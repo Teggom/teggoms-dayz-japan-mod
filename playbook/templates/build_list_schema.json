@@ -1,0 +1,88 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "jp/playbook/build_list_schema.json",
+ "title": "JP build list (research agent A -> builder B/C/D/S)",
+ "description": "One file per category, e.g. build_lists/roofs.json. One entry per part or asset. Stephen approves it at gate G1 before anything is built.",
+ "type": "object",
+ "required": ["category", "version", "author", "date", "stage", "entries"],
+ "properties": {
+  "category": {"type": "string", "description": "e.g. materials-walls, parts-roofs, parts-openings, furniture-doma, site-wells, buildings-post-town"},
+  "version": {"type": "integer"},
+  "author": {"type": "string"},
+  "date": {"type": "string"},
+  "stage": {"enum": ["B", "C", "D", "S", "R", "W", "F"]},
+  "scope_note": {"type": "string", "description": "What is in and out of this list, and why"},
+  "entries": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": ["id", "name", "importance", "tiers", "priority", "refs", "dimensions", "materials", "variants"],
+    "properties": {
+     "id": {"type": "string", "pattern": "^jp_(m|p|f|s|r)_[a-z0-9_]+$|^jp_[a-z0-9_]+$", "description": "Final file stem, following the PLAYBOOK §10.1 prefixes"},
+     "name": {"type": "string", "description": "English + romaji (+ kanji optional)"},
+     "what": {"type": "string", "description": "One sentence: what it is and where it appears"},
+     "importance": {"enum": ["hero", "standard", "filler"]},
+     "tiers": {"type": "array", "items": {"enum": [1, 2, 3]}},
+     "region": {"enum": ["kamigata", "edo", "rural", "all"]},
+     "status_overlay": {"enum": ["commoner", "samurai", "official", "religious", "none"]},
+     "priority": {"enum": ["P1", "P2", "P3"]},
+     "period_evidence": {"type": "string", "description": "Dated evidence that it existed 1680-1750 (ref ids)"},
+     "refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "required": ["id", "shows"],
+       "properties": {
+        "id": {"type": "string", "description": "id in the category refs_index.json or playbook/refs_index.json"},
+        "shows": {"type": "string"},
+        "period_image": {"type": "boolean", "description": "true for a museum object, a period print or a period building"}
+       }
+      }
+     },
+     "dimensions": {
+      "type": "object",
+      "description": "key_with_unit -> {value, source|assumed+reason}; include grid size in ken for parts",
+      "additionalProperties": {
+       "type": "object",
+       "required": ["value"],
+       "properties": {"value": {}, "source": {"type": "string"}, "assumed": {"type": "boolean"}, "reason": {"type": "string"}}
+      }
+     },
+     "materials": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": ["surface", "material", "palette_id"],
+       "properties": {
+        "surface": {"type": "string"},
+        "material": {"type": "string", "description": "library material stem jp_m_<family>_<name> (existing or requested in this list)"},
+        "palette_id": {"type": "string"}
+       }
+      }
+     },
+     "connectors": {
+      "type": "array",
+      "items": {"type": "string", "description": "e.g. 'post L/R on half-ken', 'head 2.00', 'eave', 'proxy_base on floor'"}
+     },
+     "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "required": ["id", "differs_by"],
+       "properties": {"id": {"type": "string"}, "differs_by": {"type": "string"}, "tier": {"enum": [1, 2, 3]}}
+      }
+     },
+     "room_tags": {"type": "array", "items": {"type": "string"}, "description": "Furniture: where the decorator may place it"},
+     "deviations": {"type": "array", "items": {"type": "string"}},
+     "lod_budget": {"type": "string", "description": "PLAYBOOK §12 class"},
+     "checks": {"type": "array", "items": {"type": "string", "pattern": "^C[1-9]$"}},
+     "banned_tells_to_watch": {"type": "array", "items": {"type": "string"}},
+     "open_questions": {"type": "array", "items": {"type": "string"}}
+    }
+   }
+  }
+ }
+}

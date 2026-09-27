@@ -1,0 +1,1367 @@
+{
+ "version": 1,
+ "colour_space": "sRGB, 8-bit, gamma-encoded (as in a _co texture)",
+ "tolerance_metric": "CIE76 delta-E in CIELAB (D65). A texture passes when the mean colour of the material area, excluding painted-on dirt/detail masks, is within tolerance_dE76 of srgb.",
+ "method": "See playbook/tools/sample_palette.py docstring. Photos: data/playbook/refs (local only), listed in playbook/refs_index.json.",
+ "method_values": {
+  "sampled": "median of photo pixels",
+  "reference": "value from a cited text source",
+  "assumed": "no licensed sample; reasoned value, verify when a sample is found"
+ },
+ "lighting_caveat": "Photo samples include daylight and camera processing. They are targets for texture mean albedo within tolerance, not physically exact albedo.",
+ "vanilla_calibration": {
+  "note": "Mean sRGB of vanilla DayZ _co textures (converted with ImageToPAA, 2026-09-27). Vanilla 'white' walls sit near 150, so photo-sampled whites of 130-195 are in the engine's range and pure 230+ whites would glow. At gate G3 compare in engine and, if needed, apply ONE global exposure factor to all JP textures (expected 0.8-1.0).",
+  "dz/structures/data/stucco_white_clean_01_co": [
+   144,
+   144,
+   144
+  ],
+  "dz/structures/data/plaster/coalplant_plaster_white_co": [
+   155,
+   154,
+   151
+  ],
+  "dz/structures/data/plaster/housebt_plaster1_co": [
+   154,
+   156,
+   141
+  ],
+  "dz/structures/data/wood_planks_gray_co": [
+   112,
+   110,
+   107
+  ],
+  "dz/structures/data/wood/planksold_01_co": [
+   85,
+   84,
+   78
+  ],
+  "dz/structures/data/wood/bridge_wood_planks_co": [
+   108,
+   99,
+   92
+  ],
+  "dz/structures/data/roof/roof_ceramic_01_co": [
+   101,
+   73,
+   48
+  ],
+  "dz/structures/data/roof/roof_ceramic_old_co": [
+   104,
+   79,
+   64
+  ],
+  "dz/structures/data/roof/cowshed_roof_co": [
+   80,
+   80,
+   79
+  ]
+ },
+ "entries": [
+  {
+   "id": "timber_weathered",
+   "name": "Weathered exterior timber (sugi/hinoki, silver-brown)",
+   "material": "unpainted sugi / hinoki boards and posts, sun and rain aged",
+   "group": "timber",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "exterior boards, posts, board roofs, fences, rural everything",
+   "srgb": [
+    118,
+    82,
+    73
+   ],
+   "hex": "#765249",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 29.1,
+   "samples": [
+    {
+     "ref": "c02_narai_facade",
+     "box": [
+      0.25,
+      0.55,
+      0.32,
+      0.72
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c02_narai_facade",
+     "box": [
+      0.33,
+      0.4,
+      0.4,
+      0.5
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c12_higashi_chaya",
+     "box": [
+      0.345,
+      0.15,
+      0.415,
+      0.3
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ],
+   "weathering": {
+    "clean": "timber_street_dark",
+    "worst": "stone_lantern",
+    "max_mix": 0.35
+   }
+  },
+  {
+   "id": "timber_street_dark",
+   "name": "Dark street-front timber (oiled / soot-darkened)",
+   "material": "sugi/hinoki darkened by age, oil, soot or kakishibu (sampled wet, in rain)",
+   "group": "timber",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "post-town and town facades, lattice frames, shop fronts",
+   "srgb": [
+    84,
+    56,
+    42
+   ],
+   "hex": "#54382A",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 19.6,
+   "samples": [
+    {
+     "ref": "c01_narai_street",
+     "box": [
+      0.915,
+      0.42,
+      0.985,
+      0.62
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c01_narai_street",
+     "box": [
+      0.915,
+      0.06,
+      0.955,
+      0.19
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "timber_interior",
+   "name": "Interior timber, smoke-aged brown",
+   "material": "posts and frames inside a surviving farmhouse",
+   "group": "timber",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "note": "Warm artificial light. Machiya interiors are lighter (use timber_weathered darkened 10 %), farmhouses this or darker.",
+   "srgb": [
+    69,
+    52,
+    46
+   ],
+   "hex": "#45342E",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 47.1,
+   "samples": [
+    {
+     "ref": "c23_fukiya_katayama",
+     "box": [
+      0.19,
+      0.3,
+      0.22,
+      0.7
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c15_farmhouse_interior",
+     "box": [
+      0.28,
+      0.45,
+      0.32,
+      0.65
+     ],
+     "select": "dark"
+    }
+   ]
+  },
+  {
+   "id": "timber_sooted",
+   "name": "Smoke-blackened beams (irori soot)",
+   "material": "structural timber and ceiling boards darkened by hearth smoke",
+   "group": "timber",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "farmhouse and machiya kitchen roof space, beams above irori/kamado",
+   "note": "The c15 roof space samples at about (9,5,3) because it is underexposed; a texture that dark reads as a hole in game. Keep albedo >= 30.",
+   "srgb": [
+    36,
+    28,
+    22
+   ],
+   "hex": "#241C16",
+   "method": "assumed",
+   "tolerance_dE76": 12
+  },
+  {
+   "id": "shikkui_white",
+   "name": "Shikkui lime plaster, white",
+   "material": "slaked lime + seaweed glue + fibre (shikkui)",
+   "group": "wall",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "kura, castle, upper storeys of tier-3 townhouses, wall caps",
+   "srgb": [
+    192,
+    194,
+    196
+   ],
+   "hex": "#C0C2C4",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 14.3,
+   "samples": [
+    {
+     "ref": "c09_himeji",
+     "box": [
+      0.4,
+      0.62,
+      0.85,
+      0.72
+     ],
+     "select": "top"
+    },
+    {
+     "ref": "c11_kurashiki",
+     "box": [
+      0.55,
+      0.4,
+      0.68,
+      0.47
+     ],
+     "select": "top"
+    },
+    {
+     "ref": "c03_tsumago_street",
+     "box": [
+      0.79,
+      0.33,
+      0.86,
+      0.45
+     ],
+     "select": "top"
+    }
+   ],
+   "weathering": {
+    "worst": "earth_wall_ochre",
+    "max_mix": 0.25,
+    "streaks": "rain streaks under eaves and sills, grime band 0-40 cm above ground"
+   }
+  },
+  {
+   "id": "earth_wall_ochre",
+   "name": "Earthen wall, ochre (arakabe / nakanuri / tsuijibei)",
+   "material": "clay + straw over bamboo lath, or rammed earth",
+   "group": "wall",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "rural walls, interior walls, garden and temple earth walls",
+   "note": "c12 is a repainted modern finish; c29 is the primary sample.",
+   "srgb": [
+    215,
+    180,
+    115
+   ],
+   "hex": "#D7B473",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 13.8,
+   "samples": [
+    {
+     "ref": "c29_earthen_wall",
+     "box": [
+      0.18,
+      0.46,
+      0.72,
+      0.68
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c12_higashi_chaya",
+     "box": [
+      0.02,
+      0.3,
+      0.12,
+      0.5
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "earth_wall_interior",
+   "name": "Interior earthen wall (lit)",
+   "material": "interior clay finish seen in a surviving farmhouse",
+   "group": "wall",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "note": "Warm artificial light; use as the lit-interior check value, not as albedo.",
+   "srgb": [
+    78,
+    54,
+    35
+   ],
+   "hex": "#4E3623",
+   "method": "sampled",
+   "tolerance_dE76": 11,
+   "observed_spread_dE76": 10.9,
+   "samples": [
+    {
+     "ref": "c15_farmhouse_interior",
+     "box": [
+      0.74,
+      0.1,
+      0.95,
+      0.5
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "bengara_wall",
+   "name": "Bengara-red plaster",
+   "material": "earthen/lime plaster pigmented with bengara (iron oxide)",
+   "group": "wall",
+   "tiers": [
+    3
+   ],
+   "use": "rare: a few prestige tea houses / pleasure-quarter fronts only",
+   "note": "The Gion example (Ichiriki-tei) is famous precisely because it is unusual.",
+   "srgb": [
+    142,
+    62,
+    36
+   ],
+   "hex": "#8E3E24",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 32.9,
+   "samples": [
+    {
+     "ref": "c07_gion_machiya",
+     "box": [
+      0.85,
+      0.3,
+      0.92,
+      0.42
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c07_gion_machiya",
+     "box": [
+      0.72,
+      0.46,
+      0.78,
+      0.51
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "neribei_clay",
+   "name": "Tile-course clay wall (neribei), mortar",
+   "material": "clay mortar between laid roof-tile courses",
+   "group": "wall",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "temple / wealthy compound walls",
+   "srgb": [
+    180,
+    180,
+    173
+   ],
+   "hex": "#B4B4AD",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 20.4,
+   "samples": [
+    {
+     "ref": "c25_tsuijibei",
+     "box": [
+      0.52,
+      0.38,
+      0.6,
+      0.52
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "namako_tile",
+   "name": "Namako wall tile (dark)",
+   "material": "square flat tiles on kura lower walls",
+   "group": "wall",
+   "tiers": [
+    2,
+    3
+   ],
+   "srgb": [
+    35,
+    34,
+    29
+   ],
+   "hex": "#23221D",
+   "method": "sampled",
+   "tolerance_dE76": 7,
+   "observed_spread_dE76": 6.9,
+   "samples": [
+    {
+     "ref": "c11_kurashiki",
+     "box": [
+      0.44,
+      0.62,
+      0.53,
+      0.74
+     ],
+     "select": "dark"
+    }
+   ]
+  },
+  {
+   "id": "namako_joint",
+   "name": "Namako joint plaster (white, raised)",
+   "material": "shikkui joints of namako walls",
+   "group": "wall",
+   "tiers": [
+    2,
+    3
+   ],
+   "note": "Same material as shikkui_white, sampled in shade; use shikkui_white's texture with this as the shaded check value.",
+   "srgb": [
+    136,
+    137,
+    139
+   ],
+   "hex": "#88898B",
+   "method": "sampled",
+   "tolerance_dE76": 6,
+   "observed_spread_dE76": 4.1,
+   "samples": [
+    {
+     "ref": "c11_kurashiki",
+     "box": [
+      0.44,
+      0.62,
+      0.53,
+      0.74
+     ],
+     "select": "top"
+    }
+   ]
+  },
+  {
+   "id": "kuro_board",
+   "name": "Black-stained boards (sumi / kakishibu)",
+   "material": "board cladding stained black",
+   "group": "wall",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "official buildings (checkpoint, jinya, bansho), kura lower walls, castle-town board fences",
+   "srgb": [
+    19,
+    23,
+    26
+   ],
+   "hex": "#13171A",
+   "method": "sampled",
+   "tolerance_dE76": 6,
+   "observed_spread_dE76": 5.5,
+   "samples": [
+    {
+     "ref": "c16_hakone_sekisho",
+     "box": [
+      0.86,
+      0.36,
+      0.96,
+      0.55
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "kawara_ibushi",
+   "name": "Kawara tile, ibushi silver-grey",
+   "material": "carbon-smoked fired clay tile (ibushi-gawara)",
+   "group": "roof",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "all tile roofs; never flat-textured: tiles are geometry (see PLAYBOOK roofs)",
+   "srgb": [
+    145,
+    149,
+    149
+   ],
+   "hex": "#919595",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 20.4,
+   "samples": [
+    {
+     "ref": "c08_kyomachiya",
+     "box": [
+      0.18,
+      0.44,
+      0.6,
+      0.485
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c14_minkaen_b",
+     "box": [
+      0.4,
+      0.4,
+      0.62,
+      0.52
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c04_tsumago_wakihonjin",
+     "box": [
+      0.24,
+      0.48,
+      0.4,
+      0.52
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ],
+   "weathering": {
+    "worst": "kawara_weathered",
+    "max_mix": 1.0
+   }
+  },
+  {
+   "id": "kawara_weathered",
+   "name": "Kawara tile, weathered dark",
+   "material": "old ibushi tile with lichen and grime",
+   "group": "roof",
+   "tiers": [
+    2,
+    3
+   ],
+   "srgb": [
+    123,
+    131,
+    120
+   ],
+   "hex": "#7B8378",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 29.3,
+   "samples": [
+    {
+     "ref": "c25_tsuijibei",
+     "box": [
+      0.25,
+      0.21,
+      0.4,
+      0.27
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "thatch_weathered",
+   "name": "Thatch, weathered (kaya)",
+   "material": "susuki / reed thatch after years of weather",
+   "group": "roof",
+   "tiers": [
+    1,
+    2
+   ],
+   "use": "farmhouses, rural post towns, roadside tea houses",
+   "srgb": [
+    70,
+    60,
+    58
+   ],
+   "hex": "#463C3A",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 20.8,
+   "samples": [
+    {
+     "ref": "c05_ouchi_thatch",
+     "box": [
+      0.85,
+      0.15,
+      0.98,
+      0.28
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c06_shirakawa_gassho",
+     "box": [
+      0.6,
+      0.55,
+      0.63,
+      0.62
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ],
+   "weathering": {
+    "clean": "thatch_new",
+    "worst": "stone_lantern",
+    "max_mix": 0.2,
+    "moss": "moss_on_stone on north slopes"
+   }
+  },
+  {
+   "id": "thatch_new",
+   "name": "Thatch, new",
+   "material": "freshly laid susuki / reed",
+   "group": "roof",
+   "tiers": [
+    1,
+    2
+   ],
+   "note": "No licensed photo of fresh thatch in the set. Straw-gold, pick up to 1 in 10 roofs as recently re-thatched.",
+   "srgb": [
+    176,
+    150,
+    98
+   ],
+   "hex": "#B09662",
+   "method": "assumed",
+   "tolerance_dE76": 12
+  },
+  {
+   "id": "stone_granite",
+   "name": "Granite, weathered (ishigaki, gate posts)",
+   "material": "granite / hard stone, grey with warm specks",
+   "group": "stone",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "ishigaki, plinth stones (soseki), steps, lantern bodies, gravestones",
+   "srgb": [
+    163,
+    140,
+    110
+   ],
+   "hex": "#A38C6E",
+   "method": "sampled",
+   "tolerance_dE76": 9,
+   "observed_spread_dE76": 9.3,
+   "samples": [
+    {
+     "ref": "c09_himeji",
+     "box": [
+      0.45,
+      0.84,
+      0.8,
+      0.97
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "stone_lantern",
+   "name": "Stone lantern, lichen-grey",
+   "material": "weathered granite/andesite of shrine lanterns",
+   "group": "stone",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "srgb": [
+    73,
+    70,
+    62
+   ],
+   "hex": "#49463E",
+   "method": "sampled",
+   "tolerance_dE76": 9,
+   "observed_spread_dE76": 8.8,
+   "samples": [
+    {
+     "ref": "c22_kasuga_lanterns",
+     "box": [
+      0.625,
+      0.4,
+      0.675,
+      0.56
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "moss_on_stone",
+   "name": "Moss on stone / thatch",
+   "material": "moss and algae",
+   "group": "stone",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "weathering overlay only; never a base colour",
+   "srgb": [
+    125,
+    128,
+    92
+   ],
+   "hex": "#7D805C",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 22.7,
+   "samples": [
+    {
+     "ref": "c22_kasuga_lanterns",
+     "box": [
+      0.3,
+      0.52,
+      0.42,
+      0.62
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "earth_road",
+   "name": "Packed earth (road, yard, exterior doma)",
+   "material": "compacted local soil",
+   "group": "ground",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "roads, yards; interior doma = this darkened 20-30 % (compacted, smoke, damp)",
+   "srgb": [
+    208,
+    190,
+    167
+   ],
+   "hex": "#D0BEA7",
+   "method": "sampled",
+   "tolerance_dE76": 6,
+   "observed_spread_dE76": 5.8,
+   "samples": [
+    {
+     "ref": "c05_ouchi_thatch",
+     "box": [
+      0.3,
+      0.7,
+      0.55,
+      0.88
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c16_hakone_sekisho",
+     "box": [
+      0.45,
+      0.82,
+      0.62,
+      0.95
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "gravel_white",
+   "name": "White gravel / sand (shrine, court)",
+   "material": "decomposed granite sand (shirakawa-suna type)",
+   "group": "ground",
+   "tiers": [
+    3
+   ],
+   "use": "shrine approaches, bugyosho court (shirasu), temple courts",
+   "srgb": [
+    224,
+    221,
+    229
+   ],
+   "hex": "#E0DDE5",
+   "method": "sampled",
+   "tolerance_dE76": 6,
+   "observed_spread_dE76": 4.8,
+   "samples": [
+    {
+     "ref": "c22_kasuga_lanterns",
+     "box": [
+      0.08,
+      0.8,
+      0.28,
+      0.95
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "shu_vermilion",
+   "name": "Shu vermilion (shrine red)",
+   "material": "vermilion / red-lead paint on shrine timber",
+   "group": "paint",
+   "tiers": [
+    3
+   ],
+   "use": "shrines, some temple gates/halls ONLY. Never on houses, shops or castles",
+   "note": "Modern repaint; period shu is the same family (sampled in shade and sun).",
+   "srgb": [
+    146,
+    20,
+    1
+   ],
+   "hex": "#921401",
+   "method": "sampled",
+   "tolerance_dE76": 7,
+   "observed_spread_dE76": 6.9,
+   "samples": [
+    {
+     "ref": "c10_inari_torii",
+     "box": [
+      0.33,
+      0.48,
+      0.365,
+      0.8
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c10_inari_torii",
+     "box": [
+      0.755,
+      0.47,
+      0.775,
+      0.58
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "sumi_black",
+   "name": "Sumi black (lacquer / ink black)",
+   "material": "carbon black paint or lacquer",
+   "group": "paint",
+   "tiers": [
+    3
+   ],
+   "use": "torii kasagi, lacquered fittings, black plaster (kuro-shikkui) on castles",
+   "note": "ja.wikipedia 'Nihon no iro no ichiran' sumi-iro #343434. The sampled black-stained boards (kuro_board) agree within tolerance.",
+   "srgb": [
+    52,
+    52,
+    52
+   ],
+   "hex": "#343434",
+   "method": "reference",
+   "tolerance_dE76": 10
+  },
+  {
+   "id": "bengara_lattice",
+   "name": "Bengara red-brown (lattice paint)",
+   "material": "iron-oxide red mixed with soot/oil on timber",
+   "group": "paint",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "Kyoto/Osaka-side machiya lattices and fronts, sparingly",
+   "srgb": [
+    49,
+    41,
+    30
+   ],
+   "hex": "#31291E",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 14.5,
+   "samples": [
+    {
+     "ref": "c07_gion_machiya",
+     "box": [
+      0.72,
+      0.36,
+      0.78,
+      0.45
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c08_kyomachiya",
+     "box": [
+      0.63,
+      0.6,
+      0.68,
+      0.7
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "gofun_white",
+   "name": "Gofun shell white",
+   "material": "calcined oyster-shell white",
+   "group": "paint",
+   "tiers": [
+    3
+   ],
+   "note": "Warm off-white on the same exposure scale as the sampled shikkui_white (vanilla whites ~150). Shrine carving, dolls. Not for walls.",
+   "srgb": [
+    205,
+    201,
+    192
+   ],
+   "hex": "#CDC9C0",
+   "method": "assumed",
+   "tolerance_dE76": 12
+  },
+  {
+   "id": "tatami_aged",
+   "name": "Tatami, aged (igusa faded to straw)",
+   "material": "igusa rush mat face",
+   "group": "floor",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "all tatami; new green tatami only as rare accents",
+   "note": "c23 is shaded daylight (golden), c21 is flat light (grey-beige).",
+   "srgb": [
+    127,
+    108,
+    90
+   ],
+   "hex": "#7F6C5A",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 28.4,
+   "samples": [
+    {
+     "ref": "c23_fukiya_katayama",
+     "box": [
+      0.45,
+      0.74,
+      0.75,
+      0.86
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c23_fukiya_katayama",
+     "box": [
+      0.35,
+      0.66,
+      0.6,
+      0.72
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c21_tatami",
+     "box": [
+      0.55,
+      0.45,
+      0.95,
+      0.95
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "tatami_heri",
+   "name": "Tatami edge cloth (heri), plain",
+   "material": "black or indigo cotton/hemp binding",
+   "group": "floor",
+   "tiers": [
+    2,
+    3
+   ],
+   "note": "Commoner heri are plain dark; patterned (monberi) heri are temple/elite only.",
+   "srgb": [
+    38,
+    36,
+    40
+   ],
+   "hex": "#262428",
+   "method": "assumed",
+   "tolerance_dE76": 12
+  },
+  {
+   "id": "washi_shoji",
+   "name": "Shoji paper (washi)",
+   "material": "kozo paper",
+   "group": "fitting",
+   "tiers": [
+    2,
+    3
+   ],
+   "note": "Warm white on the shikkui_white exposure scale, never pure white; lets light through (alpha/translucency per B).",
+   "srgb": [
+    200,
+    195,
+    182
+   ],
+   "hex": "#C8C3B6",
+   "method": "assumed",
+   "tolerance_dE76": 12
+  },
+  {
+   "id": "bamboo_weathered",
+   "name": "Bamboo, weathered (inuyarai, fences)",
+   "material": "madake bamboo, sun-bleached",
+   "group": "fitting",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "srgb": [
+    169,
+    157,
+    146
+   ],
+   "hex": "#A99D92",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 26.0,
+   "samples": [
+    {
+     "ref": "c08_kyomachiya",
+     "box": [
+      0.3,
+      0.76,
+      0.5,
+      0.88
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c07_gion_machiya",
+     "box": [
+      0.68,
+      0.84,
+      0.8,
+      0.95
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "sudare_reed",
+   "name": "Reed / bamboo blind (sudare)",
+   "material": "split bamboo or reed blind",
+   "group": "fitting",
+   "tiers": [
+    2,
+    3
+   ],
+   "srgb": [
+    168,
+    148,
+    133
+   ],
+   "hex": "#A89485",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 31.3,
+   "samples": [
+    {
+     "ref": "c08_kyomachiya",
+     "box": [
+      0.36,
+      0.12,
+      0.56,
+      0.3
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "iron_black",
+   "name": "Wrought iron, dark",
+   "material": "iron fittings, pots, tools (katana dossier value)",
+   "group": "metal",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "note": "Measured in the katana dossier from Met 30091/30092 and TNM F-19992 (spikes/A_arms/katana_v2/DOSSIER.md s5).",
+   "srgb": [
+    76,
+    72,
+    69
+   ],
+   "hex": "#4C4845",
+   "method": "reference",
+   "tolerance_dE76": 10
+  },
+  {
+   "id": "aizome_kachi",
+   "name": "Aizome, darkest indigo (kachi-iro)",
+   "material": "indigo-dyed cotton, many dips",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "work clothes, firemen, noren, futon covers; the commoner default",
+   "srgb": [
+    28,
+    32,
+    40
+   ],
+   "hex": "#1C2028",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 13.5,
+   "samples": [
+    {
+     "ref": "m01_sashiko_jacket",
+     "box": [
+      0.33,
+      0.62,
+      0.6,
+      0.78
+     ],
+     "select": "dark"
+    },
+    {
+     "ref": "m02_indigo_piece",
+     "box": [
+      0.03,
+      0.44,
+      0.3,
+      0.52
+     ],
+     "select": "dark"
+    }
+   ]
+  },
+  {
+   "id": "aizome_kon",
+   "name": "Aizome, dark blue-grey (kon / nezumi-ai)",
+   "material": "indigo-dyed silk/cotton, faded",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "srgb": [
+    54,
+    62,
+    66
+   ],
+   "hex": "#363E42",
+   "method": "sampled",
+   "tolerance_dE76": 6,
+   "observed_spread_dE76": 3.3,
+   "samples": [
+    {
+     "ref": "m03_kosode_stencil",
+     "box": [
+      0.35,
+      0.4,
+      0.65,
+      0.8
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "aizome_maku",
+   "name": "Indigo curtain (maku / noren) as seen outdoors",
+   "material": "indigo cotton hanging in daylight",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "srgb": [
+    18,
+    22,
+    34
+   ],
+   "hex": "#121622",
+   "method": "sampled",
+   "tolerance_dE76": 12,
+   "observed_spread_dE76": 12.2,
+   "samples": [
+    {
+     "ref": "c16_hakone_sekisho",
+     "box": [
+      0.03,
+      0.57,
+      0.1,
+      0.66
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "aizome_asagi",
+   "name": "Aizome, light (asagi / kamenozoki)",
+   "material": "indigo, few dips",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "note": "Dictionary asagi (#00A4AC, ja.wikipedia) is a modern saturated rendering; this is a faded-cotton value. Verify with a museum sample.",
+   "srgb": [
+    128,
+    164,
+    178
+   ],
+   "hex": "#80A4B2",
+   "method": "assumed",
+   "tolerance_dE76": 12
+  },
+  {
+   "id": "cha_danjuro",
+   "name": "Danjuro-cha (red-brown)",
+   "material": "tea-brown dye",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "note": "ja.wikipedia 'Nihon no iro no ichiran' #9F563A. One of the 'shijuhacha hyakunezumi' browns that sumptuary edicts pushed commoners toward.",
+   "srgb": [
+    159,
+    86,
+    58
+   ],
+   "hex": "#9F563A",
+   "method": "reference",
+   "tolerance_dE76": 10
+  },
+  {
+   "id": "cha_koge",
+   "name": "Koge-cha (dark brown)",
+   "material": "tea-brown dye",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "note": "ja.wikipedia #6A4D32",
+   "srgb": [
+    106,
+    77,
+    50
+   ],
+   "hex": "#6A4D32",
+   "method": "reference",
+   "tolerance_dE76": 10
+  },
+  {
+   "id": "nezumi_rikyu",
+   "name": "Rikyu-nezumi (green-grey)",
+   "material": "grey dye",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "note": "ja.wikipedia #888E7E",
+   "srgb": [
+    136,
+    142,
+    126
+   ],
+   "hex": "#888E7E",
+   "method": "reference",
+   "tolerance_dE76": 10
+  },
+  {
+   "id": "kinari_cloth",
+   "name": "Undyed cotton / hemp (kinari)",
+   "material": "unbleached cloth",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "note": "Between dictionary kinari #C2B280 (khaki) and the shikkui_white scale. Loincloths, underlayers, sacks, bandages.",
+   "srgb": [
+    190,
+    181,
+    160
+   ],
+   "hex": "#BEB5A0",
+   "method": "assumed",
+   "tolerance_dE76": 12
+  }
+ ]
+}

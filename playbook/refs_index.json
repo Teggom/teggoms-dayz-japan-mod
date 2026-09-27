@@ -1,0 +1,720 @@
+{
+ "version": 1,
+ "note": "Images are local only (data/playbook/refs/, git-ignored, never shipped). Text sources are cited, not copied.",
+ "download_policy": "Only PD / CC0 / CC BY images (no SA/NC/ND). Commons via API with a descriptive User-Agent; Met via Open Access API, <= 1 request / 3 s.",
+ "images": [
+  {
+   "id": "c01_narai_street",
+   "file": "data/playbook/refs/c01_narai_street.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Narai-juku - Naraijuku6558.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Narai-juku_-_Naraijuku6558.jpg",
+   "licence": "CC0",
+   "author": "lumoplank",
+   "date": "3 November 2025",
+   "supports": "Nakasendo post town: aged timber facades, board eaves, dashigeta"
+  },
+  {
+   "id": "c02_narai_facade",
+   "file": "data/playbook/refs/c02_narai_facade.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Narai-juku - Naraijuku6579.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Narai-juku_-_Naraijuku6579.jpg",
+   "licence": "CC0",
+   "author": "lumoplank",
+   "date": "3 November 2025",
+   "supports": "Nakasendo post town: timber colour, lattice, low upper storey"
+  },
+  {
+   "id": "c03_tsumago_street",
+   "file": "data/playbook/refs/c03_tsumago_street.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Looking down the Nakasendō in the central part of the village, Tsumago-juku, Nagiso, 2016.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Looking_down_the_Nakasend%C5%8D_in_the_central_part_of_the_village,_Tsumago-juku,_Nagiso,_2016.jpg",
+   "licence": "CC0",
+   "author": "DimiTalen",
+   "date": "2016-03-29 14:52:56",
+   "supports": "Post town streetscape, board roofs, weathered sugi"
+  },
+  {
+   "id": "c04_tsumago_wakihonjin",
+   "file": "data/playbook/refs/c04_tsumago_wakihonjin.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Entry to the Waki-Honjin, Tsumago-juku, Nagiso, 2016.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Entry_to_the_Waki-Honjin,_Tsumago-juku,_Nagiso,_2016.jpg",
+   "licence": "CC0",
+   "author": "DimiTalen",
+   "date": "2016-03-29 14:57:54",
+   "supports": "Waki-honjin gate/entry, dark timber"
+  },
+  {
+   "id": "c05_ouchi_thatch",
+   "file": "data/playbook/refs/c05_ouchi_thatch.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Ouchi-juku, Fukushima 01.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Ouchi-juku,_Fukushima_01.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Σ64",
+   "date": "2017-11-11",
+   "supports": "Thatched post town (Aizu): thatch colour, hip roofs"
+  },
+  {
+   "id": "c06_shirakawa_gassho",
+   "file": "data/playbook/refs/c06_shirakawa_gassho.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Historic Village of Shirakawa-go (2016) - img 01.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Historic_Village_of_Shirakawa-go_(2016)_-_img_01.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Chainwit.",
+   "date": "2016-05-06 11:58:52",
+   "supports": "Gassho thatch, steep pitch"
+  },
+  {
+   "id": "c07_gion_machiya",
+   "file": "data/playbook/refs/c07_gion_machiya.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:150124 Gion Kyoto Japan01s3.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:150124_Gion_Kyoto_Japan01s3.jpg",
+   "licence": "CC BY 2.5",
+   "author": "663highland",
+   "date": "24 January 2015",
+   "supports": "Kyoto machiya: bengara koshi, kawara, low upper storey"
+  },
+  {
+   "id": "c08_kyomachiya",
+   "file": "data/playbook/refs/c08_kyomachiya.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Kyō-machiya 01.JPG",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Ky%C5%8D-machiya_01.JPG",
+   "licence": "CC BY 3.0",
+   "author": "ja:利用者:Mariemon",
+   "date": "2010-05-17",
+   "supports": "Kyoto machiya: mushiko-mado, plaster upper storey, sangawara"
+  },
+  {
+   "id": "c09_himeji",
+   "file": "data/playbook/refs/c09_himeji.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Himeji - Himeji357.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Himeji_-_Himeji357.jpg",
+   "licence": "CC0",
+   "author": "lumoplank",
+   "date": "8 November 2023",
+   "supports": "Castle: shikkui white, ishigaki granite, ibushi kawara"
+  },
+  {
+   "id": "c10_inari_torii",
+   "file": "data/playbook/refs/c10_inari_torii.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:20181110 Fushimi Inari Torii 1.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:20181110_Fushimi_Inari_Torii_1.jpg",
+   "licence": "CC0",
+   "author": "Balon Greyjoy",
+   "date": "2018-11-10 10:58:30",
+   "supports": "Shu vermilion + sumi black on torii"
+  },
+  {
+   "id": "c11_kurashiki",
+   "file": "data/playbook/refs/c11_kurashiki.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Kurashikikahan17nt3200.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Kurashikikahan17nt3200.jpg",
+   "licence": "CC BY 2.5",
+   "author": "663highland",
+   "date": "2008-07-27",
+   "supports": "Kura: namako-kabe, black/white plaster"
+  },
+  {
+   "id": "c12_higashi_chaya",
+   "file": "data/playbook/refs/c12_higashi_chaya.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Higashi Chaya District (50153812728).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Higashi_Chaya_District_(50153812728).jpg",
+   "licence": "CC BY 2.0",
+   "author": "Raita Futo",
+   "date": "17 September 2019, 13:30",
+   "supports": "Bengara lattice, 1820 chaya district (later than window, colour only)"
+  },
+  {
+   "id": "c14_minkaen_b",
+   "file": "data/playbook/refs/c14_minkaen_b.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Nihon Minka-en 11.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Nihon_Minka-en_11.jpg",
+   "licence": "CC0",
+   "author": "Syced",
+   "date": "Taken on 3 November 2024",
+   "supports": "Edo-period farmhouse (open-air museum)"
+  },
+  {
+   "id": "c15_farmhouse_interior",
+   "file": "data/playbook/refs/c15_farmhouse_interior.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Japanese traditional farmhouse - wooden floor and mud wall - 4373467409.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Japanese_traditional_farmhouse_-_wooden_floor_and_mud_wall_-_4373467409.jpg",
+   "licence": "CC BY 2.0",
+   "author": "TANAKA Juuyoh (田中十洋)",
+   "date": "2010-02-14 11:48:46",
+   "supports": "Farmhouse interior: board floor, earthen wall"
+  },
+  {
+   "id": "c16_hakone_sekisho",
+   "file": "data/playbook/refs/c16_hakone_sekisho.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Hakone Sekisho July 2018.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Hakone_Sekisho_July_2018.jpg",
+   "licence": "CC0",
+   "author": "Alvinz",
+   "date": "2018-07-13 10:38:55",
+   "supports": "Reconstructed Hakone checkpoint (2007 rebuild from 1865 plans)"
+  },
+  {
+   "id": "c17_ichirizuka",
+   "file": "data/playbook/refs/c17_ichirizuka.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Koganei Ichirizuka, Tochigi.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Koganei_Ichirizuka,_Tochigi.jpg",
+   "licence": "CC0",
+   "author": "ニンジンシチュー",
+   "date": "2014-05-02 11:49:33",
+   "supports": "Surviving ichirizuka milestone mound"
+  },
+  {
+   "id": "c18_hiroshige_mariko",
+   "file": "data/playbook/refs/c18_hiroshige_mariko.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Hiroshige-53-Stations-Hoeido-21-Mariko-MFA-03.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Hiroshige-53-Stations-Hoeido-21-Mariko-MFA-03.jpg",
+   "licence": "Public domain",
+   "author": "Utagawa Hiroshige",
+   "date": "circa 1833/35",
+   "supports": "Roadside tea house, thatch, travellers' dress (c.1833)"
+  },
+  {
+   "id": "c20_minkaen_c",
+   "file": "data/playbook/refs/c20_minkaen_c.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Nihon Minka-en 27.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Nihon_Minka-en_27.jpg",
+   "licence": "CC0",
+   "author": "Syced",
+   "date": "3 November 2024 (according to Exif data)",
+   "supports": "Edo-period farmhouse (open-air museum)"
+  },
+  {
+   "id": "c21_tatami",
+   "file": "data/playbook/refs/c21_tatami.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Tatami-detail-1.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Tatami-detail-1.jpg",
+   "licence": "CC0",
+   "author": "Francesco Marinucci",
+   "date": "2017-09-27 17:03:30",
+   "supports": "Tatami omote weave and heri edge, colour"
+  },
+  {
+   "id": "c22_kasuga_lanterns",
+   "file": "data/playbook/refs/c22_kasuga_lanterns.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Nara Kasuga-taisha Lanterns 03.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Nara_Kasuga-taisha_Lanterns_03.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Zairon",
+   "date": "2023-10-17 13:21:02",
+   "supports": "Stone toro (Kasuga type), weathered granite + moss"
+  },
+  {
+   "id": "c23_fukiya_katayama",
+   "file": "data/playbook/refs/c23_fukiya_katayama.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Fukiya katayama house03s3200.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Fukiya_katayama_house03s3200.jpg",
+   "licence": "CC BY 2.5",
+   "author": "663highland",
+   "date": "2006-09-30",
+   "supports": "Bengara maker's house (Fukiya): bengara lattice, Sekishu red tiles"
+  },
+  {
+   "id": "c24_jizo_cemetery",
+   "file": "data/playbook/refs/c24_jizo_cemetery.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Japan, Jizo statues at cemetery 1.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Japan,_Jizo_statues_at_cemetery_1.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Marie-Sophie Mejan",
+   "date": "circa 1987date QS:P,+1987-00-00T00:00:00",
+   "supports": "Jizo and grave stones, weathered stone"
+  },
+  {
+   "id": "c25_tsuijibei",
+   "file": "data/playbook/refs/c25_tsuijibei.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Kannon-ji Tsuijibei.JPG",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Kannon-ji_Tsuijibei.JPG",
+   "licence": "Public domain",
+   "author": "Abasaa",
+   "date": "2021-03-14",
+   "supports": "Tile-course clay wall (neribei type) with tile cap: wall type + weathered kawara"
+  },
+  {
+   "id": "c26_morse_tile_ridge",
+   "file": "data/playbook/refs/c26_morse_tile_ridge.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes067 RIDGE OF TILED ROOF.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes067_RIDGE_OF_TILED_ROOF.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885: tiled ridge build-up (noshi courses)"
+  },
+  {
+   "id": "c27_morse_thatch_ridge",
+   "file": "data/playbook/refs/c27_morse_thatch_ridge.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes082 BAMBOO RIDGE OF THATCHED ROOF IN MUSASHI.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes082_BAMBOO_RIDGE_OF_THATCHED_ROOF_IN_MUSASHI.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885: thatch ridge treatment"
+  },
+  {
+   "id": "c28_morse_country_inn",
+   "file": "data/playbook/refs/c28_morse_country_inn.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes039 COUNTRY INN IN RIKUZEN.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes039_COUNTRY_INN_IN_RIKUZEN.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885: country inn (hatago) elevation"
+  },
+  {
+   "id": "c29_earthen_wall",
+   "file": "data/playbook/refs/c29_earthen_wall.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Wall - Hōryū-ji - Ikaruga, Nara, Japan - DSC07605.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Wall_-_H%C5%8Dry%C5%AB-ji_-_Ikaruga,_Nara,_Japan_-_DSC07605.jpg",
+   "licence": "CC0",
+   "author": "Daderot",
+   "date": "2018-04-10 04:01:54",
+   "supports": "Tile-capped earthen wall (tsuijibei), earth ochre colour"
+  },
+  {
+   "id": "m01_sashiko_jacket",
+   "file": "data/playbook/refs/m01_sashiko_jacket.jpg",
+   "source": "The Met Open Access",
+   "title": "Sashiko Jacket",
+   "page_url": "https://www.metmuseum.org/art/collection/search/50805",
+   "licence": "CC0 (Met Open Access)",
+   "author": "",
+   "date": "second half of the 19th century",
+   "medium": "Indigo-dyed plain-weave cotton, quilted and embroidered with white cotton thread",
+   "supports": "Aizome indigo on working cotton (sashiko)"
+  },
+  {
+   "id": "m02_indigo_piece",
+   "file": "data/playbook/refs/m02_indigo_piece.jpg",
+   "source": "The Met Open Access",
+   "title": "Piece",
+   "page_url": "https://www.metmuseum.org/art/collection/search/70748",
+   "licence": "CC0 (Met Open Access)",
+   "author": "",
+   "date": "",
+   "medium": "Indigo-dyed cotton",
+   "supports": "Aizome indigo cotton, dark/light shades"
+  },
+  {
+   "id": "m03_kosode_stencil",
+   "file": "data/playbook/refs/m03_kosode_stencil.jpg",
+   "source": "The Met Open Access",
+   "title": "Kosode",
+   "page_url": "https://www.metmuseum.org/art/collection/search/61840",
+   "licence": "CC0 (Met Open Access)",
+   "author": "",
+   "date": "18th–19th century",
+   "medium": "Stencil-dyed plain-weave silk",
+   "supports": "Stencil-dyed kosode, 18th-19th c."
+  }
+ ],
+ "text": [
+  {
+   "id": "T01",
+   "url": "https://en.wikipedia.org/wiki/Tatami",
+   "licence": "CC BY-SA (text, cited not copied)",
+   "supports": "Tatami sizes: kyoma 1.91x0.955 m, chukyoma 1.82x0.91, edoma 1.76x0.88; reached commoners' homes toward the end of the 17th c."
+  },
+  {
+   "id": "T02",
+   "url": "https://en.wikipedia.org/wiki/Ken_(unit)",
+   "licence": "CC BY-SA",
+   "supports": "Ken = 6 shaku = 1.82 m; ~1.97 m under Hideyoshi; reduced to 1.818 m c.1650"
+  },
+  {
+   "id": "T03",
+   "url": "https://ja.wikipedia.org/wiki/京間",
+   "licence": "CC BY-SA",
+   "supports": "Kyoma: ken 6.5 shaku, tatami 6.3 x 3.15 shaku, tatami-based planning vs Edo column-based (inakama); term attested 1608"
+  },
+  {
+   "id": "T04",
+   "url": "https://en.wikipedia.org/wiki/Machiya",
+   "licence": "CC BY-SA",
+   "supports": "Plot 5.4-6 m wide x ~20 m deep; mushiko-mado; 1, 1.5 or 2 storeys; bengara koshi"
+  },
+  {
+   "id": "T05",
+   "url": "https://ja.wikipedia.org/wiki/町屋_(商家)",
+   "licence": "CC BY-SA",
+   "supports": "Low tsushi-nikai (regulated), board/kokera roofs early, 1720 (Kyoho 5) tile + dozo encouragement, udatsu, facade elements, Kyoto vs Edo (dashigeta) differences"
+  },
+  {
+   "id": "T06",
+   "url": "https://www.aisf.or.jp/~jaanus/deta/s/sangawara.htm",
+   "licence": "JAANUS (reference)",
+   "supports": "Sangawara = pan and roll combined in one tile"
+  },
+  {
+   "id": "T07",
+   "url": "https://ja.wikipedia.org/wiki/桟瓦",
+   "licence": "CC BY-SA",
+   "supports": "Sangawara invented 1674 by Nishimura Hanbei (Miidera); lighter than hongawara; commoner tile roofs first restricted, later encouraged"
+  },
+  {
+   "id": "T08",
+   "url": "https://www.aisf.or.jp/~jaanus/deta/u/udatsu.htm",
+   "licence": "JAANUS",
+   "supports": "Udatsu: machiya gable parapet; Edo-period fireproof tiled and plastered form, status symbol"
+  },
+  {
+   "id": "T09",
+   "url": "https://www.aisf.or.jp/~jaanus/deta/m/mushikomado.htm",
+   "licence": "JAANUS",
+   "supports": "Mushiko-mado: plastered slatted window lighting the low upper storey (zushi)"
+  },
+  {
+   "id": "T10",
+   "url": "https://www.aisf.or.jp/~jaanus/deta/h/hongawarabuki.htm",
+   "licence": "JAANUS",
+   "supports": "Hongawara: flat pans + semicylindrical covers; special eave, ridge, verge tiles"
+  },
+  {
+   "id": "T11",
+   "url": "https://ja.wikipedia.org/wiki/木戸番",
+   "licence": "CC BY-SA",
+   "supports": "Kido gates at both ends of each cho in Edo/Kyoto/Osaka; guard hut 6 x 9 shaku, eave 10 shaku; closed about 10 pm, wicket door after"
+  },
+  {
+   "id": "T12",
+   "url": "https://kotobank.jp/word/%E7%81%AB%E3%81%AE%E8%A6%8B%E6%AB%93-120594",
+   "licence": "Kotobank (reference)",
+   "supports": "Jobikeshi towers from 1658, 3 jo (~9 m), plain wood; daimyo and town towers black and lower; Kyoho: one tower per ~10 cho, ladders on jishinban"
+  },
+  {
+   "id": "T13",
+   "url": "http://www.hetima.net/firetower/reference/history/",
+   "licence": "web page",
+   "supports": "Fire-tower history (corroborates T12)"
+  },
+  {
+   "id": "T14",
+   "url": "https://ja.wikipedia.org/wiki/御土居",
+   "licence": "CC BY-SA",
+   "supports": "Kyoto Odoi 1591: 22.5 km, base ~20 m, top ~5 m, height ~5 m, moat 10-15 m, bamboo on top, 10 gates, opened up in the Edo period"
+  },
+  {
+   "id": "T15",
+   "url": "https://ja.wikipedia.org/wiki/箱根関所",
+   "licence": "CC BY-SA",
+   "supports": "Hakone checkpoint c.1619-1869: two gates ~18 m apart, guard houses, palisades, lookout; 'iri-deppo ni de-onna'; 1686 staffing"
+  },
+  {
+   "id": "T16",
+   "url": "https://en.wikipedia.org/wiki/J%C5%8Dkamachi",
+   "licence": "CC BY-SA",
+   "supports": "Castle-town zoning (samurai, chonin, temple districts); walls mostly only around the castle, some sogamae; masugata gates, cranked streets"
+  },
+  {
+   "id": "T17",
+   "url": "https://en.wikipedia.org/wiki/Minka",
+   "licence": "CC BY-SA",
+   "supports": "Doma earth floor, hiroma raised ~50 cm, roof types, irori, status markers (ridge members, udatsu)"
+  },
+  {
+   "id": "T18",
+   "url": "https://en.wikipedia.org/wiki/Shukuba",
+   "licence": "CC BY-SA",
+   "supports": "Post-station facilities: honjin, waki-honjin, hatago, kichin-yado, chaya, toiyaba, kosatsu"
+  },
+  {
+   "id": "T19",
+   "url": "https://ja.wikipedia.org/wiki/本陣",
+   "licence": "CC BY-SA",
+   "supports": "Honjin reserved features: front gate, shikidai genkan, jodan-no-ma; system from 1634-35"
+  },
+  {
+   "id": "T20",
+   "url": "https://ja.wikipedia.org/wiki/伝馬制",
+   "licence": "CC BY-SA",
+   "supports": "Tokaido 100 porters + 100 horses per station (1638); Kiso/Nakasendo 50 + 50"
+  },
+  {
+   "id": "T21",
+   "url": "https://ja.wikipedia.org/wiki/問屋場",
+   "licence": "CC BY-SA",
+   "supports": "Toiyaba = relay office for horses/porters; surviving examples Fuchu, Narai, Samegai"
+  },
+  {
+   "id": "T22",
+   "url": "https://ja.wikipedia.org/wiki/一里塚",
+   "licence": "CC BY-SA",
+   "supports": "Ichirizuka ordered 1604; paired mounds ~5 ken square, 1 jo high, every ri (~3.9 km); trees: enoki 55 %, pine 27 %, cedar 8 %"
+  },
+  {
+   "id": "T23",
+   "url": "https://ja.wikipedia.org/wiki/高札",
+   "licence": "CC BY-SA",
+   "supports": "Kosatsu boards at kosatsuba (Nihonbashi, Sanjo bridge...); 1711 Shotoku boards stayed up to the end of Edo"
+  },
+  {
+   "id": "T24",
+   "url": "https://ja.wikipedia.org/wiki/見附",
+   "licence": "CC BY-SA",
+   "supports": "Mitsuke: guarded gates (Edo castle's 36 mitsuke) and guard posts on roads"
+  },
+  {
+   "id": "T25",
+   "url": "https://ja.wikipedia.org/wiki/杉玉",
+   "licence": "CC BY-SA",
+   "supports": "Sugidama at sake breweries from the early Edo period; green when new, browns with age"
+  },
+  {
+   "id": "T26",
+   "url": "https://ja.wikipedia.org/wiki/曲り家",
+   "licence": "CC BY-SA",
+   "supports": "Magariya: L-plan farmhouse with stable, 18th c., Nanbu (Iwate)"
+  },
+  {
+   "id": "T27",
+   "url": "https://ja.wikipedia.org/wiki/銭湯",
+   "licence": "CC BY-SA",
+   "supports": "First Edo bathhouse 1591; zakuro-guchi; upper-floor rest room for men; 1791 mixed-bathing ban"
+  },
+  {
+   "id": "T28",
+   "url": "https://ja.wikipedia.org/wiki/陣屋",
+   "licence": "CC BY-SA",
+   "supports": "Jinya: single-compound administrative seat (office, residence, storehouses, walls, gate); Takayama Jinya"
+  },
+  {
+   "id": "T29",
+   "url": "https://ja.wikipedia.org/wiki/長屋門",
+   "licence": "CC BY-SA",
+   "supports": "Nagaya-mon: plaster walls allowed for samurai residences, boards for commoners"
+  },
+  {
+   "id": "T30",
+   "url": "https://ja.wikipedia.org/wiki/旅籠",
+   "licence": "CC BY-SA",
+   "supports": "Hatago: two-storey, lattice fronts, 200-300 mon/night, ~3,000 on the Tokaido"
+  },
+  {
+   "id": "T31",
+   "url": "https://ja.wikipedia.org/wiki/町奉行",
+   "licence": "CC BY-SA",
+   "supports": "Edo north/south machi-bugyo; ~250 staff for 500,000 townspeople"
+  },
+  {
+   "id": "T32",
+   "url": "https://en.wikipedia.org/wiki/T%C5%8Dr%C5%8D",
+   "licence": "CC BY-SA",
+   "supports": "Stone lantern parts and types (kasuga, yukimi, ikekomi, oki)"
+  },
+  {
+   "id": "T33",
+   "url": "https://en.wikipedia.org/wiki/Torii",
+   "licence": "CC BY-SA",
+   "supports": "Torii parts; shinmei vs myojin families; vermilion pillars, black only on kasagi/nemaki; stone torii since the 12th c."
+  },
+  {
+   "id": "T34",
+   "url": "https://ja.wikipedia.org/wiki/石垣",
+   "licence": "CC BY-SA",
+   "supports": "Nozura-zumi, uchikomi-hagi, kirikomi-hagi; less stone walling in east Japan"
+  },
+  {
+   "id": "T35",
+   "url": "https://ja.wikipedia.org/wiki/道祖神",
+   "licence": "CC BY-SA",
+   "supports": "Dosojin at village edges, passes, crossroads; most surviving are Edo/Meiji; Nagano densest"
+  },
+  {
+   "id": "T36",
+   "url": "https://ja.wikipedia.org/wiki/墓石",
+   "licence": "CC BY-SA",
+   "supports": "Commoner stone grave markers spread in the Edo period (danka system); family graves from mid-Meiji"
+  },
+  {
+   "id": "T37",
+   "url": "https://ja.wikipedia.org/wiki/登り窯",
+   "licence": "CC BY-SA",
+   "supports": "Multi-chamber climbing kiln standard in the Edo period"
+  },
+  {
+   "id": "T38",
+   "url": "https://ja.wikipedia.org/wiki/水車",
+   "licence": "CC BY-SA",
+   "supports": "Waterwheels widespread in the Edo period for rice polishing/milling"
+  },
+  {
+   "id": "T39",
+   "url": "https://wafujyutaku.jp/japanese-style-room-cat/uchinori",
+   "licence": "web page",
+   "supports": "Uchinori (door-head) height traditionally 5 shaku 7 sun (~1.73 m); 8 shaku (2.42 m) ceilings"
+  },
+  {
+   "id": "T40",
+   "url": "http://amenomichi.com/nihon/kioka13.html",
+   "licence": "web page (Kioka Takao)",
+   "supports": "Stone-weighted board roofs ~3.5 sun (~20 deg); late 17th c. sangawara displaced board roofs in Edo"
+  },
+  {
+   "id": "T41",
+   "url": "https://online.bunka.go.jp/suisensyo/shirakawago/MAINTEXT/outline4-j.html",
+   "licence": "Agency for Cultural Affairs",
+   "supports": "Ordinary thatched minka mostly <= 45 deg; gassho near 60 deg (read via search summary)"
+  },
+  {
+   "id": "T42",
+   "url": "https://ja.wikipedia.org/wiki/勾配",
+   "licence": "CC BY-SA",
+   "supports": "Sun-kobai: rise in sun per 1 shaku run; 3 sun ~17 deg"
+  },
+  {
+   "id": "T43",
+   "url": "https://www.kenohare.com/kyo-machiya-5features/",
+   "licence": "web page",
+   "supports": "Zushi-nikai: street-side upper storey 1.5-1.8 m high; storage/servants; mushiko windows"
+  },
+  {
+   "id": "T44",
+   "url": "https://crd.ndl.go.jp/reference/detail?page=ref_view&id=1000270298",
+   "licence": "NDL Collaborative Reference DB",
+   "supports": "Why the Edo-period zushi-nikai ceiling was low (question record)"
+  },
+  {
+   "id": "T45",
+   "url": "https://www.hachise.jp/kyomachiya/isho/isho_1.html",
+   "licence": "web page (Hachise)",
+   "supports": "Zushi-nikai design notes (Kyoto machiya)"
+  },
+  {
+   "id": "T46",
+   "url": "https://solidwood.jp/iroha/timber/timber-size-name",
+   "licence": "web page",
+   "supports": "Post sizes: 3.5 sun (10.5 cm) and 4 sun (12 cm) standard"
+  },
+  {
+   "id": "T47",
+   "url": "https://sakujigumi.com/sakujiwiki/daikokubashira",
+   "licence": "Kyomachiya Sakujigumi glossary",
+   "supports": "Daikokubashira: larger central post on the toriniwa side"
+  },
+  {
+   "id": "T48",
+   "url": "https://www.touken-world.jp/tips/51221/",
+   "licence": "web page",
+   "supports": "1668 (Kanbun 8) Edo townsmen house rules: no nageshi, sugito, tsuke-shoin, carving, karakami; 3-ken beam-span limit"
+  },
+  {
+   "id": "T49",
+   "url": "https://ja.wikipedia.org/wiki/奢侈禁止令",
+   "licence": "CC BY-SA",
+   "supports": "1683 ban on gold thread, embroidery, so-kanoko for townspeople; 1745 townspeople limited to silk, tsumugi, cotton, hemp; 'shijuhacha hyakunezumi'"
+  },
+  {
+   "id": "T50",
+   "url": "https://en.wikipedia.org/wiki/Obi_(sash)",
+   "licence": "CC BY-SA",
+   "supports": "Women's obi ~25 cm in the 1730s; men's widest ~16 cm in the 1730s; tied at the back by the end of the 17th c."
+  },
+  {
+   "id": "T51",
+   "url": "https://en.wikipedia.org/wiki/Kosode",
+   "licence": "CC BY-SA",
+   "supports": "Kosode: small sleeve openings, sleeves sewn to the body, rounded outer edges"
+  },
+  {
+   "id": "T52",
+   "url": "https://ja.wikipedia.org/wiki/日本の色の一覧",
+   "licence": "CC BY-SA",
+   "supports": "Dictionary hex values for traditional colour names (used only where no photo sample)"
+  },
+  {
+   "id": "T53",
+   "url": "https://japan-heritage.bunka.go.jp/ja/culturalproperties/result/3884/",
+   "licence": "Agency for Cultural Affairs",
+   "supports": "Hakone road paved with stone in 1680, 2 ken (~3.6 m) wide, kerb stones 30-70 cm (read via search summary)"
+  },
+  {
+   "id": "T54",
+   "url": "https://kotobank.jp/word/%E5%A4%A7%E5%85%AB%E8%BB%8A-558136",
+   "licence": "Kotobank",
+   "supports": "Daihachiguruma handcart after the 1657 fire; bed 8 x 2.5 shaku, wheels 3.5 shaku; 1,273 in Edo in 1703"
+  },
+  {
+   "id": "T55",
+   "url": "https://en.wikipedia.org/wiki/Koi",
+   "licence": "CC BY-SA",
+   "supports": "Coloured nishikigoi arose in Niigata in the early 19th c. (so: none in a 1730 world)"
+  },
+  {
+   "id": "T56",
+   "url": "https://ja.wikipedia.org/wiki/長屋",
+   "licence": "CC BY-SA",
+   "supports": "Nagaya form: shared walls, own entrance, kitchen at the door, 1-2 rooms"
+  },
+  {
+   "id": "T57",
+   "url": "https://en.wikipedia.org/wiki/Honjin",
+   "licence": "CC BY-SA",
+   "supports": "Honjin for daimyo/officials only; waki-honjin could take others"
+  },
+  {
+   "id": "T58",
+   "url": "https://www.woodtec.co.jp/lab/flooring/history/02/",
+   "licence": "web page",
+   "supports": "Tatami reached ordinary commoners' homes by the late Edo period"
+  },
+  {
+   "id": "T59",
+   "url": "https://www.gutenberg.org/ebooks/author/2436",
+   "licence": "Public domain (1886 book)",
+   "supports": "E. S. Morse, 'Japanese Homes and Their Surroundings': drawings of ridges, gables, kura, inns (images c26-c28)"
+  },
+  {
+   "id": "T60",
+   "url": "spikes/A_arms/katana_v2/DOSSIER.md",
+   "licence": "internal",
+   "supports": "Research process template; iron colour (76,72,69); photo-sampling lessons"
+  },
+  {
+   "id": "T61",
+   "url": "spikes/B_building/REPORT.md",
+   "licence": "internal",
+   "supports": "Engine facts: LOD set, doors (translation), roadway, fire materials, 0.8/1.0 m doors, 38-40 deg stair, house_1w01 face counts 2019/777/262"
+  },
+  {
+   "id": "T62",
+   "url": "spikes/W_wearables/REPORT.md",
+   "licence": "internal",
+   "supports": "DayzTemporarySkeleton, worn/ground LOD sets, long robe fails in motion, hakama per-leg method, kimono tri counts"
+  },
+  {
+   "id": "T63",
+   "url": "spikes/F_flora/REPORT.md",
+   "licence": "internal",
+   "supports": "TreeAdv rvmats copy vanilla blocks, autocenter=0, sakura LOD1 7.1k tris heavy"
+  }
+ ]
+}

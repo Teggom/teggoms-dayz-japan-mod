@@ -1,0 +1,112 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "jp/playbook/spec_schema.json",
+ "title": "JP asset spec (generalised from katana_v2/katana_spec.json)",
+ "description": "The single source of every dimension, material and colour of one asset. The generator reads only this file. Every leaf value is an Entry: value + source, or assumed + reason. Units go in the key suffix (_m, _cm, _deg, _ken, _sun) as in the katana spec.",
+ "type": "object",
+ "required": ["asset", "class", "category", "importance", "era", "tiers", "how_to_read", "primary_refs", "frame", "dimensions", "materials", "lods", "checks"],
+ "properties": {
+  "asset": {"type": "string", "description": "File stem, e.g. jp_machiya_03 or jp_f_tansu_01"},
+  "class": {"type": "string", "description": "Config class, e.g. Land_JP_Machiya_03, JP_Kasa; '' for proxies and parts"},
+  "category": {"enum": ["building", "part", "material", "furniture", "site", "wearable", "weapon", "flora", "religious", "vehicle"]},
+  "importance": {"enum": ["hero", "standard", "filler"]},
+  "era": {"type": "string", "description": "Date or range of the form, e.g. 'c.1730; form attested 1690-1760'. Must overlap 1680-1750"},
+  "tiers": {"type": "array", "items": {"enum": [1, 2, 3]}, "minItems": 1},
+  "region": {"enum": ["kamigata", "edo", "rural", "all"]},
+  "status_overlay": {"enum": ["commoner", "samurai", "official", "religious", "none"], "description": "PLAYBOOK §2.2"},
+  "how_to_read": {"type": "string"},
+  "primary_refs": {"type": "object", "additionalProperties": {"type": "string"}, "description": "Aspect -> ref id and one-line why"},
+  "frame": {
+   "type": "object",
+   "description": "Engine constraints (not research): origin, axes, autocenter, parent class, grip or IK frame, grid anchor",
+   "additionalProperties": {"$ref": "#/$defs/entry"}
+  },
+  "dimensions": {"$ref": "#/$defs/section"},
+  "construction": {"$ref": "#/$defs/section"},
+  "materials": {
+   "type": "object",
+   "description": "Surface name -> library material and palette id",
+   "additionalProperties": {
+    "type": "object",
+    "required": ["path", "palette_id"],
+    "properties": {
+     "path": {"type": "string", "pattern": "^(JP\\\\common\\\\materials\\\\|dz\\\\)", "description": "rvmat path by reference; JP\\common\\materials\\... or an allowed vanilla path"},
+     "palette_id": {"type": "string"},
+     "wear": {"enum": ["w0", "w1", "w2"]},
+     "fire": {"type": "string", "description": "vanilla penetration rvmat name"},
+     "roadway": {"type": "string"}
+    }
+   }
+  },
+  "connectors": {
+   "type": "array",
+   "description": "Parts and buildings: snap points (PLAYBOOK §10.2)",
+   "items": {
+    "type": "object",
+    "required": ["type", "pos_m"],
+    "properties": {
+     "type": {"enum": ["post", "sill", "head", "eave", "ridge", "floor", "stair_foot", "stair_head", "proxy_base"]},
+     "pos_m": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+     "note": {"type": "string"}
+    }
+   }
+  },
+  "rooms": {
+   "type": "array",
+   "description": "Buildings only",
+   "items": {
+    "type": "object",
+    "required": ["id", "tag", "floor", "rect_ken", "level"],
+    "properties": {
+     "id": {"type": "string"},
+     "tag": {"type": "string", "description": "PLAYBOOK §10.3, with an optional :subtag"},
+     "floor": {"enum": ["earth", "boards", "tatami", "stone", "gravel"]},
+     "rect_ken": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+     "level": {"type": "string"}
+    }
+   }
+  },
+  "deviations": {"type": "array", "items": {"type": "string", "pattern": "^D([1-9]|10)\\b"}, "description": "Gameplay deviations used, with a reason each"},
+  "lods": {
+   "type": "object",
+   "required": ["set", "faces"],
+   "properties": {
+    "set": {"type": "array", "items": {"type": "string"}},
+    "faces": {"type": "object", "additionalProperties": {"type": "integer"}},
+    "budget_class": {"type": "string"}
+   }
+  },
+  "colours_rgb": {"$ref": "#/$defs/section"},
+  "checks": {
+   "type": "object",
+   "description": "Which of C1-C9 apply and their thresholds; results go to checks.json",
+   "additionalProperties": {"type": ["boolean", "number", "string"]}
+  },
+  "build": {"type": "object", "description": "Generator script(s), outputs, rebuild command"}
+ },
+ "$defs": {
+  "entry": {
+   "type": "object",
+   "properties": {
+    "value": {},
+    "source": {"type": "string"},
+    "ref": {"type": "array", "items": {"type": "string"}},
+    "assumed": {"type": "boolean"},
+    "reason": {"type": "string"},
+    "tolerance": {"type": ["number", "string"]}
+   },
+   "required": ["value"],
+   "anyOf": [
+    {"required": ["source"]},
+    {"required": ["assumed", "reason"], "properties": {"assumed": {"const": true}}}
+   ]
+  },
+  "section": {
+   "type": "object",
+   "description": "Nested groups of entries",
+   "additionalProperties": {
+    "anyOf": [{"$ref": "#/$defs/entry"}, {"$ref": "#/$defs/section"}, {"type": "string"}]
+   }
+  }
+ }
+}
