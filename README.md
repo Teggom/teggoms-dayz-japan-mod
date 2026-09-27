@@ -67,6 +67,7 @@ Each agent writes only its own files. T's build scripts merge everything they fi
 |---|---|---|
 | `test/placements/<X>.csv` | `p3d,x,z,yaw_deg,y_offset`: `p3d` P:-relative (`JP\plants\...\jp_x.p3d`); y = ground + y_offset; yaw clockwise from north | Objects baked into the **terrain** (.wrp). Needed for anything the engine matches by p3d name: cuttable trees and bushes, map buildings |
 | `test/spawns/<X>.json` | the vanilla object-spawner format `{"Objects":[{"name":"Class","pos":[x,y,z],"ypr":[yaw,0,0],"scale":1}]}` | Objects spawned at runtime by `cfggameplay.json` `objectSpawnersArr` |
+| `test/spawns/<X>_creatures.txt` | `Class x z yaw` per line, `#` comments | Infected or animals spawned standing by `init.c` at ground height, as weapon dummies. There is no navmesh, so they won't move |
 | `test/items/<X>.txt` | one class per line, optional count (`JP_Katana 2`), `#` comments | Items laid out on the item grid at spawn |
 | `test/types/<X>.xml` | bare `<type>` elements | Merged into the mission `types.xml` |
 | `test/ce/<X>_mapgroupproto.xml`, `test/ce/<X>_mapgrouppos.xml` | bare `<group>` elements | Loot points and building instances |
