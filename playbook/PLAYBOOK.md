@@ -1,5 +1,19 @@
 # JP Playbook v1: the art and rules bible
 
+> **Stephen's G0 decisions (2026-09-27):**
+> 1. Era anchor 1730, window 1680-1750: YES.
+> 2. One 1.82 m grid everywhere: YES.
+> 3. Doors 2.0 m high, >=0.80 m inside and >=1.0 m at entrances, ceilings 2.5-2.7 m: YES.
+> 4. Low upper floors: DEFAULT sealed (no access). A walkable crouch attic is only for SOME rich buildings or shrines,
+>    and only if it holds loot; not a priority.
+> 5. Stairs <=38 deg etc.: pending the in-game stair check.
+> 6. Clothing is ONE set shared by players and infected (zombies wear the same outfits, attached, not flowy).
+>    Period gear for every walk of life: worker, farmer, guard, samurai, leader, noble, peasant, traveller. The v1
+>    kimono must be redone (chest seam, arms too baggy, legs clip when walking). Low priority at the start.
+> 7. Shared material library jp_common.pbo with three wear levels, B's textures migrated: YES.
+> 8. First playable slice: YES, but ALL development happens on the 2 x 2 km test island for now.
+
+
 **Status:** v1, waiting for Stephen's approval (gate G0). Written 2026-09-27. No models were built for it.
 
 **Who must follow it:** every agent after this point: researchers (A), material and part builders (B), architects
