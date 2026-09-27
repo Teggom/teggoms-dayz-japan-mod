@@ -195,7 +195,13 @@ def config_cpp(names):
     for cls, name, x, z, typ in names:
         nm.append("\t\t\tclass %s\n\t\t\t{\n\t\t\t\tname=\"%s\";\n\t\t\t\tposition[]={%.1f,%.1f};\n\t\t\t\ttype=\"%s\";\n\t\t\t};" % (cls, name, x, z, typ))
     mats = "\n".join("\t\t\tmaterial%d=\"%s\";" % (i, s[1]) for i, s in enumerate(layers.SURFACES))
-    return CONFIG_TEMPLATE.replace("@NAMES@", "\n".join(nm)).replace("@MATERIALS@", mats)
+    own_nm = os.path.join(SRC, "navmesh", WORLD_NAME + ".nm")
+    if os.path.isfile(own_nm):
+        navmesh = "\\JP\\worlds\\testisland\\navmesh\\%s.nm" % WORLD_NAME
+    else:
+        navmesh = "\\DZ\\worlds\\enoch\\navmesh\\navmesh.nm"   # stopgap: a missing navmesh is fatal
+    return (CONFIG_TEMPLATE.replace("@NAMES@", "\n".join(nm)).replace("@MATERIALS@", mats)
+            .replace("@NAVMESH@", navmesh))
 
 
 CONFIG_TEMPLATE = r"""// JapanTestIsland - 2048 m test world for the feudal Japan project (japan_dev/, spike T).
@@ -232,11 +238,13 @@ class CfgWorlds
 		worldName="JP\worlds\testisland\world\japantestisland.wrp";
 		ceFiles="JP\worlds\testisland\ce";
 		cutscenes[]={};
-		// no navmesh file yet: the game copes without one (AI stands still). GenParams are the vanilla ones,
-		// ready for NavMeshGenerator - see spikes/T_terrain/REPORT.md for the procedure.
+		// A missing navmesh is FATAL ("Unable to load navmesh", server dies - Stephen's first boot, 2026-09-27).
+		// Until NavMeshGenerator has produced our own .nm, build_world.py points navmeshName at vanilla Livonia's
+		// navmesh as a stopgap so the world boots; AI then paths on Livonia's mesh (wrong, irrelevant for dummies).
+		// GenParams are the vanilla ones, ready for NavMeshGenerator - see spikes/T_terrain/REPORT.md.
 		class Navmesh
 		{
-			navmeshName="\JP\worlds\testisland\navmesh\japantestisland.nm";
+			navmeshName="@NAVMESH@";
 			filterIsolatedIslandsOnLoad=1;
 			visualiseOffset=0;
 			class GenParams

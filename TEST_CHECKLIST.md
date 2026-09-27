@@ -3,8 +3,10 @@
 This is a **mechanics** test. Several looks are already known to be wrong: the house style, the kimono cut, and the
 katana tip (being rebuilt). Those get fixed through the playbook process. Here, just tell me whether things *work*.
 
-**Start:** `start-japan-test-island.bat` in the server folder. It starts the test server, waits 30 s, then opens your
-game with `@Japan`. The test server runs on its own port, so the live server is unaffected.
+**Start:**
+1. Run `start-japan-test-island.bat` in the server folder. It starts only the test server, on its own port, so the
+   live server is unaffected.
+2. When the server is up, run `start-japan-test-client.bat` to join.
 
 **If it won't load, kicks you, or something is invisible:** just tell me. I read the server and client logs myself,
 so you don't need to dig.
@@ -32,8 +34,8 @@ so you don't need to dig.
 
 ## 3. Weapons (6 min)
 
-**The range** is ~40 m south: hay bales, 2 standing infected and a deer. They don't move, because there's no navmesh
-yet.
+**The range** is ~40 m south: hay bales, 2 standing infected and a deer. There's no navmesh of our own yet; the island
+borrows Livonia's as a stopgap, so they may stand still or wander oddly.
 
 - **Katana vs the vanilla Sword:** light attack, heavy attack, kill an infected. Are the hands on the handle?
 - **Yari vs SpearStone:** the same test.

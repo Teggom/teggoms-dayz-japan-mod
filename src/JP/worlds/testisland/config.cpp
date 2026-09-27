@@ -32,11 +32,13 @@ class CfgWorlds
 		worldName="JP\worlds\testisland\world\japantestisland.wrp";
 		ceFiles="JP\worlds\testisland\ce";
 		cutscenes[]={};
-		// no navmesh file yet: the game copes without one (AI stands still). GenParams are the vanilla ones,
-		// ready for NavMeshGenerator - see spikes/T_terrain/REPORT.md for the procedure.
+		// A missing navmesh is FATAL ("Unable to load navmesh", server dies - Stephen's first boot, 2026-09-27).
+		// Until NavMeshGenerator has produced our own .nm, build_world.py points navmeshName at vanilla Livonia's
+		// navmesh as a stopgap so the world boots; AI then paths on Livonia's mesh (wrong, irrelevant for dummies).
+		// GenParams are the vanilla ones, ready for NavMeshGenerator - see spikes/T_terrain/REPORT.md.
 		class Navmesh
 		{
-			navmeshName="\JP\worlds\testisland\navmesh\japantestisland.nm";
+			navmeshName="\DZ\worlds\enoch\navmesh\navmesh.nm";
 			filterIsolatedIslandsOnLoad=1;
 			visualiseOffset=0;
 			class GenParams
