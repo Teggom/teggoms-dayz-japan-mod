@@ -705,5 +705,15 @@ def write_world_ce():
         f.write(b'<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>\n<env>\n\t<territories>\n\t</territories>\n</env>\n')
 
 
+def run_placecheck():
+    """Float/sink check of everything baked or spawned on the island (japan_dev/tools/placecheck, cached)."""
+    dev = os.path.dirname(os.path.dirname(HERE))
+    r = subprocess.run([sys.executable, os.path.join(dev, "tools", "placecheck", "check.py"), "island"])
+    return r.returncode
+
+
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1:]))
+    rc = main(sys.argv[1:])
+    if rc in (0, None) and "--previews" not in sys.argv:
+        run_placecheck()
+    sys.exit(rc)

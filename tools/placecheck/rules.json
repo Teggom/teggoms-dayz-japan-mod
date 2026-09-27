@@ -17,7 +17,8 @@
    "base_radius": 0.75,
    "sectors": 12,
    "min_sink": 0.02,
-   "max_embed": 0.5,
+   "max_embed": 1.3,
+"max_embed_note": "1.3 m (lead, 2026-09-27): vanilla tree trunks run below their origin; on slopes the uphill side of a trunk sinks and that is invisible. Floating is what Stephen cares about.",
    "fixable": true
   },
   "rock": {

@@ -61,6 +61,20 @@ class Placer:
     def ground(self, x, z):
         return terrain.bilinear(self.h, x, z)
 
+    def ground_min(self, x, z, r, n=12):
+        """Lowest terrain height on a ring of radius r around (x, z) (and the centre). Used to seat plants and rocks
+        on slopes: placing by the centre height left the downhill side floating (placecheck, 2026-09-27)."""
+        a = np.linspace(0, 2 * np.pi, n, endpoint=False)
+        return min(self.ground(x, z), min(self.ground(x + r * np.cos(t), z + r * np.sin(t)) for t in a))
+
+    def seat_plant(self, x, z, r, sink=0.06, max_embed=0.45):
+        """y_offset that sinks a plant's base `sink` below the lowest ground within r, or None if the slope is too
+        steep to do that without burying the stem more than max_embed (placecheck rule 'plant')."""
+        drop = self.ground(x, z) - self.ground_min(x, z, r)
+        if drop + sink > max_embed:
+            return None
+        return -drop - sink
+
     def place(self, p3d, x, z, yaw, y_offset=0.0, scale=1.0, pitch=0.0, roll=0.0, kind="object", y_abs=None):
         bc, how = self.bc(p3d)
         if bc is None:
@@ -183,10 +197,18 @@ def place_vegetation(pl, T, F, rng, pads, spacing=10.0):
                     p3d = pick(rng, SPRUCE)
                 else:
                     p3d = pick(rng, BROADLEAF)
-                pl.place(p3d, x, z, rng.uniform(0, 360), scale=rng.uniform(0.82, 1.08), kind="tree")
+                s = rng.uniform(0.82, 1.08)
+                yo = pl.seat_plant(x, z, 0.6 * s)
+                if yo is None:
+                    continue                           # too steep for a trunk to sit right
+                pl.place(p3d, x, z, rng.uniform(0, 360), y_offset=yo, scale=s, kind="tree")
                 n_tree += 1
             elif r < f * 0.92 + 0.10 * (1 - abs(f - 0.4) * 1.5):
-                pl.place(pick(rng, BUSHES), x, z, rng.uniform(0, 360), scale=rng.uniform(0.8, 1.15), kind="bush")
+                s = rng.uniform(0.8, 1.15)
+                yo = pl.seat_plant(x, z, 1.2 * s, max_embed=0.6)   # bushes spread wide at the base
+                if yo is None:
+                    continue
+                pl.place(pick(rng, BUSHES), x, z, rng.uniform(0, 360), y_offset=yo, scale=s, kind="bush")
                 n_bush += 1
     return n_tree, n_bush
 
@@ -206,7 +228,11 @@ def place_coastal_pines(pl, T, rng):
                     and T["road_d"][j, i] > 12 and rng.random() < 0.55:
                 p3d = rng.choice([r"dz\plants\tree\t_pinussylvestris_2s.p3d", r"dz\plants\tree\t_pinussylvestris_3s.p3d",
                                   r"dz\plants\tree\t_pinussylvestris_2sb.p3d"])
-                pl.place(str(p3d), x, z, rng.uniform(0, 360), scale=rng.uniform(0.8, 1.05), kind="tree")
+                s = rng.uniform(0.8, 1.05)
+                yo = pl.seat_plant(x, z, 0.6 * s)
+                if yo is None:
+                    continue
+                pl.place(str(p3d), x, z, rng.uniform(0, 360), y_offset=yo, scale=s, kind="tree")
                 n += 1
     return n
 
@@ -237,11 +263,13 @@ def _place_rock(pl, p3d, x, z, rng, scale=None):
     info = odol_info(os.path.join(P, p3d))
     s = scale if scale else rng.uniform(0.5, 0.9)
     height = (info["bmax"][1] - info["bmin"][1]) * s if info else 3.0
-    # sink so the rock sits in the slope rather than on it: origin = ground - 25..40 % of its height,
-    # measured from the bounding-box bottom
+    # sink so the rock sits in the slope rather than on it: its bottom goes 15..30 % of its height below the LOWEST
+    # ground under its footprint (the centre height left rocks floating up to 4.8 m downhill - placecheck 2026-09-27)
     bottom = (info["bc"][1] + info["bmin"][1]) * s if info else 0.0
-    sink = rng.uniform(0.25, 0.4) * height
-    pl.place(p3d, x, z, rng.uniform(0, 360), y_offset=-bottom - sink, scale=s,
+    radius = 0.6 * max(info["bmax"][0] - info["bmin"][0], info["bmax"][2] - info["bmin"][2]) * s if info else 1.5
+    drop = pl.ground(x, z) - pl.ground_min(x, z, radius, n=16)
+    sink = rng.uniform(0.2, 0.35) * height
+    pl.place(p3d, x, z, rng.uniform(0, 360), y_offset=-bottom - drop - sink, scale=s,
              pitch=rng.uniform(-8, 8), roll=rng.uniform(-8, 8), kind="rock")
 
 
