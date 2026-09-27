@@ -1,0 +1,11 @@
+# spike A (arms): the new weapons, their ammo, and the vanilla parents to compare against.
+JP_Katana
+JP_Yari
+JP_Yumi          # the yumi on the vanilla BOW animation set (RecurveBow profile); ya nocked by script, no draw anim
+JP_Yumi_XB       # the yumi on the vanilla CROSSBOW animation set: the fallback that is known to load/fire
+JP_Ammo_Ya 3     # ya: arrow piles (crossbow-bolt pattern), stack of 10
+Sword            # vanilla parent of JP_Katana
+SpearStone       # vanilla Spear is scope=0; SpearStone is its spawnable child (same profile)
+RecurveBow       # vanilla dormant bow: can be held/raised, has no weapon FSM and no arrow class exists
+Crossbow         # vanilla working crossbow, for comparison with JP_Yumi_XB
+Ammo_HuntingBolt 2

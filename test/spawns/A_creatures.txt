@@ -1,0 +1,4 @@
+# spike A (arms): damage dummies at the weapon range (no navmesh: they stand still). Class x z yaw
+ZmbM_CitizenASkinny_Blue  1010.0 950.0   0    # melee dummy for katana / yari, nearest the item rows
+ZmbF_CitizenANormal_Beige 1022.0 938.0   0    # archery dummy at ~17 m from the shooting line (z 955)
+Animal_CervusElaphus      1037.0 942.0  90    # red deer broadside at ~15 m: arrows should stick in it
