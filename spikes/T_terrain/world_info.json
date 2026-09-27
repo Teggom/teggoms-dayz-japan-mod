@@ -1,0 +1,166 @@
+{
+ "world": 2048,
+ "yard_centre": [
+  1024,
+  1024
+ ],
+ "yard_half": 100,
+ "yard_height": 25.0,
+ "spawn": [
+  1024.0,
+  985.0
+ ],
+ "house": {
+  "class": "Land_House_1W01",
+  "p3d": "dz\\structures\\residential\\houses\\house_1w01.p3d",
+  "pos": [
+   1235.928174339711,
+   19.2098867893219,
+   917.5051255899965
+  ],
+  "yaw": 200.0
+ },
+ "pond": {
+  "pos": [
+   800.0,
+   25.1,
+   905.0
+  ],
+  "radius": 16.0
+ },
+ "canal": [
+  [
+   1616.0,
+   900.0
+  ],
+  [
+   1446.0,
+   903.0
+  ]
+ ],
+ "road_start": [
+  1100.0,
+  1100.0
+ ],
+ "road_end": [
+  1126.9359617227676,
+  1286.0087570870794
+ ],
+ "summit": [
+  804.0,
+  177.06993103027344,
+  1492.0
+ ],
+ "placed": [
+  {
+   "p3d": "dz\\structures\\residential\\houses\\house_1w01.p3d",
+   "pos": [
+    1235.928174339711,
+    19.2098867893219,
+    917.5051255899965
+   ],
+   "yaw": 200.0,
+   "src": "house"
+  },
+  {
+   "p3d": "JP\\structures\\machiya\\jp_machiya_01.p3d",
+   "pos": [
+    1024.0,
+    25.0,
+    1045.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:B.csv"
+  },
+  {
+   "p3d": "JP\\plants\\tree\\jp_sakura_01.p3d",
+   "pos": [
+    985.0,
+    24.95,
+    1010.0
+   ],
+   "yaw": 20.0,
+   "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\plants\\tree\\jp_sakura_02.p3d",
+   "pos": [
+    1063.0,
+    24.95,
+    1010.0
+   ],
+   "yaw": 200.0,
+   "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\plants\\bamboo\\jp_bamboo_clump_01.p3d",
+   "pos": [
+    1098.3,
+    24.95,
+    958.9
+   ],
+   "yaw": 5.0,
+   "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\plants\\bamboo\\jp_bamboo_clump_01.p3d",
+   "pos": [
+    1089.6,
+    24.950001907348632,
+    965.6
+   ],
+   "yaw": 348.0,
+   "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\plants\\bamboo\\jp_bamboo_clump_01.p3d",
+   "pos": [
+    1100.7,
+    24.95,
+    981.0
+   ],
+   "yaw": 58.0,
+   "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\plants\\bamboo\\jp_bamboo_clump_01.p3d",
+   "pos": [
+    1088.2,
+    24.95,
+    975.2
+   ],
+   "yaw": 349.0,
+   "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\plants\\bamboo\\jp_bamboo_clump_01.p3d",
+   "pos": [
+    1106.0,
+    24.95,
+    969.4
+   ],
+   "yaw": 274.0,
+   "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\plants\\bamboo\\jp_bamboo_clump_01.p3d",
+   "pos": [
+    1095.9,
+    24.95,
+    991.1
+   ],
+   "yaw": 136.0,
+   "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\plants\\bamboo\\jp_bamboo_clump_01.p3d",
+   "pos": [
+    1106.3,
+    24.95,
+    987.3
+   ],
+   "yaw": 328.0,
+   "src": "placement:F.csv"
+  }
+ ]
+}
