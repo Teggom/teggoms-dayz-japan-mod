@@ -183,15 +183,19 @@ def build_mapgroups(info):
 
 def build_areaflags():
     """2048 x 2048 cells of 1 m (512 x 512 crashed the server: INT_DIVIDE_BY_ZERO in CE InitOffline, 2026-09-27;
-    every working map on this server uses 2048 or 4096 cells) (header: w, h, world x, world z, usage bits = 32, 0; then a uint32 usage plane and a
-    uint8 value plane, row 0 = south - the Chernarus layout). Every cell: usage Town + Village, value Tier1 + Tier2."""
+    every working map on this server uses 2048 or 4096 cells) (5-int header, uint32 usage plane, int 8, uint8 value plane, row 0 = south - the Chernarus layout). Every cell: usage Town + Village, value Tier1 + Tier2."""
     usages = re.findall(r'<usage name="([^"]+)"', rd(os.path.join(VANILLA, "cfglimitsdefinition.xml")))
     values = re.findall(r'<value name="([^"]+)"', rd(os.path.join(VANILLA, "cfglimitsdefinition.xml")))
     ubits = (1 << usages.index("Town")) | (1 << usages.index("Village"))
     vbits = (1 << values.index("Tier1")) | (1 << values.index("Tier2"))
     n = 2048
-    raw = struct.pack("<6i", n, n, WORLD, WORLD, 32, 0)
-    raw += np.full(n * n, ubits, "<u4").tobytes() + np.full(n * n, vbits, np.uint8).tobytes()
+    # REAL layout (derived 2026-09-27 from the server's own code + every working map's file size): 5 ints
+    # (w, h, world x, world z, usage bits), the usage plane, ONE int (value bits), the value plane. The first
+    # version wrote a 6th header int instead; the server then read the last usage cell (0x180 = 384) as the value
+    # bit depth, 32 / 384 = 0, and crashed with INT_DIVIDE_BY_ZERO in CE InitOffline.
+    raw = struct.pack("<5i", n, n, WORLD, WORLD, 32)
+    raw += np.full(n * n, ubits, "<u4").tobytes()
+    raw += struct.pack("<i", 8) + np.full(n * n, vbits, np.uint8).tobytes()
     with open(os.path.join(MISSION, "areaflags.map"), "wb") as f:
         f.write(raw)
     log("areaflags.map: %dx%d cells of %.0f m, usage 0x%x (Town|Village), value 0x%x (Tier1|Tier2), %d bytes"
