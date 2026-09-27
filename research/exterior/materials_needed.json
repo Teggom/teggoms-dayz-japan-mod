@@ -1,0 +1,591 @@
+{
+ "version": 1,
+ "date": "2026-09-27",
+ "author": "research agent A-EXT",
+ "note": "Full task list for the materials agent: one canonical set per material, 3 wear levels each (_w0 clean, _w1 normal, _w2 heavy), path JP\\common\\materials\\<family>\\ (PLAYBOOK §9). Weathering W1-W8 per PLAYBOOK §6.5. Resolution 1024^2 tileable; px_per_m per PLAYBOOK §9.",
+ "counts": {
+  "materials": 22,
+  "texture_sets": 66
+ },
+ "materials": [
+  {
+   "id": "jp_m_wood_weathered",
+   "family": "wood",
+   "palette_id": "timber_weathered",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "along member",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "warm brown, crisp grain",
+    "_w1": "sun faces silvering (W3), grime band (W1)",
+    "_w2": "grey toward stone_lantern (max 0.35), splits, heavy grime"
+   },
+   "note": "the default exterior timber",
+   "used_by": [
+    "jp_p_found_dodai_stones",
+    "jp_p_found_step",
+    "jp_p_found_yukashita",
+    "jp_p_frame_beam",
+    "jp_p_frame_post",
+    "jp_p_open_amado",
+    "jp_p_open_itado",
+    "jp_p_open_kura_door",
+    "jp_p_open_renji",
+    "jp_p_open_shoji_ext",
+    "jp_p_open_suriagedo",
+    "jp_p_open_tobukuro",
+    "jp_p_open_upper_rail",
+    "jp_p_porch_engawa",
+    "jp_p_porch_nureen",
+    "jp_p_roof_eave_soffit",
+    "jp_p_roof_hafu",
+    "jp_p_roof_hisashi",
+    "jp_p_roof_ishioki_battens",
+    "jp_p_roof_kemuridashi",
+    "jp_p_roof_thatch_ridge",
+    "jp_p_wall_board_vertical",
+    "jp_p_wall_gable",
+    "jp_p_wall_koshiita",
+    "jp_p_wall_shinkabe"
+   ]
+  },
+  {
+   "id": "jp_m_wood_street_dark",
+   "family": "wood",
+   "palette_id": "timber_street_dark",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "along member",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "oiled dark brown",
+    "_w1": "edge wear on lattice corners (W7)",
+    "_w2": "dusty, raised grain, pale edge wear"
+   },
+   "note": "town fronts, lattice, shop shutters",
+   "used_by": [
+    "jp_p_frame_dashigeta",
+    "jp_p_frame_post",
+    "jp_p_open_battari",
+    "jp_p_open_itado",
+    "jp_p_open_koshi",
+    "jp_p_open_koshido",
+    "jp_p_open_shitomido",
+    "jp_p_open_suriagedo",
+    "jp_p_wall_board_vertical",
+    "jp_p_wall_shitami"
+   ]
+  },
+  {
+   "id": "jp_m_wood_bengara",
+   "family": "paint",
+   "palette_id": "bengara_lattice",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "along member",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "even red-brown",
+    "_w1": "worn to wood on edges",
+    "_w2": "patchy, wood showing"
+   },
+   "note": "RESTRICTED: Kamigata T2-3 lattice, sparingly",
+   "used_by": [
+    "jp_p_open_koshi"
+   ]
+  },
+  {
+   "id": "jp_m_wood_kuro",
+   "family": "wood",
+   "palette_id": "kuro_board",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "along member",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "matte black",
+    "_w1": "grey bloom",
+    "_w2": "grey, wood showing on edges"
+   },
+   "note": "RESTRICTED: kura lower boards only in this list",
+   "used_by": [
+    "jp_p_wall_shitami"
+   ]
+  },
+  {
+   "id": "jp_m_wood_sooted",
+   "family": "wood",
+   "palette_id": "timber_sooted",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "along member",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "dark brown-black, albedo >=30",
+    "_w1": "soot streaks",
+    "_w2": "crusted soot"
+   },
+   "note": "inside smoke vents; exterior soot halo = weathering",
+   "used_by": [
+    "jp_p_roof_kemuridashi"
+   ]
+  },
+  {
+   "id": "jp_m_wall_arakabe",
+   "family": "wall",
+   "palette_id": "earth_wall_aged",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "none; straw flecks",
+   "penetration_rvmat": "dirt",
+   "wear": {
+    "_w0": "fresh clay, straw visible",
+    "_w1": "rain streaks (W2), splash band (W1)",
+    "_w2": "eroded, straw and lath showing in patches"
+   },
+   "note": "T1 exterior earth; NEW palette entry requested",
+   "used_by": [
+    "jp_p_wall_gable",
+    "jp_p_wall_shinkabe"
+   ]
+  },
+  {
+   "id": "jp_m_wall_nakanuri",
+   "family": "wall",
+   "palette_id": "earth_wall_aged",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "none; fine trowel marks",
+   "penetration_rvmat": "dirt",
+   "wear": {
+    "_w0": "smooth clay",
+    "_w1": "streaks, splash",
+    "_w2": "cracks, patched areas"
+   },
+   "note": "T2 exterior earth; fallback palette earth_wall_ochre if the new entry is refused",
+   "used_by": [
+    "jp_p_wall_shinkabe"
+   ]
+  },
+  {
+   "id": "jp_m_wall_shikkui",
+   "family": "wall",
+   "palette_id": "shikkui_white",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "none; trowel",
+   "penetration_rvmat": "dirt",
+   "wear": {
+    "_w0": "clean lime, mean <=192 (never 217)",
+    "_w1": "default on houses: grey streaks under eaves and sills",
+    "_w2": "toward earth_wall_ochre (max 0.25), grime band, hairline cracks"
+   },
+   "note": "T3 upper storeys, kura, udatsu, mushiko, namako joints",
+   "used_by": [
+    "jp_p_open_kura_door",
+    "jp_p_open_kura_window",
+    "jp_p_open_mushiko",
+    "jp_p_roof_kawara_ridge",
+    "jp_p_roof_kura_eave",
+    "jp_p_roof_sangawara_field",
+    "jp_p_wall_gable",
+    "jp_p_wall_namako",
+    "jp_p_wall_okabe",
+    "jp_p_wall_shinkabe",
+    "jp_p_wall_udatsu"
+   ]
+  },
+  {
+   "id": "jp_m_wall_namako_tile",
+   "family": "wall",
+   "palette_id": "namako_tile",
+   "palette_status": "existing",
+   "tile_size_m": 0.91,
+   "px_per_m": 512,
+   "grain": "none",
+   "penetration_rvmat": "pottery",
+   "wear": {
+    "_w0": "dark even tile",
+    "_w1": "lime wash drips",
+    "_w2": "chipped tiles, stained joints"
+   },
+   "note": "texture = tiles only; joints are shikkui geometry",
+   "used_by": [
+    "jp_p_wall_namako"
+   ]
+  },
+  {
+   "id": "jp_m_roof_kawara",
+   "family": "roof",
+   "palette_id": "kawara_ibushi",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 256,
+   "grain": "per tile column",
+   "penetration_rvmat": "pottery",
+   "wear": {
+    "_w0": "silver-grey ibushi",
+    "_w1": "darker, per-tile tint (W8)",
+    "_w2": "toward kawara_weathered, lichen on north (W6)"
+   },
+   "note": "all tile parts",
+   "used_by": [
+    "jp_p_open_kura_door",
+    "jp_p_open_kura_window",
+    "jp_p_roof_hisashi",
+    "jp_p_roof_hongawara",
+    "jp_p_roof_kawara_ridge",
+    "jp_p_roof_kura_eave",
+    "jp_p_roof_onigawara",
+    "jp_p_roof_sangawara_eave",
+    "jp_p_roof_sangawara_field",
+    "jp_p_roof_sangawara_verge",
+    "jp_p_roof_thatch_ridge",
+    "jp_p_wall_udatsu"
+   ]
+  },
+  {
+   "id": "jp_m_roof_thatch",
+   "family": "roof",
+   "palette_id": "thatch_weathered",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 256,
+   "grain": "stalks down-slope",
+   "penetration_rvmat": "hay",
+   "wear": {
+    "_w0": "thatch_new golden (recent re-thatch, 1 in 10)",
+    "_w1": "grey-brown",
+    "_w2": "dark, moss on north slopes (W6), sagging patches"
+   },
+   "note": "surface",
+   "used_by": [
+    "jp_p_roof_kemuridashi",
+    "jp_p_roof_thatch_body",
+    "jp_p_roof_thatch_ridge"
+   ]
+  },
+  {
+   "id": "jp_m_roof_thatch_cut",
+   "family": "roof",
+   "palette_id": "thatch_weathered",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "stalk ends facing out",
+   "penetration_rvmat": "hay",
+   "wear": {
+    "_w0": "fresh cut, light",
+    "_w1": "2-3 light/dark layer bands (Morse)",
+    "_w2": "ragged, dark"
+   },
+   "note": "eave cut face",
+   "used_by": [
+    "jp_p_roof_thatch_body"
+   ]
+  },
+  {
+   "id": "jp_m_roof_kureita",
+   "family": "roof",
+   "palette_id": "roof_board_silver",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "tile_size_m": 2.0,
+   "px_per_m": 256,
+   "grain": "down-slope, split texture",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "pale new wood (rare)",
+    "_w1": "silver-grey",
+    "_w2": "dark grey, moss, lifted boards"
+   },
+   "note": "ishioki boards, board ridges, board hisashi; NEW palette entry requested",
+   "used_by": [
+    "jp_p_roof_board_ridge",
+    "jp_p_roof_hisashi",
+    "jp_p_roof_ishioki_field"
+   ]
+  },
+  {
+   "id": "jp_m_roof_kokera",
+   "family": "roof",
+   "palette_id": "roof_board_silver",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "tile_size_m": 2.0,
+   "px_per_m": 256,
+   "grain": "down-slope, fine courses 0.09",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "pale",
+    "_w1": "silver-grey",
+    "_w2": "curled, dark"
+   },
+   "note": "thin shingle roofs",
+   "used_by": [
+    "jp_p_roof_itabuki_field"
+   ]
+  },
+  {
+   "id": "jp_m_roof_kakigara",
+   "family": "roof",
+   "palette_id": "kakigara_shell",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "tile_size_m": 2.0,
+   "px_per_m": 256,
+   "grain": "scattered shells over kokera",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "pale shells",
+    "_w1": "grey shells, dirt",
+    "_w2": "sparse shells, moss"
+   },
+   "note": "ONLY if decision 3 is yes; NEW palette entry (assumed)",
+   "used_by": [
+    "jp_p_roof_itabuki_field"
+   ]
+  },
+  {
+   "id": "jp_m_stone_field",
+   "family": "stone",
+   "palette_id": "stone_granite",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "none",
+   "penetration_rvmat": "granite",
+   "wear": {
+    "_w0": "clean",
+    "_w1": "splash band, lichen spots",
+    "_w2": "moss (W6)"
+   },
+   "note": "soseki, natural steps, under-floor stones",
+   "used_by": [
+    "jp_p_found_soseki",
+    "jp_p_found_step",
+    "jp_p_found_yukashita"
+   ]
+  },
+  {
+   "id": "jp_m_stone_cut",
+   "family": "stone",
+   "palette_id": "stone_granite",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "tool marks",
+   "penetration_rvmat": "granite",
+   "wear": {
+    "_w0": "crisp tool marks",
+    "_w1": "rounded arrises, grime",
+    "_w2": "moss in joints"
+   },
+   "note": "dodai stones, kura footing, cut steps",
+   "used_by": [
+    "jp_p_found_dodai_stones",
+    "jp_p_found_kura_footing",
+    "jp_p_found_step"
+   ]
+  },
+  {
+   "id": "jp_m_stone_river",
+   "family": "stone",
+   "palette_id": "stone_lantern",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 256,
+   "grain": "none",
+   "penetration_rvmat": "granite",
+   "wear": {
+    "_w0": "grey cobbles",
+    "_w1": "lichen",
+    "_w2": "moss"
+   },
+   "note": "ishioki roof stones",
+   "used_by": [
+    "jp_p_roof_board_ridge",
+    "jp_p_roof_hisashi",
+    "jp_p_roof_ishioki_battens"
+   ]
+  },
+  {
+   "id": "jp_m_paper_shoji",
+   "family": "paper",
+   "palette_id": "washi_shoji",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "fibres",
+   "penetration_rvmat": "fabric_thin",
+   "wear": {
+    "_w0": "clean warm white",
+    "_w1": "yellowed, patched squares",
+    "_w2": "torn squares, stains"
+   },
+   "note": "translucency per B",
+   "used_by": [
+    "jp_p_open_shoji_ext"
+   ]
+  },
+  {
+   "id": "jp_m_bamboo_weathered",
+   "family": "bamboo",
+   "palette_id": "bamboo_weathered",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "along culm, nodes",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "pale",
+    "_w1": "grey-beige",
+    "_w2": "split, dark"
+   },
+   "note": "renji bars, thatch ridges, gutters, strips",
+   "used_by": [
+    "jp_p_open_renji",
+    "jp_p_roof_eave_soffit",
+    "jp_p_roof_gutter",
+    "jp_p_roof_itabuki_field",
+    "jp_p_roof_thatch_ridge"
+   ]
+  },
+  {
+   "id": "jp_m_metal_iron",
+   "family": "metal",
+   "palette_id": "iron_black",
+   "palette_status": "existing",
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "none",
+   "penetration_rvmat": "iron",
+   "wear": {
+    "_w0": "dark iron",
+    "_w1": "rust bloom",
+    "_w2": "rust streaks on plaster below"
+   },
+   "note": "kura fittings, bars, hooks",
+   "used_by": [
+    "jp_p_open_itado",
+    "jp_p_open_kura_door",
+    "jp_p_open_kura_window",
+    "jp_p_open_shitomido",
+    "jp_p_roof_gutter"
+   ]
+  },
+  {
+   "id": "jp_m_straw_mushiro",
+   "family": "straw",
+   "palette_id": "thatch_new",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "woven straw",
+   "penetration_rvmat": "hay",
+   "wear": {
+    "_w0": "golden",
+    "_w1": "grey-gold",
+    "_w2": "dark, frayed"
+   },
+   "note": "P3 hung mat only",
+   "used_by": [
+    "jp_p_open_mushiro"
+   ]
+  }
+ ],
+ "requested_palette_entries": [
+  {
+   "id": "earth_wall_aged",
+   "srgb": [
+    115,
+    98,
+    80
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "samples": [
+    {
+     "ref": "x08_hirose_earthwall",
+     "box": [
+      0.2,
+      0.52,
+      0.29,
+      0.64
+     ],
+     "select": "mid 70 % luminance",
+     "value": [
+      116,
+      100,
+      80
+     ]
+    },
+    {
+     "ref": "x08_hirose_earthwall",
+     "box": [
+      0.52,
+      0.64,
+      0.64,
+      0.74
+     ],
+     "select": "mid 70 % luminance",
+     "value": [
+      114,
+      96,
+      79
+     ]
+    }
+   ],
+   "check": "x06_suzuki_a in evening shade gives (99,97,96)",
+   "why": "Exterior earth walls of surviving 17th-18th c. farmhouses are grey-brown, not the sunlit ochre of c29 (215,180,115). The v1 walls read too bright; vanilla white walls sit at ~150."
+  },
+  {
+   "id": "roof_board_silver",
+   "srgb": [
+    123,
+    128,
+    134
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "samples": [
+    {
+     "ref": "x04_misawa_a",
+     "box": [
+      0.25,
+      0.22,
+      0.55,
+      0.3
+     ],
+     "select": "mid 70 % luminance",
+     "value": [
+      123,
+      128,
+      134
+     ]
+    }
+   ],
+   "check": "includes some stones; evening light",
+   "why": "Weathered roof boards go silver-grey; timber_weathered (118,82,73) is the brown of wet facade boards and is wrong for roofs."
+  },
+  {
+   "id": "kakigara_shell",
+   "srgb": [
+    172,
+    168,
+    158
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "samples": [],
+   "check": "needs a licensed sample of weathered oyster shells",
+   "why": "Only if decision 3 (Edo oyster-shell board roofs) is yes."
+  }
+ ]
+}

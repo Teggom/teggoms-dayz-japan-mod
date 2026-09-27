@@ -1,0 +1,4508 @@
+{
+ "category": "parts-exterior-dwellings-shops",
+ "version": 1,
+ "author": "research agent A-EXT",
+ "date": "2026-09-27",
+ "stage": "B",
+ "scope_note": "Exteriors of dwellings and shops for tiers 1-3 (minka, machiya, nagaya, shop fronts, hatago, tea houses, family kura). Parts only: the architect (C) assembles buildings from them. Out of scope (see BUILD_LIST.md, Later): temples/shrines, government/castle, street dressing, gardens/site sets, interiors.",
+ "entries": [
+  {
+   "id": "jp_p_roof_forms",
+   "name": "Roof forms and footprint rules (kirizuma / yosemune / irimoya)",
+   "what": "The roof generator spec: which form and covering each tier and region uses, pitches, overhangs and spans.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "priority": "P1",
+   "period_evidence": "Kitamura house 1687, yosemune thatch [E01]; Kiyomiya late 17th c. yosemune thatch [E01]; Ito late 17th-early 18th c. irimoya thatch [E01]; Hirose late 17th c. kirizuma thatch [x08]; Sasaki 1731/32 yosemune thatch with stone-weighted board eaves [E02]; Ioka late 17th-early 18th c. kirizuma sangawara machiya [E03]; tile banned in Edo 1657 except storehouses, encouraged 1720 [E09]",
+   "refs": [
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "kirizuma thatch, late 17th c. building (Koshu)",
+     "period_image": true
+    },
+    {
+     "id": "x07_sasaki_1985",
+     "shows": "Sasaki house 1732: thatch with board pent eave",
+     "period_image": true
+    },
+    {
+     "id": "x01_ioka_a",
+     "shows": "Ioka machiya: kirizuma sangawara, gable pent roof",
+     "period_image": true
+    },
+    {
+     "id": "x04_misawa_a",
+     "shows": "kirizuma stone-weighted board roof (mid-19th c.)",
+     "period_image": true
+    },
+    {
+     "id": "x22_morse_thatch_kanto",
+     "shows": "Kanto hip thatch near Tokyo (1880s)",
+     "period_image": false
+    },
+    {
+     "id": "x36_hiroshige_ishibe",
+     "shows": "roadside tea house: thatch kirizuma + board pents",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "grid_m": {
+     "value": "1.820 ken / 0.910 half-ken; footprints are unions of ken rectangles",
+     "source": "PLAYBOOK §3-4"
+    },
+    "pitch_kawara_sun": {
+     "value": "4.5 default (4-5.5) = 24.2 deg",
+     "source": "PLAYBOOK §4"
+    },
+    "pitch_ishioki_sun": {
+     "value": "3-3.5 (16.7-19.3 deg); steeper and the stones slide",
+     "source": "T40, PLAYBOOK §4"
+    },
+    "pitch_itabuki_sun": {
+     "value": "4-5",
+     "assumed": true,
+     "reason": "PLAYBOOK §4 value, no period source"
+    },
+    "pitch_thatch_deg": {
+     "value": "45 (50-60 only gassho, not on our map)",
+     "source": "T41"
+    },
+    "eave_overhang_m": {
+     "value": "tile 0.90; thatch 0.80-1.20; ishioki 0.90-1.20; board 0.60-0.90; gable/verge 0.30-0.45",
+     "source": "PLAYBOOK §4 (board: assumed)"
+    },
+    "main_span_townhouse_ken": {
+     "value": "<=3 between main-roof walls (Edo townsmen rule 1668); extra depth by lean-to",
+     "source": "T48"
+    },
+    "main_span_farmhouse_m": {
+     "value": "8.2-10.0 (Kiyomiya 8.2, Kitamura 8.9, Ito 9.1, Sasaki 10.0) = 4.5-5.5 ken; the 3-ken rule is urban, not rural",
+     "source": "E01, E02"
+    },
+    "plan_examples_m": {
+     "value": "Kitamura 15.6x8.9; Kiyomiya 13.6x8.2; Ito 16.4x9.1; Sasaki 24.7x10.0; Ioka 7.9 wide x 12.7 deep; Misawa 13.6x12.7",
+     "source": "E01-E03"
+    },
+    "wall_plate_keta_m": {
+     "value": "machiya ground storey 2.90-3.20 at the street eave edge; T1-2 thatch: see decision 6",
+     "source": "PLAYBOOK §4"
+    }
+   },
+   "materials": [],
+   "connectors": [
+    "footprint: rectangle or L/T union on the ken grid",
+    "eave line = keta top outer edge",
+    "ridge line centred on the span",
+    "kawara columns 0.260 m = 7 per ken, so a column edge lands on every ken line",
+    "lean-to (geya/hisashi) roofs attach below the main eave at a wall line"
+   ],
+   "variants": [
+    {
+     "id": "kirizuma",
+     "differs_by": "gable: machiya, nagaya, kura, Kiso post town, Koshu farmhouse, tea house"
+    },
+    {
+     "id": "yosemune",
+     "differs_by": "hip: Kanto farmhouse (Kitamura 1687, Kiyomiya), headman house (Sasaki)",
+     "tier": 1
+    },
+    {
+     "id": "irimoya",
+     "differs_by": "hip-and-gable with a smoke opening in the small gable: Kansai/Kanto farmhouse (Ito), bigger inns",
+     "tier": 2
+    },
+    {
+     "id": "kabuto",
+     "differs_by": "Sasaki-type gable cut into a hip (kabuto-zukuri) at one end; P2",
+     "tier": 2
+    }
+   ],
+   "deviations": [
+    "Tier and region rules: T1 thatch or ishioki, never tile; T2 ishioki/board/thatch, tile only on kura and big inns; T3 Kamigata sangawara, T3 Edo about half board (see kakigara decision) and half new sangawara (PLAYBOOK §2.1, E09)"
+   ],
+   "lod_budget": "roof share of the building budget: machiya roof <=3k faces LOD0 (PLAYBOOK §6.1)",
+   "banned_tells_to_watch": [
+    "kawara as a flat textured plane",
+    "chimneys, dormers, metal",
+    "Chinese upturned corners",
+    "curb (mansard) roofs: Morse says never seen"
+   ],
+   "open_questions": [
+    "Decision 6: thatch eave height versus the 2.20 m soffit rule"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_eave_soffit",
+   "name": "Eave soffit: rafters, sheathing and fascia (noki-ura)",
+   "what": "The visible underside and edge of every eave: exposed rafters, sheathing boards and the fascia the eave tiles or boards sit on.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Surviving period buildings all show exposed rafter soffits [x01, x08, x07]",
+   "refs": [
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "pole rafters and bamboo lath under thatch verge",
+     "period_image": true
+    },
+    {
+     "id": "x01_ioka_a",
+     "shows": "square rafters under tile eave",
+     "period_image": true
+    },
+    {
+     "id": "x29_morse_hisashi",
+     "shows": "thin boards on slender brackets",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "rafter_section_m": {
+     "value": "0.045 x 0.060 (tile/board); thatch: round poles d 0.06-0.08",
+     "assumed": true,
+     "reason": "typical 1.5 x 2 sun; not measured"
+    },
+    "rafter_spacing_m": {
+     "value": "0.303 (ken/6)",
+     "assumed": true,
+     "reason": "about 1 shaku, a common spacing; ken/6 keeps rafters on the grid"
+    },
+    "sheathing_m": {
+     "value": "boards 0.012 thick visible between rafters; thatch: bamboo lath at 0.10",
+     "assumed": true,
+     "reason": "visual, x08"
+    },
+    "fascia_m": {
+     "value": "0.030 x 0.120 (tile: carries the eave tiles); none on thatch",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "keta_m": {
+     "value": "0.120 x 0.180 wall plate; ends project 0.15 at gables",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "rafters, fascia, sheathing",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "thatch lath",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    }
+   ],
+   "connectors": [
+    "eave: rafter seats on keta top; rafter feet on the eave line",
+    "soffit follows the roof pitch; the generator emits it for every eave run"
+   ],
+   "variants": [
+    {
+     "id": "_tile",
+     "differs_by": "square rafters + boards + fascia"
+    },
+    {
+     "id": "_board",
+     "differs_by": "thinner rafters, no fascia, boards overhang 0.03"
+    },
+    {
+     "id": "_thatch",
+     "differs_by": "pole rafters + bamboo lath",
+     "tier": 1
+    }
+   ],
+   "lod_budget": "LOD0 every rafter; LOD1 every 2nd; LOD2 flat textured soffit",
+   "banned_tells_to_watch": [
+    "flat untextured soffit at LOD0",
+    "painted white timber"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_sangawara_field",
+   "name": "Sangawara field tiles",
+   "what": "The corrugated one-piece S-tile field of every tiled town roof, kura and inn.",
+   "importance": "hero",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Sangawara invented 1674 [T07, E06]; Ioka machiya (Nara, late 17th-early 18th c.) is sangawara [E03]; Kyoto commoner tile spreads after sangawara, standard look by the 18th c. [E10]; Edo tile encouraged 1720 [E09]",
+   "refs": [
+    {
+     "id": "c08_kyomachiya",
+     "shows": "sangawara on a Kyoto machiya",
+     "period_image": false
+    },
+    {
+     "id": "x03_ioka_c",
+     "shows": "sangawara roof on the dated Ioka house",
+     "period_image": true
+    },
+    {
+     "id": "x18_morse_yedogawara",
+     "shows": "Yedo-gawara (sangawara) profile at the eave",
+     "period_image": false
+    },
+    {
+     "id": "x16_morse_tile_eaves",
+     "shows": "eave tiles and field",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "working_width_m": {
+     "value": 0.26,
+     "source": "PLAYBOOK §4 (ken/7)"
+    },
+    "exposure_m": {
+     "value": 0.235,
+     "source": "PLAYBOOK §4"
+    },
+    "roll_height_m": {
+     "value": "0.05-0.06",
+     "source": "PLAYBOOK §4"
+    },
+    "tile_thickness_m": {
+     "value": 0.018,
+     "assumed": true,
+     "reason": "fired clay 15-20 mm; for edge silhouette only"
+    },
+    "bedding_m": {
+     "value": "tile surface 0.08 above sheathing (mud bed)",
+     "assumed": true,
+     "reason": "Morse [T59]: tiles bedded in a thick mud layer; thickness not given"
+    },
+    "lod0_segments_per_column": {
+     "value": ">=4",
+     "source": "PLAYBOOK §6.1"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tiles",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    },
+    {
+     "surface": "white pointing (variant)",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    }
+   ],
+   "connectors": [
+    "eave: first course overhangs the fascia by 0.06",
+    "ridge: last course tucks under the ridge noshi",
+    "verge: field stops 0.13 inside the verge line for jp_p_roof_sangawara_verge",
+    "columns 0.260 aligned to ken lines"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "plain field; per-row tint offset (W8)"
+    },
+    {
+     "id": "_pointed",
+     "differs_by": "white mortar pointing on the 2-3 rows at the eave and ridge; Morse: common on better roofs [T59]",
+     "tier": 3
+    }
+   ],
+   "lod_budget": "<=3k faces for a machiya roof incl. ridge and ends; LOD1 2 segments/column; LOD2 plane",
+   "banned_tells_to_watch": [
+    "flat textured plane",
+    "identical rows (no W8 variation)",
+    "glazed or coloured tiles"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_sangawara_eave",
+   "name": "Sangawara eave tiles (noki-gawara, manju type)",
+   "what": "The first course of a tiled roof: small round end plus a turned-down lip carrying a relief band.",
+   "importance": "hero",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Special eave tile named with sangawara [E06]; form drawn by Morse [x16, x18]",
+   "refs": [
+    {
+     "id": "x16_morse_tile_eaves",
+     "shows": "eave tiles: round end + turned-down lip",
+     "period_image": false
+    },
+    {
+     "id": "x18_morse_yedogawara",
+     "shows": "Yedo eave tile profile",
+     "period_image": false
+    },
+    {
+     "id": "c08_kyomachiya",
+     "shows": "eave line in photo",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "lip_depth_m": {
+     "value": 0.045,
+     "assumed": true,
+     "reason": "measured by eye from Morse fig. 71 proportions against the 0.26 tile"
+    },
+    "round_end_diameter_m": {
+     "value": 0.075,
+     "assumed": true,
+     "reason": "small manju end; Morse fig. 71 proportion"
+    },
+    "overhang_past_fascia_m": {
+     "value": 0.06,
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tile",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    }
+   ],
+   "connectors": [
+    "eave: one per column (0.260), placed by the generator on the eave line"
+   ],
+   "variants": [
+    {
+     "id": "_tomoe",
+     "differs_by": "round end with a mitsudomoe relief"
+    },
+    {
+     "id": "_plain",
+     "differs_by": "round end plain"
+    },
+    {
+     "id": "_lod1_strip",
+     "differs_by": "LOD1: the whole eave as one extruded strip"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "family crests of status on commoner eaves; the Tokugawa crest (Morse: rarely seen)"
+   ],
+   "open_questions": [
+    "Straight-cut ichimonji eave tiles are common in Kyoto today; their first date is unverified, so they are not listed"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_sangawara_verge",
+   "name": "Verge tiles (sode-gawara / keraba)",
+   "what": "Tiles that turn down over the bargeboard along every tiled gable edge.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Named among the sangawara special tiles [E06]",
+   "refs": [
+    {
+     "id": "x01_ioka_a",
+     "shows": "verge line on the Ioka gable",
+     "period_image": true
+    },
+    {
+     "id": "c08_kyomachiya",
+     "shows": "verge tiles in photo",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "flange_drop_m": {
+     "value": 0.07,
+     "assumed": true,
+     "reason": "covers the bargeboard top; visual"
+    },
+    "module_m": {
+     "value": "0.235 per course (matches exposure)",
+     "source": "PLAYBOOK §4"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tile",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    }
+   ],
+   "connectors": [
+    "verge: one per course along the gable line, over jp_p_roof_hafu",
+    "meets the eave tile at the corner and the ridge end below the onigawara"
+   ],
+   "variants": [
+    {
+     "id": "_L",
+     "differs_by": "left hand"
+    },
+    {
+     "id": "_R",
+     "differs_by": "right hand"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_kawara_ridge",
+   "name": "Tiled ridge (noshi courses + ganburi cap) and hip ridge",
+   "what": "Stacked flat noshi courses capped by a round tile along the ridge, and the same build-up down the hips of hipped tile roofs.",
+   "importance": "hero",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Noshi and ganburi named with sangawara [E06]; course count rises with status [PLAYBOOK §6.1]; Morse on ridges [T59]",
+   "refs": [
+    {
+     "id": "c26_morse_tile_ridge",
+     "shows": "stacked ridge build-up",
+     "period_image": false
+    },
+    {
+     "id": "x17_morse_hongawara",
+     "shows": "ridge and field relation",
+     "period_image": false
+    },
+    {
+     "id": "c08_kyomachiya",
+     "shows": "machiya ridge, photo",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "noshi_course_m": {
+     "value": "0.025 thick each, 0.22 wide",
+     "assumed": true,
+     "reason": "assumed from c26 proportions"
+    },
+    "courses": {
+     "value": "T2 kura/inn 3; T3 machiya 3-5; hongawara elite 7 (later)",
+     "source": "PLAYBOOK §6.1"
+    },
+    "cap_diameter_m": {
+     "value": 0.16,
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "height_above_field_m": {
+     "value": "3 courses 0.30; 5 courses 0.38",
+     "assumed": true,
+     "reason": "derived from the values above"
+    },
+    "hip_ridge": {
+     "value": "same section minus 1 course; ends in a small round end tile",
+     "source": "Morse [T59]"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tiles",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    },
+    {
+     "surface": "mortar bedding lines",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    }
+   ],
+   "connectors": [
+    "ridge: runs the ridge line between the two onigawara",
+    "hip: from the ridge end to the eave corner on yosemune/irimoya"
+   ],
+   "variants": [
+    {
+     "id": "_c3",
+     "differs_by": "3 noshi courses",
+     "tier": 2
+    },
+    {
+     "id": "_c5",
+     "differs_by": "5 noshi courses",
+     "tier": 3
+    },
+    {
+     "id": "_hip",
+     "differs_by": "hip ridge (kudarimune) with an end tile"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "plaster wave reliefs (Morse saw them on big fire-proof buildings of the 1880s; not on 1730 commoner houses)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_onigawara",
+   "name": "Ridge-end tile (onigawara)",
+   "what": "The shouldered end block at each end of a tiled ridge.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "priority": "P1",
+   "period_evidence": "Onigawara named among sangawara special tiles [E06]; Morse: ridges always end in a shouldered mass [T59]",
+   "refs": [
+    {
+     "id": "c26_morse_tile_ridge",
+     "shows": "ridge end",
+     "period_image": false
+    },
+    {
+     "id": "c08_kyomachiya",
+     "shows": "machiya ridge end",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "height_m": {
+     "value": "T2 0.30; T3 0.38 (scales with the ridge)",
+     "assumed": true,
+     "reason": "about 1x ridge height; not measured"
+    },
+    "width_m": {
+     "value": "0.30-0.36",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tile",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    }
+   ],
+   "connectors": [
+    "ridge: one at each ridge end, over the verge"
+   ],
+   "variants": [
+    {
+     "id": "_plain",
+     "differs_by": "plain shouldered block"
+    },
+    {
+     "id": "_sui",
+     "differs_by": "with the character for water in relief (fire charm; Morse notes it on ridge ends) "
+    }
+   ],
+   "banned_tells_to_watch": [
+    "demon faces and crests of temple scale on commoner houses"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_hongawara",
+   "name": "Hongawara set (flat pans + round covers, eave and ridge)",
+   "what": "The two-piece true tile for rich kura and, later, temples, gates and samurai elite.",
+   "importance": "standard",
+   "tiers": [
+    3
+   ],
+   "region": "all",
+   "priority": "P3",
+   "period_evidence": "Hongawara is the older tile, on temples, castles and rich kura [T10, PLAYBOOK §6.1]",
+   "refs": [
+    {
+     "id": "x17_morse_hongawara",
+     "shows": "pans + covers, round eave ends",
+     "period_image": false
+    },
+    {
+     "id": "c09_himeji",
+     "shows": "hongawara on a castle",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "column_m": {
+     "value": "0.303 (ken/6)",
+     "assumed": true,
+     "reason": "real pans are about 1 shaku wide; ken/6 keeps the grid"
+    },
+    "cover_diameter_m": {
+     "value": 0.15,
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tiles",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    }
+   ],
+   "connectors": [
+    "same eave, ridge and verge connectors as sangawara, 6 columns per ken"
+   ],
+   "variants": [
+    {
+     "id": "_field",
+     "differs_by": "field"
+    },
+    {
+     "id": "_eave",
+     "differs_by": "round-end + flat eave with karakusa lip"
+    },
+    {
+     "id": "_ridge",
+     "differs_by": "taller ridge, 5-7 courses"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_ishioki_field",
+   "name": "Stone-weighted board roof: board field (ishioki-yane, kureita)",
+   "what": "Split boards in overlapping courses at a low pitch, the roof of Kiso post towns, mountain and coast villages.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2
+   ],
+   "region": "rural",
+   "priority": "P1",
+   "period_evidence": "Stone-weighted board roofs in Kyoto in the early Edo period [E14]; Sasaki house 1731/32 has stone-weighted board eaves [E02]; Kiso post towns [c01-c03]",
+   "refs": [
+    {
+     "id": "x04_misawa_a",
+     "shows": "surviving ishioki roof, chestnut boards (mid-19th c.)",
+     "period_image": true
+    },
+    {
+     "id": "c01_narai_street",
+     "shows": "Narai board roofs",
+     "period_image": false
+    },
+    {
+     "id": "c03_tsumago_street",
+     "shows": "Tsumago board roofs",
+     "period_image": false
+    },
+    {
+     "id": "x37_eisen_narai",
+     "shows": "Narai c.1835: boards and stones (lower left)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "board_length_m": {
+     "value": "0.30-0.50",
+     "source": "E18 (low-grade web source)"
+    },
+    "board_width_m": {
+     "value": "0.09-0.21, random per board (W8)",
+     "source": "E18 figure read as cm; assumed"
+    },
+    "board_thickness_m": {
+     "value": "0.004 real; model course edge 0.012",
+     "source": "E18; model value for silhouette (reason)"
+    },
+    "course_exposure_m": {
+     "value": 0.15,
+     "assumed": true,
+     "reason": "about 1/3 of the board length, triple lap; not sourced"
+    },
+    "eave_edge_stack_m": {
+     "value": "0.05-0.08 visible thickness",
+     "assumed": true,
+     "reason": "visual, x04"
+    },
+    "pitch_sun": {
+     "value": "3-3.5",
+     "source": "T40"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver"
+    }
+   ],
+   "connectors": [
+    "eave: first course overhangs the rafter feet by 0.05",
+    "ridge: jp_p_roof_board_ridge",
+    "verge: jp_p_roof_hafu _ishioki",
+    "battens and stones: jp_p_roof_ishioki_battens"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "standard"
+    },
+    {
+     "id": "_worn",
+     "differs_by": "missing/lifted boards, moss (W6) on north slope"
+    }
+   ],
+   "lod_budget": "courses as geometry steps only within 3 rows of the eave and ridge (as kawara); rest normal map",
+   "banned_tells_to_watch": [
+    "pitch steeper than 3.5 sun",
+    "uniform brown boards (they weather silver-grey, x04)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_ishioki_battens",
+   "name": "Stone-weighted roof: battens and stones (osae-gi + ishi)",
+   "what": "Split-pole battens laid across the boards parallel to the eave, with river stones resting on them.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2
+   ],
+   "region": "rural",
+   "priority": "P1",
+   "period_evidence": "as jp_p_roof_ishioki_field",
+   "refs": [
+    {
+     "id": "x04_misawa_a",
+     "shows": "battens + stones, photo",
+     "period_image": true
+    },
+    {
+     "id": "c02_narai_facade",
+     "shows": "Narai roofs",
+     "period_image": false
+    },
+    {
+     "id": "x37_eisen_narai",
+     "shows": "stones in a grid on a roof, c.1835",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "batten_diameter_m": {
+     "value": "0.06-0.08 split pole",
+     "assumed": true,
+     "reason": "visual, x04"
+    },
+    "batten_spacing_m": {
+     "value": "0.60 up the slope",
+     "assumed": true,
+     "reason": "counted roughly on x04; PLAYBOOK §6.1 gives 0.45-0.60 (assumed)"
+    },
+    "stone_size_m": {
+     "value": "0.15-0.30",
+     "source": "PLAYBOOK §6.1 [T40, c01-c03]"
+    },
+    "stone_spacing_m": {
+     "value": "0.30-0.45 along each batten, jittered",
+     "assumed": true,
+     "reason": "visual, x04"
+    }
+   },
+   "materials": [
+    {
+     "surface": "battens",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "stones",
+     "material": "jp_m_stone_river",
+     "palette_id": "stone_lantern"
+    }
+   ],
+   "connectors": [
+    "battens run eave-parallel between verges; stones sit on the upslope side of each batten",
+    "generator scatters stones from the 8-shape set with random yaw"
+   ],
+   "variants": [
+    {
+     "id": "_stoneset8",
+     "differs_by": "8 stone shapes"
+    },
+    {
+     "id": "_sparse",
+     "differs_by": "fewer stones (poor / neglected)",
+     "tier": 1
+    }
+   ],
+   "lod_budget": "stones: LOD0 ~20 faces each, LOD1 merged lumps, LOD2 texture only",
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_itabuki_field",
+   "name": "Thin shingle / board roof (itabuki, kokera)",
+   "what": "Thin split-shingle roofs: Edo townhouses before tile, back-alley nagaya, T2 houses and sheds.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Board and kokera roofs on early machiya [T05]; in Edo tile was banned 1657-1720 except storehouses, board roofs with oyster shells recommended, still in use in the Kyoho era [E09]",
+   "refs": [
+    {
+     "id": "x14_morse_shingle_laid",
+     "shows": "shingles laid in courses",
+     "period_image": false
+    },
+    {
+     "id": "x15_morse_shingle_ridge",
+     "shows": "shingle roof ridge",
+     "period_image": false
+    },
+    {
+     "id": "c18_hiroshige_mariko",
+     "shows": "board-roofed houses c.1833",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "shingle_thickness_m": {
+     "value": "0.002-0.003 (kokera)",
+     "source": "E17"
+    },
+    "course_exposure_m": {
+     "value": 0.09,
+     "assumed": true,
+     "reason": "about 3 sun; Morse marks courses with a measure but gives no value"
+    },
+    "eave_edge_m": {
+     "value": "0.03-0.05 visible stack",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "pitch_sun": {
+     "value": "4-5",
+     "assumed": true,
+     "reason": "PLAYBOOK §4"
+    }
+   },
+   "materials": [
+    {
+     "surface": "shingles",
+     "material": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver"
+    },
+    {
+     "surface": "bamboo strips (variant)",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "oyster shells (variant)",
+     "material": "jp_m_roof_kakigara",
+     "palette_id": "kakigara_shell"
+    }
+   ],
+   "connectors": [
+    "as ishioki: eave, board ridge, verge"
+   ],
+   "variants": [
+    {
+     "id": "_plain",
+     "differs_by": "plain courses"
+    },
+    {
+     "id": "_bamboo",
+     "differs_by": "bamboo strips nailed obliquely ridge to eave against gales (Morse fig. 63)"
+    },
+    {
+     "id": "_kakigara",
+     "differs_by": "Edo only: oyster shells over the boards (fire measure 1657-Kyoho) - only if decision 3 is yes",
+     "tier": 3
+    }
+   ],
+   "banned_tells_to_watch": [
+    "temple-style thick curved kokera on houses (PLAYBOOK §6.1)"
+   ],
+   "open_questions": [
+    "Decision 3: kakigara-buki for Edo T3"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_board_ridge",
+   "name": "Board ridge (for ishioki and shingle roofs)",
+   "what": "Thin strips nailed over the ridge in a mass, held by battens; on ishioki roofs weighted with stones.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Morse fig. 65 (1880s); form follows from the board roof [E14]",
+   "refs": [
+    {
+     "id": "x15_morse_shingle_ridge",
+     "shows": "ridge of shingle roof, Musashi",
+     "period_image": false
+    },
+    {
+     "id": "x04_misawa_a",
+     "shows": "ishioki ridge",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "width_m": {
+     "value": "0.30-0.40",
+     "assumed": true,
+     "reason": "visual, x15"
+    },
+    "height_m": {
+     "value": "0.06-0.10",
+     "assumed": true,
+     "reason": "visual"
+    }
+   },
+   "materials": [
+    {
+     "surface": "strips",
+     "material": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver"
+    },
+    {
+     "surface": "stones",
+     "material": "jp_m_stone_river",
+     "palette_id": "stone_lantern"
+    }
+   ],
+   "connectors": [
+    "ridge: full ridge length, ends flush with the verge boards"
+   ],
+   "variants": [
+    {
+     "id": "_strips",
+     "differs_by": "shingle roof ridge"
+    },
+    {
+     "id": "_stoned",
+     "differs_by": "ishioki ridge with a stone row"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_thatch_body",
+   "name": "Thatch roof body (kaya-buki): field, cut eave, verge and hips",
+   "what": "The thick thatch mass generated over any footprint, with the squared eave cut that shows its thickness.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2
+   ],
+   "region": "rural",
+   "priority": "P1",
+   "period_evidence": "Kitamura 1687, Kiyomiya late 17th c. (yosemune), Ito (irimoya), Hirose (kirizuma), Sasaki 1731/32: all thatch [E01, E02, x08]",
+   "refs": [
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "kirizuma thatch: thick verge, cut edge",
+     "period_image": true
+    },
+    {
+     "id": "x06_suzuki_a",
+     "shows": "hip thatch with board lower eave (early 19th c.)",
+     "period_image": true
+    },
+    {
+     "id": "c05_ouchi_thatch",
+     "shows": "thatch colour, hip roofs",
+     "period_image": false
+    },
+    {
+     "id": "x22_morse_thatch_kanto",
+     "shows": "Kanto hip thatch",
+     "period_image": false
+    },
+    {
+     "id": "x26_morse_farmhouse_kabutoyama",
+     "shows": "old farmhouse, Musashi",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "eave_cut_thickness_m": {
+     "value": "0.60 (0.40-0.80)",
+     "source": "Morse: eaves trimmed square or slightly rounded, often two feet or more [T59]; PLAYBOOK §6.1"
+    },
+    "field_thickness_m": {
+     "value": "0.35-0.45",
+     "assumed": true,
+     "reason": "Morse: not the same thickness throughout [T59]"
+    },
+    "verge_overhang_m": {
+     "value": "0.30-0.45",
+     "source": "PLAYBOOK §4, x08"
+    },
+    "pitch_deg": {
+     "value": 45,
+     "source": "T41"
+    },
+    "eave_cut_profile": {
+     "value": "square or slightly rounded; 2-3 visible light/dark layer bands",
+     "source": "T59"
+    }
+   },
+   "materials": [
+    {
+     "surface": "thatch surface",
+     "material": "jp_m_roof_thatch",
+     "palette_id": "thatch_weathered"
+    },
+    {
+     "surface": "eave cut face",
+     "material": "jp_m_roof_thatch_cut",
+     "palette_id": "thatch_weathered"
+    }
+   ],
+   "connectors": [
+    "eave: rests on the rafter feet; cut face vertical at the eave line + overhang",
+    "ridge: jp_p_roof_thatch_ridge",
+    "hips rounded (radius 0.3)"
+   ],
+   "variants": [
+    {
+     "id": "_yosemune",
+     "differs_by": "Kanto hip (Kitamura type)",
+     "tier": 1
+    },
+    {
+     "id": "_kirizuma",
+     "differs_by": "Koshu gable (Hirose type)",
+     "tier": 1
+    },
+    {
+     "id": "_irimoya",
+     "differs_by": "hip-and-gable (Ito type)",
+     "tier": 2
+    },
+    {
+     "id": "_new",
+     "differs_by": "freshly re-thatched (thatch_new tint via _w0), 1 roof in 10"
+    }
+   ],
+   "lod_budget": "LOD0 surface undulation low; cut edge 2-3 steps; LOD2 single shell",
+   "banned_tells_to_watch": [
+    "thin flat thatch plane",
+    "clean uniform colour: north slopes carry moss (W6)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_thatch_ridge",
+   "name": "Thatch ridge treatments (bamboo, tiled, turf, umanori)",
+   "what": "The ridge caps that close the top of a thatch roof; each region has its own style.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2
+   ],
+   "region": "rural",
+   "priority": "P1",
+   "period_evidence": "Kiyomiya house, late 17th c.: iris growing on the (turf) ridge [E01]; ridge members count up with status [T17]",
+   "refs": [
+    {
+     "id": "c27_morse_thatch_ridge",
+     "shows": "bamboo ridge, Musashi",
+     "period_image": false
+    },
+    {
+     "id": "x21_morse_thatch_tile_ridge",
+     "shows": "tiled ridge on thatch, Musashi",
+     "period_image": false
+    },
+    {
+     "id": "x22_morse_thatch_kanto",
+     "shows": "Kanto thatch ridge",
+     "period_image": false
+    },
+    {
+     "id": "x06_suzuki_a",
+     "shows": "ridge with vent",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "height_above_thatch_m": {
+     "value": "0.50-0.80",
+     "assumed": true,
+     "reason": "visual, c27/x21"
+    },
+    "umanori_spacing_m": {
+     "value": "0.91 (half-ken)",
+     "assumed": true,
+     "reason": "grid choice"
+    },
+    "umanori_count": {
+     "value": "T1 3-5, T2 5-7 per ridge",
+     "assumed": true,
+     "reason": "T17 says the count rises with status; numbers assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "bamboo binding",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "tiles (variant)",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    },
+    {
+     "surface": "thatch/turf cap",
+     "material": "jp_m_roof_thatch",
+     "palette_id": "thatch_weathered"
+    },
+    {
+     "surface": "crossed members",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "ridge: full ridge length; ends flush with the thatch verge or hip apex"
+   ],
+   "variants": [
+    {
+     "id": "_bamboo",
+     "differs_by": "bamboo-bound ridge (Kanto)",
+     "tier": 1
+    },
+    {
+     "id": "_tile",
+     "differs_by": "noshi/round tiles over the thatch ridge (Musashi)",
+     "tier": 2
+    },
+    {
+     "id": "_shiba",
+     "differs_by": "turf ridge with iris (Kiyomiya type)",
+     "tier": 1
+    },
+    {
+     "id": "_umanori",
+     "differs_by": "grass ridge with crossed timbers"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_kemuridashi",
+   "name": "Smoke vents (ridge smoke hood, raised ridge vent, irimoya smoke gable)",
+   "what": "How hearth smoke leaves a roof with no chimney: a hood on a thatch ridge, a raised louvred ridge on board/tile roofs, or the open irimoya gable.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "No chimneys; smoke leaves by roof vents and gable openings [PLAYBOOK §6.1]; Morse: triangular latticed opening at the gable [T59]",
+   "refs": [
+    {
+     "id": "x20_morse_thatch_end",
+     "shows": "smoke hood at a thatch ridge end, Iwaki",
+     "period_image": false
+    },
+    {
+     "id": "x06_suzuki_a",
+     "shows": "small raised vent on a thatch ridge",
+     "period_image": true
+    },
+    {
+     "id": "x26_morse_farmhouse_kabutoyama",
+     "shows": "farmhouse vent",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "hood_width_m": {
+     "value": "0.60-0.90",
+     "assumed": true,
+     "reason": "visual, x20"
+    },
+    "koshiyane_lift_m": {
+     "value": "0.30-0.45 above the main ridge",
+     "assumed": true,
+     "reason": "visual, x06"
+    },
+    "koshiyane_length_m": {
+     "value": "1.82 (1 ken) or 3.64",
+     "assumed": true,
+     "reason": "grid choice"
+    },
+    "irimoya_gable_opening_m": {
+     "value": "triangle 0.9-1.4 wide, lattice 0.03 bars",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame, louvres",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "inner soot faces",
+     "material": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted"
+    },
+    {
+     "surface": "covering",
+     "material": "jp_m_roof_thatch",
+     "palette_id": "thatch_weathered"
+    }
+   ],
+   "connectors": [
+    "ridge: placed by the generator at a ridge position over the doma/kamado bay",
+    "irimoya variant is part of the irimoya roof form"
+   ],
+   "variants": [
+    {
+     "id": "_hood",
+     "differs_by": "thatch ridge hood",
+     "tier": 1
+    },
+    {
+     "id": "_koshiyane",
+     "differs_by": "raised ridge vent on board/tile roofs (smithy, kitchens)",
+     "tier": 2
+    },
+    {
+     "id": "_irimoya",
+     "differs_by": "latticed triangle in the small gable"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "chimneys, stove pipes"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_hafu",
+   "name": "Bargeboards and gable edge (hafu-ita, purlin ends)",
+   "what": "The plain boards finishing every gable edge, with the purlin ends that show under the verge.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "priority": "P1",
+   "period_evidence": "Gable rule 5 [PLAYBOOK §6.2]; visible on the dated Ioka and Hirose gables [x01, x08]",
+   "refs": [
+    {
+     "id": "x01_ioka_a",
+     "shows": "tile gable edge",
+     "period_image": true
+    },
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "thatch verge",
+     "period_image": true
+    },
+    {
+     "id": "x04_misawa_a",
+     "shows": "board-roof verge",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "board_m": {
+     "value": "0.030 x 0.24",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "purlin_end_projection_m": {
+     "value": "0.30",
+     "assumed": true,
+     "reason": "visual"
+    },
+    "purlin_section_m": {
+     "value": "0.10 x 0.12",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards, purlins",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "verge: follows the verge line from eave to ridge; purlin ends at each purlin (every 0.91 up the slope)"
+   ],
+   "variants": [
+    {
+     "id": "_tile",
+     "differs_by": "under sode-gawara"
+    },
+    {
+     "id": "_board",
+     "differs_by": "with a verge batten for shingle/ishioki roofs"
+    },
+    {
+     "id": "_thatch",
+     "differs_by": "hidden; only purlin ends show under the thatch verge",
+     "tier": 1
+    }
+   ],
+   "banned_tells_to_watch": [
+    "kengyo (hanging gable ornament) on commoner houses (status)",
+    "painted boards"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_hisashi",
+   "name": "Pent roofs (hisashi): street pent, board pent, farmhouse board skirt, gable pent",
+   "what": "The light lean-to roofs below the main eave: over the machiya shopfront, over verandas, as the board skirt of thatch houses and along tiled gables.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Sasaki 1731/32: stone-weighted board eaves front and rear of the thatch roof [E02]; Suzuki: board-shingled eaves [E03]; Ioka: pent roofs front and side [E03]; Morse: hisashi of wide thin boards on slender brackets or posts [T59]",
+   "refs": [
+    {
+     "id": "x29_morse_hisashi",
+     "shows": "board hisashi",
+     "period_image": false
+    },
+    {
+     "id": "x07_sasaki_1985",
+     "shows": "board pent eave under thatch, 1732 house",
+     "period_image": true
+    },
+    {
+     "id": "x01_ioka_a",
+     "shows": "tiled gable pent",
+     "period_image": true
+    },
+    {
+     "id": "c08_kyomachiya",
+     "shows": "tiled street pent",
+     "period_image": false
+    },
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "shop front of 1690 (context)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "projection_m": {
+     "value": "0.91 (half-ken); veranda hisashi to 1.2 on posts",
+     "assumed": true,
+     "reason": "Morse calls them narrow; grid choice"
+    },
+    "street_eave_edge_m": {
+     "value": "2.90-3.20; soffit >=2.20 where walked under",
+     "source": "PLAYBOOK §4"
+    },
+    "pitch": {
+     "value": "tile 4 sun; board 2.5-3 sun; ishioki 3 sun",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "bracket_udegi_m": {
+     "value": "0.06 x 0.09 arm, from each post (0.91 or 1.82 c/c)",
+     "assumed": true,
+     "reason": "Morse: slender brackets at right angles to the uprights"
+    },
+    "gable_pent_height_m": {
+     "value": "at upper-floor line, 0.45 projection",
+     "assumed": true,
+     "reason": "visual, x01"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tile variant",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    },
+    {
+     "surface": "board variants",
+     "material": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver"
+    },
+    {
+     "surface": "brackets, fascia",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "stones (ishioki variant)",
+     "material": "jp_m_stone_river",
+     "palette_id": "stone_lantern"
+    }
+   ],
+   "connectors": [
+    "post: udegi bracket plugs into each post at the pent height",
+    "eave: pent eave line parallel to the wall",
+    "top: flashed under the upper wall or main eave"
+   ],
+   "variants": [
+    {
+     "id": "_tile",
+     "differs_by": "sangawara street pent (T3 machiya)",
+     "tier": 3
+    },
+    {
+     "id": "_board",
+     "differs_by": "thin boards on brackets (Morse)"
+    },
+    {
+     "id": "_ishioki",
+     "differs_by": "Kiso stone-weighted pent",
+     "tier": 2
+    },
+    {
+     "id": "_skirt",
+     "differs_by": "board skirt under a thatch roof, low pitch (Sasaki/Suzuki type)",
+     "tier": 2
+    },
+    {
+     "id": "_gable",
+     "differs_by": "small tiled pent along a gable (Ioka)",
+     "tier": 3
+    }
+   ],
+   "banned_tells_to_watch": [
+    "metal flashing",
+    "thick heavy fascia"
+   ],
+   "open_questions": [
+    "Decision 6: the _skirt pent is also the period-correct way to keep a thatch house entrance above 2.20 m"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_kura_eave",
+   "name": "Kura plastered eave and wall-head band",
+   "what": "The fire-proof kura eave: rafters and soffit plastered over, with a thick plaster band at the wall head.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Kura as the only tiled building allowed in Edo 1657-1720 [E09]; kura form [T59, c11]",
+   "refs": [
+    {
+     "id": "x13_morse_kura",
+     "shows": "Tokyo kura",
+     "period_image": false
+    },
+    {
+     "id": "c11_kurashiki",
+     "shows": "Kurashiki kura",
+     "period_image": false
+    },
+    {
+     "id": "x23_morse_kura_door",
+     "shows": "old Kyoto kura",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "band_height_m": {
+     "value": "0.30-0.45",
+     "assumed": true,
+     "reason": "visual, c11/x13"
+    },
+    "band_projection_m": {
+     "value": "0.05-0.10 per step, 2 steps",
+     "assumed": true,
+     "reason": "visual"
+    },
+    "eave_overhang_m": {
+     "value": "0.45-0.60",
+     "assumed": true,
+     "reason": "kura eaves are short; visual"
+    }
+   },
+   "materials": [
+    {
+     "surface": "plaster",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    },
+    {
+     "surface": "tiles above",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    }
+   ],
+   "connectors": [
+    "eave: sits on the okabe wall top; tile eave course on top"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "plain stepped band"
+    },
+    {
+     "id": "_okiyane",
+     "differs_by": "separate roof raised on posts above a plastered roof: region/date unverified, P3"
+    }
+   ],
+   "open_questions": [
+    "Oki-yane (detached kura roof): date and region not checked; do not build before verified"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_roof_gutter",
+   "name": "Bamboo gutter and downpipe",
+   "what": "A split-bamboo half-pipe on hooks along an eave, draining into a bamboo downpipe with a wooden funnel.",
+   "importance": "filler",
+   "tiers": [
+    3
+   ],
+   "region": "all",
+   "priority": "P3",
+   "period_evidence": "Morse fig. 66 (1880s) only; 1730 use assumed",
+   "refs": [
+    {
+     "id": "x38_morse_gutter",
+     "shows": "bamboo water-conductor with wooden funnel",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "gutter_diameter_m": {
+     "value": "0.10",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "hook_spacing_m": {
+     "value": "0.91",
+     "assumed": true,
+     "reason": "grid"
+    }
+   },
+   "materials": [
+    {
+     "surface": "bamboo",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "hooks",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "eave: hangs 0.05 below the eave edge on hooks at post positions"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "gutter + one downpipe"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "metal gutters (PLAYBOOK §7)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C8"
+   ]
+  },
+  {
+   "id": "jp_p_wall_shinkabe",
+   "name": "Earthen wall between exposed posts (shinkabe), with header panel (kokabe)",
+   "what": "The default house wall recipe: posts and rails visible, earth or plaster infill, generated for any run of half-ken bays.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Hirose late 17th c.: earth infill between exposed posts and rails [x08]; Sasaki 1732 [x07]",
+   "refs": [
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "earth panels between posts and rails",
+     "period_image": true
+    },
+    {
+     "id": "x06_suzuki_a",
+     "shows": "earth panels, board base",
+     "period_image": true
+    },
+    {
+     "id": "c29_earthen_wall",
+     "shows": "earth colour (sunlit)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "infill_thickness_m": {
+     "value": "0.075 (0.06 T1 arakabe)",
+     "source": "PLAYBOOK §6.2"
+    },
+    "infill_setback_m": {
+     "value": "0.02 behind the post face, both sides",
+     "assumed": true,
+     "reason": "posts 0.12, wall 0.075"
+    },
+    "panel_max": {
+     "value": "1 ken x 1 storey",
+     "source": "PLAYBOOK §6.2"
+    },
+    "rail_heights_m": {
+     "value": "sill 0 / door head 2.00 / wall plate",
+     "source": "PLAYBOOK §4"
+    },
+    "kokabe_band_m": {
+     "value": "from the 2.00 door head to the beam (0.6-1.1)",
+     "source": "follows from D2"
+    }
+   },
+   "materials": [
+    {
+     "surface": "T1 exterior",
+     "material": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged"
+    },
+    {
+     "surface": "T2 exterior",
+     "material": "jp_m_wall_nakanuri",
+     "palette_id": "earth_wall_aged"
+    },
+    {
+     "surface": "T3 upper storey",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    },
+    {
+     "surface": "posts, rails",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post: panels span between post connectors on any half-ken run",
+    "sill: bottom on dodai or grade",
+    "head: door heads at 2.00; above = kokabe",
+    "eave: top under the keta"
+   ],
+   "variants": [
+    {
+     "id": "_arakabe",
+     "differs_by": "rough, straw showing",
+     "tier": 1
+    },
+    {
+     "id": "_nakanuri",
+     "differs_by": "smoother, T2",
+     "tier": 2
+    },
+    {
+     "id": "_shikkui",
+     "differs_by": "white lime finish, T3 upper storeys",
+     "tier": 3
+    },
+    {
+     "id": "_kokabe_ranma",
+     "differs_by": "header band as a plain lattice transom instead of plaster",
+     "tier": 2
+    }
+   ],
+   "deviations": [
+    "D2/D6 raise openings; the kokabe band absorbs the difference"
+   ],
+   "banned_tells_to_watch": [
+    "pure-white untextured plaster",
+    "any blank plane > 2 x 2 m",
+    "bright ochre (see requested palette entry earth_wall_aged)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_wall_okabe",
+   "name": "Thick plastered wall, posts hidden (okabe): kura, nuriya fronts",
+   "what": "Fire-proof walls with the frame buried in plaster: kura, the post-1720 plastered town fronts, udatsu.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Edo encouraged plastered (dozo/nuriya) fronts from 1720 [T05, E09]; kura [c11]",
+   "refs": [
+    {
+     "id": "c11_kurashiki",
+     "shows": "kura plaster + namako",
+     "period_image": false
+    },
+    {
+     "id": "x13_morse_kura",
+     "shows": "kura in Tokyo",
+     "period_image": false
+    },
+    {
+     "id": "c09_himeji",
+     "shows": "shikkui texture",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "thickness_m": {
+     "value": "kura 0.24 (0.20-0.30); nuriya front 0.15",
+     "source": "PLAYBOOK §6.2 (kura); nuriya assumed"
+    },
+    "corner": {
+     "value": "sharp arris, slight irregularity",
+     "assumed": true,
+     "reason": "visual"
+    }
+   },
+   "materials": [
+    {
+     "surface": "plaster",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    }
+   ],
+   "connectors": [
+    "post: wall hides posts but still snaps to post connectors; openings cut on half-ken bays"
+   ],
+   "variants": [
+    {
+     "id": "_kura",
+     "differs_by": "0.24 thick",
+     "tier": 2
+    },
+    {
+     "id": "_nuriya",
+     "differs_by": "Edo plastered townhouse front, 0.15",
+     "tier": 3
+    }
+   ],
+   "banned_tells_to_watch": [
+    "glowing white: author the mean at <=192, houses default _w1"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_wall_board_vertical",
+   "name": "Vertical board cladding (tate-ita-bari) with cover battens",
+   "what": "Vertical boards on posts: Kiso street fronts, nagaya, farmhouse lower walls, gables.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Ioka house (late 17th-early 18th c.) lower walls are vertical dark boards [x01]",
+   "refs": [
+    {
+     "id": "x01_ioka_a",
+     "shows": "vertical boards on the dated Ioka house",
+     "period_image": true
+    },
+    {
+     "id": "c02_narai_facade",
+     "shows": "Narai front boards",
+     "period_image": false
+    },
+    {
+     "id": "x04_misawa_a",
+     "shows": "board front",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "board_width_m": {
+     "value": "0.24-0.30 random",
+     "assumed": true,
+     "reason": "visual"
+    },
+    "board_thickness_m": {
+     "value": 0.015,
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "batten_m": {
+     "value": "0.036 x 0.018 at each joint",
+     "assumed": true,
+     "reason": "visual"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "town fronts",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    }
+   ],
+   "connectors": [
+    "post: boards fixed to the outer face of posts/rails; runs any half-ken length"
+   ],
+   "variants": [
+    {
+     "id": "_battened",
+     "differs_by": "with cover battens"
+    },
+    {
+     "id": "_plain",
+     "differs_by": "butt boards, T1"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "identical repeated boards (W8)",
+    "perfectly straight new timber"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_wall_shitami",
+   "name": "Lapped horizontal boards with battens (shitami-ita-bari)",
+   "what": "Horizontal overlapping boards held by vertical battens: lower walls and gables in T2-3.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P2",
+   "period_evidence": "Widely used through the Edo period (black form on official buildings [c16]); unpainted on houses (assumed)",
+   "refs": [
+    {
+     "id": "c16_hakone_sekisho",
+     "shows": "black shitami (official form)",
+     "period_image": false
+    },
+    {
+     "id": "x05_misawa_b",
+     "shows": "board walls, museum",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "exposure_m": {
+     "value": "0.20",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "lap_m": {
+     "value": "0.025",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "batten_spacing_m": {
+     "value": "0.455 (ken/4)",
+     "assumed": true,
+     "reason": "grid"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "kura variant",
+     "material": "jp_m_wood_kuro",
+     "palette_id": "kuro_board"
+    }
+   ],
+   "connectors": [
+    "post: as board cladding"
+   ],
+   "variants": [
+    {
+     "id": "_house",
+     "differs_by": "unpainted/dark weathered"
+    },
+    {
+     "id": "_kura",
+     "differs_by": "black-stained, kura only (restricted colour)",
+     "tier": 3
+    }
+   ],
+   "banned_tells_to_watch": [
+    "kuro_board on ordinary houses (restricted: official, kura)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_wall_koshiita",
+   "name": "Board wainscot on earth walls (koshi-ita)",
+   "what": "A band of boards protecting the bottom of earth and plaster walls from splash.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Board lower panels on the Hirose (late 17th c.) and Suzuki houses [x08, x06]",
+   "refs": [
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "board lower panels",
+     "period_image": true
+    },
+    {
+     "id": "x06_suzuki_a",
+     "shows": "board base",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "height_m": {
+     "value": "0.60 or 0.90",
+     "source": "PLAYBOOK §6.2"
+    },
+    "drip_cap_m": {
+     "value": "0.02 x 0.04 top rail",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post: between posts, bottom at sill"
+   ],
+   "variants": [
+    {
+     "id": "_h060",
+     "differs_by": "0.60 high"
+    },
+    {
+     "id": "_h090",
+     "differs_by": "0.90 high"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_wall_namako",
+   "name": "Namako tile wall (namako-kabe)",
+   "what": "Square dark tiles with raised half-round white plaster joints on kura lower walls.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P2",
+   "period_evidence": "Appears from the Edo period; imo-bari (grid) is the oldest laying, shihan-bari (diagonal) the most widespread [E15]",
+   "refs": [
+    {
+     "id": "c11_kurashiki",
+     "shows": "namako on a kura",
+     "period_image": false
+    },
+    {
+     "id": "x12_morse_namako",
+     "shows": "square tiles on the side of a house",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "tile_side_m": {
+     "value": 0.2145,
+     "assumed": true,
+     "reason": "about 7 sun; chosen so the diagonal (0.303) gives 3 per half-ken"
+    },
+    "joint_width_m": {
+     "value": "0.035",
+     "assumed": true,
+     "reason": "visual, c11"
+    },
+    "joint_relief_m": {
+     "value": "0.02",
+     "assumed": true,
+     "reason": "half-round"
+    },
+    "height_m": {
+     "value": "0.9-1.8 (kura lower wall)",
+     "assumed": true,
+     "reason": "visual, c11"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tiles",
+     "material": "jp_m_wall_namako_tile",
+     "palette_id": "namako_tile"
+    },
+    {
+     "surface": "joints",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    }
+   ],
+   "connectors": [
+    "post: on okabe walls, bottom on the kura footing"
+   ],
+   "variants": [
+    {
+     "id": "_imo",
+     "differs_by": "square grid (oldest form)"
+    },
+    {
+     "id": "_shihan",
+     "differs_by": "diagonal (most common)"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "flat texture only: joints are geometry at LOD0"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_wall_gable",
+   "name": "Gable end: frame, infill and vent (rule 5)",
+   "what": "Every gable built up from exposed posts, ties and panels, with the right infill for its roof family.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Hirose (late 17th c.) thatch gable [x08]; Ioka tile gable with pent roof [x01]",
+   "refs": [
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "thatch gable frame",
+     "period_image": true
+    },
+    {
+     "id": "x01_ioka_a",
+     "shows": "tile gable: plaster above, boards below",
+     "period_image": true
+    },
+    {
+     "id": "x36_hiroshige_ishibe",
+     "shows": "tea house gable frame",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "panel_max": {
+     "value": "1 ken x 1 storey",
+     "source": "PLAYBOOK §6.2"
+    },
+    "tie_beam_m": {
+     "value": "0.12 x 0.21",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "vent_m": {
+     "value": "0.6-0.9 wide, lattice 0.03",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "T1 infill",
+     "material": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged"
+    },
+    {
+     "surface": "T3 infill",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    },
+    {
+     "surface": "board infill",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post: gable posts on the ken grid up to the ridge post",
+    "verge: meets jp_p_roof_hafu",
+    "eave: sits on the end tie beam"
+   ],
+   "variants": [
+    {
+     "id": "_thatch",
+     "differs_by": "earth panels, thick thatch verge (Hirose)",
+     "tier": 1
+    },
+    {
+     "id": "_tile",
+     "differs_by": "plaster above the pent, boards below (Ioka)",
+     "tier": 3
+    },
+    {
+     "id": "_board",
+     "differs_by": "all boards (Kiso)",
+     "tier": 2
+    },
+    {
+     "id": "_kura",
+     "differs_by": "plain okabe, small vent",
+     "tier": 2
+    }
+   ],
+   "banned_tells_to_watch": [
+    "a flat plain gable (machiya v1 mistake)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_wall_udatsu",
+   "name": "Udatsu fire wing walls (sode-udatsu, hon-udatsu)",
+   "what": "Plastered wing walls with a small tile cap between adjoining town houses.",
+   "importance": "standard",
+   "tiers": [
+    3
+   ],
+   "region": "kamigata",
+   "status_overlay": "commoner",
+   "priority": "P2",
+   "period_evidence": "Mid-Edo onward the udatsu became mainly decorative (a wealth sign) [E04]; T08",
+   "refs": [
+    {
+     "id": "x09_udatsu_mino",
+     "shows": "Mino udatsu street (late Edo/Meiji buildings; form only)",
+     "period_image": false
+    },
+    {
+     "id": "c07_gion_machiya",
+     "shows": "Kyoto machiya front",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "projection_m": {
+     "value": "0.45-0.60 beyond the facade",
+     "assumed": true,
+     "reason": "visual, x09"
+    },
+    "thickness_m": {
+     "value": "0.18",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "height": {
+     "value": "sode: from the ground-floor pent to the upper eave (1.3-1.6); hon: 0.3-0.5 above the roof plane",
+     "assumed": true,
+     "reason": "E04 describes the forms; heights assumed"
+    },
+    "cap_width_m": {
+     "value": "0.30-0.35 tile cap",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "plaster",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    },
+    {
+     "surface": "cap",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    }
+   ],
+   "connectors": [
+    "post: on the party-wall post line at the facade",
+    "eave: bottom on the ground-floor pent, top under the main eave"
+   ],
+   "variants": [
+    {
+     "id": "_sode",
+     "differs_by": "wing wall at the upper storey (default)"
+    },
+    {
+     "id": "_hon",
+     "differs_by": "parapet on the gable with its own roof (rich, P3)"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_frame_post",
+   "name": "Exterior posts",
+   "what": "Corner and wall posts that the walls, doors and pents all snap to.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Kitamura 1687: adze-marked posts between the main room and doma [E01]; post sizes [T46]",
+   "refs": [
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "irregular farmhouse posts",
+     "period_image": true
+    },
+    {
+     "id": "c02_narai_facade",
+     "shows": "town posts",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "section_m": {
+     "value": "0.120 (T2-3); 0.150 farmhouse main posts",
+     "source": "PLAYBOOK §4 [T46]"
+    },
+    "position": {
+     "value": "centred on grid nodes",
+     "source": "PLAYBOOK §4"
+    }
+   },
+   "materials": [
+    {
+     "surface": "posts",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "town fronts",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    }
+   ],
+   "connectors": [
+    "post: the grid node itself; bottom on soseki or dodai"
+   ],
+   "variants": [
+    {
+     "id": "_planed",
+     "differs_by": "straight, T2-3"
+    },
+    {
+     "id": "_adzed",
+     "differs_by": "adze facets, slight irregularity (Kitamura)",
+     "tier": 1
+    }
+   ],
+   "banned_tells_to_watch": [
+    "perfectly straight new timber on old buildings"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_frame_beam",
+   "name": "Exposed beams and rails (keta, hari ends, nuki, dodai)",
+   "what": "The horizontal members visible outside: wall plates, beam ends at gables, rails and sills.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "as jp_p_wall_gable",
+   "refs": [
+    {
+     "id": "x11_morse_frame_2storey",
+     "shows": "frame of an ordinary two-storey house (from a Japanese drawing)",
+     "period_image": false
+    },
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "rails and beam ends",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "keta_m": {
+     "value": "0.12 x 0.18",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "nuki_m": {
+     "value": "0.03 x 0.105",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "dodai_m": {
+     "value": "0.12 x 0.12",
+     "assumed": true,
+     "reason": "equal to the post"
+    },
+    "hari_end_projection_m": {
+     "value": "0.15-0.25",
+     "assumed": true,
+     "reason": "visual"
+    }
+   },
+   "materials": [
+    {
+     "surface": "timber",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post: members span post to post; beam ends project at gables"
+   ],
+   "variants": [
+    {
+     "id": "_sawn",
+     "differs_by": "sawn"
+    },
+    {
+     "id": "_log",
+     "differs_by": "log beam ends (farmhouse)",
+     "tier": 1
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_frame_dashigeta",
+   "name": "Cantilevered eave purlin (dashigeta) / projecting upper floor",
+   "what": "Arms from the posts carrying a purlin that holds a deep street eave; Edo shop fronts and Kiso post towns.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "edo",
+   "priority": "P3",
+   "period_evidence": "Surviving examples are late Edo (Kagiya 1856); the form spread in Edo shops from late Edo [E11]. NOT verified for 1730",
+   "refs": [
+    {
+     "id": "c01_narai_street",
+     "shows": "Narai: projecting upper fronts (late Edo buildings)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "cantilever_m": {
+     "value": "0.45-0.90",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "timber",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    }
+   ],
+   "connectors": [
+    "post: arms plug into the front posts at the upper floor line"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "dashigeta arm + purlin"
+    }
+   ],
+   "open_questions": [
+    "Decision 4: build only if a pre-1750 source is found or Stephen accepts it as a deviation"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_itado",
+   "name": "Plank sliding door (itado), incl. oodo with wicket",
+   "what": "The exterior plank door of every tier; the main entrance is one wide leaf sliding along the outside of the next bay.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "T1 doors are plank itado [PLAYBOOK §2.1]; shop fronts of 1690 [x33]",
+   "refs": [
+    {
+     "id": "x04_misawa_a",
+     "shows": "plank doors on a post-town house",
+     "period_image": true
+    },
+    {
+     "id": "c02_narai_facade",
+     "shows": "town plank doors",
+     "period_image": false
+    },
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "open shop front 1690",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "bay": {
+     "value": "1 half-ken leaf; main entrance: one leaf on a 1.5-ken opening, >=1.00 clear",
+     "source": "PLAYBOOK §6.3, D1"
+    },
+    "head_m": {
+     "value": 2.0,
+     "source": "D2"
+    },
+    "leaf_thickness_m": {
+     "value": "frame 0.033, boards 0.012",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "battens": {
+     "value": "3-5 horizontal",
+     "assumed": true,
+     "reason": "visual"
+    },
+    "kuguri_m": {
+     "value": "0.60 x 1.20 decorative wicket",
+     "source": "D9"
+    }
+   },
+   "materials": [
+    {
+     "surface": "leaf",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "town leaf",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "fittings",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "post: between post connectors, 0.5/1/1.5/2 ken",
+    "sill: runs in a grooved sill at floor level",
+    "head: 2.00"
+   ],
+   "variants": [
+    {
+     "id": "_plain",
+     "differs_by": "boards only",
+     "tier": 1
+    },
+    {
+     "id": "_battened",
+     "differs_by": "frame + battens",
+     "tier": 2
+    },
+    {
+     "id": "_oodo",
+     "differs_by": "big leaf with a decorative kuguri wicket (D9)",
+     "tier": 2
+    },
+    {
+     "id": "_pair",
+     "differs_by": "two leaves in a 1-ken bay"
+    }
+   ],
+   "deviations": [
+    "D1",
+    "D2",
+    "D9"
+   ],
+   "banned_tells_to_watch": [
+    "hinged doors, knobs, butt hinges"
+   ],
+   "open_questions": [
+    "Engine: translation door, one bone per leaf, memory axis exactly 1.00 m, doorWoodSlide sounds (PLAYBOOK §6.3)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_koshido",
+   "name": "Lattice sliding door (koshi-do)",
+   "what": "A day door of vertical bars used at T2-3 entrances behind the itado.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P2",
+   "period_evidence": "Koshi fronts on hatago and machiya [T30, E10]",
+   "refs": [
+    {
+     "id": "c07_gion_machiya",
+     "shows": "lattice door, Kyoto",
+     "period_image": false
+    },
+    {
+     "id": "c02_narai_facade",
+     "shows": "lattice, Narai",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "bar_face_m": {
+     "value": 0.03,
+     "source": "E16 (1 sun face)"
+    },
+    "bar_gap_m": {
+     "value": 0.03,
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "lower_board_m": {
+     "value": 0.3,
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "head_m": {
+     "value": 2.0,
+     "source": "D2"
+    }
+   },
+   "materials": [
+    {
+     "surface": "lattice",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    }
+   ],
+   "connectors": [
+    "post/sill/head as jp_p_open_itado"
+   ],
+   "variants": [
+    {
+     "id": "_open",
+     "differs_by": "bars only"
+    },
+    {
+     "id": "_papered",
+     "differs_by": "paper behind the bars"
+    }
+   ],
+   "open_questions": [
+    "Engine: translation door, one bone per leaf, memory axis exactly 1.00 m, doorWoodSlide sounds (PLAYBOOK §6.3); Fire Geometry wood"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_shoji_ext",
+   "name": "Exterior paper doors (koshidaka-shoji, akari-shoji)",
+   "what": "Paper sliding doors facing outside: the board-bottomed door of nagaya and doma entrances, and the shoji line behind amado.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Shoji at T2-3 [PLAYBOOK §2.1]; paper shop doors in 1830s road prints [x35]",
+   "refs": [
+    {
+     "id": "x35_hiroshige_goyu",
+     "shows": "inn fronts with shoji and lattice (c.1833)",
+     "period_image": true
+    },
+    {
+     "id": "x28_morse_inn_mishima",
+     "shows": "inn front, 1880s",
+     "period_image": false
+    },
+    {
+     "id": "x07_sasaki_1985",
+     "shows": "shoji behind the eave, 1732 house",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "lower_board_m": {
+     "value": "koshidaka 0.60; akari 0.15",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "kumiko_m": {
+     "value": "3 verticals per leaf, horizontals at 0.25",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "head_m": {
+     "value": 2.0,
+     "source": "D2"
+    }
+   },
+   "materials": [
+    {
+     "surface": "paper",
+     "material": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji"
+    },
+    {
+     "surface": "frame",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post/sill/head as jp_p_open_itado"
+   ],
+   "variants": [
+    {
+     "id": "_koshidaka",
+     "differs_by": "board-bottomed door (nagaya, doma)",
+     "tier": 1
+    },
+    {
+     "id": "_akari",
+     "differs_by": "plain shoji behind amado",
+     "tier": 2
+    }
+   ],
+   "banned_tells_to_watch": [
+    "glass panes",
+    "pure white paper"
+   ],
+   "open_questions": [
+    "Engine: translation door, one bone per leaf, memory axis exactly 1.00 m, doorWoodSlide sounds (PLAYBOOK §6.3); Fire Geometry fabric_thin (bullets pass)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_amado",
+   "name": "Storm shutters (amado)",
+   "what": "Thin board shutters on one outer track that close a veranda or window line at night.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Amado from 1587 (Jurakudai) [E07]",
+   "refs": [
+    {
+     "id": "x25_morse_amado_box",
+     "shows": "veranda with the rain-door closet",
+     "period_image": false
+    },
+    {
+     "id": "x07_sasaki_1985",
+     "shows": "closed facade, 1732 house",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "leaf_m": {
+     "value": "0.91 wide x door head",
+     "source": "half-ken bay (PLAYBOOK §6.3)"
+    },
+    "board_m": {
+     "value": "0.009 boards on a light frame with a few bars",
+     "source": "Morse [T59] (thickness assumed)"
+    },
+    "track": {
+     "value": "single groove on the outer edge of the veranda",
+     "source": "Morse [T59]"
+    }
+   },
+   "materials": [
+    {
+     "surface": "leaf",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "sill: outer groove of jp_p_porch_engawa",
+    "head: 2.00 under a small transom band",
+    "stows into jp_p_open_tobukuro at one end"
+   ],
+   "variants": [
+    {
+     "id": "_stowed",
+     "differs_by": "static: all leaves in the box (default)"
+    },
+    {
+     "id": "_closed",
+     "differs_by": "static closed line (abandoned houses; blocks the opening)"
+    }
+   ],
+   "open_questions": [
+    "Gameplay: amado are static, not doors (a run of 6-10 leaves would be 6-10 door bones)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_tobukuro",
+   "name": "Shutter box (tobukuro)",
+   "what": "The board box at the end of an amado run that holds the stowed leaves.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Box types named with amado [E07]; Morse swinging closet [x25] (1880s)",
+   "refs": [
+    {
+     "id": "x25_morse_amado_box",
+     "shows": "rain-door closet",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "inner_width_m": {
+     "value": "leaf + 0.05",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "depth_m": {
+     "value": "n leaves x 0.03 + 0.05",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "height_m": {
+     "value": "leaf + 0.10",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "box",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post: outside the end post of the run, on the veranda edge line"
+   ],
+   "variants": [
+    {
+     "id": "_box",
+     "differs_by": "covered box (to-bako)"
+    },
+    {
+     "id": "_swing",
+     "differs_by": "Morse swinging closet, P3"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_kura_door",
+   "name": "Kura doors (hinged plastered doors + inner sliding doors)",
+   "what": "The only hinged doors: thick stepped plaster leaves, an inner lattice/board sliding door and a small pent roof above.",
+   "importance": "hero",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Kura doors [PLAYBOOK §6.3]; old Kyoto kura doorway [x23] (1880s drawing of an old kura)",
+   "refs": [
+    {
+     "id": "x23_morse_kura_door",
+     "shows": "open hinged leaves, inner lattice, pent roof",
+     "period_image": false
+    },
+    {
+     "id": "c11_kurashiki",
+     "shows": "kura doors",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "clear_m": {
+     "value": ">=1.00 x 2.00",
+     "source": "D1, D2"
+    },
+    "leaf_thickness_m": {
+     "value": "0.15-0.20",
+     "assumed": true,
+     "reason": "visual, x23"
+    },
+    "jamb_steps": {
+     "value": "3-5 steps of 0.03-0.04",
+     "assumed": true,
+     "reason": "visual"
+    },
+    "door_pent_m": {
+     "value": "0.60 deep on 2 brackets",
+     "assumed": true,
+     "reason": "visual, x23"
+    }
+   },
+   "materials": [
+    {
+     "surface": "leaves, jambs",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    },
+    {
+     "surface": "inner doors",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "hinges, hasp",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    },
+    {
+     "surface": "pent",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    }
+   ],
+   "connectors": [
+    "post: centred on a 1-ken bay of an okabe wall",
+    "sill: raised stone threshold 0.15"
+   ],
+   "variants": [
+    {
+     "id": "_open",
+     "differs_by": "outer leaves static open; inner sliding door is the game door (P1)"
+    },
+    {
+     "id": "_hinged",
+     "differs_by": "outer leaves as rotation doors (P2, engine test)"
+    }
+   ],
+   "open_questions": [
+    "Engine: hinged rotation doors are untested in this kit"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_kura_window",
+   "name": "Kura window (barred, plaster shutters, tiny pent)",
+   "what": "Small barred kura window with thick plaster shutters and a mini tile pent.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P2",
+   "period_evidence": "as kura",
+   "refs": [
+    {
+     "id": "x13_morse_kura",
+     "shows": "kura windows",
+     "period_image": false
+    },
+    {
+     "id": "c11_kurashiki",
+     "shows": "kura windows",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "opening_m": {
+     "value": "0.60 x 0.75",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "bars_m": {
+     "value": "0.03 at 0.09",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "shutter_thickness_m": {
+     "value": 0.12,
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "shutters",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    },
+    {
+     "surface": "bars",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    },
+    {
+     "surface": "pent",
+     "material": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi"
+    }
+   ],
+   "connectors": [
+    "post: centred in a half-ken or 1-ken bay; sill at 1.2 (ground) or 0.6 (upper)"
+   ],
+   "variants": [
+    {
+     "id": "_slide",
+     "differs_by": "sliding plaster shutter"
+    },
+    {
+     "id": "_hinged",
+     "differs_by": "pair of hinged shutters (static open)"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_mushiko",
+   "name": "Mushiko window, 1730 form (small oval)",
+   "what": "The plastered slatted window of the low upper storey of Kamigata machiya; in 1730 small and oval, not the later rectangle.",
+   "importance": "hero",
+   "tiers": [
+    3
+   ],
+   "region": "kamigata",
+   "priority": "P1",
+   "period_evidence": "Early mushiko-mado were small and oval; they became larger and rectangular in the Meiji period [E05]; standard on 18th c. Kyoto machiya [E10]",
+   "refs": [
+    {
+     "id": "c08_kyomachiya",
+     "shows": "mushiko construction (later rectangular form: slats and plaster only)",
+     "period_image": false
+    },
+    {
+     "id": "c07_gion_machiya",
+     "shows": "low upper storey",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "opening_m": {
+     "value": "0.90 wide x 0.45 high, round ends",
+     "assumed": true,
+     "reason": "E05 says small and oval; size assumed to fit a half-ken bay and the <=1.30 street wall"
+    },
+    "slat_face_m": {
+     "value": 0.045,
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "slat_gap_m": {
+     "value": 0.045,
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "depth_m": {
+     "value": "wall thickness 0.15",
+     "assumed": true,
+     "reason": "okabe"
+    },
+    "placement": {
+     "value": "upper street wall, sill 0.40 above the upper floor",
+     "assumed": true,
+     "reason": "fits PLAYBOOK D3 street wall <=1.30"
+    }
+   },
+   "materials": [
+    {
+     "surface": "plaster",
+     "material": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white"
+    }
+   ],
+   "connectors": [
+    "post: centred on a half-ken bay of the upper okabe front; 1 per 1-2 bays"
+   ],
+   "variants": [
+    {
+     "id": "_oval",
+     "differs_by": "single oval"
+    },
+    {
+     "id": "_oval_pair",
+     "differs_by": "two ovals in one 1-ken bay"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "large rectangular mushiko (Meiji form)",
+    "see-through: View Geometry closed, Fire Geometry dirt"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_koshi",
+   "name": "Koshi lattice fronts and windows (incl. de-goshi)",
+   "what": "Wooden lattice modules for street fronts and windows, with trade variants and the projecting de-goshi.",
+   "importance": "hero",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "De-goshi part of the 18th c. standard Kyoto front [E10]; lattice fronts on hatago [T30]",
+   "refs": [
+    {
+     "id": "c07_gion_machiya",
+     "shows": "bengara koshi",
+     "period_image": false
+    },
+    {
+     "id": "c08_kyomachiya",
+     "shows": "koshi front",
+     "period_image": false
+    },
+    {
+     "id": "c02_narai_facade",
+     "shows": "Narai lattice",
+     "period_image": false
+    },
+    {
+     "id": "x35_hiroshige_goyu",
+     "shows": "inn lattice fronts (c.1833)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "module_widths": {
+     "value": "0.5 / 1 / 1.5 / 2 ken",
+     "source": "PLAYBOOK §10.2"
+    },
+    "bar_face_m": {
+     "value": 0.03,
+     "source": "E16"
+    },
+    "bar_depth_m": {
+     "value": 0.05,
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "degoshi_projection_m": {
+     "value": 0.3,
+     "assumed": true,
+     "reason": "about 1 shaku; assumed"
+    },
+    "oyako_cut_gap_m": {
+     "value": "children stop 0.30 below the head rail",
+     "assumed": true,
+     "reason": "E16 describes cut-top children; gap assumed"
+    },
+    "sill_m": {
+     "value": "on koshi-ita or plinth at 0.45; head 2.00",
+     "assumed": true,
+     "reason": "assumed / D2"
+    }
+   },
+   "materials": [
+    {
+     "surface": "lattice",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "Kamigata finish",
+     "material": "jp_m_wood_bengara",
+     "palette_id": "bengara_lattice"
+    }
+   ],
+   "connectors": [
+    "post: between post connectors",
+    "sill: own sill rail on the dodai or a board base",
+    "head: 2.00 rail"
+   ],
+   "variants": [
+    {
+     "id": "_kyo",
+     "differs_by": "fine bars, few rails"
+    },
+    {
+     "id": "_oyako",
+     "differs_by": "parent bars + cut-top children (cloth/thread shops)",
+     "tier": 3
+    },
+    {
+     "id": "_komeya",
+     "differs_by": "thick bars (rice, charcoal)",
+     "tier": 2
+    },
+    {
+     "id": "_degoshi",
+     "differs_by": "projecting lattice on its own sill",
+     "tier": 3
+    },
+    {
+     "id": "_bengara",
+     "differs_by": "bengara finish (Kamigata, sparingly)",
+     "tier": 3
+    }
+   ],
+   "banned_tells_to_watch": [
+    "bengara outside Kamigata T2-3",
+    "glass behind the lattice"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_renji",
+   "name": "Barred and slatted windows (renji-mado, muso-mado)",
+   "what": "Plain barred windows with a sliding board shutter; the everyday window of farmhouses and kitchens.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Lattice windows on the Ito house (late 17th-early 18th c.) [E01]; renji-mado for rural T1 [PLAYBOOK §2.1]",
+   "refs": [
+    {
+     "id": "x07_sasaki_1985",
+     "shows": "lattice window, 1732 house",
+     "period_image": true
+    },
+    {
+     "id": "x04_misawa_a",
+     "shows": "lattice window",
+     "period_image": true
+    },
+    {
+     "id": "x26_morse_farmhouse_kabutoyama",
+     "shows": "farmhouse windows",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "opening_m": {
+     "value": "0.91 x 0.60-0.90",
+     "assumed": true,
+     "reason": "grid + assumed"
+    },
+    "sill_m": {
+     "value": 0.9,
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "bars_m": {
+     "value": "bamboo d 0.028 or wood 0.03 square at 0.08 c/c",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "muso_slat_m": {
+     "value": "0.045 slats, 0.045 gaps, one panel slides",
+     "assumed": true,
+     "reason": "assumed; period of muso-mado not verified"
+    }
+   },
+   "materials": [
+    {
+     "surface": "bars",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "frame, shutter",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post: half-ken or 1-ken bay; the shutter slides inside the wall line"
+   ],
+   "variants": [
+    {
+     "id": "_bamboo",
+     "differs_by": "bamboo bars",
+     "tier": 1
+    },
+    {
+     "id": "_wood",
+     "differs_by": "square wood bars",
+     "tier": 2
+    },
+    {
+     "id": "_muso",
+     "differs_by": "double slatted panels (kitchens; date unverified)",
+     "tier": 2
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_suriagedo",
+   "name": "Vertical-sliding shop shutters (suriage-do / agedo)",
+   "what": "The night closure of an open shop front: stacked boards that slide up in post grooves into a box behind the upper beam.",
+   "importance": "hero",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Standard through the Edo period to mid-Meiji (Seki-juku) [E12]; agedo on the Suzuki house front [E03]; Inoue house, Kurashiki (1721 renovation) has shitomi and suriage shutters [E13]",
+   "refs": [
+    {
+     "id": "x06_suzuki_a",
+     "shows": "Suzuki house (agedo front)",
+     "period_image": true
+    },
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "fully open shop front of 1690",
+     "period_image": true
+    },
+    {
+     "id": "x37_eisen_narai",
+     "shows": "open post-town shop front c.1835",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "boards": {
+     "value": "3 per opening, each ~0.68 high (2.04 / 3)",
+     "source": "E12 (3 boards); height derived from D2"
+    },
+    "bay": {
+     "value": "1 ken per stack",
+     "assumed": true,
+     "reason": "grid"
+    },
+    "storage": {
+     "value": "box behind the upper beam inside, occupying the upper front wall",
+     "source": "E12"
+    },
+    "groove_m": {
+     "value": "0.03 wide in the posts",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "box",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post: grooves in the two posts of a 1-ken bay",
+    "head: stack top under the 2.00 beam; box above it inside"
+   ],
+   "variants": [
+    {
+     "id": "_closed",
+     "differs_by": "static closed"
+    },
+    {
+     "id": "_part",
+     "differs_by": "static, one board lowered"
+    },
+    {
+     "id": "_door",
+     "differs_by": "animated: whole stack as one leaf, vertical translation (engine test)"
+    }
+   ],
+   "open_questions": [
+    "Engine: a vertical translation door is untested; fall back to static states"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_shitomido",
+   "name": "Hinged-up shop shutter (shitomido)",
+   "what": "Kamigata shop closure: an upper panel hinged at the top and hooked up by day, a lower panel lifted out.",
+   "importance": "standard",
+   "tiers": [
+    3
+   ],
+   "region": "kamigata",
+   "priority": "P2",
+   "period_evidence": "Inoue house, Kurashiki (1721 renovation) has shitomido [E13]; upper panel larger than the lower [E08]",
+   "refs": [
+    {
+     "id": "c08_kyomachiya",
+     "shows": "Kyoto machiya front (context)",
+     "period_image": false
+    },
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "open shop front, 1690",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "bay": {
+     "value": "1 ken",
+     "assumed": true,
+     "reason": "grid"
+    },
+    "upper_panel_m": {
+     "value": "1.1 high",
+     "assumed": true,
+     "reason": "E08 says upper larger; value assumed"
+    },
+    "lower_panel_m": {
+     "value": "0.8 high",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "panel_build": {
+     "value": "lattice with boards behind",
+     "source": "E08"
+    }
+   },
+   "materials": [
+    {
+     "surface": "panels",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "hooks",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "post: between the posts of a 1-ken bay; hinge at the 2.00 head rail"
+   ],
+   "variants": [
+    {
+     "id": "_up",
+     "differs_by": "static: upper hooked up under the pent, lower removed"
+    },
+    {
+     "id": "_closed",
+     "differs_by": "static closed"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_battari",
+   "name": "Fold-down shop bench (battari-shogi)",
+   "what": "A bench hinged to the Kamigata shop front, folded up at night.",
+   "importance": "filler",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "kamigata",
+   "priority": "P2",
+   "period_evidence": "Kamigata signature detail [PLAYBOOK §3]; no pre-1750 image found",
+   "refs": [
+    {
+     "id": "c07_gion_machiya",
+     "shows": "Kyoto front (context only)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "1.82 x 0.50, seat 0.42",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    }
+   ],
+   "connectors": [
+    "post: hinged on the facade between two posts, under a lattice window"
+   ],
+   "variants": [
+    {
+     "id": "_down",
+     "differs_by": "static down"
+    },
+    {
+     "id": "_up",
+     "differs_by": "static folded"
+    }
+   ],
+   "open_questions": [
+    "Catalogue lists it as street furniture (S); moved to the shell because it hinges on the facade. First date unverified"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_upper_rail",
+   "name": "Upper-floor front rail (tesuri) for inns and tea houses",
+   "what": "A low plain wooden rail along an upper-floor opening or veranda of an inn or tea house.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P2",
+   "period_evidence": "Railed tea-house rooms in prints of 1726 and c.1748 [x30, x31]",
+   "refs": [
+    {
+     "id": "x30_shinagawa_1726",
+     "shows": "railed room open to the sea, Shinagawa 1726",
+     "period_image": true
+    },
+    {
+     "id": "x31_masanobu_ryogoku_1748",
+     "shows": "railed riverside room c.1748",
+     "period_image": true
+    },
+    {
+     "id": "x35_hiroshige_goyu",
+     "shows": "inn upper front (c.1833)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "rail_height_m": {
+     "value": "0.60 visible",
+     "assumed": true,
+     "reason": "sitting height; assumed"
+    },
+    "baluster_m": {
+     "value": "0.03 square at 0.12",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "geometry_blocker_m": {
+     "value": "1.00",
+     "assumed": true,
+     "reason": "reason: fall protection in Geometry only"
+    }
+   },
+   "materials": [
+    {
+     "surface": "rail",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "post: between upper-floor posts at the upper floor level"
+   ],
+   "variants": [
+    {
+     "id": "_plain",
+     "differs_by": "plain verticals"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "Western turned balusters, balconies"
+   ],
+   "open_questions": [
+    "Decision 5: full-height upper storeys on T2 hatago"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_open_mushiro",
+   "name": "Hung straw mat door (mushiro, rolled up)",
+   "what": "The poorest doorway closure: a straw mat hung over an opening, shown rolled up.",
+   "importance": "filler",
+   "tiers": [
+    1
+   ],
+   "region": "rural",
+   "priority": "P3",
+   "period_evidence": "T1 doors include hung mushiro [PLAYBOOK §2.1]",
+   "refs": [
+    {
+     "id": "c18_hiroshige_mariko",
+     "shows": "poor roadside house (c.1833)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "roll_m": {
+     "value": "d 0.15 x 0.91-1.82",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "mat",
+     "material": "jp_m_straw_mushiro",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "head: hangs from the head rail above an open bay; no collision"
+   ],
+   "variants": [
+    {
+     "id": "_rolled",
+     "differs_by": "rolled up, static"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4"
+   ]
+  },
+  {
+   "id": "jp_p_found_soseki",
+   "name": "Foundation stones (soseki, ishiba-date)",
+   "what": "Individual rounded field stones under each post of rural houses and verandas.",
+   "importance": "hero",
+   "tiers": [
+    1,
+    2
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Rural posts on single stones [PLAYBOOK §6.4]; Morse foundation stone [x10]",
+   "refs": [
+    {
+     "id": "x10_morse_foundation_stone",
+     "shows": "post on a foundation stone",
+     "period_image": false
+    },
+    {
+     "id": "x08_hirose_earthwall",
+     "shows": "farmhouse base",
+     "period_image": true
+    },
+    {
+     "id": "x06_suzuki_a",
+     "shows": "stone base",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "stone_m": {
+     "value": "0.30-0.50 across, 0.15-0.30 tall",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "exposed_m": {
+     "value": "0.05-0.20",
+     "source": "PLAYBOOK §6.4"
+    },
+    "shapes": {
+     "value": "8 distinct",
+     "assumed": true,
+     "reason": "W8 variety"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "post: one per post node, top at post base; buried to grade - exposed height"
+   ],
+   "variants": [
+    {
+     "id": "_set8",
+     "differs_by": "8 shapes"
+    },
+    {
+     "id": "_mossy",
+     "differs_by": "north-side moss (W6)"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "continuous smooth plinth (rule 3)",
+    "cement mortar"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_found_dodai_stones",
+   "name": "Sill on a course of individual stones (dodai + ishi)",
+   "what": "Town-house base: a timber sill on a low course of separate cut stones with irregular joints.",
+   "importance": "hero",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "PLAYBOOK §6.4 (rule 3); Ioka base [x01]",
+   "refs": [
+    {
+     "id": "x01_ioka_a",
+     "shows": "sill line of the dated Ioka house",
+     "period_image": true
+    },
+    {
+     "id": "c02_narai_facade",
+     "shows": "town base",
+     "period_image": false
+    },
+    {
+     "id": "c08_kyomachiya",
+     "shows": "machiya base",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "stone_m": {
+     "value": "0.30-0.60 long x 0.25-0.35 deep; 0.10-0.20 showing",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "joint_m": {
+     "value": "0.005-0.02 irregular",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "sill_m": {
+     "value": "0.12 x 0.12",
+     "source": "PLAYBOOK §4"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stones",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "sill",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "sill: dodai top = finished grade + stone height; posts stand on it",
+    "runs any half-ken length; stone joints never align with posts on purpose"
+   ],
+   "variants": [
+    {
+     "id": "_rough",
+     "differs_by": "roughly dressed, T2",
+     "tier": 2
+    },
+    {
+     "id": "_dressed",
+     "differs_by": "better dressed, T3",
+     "tier": 3
+    }
+   ],
+   "banned_tells_to_watch": [
+    "continuous smooth plinth",
+    "uniform block courses"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_found_kura_footing",
+   "name": "Kura footing course (cut granite)",
+   "what": "The 0.3-0.6 m cut-stone footing under kura walls, in individual blocks.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "PLAYBOOK §6.4",
+   "refs": [
+    {
+     "id": "c11_kurashiki",
+     "shows": "kura footing",
+     "period_image": false
+    },
+    {
+     "id": "x13_morse_kura",
+     "shows": "kura base",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "height_m": {
+     "value": "0.30-0.60 (1-2 courses)",
+     "source": "PLAYBOOK §6.4"
+    },
+    "block_m": {
+     "value": "0.6-0.9 long",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "projection_m": {
+     "value": "0.05-0.10 beyond the wall",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "sill: under the okabe wall; grade to wall bottom"
+   ],
+   "variants": [
+    {
+     "id": "_c1",
+     "differs_by": "one course"
+    },
+    {
+     "id": "_c2",
+     "differs_by": "two courses"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_found_yukashita",
+   "name": "Under-floor zone (raised floor gap, tsuka posts)",
+   "what": "The dark ventilated gap under raised floors and verandas, open or closed by boards.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Raised floors on short posts over small stones [PLAYBOOK §6.4, T17]",
+   "refs": [
+    {
+     "id": "x07_sasaki_1985",
+     "shows": "raised floor edge, 1732 house",
+     "period_image": true
+    },
+    {
+     "id": "x04_misawa_a",
+     "shows": "raised front",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "floor_m": {
+     "value": "+0.50 above grade (doma +0.05, step +0.45)",
+     "source": "PLAYBOOK §4"
+    },
+    "tsuka_m": {
+     "value": "0.09 square on small stones at 0.91",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "posts, boards",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "stones",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "floor: under every raised-floor edge that faces outside"
+   ],
+   "variants": [
+    {
+     "id": "_open",
+     "differs_by": "open dark gap (T1-2, verandas)"
+    },
+    {
+     "id": "_boarded",
+     "differs_by": "vertical boards with vent gaps (T2-3)"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_found_step",
+   "name": "Entrance stones and steps (kutsunugi-ishi, threshold stone, veranda step)",
+   "what": "The stones and steps at doors and verandas that also hide the walk ramps.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "B spike; Morse steps to verandah (fig. 179)",
+   "refs": [
+    {
+     "id": "x04_misawa_a",
+     "shows": "entrance stones",
+     "period_image": true
+    },
+    {
+     "id": "x25_morse_amado_box",
+     "shows": "veranda edge",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "kutsunugi_m": {
+     "value": "0.60 x 0.40 x 0.15-0.20",
+     "source": "B spike"
+    },
+    "step_rise_m": {
+     "value": "0.15-0.18",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "tread_m": {
+     "value": "0.30-0.40",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "ramp_deg": {
+     "value": "<=34 hidden under the stone",
+     "source": "PLAYBOOK §4"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "cut stone",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "wood step",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "sill: at door sills and veranda edges; ramp in Geometry/Roadway"
+   ],
+   "variants": [
+    {
+     "id": "_natural",
+     "differs_by": "natural slab"
+    },
+    {
+     "id": "_cut",
+     "differs_by": "cut slab",
+     "tier": 3
+    },
+    {
+     "id": "_wood",
+     "differs_by": "wooden step box at a veranda"
+    }
+   ],
+   "banned_tells_to_watch": [
+    "poured-looking steps"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_porch_engawa",
+   "name": "Veranda (engawa)",
+   "what": "The raised board veranda along garden and yard sides of better houses, closed by amado.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P1",
+   "period_evidence": "Engawa on T2-3 [PLAYBOOK §10.3]; railed tea-house engawa in 1726 and c.1748 prints [x30, x31]",
+   "refs": [
+    {
+     "id": "x25_morse_amado_box",
+     "shows": "veranda + rain-door closet",
+     "period_image": false
+    },
+    {
+     "id": "x30_shinagawa_1726",
+     "shows": "tea-house engawa, 1726",
+     "period_image": true
+    },
+    {
+     "id": "x07_sasaki_1985",
+     "shows": "veranda line, 1732 house",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "width_clear_m": {
+     "value": ">=1.00 (1.00-1.20)",
+     "source": "PLAYBOOK §4 (reason)"
+    },
+    "height_m": {
+     "value": 0.5,
+     "source": "PLAYBOOK §4"
+    },
+    "edge_beam_m": {
+     "value": "0.09 x 0.15",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "boards": {
+     "value": "kure-en: boards along the wall inside the amado line; kiri-en: boards across, exposed",
+     "assumed": true,
+     "reason": "assumed from common practice"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "floor: level ID of the raised floor",
+    "post: veranda posts on the outer line carry the eave or hisashi (Morse)",
+    "outer edge carries the amado groove"
+   ],
+   "variants": [
+    {
+     "id": "_kure",
+     "differs_by": "lengthwise boards, inside the amado",
+     "tier": 2
+    },
+    {
+     "id": "_kiri",
+     "differs_by": "crosswise boards, exposed",
+     "tier": 2
+    }
+   ],
+   "deviations": [
+    "D5 (>=1.00 clear)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C9"
+   ]
+  },
+  {
+   "id": "jp_p_porch_nureen",
+   "name": "Open deck (nure-en)",
+   "what": "A narrow unroofed board deck outside a room.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "region": "all",
+   "priority": "P3",
+   "period_evidence": "assumed common; no dated source gathered",
+   "refs": [
+    {
+     "id": "x25_morse_amado_box",
+     "shows": "veranda boards",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "width_m": {
+     "value": "0.45-0.60",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "height_m": {
+     "value": 0.45,
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "floor: against a raised-floor edge"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "plain"
+    }
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+   ]
+  }
+ ]
+}

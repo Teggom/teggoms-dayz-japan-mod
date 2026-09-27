@@ -1,0 +1,512 @@
+{
+ "version": 1,
+ "category": "exterior (dwellings and shops)",
+ "date": "2026-09-27",
+ "note": "Images local only in data/research_ext/refs/ (git-ignored, never shipped). Ids without a prefix listed here (c.., m.., T..) are in playbook/refs_index.json. Text is cited, not copied.",
+ "download_policy": "PD / CC0 / CC BY only. Commons API (descriptive User-Agent, retry-after honoured), Project Gutenberg (Morse figures), Met Open Access, Cleveland Open Access, Library of Congress.",
+ "playbook_ids_reused": [
+  "c01_narai_street",
+  "c02_narai_facade",
+  "c03_tsumago_street",
+  "c05_ouchi_thatch",
+  "c07_gion_machiya",
+  "c08_kyomachiya",
+  "c09_himeji",
+  "c11_kurashiki",
+  "c16_hakone_sekisho",
+  "c18_hiroshige_mariko",
+  "c26_morse_tile_ridge",
+  "c27_morse_thatch_ridge",
+  "c29_earthen_wall"
+ ],
+ "images": [
+  {
+   "id": "x01_ioka_a",
+   "file": "data/research_ext/refs/x01_ioka_a.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Nihon Minka-en 25.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Nihon_Minka-en_25.jpg",
+   "licence": "CC0",
+   "author": "Syced",
+   "date": "3 November 2024 (according to Exif data)",
+   "supports": "Ioka machiya (Nara, late 17th-early 18th c.; Nihon Minka-en): kirizuma sangawara, gable pent roof, vertical boards, under repair"
+  },
+  {
+   "id": "x03_ioka_c",
+   "file": "data/research_ext/refs/x03_ioka_c.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Nihon Minka-en 94.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Nihon_Minka-en_94.jpg",
+   "licence": "CC0",
+   "author": "Syced",
+   "date": "3 November 2024",
+   "supports": "Ioka machiya: sangawara roof, plaster gable, board lower walls, side pent (backlit; colour not usable)"
+  },
+  {
+   "id": "x04_misawa_a",
+   "file": "data/research_ext/refs/x04_misawa_a.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Nihon Minka-en 60.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Nihon_Minka-en_60.jpg",
+   "licence": "CC0",
+   "author": "Syced",
+   "date": "3 November 2024 (according to Exif data)",
+   "supports": "Misawa house (Ina, mid-19th c.): stone-weighted chestnut board roof, battens, stones, plank doors, lattice window"
+  },
+  {
+   "id": "x05_misawa_b",
+   "file": "data/research_ext/refs/x05_misawa_b.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Nihon Minka-en 83.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Nihon_Minka-en_83.jpg",
+   "licence": "CC0",
+   "author": "Syced",
+   "date": "3 November 2024 (according to Exif data)",
+   "supports": "Misawa house: long side, board and plaster walls, deep eaves"
+  },
+  {
+   "id": "x06_suzuki_a",
+   "file": "data/research_ext/refs/x06_suzuki_a.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Nihon Minka-en 15.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Nihon_Minka-en_15.jpg",
+   "licence": "CC0",
+   "author": "Syced",
+   "date": "Taken on 3 November 2024",
+   "supports": "Suzuki house (Fukushima, early 19th c., horse inn): hip thatch with board-shingled lower eave, earth walls, small ridge vent"
+  },
+  {
+   "id": "x07_sasaki_1985",
+   "file": "data/research_ext/refs/x07_sasaki_1985.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Japan, country side, classic house.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Japan,_country_side,_classic_house.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Marie-Sophie Mejan",
+   "date": "1985",
+   "supports": "Sasaki house (Nagano, 1731/32, village headman): thatch, board pent eave, lattice window, shoji (1985 photo)"
+  },
+  {
+   "id": "x08_hirose_earthwall",
+   "file": "data/research_ext/refs/x08_hirose_earthwall.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Earthen walls of traditional Japanese houses.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Earthen_walls_of_traditional_Japanese_houses.jpg",
+   "licence": "CC0",
+   "author": "タクナワン",
+   "date": "2024-04-29",
+   "supports": "Hirose house (Koshu, late 17th c.): kirizuma thatch gable, exposed frame, earth panels, board base; earth colour sample"
+  },
+  {
+   "id": "x09_udatsu_mino",
+   "file": "data/research_ext/refs/x09_udatsu_mino.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Udatsu in minomachi.JPG",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Udatsu_in_minomachi.JPG",
+   "licence": "Public domain",
+   "author": "guretaro",
+   "date": "2008-08-11",
+   "supports": "Mino-machi: udatsu wing walls between town houses (late Edo/Meiji buildings; form only)"
+  },
+  {
+   "id": "x10_morse_foundation_stone",
+   "file": "data/research_ext/refs/x10_morse_foundation_stone.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes006 FOUNDATION STONE.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes006_FOUNDATION_STONE.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "post on a foundation stone"
+  },
+  {
+   "id": "x11_morse_frame_2storey",
+   "file": "data/research_ext/refs/x11_morse_frame_2storey.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes012 FRAMING OF AN ORDINARY TWO-STORIED HOUSE. (FROM A JAPANESE DRAWING).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes012_FRAMING_OF_AN_ORDINARY_TWO-STORIED_HOUSE._(FROM_A_JAPANESE_DRAWING).jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "frame of an ordinary two-storey house (from a Japanese drawing)"
+  },
+  {
+   "id": "x12_morse_namako",
+   "file": "data/research_ext/refs/x12_morse_namako.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes025 ARRANGEMENT OF SQUARE TILES ON SIDE OF A HOUSE.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes025_ARRANGEMENT_OF_SQUARE_TILES_ON_SIDE_OF_A_HOUSE.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "square tiles on the side of a house (namako)"
+  },
+  {
+   "id": "x13_morse_kura",
+   "file": "data/research_ext/refs/x13_morse_kura.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes058 KURA, OR FIRE-PROOF BUILDINGS IN TOKIO (from a sketch by S, Koyama).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes058_KURA,_OR_FIRE-PROOF_BUILDINGS_IN_TOKIO_(from_a_sketch_by_S,_Koyama).jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "kura (fire-proof storehouses), Tokyo"
+  },
+  {
+   "id": "x14_morse_shingle_laid",
+   "file": "data/research_ext/refs/x14_morse_shingle_laid.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes064 ROOF WITH SHINGLES PARTLY LAID.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes064_ROOF_WITH_SHINGLES_PARTLY_LAID.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "shingle roof partly laid"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 65.-Ridge on shingle-roof in Musashi.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig65",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x15_morse_shingle_ridge",
+   "file": "data/research_ext/refs/x15_morse_shingle_ridge.jpg",
+   "supports": "ridge of a shingle roof, Musashi"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 71.-Eaves of tiled roof.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig71",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x16_morse_tile_eaves",
+   "file": "data/research_ext/refs/x16_morse_tile_eaves.jpg",
+   "supports": "eaves of a tiled roof: eave tiles"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 73.-Hon-gawara, or True Tile.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig73",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x17_morse_hongawara",
+   "file": "data/research_ext/refs/x17_morse_hongawara.jpg",
+   "supports": "hongawara (true tile)"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 74.-Yedo-gawara, or Yedo-tile eaves.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig74",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x18_morse_yedogawara",
+   "file": "data/research_ext/refs/x18_morse_yedogawara.jpg",
+   "supports": "Yedo-gawara (sangawara) eaves"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 77.-Stone roof.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig77",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x19_morse_stone_roof",
+   "file": "data/research_ext/refs/x19_morse_stone_roof.jpg",
+   "supports": "stone-slab kura roof (Shimotsuke; not used, context)"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 79.-End of roof in Fujita, Iwaki.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig79",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x20_morse_thatch_end",
+   "file": "data/research_ext/refs/x20_morse_thatch_end.jpg",
+   "supports": "thatch ridge end with smoke hood, Iwaki"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 81.-Tiled ridge of thatched roof in Musashi.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig81",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x21_morse_thatch_tile_ridge",
+   "file": "data/research_ext/refs/x21_morse_thatch_tile_ridge.jpg",
+   "supports": "tiled ridge on thatch, Musashi"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 83.-Thatched Roof, near Tokio.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig83",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x22_morse_thatch_kanto",
+   "file": "data/research_ext/refs/x22_morse_thatch_kanto.jpg",
+   "supports": "thatched roof near Tokyo"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 140.-Doorway of an old kura in Kioto.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig140",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x23_morse_kura_door",
+   "file": "data/research_ext/refs/x23_morse_kura_door.jpg",
+   "supports": "doorway of an old kura, Kyoto: hinged plaster doors, inner lattice, pent"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 154.-Window.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig154",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x24_morse_window",
+   "file": "data/research_ext/refs/x24_morse_window.jpg",
+   "supports": "window with board wall (context)"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 237.-Verandah showing swinging closet for rain-doors, and also ChÅdzu-bachi.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig237",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x25_morse_amado_box",
+   "file": "data/research_ext/refs/x25_morse_amado_box.jpg",
+   "supports": "veranda with swinging closet for rain-doors"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 45.-Old Farm-house in Kabutoyama.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig45",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x26_morse_farmhouse_kabutoyama",
+   "file": "data/research_ext/refs/x26_morse_farmhouse_kabutoyama.jpg",
+   "supports": "old farmhouse, Kabutoyama (Musashi)"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 52.-Village Street in Nasaike, Yamashiro.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig52",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x27_morse_village_yamashiro",
+   "file": "data/research_ext/refs/x27_morse_village_yamashiro.jpg",
+   "supports": "village street, Nagaike (Yamashiro): Kansai village fronts"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 51.-Old Inn in Mishima, Suruga.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig51",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x28_morse_inn_mishima",
+   "file": "data/research_ext/refs/x28_morse_inn_mishima.jpg",
+   "supports": "old inn, Mishima (Tokaido)"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 60.-Hisashi.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig60",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x29_morse_hisashi",
+   "file": "data/research_ext/refs/x29_morse_hisashi.jpg",
+   "supports": "hisashi of thin boards on brackets"
+  },
+  {
+   "source": "Library of Congress Prints and Photographs",
+   "title": "Shinagawa tsukimi no keshiki.",
+   "page_url": "https://www.loc.gov/item/2008680283/",
+   "licence": "Public domain (LOC: no known restrictions)",
+   "author": "unknown (LOC record)",
+   "date": "1726",
+   "id": "x30_shinagawa_1726",
+   "file": "data/research_ext/refs/x30_shinagawa_1726.jpg",
+   "supports": "uki-e 1726: tea-house room with railed engawa at Shinagawa (Tokaido)"
+  },
+  {
+   "id": "x31_masanobu_ryogoku_1748",
+   "file": "data/research_ext/refs/x31_masanobu_ryogoku_1748.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Large Perspective Picture of Evening Cool by Ryogoku Bridge by Okumura Masanobu.JPG",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Large_Perspective_Picture_of_Evening_Cool_by_Ryogoku_Bridge_by_Okumura_Masanobu.JPG",
+   "licence": "Public domain",
+   "author": "Okumura Masanobu",
+   "date": "early c. 1748",
+   "supports": "Okumura Masanobu uki-e c.1748: riverside tea-house room, rails"
+  },
+  {
+   "source": "Cleveland Museum of Art Open Access",
+   "title": "Tea House Beside the Kamo River in Kyoto 1920.515",
+   "page_url": "https://clevelandart.org/art/1920.515",
+   "licence": "CC0",
+   "author": "Nishimura Shigenaga",
+   "date": "1740s",
+   "id": "x32_shigenaga_kamo_1740s",
+   "file": "data/research_ext/refs/x32_shigenaga_kamo_1740s.jpg",
+   "supports": "Nishimura Shigenaga 1740s: Kyoto tea house by the Kamo river (mostly interior)"
+  },
+  {
+   "id": "x33_jinrin_bookseller_1690",
+   "file": "data/research_ext/refs/x33_jinrin_bookseller_1690.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Japanese bookseller from Jinrin kinmo zui.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Japanese_bookseller_from_Jinrin_kinmo_zui.jpg",
+   "licence": "Public domain",
+   "author": "Attributed to Makieshi Genzaburo",
+   "date": "1690date QS:P571,+1690-00-00T00:00:00Z/9",
+   "supports": "Jinrin kinmo zui 1690: bookseller shop front, raised display floor"
+  },
+  {
+   "source": "The Met Open Access",
+   "title": "Goyu: Women Stopping Travellers (Tokaido Hoeido ed.) DP122214",
+   "page_url": "https://www.metmuseum.org/art/collection/search?q=DP122214",
+   "licence": "CC0 (Met Open Access)",
+   "author": "Utagawa Hiroshige",
+   "date": "c. 1833-34",
+   "id": "x35_hiroshige_goyu",
+   "file": "data/research_ext/refs/x35_hiroshige_goyu.jpg",
+   "supports": "Hiroshige c.1833: Goyu inn fronts, lattice, shoji, upper floor"
+  },
+  {
+   "source": "The Met Open Access",
+   "title": "Ishibe: Megawa Village (Tokaido Hoeido ed.) DP122232",
+   "page_url": "https://www.metmuseum.org/art/collection/search?q=DP122232",
+   "licence": "CC0 (Met Open Access)",
+   "author": "Utagawa Hiroshige",
+   "date": "c. 1833-34",
+   "id": "x36_hiroshige_ishibe",
+   "file": "data/research_ext/refs/x36_hiroshige_ishibe.jpg",
+   "supports": "Hiroshige c.1833: Megawa roadside tea houses, thatch + board pents, gable frame"
+  },
+  {
+   "id": "x37_eisen_narai",
+   "file": "data/research_ext/refs/x37_eisen_narai.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:NDL-DC 1306239-Keisai Eisen-三十五 岐阻街道奈良井宿名産店之図-crd.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:NDL-DC_1306239-Keisai_Eisen-%E4%B8%89%E5%8D%81%E4%BA%94_%E5%B2%90%E9%98%BB%E8%A1%97%E9%81%93%E5%A5%88%E8%89%AF%E4%BA%95%E5%AE%BF%E5%90%8D%E7%94%A3%E5%BA%97%E4%B9%8B%E5%9B%B3-crd.jpg",
+   "licence": "Public domain",
+   "author": "Keisai Eisen",
+   "date": "",
+   "supports": "Eisen c.1835: Narai post-town shop, roofs with stones"
+  },
+  {
+   "source": "Project Gutenberg #52868 (Morse, Japanese Homes and Their Surroundings, 1886 ed.)",
+   "title": "Fig. 66.-Water-conductor.",
+   "page_url": "https://www.gutenberg.org/files/52868/52868-h/52868-h.html#fig66",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11 (drawings 1877-1883)",
+   "id": "x38_morse_gutter",
+   "file": "data/research_ext/refs/x38_morse_gutter.jpg",
+   "supports": "bamboo gutter and downpipe with wooden funnel"
+  }
+ ],
+ "text": [
+  {
+   "id": "E01",
+   "url": "https://www.nihonminkaen.jp/kanagawa.html",
+   "supports": "Nihon Minka-en: Kitamura house 1687 (ink date), village headman, yosemune thatch, 15.6 x 8.9 m, adze-marked posts; Kiyomiya late 17th c., yosemune thatch 13.6 x 8.2, iris on the ridge; Ito late 17th-early 18th c., irimoya thatch 16.4 x 9.1, lattice windows"
+  },
+  {
+   "id": "E02",
+   "url": "https://www.city.kawasaki.jp/880/page/0000000269.html",
+   "supports": "Kawasaki city: Sasaki house, building petition 1731, built 1732, headman of Kamihata village (Nagano); yosemune thatch partly stone-weighted boards; board eaves front and rear; kabuto gable; 24.7 x 10.0 m; 1747 extension"
+  },
+  {
+   "id": "E03",
+   "url": "https://www.nihonminkaen.jp/shukuba.html",
+   "supports": "Nihon Minka-en: Ioka house (Nara, late 17th-early 18th c.) kirizuma sangawara, pent eaves front and side, partial upper floor, 7.9 x 12.7 m; Suzuki (early 19th c.) thatch with board-shingled eaves, agedo front; Misawa (mid-19th c.) stone-weighted chestnut board roof"
+  },
+  {
+   "id": "E04",
+   "url": "https://ja.wikipedia.org/wiki/卯建",
+   "supports": "Udatsu: hon-udatsu (small roof on the gable wall) and sode-udatsu (wing wall between the storeys); black tile caps; mainly decorative from mid-Edo; Mino, Wakimachi"
+  },
+  {
+   "id": "E05",
+   "url": "https://ja.wikipedia.org/wiki/虫籠窓",
+   "supports": "Mushiko-mado: early examples small and oval; larger and rectangular in the Meiji period; Kyoto sphere"
+  },
+  {
+   "id": "E06",
+   "url": "https://ja.wikipedia.org/wiki/桟瓦",
+   "supports": "Sangawara 1674 (Nishimura Hanbei); special tiles noki, sode, noshi, ganburi, onigawara; widespread only in late Edo"
+  },
+  {
+   "id": "E07",
+   "url": "https://ja.wikipedia.org/wiki/雨戸",
+   "supports": "Amado first recorded at the Jurakudai (1587); run in sill/head grooves from a tobukuro; box and plate types; saru locks"
+  },
+  {
+   "id": "E08",
+   "url": "https://ja.wikipedia.org/wiki/蔀",
+   "supports": "Shitomi: lattice with boards; upper part larger than the lower"
+  },
+  {
+   "id": "E09",
+   "url": "https://roofstyle.niscs.nipponsteel.com/archives/661",
+   "supports": "Edo: tile banned after the 1657 Meireki fire (falling tiles in demolition fire-fighting), oyster-shell roofs recommended; 1720 tile promoted from samurai down to commoners, sangawara made it spread"
+  },
+  {
+   "id": "E10",
+   "url": "https://www.hachise.jp/kyomachiya/history/edo.html",
+   "supports": "Kyoto machiya: after sangawara, commoner tile spread; in the 18th c. a unified look: one-row three-room plan, zushi-nikai, mushiko-mado, de-goshi; surviving machiya mostly post-1864"
+  },
+  {
+   "id": "E11",
+   "url": "https://www.tatemonoen.jp/restore/intro/east.php",
+   "supports": "Dashigeta-zukuri: Edo-Taisho shop form, common in Edo/Tokyo from late Edo; Kagiya (1856). Read via search summary"
+  },
+  {
+   "id": "E12",
+   "url": "https://matinamigurashi.com/guide-20190309",
+   "supports": "Seki-juku suriage-do: 3 boards in post grooves, stored in a box behind the upper beam inside; standard Edo to mid-Meiji"
+  },
+  {
+   "id": "E13",
+   "url": "https://kuratoco.com/inoueke/",
+   "supports": "Inoue house, Kurashiki: major renovation 1721; shitomido and suriage shutters (present appearance Tenpo)"
+  },
+  {
+   "id": "E14",
+   "url": "https://kotobank.jp/word/%E7%9F%B3%E7%BD%AE%E5%B1%8B%E6%A0%B9-1268128",
+   "supports": "Ishioki-yane: boards weighted with stones; still in Kyoto in the early Edo period (Rakuchu rakugai-zu); before tile spread"
+  },
+  {
+   "id": "E15",
+   "url": "https://ja.wikipedia.org/wiki/なまこ壁",
+   "supports": "Namako-kabe: from the Edo period; imo-bari oldest, shihan-bari most widespread; kura, nuriya, daimyo nagaya. Read via search summary"
+  },
+  {
+   "id": "E16",
+   "url": "https://kominkai.net/kousi/",
+   "supports": "Koshi by trade; oyako-goshi (cut-top children) for cloth/thread shops; lattice bars about 1 sun face. Read via search summary"
+  },
+  {
+   "id": "E17",
+   "url": "https://ja.wikipedia.org/wiki/杮葺",
+   "supports": "Kokera 2-3 mm, tokusa 4-7 mm, tochi 1-3 cm"
+  },
+  {
+   "id": "E18",
+   "url": "https://machiyane-kagoshima.com/column/yane-isi.html",
+   "supports": "Roofing-company column (low grade): ishioki boards (kiba) about 300-500 mm long, 3-5 mm thick; split battens across the boards with stones. Read via search summary"
+  }
+ ]
+}

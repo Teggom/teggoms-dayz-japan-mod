@@ -98,6 +98,10 @@ Stephen then does one bundled check from `TEST_CHECKLIST.md`.
    - ambientCG and Poly Haven CC0 assets, all agents
    - Bohemia's official DayZ-Samples repo, for reference
 
+   **Never put personal information in any web request** (User-Agent, headers, parameters): no email, no names,
+   no account IDs. Use a generic tag like `JapanDevResearch/1.0 (DayZ mod research)`. (Added 2026-09-27 after an
+   agent put Stephen's email in a Wikimedia User-Agent.)
+
    Web pages can be read freely. **No executables or installers.** Python has numpy, Pillow and requests. If you
    truly need scipy: `python -m pip install --user scipy` is the only package install allowed. Blender's own
    Python has numpy. Log every downloaded asset with its licence in `spikes/<X>/CREDITS.md`.
