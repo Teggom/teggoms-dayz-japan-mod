@@ -50,130 +50,146 @@ def tube(m, axis_pts, radii, n, tex, mat, uq=None, vq=None, ax_x=(1, 0, 0), ax_z
 
 
 # =========================================================================== katana
-K = dict(y_kashira=-0.118, y_tsuka0=-0.108, y_fuchi=0.110, y_tsuba0=0.117, y_tsuba1=0.124, y_habaki=0.154,
-         L=0.745, sori=0.017, W0=0.031, Wk=0.0225, T0=0.0072, Tk=0.0052, k=0.035)
+# v2 (2026-09-27): every dimension comes from spikes/A_arms/katana_v2/katana_spec.json through katana_geom.py.
+# The grip frame is unchanged: tsuka along +Y through x = z = 0, point +Y, edge +Z, machi at the vanilla guard base.
+import katana_geom as kg  # noqa: E402
+
+TEXK = {"blade": D + "jp_katana_blade_co.paa", "tsuka": D + "jp_katana_tsuka_co.paa", "fit": D + "jp_katana_fittings_co.paa"}
+_KG = []
 
 
-def katana_blade_frame(s):
-    """mune point M(s) and unit normal n(s) (towards the edge) in the (y, z) plane"""
-    R = K["L"] ** 2 / (8 * K["sori"])
-    th = s / R
-    y = K["y_tsuba1"] + R * math.sin(th)
-    z = -K["W0"] / 2 - R * (1 - math.cos(th))
-    return np.array([0.0, y, z]), np.array([0.0, math.sin(th), math.cos(th)])
+def katana_geom():
+    if not _KG:
+        _KG.append(kg.KatanaGeom())
+    return _KG[0]
+
+
+def _seg(g, key, detail, lo):
+    return max(lo, int(round(kg.V(g.spec["build"][key]) * detail)))
+
+
+def _ellipse_loft(m, ys, rx_fn, rz_fn, zc_fn, n, rect, mat, v_fn=None):
+    rings = [mk.ellipse_ring((0.0, y, zc_fn(y)), (1, 0, 0), (0, 0, 1), rx_fn(y), rz_fn(y), n) for y in ys]
+    uq = [qmap(rect, j / n, 0)[0] for j in range(n + 1)]
+    vq = [qmap(rect, 0, v_fn(y) if v_fn else k / (len(ys) - 1))[1] for k, y in enumerate(ys)]
+    m.loft(rings, uq, vq, TEXK["fit"], mat, outward_ref=[(0.0, y, zc_fn(y)) for y in ys[:-1]])
+    return rings
+
+
+def _planar_cap(m, ring, centre, normal, rect, r_uv, mat):
+    """cap a ring with UVs projected from X/Z into rect (r_uv = radius that maps to the rect edge)"""
+    cx, cz = centre[0], centre[2]
+    uvs = [qmap(rect, 0.5 + 0.5 * (p[0] - cx) / r_uv, 0.5 + 0.5 * (p[2] - cz) / r_uv) for p in ring]
+    m.cap(ring, centre, normal, qmap(rect, 0.5, 0.5), uvs, TEXK["fit"], mat)
 
 
 def build_katana(detail=1.0):
+    g = katana_geom()
+    A = kg.ATLAS
     m = Mesh()
-    L, k = K["L"], K["k"]
-    nseg = int(60 * detail)
-    ss = [L * (i / nseg) for i in range(nseg + 1)]
-    # extra samples inside the kissaki
-    ks = [L - k + k * (i / int(10 * detail)) for i in range(1, int(10 * detail))]
-    ss = sorted(set([round(s, 6) for s in ss + ks if s < L * 0.9995]))
-    rings = []
-    vs = []
-    for s in ss:
-        M, n = katana_blade_frame(s)
-        xdir = np.array([1.0, 0, 0])
-        if s <= L - k:
-            f = s / (L - k)
-            w = K["W0"] + (K["Wk"] - K["W0"]) * f
-            T = K["T0"] + (K["Tk"] - K["T0"]) * f
-            dm, de = 0.0, w
-        else:
-            t = (s - (L - k)) / k
-            w0 = K["Wk"]
-            dm = 0.25 * w0 * t ** 2
-            de = 0.25 * w0 + 0.75 * w0 * math.sqrt(max(0.0, 1 - t ** 2))
-            T = K["Tk"] * (1 - 0.85 * t)
-        ww = de - dm
-        prof = [(dm, 0.0), (dm + 0.06 * ww, 0.42 * T), (dm + 0.30 * ww, 0.5 * T), (de, 0.0),
-                (dm + 0.30 * ww, -0.5 * T), (dm + 0.06 * ww, -0.42 * T)]
-        rings.append([tuple(M + d * n + x * xdir) for d, x in prof])
-        vs.append(1.0 - s / L)
-    us = [0.0, 0.06, 0.30, 1.0, 0.30, 0.06, 0.0]
-    inside = []
-    for s in ss[:-1]:
-        M, n = katana_blade_frame(s)
-        inside.append(M + 0.3 * K["Wk"] * n)
-    m.loft(rings, us, vs, TEX["blade"], MAT["steel"], closed=True, hard=True, outward_ref=inside, sel=["blade"])
-    # tip: fan the last ring into the point
-    Mt, nt = katana_blade_frame(L)
-    tip = tuple(Mt + 0.25 * K["Wk"] * nt)
-    last = rings[-1]
-    m.cap(last, tip, v3(katana_blade_frame(L)[0]) - v3(katana_blade_frame(L - 0.01)[0]), (0.25, 0.0),
-          [(u, 0.0) for u in us[:-1]], TEX["blade"], MAT["steel"])
-    # base cap of the blade (hidden inside the habaki)
-    M0, n0 = katana_blade_frame(0)
-    m.cap(rings[0], tuple(M0 + 0.3 * K["W0"] * n0), (0, -1, 0), (0.3, 1.0), [(u, 1.0) for u in us[:-1]], TEX["blade"], MAT["steel"])
-    # habaki: sleeve around the blade base
-    hr = []
-    for y in (K["y_tsuba1"], K["y_habaki"] - 0.004, K["y_habaki"]):
-        s = y - K["y_tsuba1"]
-        M, n = katana_blade_frame(s)
-        c = M + (K["W0"] / 2) * n
-        shrink = 0.0 if y < K["y_habaki"] - 0.001 else 0.0015
-        hr.append((c, K["W0"] / 2 + 0.0022 - shrink, K["T0"] / 2 + 0.0024 - shrink))
-    rings = [mk.ellipse_ring(c, (1, 0, 0), (0, 0, 1), b, a, int(12 * detail) or 8) for c, a, b in hr]
-    n_h = len(rings[0])
-    uq = [qmap(Q_BRASS, j / n_h, 0)[0] for j in range(n_h + 1)]
-    m.loft(rings, uq, [qmap(Q_BRASS, 0, t)[1] for t in (0, 0.8, 1.0)], TEX["fit"], MAT["brass"], outward_ref=[r[0] for r in hr[:-1]])
-    m.cap(rings[-1], tuple(hr[-1][0]), (0, 1, 0), qmap(Q_BRASS, 0.5, 0.5), [qmap(Q_BRASS, 0.5 + 0.4 * math.cos(2 * math.pi * j / n_h), 0.5) for j in range(n_h)], TEX["fit"], MAT["brass"])
-    # tsuba: mokko (four lobes) disc in the XZ plane
-    nt_ = int(40 * detail) or 16
+    # ---------------------------------------------------------------- blade: body (machi -> yokote) + kissaki (yokote -> point)
+    nb = _seg(g, "blade_body_segments", detail, 10)
+    nk = _seg(g, "kissaki_segments", detail, 8)
 
-    def mokko(y, grow=0.0):
-        pts = []
-        for j in range(nt_):
-            a = 2 * math.pi * j / nt_
-            r = 0.0365 + 0.0020 * math.cos(4 * a) + grow
-            pts.append((0.94 * r * math.cos(a), y, r * math.sin(a) + 0.002))
-        return pts
-    tr = [mokko(K["y_tsuba0"]), mokko(K["y_tsuba0"] + 0.0012, 0.0006), mokko(K["y_tsuba1"] - 0.0012, 0.0006), mokko(K["y_tsuba1"])]
-    uq = [qmap(Q_IRON, j / nt_, 0)[0] for j in range(nt_ + 1)]
-    m.loft(tr, uq, [qmap(Q_IRON, 0, t)[1] for t in (0, 0.1, 0.9, 1.0)], TEX["fit"], MAT["iron"],
-           outward_ref=[(0, K["y_tsuba0"], 0.002)] * 3)
-    for ring, y, nrm in ((tr[0], K["y_tsuba0"], (0, -1, 0)), (tr[-1], K["y_tsuba1"], (0, 1, 0))):
-        uvs = [qmap(Q_IRON, 0.5 + 0.5 * p[0] / 0.04, 0.5 + 0.5 * (p[2] - 0.002) / 0.04) for p in ring]
-        m.cap(ring, (0, y, 0.002), nrm, qmap(Q_IRON, 0.5, 0.5), uvs, TEX["fit"], MAT["iron"])
-    # tsuka (oval, long axis along Z = edge direction), slight hourglass, silk wrap texture
-    ntk = int(20 * detail) or 10
-    ys = np.linspace(K["y_tsuka0"], K["y_fuchi"], int(14 * detail) or 6)
-    mid = (K["y_tsuka0"] + K["y_fuchi"]) / 2
-    axis = [(0, y, 0) for y in ys]
-    half = (K["y_fuchi"] - K["y_tsuka0"]) / 2
-    radii = []
-    for y in ys:
-        waist = 1 - 0.06 * (1 - abs(y - mid) / half) ** 1.5    # slightly narrower in the middle
-        radii.append((0.0122 * waist, 0.0160 * waist))
-    rings = [mk.ellipse_ring(c, (1, 0, 0), (0, 0, 1), rx, rz, ntk) for c, (rx, rz) in zip(axis, radii)]
-    m.loft(rings, [j / ntk for j in range(ntk + 1)], [(K["y_fuchi"] - y) / (K["y_fuchi"] - K["y_tsuka0"]) for y in ys],
-           TEX["tsuka"], MAT["silk"], outward_ref=axis[:-1])
-    # fuchi (collar) and kashira (pommel cap), iron
-    for y0, y1, grow, dome in ((K["y_fuchi"], K["y_tsuba0"], 0.0012, False), (K["y_kashira"], K["y_tsuka0"], 0.0012, True)):
-        rs = [mk.ellipse_ring((0, y, 0), (1, 0, 0), (0, 0, 1), 0.0122 + grow, 0.0160 + grow, ntk) for y in (y0, y1)]
-        uq = [qmap(Q_IRON, j / ntk, 0)[0] for j in range(ntk + 1)]
-        m.loft(rs, uq, [qmap(Q_IRON, 0, 0.2)[1], qmap(Q_IRON, 0, 0.8)[1]], TEX["fit"], MAT["iron"], outward_ref=[(0, y0, 0)])
-        if dome:
-            inner = mk.ellipse_ring((0, y0 - 0.0035, 0), (1, 0, 0), (0, 0, 1), (0.0122 + grow) * 0.75, (0.0160 + grow) * 0.75, ntk)
-            m.loft([inner, rs[0]], uq, [qmap(Q_IRON, 0, 0.05)[1], qmap(Q_IRON, 0, 0.2)[1]], TEX["fit"], MAT["iron"],
-                   outward_ref=[(0, y0 + 0.004, 0)])
-            m.cap(inner, (0, y0 - 0.0045, 0), (0, -1, 0), qmap(Q_IRON, 0.5, 0.5),
-                  [qmap(Q_IRON, 0.5 + 0.4 * math.cos(2 * math.pi * j / ntk), 0.5 + 0.4 * math.sin(2 * math.pi * j / ntk)) for j in range(ntk)],
-                  TEX["fit"], MAT["iron"])
+    def rings_for(stations):
+        rings, U, vs = [], [], []
+        for s in stations:
+            pts, us = g.section(s)
+            rings.append([tuple(g.to_model(s, d, x)) for d, x in pts])
+            U.append(list(us) + [us[0]])
+            vs.append(1.0 - s / g.L_arc)
+        return rings, U, vs
+    body = rings_for(g.body_stations(nb))
+    inside_b = [g.to_model(s, 0.5 * g.width(s), 0.0) for s in g.body_stations(nb)[:-1]]
+    m.loft(body[0], body[1], body[2], TEXK["blade"], MAT["steel"], closed=True, hard=True, outward_ref=inside_b, sel=["blade"])
+    kst = g.kissaki_stations(nk)
+    kis = rings_for(kst)
+    inside_k = [g.to_model(s, 0.5 * g.width(s), 0.0) for s in kst[:-1]]
+    m.loft(kis[0], kis[1], kis[2], TEXK["blade"], MAT["steel"], closed=True, hard=True, outward_ref=inside_k, sel=["blade"])
+    # base cap (inside the habaki)
+    c0 = g.to_model(0.0, 0.5 * g.motohaba, 0.0)
+    m.cap(body[0][0], tuple(c0), (0, -1, 0), (0.5, 1.0), [(u, 1.0) for u in body[1][0][:-1]], TEXK["blade"], MAT["steel"])
+    # ---------------------------------------------------------------- habaki: gold-foiled sleeve around the blade base
+    hw = g.habaki_wall
+
+    def habaki_ring(s, shrink):
+        pts, _ = g.section(s)
+        w = g.width(s)
+        out = []
+        for d, x in pts[:5]:                         # mune top -> hira (+X side)
+            out.append((d - (hw - shrink) * (1 - d / w), x + (hw - shrink)))
+        out += [(w + hw - shrink, 0.6 * (hw - shrink)), (w + hw - shrink, -0.6 * (hw - shrink))]
+        for d, x in pts[6:]:                         # hira -> mune top (-X side)
+            out.append((d - (hw - shrink) * (1 - d / w), x - (hw - shrink)))
+        return [tuple(g.to_model(s, d, x)) for d, x in out]
+    sd = g.spec["build"]["shape_details"]
+    cb, cs = [0.01 * v for v in kg.V(sd["habaki_front_chamfer_cm"])]
+    hs = [(0.0, 0.0), (g.habaki_len - cb, 0.0), (g.habaki_len, cs)]
+    hr = [habaki_ring(s, sh) for s, sh in hs]
+    nh = len(hr[0])
+    uq = [qmap(A["gold"], j / nh, 0)[0] for j in range(nh + 1)]
+    m.loft(hr, uq, [qmap(A["gold"], 0, t)[1] for t in (0.0, 0.9, 1.0)], TEXK["fit"], MAT["brass"],
+           outward_ref=[tuple(g.to_model(s, 0.5 * g.width(s), 0.0)) for s, _ in hs[:-1]])
+    for ring, s, nrm in ((hr[-1], g.habaki_len, g.tangent(g.habaki_len)), (hr[0], 0.0, -g.tangent(0.0))):
+        _planar_cap(m, ring, tuple(g.to_model(s, 0.5 * g.width(s), 0.0)), tuple(nrm), A["gold"], 0.03, MAT["brass"])
+    # ---------------------------------------------------------------- seppa (copper), tsuba (round iron)
+    rx_f = 0.5 * g.tsuka_width * g.fuchi_flare
+    rz_f = 0.5 * g.tsuka_depth * g.fuchi_flare
+    ns = _seg(g, "tsuka_segments_round", detail, 10)
+    for y0, y1 in (g.y_seppa_a, g.y_seppa_b):
+        rs = _ellipse_loft(m, [y0, y1], lambda y: rx_f + g.seppa_margin, lambda y: rz_f + g.seppa_margin, lambda y: 0.0, ns, A["copper"], MAT["brass"])
+        _planar_cap(m, rs[0], (0.0, y0, 0.0), (0, -1, 0), A["copper"], rz_f + g.seppa_margin, MAT["brass"])
+        _planar_cap(m, rs[1], (0.0, y1, 0.0), (0, 1, 0), A["copper"], rz_f + g.seppa_margin, MAT["brass"])
+    nt = _seg(g, "tsuba_segments_round", detail, 16)
+    r, rr = g.tsuba_r, g.tsuba_round
+    ty0, ty1 = g.y_tsuba
+    prof = [(ty0, r - rr), (ty0 + rr, r), (ty1 - rr, r), (ty1, r - rr)]   # kaku-mimi, slightly rounded
+    rings = [mk.ellipse_ring((0.0, y, 0.0), (1, 0, 0), (0, 0, 1), rad, rad, nt) for y, rad in prof]
+    uq = [qmap(A["iron"], j / nt, 0)[0] for j in range(nt + 1)]
+    m.loft(rings, uq, [qmap(A["iron"], 0, t)[1] for t in (0.40, 0.45, 0.55, 0.60)], TEXK["fit"], MAT["iron"],
+           outward_ref=[(0.0, y, 0.0) for y, _ in prof[:-1]])
+    _planar_cap(m, rings[0], (0.0, ty0, 0.0), (0, -1, 0), A["iron"], r, MAT["iron"])
+    _planar_cap(m, rings[-1], (0.0, ty1, 0.0), (0, 1, 0), A["iron"], r, MAT["iron"])
+    # ---------------------------------------------------------------- fuchi (shakudo, low, angled sides)
+    lip = 0.01 * kg.V(sd["fuchi_lip_cm"])
+    fy0, fy1 = g.y_fuchi
+    rs = _ellipse_loft(m, [fy1, fy0], lambda y: (0.5 * g.tsuka_width + lip) * (g.fuchi_flare if y == fy1 else 1.0),
+                       lambda y: (0.5 * g.tsuka_depth + lip) * (g.fuchi_flare if y == fy1 else 1.0), g.tsuka_offset_z, ns,
+                       A["shakudo"], MAT["iron"])
+    _planar_cap(m, rs[0], (0.0, fy1, 0.0), (0, 1, 0), A["shakudo"], rz_f + lip, MAT["iron"])
+    # ---------------------------------------------------------------- tsuka: leather hineri-maki over same (texture), ryugo
+    wy0, wy1 = g.y_wrap
+    nring = _seg(g, "tsuka_rings", detail, 6)
+    ys = [wy1 + (wy0 - wy1) * k / nring for k in range(nring + 1)]
+    rings = [mk.ellipse_ring((0.0, y, g.tsuka_offset_z(y)), (1, 0, 0), (0, 0, 1), 0.5 * g.tsuka_width * g.tsuka_scale(y),
+                             0.5 * g.tsuka_depth * g.tsuka_scale(y), ns) for y in ys]
+    m.loft(rings, [j / ns for j in range(ns + 1)], [(wy1 - y) / (wy1 - wy0) for y in ys], TEXK["tsuka"], MAT["silk"],
+           outward_ref=[(0.0, y, g.tsuka_offset_z(y)) for y in ys[:-1]], sel=["tsuka"])
+    # ---------------------------------------------------------------- kashira: black lacquered horn, wrap over the top (texture)
+    ky0, ky1 = g.y_kashira
+    ks = g.kashira_scale
+    kprof = [(ky1 - f * g.kashira_len, sc) for f, sc in kg.V(sd["kashira_profile"])]
+    rings = [mk.ellipse_ring((0.0, y, g.tsuka_offset_z(y)), (1, 0, 0), (0, 0, 1), 0.5 * g.tsuka_width * ks * f,
+                             0.5 * g.tsuka_depth * ks * f, ns) for y, f in kprof]
+    uq = [qmap(A["horn_side"], j / ns, 0)[0] for j in range(ns + 1)]
+    m.loft(rings, uq, [qmap(A["horn_side"], 0, t)[1] for t in (0.0, 0.5, 0.85, 1.0)], TEXK["fit"], MAT["iron"],
+           outward_ref=[(0.0, y, g.tsuka_offset_z(y)) for y, _ in kprof[:-1]])
+    _planar_cap(m, rings[-1], (0.0, ky0 - 0.0006, g.tsuka_offset_z(ky0)), (0, -1, 0), A["horn_cap"],
+                0.5 * g.tsuka_depth * ks * kprof[-1][1], MAT["iron"])
     return m
 
 
 def katana_memory(m):
+    g = katana_geom()
     lo, hi = m.bounds()
-    tip, _ = katana_blade_frame(K["L"])
+    tip = g.tip()
+    mp = kg.V(g.spec["build"]["memory_points_kept"])
     return {
         "boundingbox_min": [tuple(lo)], "boundingbox_max": [tuple(hi)],
-        "invview": [(0.82, 0.36, 0.0)],
-        "meleerangestart": [(0.0, 0.05, 0.0)], "meleerangeend": [tuple(tip + np.array([0, 0, 0.004]))],
+        "invview": [tuple(mp["invview"])],
+        "meleerangestart": [tuple(mp["meleerangestart"])], "meleerangeend": [tuple(tip + np.array(mp["meleerangeend_offset"]))],
         "ce_center": [(0.0, (lo[1] + hi[1]) / 2, 0.0)], "ce_radius": [tuple(hi)],
-        "throwingimpulseposition": [(0.0, 0.142, 0.0)],
+        "throwingimpulseposition": [tuple(mp["throwingimpulseposition"])],
     }
 
 

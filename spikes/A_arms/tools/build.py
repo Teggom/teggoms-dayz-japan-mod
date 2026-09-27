@@ -1,6 +1,9 @@
 """Spike A (arms) build: textures -> MLOD p3ds -> binarize -> config check -> PBO.
 
-    python tools/build.py [--no-textures] [--no-binarize] [--no-pack]
+    python tools/build.py [--no-textures] [--no-binarize] [--no-pack] [--only jp_katana[,jp_yari...]]
+
+--only builds just those parts (and, for jp_katana alone, just the katana textures), so a rebuild of one model
+leaves every other p3d and texture byte-identical.
 
 Writes (all inside our own paths):
   src/JP/weapons/data/*            textures (.png kept for renders, skipped by pbo.py) + rvmats
@@ -53,9 +56,15 @@ DETAILS = [(1.0, 1.0), (2.0, 0.5), (4.0, 0.28)]
 
 def build_p3d(name):
     folder, fn, memfn, mass = PARTS[name]
+    details = DETAILS
+    if name == "jp_katana":                      # katana v2: mass and LOD scheme come from katana_spec.json
+        import katana_geom
+        bs = katana_geom.load_spec()["build"]
+        mass = katana_geom.V(bs["mass_kg"])
+        details = [tuple(x) for x in katana_geom.V(bs["lod_details"])]
     lods = []
     first = None
-    for res, det in DETAILS:
+    for res, det in details:
         r = fn(det)
         mesh, info, extra = (r if isinstance(r, tuple) else (r, None, None))
         if first is None:
@@ -218,19 +227,28 @@ def main(argv):
     if not os.path.isdir(r"P:\DZ") or not os.path.isdir(r"P:\JP\weapons"):
         print("P: drive or P:\\JP\\weapons junction missing")
         return 1
+    only = list(PARTS)
+    if "--only" in argv:
+        only = argv[argv.index("--only") + 1].split(",")
+        assert all(n in PARTS for n in only), only
     if "--no-textures" not in argv:
-        import textures
-        textures.main()
+        import katana_textures
+        if only != ["jp_katana"]:
+            import textures
+            textures.main()
+        if "jp_katana" in only:
+            katana_textures.main()
     print("models:")
     built = {}
-    for name in PARTS:
+    for name in only:
         built[name] = build_p3d(name)
-    with open(os.path.join(SRC, "yumi", "model.cfg"), "wb") as fh:
-        fh.write(MODEL_CFG.encode("ascii"))
+    if any(PARTS[n][0] == "yumi" for n in only):
+        with open(os.path.join(SRC, "yumi", "model.cfg"), "wb") as fh:
+            fh.write(MODEL_CFG.encode("ascii"))
     ok = True
     if "--no-binarize" not in argv:
         print("binarize:")
-        for folder in sorted({v[0] for v in PARTS.values()}):
+        for folder in sorted({PARTS[n][0] for n in only}):
             ok = binarize(folder) and ok
     print("config:")
     ok = cfgconvert() and ok

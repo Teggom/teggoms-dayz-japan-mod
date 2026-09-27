@@ -13,6 +13,8 @@ import bpy
 from mathutils import Vector
 
 argv = sys.argv[sys.argv.index("--") + 1:]
+ALPHA = "--alpha" in argv                  # transparent film (clean silhouettes for compare.py)
+argv = [a for a in argv if a != "--alpha"]
 OUT = argv[0]
 NAMES = argv[1:]
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -27,14 +29,16 @@ LOOK = {
 
 # per model: list of (view name, camera direction from target (Blender axes), ortho padding)
 VIEWS = {
-    "jp_katana": [("side", (1, 0, 0)), ("edge", (0, -1, 0)), ("three_quarter", (0.8, -0.5, 0.35)), ("hilt", (1, -0.6, 0.2))],
+    "jp_katana": [("side", (1, 0, 0)), ("edge", (0, -1, 0)), ("three_quarter", (0.8, -0.5, 0.35)), ("hilt", (1, -0.6, 0.2)),
+                  ("tip", (1, 0, 0)), ("tip_three_quarter", (0.8, -0.45, 0.25)), ("tsuka", (1, 0, 0)), ("ura", (-1, 0, 0))],
     "jp_yari": [("side", (0, -1, 0)), ("three_quarter", (0.8, -0.6, 0.3)), ("head", (0.7, -0.7, 0.2))],
     "jp_yumi": [("side", (0, -1, 0)), ("three_quarter", (0.6, -0.8, 0.25)), ("grip", (0.4, -0.9, 0.2))],
     "jp_yumi_xb": [("side", (0, -1, 0)), ("three_quarter", (0.6, -0.8, 0.25))],
     "jp_ya": [("side", (1, 0.0, 0.0)), ("three_quarter", (0.7, 0.5, 0.5)), ("fletch", (0.7, 0.4, 0.6))],
 }
 # close-up framing: fraction of the bounding box to frame, and its centre (in fractions of the box)
-CLOSE = {"hilt": (0.36, 0.17), "head": (0.2, 0.9), "grip": (0.18, 0.33), "fletch": (0.25, 0.15)}
+CLOSE = {"hilt": (0.36, 0.17), "head": (0.2, 0.9), "grip": (0.18, 0.33), "fletch": (0.25, 0.15),
+         "tip": (0.16, 0.955), "tip_three_quarter": (0.11, 0.94), "tsuka": (0.38, 0.135)}
 # close-ups that must centre on a given p3d point (converted to Blender axes: X=-x, Y=-z, Z=y)
 FOCUS = {("jp_yumi", "grip"): (-0.037, 0.03, -0.049)}
 
@@ -51,7 +55,9 @@ def reset():
             sc.render.engine = "CYCLES"
     sc.render.resolution_x = 1400
     sc.render.resolution_y = 1000
-    sc.render.film_transparent = False
+    sc.render.film_transparent = ALPHA
+    if ALPHA:
+        sc.render.image_settings.color_mode = "RGBA"
     world = bpy.data.worlds.new("w")
     sc.world = world
     world.use_nodes = True
@@ -116,8 +122,26 @@ def camera(centre, direction, span, sc):
     return cam
 
 
+def katana_focus():
+    """close-ups of the katana centre on points computed from katana_spec.json (no hand-typed coordinates)"""
+    try:
+        sys.path.insert(0, HERE)
+        import katana_geom
+    except Exception as e:  # Blender python without numpy
+        print("katana_geom unavailable:", e)
+        return
+    g = katana_geom.KatanaGeom()
+    s = g.L_arc - 0.55 * g.L_k
+    p = g.to_model(s, 0.5 * g.width(s), 0.0)
+    FOCUS[("jp_katana", "tip")] = tuple(p)
+    FOCUS[("jp_katana", "tip_three_quarter")] = tuple(p)
+    FOCUS[("jp_katana", "tsuka")] = (0.0, 0.5 * (g.y_end + g.y_tsuba[1]), 0.0)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
+    if "jp_katana" in NAMES:
+        katana_focus()
     for name in NAMES:
         for view, direction in VIEWS[name]:
             sc = reset()

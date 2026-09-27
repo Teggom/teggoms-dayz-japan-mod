@@ -1,0 +1,90 @@
+{
+ "spec": {
+  "kissaki_len_over_sakihaba": 1.8,
+  "sori_cm": 1.6,
+  "sori_peak_from_machi_frac": 0.5,
+  "nagasa_cm": 70.2,
+  "motohaba_cm": 3.05,
+  "sakihaba_cm": 2.5,
+  "kissaki_cm": 4.500000000000001,
+  "motokasane_cm": 0.75,
+  "shinogi_thickness_machi_cm": 0.8624999999999999,
+  "tsuba_diameter_cm": 8.0,
+  "tsuka_len_cm": 24.5
+ },
+ "mesh_from_odol": {
+  "nagasa_cm": 70.2,
+  "sori_cm": 1.6,
+  "sori_peak_from_machi_frac": 0.497,
+  "motohaba_cm": 3.05,
+  "sakihaba_cm": 2.5,
+  "kissaki_cm": 4.5,
+  "motokasane_cm": 0.75,
+  "shinogi_thickness_machi_cm": 0.862,
+  "tsuba_diameter_cm": 8.0,
+  "tsuka_len_cm": 24.56,
+  "tip_on_mune_line_mm": 0.0
+ },
+ "ours_side_machi_row": 1002.2787574395838,
+ "photo_met27600_blade": {
+  "sori_cm": 1.39,
+  "sori_peak_from_machi_frac": 0.507,
+  "edge_side_in_photo": "right",
+  "cm_per_px": 0.02427
+ },
+ "photo_met27601_blade": {
+  "sori_cm": 1.25,
+  "sori_peak_from_machi_frac": 0.474,
+  "edge_side_in_photo": "right",
+  "cm_per_px": 0.02689
+ },
+ "ours_kissaki_from_render": {
+  "kissaki_len_over_sakihaba": 1.791,
+  "shinogi_from_edge_frac": null,
+  "fukura_w_at_t": {
+   "0.0": 0.0087,
+   "0.2": 0.3961,
+   "0.4": 0.6184,
+   "0.6": 0.7831,
+   "0.8": 0.9077,
+   "1.0": 1.0
+  }
+ },
+ "photo_met27600_kissaki": {
+  "kissaki_len_over_sakihaba": 1.68,
+  "fukura_w_at_t": {
+   "0.0": 0.0154,
+   "0.2": 0.3985,
+   "0.4": 0.6208,
+   "0.6": 0.7898,
+   "0.8": 0.9151,
+   "1.0": 0.997
+  }
+ },
+ "photo_met27601_kissaki": {
+  "kissaki_len_over_sakihaba": 1.806,
+  "fukura_w_at_t": {
+   "0.0": 0.0095,
+   "0.2": 0.3908,
+   "0.4": 0.6106,
+   "0.6": 0.7743,
+   "0.8": 0.903,
+   "1.0": 0.9982
+  }
+ },
+ "ours_tsuka_render_px_per_cm": 38.62,
+ "tsuka": {
+  "ours_len_cm": 24.5,
+  "ours_windows": 17,
+  "ours_pitch_cm": 1.29,
+  "tnm_len_cm": 20.1,
+  "tnm_windows": 15,
+  "tnm_pitch_cm": 1.26
+ },
+ "overlay_kissaki_iou_mesh_vs_spec": 0.9991,
+ "ours_blade_from_render": {
+  "sori_cm": 1.75,
+  "sori_peak_from_machi_frac": 0.485,
+  "edge_side_in_photo": "left"
+ }
+}

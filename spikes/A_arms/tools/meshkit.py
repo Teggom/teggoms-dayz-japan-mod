@@ -68,6 +68,8 @@ class Mesh:
         outward_ref: per ring a point that lies INSIDE (default: ring centroid); faces are flipped to face away."""
         n = len(rings[0])
         R = len(rings)
+        # us: one list for every ring (old behaviour) or a list per ring (katana: features move across the width)
+        U = us if isinstance(us[0], (list, tuple)) else [us] * R
         idx = [[self.add(p) for p in ring] for ring in rings]
         P = [[v3(p) for p in ring] for ring in rings]
         nseg = n if closed else n - 1
@@ -111,7 +113,7 @@ class Mesh:
                 j2 = (j + 1) % n
                 quad = [(r, j), (r, j2), (r + 1, j2), (r + 1, j)]
                 ids = [idx[a][b] for a, b in quad]
-                uvs = [(us[j], vs[r]), (us[j + 1], vs[r]), (us[j + 1], vs[r + 1]), (us[j], vs[r + 1])]
+                uvs = [(U[r][j], vs[r]), (U[r][j + 1], vs[r]), (U[r + 1][j + 1], vs[r + 1]), (U[r + 1][j], vs[r + 1])]
                 if hard:
                     nrm = [vn_hard(a, j) for a, b in quad]
                 else:

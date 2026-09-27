@@ -18,12 +18,9 @@ Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory requir
 Warning: Terrain grid 0.5 will be too slow, should use 3.1
 Convert model P:\JP\weapons\katana\jp_katana.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\A_arms\work\bin\katana\jp_katana.p3d
 <model = "P:\JP\weapons\katana\jp_katana.p3d">
-UV mapping too varied on jp\weapons\data\jp_blade_co.paa, stage 0: texel size used 0.000205903, max 0.00138107, min 0.00012115
-UV mapping too varied on jp\weapons\data\jp_fittings_co.paa, stage 0: texel size used 0.000500883, max 0.00390625, min 0.000251806
-UV mapping too varied on jp\weapons\data\jp_blade_co.paa, stage 0: texel size used 0.000205769, max 0.00138107, min 0.000144452
-UV mapping too varied on jp\weapons\data\jp_fittings_co.paa, stage 0: texel size used 0.00046956, max 0.00390625, min 0.000218717
-UV mapping too varied on jp\weapons\data\jp_blade_co.paa, stage 0: texel size used 0.000205545, max 0.00138107, min 0.000171981
-UV mapping too varied on jp\weapons\data\jp_fittings_co.paa, stage 0: texel size used 0.000465145, max 0.00390625, min 0.000272481
+UV mapping too varied on jp\weapons\data\jp_katana_blade_co.paa, stage 0: texel size used 0.000142255, max 0.000976563, min 2.36802e-05
+UV mapping too varied on jp\weapons\data\jp_katana_blade_co.paa, stage 0: texel size used 0.000142155, max 0.000976563, min 3.07179e-05
+UV mapping too varied on jp\weapons\data\jp_katana_blade_co.paa, stage 0: texel size used 0.000142211, max 0.000976563, min 4.16526e-05
 </model>
 
 FileServer MaxCacheSize = 23987 MB

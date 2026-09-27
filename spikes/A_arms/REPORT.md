@@ -1,5 +1,7 @@
 # Spike A (arms): katana, yari, yumi + ya
 
+> **2026-09-27: the katana was rebuilt research-first. See `katana_v2/DOSSIER.md`; the katana lines below describe the old v1 model.**
+
 Agent A, spike wave 1, 2026-09-26/27. Vanilla animation sets only; nothing tested in game yet.
 
 (The agent returned this as text because subagents can't write report files; the lead saved it on 2026-09-27.)
