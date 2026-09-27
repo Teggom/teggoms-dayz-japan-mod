@@ -6,7 +6,8 @@
 > 3. Doors 2.0 m high, >=0.80 m inside and >=1.0 m at entrances, ceilings 2.5-2.7 m: YES.
 > 4. Low upper floors: DEFAULT sealed (no access). A walkable crouch attic is only for SOME rich buildings or shrines,
 >    and only if it holds loot; not a priority.
-> 5. Stairs <=38 deg etc.: pending the in-game stair check.
+> 5. Stairs <=38 deg: CONFIRMED in game (2026-09-27). Stephen's AI test: an infected followed him in and upstairs
+>    but slowly, so door clear width is >=1.00 m everywhere and stairs are >=1.10 m wide (D1, D4 updated).
 > 6. Clothing is ONE set shared by players and infected (zombies wear the same outfits, attached, not flowy).
 >    Period gear for every walk of life: worker, farmer, guard, samurai, leader, noble, peasant, traveller. The v1
 >    kimono must be redone (chest seam, arms too baggy, legs clip when walking). Low priority at the start.
@@ -166,7 +167,7 @@ All heights are measured from the local finished floor unless the table says oth
 | Doma level | ground level | **grade + 0.05** | B spike |
 | Raised floor | ~50 cm above the doma | **+0.45** above the doma, reached by a hidden ramp (≤34°) under a stepping stone | [T17], B spike |
 | Door head (uchinori) | 5.7–5.8 shaku = **1.73–1.76 m** | **2.00 m** (deviation D2) | [T39] |
-| Clear door width | shoji leaf about 0.85–0.9 m | **≥0.80 m** interior, **≥1.00 m** main exterior entrance (D1) | B spike, vanilla ~1.2 m |
+| Clear door width | shoji leaf about 0.85–0.9 m | **≥1.00 m for every door a player or infected must pass**, interior and exterior (D1) | Stephen's AI test 2026-09-27: infected got through B's 0.80 m door slowly; the navmesh agent is 0.6 m wide |
 | Ground-floor room ceiling | about 8 shaku (2.42 m) | **2.50–2.70 m**, because the door head rose 0.27 m (D6). A machiya doma stays open to the roof (fukinuke) | [T39] |
 | Ground-floor street eave | about 3 m (machiya) | **2.90–3.20 m** to the eave edge; soffit **≥2.20 m** where people walk underneath | B spike (3.05) |
 | **Low upper storey (zushi-nikai)** | **1.5–1.8 m** inside at the street side | Upper floor at **+2.85–3.10**. Street wall above the upper floor **≤1.30 m** (mushiko level). The ridge gives ≥2.10 m clear at the back. Walkable only where clear ≥2.10 (D3) | [T43, T45, T05] |
@@ -178,7 +179,7 @@ All heights are measured from the local finished floor unless the table says oth
 | Roof pitch, thatch | ≤45° usual; gasshō up to 60° | **45°** default; 50–60° only for gasshō-type | [T41] |
 | Eave overhang | deep | tile **0.90 m**; thatch **0.90–1.20**; boards weighted with stones **0.90–1.20**; gable overhang **0.30–0.45** | B spike; (assumed) |
 | Kawara module | modern J-type 53A has a working width of ≈0.265 m | working width **0.260 m (ken ÷ 7)**, exposure **0.235**, roll height **0.05–0.06** | (reason: seven columns per ken) |
-| Stair | box stairs were very steep | walk ramp **≤38°**, width **≥0.90**, head room **≥2.05 m** along the flight (D4) | B spike (37.8°, untested) |
+| Stair | box stairs were very steep | walk ramp **≤38°**, width **≥1.10 m**, head room **≥2.05 m** along the flight (D4) | B spike: 37.8° walks fine for players (Stephen 2026-09-27); 0.90 m wide was slow for infected, so +0.2 m |
 | Engawa and corridors | 0.9–1.2 m | **≥1.00 m** clear | reason |
 | Tōri-niwa passage | 1 ken | **≥1.00 m** clear beside the kamado and jars | B spike |
 | Alleys (roji) | about 0.9–1.8 m | **≥1.20 m** where walkable; narrower gaps are blocked in Geometry | reason |
@@ -201,10 +202,10 @@ decides them.
 
 | # | Deviation | Real | Game | Why |
 |---|---|---|---|---|
-| D1 | Door width | ~0.85–0.9 m per leaf | ≥0.80 interior, ≥1.00 main entrance | The player's body and third-person camera. B's 0.80 is untested and may feel tight |
+| D1 | Door width | ~0.85–0.9 m per leaf | **≥1.00 m every passable door** | Infected pathing (0.6 m navmesh agent) and the player camera. Tested 2026-09-27: 0.80 m worked but was slow. Leaves park along the facade or in a pocket, not across a 1-ken passage |
 | D2 | Door head height | 1.73–1.76 m | **2.00 m** | A standing player is about 1.8 m and needs clearance with a raised weapon |
 | D3 | Low upper storey | 1.5–1.8 m, storage and servants | Low street wall kept; walkable only under the ridge (≥2.10 m); the front strip under 1.40 m is blocked in Geometry; 1.40–2.10 m is a crouch zone (**to test**) | Keeps rule 2's look without head traps. Option B is a sealed loft |
-| D4 | Stair angle | box stairs ~50–60° | **≤38°** walk ramp | DayZ walkability. B's 37.8° is untested |
+| D4 | Stair angle and width | box stairs ~50–60°, narrow | **≤38°** walk ramp, **≥1.10 m** wide | DayZ walkability: 37.8° confirmed fine for players 2026-09-27; width raised for infected |
 | D5 | Corridors and alleys | 0.9–1.8 m | ≥1.00 m corridors, ≥1.20 m walkable alleys | Movement and infected pathing |
 | D6 | Room ceilings | ~2.4 m | 2.5–2.7 m | Follows from D2; compensated by a low street eave and a low upper storey so facades don't look inflated |
 | D7 | Bare-legged labourers (porters, kago bearers, in the period prints [c18]) | common | **NPC only.** Every player garment covers the legs | Stephen's kimono v1 feedback |
