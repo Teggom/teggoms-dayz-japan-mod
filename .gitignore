@@ -1,0 +1,10 @@
+# Big downloaded / generated data
+data/
+*.pbo
+*.bisign
+# Server persistence written into the junctioned mission folder
+mission/*/storage_*/
+# Blender autosaves
+*.blend1
+*.blend2
+__pycache__/
