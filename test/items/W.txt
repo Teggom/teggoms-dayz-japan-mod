@@ -1,0 +1,10 @@
+# spike W (wearables): the four new garments, two of each so a male and a female character can both wear one
+JP_Kasa 2            # Headgear: conical straw hat (rigid, Head bone)
+JP_Kimono_Short 2    # Body: hip-length indigo kimono, wide sleeves, obi, V collar with skin ('personality')
+JP_Kimono_Long 2     # Body: the same kimono to the ankle - the long-robe R&D piece
+JP_Tabi_Waraji 2     # Feet: split-toe socks + straw sandals, one item
+# vanilla references for the side-by-side look (same parents / same lengths)
+CowboyHat_Brown      # parent of JP_Kasa
+Raincoat_Orange      # the vanilla mid-thigh length the short kimono copies
+NurseDress_Blue      # the longest vanilla Body-slot garment (above the knee)
+Sneakers_Black       # parent of JP_Tabi_Waraji
