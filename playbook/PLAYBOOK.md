@@ -14,6 +14,21 @@
 > 7. Shared material library jp_common.pbo with three wear levels, B's textures migrated: YES.
 > 8. First playable slice: YES, but ALL development happens on the 2 x 2 km test island for now.
 
+> **Stephen's G1 decisions on the exterior build list (2026-09-27):**
+> 1. New palette entry `earth_wall_aged` (115,98,80) is the default tier 1-2 exterior wall: YES.
+> 2. New palette entry `roof_board_silver` (123,128,134): YES.
+> 3. Oyster-shell board roof (kakigara) as the Edo-side tier-3 variant: YES.
+> 4. Cantilevered eave beams (dashigeta) and projecting upper fronts (post-1750): ALLOWED SPARINGLY as a flagged
+>    deviation, tier 3 only. Build them as optional parts so Stephen can see them. His rule: if it clearly reads
+>    as Japanese and is cheap once modelled, he likely wants it.
+> 5. Full-height upper floors: the lead decides. A full second storey is allowed only on at most one grand inn
+>    (honjin/large hatago grade) per tier-3 town, and only where neighbours (2-storey kura, tall machiya) make the
+>    height read naturally. Elevation and chokepoints come mainly from period-true tall structures: kura lofts by
+>    ladder or stair, fire watchtowers (hinomi-yagura), bell towers, castle yagura. Not from making ordinary houses
+>    tall.
+> 6. Thatch eaves: a board pent eave (porch roof) over entrance sides, as on the 1731 Sasaki house, instead of
+>    raising the walls: YES.
+
 
 **Status:** v1, waiting for Stephen's approval (gate G0). Written 2026-09-27. No models were built for it.
 

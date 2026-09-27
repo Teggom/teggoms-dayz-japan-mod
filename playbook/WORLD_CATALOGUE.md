@@ -379,3 +379,12 @@ These are covered by stage F:
 That is enough for one Nakasendō stretch: a post town, a village, a checkpoint and the road.
 
 The castle town, the capitals, the temples and the boats follow in P2 and P3.
+
+
+## Additions requested by Stephen (2026-09-27), research pending
+
+| Item | Why | Notes for the research agent |
+|---|---|---|
+| **Onsen town inn (yuyado)** | Hakone (our test terrain's DEM source) was famous for its hot springs in the Edo period (the Hakone Nanayu); Arima near Osaka is among the oldest | Verify what a c.1730 onsen inn and its bath looked like. Communal bathhouses (sotoyu) and inn baths were more typical than the modern open-air rock pool; confirm with sources |
+| **Hot spring pool** (steaming water) | Gameplay: a warmth or healing spot, and a landmark | Needs a pond-style water object plus steam particles. Check period form (bath hut vs open pool) |
+| **Futons, tea sets** | Already listed under interiors (sleeping: futon stack; living: tea set) | Tea ware must be period-correct for 1730: kettles and matcha ware for the elite, cheap cups for tea houses. The side-handled teapot came later; verify |
