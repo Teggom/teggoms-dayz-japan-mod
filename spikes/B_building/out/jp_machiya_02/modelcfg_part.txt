@@ -1,0 +1,81 @@
+	class jp_machiya_02_skeleton: Default
+	{
+		skeletonInherit="Default";
+		skeletonBones[]=
+		{
+			"doors1","",
+			"doors2","",
+			"doors3","",
+			"doors4","",
+			"doors5",""
+		};
+	};
+
+//--
+	class jp_machiya_02: Default
+	{
+		skeletonName="jp_machiya_02_skeleton";
+		class Animations
+		{
+			class Doors1
+			{
+				type="translation";
+				source="Doors1";
+				selection="doors1";
+				axis="doors1_axis";
+				memory=1;
+				minValue=0;
+				maxValue=1;
+				offset0=0;
+				offset1=0.8380;
+			};
+			class Doors2
+			{
+				type="translation";
+				source="Doors2";
+				selection="doors2";
+				axis="doors2_axis";
+				memory=1;
+				minValue=0;
+				maxValue=1;
+				offset0=0;
+				offset1=0.8380;
+			};
+			class Doors3
+			{
+				type="translation";
+				source="Doors3";
+				selection="doors3";
+				axis="doors3_axis";
+				memory=1;
+				minValue=0;
+				maxValue=1;
+				offset0=0;
+				offset1=1.0400;
+			};
+			class Doors4
+			{
+				type="translation";
+				source="Doors4";
+				selection="doors4";
+				axis="doors4_axis";
+				memory=1;
+				minValue=0;
+				maxValue=1;
+				offset0=0;
+				offset1=1.0400;
+			};
+			class Doors5
+			{
+				type="translation";
+				source="Doors5";
+				selection="doors5";
+				axis="doors5_axis";
+				memory=1;
+				minValue=0;
+				maxValue=1;
+				offset0=0;
+				offset1=1.0400;
+			};
+		};
+	};

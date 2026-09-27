@@ -1,0 +1,39 @@
+		<group name="Land_JP_Machiya_01">
+				<usage name="Town" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="3.532857 0.450000 1.710714" range="0.880000" height="2.000000" />
+						<point pos="4.504286 0.450000 2.683571" range="0.785714" height="1.964286" />
+						<point pos="3.532857 0.450000 0.089286" range="0.880000" height="2.000000" />
+						<point pos="4.504286 0.450000 -0.883571" range="0.785714" height="1.964286" />
+						<point pos="-0.097857 0.450000 2.683571" range="0.775749" height="1.939372" />
+						<point pos="1.076429 0.450000 2.035000" range="0.593571" height="1.483929" />
+						<point pos="-0.097857 0.450000 -0.559286" range="0.622143" height="1.555357" />
+						<point pos="1.076429 0.450000 -1.207857" range="0.462143" height="1.155357" />
+						<point pos="-3.727143 0.450000 1.710714" range="0.880000" height="2.000000" />
+						<point pos="-2.755714 0.450000 2.683571" range="0.785714" height="1.964286" />
+						<point pos="-3.727143 0.450000 0.089286" range="0.880000" height="2.000000" />
+						<point pos="-2.755714 0.450000 -0.883571" range="0.785714" height="1.964286" />
+						<point pos="-2.673214 0.050000 -2.977143" range="0.468850" height="1.172124" />
+						<point pos="-1.247500 0.050000 -2.720000" range="0.650000" height="1.625000" />
+						<point pos="1.960357 0.050000 -2.720000" range="0.650000" height="1.625000" />
+						<point pos="4.811786 0.050000 -2.720000" range="0.478214" height="1.195536" />
+						<point pos="0.106429 3.100000 2.359286" range="0.784761" height="1.961902" />
+						<point pos="1.696429 3.100000 1.062143" range="0.995000" height="2.000000" />
+						<point pos="3.059286 3.100000 1.062143" range="0.995000" height="2.000000" />
+						<point pos="3.967857 3.100000 2.035000" range="0.995000" height="2.000000" />
+						<point pos="0.106429 3.100000 -0.235000" range="0.776429" height="1.941071" />
+						<point pos="1.469286 3.100000 -0.235000" range="0.995000" height="2.000000" />
+						<point pos="2.832143 3.100000 -0.235000" range="0.995000" height="2.000000" />
+						<point pos="4.195000 3.100000 -0.235000" range="0.995000" height="2.000000" />
+						<point pos="-3.727143 3.100000 1.710714" range="0.880000" height="2.000000" />
+						<point pos="-2.755714 3.100000 2.683571" range="0.785714" height="1.964286" />
+						<point pos="-3.727143 3.100000 0.089286" range="0.880000" height="2.000000" />
+						<point pos="-2.755714 3.100000 -0.883571" range="0.785714" height="1.964286" />
+				</container>
+		</group>
