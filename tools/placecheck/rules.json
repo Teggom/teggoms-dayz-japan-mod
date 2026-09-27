@@ -1,0 +1,86 @@
+{
+ "_doc": [
+  "placecheck grounding rules. Units: metres and degrees. Sign convention everywhere: gap = object bottom minus support surface,",
+  "so gap > 0 floats and gap < 0 is sunk. Tune values here; a change invalidates the check cache for that category only.",
+  "contact_lods: which LOD gives the contact geometry, first one present wins (landcontact 2e15, visual = first resolution LOD,",
+  "geometry 1e13, roadway 3e15). band: contact points are the vertices/edge samples within this height of the object's lowest",
+  "point (band_frac: fraction of the model height, the larger of the two wins). max_samples caps the points tested per object.",
+  "support: 'terrain' or 'terrain_or_host' (a host building's Roadway LOD, or its Geometry LOD when it has no Roadway)."
+ ],
+ "version": 1,
+ "categories": {
+  "plant": {
+   "desc": "tree, bush, bamboo, grass: the base must dip into the soil all round (every bottom point >= min_sink under it); terrain at the stem may rise above the model's ground line (MLOD origin) by <= max_embed. The base rim = the lowest point in each of `sectors` directions around the centre of the model's bottom `band`, within base_radius of it (so a slanted trunk cut is followed all round and drooping leaf cards further out are ignored)",
+   "contact_lods": ["landcontact", "visual", "geometry"],
+   "band": 0.5, "band_frac": 0.0, "max_samples": 24,
+   "support": "terrain",
+   "base_radius": 0.75,
+   "sectors": 12,
+   "min_sink": 0.02,
+   "max_embed": 0.5,
+   "fixable": true
+  },
+  "rock": {
+   "desc": "rock or boulder: its lowest part must be embedded all round",
+   "contact_lods": ["visual", "geometry"],
+   "band": 0.0, "band_frac": 0.15, "max_samples": 64,
+   "support": "terrain",
+   "min_sink": 0.05,
+   "fixable": false
+  },
+  "building": {
+   "desc": "building, wall, pad: footprint gap <= gap_tol everywhere; terrain may rise above the model's ground line (MLOD origin) by <= embed_max",
+   "contact_lods": ["landcontact", "visual", "geometry"],
+   "band": 0.05, "band_frac": 0.0, "max_samples": 128,
+   "support": "terrain_or_host",
+   "gap_tol": 0.03,
+   "embed_max": 0.30,
+   "fixable": false
+  },
+  "prop": {
+   "desc": "small prop: bottom within +-tol of its support (terrain, or a host building's floor)",
+   "contact_lods": ["landcontact", "visual", "geometry"],
+   "band": 0.005, "band_frac": 0.0, "max_samples": 48,
+   "support": "terrain_or_host",
+   "tol": 0.02,
+   "fixable": true
+  },
+  "hanging": {
+   "desc": "hanging prop (lantern, sign): every attach point within tol of a host's Geometry LOD",
+   "attach_regex": "attach|hang|hook|rope|chain|slot_top|top",
+   "tol": 0.03,
+   "search": 0.5,
+   "fixable": false
+  },
+  "road": {
+   "desc": "road piece: its Roadway surface follows the terrain. mode drape = the engine drapes class=road pieces per vertex, so only terrain bumps between vertices count; rigid = the piece as placed",
+   "mode": "drape",
+   "tol": 0.10,
+   "step": 1.0,
+   "fixable": false
+  },
+  "skip": {
+   "desc": "not checked (water surfaces, markers, invisible helpers)"
+  }
+ },
+ "host_categories": ["building"],
+ "naming": [
+  ["skip", "pond|water|lake_|helper|marker|_trigger|invisible"],
+  ["hanging", "lantern|chochin|hanging|hang_|_hang|noren|windchime|wind_chime|lamp_hang|sign_hang"],
+  ["road", "\\\\roads\\\\|^road_|_road_|grav_|asf1_|asf2_|asf3_|\\\\kr_|\\\\path_"],
+  ["rock", "\\\\rocks|rock|boulder|stone_big|_stone_"],
+  ["plant", "\\\\plants|\\\\tree\\\\|\\\\bush\\\\|\\\\t_|\\\\b_|sakura|bamboo|grass|clutter|flower|bush|(^|[\\\\_])tree"],
+  ["prop", "\\\\misc\\\\|\\\\furniture\\\\|\\\\props?\\\\|haybale|barrel|crate|target|bench|bucket"],
+  ["building", "\\\\structures\\\\|^land_|^staticobj_|house|machiya|building|wall|fence|gate|shrine|temple|torii|pad_|platform|bridge|pier"]
+ ],
+ "odol_class": {
+  "tree": "plant", "bush": "plant", "treehard": "plant", "treesoft": "plant", "bushhard": "plant", "bushsoft": "plant",
+  "road": "road", "pond": "skip", "house": "building", "church": "building", "building": "building"
+ },
+ "size_fallback": {"_doc": "no naming match: largest extent below prop_max_size = prop, else building. A 'building' match that small also becomes a prop", "prop_max_size": 2.5},
+ "overrides": {
+  "_doc": "class name or p3d path (lower case, backslashes) -> category. Wins over everything else.",
+  "staticobj_target_concrete1": "prop",
+  "staticobj_target_support": "prop"
+ }
+}
