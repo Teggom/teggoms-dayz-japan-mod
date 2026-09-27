@@ -79,8 +79,37 @@ def attr(el, name):
 
 
 # ------------------------------------------------------------------------------------------------------
+TEST_LOOT_MAX = 40   # the island has ~3 loot buildings (~90 points); vanilla Chernarus nominals flood the
+                     # respawner ("causing search overtime" x thousands, 2026-09-27 boot) - keep a small sample
+
+
+def shrink_vanilla_loot(van):
+    """Keep ~40 common Town/Village floor items at nominal 1 / min 1; every other vanilla type nominal 0 / min 0."""
+    kept = [0]
+    wanted = {"tools", "food", "clothes", "containers"}
+
+    def fix(m):
+        blk = m.group(0)
+        nom = re.search(r"<nominal>(\d+)</nominal>", blk)
+        if not nom or int(nom.group(1)) == 0:
+            return blk
+        cats = set(re.findall(r'<category name="([^"]+)"', blk))
+        uses = set(re.findall(r'<usage name="([^"]+)"', blk))
+        keep = kept[0] < TEST_LOOT_MAX and (cats & wanted) and (uses & {"Town", "Village"})
+        n = 1 if keep else 0
+        if keep:
+            kept[0] += 1
+        blk = re.sub(r"<nominal>\d+</nominal>", "<nominal>%d</nominal>" % n, blk, count=1)
+        blk = re.sub(r"<min>\d+</min>", "<min>%d</min>" % n, blk, count=1)
+        return blk
+
+    van = re.sub(r'<type name="[^"]+">.*?</type>', fix, van, flags=re.S)
+    log("types: vanilla loot shrunk to %d items at nominal 1 (TEST_LOOT_MAX)" % kept[0])
+    return van
+
+
 def build_types():
-    van = rd(os.path.join(VANILLA, "db", "types.xml"))
+    van = shrink_vanilla_loot(rd(os.path.join(VANILLA, "db", "types.xml")))
     add = []
     for path in sorted(glob.glob(os.path.join(TEST, "types", "*.xml"))):
         els = bare_elements(rd(path), "type")
