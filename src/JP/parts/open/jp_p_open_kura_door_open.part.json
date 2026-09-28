@@ -25,18 +25,18 @@
  "deviation": null,
  "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
  "bbox_m": [
-  -0.0,
-  2.76,
+  -0.07,
+  2.97,
   -0.1,
   3.033,
   -0.204,
-  1.04
+  1.068
  ],
  "dims": [
   {
    "name": "clear_m",
    "expected": ">=1.00 x 2.00",
-   "measured": "1.10 x 2.00",
+   "measured": "1.02 x 2.00",
    "tol": 0.01,
    "source": "build_list / D1",
    "ok": true
@@ -130,6 +130,18 @@
    ]
   },
   {
+   "key": "roof_kawara_far",
+   "id": "jp_m_roof_kawara_far",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
    "key": "roof_kawara_field",
    "id": "jp_m_roof_kawara_field",
    "palette_id": "kawara_ibushi",
@@ -146,6 +158,18 @@
    "id": "jp_m_stone_cut",
    "palette_id": "stone_granite",
    "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
    "default_wear": "_w1",
    "wear_selectable": [
     "_w0",
@@ -179,9 +203,9 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 421,
-  "Resolution 2": 146,
-  "Resolution 3": 61,
+  "Resolution 1": 442,
+  "Resolution 2": 160,
+  "Resolution 3": 67,
   "Geometry": 112,
   "Memory": 0,
   "Roadway": 3,
@@ -209,27 +233,27 @@
      "bone": "doors1",
      "type": "translation",
      "axis_memory": "doors1_axis",
-     "amount": 1.14,
+     "amount": 1.04,
      "unit": "m (translation; axis 1.00 m)"
     }
    ],
    "anim_period": 1.0,
    "init_opened": 0.3,
    "sound": "doorWoodSlide",
-   "clear_width_m": 1.08,
+   "clear_width_m": 1.0,
    "engine_tested": true,
    "note": "inner sliding door (game door)"
   }
  ],
  "notes": [
-  "Opening 1.10 x 2.15 from the approach level = 2.00 clear above the 0.15 threshold; the okabe wall recipe must leave that hole (walls.wall_run(kind='okabe', openings=[(0.36, 1.46, 0, 2.15)]))."
+  "Opening 1.24 x 2.15 from the approach level = 2.00 clear above the 0.15 threshold (1.02 clear once the open inner leaf keeps its 0.22 stub); the okabe wall recipe must leave that hole (walls.wall_run(kind='okabe', openings=[(0.29, 1.53, 0, 2.15)]))."
  ],
  "extra": {},
  "checks": [
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 421, Resolution 2 146, Resolution 3 61, Geometry 112, Memory 0, Roadway 3, View Geometry 96, Fire Geometry 102"
+   "detail": "Resolution 1 442, Resolution 2 160, Resolution 3 67, Geometry 112, Memory 0, Roadway 3, View Geometry 96, Fire Geometry 102"
   },
   {
    "check": "C2 library only",
@@ -264,7 +288,27 @@
   {
    "check": "C7 door doors1 sweep + clear",
    "ok": true,
-   "detail": "leaf slides 1.140 m without touching other geometry; open clear width 1.08 m (>= 1.00), head 2.00 m"
+   "detail": "leaf slides 1.040 m without touching other geometry; open clear width 1.00 m (>= 1.00), head 2.00 m"
+  },
+  {
+   "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+   "ok": true,
+   "detail": "0.220 m of the leaf stays in the opening when open"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.04 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.65 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.61 m"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "0/0 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
   },
   {
    "check": "C7 Roadway on Geometry",
@@ -274,7 +318,7 @@
   {
    "check": "C4 clear_m",
    "ok": true,
-   "detail": "expected >=1.00 x 2.00, measured 1.10 x 2.00"
+   "detail": "expected >=1.00 x 2.00, measured 1.02 x 2.00"
   },
   {
    "check": "C4 leaf_thickness_m",

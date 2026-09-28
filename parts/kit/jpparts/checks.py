@@ -8,8 +8,8 @@ import math
 import os
 import re
 
-from . import mlod
-from .core import HALF, QK, MIN_CLEAR, MIN_HEAD, LIB, DEV
+from . import mlod, raycheck
+from .core import HALF, QK, MIN_CLEAR, MIN_HEAD, LIB, DEV, POST, WALL_H
 
 ALLOWED_VANILLA = ("dz\\data\\data\\penetration\\", "dz\\surfaces\\data\\roadway\\")
 
@@ -198,6 +198,25 @@ def check_part(part, path, lods=None):
         if getattr(d, "passable", True) and d.anims[0]["type"] == "translation" and geo:
             r = door_sweep(d, gcomps + vposts)
             res.append(("C7 door %s sweep + clear" % ds, r[0], r[1]))
+        elif geo:
+            hits = sweep_hits(d, gcomps + vposts)
+            res.append(("C7 door %s sweep (window / hinged)" % ds, not hits, "moves closed -> open without touching "
+                        "other geometry" if not hits else "HITS %s" % hits[:3]))
+        if d.anims[0]["type"] == "translation" and geo:
+            st = stub_left(d, gcomps)
+            res.append(("C10 door %s open leaf keeps >= 0.15 m in the opening (vanilla)" % ds, st >= 0.15 - 1e-6,
+                        "%.3f m of the leaf stays in the opening when open" % st))
+        if "View Geometry" in L:
+            vcomps = components(L["View Geometry"]) + virtual_walls(part, d) + vposts
+            for frac, state in ((1.0, "open"), (0.0, "closed")):
+                rr = raycheck.door_reach(d, vcomps, part.memory, frac=frac, others=part.doors)
+                bad = [k for k, (ok, _) in rr.items() if not ok]
+                res.append(("C10 door %s reachable from both sides (%s)" % (ds, state), not bad,
+                            "; ".join("%s: %s" % (k, v[1]) for k, v in rr.items())))
+    # tile seating (kawara on a clay bed, fascia at the eave)
+    ts = tile_seating(part)
+    if ts is not None:
+        res.append(("C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave", ts[0], ts[1]))
     # roadway on geometry
     if part.walkable:
         if "Roadway" not in L:
@@ -288,3 +307,86 @@ def door_sweep(d, gcomps):
     return ok, "leaf slides %.3f m %s; open clear width %.2f m (>= %.2f), head %.2f m%s" % (
         amt, "without touching other geometry" if not hits else "HITS %s" % hits[:3], clear, MIN_CLEAR,
         head if head < 99 else float("nan"), "" if ok else " FAIL")
+
+
+def sweep_hits(d, gcomps, steps=8):
+    """Any leaf of the door (translation or rotation) touching another Geometry component on its way open."""
+    bones = [a["bone"] for a in d.anims]
+    others = [c for c in gcomps if c["door"] not in bones]
+    hits = []
+    for a in d.anims:
+        leaf = [c for c in gcomps if c["door"] == a["bone"]]
+        for k in range(1, steps + 1):
+            f = raycheck.anim_point_fn(a, k / steps)
+            for c in leaf:
+                mc = raycheck.moved(c, f)
+                for o in others:
+                    if raycheck.convex_overlap(mc, o, 0.004) > 0:
+                        hits.append(o["name"])
+    return sorted(set(hits))
+
+
+def stub_left(d, gcomps):
+    """Smallest length of any open leaf still inside the opening along its slide axis (part frame)."""
+    o = d.opening
+    best = 99.0
+    for a in d.anims:
+        leaf = [c for c in gcomps if c["door"] == a["bone"]]
+        if not leaf:
+            return 0.0
+        dv = [a["axis"][1][k] - a["axis"][0][k] for k in range(3)]
+        k = 0 if abs(dv[0]) > 0.5 else (1 if abs(dv[1]) > 0.5 else 2)
+        lo = min(c["bbox"][2 * k] for c in leaf) + dv[k] * a["amount"]
+        hi = max(c["bbox"][2 * k + 1] for c in leaf) + dv[k] * a["amount"]
+        olo, ohi = (o[0], o[1]) if k == 0 else (o[2], o[3])
+        best = min(best, max(0.0, min(hi, ohi) - max(lo, olo)))
+    return best
+
+
+def virtual_walls(part, d):
+    """Stand-ins for the wall the building puts around the part (the wall plane over the part's post span, minus the
+    opening), so C10 sees the part the way a player in the building does. Parts with hidden posts (okabe) get none."""
+    xs = [c["pos"][0] for c in part.connectors if c["type"] == "post" and not c.get("hidden")]
+    if len(xs) < 2 or not getattr(d, "opening", None):
+        return []
+    x0, x1 = min(xs) + POST / 2, max(xs) - POST / 2
+    o0, o1, b0, b1 = d.opening
+    t = 0.0375
+    out = []
+    for (a, b, c, e) in ((x0, o0 - POST, 0.0, WALL_H), (o1 + 0.001, x1, 0.0, WALL_H), (o0 - POST, o1 + 0.001, b1, WALL_H),
+                         (o0 - POST, o1 + 0.001, 0.0, b0)):
+        if b - a > 0.01 and e - c > 0.01:
+            out.append(box_comp(a, b, c, e, -t, t, name="virtual_wall"))
+    return out
+
+
+def tile_seating(part):
+    """None if the part has no kawara. Else (ok, detail): every LOD0 kawara field vertex that lies over the part's
+    sheathing has a closed visual solid (the fuki-tsuchi clay bed) within 1 cm below its tile underside, and every
+    slope with eave tiles has a fascia (kayaoi) board under them."""
+    field = [s for s in part.solids if s.tag in ("kawara_field", "hongawara") and 1 in s.vis]
+    if not field:
+        return None
+    beds = [raycheck.solid_comp(s) for s in part.solids if s.tag == "tile_bed" and s.closed]
+    sheath = [raycheck.solid_comp(s) for s in part.solids if s.tag == "sheathing" and s.closed]
+    if not beds:
+        return (False, "no clay bed (tile_bed) under the kawara")
+    n = bad = 0
+    worst = 0.0
+    for s in field:
+        for v in s.verts[::3]:
+            over = [c for c in sheath if ray_y(c, v[0], v[2])]
+            if not over:
+                continue
+            n += 1
+            tops = [r[1] for c in beds for r in [ray_y(c, v[0], v[2])] if r and r[1] <= v[1] + 0.005]
+            gap = (v[1] - max(tops)) if tops else 9.9
+            # the corrugation: pans sit on the bed, rolls stand up to 0.055 + the row step above it
+            if gap > 0.055 + 0.022 + 0.012:
+                bad += 1
+                worst = max(worst, gap)
+    eaves = [s for s in part.solids if s.tag == "eave_tile"]
+    fasc = [s for s in part.solids if s.tag == "kawara_fascia"]
+    ok = bad == 0 and (not eaves or fasc)
+    return (ok, "%d/%d field points within reach of the bed%s; %d eave tile sets, %d fascia boards" % (
+        n - bad, n, "" if not bad else " (worst gap %.3f m)" % worst, len(eaves), len(fasc)))

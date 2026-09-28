@@ -77,21 +77,19 @@ def plain(name, rgb):
 def part_mesh(part, name, lod=1, tint=None, open_doors=0.0):
     verts, polys, uvs, mids = [], [], [], []
     mats, mindex = [], {}
-    shift = {}
+    moves = {}
     if open_doors:
         for d in part.doors:
             for a in d.anims:
-                ax = a["axis"]
-                dv = [(ax[1][k] - ax[0][k]) for k in range(3)]
-                if a["type"] == "translation":
-                    shift[a["bone"]] = tuple(dv[k] * a["amount"] * open_doors for k in range(3))
+                moves[a["bone"]] = core.anim_point_fn(a, open_doors)      # translation or rotation (G3 windows)
+    ident = lambda p: p                                                    # noqa: E731
     for s in part.solids:
         if lod not in s.vis:
             continue
-        off = shift.get(s.door, (0.0, 0.0, 0.0))
+        mv = moves.get(s.door, ident)
         for fi in range(len(s.faces)):
-            pts = [to_b(core.add(p, off)) for p in s.face_points(fi)]
-            n = to_b(s.fn[fi])
+            pts = [to_b(mv(p)) for p in s.face_points(fi)]
+            n = to_b(core.sub(mv(core.add(s.face_points(fi)[0], s.fn[fi])), mv(s.face_points(fi)[0])))
             nn = core.newell(pts)
             order = list(range(len(pts)))
             if core.dot(nn, n) < 0:

@@ -27,10 +27,10 @@
  "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
  "bbox_m": [
   -0.092,
-  1.399,
-  -0.579,
-  0.171,
-  -1.399,
+  1.414,
+  -0.585,
+  0.177,
+  -1.414,
   0.092
  ],
  "dims": [
@@ -96,8 +96,8 @@
  ],
  "lod_faces": {
   "Resolution 1": 59,
-  "Resolution 2": 31,
-  "Resolution 3": 13
+  "Resolution 2": 43,
+  "Resolution 3": 31
  },
  "contributes": [
   "Resolution 1",
@@ -112,7 +112,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 59, Resolution 2 31, Resolution 3 13"
+   "detail": "Resolution 1 59, Resolution 2 43, Resolution 3 31"
   },
   {
    "check": "C2 library only",

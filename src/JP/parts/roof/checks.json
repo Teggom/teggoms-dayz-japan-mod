@@ -7,7 +7,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 2911, Resolution 2 517, Resolution 3 113, Geometry 12, Roadway 2, View Geometry 12, Fire Geometry 12"
+     "detail": "Resolution 1 2935, Resolution 2 571, Resolution 3 159, Geometry 12, Roadway 2, View Geometry 12, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -33,6 +33,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "2278/2278 field points within reach of the bed; 2 eave tile sets, 2 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -82,7 +87,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 3993, Resolution 2 445, Resolution 3 209, Geometry 22, Roadway 4, View Geometry 22, Fire Geometry 22"
+     "detail": "Resolution 1 4039, Resolution 2 557, Resolution 3 347, Geometry 22, Roadway 4, View Geometry 22, Fire Geometry 22"
     },
     {
      "check": "C2 library only",
@@ -108,6 +113,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "2818/2818 field points within reach of the bed; 4 eave tile sets, 4 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -152,7 +162,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 4425, Resolution 2 505, Resolution 3 223, Geometry 46, Roadway 6, View Geometry 36, Fire Geometry 36"
+     "detail": "Resolution 1 4485, Resolution 2 631, Resolution 3 361, Geometry 46, Roadway 6, View Geometry 36, Fire Geometry 36"
     },
     {
      "check": "C2 library only",
@@ -178,6 +188,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "2818/2818 field points within reach of the bed; 4 eave tile sets, 4 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -427,7 +442,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 202, Resolution 2 20, Resolution 3 13, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 214, Resolution 2 32, Resolution 3 13, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -453,6 +468,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "211/211 field points within reach of the bed; 0 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -502,7 +522,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 412, Resolution 2 20, Resolution 3 13, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 424, Resolution 2 32, Resolution 3 13, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -528,6 +548,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "211/211 field points within reach of the bed; 0 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -577,7 +602,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 63, Resolution 2 6"
+     "detail": "Resolution 1 63, Resolution 2 6, Resolution 3 6"
     },
     {
      "check": "C2 library only",
@@ -612,7 +637,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 49, Resolution 2 6"
+     "detail": "Resolution 1 49, Resolution 2 6, Resolution 3 6"
     },
     {
      "check": "C2 library only",
@@ -682,7 +707,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 21, Resolution 2 21"
+     "detail": "Resolution 1 21, Resolution 2 21, Resolution 3 6"
     },
     {
      "check": "C2 library only",
@@ -712,7 +737,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 21, Resolution 2 21"
+     "detail": "Resolution 1 21, Resolution 2 21, Resolution 3 6"
     },
     {
      "check": "C2 library only",
@@ -742,7 +767,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 65, Resolution 2 31, Resolution 3 13"
+     "detail": "Resolution 1 65, Resolution 2 49, Resolution 3 31"
     },
     {
      "check": "C2 library only",
@@ -777,7 +802,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 77, Resolution 2 31, Resolution 3 13"
+     "detail": "Resolution 1 77, Resolution 2 49, Resolution 3 31"
     },
     {
      "check": "C2 library only",
@@ -812,7 +837,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 59, Resolution 2 31, Resolution 3 13"
+     "detail": "Resolution 1 59, Resolution 2 43, Resolution 3 31"
     },
     {
      "check": "C2 library only",
@@ -842,7 +867,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 37, Resolution 2 25"
+     "detail": "Resolution 1 37, Resolution 2 31, Resolution 3 21"
     },
     {
      "check": "C2 library only",
@@ -872,7 +897,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 61, Resolution 2 25"
+     "detail": "Resolution 1 61, Resolution 2 31, Resolution 3 21"
     },
     {
      "check": "C2 library only",
@@ -1517,7 +1542,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 1739, Resolution 2 275, Resolution 3 59, Geometry 56, View Geometry 46, Fire Geometry 46"
+     "detail": "Resolution 1 1739, Resolution 2 287, Resolution 3 77, Geometry 56, View Geometry 46, Fire Geometry 46"
     },
     {
      "check": "C2 library only",
@@ -1692,7 +1717,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 81, Resolution 2 53, Resolution 3 23, Geometry 10, View Geometry 10, Fire Geometry 10"
+     "detail": "Resolution 1 81, Resolution 2 65, Resolution 3 41, Geometry 10, View Geometry 10, Fire Geometry 10"
     },
     {
      "check": "C2 library only",
@@ -2062,7 +2087,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 416, Resolution 2 107, Resolution 3 39, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+     "detail": "Resolution 1 415, Resolution 2 106, Resolution 3 31, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
     },
     {
      "check": "C2 library only",
@@ -2088,6 +2113,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery, wood"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "224/224 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -2307,7 +2337,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 304, Resolution 2 107, Resolution 3 39, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+     "detail": "Resolution 1 303, Resolution 2 106, Resolution 3 31, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
     },
     {
      "check": "C2 library only",
@@ -2333,6 +2363,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery, wood"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "75/75 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -2367,7 +2402,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 165, Resolution 2 38, Resolution 3 25, Geometry 18, View Geometry 18, Fire Geometry 18"
+     "detail": "Resolution 1 177, Resolution 2 50, Resolution 3 31, Geometry 18, View Geometry 18, Fire Geometry 18"
     },
     {
      "check": "C2 library only",
@@ -2393,6 +2428,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "dirt"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "0/0 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C4 band_height_m",
@@ -2422,7 +2462,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 98, Resolution 2 98, Resolution 3 6, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 110, Resolution 2 110, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -2448,6 +2488,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "10/10 field points within reach of the bed; 0 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -2477,7 +2522,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 296, Resolution 2 212, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 308, Resolution 2 224, Resolution 3 18, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -2503,6 +2548,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "19/19 field points within reach of the bed; 0 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -2532,7 +2582,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 114, Resolution 2 56, Resolution 3 13"
+     "detail": "Resolution 1 114, Resolution 2 80, Resolution 3 52"
     },
     {
      "check": "C2 library only",

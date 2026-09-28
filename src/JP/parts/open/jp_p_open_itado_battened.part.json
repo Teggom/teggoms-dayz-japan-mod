@@ -50,9 +50,9 @@
    "source": "D2"
   },
   {
-   "name": "leaf_slide_m (= leaf width)",
-   "expected": 1.74,
-   "measured": 1.74,
+   "name": "leaf_slide_m (= leaf width - overlap - STUB)",
+   "expected": 1.5,
+   "measured": 1.5,
    "tol": 0.01,
    "source": "build_list"
   },
@@ -176,14 +176,14 @@
      "bone": "doors1",
      "type": "translation",
      "axis_memory": "doors1_axis",
-     "amount": 1.74,
+     "amount": 1.5,
      "unit": "m (translation; axis 1.00 m)"
     }
    ],
    "anim_period": 1.0,
    "init_opened": 0.3,
    "sound": "doorWoodSlide",
-   "clear_width_m": 1.68,
+   "clear_width_m": 1.46,
    "engine_tested": true,
    "note": "exterior leaf, parks over the next bay"
   }
@@ -229,7 +229,22 @@
   {
    "check": "C7 door doors1 sweep + clear",
    "ok": true,
-   "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+   "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+  },
+  {
+   "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+   "ok": true,
+   "detail": "0.220 m of the leaf stays in the opening when open"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.81 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.45 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
   },
   {
    "check": "C7 Roadway on Geometry",
@@ -247,9 +262,9 @@
    "detail": "expected 2.0, measured 2.0"
   },
   {
-   "check": "C4 leaf_slide_m (= leaf width)",
+   "check": "C4 leaf_slide_m (= leaf width - overlap - STUB)",
    "ok": true,
-   "detail": "expected 1.74, measured 1.74"
+   "detail": "expected 1.5, measured 1.5"
   },
   {
    "check": "C4 leaf_thickness_m",

@@ -1,0 +1,214 @@
+{
+ "id": "jp_p_open_tsukiage_board",
+ "part": "jp_p_open_tsukiage",
+ "variant": "_board",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_tsukiage_board.p3d",
+ "build_list": {
+  "entry": "jp_p_open_tsukiage",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "half-ken storage / farmhouse / shop-side window: wooden bars and a board shutter hinged at the top that is pushed up and out (tsukiage / hanemage)",
+ "datum": "half-ken bay between post nodes x=0 and x=0.91; y 0 = floor; opening 0.90-1.60",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.02,
+  0.89,
+  0.85,
+  1.68,
+  -0.07,
+  0.11
+ ],
+ "dims": [
+  {
+   "name": "opening_m",
+   "expected": "0.79 x 0.70",
+   "measured": "0.79 x 0.70",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "open_angle_deg",
+   "expected": 75.0,
+   "measured": 75.0,
+   "tol": 0.5,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.91,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    1.65,
+    0.0
+   ],
+   "note": "hinge line on the outside of the head rail"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 114,
+  "Resolution 2": 66,
+  "Resolution 3": 24,
+  "Geometry": 24,
+  "Memory": 0,
+  "View Geometry": 18,
+  "Fire Geometry": 18
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [
+  {
+   "source": "DoorsTwin1",
+   "kind": "plank",
+   "display": "window",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "rotation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.309,
+     "unit": "rad"
+    }
+   ],
+   "anim_period": 1.2,
+   "init_opened": 0.5,
+   "sound": "doorWoodSlide",
+   "clear_width_m": null,
+   "engine_tested": false,
+   "note": "top-hinged push-up shutter (rotation about the head, 75 deg)"
+  }
+ ],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 114, Resolution 2 66, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 18"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "rotation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep (window / hinged)",
+   "ok": true,
+   "detail": "moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.17 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.89 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.03 m"
+  },
+  {
+   "check": "C4 opening_m",
+   "ok": true,
+   "detail": "expected 0.79 x 0.70, measured 0.79 x 0.70"
+  },
+  {
+   "check": "C4 open_angle_deg",
+   "ok": true,
+   "detail": "expected 75.0, measured 75.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

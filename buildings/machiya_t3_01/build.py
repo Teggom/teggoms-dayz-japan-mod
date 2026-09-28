@@ -74,10 +74,14 @@ def model_cfg(doors):
     anims = ""
     for k, d in enumerate(doors, 1):
         for a in d.anims:
-            anims += ("\t\t\tclass %s\n\t\t\t{\n\t\t\t\ttype=\"translation\";\n\t\t\t\tsource=\"DoorsTwin%d\";\n"
+            # translation: axis 1.00 m, offset1 = metres. rotation (G3 windows): angle1 in radians; the engine turns by
+            # the RIGHT-hand rule about axis point 1 -> 2 (vanilla vehicle doors; PLAYBOOK §15 T5)
+            last = ("offset0=0;\n\t\t\t\toffset1=%.4f;" % a["amount"]) if a["type"] == "translation" else \
+                ("angle0=0;\n\t\t\t\tangle1=%.6f;" % a["amount"])
+            anims += ("\t\t\tclass %s\n\t\t\t{\n\t\t\t\ttype=\"%s\";\n\t\t\t\tsource=\"DoorsTwin%d\";\n"
                       "\t\t\t\tselection=\"%s\";\n\t\t\t\taxis=\"%s_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n"
-                      "\t\t\t\tmaxValue=1;\n\t\t\t\toffset0=0;\n\t\t\t\toffset1=%.4f;\n\t\t\t};\n"
-                      % (a["bone"][0].upper() + a["bone"][1:], k, a["bone"], a["bone"], a["amount"]))
+                      "\t\t\t\tmaxValue=1;\n\t\t\t\t%s\n\t\t\t};\n"
+                      % (a["bone"][0].upper() + a["bone"][1:], a["type"], k, a["bone"], a["bone"], last))
     return ("class CfgSkeletons\n{\n\tclass Default\n\t{\n\t\tisDiscrete=1;\n\t\tskeletonInherit=\"\";\n"
             "\t\tskeletonBones[]={};\n\t};\n\tclass %s_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n"
             "\t\tskeletonBones[]=\n\t\t{\n%s\n\t\t};\n\t};\n};\nclass CfgModels\n{\n\tclass Default\n\t{\n"

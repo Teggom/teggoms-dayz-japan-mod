@@ -12,6 +12,18 @@ from .shapes import board_run, clip_rect, clip_poly, clean_poly, half_tube, tube
 from . import frame
 
 FINISH = {"arakabe": ("wall_arakabe", 0.06), "nakanuri": ("wall_nakanuri", 0.075), "shikkui": ("wall_shikkui", 0.075)}
+# G3 fix (PLAYBOOK §15 T6): interior faces never use exterior weathering. Earth finishes get the unweathered, warmer
+# interior clay on every face that looks into a room.
+INTERIOR_OF = {"wall_nakanuri": "wall_nakanuri_int", "wall_arakabe": "wall_nakanuri_int"}
+
+
+def interior_mats(m, interior):
+    """interior: None (exterior sample) | 'back' (the -z face is inside: an exterior wall) | 'both' (a partition)."""
+    from .core import LIBRARY
+    im = INTERIOR_OF.get(m)
+    if not interior or not im or im not in LIBRARY:
+        return m
+    return im if interior == "both" else {"back": im, "default": m}
 HEAD_T = 0.105       # head rail (kamoi) depth
 
 
@@ -51,7 +63,7 @@ def bays(x0, x1, step=KEN, post=POST):
 
 def wall_run(part, kind, x0, x1, y0=0.0, y1=WALL_H, openings=(), finish="nakanuri", head=True, kokabe="plaster",
              thick=None, face_mats=None, ext0=0.0, ext1=0.0, mat=None, z=0.0, internal_posts=True, vis=(1, 2, 3),
-             board_opts=None):
+             board_opts=None, interior=None):
     rng = rng_for(part.name + kind, int(x0 * 100))
     bay_list, ns = bays(x0, x1)
     if internal_posts and kind in ("shinkabe", "board_vertical", "shitami"):
@@ -60,7 +72,7 @@ def wall_run(part, kind, x0, x1, y0=0.0, y1=WALL_H, openings=(), finish="nakanur
     if kind == "shinkabe":
         m, t = FINISH[finish]
         t = thick or t
-        mats = face_mats or m
+        mats = face_mats or interior_mats(m, interior)
         yh = y0 + DOOR_H
         for (a, b) in bay_list:
             lower_top = yh if head else y1
@@ -104,6 +116,11 @@ def wall_run(part, kind, x0, x1, y0=0.0, y1=WALL_H, openings=(), finish="nakanur
                 if any(a0 < b and a1 > a and b0 < yy + 0.1 and b1 > yy for a0, a1, b0, b1 in openings):
                     continue
                 part.add(box(a, b, yy, yy + 0.105, zf - 0.03, zf, m, vis=(1,), tag="rail"))
+            # G3 fix (C11 envelope leak): a top rail across the whole thickness, inner face to board face, so the
+            # step to the wall above (boards outside the posts, plaster in the middle) leaves no slit
+            if not any(a0 < b and a1 > a and b1 >= y1 - 0.07 for a0, a1, b0, b1 in openings):
+                part.add(box(a, b, y1 - 0.07, y1, z - POST / 2, zf + 0.02, m, vis=(1, 2, 3), geo=True, view=True,
+                             fire=True, tag="top_rail"))
     elif kind == "shitami":
         m = mat or "wood_street_dark"
         zf = z + (thick if thick else POST / 2)
@@ -395,8 +412,14 @@ def gable(part, D, t, eave_y=EAVE_Y, variant="_thatch", z=0.0):
             part.add(box(x - 0.015, x + 0.015, b0, b1, z - 0.015, z + 0.015, bar_m, vis=(1,), tag="vent_bar"))
         part.add(box(a0, a1, b0, b1, z - 0.01, z + 0.01, fm, vis=(), geo=True, tag="vent_geo"))
     if variant == "_tile":
-        # boards below, plaster above; plastered purlin-end bosses (x01 Ioka)
-        part.add(box(0.0, D, eave_y, eave_y + 0.36, z + it / 2, z + it / 2 + 0.015, fm, vis=(1, 2), tag="board_band"))
+        # boards below, plaster above; plastered purlin-end bosses (x01 Ioka). G3 fix (C12): both bands are clipped
+        # 2 cm under the roof lines - as full rectangles they poked up through the roof at both eave corners
+        def under_roof(poly):
+            poly = clip_poly(poly, -t, 1.0, eave_y - 0.02)                      # y <= eave_y + t x - 0.02
+            return clean_poly(clip_poly(poly, t, 1.0, eave_y + t * D - 0.02))   # y <= eave_y + t (D - x) - 0.02
+        bb = under_roof([(0.0, eave_y), (D, eave_y), (D, eave_y + 0.36), (0.0, eave_y + 0.36)])
+        if len(bb) >= 3:
+            part.add(prism(bb, "z", z + it / 2, z + it / 2 + 0.015, fm, vis=(1, 2), tag="board_band"))
         for x in (0.0, D):
             pass
         for side in (0, 1):
@@ -411,8 +434,9 @@ def gable(part, D, t, eave_y=EAVE_Y, variant="_thatch", z=0.0):
                     part.add(tube((x, y, z + it / 2), (x, y, z + it / 2 + 0.05), 0.09, "wall_shikkui", n=10, vis=(1, 2),
                                   tag="boss"))
                 k += 1
-        part.add(box(0.2, D - 0.2, eave_y + 0.36, eave_y + 0.42, z + it / 2, z + it / 2 + 0.03, fm, vis=(1, 2),
-                     tag="band"))
+        bd = under_roof([(0.2, eave_y + 0.36), (D - 0.2, eave_y + 0.36), (D - 0.2, eave_y + 0.42), (0.2, eave_y + 0.42)])
+        if len(bd) >= 3:
+            part.add(prism(bd, "z", z + it / 2, z + it / 2 + 0.03, fm, vis=(1, 2), tag="band"))
     return ytop
 
 
@@ -471,6 +495,9 @@ def kawara_cap(part, p0, p1, width=0.32, courses=2, y_base=None):
         cc = tuple(c[i] + e2[i] * (h + 0.0125) for i in range(3))
         part.add(oriented_box(cc, d, e2, e1, L / 2 + 0.02, 0.0125, w / 2, "roof_kawara", vis=(1, 2), tag="noshi"))
         h += 0.025
+    # G3 fix (PLAYBOOK §15 T7): the courses as one block in the far LOD, so the cap never floats
+    cc = tuple(c[i] + e2[i] * h / 2 for i in range(3))
+    part.add(oriented_box(cc, d, e2, e1, L / 2 + 0.02, h / 2, width / 2, "roof_kawara", vis=(3,), tag="noshi_far"))
     a = tuple(p0[i] + e2[i] * h - d[i] * 0.03 for i in range(3))
     b = tuple(p1[i] + e2[i] * h + d[i] * 0.03 for i in range(3))
     part.add(half_tube(a, b, 0.075, "roof_kawara", n=6, vis=(1, 2, 3), tag="cap"))

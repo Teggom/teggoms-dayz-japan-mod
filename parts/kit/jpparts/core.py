@@ -469,6 +469,29 @@ class Door:
         return [a["bone"] for a in self.anims]
 
 
+def anim_point_fn(a, frac=1.0):
+    """p -> p moved by one door animation at phase frac (0 closed .. 1 open). translation: along (axis1 - axis0) by
+    amount (the axis is 1.00 m). rotation: about the line axis0 -> axis1 by amount (rad), right-hand rule in the raw
+    p3d model coordinates (G3 fix pass; the engine's sign convention is recorded in PLAYBOOK §15)."""
+    p0, p1 = a["axis"][0], a["axis"][1]
+    d = sub(p1, p0)
+    if a["type"] == "translation":
+        off = mul(d, a["amount"] * frac)
+        return lambda p: add(p, off)
+    u = norm(d)
+    th = a["amount"] * frac * ROT_SIGN
+    c, s = math.cos(th), math.sin(th)
+
+    def f(p):
+        v = sub(p, p0)
+        r = add(add(mul(v, c), mul(cross(u, v), s)), mul(u, dot(u, v) * (1 - c)))
+        return add(p0, r)
+    return f
+
+
+ROT_SIGN = 1.0      # +1: model.cfg angle1 > 0 turns by the right-hand rule about axis0 -> axis1 (see PLAYBOOK §15)
+
+
 # ---------------------------------------------------------------------------------------------------- part
 class Part:
     def __init__(self, pid, variant="", group="", **meta):
@@ -565,6 +588,8 @@ class Part:
             ns = copy.copy(s)
             if s.door:
                 ns.door = remap[s.door]
+            if not getattr(ns, "src", None):
+                ns.src = other.name          # which sub-part it came from (roof / wall intersection checks)
             self.solids.append(ns)
         self.roadway += other.roadway
         for key, v in other.memory.items():
@@ -697,19 +722,26 @@ class Part:
 
 
 # ---------------------------------------------------------------------------------------------------- sliding leaf
+STUB = 0.22          # G3 (2026-09-27): an OPEN sliding leaf keeps 0.22 m inside the opening, like vanilla (Land_Barn_Brick2
+#                      0.22 m, rail warehouse 0.30 m): DayZ finds a door only by the View Geometry component the camera
+#                      ray hits, so a leaf parked fully behind the wall cannot be closed from the other side (PLAYBOOK §15)
+
+
 def sliding_leaf(part, x0, x1, y0, height, z_face, side, direction, mats, thick=0.04, kind="plank", fire=True,
-                 note="", build=None, park_span=None, anim_period=None, init_opened=None):
+                 note="", build=None, park_span=None, anim_period=None, init_opened=None, stub=STUB):
     """One translation door (B's proven format): the leaf covers the opening [x0, x1] (+OV each side), runs on the
-    face at z_face on `side` (+1 outside / -1 inside), slides `direction` (+1/-1 along x) by its own width.
-    build(leaf_x0, leaf_x1, y_bot, y_top, z0, z1, bone) -> list of Solids (visual detail + one closed leaf solid
-    flagged geo/view/fire). Returns the Door."""
+    face at z_face on `side` (+1 outside / -1 inside), slides `direction` (+1/-1 along x) until only `stub` of it is
+    left in the opening (vanilla rule, see STUB). build(leaf_x0, leaf_x1, y_bot, y_top, z0, z1, bone) -> list of
+    Solids (visual detail + one closed leaf solid flagged geo/view/fire). The memory point <bone> sits on the leaf's
+    trailing edge at hand height (vanilla), so it stays in the doorway when open. Returns the Door."""
     bone = part.next_bone()
     l0, l1 = x0 - OV, x1 + OV
     width = l1 - l0
+    slide = width - OV - stub
     zc = z_face + side * (GAP + thick / 2)
     z0, z1 = zc - thick / 2, zc + thick / 2
     bot, top = y0 + 0.004, y0 + height + 0.03
-    o0, o1 = l0 + direction * width, l1 + direction * width
+    o0, o1 = l0 + direction * slide, l1 + direction * slide
     if park_span and (o0 < park_span[0] - 1e-3 or o1 > park_span[1] + 1e-3):
         raise ValueError("%s: open leaf [%.2f, %.2f] leaves the park span %s" % (part.name, o0, o1, park_span))
     solids = build(l0, l1, bot, top, z0, z1, bone) if build else [
@@ -720,15 +752,17 @@ def sliding_leaf(part, x0, x1, y0, height, z_face, side, direction, mats, thick=
     centre = ((l0 + l1) / 2, (bot + top) / 2, zc)
     axis = [centre, (centre[0] + direction, centre[1], centre[2])]
     action = ((x0 + x1) / 2, y0 + 1.0, z_face)
+    trail = (l0 + 0.04, y0 + 1.0, zc) if direction > 0 else (l1 - 0.04, y0 + 1.0, zc)
     part.memory[bone + "_axis"] = axis
     part.memory[bone + "_action"] = [action]
-    part.memory[bone] = [centre]
-    d = Door(kind=kind, anims=[{"bone": bone, "type": "translation", "axis": axis, "amount": width}],
-             action=action, centre=centre, width=width, slide=width, direction=(float(direction), 0.0, 0.0),
+    part.memory[bone] = [trail]
+    d = Door(kind=kind, anims=[{"bone": bone, "type": "translation", "axis": axis, "amount": slide}],
+             action=action, centre=centre, width=width, slide=slide, direction=(float(direction), 0.0, 0.0),
              anim_period=anim_period or (1.0 if kind == "plank" else 0.8),
              init_opened=init_opened if init_opened is not None else (0.3 if kind == "plank" else 0.5),
              display="%s door" % kind, note=note, opening=(x0, x1, y0, y0 + height), z_face=z_face, side=side,
-             leaf_z=(z0, z1), leaf_x=(l0, l1), leaf_y=(bot, top), sweep=(min(l0, o0), max(l1, o1)))
+             leaf_z=(z0, z1), leaf_x=(l0, l1), leaf_y=(bot, top), sweep=(min(l0, o0), max(l1, o1)), stub=stub,
+             style="single")
     part.doors.append(d)
     return d
 

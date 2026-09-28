@@ -1,0 +1,68 @@
+{
+ "id": "jp_m_wall_nakanuri_int",
+ "family": "wall",
+ "palette_id": "earth_wall_aged",
+ "palette_by_wear": {},
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean clay, warm",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int_w0.rvmat",
+   "target_srgb": [
+    127.1,
+    99.1,
+    75.4
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "clean clay, faint handling marks",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int_w1.rvmat",
+   "target_srgb": [
+    127.1,
+    99.1,
+    75.4
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "clean clay, light soot at the top (W5)",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int_w2.rvmat",
+   "target_srgb": [
+    127.1,
+    99.1,
+    75.4
+   ],
+   "masked_frac": 0.0
+  }
+ },
+ "normal_convention": "DirectX (green = down), like the library",
+ "made_by": "parts/kit/make_fix_materials.py (fix agent C-FIX, G3 2026-09-27)",
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m (as jp_m_wall_nakanuri)",
+ "grain": "none; fine trowel marks",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": null,
+ "interior": true,
+ "exterior_twin": "jp_m_wall_nakanuri",
+ "used_by": [
+  "walls.wall_run(interior=...)",
+  "buildings: interior faces of earth walls"
+ ],
+ "used_on": "Every INTERIOR face of an earth (nakanuri / arakabe) wall, and interior clay fixtures (kamado). Never the exterior face. PLAYBOOK §15 T6: interior faces never use exterior weathering.",
+ "sources": [
+  {
+   "derived_from": "jp_m_wall_nakanuri _w0 (Poly Haven clay_plaster, CC0)"
+  },
+  {
+   "target": "earth_wall_aged + (dL +1.5, da +4, db +5): warmer at about the same lightness, Stephen's G3 note (interior walls dark and greenish)"
+  }
+ ]
+}

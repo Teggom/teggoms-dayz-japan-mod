@@ -103,10 +103,34 @@
    ]
   },
   {
+   "key": "roof_kawara_far",
+   "id": "jp_m_roof_kawara_far",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
    "key": "roof_kawara_field",
    "id": "jp_m_roof_kawara_field",
    "palette_id": "kawara_ibushi",
    "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
    "default_wear": "_w1",
    "wear_selectable": [
     "_w0",
@@ -140,9 +164,9 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 151,
-  "Resolution 2": 118,
-  "Resolution 3": 71,
+  "Resolution 1": 163,
+  "Resolution 2": 130,
+  "Resolution 3": 79,
   "Geometry": 72,
   "View Geometry": 66,
   "Fire Geometry": 66
@@ -163,7 +187,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 151, Resolution 2 118, Resolution 3 71, Geometry 72, View Geometry 66, Fire Geometry 66"
+   "detail": "Resolution 1 163, Resolution 2 130, Resolution 3 79, Geometry 72, View Geometry 66, Fire Geometry 66"
   },
   {
    "check": "C2 library only",
@@ -189,6 +213,11 @@
    "check": "C7 Fire penetration mats",
    "ok": true,
    "detail": "dirt, wood"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "0/0 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
   },
   {
    "check": "C4 opening_m",

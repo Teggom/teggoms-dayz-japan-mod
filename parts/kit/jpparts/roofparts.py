@@ -121,6 +121,8 @@ def part_sangawara_field(variant):
     sl = _sample_slope("sangawara", 7 * K.EXPO)
     R.collision(p, sl, R.STACK["sangawara"] + 0.05, "pottery", "tile_roof")
     R.sheathing(p, sl)
+    R.tile_bed(p, sl, R.STACK["sangawara"])
+    R.kawara_fascia(p, sl, R.STACK["sangawara"])
     F = sl.frame(R.STACK["sangawara"])
     nf = K.field(p, F, 0.0, KEN, 0.0, 7 * K.EXPO, rows_eave=2, rows_ridge=1)
     if variant == "_pointed":
@@ -236,6 +238,8 @@ def part_hongawara(variant):
         F = sl.frame(R.STACK["hongawara"])
         R.collision(p, sl, R.STACK["hongawara"] + 0.05, "pottery", "tile_roof")
         R.sheathing(p, sl)
+        R.tile_bed(p, sl, R.STACK["hongawara"])
+        R.kawara_fascia(p, sl, R.STACK["hongawara"])
         if variant == "_field":
             K.hongawara_field(p, F, 0.0, KEN, 0.0, 5 * K.EXPO)
         else:
@@ -432,6 +436,8 @@ def pent(part, x0, x1, y_wall, proj, t, kind, posts=False, bracket_step=HALF):
     R.sheathing(part, sl)
     R.rafters(part, sl, spacing=0.303, sec=(0.04, 0.05), only_eave=False)
     if fam == "sangawara":
+        R.tile_bed(part, sl, R.STACK[fam])
+        R.kawara_fascia(part, sl, R.STACK[fam])
         F = sl.frame(R.STACK[fam])
         rl = (ov - 0.06) / sl.cos
         K.eave_tiles(part, F, x0, x1, style="plain")
@@ -509,6 +515,8 @@ def part_kura_eave(variant):
                  (0.0, ov), yb + 0.06, t, ov)
     p.add(slab(sl.poly, lambda x, z: sl.y(x, z, -0.12), lambda x, z: sl.y(x, z, 0.06), "wall_shikkui", vis=(1, 2, 3),
                geo=True, view=True, fire=True, tag="plastered_eave"))
+    R.tile_bed(p, sl, 0.10, h0=0.06)
+    R.kawara_fascia(p, sl, 0.10, mat="wall_shikkui")
     F = sl.frame(0.10)
     K.eave_tiles(p, F, 0.0, KEN, style="tomoe")
     K.field(p, F, 0.0, KEN, K.EXPO, (ov + 0.12) / sl.cos + 0.2, rows_eave=1, rows_ridge=0)

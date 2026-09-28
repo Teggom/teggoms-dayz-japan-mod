@@ -8,7 +8,8 @@ Opening parts fill a hole the wall recipe leaves (walls.wall_run(openings=[...])
 """
 import math
 
-from .core import (Part, Door, box, prism, KEN, HALF, POST, DOOR_H, WALL_H, GAP, OV, sliding_leaf, rng_for, add, mul)
+from .core import (Part, Door, box, prism, KEN, HALF, POST, DOOR_H, WALL_H, GAP, OV, STUB, sliding_leaf, rng_for, add,
+                   mul)
 from .shapes import board_run, tube, oriented_box, clip_rect
 from . import kawara
 
@@ -16,11 +17,12 @@ A, B = POST / 2, KEN - POST / 2          # 1-ken bay opening between post faces
 
 
 # ------------------------------------------------------------------------------------------------ shared bits
-def tracks(part, x0, x1, z_face, side, thick=0.04, mat="wood_weathered", head_y=DOOR_H):
-    """Sill track (flush with the floor) and head track on the face the leaf runs on, over door + park bays."""
+def tracks(part, x0, x1, z_face, side, thick=0.04, mat="wood_weathered", head_y=DOOR_H, sill_y=0.0):
+    """Sill track (flush with the floor / window sill) and head track on the face the leaf runs on, over door + park
+    bays."""
     tw = thick + 2 * GAP + 0.02
     z0, z1 = sorted((z_face, z_face + side * tw))
-    part.add(box(x0, x1, -0.03, 0.0, z0, z1, mat, vis=(1, 2), tag="track"))
+    part.add(box(x0, x1, sill_y - 0.03, sill_y, z0, z1, mat, vis=(1, 2), tag="track"))
     part.add(box(x0, x1, head_y + 0.035, head_y + 0.14, z0, z1, mat, vis=(1, 2, 3), tag="track"))
 
 
@@ -85,7 +87,8 @@ def leaf_plank(style, mat, rng):
 
 def leaf_lattice(papered, mat):
     def build(l0, l1, bot, top, z0, z1, bone):
-        out = [box(l0, l1, bot, top, z0, z1, mat, vis=(2, 3), geo=True, view=papered, fire=True, tag="leaf")]
+        # View Geometry even when open-barred: DayZ targets a door only through a View Geometry component (G3 fix)
+        out = [box(l0, l1, bot, top, z0, z1, mat, vis=(2, 3), geo=True, view=True, fire=True, tag="leaf")]
         sw = 0.05
         out += [box(l0, l0 + sw, bot, top, z0, z1, mat, vis=(1,)), box(l1 - sw, l1, bot, top, z0, z1, mat, vis=(1,)),
                 box(l0 + sw, l1 - sw, top - 0.05, top, z0, z1, mat, vis=(1,)),
@@ -102,6 +105,49 @@ def leaf_lattice(papered, mat):
                            tag="paper"))
         return out
     return build
+
+
+def open_bar(x0, x1, y0, y1, z0, z1, mat, axis, tag="kumiko"):
+    """A thin visual bar without its two hidden end faces (they butt into stiles / rails): 4 faces, not 6."""
+    from .core import sheet
+    if axis == "y":            # vertical bar: keep the x and z faces
+        q = [([(x0, y0, z0), (x0, y1, z0), (x0, y1, z1), (x0, y0, z1)], (-1.0, 0.0, 0.0)),
+             ([(x1, y0, z0), (x1, y1, z0), (x1, y1, z1), (x1, y0, z1)], (1.0, 0.0, 0.0)),
+             ([(x0, y0, z0), (x1, y0, z0), (x1, y1, z0), (x0, y1, z0)], (0.0, 0.0, -1.0)),
+             ([(x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1)], (0.0, 0.0, 1.0))]
+    else:                      # horizontal bar: keep the y and z faces
+        q = [([(x0, y0, z0), (x1, y0, z0), (x1, y0, z1), (x0, y0, z1)], (0.0, -1.0, 0.0)),
+             ([(x0, y1, z0), (x1, y1, z0), (x1, y1, z1), (x0, y1, z1)], (0.0, 1.0, 0.0)),
+             ([(x0, y0, z0), (x1, y0, z0), (x1, y1, z0), (x0, y1, z0)], (0.0, 0.0, -1.0)),
+             ([(x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1)], (0.0, 0.0, 1.0))]
+    return sheet([a for a, _ in q], mat, [n for _, n in q], vis=(1,), tag=tag)
+
+
+def fixed_panel(kind, x0, x1, y0, y1, z0, z1, rng=None):
+    """A light static panel beside a single sliding leaf (sode): one collision box + a frame, few faces (the R1
+    budget of a house has room for about ten doors)."""
+    fm = "wood_weathered" if kind == "shoji" else "wood_street_dark"
+    out = [box(x0, x1, y0, y1, z0, z1, {"front": "paper_shoji", "back": "paper_shoji", "default": fm} if kind == "shoji"
+               else fm, vis=(2, 3), geo=True, view=True, fire="fabric_thin" if kind == "shoji" else True, uv="fit",
+               tag="fixed_panel")]
+    if kind == "shoji":
+        sw, low = 0.035, 0.30
+        out += [box(x1 - sw, x1, y0, y1, z0, z1, fm, vis=(1,), tag="fixed_panel"),
+                box(x0, x1, y1 - 0.04, y1, z0, z1, fm, vis=(1,), tag="fixed_panel"),
+                box(x0, x1, y0, y0 + low + 0.035, z0 + 0.004, z1 - 0.004, fm, vis=(1,), tag="fixed_panel"),
+                box(x0, x1 - sw, y0 + low + 0.035, y1 - 0.04, (z0 + z1) / 2 - 0.0015, (z0 + z1) / 2 + 0.0015,
+                    "paper_shoji", vis=(1,), tag="fixed_panel")]
+        xm = (x0 + x1 - sw) / 2
+        out.append(open_bar(xm - 0.008, xm + 0.008, y0 + low + 0.035, y1 - 0.04, z0 + 0.003, z1 - 0.003, fm, "y"))
+        y = y0 + low + 0.035 + 0.40
+        while y < y1 - 0.2:
+            out.append(open_bar(x0, x1 - sw, y - 0.008, y + 0.008, z0 + 0.003, z1 - 0.003, fm, "x"))
+            y += 0.40
+    else:
+        out.append(box(x0, x1, y0, y1, z0, z1, fm, vis=(1,), uv="fit", tag="fixed_panel"))
+        for yy in (y0 + 0.30, y1 - 0.40):
+            out.append(box(x0 + 0.02, x1 - 0.02, yy, yy + 0.07, z1, z1 + 0.012, fm, vis=(1,), tag="fixed_panel"))
+    return out
 
 
 def leaf_shoji(low, mat="wood_weathered"):
@@ -121,11 +167,11 @@ def leaf_shoji(low, mat="wood_weathered"):
         for (a, b) in ((l0 + sw, mid - sw / 2), (mid + sw / 2, l1 - sw)):
             for k in (1, 2, 3):
                 x = a + (b - a) * k / 4
-                out.append(box(x - 0.008, x + 0.008, bot + low + 0.035, top - 0.04, z0 + 0.003, z1 - 0.003, mat, vis=(1,),
-                               tag="kumiko"))
+                out.append(open_bar(x - 0.008, x + 0.008, bot + low + 0.035, top - 0.04, z0 + 0.003, z1 - 0.003, mat,
+                                    "y"))
         y = bot + low + 0.035 + 0.25
         while y < top - 0.1:
-            out.append(box(l0 + sw, l1 - sw, y - 0.008, y + 0.008, z0 + 0.003, z1 - 0.003, mat, vis=(1,), tag="kumiko"))
+            out.append(open_bar(l0 + sw, l1 - sw, y - 0.008, y + 0.008, z0 + 0.003, z1 - 0.003, mat, "x"))
             y += 0.25
         return out
     return build
@@ -145,27 +191,17 @@ def sliding_door_part(pid, variant, tiers, used, leaf_build, kind, side, thick, 
     p.dim("clear_opening_m", ">=1.00", (bay - POST / 2) - A, source="D1")
     p.dims[-1]["ok"] = (bay - POST) >= 1.0
     p.dim("head_m", DOOR_H, d.opening[3] - d.opening[2], source="D2")
-    p.dim("leaf_slide_m (= leaf width)", round(d.width, 4), d.slide)
+    p.dim("leaf_slide_m (= leaf width - overlap - STUB)", round(d.width - OV - STUB, 4), d.slide)
     return p
 
 
 # ------------------------------------------------------------------------------------------------ twin leaves
-def twin_leaves(part, x0, x1, y0, height, z_face, side, leaf_build, thick, kind, note="", mats=None):
-    """Two period-size leaves (~0.89 m) on two tracks covering the opening [x0, x1]; ONE door action (vanilla
-    'DoorsTwinN' convention: one config class, two bones driven by the same source) slides both into a stack over the
-    next half-ken in +x (architect C, Stephen 2026-09-27: period leaves, >= 1.00 m clear, D1).
-    The leaf next to the park bay runs on the inner track and moves one leaf width; the far leaf runs on the outer track,
-    passes in front of it and moves two. Returns the Door (twin=True, action point name <twin>_action)."""
-    mid = (x0 + x1) / 2
-    tr_in = z_face + side * (GAP + thick / 2)
-    tr_out = tr_in + side * (thick + GAP)
-    far = (x0 - OV, mid + OV / 2)           # far leaf: left half, outer track
-    near = (mid - OV / 2, x1 + OV)          # near leaf: right half, inner track
-    park_end = near[1] + (near[1] - near[0])
+def _leaf_set(part, specs, y0, height, thick, leaf_build, mats, kind):
+    """Leaves [(l0, l1, zc, direction, slide, what)] -> anims; every leaf a bone, memory point <bone> on its trailing
+    edge at hand height (vanilla: the point stays in the doorway when open)."""
     anims = []
     bot, top = y0 + 0.004, y0 + height + 0.03
-    for (l0, l1), zc, slide, what in ((far, tr_out, near[1] - far[0], "far leaf, outer track"),
-                                      (near, tr_in, near[1] - near[0], "near leaf, inner track")):
+    for (l0, l1, zc, dirn, slide, what) in specs:
         bone = "doors%d" % (sum(len(d.anims) for d in part.doors) + len(anims) + 1)
         z0, z1 = zc - thick / 2, zc + thick / 2
         solids = leaf_build(l0, l1, bot, top, z0, z1, bone) if leaf_build else [
@@ -174,23 +210,73 @@ def twin_leaves(part, x0, x1, y0, height, z_face, side, leaf_build, thick, kind,
             s.door = bone
             part.add(s)
         centre = ((l0 + l1) / 2, (bot + top) / 2, zc)
-        axis = [centre, (centre[0] + 1.0, centre[1], centre[2])]
+        axis = [centre, (centre[0] + dirn, centre[1], centre[2])]
         part.memory[bone + "_axis"] = axis
-        part.memory[bone] = [centre]
+        part.memory[bone] = [(l0 + 0.04, y0 + 1.0, zc) if dirn > 0 else (l1 - 0.04, y0 + 1.0, zc)]
         anims.append({"bone": bone, "type": "translation", "axis": axis, "amount": slide, "note": what})
+    return anims
+
+
+def _twin_door(part, anims, x0, x1, y0, height, z_face, side, kind, note, tr_in, thick, tr_out, sweep, style, stub,
+               window=False):
+    mid = (x0 + x1) / 2
     twin = "doorstwin%d" % (len(part.doors) + 1)
-    action = (mid, y0 + 1.0, z_face)
+    action = (mid, y0 + min(1.0, height / 2), z_face)
     part.memory[twin + "_action"] = [action]
     d = Door(kind=kind, anims=anims, action=action, centre=(mid, y0 + height / 2, tr_in), twin=twin,
-             width=near[1] - near[0], slide=anims[0]["amount"], direction=(1.0, 0.0, 0.0),
+             width=None, slide=anims[0]["amount"], direction=(1.0, 0.0, 0.0),
              anim_period=1.0 if kind == "plank" else 0.8, init_opened=0.3 if kind == "plank" else 0.5,
-             display="%s door" % kind, note=note, opening=(x0, x1, y0, y0 + height), z_face=z_face, side=side,
-             leaf_z=tuple(sorted((tr_in - side * thick / 2, tr_out + side * thick / 2))),
-             sweep=(far[0], park_end), park_end=park_end, engine_tested=False)
+             display="%s %s" % (kind, "window" if window else "door"), note=note, opening=(x0, x1, y0, y0 + height),
+             z_face=z_face, side=side, leaf_z=tuple(sorted((tr_in - side * thick / 2, tr_out + side * thick / 2))),
+             sweep=sweep, park_end=sweep[1], engine_tested=False, style=style, stub=stub, passable=not window,
+             act_h=y0 + min(1.0, height / 2))
+    bones = {a["bone"] for a in anims}
     for s in part.solids:
-        if s.door in (anims[0]["bone"], anims[1]["bone"]):
+        if s.door in bones:
             s.sel = twin
     part.doors.append(d)
+    return d
+
+
+def twin_leaves(part, x0, x1, y0, height, z_face, side, leaf_build, thick, kind, note="", mats=None, stub=STUB,
+                window=False):
+    """HIKICHIGAI (main entrances only, PLAYBOOK §15): two period-size leaves (~0.89 m) on two tracks covering the
+    opening [x0, x1]; ONE door action (vanilla 'DoorsTwinN': one config class, two bones on the same source) slides
+    both into a stack over the next half-ken in +x. Both leaves stop with `stub` still in the opening (vanilla rule:
+    the open leaf must stay aimable from the other side). Returns the Door (twin name, action point <twin>_action)."""
+    mid = (x0 + x1) / 2
+    tr_in = z_face + side * (GAP + thick / 2)
+    tr_out = tr_in + side * (thick + GAP)
+    far = (x0 - OV, mid + OV / 2)           # far leaf: left half, outer track
+    near = (mid - OV / 2, x1 + OV)          # near leaf: right half, inner track
+    stop = x1 - stub                        # both trailing edges end here, stacked
+    park_end = stop + max(near[1] - near[0], far[1] - far[0])
+    anims = _leaf_set(part, [(far[0], far[1], tr_out, +1, stop - far[0], "far leaf, outer track"),
+                             (near[0], near[1], tr_in, +1, stop - near[0], "near leaf, inner track")],
+                      y0, height, thick, leaf_build, mats, kind)
+    d = _twin_door(part, anims, x0, x1, y0, height, z_face, side, kind, note, tr_in, thick, tr_out,
+                   (far[0], park_end), "hikichigai", stub, window)
+    d.width = near[1] - near[0]
+    return d
+
+
+def split_leaves(part, x0, x1, y0, height, z_face, side, leaf_build, thick, kind, note="", mats=None, stub=STUB):
+    """HIKIWAKE (interior fusuma / shoji pairs, PLAYBOOK §15): two leaves part in the middle and slide in opposite
+    directions, each over its own half-ken; one door action. Left leaf on the outer track, right leaf on the inner
+    track (0.02 overlap at the meeting stiles). Each stops with `stub` in the opening."""
+    mid = (x0 + x1) / 2
+    tr_in = z_face + side * (GAP + thick / 2)
+    tr_out = tr_in + side * (thick + GAP)
+    left = (x0 - OV, mid + OV / 2)
+    right = (mid - OV / 2, x1 + OV)
+    sl = left[1] - (x0 + stub)
+    sr = (x1 - stub) - right[0]
+    anims = _leaf_set(part, [(left[0], left[1], tr_out, -1, sl, "left leaf, slides left, outer track"),
+                             (right[0], right[1], tr_in, +1, sr, "right leaf, slides right, inner track")],
+                      y0, height, thick, leaf_build, mats, kind)
+    d = _twin_door(part, anims, x0, x1, y0, height, z_face, side, kind, note, tr_in, thick, tr_out,
+                   (left[0] - sl, right[1] + sr), "hikiwake", stub)
+    d.width = left[1] - left[0]
     return d
 
 
@@ -216,6 +302,80 @@ def twin_door_part(pid, variant, tiers, used, leaf_build, kind, side, thick, not
     p.dims[-1]["ok"] = (KEN - POST) >= 1.0
     p.dim("leaf_width_m (period ~0.9)", "0.85-0.95", d.width, source="Stephen 2026-09-27")
     p.dim("head_m", DOOR_H, DOOR_H, source="D2")
+    p.dim("open_stub_m (vanilla 0.22-0.30)", STUB, d.stub, source="G3 fix: vanilla sliding doors")
+    return p
+
+
+def hikiwake_door_part(pid, variant, tiers, used, leaf_build, kind, side, thick, note=""):
+    """1-ken door bay (posts x = 0 and 1.82) + a half-ken park bay on EACH side (x -0.91..0 and 1.82..2.73)."""
+    p = Part(pid, variant, "open", tiers=tiers, used_for=used,
+             datum="1-ken door bay between post nodes x=0 and x=1.82 + half-ken park bays x=-0.91..0 and 1.82..2.73; "
+                   "y 0 = sill/floor",
+             note="hikiwake: two leaves part in the middle, one door action (DoorsTwin); plain wall on the park face "
+                  "of BOTH neighbouring half-ken bays")
+    zf = side * POST / 2
+    d = split_leaves(p, A, KEN - POST / 2, 0.0, DOOR_H, zf, side, leaf_build, thick, kind, note=note)
+    if d.sweep[0] < -HALF + POST / 2 - 1e-3 or d.sweep[1] > KEN + HALF - POST / 2 + 1e-3:
+        raise ValueError("%s: parked leaves %s leave the half-ken park bays" % (p.name, d.sweep))
+    tracks(p, -HALF + A, KEN + HALF - POST / 2, zf, side, 2 * thick + GAP)
+    threshold(p, A, KEN - POST / 2)
+    for x in (-HALF, 0.0, KEN, KEN + HALF):
+        p.conn("post", (x, 0, 0))
+    p.conn("sill", (0, 0, 0), note="runs in a grooved sill at floor level")
+    p.conn("head", (0, DOOR_H, 0))
+    face = "exterior" if side > 0 else "interior"
+    p.conn("park", (-HALF, 0, 0), length=HALF, face=face, note="left leaf parks here: plain wall on this face")
+    p.conn("park", (KEN, 0, 0), length=HALF, face=face, note="right leaf parks here: plain wall on this face")
+    p.dim("clear_opening_m (both open)", ">=1.00", (KEN - POST / 2 - STUB) - (A + STUB), source="D1")
+    p.dims[-1]["ok"] = (KEN - POST - 2 * STUB) >= 1.0
+    p.dim("leaf_width_m (period ~0.9)", "0.85-0.95", d.width, source="Stephen 2026-09-27")
+    p.dim("head_m", DOOR_H, DOOR_H, source="D2")
+    p.dim("open_stub_m (vanilla 0.22-0.30)", STUB, d.stub, source="G3 fix: vanilla sliding doors")
+    return p
+
+
+SINGLE_OPEN = 1.30     # narrow single door: opening between the post face and the fixed panel's stile (clear 1.08)
+
+
+def single_door_part(pid, variant, tiers, used, leaf_build, kind, side, thick, note="", panel="plank"):
+    """KATABIKI narrow single door (side, back and kitchen doors, PLAYBOOK §15): a 1-ken bay narrowed by a fixed
+    half-panel (sode, the same leaf build, in the wall plane) to a 1.30 m opening; ONE ~1.34 m leaf slides over the
+    fixed panel and the next half-ken, stopping with STUB in the opening (clear 1.08 m, D1). Uses the DoorsTwin
+    config convention with one bone, so buildings treat every door alike."""
+    p = Part(pid, variant, "open", tiers=tiers, used_for=used,
+             datum="1-ken door bay between post nodes x=0 and x=1.82 (opening x 0.06..1.36, fixed panel 1.36..1.76) + "
+                   "a half-ken park bay to x=2.73; y 0 = sill/floor",
+             note="one leaf, one door action (DoorsTwin with one bone); plain wall on the park face of the next "
+                  "half-ken")
+    zf = side * POST / 2
+    ox1 = A + SINGLE_OPEN
+    # fixed panel in the wall plane: a stile + the leaf build (a leaf look-alike that never moves)
+    p.add(box(ox1, ox1 + 0.05, 0.0, DOOR_H, -0.03, 0.03, "wood_weathered", vis=(1, 2, 3), geo=True, view=True,
+              fire=True, tag="fixed_stile"))
+    for s in fixed_panel(panel, ox1 + 0.05, B + 0.01, 0.004, DOOR_H + 0.01, -0.02, 0.02):
+        p.add(s)
+    tr = zf + side * (GAP + thick / 2)
+    l0, l1 = A - OV, ox1 + OV
+    slide = (ox1 - STUB) - l0
+    anims = _leaf_set(p, [(l0, l1, tr, +1, slide, "single leaf")], 0.0, DOOR_H, thick, leaf_build, None, kind)
+    d = _twin_door(p, anims, A, ox1, 0.0, DOOR_H, zf, side, kind, note, tr, thick, tr, (l0, l1 + slide), "katabiki",
+                   STUB)
+    d.width = l1 - l0
+    if d.sweep[1] > KEN + HALF - POST / 2 + 1e-3:
+        raise ValueError("%s: parked leaf ends at %.3f, beyond the half-ken park bay" % (p.name, d.sweep[1]))
+    tracks(p, A, KEN + HALF - POST / 2, zf, side, thick)
+    threshold(p, A, ox1)
+    for x in (0.0, KEN, KEN + HALF):
+        p.conn("post", (x, 0, 0))
+    p.conn("sill", (0, 0, 0), note="runs in a grooved sill at floor level")
+    p.conn("head", (0, DOOR_H, 0))
+    p.conn("park", (KEN, 0, 0), length=HALF, face="exterior" if side > 0 else "interior",
+           note="the next half-ken must be a plain wall on this face: the leaf parks over the fixed panel and there")
+    p.dim("clear_opening_m", ">=1.00", SINGLE_OPEN - STUB, source="D1")
+    p.dims[-1]["ok"] = SINGLE_OPEN - STUB >= 1.0
+    p.dim("leaf_width_m", "1.30-1.40", d.width, source="D1 + STUB (period back doors ~0.9; gameplay wins)")
+    p.dim("head_m", DOOR_H, DOOR_H, source="D2")
+    p.dim("open_stub_m (vanilla 0.22-0.30)", STUB, d.stub, source="G3 fix: vanilla sliding doors")
     return p
 
 
@@ -231,6 +391,12 @@ def part_itado(variant):
                               "into a stack over the next half-ken (1.70 m clear, D1)",
                               leaf_plank("battened", "wood_street_dark", rng), "plank", +1, 0.04,
                               note="exterior leaves, two outside tracks, park stacked over the next half-ken")
+    if variant == "_single":
+        return single_door_part("jp_p_open_itado", "_single", [1, 2, 3],
+                                "narrow single plank door (katabiki) for side, back and kitchen doors: one ~1.34 m "
+                                "leaf beside a fixed half-panel, 1.08 m clear (PLAYBOOK §15 door styles)",
+                                leaf_plank("battened", "wood_street_dark", rng), "plank", +1, 0.04,
+                                note="exterior leaf, parks over the fixed panel and the next half-ken")
     style = {"_plain": "plain", "_battened": "battened", "_oodo": "oodo"}[variant]
     used = {"_plain": "plank sliding door of poor houses (T1), boards only; one 1.74 m leaf parks outside",
             "_battened": "framed and battened plank door, the everyday exterior door (T2)",
@@ -290,6 +456,20 @@ def part_shoji_ext(variant):
                            "paper sliding door as two period leaves (~0.88 m) in a 1-ken bay (room fronts on the doma); "
                            "one action slides both into a stack over the next half-ken (1.70 m clear, D1)",
                            leaf_shoji(0.30), "shoji", -1, 0.03, note="paper leaves, two interior tracks")
+        p.dim("lower_board_m", 0.30, 0.30)
+        return p
+    if variant == "_hikiwake":
+        p = hikiwake_door_part("jp_p_open_shoji_ext", "_hikiwake", [2, 3],
+                               "interior shoji / fusuma pair that parts in the middle (hikiwake): two ~0.88 m leaves "
+                               "slide apart over a half-ken each side, 1.26 m clear (PLAYBOOK §15 door styles)",
+                               leaf_shoji(0.30), "shoji", -1, 0.03, note="paper leaves, two interior tracks")
+        p.dim("lower_board_m", 0.30, 0.30)
+        return p
+    if variant == "_single":
+        p = single_door_part("jp_p_open_shoji_ext", "_single", [2, 3],
+                             "narrow single shoji door beside a fixed shoji panel (room entrances off the doma): one "
+                             "~1.34 m leaf, 1.08 m clear (PLAYBOOK §15 door styles)",
+                             leaf_shoji(0.30), "shoji", -1, 0.03, note="paper leaf, interior track", panel="shoji")
         p.dim("lower_board_m", 0.30, 0.30)
         return p
     low = 0.60 if variant == "_koshidaka" else 0.15
@@ -403,6 +583,12 @@ def mini_pent(part, x0, x1, y_wall, z_wall, depth=0.60, t=0.40, brackets=True):
     y_edge = y_wall - depth * t
     part.add(prism([(y_wall, z_wall), (y_edge, z_wall + depth), (y_edge + 0.06, z_wall + depth), (y_wall + 0.06, z_wall)],
                    "x", x0, x1, {"default": "wood_weathered"}, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="pent"))
+    # G3 fix: clay bed (fuki-tsuchi) between the pent slab and the tiles + a fascia board at the eave (PLAYBOOK §15 T1)
+    part.add(prism([(y_wall + 0.06, z_wall), (y_edge + 0.06, z_wall + depth), (y_edge + 0.068, z_wall + depth),
+                    (y_wall + 0.068, z_wall)], "x", x0, x1, "wall_arakabe", vis=(1, 2), tag="tile_bed"))
+    part.add(prism([(y_edge - 0.01, z_wall + depth), (y_edge - 0.01, z_wall + depth + 0.03),
+                    (y_edge + 0.08, z_wall + depth + 0.03), (y_edge + 0.08, z_wall + depth)], "x", x0, x1,
+                   "wood_weathered", vis=(1, 2, 3), tag="kawara_fascia"))
     F = kawara.SlopeFrame((x0, y_edge + 0.06 + 0.012, z_wall + depth), (1.0, 0.0, 0.0), (0.0, 0.0, -1.0), t)
     rl = depth / F.cos
     kawara.eave_tiles(part, F, 0.0, x1 - x0, style="plain")
@@ -420,7 +606,8 @@ def part_kura_door(variant):
                        else "kura doorway: stepped plaster surround, outer leaves static open, inner sliding door"),
              datum="1-ken bay of a 0.24 okabe wall (faces z +-0.12), centred at x 0.91; y 0 = approach level")
     th = 0.15                                  # raised stone threshold (hidden ramps both sides)
-    cx, cw, ch = HALF, 1.10, DOOR_H + th       # 2.00 clear above the threshold
+    cx, cw, ch = HALF, 1.24, DOOR_H + th       # 2.00 clear above the threshold; 1.24 wide so the open inner leaf keeps
+    #                                            STUB in the opening and still clears 1.02 m (D1, G3 fix)
     fz = 0.12
     ow, oh, zf_out = kura_surround(p, cx, cw, ch, fz)
     p.add(box(cx - cw / 2 - 0.06, cx + cw / 2 + 0.06, -0.10, th, -0.12, zf_out, "stone_cut", vis=(1, 2, 3), geo=True,
@@ -453,7 +640,7 @@ def part_kura_door(variant):
                  build=inner, park_span=(cx - cw / 2 - OV, KEN + KEN), note="inner sliding door (game door)")
     tracks(p, cx - cw / 2, cx + cw / 2 + cw + 0.2, -0.12, -1, 0.04, head_y=th + DOOR_H)
     # outer leaves: 0.16 thick plastered, stepped edge
-    lw = ow / 2 - 0.30 + 0.07 + 4 * 0.035
+    lw = cw / 2 + 4 * 0.035 + 0.03 - 0.002     # the two leaves meet at the centre (they overlapped 8 cm: G3 sweep check)
     lh = ch + 0.14 + 0.04 - th
     hinges = [(cx - cw / 2 - 4 * 0.035 - 0.03, -1), (cx + cw / 2 + 4 * 0.035 + 0.03, +1)]
     for hx, sg in hinges:
@@ -480,8 +667,10 @@ def part_kura_door(variant):
             for s in leaf_solids(True):
                 s.door = bone
                 p.add(s)
-            axis = [(hx, th, zf_out), (hx, th + lh, zf_out)] if sg < 0 else [(hx, th + lh, zf_out), (hx, th, zf_out)]
-            ang = math.radians(100)
+            # model.cfg rotation: +angle turns by the RIGHT-hand rule about axis point 1 -> 2 (vanilla vehicle doors,
+            # G3 research, PLAYBOOK §15): these axes swing both plaster leaves OUT, away from the wall
+            axis = [(hx, th + lh, zf_out), (hx, th, zf_out)] if sg < 0 else [(hx, th, zf_out), (hx, th + lh, zf_out)]
+            ang = math.radians(90)          # 100 swung the leaf back into the stepped surround (G3 sweep check)
             centre = (hx - sg * lw / 2, th + lh / 2, zf_out + 0.08)
             p.memory[bone + "_axis"] = axis
             p.memory[bone + "_action"] = [(cx, 1.0 + th, zf_out)]
@@ -489,7 +678,8 @@ def part_kura_door(variant):
             p.doors.append(Door(kind="kura", anims=[{"bone": bone, "type": "rotation", "axis": axis, "amount": ang}],
                                 action=(cx, 1.0 + th, zf_out), centre=centre, anim_period=2.0, init_opened=1.0,
                                 sound="doorWoodSlide", display="kura door", note="outer plaster leaf (rotation)",
-                                engine_tested=False, passable=False, has_view=True))
+                                engine_tested=False, passable=False, has_view=True, act_h=1.0 + th,
+                                reach_sides=("leaf",), style="kura_hinged"))
         else:
             p.extend(leaf_solids(False))
         for yy in (th + 0.35, th + lh - 0.45):
@@ -501,12 +691,13 @@ def part_kura_door(variant):
     p.conn("sill", (0, 0, 0), note="raised stone threshold 0.15 with hidden ramps")
     p.conn("park", (KEN, 0, 0), length=KEN, face="interior")
     p.dim("clear_m", ">=1.00 x 2.00", 0.0, source="build_list / D1")
-    p.dims[-1].update(measured="%.2f x %.2f" % (cw, ch - th), ok=cw >= 1.0 and ch - th >= 2.0 - 1e-6)
+    p.dims[-1].update(measured="%.2f x %.2f" % (cw - STUB, ch - th), ok=cw - STUB >= 1.0 and ch - th >= 2.0 - 1e-6)
     p.dim("leaf_thickness_m", "0.15-0.20", 0.16)
     p.dim("jamb_steps", "3-5", 4, tol=0)
     p.dim("door_pent_m", 0.60, 0.60)
-    p.notes.append("Opening 1.10 x 2.15 from the approach level = 2.00 clear above the 0.15 threshold; the okabe wall "
-                   "recipe must leave that hole (walls.wall_run(kind='okabe', openings=[(0.36, 1.46, 0, 2.15)])).")
+    p.notes.append("Opening 1.24 x 2.15 from the approach level = 2.00 clear above the 0.15 threshold (1.02 clear once "
+                   "the open inner leaf keeps its 0.22 stub); the okabe wall recipe must leave that hole "
+                   "(walls.wall_run(kind='okabe', openings=[(0.29, 1.53, 0, 2.15)])).")
     return p
 
 
@@ -636,15 +827,16 @@ def part_mushiko(variant):
 
 
 # ------------------------------------------------------------------------------------------------ koshi lattice
-def koshi(part, x0, x1, variant, y0=0.45, y1=DOOR_H, z=0.0):
+def koshi(part, x0, x1, variant, y0=0.45, y1=DOOR_H, z=0.0, paper=True):
     mat = "wood_bengara" if variant == "_bengara" else "wood_street_dark"
     zb = z + 0.05                      # bars stand proud of the frame line on the street side
     part.add(box(x0, x1, y0 - 0.06, y0, z - 0.03, zb + 0.03, mat, vis=(1, 2, 3), geo=True, view=True, fire=True,
                  tag="koshi_sill"))
     part.add(box(x0, x1, y1 - 0.06, y1, z - 0.03, zb + 0.02, mat, vis=(1, 2, 3), tag="koshi_head"))
     part.add(box(x0, x1, y0, y1 - 0.06, z - 0.03, zb, mat, vis=(), geo=True, view=True, fire=True, tag="koshi_geo"))
-    # paper of the static shoji behind
-    part.add(box(x0, x1, y0, y1 - 0.06, z - 0.03, z - 0.027, "paper_shoji", vis=(1, 2, 3), tag="koshi_paper"))
+    # paper of the static shoji behind (paper=False: an openable panel behind the lattice replaces it)
+    if paper:
+        part.add(box(x0, x1, y0, y1 - 0.06, z - 0.03, z - 0.027, "paper_shoji", vis=(1, 2, 3), tag="koshi_paper"))
     part.add(box(x0, x1, y0, y1 - 0.06, z - 0.027, zb, mat, vis=(3,), tag="koshi_lod", uv="fit"))
     if variant == "_komeya":
         face, cc = 0.06, 0.12
@@ -684,8 +876,11 @@ def part_koshi(variant):
                 zz = 0.03 + k * (pz - 0.02) / n
                 p.add(box(x - 0.01, x + 0.01, 0.45, DOOR_H - 0.12, zz, zz + 0.03, "wood_street_dark", vis=(1,),
                           tag="side_bar"))
-        p.add(box(A - 0.04, B + 0.04, DOOR_H - 0.06, DOOR_H - 0.02, -0.02, pz + 0.12, "wood_street_dark", vis=(1, 2, 3),
-                  tag="degoshi_top"))
+        # G3 fix (C11 envelope leak, Stephen: "from inside I can see outside"): the head board closes the whole
+        # opening head - it runs up to the wall's head rail (2.00) and back to the wall's inner face, so no slit is
+        # left between the lattice box and the wall above at standing eye height
+        p.add(box(A - 0.04, B + 0.04, DOOR_H - 0.06, DOOR_H, -POST / 2, pz + 0.12, "wood_street_dark", vis=(1, 2, 3),
+                  geo=True, view=True, fire=True, tag="degoshi_top"))
         p.add(box(A - 0.04, B + 0.04, 0.33, 0.39, 0.0, pz + 0.12, "wood_street_dark", vis=(1, 2, 3), geo=True, view=True,
                   fire=True, tag="degoshi_sill"))
         p.dim("degoshi_projection_m", 0.30, pz)
@@ -789,7 +984,7 @@ def part_suriagedo(variant):
         for k, (y0, y1, z) in enumerate(boards):
             bone = "doors%d" % (k + 1)
             p.extend(board_solids(y0, y1, z, bone))
-            amt = DOOR_H - y0 + 0.004
+            amt = DOOR_H - y0 + 0.004 - STUB      # the bottom board keeps STUB in the opening (aimable, G3 fix)
             c = ((A + B) / 2, (y0 + y1) / 2, z)
             axis = [c, (c[0], c[1] + 1.0, c[2])]
             p.memory[bone + "_axis"] = axis
@@ -798,8 +993,10 @@ def part_suriagedo(variant):
         act = ((A + B) / 2, 1.0, 0.0)
         p.memory["doors1_action"] = [act]
         d = Door(kind="plank", anims=anims, action=act, centre=((A + B) / 2, 1.0, 0.0), anim_period=1.6, init_opened=1.0,
-                 display="shop shutters", note="3 boards on one source; vertical translation (engine test)",
-                 engine_tested=False, opening=(A, B, 0.0, DOOR_H), z_face=0.0, passable=True)
+                 display="shop shutters", note="3 boards on one source; vertical translation (engine test); open, the "
+                 "bottom board hangs STUB below the head (vanilla rule), so it is a shop window, not a walk-through",
+                 engine_tested=False, opening=(A, B, 0.0, DOOR_H), z_face=0.0, passable=False, act_h=1.0,
+                 style="suriage", stub=STUB)
         p.doors.append(d)
     for x in (0.0, KEN):
         p.conn("post", (x, 0, 0), note="grooved post (0.03 grooves)")
@@ -927,9 +1124,178 @@ def part_mushiro(variant):
     return p
 
 
+# ------------------------------------------------------------------------------------------------ openable windows
+# G3 fix pass (Stephen 2026-09-27: "as long as there's a few somewhere, in correct spots"). Animated exactly like the
+# doors (config class DoorsTwinN, bones doorsN, memory <bone>_axis / <bone> / doorstwinN_action, doorWoodSlide sound);
+# not passable. Where each type belongs: PLAYBOOK §15.
+def part_window_slide(variant):
+    """Half-ken window: a fixed lattice outside (koshi _kyo, no paper / renji bars) and ONE sliding panel on the inside
+    face (shoji or board) that parks over the next half-ken inside and keeps STUB in the opening. Operated from inside
+    (the lattice's View Geometry covers it from outside, as in a real house)."""
+    shoji = variant == "_shoji"
+    p = Part("jp_p_open_window_slide", variant, "open", tiers=[2, 3] if shoji else [1, 2, 3],
+             used_for=("half-ken street / room window: fine koshi lattice outside, a sliding shoji panel inside "
+                       "(T2-3 town fronts and rooms)" if shoji else
+                       "half-ken kitchen / work window: wooden renji bars outside, a sliding board shutter inside "
+                       "(T1-3 kitchens, stables, workshops)"),
+             datum="half-ken bay between post nodes x=0 and x=0.91 + the next half-ken (0.91..1.82) as the inside park "
+                   "bay; y 0 = floor; opening %s" % ("0.45-2.00 (koshi window)" if shoji else "0.90-1.65 (renji)"))
+    a, b = A, HALF - POST / 2
+    s0, s1 = (0.45, DOOR_H) if shoji else (0.90, 1.65)
+    fm = "wood_weathered"
+    if shoji:
+        koshi(p, a, b, "_kyo", y0=s0, y1=s1, paper=False)
+        build = leaf_shoji(0.05)
+        thick, kind = 0.03, "shoji"
+    else:
+        p.add(box(a, b, s0 - 0.05, s0, -0.07, 0.07, fm, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="sill"))
+        p.add(box(a, b, s1, s1 + 0.05, -0.06, 0.06, fm, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="head"))
+        p.add(box(a, b, s0, s1, -0.01, 0.01, fm, vis=(), geo=True, tag="bars_geo"))     # Geometry only: rays pass
+        n = int((b - a) / 0.08)
+        for k in range(n):
+            x = a + (k + 0.5) * (b - a) / n
+            p.add(box(x - 0.015, x + 0.015, s0, s1, -0.015, 0.015, fm, vis=(1, 2), tag="bar"))
+        p.add(box(a, b, s0, s1, -0.012, 0.012, fm, vis=(3,), tag="bars_lod"))
+        build = leaf_plank("plain", "wood_weathered", rng_for("window_slide" + variant))
+        thick, kind = 0.025, "plank"
+    zf = -POST / 2
+    tr = zf - (GAP + thick / 2)
+    l0, l1 = a - OV, b + OV
+    slide = (b - STUB) - l0
+    height = s1 - s0 - 0.03
+    anims = _leaf_set(p, [(l0, l1, tr, +1, slide, "window panel")], s0, height, thick, build, None, kind)
+    d = _twin_door(p, anims, a, b, s0, height, zf, -1, kind, "sliding window panel, inside face", tr, thick, tr,
+                   (l0, l1 + slide), "window_slide", STUB, window=True)
+    d.reach_sides = ("leaf",)
+    d.display = "window"
+    d.anim_period, d.init_opened = 0.6, 0.4
+    if d.sweep[1] > KEN - POST / 2 + 1e-3:
+        raise ValueError("%s: parked panel beyond the next half-ken" % p.name)
+    tracks(p, a, KEN - POST / 2, zf, -1, thick, head_y=s1 - 0.03, sill_y=s0)
+    for x in (0.0, HALF, KEN):
+        p.conn("post", (x, 0, 0))
+    p.conn("park", (HALF, 0, 0), length=HALF, face="interior",
+           note="the next half-ken must be a plain wall on the inside face: the panel parks there")
+    p.dim("opening_m", "0.79 x %.2f" % (s1 - s0), 0.0)
+    p.dims[-1].update(measured="%.2f x %.2f" % (b - a, s1 - s0), ok=True)
+    p.dim("open_stub_m (vanilla 0.22-0.30)", STUB, d.stub, source="G3 fix: vanilla sliding doors")
+    return p
+
+
+def part_amado_window(variant):
+    """1-ken window with two amado storm shutters on the outside tracks: one action slides both into a board box
+    (tobukuro) over the next half-ken; both keep STUB in the opening, so it closes from inside and outside."""
+    p = Part("jp_p_open_amado_window", variant, "open", tiers=[2, 3],
+             used_for="1-ken room window (zashiki, inn rooms) closed by two amado storm shutters that stow in a "
+                      "tobukuro box beside it (T2-3)",
+             datum="1-ken bay between post nodes x=0 and x=1.82 + the tobukuro over the next half-ken (to 2.73); "
+                   "y 0 = room floor; opening 0.70-2.00")
+    s0, s1 = 0.70, DOOR_H
+    thick = 0.025
+    zf = POST / 2
+    rng = rng_for("amado_window" + variant)
+    build = leaf_plank("plain", "wood_weathered", rng)
+    height = s1 - s0 - 0.03
+    d = twin_leaves(p, A, B, s0, height, zf, +1, build, thick, "plank", note="amado storm shutters, outside tracks",
+                    window=True)
+    d.display = "window"
+    d.anim_period, d.init_opened = 1.0, 0.5
+    pe = d.park_end
+    if pe > KEN + HALF - POST / 2 + 1e-3:
+        raise ValueError("%s: stowed shutters end at %.3f, beyond the half-ken" % (p.name, pe))
+    fm = "wood_weathered"
+    # inside sill board and the frame the shutters close against
+    p.add(box(A, B, s0 - 0.04, s0, -0.07, 0.07, fm, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="sill"))
+    tracks(p, A, B, zf, +1, 2 * thick + GAP, head_y=s1 - 0.03, sill_y=s0)
+    # tobukuro: board box around the stowed leaves beyond the post face (x from the post face at 1.76)
+    zo = zf + 2 * (GAP + thick) + 0.012
+    bx0, bx1 = B, pe + 0.03
+    for (x0, x1, y0, y1, z0, z1, tag) in ((bx0, bx1, s0 - 0.06, s1 + 0.10, zo, zo + 0.015, "box_front"),
+                                          (bx1, bx1 + 0.015, s0 - 0.06, s1 + 0.10, zf, zo + 0.015, "box_end"),
+                                          (bx0, bx1 + 0.015, s1 + 0.08, s1 + 0.10, zf, zo, "box_lid"),
+                                          (bx0, bx1 + 0.015, s0 - 0.06, s0 - 0.04, zf, zo, "box_floor")):
+        p.add(box(x0, x1, y0, y1, z0, z1, fm, vis=(1, 2, 3), geo=True, view=True, fire=True, tag=tag))
+    p.extend(board_run(bx0 + 0.01, bx1 - 0.01, s0 - 0.04, s1 + 0.08, zo + 0.015, zo + 0.027, rng, 0.18, 0.28, fm,
+                       vis=(1,), tag="box_board"))
+    for x in (0.0, KEN, KEN + HALF):
+        p.conn("post", (x, 0, 0))
+    p.conn("park", (KEN, 0, 0), length=HALF, face="exterior",
+           note="the tobukuro box covers the next half-ken on the outside: plain wall there")
+    p.dim("opening_m", "1.70 x 1.30", 0.0)
+    p.dims[-1].update(measured="%.2f x %.2f" % (B - A, s1 - s0), ok=True)
+    p.dim("open_stub_m (vanilla 0.22-0.30)", STUB, d.stub, source="G3 fix: vanilla sliding doors")
+    return p
+
+
+TSUKIAGE_DEG = 75.0
+
+
+def part_tsukiage(variant):
+    """Half-ken window with wooden bars (Geometry only, so the camera ray passes) and a top-hinged board shutter
+    outside that is pushed up and out (tsukiage / hanemage) by a rotation about its head: an animated door."""
+    p = Part("jp_p_open_tsukiage", variant, "open", tiers=[1, 2, 3],
+             used_for="half-ken storage / farmhouse / shop-side window: wooden bars and a board shutter hinged at the "
+                      "top that is pushed up and out (tsukiage / hanemage)",
+             datum="half-ken bay between post nodes x=0 and x=0.91; y 0 = floor; opening 0.90-1.60")
+    a, b = A, HALF - POST / 2
+    s0, s1 = 0.90, 1.60
+    fm = "wood_weathered"
+    p.add(box(a, b, s0 - 0.05, s0, -0.07, 0.07, fm, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="sill"))
+    p.add(box(a, b, s1, s1 + 0.06, -0.06, 0.06, fm, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="head"))
+    p.add(box(a, b, s0, s1, -0.01, 0.01, fm, vis=(), geo=True, tag="bars_geo"))
+    n = int((b - a) / 0.09)
+    for k in range(n):
+        x = a + (k + 0.5) * (b - a) / n
+        p.add(box(x - 0.016, x + 0.016, s0, s1, -0.016, 0.016, fm, vis=(1, 2), tag="bar"))
+    p.add(box(a, b, s0, s1, -0.012, 0.012, fm, vis=(3,), tag="bars_lod"))
+    # shutter: boards + two battens, hinged at its top edge on the outside of the head
+    hz = POST / 2 + 0.012
+    hy = s1 + 0.05
+    x0, x1 = a - 0.04, b + 0.04
+    y0 = s0 - 0.05
+    bone = p.next_bone()
+    rng = rng_for("tsukiage" + variant)
+    sol = [box(x0, x1, y0, hy, hz, hz + 0.028, fm, vis=(2, 3), geo=True, view=True, fire=True, tag="leaf")]
+    sol += board_run(x0, x1, y0, hy, hz, hz + 0.022, rng, 0.14, 0.22, fm, vis=(1,), tag="leaf_board")
+    for yy in (y0 + 0.10, hy - 0.16):
+        sol.append(box(x0 + 0.03, x1 - 0.03, yy, yy + 0.06, hz + 0.022, hz + 0.038, fm, vis=(1,), tag="leaf_batten"))
+    for s in sol:
+        s.door = bone
+        p.add(s)
+    for xx in (x0 + 0.08, x1 - 0.14):
+        p.add(box(xx, xx + 0.06, hy - 0.01, hy + 0.03, POST / 2 - 0.005, hz + 0.03, "metal_iron", vis=(1,), tag="hinge"))
+    # axis along -x: with the right-hand rule a positive angle swings the bottom edge OUT (+z) and up (core.ROT_SIGN)
+    axis = [(x1, hy, hz), (x0, hy, hz)]
+    p.memory[bone + "_axis"] = axis
+    p.memory[bone] = [((x0 + x1) / 2, y0 + 0.06, hz + 0.014)]
+    twin = "doorstwin1"
+    act = ((a + b) / 2, (s0 + s1) / 2, 0.0)
+    p.memory[twin + "_action"] = [act]
+    for s in p.solids:
+        if s.door == bone:
+            s.sel = twin
+    d = Door(kind="plank", anims=[{"bone": bone, "type": "rotation", "axis": axis,
+                                   "amount": math.radians(TSUKIAGE_DEG), "note": "top-hinged shutter"}],
+             action=act, centre=((x0 + x1) / 2, (y0 + hy) / 2, hz), twin=twin, anim_period=1.2, init_opened=0.5,
+             display="window", note="top-hinged push-up shutter (rotation about the head, %d deg)" % TSUKIAGE_DEG,
+             opening=(a, b, s0, s1), z_face=POST / 2, side=+1, passable=False, engine_tested=False,
+             style="tsukiage", stub=None, act_h=(s0 + s1) / 2)
+    p.doors.append(d)
+    for x in (0.0, HALF):
+        p.conn("post", (x, 0, 0))
+    p.conn("head", (0, hy, 0), note="hinge line on the outside of the head rail")
+    p.dim("opening_m", "0.79 x 0.70", 0.0)
+    p.dims[-1].update(measured="%.2f x %.2f" % (b - a, s1 - s0), ok=True)
+    p.dim("open_angle_deg", TSUKIAGE_DEG, TSUKIAGE_DEG, tol=0.5)
+    return p
+
+
 def register(reg):
-    reg("jp_p_open_itado", ["_plain", "_battened", "_oodo", "_pair", "_twin"], part_itado)
-    reg("jp_p_open_shoji_ext", ["_koshidaka", "_akari", "_twin"], part_shoji_ext)
+    reg("jp_p_open_itado", ["_plain", "_battened", "_oodo", "_pair", "_twin", "_single"], part_itado)
+    reg("jp_p_open_shoji_ext", ["_koshidaka", "_akari", "_twin", "_hikiwake", "_single"], part_shoji_ext)
+    reg("jp_p_open_window_slide", ["_shoji", "_board"], part_window_slide)
+    reg("jp_p_open_amado_window", ["_twin"], part_amado_window)
+    reg("jp_p_open_tsukiage", ["_board"], part_tsukiage)
     reg("jp_p_open_amado", ["_stowed", "_closed"], part_amado)
     reg("jp_p_open_tobukuro", ["_box", "_swing"], part_tobukuro)
     reg("jp_p_open_kura_door", ["_open", "_hinged"], part_kura_door)

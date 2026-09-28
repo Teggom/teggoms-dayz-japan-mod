@@ -1,0 +1,295 @@
+{
+ "id": "jp_p_open_itado_single",
+ "part": "jp_p_open_itado",
+ "variant": "_single",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_itado_single.p3d",
+ "build_list": {
+  "entry": "jp_p_open_itado",
+  "variant": null,
+  "differs_by": null,
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x04_misawa_a",
+   "c02_narai_facade",
+   "x33_jinrin_bookseller_1690"
+  ]
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "narrow single plank door (katabiki) for side, back and kitchen doors: one ~1.34 m leaf beside a fixed half-panel, 1.08 m clear (PLAYBOOK §15 door styles)",
+ "datum": "1-ken door bay between post nodes x=0 and x=1.82 (opening x 0.06..1.36, fixed panel 1.36..1.76) + a half-ken park bay to x=2.73; y 0 = sill/floor",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.04,
+  2.67,
+  -0.1,
+  2.14,
+  -0.06,
+  0.144
+ ],
+ "dims": [
+  {
+   "name": "clear_opening_m",
+   "expected": ">=1.00",
+   "measured": 1.08,
+   "tol": 0.01,
+   "source": "D1",
+   "ok": true
+  },
+  {
+   "name": "leaf_width_m",
+   "expected": "1.30-1.40",
+   "measured": 1.34,
+   "tol": 0.01,
+   "source": "D1 + STUB (period back doors ~0.9; gameplay wins)"
+  },
+  {
+   "name": "head_m",
+   "expected": 2.0,
+   "measured": 2.0,
+   "tol": 0.01,
+   "source": "D2"
+  },
+  {
+   "name": "open_stub_m (vanilla 0.22-0.30)",
+   "expected": 0.22,
+   "measured": 0.22,
+   "tol": 0.01,
+   "source": "G3 fix: vanilla sliding doors"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    2.73,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "runs in a grooved sill at floor level"
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  {
+   "type": "park",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "length": 0.91,
+   "face": "exterior",
+   "note": "the next half-ken must be a plain wall on this face: the leaf parks over the fixed panel and there"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_street_dark",
+   "id": "jp_m_wood_street_dark",
+   "palette_id": "timber_street_dark",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_street_dark<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 126,
+  "Resolution 2": 36,
+  "Resolution 3": 24,
+  "Geometry": 24,
+  "Memory": 0,
+  "Roadway": 1,
+  "View Geometry": 18,
+  "Fire Geometry": 24
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [
+  {
+   "source": "DoorsTwin1",
+   "kind": "plank",
+   "display": "plank door",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "translation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.1,
+     "unit": "m (translation; axis 1.00 m)"
+    }
+   ],
+   "anim_period": 1.0,
+   "init_opened": 0.3,
+   "sound": "doorWoodSlide",
+   "clear_width_m": 1.06,
+   "engine_tested": false,
+   "note": "exterior leaf, parks over the fixed panel and the next half-ken"
+  }
+ ],
+ "notes": [],
+ "extra": {
+  "note": "one leaf, one door action (DoorsTwin with one bone); plain wall on the park face of the next half-ken"
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 126, Resolution 2 36, Resolution 3 24, Geometry 24, Memory 0, Roadway 1, View Geometry 18, Fire Geometry 24"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "translation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep + clear",
+   "ok": true,
+   "detail": "leaf slides 1.100 m without touching other geometry; open clear width 1.06 m (>= 1.00), head nan m"
+  },
+  {
+   "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+   "ok": true,
+   "detail": "0.220 m of the leaf stays in the opening when open"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 clear_opening_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.08"
+  },
+  {
+   "check": "C4 leaf_width_m",
+   "ok": true,
+   "detail": "expected 1.30-1.40, measured 1.34"
+  },
+  {
+   "check": "C4 head_m",
+   "ok": true,
+   "detail": "expected 2.0, measured 2.0"
+  },
+  {
+   "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+   "ok": true,
+   "detail": "expected 0.22, measured 0.22"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

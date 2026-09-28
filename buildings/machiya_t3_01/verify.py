@@ -16,7 +16,7 @@ DEV = os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(DEV, "spikes", "B_building", "kit"))
 import machiya_t3_01 as MT  # noqa: E402
-from jpparts import mlod, checks as C, core  # noqa: E402
+from jpparts import mlod, checks as C, core, raycheck as RC, buildcheck as BC  # noqa: E402
 from jpkit import loot as bloot  # noqa: E402
 
 BUDGET = {"Resolution 1": 12000, "Resolution 2": 4600, "Resolution 3": 1600}   # PLAYBOOK §12 large / landmark
@@ -217,17 +217,23 @@ def run(M=None, floors=None, pts=None):
             ax = mem.selections.get(b + "_axis")
             if not ax or len(ax[0]) != 2:
                 probs.append("%s_axis needs 2 points" % b)
-            else:
+            elif a["type"] == "translation":
                 ps = [mem.points[i] for i in sorted(ax[0])]
                 v = [ps[1][i] - ps[0][i] for i in range(3)]
                 want_d = [a["axis"][1][i] - a["axis"][0][i] for i in range(3)]
                 if abs(math.sqrt(sum(c * c for c in v)) - 1.0) > 1e-3 or abs(sum(v[i] * want_d[i] for i in range(3))) < 0.999:
                     probs.append("%s axis not 1.00 m along the slide" % b)
+            else:
+                # rotation: memory vertex order = axis point order (the engine turns by the right-hand rule 1 -> 2)
+                ps = [mem.points[i] for i in sorted(ax[0])]
+                if max(abs(ps[0][i] - a["axis"][0][i]) for i in range(3)) > 1e-3:
+                    probs.append("%s_axis point order differs from the recipe (rotation sense!)" % b)
             if not mem.selections.get(b):
                 probs.append("memory leaf point %s missing" % b)
             cls = b[0].upper() + b[1:]
-            if not re.search(r'class %s\s*\{[^}]*source="DoorsTwin%d";[^}]*selection="%s";[^}]*axis="%s_axis";'
-                             r'[^}]*offset1=%.4f;' % (cls, k, b, b, a["amount"]), mcfg):
+            last = ("offset1=%.4f;" % a["amount"]) if a["type"] == "translation" else ("angle1=%.6f;" % a["amount"])
+            if not re.search(r'class %s\s*\{[^}]*type="%s";[^}]*source="DoorsTwin%d";[^}]*selection="%s";'
+                             r'[^}]*axis="%s_axis";[^}]*%s' % (cls, a["type"], k, b, b, re.escape(last)), mcfg):
                 probs.append("model.cfg %s wrong" % cls)
         if not mem.selections.get(tw + "_action"):
             probs.append("memory %s_action missing" % tw)
@@ -237,11 +243,16 @@ def run(M=None, floors=None, pts=None):
         if not re.search(r'componentNames\[\]=\s*\{\s*"doorstwin%d"' % k, ccfg):
             probs.append("DamageZone DoorsTwin%d missing" % k)
         rec("C7 DoorsTwin%d selections, memory, model.cfg, config" % k, not probs,
-            "%s: bones %s" % (getattr(d, "label", ""), "+".join(a["bone"] for a in d.anims)) if not probs
-            else "; ".join(probs[:4]))
-        ok, msg, clear = door_world(d, gcomps)
-        clears.append(clear or 0.0)
-        rec("C7 DoorsTwin%d sweep + clear (>= 1.00, D1) + head (D2)" % k, ok, msg)
+            "%s (%s): bones %s" % (getattr(d, "label", ""), getattr(d, "style", ""),
+                                   "+".join(a["bone"] for a in d.anims)) if not probs else "; ".join(probs[:4]))
+        if getattr(d, "passable", True):
+            ok, msg, clear = door_world(d, gcomps)
+            clears.append(clear or 0.0)
+            rec("C7 DoorsTwin%d sweep + clear (>= 1.00, D1) + head (D2)" % k, ok, msg)
+        else:
+            hits = C.sweep_hits(d, gcomps)
+            rec("C7 DoorsTwin%d window sweep" % k, not hits, "%s moves closed -> open without touching other "
+                "geometry" % d.style if not hits else "HITS %s" % hits[:3])
     # the open toriniwa passage into the kitchen (no door): clear width and head
     class _P:
         pass
@@ -333,6 +344,7 @@ def run(M=None, floors=None, pts=None):
         min(xs) > 924 and max(xs) < 1124 and min(zs) > 924 and max(zs) < 1124 and dist > 8,
         "%.2f x %.2f m incl. eaves; world x %.1f-%.1f, z %.1f-%.1f; nearest sakura trunk %.1f m away; ridge %.2f m"
         % (fw, fd, min(xs), max(xs), min(zs), max(zs), dist, b[3]))
+    BC.run_g3(M, L, floors, rec)          # C10-C16, the G3 checks every building runs (jpparts/buildcheck.py)
     # ODOL
     odol = os.path.join(DEV, "src", "JP", "buildings", "machiya", MT.NAME + ".p3d")
     data = open(odol, "rb").read()

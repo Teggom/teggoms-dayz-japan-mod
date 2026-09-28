@@ -180,14 +180,14 @@
      "bone": "doors1",
      "type": "translation",
      "axis_memory": "doors1_axis",
-     "amount": 1.345,
+     "amount": 1.105,
      "unit": "m (translation; axis 1.00 m)"
     }
    ],
    "anim_period": 1.0,
    "init_opened": 0.3,
    "sound": "doorWoodSlide",
-   "clear_width_m": 1.26,
+   "clear_width_m": 1.04,
    "engine_tested": true,
    "note": "left leaf"
   },
@@ -200,14 +200,14 @@
      "bone": "doors2",
      "type": "translation",
      "axis_memory": "doors2_axis",
-     "amount": 1.345,
+     "amount": 1.105,
      "unit": "m (translation; axis 1.00 m)"
     }
    ],
    "anim_period": 1.0,
    "init_opened": 0.3,
    "sound": "doorWoodSlide",
-   "clear_width_m": 1.26,
+   "clear_width_m": 1.04,
    "engine_tested": true,
    "note": "right leaf"
   }
@@ -253,7 +253,22 @@
   {
    "check": "C7 door doors1 sweep + clear",
    "ok": true,
-   "detail": "leaf slides 1.345 m without touching other geometry; open clear width 1.26 m (>= 1.00), head nan m"
+   "detail": "leaf slides 1.105 m without touching other geometry; open clear width 1.04 m (>= 1.00), head nan m"
+  },
+  {
+   "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+   "ok": true,
+   "detail": "0.220 m of the leaf stays in the opening when open"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.82 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.89 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
   },
   {
    "check": "C7 door doors2 selections+memory",
@@ -263,7 +278,22 @@
   {
    "check": "C7 door doors2 sweep + clear",
    "ok": true,
-   "detail": "leaf slides 1.345 m without touching other geometry; open clear width 1.26 m (>= 1.00), head nan m"
+   "detail": "leaf slides 1.105 m without touching other geometry; open clear width 1.04 m (>= 1.00), head nan m"
+  },
+  {
+   "check": "C10 door doors2 open leaf keeps >= 0.15 m in the opening (vanilla)",
+   "ok": true,
+   "detail": "0.220 m of the leaf stays in the opening when open"
+  },
+  {
+   "check": "C10 door doors2 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 door doors2 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
   },
   {
    "check": "C7 Roadway on Geometry",

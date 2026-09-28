@@ -28,7 +28,7 @@
   -0.05,
   1.87,
   0.0,
-  0.198,
+  0.205,
   -0.14,
   0.14
  ],
@@ -102,8 +102,8 @@
  ],
  "lod_faces": {
   "Resolution 1": 65,
-  "Resolution 2": 31,
-  "Resolution 3": 13
+  "Resolution 2": 49,
+  "Resolution 3": 31
  },
  "contributes": [
   "Resolution 1",
@@ -118,7 +118,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 65, Resolution 2 31, Resolution 3 13"
+   "detail": "Resolution 1 65, Resolution 2 49, Resolution 3 31"
   },
   {
    "check": "C2 library only",

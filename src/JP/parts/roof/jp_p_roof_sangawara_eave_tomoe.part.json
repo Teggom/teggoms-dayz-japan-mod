@@ -83,11 +83,13 @@
  ],
  "lod_faces": {
   "Resolution 1": 63,
-  "Resolution 2": 6
+  "Resolution 2": 6,
+  "Resolution 3": 6
  },
  "contributes": [
   "Resolution 1",
-  "Resolution 2"
+  "Resolution 2",
+  "Resolution 3"
  ],
  "walkable": false,
  "doors": [],
@@ -97,7 +99,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 63, Resolution 2 6"
+   "detail": "Resolution 1 63, Resolution 2 6, Resolution 3 6"
   },
   {
    "check": "C2 library only",

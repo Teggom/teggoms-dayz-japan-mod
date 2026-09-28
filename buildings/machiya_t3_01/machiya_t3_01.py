@@ -73,6 +73,9 @@ F_RIGHT_G = (-90.0, (W, 0.0, ZB))           # geya gable x=W; local x = ZB - z; 
 F_PART_G = (90.0, (XS, 0.0, ZG))            # kitchen / storage partition; local x = z - ZG; out = -x (kitchen)
 
 ROOMS = []                  # filled by build(): room tags for the decorator (PLAYBOOK §10.3)
+WINDOWS = []                # (label, frame, dx, dy, mirror, part): openable windows, placed after the doors
+AMADO_SILL = 0.75           # zashiki amado window sill above the tatami (part jp_p_open_amado_window)
+TSUKI_Y = 0.36              # storage tsukiage placed so its shutter clears the 0.90 koshiita (sill 1.26, floor 0.08)
 FLOORS = []                 # walkable floors for loot + checks: {name, tag, rect (kit frame), y, obstacles}
 POSTS = []                  # (x, z) of every post node, for the C3 grid check
 LOG = []                    # which library part / recipe went where
@@ -154,10 +157,14 @@ def dodai_stones(H, fr, x0, x1, seed):
 
 
 def wall(H, fr, name, kind, x0, x1, y0, y1, finish="nakanuri", head=True, openings_=(), grime=None, koshiita=None,
-         kokabe="plaster", internal_posts=False, mat=None, board_opts=None, thick=None, head_clip=None):
+         kokabe="plaster", internal_posts=False, mat=None, board_opts=None, thick=None, head_clip=None, interior=None):
+    """interior: 'back' = an exterior wall (its -z face looks into a room), 'both' = a partition (default while
+    INTERIOR is on), see PLAYBOOK §15 T6: interior faces never use the exterior-weathered earth."""
+    if interior is None:
+        interior = "both" if INTERIOR[0] else "back"
     s = P(name)
     walls.wall_run(s, kind, x0, x1, y0=y0, y1=y1, openings=openings_, finish=finish, head=head, kokabe=kokabe,
-                   internal_posts=internal_posts, mat=mat, board_opts=board_opts, thick=thick)
+                   internal_posts=internal_posts, mat=mat, board_opts=board_opts, thick=thick, interior=interior)
     if head_clip:
         # a sliding leaf of the perpendicular door line runs 0.07-0.16 in front of the corner post: the head rail
         # (kamoi) of this wall stops short of it
@@ -178,9 +185,11 @@ def wall(H, fr, name, kind, x0, x1, y0, y1, finish="nakanuri", head=True, openin
 
 
 def sloped_wall(H, fr, name, nodes, y0, ytop, mat="wall_nakanuri", t=0.075, head_y=None, door_bays=(),
-                koshiita_h=None, grime=False, window=None):
+                koshiita_h=None, grime=False, window=None, interior="back"):
     """Wall under a lean-to verge: infill between post faces from y0 up to the roof line ytop(x) (local x), a head rail
-    at head_y, and a sloped wall plate under the roof bed. The shinkabe recipe (walls.wall_run) cut to the roof line."""
+    at head_y, and a sloped wall plate under the roof bed. The shinkabe recipe (walls.wall_run) cut to the roof line.
+    interior: 'back' (exterior wall) or 'both' (partition) - the room faces get the interior clay (§15 T6)."""
+    mat = walls.interior_mats(mat, interior)
     s = P(name)
     fm = "wood_weathered"
     rng = rng_for(name)
@@ -331,10 +340,11 @@ def kamado(H, x0, x1, z0, z1):
     s = P("kamado")
     top = DOMA + 0.72
     s.add(box(x0, x1, DOMA, DOMA + 0.10, z0, z1, "stone_cut", vis=(1, 2, 3), tag="kamado_base"))
-    s.add(box(x0, x1, DOMA, top, z0, z1, "wall_nakanuri", vis=(), geo=True, view=True, fire="dirt", tag="kamado_geo"))
-    s.add(box(x0 + 0.02, x1 - 0.02, DOMA + 0.10, top - 0.04, z0 + 0.02, z1 - 0.02, "wall_nakanuri", vis=(1, 2, 3),
+    s.add(box(x0, x1, DOMA, top, z0, z1, "wall_nakanuri_int", vis=(), geo=True, view=True, fire="dirt",
+              tag="kamado_geo"))
+    s.add(box(x0 + 0.02, x1 - 0.02, DOMA + 0.10, top - 0.04, z0 + 0.02, z1 - 0.02, "wall_nakanuri_int", vis=(1, 2, 3),
               tag="kamado_body"))
-    s.add(box(x0, x1, top - 0.04, top, z0, z1, "wall_nakanuri", vis=(1, 2, 3),
+    s.add(box(x0, x1, top - 0.04, top, z0, z1, "wall_nakanuri_int", vis=(1, 2, 3),
               tag="kamado_top"))
     n = 2
     L = (z1 - z0) / n
@@ -363,6 +373,8 @@ def geya_roof(H):
     h_top = R.STACK["sangawara"] + 0.05
     R.collision(s, sl, h_top, "pottery", "tile_roof")
     R.sheathing(s, sl)
+    R.tile_bed(s, sl, R.STACK["sangawara"])          # G3 fix: tiles seated on the clay bed (PLAYBOOK §15 T1)
+    R.kawara_fascia(s, sl, R.STACK["sangawara"])     # G3 fix: eave board under the eave tiles
     R.rafters(s, sl, only_eave=True)
     # kawara cover as roofs.cover_kawara, but one modelled eave row (the library pent recipe's setting; the lean-to
     # is a deep pent) instead of two: rule 1 keeps the corrugation, eave-tile ends, verge tiles and the top row
@@ -424,12 +436,14 @@ def udatsu(H, x):
 
 # ------------------------------------------------------------------------------------------------ build
 def build():
-    del ROOMS[:], FLOORS[:], POSTS[:], LOG[:]
+    del ROOMS[:], FLOORS[:], POSTS[:], LOG[:], WINDOWS[:]
     INTERIOR[0] = False
     H = Part(NAME, "", "buildings", tiers=[3], used_for="tier-3 Kamigata town machiya (Ioka type)")
     H.wear = "_w1"
-    itado_twin = openings.part_itado("_twin")
-    shoji_twin = openings.part_shoji_ext("_twin")
+    itado_twin = openings.part_itado("_twin")          # hikichigai: the main entrance only (PLAYBOOK §15 T3)
+    itado_single = openings.part_itado("_single")      # katabiki: back and kitchen doors
+    shoji_single = openings.part_shoji_ext("_single")  # katabiki: the room entrances off the toriniwa
+    shoji_hikiwake = openings.part_shoji_ext("_hikiwake")   # hikiwake: the mise / zashiki shoji pair
 
     # ======================================================================== STREET FRONT (z = 0)
     # base: low sill over the entrance + park bays (door tracks at doma level), dodai on dressed stones elsewhere
@@ -446,9 +460,8 @@ def build():
     wall(H, F_FRONT, "front_b2b", "shinkabe", KEN + HALF, 2 * KEN, SILL, CEIL,
          openings_=[(KEN + HALF + A_, 2 * KEN - A_, SILL + 0.45, SILL + 2.0)],
          koshiita=[(KEN + HALF + A_, 2 * KEN - A_, 0.39)], grime=[(KEN + HALF + A_, 2 * KEN - A_, None)])
-    s = P("front_koshi")
-    openings.koshi(s, KEN + HALF + A_, 2 * KEN - A_, "_kyo", y0=SILL + 0.45, y1=SILL + 2.0)
-    put(H, s, F_FRONT, what="openings.koshi _kyo (jp_p_open_koshi_kyo recipe), half-ken window")
+    # street window: koshi lattice + a sliding shoji panel inside, parking over the plain half-ken B2a (mirrored)
+    WINDOWS.append(("street window", F_FRONT, 2 * KEN, SILL, True, openings.part_window_slide("_shoji")))
     for k in (2, 3):
         x0 = k * KEN
         wall(H, F_FRONT, "front_b%d" % (k + 1), "shinkabe", x0, x0 + KEN, SILL, CEIL,
@@ -473,23 +486,22 @@ def build():
 
     # ======================================================================== RIGHT GABLE x = W (mise, zashiki)
     dodai_stones(H, F_RIGHT_O, 0.0, DO, 21)
-    posts_on(H, F_RIGHT_O, [KEN, KEN + HALF, 2 * KEN, 2 * KEN + HALF, DO], SILL, GTIE)
+    posts_on(H, F_RIGHT_O, [KEN, KEN + HALF, 2 * KEN, DO], SILL, GTIE)
     s = P("right_lower")
     s.add(box(A_, DO - A_, SILL, FLOOR, -0.0375, 0.0375, "wall_nakanuri", vis=(1, 2, 3), geo=True, view=True, fire=True,
               tag="infill"))
-    rbays = ((0.0, KEN), (KEN, KEN + HALF), (KEN + HALF, 2 * KEN), (2 * KEN, 2 * KEN + HALF), (2 * KEN + HALF, DO))
+    rbays = ((0.0, KEN), (KEN, KEN + HALF), (KEN + HALF, 2 * KEN), (2 * KEN, DO))
     for (a, b) in rbays:
         walls.koshiita(s, a + A_, b - A_, 0.90, 0.0375, y0=SILL)
     put(H, s, F_RIGHT_O, what="walls.koshiita h090 (jp_p_wall_koshiita_h090 recipe) on the right gable")
     for (a, b) in rbays:
-        win = [(a + A_, b - A_, FLOOR + 0.70, FLOOR + 2.0)] if a == 2 * KEN + HALF else []
+        win = [(a + A_, b - A_, FLOOR + AMADO_SILL, FLOOR + 2.0)] if a == 2 * KEN else []
         wall(H, F_RIGHT_O, "right_%d" % int(a * 100), "shinkabe", a, b, FLOOR, CEIL, openings_=win)
     s = P("right_grime")
     trim.grime_band(s, A_, DO - A_, 0.0375 + 0.015, y0=SILL)
     put(H, s, F_RIGHT_O)
-    s = P("right_koshi")
-    openings.koshi(s, 2 * KEN + HALF + A_, DO - A_, "_kyo", y0=FLOOR + 0.70, y1=FLOOR + 2.0)
-    put(H, s, F_RIGHT_O, what="openings.koshi _kyo zashiki window (right gable)")
+    # zashiki window: amado storm shutters stowing in a tobukuro over the plain half-ken 1.5-2 ken (mirrored part)
+    WINDOWS.append(("zashiki window", F_RIGHT_O, DO, FLOOR, True, openings.part_amado_window("_twin")))
 
     # ======================================================================== LEFT GABLE x = 0 (toriniwa)
     dodai_stones(H, F_LEFT_O, 0.0, DO, 31)
@@ -519,7 +531,7 @@ def build():
     s = P("back_o_sill")
     s.add(box(-0.06, 3 * KEN + 0.06, DOMA, SILL, -POST / 2, POST / 2, "wood_weathered", vis=(1, 2, 3), geo=True,
               view=True, fire=True, tag="dodai"))
-    s.add(box(A_, 3 * KEN - A_, SILL, FLOOR, -0.0375, 0.0375, "wall_nakanuri", vis=(1, 2, 3), geo=True, view=True,
+    s.add(box(A_, 3 * KEN - A_, SILL, FLOOR, -0.0375, 0.0375, "wall_nakanuri_int", vis=(1, 2, 3), geo=True, view=True,
               fire=True, tag="infill"))
     put(H, s, F_BACK_O)
     wall(H, F_BACK_O, "back_o_rooms", "shinkabe", 0.0, 3 * KEN, FLOOR, CEIL, head_clip=(-1.0, 3 * KEN - POST / 2 - 0.12))
@@ -527,8 +539,8 @@ def build():
     s = P("back_o_passage")
     s.add(box(3 * KEN + A_, W - A_, DOMA + 2.0, DOMA + 2.0 + walls.HEAD_T, -POST / 2, POST / 2, "wood_weathered",
               vis=(1, 2, 3), geo=True, view=True, fire=True, tag="head_rail"))
-    s.add(box(3 * KEN + A_, W - A_, DOMA + 2.0 + walls.HEAD_T, CEIL, -0.0375, 0.0375, "wall_nakanuri", vis=(1, 2, 3),
-              geo=True, view=True, fire=True, tag="kokabe"))
+    s.add(box(3 * KEN + A_, W - A_, DOMA + 2.0 + walls.HEAD_T, CEIL, -0.0375, 0.0375, "wall_nakanuri_int",
+              vis=(1, 2, 3), geo=True, view=True, fire=True, tag="kokabe"))
     put(H, s, F_BACK_O)
     INTERIOR[0] = False
     s = P("back_o_beam")
@@ -549,17 +561,18 @@ def build():
     s.add(box(0.0, DO, FLOOR - 0.12, FLOOR - 0.10, -0.05, 0.05, "wood_weathered", vis=(1,), tag="kamachi_lip"))
     put(H, s, F_TORI)
     door_bays_tori = [(0.0, "zashiki"), (KEN + HALF, "mise")]
+    oc = A_ + (openings.SINGLE_OPEN - openings.STUB) / 2   # centre of the single door's clear opening
     for (a, room) in door_bays_tori:
         wall(H, F_TORI, "tori_door_%s" % room, "shinkabe", a, a + KEN, FLOOR, CEIL,
              openings_=[(a + A_, a + B_, FLOOR, FLOOR + 2.0)])
-        place_door(H, shoji_twin, F_TORI, a, FLOOR, label="Toriniwa -> %s" % room)
+        place_door(H, shoji_single, F_TORI, a, FLOOR, label="Toriniwa -> %s" % room)
         st = P("step_%s" % room)
-        found.step(st, KEN / 2, "natural", drop=FLOOR - DOMA, width=1.20)
+        found.step(st, oc, "natural", drop=FLOOR - DOMA, width=1.04)
         put(H, st, F_TORI, a, FLOOR, what="jp_p_found_step_natural (kutsunugi stone, hidden ramp) at the %s" % room)
         # step footprint in the toriniwa (kit frame) for loot / floor checks
         ramp = (FLOOR - DOMA) / math.tan(math.radians(34.0))
-        _, z0 = to_world(F_TORI, a + KEN / 2 - 0.62)
-        _, z1 = to_world(F_TORI, a + KEN / 2 + 0.62)
+        _, z0 = to_world(F_TORI, a + oc - 0.54)
+        _, z1 = to_world(F_TORI, a + oc + 0.54)
         FLOORS_OBST.append(("toriniwa", floor_rect(XT - POST / 2 - ramp - 0.05, XT, z0, z1)))
     for (a, b) in ((KEN, KEN + HALF), (2 * KEN + HALF, DO)):
         wall(H, F_TORI, "tori_park_%d" % int(a * 100), "shinkabe", a, b, FLOOR, CEIL)
@@ -571,7 +584,7 @@ def build():
              head_clip=(KEN + POST / 2 + 0.12, 99.0) if a == KEN else None)
     wall(H, F_MID, "mid_door", "shinkabe", 2 * KEN, 3 * KEN, FLOOR, CEIL, openings_=[(2 * KEN + A_, 3 * KEN - A_, FLOOR,
                                                                                      FLOOR + 2.0)])
-    place_door(H, shoji_twin, F_MID, 2 * KEN, FLOOR, label="Mise <-> zashiki")
+    place_door(H, shoji_hikiwake, F_MID, 2 * KEN, FLOOR, label="Mise <-> zashiki")
 
     # ======================================================================== LOFT FLOOR (sealed, G0-4) + ceiling
     s = P("loft")
@@ -608,14 +621,14 @@ def build():
     posts_on(H, F_BACK_G, [0.0, KEN, 2 * KEN], SILL, KETA_G)
     wall(H, F_BACK_G, "back_g_door", "shinkabe", W - KEN, W, DOMA, KETA_G, openings_=[(W - KEN + A_, W - A_, DOMA,
                                                                                         DOMA + 2.0)])
-    place_door(H, itado_twin, F_BACK_G, W, DOMA, mirror=True, label="Kitchen back door (yard)")
+    place_door(H, itado_single, F_BACK_G, W, DOMA, mirror=True, label="Kitchen back door (yard)")
     wall(H, F_BACK_G, "back_g_park", "shinkabe", W - KEN - HALF, W - KEN, DOMA, KETA_G,
          grime=[(W - KEN - HALF + A_, W - KEN - A_, None)])
     wall(H, F_BACK_G, "back_g_win", "shinkabe", 2 * KEN, 2 * KEN + HALF, SILL, KETA_G,
          openings_=[(2 * KEN + A_, 2 * KEN + HALF - A_, DOMA + 0.85, DOMA + 1.70)],
          koshiita=[(2 * KEN + A_, 2 * KEN + HALF - A_, 0.55)], grime=[(2 * KEN + A_, 2 * KEN + HALF - A_, None)])
-    rj = openings.part_renji("_wood")
-    put(H, rj, F_BACK_G, 2 * KEN, DOMA, what="jp_p_open_renji_wood (kitchen window)")
+    # kitchen window: renji bars + a sliding board shutter inside, parking over the back door's park bay (inside face)
+    WINDOWS.append(("kitchen window", F_BACK_G, 2 * KEN, DOMA, False, openings.part_window_slide("_board")))
     for (a, b) in ((0.0, KEN), (KEN, 2 * KEN)):
         wall(H, F_BACK_G, "back_g_store_%d" % int(a * 100), "shinkabe", a, b, SILL, KETA_G,
              koshiita=[(a + A_, b - A_, 0.90)], grime=[(a + A_, b - A_, None)])
@@ -626,8 +639,11 @@ def build():
     posts_on(H, F_RIGHT_G, [KEN], SILL, ytop_right(KEN))
     sloped_wall(H, F_LEFT_G, "geya_left", [0.0, KEN, DG], SILL, ytop_left, head_y=SILL + 2.0, koshiita_h=0.90,
                 grime=True)
+    posts_on(H, F_RIGHT_G, [KEN + HALF], SILL, SILL + 2.0)
     sloped_wall(H, F_RIGHT_G, "geya_right", [0.0, KEN, DG], SILL, ytop_right, head_y=SILL + 2.0, koshiita_h=0.90,
-                grime=True)
+                grime=True, window=(KEN + A_, KEN + HALF - A_, TSUKI_Y + 0.90, TSUKI_Y + 1.60))
+    # storage window: bars + a top-hinged push-up shutter (tsukiage), high above the koshiita
+    WINDOWS.append(("storage window", F_RIGHT_G, KEN, TSUKI_Y, False, openings.part_tsukiage("_board")))
     # kitchen / storage partition x = 2 ken (local x = z - ZG): door [0.5, 1.5 ken] parks over [1.5, 2 ken]
     INTERIOR[0] = True
     s = P("part_g_sill")
@@ -637,12 +653,16 @@ def build():
     posts_on(H, F_PART_G, [HALF], STORE, ytop_left(HALF))
     posts_on(H, F_PART_G, [KEN + HALF], STORE, ytop_left(KEN + HALF))
     sloped_wall(H, F_PART_G, "geya_partition", [0.0, HALF, KEN + HALF, DG], STORE, ytop_left, head_y=STORE + 2.0,
-                door_bays=(HALF,))
-    place_door(H, itado_twin, F_PART_G, HALF, STORE, label="Kitchen -> storage")
+                door_bays=(HALF,), interior="both")
+    place_door(H, itado_single, F_PART_G, HALF, STORE, label="Kitchen -> storage")
     kamado(H, POST / 2 + 0.02, POST / 2 + 0.72, ZG + 1.15, ZG + 2.95)
     FLOORS_OBST.append(("kitchen", floor_rect(0.0, POST / 2 + 0.72, ZG + 1.15, ZG + 2.95)))
     INTERIOR[0] = False
     sl_g = geya_roof(H)
+
+    # ======================================================================== WINDOWS (animated like doors, after them)
+    for (label, fr, dx, dy, mirror, part) in WINDOWS:
+        place_door(H, part, fr, dx, dy, mirror=mirror, label=label.capitalize())
 
     # ======================================================================== MAIN ROOF
     s = P("roof_main")

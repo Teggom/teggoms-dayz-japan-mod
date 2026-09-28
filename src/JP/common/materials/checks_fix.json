@@ -1,0 +1,209 @@
+{
+ "check": "C1 palette (tools/matcheck), G3 fix materials",
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_nakanuri_int_w0_co.png",
+   "palette_id": "earth_wall_aged",
+   "wear": "",
+   "mean_srgb": [
+    127.1,
+    99.1,
+    75.4
+   ],
+   "target_srgb": [
+    115,
+    98,
+    80
+   ],
+   "dE": 6.58,
+   "dE_to_entry": 6.58,
+   "tol": 14.0,
+   "spread_p75": 2.4,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     127.0,
+     99.2,
+     75.3
+    ],
+    "dE": 6.55,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_nakanuri_int_w1_co.png",
+   "palette_id": "earth_wall_aged",
+   "wear": "",
+   "mean_srgb": [
+    127.1,
+    99.1,
+    75.4
+   ],
+   "target_srgb": [
+    115,
+    98,
+    80
+   ],
+   "dE": 6.58,
+   "dE_to_entry": 6.58,
+   "tol": 14.0,
+   "spread_p75": 2.4,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     127.0,
+     99.2,
+     75.3
+    ],
+    "dE": 6.54,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_nakanuri_int_w2_co.png",
+   "palette_id": "earth_wall_aged",
+   "wear": "",
+   "mean_srgb": [
+    127.1,
+    99.1,
+    75.4
+   ],
+   "target_srgb": [
+    115,
+    98,
+    80
+   ],
+   "dE": 6.58,
+   "dE_to_entry": 6.58,
+   "tol": 14.0,
+   "spread_p75": 2.6,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     127.0,
+     99.2,
+     75.4
+    ],
+    "dE": 6.55,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_far_w0_co.png",
+   "palette_id": "kawara_ibushi",
+   "wear": "",
+   "mean_srgb": [
+    109.7,
+    114.5,
+    117.1
+   ],
+   "target_srgb": [
+    118,
+    122,
+    123
+   ],
+   "dE": 3.16,
+   "dE_to_entry": 3.16,
+   "tol": 14.0,
+   "spread_p75": 5.2,
+   "observed_spread": 20.4,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     109.6,
+     114.5,
+     117.4
+    ],
+    "dE": 3.22,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_far_w1_co.png",
+   "palette_id": "kawara_ibushi",
+   "wear": "",
+   "mean_srgb": [
+    87.7,
+    92.4,
+    94.9
+   ],
+   "target_srgb": [
+    118,
+    122,
+    123
+   ],
+   "dE": 12.04,
+   "dE_to_entry": 12.04,
+   "tol": 14.0,
+   "spread_p75": 5.0,
+   "observed_spread": 20.4,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     87.6,
+     92.4,
+     95.3
+    ],
+    "dE": 12.06,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_far_w2_co.png",
+   "palette_id": "kawara_ibushi",
+   "wear": "",
+   "mean_srgb": [
+    89.5,
+    95.9,
+    88.9
+   ],
+   "target_srgb": [
+    118,
+    122,
+    123
+   ],
+   "dE": 12.05,
+   "dE_to_entry": 12.07,
+   "tol": 14.0,
+   "spread_p75": 5.0,
+   "observed_spread": 20.4,
+   "masked_frac": 0.062,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_far_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     89.4,
+     95.9,
+     89.3
+    ],
+    "dE": 11.96,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  }
+ ]
+}

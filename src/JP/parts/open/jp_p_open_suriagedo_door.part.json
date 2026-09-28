@@ -147,30 +147,30 @@
      "bone": "doors1",
      "type": "translation",
      "axis_memory": "doors1_axis",
-     "amount": 2.0,
+     "amount": 1.78,
      "unit": "m (translation; axis 1.00 m)"
     },
     {
      "bone": "doors2",
      "type": "translation",
      "axis_memory": "doors2_axis",
-     "amount": 1.3333,
+     "amount": 1.1133,
      "unit": "m (translation; axis 1.00 m)"
     },
     {
      "bone": "doors3",
      "type": "translation",
      "axis_memory": "doors3_axis",
-     "amount": 0.6667,
+     "amount": 0.4467,
      "unit": "m (translation; axis 1.00 m)"
     }
    ],
    "anim_period": 1.6,
    "init_opened": 1.0,
    "sound": "doorWoodSlide",
-   "clear_width_m": 1.68,
+   "clear_width_m": null,
    "engine_tested": false,
-   "note": "3 boards on one source; vertical translation (engine test)"
+   "note": "3 boards on one source; vertical translation (engine test); open, the bottom board hangs STUB below the head (vanilla rule), so it is a shop window, not a walk-through"
   }
  ],
  "notes": [],
@@ -212,9 +212,24 @@
    "detail": "translation, 3 bone(s), axis/action/leaf points"
   },
   {
-   "check": "C7 door doors1 sweep + clear",
+   "check": "C7 door doors1 sweep (window / hinged)",
    "ok": true,
-   "detail": "leaf slides 2.000 m without touching other geometry; open clear width 1.68 m (>= 1.00), head 2.00 m"
+   "detail": "moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+   "ok": true,
+   "detail": "0.216 m of the leaf stays in the opening when open"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.80 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.81 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.78 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
   },
   {
    "check": "C7 Roadway on Geometry",

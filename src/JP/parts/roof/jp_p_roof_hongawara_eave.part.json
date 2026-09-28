@@ -26,10 +26,10 @@
  "bbox_m": [
   0.0,
   1.893,
-  2.805,
-  3.299,
+  2.712,
+  3.375,
   -0.772,
-  0.386
+  0.399
  ],
  "dims": [
   {
@@ -83,6 +83,18 @@
    ]
   },
   {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
    "key": "wood_weathered",
    "id": "jp_m_wood_weathered",
    "palette_id": "timber_weathered",
@@ -96,9 +108,9 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 296,
-  "Resolution 2": 212,
-  "Resolution 3": 12,
+  "Resolution 1": 308,
+  "Resolution 2": 224,
+  "Resolution 3": 18,
   "Geometry": 6,
   "Roadway": 1,
   "View Geometry": 6,
@@ -121,7 +133,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 296, Resolution 2 212, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+   "detail": "Resolution 1 308, Resolution 2 224, Resolution 3 18, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
   },
   {
    "check": "C2 library only",
@@ -147,6 +159,11 @@
    "check": "C7 Fire penetration mats",
    "ok": true,
    "detail": "pottery"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "19/19 field points within reach of the bed; 0 eave tile sets, 1 fascia boards"
   },
   {
    "check": "C7 Roadway on Geometry",

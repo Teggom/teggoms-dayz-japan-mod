@@ -29,12 +29,12 @@
  "deviation": null,
  "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
  "bbox_m": [
-  -1.011,
-  8.291,
-  2.489,
-  4.469,
-  -6.471,
-  1.011
+  -1.026,
+  8.306,
+  2.442,
+  4.476,
+  -6.486,
+  1.026
  ],
  "dims": [
   {
@@ -153,10 +153,34 @@
    ]
   },
   {
+   "key": "roof_kawara_far",
+   "id": "jp_m_roof_kawara_far",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
    "key": "roof_kawara_field",
    "id": "jp_m_roof_kawara_field",
    "palette_id": "kawara_ibushi",
    "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
    "default_wear": "_w1",
    "wear_selectable": [
     "_w0",
@@ -202,9 +226,9 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 4425,
-  "Resolution 2": 505,
-  "Resolution 3": 223,
+  "Resolution 1": 4485,
+  "Resolution 2": 631,
+  "Resolution 3": 361,
   "Geometry": 46,
   "Roadway": 6,
   "View Geometry": 36,
@@ -253,7 +277,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 4425, Resolution 2 505, Resolution 3 223, Geometry 46, Roadway 6, View Geometry 36, Fire Geometry 36"
+   "detail": "Resolution 1 4485, Resolution 2 631, Resolution 3 361, Geometry 46, Roadway 6, View Geometry 36, Fire Geometry 36"
   },
   {
    "check": "C2 library only",
@@ -279,6 +303,11 @@
    "check": "C7 Fire penetration mats",
    "ok": true,
    "detail": "pottery"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "2818/2818 field points within reach of the bed; 4 eave tile sets, 4 fascia boards"
   },
   {
    "check": "C7 Roadway on Geometry",

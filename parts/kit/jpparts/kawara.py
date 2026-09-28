@@ -14,6 +14,12 @@ COL = 0.26            # working width (ken / 7)
 EXPO = 0.235          # exposure along the slope
 FIELD = "roof_kawara_field"
 TILE = "roof_kawara"
+FAR = "roof_kawara_far"   # G3 fix: matte far-LOD field with the tile rows / columns baked in (Resolution 2 and 3)
+
+
+def far_mat():
+    from .core import LIBRARY
+    return FAR if FAR in LIBRARY else FIELD
 UVU, UVV = 1.04, 0.94  # field texture tile (4 columns x 4 courses)
 
 # corrugation profiles (fraction across the column, height above the bed): pan dip at 0.30, roll at 0.82
@@ -82,7 +88,16 @@ def field(part, F, u0, u1, r0, r1, lod_sets=((0, (1,)), (1, (2,)), (2, (3,))), r
     n_faces = 0
     for lod, vis in lod_sets:
         quads, uvs, nrm = [], [], []
-        for (a, b, cu) in columns(u0, u1):
+        cols = columns(u0, u1)
+        if lod == 2 and r1_fn is None:
+            cols = [(u0, u1, None)]          # flat: one quad per slope (the far material carries the columns)
+        for (a, b, cu) in cols:
+            if cu is None:
+                h = PROFILE[2][0][1] + bh * 0.5
+                q = [F.P(a, r0, h), F.P(b, r0, h), F.P(b, r1, h), F.P(a, r1, h)]
+                quads.append(q)
+                uvs.append([(a / UVU, -r0 / UVV), (b / UVU, -r0 / UVV), (b / UVU, -r1 / UVV), (a / UVU, -r1 / UVV)])
+                continue
             prof = _prof_pts(a, b, cu, lod)
             ra = r1_fn(a) if r1_fn else r1
             rb = r1_fn(b) if r1_fn else r1
@@ -122,8 +137,9 @@ def field(part, F, u0, u1, r0, r1, lod_sets=((0, (1,)), (1, (2,)), (2, (3,))), r
                         uvs.append([(ua / UVU, -rs / UVV + 0.01), (ub / UVU, -rs / UVV + 0.01), (ub / UVU, -rs / UVV),
                                     (ua / UVU, -rs / UVV)])
         if quads:
+            m = mat if (lod == 0 or mat != FIELD) else far_mat()
             s = Solid([p for q in quads for p in q], [[4 * i, 4 * i + 1, 4 * i + 2, 4 * i + 3] for i in range(len(quads))],
-                      mat, vis=vis, uv=uvs, normals=[F.n] * len(quads), tag=tag)
+                      m, vis=vis, uv=uvs, normals=[F.n] * len(quads), tag=tag if lod == 0 else tag + "_far")
             # butt faces face down-slope: fix their hint normal
             fix = []
             for q in quads:
@@ -136,7 +152,8 @@ def field(part, F, u0, u1, r0, r1, lod_sets=((0, (1,)), (1, (2,)), (2, (3,))), r
     return n_faces
 
 
-def eave_tiles(part, F, u0, u1, style="plain", lip=0.045, manju_d=0.075, over=0.06, vis0=(1,), vis1=(2,), tag="eave_tile"):
+def eave_tiles(part, F, u0, u1, style="plain", lip=0.045, manju_d=0.075, over=0.06, vis0=(1,), vis1=(2, 3),
+               tag="eave_tile"):
     """First course: the tile body (4-segment profile, one course), a turned-down lip across each column and the
     round end (manju) on the roll. style: 'plain' | 'tomoe' (raised boss). LOD1: one extruded strip."""
     quads, uvs, nrm = [], [], []
@@ -197,6 +214,10 @@ def verge(part, F, u_edge, r0, r1, side, drop=0.07, width=0.13, vis=(1, 2), tag=
         k += 1
     part.add(Solid([p for q in quads for p in q], [[4 * i, 4 * i + 1, 4 * i + 2, 4 * i + 3] for i in range(len(quads))],
                    TILE, vis=vis, uv=uvs, normals=nrm, tag=tag))
+    if 3 not in vis:
+        # G3 fix: a stable silhouette - the verge as one strip in the far LOD (PLAYBOOK §15 T7)
+        c = F.P(u_edge - side * width / 2, (r0 + r1) / 2, 0.01)
+        part.add(oriented_box(c, F.up, F.n, F.u, (r1 - r0) / 2, 0.045, width / 2, TILE, vis=(3,), tag=tag + "_far"))
     return k
 
 
@@ -217,13 +238,27 @@ def ridge(part, p0, p1, courses=3, width=0.22, cap_d=0.16, mortar=True, end_tile
         part.add(oriented_box(cc, d, e2, e1, L / 2 + 0.01, 0.0125, w / 2, TILE, vis=vis if k < 2 else (1,), tag="noshi",
                               uvoff=(0.13 * k, 0.37 * k)))
         h += 0.025
+    # G3 fix (PLAYBOOK §15 T7): every LOD keeps the full stack height under the cap, so the ridge silhouette does not
+    # pop: Res 2 gets one block for the courses above the first two, Res 3 one block for mortar + all courses
+    h2 = (0.04 if mortar else 0.0) + 2 * 0.025
+    if h > h2 + 1e-6:
+        cc = add(c, mul(e2, (h2 + h) / 2))
+        part.add(oriented_box(cc, d, e2, e1, L / 2 + 0.01, (h - h2) / 2, (width - 0.02) / 2, TILE, vis=(2,),
+                              tag="noshi_far"))
+    if h > 1e-6:
+        part.add(oriented_box(add(c, mul(e2, h / 2)), d, e2, e1, L / 2 + 0.01, h / 2, width / 2, TILE, vis=(3,),
+                              tag="noshi_far"))
     a = add(p0, mul(e2, h))
     b = add(p1, mul(e2, h))
-    part.add(half_tube(add(a, mul(d, -0.02)), add(b, mul(d, 0.02)), cap_d / 2, TILE, n=6, vis=(1, 2, 3), tag="ganburi"))
+    if cap_d > 0.01:        # flashing strips (cap_d ~0) get no cap: a 0.1 mm half-tube was 13 invisible faces per LOD
+        part.add(half_tube(add(a, mul(d, -0.02)), add(b, mul(d, 0.02)), cap_d / 2, TILE, n=6, vis=(1, 2, 3),
+                           tag="ganburi"))
     if end_tiles:
         for q, sg in ((a, -1), (b, 1)):
             part.add(tube(add(q, mul(d, sg * 0.02)), add(q, mul(d, sg * 0.05)), cap_d / 2 + 0.01, TILE, n=8, vis=(1,),
                           tag="ridge_end"))
+            part.add(oriented_box(add(q, mul(d, sg * 0.035)), d, e2, e1, 0.015, cap_d / 2 + 0.01, cap_d / 2 + 0.01, TILE,
+                                  vis=(2, 3), tag="ridge_end_far"))
     return h + cap_d / 2
 
 
@@ -251,7 +286,7 @@ def onigawara(part, base, facing, height=0.38, width=0.33, sui=False, vis=(1, 2)
     n = len(pts)
     faces = [list(range(n)), list(range(n, 2 * n))] + [[i, i + 1, n + i + 1, n + i] for i in range(n - 1)] + [[n - 1, 0, n, 2 * n - 1]]
     part.add(Solid(verts, faces, TILE, vis=vis, tag="onigawara"))
-    ob(0, height * 0.40, -t / 2 - 0.08, width * 0.30, height * 0.40, 0.08, v=(1,))  # back block
+    ob(0, height * 0.40, -t / 2 - 0.08, width * 0.30, height * 0.40, 0.08, v=(1, 2, 3))  # back block (every LOD)
     if sui:
         z = t / 2 + 0.006
         ob(0, h1 * 0.55, z, 0.012, h1 * 0.35, 0.006, v=(1,))
@@ -259,6 +294,19 @@ def onigawara(part, base, facing, height=0.38, width=0.33, sui=False, vis=(1, 2)
             ob(sx, h1 * sy, z, 0.035, 0.010, 0.006, v=(1,))
     else:
         ob(0, h1 * 0.5, t / 2 + 0.005, width * 0.36, h1 * 0.34, 0.005, v=(1,))     # raised panel border
+    if 3 not in vis:
+        # G3 fix (PLAYBOOK §15 T7): the ridge-end block stays in the far LOD as one shouldered prism
+        top = cy + r * 0.75
+        sh = width * 0.38
+        for prof in ([(-width / 2, 0.0), (width / 2, 0.0), (width / 2, h1), (-width / 2, h1)],
+                     [(-sh, h1), (sh, h1), (sh, cy), (0.0, top), (-sh, cy)]):
+            vv = []
+            for dz in (-t / 2, t / 2):
+                for (x, y) in prof:
+                    vv.append(add(base, add(mul(side, x), add(mul(up, y), mul(f, dz)))))
+            m = len(prof)
+            ff = [list(range(m)), list(range(m, 2 * m))] + [[i, (i + 1) % m, m + (i + 1) % m, m + i] for i in range(m)]
+            part.add(Solid(vv, ff, TILE, vis=(3,), tag="onigawara_far"))
 
 
 def hongawara_field(part, F, u0, u1, r0, r1, vis0=(1,), tag="hongawara"):

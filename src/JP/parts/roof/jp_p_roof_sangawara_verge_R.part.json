@@ -27,10 +27,10 @@
  "bbox_m": [
   1.69,
   1.82,
-  2.874,
-  3.598,
+  2.865,
+  3.622,
   -1.217,
-  0.318
+  0.323
  ],
  "dims": [
   {
@@ -75,11 +75,13 @@
  ],
  "lod_faces": {
   "Resolution 1": 21,
-  "Resolution 2": 21
+  "Resolution 2": 21,
+  "Resolution 3": 6
  },
  "contributes": [
   "Resolution 1",
-  "Resolution 2"
+  "Resolution 2",
+  "Resolution 3"
  ],
  "walkable": false,
  "doors": [],
@@ -89,7 +91,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 21, Resolution 2 21"
+   "detail": "Resolution 1 21, Resolution 2 21, Resolution 3 6"
   },
   {
    "check": "C2 library only",

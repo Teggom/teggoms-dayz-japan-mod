@@ -691,3 +691,201 @@ tighten these budgets.
 - **Q4:** Which normal-map green channel does DayZ use? (§9)
 - **Q5:** Which LODs do vanilla houses put their furniture proxies in? (§10.4; readable offline)
 - **Q6:** Does the engine's tone mapping keep the palette's look? (§8)
+
+---
+
+## 15. Lessons from the first in-game house (G3, 2026-09-27)
+
+Stephen walked `Land_JP_Machiya_T3_01`, the first house built from the parts library.
+
+**His verdict:** the house looks good and nothing glows. The entrance, walking, every door opening, floor loot and roof
+climbing all work.
+
+**What he found** is below. The fix pass (agent C-FIX) turned every finding into a rule here and, where possible, into
+an automated check.
+- The checks run for every part (`parts/kit/jpparts/checks.py`) and every building
+  (`parts/kit/jpparts/buildcheck.py`).
+- Every building's `verify.py` calls `buildcheck.run_g3(M, L, floors, rec)`.
+- Details and numbers: `buildings/machiya_t3_01/REPORT_FIX.txt`.
+
+**Binding for every agent after this point.**
+
+### 15.1 The rules
+
+**T1 Tiles sit on a clay bed; the eave is closed.**
+- **Stephen:** "Roof tiles are not on the roof; there's a gap when I get close."
+- **The cause:** the kawara layer floated 8 cm above the sheathing boards. Nothing filled the gap, and nothing closed it
+  at the eaves.
+- **The rule:**
+  - Kawara are laid in a bed of straw-tempered clay (fuki-tsuchi) on the sheathing, as the period did. The bed fills
+    everything from the board top to the tile underside.
+  - Every tiled eave has a fascia board (kayaoi / hana-kakushi) square to the rafters. Its top meets the underside of
+    the eave tiles, and their lips hang in front of it.
+  - No daylight shows anywhere between the rafters, boards, bed and tiles.
+- **Implementation:**
+  - `roofs.tile_bed()` and `roofs.kawara_fascia()`.
+  - They are called by `roofs.cover_kawara` (so every roof from `roofs.roof`), by `roofparts.pent`,
+    `openings.mini_pent` and the kura eave, and by the field sample parts.
+  - **A hand-built tiled slope must call both.** The machiya's lean-to does.
+- **Check:** C13.
+
+**T2 Every door can be closed from both sides.** This is an engine rule, read from the vanilla scripts:
+- **How DayZ finds a door:**
+  - It uses only the component the camera ray hits: 5 m, in View Geometry. See `ActionTargets` (`ObjIntersectView`),
+    `ActionOpenDoors` / `ActionCloseDoors` and `Building.GetDoorIndex(componentIndex)`.
+  - `CCTCursor` and `IsInReach` also need the hit point, and the leaf's memory point `doorsN`, within 2 m of the head
+    or feet.
+  - Nothing falls back to "nearest door".
+- **What went wrong:** a leaf that parks completely behind the wall cannot be closed from the other side (Stephen:
+  "doors can only be closed from one direction").
+- **What vanilla does:** its sliding leaves never clear the doorway. Barn_Brick2 leaves 0.22 m, the rail warehouse
+  0.30 m, the boxcar 0.4–0.5 m.
+- **The rule:**
+  - A fully open sliding leaf keeps `STUB` = **0.22 m** of its broad face inside the opening (`core.STUB`).
+  - The memory point `<bone>` sits on the leaf's trailing edge at hand height, so it stays in the doorway.
+  - D1 is measured with the stub in place: clear = opening − stub.
+  - Every leaf has a View Geometry component, even open-bar lattices.
+- **Check:** C10. For every door and window, open and closed, from both sides, with the other doors open:
+  - the camera ray must hit the leaf's **broad face first**
+  - from the far side, the hit must be **inside the doorway**
+  - it must work from at least 4 of 15 standing positions (0.7–1.4 m out, ±0.6 m along)
+  - the hit and the leaf point must be within 2 m
+
+  The parts check adds "the open leaf keeps ≥0.15 m in the opening". C10 reproduces Stephen's defect: the pre-G3 doors
+  score 0/15 from the far side and 14/15 from the park side.
+
+**T3 Door styles by use (period).** Stephen likes the variety.
+
+| Style | Leaves | Where | Part | Clear (measured) | Needs |
+|---|---|---|---|---|---|
+| **hikichigai** | 2, stacking to one side on 2 tracks | **Main entrances only**: street / shop entrance, inn entrance | `jp_p_open_itado_twin`, `jp_p_open_shoji_ext_twin` | 1.46 m | a plain half-ken beside it, on the leaf face |
+| **hikiwake** | 2, parting in the middle in opposite directions | **Interior fusuma / shoji pairs** between rooms | `jp_p_open_shoji_ext_hikiwake` | 1.24 m | a plain half-ken on **both** sides |
+| **katabiki (single)** | 1, beside a fixed half-panel | **Side, back and kitchen doors**, room entrances off a doma, storage | `jp_p_open_itado_single`, `jp_p_open_shoji_ext_single` | 1.06 m | a plain half-ken on the park side |
+| single big leaf | 1 × 1.74 m | Poor houses, barns, big shop doors (ōdo) | `jp_p_open_itado_plain / _battened / _oodo` | 1.46 m | a plain 1-ken on the park side |
+
+- Every door and window uses the **DoorsTwinN** config convention, single leaves too:
+  - one config class per door
+  - one selection `doorstwinN` over all its leaves
+  - bones `doorsN`
+  - one animation source
+- The machiya uses:
+  - the entrance: hikichigai
+  - mise ↔ zashiki: hikiwake
+  - both room entrances off the toriniwa, the back door and kitchen → storage: single
+
+**T4 Openable windows** (Stephen: "as long as there's a few somewhere, in correct spots"):
+- **How they work:**
+  - They animate exactly like doors: DoorsTwinN, doorWoodSlide sound, the same C7/C10 checks.
+  - They are not passable.
+  - Sliding panels keep the STUB too.
+
+| Type | Part | Where it belongs | Worked from |
+|---|---|---|---|
+| Sliding shoji behind a fine koshi lattice | `jp_p_open_window_slide_shoji` (half-ken) | T2–3 town street windows and room windows on streets or alleys | inside only (the lattice covers it from outside, as in a real house) |
+| Sliding board shutter behind renji bars | `jp_p_open_window_slide_board` (half-ken) | Kitchens, stables, workshops, T1 houses | inside only |
+| Two amado storm shutters stowing in a tobukuro box | `jp_p_open_amado_window_twin` (1 ken) | Zashiki, inn rooms, better T2–3 rooms on garden or side walls. **Not** shop fronts | both sides |
+| Top-hinged push-up shutter (tsukiage / hanemage) over bars | `jp_p_open_tsukiage_board` (half-ken) | Storage, farmhouses, shop side walls. High sill (≥1.1 m above the floor), under an eave. Its bars are Geometry-only so the camera ray reaches the shutter from inside | both sides |
+
+- **Stay static:**
+  - mushiko (loft)
+  - koshi and degoshi shop fronts
+  - the kura window variants
+  - shitomido
+- **On the machiya:**
+  - street window B2b: sliding shoji
+  - zashiki gable: amado
+  - kitchen back wall: board shutter
+  - storage gable: tsukiage
+- **Rotation sign (hinged leaves and shutters):**
+  - model.cfg `type="rotation"`, `angle1 > 0` turns by the **right-hand rule about axis point 1 → 2**, in memory
+    vertex order.
+  - Source: 10 of 10 vanilla vehicle doors, hoods and trunks.
+  - Kit: `core.ROT_SIGN`, `core.anim_point_fn`.
+  - Untested on our buildings until Stephen's re-check. If a shutter swings the wrong way, swap the two axis points in
+    the part and change nothing else.
+
+**T5 The envelope is sealed except through its openings.**
+- **Stephen:** "From inside I can see outside." In the tatami room, the degoshi bays left a slit between the lattice
+  box's head and the wall above, at standing eye height. The toriniwa gable had a second slit, where the outside board
+  wall met the plaster above.
+- **The rule:**
+  - A room sees outside only through its declared doors, windows and lattices.
+  - Where two wall kinds meet, or a lattice, bay or pent meets a wall, one member spans the **full wall thickness**.
+    Examples: the board wall's top rail; the degoshi head board running up to the wall's head rail (2.00 m) and back
+    to the inner face.
+- **Note for any model that builds something similar** (Stephen asked for it):
+  - This covers projecting lattice bays (degoshi, dashi-mado), bay windows, shop fronts and pents.
+  - Close the **head** to the wall above with a head board or lintel that meets the wall's head rail. Never stop it
+    short underneath.
+  - Then prove it with C11. Don't judge it by eye in a render.
+- **Check C11:**
+  - Rays go out from a grid of eye points (0.5 / 1.1 / 1.65 m) in every room, against the Resolution 1 faces, with
+    doors and windows closed.
+  - A ray that escapes without passing through a door or window portal is a leak.
+  - Paper counts as opaque.
+
+**T6 Interior faces never use exterior weathering.**
+- **Stephen:** interior walls looked dark and greenish. The weathered exterior clay (#7 `jp_m_wall_nakanuri`) turns
+  green in DayZ's cool interior light.
+- **The rule:**
+  - Every earth-wall face that looks into a room uses `jp_m_wall_nakanuri_int`: warmer, unweathered, about the same
+    lightness. It is palette `earth_wall_aged` +a*/+b*, matcheck dE 6.6/14.
+  - Interior clay fixtures such as the kamado use it too.
+  - Stephen: "it's supposed to be a dark game". He judges the colour in game.
+- **Kit:** `walls.wall_run(interior='back'|'both')` and `walls.interior_mats()`. Building helpers default exterior
+  walls to `'back'` and partitions to `'both'`.
+- **Gap:** shikkui has no interior twin yet. Add `jp_m_wall_shikkui_int` the first time a plastered wall faces a room.
+- **Check:** C14.
+
+**T7 LOD material matching and a stable silhouette.**
+- **(a) Matte far roof.** Far away, the roof looked "too shiny and flat", then darkened when the close LOD took over.
+  - Kawara fields in Resolution 2 and 3 use `jp_m_roof_kawara_far`:
+    - matte specular: 0.22 / 35 against 0.6 / 90
+    - the LOD0 corrugation (pan shadow, roll highlight) and the course shadows baked into colour and normal map
+    - its mean about 4 L* darker
+  - The Resolution 3 field is one quad per slope.
+  - **Check:** C16.
+- **(b) Stable silhouette.** The onigawara and ridge-end tops popped in and out.
+  - Everything that forms the outline keeps a simplified version in **every** LOD:
+    - the ridge stack (one block per LOD for the courses)
+    - the ridge ends
+    - the onigawara (two prisms and its back block)
+    - the verge strip, the eave strip and the fascia
+    - the udatsu cap courses
+  - A cap may never float over a course that a lower LOD dropped.
+  - **Check C15:** top-down height maps of Resolution 2 and 3 stay within 0.10 m of Resolution 1.
+
+**T8 No part pokes into a roof.**
+- **Stephen:** "Something on the side of the house clips into the roof and pokes through, and pops with distance."
+  He also saw it on the parts sheets.
+- **The culprit:** the tile gable's board band and rail (`walls.gable _tile`). They were full rectangles, so they rose
+  36 cm through the roof at both eave corners. They were in LOD 1–2 only, so they popped.
+- **The rule:** gable and wall details are clipped 2 cm under the roof lines.
+- **Check C12:** no solid of another sub-part may enter a roof body (from rafter underside to tile top) by more than
+  3 cm, in any LOD. Sub-parts are tracked by `Solid.src`, which `Part.merge` stamps.
+
+**T9 Earlier lessons from today, confirmed in game:**
+- **D1 and D4:**
+  - Doors are ≥1.00 m clear. 0.80 m worked, but infected were slow.
+  - Stairs are ≥1.10 m wide and ≤38° (37.8° walks fine), with ≥2.05 m head room.
+  - Both are measured with leaf stubs and fixed panels in place.
+- **Infected follow a player inside and upstairs** once the navmesh includes the building. Regenerate the navmesh
+  (`NAVMESH_STEPS.md`) after placing or changing a building, before any AI test.
+- **Tile and board roofs are walkable** (Roadway on the slopes plus a ridge strip), for rooftop running. Roof climbing
+  was confirmed on the machiya. Thatch stays non-walkable.
+- **Palette calibration holds in engine light:** nothing glowed.
+- **Budget:** the machiya sits at R1 11,926 / 12,000 and R3 1,570 / 1,600. New detail has to be paid for elsewhere.
+  - Fixed panels and kumiko use 4-face open bars (`openings.open_bar`).
+  - Flashing strips have no cap.
+
+### 15.2 The checks added (they extend §12)
+
+| Check | Rule | Runs in |
+|---|---|---|
+| **C10 Door reach** | T2: the camera ray hits the leaf's broad face first from both sides, open and closed, within 2 m; ≥4/15 positions; far side inside the doorway; the open leaf keeps ≥0.15 m in the opening | parts (`checks.py`) + buildings (`buildcheck.py`) |
+| **C11 Envelope leak** | T5: rooms see outside only through doors, windows and lattices | buildings |
+| **C12 Roof / wall intersection** | T8: nothing from another sub-part inside a roof body by more than 3 cm, in any LOD | buildings |
+| **C13 Tile seating** | T1: kawara within reach of the clay bed; a fascia at every eave with eave tiles | parts + buildings |
+| **C14 Interior material** | T6: no exterior-weathered earth face looks into a room | buildings |
+| **C15 Stable silhouette** | T7b: Resolution 2 / 3 top heights within 0.10 m of Resolution 1 | buildings |
+| **C16 Far-LOD kawara** | T7a: the matte far material in Resolution 2 / 3 only, specular below the close material | buildings |

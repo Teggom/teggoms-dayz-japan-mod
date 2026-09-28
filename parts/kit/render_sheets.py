@@ -26,6 +26,8 @@ FONT, FONTB = r"C:\Windows\Fonts\arial.ttf", r"C:\Windows\Fonts\arialbd.ttf"
 CELL = (480, 400)
 
 # sheet -> (title, scale m, filter(part id) -> bool, view)
+G3_NEW = ("jp_p_open_itado_single", "jp_p_open_shoji_ext_hikiwake", "jp_p_open_shoji_ext_single",
+          "jp_p_open_window_slide", "jp_p_open_amado_window", "jp_p_open_tsukiage")
 KAWARA_PARTS = ("jp_p_roof_sangawara", "jp_p_roof_kawara_ridge", "jp_p_roof_onigawara", "jp_p_roof_hongawara")
 SHEET_DEFS = [
     ("1_frame", "Frame: posts, beams, dashigeta (G1 d4: flagged deviation)", 6.5,
@@ -35,9 +37,11 @@ SHEET_DEFS = [
     ("2b_gables", "Gable ends (3-ken span, from the eave line up) and udatsu", 9.0,
      lambda p: p.startswith(("jp_p_wall_gable", "jp_p_wall_udatsu")), "3q"),
     ("3_openings", "Openings: sliding doors (shown 60 % open), windows, lattices, shop closures", 7.5,
-     lambda p: p.startswith("jp_p_open_") and not p.endswith("_twin"), "3q"),
+     lambda p: p.startswith("jp_p_open_") and not p.endswith("_twin") and not p.startswith(G3_NEW), "3q"),
     ("3b_openings_twin", "Openings: twin-leaf sliding doors (added by architect C, 2026-09-27), 60 % open", 7.5,
      lambda p: p.startswith("jp_p_open_") and p.endswith("_twin"), "3q"),
+    ("3c_openings_g3", "G3 fix pass: door styles by use + openable windows (60 % open)", 7.5,
+     lambda p: p.startswith(G3_NEW), "3q"),
     ("4_foundations", "Foundations, sills, steps, verandas", 6.0,
      lambda p: p.startswith("jp_p_found_") or p.startswith("jp_p_porch_"), "3q"),
     ("5a_roof_kawara", "Kawara as geometry: field, eave, verge, ridges, onigawara, hongawara", 3.6,
@@ -73,8 +77,8 @@ def jobs_for(sheet):
         if g:
             job["ground_y"] = g[0] - 0.002
             job["human_y"] = g[0]
-        if part.doors and any(a["type"] == "translation" for d in part.doors for a in d.anims):
-            job["open"] = 0.6
+        if part.doors:
+            job["open"] = 0.6                  # translation and rotation (render_parts.part_mesh, G3)
         job.update(getattr(registry, "RENDER_HINTS", {}).get(name, {}))
         out.append(job)
     return out
@@ -129,7 +133,8 @@ def compose(sheet, jobs, extra_note="", captions_top=None):
                          "(jp_p_frame_post). %s" % (scale, extra_note), font=F["s"], fill=(60, 60, 60))
     if not captions_top:
         d.text((14, 72), "Checks = C2 library paths, C3 grid, C4 dimensions, C5 LODs, C7 convex/closed components, doors "
-                     "(sweep, >= 1.00 m clear, 2.00 m head), Roadway on Geometry.", font=F["s"], fill=(60, 60, 60))
+                     "(sweep, >= 1.00 m clear, 2.00 m head), Roadway on Geometry; G3: C10 door reach from both sides "
+                     "+ 0.22 m stub, C13 tiles on the clay bed.", font=F["s"], fill=(60, 60, 60))
     for i, j in enumerate(jobs):
         x = 10 + (i % cols) * (CELL[0] + 10)
         y = 96 + (i // cols) * (CELL[1] + cap + 10)

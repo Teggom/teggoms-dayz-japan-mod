@@ -22,45 +22,59 @@ RES = (960, 720)
 
 # (out, caption, view spec)
 JOBS = [
-    ("street", "Street front (south face when placed): twin plank entrance leaves in the toriniwa bay, plain park bay, "
-     "half-ken koshi window, two degoshi bays (shop front), tiled street pent between plastered udatsu, low plastered "
-     "upper storey with three oval mushiko, 5-course ridge with onigawara.",
+    ("street", "Street front (south face when placed): hikichigai plank entrance (both leaves stack right, main entrance "
+     "only), sliding-shoji street window behind its koshi, two degoshi bays with their head boards closed to the wall, "
+     "tiled street pent between udatsu, low plastered upper storey with oval mushiko.",
      {"view": "front", "scale": 11.5, "target": [0.0, 3.2, 4.6]}),
-    ("q_front_right", "3/4 from the street, west corner (rooms side): zashiki koshi window, board wainscot over the "
-     "grime band, shinkabe upper wall, tile gable with bosses and bargeboard, dodai on separate dressed stones.",
+    ("q_front_right", "3/4 from the street, rooms side: the zashiki amado window (two storm shutters, tobukuro box "
+     "beside it), board wainscot, tile gable whose board band now stops under the roof line (G3 C12 fix).",
      {"view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 26}),
-    ("q_front_left", "3/4 from the street, east corner (toriniwa side): the gable pent at the upper-floor line (Ioka), "
-     "dark vertical boards below, entrance bay with its twin plank leaves, rear lean-to behind.",
+    ("q_front_left", "3/4 from the street, toriniwa side: gable pent at the upper-floor line, dark vertical boards with "
+     "their new top rail (closes the slit Stephen saw through), entrance bay, rear lean-to.",
      {"view": "3q_left", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 26}),
-    ("back", "Back (yard side): geya lean-to with verge tiles and bargeboards, twin kitchen back door, renji kitchen "
-     "window, storage wall; the main roof's back eave over the lean-to. Eave edge 2.53 m (the climb route to the roof).",
+    ("back", "Back (yard side): single plank back door beside its fixed panel, renji kitchen window with a sliding board "
+     "shutter inside, storage wall; lean-to eave with clay bed, fascia and eave tiles (G3 tile seating).",
      {"view": "back", "persp": 30, "target": [0.0, 2.4, 0.0], "dist": 26}),
-    ("plan", "Plan cut at 1.3 m, doors CLOSED. Left: toriniwa (doma) with two stepping stones; mise (shop, 9 mats) at "
-     "the front, zashiki (9 mats) behind; geya: kitchen (doma, kamado) and storage (boards). North is down.",
+    ("plan", "Plan cut at 1.3 m, doors CLOSED. Toriniwa with two stepping stones (re-centred on the narrow single "
+     "shoji doors), mise and zashiki (9 mats each), kitchen with kamado, storage. North is down.",
      {"view": "top", "scale": 12.5, "cut_y": 1.3, "no_human": True}),
-    ("plan_open", "Plan cut, every door OPEN (both leaves of each twin door stacked over the next half-ken): 1.70 m "
-     "clear openings.", {"view": "top", "scale": 12.5, "cut_y": 1.3, "no_human": True, "open": 1.0}),
-    ("section", "Long section through the rooms (cut at 1.4 m in from the east wall, looking west): raised tatami "
-     "rooms (2.50 m ceilings), sealed low loft (no stair, no hatch), kirizuma main roof, geya lean-to over the doma.",
+    ("plan_open", "Plan cut, everything OPEN. Door styles by use (PLAYBOOK §15): entrance hikichigai (1.48 m clear), "
+     "mise/zashiki hikiwake (1.26), four narrow single doors (1.08). Every open leaf keeps 0.22 m in its opening, "
+     "like vanilla, so it can be closed from both sides.",
+     {"view": "top", "scale": 12.5, "cut_y": 1.3, "no_human": True, "open": 1.0}),
+    ("section", "Long section (cut 1.4 m in from the east wall, looking west): raised tatami rooms, sealed low loft, "
+     "kirizuma main roof and lean-to, both on a clay bed with fascia boards at the eaves.",
      {"view": "side", "scale": 12.5, "cut_x": 0.5, "target": [0.0, 3.0, 0.0]}),
     ("doors_closed", "Entrance closed: two ~0.88 m leaves in the 1-ken bay.",
      {"view": "3q", "persp": 35, "target": [-2.6, 1.3, 4.6], "dist": 9}),
-    ("doors_open", "Entrance open (one action): both leaves stacked over the plain half-ken; 1.70 m clear.",
+    ("doors_open", "Entrance open (one action): both leaves stacked to the right, their edges still 0.22 m inside the "
+     "opening - the part you aim at to close it from inside (G3 fix; 1.48 m clear).",
      {"view": "3q", "persp": 35, "target": [-2.6, 1.3, 4.6], "dist": 9, "open": 1.0}),
-    ("interior_toriniwa", "Inside the toriniwa looking back to the kitchen: stepping stones and shoji into the rooms "
-     "(open), joisted ceiling, kamado beyond.",
+    ("interior_toriniwa", "Inside the toriniwa (interior clay walls, warmer and unweathered): the two narrow single "
+     "shoji doors open, their leaf edges in the openings; kamado beyond.",
      {"interior": {"cam": [-2.75, 1.55, 3.9], "look": [-2.3, 1.2, -3.5], "lens": 20}, "open": 1.0}),
-    ("interior_mise", "Inside the mise (shop): 9 tatami in a shugi layout, degoshi lattice with paper behind, the "
-     "plastered partition with its twin shoji to the zashiki open.",
-     {"interior": {"cam": [3.2, 1.9, 2.1], "look": [-1.5, 0.8, 4.3], "lens": 18}, "open": 1.0}),
-    ("interior_kitchen", "Kitchen (geya): built-in kamado against the sooted boards, twin plank door to the storage, "
-     "the omoya back wall rising into the lean-to.",
-     {"interior": {"cam": [-0.4, 1.6, -4.1], "look": [-3.3, 0.8, -2.0], "lens": 18}, "open": 0.0}),
-    ("lod2", "Resolution 2 (LOD1).", {"view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 26, "lod": 2}),
-    ("lod3", "Resolution 3 (LOD2).", {"view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 26, "lod": 3}),
-    ("roof_walk", "Rooftop: walkable tile slopes (Roadway), ridge walk strip; the lean-to leads up to the main roof.",
-     {"view": "back", "persp": 35, "target": [0.0, 4.5, -3.0], "dist": 14, "human_at": [1.0, -2.45],
-      "human_y": 3.73}),
+    ("interior_mise", "Inside the mise: the degoshi head boards now meet the wall's head rail (no daylight above the "
+     "lattice, C11), the street window's shoji panel open, the hikiwake pair to the zashiki open.",
+     {"interior": {"cam": [3.2, 1.9, 2.1], "look": [-1.5, 1.4, 4.3], "lens": 18}, "open": 1.0}),
+    ("interior_zashiki", "Inside the zashiki: the amado window open (shutter edges left in the opening so it closes "
+     "from inside), interior clay walls, the hikiwake pair to the mise.",
+     {"interior": {"cam": [-1.3, 2.05, 1.5], "look": [3.6, 1.45, -0.2], "lens": 18}, "open": 1.0}),
+    ("interior_kitchen", "Kitchen: kamado in interior clay, single plank door to the storage (open, leaf edge in the "
+     "opening), the renji window's board shutter.",
+     {"interior": {"cam": [-0.4, 1.6, -4.1], "look": [-3.3, 0.8, -2.0], "lens": 18}, "open": 1.0}),
+    ("eave_closeup", "Eave corner up close (Stephen's 'tiles not on the roof'): eave tiles now sit on a clay bed "
+     "(fuki-tsuchi) over the sheathing, their lips hang in front of a fascia board; verge tiles over the bargeboard.",
+     {"interior": {"cam": [6.6, 3.7, 7.6], "look": [4.0, 4.45, 5.45], "lens": 34}}),
+    ("gable_side", "Gable end from the side: the board band and its rail are clipped under the roof line (they poked "
+     "through the roof at both eave corners and popped with distance - C12).",
+     {"interior": {"cam": [9.5, 4.6, 5.5], "look": [3.64, 4.9, 1.0], "lens": 28}}),
+    ("windows_open", "Back right, everything open: the storage tsukiage shutter pushed up and out (rotation, engine-"
+     "untested), the zashiki amado stowed in its tobukuro, back door open.",
+     {"interior": {"cam": [7.6, 2.2, -5.6], "look": [3.4, 1.7, -1.3], "lens": 20}, "open": 1.0}),
+    ("lod2", "Resolution 2 (LOD1): matte far kawara material, full ridge stack, onigawara.",
+     {"view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 26, "lod": 2}),
+    ("lod3", "Resolution 3 (LOD2): one far-material plane per slope, ridge stack, onigawara and verge strips kept "
+     "(stable silhouette, C15).", {"view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 26, "lod": 3}),
 ]
 
 
@@ -158,8 +172,9 @@ def compose():
         line = "Checks: %d/%d pass (checks.json). Faces R1/R2/R3 = %s. " % (ok, n, c.get("faces", ""))
     d.text((14, 58), line + "Resolution-1 LOD with the jp_common textures (_w1) unless noted; dark figure = 1.8 m.",
            font=F["s"], fill=(60, 60, 60))
-    d.text((14, 80), "4 x 3 ken omoya (sealed low loft) + 4 x 2 ken rear lean-to; 6 twin sliding doors; model front = "
-           "+z (placed at yaw 180 facing south, centre (1024, 1045)).", font=F["s"], fill=(60, 60, 60))
+    d.text((14, 80), "G3 fix pass 2026-09-27: 4 x 3 ken omoya + 4 x 2 ken lean-to; 6 doors (hikichigai, hikiwake, 4 "
+           "single) + 4 openable windows; model front = +z (placed at yaw 180 facing south, centre (1024, 1045)).",
+           font=F["s"], fill=(60, 60, 60))
     for i, (out, caption, v) in enumerate(JOBS):
         x = 10 + (i % cols) * (cw + 10)
         y = 110 + (i // cols) * (ch + cap + 10)

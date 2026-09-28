@@ -202,8 +202,40 @@ def rafters(part, sl, spacing=0.303, sec=(0.045, 0.06), round_=False, only_eave=
         k += 1
 
 
+SHEATH_TOP = 0.072     # sheathing (nojiita) top above the rafter underside plane (sheathing(): 0.06 + 0.012)
+BED_MAT = "wall_arakabe"   # fuki-tsuchi: straw-tempered clay, the same earth as arakabe walls
+
+
+def tile_bed(part, sl, h_bed, h0=SHEATH_TOP, vis=(1, 2)):
+    """G3 fix (Stephen: "roof tiles are not on the roof; there's a gap when I get close"). The period laid kawara on a
+    bed of straw-tempered clay (fuki-tsuchi) spread over the sheathing boards; the tiles sit IN it. One convex slab per
+    slope piece from the sheathing top to 4 mm under the tile bed plane, so no daylight shows between boards and tiles
+    at the eave, the verge or anywhere a player looks along the roof. PLAYBOOK §15 T1."""
+    for pc in sl.pieces:
+        part.add(slab(pc, lambda x, z: sl.y(x, z, h0), lambda x, z: sl.y(x, z, h_bed - 0.004), BED_MAT, vis=vis,
+                      tag="tile_bed"))
+
+
+def kawara_fascia(part, sl, h_bed, mat="wood_weathered", vis=(1, 2, 3)):
+    """G3 fix: the eave board (kayaoi / hana-kakushi) along each eave edge, square to the rafters, from just under the
+    rafter plane up to 12 mm above the tile bed plane, so the eave tiles' lips hang in front of it and nothing is open
+    between tiles, bed, sheathing and rafter ends. PLAYBOOK §15 T1."""
+    F = sl.frame(0.0)
+    us = [sl.u_of(x, z) for x, z in sl.poly if abs(sl.s(x, z) + sl.ov) < 1e-6]
+    if len(us) < 2:
+        return
+    u0, u1 = min(us), max(us)
+    r0, r1 = -0.035, 0.0
+    hl, hh = -0.02, h_bed + 0.012
+    c = [F.P(u0, r0, hl), F.P(u1, r0, hl), F.P(u1, r1, hl), F.P(u0, r1, hl),
+         F.P(u0, r0, hh), F.P(u1, r0, hh), F.P(u1, r1, hh), F.P(u0, r1, hh)]
+    part.add(hexa(c, mat, vis=vis, tag="kawara_fascia", grain="long"))
+
+
 def cover_kawara(part, sl, fam="sangawara", eave_style="tomoe", h0=None):
     h0 = STACK[fam] if h0 is None else h0
+    tile_bed(part, sl, h0)
+    kawara_fascia(part, sl, h0)
     F = sl.frame(h0)
     u0, u1 = sl.u_range()
     vw = 0.13

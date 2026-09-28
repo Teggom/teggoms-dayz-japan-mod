@@ -1,6 +1,9 @@
 LAND_JP_MACHIYA_T3_01 - REPORT (architect C, 2026-09-27)
 =======================================================
 
+>>> 2026-09-27 G3 FIX PASS: see REPORT_FIX.txt (doors, windows, tiles, interior clay, LODs; 64/64 checks). Where this
+>>> report and REPORT_FIX.txt differ (doors 2-6, windows, check count, faces), REPORT_FIX.txt is current.
+
 One house, the tier-3 Kamigata town machiya (Ioka type), rebuilt to the playbook and assembled only from the parts
 library (parts/kit, jpparts) and jp_common materials. Render sheet: machiya_t3_01_sheet.jpg. Checks: checks.json.
 Nothing here started, stopped or killed any program. No git.

@@ -76,6 +76,42 @@
    ],
    "open": 0.6,
    "caption": "paper sliding door as two period leaves (~0.88 m) in a 1-ken bay (room fronts on the doma); one action slides both into a stack over the next half-ken (1.70 m clear, D1)"
+  },
+  {
+   "name": "jp_p_open_amado_window_twin",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      2.73,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "1-ken room window (zashiki, inn rooms) closed by two amado storm shutters that stow in a tobukuro box beside it (T2-3)"
   }
  ]
 }

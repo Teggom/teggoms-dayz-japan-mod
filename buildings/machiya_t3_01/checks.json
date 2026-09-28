@@ -1,25 +1,25 @@
 {
  "building": "Land_JP_Machiya_T3_01",
  "date": "2026-09-27",
- "faces": "11931/4048/1479",
+ "faces": "11926/4207/1570",
  "door_clear_m": [
-  1.68,
-  1.68,
-  1.68,
-  1.68,
-  1.68,
-  1.68
+  1.46,
+  1.06,
+  1.06,
+  1.24,
+  1.06,
+  1.06
  ],
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11931, Resolution 2 4048, Resolution 3 1479, Geometry 1530, Memory 0, Roadway 19, View Geometry 1532, Fire Geometry 1514"
+   "detail": "Resolution 1 11926, Resolution 2 4207, Resolution 3 1570, Geometry 1644, Memory 0, Roadway 19, View Geometry 1640, Fire Geometry 1622"
   },
   {
    "check": "C5 face budget (large / landmark: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 11931, R2 4048, R3 1479"
+   "detail": "R1 11926, R2 4207, R3 1570"
   },
   {
    "check": "Geometry properties + mass",
@@ -29,17 +29,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "256 components, 0 bad, 0 faces outside components"
+   "detail": "275 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "256 components, 0 bad, 0 faces outside components"
+   "detail": "274 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "253 components, 0 bad, 0 faces outside components"
+   "detail": "271 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -64,62 +64,102 @@
   {
    "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
    "ok": true,
-   "detail": "Entrance (street): bones doors1+doors2"
+   "detail": "Entrance (street) (hikichigai): bones doors1+doors2"
   },
   {
    "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+   "detail": "leaves slide 1.50/0.64 m without touching other geometry; open clear 1.46 m, head 2.00 m"
   },
   {
    "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
    "ok": true,
-   "detail": "Toriniwa -> zashiki: bones doors3+doors4"
+   "detail": "Toriniwa -> zashiki (katabiki): bones doors3"
   },
   {
    "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
   },
   {
    "check": "C7 DoorsTwin3 selections, memory, model.cfg, config",
    "ok": true,
-   "detail": "Toriniwa -> mise: bones doors5+doors6"
+   "detail": "Toriniwa -> mise (katabiki): bones doors4"
   },
   {
    "check": "C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
   },
   {
    "check": "C7 DoorsTwin4 selections, memory, model.cfg, config",
    "ok": true,
-   "detail": "Mise <-> zashiki: bones doors7+doors8"
+   "detail": "Mise <-> zashiki (hikiwake): bones doors5+doors6"
   },
   {
    "check": "C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+   "detail": "leaves slide 0.64/0.64 m without touching other geometry; open clear 1.24 m, head 2.00 m"
   },
   {
    "check": "C7 DoorsTwin5 selections, memory, model.cfg, config",
    "ok": true,
-   "detail": "Kitchen back door (yard): bones doors9+doors10"
+   "detail": "Kitchen back door (yard) (katabiki): bones doors7"
   },
   {
    "check": "C7 DoorsTwin5 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
   },
   {
    "check": "C7 DoorsTwin6 selections, memory, model.cfg, config",
    "ok": true,
-   "detail": "Kitchen -> storage: bones doors11+doors12"
+   "detail": "Kitchen -> storage (katabiki): bones doors8"
   },
   {
    "check": "C7 DoorsTwin6 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin7 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Street window (window_slide): bones doors9"
+  },
+  {
+   "check": "C7 DoorsTwin7 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin8 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Zashiki window (hikichigai): bones doors10+doors11"
+  },
+  {
+   "check": "C7 DoorsTwin8 window sweep",
+   "ok": true,
+   "detail": "hikichigai moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin9 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kitchen window (window_slide): bones doors12"
+  },
+  {
+   "check": "C7 DoorsTwin9 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin10 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Storage window (tsukiage): bones doors13"
+  },
+  {
+   "check": "C7 DoorsTwin10 window sweep",
+   "ok": true,
+   "detail": "tsukiage moves closed -> open without touching other geometry"
   },
   {
    "check": "C7 toriniwa -> kitchen passage (open) clear + head",
@@ -134,7 +174,7 @@
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "1062/1062 samples over toriniwa, mise, zashiki, kitchen, storage"
+   "detail": "1068/1068 samples over toriniwa, mise, zashiki, kitchen, storage"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -154,12 +194,142 @@
   {
    "check": "Placement footprint <= 14 x 14 m, inside the yard, clear of the sakura",
    "ok": true,
-   "detail": "8.25 x 11.09 m incl. eaves; world x 1019.9-1028.2, z 1039.4-1050.5; nearest sakura trunk 45.6 m away; ridge 6.41 m"
+   "detail": "8.25 x 11.10 m incl. eaves; world x 1019.9-1028.2, z 1039.4-1050.5; nearest sakura trunk 45.6 m away; ridge 6.41 m"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.79 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.58 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Toriniwa -> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Toriniwa -> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.28 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.28 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Mise <-> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.74 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Mise <-> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.27 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.40 m"
+  },
+  {
+   "check": "C10 DoorsTwin6 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kitchen -> storage: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.96 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin6 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kitchen -> storage: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.57 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin7 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.21 m"
+  },
+  {
+   "check": "C10 DoorsTwin7 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.24 m"
+  },
+  {
+   "check": "C10 DoorsTwin8 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Zashiki window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.10 m"
+  },
+  {
+   "check": "C10 DoorsTwin8 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Zashiki window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.99 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.22 m"
+  },
+  {
+   "check": "C10 DoorsTwin9 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Kitchen window: leaf: leaf hit first from 13/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin9 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Kitchen window: leaf: leaf hit first from 13/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C10 DoorsTwin10 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Storage window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.29 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.48 m"
+  },
+  {
+   "check": "C10 DoorsTwin10 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Storage window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.69 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.88 m"
+  },
+  {
+   "check": "C11 envelope leak: rooms see outside only through doors / windows",
+   "ok": true,
+   "detail": "toriniwa 9600 rays, 12 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; zashiki 11520 rays, 5 out through doors/windows, 0 LEAKS; kitchen 9600 rays, 0 out through doors/windows, 0 LEAKS; storage 11520 rays, 0 out through doors/windows, 0 LEAKS"
+  },
+  {
+   "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+   "ok": true,
+   "detail": "5 roof bodies clear"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed, fascia at every eave",
+   "ok": true,
+   "detail": "3644/3644 field points within reach of the bed; 5 eave tile sets, 5 fascia boards"
+  },
+  {
+   "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+   "ok": true,
+   "detail": "no exterior earth face looks into a room"
+  },
+  {
+   "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+   "ok": true,
+   "detail": "6337 columns over 2.5 m compared in each LOD"
+  },
+  {
+   "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+   "ok": true,
+   "detail": "far-field faces R1/R2/R3 0/284/5; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   },
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 925550 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 959017 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

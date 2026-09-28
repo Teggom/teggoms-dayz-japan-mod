@@ -1,0 +1,66 @@
+{
+ "id": "jp_m_roof_kawara_far",
+ "family": "roof",
+ "palette_id": "kawara_ibushi",
+ "palette_by_wear": {},
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "as roof_kawara_field _w0, corrugation baked, matte",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far_w0.rvmat",
+   "target_srgb": [
+    109.7,
+    114.5,
+    117.1
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "as _w0 at the _w1 wear",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far_w1.rvmat",
+   "target_srgb": [
+    87.7,
+    92.4,
+    94.9
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "as _w0 at the _w2 wear",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far_w2.rvmat",
+   "target_srgb": [
+    89.5,
+    95.9,
+    88.9
+   ],
+   "masked_frac": 0.062
+  }
+ },
+ "normal_convention": "DirectX (green = down), like the library",
+ "made_by": "parts/kit/make_fix_materials.py (fix agent C-FIX, G3 2026-09-27)",
+ "tile_size_m": 1.04,
+ "tile_size_v_m": 0.94,
+ "texture_px": 1024,
+ "px_per_m": 985.0,
+ "uv": "as jp_m_roof_kawara_field: u = metres along the eave / 1.04 from a ken line; v = metres down the slope / 0.94",
+ "grain": "4 columns (0.26) x 4 courses (0.235) per tile; LOD0 corrugation baked into colour + normal",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\pottery.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\ceramic_tiles_roof_ext.paa",
+ "used_by": [
+  "kawara.field (Resolution 2 and 3)"
+ ],
+ "used_on": "The far LODs of every kawara field (the flat / 2-segment planes), so the roof keeps the close LOD's darkness and matte look from a distance. PLAYBOOK §15 T7.",
+ "sources": [
+  {
+   "derived_from": "jp_m_roof_kawara_field (make_part_materials.kawara_field)"
+  },
+  {
+   "baked": "kawara.PROFILE[0] corrugation: occlusion 0.80 pan .. 1.10 roll, height normal"
+  }
+ ]
+}

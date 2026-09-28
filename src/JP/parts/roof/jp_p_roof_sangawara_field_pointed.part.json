@@ -28,10 +28,10 @@
  "bbox_m": [
   0.0,
   1.82,
-  2.805,
+  2.712,
   3.623,
   -1.2,
-  0.332
+  0.399
  ],
  "dims": [
   {
@@ -108,10 +108,34 @@
  ],
  "materials": [
   {
+   "key": "roof_kawara_far",
+   "id": "jp_m_roof_kawara_far",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
    "key": "roof_kawara_field",
    "id": "jp_m_roof_kawara_field",
    "palette_id": "kawara_ibushi",
    "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
    "default_wear": "_w1",
    "wear_selectable": [
     "_w0",
@@ -145,8 +169,8 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 412,
-  "Resolution 2": 20,
+  "Resolution 1": 424,
+  "Resolution 2": 32,
   "Resolution 3": 13,
   "Geometry": 6,
   "Roadway": 1,
@@ -170,7 +194,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 412, Resolution 2 20, Resolution 3 13, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+   "detail": "Resolution 1 424, Resolution 2 32, Resolution 3 13, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
   },
   {
    "check": "C2 library only",
@@ -196,6 +220,11 @@
    "check": "C7 Fire penetration mats",
    "ok": true,
    "detail": "pottery"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "211/211 field points within reach of the bed; 0 eave tile sets, 1 fascia boards"
   },
   {
    "check": "C7 Roadway on Geometry",

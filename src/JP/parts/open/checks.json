@@ -42,7 +42,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.81 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.45 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -60,9 +75,9 @@
      "detail": "expected 2.0, measured 2.0"
     },
     {
-     "check": "C4 leaf_slide_m (= leaf width)",
+     "check": "C4 leaf_slide_m (= leaf width - overlap - STUB)",
      "ok": true,
-     "detail": "expected 1.74, measured 1.74"
+     "detail": "expected 1.5, measured 1.5"
     },
     {
      "check": "C4 leaf_thickness_m",
@@ -117,7 +132,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.81 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.45 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -135,9 +165,9 @@
      "detail": "expected 2.0, measured 2.0"
     },
     {
-     "check": "C4 leaf_slide_m (= leaf width)",
+     "check": "C4 leaf_slide_m (= leaf width - overlap - STUB)",
      "ok": true,
-     "detail": "expected 1.74, measured 1.74"
+     "detail": "expected 1.5, measured 1.5"
     },
     {
      "check": "C4 leaf_thickness_m",
@@ -192,7 +222,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.81 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.45 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -210,9 +255,9 @@
      "detail": "expected 2.0, measured 2.0"
     },
     {
-     "check": "C4 leaf_slide_m (= leaf width)",
+     "check": "C4 leaf_slide_m (= leaf width - overlap - STUB)",
      "ok": true,
-     "detail": "expected 1.74, measured 1.74"
+     "detail": "expected 1.5, measured 1.5"
     },
     {
      "check": "C4 leaf_thickness_m",
@@ -267,7 +312,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.345 m without touching other geometry; open clear width 1.26 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.105 m without touching other geometry; open clear width 1.04 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.82 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.89 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
     },
     {
      "check": "C7 door doors2 selections+memory",
@@ -277,7 +337,22 @@
     {
      "check": "C7 door doors2 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.345 m without touching other geometry; open clear width 1.26 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.105 m without touching other geometry; open clear width 1.04 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors2 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors2 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+    },
+    {
+     "check": "C10 door doors2 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -302,12 +377,192 @@
    ]
   },
   {
+   "id": "jp_p_open_itado_twin",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 162, Resolution 2 30, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "translation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep + clear",
+     "ok": true,
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.83 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.43 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.58 m"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 clear_opening_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.7"
+    },
+    {
+     "check": "C4 leaf_width_m (period ~0.9)",
+     "ok": true,
+     "detail": "expected 0.85-0.95, measured 0.88"
+    },
+    {
+     "check": "C4 head_m",
+     "ok": true,
+     "detail": "expected 2.0, measured 2.0"
+    },
+    {
+     "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+     "ok": true,
+     "detail": "expected 0.22, measured 0.22"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_itado_single",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 126, Resolution 2 36, Resolution 3 24, Geometry 24, Memory 0, Roadway 1, View Geometry 18, Fire Geometry 24"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "translation, 1 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep + clear",
+     "ok": true,
+     "detail": "leaf slides 1.100 m without touching other geometry; open clear width 1.06 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 clear_opening_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.08"
+    },
+    {
+     "check": "C4 leaf_width_m",
+     "ok": true,
+     "detail": "expected 1.30-1.40, measured 1.34"
+    },
+    {
+     "check": "C4 head_m",
+     "ok": true,
+     "detail": "expected 2.0, measured 2.0"
+    },
+    {
+     "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+     "ok": true,
+     "detail": "expected 0.22, measured 0.22"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
    "id": "jp_p_open_shoji_ext_koshidaka",
    "checks": [
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 126, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 104, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -342,7 +597,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.91 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.50 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -360,9 +630,9 @@
      "detail": "expected 2.0, measured 2.0"
     },
     {
-     "check": "C4 leaf_slide_m (= leaf width)",
+     "check": "C4 leaf_slide_m (= leaf width - overlap - STUB)",
      "ok": true,
-     "detail": "expected 1.74, measured 1.74"
+     "detail": "expected 1.5, measured 1.5"
     },
     {
      "check": "C4 lower_board_m",
@@ -382,7 +652,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 132, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 108, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -417,7 +687,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.91 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.50 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -435,9 +720,9 @@
      "detail": "expected 2.0, measured 2.0"
     },
     {
-     "check": "C4 leaf_slide_m (= leaf width)",
+     "check": "C4 leaf_slide_m (= leaf width - overlap - STUB)",
      "ok": true,
-     "detail": "expected 1.74, measured 1.74"
+     "detail": "expected 1.5, measured 1.5"
     },
     {
      "check": "C4 lower_board_m",
@@ -448,6 +733,586 @@
      "check": "C3 grid snap",
      "ok": true,
      "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_shoji_ext_twin",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 198, Resolution 2 30, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "fabric_thin, wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "translation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep + clear",
+     "ok": true,
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.23 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 clear_opening_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.7"
+    },
+    {
+     "check": "C4 leaf_width_m (period ~0.9)",
+     "ok": true,
+     "detail": "expected 0.85-0.95, measured 0.88"
+    },
+    {
+     "check": "C4 head_m",
+     "ok": true,
+     "detail": "expected 2.0, measured 2.0"
+    },
+    {
+     "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+     "ok": true,
+     "detail": "expected 0.22, measured 0.22"
+    },
+    {
+     "check": "C4 lower_board_m",
+     "ok": true,
+     "detail": "expected 0.3, measured 0.3"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_shoji_ext_hikiwake",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 198, Resolution 2 30, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "fabric_thin, wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "translation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep + clear",
+     "ok": true,
+     "detail": "leaf slides 0.640 m without touching other geometry; open clear width 1.24 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.74 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 clear_opening_m (both open)",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.26"
+    },
+    {
+     "check": "C4 leaf_width_m (period ~0.9)",
+     "ok": true,
+     "detail": "expected 0.85-0.95, measured 0.88"
+    },
+    {
+     "check": "C4 head_m",
+     "ok": true,
+     "detail": "expected 2.0, measured 2.0"
+    },
+    {
+     "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+     "ok": true,
+     "detail": "expected 0.22, measured 0.22"
+    },
+    {
+     "check": "C4 lower_board_m",
+     "ok": true,
+     "detail": "expected 0.3, measured 0.3"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "8 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_shoji_ext_single",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 154, Resolution 2 36, Resolution 3 24, Geometry 24, Memory 0, Roadway 1, View Geometry 18, Fire Geometry 24"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "fabric_thin, wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "translation, 1 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep + clear",
+     "ok": true,
+     "detail": "leaf slides 1.100 m without touching other geometry; open clear width 1.06 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.34 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.64 m"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 clear_opening_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.08"
+    },
+    {
+     "check": "C4 leaf_width_m",
+     "ok": true,
+     "detail": "expected 1.30-1.40, measured 1.34"
+    },
+    {
+     "check": "C4 head_m",
+     "ok": true,
+     "detail": "expected 2.0, measured 2.0"
+    },
+    {
+     "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+     "ok": true,
+     "detail": "expected 0.22, measured 0.22"
+    },
+    {
+     "check": "C4 lower_board_m",
+     "ok": true,
+     "detail": "expected 0.3, measured 0.3"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_window_slide_shoji",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 200, Resolution 2 72, Resolution 3 30, Geometry 18, Memory 0, View Geometry 18, Fire Geometry 18"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "fabric_thin, wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "translation, 1 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.41 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.22 m"
+    },
+    {
+     "check": "C4 opening_m",
+     "ok": true,
+     "detail": "expected 0.79 x 1.55, measured 0.79 x 1.55"
+    },
+    {
+     "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+     "ok": true,
+     "detail": "expected 0.22, measured 0.22"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_window_slide_board",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 120, Resolution 2 84, Resolution 3 30, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 18"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "translation, 1 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+    },
+    {
+     "check": "C4 opening_m",
+     "ok": true,
+     "detail": "expected 0.79 x 0.75, measured 0.79 x 0.75"
+    },
+    {
+     "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+     "ok": true,
+     "detail": "expected 0.22, measured 0.22"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_amado_window_twin",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 144, Resolution 2 54, Resolution 3 48, Geometry 42, Memory 0, View Geometry 42, Fire Geometry 42"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "translation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.10 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+    },
+    {
+     "check": "C4 opening_m",
+     "ok": true,
+     "detail": "expected 1.70 x 1.30, measured 1.70 x 1.30"
+    },
+    {
+     "check": "C4 open_stub_m (vanilla 0.22-0.30)",
+     "ok": true,
+     "detail": "expected 0.22, measured 0.22"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_tsukiage_board",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 114, Resolution 2 66, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 18"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "rotation, 1 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.17 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.89 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.03 m"
+    },
+    {
+     "check": "C4 opening_m",
+     "ok": true,
+     "detail": "expected 0.79 x 0.70, measured 0.79 x 0.70"
+    },
+    {
+     "check": "C4 open_angle_deg",
+     "ok": true,
+     "detail": "expected 75.0, measured 75.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
   },
@@ -637,7 +1502,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 421, Resolution 2 146, Resolution 3 61, Geometry 112, Memory 0, Roadway 3, View Geometry 96, Fire Geometry 102"
+     "detail": "Resolution 1 442, Resolution 2 160, Resolution 3 67, Geometry 112, Memory 0, Roadway 3, View Geometry 96, Fire Geometry 102"
     },
     {
      "check": "C2 library only",
@@ -672,7 +1537,27 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.140 m without touching other geometry; open clear width 1.08 m (>= 1.00), head 2.00 m"
+     "detail": "leaf slides 1.040 m without touching other geometry; open clear width 1.00 m (>= 1.00), head 2.00 m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.04 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.65 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.61 m"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "0/0 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -682,7 +1567,7 @@
     {
      "check": "C4 clear_m",
      "ok": true,
-     "detail": "expected >=1.00 x 2.00, measured 1.10 x 2.00"
+     "detail": "expected >=1.00 x 2.00, measured 1.02 x 2.00"
     },
     {
      "check": "C4 leaf_thickness_m",
@@ -712,7 +1597,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 421, Resolution 2 146, Resolution 3 61, Geometry 112, Memory 0, Roadway 3, View Geometry 96, Fire Geometry 102"
+     "detail": "Resolution 1 442, Resolution 2 160, Resolution 3 67, Geometry 112, Memory 0, Roadway 3, View Geometry 96, Fire Geometry 102"
     },
     {
      "check": "C2 library only",
@@ -747,7 +1632,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.140 m without touching other geometry; open clear width 1.08 m (>= 1.00), head 2.00 m"
+     "detail": "leaf slides 1.040 m without touching other geometry; open clear width 1.00 m (>= 1.00), head 2.00 m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.04 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.65 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.61 m"
     },
     {
      "check": "C7 door doors2 selections+memory",
@@ -755,9 +1655,44 @@
      "detail": "rotation, 1 bone(s), axis/action/leaf points"
     },
     {
+     "check": "C7 door doors2 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors2 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.40 m"
+    },
+    {
+     "check": "C10 door doors2 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.05 m"
+    },
+    {
      "check": "C7 door doors3 selections+memory",
      "ok": true,
      "detail": "rotation, 1 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors3 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors3 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+    },
+    {
+     "check": "C10 door doors3 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.12 m"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "0/0 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -767,7 +1702,7 @@
     {
      "check": "C4 clear_m",
      "ok": true,
-     "detail": "expected >=1.00 x 2.00, measured 1.10 x 2.00"
+     "detail": "expected >=1.00 x 2.00, measured 1.02 x 2.00"
     },
     {
      "check": "C4 leaf_thickness_m",
@@ -1067,7 +2002,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 282, Resolution 2 126, Resolution 3 48, Geometry 30, View Geometry 30, Fire Geometry 30"
+     "detail": "Resolution 1 282, Resolution 2 126, Resolution 3 48, Geometry 36, View Geometry 36, Fire Geometry 36"
     },
     {
      "check": "C2 library only",
@@ -1077,17 +2012,17 @@
     {
      "check": "C7 Geometry closed+convex",
      "ok": true,
-     "detail": "5 components, all closed and convex"
+     "detail": "6 components, all closed and convex"
     },
     {
      "check": "C7 View Geometry closed+convex",
      "ok": true,
-     "detail": "5 components, all closed and convex"
+     "detail": "6 components, all closed and convex"
     },
     {
      "check": "C7 Fire Geometry closed+convex",
      "ok": true,
-     "detail": "5 components, all closed and convex"
+     "detail": "6 components, all closed and convex"
     },
     {
      "check": "C7 Fire penetration mats",
@@ -1465,9 +2400,24 @@
      "detail": "translation, 3 bone(s), axis/action/leaf points"
     },
     {
-     "check": "C7 door doors1 sweep + clear",
+     "check": "C7 door doors1 sweep (window / hinged)",
      "ok": true,
-     "detail": "leaf slides 2.000 m without touching other geometry; open clear width 1.68 m (>= 1.00), head 2.00 m"
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.216 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.80 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.81 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.78 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -1497,7 +2447,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 222, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, Fire Geometry 12"
+     "detail": "Resolution 1 222, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -1508,6 +2458,11 @@
      "check": "C7 Geometry closed+convex",
      "ok": true,
      "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
     },
     {
      "check": "C7 Fire Geometry closed+convex",
@@ -1527,7 +2482,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.91 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.50 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -1545,9 +2515,9 @@
      "detail": "expected 2.0, measured 2.0"
     },
     {
-     "check": "C4 leaf_slide_m (= leaf width)",
+     "check": "C4 leaf_slide_m (= leaf width - overlap - STUB)",
      "ok": true,
-     "detail": "expected 1.74, measured 1.74"
+     "detail": "expected 1.5, measured 1.5"
     },
     {
      "check": "C3 grid snap",
@@ -1597,7 +2567,22 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+     "detail": "leaf slides 1.500 m without touching other geometry; open clear width 1.46 m (>= 1.00), head nan m"
+    },
+    {
+     "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
+     "ok": true,
+     "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.91 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.50 m"
     },
     {
      "check": "C7 Roadway on Geometry",
@@ -1615,9 +2600,9 @@
      "detail": "expected 2.0, measured 2.0"
     },
     {
-     "check": "C4 leaf_slide_m (= leaf width)",
+     "check": "C4 leaf_slide_m (= leaf width - overlap - STUB)",
      "ok": true,
-     "detail": "expected 1.74, measured 1.74"
+     "detail": "expected 1.5, measured 1.5"
     },
     {
      "check": "C3 grid snap",
@@ -1632,7 +2617,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 157, Resolution 2 124, Resolution 3 65, Geometry 66, View Geometry 60, Fire Geometry 60"
+     "detail": "Resolution 1 169, Resolution 2 136, Resolution 3 73, Geometry 66, View Geometry 60, Fire Geometry 60"
     },
     {
      "check": "C2 library only",
@@ -1658,6 +2643,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "dirt, wood"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "0/0 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C4 opening_m",
@@ -1687,7 +2677,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 151, Resolution 2 118, Resolution 3 71, Geometry 72, View Geometry 66, Fire Geometry 66"
+     "detail": "Resolution 1 163, Resolution 2 130, Resolution 3 79, Geometry 72, View Geometry 66, Fire Geometry 66"
     },
     {
      "check": "C2 library only",
@@ -1713,6 +2703,11 @@
      "check": "C7 Fire penetration mats",
      "ok": true,
      "detail": "dirt, wood"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "0/0 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
     },
     {
      "check": "C4 opening_m",

@@ -1,0 +1,198 @@
+LAND_JP_MACHIYA_T3_01 - FIX PASS AFTER STEPHEN'S FIRST IN-GAME WALK (G3)
+Fix agent C-FIX, 2026-09-27
+========================================================================
+
+Stephen's verdict: the house looks good, nothing glows. Entrance, walking, every door opening, floor loot and roof
+climbing all work. He approved this pass for the defects below.
+
+Every fix is in the parts library or the kit (so every future building gets it), plus the house recipe. Every lesson
+is now a binding rule in PLAYBOOK §15 (T1-T9), with automated checks C10-C16 (table in §15.2).
+
+Result:
+  - The house: 64/64 checks pass (checks.json). Faces R1/R2/R3 = 11,926 / 4,207 / 1,570 (budget 12,000 / 4,600 /
+    1,600).
+  - The parts: 138 variants, 0 failures.
+  - The new materials: matcheck 6/6 PASS.
+  - The world: build_world.py and build_mission.py both ran. The house passes the float check.
+Nothing was started, stopped or killed. No git.
+
+
+1. WHAT CHANGED, PER DEFECT
+---------------------------
+
+1. "Roof tiles are not on the roof; there's a gap when I get close"
+   Cause: the kawara bed plane sat 0.152 above the rafter plane, but the sheathing top was at 0.072. That left an 8 cm
+   void, open at every eave and verge.
+   Fix (kit, every tile roof):
+   - roofs.tile_bed() adds a fuki-tsuchi clay bed (the arakabe earth) from the sheathing top to the tiles.
+   - roofs.kawara_fascia() adds a fascia board (kayaoi) at every eave, square to the rafters. Its top is 12 mm above
+     the tile bed plane, under the eave tiles, whose lips now hang in front of it.
+   Where it is used:
+   - cover_kawara, so every roofs.roof()
+   - roofparts.pent (street and gable pents)
+   - the kura mini-pents and the kura eave
+   - the field samples
+   - the machiya lean-to
+   Check: C13 (3,644/3,644 field points on the bed; 5 eaves, 5 fascias).
+
+2. "Doors can only be closed from one direction"
+   Research, from the vanilla scripts and ODOLs:
+   - A door is targeted only through the View Geometry component that the camera ray hits: 5 m,
+     ObjIntersectView -> Building.GetDoorIndex.
+   - The hit point and the leaf's memory point must both be within 2 m (CCTCursor and IsInReach).
+   - Vanilla sliding leaves never clear the opening: 0.22-0.5 m stays in it.
+   Fix (kit):
+   - Every sliding leaf now stops with core.STUB = 0.22 m of its broad face inside the opening.
+   - The leaf memory point moves to the trailing edge, as in vanilla.
+   - Every leaf has View Geometry (the open-bar koshido leaf had none).
+   Knock-on fixes:
+   - The kura door opening was widened to 1.24 m (so it still clears 1.02).
+   - The kura outer plaster leaves now meet at the centre and swing 90 deg, not 100 deg (they had overlapped 8 cm and
+     swung back into the surround).
+   - The suriagedo boards stop 0.22 m below the head.
+   Check C10 aims the camera ray at the leaf's broad faces from 15 standing positions per side, open and closed. The
+   far side must hit inside the doorway. It reproduces the old defect (0/15 from the far side) and all 10 doors and
+   windows now pass: 13-15/15 per side.
+   Measured clear widths: entrance 1.46 m, hikiwake 1.24 m, singles 1.06 m (D1 >= 1.00).
+
+3. Door variety
+   New parts (sheet contact_sheets/3c_openings_g3.jpg):
+   - jp_p_open_itado_single, jp_p_open_shoji_ext_single: katabiki, one ~1.34 m leaf beside a fixed half-panel.
+   - jp_p_open_shoji_ext_hikiwake: two leaves parting in the middle.
+   On the house:
+   - entrance: hikichigai (the twin, main entrance only)
+   - mise <-> zashiki: hikiwake
+   - toriniwa -> zashiki and toriniwa -> mise: single shoji (their stepping stones re-centred on the narrower opening)
+   - back door and kitchen -> storage: single itado
+   Where each style belongs: PLAYBOOK §15 T3.
+
+4. "From inside I can see outside" (the tatami room)
+   The C11 ray check found two slits:
+   - (a) The degoshi head board stopped 2 cm under the wall's head rail, so there was a slit at 2.25-2.27 m: eye height
+     for someone standing on the 0.50 m tatami.
+   - (b) A diagonal slit where the toriniwa's outside board wall met the plaster wall above (2.2 m).
+   Fixes (kit):
+   - The degoshi head board now runs up to the head rail and back to the wall's inner face (Geometry, View and Fire).
+   - Every board_vertical wall run gets a top rail across its full thickness.
+   Pent soffit: C11 shows the street pent was already closed. No leak ran through it, so no soffit board was needed.
+   The note for future models is PLAYBOOK §15 T5, and the check is C11 (rooms: 0 leaks; 17 rays leave through door
+   and window portals, which is allowed).
+
+5. Openable windows
+   New parts, all animated like doors, all engine-untested:
+   - jp_p_open_window_slide_shoji / _board: a sliding panel behind a koshi lattice or renji bars.
+   - jp_p_open_amado_window_twin: two storm shutters stowing in a tobukuro box.
+   - jp_p_open_tsukiage_board: a top-hinged push-up shutter (rotation, 75 deg).
+   On the house:
+   - DoorsTwin7: the street window (B2b)
+   - DoorsTwin8: the zashiki gable window (replaces the koshi; the 2.5-ken post was removed)
+   - DoorsTwin9: the kitchen window (replaces the static renji)
+   - DoorsTwin10: the storage gable window (sill 1.18 m above the storage floor, clear of the wainscot)
+   Rotation sense: +angle1 turns by the right-hand rule about axis point 1 -> 2. This was read off 10 vanilla vehicle
+   doors, hoods and trunks. build.py now writes type="rotation" / angle1 for rotation leaves.
+
+6. Interior walls dark and greenish
+   New material jp_m_wall_nakanuri_int (palette earth_wall_aged, warmer, unweathered, about the same lightness; mean
+   (127,99,75), dE 6.6/14).
+   - walls.wall_run(interior='back'|'both') puts it on every face that looks into a room. The house uses it on
+     exterior walls (the inside face), partitions (both faces) and the kamado.
+   - Check: C14 (no exterior-weathered earth face looks into a room).
+
+7. Roof LOD pops
+   (a) Too shiny and flat at range: new jp_m_roof_kawara_far for the Resolution 2 and 3 fields.
+       - It is matte: 0.22/35 against 0.6/90.
+       - The LOD0 corrugation and course shadows are baked into colour and normal map.
+       - Its mean is 4 L* darker (dE 3-12/14).
+       - The Resolution 3 field is one quad per slope.
+       - Check: C16.
+   (b) Ridge-end ornaments popping: every LOD now keeps the ridge stack (Resolution 2 and 3 blocks), the ridge ends,
+       the onigawara (two prisms and its back block), the verge strips, the eave strip and the udatsu cap courses.
+       Before, the Resolution 3 ridge cap floated 0.17 m over nothing. Check: C15 (Resolution 2/3 top heights within
+       0.10 m of Resolution 1).
+   (c) "Something on the side clips into the roof": the tile gable's board band and rail were full rectangles that
+       rose through the roof at both eave corners, in LOD 1-2 only. They are now clipped 2 cm under the roof lines
+       (walls.gable). This was also what Stephen saw on the parts sheet (2b gables). Check: C12 (5 roof bodies clear).
+   Also: the flashing strips' invisible caps were dropped (-39 faces per LOD).
+
+
+2. NEW CHECKS (PLAYBOOK §15.2)
+------------------------------
+  C10 door reach (parts + buildings)          C11 envelope leak (buildings)
+  C12 roof / wall intersection (buildings)    C13 tile seating (parts + buildings)
+  C14 interior material (buildings)           C15 stable silhouette (buildings)
+  C16 far-LOD kawara material (buildings)
+The building checks live in parts/kit/jpparts/buildcheck.py (run_g3), and every building's verify.py should call it.
+Ray tools: jpparts/raycheck.py. Part checks: jpparts/checks.py. Materials: parts/kit/make_fix_materials.py.
+
+
+3. FILES
+--------
+Kit (parts/kit/):
+  jpparts/core.py         STUB, the leaf-point rule, anim_point_fn / ROT_SIGN, Solid.src
+  jpparts/openings.py     single / hikiwake / window parts, stubs, the degoshi head, kura fixes, open_bar
+  jpparts/roofs.py        tile_bed, kawara_fascia
+  jpparts/roofparts.py    pent and samples seated
+  jpparts/kawara.py       far material, LOD ridge / onigawara / verge
+  jpparts/walls.py        interior clay, board top rail, clipped gable bands, udatsu cap LOD
+  jpparts/checks.py, raycheck.py (new), buildcheck.py (new)
+  render_parts.py         rotation leaves
+  render_sheets.py        sheet 3c
+  make_fix_materials.py   (new)
+Parts:
+  src/JP/parts/*          138 variants
+  parts/manifest.json
+  contact sheets 2a 2b 3 3b 3c 5a 5b 6, re-rendered (sheet 8, the test assembly, was not)
+Materials:
+  src/JP/common/materials/wall/jp_m_wall_nakanuri_int*
+  src/JP/common/materials/roof/jp_m_roof_kawara_far*
+  checks_fix.json
+  @Japan/addons/jp_common.pbo, repacked
+House:
+  machiya_t3_01.py, build.py (rotation model.cfg), verify.py, render_machiya.py, checks.json, rooms.json
+  machiya_t3_01_sheet.jpg (18 views)
+  src/JP/buildings (config.cpp: 10 DoorsTwin, 6 doors + 4 windows; ODOL)
+  @Japan/addons/jp_buildings.pbo
+  test/placements/C.csv, test/ce/C_* (rewritten, unchanged in content except loot)
+World:
+  build_world.py: the house is OK in the float check. The 27 failures are T's bushes, roads and one oak, none of them
+  mine.
+  build_mission.py: the house group matches its wrp object exactly.
+  The navmesh still predates the house.
+
+
+4. DECISIONS I MADE
+-------------------
+- STUB 0.22 m. It is the vanilla minimum, and it keeps every door at or above 1.06 m clear.
+- The single door is narrowed by a fixed half-panel (1.30 m opening). A half-ken bay is only 0.79 m, below D1.
+- The toriniwa room entrances are single shoji, not hikiwake. There is no room for a half-ken park bay on both sides
+  (the partition meets that wall).
+- The interior clay is ochre-warm (+4 a*, +5 b*), not red. The first +6 a* try looked pink.
+- The far kawara material is also used in Resolution 2 (on its 2-segment geometry), not only in Resolution 3.
+- The storage tsukiage sits high (sill 1.18 m) so its shutter clears the 0.90 m wainscot.
+- Shikkui has no interior twin yet. Only the sealed loft and the lean-to face of the omoya back wall show it inside.
+  Logged in OPEN_ISSUES.
+
+
+5. IN-GAME RE-CHECK FOR STEPHEN (7 items; the Japan server needs a restart for the new PBOs)
+------------------------------------------------------------------------------------------
+1. Roof up close: from the ground at a front corner and from the lean-to roof edge, look along the eaves and the
+   gable verges.
+   Pass: the tiles sit on a clay bed, there is a board under the eave tiles, and no daylight shows between tiles and
+   boards.
+2. Doors from both sides: close and open all 6 doors from the side the leaves do NOT park on. For example, the entrance
+   from inside: aim at the leaf edges that stay about 0.2 m inside the doorway.
+   Pass: "close" works from both sides everywhere.
+3. Door styles: the entrance leaves both stack right; mise <-> zashiki parts in the middle; the other four are single
+   leaves beside a fixed panel. Walk through each one.
+   Pass: easy to pass, nothing clips.
+4. Windows, from inside: the street window (shop), the kitchen window, the zashiki window (also from outside) and the
+   storage window (outside, back right).
+   Pass: all four open and close. The storage shutter swings UP and OUT. If it swings inward, tell me: it is a
+   one-line axis swap.
+5. Standing on the tatami in the shop, look at the two lattice bays.
+   Pass: no outside is visible above the lattice or at the gable wall.
+6. Interior walls in the rooms and the toriniwa.
+   Pass: warmer clay, not greenish, still dark. Say "lighter", "darker" or "less red" if needed; it is one number.
+7. Walk out to about 150 m and back.
+   Pass: the roof keeps its matte, dark look (no shiny, flat far LOD); the ridge ends and onigawara stay put; nothing
+   pokes out of the roof at the gable corners.

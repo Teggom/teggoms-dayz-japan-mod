@@ -30,7 +30,7 @@
   1.8,
   0.33,
   2.0,
-  -0.02,
+  -0.06,
   0.42
  ],
  "dims": [
@@ -121,9 +121,9 @@
   "Resolution 1": 282,
   "Resolution 2": 126,
   "Resolution 3": 48,
-  "Geometry": 30,
-  "View Geometry": 30,
-  "Fire Geometry": 30
+  "Geometry": 36,
+  "View Geometry": 36,
+  "Fire Geometry": 36
  },
  "contributes": [
   "Resolution 1",
@@ -141,7 +141,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 282, Resolution 2 126, Resolution 3 48, Geometry 30, View Geometry 30, Fire Geometry 30"
+   "detail": "Resolution 1 282, Resolution 2 126, Resolution 3 48, Geometry 36, View Geometry 36, Fire Geometry 36"
   },
   {
    "check": "C2 library only",
@@ -151,17 +151,17 @@
   {
    "check": "C7 Geometry closed+convex",
    "ok": true,
-   "detail": "5 components, all closed and convex"
+   "detail": "6 components, all closed and convex"
   },
   {
    "check": "C7 View Geometry closed+convex",
    "ok": true,
-   "detail": "5 components, all closed and convex"
+   "detail": "6 components, all closed and convex"
   },
   {
    "check": "C7 Fire Geometry closed+convex",
    "ok": true,
-   "detail": "5 components, all closed and convex"
+   "detail": "6 components, all closed and convex"
   },
   {
    "check": "C7 Fire penetration mats",

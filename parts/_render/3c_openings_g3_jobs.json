@@ -1,0 +1,261 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\3c_openings_g3",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_open_itado_single",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      2.73,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "narrow single plank door (katabiki) for side, back and kitchen doors: one ~1.34 m leaf beside a fixed half-panel, 1.08 m clear (PLAYBOOK \u00a715 door styles)"
+  },
+  {
+   "name": "jp_p_open_shoji_ext_hikiwake",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      -0.91,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      2.73,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "interior shoji / fusuma pair that parts in the middle (hikiwake): two ~0.88 m leaves slide apart over a half-ken each side, 1.26 m clear (PLAYBOOK \u00a715 door styles)"
+  },
+  {
+   "name": "jp_p_open_shoji_ext_single",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      2.73,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "narrow single shoji door beside a fixed shoji panel (room entrances off the doma): one ~1.34 m leaf, 1.08 m clear (PLAYBOOK \u00a715 door styles)"
+  },
+  {
+   "name": "jp_p_open_window_slide_shoji",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.91,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "half-ken street / room window: fine koshi lattice outside, a sliding shoji panel inside (T2-3 town fronts and rooms)"
+  },
+  {
+   "name": "jp_p_open_window_slide_board",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.91,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "half-ken kitchen / work window: wooden renji bars outside, a sliding board shutter inside (T1-3 kitchens, stables, workshops)"
+  },
+  {
+   "name": "jp_p_open_amado_window_twin",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      2.73,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "1-ken room window (zashiki, inn rooms) closed by two amado storm shutters that stow in a tobukuro box beside it (T2-3)"
+  },
+  {
+   "name": "jp_p_open_tsukiage_board",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.91,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "half-ken storage / farmhouse / shop-side window: wooden bars and a board shutter hinged at the top that is pushed up and out (tsukiage / hanemage)"
+  }
+ ]
+}

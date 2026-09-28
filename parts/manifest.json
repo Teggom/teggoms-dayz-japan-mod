@@ -1288,12 +1288,12 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 90,
-    "Resolution 2": 42,
-    "Resolution 3": 6,
-    "Geometry": 6,
-    "View Geometry": 6,
-    "Fire Geometry": 6
+    "Resolution 1": 96,
+    "Resolution 2": 48,
+    "Resolution 3": 12,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
    },
    "contributes": [
     "Resolution 1",
@@ -1388,12 +1388,12 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 54,
-    "Resolution 2": 42,
-    "Resolution 3": 6,
-    "Geometry": 6,
-    "View Geometry": 6,
-    "Fire Geometry": 6
+    "Resolution 1": 60,
+    "Resolution 2": 48,
+    "Resolution 3": 12,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
    },
    "contributes": [
     "Resolution 1",
@@ -2562,7 +2562,7 @@
    "lod_faces": {
     "Resolution 1": 37,
     "Resolution 2": 37,
-    "Resolution 3": 19,
+    "Resolution 3": 25,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -2650,7 +2650,7 @@
    "lod_faces": {
     "Resolution 1": 62,
     "Resolution 2": 62,
-    "Resolution 3": 38,
+    "Resolution 3": 50,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -2932,9 +2932,9 @@
      "source": "D2"
     },
     {
-     "name": "leaf_slide_m (= leaf width)",
-     "expected": 1.74,
-     "measured": 1.74,
+     "name": "leaf_slide_m (= leaf width - overlap - STUB)",
+     "expected": 1.5,
+     "measured": 1.5,
      "tol": 0.01,
      "source": "build_list"
     },
@@ -3046,14 +3046,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.0,
      "init_opened": 0.3,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": true,
      "note": "exterior leaf, parks over the next bay"
     }
@@ -3102,9 +3102,9 @@
      "source": "D2"
     },
     {
-     "name": "leaf_slide_m (= leaf width)",
-     "expected": 1.74,
-     "measured": 1.74,
+     "name": "leaf_slide_m (= leaf width - overlap - STUB)",
+     "expected": 1.5,
+     "measured": 1.5,
      "tol": 0.01,
      "source": "build_list"
     },
@@ -3228,14 +3228,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.0,
      "init_opened": 0.3,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": true,
      "note": "exterior leaf, parks over the next bay"
     }
@@ -3284,9 +3284,9 @@
      "source": "D2"
     },
     {
-     "name": "leaf_slide_m (= leaf width)",
-     "expected": 1.74,
-     "measured": 1.74,
+     "name": "leaf_slide_m (= leaf width - overlap - STUB)",
+     "expected": 1.5,
+     "measured": 1.5,
      "tol": 0.01,
      "source": "build_list"
     },
@@ -3410,14 +3410,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.0,
      "init_opened": 0.3,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": true,
      "note": "exterior leaf, parks over the next bay"
     }
@@ -3596,14 +3596,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.345,
+       "amount": 1.105,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.0,
      "init_opened": 0.3,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.26,
+     "clear_width_m": 1.04,
      "engine_tested": true,
      "note": "left leaf"
     },
@@ -3616,14 +3616,14 @@
        "bone": "doors2",
        "type": "translation",
        "axis_memory": "doors2_axis",
-       "amount": 1.345,
+       "amount": 1.105,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.0,
      "init_opened": 0.3,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.26,
+     "clear_width_m": 1.04,
      "engine_tested": true,
      "note": "right leaf"
     }
@@ -3677,6 +3677,13 @@
      "measured": 2.0,
      "tol": 0.01,
      "source": "D2"
+    },
+    {
+     "name": "open_stub_m (vanilla 0.22-0.30)",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "G3 fix: vanilla sliding doors"
     }
    ],
    "connectors": [
@@ -3803,27 +3810,221 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       },
       {
        "bone": "doors2",
        "type": "translation",
        "axis_memory": "doors2_axis",
-       "amount": 0.88,
+       "amount": 0.64,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.0,
      "init_opened": 0.3,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": false,
      "note": "exterior leaves, two outside tracks, park stacked over the next half-ken"
     }
    ],
    "deviation": null,
    "datum": "1-ken door bay between post nodes x=0 and x=1.82 + a half-ken park bay to x=2.73; y 0 = sill/floor",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_itado_single",
+   "part": "jp_p_open_itado",
+   "variant": "_single",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_itado_single.p3d",
+   "build_list": {
+    "entry": "jp_p_open_itado",
+    "variant": null,
+    "differs_by": null,
+    "priority": "P1",
+    "importance": "hero",
+    "refs": [
+     "x04_misawa_a",
+     "c02_narai_facade",
+     "x33_jinrin_bookseller_1690"
+    ]
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "narrow single plank door (katabiki) for side, back and kitchen doors: one ~1.34 m leaf beside a fixed half-panel, 1.08 m clear (PLAYBOOK §15 door styles)",
+   "dims": [
+    {
+     "name": "clear_opening_m",
+     "expected": ">=1.00",
+     "measured": 1.08,
+     "tol": 0.01,
+     "source": "D1",
+     "ok": true
+    },
+    {
+     "name": "leaf_width_m",
+     "expected": "1.30-1.40",
+     "measured": 1.34,
+     "tol": 0.01,
+     "source": "D1 + STUB (period back doors ~0.9; gameplay wins)"
+    },
+    {
+     "name": "head_m",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "D2"
+    },
+    {
+     "name": "open_stub_m (vanilla 0.22-0.30)",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "G3 fix: vanilla sliding doors"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "runs in a grooved sill at floor level"
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ]
+    },
+    {
+     "type": "park",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "exterior",
+     "note": "the next half-ken must be a plain wall on this face: the leaf parks over the fixed panel and there"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_street_dark",
+     "id": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_street_dark<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 36,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "Roadway": 1,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "plank door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "translation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.1,
+       "unit": "m (translation; axis 1.00 m)"
+      }
+     ],
+     "anim_period": 1.0,
+     "init_opened": 0.3,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.06,
+     "engine_tested": false,
+     "note": "exterior leaf, parks over the fixed panel and the next half-ken"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken door bay between post nodes x=0 and x=1.82 (opening x 0.06..1.36, fixed panel 1.36..1.76) + a half-ken park bay to x=2.73; y 0 = sill/floor",
    "recipe": null
   },
   {
@@ -3865,9 +4066,9 @@
      "source": "D2"
     },
     {
-     "name": "leaf_slide_m (= leaf width)",
-     "expected": 1.74,
-     "measured": 1.74,
+     "name": "leaf_slide_m (= leaf width - overlap - STUB)",
+     "expected": 1.5,
+     "measured": 1.5,
      "tol": 0.01,
      "source": "build_list"
     },
@@ -3961,7 +4162,7 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 126,
+    "Resolution 1": 104,
     "Resolution 2": 24,
     "Resolution 3": 12,
     "Geometry": 12,
@@ -3991,14 +4192,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 0.8,
      "init_opened": 0.5,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": true,
      "note": "paper door, interior track"
     }
@@ -4047,9 +4248,9 @@
      "source": "D2"
     },
     {
-     "name": "leaf_slide_m (= leaf width)",
-     "expected": 1.74,
-     "measured": 1.74,
+     "name": "leaf_slide_m (= leaf width - overlap - STUB)",
+     "expected": 1.5,
+     "measured": 1.5,
      "tol": 0.01,
      "source": "build_list"
     },
@@ -4143,7 +4344,7 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 132,
+    "Resolution 1": 108,
     "Resolution 2": 24,
     "Resolution 3": 12,
     "Geometry": 12,
@@ -4173,14 +4374,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 0.8,
      "init_opened": 0.5,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": true,
      "note": "paper door, interior track"
     }
@@ -4234,6 +4435,13 @@
      "measured": 2.0,
      "tol": 0.01,
      "source": "D2"
+    },
+    {
+     "name": "open_stub_m (vanilla 0.22-0.30)",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "G3 fix: vanilla sliding doors"
     },
     {
      "name": "lower_board_m",
@@ -4325,7 +4533,7 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 246,
+    "Resolution 1": 198,
     "Resolution 2": 30,
     "Resolution 3": 18,
     "Geometry": 18,
@@ -4355,27 +4563,992 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       },
       {
        "bone": "doors2",
        "type": "translation",
        "axis_memory": "doors2_axis",
-       "amount": 0.88,
+       "amount": 0.64,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 0.8,
      "init_opened": 0.5,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": false,
      "note": "paper leaves, two interior tracks"
     }
    ],
    "deviation": null,
    "datum": "1-ken door bay between post nodes x=0 and x=1.82 + a half-ken park bay to x=2.73; y 0 = sill/floor",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_shoji_ext_hikiwake",
+   "part": "jp_p_open_shoji_ext",
+   "variant": "_hikiwake",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_shoji_ext_hikiwake.p3d",
+   "build_list": {
+    "entry": "jp_p_open_shoji_ext",
+    "variant": null,
+    "differs_by": null,
+    "priority": "P1",
+    "importance": "standard",
+    "refs": [
+     "x35_hiroshige_goyu",
+     "x28_morse_inn_mishima",
+     "x07_sasaki_1985"
+    ]
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "interior shoji / fusuma pair that parts in the middle (hikiwake): two ~0.88 m leaves slide apart over a half-ken each side, 1.26 m clear (PLAYBOOK §15 door styles)",
+   "dims": [
+    {
+     "name": "clear_opening_m (both open)",
+     "expected": ">=1.00",
+     "measured": 1.26,
+     "tol": 0.01,
+     "source": "D1",
+     "ok": true
+    },
+    {
+     "name": "leaf_width_m (period ~0.9)",
+     "expected": "0.85-0.95",
+     "measured": 0.88,
+     "tol": 0.01,
+     "source": "Stephen 2026-09-27"
+    },
+    {
+     "name": "head_m",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "D2"
+    },
+    {
+     "name": "open_stub_m (vanilla 0.22-0.30)",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "G3 fix: vanilla sliding doors"
+    },
+    {
+     "name": "lower_board_m",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      -0.91,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "runs in a grooved sill at floor level"
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ]
+    },
+    {
+     "type": "park",
+     "pos": [
+      -0.91,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "interior",
+     "note": "left leaf parks here: plain wall on this face"
+    },
+    {
+     "type": "park",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "interior",
+     "note": "right leaf parks here: plain wall on this face"
+    }
+   ],
+   "materials": [
+    {
+     "key": "paper_shoji",
+     "id": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji",
+     "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 198,
+    "Resolution 2": 30,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "Memory": 0,
+    "Roadway": 1,
+    "View Geometry": 12,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "shoji",
+     "display": "shoji door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "translation",
+       "axis_memory": "doors1_axis",
+       "amount": 0.64,
+       "unit": "m (translation; axis 1.00 m)"
+      },
+      {
+       "bone": "doors2",
+       "type": "translation",
+       "axis_memory": "doors2_axis",
+       "amount": 0.64,
+       "unit": "m (translation; axis 1.00 m)"
+      }
+     ],
+     "anim_period": 0.8,
+     "init_opened": 0.5,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.24,
+     "engine_tested": false,
+     "note": "paper leaves, two interior tracks"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken door bay between post nodes x=0 and x=1.82 + half-ken park bays x=-0.91..0 and 1.82..2.73; y 0 = sill/floor",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_shoji_ext_single",
+   "part": "jp_p_open_shoji_ext",
+   "variant": "_single",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_shoji_ext_single.p3d",
+   "build_list": {
+    "entry": "jp_p_open_shoji_ext",
+    "variant": null,
+    "differs_by": null,
+    "priority": "P1",
+    "importance": "standard",
+    "refs": [
+     "x35_hiroshige_goyu",
+     "x28_morse_inn_mishima",
+     "x07_sasaki_1985"
+    ]
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "narrow single shoji door beside a fixed shoji panel (room entrances off the doma): one ~1.34 m leaf, 1.08 m clear (PLAYBOOK §15 door styles)",
+   "dims": [
+    {
+     "name": "clear_opening_m",
+     "expected": ">=1.00",
+     "measured": 1.08,
+     "tol": 0.01,
+     "source": "D1",
+     "ok": true
+    },
+    {
+     "name": "leaf_width_m",
+     "expected": "1.30-1.40",
+     "measured": 1.34,
+     "tol": 0.01,
+     "source": "D1 + STUB (period back doors ~0.9; gameplay wins)"
+    },
+    {
+     "name": "head_m",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "D2"
+    },
+    {
+     "name": "open_stub_m (vanilla 0.22-0.30)",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "G3 fix: vanilla sliding doors"
+    },
+    {
+     "name": "lower_board_m",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "runs in a grooved sill at floor level"
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ]
+    },
+    {
+     "type": "park",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "interior",
+     "note": "the next half-ken must be a plain wall on this face: the leaf parks over the fixed panel and there"
+    }
+   ],
+   "materials": [
+    {
+     "key": "paper_shoji",
+     "id": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji",
+     "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 154,
+    "Resolution 2": 36,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "Roadway": 1,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "shoji",
+     "display": "shoji door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "translation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.1,
+       "unit": "m (translation; axis 1.00 m)"
+      }
+     ],
+     "anim_period": 0.8,
+     "init_opened": 0.5,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.06,
+     "engine_tested": false,
+     "note": "paper leaf, interior track"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken door bay between post nodes x=0 and x=1.82 (opening x 0.06..1.36, fixed panel 1.36..1.76) + a half-ken park bay to x=2.73; y 0 = sill/floor",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_window_slide_shoji",
+   "part": "jp_p_open_window_slide",
+   "variant": "_shoji",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_window_slide_shoji.p3d",
+   "build_list": {
+    "entry": "jp_p_open_window_slide",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "half-ken street / room window: fine koshi lattice outside, a sliding shoji panel inside (T2-3 town fronts and rooms)",
+   "dims": [
+    {
+     "name": "opening_m",
+     "expected": "0.79 x 1.55",
+     "measured": "0.79 x 1.55",
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "open_stub_m (vanilla 0.22-0.30)",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "G3 fix: vanilla sliding doors"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.91,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "park",
+     "pos": [
+      0.91,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "interior",
+     "note": "the next half-ken must be a plain wall on the inside face: the panel parks there"
+    }
+   ],
+   "materials": [
+    {
+     "key": "paper_shoji",
+     "id": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji",
+     "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_street_dark",
+     "id": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_street_dark<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 200,
+    "Resolution 2": 72,
+    "Resolution 3": 30,
+    "Geometry": 18,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "shoji",
+     "display": "window",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "translation",
+       "axis_memory": "doors1_axis",
+       "amount": 0.59,
+       "unit": "m (translation; axis 1.00 m)"
+      }
+     ],
+     "anim_period": 0.6,
+     "init_opened": 0.4,
+     "sound": "doorWoodSlide",
+     "clear_width_m": null,
+     "engine_tested": false,
+     "note": "sliding window panel, inside face"
+    }
+   ],
+   "deviation": null,
+   "datum": "half-ken bay between post nodes x=0 and x=0.91 + the next half-ken (0.91..1.82) as the inside park bay; y 0 = floor; opening 0.45-2.00 (koshi window)",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_window_slide_board",
+   "part": "jp_p_open_window_slide",
+   "variant": "_board",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_window_slide_board.p3d",
+   "build_list": {
+    "entry": "jp_p_open_window_slide",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "half-ken kitchen / work window: wooden renji bars outside, a sliding board shutter inside (T1-3 kitchens, stables, workshops)",
+   "dims": [
+    {
+     "name": "opening_m",
+     "expected": "0.79 x 0.75",
+     "measured": "0.79 x 0.75",
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "open_stub_m (vanilla 0.22-0.30)",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "G3 fix: vanilla sliding doors"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.91,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "park",
+     "pos": [
+      0.91,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "interior",
+     "note": "the next half-ken must be a plain wall on the inside face: the panel parks there"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 120,
+    "Resolution 2": 84,
+    "Resolution 3": 30,
+    "Geometry": 24,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "window",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "translation",
+       "axis_memory": "doors1_axis",
+       "amount": 0.59,
+       "unit": "m (translation; axis 1.00 m)"
+      }
+     ],
+     "anim_period": 0.6,
+     "init_opened": 0.4,
+     "sound": "doorWoodSlide",
+     "clear_width_m": null,
+     "engine_tested": false,
+     "note": "sliding window panel, inside face"
+    }
+   ],
+   "deviation": null,
+   "datum": "half-ken bay between post nodes x=0 and x=0.91 + the next half-ken (0.91..1.82) as the inside park bay; y 0 = floor; opening 0.90-1.65 (renji)",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_amado_window_twin",
+   "part": "jp_p_open_amado_window",
+   "variant": "_twin",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_amado_window_twin.p3d",
+   "build_list": {
+    "entry": "jp_p_open_amado_window",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "1-ken room window (zashiki, inn rooms) closed by two amado storm shutters that stow in a tobukuro box beside it (T2-3)",
+   "dims": [
+    {
+     "name": "opening_m",
+     "expected": "1.70 x 1.30",
+     "measured": "1.70 x 1.30",
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "open_stub_m (vanilla 0.22-0.30)",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "G3 fix: vanilla sliding doors"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "park",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "exterior",
+     "note": "the tobukuro box covers the next half-ken on the outside: plain wall there"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 144,
+    "Resolution 2": 54,
+    "Resolution 3": 48,
+    "Geometry": 42,
+    "Memory": 0,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "window",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "translation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.5,
+       "unit": "m (translation; axis 1.00 m)"
+      },
+      {
+       "bone": "doors2",
+       "type": "translation",
+       "axis_memory": "doors2_axis",
+       "amount": 0.64,
+       "unit": "m (translation; axis 1.00 m)"
+      }
+     ],
+     "anim_period": 1.0,
+     "init_opened": 0.5,
+     "sound": "doorWoodSlide",
+     "clear_width_m": null,
+     "engine_tested": false,
+     "note": "amado storm shutters, outside tracks"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x=0 and x=1.82 + the tobukuro over the next half-ken (to 2.73); y 0 = room floor; opening 0.70-2.00",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_tsukiage_board",
+   "part": "jp_p_open_tsukiage",
+   "variant": "_board",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_tsukiage_board.p3d",
+   "build_list": {
+    "entry": "jp_p_open_tsukiage",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "half-ken storage / farmhouse / shop-side window: wooden bars and a board shutter hinged at the top that is pushed up and out (tsukiage / hanemage)",
+   "dims": [
+    {
+     "name": "opening_m",
+     "expected": "0.79 x 0.70",
+     "measured": "0.79 x 0.70",
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "open_angle_deg",
+     "expected": 75.0,
+     "measured": 75.0,
+     "tol": 0.5,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.91,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      1.65,
+      0.0
+     ],
+     "note": "hinge line on the outside of the head rail"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 114,
+    "Resolution 2": 66,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "window",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "rotation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.309,
+       "unit": "rad"
+      }
+     ],
+     "anim_period": 1.2,
+     "init_opened": 0.5,
+     "sound": "doorWoodSlide",
+     "clear_width_m": null,
+     "engine_tested": false,
+     "note": "top-hinged push-up shutter (rotation about the head, 75 deg)"
+    }
+   ],
+   "deviation": null,
+   "datum": "half-ken bay between post nodes x=0 and x=0.91; y 0 = floor; opening 0.90-1.60",
    "recipe": null
   },
   {
@@ -4820,7 +5993,7 @@
     {
      "name": "clear_m",
      "expected": ">=1.00 x 2.00",
-     "measured": "1.10 x 2.00",
+     "measured": "1.02 x 2.00",
      "tol": 0.01,
      "source": "build_list / D1",
      "ok": true
@@ -4914,6 +6087,18 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
@@ -4930,6 +6115,18 @@
      "id": "jp_m_stone_cut",
      "palette_id": "stone_granite",
      "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -4963,9 +6160,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 421,
-    "Resolution 2": 146,
-    "Resolution 3": 61,
+    "Resolution 1": 442,
+    "Resolution 2": 160,
+    "Resolution 3": 67,
     "Geometry": 112,
     "Memory": 0,
     "Roadway": 3,
@@ -4993,14 +6190,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.14,
+       "amount": 1.04,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.0,
      "init_opened": 0.3,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.08,
+     "clear_width_m": 1.0,
      "engine_tested": true,
      "note": "inner sliding door (game door)"
     }
@@ -5035,7 +6232,7 @@
     {
      "name": "clear_m",
      "expected": ">=1.00 x 2.00",
-     "measured": "1.10 x 2.00",
+     "measured": "1.02 x 2.00",
      "tol": 0.01,
      "source": "build_list / D1",
      "ok": true
@@ -5129,6 +6326,18 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
@@ -5145,6 +6354,18 @@
      "id": "jp_m_stone_cut",
      "palette_id": "stone_granite",
      "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -5178,9 +6399,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 421,
-    "Resolution 2": 146,
-    "Resolution 3": 61,
+    "Resolution 1": 442,
+    "Resolution 2": 160,
+    "Resolution 3": 67,
     "Geometry": 112,
     "Memory": 0,
     "Roadway": 3,
@@ -5208,14 +6429,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.14,
+       "amount": 1.04,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.0,
      "init_opened": 0.3,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.08,
+     "clear_width_m": 1.0,
      "engine_tested": true,
      "note": "inner sliding door (game door)"
     },
@@ -5228,7 +6449,7 @@
        "bone": "doors2",
        "type": "rotation",
        "axis_memory": "doors2_axis",
-       "amount": 1.7453,
+       "amount": 1.5708,
        "unit": "rad"
       }
      ],
@@ -5248,7 +6469,7 @@
        "bone": "doors3",
        "type": "rotation",
        "axis_memory": "doors3_axis",
-       "amount": 1.7453,
+       "amount": 1.5708,
        "unit": "rad"
       }
      ],
@@ -5999,9 +7220,9 @@
     "Resolution 1": 282,
     "Resolution 2": 126,
     "Resolution 3": 48,
-    "Geometry": 30,
-    "View Geometry": 30,
-    "Fire Geometry": 30
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
    },
    "contributes": [
     "Resolution 1",
@@ -6827,30 +8048,30 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 2.0,
+       "amount": 1.78,
        "unit": "m (translation; axis 1.00 m)"
       },
       {
        "bone": "doors2",
        "type": "translation",
        "axis_memory": "doors2_axis",
-       "amount": 1.3333,
+       "amount": 1.1133,
        "unit": "m (translation; axis 1.00 m)"
       },
       {
        "bone": "doors3",
        "type": "translation",
        "axis_memory": "doors3_axis",
-       "amount": 0.6667,
+       "amount": 0.4467,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 1.6,
      "init_opened": 1.0,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": null,
      "engine_tested": false,
-     "note": "3 boards on one source; vertical translation (engine test)"
+     "note": "3 boards on one source; vertical translation (engine test); open, the bottom board hangs STUB below the head (vanilla rule), so it is a shop window, not a walk-through"
     }
    ],
    "deviation": null,
@@ -6896,9 +8117,9 @@
      "source": "D2"
     },
     {
-     "name": "leaf_slide_m (= leaf width)",
-     "expected": 1.74,
-     "measured": 1.74,
+     "name": "leaf_slide_m (= leaf width - overlap - STUB)",
+     "expected": 1.5,
+     "measured": 1.5,
      "tol": 0.01,
      "source": "build_list"
     }
@@ -6991,6 +8212,7 @@
     "Geometry": 12,
     "Memory": 0,
     "Roadway": 1,
+    "View Geometry": 6,
     "Fire Geometry": 12
    },
    "contributes": [
@@ -7000,6 +8222,7 @@
     "Geometry",
     "Memory",
     "Roadway",
+    "View Geometry",
     "Fire Geometry"
    ],
    "walkable": true,
@@ -7013,14 +8236,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 0.8,
      "init_opened": 0.5,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": true,
      "note": "interior leaf, parks inside over the next bay"
     }
@@ -7068,9 +8291,9 @@
      "source": "D2"
     },
     {
-     "name": "leaf_slide_m (= leaf width)",
-     "expected": 1.74,
-     "measured": 1.74,
+     "name": "leaf_slide_m (= leaf width - overlap - STUB)",
+     "expected": 1.5,
+     "measured": 1.5,
      "tol": 0.01,
      "source": "build_list"
     }
@@ -7199,14 +8422,14 @@
        "bone": "doors1",
        "type": "translation",
        "axis_memory": "doors1_axis",
-       "amount": 1.74,
+       "amount": 1.5,
        "unit": "m (translation; axis 1.00 m)"
       }
      ],
      "anim_period": 0.8,
      "init_opened": 0.5,
      "sound": "doorWoodSlide",
-     "clear_width_m": 1.68,
+     "clear_width_m": 1.46,
      "engine_tested": true,
      "note": "interior leaf, parks inside over the next bay"
     }
@@ -7308,10 +8531,34 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -7345,9 +8592,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 157,
-    "Resolution 2": 124,
-    "Resolution 3": 65,
+    "Resolution 1": 169,
+    "Resolution 2": 136,
+    "Resolution 3": 73,
     "Geometry": 66,
     "View Geometry": 60,
     "Fire Geometry": 60
@@ -7459,10 +8706,34 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -7496,9 +8767,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 151,
-    "Resolution 2": 118,
-    "Resolution 3": 71,
+    "Resolution 1": 163,
+    "Resolution 2": 130,
+    "Resolution 3": 79,
     "Geometry": 72,
     "View Geometry": 66,
     "Fire Geometry": 66
@@ -10255,10 +11526,34 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -10292,9 +11587,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 2911,
-    "Resolution 2": 517,
-    "Resolution 3": 113,
+    "Resolution 1": 2935,
+    "Resolution 2": 571,
+    "Resolution 3": 159,
     "Geometry": 12,
     "Roadway": 2,
     "View Geometry": 12,
@@ -10458,10 +11753,34 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -10495,9 +11814,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 3993,
-    "Resolution 2": 445,
-    "Resolution 3": 209,
+    "Resolution 1": 4039,
+    "Resolution 2": 557,
+    "Resolution 3": 347,
     "Geometry": 22,
     "Roadway": 4,
     "View Geometry": 22,
@@ -10661,10 +11980,34 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -10710,9 +12053,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 4425,
-    "Resolution 2": 505,
-    "Resolution 3": 223,
+    "Resolution 1": 4485,
+    "Resolution 2": 631,
+    "Resolution 3": 361,
     "Geometry": 46,
     "Roadway": 6,
     "View Geometry": 36,
@@ -11351,10 +12694,34 @@
    ],
    "materials": [
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -11376,8 +12743,8 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 202,
-    "Resolution 2": 20,
+    "Resolution 1": 214,
+    "Resolution 2": 32,
     "Resolution 3": 13,
     "Geometry": 6,
     "Roadway": 1,
@@ -11497,10 +12864,34 @@
    ],
    "materials": [
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -11534,8 +12925,8 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 412,
-    "Resolution 2": 20,
+    "Resolution 1": 424,
+    "Resolution 2": 32,
     "Resolution 3": 13,
     "Geometry": 6,
     "Roadway": 1,
@@ -11630,11 +13021,13 @@
    ],
    "lod_faces": {
     "Resolution 1": 63,
-    "Resolution 2": 6
+    "Resolution 2": 6,
+    "Resolution 3": 6
    },
    "contributes": [
     "Resolution 1",
-    "Resolution 2"
+    "Resolution 2",
+    "Resolution 3"
    ],
    "walkable": false,
    "doors": [],
@@ -11715,11 +13108,13 @@
    ],
    "lod_faces": {
     "Resolution 1": 49,
-    "Resolution 2": 6
+    "Resolution 2": 6,
+    "Resolution 3": 6
    },
    "contributes": [
     "Resolution 1",
-    "Resolution 2"
+    "Resolution 2",
+    "Resolution 3"
    ],
    "walkable": false,
    "doors": [],
@@ -11879,11 +13274,13 @@
    ],
    "lod_faces": {
     "Resolution 1": 21,
-    "Resolution 2": 21
+    "Resolution 2": 21,
+    "Resolution 3": 6
    },
    "contributes": [
     "Resolution 1",
-    "Resolution 2"
+    "Resolution 2",
+    "Resolution 3"
    ],
    "walkable": false,
    "doors": [],
@@ -11956,11 +13353,13 @@
    ],
    "lod_faces": {
     "Resolution 1": 21,
-    "Resolution 2": 21
+    "Resolution 2": 21,
+    "Resolution 3": 6
    },
    "contributes": [
     "Resolution 1",
-    "Resolution 2"
+    "Resolution 2",
+    "Resolution 3"
    ],
    "walkable": false,
    "doors": [],
@@ -12060,8 +13459,8 @@
    ],
    "lod_faces": {
     "Resolution 1": 65,
-    "Resolution 2": 31,
-    "Resolution 3": 13
+    "Resolution 2": 49,
+    "Resolution 3": 31
    },
    "contributes": [
     "Resolution 1",
@@ -12166,8 +13565,8 @@
    ],
    "lod_faces": {
     "Resolution 1": 77,
-    "Resolution 2": 31,
-    "Resolution 3": 13
+    "Resolution 2": 49,
+    "Resolution 3": 31
    },
    "contributes": [
     "Resolution 1",
@@ -12266,8 +13665,8 @@
    ],
    "lod_faces": {
     "Resolution 1": 59,
-    "Resolution 2": 31,
-    "Resolution 3": 13
+    "Resolution 2": 43,
+    "Resolution 3": 31
    },
    "contributes": [
     "Resolution 1",
@@ -12345,11 +13744,13 @@
    ],
    "lod_faces": {
     "Resolution 1": 37,
-    "Resolution 2": 25
+    "Resolution 2": 31,
+    "Resolution 3": 21
    },
    "contributes": [
     "Resolution 1",
-    "Resolution 2"
+    "Resolution 2",
+    "Resolution 3"
    ],
    "walkable": false,
    "doors": [],
@@ -12421,11 +13822,13 @@
    ],
    "lod_faces": {
     "Resolution 1": 61,
-    "Resolution 2": 25
+    "Resolution 2": 31,
+    "Resolution 3": 21
    },
    "contributes": [
     "Resolution 1",
-    "Resolution 2"
+    "Resolution 2",
+    "Resolution 3"
    ],
    "walkable": false,
    "doors": [],
@@ -14026,8 +15429,8 @@
    ],
    "lod_faces": {
     "Resolution 1": 1739,
-    "Resolution 2": 275,
-    "Resolution 3": 59,
+    "Resolution 2": 287,
+    "Resolution 3": 77,
     "Geometry": 56,
     "View Geometry": 46,
     "Fire Geometry": 46
@@ -14432,8 +15835,8 @@
    ],
    "lod_faces": {
     "Resolution 1": 81,
-    "Resolution 2": 53,
-    "Resolution 3": 23,
+    "Resolution 2": 65,
+    "Resolution 3": 41,
     "Geometry": 10,
     "View Geometry": 10,
     "Fire Geometry": 10
@@ -15341,10 +16744,34 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -15378,9 +16805,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 416,
-    "Resolution 2": 107,
-    "Resolution 3": 39,
+    "Resolution 1": 415,
+    "Resolution 2": 106,
+    "Resolution 3": 31,
     "Geometry": 42,
     "Roadway": 1,
     "View Geometry": 42,
@@ -15971,10 +17398,34 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -16008,9 +17459,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 304,
-    "Resolution 2": 107,
-    "Resolution 3": 39,
+    "Resolution 1": 303,
+    "Resolution 2": 106,
+    "Resolution 3": 31,
     "Geometry": 42,
     "Roadway": 1,
     "View Geometry": 42,
@@ -16120,10 +17571,34 @@
      ]
     },
     {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "roof_kawara_field",
      "id": "jp_m_roof_kawara_field",
      "palette_id": "kawara_ibushi",
      "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -16145,9 +17620,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 165,
-    "Resolution 2": 38,
-    "Resolution 3": 25,
+    "Resolution 1": 177,
+    "Resolution 2": 50,
+    "Resolution 3": 31,
     "Geometry": 18,
     "View Geometry": 18,
     "Fire Geometry": 18
@@ -16239,6 +17714,18 @@
      ]
     },
     {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "wood_weathered",
      "id": "jp_m_wood_weathered",
      "palette_id": "timber_weathered",
@@ -16252,9 +17739,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 98,
-    "Resolution 2": 98,
-    "Resolution 3": 6,
+    "Resolution 1": 110,
+    "Resolution 2": 110,
+    "Resolution 3": 12,
     "Geometry": 6,
     "Roadway": 1,
     "View Geometry": 6,
@@ -16348,6 +17835,18 @@
      ]
     },
     {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
      "key": "wood_weathered",
      "id": "jp_m_wood_weathered",
      "palette_id": "timber_weathered",
@@ -16361,9 +17860,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 296,
-    "Resolution 2": 212,
-    "Resolution 3": 12,
+    "Resolution 1": 308,
+    "Resolution 2": 224,
+    "Resolution 3": 18,
     "Geometry": 6,
     "Roadway": 1,
     "View Geometry": 6,
@@ -16452,8 +17951,8 @@
    ],
    "lod_faces": {
     "Resolution 1": 114,
-    "Resolution 2": 56,
-    "Resolution 3": 13
+    "Resolution 2": 80,
+    "Resolution 3": 52
    },
    "contributes": [
     "Resolution 1",
