@@ -1,0 +1,226 @@
+LAND_JP_MACHIYA_T3_01 - REPORT (architect C, 2026-09-27)
+=======================================================
+
+One house, the tier-3 Kamigata town machiya (Ioka type), rebuilt to the playbook and assembled only from the parts
+library (parts/kit, jpparts) and jp_common materials. Render sheet: machiya_t3_01_sheet.jpg. Checks: checks.json.
+Nothing here started, stopped or killed any program. No git.
+
+STATUS: built, binarized, packed, 30/30 offline checks pass.
+BLOCKED (for the lead): removing the v1 machiya from B's drop-in files was refused by the permission system (they
+are agent B's files). Until that is done, do NOT rebuild the world: B.csv still bakes the v1 house on exactly this
+spot. See section 7.
+
+
+1. FILES
+--------
+Game:
+  ..\@Japan\addons\jp_buildings.pbo   prefix JP\buildings, CfgPatches JP_Buildings (requires DZ_Data,
+                                      DZ_Structures_Residential, JP_Common). 934 kB.
+  src/JP/buildings/config.cpp          Land_JP_Machiya_T3_01: HouseNoDestruct, scope 1, class Doors DoorsTwin1-6
+                                       (vanilla doorWoodSlide sounds), DamageSystem with one zone per door.
+  src/JP/buildings/machiya/jp_machiya_t3_01.p3d   ODOL v55 (binarized, cwd P:\). model.cfg next to it (not packed).
+Drop-ins:
+  test/placements/C.csv                JP\buildings\machiya\jp_machiya_t3_01.p3d at (1024, 1045), yaw 180, y 0.
+  test/ce/C_mapgroupproto.xml          group Land_JP_Machiya_T3_01, usage Town, lootFloor, 10 points.
+  test/ce/C_mapgrouppos.xml            pos 1024 25 1045, rpy 0 0 180, a -90.
+This folder:
+  machiya_t3_01.py     THE RECIPE: build() assembles the house as one kit Part (every part and recipe listed in
+                       section 2); model() centres it (origin = footprint centre at grade, front = +z).
+  build.py             MLOD -> model.cfg / config.cpp (CfgConvert OK) -> binarize -> pack -> drop-ins -> verify.
+  verify.py            the checks (section 3) -> checks.json.
+  render_machiya.py    Blender renders (renders/*.png) + the sheet. Uses the kit's render_parts.py helpers.
+  rooms.json           room tags for the decorator (section 5).
+  out/                 the MLOD source (9.4 MB) and binarize.log (same stock P:\bin lines as B's proven log;
+                       BoundingCenter 0,0, so autocenter=0 took).
+Rebuild (seconds, server can stay up except for the pack):
+  python buildings/machiya_t3_01/build.py
+  python buildings/machiya_t3_01/render_machiya.py
+
+Library additions (parts/kit, as the brief allowed):
+  jp_p_open_itado_twin, jp_p_open_shoji_ext_twin: two ~0.88 m leaves per 1-ken bay on two tracks; ONE door action
+  slides both into a stack over the next half-ken (far leaf 1.74 m on the outer track, near leaf 0.88 m).
+  Clear 1.70 m between posts (measured 1.68 on 1 cm steps), head 2.00. Engine convention copied from vanilla twin
+  doors (read from City_FireStation's config and ODOL): config class DoorsTwinN (component "DoorsTwinN",
+  soundPos "doorsTwinN_action"), one selection "doorstwinN" over both leaves, two bones doorsA/doorsB each with its
+  own _axis, both animated from source "DoorsTwinN" in model.cfg.
+  - openings.py: twin_leaves(), twin_door_part(), the two _twin variants; checks.py accepts the twin action point;
+    build_parts.py names the twin source; render_sheets.py has sheet 3b.
+  - build_parts.py --only _twin: 13/13 and 14/14 checks, manifest now 131 parts.
+  - contact_sheets/3b_openings_twin.jpg.
+  Chose the stacked (one-side) park over bi-parting: the entrance and back door are corner bays, so there is
+  no wall on the far side to park a second leaf on. One variant works in every bay that has a plain half-ken beside
+  it.
+
+
+2. RECIPE (what went where; kit frame x along the street, toriniwa on the left looking out)
+------------------------------------------------------------------------------------------
+Omoya 4 x 3 ken (7.28 x 5.46 m), rear geya (lean-to) 4 x 2 ken. Footprint with eaves 8.25 x 11.09 m, ridge 6.41 m.
+Levels: grade 0, doma 0.05, stones show 0.15 under a 0.12 dodai (sill top 0.27), rooms +0.45 (0.50),
+ceiling 3.00 (rooms 2.50 clear), loft floor 3.15, upper street wall 1.30 (keta 4.45-4.63).
+
+Roof:   roofs.roof kirizuma sangawara (4.5 sun, eave 0.90, verge 0.40), 5-course noshi ridge + onigawara, eave
+        tiles, verge tiles, hafu, eave rafters (= jp_p_roof_forms_kirizuma + sangawara field/eave/verge +
+        kawara_ridge_c5 + onigawara_plain + hafu_tile). Street pent: roofparts.pent "tile" (hisashi_tile, eave
+        2.99). Ioka side pent: roofparts.pent "gable" on the toriniwa gable at the upper-floor line.
+        Geya: the generator's Slope + collision + sheathing + eave rafters + kawara field / eave tiles / verges
+        (4 sun), kawara.ridge flashing strip at the omoya wall, bargeboards, keta.
+        Plus a ridge collision strip with Roadway (ridge walk).
+Street front (4 bays): B1 entrance jp_p_open_itado_twin (dark town boards); B2a plain earth wall (the park face);
+        B2b half-ken koshi_kyo window over a board wainscot; B3-B4 jp_p_open_koshi_degoshi (the shop front) over
+        wainscots. Floor beam, then the plastered upper wall: jp_p_open_mushiko_oval x3 + okabe plaster over the
+        toriniwa. Udatsu (walls.part_udatsu _sode recipe) on both ends, standing on the pent.
+Gables: toriniwa side: dark vertical boards (board_vertical battened, Ioka lower wall) + earth kokabe; rooms side:
+        earth shinkabe with koshiita h090 and a half-ken koshi window for the zashiki. Upper storey: shikkui
+        shinkabe with exposed posts; walls.gable _tile above (board band, plastered bosses, tie beam).
+Base:   found.dodai_stones _dressed on every sill wall; low timber sill under the two door + park zones.
+Inside: toriniwa doma (wall_arakabe earth); two jp_p_found_step_natural (kutsunugi stone hiding a 0.45 ramp) up
+        to the rooms; room fronts on the toriniwa: shoji_ext_twin; mise/zashiki partition: shoji_ext_twin;
+        tatami (9 mats per room, shugi layout found by search); sealed loft floor = joisted board ceiling.
+Geya:   kitchen doma with a built-in kamado (two fire mouths, iron rims, sooted board splashback) and the twin back
+        door (mirrored itado_twin) + jp_p_open_renji_wood window; storage with a board floor behind a plank
+        itado_twin; sloped-top shinkabe walls under the lean-to.
+Trim:   trim.grime_band (W1) on every exterior wall base, jp_p_trim_grime_post on every exterior post.
+Frame:  33 posts, all on the 0.455 grid; keta on the eave walls.
+Materials: only jp_common (wear _w1): wood_weathered, wood_street_dark, wood_sooted, wall_nakanuri, wall_shikkui,
+        wall_arakabe, wall_grime, roof_kawara, roof_kawara_field, stone_cut, stone_field, straw_mushiro,
+        paper_shoji, metal_iron; vanilla penetration and roadway files only.
+
+Doors (6 twin doors, 12 leaves, all 1.68 m measured clear, 2.00 head):
+  DoorsTwin1 entrance (street), 2 toriniwa -> zashiki, 3 toriniwa -> mise, 4 mise <-> zashiki,
+  5 kitchen back door (yard), 6 kitchen -> storage.
+
+
+3. CHECKS (verify.py -> checks.json): 30/30 PASS
+-------------------------------------------------
+- C5 LOD set = vanilla house set (Res 1-3, Geometry, Memory, Roadway, View, Fire).
+- C5 budget, large / landmark class: R1 11,931 <= 12,000; R2 4,048 <= 4,600; R3 1,479 <= 1,600.
+- Geometry class/map house, damage no, autocenter 0, mass 60 t.
+- C7 Geometry 256, View 256, Fire 253 components, all closed and convex, every face in a component; Fire uses only
+  vanilla penetration rvmats (dirt, fabric_thin, granite, pottery, wood).
+- C2 every texture/rvmat path is jp_common (on disk) or vanilla penetration/roadway.
+- C8 no glass; 2,732-face corrugated kawara field at LOD0; 55 individual dodai stones.
+- C3 all 33 post nodes on the 0.455 grid.
+- Doors x6: bones in Res 1 and Geometry (each exactly one component), twin selection in Res 1/2, Geometry, View,
+  Fire; axes 2 points exactly 1.00 m along the slide; leaf and action points; model.cfg + config + damage zone.
+- Door sweeps x6: every leaf slides closed -> open without touching any other component; with both open a
+  0.7 m deep column through the doorway is clear 1.68 m (D1 >= 1.00), head 2.00 (D2).
+- Open toriniwa -> kitchen passage: 1.15 m clear beside the zashiki step ramp (1.70 between posts), head 2.00.
+- Roadway on Geometry: 304/304 samples within 3 cm. Floors: roadway at floor height on 1,062/1,062 samples.
+- Head room over every floor >= 2.10: lowest 2.50 m.
+- Loot: 10 points (2 per room), on roadway, range circles clear of walls; CE frame -> world == model -> world
+  (4e-7 m) at (1024, 25, 1045) yaw 180.
+- Placement: footprint 8.25 x 11.09 incl. eaves (world x 1019.9-1028.2, z 1039.4-1050.5), inside the yard,
+  45.6 m from the nearest sakura.
+- ODOL: 8 LODs, all bones + axes, twin selections + action points, skeleton present.
+NOT RUN: T's float checker (build_world.py runs it) - see section 7. The model's grade is y 0 with stones buried to
+-0.12, inside placecheck's building rule (embed <= 0.30).
+
+
+4. PERIOD JUSTIFICATION (per element)
+------------------------------------
+- Gable roof, eave to the street, sangawara, stacked ridge with end tiles, small round eave tiles: the Ioka house
+  (Nara, late 17th-early 18th c.) [E03, x01, x03]; sangawara from 1674 [T07]; tile on T3 townhouses (§2.1).
+  Plain round eave tiles, as §6.1 describes sangawara (the mon-boss tomoe tile is the hongawara form).
+- 3-ken main span + rear lean-to: commoner beam span <= 3 ken, extra depth from geya [T48, §2.2]. 4-ken frontage
+  follows Ioka (7.9 m = 4 kyo-ken) on our 1.82 grid.
+- Low upper storey, 1.30 m street wall, sealed: rule 2, §4, D3 [T43, T05]; G0-4 default sealed. No full storey
+  (banned in 1730, §1).
+- Small oval mushiko: the 1730 form, rectangles are Meiji [E05, T09].
+- Koshi lattice + de-goshi shop front: the 18th c. Kyoto standard front [E10]; dark timber, no bengara (restricted,
+  and the Ioka front is dark).
+- Street pent and side pent: Ioka has pents front and side [E03].
+- Udatsu: T3 Kamigata [T08]. On this lone test house they mark the party-wall lines of a future street.
+- Dodai on individual dressed stones: rule 3, §6.4.
+- Walls: earth shinkabe (earth_wall_aged) on the ground floor, shikkui only on the upper storey and gables (G1 d1,
+  build list T3 text); dark vertical boards on the toriniwa gable (Ioka lower walls [x01]); koshiita wainscots
+  (§6.2); exposed posts; no plane > 2 x 2 m without a frame line.
+- Doors: period ~0.9 m leaves, two per 1-ken bay (§4 [T39], §6.3), heads raised to 2.00 (D2).
+- Plan: 1-ken earth toriniwa through the house, shop at the front, rooms raised about 0.45 [T04, T17, §2.1];
+  tatami in the living rooms, shugi layout (§3); board storage; kitchen doma with a kamado (T3 interiors).
+- Zashiki kept plain: no tokonoma, nageshi or shoin, the 1668 commoner rules [T48, §2.2].
+- Weathering: W1 grime bands on wall bases and posts, wear _w1 throughout (rule 4).
+
+
+5. ROOM TAGS (rooms.json; the decorator furnishes by tag)
+---------------------------------------------------------
+  toriniwa  doma           earth   0.05  entry passage          doors 1, 2, 3   loot 2
+  mise      shop:general   tatami  0.50  9 mats, street front   doors 3, 4      loot 2
+  zashiki   zashiki        tatami  0.50  9 mats, side window    doors 2, 4      loot 2
+  kitchen   doma (kitchen) earth   0.05  kamado, back door      doors 5, 6      loot 2
+  storage   storage        boards  0.08  monooki                door 6          loot 2
+  loft      loft           boards  3.15  SEALED, no access, no loot
+The shop subtag defaults to "general"; the decorator picks the trade.
+
+
+6. DEVIATIONS, CONFLICTS AND DECISIONS
+--------------------------------------
+Playbook conflicts:
+ a. The library has no tatami, floor-board or doma material (the §9 families floor/ground were never built).
+    Stand-ins, all jp_common: straw_mushiro for the mat facing (each mat is modelled: 0.055 thick, weave turned per
+    mat), wood_sooted for the heri edges, wood_weathered for floor boards, wall_arakabe for the doma (as the parts
+    test assembly did). Ask the materials agent for jp_m_floor_tatami / floor_boards / ground_doma; swapping them is
+    one path change and a rebuild.
+ b. Budget class: the brief says "LOD budgets"; the whole house cannot meet the 6,000-face standard-house budget
+    with a 3,000-face kawara roof (rule 1). I used the large/landmark class (12,000 / 4,600 / 1,600), since §11
+    lists "the main machiya archetype" as a hero landmark. To get under it: Resolution 3 is the exterior shell only
+    (interior walls, floors, loft, kamado drop out), koshiita and board walls are one slab from Resolution 2 on,
+    the geya has one modelled eave row (the library pent recipe's setting) instead of two, hidden bottom faces of
+    mats and boards are left out, and there is no ranma.
+Decisions (not engine-tested):
+ c. Sealed loft (G0-4). No reason found to open it: the house holds no loft loot and there's no stair.
+ d. Twin doors (section 1) use the vanilla DoorsTwin convention. This is the first time this project uses it:
+    in-game item 2.
+ e. Walkable roofs: tile slopes, both pents and the lean-to have Roadway, and a ridge strip lets you walk the
+    ridge. The street pent sits under the main eave (under 1.2 m of clearance), so there you crawl, not stand.
+    Rooftop access with no stair: climb the rear lean-to eave (tile edge about 2.53 m; vanilla climbs 1.7-2.75 m,
+    dayzplayerimplementjumpclimb.c), then vault about 0.5 m onto the main roof's back eave. Unknown: whether the
+    climb test accepts an overhanging eave. Fallback: a woodpile or garden wall at the site stage.
+ f. Stone courses sit 0.10 outwards, so the inside face is flush with the wall. Centred courses made a kerb in the
+    doma and put stones under two doorways.
+ g. At the two room corners where a door line meets a partition, the partition's head rail stops 0.12 m short. The
+    far leaf's top ran 3 cm into it.
+ h. Udatsu are built with the _sode recipe but sized 3.05-4.12 m. The library size (to 4.55) cuts into the main
+    eave.
+ i. The kamado and its sooted boards are modelled as a built-in fixture. The pots are left to the decorator.
+ j. Mushiko openings are closed in Geometry, as the part is. The loft can be seen through them, not entered.
+ k. Stephen dropped the old-vs-new comparison, so the sheet shows only the new house.
+
+
+7. PENDING FOR THE LEAD (blocked here)
+--------------------------------------
+The permission system refused my edits to agent B's files. Please make these three edits (or have Stephen allow
+them), then rebuild. B's build_b.py would write them back if B ever reruns it, so change its dropins() too if it
+stays in use.
+  test/placements/B.csv       remove the line JP\structures\machiya\jp_machiya_01.p3d,1024.000,1045.000,180.0,0.0
+                              (a header-only file is fine: read_placements skips "p3d" and "#" lines)
+  test/ce/B_mapgrouppos.xml   remove both Land_JP_Machiya_01 lines (baked 1024/1045 and spawned 1075/1090); an
+                              empty or comment-only file gives 0 groups
+  test/spawns/B.json          {"Objects": []}  (removes the spawned v1 at 1075, 1090)
+  (B_mapgroupproto.xml can stay: a prototype with no positions spawns nothing.)
+Then, with the Japan test server off:
+  python japan_dev\spikes\T_terrain\build_world.py     (runs the float checker; the house must pass)
+  python japan_dev\spikes\T_terrain\build_mission.py
+build_mission snaps C_mapgrouppos to the baked object by name (land_ + p3d name matches the class).
+Navmesh: the island's navmesh predates this house. Regenerate it (japan_dev\NAVMESH_STEPS.md) before in-game
+item 8, or AI won't path into the house.
+
+
+8. IN-GAME CHECKLIST FOR STEPHEN (after section 7)
+-------------------------------------------------
+1. Spawn and look north. The new house stands on the old building spot, and the v1 houses are gone. In engine
+   light, compare roof tiles, earth walls and the white upper storey with the vanilla control house.
+   Pass: nothing glows or looks like concrete.
+2. Entrance (the bay on the right as you face the house): one "open" slides BOTH leaves together, and they stack
+   over the plain bay beside it. Walk through, close, reopen. Do the same at the back door (north side).
+   Pass: both leaves move, nothing clips, and the doors make the wood-slide sound.
+3. Inside, step up from the earth passage into the shop room and the back room over the flat stepping stones,
+   then back down, without jumping. Pass: smooth both ways.
+4. Try the other three doors: shop <-> back room, both shoji fronts, kitchen -> storage. Pass: one action each,
+   and the leaves park beside the opening.
+5. Loot: check the tatami rooms, the earth passage, the kitchen and the storage floor (10 points). Pass: items
+   lie on the floors, not inside them.
+6. Roof: from behind the house, climb the rear lean-to eave (about 2.5 m), walk up it, vault onto the main roof
+   and walk the ridge. Pass: you can climb, walk the tiles and stay on top. If the eave refuses the climb, tell me.
+7. Walk out to about 150 m and back. Pass: the house doesn't pop, and there are no holes at any distance.
+8. After the navmesh is regenerated: let an infected chase you in through the entrance and into a raised room.
+   Pass: it follows through the doorway and up the step at normal speed.

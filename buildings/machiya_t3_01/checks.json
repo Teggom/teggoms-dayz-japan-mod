@@ -1,0 +1,165 @@
+{
+ "building": "Land_JP_Machiya_T3_01",
+ "date": "2026-09-27",
+ "faces": "11931/4048/1479",
+ "door_clear_m": [
+  1.68,
+  1.68,
+  1.68,
+  1.68,
+  1.68,
+  1.68
+ ],
+ "checks": [
+  {
+   "check": "C5 LOD set (vanilla house set)",
+   "ok": true,
+   "detail": "Resolution 1 11931, Resolution 2 4048, Resolution 3 1479, Geometry 1530, Memory 0, Roadway 19, View Geometry 1532, Fire Geometry 1514"
+  },
+  {
+   "check": "C5 face budget (large / landmark: 12000 / 4600 / 1600)",
+   "ok": true,
+   "detail": "R1 11931, R2 4048, R3 1479"
+  },
+  {
+   "check": "Geometry properties + mass",
+   "ok": true,
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 60000 kg"
+  },
+  {
+   "check": "C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "256 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "256 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "253 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry penetration rvmats",
+   "ok": true,
+   "detail": "dirt, fabric_thin, granite, pottery, wood"
+  },
+  {
+   "check": "C2 library materials only",
+   "ok": true,
+   "detail": "every path under JP\\common\\materials\\ (on disk) or vanilla penetration / roadway"
+  },
+  {
+   "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
+   "ok": true,
+   "detail": "glass paths 0; 2732 corrugated kawara field faces in LOD0; 55 individual dodai stones"
+  },
+  {
+   "check": "C3 grid snap (post nodes on the 0.455 grid)",
+   "ok": true,
+   "detail": "33 posts"
+  },
+  {
+   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Entrance (street): bones doors1+doors2"
+  },
+  {
+   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Toriniwa -> zashiki: bones doors3+doors4"
+  },
+  {
+   "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin3 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Toriniwa -> mise: bones doors5+doors6"
+  },
+  {
+   "check": "C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin4 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Mise <-> zashiki: bones doors7+doors8"
+  },
+  {
+   "check": "C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin5 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kitchen back door (yard): bones doors9+doors10"
+  },
+  {
+   "check": "C7 DoorsTwin5 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin6 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kitchen -> storage: bones doors11+doors12"
+  },
+  {
+   "check": "C7 DoorsTwin6 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.74/0.88 m without touching other geometry; open clear 1.68 m, head 2.00 m"
+  },
+  {
+   "check": "C7 toriniwa -> kitchen passage (open) clear + head",
+   "ok": true,
+   "detail": "clear 1.15 m, head 2.00 m"
+  },
+  {
+   "check": "C7 Roadway sits on Geometry (+-3 cm)",
+   "ok": true,
+   "detail": "304/304 samples"
+  },
+  {
+   "check": "C7 walkable floors have Roadway at floor height",
+   "ok": true,
+   "detail": "1062/1062 samples over toriniwa, mise, zashiki, kitchen, storage"
+  },
+  {
+   "check": "C7 head room >= 2.10 over every floor",
+   "ok": true,
+   "detail": "lowest 2.50 m"
+  },
+  {
+   "check": "Loot points on Roadway floors, ranges clear of walls",
+   "ok": true,
+   "detail": "10 points (toriniwa 2, mise 2, zashiki 2, kitchen 2, storage 2)"
+  },
+  {
+   "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
+   "ok": true,
+   "detail": "10 points, max diff 4.3e-07 m"
+  },
+  {
+   "check": "Placement footprint <= 14 x 14 m, inside the yard, clear of the sakura",
+   "ok": true,
+   "detail": "8.25 x 11.09 m incl. eaves; world x 1019.9-1028.2, z 1039.4-1050.5; nearest sakura trunk 45.6 m away; ridge 6.41 m"
+  },
+  {
+   "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
+   "ok": true,
+   "detail": "ODOL v55, 925550 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+  }
+ ]
+}

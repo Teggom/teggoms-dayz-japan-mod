@@ -1,0 +1,81 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\3b_openings_twin",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_open_itado_twin",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      2.73,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "town plank door as two period leaves (~0.88 m) in a 1-ken bay; one action slides both into a stack over the next half-ken (1.70 m clear, D1)"
+  },
+  {
+   "name": "jp_p_open_shoji_ext_twin",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      2.73,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "paper sliding door as two period leaves (~0.88 m) in a 1-ken bay (room fronts on the doma); one action slides both into a stack over the next half-ken (1.70 m clear, D1)"
+  }
+ ]
+}

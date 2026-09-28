@@ -64,7 +64,7 @@ def sidecar(part, lods, counts, res, bl_entry, var_entry):
         "materials": mats_of(part),
         "lod_faces": counts, "contributes": contributes(lods),
         "walkable": part.walkable,
-        "doors": [{"source": "Doors%d" % (i + 1), "kind": d.kind, "display": d.display,
+        "doors": [{"source": ("DoorsTwin%d" % (i + 1)) if getattr(d, "twin", None) else "Doors%d" % (i + 1), "kind": d.kind, "display": d.display,
                    "anims": [{"bone": a["bone"], "type": a["type"], "axis_memory": a["bone"] + "_axis",
                               "amount": round(a["amount"], 4),
                               "unit": "m (translation; axis 1.00 m)" if a["type"] == "translation" else "rad"}

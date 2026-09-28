@@ -3633,6 +3633,200 @@
    "recipe": null
   },
   {
+   "id": "jp_p_open_itado_twin",
+   "part": "jp_p_open_itado",
+   "variant": "_twin",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_itado_twin.p3d",
+   "build_list": {
+    "entry": "jp_p_open_itado",
+    "variant": null,
+    "differs_by": null,
+    "priority": "P1",
+    "importance": "hero",
+    "refs": [
+     "x04_misawa_a",
+     "c02_narai_facade",
+     "x33_jinrin_bookseller_1690"
+    ]
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "town plank door as two period leaves (~0.88 m) in a 1-ken bay; one action slides both into a stack over the next half-ken (1.70 m clear, D1)",
+   "dims": [
+    {
+     "name": "clear_opening_m",
+     "expected": ">=1.00",
+     "measured": 1.7,
+     "tol": 0.01,
+     "source": "D1",
+     "ok": true
+    },
+    {
+     "name": "leaf_width_m (period ~0.9)",
+     "expected": "0.85-0.95",
+     "measured": 0.88,
+     "tol": 0.01,
+     "source": "Stephen 2026-09-27"
+    },
+    {
+     "name": "head_m",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "D2"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ],
+     "note": "far end of the half-ken park bay"
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "runs in a grooved sill at floor level"
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ]
+    },
+    {
+     "type": "park",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "exterior",
+     "note": "the next half-ken must be a plain wall on this face: both leaves park there, stacked"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_street_dark",
+     "id": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_street_dark<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 162,
+    "Resolution 2": 30,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "Memory": 0,
+    "Roadway": 1,
+    "View Geometry": 12,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "plank door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "translation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.74,
+       "unit": "m (translation; axis 1.00 m)"
+      },
+      {
+       "bone": "doors2",
+       "type": "translation",
+       "axis_memory": "doors2_axis",
+       "amount": 0.88,
+       "unit": "m (translation; axis 1.00 m)"
+      }
+     ],
+     "anim_period": 1.0,
+     "init_opened": 0.3,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.68,
+     "engine_tested": false,
+     "note": "exterior leaves, two outside tracks, park stacked over the next half-ken"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken door bay between post nodes x=0 and x=1.82 + a half-ken park bay to x=2.73; y 0 = sill/floor",
+   "recipe": null
+  },
+  {
    "id": "jp_p_open_shoji_ext_koshidaka",
    "part": "jp_p_open_shoji_ext",
    "variant": "_koshidaka",
@@ -3993,6 +4187,195 @@
    ],
    "deviation": null,
    "datum": "1-ken door bay between post nodes x=0 and x=1.82 + its park bay to x=3.64; y 0 = sill/floor",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_shoji_ext_twin",
+   "part": "jp_p_open_shoji_ext",
+   "variant": "_twin",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_shoji_ext_twin.p3d",
+   "build_list": {
+    "entry": "jp_p_open_shoji_ext",
+    "variant": null,
+    "differs_by": null,
+    "priority": "P1",
+    "importance": "standard",
+    "refs": [
+     "x35_hiroshige_goyu",
+     "x28_morse_inn_mishima",
+     "x07_sasaki_1985"
+    ]
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "paper sliding door as two period leaves (~0.88 m) in a 1-ken bay (room fronts on the doma); one action slides both into a stack over the next half-ken (1.70 m clear, D1)",
+   "dims": [
+    {
+     "name": "clear_opening_m",
+     "expected": ">=1.00",
+     "measured": 1.7,
+     "tol": 0.01,
+     "source": "D1",
+     "ok": true
+    },
+    {
+     "name": "leaf_width_m (period ~0.9)",
+     "expected": "0.85-0.95",
+     "measured": 0.88,
+     "tol": 0.01,
+     "source": "Stephen 2026-09-27"
+    },
+    {
+     "name": "head_m",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "D2"
+    },
+    {
+     "name": "lower_board_m",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ],
+     "note": "far end of the half-ken park bay"
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "runs in a grooved sill at floor level"
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ]
+    },
+    {
+     "type": "park",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "length": 0.91,
+     "face": "interior",
+     "note": "the next half-ken must be a plain wall on this face: both leaves park there, stacked"
+    }
+   ],
+   "materials": [
+    {
+     "key": "paper_shoji",
+     "id": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji",
+     "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 246,
+    "Resolution 2": 30,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "Memory": 0,
+    "Roadway": 1,
+    "View Geometry": 12,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "shoji",
+     "display": "shoji door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "translation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.74,
+       "unit": "m (translation; axis 1.00 m)"
+      },
+      {
+       "bone": "doors2",
+       "type": "translation",
+       "axis_memory": "doors2_axis",
+       "amount": 0.88,
+       "unit": "m (translation; axis 1.00 m)"
+      }
+     ],
+     "anim_period": 0.8,
+     "init_opened": 0.5,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.68,
+     "engine_tested": false,
+     "note": "paper leaves, two interior tracks"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken door bay between post nodes x=0 and x=1.82 + a half-ken park bay to x=2.73; y 0 = sill/floor",
    "recipe": null
   },
   {

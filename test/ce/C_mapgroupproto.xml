@@ -1,0 +1,20 @@
+		<group name="Land_JP_Machiya_T3_01">
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="1.333571 0.050000 2.730000" range="0.625832" height="1.564581" />
+						<point pos="3.927857 0.050000 2.730000" range="0.462143" height="1.155357" />
+						<point pos="3.185000 0.500000 0.225000" range="1.105000" height="2.000000" />
+						<point pos="3.185000 0.500000 -2.045000" range="1.105000" height="2.000000" />
+						<point pos="0.455000 0.500000 0.225000" range="1.105000" height="2.000000" />
+						<point pos="0.455000 0.500000 -2.045000" range="1.105000" height="2.000000" />
+						<point pos="-2.730000 0.050000 1.917143" range="0.842857" height="2.000000" />
+						<point pos="-3.507143 0.050000 0.751429" range="0.591429" height="1.478571" />
+						<point pos="-2.730000 0.080000 -1.722857" range="0.880000" height="2.000000" />
+						<point pos="-3.507143 0.080000 -2.888571" range="0.591429" height="1.478571" />
+				</container>
+		</group>

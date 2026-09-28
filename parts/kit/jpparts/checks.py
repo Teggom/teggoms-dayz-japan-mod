@@ -185,9 +185,14 @@ def check_part(part, path, lods=None):
                 if a["type"] == "translation" and abs(ln - 1.0) > 1e-3:
                     probs.append("%s axis %.3f m (must be 1.00)" % (b, ln))
         ds = d.anims[0]["bone"]
-        for suf in ("_action", ""):
-            if not mem or not mem.selections.get(ds + suf):
-                probs.append("memory %s%s missing" % (ds, suf))
+        act = getattr(d, "twin", None) or ds          # twin doors (vanilla DoorsTwinN): one action point for both leaves
+        for nm in (act + "_action", ds):
+            if not mem or not mem.selections.get(nm):
+                probs.append("memory %s missing" % nm)
+        if getattr(d, "twin", None):
+            for w in ("Resolution 1", "Geometry"):
+                if w in L and not (L[w].selections.get(d.twin) or ({}, set()))[1]:
+                    probs.append("%s: twin selection %s has no faces" % (w, d.twin))
         res.append(("C7 door %s selections+memory" % ds, not probs, "; ".join(probs) if probs else
                     "%s, %d bone(s), axis/action/leaf points" % (d.anims[0]["type"], len(d.anims))))
         if getattr(d, "passable", True) and d.anims[0]["type"] == "translation" and geo:

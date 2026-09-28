@@ -12,3 +12,4 @@ rebuild from parts by script.
 | 2026-09-27 | 5 gravel road pieces sit 0.1–0.2 m off the ground (placecheck) | Road placement in `spikes/T_terrain/tools/objects.py`, unless the engine drapes them | Check in game |
 | 2026-09-27 | The navmesh predates the new machiya | Stephen reruns `NAVMESH_STEPS.md` (~15 min) | Optional, after the house check |
 | 2026-09-27 | The bamboo pole is held one-handed (it inherits LongWoodenStick) | A script-registered two-handed profile (flora report) | Deferred |
+| 2026-09-27 | jp_common has **no tatami, floor-board or doma (earth floor) material**; the T3 machiya used straw matting, weathered timber and earth plaster as stand-ins | Interior materials come with the interior research step | Next interior pass |
