@@ -1,0 +1,198 @@
+{
+ "id": "jp_p_open_mushiko_oval",
+ "part": "jp_p_open_mushiko",
+ "variant": "_oval",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_mushiko_oval.p3d",
+ "build_list": {
+  "entry": "jp_p_open_mushiko",
+  "variant": "_oval",
+  "differs_by": "single oval",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "c08_kyomachiya",
+   "c07_gion_machiya"
+  ]
+ },
+ "tiers": [
+  3
+ ],
+ "used_for": "single small oval mushiko on the low upper street wall of Kamigata machiya (1730 form)",
+ "datum": "1-ken bay of the upper plastered front (0.15 thick, hidden posts); y 0 = upper floor, wall to 1.30",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.0,
+  1.82,
+  0.0,
+  1.3,
+  -0.075,
+  0.075
+ ],
+ "dims": [
+  {
+   "name": "opening_m",
+   "expected": "0.90 x 0.45",
+   "measured": "0.90 x 0.45",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "slat_face_m",
+   "expected": 0.045,
+   "measured": 0.045,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "depth_m",
+   "expected": 0.15,
+   "measured": 0.15,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "sill_above_upper_floor_m",
+   "expected": 0.4,
+   "measured": 0.4,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  },
+  {
+   "type": "floor",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "upper floor level; street wall above it <= 1.30 (D3)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 224,
+  "Resolution 2": 224,
+  "Resolution 3": 30,
+  "Geometry": 6,
+  "View Geometry": 24,
+  "Fire Geometry": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 224, Resolution 2 224, Resolution 3 30, Geometry 6, View Geometry 24, Fire Geometry 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt"
+  },
+  {
+   "check": "C4 opening_m",
+   "ok": true,
+   "detail": "expected 0.90 x 0.45, measured 0.90 x 0.45"
+  },
+  {
+   "check": "C4 slat_face_m",
+   "ok": true,
+   "detail": "expected 0.045, measured 0.045"
+  },
+  {
+   "check": "C4 depth_m",
+   "ok": true,
+   "detail": "expected 0.15, measured 0.15"
+  },
+  {
+   "check": "C4 sill_above_upper_floor_m",
+   "ok": true,
+   "detail": "expected 0.4, measured 0.4"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

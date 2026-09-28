@@ -2,7 +2,9 @@
  "id": "jp_m_roof_kureita",
  "family": "roof",
  "palette_id": "roof_board_silver",
- "palette_by_wear": {},
+ "palette_by_wear": {
+  "_w0": "board_new"
+ },
  "tile_size_m": 2.0,
  "texture_px": 1024,
  "px_per_m": 512.0,
@@ -17,9 +19,9 @@
    "co": "JP\\common\\materials\\roof\\jp_m_roof_kureita_w0_co.paa",
    "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita_w0.rvmat",
    "target_srgb": [
-    147.9,
-    145.1,
-    141.8
+    156.0,
+    122.0,
+    84.0
    ],
    "masked_frac": 0.0
   },

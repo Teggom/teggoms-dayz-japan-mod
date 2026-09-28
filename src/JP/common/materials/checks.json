@@ -924,19 +924,19 @@
    "palette_id": "kawara_ibushi",
    "wear": "",
    "mean_srgb": [
-    147.6,
-    151.6,
-    151.6
+    120.5,
+    124.5,
+    125.5
    ],
    "target_srgb": [
-    145,
-    149,
-    149
+    118,
+    122,
+    123
    ],
-   "dE": 1.0,
+   "dE": 0.93,
    "dE_to_entry": 1.0,
    "tol": 14.0,
-   "spread_p75": 2.3,
+   "spread_p75": 2.0,
    "observed_spread": 20.4,
    "masked_frac": 0.0,
    "mask": null,
@@ -944,11 +944,11 @@
    "warnings": [],
    "shipped_paa": {
     "mean_srgb": [
-     147.6,
-     151.6,
-     151.7
+     120.5,
+     124.6,
+     125.1
     ],
-    "dE": 1.01,
+    "dE": 0.83,
     "verdict": "PASS",
     "warnings": []
    }
@@ -958,19 +958,19 @@
    "palette_id": "kawara_ibushi",
    "wear": "",
    "mean_srgb": [
-    123.6,
-    128.4,
-    130.0
+    97.4,
+    102.1,
+    104.7
    ],
    "target_srgb": [
-    145,
-    149,
-    149
+    118,
+    122,
+    123
    ],
-   "dE": 5.88,
+   "dE": 8.06,
    "dE_to_entry": 8.06,
    "tol": 14.0,
-   "spread_p75": 3.2,
+   "spread_p75": 2.8,
    "observed_spread": 20.4,
    "masked_frac": 0.0,
    "mask": null,
@@ -978,11 +978,11 @@
    "warnings": [],
    "shipped_paa": {
     "mean_srgb": [
-     123.5,
-     128.4,
-     130.1
+     97.3,
+     102.1,
+     105.2
     ],
-    "dE": 5.92,
+    "dE": 8.1,
     "verdict": "PASS",
     "warnings": []
    }
@@ -992,19 +992,19 @@
    "palette_id": "kawara_ibushi",
    "wear": "",
    "mean_srgb": [
-    119.4,
-    126.1,
-    118.6
+    99.1,
+    105.7,
+    98.6
    ],
    "target_srgb": [
-    145,
-    149,
-    149
+    118,
+    122,
+    123
    ],
-   "dE": 2.64,
-   "dE_to_entry": 10.35,
+   "dE": 8.34,
+   "dE_to_entry": 8.59,
    "tol": 14.0,
-   "spread_p75": 3.1,
+   "spread_p75": 2.8,
    "observed_spread": 20.4,
    "masked_frac": 0.062,
    "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_w2_mask.png",
@@ -1012,11 +1012,11 @@
    "warnings": [],
    "shipped_paa": {
     "mean_srgb": [
-     119.3,
-     126.2,
-     118.9
+     99.1,
+     105.7,
+     98.9
     ],
-    "dE": 2.76,
+    "dE": 8.26,
     "verdict": "PASS",
     "warnings": []
    }
@@ -1231,34 +1231,34 @@
   },
   {
    "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kureita_w0_co.png",
-   "palette_id": "roof_board_silver",
+   "palette_id": "board_new",
    "wear": "",
    "mean_srgb": [
-    147.9,
-    145.1,
-    141.8
+    156.0,
+    122.0,
+    84.0
    ],
    "target_srgb": [
-    123,
-    128,
-    134
+    156,
+    122,
+    84
    ],
-   "dE": 9.27,
-   "dE_to_entry": 9.27,
-   "tol": 14.0,
-   "spread_p75": 8.0,
-   "observed_spread": null,
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 6.0,
+   "spread_p75": 7.9,
+   "observed_spread": 2.7,
    "masked_frac": 0.0,
    "mask": null,
    "verdict": "PASS",
    "warnings": [],
    "shipped_paa": {
     "mean_srgb": [
-     148.0,
-     145.1,
-     141.6
+     156.0,
+     122.0,
+     84.0
     ],
-    "dE": 9.35,
+    "dE": 0.02,
     "verdict": "PASS",
     "warnings": []
    }
@@ -1333,34 +1333,34 @@
   },
   {
    "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kokera_w0_co.png",
-   "palette_id": "roof_board_silver",
+   "palette_id": "board_new",
    "wear": "",
    "mean_srgb": [
-    149.7,
-    147.8,
-    146.1
+    150.5,
+    117.0,
+    79.2
    ],
    "target_srgb": [
-    123,
-    128,
-    134
+    156,
+    122,
+    84
    ],
-   "dE": 9.49,
-   "dE_to_entry": 9.49,
-   "tol": 14.0,
-   "spread_p75": 8.6,
-   "observed_spread": null,
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 6.0,
+   "spread_p75": 8.1,
+   "observed_spread": 2.7,
    "masked_frac": 0.0,
    "mask": null,
    "verdict": "PASS",
    "warnings": [],
    "shipped_paa": {
     "mean_srgb": [
-     149.7,
-     147.8,
-     146.2
+     150.6,
+     117.0,
+     79.2
     ],
-    "dE": 9.47,
+    "dE": 2.0,
     "verdict": "PASS",
     "warnings": []
    }

@@ -1,0 +1,145 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\1_frame",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_frame_post_planed",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "every wall, door and pent node (T2-3)"
+  },
+  {
+   "name": "jp_p_frame_post_adzed",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "farmhouse main posts, adze-faceted (T1)"
+  },
+  {
+   "name": "jp_p_frame_beam_sawn",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "wall plate, rails, sill and beam ends of every wall"
+  },
+  {
+   "name": "jp_p_frame_beam_log",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "log beam ends of farmhouses (T1)"
+  },
+  {
+   "name": "jp_p_frame_dashigeta_std",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "cantilevered eave purlin carrying a deep street eave (Edo shops, Kiso), tier 3, flagged  [DEVIATION: G1 decision 4: post-1750 feature, allowed sparingly on tier 3 only (flagged, optional part)]"
+  },
+  {
+   "name": "jp_p_frame_dashigeta_upper_front",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "projecting upper front on dashigeta arms (Edo shop fronts), tier 3, flagged deviation  [DEVIATION: G1 decision 4: post-1750 feature, allowed sparingly on tier 3 only (flagged, optional part)]"
+  }
+ ]
+}

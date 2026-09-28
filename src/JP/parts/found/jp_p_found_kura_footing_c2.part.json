@@ -1,0 +1,191 @@
+{
+ "id": "jp_p_found_kura_footing_c2",
+ "part": "jp_p_found_kura_footing",
+ "variant": "_c2",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_found_kura_footing_c2.p3d",
+ "build_list": {
+  "entry": "jp_p_found_kura_footing",
+  "variant": "_c2",
+  "differs_by": "two courses",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "c11_kurashiki",
+   "x13_morse_kura"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "2-course cut-granite footing under a kura wall, individual blocks",
+ "datum": "2-ken run under a 0.24 okabe; y 0 = footing top = wall bottom; grade at -0.60",
+ "recipe": "found.kura_footing(part, x0, x1, courses)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.08,
+  3.72,
+  -0.7,
+  0.0,
+  -0.2,
+  0.2
+ ],
+ "dims": [
+  {
+   "name": "height_m",
+   "expected": "0.30-0.60",
+   "measured": 0.6,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "block_m",
+   "expected": "0.6-0.9",
+   "measured": 0.7405,
+   "tol": 0.03,
+   "source": "build_list (A)"
+  },
+  {
+   "name": "projection_m",
+   "expected": "0.05-0.10",
+   "measured": 0.08,
+   "tol": 0.01,
+   "source": "build_list (A)"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "under the okabe wall"
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -0.6,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 220,
+  "Resolution 2": 12,
+  "Resolution 3": 12,
+  "Geometry": 12,
+  "View Geometry": 12,
+  "Fire Geometry": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 220, Resolution 2 12, Resolution 3 12, Geometry 12, View Geometry 12, Fire Geometry 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "granite"
+  },
+  {
+   "check": "C4 height_m",
+   "ok": true,
+   "detail": "expected 0.30-0.60, measured 0.6"
+  },
+  {
+   "check": "C4 block_m",
+   "ok": true,
+   "detail": "expected 0.6-0.9, measured 0.7405"
+  },
+  {
+   "check": "C4 projection_m",
+   "ok": true,
+   "detail": "expected 0.05-0.10, measured 0.08"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

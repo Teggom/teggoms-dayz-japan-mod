@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 r"""build_materials.py - regenerate the jp_common material library, its checks, the swatch wall and the contact sheets.
 
-  python build_materials.py [--no-render] [--no-binarize] [--no-pack] [--sheets-only]
+  python build_materials.py [--no-render] [--no-binarize] [--no-pack] [--sheets-only] [--only ID[,ID...]]
+
+  --only (parts agent, 2026-09-27): regenerate just these materials (textures, PAAs, rvmats, sidecars), then run
+  matcheck over the whole library, repack and refresh the sheets; the swatch wall is not rebuilt (it references the
+  library by path).
 
 Steps (one run, everything from sources):
   1. fetch_sources.py  : CC0 Poly Haven maps -> data/materials/polyhaven (skipped when present)
@@ -194,16 +198,16 @@ def to_paa(pairs):
     print("paa: %d converted, %d up to date" % (len(todo), len(pairs) - len(todo)))
 
 
-def library(info):
+def library(info, only=None):
     pairs = []
-    for mid in ORDER:
+    for mid in (only or ORDER):
         for wear, _ in WEARS:
             for suf in ("_co", "_nohq", "_smdi"):
                 pairs.append((os.path.join(TEX, mid + wear + suf + ".png"),
                               os.path.join(MATDIR, fam(mid), mid + wear + suf + ".paa")))
     to_paa(pairs)
     man = json.load(open(os.path.join(DATA, "polyhaven", "manifest.json"), encoding="utf-8"))
-    for mid in ORDER:
+    for mid in (only or ORDER):
         m = MT.MATS[mid]
         s, p = SPEC[mid]
         wears = {}
@@ -690,18 +694,20 @@ splits, drips, rust, edge wear, streaks), and the swatch plaques (Arial from Win
 
 def main(argv):
     only_sheets = "--sheets-only" in argv
+    only = argv[argv.index("--only") + 1].split(",") if "--only" in argv else None
     if not only_sheets:
         import fetch_sources
         fetch_sources.main()
-        info = MT.main([])
-        library(info)
+        info = MT.main(only or [])
+        library(info, only)
     res = checks()
     if any(r["verdict"] == "FAIL" for r in res):
         print("C1 FAIL - fix the texture targets before shipping")
         return 1
     ok = True
-    if not only_sheets:
+    if not only_sheets and not only:
         ok = swatch("--no-binarize" not in argv) and ok
+    if not only_sheets:
         if "--no-pack" not in argv:
             ok = pack() and ok
         placement()

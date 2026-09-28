@@ -1,0 +1,179 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\5a_roof_kawara",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_roof_sangawara_field_std",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "corrugated one-piece S-tile field (2 modelled rows at the eave, 1 at the ridge)"
+  },
+  {
+   "name": "jp_p_roof_sangawara_field_pointed",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "sangawara field with white mortar pointing near eave and ridge (better roofs, T3)"
+  },
+  {
+   "name": "jp_p_roof_sangawara_eave_tomoe",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_roof_sangawara_field_std",
+     0.0,
+     [
+      0,
+      0,
+      0
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "eave tiles with round ends carrying a raised (tomoe) boss"
+  },
+  {
+   "name": "jp_p_roof_sangawara_eave_plain",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_roof_sangawara_field_std",
+     0.0,
+     [
+      0,
+      0,
+      0
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "eave tiles with plain round ends"
+  },
+  {
+   "name": "jp_p_roof_sangawara_eave_lod1_strip",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_roof_sangawara_field_std",
+     0.0,
+     [
+      0,
+      0,
+      0
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "the whole eave course as one extruded strip (the LOD1 form of the eave)"
+  },
+  {
+   "name": "jp_p_roof_sangawara_verge_L",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_roof_sangawara_field_std",
+     0.0,
+     [
+      0.13,
+      0,
+      0
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "left-hand verge tiles turning down over the bargeboard, one per course"
+  },
+  {
+   "name": "jp_p_roof_sangawara_verge_R",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_roof_sangawara_field_std",
+     0.0,
+     [
+      -0.13,
+      0,
+      0
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "right-hand verge tiles turning down over the bargeboard, one per course"
+  },
+  {
+   "name": "jp_p_roof_kawara_ridge_c3",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "3 noshi courses + round cap on mortar bedding (T2 kura / inn ridges)"
+  },
+  {
+   "name": "jp_p_roof_kawara_ridge_c5",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "5 noshi courses + round cap (T3 machiya ridges)"
+  },
+  {
+   "name": "jp_p_roof_kawara_ridge_hip",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "hip ridge (kudarimune): one course fewer, ending in a round end tile"
+  },
+  {
+   "name": "jp_p_roof_onigawara_plain",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "plain shouldered ridge-end block"
+  },
+  {
+   "name": "jp_p_roof_onigawara_sui",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "ridge-end block with the character for water in relief (fire charm), T3"
+  },
+  {
+   "name": "jp_p_roof_hongawara_field",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "hongawara field: flat pans with round covers, 6 columns per ken (rich kura)"
+  },
+  {
+   "name": "jp_p_roof_hongawara_eave",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "hongawara eave: round-end covers and flat eave tiles with a lip"
+  },
+  {
+   "name": "jp_p_roof_hongawara_ridge",
+   "scale": 3.6,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "taller hongawara ridge (5 courses; 7 for later elite work)"
+  }
+ ]
+}

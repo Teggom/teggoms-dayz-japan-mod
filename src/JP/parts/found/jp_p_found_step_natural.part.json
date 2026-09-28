@@ -1,0 +1,170 @@
+{
+ "id": "jp_p_found_step_natural",
+ "part": "jp_p_found_step",
+ "variant": "_natural",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_found_step_natural.p3d",
+ "build_list": {
+  "entry": "jp_p_found_step",
+  "variant": "_natural",
+  "differs_by": "natural slab",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x04_misawa_a",
+   "x25_morse_amado_box"
+  ]
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "natural shoe-removal stone at a doma-to-floor step, hides the walk ramp",
+ "datum": "door sill at z 0 (the floor edge), y 0 = raised floor / veranda; the ramp runs to +z",
+ "recipe": "found.step(part, cx, style, drop)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.579,
+  1.247,
+  -0.53,
+  -0.23,
+  0.035,
+  0.457
+ ],
+ "dims": [
+  {
+   "name": "ramp_deg",
+   "expected": "<=34",
+   "measured": 34.0,
+   "tol": 0.1,
+   "source": "build_list"
+  },
+  {
+   "name": "kutsunugi_m",
+   "expected": "0.60 x 0.40 x 0.15-0.20",
+   "measured": "0.67 x 0.42 x 0.22 shows",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "ramp_width_m",
+   "expected": ">=1.00",
+   "measured": 1.2,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "stair_head",
+   "pos": [
+    0.91,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "ramp_foot",
+   "pos": [
+    0.91,
+    -0.45,
+    0.6672
+   ]
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -0.45,
+    0.0
+   ],
+   "note": "doma / yard level"
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 38,
+  "Resolution 2": 38,
+  "Resolution 3": 38,
+  "Geometry": 5,
+  "Roadway": 1
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 38, Resolution 2 38, Resolution 3 38, Geometry 5, Roadway 1"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 ramp_deg",
+   "ok": true,
+   "detail": "expected <=34, measured 34.0"
+  },
+  {
+   "check": "C4 kutsunugi_m",
+   "ok": true,
+   "detail": "expected 0.60 x 0.40 x 0.15-0.20, measured 0.67 x 0.42 x 0.22 shows"
+  },
+  {
+   "check": "C4 ramp_width_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.2"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

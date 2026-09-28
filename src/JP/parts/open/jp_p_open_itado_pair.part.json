@@ -1,0 +1,290 @@
+{
+ "id": "jp_p_open_itado_pair",
+ "part": "jp_p_open_itado",
+ "variant": "_pair",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_itado_pair.p3d",
+ "build_list": {
+  "entry": "jp_p_open_itado",
+  "variant": "_pair",
+  "differs_by": "two leaves in a 1-ken bay",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x04_misawa_a",
+   "c02_narai_facade",
+   "x33_jinrin_bookseller_1690"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "pair of plank leaves in a 1.5-ken bay, each opening >= 1.00 m (D1; build list said 1 ken)",
+ "datum": "1.5-ken bay x 0..2.73; left leaf parks over x -1.82..0, right leaf over 2.73..4.55",
+ "recipe": null,
+ "deviation": "bay 1.5 ken instead of the build list's 1 ken: a 1-ken pair opens 0.85 m per leaf (< D1)",
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -1.76,
+  4.49,
+  -0.1,
+  2.14,
+  -0.06,
+  0.194
+ ],
+ "dims": [
+  {
+   "name": "clear_per_leaf_m (left leaf)",
+   "expected": ">=1.00",
+   "measured": 1.305,
+   "tol": 0.01,
+   "source": "D1",
+   "ok": true
+  },
+  {
+   "name": "clear_per_leaf_m (right leaf)",
+   "expected": ">=1.00",
+   "measured": 1.305,
+   "tol": 0.01,
+   "source": "D1",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    2.73,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    -1.82,
+    0.0,
+    0.0
+   ],
+   "note": "far end of the left park bay"
+  },
+  {
+   "type": "post",
+   "pos": [
+    4.55,
+    0.0,
+    0.0
+   ],
+   "note": "far end of the right park bay"
+  },
+  {
+   "type": "park",
+   "pos": [
+    -1.82,
+    0.0,
+    0.0
+   ],
+   "length": 1.82,
+   "face": "exterior"
+  },
+  {
+   "type": "park",
+   "pos": [
+    2.73,
+    0.0,
+    0.0
+   ],
+   "length": 1.82,
+   "face": "exterior"
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 186,
+  "Resolution 2": 30,
+  "Resolution 3": 18,
+  "Geometry": 18,
+  "Memory": 0,
+  "Roadway": 1,
+  "View Geometry": 12,
+  "Fire Geometry": 18
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [
+  {
+   "source": "Doors1",
+   "kind": "plank",
+   "display": "plank door",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "translation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.345,
+     "unit": "m (translation; axis 1.00 m)"
+    }
+   ],
+   "anim_period": 1.0,
+   "init_opened": 0.3,
+   "sound": "doorWoodSlide",
+   "clear_width_m": 1.26,
+   "engine_tested": true,
+   "note": "left leaf"
+  },
+  {
+   "source": "Doors2",
+   "kind": "plank",
+   "display": "plank door",
+   "anims": [
+    {
+     "bone": "doors2",
+     "type": "translation",
+     "axis_memory": "doors2_axis",
+     "amount": 1.345,
+     "unit": "m (translation; axis 1.00 m)"
+    }
+   ],
+   "anim_period": 1.0,
+   "init_opened": 0.3,
+   "sound": "doorWoodSlide",
+   "clear_width_m": 1.26,
+   "engine_tested": true,
+   "note": "right leaf"
+  }
+ ],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 186, Resolution 2 30, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "translation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep + clear",
+   "ok": true,
+   "detail": "leaf slides 1.345 m without touching other geometry; open clear width 1.26 m (>= 1.00), head nan m"
+  },
+  {
+   "check": "C7 door doors2 selections+memory",
+   "ok": true,
+   "detail": "translation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors2 sweep + clear",
+   "ok": true,
+   "detail": "leaf slides 1.345 m without touching other geometry; open clear width 1.26 m (>= 1.00), head nan m"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 clear_per_leaf_m (left leaf)",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.305"
+  },
+  {
+   "check": "C4 clear_per_leaf_m (right leaf)",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.305"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "8 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

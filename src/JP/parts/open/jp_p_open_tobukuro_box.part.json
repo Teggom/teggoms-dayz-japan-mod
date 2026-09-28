@@ -1,0 +1,155 @@
+{
+ "id": "jp_p_open_tobukuro_box",
+ "part": "jp_p_open_tobukuro",
+ "variant": "_box",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_tobukuro_box.p3d",
+ "build_list": {
+  "entry": "jp_p_open_tobukuro",
+  "variant": "_box",
+  "differs_by": "covered box (to-bako)",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x25_morse_amado_box"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "board box holding the stowed amado at the end of a run",
+ "datum": "beside the end post of the amado run: x from the post face, z 0 = groove line, y 0 = veranda floor",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.04,
+  1.09,
+  0.0,
+  2.18,
+  -0.175,
+  0.185
+ ],
+ "dims": [
+  {
+   "name": "inner_width_m",
+   "expected": 0.96,
+   "measured": 0.96,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "depth_m (8 leaves)",
+   "expected": 0.29,
+   "measured": 0.29,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "height_m",
+   "expected": 2.13,
+   "measured": 2.13,
+   "tol": 0.01,
+   "source": "leaf + 0.10"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "outside the end post of the amado run"
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 60,
+  "Resolution 2": 12,
+  "Resolution 3": 6,
+  "Geometry": 6,
+  "View Geometry": 6,
+  "Fire Geometry": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 60, Resolution 2 12, Resolution 3 6, Geometry 6, View Geometry 6, Fire Geometry 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 inner_width_m",
+   "ok": true,
+   "detail": "expected 0.96, measured 0.96"
+  },
+  {
+   "check": "C4 depth_m (8 leaves)",
+   "ok": true,
+   "detail": "expected 0.29, measured 0.29"
+  },
+  {
+   "check": "C4 height_m",
+   "ok": true,
+   "detail": "expected 2.13, measured 2.13"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

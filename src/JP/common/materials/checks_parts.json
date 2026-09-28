@@ -1,0 +1,209 @@
+{
+ "check": "C1 palette (tools/matcheck), parts-agent materials",
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_grime_w0_co.png",
+   "palette_id": "grime_splash",
+   "wear": "",
+   "mean_srgb": [
+    114.1,
+    98.7,
+    80.3
+   ],
+   "target_srgb": [
+    104,
+    89,
+    71
+   ],
+   "dE": 4.0,
+   "dE_to_entry": 4.0,
+   "tol": 6.0,
+   "spread_p75": 3.8,
+   "observed_spread": 1.8,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     114.1,
+     98.7,
+     80.3
+    ],
+    "dE": 4.0,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_grime_w1_co.png",
+   "palette_id": "grime_splash",
+   "wear": "",
+   "mean_srgb": [
+    104.0,
+    89.0,
+    71.0
+   ],
+   "target_srgb": [
+    104,
+    89,
+    71
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 6.0,
+   "spread_p75": 2.5,
+   "observed_spread": 1.8,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     103.9,
+     89.0,
+     70.9
+    ],
+    "dE": 0.09,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_grime_w2_co.png",
+   "palette_id": "grime_splash",
+   "wear": "",
+   "mean_srgb": [
+    91.6,
+    77.2,
+    59.6
+   ],
+   "target_srgb": [
+    104,
+    89,
+    71
+   ],
+   "dE": 5.0,
+   "dE_to_entry": 5.0,
+   "tol": 6.0,
+   "spread_p75": 3.3,
+   "observed_spread": 1.8,
+   "masked_frac": 0.004,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_grime_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     91.6,
+     77.3,
+     59.6
+    ],
+    "dE": 4.98,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_field_w0_co.png",
+   "palette_id": "kawara_ibushi",
+   "wear": "",
+   "mean_srgb": [
+    120.5,
+    124.5,
+    125.5
+   ],
+   "target_srgb": [
+    118,
+    122,
+    123
+   ],
+   "dE": 0.93,
+   "dE_to_entry": 1.0,
+   "tol": 14.0,
+   "spread_p75": 2.8,
+   "observed_spread": 20.4,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     120.5,
+     124.6,
+     125.1
+    ],
+    "dE": 0.83,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_field_w1_co.png",
+   "palette_id": "kawara_ibushi",
+   "wear": "",
+   "mean_srgb": [
+    97.4,
+    102.1,
+    104.7
+   ],
+   "target_srgb": [
+    118,
+    122,
+    123
+   ],
+   "dE": 8.06,
+   "dE_to_entry": 8.06,
+   "tol": 14.0,
+   "spread_p75": 3.6,
+   "observed_spread": 20.4,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     97.3,
+     102.1,
+     105.2
+    ],
+    "dE": 8.1,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_field_w2_co.png",
+   "palette_id": "kawara_ibushi",
+   "wear": "",
+   "mean_srgb": [
+    99.1,
+    105.7,
+    98.6
+   ],
+   "target_srgb": [
+    118,
+    122,
+    123
+   ],
+   "dE": 8.34,
+   "dE_to_entry": 8.59,
+   "tol": 14.0,
+   "spread_p75": 3.6,
+   "observed_spread": 20.4,
+   "masked_frac": 0.062,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_kawara_field_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     99.1,
+     105.7,
+     98.9
+    ],
+    "dE": 8.26,
+    "verdict": "PASS",
+    "warnings": []
+   }
+  }
+ ]
+}

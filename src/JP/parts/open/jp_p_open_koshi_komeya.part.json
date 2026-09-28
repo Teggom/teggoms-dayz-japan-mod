@@ -1,0 +1,181 @@
+{
+ "id": "jp_p_open_koshi_komeya",
+ "part": "jp_p_open_koshi",
+ "variant": "_komeya",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_koshi_komeya.p3d",
+ "build_list": {
+  "entry": "jp_p_open_koshi",
+  "variant": "_komeya",
+  "differs_by": "thick bars (rice, charcoal)",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "c07_gion_machiya",
+   "c08_kyomachiya",
+   "c02_narai_facade",
+   "x35_hiroshige_goyu"
+  ]
+ },
+ "tiers": [
+  2
+ ],
+ "used_for": "thick bars for rice and charcoal shops (T2)",
+ "datum": "1-ken module between post faces; y 0 = sill level of the wall (lattice sill 0.45, head 2.00)",
+ "recipe": "openings.koshi(part, x0, x1, variant) for 0.5 / 1 / 1.5 / 2-ken modules",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.06,
+  1.76,
+  0.39,
+  2.0,
+  -0.03,
+  0.08
+ ],
+ "dims": [
+  {
+   "name": "bar_face_m",
+   "expected": 0.06,
+   "measured": 0.06,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "module_width_ken",
+   "expected": "0.5 / 1 / 1.5 / 2",
+   "measured": 1.0,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.45,
+    0.0
+   ],
+   "note": "own sill rail on the koshi-ita / plinth"
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "paper_shoji",
+   "id": "jp_m_paper_shoji",
+   "palette_id": "washi_shoji",
+   "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_street_dark",
+   "id": "jp_m_wood_street_dark",
+   "palette_id": "timber_street_dark",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_street_dark<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 108,
+  "Resolution 2": 60,
+  "Resolution 3": 24,
+  "Geometry": 12,
+  "View Geometry": 12,
+  "Fire Geometry": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 108, Resolution 2 60, Resolution 3 24, Geometry 12, View Geometry 12, Fire Geometry 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 bar_face_m",
+   "ok": true,
+   "detail": "expected 0.06, measured 0.06"
+  },
+  {
+   "check": "C4 module_width_ken",
+   "ok": true,
+   "detail": "expected 0.5 / 1 / 1.5 / 2, measured 1.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

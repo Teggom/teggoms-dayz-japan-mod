@@ -1,0 +1,116 @@
+{
+ "id": "jp_p_roof_sangawara_verge_R",
+ "part": "jp_p_roof_sangawara_verge",
+ "variant": "_R",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_sangawara_verge_R.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_sangawara_verge",
+  "variant": "_R",
+  "differs_by": "right hand",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x01_ioka_a",
+   "c08_kyomachiya"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "right-hand verge tiles turning down over the bargeboard, one per course",
+ "datum": "7 courses of a gable edge at x 0 (L) / x 1.82 (R); y 0 = floor",
+ "recipe": "kawara.verge(part, frame, u_edge, r0, r1, side)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  1.69,
+  1.82,
+  2.874,
+  3.598,
+  -1.217,
+  0.318
+ ],
+ "dims": [
+  {
+   "name": "flange_drop_m",
+   "expected": 0.07,
+   "measured": 0.07,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "module_m",
+   "expected": 0.235,
+   "measured": 0.235,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "verge",
+   "pos": [
+    1.82,
+    2.88,
+    0.3
+   ],
+   "note": "over jp_p_roof_hafu; meets the eave tile at the corner"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 21,
+  "Resolution 2": 21
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 21, Resolution 2 21"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 flange_drop_m",
+   "ok": true,
+   "detail": "expected 0.07, measured 0.07"
+  },
+  {
+   "check": "C4 module_m",
+   "ok": true,
+   "detail": "expected 0.235, measured 0.235"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

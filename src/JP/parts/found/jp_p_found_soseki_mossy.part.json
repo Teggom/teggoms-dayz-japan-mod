@@ -1,0 +1,241 @@
+{
+ "id": "jp_p_found_soseki_mossy",
+ "part": "jp_p_found_soseki",
+ "variant": "_mossy",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_found_soseki_mossy.p3d",
+ "build_list": {
+  "entry": "jp_p_found_soseki",
+  "variant": "_mossy",
+  "differs_by": "north-side moss (W6)",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x10_morse_foundation_stone",
+   "x08_hirose_earthwall",
+   "x06_suzuki_a"
+  ]
+ },
+ "tiers": [
+  1,
+  2
+ ],
+ "used_for": "the 8 field-stone shapes under the posts of rural houses and verandas (north-side moss, wear _w2)",
+ "datum": "stone k at x = k * 0.91; y 0 = stone top = post foot; grade at -0.12 (exposed 0.05-0.20 by placement)",
+ "recipe": "found.soseki(part, x, z, shape 0-7)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.228,
+  6.537,
+  -0.272,
+  0.0,
+  -0.252,
+  0.247
+ ],
+ "dims": [
+  {
+   "name": "stone_across_m",
+   "expected": "0.30-0.50",
+   "measured": 0.4748,
+   "tol": 0.01,
+   "source": "build_list (A)"
+  },
+  {
+   "name": "stone_across_min_m",
+   "expected": "0.30-0.50",
+   "measured": 0.3251,
+   "tol": 0.01,
+   "source": "build_list (A)"
+  },
+  {
+   "name": "stone_height_m",
+   "expected": "0.15-0.30",
+   "measured": 0.2716,
+   "tol": 0.01,
+   "source": "build_list (A)"
+  },
+  {
+   "name": "shapes",
+   "expected": 8,
+   "measured": 8.0,
+   "tol": 0,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "shape": 0
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.91,
+    0.0,
+    0.0
+   ],
+   "shape": 1
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "shape": 2
+  },
+  {
+   "type": "post",
+   "pos": [
+    2.73,
+    0.0,
+    0.0
+   ],
+   "shape": 3
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    0.0
+   ],
+   "shape": 4
+  },
+  {
+   "type": "post",
+   "pos": [
+    4.55,
+    0.0,
+    0.0
+   ],
+   "shape": 5
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    0.0
+   ],
+   "shape": 6
+  },
+  {
+   "type": "post",
+   "pos": [
+    6.37,
+    0.0,
+    0.0
+   ],
+   "shape": 7
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -0.12,
+    0.0
+   ],
+   "note": "exposure 0.05-0.20 set by the placement"
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w2",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 270,
+  "Resolution 2": 176,
+  "Resolution 3": 176,
+  "Geometry": 176,
+  "View Geometry": 176,
+  "Fire Geometry": 176
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 270, Resolution 2 176, Resolution 3 176, Geometry 176, View Geometry 176, Fire Geometry 176"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "granite"
+  },
+  {
+   "check": "C4 stone_across_m",
+   "ok": true,
+   "detail": "expected 0.30-0.50, measured 0.4748"
+  },
+  {
+   "check": "C4 stone_across_min_m",
+   "ok": true,
+   "detail": "expected 0.30-0.50, measured 0.3251"
+  },
+  {
+   "check": "C4 stone_height_m",
+   "ok": true,
+   "detail": "expected 0.15-0.30, measured 0.2716"
+  },
+  {
+   "check": "C4 shapes",
+   "ok": true,
+   "detail": "expected 8, measured 8.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "9 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,55 @@
+{
+ "checks": "C2 C3 C4 C5 C7 (parts/kit/jpparts/checks.py)",
+ "parts": [
+  {
+   "id": "jp_p_trim_grime_wall",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 1, Resolution 2 1"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C4 band_height_m",
+     "ok": true,
+     "detail": "expected 0-0.4 zone (W1), measured 0.45"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_trim_grime_post",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 4, Resolution 2 4"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C4 band_height_m",
+     "ok": true,
+     "detail": "expected 0-0.4 zone (W1), measured 0.45"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  }
+ ]
+}

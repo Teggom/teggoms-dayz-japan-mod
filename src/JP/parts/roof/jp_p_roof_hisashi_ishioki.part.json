@@ -1,0 +1,226 @@
+{
+ "id": "jp_p_roof_hisashi_ishioki",
+ "part": "jp_p_roof_hisashi",
+ "variant": "_ishioki",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_hisashi_ishioki.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_hisashi",
+  "variant": "_ishioki",
+  "differs_by": "Kiso stone-weighted pent",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x29_morse_hisashi",
+   "x07_sasaki_1985",
+   "x01_ioka_a",
+   "c08_kyomachiya",
+   "x33_jinrin_bookseller_1690"
+  ]
+ },
+ "tiers": [
+  2
+ ],
+ "used_for": "stone-weighted board pent (Kiso post towns)",
+ "datum": "2-ken run of a wall (z 0), y 0 = ground floor; attaches at y 3.10, projects +z 0.91",
+ "recipe": "roofparts.pent(part, x0, x1, y_wall, projection, pitch, kind)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.05,
+  3.69,
+  2.313,
+  3.22,
+  0.06,
+  0.972
+ ],
+ "dims": [
+  {
+   "name": "projection_m",
+   "expected": 0.91,
+   "measured": 0.91,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "pitch_sun",
+   "expected": 3,
+   "measured": 3.0,
+   "tol": 0.05,
+   "source": "build_list"
+  },
+  {
+   "name": "soffit_min_m",
+   "expected": ">=2.20",
+   "measured": 2.627,
+   "tol": 0.01,
+   "source": "PLAYBOOK §4 (walked under)",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "udegi bracket plugs into each post at the pent height"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "note": "udegi bracket plugs into each post at the pent height"
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    0.0
+   ],
+   "note": "udegi bracket plugs into each post at the pent height"
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.827,
+    0.91
+   ],
+   "note": "pent eave line parallel to the wall"
+  },
+  {
+   "type": "top",
+   "pos": [
+    0.0,
+    3.1,
+    0.0
+   ],
+   "note": "flashed under the upper wall or main eave"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kureita",
+   "id": "jp_m_roof_kureita",
+   "palette_id": "roof_board_silver",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_river",
+   "id": "jp_m_stone_river",
+   "palette_id": "stone_lantern",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_river<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 424,
+  "Resolution 2": 165,
+  "Resolution 3": 18,
+  "Geometry": 42,
+  "Roadway": 1,
+  "View Geometry": 42,
+  "Fire Geometry": 42
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 424, Resolution 2 165, Resolution 3 18, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 projection_m",
+   "ok": true,
+   "detail": "expected 0.91, measured 0.91"
+  },
+  {
+   "check": "C4 pitch_sun",
+   "ok": true,
+   "detail": "expected 3, measured 3.0"
+  },
+  {
+   "check": "C4 soffit_min_m",
+   "ok": true,
+   "detail": "expected >=2.20, measured 2.627"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

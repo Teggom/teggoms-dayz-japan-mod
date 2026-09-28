@@ -1,0 +1,590 @@
+{
+ "checks": "C2 C3 C4 C5 C7 (parts/kit/jpparts/checks.py)",
+ "parts": [
+  {
+   "id": "jp_p_found_soseki_set8",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 270, Resolution 2 176, Resolution 3 176, Geometry 176, View Geometry 176, Fire Geometry 176"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite"
+    },
+    {
+     "check": "C4 stone_across_m",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.4748"
+    },
+    {
+     "check": "C4 stone_across_min_m",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.3251"
+    },
+    {
+     "check": "C4 stone_height_m",
+     "ok": true,
+     "detail": "expected 0.15-0.30, measured 0.2716"
+    },
+    {
+     "check": "C4 shapes",
+     "ok": true,
+     "detail": "expected 8, measured 8.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "9 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_soseki_mossy",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 270, Resolution 2 176, Resolution 3 176, Geometry 176, View Geometry 176, Fire Geometry 176"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite"
+    },
+    {
+     "check": "C4 stone_across_m",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.4748"
+    },
+    {
+     "check": "C4 stone_across_min_m",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.3251"
+    },
+    {
+     "check": "C4 stone_height_m",
+     "ok": true,
+     "detail": "expected 0.15-0.30, measured 0.2716"
+    },
+    {
+     "check": "C4 shapes",
+     "ok": true,
+     "detail": "expected 8, measured 8.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "9 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_dodai_stones_rough",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 204, Resolution 2 12, Resolution 3 12, Geometry 12, View Geometry 12, Fire Geometry 12"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite, wood"
+    },
+    {
+     "check": "C4 stone_length_m",
+     "ok": true,
+     "detail": "expected 0.30-0.60, measured 0.4524"
+    },
+    {
+     "check": "C4 stone_depth_m",
+     "ok": true,
+     "detail": "expected 0.25-0.35, measured 0.3466"
+    },
+    {
+     "check": "C4 stone_showing_m",
+     "ok": true,
+     "detail": "expected 0.10-0.20, measured 0.15"
+    },
+    {
+     "check": "C4 sill_m",
+     "ok": true,
+     "detail": "expected 0.12, measured 0.12"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_dodai_stones_dressed",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 160, Resolution 2 12, Resolution 3 12, Geometry 12, View Geometry 12, Fire Geometry 12"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite, wood"
+    },
+    {
+     "check": "C4 stone_length_m",
+     "ok": true,
+     "detail": "expected 0.30-0.60, measured 0.523"
+    },
+    {
+     "check": "C4 stone_depth_m",
+     "ok": true,
+     "detail": "expected 0.25-0.35, measured 0.3"
+    },
+    {
+     "check": "C4 stone_showing_m",
+     "ok": true,
+     "detail": "expected 0.10-0.20, measured 0.15"
+    },
+    {
+     "check": "C4 sill_m",
+     "ok": true,
+     "detail": "expected 0.12, measured 0.12"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_kura_footing_c1",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 110, Resolution 2 6, Resolution 3 6, Geometry 6, View Geometry 6, Fire Geometry 6"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.30-0.60, measured 0.3"
+    },
+    {
+     "check": "C4 block_m",
+     "ok": true,
+     "detail": "expected 0.6-0.9, measured 0.7481"
+    },
+    {
+     "check": "C4 projection_m",
+     "ok": true,
+     "detail": "expected 0.05-0.10, measured 0.08"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_kura_footing_c2",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 220, Resolution 2 12, Resolution 3 12, Geometry 12, View Geometry 12, Fire Geometry 12"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.30-0.60, measured 0.6"
+    },
+    {
+     "check": "C4 block_m",
+     "ok": true,
+     "detail": "expected 0.6-0.9, measured 0.7405"
+    },
+    {
+     "check": "C4 projection_m",
+     "ok": true,
+     "detail": "expected 0.05-0.10, measured 0.08"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_yukashita_open",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 89, Resolution 2 89, Resolution 3 6, Geometry 12, View Geometry 6, Fire Geometry 6"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 floor_above_grade_m",
+     "ok": true,
+     "detail": "expected 0.5, measured 0.5"
+    },
+    {
+     "check": "C4 tsuka_m",
+     "ok": true,
+     "detail": "expected 0.09 at 0.91, measured 0.09 at 0.91"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_yukashita_boarded",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 190, Resolution 2 166, Resolution 3 12, Geometry 18, View Geometry 12, Fire Geometry 12"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 floor_above_grade_m",
+     "ok": true,
+     "detail": "expected 0.5, measured 0.5"
+    },
+    {
+     "check": "C4 tsuka_m",
+     "ok": true,
+     "detail": "expected 0.09 at 0.91, measured 0.09 at 0.91"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_step_natural",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 38, Resolution 2 38, Resolution 3 38, Geometry 5, Roadway 1"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 ramp_deg",
+     "ok": true,
+     "detail": "expected <=34, measured 34.0"
+    },
+    {
+     "check": "C4 kutsunugi_m",
+     "ok": true,
+     "detail": "expected 0.60 x 0.40 x 0.15-0.20, measured 0.67 x 0.42 x 0.22 shows"
+    },
+    {
+     "check": "C4 ramp_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.2"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_step_cut",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 22, Resolution 2 22, Resolution 3 22, Geometry 5, Roadway 1"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 ramp_deg",
+     "ok": true,
+     "detail": "expected <=34, measured 34.0"
+    },
+    {
+     "check": "C4 kutsunugi_m",
+     "ok": true,
+     "detail": "expected 0.60 x 0.40 x 0.15-0.20, measured 0.70 x 0.40 x 0.22 shows"
+    },
+    {
+     "check": "C4 ramp_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.2"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_found_step_wood",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 54, Resolution 2 18, Resolution 3 6, Geometry 5, Roadway 1"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 ramp_deg",
+     "ok": true,
+     "detail": "expected <=34, measured 34.0"
+    },
+    {
+     "check": "C4 step_rise_m",
+     "ok": true,
+     "detail": "expected 0.15-0.18 (A), measured 0.25"
+    },
+    {
+     "check": "C4 ramp_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.2"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  }
+ ]
+}

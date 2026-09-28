@@ -1,0 +1,139 @@
+{
+ "id": "jp_p_roof_kawara_ridge_hip",
+ "part": "jp_p_roof_kawara_ridge",
+ "variant": "_hip",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_kawara_ridge_hip.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_kawara_ridge",
+  "variant": "_hip",
+  "differs_by": "hip ridge (kudarimune) with an end tile",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "c26_morse_tile_ridge",
+   "x17_morse_hongawara",
+   "c08_kyomachiya"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "hip ridge (kudarimune): one course fewer, ending in a round end tile",
+ "datum": "origin = ridge connector (apex of the tile bed); 1 ken long (hip: 1 ken in plan at 45 deg)",
+ "recipe": "kawara.ridge(part, p0, p1, courses)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.092,
+  1.399,
+  -0.579,
+  0.171,
+  -1.399,
+  0.092
+ ],
+ "dims": [
+  {
+   "name": "noshi_course_m",
+   "expected": "0.025 thick, 0.22 wide",
+   "measured": "0.025 x 0.20",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "cap_diameter_m",
+   "expected": "0.14 (hip)",
+   "measured": 0.14,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "ridge",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    1.2869,
+    -0.5791,
+    -1.2869
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 59,
+  "Resolution 2": 31,
+  "Resolution 3": 13
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 59, Resolution 2 31, Resolution 3 13"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 noshi_course_m",
+   "ok": true,
+   "detail": "expected 0.025 thick, 0.22 wide, measured 0.025 x 0.20"
+  },
+  {
+   "check": "C4 cap_diameter_m",
+   "ok": true,
+   "detail": "expected 0.14 (hip), measured 0.14"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

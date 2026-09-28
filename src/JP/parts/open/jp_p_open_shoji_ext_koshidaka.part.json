@@ -1,0 +1,265 @@
+{
+ "id": "jp_p_open_shoji_ext_koshidaka",
+ "part": "jp_p_open_shoji_ext",
+ "variant": "_koshidaka",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_shoji_ext_koshidaka.p3d",
+ "build_list": {
+  "entry": "jp_p_open_shoji_ext",
+  "variant": "_koshidaka",
+  "differs_by": "board-bottomed door (nagaya, doma)",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x35_hiroshige_goyu",
+   "x28_morse_inn_mishima",
+   "x07_sasaki_1985"
+  ]
+ },
+ "tiers": [
+  1
+ ],
+ "used_for": "board-bottomed paper door of nagaya and doma entrances (T1)",
+ "datum": "1-ken door bay between post nodes x=0 and x=1.82 + its park bay to x=3.64; y 0 = sill/floor",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.04,
+  3.58,
+  -0.1,
+  2.14,
+  -0.134,
+  0.06
+ ],
+ "dims": [
+  {
+   "name": "clear_opening_m",
+   "expected": ">=1.00",
+   "measured": 1.7,
+   "tol": 0.01,
+   "source": "D1",
+   "ok": true
+  },
+  {
+   "name": "head_m",
+   "expected": 2.0,
+   "measured": 2.0,
+   "tol": 0.01,
+   "source": "D2"
+  },
+  {
+   "name": "leaf_slide_m (= leaf width)",
+   "expected": 1.74,
+   "measured": 1.74,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "lower_board_m",
+   "expected": 0.6,
+   "measured": 0.6,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    0.0
+   ],
+   "note": "far end of the park bay"
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "runs in a grooved sill at floor level"
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  {
+   "type": "park",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "length": 1.82,
+   "face": "interior",
+   "note": "the next bay must be a plain wall on the interior face: the open leaf parks there"
+  }
+ ],
+ "materials": [
+  {
+   "key": "paper_shoji",
+   "id": "jp_m_paper_shoji",
+   "palette_id": "washi_shoji",
+   "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 126,
+  "Resolution 2": 24,
+  "Resolution 3": 12,
+  "Geometry": 12,
+  "Memory": 0,
+  "Roadway": 1,
+  "View Geometry": 6,
+  "Fire Geometry": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [
+  {
+   "source": "Doors1",
+   "kind": "shoji",
+   "display": "shoji door",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "translation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.74,
+     "unit": "m (translation; axis 1.00 m)"
+    }
+   ],
+   "anim_period": 0.8,
+   "init_opened": 0.5,
+   "sound": "doorWoodSlide",
+   "clear_width_m": 1.68,
+   "engine_tested": true,
+   "note": "paper door, interior track"
+  }
+ ],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 126, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "fabric_thin, wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "translation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep + clear",
+   "ok": true,
+   "detail": "leaf slides 1.740 m without touching other geometry; open clear width 1.68 m (>= 1.00), head nan m"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 clear_opening_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.7"
+  },
+  {
+   "check": "C4 head_m",
+   "ok": true,
+   "detail": "expected 2.0, measured 2.0"
+  },
+  {
+   "check": "C4 leaf_slide_m (= leaf width)",
+   "ok": true,
+   "detail": "expected 1.74, measured 1.74"
+  },
+  {
+   "check": "C4 lower_board_m",
+   "ok": true,
+   "detail": "expected 0.6, measured 0.6"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

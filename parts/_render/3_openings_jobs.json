@@ -1,0 +1,897 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\3_openings",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_open_itado_plain",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "plank sliding door of poor houses (T1), boards only; one 1.74 m leaf parks outside"
+  },
+  {
+   "name": "jp_p_open_itado_battened",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "framed and battened plank door, the everyday exterior door (T2)"
+  },
+  {
+   "name": "jp_p_open_itado_oodo",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "big entrance door with a decorative kuguri wicket (D9: the wicket does not open)"
+  },
+  {
+   "name": "jp_p_open_itado_pair",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      2.73,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      -1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      4.55,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "pair of plank leaves in a 1.5-ken bay, each opening >= 1.00 m (D1; build list said 1 ken)  [DEVIATION: bay 1.5 ken instead of the build list's 1 ken: a 1-ken pair opens 0.85 m per leaf (< D1)]"
+  },
+  {
+   "name": "jp_p_open_shoji_ext_koshidaka",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "board-bottomed paper door of nagaya and doma entrances (T1)"
+  },
+  {
+   "name": "jp_p_open_shoji_ext_akari",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "plain shoji line behind the amado of a veranda (T2)"
+  },
+  {
+   "name": "jp_p_open_amado_stowed",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "amado track and transom with the leaves stowed in the tobukuro (default, open)"
+  },
+  {
+   "name": "jp_p_open_amado_closed",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "storm shutters closed in a line (abandoned houses; blocks the opening)"
+  },
+  {
+   "name": "jp_p_open_tobukuro_box",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "board box holding the stowed amado at the end of a run"
+  },
+  {
+   "name": "jp_p_open_tobukuro_swing",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "Morse's swinging shutter closet, shown swung clear of the veranda (P3)"
+  },
+  {
+   "name": "jp_p_open_kura_door_open",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [],
+   "open": 0.6,
+   "caption": "kura doorway: stepped plaster surround, outer leaves static open, inner sliding door"
+  },
+  {
+   "name": "jp_p_open_kura_door_hinged",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [],
+   "open": 0.6,
+   "caption": "kura doorway with the thick plastered leaves as rotation doors (engine test, P2)"
+  },
+  {
+   "name": "jp_p_open_mushiko_oval",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [],
+   "caption": "single small oval mushiko on the low upper street wall of Kamigata machiya (1730 form)"
+  },
+  {
+   "name": "jp_p_open_mushiko_oval_pair",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [],
+   "caption": "two small oval mushiko in one 1-ken bay of the low upper street wall (1730 form)  [DEVIATION: oval pair: each oval 0.70 x 0.40 so two fit one 1-ken bay (build list single oval 0.90 x 0.45)]"
+  },
+  {
+   "name": "jp_p_open_koshi_kyo",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "fine-bar Kyoto lattice front / window"
+  },
+  {
+   "name": "jp_p_open_koshi_oyako",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "parent bars + cut-top children (cloth, thread)"
+  },
+  {
+   "name": "jp_p_open_koshi_komeya",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "thick bars for rice and charcoal shops (T2)"
+  },
+  {
+   "name": "jp_p_open_koshi_degoshi",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "projecting lattice on its own sill (T3)"
+  },
+  {
+   "name": "jp_p_open_koshi_bengara",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "bengara-red fine lattice (Kamigata, sparingly; restricted colour)"
+  },
+  {
+   "name": "jp_p_open_renji_bamboo",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.91,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "bamboo-barred window with a sliding board shutter (farmhouses, T1)"
+  },
+  {
+   "name": "jp_p_open_renji_wood",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.91,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "square wood-barred window with a sliding board shutter (T2)"
+  },
+  {
+   "name": "jp_p_open_renji_muso",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.91,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "double slatted kitchen window, one panel slides (date unverified)"
+  },
+  {
+   "name": "jp_p_open_suriagedo_closed",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "shop front closed at night by 3 stacked boards in the post grooves (static)"
+  },
+  {
+   "name": "jp_p_open_suriagedo_part",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "shop front with one board left in the grooves (static)"
+  },
+  {
+   "name": "jp_p_open_suriagedo_door",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "animated: the 3 boards rise into the box behind the beam (one door, 3 bones; engine test)"
+  },
+  {
+   "name": "jp_p_open_koshido_open",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "open-bar lattice day door behind the itado (T2-3 entrances)"
+  },
+  {
+   "name": "jp_p_open_koshido_papered",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      3.64,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "lattice day door behind the itado, paper behind the bars"
+  },
+  {
+   "name": "jp_p_open_kura_window_slide",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [],
+   "caption": "kura window with iron bars, sliding plaster shutter and a tiny tile pent"
+  },
+  {
+   "name": "jp_p_open_kura_window_hinged",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [],
+   "caption": "kura window with a pair of hinged plaster shutters (static open)"
+  },
+  {
+   "name": "jp_p_open_shitomido_up",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "Kamigata shop shutter: upper panel hooked up under the pent, lower lifted out (static)"
+  },
+  {
+   "name": "jp_p_open_shitomido_closed",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "shitomido closed: upper panel down, lower panel in place (static)"
+  },
+  {
+   "name": "jp_p_open_battari_down",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "fold-down shop bench, down by day (walkable seat)"
+  },
+  {
+   "name": "jp_p_open_battari_up",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "fold-down bench folded up at night"
+  },
+  {
+   "name": "jp_p_open_upper_rail_plain",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "low plain rail along an inn / tea-house upper opening; 1.00 m invisible blocker"
+  },
+  {
+   "name": "jp_p_open_mushiro_rolled",
+   "scale": 7.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "straw mat doorway of the poorest houses, rolled up (no collision)"
+  }
+ ]
+}

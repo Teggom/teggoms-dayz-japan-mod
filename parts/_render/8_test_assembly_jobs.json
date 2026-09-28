@@ -1,0 +1,115 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\8_test_assembly",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "out": "asm_all",
+   "scale": 26.0,
+   "view": "3q",
+   "target": [
+    11.5,
+    1.8,
+    -1.0
+   ],
+   "no_human": false,
+   "human_at": [
+    1.2,
+    2.2
+   ],
+   "caption": "The whole test assembly: the 2 x 2 ken frame (sangawara kirizuma) and one roof corner per other family on its own post frame: ishioki, kokera, thatch (hip).",
+   "name": "jp_p_test_assembly",
+   "assembly": true
+  },
+  {
+   "out": "asm_front",
+   "scale": 8.0,
+   "view": "3q",
+   "target": [
+    1.82,
+    1.9,
+    -1.0
+   ],
+   "open": 0.6,
+   "human_at": [
+    4.3,
+    1.2
+   ],
+   "caption": "Front: itado leaf 60 % open, parking over bay 2 (plain shinkabe + grime band); dodai on dressed stones; cut step hiding the ramp; keta, tile gable, kawara roof on the eave line.",
+   "name": "jp_p_test_assembly",
+   "assembly": true
+  },
+  {
+   "out": "asm_left",
+   "scale": 8.0,
+   "view": "3q_left",
+   "target": [
+    0.5,
+    1.9,
+    -1.8
+   ],
+   "human_at": [
+    -1.0,
+    1.2
+   ],
+   "caption": "Left gable wall: koshi lattice over a 0.39 wainscot in bay 1, battened boards in bay 2, tile gable (board band, plastered purlin bosses) under the verge tiles and bargeboard.",
+   "name": "jp_p_test_assembly",
+   "assembly": true
+  },
+  {
+   "out": "asm_back",
+   "scale": 8.0,
+   "view": "back",
+   "target": [
+    1.8,
+    1.9,
+    -3.2
+   ],
+   "human_at": [
+    -0.8,
+    -4.4
+   ],
+   "caption": "Back: wood renji window in a half-ken bay (extra post on the 0.91 node); right: arakabe with a 0.90 koshi-ita.",
+   "name": "jp_p_test_assembly",
+   "assembly": true
+  },
+  {
+   "out": "asm_pavilions",
+   "scale": 15.0,
+   "view": "3q",
+   "target": [
+    13.8,
+    1.8,
+    -0.9
+   ],
+   "human_at": [
+    8.2,
+    1.0
+   ],
+   "caption": "Roof corners: ishioki (boards, battens, stones), kokera shingle, thatch hip (0.60 cut eave, hip roll, bamboo ridge) on adzed 0.15 posts and soseki stones.",
+   "name": "jp_p_test_assembly",
+   "assembly": true
+  },
+  {
+   "out": "asm_door_open_front",
+   "scale": 5.0,
+   "view": "front",
+   "target": [
+    1.6,
+    1.2,
+    0.5
+   ],
+   "open": 1.0,
+   "human_at": [
+    0.9,
+    0.9
+   ],
+   "human_y": -0.27,
+   "caption": "Front, door fully open: the 1.74 m leaf has parked over bay 2; the doorway is clear post face to post face (1.70 m; the check measures 1.68 m on 1 cm steps), head 2.00.",
+   "name": "jp_p_test_assembly",
+   "assembly": true
+  }
+ ]
+}

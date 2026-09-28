@@ -1,0 +1,232 @@
+{
+ "id": "jp_p_porch_engawa_kure",
+ "part": "jp_p_porch_engawa",
+ "variant": "_kure",
+ "group": "porch",
+ "p3d": "JP\\parts\\porch\\jp_p_porch_engawa_kure.p3d",
+ "build_list": {
+  "entry": "jp_p_porch_engawa",
+  "variant": "_kure",
+  "differs_by": "lengthwise boards, inside the amado",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x25_morse_amado_box",
+   "x30_shinagawa_1726",
+   "x07_sasaki_1985"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "veranda with lengthwise boards inside the amado line (closed by amado at night)",
+ "datum": "1-ken run along a wall (wall centreline z 0); outer post line z 1.365; y 0 = floor (+0.50)",
+ "recipe": "found.engawa(part, x0, x1, kure, depth)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.0,
+  1.82,
+  -0.59,
+  0.001,
+  0.06,
+  1.466
+ ],
+ "dims": [
+  {
+   "name": "width_clear_m",
+   "expected": "1.00-1.20",
+   "measured": 1.245,
+   "tol": 0.01,
+   "source": "build_list; D5",
+   "ok": true
+  },
+  {
+   "name": "height_m",
+   "expected": 0.5,
+   "measured": 0.5,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "wall post"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    1.365
+   ],
+   "note": "veranda post on the outer line (carries the eave / hisashi)"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "note": "wall post"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    1.365
+   ],
+   "note": "veranda post on the outer line (carries the eave / hisashi)"
+  },
+  {
+   "type": "floor",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "level ID of the raised floor"
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -0.5,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    1.365
+   ],
+   "note": "outer amado groove (jp_p_open_amado)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 155,
+  "Resolution 2": 137,
+  "Resolution 3": 12,
+  "Geometry": 6,
+  "Roadway": 1,
+  "View Geometry": 6,
+  "Fire Geometry": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [
+  "clear width 1.245 m: the outer post line sits on the 0.455 grid (z 1.365), which gives 1.245 m, 0.045 over the build list's 1.20 (grid wins; D5 satisfied)"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 155, Resolution 2 137, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 width_clear_m",
+   "ok": true,
+   "detail": "expected 1.00-1.20, measured 1.245"
+  },
+  {
+   "check": "C4 height_m",
+   "ok": true,
+   "detail": "expected 0.5, measured 0.5"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

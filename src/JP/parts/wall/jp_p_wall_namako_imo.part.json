@@ -1,0 +1,149 @@
+{
+ "id": "jp_p_wall_namako_imo",
+ "part": "jp_p_wall_namako",
+ "variant": "_imo",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_namako_imo.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_namako",
+  "variant": "_imo",
+  "differs_by": "square grid (oldest form)",
+  "priority": "P2",
+  "importance": "standard",
+  "refs": [
+   "c11_kurashiki",
+   "x12_morse_namako"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "square-grid namako tiles on kura lower walls (oldest form)",
+ "datum": "1-ken x 1.80 m panel on an okabe face (z0 = +0.12), bottom on the footing",
+ "recipe": "walls.namako",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.0,
+  1.82,
+  0.0,
+  1.8,
+  0.12,
+  0.152
+ ],
+ "dims": [
+  {
+   "name": "tile_side_m",
+   "expected": 0.2145,
+   "measured": 0.2145,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "joint_width_m",
+   "expected": 0.035,
+   "measured": 0.035,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "joint_relief_m",
+   "expected": 0.02,
+   "measured": 0.02,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "wall_namako_tile",
+   "id": "jp_m_wall_namako_tile",
+   "palette_id": "namako_tile",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_namako_tile<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 174,
+  "Resolution 2": 90,
+  "Resolution 3": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 174, Resolution 2 90, Resolution 3 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 tile_side_m",
+   "ok": true,
+   "detail": "expected 0.2145, measured 0.2145"
+  },
+  {
+   "check": "C4 joint_width_m",
+   "ok": true,
+   "detail": "expected 0.035, measured 0.035"
+  },
+  {
+   "check": "C4 joint_relief_m",
+   "ok": true,
+   "detail": "expected 0.02, measured 0.02"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,215 @@
+{
+ "id": "jp_p_open_kura_window_hinged",
+ "part": "jp_p_open_kura_window",
+ "variant": "_hinged",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_kura_window_hinged.p3d",
+ "build_list": {
+  "entry": "jp_p_open_kura_window",
+  "variant": "_hinged",
+  "differs_by": "pair of hinged shutters (static open)",
+  "priority": "P2",
+  "importance": "standard",
+  "refs": [
+   "x13_morse_kura",
+   "c11_kurashiki"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "kura window with a pair of hinged plaster shutters (static open)",
+ "datum": "half-ken bay of a 0.24 okabe wall, opening centred at x 0.455, sill at 1.20; y 0 = kura floor",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.145,
+  1.055,
+  1.0,
+  2.503,
+  -0.015,
+  0.661
+ ],
+ "dims": [
+  {
+   "name": "opening_m",
+   "expected": "0.60 x 0.75",
+   "measured": "0.60 x 0.75",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "bars_m",
+   "expected": "0.03 at 0.09",
+   "measured": "0.03 at 0.100",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "shutter_thickness_m",
+   "expected": 0.12,
+   "measured": 0.12,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.91,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_field",
+   "id": "jp_m_roof_kawara_field",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 151,
+  "Resolution 2": 118,
+  "Resolution 3": 71,
+  "Geometry": 72,
+  "View Geometry": 66,
+  "Fire Geometry": 66
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 151, Resolution 2 118, Resolution 3 71, Geometry 72, View Geometry 66, Fire Geometry 66"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "12 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "11 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "11 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, wood"
+  },
+  {
+   "check": "C4 opening_m",
+   "ok": true,
+   "detail": "expected 0.60 x 0.75, measured 0.60 x 0.75"
+  },
+  {
+   "check": "C4 bars_m",
+   "ok": true,
+   "detail": "expected 0.03 at 0.09, measured 0.03 at 0.100"
+  },
+  {
+   "check": "C4 shutter_thickness_m",
+   "ok": true,
+   "detail": "expected 0.12, measured 0.12"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

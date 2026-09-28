@@ -1,0 +1,135 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\4_foundations",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_found_soseki_set8",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.122,
+   "human_y": -0.12,
+   "caption": "the 8 field-stone shapes under the posts of rural houses and verandas"
+  },
+  {
+   "name": "jp_p_found_soseki_mossy",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.122,
+   "human_y": -0.12,
+   "caption": "the 8 field-stone shapes under the posts of rural houses and verandas (north-side moss, wear _w2)"
+  },
+  {
+   "name": "jp_p_found_dodai_stones_rough",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.272,
+   "human_y": -0.27,
+   "caption": "timber sill on a course of roughly dressed cut stones (town houses)"
+  },
+  {
+   "name": "jp_p_found_dodai_stones_dressed",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.272,
+   "human_y": -0.27,
+   "caption": "timber sill on a course of better dressed cut stones (town houses)"
+  },
+  {
+   "name": "jp_p_found_kura_footing_c1",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.302,
+   "human_y": -0.3,
+   "caption": "1-course cut-granite footing under a kura wall, individual blocks"
+  },
+  {
+   "name": "jp_p_found_kura_footing_c2",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.602,
+   "human_y": -0.6,
+   "caption": "2-course cut-granite footing under a kura wall, individual blocks"
+  },
+  {
+   "name": "jp_p_found_yukashita_open",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.502,
+   "human_y": -0.5,
+   "caption": "open dark ventilated gap under a raised floor or veranda (T1-2)"
+  },
+  {
+   "name": "jp_p_found_yukashita_boarded",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.502,
+   "human_y": -0.5,
+   "caption": "under-floor zone closed by vertical boards with vent gaps (T2-3)"
+  },
+  {
+   "name": "jp_p_found_step_natural",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.452,
+   "human_y": -0.45,
+   "caption": "natural shoe-removal stone at a doma-to-floor step, hides the walk ramp"
+  },
+  {
+   "name": "jp_p_found_step_cut",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.452,
+   "human_y": -0.45,
+   "caption": "cut stone step slab (T3), hides the walk ramp"
+  },
+  {
+   "name": "jp_p_found_step_wood",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.502,
+   "human_y": -0.5,
+   "caption": "wooden step box at a veranda edge (0.50), hides the walk ramp"
+  },
+  {
+   "name": "jp_p_porch_engawa_kure",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.502,
+   "human_y": -0.5,
+   "caption": "veranda with lengthwise boards inside the amado line (closed by amado at night)"
+  },
+  {
+   "name": "jp_p_porch_engawa_kiri",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.502,
+   "human_y": -0.5,
+   "caption": "veranda with crosswise boards, open to the weather (no amado)"
+  },
+  {
+   "name": "jp_p_porch_nureen_std",
+   "scale": 6.0,
+   "view": "3q",
+   "context": [],
+   "ground_y": -0.452,
+   "human_y": -0.45,
+   "caption": "narrow open slatted deck outside a room (nure-en)"
+  }
+ ]
+}

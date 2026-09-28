@@ -1,0 +1,120 @@
+{
+ "id": "jp_p_open_mushiro_rolled",
+ "part": "jp_p_open_mushiro",
+ "variant": "_rolled",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_mushiro_rolled.p3d",
+ "build_list": {
+  "entry": "jp_p_open_mushiro",
+  "variant": "_rolled",
+  "differs_by": "rolled up, static",
+  "priority": "P3",
+  "importance": "filler",
+  "refs": [
+   "c18_hiroshige_mariko"
+  ]
+ },
+ "tiers": [
+  1
+ ],
+ "used_for": "straw mat doorway of the poorest houses, rolled up (no collision)",
+ "datum": "hangs from the head rail of an open 1-ken bay; y 0 = floor",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.09,
+  1.73,
+  1.8,
+  2.02,
+  0.02,
+  0.19
+ ],
+ "dims": [
+  {
+   "name": "roll_m",
+   "expected": "d 0.15 x 0.91-1.82",
+   "measured": "d 0.15 x 1.64",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "straw_mushiro",
+   "id": "jp_m_straw_mushiro",
+   "palette_id": "thatch_new",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_mushiro<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 30,
+  "Resolution 2": 18,
+  "Resolution 3": 18
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 30, Resolution 2 18, Resolution 3 18"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 roll_m",
+   "ok": true,
+   "detail": "expected d 0.15 x 0.91-1.82, measured d 0.15 x 1.64"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

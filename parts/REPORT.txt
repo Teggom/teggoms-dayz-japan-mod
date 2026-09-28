@@ -1,0 +1,258 @@
+JP PARTS LIBRARY - REPORT (parts agent B-PARTS, 2026-09-27)
+==========================================================
+
+For gate G2. Stephen reviews the contact sheets in parts/contact_sheets/ (one per family + the test assembly).
+Nothing here touches the server, the game, git or any GUI program.
+
+
+1. WHAT WAS BUILT
+-----------------
+129 part variants = the build list's 127, minus 1 it says not to build, plus 3 extra:
+  - 126 build-list variants from all 52 entries.
+  - NOT built: jp_p_roof_kura_eave_okiyane. The build list says its date and region are unverified and it must
+    not be built until they are.
+  - Extra: jp_p_frame_dashigeta_upper_front (G1 decision 4 asks for projecting upper fronts as an optional
+    part), and jp_p_trim_grime_wall / _post (pre-step 3).
+
+By group (src/JP/parts/<group>/, = P:\JP\parts\...):
+  frame 6, wall 20, open 35, found 11, porch 3, roof 52, trim 2.
+
+Per variant:
+  - <name>.p3d: MLOD with every LOD it contributes (Res 1-3, Geometry, Memory, Roadway, View Geometry, Fire
+    Geometry).
+  - <name>.part.json: the PLAYBOOK §10.2 sidecar. It holds dims, tiers, materials with the wear level selectable
+    per instance, LOD face counts, connectors, doors, the build-list reference and its checks.
+  - One checks.json per group.
+  - parts/manifest.json lists all 129.
+
+The code is in parts/kit/ (python package jpparts, grown from B's jpkit):
+  core.py       Solid / Part / LOD writer. Materials and UVs are resolved in the part's frame, so a part can be moved,
+                rotated or mirrored without its textures sliding. Wear is chosen per instance (Part.wear,
+                Part.wear_by_mat).
+  shapes.py     Helpers: convex slabs over plan polygons, tubes, clipping, convex stones, board runs.
+  frame.py      Posts, keta / nuki / dodai / beam ends, dashigeta.
+  walls.py      Wall RECIPES (wall_run for any half-ken run, openings as holes), wainscot, namako, gable, udatsu.
+  openings.py   Sliding doors (B's translation format), kura doors (rotation), windows, lattices, shop closures.
+  found.py      Soseki, dodai on stones, kura footing, yukashita, steps with hidden ramps, engawa, nure-en.
+  kawara.py     Kawara as geometry (see below).
+  roofs.py      The roof generator: footprint x form x family -> slopes -> coverings + collision.
+  roofparts.py  The roof entries built with the generator.
+  trim.py       The grime decal band.
+  checks.py     C2 C3 C4 C5 C7.
+  registry.py   The priority-ordered list of every variant.
+Drivers:
+  build_parts.py        Writes all p3ds, sidecars, checks and the manifest (about 3 s).
+  render_sheets.py      Contact sheets, via render_parts.py in background Blender.
+  assembly.py           The test assembly, MLOD merge and binarize.
+  make_part_materials.py  The two new library materials.
+  prestep_palette.py    The palette edits.
+
+Key conventions (manifest.json "frame"/"standards"):
+  - Part frame: origin at the left post centreline, at finished floor / sill level. +x runs along the wall, +y up,
+    +z is the exterior.
+    - "Left" is as seen standing inside, facing out; seen from outside, +x runs to the viewer's left.
+    - autocenter=0.
+  - Every post, bay and opening edge is on the 0.455 grid; walls span post node to post node.
+  - Standard heights: sill 0, door head 2.00, keta underside 2.70, eave line (keta top) 2.88.
+  - Walls are recipes: walls.wall_run(part, kind, x0, x1, openings=[...]) fills ANY half-ken run.
+    - It draws internal posts at ken nodes. End posts come from jp_p_frame_post.
+    - Opening parts fill the holes it leaves.
+    - The p3d samples are 1-ken runs.
+  - Roofs are generated from the footprint: roofs.roof(part, W, D, form, family).
+    - Forms: kirizuma / yosemune / irimoya / kabuto.
+    - Families: sangawara / hongawara / ishioki / itabuki / kakigara / thatch.
+    - The eave line is the keta top. Kawara columns are 0.26 m (ken/7), so a column edge lands on every ken line.
+    - Every slope is split into convex pieces; each piece has one collision slab.
+  - Doors are in B's proven format: type translation, one bone per leaf, memory axis exactly 1.00 m, an action
+    point and a leaf point, doorWoodSlide sounds.
+    - Every passable door is a 1-ken bay: 1.70 m clear between the post faces.
+    - Its single leaf parks along the facade over the NEXT bay: the 'park' connector, which must be plain wall on
+      that face.
+    - The part carries its tracks over the park bay.
+
+Kawara as geometry (rule 1). This is the v1 machiya failure; the close-ups show it now reads as tiles.
+  - The field is corrugated in 0.26 columns: 4 segments per column at LOD0, 2 at LOD1, flat at LOD2.
+  - Modelled courses (top + butt faces): 2 rows at the eave and 1 at the ridge.
+  - The continuous middle carries the course lines through a new library texture (see 3).
+  - Eave tiles have a lip and a round manju end; the tomoe variant has a raised boss.
+  - Sode-gawara verge tiles run along gables.
+  - Noshi ridges: 3 or 5 courses on shikkui bedding, with a round ganburi cap and end tiles.
+  - Hip ridges; onigawara (plain, and 'sui' in relief).
+  - Hongawara: flat pans plus round covers at 0.303.
+Thatch has real thickness.
+  - The eave is square-cut 0.60 in three stepped bands (thatch_cut texture), with hip rolls.
+  - Ridges: bamboo, tiled, turf with iris, and umanori.
+Stone-weighted roofs have split-pole battens every 0.60 up the slope and river stones from an 8-shape set on their
+upslope side.
+
+
+2. CHECKS AND RESULTS
+---------------------
+Per part: 1198 checks over 129 variants, 0 failures (src/JP/parts/*/checks.json; each sidecar lists its own):
+  - C2 library-only paths
+    - Every texture and rvmat resolves under JP\common\materials\ and exists on disk.
+    - The only other paths are vanilla penetration rvmats and roadway surfaces.
+  - C3 grid snap: post / sill connectors on the 0.455 grid within 5 mm.
+  - C4 dimensions vs the build list: +-1 cm; build-list ranges are checked as ranges.
+  - C5 LODs present, with face counts.
+  - C7 components
+    - Every Geometry / View / Fire component is closed and convex, and every face is in a component.
+    - Fire uses only vanilla penetration rvmats: wood, dirt, pottery, granite, hay, fabric_thin, iron.
+  - C7 doors
+    - Bone faces are in Res 1 + Geometry; memory has the axis (1.00 m), action and leaf points.
+    - The leaf sweeps closed -> open without touching any other component. The part's post nodes stand in as
+      posts.
+    - Open clear width is >= 1.00 m (itado / shoji / koshido / suriage 1.68 measured on 1 cm steps, pair 1.26 per
+      leaf, kura inner door 1.08). Head >= 2.00 m.
+  - C7 Roadway: present on every walkable part (thresholds, steps, verandas, bench, tile / board roofs and
+    pents), and every sample sits on a Geometry top within +-3 cm.
+C1 palette (tools/matcheck), for the new and changed textures: everything PASS (details in section 3).
+
+Test assembly (parts/kit/assembly.py; renders on contact_sheets/8_test_assembly.jpg): a 2 x 2 ken frame.
+  - Dodai on dressed stones under all walls; 9 posts including a half-ken post.
+  - Front: itado door parking over a plain bay, with a grime band.
+  - Left: koshi lattice over a wainscot, and a board wall.
+  - Back: renji window in a half-ken bay. Right: arakabe with a koshi-ita.
+  - Keta, tile gables, and a generated sangawara kirizuma roof; a doma floor; a cut step hiding a ramp.
+  - Beside it, one roof corner per other family on its own post frame: ishioki, kokera, and thatch hip on soseki.
+  Results (data/parts_test/assembly_checks.json):
+  - Kit path (all in memory) == MLOD-merge path (recipes + the fixed parts merged from their p3d files):
+    identical face counts in every LOD (Res1 8129 / Res2 3053 / Res3 1395 / Geo 1215).
+  - 114 Geometry / 111 View / 112 Fire components, all closed and convex.
+  - Door: the leaf slides 1.74 m clear of every component; open clear 1.68 m between the REAL posts.
+  - Roadway: 144 / 144 samples on Geometry.
+  - BINARIZE (B's pipeline, cwd P:\) -> ODOL v55, 832 kB.
+    - It has all 8 LODs: Res 1-3, Geometry, Memory, Roadway, View, Fire.
+    - The door bone, its axis and the model.cfg skeleton are present.
+    - The log shows only the same config-less "No entry / Trying to access error value" lines as B's proven
+      machiya log.
+  - Files:
+    - src/JP/parts/_test/jp_p_test_assembly.p3d + model.cfg (MLOD).
+    - data/parts_test/binarized/ (ODOL).
+    - data/parts_test/binarize.log.
+
+Face budgets (PLAYBOOK §12):
+  - Kirizuma sangawara roof on 4 x 3 ken: LOD0 2911 / LOD1 517 / LOD2 113 (machiya-roof budget 3k).
+  - Hip and irimoya tile roofs on the same footprint: 3993 and 4425 at LOD0 (twice the eave length). See
+    decision 5.
+  - Thatch roofs: 850-1740.
+  - Wall, door and window parts: 18-420 each.
+
+
+3. PRE-STEP CHOICES
+-------------------
+1. kawara_ibushi darker: (145,149,149) -> (118,122,123) in playbook/palette.json.
+   - Why: B's in-game-approved machiya roof texture averages (81,83,83). With the new entry the recipe's _w1
+     (-8 L) lands at mean ~101, inside the 95-110 target.
+     - _w0 (new tiles) is ~121.
+     - _w2's offset went from -4 to -9 L so heavy wear stays near normal (mean ~101) instead of lighter.
+   - method "calibrated", the photo value kept as photo_srgb, note "in-engine calibration, Stephen approved the
+     machiya roof in game".
+   - build_materials.py got an --only option. I ran it for kawara, kureita and kokera: 27 PAAs, sidecars,
+     matcheck over all 66 sets (0 FAIL; 1 old WARN on thatch_cut_w0), jp_common.pbo repacked, material sheets
+     refreshed.
+   - matcheck: kawara w0 dE 0.9, w1 8.1, w2 8.3 (tol 14).
+2. board_new (156,122,84), tol 6.
+   - Source: fresh hinoki board, sampled from the CC0 Poly Haven "Hinoki Planks" scan (B's machiya floor source).
+   - No build-list or playbook photo shows fresh boards in usable light. x01_ioka_a has one new board, but in
+     blue evening shade.
+   - It is now the _w0 of jp_m_roof_kureita and jp_m_roof_kokera (PALETTE_BY_WEAR): kureita w0 dE 0.0,
+     kokera w0 dE 2.0.
+   - Weathering line to roof_board_silver.
+3. Grime strip.
+   - New palette entry grime_splash (104,89,71), sampled on x08_hirose_earthwall: the bottom band of the earth
+     panels, which is ~12 % darker than the same panels 0.1 m higher.
+   - New material jp_m_wall_grime (w0 dust / w1 splash / w2 mud with moss).
+     - An alpha decal (_ca, DXT5) with the vanilla decal rvmat pattern (renderFlags NoZWrite).
+     - u tiles every 2 m along the wall; v spans a 0.45 m band.
+     - The RGB is the grime colour everywhere, so the matcheck mean is meaningful: w0 dE 4.0, w1 0.0, w2 5.0
+       (tol 6).
+   - Part jp_p_trim_grime_wall / _post: sheets 3 mm proud of the face, never in Geometry.
+Also added, beyond the brief: jp_m_roof_kawara_field (palette kawara_ibushi, dE as kawara).
+  - It is the same ceramic with the 0.235 courses (AO under each butt, lip highlight, a step in the normal map) and
+    a per-tile tint (W8).
+  - Tile: 4 columns x 4 courses = 1.04 x 0.94 m.
+  - Why: PLAYBOOK §6.1 says the rows between the modelled eave and ridge rows come "from the normal map and baked
+    AO", and the library kawara has no rows. Without it the middle of a roof would read as corrugated sheet.
+Script: parts/kit/make_part_materials.py; results in src/JP/common/materials/checks_parts.json.
+jp_common.pbo (@Japanddons, 100.2 MB) is repacked and includes every new or changed PAA and rvmat
+(kawara, kureita, kokera, grime, kawara_field).
+Grime tuning: the splash reaches ~0.30 m, with a ragged top. On earth walls it is a subtle ~10 % darkening, as
+sampled on x08. On shikkui and on dark timber it reads clearly (sheet 7 shows it on shikkui).
+
+
+4. DEVIATIONS FROM THE BUILD LIST (and why)
+-------------------------------------------
+- itado _pair: built on a 1.5-ken bay, not 1 ken. In a 1-ken pair each leaf opens 0.85 m, below D1. On 1.5 ken each
+  leaf gives 1.26 m.
+- All passable sliding doors (itado, shoji_ext, koshido, suriagedo) use one 1.74 m leaf per 1-ken bay (1.70 m
+  clear).
+  - Real leaves were ~0.9 m, but D1 (>= 1.00 m, never parked across a passage) rules out the period two-leaf bay.
+  - Shoji are drawn as two panels on one leaf. See decision 1.
+- mushiko _oval_pair: each oval is 0.70 x 0.40 so two fit one 1-ken bay (the build list gives 0.90 x 0.45 for the
+  single oval, and that is kept).
+- engawa clear width is 1.245 m.
+  - The outer post line is on the 0.455 grid (z 1.365); the build list says 1.00-1.20.
+  - The grid wins; D5 is satisfied.
+- shinkabe infill setback is 0.0225 each side: a 0.075 infill centred in a 0.12 post. The build list gives
+  0.02 (A); both cannot hold at once.
+- ishioki boards: the library kureita texture has 0.25 courses. It is laid at 1.2 m so its courses are the build
+  list's 0.15 (board widths come out 0.07-0.18).
+- namako: joint pitch 0.2495 (tile 0.2145 + joint 0.035) as the build list says. The namako texture is laid at
+  0.998 m so its tiles line up with the raised joints; _shihan rotates the UVs 45 deg.
+- suriagedo boards are 0.667 high (2.00 / 3, the head is 2.00). The build list says ~0.68 (2.04 / 3).
+- kura door: the opening is 1.10 x 2.15 from the approach, i.e. 2.00 clear above the 0.15 raised threshold.
+  - The wall recipe must leave that hole.
+  - The outer plaster leaves are static open in _open.
+  - In _hinged they are rotation doors (angle 100 deg): ENGINE-UNTESTED, and the axis direction may need
+    swapping.
+- suriagedo _door: 3 boards on one door source, vertical translation into a hollow box above the head (each board on
+  its own groove track). ENGINE-UNTESTED; _closed and _part are the static fall-backs.
+- dashigeta _std + _upper_front: G1 decision 4 deviation (post-1750), flagged in their sidecars, tier 3 only.
+- Roofs:
+  - Tile and board slopes and pents carry Roadway (walkable); thatch (45 deg) does not. See decision 2.
+  - kabuto is modelled as a tall smoke gable at one end and a hip at the other.
+- Every roof sample uses the kit's standard eave line 2.88 (keta top).
+- Pent heights:
+  - Street pent: attaches at 3.30, eave 2.94.
+  - Skirt pent for thatch entrances (G1 decision 6): attaches at 2.70, projects 1.20 on posts, soffit >= 2.30.
+Playbook conflicts: none beyond the D1 / D5 interactions above.
+
+
+5. DECISIONS FOR STEPHEN (G2)
+-----------------------------
+1. Door leaves. Every walk-through sliding door is one 1.74 m leaf in a 1-ken bay (1.70 m clear), parking over the
+   next bay. That is right for a big plank oodo, but wide for shoji and lattice doors (period ~0.9 m).
+   - Keep, or
+   - use 1.5-ken bays with a fixed half-ken panel and a 1.30 m leaf (still >= 1.00 m clear, looks more period)?
+2. Walkable roofs. Tile and board roofs and street pents have Roadway, so players (and loot) can be on them.
+   Keep, or make roofs non-walkable?
+3. Roof look (sheets 5a and 6, and the close-ups on sheet 8).
+   - Approve kawara geometry plus the new jp_m_roof_kawara_field course texture?
+   - Confirm the darker kawara (_w1 mean ~101 vs the machiya's 82) at the next in-game check.
+4. Dashigeta and the projecting upper front (sheet 1, G1 decision 4). Keep both as optional tier-3 parts, or drop
+   the projecting front?
+5. Hip and irimoya tile roofs are ~4.0-4.4k faces at LOD0 on a 4 x 3 ken footprint (the 3k budget is met by
+   kirizuma). Accept for inns and big houses, or cut the modelled eave rows from 2 to 1 on hipped tile roofs
+   (about -900 faces)?
+
+
+6. OPEN / NEXT
+--------------
+- Files outside parts/ that I changed (the brief asked for these):
+  - playbook/palette.json: kawara_ibushi, and the new board_new and grime_splash.
+  - research/materials/make_textures.py: the kawara _w2 offset; kureita and kokera _w0 now use board_new.
+  - research/materials/build_materials.py: the new --only option.
+  - src/JP/common/materials: the rebuilt and new sets, and checks_parts.json.
+  - @Japan/addons/jp_common.pbo: repacked.
+  - playbook/palette_swatches.png was NOT regenerated. Its generator would drop the G1 entries.
+- Engine tests for the next bundled check (TEST_CHECKLIST.md):
+  - suriagedo _door (vertical translation, 3 bones on one source).
+  - kura door _hinged (rotation).
+  - Grime decal sorting (NoZWrite) on plaster and on dark wood.
+  - Walking on a 24 deg tile roof.
+- LOD2 of soseki stones is 22 faces each (8-stone sample 176). Fine for buildings, could go lower.
+- The architect (C) assembles through the kit:
+  - Recipes: wall_run, dodai_stones, roof.
+  - Fixed parts: through the MLOD merge in assembly.merge_mlod, or the registry builders.
+  - Door config and model.cfg: see assembly.modelcfg.

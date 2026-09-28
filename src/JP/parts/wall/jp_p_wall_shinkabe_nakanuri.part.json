@@ -1,0 +1,214 @@
+{
+ "id": "jp_p_wall_shinkabe_nakanuri",
+ "part": "jp_p_wall_shinkabe",
+ "variant": "_nakanuri",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_shinkabe_nakanuri.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_shinkabe",
+  "variant": "_nakanuri",
+  "differs_by": "smoother, T2",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x08_hirose_earthwall",
+   "x06_suzuki_a",
+   "c29_earthen_wall"
+  ]
+ },
+ "tiers": [
+  2
+ ],
+ "used_for": "smoother earth wall between exposed posts, village and post-town houses (T2)",
+ "datum": "1-ken sample run between post nodes x=0 and x=1.82 (end posts from jp_p_frame_post), y 0 = sill top",
+ "recipe": "walls.wall_run(kind='shinkabe')",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.06,
+  1.76,
+  0.0,
+  2.7,
+  -0.06,
+  0.06
+ ],
+ "dims": [
+  {
+   "name": "infill_thickness_m",
+   "expected": 0.075,
+   "measured": 0.075,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "infill_setback_m",
+   "expected": 0.0225,
+   "measured": 0.0225,
+   "tol": 0.005,
+   "source": "build_list 0.02 (A) vs infill 0.075 in a 0.12 post: 0.0225"
+  },
+  {
+   "name": "door_head_rail_m",
+   "expected": 2.0,
+   "measured": 2.0,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "panel_max_m",
+   "expected": "<=1.82 x <=2.70",
+   "measured": "1.70 x 2.00",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ],
+   "note": "door heads 2.00; above = kokabe"
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.7,
+    0.0
+   ],
+   "note": "top under the keta"
+  }
+ ],
+ "materials": [
+  {
+   "key": "wall_nakanuri",
+   "id": "jp_m_wall_nakanuri",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 18,
+  "Resolution 2": 18,
+  "Resolution 3": 18,
+  "Geometry": 18,
+  "View Geometry": 18,
+  "Fire Geometry": 18
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 18, Resolution 2 18, Resolution 3 18, Geometry 18, View Geometry 18, Fire Geometry 18"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, wood"
+  },
+  {
+   "check": "C4 infill_thickness_m",
+   "ok": true,
+   "detail": "expected 0.075, measured 0.075"
+  },
+  {
+   "check": "C4 infill_setback_m",
+   "ok": true,
+   "detail": "expected 0.0225, measured 0.0225"
+  },
+  {
+   "check": "C4 door_head_rail_m",
+   "ok": true,
+   "detail": "expected 2.0, measured 2.0"
+  },
+  {
+   "check": "C4 panel_max_m",
+   "ok": true,
+   "detail": "expected <=1.82 x <=2.70, measured 1.70 x 2.00"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

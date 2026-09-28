@@ -578,12 +578,12 @@
    ],
    "use": "all tile roofs; never flat-textured: tiles are geometry (see PLAYBOOK roofs)",
    "srgb": [
-    145,
-    149,
-    149
+    118,
+    122,
+    123
    ],
-   "hex": "#919595",
-   "method": "sampled",
+   "hex": "#767A7B",
+   "method": "calibrated",
    "tolerance_dE76": 14,
    "observed_spread_dE76": 20.4,
    "samples": [
@@ -621,7 +621,13 @@
    "weathering": {
     "worst": "kawara_weathered",
     "max_mix": 1.0
-   }
+   },
+   "photo_srgb": [
+    145,
+    149,
+    149
+   ],
+   "note": "Darkened 2026-09-27 by the parts agent on the lead's materials-review decision. Source: in-engine calibration, Stephen approved the machiya roof in game (B's jp_kawara_co averages (81, 83, 83)). The photo-sampled value (145, 149, 149) is kept as photo_srgb; with this entry the library _w1 (recipe -8 L) averages ~103, _w0 ~121. Tolerance and samples unchanged."
   },
   {
    "id": "kawara_weathered",
@@ -686,6 +692,44 @@
      "select": "mid 70 % luminance"
     }
    ]
+  },
+  {
+   "id": "board_new",
+   "name": "Fresh cedar / cypress board (unweathered)",
+   "material": "newly split or sawn sugi / hinoki boards and shingles, before silvering",
+   "group": "roof",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "_w0 (clean) of jp_m_roof_kureita and jp_m_roof_kokera: freshly roofed houses; weathers to roof_board_silver",
+   "note": "Added 2026-09-27 by the parts agent (lead's materials-review decision). Source: CC0 photo scan Poly Haven 'Hinoki Planks' (Charlotte Baglioni, https://polyhaven.com/a/hinoki_planks), diffuse map, median of the mid-70 % luminance pixels. No build-list/playbook photo shows fresh boards in usable light (x01_ioka_a: one new board in blue evening shade). Upgrade to a museum/surviving-building sample of a freshly re-roofed house when one is found.",
+   "srgb": [
+    156,
+    122,
+    84
+   ],
+   "hex": "#9C7A54",
+   "method": "sampled",
+   "tolerance_dE76": 6,
+   "observed_spread_dE76": 2.7,
+   "samples": [
+    {
+     "ref": "polyhaven:hinoki_planks_diff_1k (data/B/polyhaven/hinoki_planks)",
+     "box": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ],
+   "weathering": {
+    "worst": "roof_board_silver",
+    "max_mix": 1.0
+   }
   },
   {
    "id": "kakigara_shell",
@@ -909,6 +953,50 @@
       0.82,
       0.62,
       0.95
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "grime_splash",
+   "name": "Splash / grime band at wall bases (W1)",
+   "material": "rain-splashed soil and dust on the bottom 0-0.4 m of walls, posts and sills",
+   "group": "ground",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "jp_m_wall_grime decal (jp_p_trim_grime_*): an alpha band over wall bases; never a base colour",
+   "note": "Added 2026-09-27 by the parts agent (lead's materials-review decision: tiling textures cannot carry a height-bound band). Sampled on x08_hirose_earthwall: the lowest 3-4 % of the earth panels just above the sill; 0.1 m higher the same panels read (115-120, 98-103, 79-85).",
+   "srgb": [
+    104,
+    89,
+    71
+   ],
+   "hex": "#685947",
+   "method": "sampled",
+   "tolerance_dE76": 6,
+   "observed_spread_dE76": 1.8,
+   "samples": [
+    {
+     "ref": "x08_hirose_earthwall",
+     "box": [
+      0.69,
+      0.765,
+      0.815,
+      0.795
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "x08_hirose_earthwall",
+     "box": [
+      0.49,
+      0.74,
+      0.56,
+      0.775
      ],
      "select": "mid 70 % luminance"
     }

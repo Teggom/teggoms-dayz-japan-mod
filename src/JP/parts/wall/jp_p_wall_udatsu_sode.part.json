@@ -1,0 +1,164 @@
+{
+ "id": "jp_p_wall_udatsu_sode",
+ "part": "jp_p_wall_udatsu",
+ "variant": "_sode",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_udatsu_sode.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_udatsu",
+  "variant": "_sode",
+  "differs_by": "wing wall at the upper storey (default)",
+  "priority": "P2",
+  "importance": "standard",
+  "refs": [
+   "x09_udatsu_mino",
+   "c07_gion_machiya"
+  ]
+ },
+ "tiers": [
+  3
+ ],
+ "used_for": "plastered wing wall with a tile cap between adjoining town houses (Kamigata)",
+ "datum": "on the party-wall post line x = 0; +z = street; y 0 = ground-floor sill",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.165,
+  0.165,
+  3.0,
+  4.675,
+  -0.08,
+  0.68
+ ],
+ "dims": [
+  {
+   "name": "projection_m",
+   "expected": "0.45-0.60",
+   "measured": 0.55,
+   "tol": 0.01,
+   "source": "build_list (A)"
+  },
+  {
+   "name": "thickness_m",
+   "expected": 0.18,
+   "measured": 0.18,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "party-wall post at the facade"
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    3.05,
+    0.0
+   ],
+   "note": "bottom on the ground-floor pent, top under the main eave"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 37,
+  "Resolution 2": 37,
+  "Resolution 3": 19,
+  "Geometry": 6,
+  "View Geometry": 6,
+  "Fire Geometry": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 37, Resolution 2 37, Resolution 3 19, Geometry 6, View Geometry 6, Fire Geometry 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt"
+  },
+  {
+   "check": "C4 projection_m",
+   "ok": true,
+   "detail": "expected 0.45-0.60, measured 0.55"
+  },
+  {
+   "check": "C4 thickness_m",
+   "ok": true,
+   "detail": "expected 0.18, measured 0.18"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

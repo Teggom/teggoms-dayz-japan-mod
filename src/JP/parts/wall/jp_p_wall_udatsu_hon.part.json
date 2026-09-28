@@ -1,0 +1,142 @@
+{
+ "id": "jp_p_wall_udatsu_hon",
+ "part": "jp_p_wall_udatsu",
+ "variant": "_hon",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_udatsu_hon.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_udatsu",
+  "variant": "_hon",
+  "differs_by": "parapet on the gable with its own roof (rich, P3)",
+  "priority": "P2",
+  "importance": "standard",
+  "refs": [
+   "x09_udatsu_mino",
+   "c07_gion_machiya"
+  ]
+ },
+ "tiers": [
+  3
+ ],
+ "used_for": "parapet on the gable with its own tile cap (rich Kamigata houses)",
+ "datum": "on the party-wall post line x = 0; +z = street; y 0 = ground-floor sill",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.165,
+  0.165,
+  2.095,
+  4.783,
+  -5.918,
+  0.458
+ ],
+ "dims": [
+  {
+   "name": "height_above_roof_m",
+   "expected": "0.3-0.5",
+   "measured": 0.4,
+   "tol": 0.01,
+   "source": "build_list (A)"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "ridge",
+   "pos": [
+    0.0,
+    4.2569,
+    -2.73
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 62,
+  "Resolution 2": 62,
+  "Resolution 3": 38,
+  "Geometry": 12,
+  "View Geometry": 12,
+  "Fire Geometry": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 62, Resolution 2 62, Resolution 3 38, Geometry 12, View Geometry 12, Fire Geometry 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt"
+  },
+  {
+   "check": "C4 height_above_roof_m",
+   "ok": true,
+   "detail": "expected 0.3-0.5, measured 0.4"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

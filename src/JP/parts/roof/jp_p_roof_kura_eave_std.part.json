@@ -1,0 +1,201 @@
+{
+ "id": "jp_p_roof_kura_eave_std",
+ "part": "jp_p_roof_kura_eave",
+ "variant": "_std",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_kura_eave_std.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_kura_eave",
+  "variant": "_std",
+  "differs_by": "plain stepped band",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x13_morse_kura",
+   "c11_kurashiki",
+   "x23_morse_kura_door"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "fire-proof kura eave: plastered rafters and soffit, stepped plaster band, tiles above",
+ "datum": "1-ken run on a 0.24 okabe wall top (z 0 = wall centreline); y 0 = floor; wall top 2.70",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.02,
+  1.84,
+  2.7,
+  3.436,
+  -0.298,
+  0.643
+ ],
+ "dims": [
+  {
+   "name": "band_height_m",
+   "expected": "0.30-0.45",
+   "measured": 0.38,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "band_projection_m",
+   "expected": "0.05-0.10 per step",
+   "measured": 0.07,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "eave_overhang_m",
+   "expected": "0.45-0.60",
+   "measured": 0.55,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.7,
+    0.0
+   ],
+   "note": "sits on the okabe wall top; tile eave course on top"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_field",
+   "id": "jp_m_roof_kawara_field",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 165,
+  "Resolution 2": 38,
+  "Resolution 3": 25,
+  "Geometry": 18,
+  "View Geometry": 18,
+  "Fire Geometry": 18
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [
+  "_okiyane (detached raised roof) NOT built: the build list says its date and region are unverified and it must not be built before they are."
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 165, Resolution 2 38, Resolution 3 25, Geometry 18, View Geometry 18, Fire Geometry 18"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt"
+  },
+  {
+   "check": "C4 band_height_m",
+   "ok": true,
+   "detail": "expected 0.30-0.45, measured 0.38"
+  },
+  {
+   "check": "C4 band_projection_m",
+   "ok": true,
+   "detail": "expected 0.05-0.10 per step, measured 0.07"
+  },
+  {
+   "check": "C4 eave_overhang_m",
+   "ok": true,
+   "detail": "expected 0.45-0.60, measured 0.55"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,308 @@
+{
+ "id": "jp_p_roof_thatch_body_kirizuma",
+ "part": "jp_p_roof_thatch_body",
+ "variant": "_kirizuma",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_thatch_body_kirizuma.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_thatch_body",
+  "variant": "_kirizuma",
+  "differs_by": "Koshu gable (Hirose type)",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x08_hirose_earthwall",
+   "x06_suzuki_a",
+   "c05_ouchi_thatch",
+   "x22_morse_thatch_kanto",
+   "x26_morse_farmhouse_kabutoyama"
+  ]
+ },
+ "tiers": [
+  1
+ ],
+ "used_for": "Koshu gable thatch (Hirose type), thick cut verge",
+ "datum": "4 x 3 ken footprint as jp_p_roof_forms; y 0 = floor",
+ "recipe": "roofs.roof(part, W, D, form, 'thatch', ridge_kind=...)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.65,
+  7.93,
+  1.92,
+  7.252,
+  -6.46,
+  1.0
+ ],
+ "dims": [
+  {
+   "name": "pitch_deg",
+   "expected": 45.0,
+   "measured": 45.0,
+   "tol": 0.1,
+   "source": "PLAYBOOK §4 (kawara 4.5 sun, ishioki 3.5 sun, board 4-5 sun (A), thatch 45 deg)"
+  },
+  {
+   "name": "eave_overhang_m",
+   "expected": "0.80-1.20",
+   "measured": 1.0,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "gable_overhang_m",
+   "expected": "0.30-0.45",
+   "measured": 0.45,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "eave_cut_thickness_m",
+   "expected": "0.40-0.80",
+   "measured": 0.6,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "field_thickness_m",
+   "expected": "0.35-0.45",
+   "measured": 0.4243,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "verge_overhang_m",
+   "expected": "0.30-0.45",
+   "measured": 0.45,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    7.28,
+    0.0,
+    0.0
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -5.46
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    7.28,
+    0.0,
+    -5.46
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.88,
+    0.0
+   ],
+   "note": "keta top (eave line) on the front wall"
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    -0.45,
+    6.27,
+    -2.73
+   ],
+   "note": "ridge line start"
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    7.73,
+    6.27,
+    -2.73
+   ],
+   "note": "ridge line end"
+  }
+ ],
+ "materials": [
+  {
+   "key": "bamboo_weathered",
+   "id": "jp_m_bamboo_weathered",
+   "palette_id": "bamboo_weathered",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_thatch",
+   "id": "jp_m_roof_thatch",
+   "palette_id": "thatch_weathered",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_thatch_cut",
+   "id": "jp_m_roof_thatch_cut",
+   "palette_id": "thatch_weathered",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 848,
+  "Resolution 2": 308,
+  "Resolution 3": 22,
+  "Geometry": 22,
+  "View Geometry": 22,
+  "Fire Geometry": 22
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "roof": {
+   "slopes": [
+    "front",
+    "back"
+   ],
+   "t": 1.0,
+   "ov": 1.0,
+   "gov": 0.45,
+   "form": "kirizuma",
+   "fam": "thatch",
+   "ridge": [
+    [
+     -0.45,
+     6.2700000000000005,
+     -2.73
+    ],
+    [
+     7.73,
+     6.2700000000000005,
+     -2.73
+    ]
+   ]
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 848, Resolution 2 308, Resolution 3 22, Geometry 22, View Geometry 22, Fire Geometry 22"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "hay"
+  },
+  {
+   "check": "C4 pitch_deg",
+   "ok": true,
+   "detail": "expected 45.0, measured 45.0"
+  },
+  {
+   "check": "C4 eave_overhang_m",
+   "ok": true,
+   "detail": "expected 0.80-1.20, measured 1.0"
+  },
+  {
+   "check": "C4 gable_overhang_m",
+   "ok": true,
+   "detail": "expected 0.30-0.45, measured 0.45"
+  },
+  {
+   "check": "C4 eave_cut_thickness_m",
+   "ok": true,
+   "detail": "expected 0.40-0.80, measured 0.6"
+  },
+  {
+   "check": "C4 field_thickness_m",
+   "ok": true,
+   "detail": "expected 0.35-0.45, measured 0.4243"
+  },
+  {
+   "check": "C4 verge_overhang_m",
+   "ok": true,
+   "detail": "expected 0.30-0.45, measured 0.45"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,308 @@
+{
+ "id": "jp_p_roof_forms_yosemune",
+ "part": "jp_p_roof_forms",
+ "variant": "_yosemune",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_forms_yosemune.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_forms",
+  "variant": "yosemune",
+  "differs_by": "hip: Kanto farmhouse (Kitamura 1687, Kiyomiya), headman house (Sasaki)",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x08_hirose_earthwall",
+   "x07_sasaki_1985",
+   "x01_ioka_a",
+   "x04_misawa_a",
+   "x22_morse_thatch_kanto",
+   "x36_hiroshige_ishibe"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "hip roof from the generator (here tiled; thatch in jp_p_roof_thatch_body)",
+ "datum": "4 x 3 ken footprint, x 0..7.28 along the ridge, z 0 (front wall) .. -5.46; y 0 = floor, eave line 2.88",
+ "recipe": "roofs.roof(part, W, D, form, family, eave_y, pitch, overhangs)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -1.011,
+  8.291,
+  2.489,
+  4.469,
+  -6.471,
+  1.011
+ ],
+ "dims": [
+  {
+   "name": "pitch_deg",
+   "expected": 24.2,
+   "measured": 24.2277,
+   "tol": 0.1,
+   "source": "PLAYBOOK §4 (kawara 4.5 sun, ishioki 3.5 sun, board 4-5 sun (A), thatch 45 deg)"
+  },
+  {
+   "name": "eave_overhang_m",
+   "expected": 0.9,
+   "measured": 0.9,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "kawara_working_width_m",
+   "expected": 0.26,
+   "measured": 0.26,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "kawara_exposure_m",
+   "expected": 0.235,
+   "measured": 0.235,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "lod0_segments_per_column",
+   "expected": ">=4",
+   "measured": 4.0,
+   "tol": 0,
+   "source": "build_list",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    7.28,
+    0.0,
+    0.0
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -5.46
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    7.28,
+    0.0,
+    -5.46
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.88,
+    0.0
+   ],
+   "note": "keta top (eave line) on the front wall"
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    2.73,
+    4.2905,
+    -2.73
+   ],
+   "note": "ridge line start"
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    4.55,
+    4.2905,
+    -2.73
+   ],
+   "note": "ridge line end"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_field",
+   "id": "jp_m_roof_kawara_field",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 3993,
+  "Resolution 2": 445,
+  "Resolution 3": 209,
+  "Geometry": 22,
+  "Roadway": 4,
+  "View Geometry": 22,
+  "Fire Geometry": 22
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "roof": {
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ],
+   "t": 0.45,
+   "ov": 0.9,
+   "gov": 0.4,
+   "form": "yosemune",
+   "fam": "sangawara",
+   "ridge": [
+    [
+     2.73,
+     4.290500000000001,
+     -2.73
+    ],
+    [
+     4.550000000000001,
+     4.290500000000001,
+     -2.73
+    ]
+   ]
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 3993, Resolution 2 445, Resolution 3 209, Geometry 22, Roadway 4, View Geometry 22, Fire Geometry 22"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "pottery"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "44/44 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 pitch_deg",
+   "ok": true,
+   "detail": "expected 24.2, measured 24.2277"
+  },
+  {
+   "check": "C4 eave_overhang_m",
+   "ok": true,
+   "detail": "expected 0.9, measured 0.9"
+  },
+  {
+   "check": "C4 kawara_working_width_m",
+   "ok": true,
+   "detail": "expected 0.26, measured 0.26"
+  },
+  {
+   "check": "C4 kawara_exposure_m",
+   "ok": true,
+   "detail": "expected 0.235, measured 0.235"
+  },
+  {
+   "check": "C4 lod0_segments_per_column",
+   "ok": true,
+   "detail": "expected >=4, measured 4.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

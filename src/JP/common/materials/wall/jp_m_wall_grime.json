@@ -1,0 +1,76 @@
+{
+ "id": "jp_m_wall_grime",
+ "family": "wall",
+ "palette_id": "grime_splash",
+ "palette_by_wear": {},
+ "alpha": true,
+ "tile_size_m": 2.0,
+ "tile_size_v_m": 0.45,
+ "texture_px": [
+  1024,
+  256
+ ],
+ "px_per_m": 512.0,
+ "uv": "u = metres along the wall / 2.0 (tiles); v = 0 at the band top (y 0.45) .. 1 at its foot (y 0): explicit UVs from jp_p_trim_grime, not world-scale",
+ "grain": "none; vertical drips",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": null,
+ "decal": true,
+ "render": "Super shader, renderFlags NoZWrite (vanilla decal rvmat pattern); _ca alpha = coverage",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "light dust at the foot",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_grime_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_grime_w0.rvmat",
+   "target_srgb": [
+    114.1,
+    98.7,
+    80.3
+   ],
+   "alpha_max": 0.45,
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "splash band, ragged top, drips",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_grime_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_grime_w1.rvmat",
+   "target_srgb": [
+    104.0,
+    89.0,
+    71.0
+   ],
+   "alpha_max": 0.72,
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "dark mud band, moss at the foot",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_grime_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_grime_w2.rvmat",
+   "target_srgb": [
+    91.6,
+    77.2,
+    59.6
+   ],
+   "alpha_max": 0.9,
+   "masked_frac": 0.004
+  }
+ },
+ "used_by": [
+  "jp_p_trim_grime"
+ ],
+ "used_on": "W1 splash band over the bottom 0.4 m of exterior walls, posts, sills and plinth stones.",
+ "sources": [
+  {
+   "procedural": "parts/kit/make_part_materials.py"
+  },
+  {
+   "palette_sample": "x08_hirose_earthwall (grime_splash)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library",
+ "made_by": "parts/kit/make_part_materials.py (parts agent, 2026-09-27)",
+ "note": "Never in Geometry/View/Fire. Keep 3 mm off the surface it covers."
+}

@@ -1,0 +1,129 @@
+{
+ "id": "jp_p_roof_sangawara_eave_tomoe",
+ "part": "jp_p_roof_sangawara_eave",
+ "variant": "_tomoe",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_sangawara_eave_tomoe.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_sangawara_eave",
+  "variant": "_tomoe",
+  "differs_by": "round end with a mitsudomoe relief",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x16_morse_tile_eaves",
+   "x18_morse_yedogawara",
+   "c08_kyomachiya"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "eave tiles with round ends carrying a raised (tomoe) boss",
+ "datum": "1 ken of eave (7 columns) at the eave edge (z 0.30) of a tiled slope; y 0 = floor",
+ "recipe": "kawara.eave_tiles(part, frame, u0, u1, style)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.0,
+  1.82,
+  2.861,
+  3.057,
+  0.086,
+  0.393
+ ],
+ "dims": [
+  {
+   "name": "round_end_diameter_m",
+   "expected": 0.075,
+   "measured": 0.075,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "lip_depth_m",
+   "expected": 0.045,
+   "measured": 0.045,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "overhang_past_fascia_m",
+   "expected": 0.06,
+   "measured": 0.06,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.88,
+    0.0
+   ],
+   "note": "one tile per 0.26 column on the eave line"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 63,
+  "Resolution 2": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 63, Resolution 2 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 round_end_diameter_m",
+   "ok": true,
+   "detail": "expected 0.075, measured 0.075"
+  },
+  {
+   "check": "C4 lip_depth_m",
+   "ok": true,
+   "detail": "expected 0.045, measured 0.045"
+  },
+  {
+   "check": "C4 overhang_past_fascia_m",
+   "ok": true,
+   "detail": "expected 0.06, measured 0.06"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

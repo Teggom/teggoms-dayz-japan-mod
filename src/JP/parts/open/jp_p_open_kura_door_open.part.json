@@ -1,0 +1,301 @@
+{
+ "id": "jp_p_open_kura_door_open",
+ "part": "jp_p_open_kura_door",
+ "variant": "_open",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_kura_door_open.p3d",
+ "build_list": {
+  "entry": "jp_p_open_kura_door",
+  "variant": "_open",
+  "differs_by": "outer leaves static open; inner sliding door is the game door (P1)",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x23_morse_kura_door",
+   "c11_kurashiki"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "kura doorway: stepped plaster surround, outer leaves static open, inner sliding door",
+ "datum": "1-ken bay of a 0.24 okabe wall (faces z +-0.12), centred at x 0.91; y 0 = approach level",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.0,
+  2.76,
+  -0.1,
+  3.033,
+  -0.204,
+  1.04
+ ],
+ "dims": [
+  {
+   "name": "clear_m",
+   "expected": ">=1.00 x 2.00",
+   "measured": "1.10 x 2.00",
+   "tol": 0.01,
+   "source": "build_list / D1",
+   "ok": true
+  },
+  {
+   "name": "leaf_thickness_m",
+   "expected": "0.15-0.20",
+   "measured": 0.16,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "jamb_steps",
+   "expected": "3-5",
+   "measured": 4.0,
+   "tol": 0,
+   "source": "build_list"
+  },
+  {
+   "name": "door_pent_m",
+   "expected": 0.6,
+   "measured": 0.6,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "okabe: posts hidden in the wall"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "okabe: posts hidden in the wall"
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "raised stone threshold 0.15 with hidden ramps"
+  },
+  {
+   "type": "park",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "length": 1.82,
+   "face": "interior"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_field",
+   "id": "jp_m_roof_kawara_field",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 421,
+  "Resolution 2": 146,
+  "Resolution 3": 61,
+  "Geometry": 112,
+  "Memory": 0,
+  "Roadway": 3,
+  "View Geometry": 96,
+  "Fire Geometry": 102
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [
+  {
+   "source": "Doors1",
+   "kind": "plank",
+   "display": "plank door",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "translation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.14,
+     "unit": "m (translation; axis 1.00 m)"
+    }
+   ],
+   "anim_period": 1.0,
+   "init_opened": 0.3,
+   "sound": "doorWoodSlide",
+   "clear_width_m": 1.08,
+   "engine_tested": true,
+   "note": "inner sliding door (game door)"
+  }
+ ],
+ "notes": [
+  "Opening 1.10 x 2.15 from the approach level = 2.00 clear above the 0.15 threshold; the okabe wall recipe must leave that hole (walls.wall_run(kind='okabe', openings=[(0.36, 1.46, 0, 2.15)]))."
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 421, Resolution 2 146, Resolution 3 61, Geometry 112, Memory 0, Roadway 3, View Geometry 96, Fire Geometry 102"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "19 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "16 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "17 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, granite, wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "translation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep + clear",
+   "ok": true,
+   "detail": "leaf slides 1.140 m without touching other geometry; open clear width 1.08 m (>= 1.00), head 2.00 m"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "48/48 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 clear_m",
+   "ok": true,
+   "detail": "expected >=1.00 x 2.00, measured 1.10 x 2.00"
+  },
+  {
+   "check": "C4 leaf_thickness_m",
+   "ok": true,
+   "detail": "expected 0.15-0.20, measured 0.16"
+  },
+  {
+   "check": "C4 jamb_steps",
+   "ok": true,
+   "detail": "expected 3-5, measured 4.0"
+  },
+  {
+   "check": "C4 door_pent_m",
+   "ok": true,
+   "detail": "expected 0.6, measured 0.6"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

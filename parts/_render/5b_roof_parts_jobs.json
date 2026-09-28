@@ -1,0 +1,264 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\5b_roof_parts",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_roof_eave_soffit_tile",
+   "scale": 8.0,
+   "view": "under",
+   "context": [],
+   "drop": false,
+   "no_ground": true,
+   "caption": "square rafters at ken/6, sheathing and a fascia carrying the eave tiles"
+  },
+  {
+   "name": "jp_p_roof_eave_soffit_board",
+   "scale": 8.0,
+   "view": "under",
+   "context": [],
+   "drop": false,
+   "no_ground": true,
+   "caption": "thinner rafters, no fascia, boards overhanging 0.03 (board roofs)"
+  },
+  {
+   "name": "jp_p_roof_eave_soffit_thatch",
+   "scale": 8.0,
+   "view": "under",
+   "context": [],
+   "drop": false,
+   "no_ground": true,
+   "caption": "round pole rafters with bamboo lath at 0.10 under a thatch eave (T1)"
+  },
+  {
+   "name": "jp_p_roof_ishioki_field_std",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "split-board courses of a stone-weighted roof (Kiso, mountain, coast)"
+  },
+  {
+   "name": "jp_p_roof_ishioki_field_worn",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "neglected board roof: lifted and curling boards, moss (wear _w2)"
+  },
+  {
+   "name": "jp_p_roof_ishioki_battens_stoneset8",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_roof_ishioki_field_std",
+     0.0,
+     [
+      0,
+      0,
+      0
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "split-pole battens every 0.60 up the slope with river stones from the 8-shape set"
+  },
+  {
+   "name": "jp_p_roof_ishioki_battens_sparse",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_roof_ishioki_field_std",
+     0.0,
+     [
+      0,
+      0,
+      0
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "few stones on the battens (poor / neglected roof, T1)"
+  },
+  {
+   "name": "jp_p_roof_itabuki_field_plain",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "thin shingle courses (kokera): Edo houses before tile, nagaya, sheds"
+  },
+  {
+   "name": "jp_p_roof_itabuki_field_bamboo",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "shingles with bamboo strips nailed obliquely against gales (Morse)"
+  },
+  {
+   "name": "jp_p_roof_itabuki_field_kakigara",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "oyster-shell roof over thin shingles (Edo-side T3, G1 decision 3)"
+  },
+  {
+   "name": "jp_p_roof_board_ridge_strips",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "board-strip ridge held by battens (shingle roofs)"
+  },
+  {
+   "name": "jp_p_roof_board_ridge_stoned",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "board-strip ridge weighted with a row of stones (ishioki roofs)"
+  },
+  {
+   "name": "jp_p_roof_thatch_ridge_bamboo",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "bamboo-bound thatch ridge (Kanto)"
+  },
+  {
+   "name": "jp_p_roof_thatch_ridge_tile",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "tiled ridge over thatch (Musashi, T2)"
+  },
+  {
+   "name": "jp_p_roof_thatch_ridge_shiba",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "turf ridge planted with iris (Kiyomiya type)"
+  },
+  {
+   "name": "jp_p_roof_thatch_ridge_umanori",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "grass ridge with crossed timbers (umanori) at each half-ken"
+  },
+  {
+   "name": "jp_p_roof_kemuridashi_hood",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "small thatched smoke hood on a thatch ridge (T1)"
+  },
+  {
+   "name": "jp_p_roof_kemuridashi_koshiyane",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "raised louvred ridge vent on a board / tile roof (kitchens, smithies)"
+  },
+  {
+   "name": "jp_p_roof_kemuridashi_irimoya",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "latticed smoke triangle in the small gable of an irimoya roof"
+  },
+  {
+   "name": "jp_p_roof_hafu_tile",
+   "scale": 8.0,
+   "view": "side",
+   "context": [],
+   "drop": true,
+   "caption": "plain bargeboards under the sode-gawara verge tiles, with purlin ends"
+  },
+  {
+   "name": "jp_p_roof_hafu_board",
+   "scale": 8.0,
+   "view": "side",
+   "context": [],
+   "drop": true,
+   "caption": "bargeboards with a verge batten (shingle and stone-weighted roofs)"
+  },
+  {
+   "name": "jp_p_roof_hafu_thatch",
+   "scale": 8.0,
+   "view": "side",
+   "context": [],
+   "drop": true,
+   "caption": "hidden bargeboard: only the purlin ends show under the thatch verge (T1)"
+  },
+  {
+   "name": "jp_p_roof_hisashi_tile",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "tiled street pent over a machiya shop front (eave 2.94, soffit >= 2.20)"
+  },
+  {
+   "name": "jp_p_roof_hisashi_board",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "thin board pent on bracket arms (Morse)"
+  },
+  {
+   "name": "jp_p_roof_hisashi_ishioki",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "stone-weighted board pent (Kiso post towns)"
+  },
+  {
+   "name": "jp_p_roof_hisashi_skirt",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "board pent eave on posts over a thatch house's entrance side (G1 decision 6, Sasaki 1731): keeps the entrance above 2.20 without raising the walls"
+  },
+  {
+   "name": "jp_p_roof_hisashi_gable",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "small tiled pent along a gable at the upper-floor line (Ioka)"
+  },
+  {
+   "name": "jp_p_roof_kura_eave_std",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "fire-proof kura eave: plastered rafters and soffit, stepped plaster band, tiles above"
+  },
+  {
+   "name": "jp_p_roof_gutter_std",
+   "scale": 8.0,
+   "view": "3q",
+   "context": [],
+   "drop": true,
+   "caption": "split-bamboo gutter on iron hooks with a bamboo downpipe and a wooden funnel"
+  }
+ ]
+}

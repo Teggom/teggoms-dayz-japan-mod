@@ -1,0 +1,153 @@
+{
+ "id": "jp_p_roof_ishioki_battens_sparse",
+ "part": "jp_p_roof_ishioki_battens",
+ "variant": "_sparse",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_ishioki_battens_sparse.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_ishioki_battens",
+  "variant": "_sparse",
+  "differs_by": "fewer stones (poor / neglected)",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x04_misawa_a",
+   "c02_narai_facade",
+   "x37_eisen_narai"
+  ]
+ },
+ "tiers": [
+  1
+ ],
+ "used_for": "few stones on the battens (poor / neglected roof, T1)",
+ "datum": "the same 1 ken x 2 m slope as jp_p_roof_ishioki_field (shown on it)",
+ "recipe": "roofs.battens_stones(part, slope, h0, spacing, sparse)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.05,
+  1.77,
+  3.002,
+  3.595,
+  -1.491,
+  -0.083
+ ],
+ "dims": [
+  {
+   "name": "batten_spacing_m",
+   "expected": 0.6,
+   "measured": 0.6,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "batten_diameter_m",
+   "expected": "0.06-0.08",
+   "measured": 0.07,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "stone_size_m",
+   "expected": "0.15-0.30",
+   "measured": 0.2963,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "stone_shapes",
+   "expected": 8,
+   "measured": 8.0,
+   "tol": 0,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.88,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_river",
+   "id": "jp_m_stone_river",
+   "palette_id": "stone_lantern",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_river<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 192,
+  "Resolution 2": 87
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [
+  "6 stones on this sample"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 192, Resolution 2 87"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 batten_spacing_m",
+   "ok": true,
+   "detail": "expected 0.6, measured 0.6"
+  },
+  {
+   "check": "C4 batten_diameter_m",
+   "ok": true,
+   "detail": "expected 0.06-0.08, measured 0.07"
+  },
+  {
+   "check": "C4 stone_size_m",
+   "ok": true,
+   "detail": "expected 0.15-0.30, measured 0.2963"
+  },
+  {
+   "check": "C4 stone_shapes",
+   "ok": true,
+   "detail": "expected 8, measured 8.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

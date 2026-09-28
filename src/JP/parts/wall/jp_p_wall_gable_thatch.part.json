@@ -1,0 +1,198 @@
+{
+ "id": "jp_p_wall_gable_thatch",
+ "part": "jp_p_wall_gable",
+ "variant": "_thatch",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_gable_thatch.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_gable",
+  "variant": "_thatch",
+  "differs_by": "earth panels, thick thatch verge (Hirose)",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x08_hirose_earthwall",
+   "x01_ioka_a",
+   "x36_hiroshige_ishibe"
+  ]
+ },
+ "tiers": [
+  1
+ ],
+ "used_for": "earth-panel gable under a thick thatch verge, exposed frame, smoke vent (Hirose, T1)",
+ "datum": "gable end of a 3-ken span; x = 0..5.46 across the span, y 0 = sill (gable starts at the eave line 2.88)",
+ "recipe": "walls.gable(D, pitch, eave_y, variant)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.06,
+  5.52,
+  2.67,
+  5.59,
+  -0.06,
+  0.06
+ ],
+ "dims": [
+  {
+   "name": "tie_beam_m",
+   "expected": "0.12 x 0.21",
+   "measured": "0.12 x 0.21",
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "panel_max_m",
+   "expected": "<=1.82",
+   "measured": 1.76,
+   "tol": 0.01,
+   "source": "PLAYBOOK §6.2 (1 ken x 1 storey)",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.88,
+    0.0
+   ],
+   "note": "sits on the end tie beam"
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    2.73,
+    5.61,
+    0.0
+   ],
+   "note": "ridge post; verge meets jp_p_roof_hafu"
+  }
+ ],
+ "materials": [
+  {
+   "key": "bamboo_weathered",
+   "id": "jp_m_bamboo_weathered",
+   "palette_id": "bamboo_weathered",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 169,
+  "Resolution 2": 115,
+  "Resolution 3": 91,
+  "Geometry": 97,
+  "View Geometry": 91,
+  "Fire Geometry": 91
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "span_m": 5.46,
+  "pitch_deg": 45.0
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 169, Resolution 2 115, Resolution 3 91, Geometry 97, View Geometry 91, Fire Geometry 91"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "17 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "16 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "16 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, wood"
+  },
+  {
+   "check": "C4 tie_beam_m",
+   "ok": true,
+   "detail": "expected 0.12 x 0.21, measured 0.12 x 0.21"
+  },
+  {
+   "check": "C4 panel_max_m",
+   "ok": true,
+   "detail": "expected <=1.82, measured 1.76"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,65 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\6_roof_forms",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_roof_forms_kirizuma",
+   "scale": 15.0,
+   "view": "3q",
+   "context": [],
+   "caption": "gable roof from the generator (machiya, nagaya, kura, Kiso, tea house)"
+  },
+  {
+   "name": "jp_p_roof_forms_yosemune",
+   "scale": 15.0,
+   "view": "3q",
+   "context": [],
+   "caption": "hip roof from the generator (here tiled; thatch in jp_p_roof_thatch_body)"
+  },
+  {
+   "name": "jp_p_roof_forms_irimoya",
+   "scale": 15.0,
+   "view": "3q",
+   "context": [],
+   "caption": "hip-and-gable from the generator, latticed smoke gables (big inns, T2 farmhouses)"
+  },
+  {
+   "name": "jp_p_roof_forms_kabuto",
+   "scale": 15.0,
+   "view": "3q",
+   "context": [],
+   "caption": "kabuto: one end cut into a tall smoke gable, the other hipped (Sasaki type, thatch)"
+  },
+  {
+   "name": "jp_p_roof_thatch_body_yosemune",
+   "scale": 15.0,
+   "view": "3q",
+   "context": [],
+   "caption": "Kanto hip thatch (Kitamura type) with the 0.60 square-cut eave in 3 bands"
+  },
+  {
+   "name": "jp_p_roof_thatch_body_kirizuma",
+   "scale": 15.0,
+   "view": "3q",
+   "context": [],
+   "caption": "Koshu gable thatch (Hirose type), thick cut verge"
+  },
+  {
+   "name": "jp_p_roof_thatch_body_irimoya",
+   "scale": 15.0,
+   "view": "3q",
+   "context": [],
+   "caption": "hip-and-gable thatch with latticed smoke gables (Ito type, T2)"
+  },
+  {
+   "name": "jp_p_roof_thatch_body_new",
+   "scale": 15.0,
+   "view": "3q",
+   "context": [],
+   "caption": "freshly re-thatched hip roof (thatch_new via _w0), about 1 roof in 10"
+  }
+ ]
+}

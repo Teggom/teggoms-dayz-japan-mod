@@ -1,0 +1,140 @@
+{
+ "id": "jp_p_roof_gutter_std",
+ "part": "jp_p_roof_gutter",
+ "variant": "_std",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_gutter_std.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_gutter",
+  "variant": "_std",
+  "differs_by": "gutter + one downpipe",
+  "priority": "P3",
+  "importance": "filler",
+  "refs": [
+   "x38_morse_gutter"
+  ]
+ },
+ "tiers": [
+  3
+ ],
+ "used_for": "split-bamboo gutter on iron hooks with a bamboo downpipe and a wooden funnel",
+ "datum": "2-ken eave run; hangs 0.05 below a tile eave edge (y 2.63 at z 0.95); y 0 = ground",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.006,
+  3.646,
+  0.05,
+  2.66,
+  0.87,
+  1.03
+ ],
+ "dims": [
+  {
+   "name": "gutter_diameter_m",
+   "expected": 0.1,
+   "measured": 0.1,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "hook_spacing_m",
+   "expected": 0.91,
+   "measured": 0.91,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.63,
+    0.95
+   ],
+   "note": "hangs 0.05 below the eave edge on hooks at post positions"
+  }
+ ],
+ "materials": [
+  {
+   "key": "bamboo_weathered",
+   "id": "jp_m_bamboo_weathered",
+   "palette_id": "bamboo_weathered",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 91,
+  "Resolution 2": 33,
+  "Resolution 3": 27
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 91, Resolution 2 33, Resolution 3 27"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 gutter_diameter_m",
+   "ok": true,
+   "detail": "expected 0.1, measured 0.1"
+  },
+  {
+   "check": "C4 hook_spacing_m",
+   "ok": true,
+   "detail": "expected 0.91, measured 0.91"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

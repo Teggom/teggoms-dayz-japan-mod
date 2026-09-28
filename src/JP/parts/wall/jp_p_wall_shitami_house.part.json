@@ -1,0 +1,163 @@
+{
+ "id": "jp_p_wall_shitami_house",
+ "part": "jp_p_wall_shitami",
+ "variant": "_house",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_shitami_house.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_shitami",
+  "variant": "_house",
+  "differs_by": "unpainted/dark weathered",
+  "priority": "P2",
+  "importance": "standard",
+  "refs": [
+   "c16_hakone_sekisho",
+   "x05_misawa_b"
+  ]
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "lapped horizontal boards with battens: lower walls and gables (T2-3)",
+ "datum": "1-ken sample; _kura is hung on an okabe face (z0 = +0.12), 1.80 high",
+ "recipe": "walls.wall_run(kind='shitami')",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.0,
+  1.82,
+  0.0,
+  2.7,
+  0.06,
+  0.105
+ ],
+ "dims": [
+  {
+   "name": "exposure_m",
+   "expected": 0.2,
+   "measured": 0.2,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "lap_m",
+   "expected": 0.025,
+   "measured": 0.025,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "batten_spacing_m",
+   "expected": 0.455,
+   "measured": 0.455,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_street_dark",
+   "id": "jp_m_wood_street_dark",
+   "palette_id": "timber_street_dark",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_street_dark<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 108,
+  "Resolution 2": 84,
+  "Resolution 3": 6,
+  "Geometry": 6,
+  "View Geometry": 6,
+  "Fire Geometry": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 108, Resolution 2 84, Resolution 3 6, Geometry 6, View Geometry 6, Fire Geometry 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 exposure_m",
+   "ok": true,
+   "detail": "expected 0.2, measured 0.2"
+  },
+  {
+   "check": "C4 lap_m",
+   "ok": true,
+   "detail": "expected 0.025, measured 0.025"
+  },
+  {
+   "check": "C4 batten_spacing_m",
+   "ok": true,
+   "detail": "expected 0.455, measured 0.455"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

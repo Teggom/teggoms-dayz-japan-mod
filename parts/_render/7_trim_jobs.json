@@ -1,0 +1,63 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\7_trim",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_trim_grime_wall",
+   "scale": 3.0,
+   "view": "3q_low",
+   "context": [
+    [
+     "jp_p_wall_shinkabe_shikkui",
+     0.0,
+     [
+      0,
+      0,
+      0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0,
+      0,
+      0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0,
+      0
+     ]
+    ]
+   ],
+   "ctx_plain": true,
+   "caption": "W1 splash band over the foot of a wall (shown on shikkui; on earth walls it is a subtle ~10 % darkening, as sampled)"
+  },
+  {
+   "name": "jp_p_trim_grime_post",
+   "scale": 3.0,
+   "view": "3q_low",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0,
+      0,
+      0
+     ]
+    ]
+   ],
+   "ctx_plain": true,
+   "caption": "W1 splash band wrapped round the foot of a 0.12 post"
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "id": "jp_p_wall_koshiita_h090",
+ "part": "jp_p_wall_koshiita",
+ "variant": "_h090",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_koshiita_h090.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_koshiita",
+  "variant": "_h090",
+  "differs_by": "0.90 high",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x08_hirose_earthwall",
+   "x06_suzuki_a"
+  ]
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "0.90 m board wainscot protecting the foot of earth walls from splash",
+ "datum": "between the post faces of a 1-ken bay, on the infill face (z +0.0375)",
+ "recipe": "walls.koshiita",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.06,
+  1.76,
+  0.0,
+  0.92,
+  0.037,
+  0.077
+ ],
+ "dims": [
+  {
+   "name": "height_m",
+   "expected": 0.9,
+   "measured": 0.9,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 66,
+  "Resolution 2": 54,
+  "Resolution 3": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 66, Resolution 2 54, Resolution 3 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 height_m",
+   "ok": true,
+   "detail": "expected 0.9, measured 0.9"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

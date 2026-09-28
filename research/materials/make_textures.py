@@ -535,7 +535,7 @@ def wall_namako_tile(lv, S):
 
 
 def roof_kawara(lv, S):
-    t = [tgt("kawara_ibushi", 1), tgt("kawara_ibushi", -8, 0, -1), tgt("kawara_ibushi", -4, toward="kawara_weathered", t=0.7)][lv]
+    t = [tgt("kawara_ibushi", 1), tgt("kawara_ibushi", -8, 0, -1), tgt("kawara_ibushi", -9, toward="kawara_weathered", t=0.7)][lv]  # -9: parts agent 2026-09-27, keeps _w2 near _w1 after the darker calibrated entry
     base = np.asarray(t, np.float32) / 255
     m = 0.045 * fbm(S, 2.8, 1, 1, 101) + 0.035 * fbm(S, 1.2, 1, 1, 102)
     if lv >= 1:                                                   # W8: stronger tile-scale tone changes
@@ -683,13 +683,13 @@ def roof_boards_common(lv, S, t, exposure, wmin, wmax, seed, curl=0.0):
 
 
 def roof_kureita(lv, S):
-    t = [tgt("roof_board_silver", 7, 1, 6), tgt("roof_board_silver"), tgt("roof_board_silver", -8)][lv]
+    t = [tgt("board_new"), tgt("roof_board_silver"), tgt("roof_board_silver", -8)][lv]      # _w0 = board_new (2026-09-27)
     co, h, mask = roof_boards_common(lv, S, t, 0.25, 0.12, 0.30, 131)
     return R(co, h2n(h * 6.0, 1.0), 0.8 + 0.1 * lv, mask, 0.2, 0.3, t)
 
 
 def roof_kokera(lv, S):
-    t = [tgt("roof_board_silver", 8, 1, 5), tgt("roof_board_silver", 2), tgt("roof_board_silver", -8)][lv]
+    t = [tgt("board_new", -2), tgt("roof_board_silver", 2), tgt("roof_board_silver", -8)][lv]  # _w0 = board_new
     co, h, mask = roof_boards_common(lv, S, t, 2.0 / 22, 0.06, 0.13, 141, curl=[0, 0, 1.2][lv])
     return R(co, h2n(h * 4.0, 1.0), 0.8 + 0.1 * lv, mask, 0.2, 0.3, t)
 
@@ -940,7 +940,8 @@ RECIPES = {
     "jp_m_straw_mushiro": straw_mushiro,
 }
 # wear levels whose colour is a different palette entry than the material's own (matcheck reads this from the sidecar)
-PALETTE_BY_WEAR = {"jp_m_roof_thatch": {"_w0": "thatch_new"}, "jp_m_roof_thatch_cut": {"_w0": "thatch_new"}}
+PALETTE_BY_WEAR = {"jp_m_roof_thatch": {"_w0": "thatch_new"}, "jp_m_roof_thatch_cut": {"_w0": "thatch_new"},
+                   "jp_m_roof_kureita": {"_w0": "board_new"}, "jp_m_roof_kokera": {"_w0": "board_new"}}
 
 
 def size_for(tile_m):

@@ -1,0 +1,184 @@
+{
+ "id": "jp_p_found_step_wood",
+ "part": "jp_p_found_step",
+ "variant": "_wood",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_found_step_wood.p3d",
+ "build_list": {
+  "entry": "jp_p_found_step",
+  "variant": "_wood",
+  "differs_by": "wooden step box at a veranda",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x04_misawa_a",
+   "x25_morse_amado_box"
+  ]
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "wooden step box at a veranda edge (0.50), hides the walk ramp",
+ "datum": "door sill at z 0 (the floor edge), y 0 = raised floor / veranda; the ramp runs to +z",
+ "recipe": "found.step(part, cx, style, drop)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.46,
+  1.361,
+  -0.6,
+  -0.25,
+  0.005,
+  0.462
+ ],
+ "dims": [
+  {
+   "name": "ramp_deg",
+   "expected": "<=34",
+   "measured": 34.0,
+   "tol": 0.1,
+   "source": "build_list"
+  },
+  {
+   "name": "step_rise_m",
+   "expected": "0.15-0.18 (A)",
+   "measured": 0.25,
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "ramp_width_m",
+   "expected": ">=1.00",
+   "measured": 1.2,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "stair_head",
+   "pos": [
+    0.91,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "ramp_foot",
+   "pos": [
+    0.91,
+    -0.5,
+    0.7413
+   ]
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -0.5,
+    0.0
+   ],
+   "note": "doma / yard level"
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 54,
+  "Resolution 2": 18,
+  "Resolution 3": 6,
+  "Geometry": 5,
+  "Roadway": 1
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [
+  "wooden step: one box step of 0.25 on a 0.50 veranda (two rises of 0.25; build list 0.15-0.18 assumed); the hidden ramp carries movement"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 54, Resolution 2 18, Resolution 3 6, Geometry 5, Roadway 1"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 ramp_deg",
+   "ok": true,
+   "detail": "expected <=34, measured 34.0"
+  },
+  {
+   "check": "C4 step_rise_m",
+   "ok": true,
+   "detail": "expected 0.15-0.18 (A), measured 0.25"
+  },
+  {
+   "check": "C4 ramp_width_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.2"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

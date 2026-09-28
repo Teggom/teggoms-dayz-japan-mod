@@ -1,0 +1,373 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\2a_walls",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_wall_shinkabe_arakabe",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "rough earth wall between exposed posts, poor and rural houses (T1)"
+  },
+  {
+   "name": "jp_p_wall_shinkabe_nakanuri",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "smoother earth wall between exposed posts, village and post-town houses (T2)"
+  },
+  {
+   "name": "jp_p_wall_shinkabe_shikkui",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "white lime plaster between exposed posts, town upper storeys (T3)"
+  },
+  {
+   "name": "jp_p_wall_shinkabe_kokabe_ranma",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "earth wall with a plain lattice transom as the header band (T2 best rooms)"
+  },
+  {
+   "name": "jp_p_wall_okabe_kura",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "thick fire-proof kura wall, posts hidden (T2-3)"
+  },
+  {
+   "name": "jp_p_wall_okabe_nuriya",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "plastered Edo town-house front (nuriya, post-1720), posts hidden (T3)"
+  },
+  {
+   "name": "jp_p_wall_board_vertical_battened",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "vertical boards with cover battens: Kiso fronts, nagaya, gables"
+  },
+  {
+   "name": "jp_p_wall_board_vertical_plain",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "plain butt-jointed vertical boards on poor houses and sheds (T1)"
+  },
+  {
+   "name": "jp_p_wall_koshiita_h060",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "0.60 m board wainscot protecting the foot of earth walls from splash"
+  },
+  {
+   "name": "jp_p_wall_koshiita_h090",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "0.90 m board wainscot protecting the foot of earth walls from splash"
+  },
+  {
+   "name": "jp_p_wall_shitami_house",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "lapped horizontal boards with battens: lower walls and gables (T2-3)"
+  },
+  {
+   "name": "jp_p_wall_shitami_kura",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "black lapped boards over a kura's lower plaster (restricted colour)"
+  },
+  {
+   "name": "jp_p_wall_namako_imo",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "square-grid namako tiles on kura lower walls (oldest form)"
+  },
+  {
+   "name": "jp_p_wall_namako_shihan",
+   "scale": 5.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "diagonal namako tiles on kura lower walls (most common)"
+  }
+ ]
+}

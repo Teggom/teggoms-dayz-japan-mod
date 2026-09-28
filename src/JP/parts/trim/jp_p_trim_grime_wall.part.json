@@ -1,0 +1,111 @@
+{
+ "id": "jp_p_trim_grime_wall",
+ "part": "jp_p_trim_grime",
+ "variant": "_wall",
+ "group": "trim",
+ "p3d": "JP\\parts\\trim\\jp_p_trim_grime_wall.p3d",
+ "build_list": {
+  "entry": "jp_p_trim_grime",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "W1 splash band over the foot of a wall (shown on shikkui; on earth walls it is a subtle ~10 % darkening, as sampled)",
+ "datum": "y 0 = sill / grade the band starts at; band 0.45 high, 3 mm proud of the face",
+ "recipe": "trim.grime_band(part, x0, x1, face_z, y0, h, normal, axis)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.06,
+  1.76,
+  0.0,
+  0.45,
+  0.041,
+  0.041
+ ],
+ "dims": [
+  {
+   "name": "band_height_m",
+   "expected": "0-0.4 zone (W1)",
+   "measured": 0.45,
+   "tol": 0.06,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "wall_grime",
+   "id": "jp_m_wall_grime",
+   "palette_id": "grime_splash",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_grime<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 1,
+  "Resolution 2": 1
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [
+  "palette grime_splash (sampled on x08_hirose_earthwall); matcheck in src/JP/common/materials/checks_parts.json"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 1, Resolution 2 1"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 band_height_m",
+   "ok": true,
+   "detail": "expected 0-0.4 zone (W1), measured 0.45"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

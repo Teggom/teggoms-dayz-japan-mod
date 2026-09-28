@@ -2,7 +2,9 @@
  "id": "jp_m_roof_kokera",
  "family": "roof",
  "palette_id": "roof_board_silver",
- "palette_by_wear": {},
+ "palette_by_wear": {
+  "_w0": "board_new"
+ },
  "tile_size_m": 2.0,
  "texture_px": 1024,
  "px_per_m": 512.0,
@@ -17,9 +19,9 @@
    "co": "JP\\common\\materials\\roof\\jp_m_roof_kokera_w0_co.paa",
    "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera_w0.rvmat",
    "target_srgb": [
-    149.7,
-    147.8,
-    146.1
+    150.5,
+    117.0,
+    79.2
    ],
    "masked_frac": 0.0
   },

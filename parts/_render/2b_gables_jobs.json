@@ -1,0 +1,137 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\2b_gables",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_wall_gable_thatch",
+   "scale": 9.0,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      5.46,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "earth-panel gable under a thick thatch verge, exposed frame, smoke vent (Hirose, T1)"
+  },
+  {
+   "name": "jp_p_wall_gable_tile",
+   "scale": 9.0,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      5.46,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "plastered gable with board band and purlin bosses under a tiled verge (Ioka, T3)"
+  },
+  {
+   "name": "jp_p_wall_gable_board",
+   "scale": 9.0,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      5.46,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "all-board gable over the frame, with a vent (Kiso, T2)"
+  },
+  {
+   "name": "jp_p_wall_gable_kura",
+   "scale": 9.0,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      5.46,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "plain plastered kura gable with a small barred vent (T2-3)"
+  },
+  {
+   "name": "jp_p_wall_udatsu_sode",
+   "scale": 9.0,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "plastered wing wall with a tile cap between adjoining town houses (Kamigata)"
+  },
+  {
+   "name": "jp_p_wall_udatsu_hon",
+   "scale": 9.0,
+   "view": "3q",
+   "context": [],
+   "caption": "parapet on the gable with its own tile cap (rich Kamigata houses)"
+  }
+ ]
+}

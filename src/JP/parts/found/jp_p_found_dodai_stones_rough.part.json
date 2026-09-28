@@ -1,0 +1,215 @@
+{
+ "id": "jp_p_found_dodai_stones_rough",
+ "part": "jp_p_found_dodai_stones",
+ "variant": "_rough",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_found_dodai_stones_rough.p3d",
+ "build_list": {
+  "entry": "jp_p_found_dodai_stones",
+  "variant": "_rough",
+  "differs_by": "roughly dressed, T2",
+  "priority": "P1",
+  "importance": "hero",
+  "refs": [
+   "x01_ioka_a",
+   "c02_narai_facade",
+   "c08_kyomachiya"
+  ]
+ },
+ "tiers": [
+  2
+ ],
+ "used_for": "timber sill on a course of roughly dressed cut stones (town houses)",
+ "datum": "2-ken run from the post node x 0; y 0 = dodai top (posts stand here); grade at -0.27",
+ "recipe": "found.dodai_stones(part, x0, x1, dressed)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.1,
+  3.74,
+  -0.39,
+  0.0,
+  -0.173,
+  0.173
+ ],
+ "dims": [
+  {
+   "name": "stone_length_m",
+   "expected": "0.30-0.60",
+   "measured": 0.4524,
+   "tol": 0.02,
+   "source": "build_list (A)"
+  },
+  {
+   "name": "stone_depth_m",
+   "expected": "0.25-0.35",
+   "measured": 0.3466,
+   "tol": 0.01,
+   "source": "build_list (A)"
+  },
+  {
+   "name": "stone_showing_m",
+   "expected": "0.10-0.20",
+   "measured": 0.15,
+   "tol": 0.01,
+   "source": "build_list (A)"
+  },
+  {
+   "name": "sill_m",
+   "expected": 0.12,
+   "measured": 0.12,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "posts stand on the dodai"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "note": "posts stand on the dodai"
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    0.0
+   ],
+   "note": "posts stand on the dodai"
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "dodai top = grade + stone showing + 0.12"
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -0.27,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 204,
+  "Resolution 2": 12,
+  "Resolution 3": 12,
+  "Geometry": 12,
+  "View Geometry": 12,
+  "Fire Geometry": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 204, Resolution 2 12, Resolution 3 12, Geometry 12, View Geometry 12, Fire Geometry 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "granite, wood"
+  },
+  {
+   "check": "C4 stone_length_m",
+   "ok": true,
+   "detail": "expected 0.30-0.60, measured 0.4524"
+  },
+  {
+   "check": "C4 stone_depth_m",
+   "ok": true,
+   "detail": "expected 0.25-0.35, measured 0.3466"
+  },
+  {
+   "check": "C4 stone_showing_m",
+   "ok": true,
+   "detail": "expected 0.10-0.20, measured 0.15"
+  },
+  {
+   "check": "C4 sill_m",
+   "ok": true,
+   "detail": "expected 0.12, measured 0.12"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,156 @@
+{
+ "id": "jp_p_roof_kemuridashi_hood",
+ "part": "jp_p_roof_kemuridashi",
+ "variant": "_hood",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_kemuridashi_hood.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_kemuridashi",
+  "variant": "_hood",
+  "differs_by": "thatch ridge hood",
+  "priority": "P1",
+  "importance": "standard",
+  "refs": [
+   "x20_morse_thatch_end",
+   "x06_suzuki_a",
+   "x26_morse_farmhouse_kabutoyama"
+  ]
+ },
+ "tiers": [
+  1
+ ],
+ "used_for": "small thatched smoke hood on a thatch ridge (T1)",
+ "datum": "origin = ridge connector at the vent position (irimoya: gable foot centre)",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.01,
+  1.21,
+  -0.1,
+  0.9,
+  -0.55,
+  0.55
+ ],
+ "dims": [
+  {
+   "name": "hood_width_m",
+   "expected": "0.60-0.90",
+   "measured": 0.8,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "ridge",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "placed by the generator over the doma / kamado bay"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_thatch",
+   "id": "jp_m_roof_thatch",
+   "palette_id": "thatch_weathered",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 27,
+  "Resolution 2": 15,
+  "Resolution 3": 5,
+  "Geometry": 5,
+  "View Geometry": 5,
+  "Fire Geometry": 5
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 27, Resolution 2 15, Resolution 3 5, Geometry 5, View Geometry 5, Fire Geometry 5"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "hay"
+  },
+  {
+   "check": "C4 hood_width_m",
+   "ok": true,
+   "detail": "expected 0.60-0.90, measured 0.8"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "jp_m_roof_kawara_field",
+ "family": "roof",
+ "palette_id": "kawara_ibushi",
+ "palette_by_wear": {},
+ "tile_size_m": 1.04,
+ "tile_size_v_m": 0.94,
+ "texture_px": 1024,
+ "px_per_m": 985.0,
+ "uv": "u = metres along the eave / 1.04 from a ken line; v = metres down the slope from a course line / 0.94",
+ "grain": "4 columns (0.26) x 4 courses (0.235) per tile; butts at v = k/4",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\pottery.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\ceramic_tiles_roof_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "as jp_m_roof_kawara _w0, plus courses",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field_w0.rvmat",
+   "target_srgb": [
+    120.5,
+    124.5,
+    125.5
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "as jp_m_roof_kawara _w1, plus courses",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field_w1.rvmat",
+   "target_srgb": [
+    97.4,
+    102.1,
+    104.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "as jp_m_roof_kawara _w2, plus courses",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field_w2.rvmat",
+   "target_srgb": [
+    99.1,
+    105.7,
+    98.6
+   ],
+   "masked_frac": 0.062
+  }
+ },
+ "used_by": [
+  "jp_p_roof_sangawara_field",
+  "jp_p_roof_hongawara",
+  "jp_p_roof_forms",
+  "jp_p_roof_hisashi"
+ ],
+ "used_on": "The continuous corrugated middle of kawara slopes, where PLAYBOOK §6.1 takes the course steps from the normal map and AO; the modelled rows near eave and ridge use it too, so the roof reads as one surface.",
+ "sources": [
+  {
+   "derived_from": "jp_m_roof_kawara (make_textures.roof_kawara)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library",
+ "made_by": "parts/kit/make_part_materials.py (parts agent, 2026-09-27)"
+}
