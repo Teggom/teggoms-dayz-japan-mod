@@ -1,0 +1,66 @@
+{
+ "id": "jp_m_bamboo_weathered",
+ "family": "bamboo",
+ "palette_id": "bamboo_weathered",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "along culm, nodes",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": null,
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "pale",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w0.rvmat",
+   "target_srgb": [
+    183.8,
+    167.3,
+    145.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-beige",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+   "target_srgb": [
+    169.0,
+    157.0,
+    146.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "split, dark",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
+   "target_srgb": [
+    145.1,
+    133.5,
+    122.8
+   ],
+   "masked_frac": 0.129
+  }
+ },
+ "used_by": [
+  "jp_p_open_renji",
+  "jp_p_roof_eave_soffit",
+  "jp_p_roof_gutter",
+  "jp_p_roof_itabuki_field",
+  "jp_p_roof_thatch_ridge"
+ ],
+ "used_on": "Bamboo bars in barred windows, eave soffit poles, split-bamboo gutters and downpipes, battens on shingle roofs, bamboo on thatch ridges.",
+ "sources": [
+  {
+   "procedural": "make_textures.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

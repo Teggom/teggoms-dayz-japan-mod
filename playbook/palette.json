@@ -357,6 +357,48 @@
    ]
   },
   {
+   "id": "earth_wall_aged",
+   "name": "Earthen wall, aged grey-brown (arakabe / nakanuri, exterior)",
+   "material": "clay + straw over bamboo lath, weathered",
+   "group": "wall",
+   "tiers": [
+    1,
+    2
+   ],
+   "use": "default tier 1-2 exterior earth wall (G1 decision 1)",
+   "note": "Added 2026-09-27 by the materials agent after Stephen's G1 approval. Source: research/exterior/materials_needed.json (A-EXT). Check: x06_suzuki_a in evening shade gives (99,97,96) Why: Exterior earth walls of surviving 17th-18th c. farmhouses are grey-brown, not the sunlit ochre of c29 (215,180,115). The v1 walls read too bright; vanilla white walls sit at ~150.",
+   "srgb": [
+    115,
+    98,
+    80
+   ],
+   "hex": "#736250",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "samples": [
+    {
+     "ref": "x08_hirose_earthwall",
+     "box": [
+      0.2,
+      0.52,
+      0.29,
+      0.64
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "x08_hirose_earthwall",
+     "box": [
+      0.52,
+      0.64,
+      0.64,
+      0.74
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
    "id": "bengara_wall",
    "name": "Bengara-red plaster",
    "material": "earthen/lime plaster pigmented with bengara (iron oxide)",
@@ -611,6 +653,58 @@
      "select": "mid 70 % luminance"
     }
    ]
+  },
+  {
+   "id": "roof_board_silver",
+   "name": "Weathered roof boards, silver-grey (kureita / kokera)",
+   "material": "split sugi / sawara / kuri boards and shingles, sun and rain aged",
+   "group": "roof",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "stone-weighted board roofs, shingle roofs, board ridges and pents (G1 decision 2)",
+   "note": "Added 2026-09-27 by the materials agent after Stephen's G1 approval. Source: research/exterior/materials_needed.json (A-EXT). Check: includes some stones; evening light Why: Weathered roof boards go silver-grey; timber_weathered (118,82,73) is the brown of wet facade boards and is wrong for roofs.",
+   "srgb": [
+    123,
+    128,
+    134
+   ],
+   "hex": "#7B8086",
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "samples": [
+    {
+     "ref": "x04_misawa_a",
+     "box": [
+      0.25,
+      0.22,
+      0.55,
+      0.3
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ]
+  },
+  {
+   "id": "kakigara_shell",
+   "name": "Oyster shells on a board roof (kakigara-buki), weathered",
+   "material": "oyster shells strewn over thin shingles",
+   "group": "roof",
+   "tiers": [
+    3
+   ],
+   "use": "Edo-side tier-3 board-roof variant (G1 decision 3)",
+   "note": "Added 2026-09-27 by the materials agent after Stephen's G1 approval. Source: research/exterior/materials_needed.json (A-EXT). Check: needs a licensed sample of weathered oyster shells Why: Only if decision 3 (Edo oyster-shell board roofs) is yes.",
+   "srgb": [
+    172,
+    168,
+    158
+   ],
+   "hex": "#ACA89E",
+   "method": "assumed",
+   "tolerance_dE76": 12
   },
   {
    "id": "thatch_weathered",

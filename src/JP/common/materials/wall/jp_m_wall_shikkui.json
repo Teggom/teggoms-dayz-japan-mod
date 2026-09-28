@@ -1,0 +1,78 @@
+{
+ "id": "jp_m_wall_shikkui",
+ "family": "wall",
+ "palette_id": "shikkui_white",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "none; trowel",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": null,
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean lime, mean <=192 (never 217)",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_w0.rvmat",
+   "target_srgb": [
+    183.8,
+    185.8,
+    187.8
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "default on houses: grey streaks under eaves and sills",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_w1.rvmat",
+   "target_srgb": [
+    172.9,
+    174.9,
+    176.9
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "toward earth_wall_ochre (max 0.25), grime band, hairline cracks",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_w2.rvmat",
+   "target_srgb": [
+    169.3,
+    164.1,
+    153.0
+   ],
+   "masked_frac": 0.146
+  }
+ },
+ "used_by": [
+  "jp_p_open_kura_door",
+  "jp_p_open_kura_window",
+  "jp_p_open_mushiko",
+  "jp_p_roof_kawara_ridge",
+  "jp_p_roof_kura_eave",
+  "jp_p_roof_sangawara_field",
+  "jp_p_wall_gable",
+  "jp_p_wall_namako",
+  "jp_p_wall_okabe",
+  "jp_p_wall_shinkabe",
+  "jp_p_wall_udatsu"
+ ],
+ "used_on": "White lime plaster, tier 3: kura walls and doors, plastered town fronts, the low upper storey with mushiko windows, udatsu fire walls, plastered kura eaves, gables, namako joints and the mortar of tile ridges.",
+ "sources": [
+  {
+   "asset": "white_plaster_02",
+   "name": "White Plaster 02",
+   "page": "https://polyhaven.com/a/white_plaster_02",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Rob Tuytel"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

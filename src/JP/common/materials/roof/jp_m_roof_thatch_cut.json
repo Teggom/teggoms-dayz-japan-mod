@@ -1,0 +1,64 @@
+{
+ "id": "jp_m_roof_thatch_cut",
+ "family": "roof",
+ "palette_id": "thatch_weathered",
+ "palette_by_wear": {
+  "_w0": "thatch_new"
+ },
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "stalk ends facing out",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\hay.rvmat",
+ "roadway_surface": null,
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh cut, light",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut_w0.rvmat",
+   "target_srgb": [
+    164.9,
+    139.6,
+    88.1
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "2-3 light/dark layer bands (Morse)",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut_w1.rvmat",
+   "target_srgb": [
+    81.7,
+    71.4,
+    69.3
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "ragged, dark",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut_w2.rvmat",
+   "target_srgb": [
+    65.9,
+    57.0,
+    54.2
+   ],
+   "masked_frac": 0.0
+  }
+ },
+ "used_by": [
+  "jp_p_roof_thatch_body"
+ ],
+ "used_on": "The squared-off cut face of thick thatch at the eaves (about 0.6 m thick).",
+ "sources": [
+  {
+   "procedural": "make_textures.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

@@ -1,0 +1,70 @@
+{
+ "id": "jp_m_stone_cut",
+ "family": "stone",
+ "palette_id": "stone_granite",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "tool marks",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\granite.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\stone_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "crisp tool marks",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_cut_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut_w0.rvmat",
+   "target_srgb": [
+    168.4,
+    145.2,
+    115.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "rounded arrises, grime",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_cut_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat",
+   "target_srgb": [
+    160.3,
+    137.4,
+    107.5
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "moss in joints",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_cut_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut_w2.rvmat",
+   "target_srgb": [
+    154.9,
+    132.3,
+    102.5
+   ],
+   "masked_frac": 0.071
+  }
+ },
+ "used_by": [
+  "jp_p_found_dodai_stones",
+  "jp_p_found_kura_footing",
+  "jp_p_found_step"
+ ],
+ "used_on": "Cut granite: the stone course under town-house sills, kura footings, cut steps and threshold stones.",
+ "sources": [
+  {
+   "asset": "rock_surface",
+   "name": "Rock Surface",
+   "page": "https://polyhaven.com/a/rock_surface",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Amal Kumar"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

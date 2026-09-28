@@ -1,0 +1,69 @@
+{
+ "id": "jp_m_wood_sooted",
+ "family": "wood",
+ "palette_id": "timber_sooted",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "along member",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\wood_planks_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "dark brown-black, albedo >=30",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_sooted_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted_w0.rvmat",
+   "target_srgb": [
+    38.1,
+    30.0,
+    24.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "soot streaks",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+   "target_srgb": [
+    33.9,
+    26.0,
+    19.9
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "crusted soot",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
+   "target_srgb": [
+    33.0,
+    25.0,
+    18.8
+   ],
+   "masked_frac": 0.0
+  }
+ },
+ "used_by": [
+  "jp_p_roof_kemuridashi"
+ ],
+ "used_on": "Soot-blackened timber inside smoke vents and smoke hoods (the soot halo outside is weathering).",
+ "sources": [
+  {
+   "asset": "japanese_cedar_planks",
+   "name": "Japanese Cedar Planks",
+   "page": "https://polyhaven.com/a/japanese_cedar_planks",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Charlotte Baglioni",
+    "Rico Cilliers"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

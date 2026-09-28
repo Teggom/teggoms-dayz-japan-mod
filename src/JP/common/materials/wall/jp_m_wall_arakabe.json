@@ -1,0 +1,69 @@
+{
+ "id": "jp_m_wall_arakabe",
+ "family": "wall",
+ "palette_id": "earth_wall_aged",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "none; straw flecks",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": null,
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh clay, straw visible",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_arakabe_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe_w0.rvmat",
+   "target_srgb": [
+    128.7,
+    107.0,
+    82.8
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "rain streaks (W2), splash band (W1)",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_arakabe_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe_w1.rvmat",
+   "target_srgb": [
+    115.0,
+    98.0,
+    80.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "eroded, straw and lath showing in patches",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_arakabe_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe_w2.rvmat",
+   "target_srgb": [
+    108.9,
+    93.3,
+    78.6
+   ],
+   "masked_frac": 0.015
+  }
+ },
+ "used_by": [
+  "jp_p_wall_gable",
+  "jp_p_wall_shinkabe"
+ ],
+ "used_on": "Rough earth walls of poor and village houses (tier 1-2): walls between exposed posts, farmhouse gables.",
+ "sources": [
+  {
+   "asset": "clay_plaster",
+   "name": "Clay Plaster",
+   "page": "https://polyhaven.com/a/clay_plaster",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Amal Kumar"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

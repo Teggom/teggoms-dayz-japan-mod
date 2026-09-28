@@ -1,0 +1,74 @@
+{
+ "id": "jp_m_roof_kawara",
+ "family": "roof",
+ "palette_id": "kawara_ibushi",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "per tile column",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\pottery.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\ceramic_tiles_roof_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "silver-grey ibushi",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_w0.rvmat",
+   "target_srgb": [
+    147.6,
+    151.6,
+    151.6
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "darker, per-tile tint (W8)",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_w1.rvmat",
+   "target_srgb": [
+    123.6,
+    128.4,
+    130.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "toward kawara_weathered, lichen on north (W6)",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kawara_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_w2.rvmat",
+   "target_srgb": [
+    119.4,
+    126.1,
+    118.6
+   ],
+   "masked_frac": 0.062
+  }
+ },
+ "used_by": [
+  "jp_p_open_kura_door",
+  "jp_p_open_kura_window",
+  "jp_p_roof_hisashi",
+  "jp_p_roof_hongawara",
+  "jp_p_roof_kawara_ridge",
+  "jp_p_roof_kura_eave",
+  "jp_p_roof_onigawara",
+  "jp_p_roof_sangawara_eave",
+  "jp_p_roof_sangawara_field",
+  "jp_p_roof_sangawara_verge",
+  "jp_p_roof_thatch_ridge",
+  "jp_p_wall_udatsu"
+ ],
+ "used_on": "Every fired-clay roof tile (tier 2-3): sangawara field, eave and verge tiles, stacked ridges and end tiles, hongawara, pent roofs, kura roofs and windows, udatsu caps, tiled thatch ridges.",
+ "sources": [
+  {
+   "procedural": "make_textures.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)",
+ "note": "A ceramic surface, not a tile pattern (rule 1: the tiles are geometry). W8 per-tile tint: give each tile a random UV offset."
+}

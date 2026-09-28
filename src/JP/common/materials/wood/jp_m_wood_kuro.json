@@ -1,0 +1,68 @@
+{
+ "id": "jp_m_wood_kuro",
+ "family": "wood",
+ "palette_id": "kuro_board",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "along member",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\wood_planks_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "matte black",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_kuro_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_kuro_w0.rvmat",
+   "target_srgb": [
+    19.0,
+    23.0,
+    26.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey bloom",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_kuro_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_kuro_w1.rvmat",
+   "target_srgb": [
+    26.0,
+    29.9,
+    33.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "grey, wood showing on edges",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_kuro_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_kuro_w2.rvmat",
+   "target_srgb": [
+    27.0,
+    31.0,
+    34.1
+   ],
+   "masked_frac": 0.011
+  }
+ },
+ "used_by": [
+  "jp_p_wall_shitami"
+ ],
+ "used_on": "Black lapped lower boards on kura storehouses. Restricted.",
+ "sources": [
+  {
+   "asset": "black_painted_planks",
+   "name": "Black Painted Planks",
+   "page": "https://polyhaven.com/a/black_painted_planks",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Dimitrios Savva"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

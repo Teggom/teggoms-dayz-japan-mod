@@ -1,0 +1,62 @@
+{
+ "id": "jp_m_paper_shoji",
+ "family": "paper",
+ "palette_id": "washi_shoji",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "fibres",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\fabric_thin.rvmat",
+ "roadway_surface": null,
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean warm white",
+   "co": "JP\\common\\materials\\paper\\jp_m_paper_shoji_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji_w0.rvmat",
+   "target_srgb": [
+    202.8,
+    197.8,
+    184.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "yellowed, patched squares",
+   "co": "JP\\common\\materials\\paper\\jp_m_paper_shoji_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji_w1.rvmat",
+   "target_srgb": [
+    195.3,
+    186.4,
+    164.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "torn squares, stains",
+   "co": "JP\\common\\materials\\paper\\jp_m_paper_shoji_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_shoji_w2.rvmat",
+   "target_srgb": [
+    191.4,
+    180.6,
+    157.6
+   ],
+   "masked_frac": 0.138
+  }
+ },
+ "used_by": [
+  "jp_p_open_shoji_ext"
+ ],
+ "used_on": "Paper of exterior shoji: the board-bottomed doors of tenements and doma entrances, shoji behind verandas.",
+ "sources": [
+  {
+   "procedural": "make_textures.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "jp_m_roof_thatch",
+ "family": "roof",
+ "palette_id": "thatch_weathered",
+ "palette_by_wear": {
+  "_w0": "thatch_new"
+ },
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "stalks down-slope",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\hay.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\grass_dry_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "thatch_new golden (recent re-thatch, 1 in 10)",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_thatch_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_w0.rvmat",
+   "target_srgb": [
+    170.4,
+    144.8,
+    93.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-brown",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_thatch_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_w1.rvmat",
+   "target_srgb": [
+    77.0,
+    66.8,
+    64.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "dark, moss on north slopes (W6), sagging patches",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_thatch_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_w2.rvmat",
+   "target_srgb": [
+    63.7,
+    55.1,
+    52.1
+   ],
+   "masked_frac": 0.108
+  }
+ },
+ "used_by": [
+  "jp_p_roof_kemuridashi",
+  "jp_p_roof_thatch_body",
+  "jp_p_roof_thatch_ridge"
+ ],
+ "used_on": "Thatch roof surface of farmhouses (tier 1-2): roof field, hips and verges, smoke hoods, thatch ridges.",
+ "sources": [
+  {
+   "asset": "reed_roof_04",
+   "name": "Reed Roof 04",
+   "page": "https://polyhaven.com/a/reed_roof_04",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Rob Tuytel"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

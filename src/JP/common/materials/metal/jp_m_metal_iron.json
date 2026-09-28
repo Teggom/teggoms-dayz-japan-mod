@@ -1,0 +1,73 @@
+{
+ "id": "jp_m_metal_iron",
+ "family": "metal",
+ "palette_id": "iron_black",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "none",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\iron.rvmat",
+ "roadway_surface": null,
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "dark iron",
+   "co": "JP\\common\\materials\\metal\\jp_m_metal_iron_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron_w0.rvmat",
+   "target_srgb": [
+    69.1,
+    65.1,
+    62.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "rust bloom",
+   "co": "JP\\common\\materials\\metal\\jp_m_metal_iron_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+   "target_srgb": [
+    73.7,
+    69.7,
+    66.7
+   ],
+   "masked_frac": 0.146
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "rust streaks on plaster below",
+   "co": "JP\\common\\materials\\metal\\jp_m_metal_iron_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
+   "target_srgb": [
+    73.7,
+    69.7,
+    66.7
+   ],
+   "masked_frac": 0.334
+  }
+ },
+ "used_by": [
+  "jp_p_open_itado",
+  "jp_p_open_kura_door",
+  "jp_p_open_kura_window",
+  "jp_p_open_shitomido",
+  "jp_p_roof_gutter"
+ ],
+ "used_on": "Iron fittings: kura door and window hardware and bars, hooks on plank doors, shutters and gutters.",
+ "sources": [
+  {
+   "asset": "rust_coarse_01",
+   "name": "Rust Coarse 01",
+   "page": "https://polyhaven.com/a/rust_coarse_01",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Dimitrios Savva",
+    "Rico Cilliers"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

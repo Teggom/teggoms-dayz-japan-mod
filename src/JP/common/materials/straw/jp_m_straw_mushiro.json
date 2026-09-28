@@ -1,0 +1,62 @@
+{
+ "id": "jp_m_straw_mushiro",
+ "family": "straw",
+ "palette_id": "thatch_new",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "woven straw",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\hay.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\textile_carpet_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "golden",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w0.rvmat",
+   "target_srgb": [
+    176.0,
+    150.0,
+    98.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-gold",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w1.rvmat",
+   "target_srgb": [
+    155.4,
+    135.3,
+    94.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "dark, frayed",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w2.rvmat",
+   "target_srgb": [
+    149.3,
+    127.0,
+    85.0
+   ],
+   "masked_frac": 0.121
+  }
+ },
+ "used_by": [
+  "jp_p_open_mushiro"
+ ],
+ "used_on": "The rolled straw mat hung over the doorway of the poorest tier 1 houses.",
+ "sources": [
+  {
+   "procedural": "make_textures.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "jp_m_roof_kokera",
+ "family": "roof",
+ "palette_id": "roof_board_silver",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "down-slope, fine courses 0.09",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\wood_planks_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "pale",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kokera_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera_w0.rvmat",
+   "target_srgb": [
+    149.7,
+    147.8,
+    146.1
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "silver-grey",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kokera_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera_w1.rvmat",
+   "target_srgb": [
+    128.1,
+    133.1,
+    139.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "curled, dark",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_kokera_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera_w2.rvmat",
+   "target_srgb": [
+    103.0,
+    107.9,
+    113.7
+   ],
+   "masked_frac": 0.014
+  }
+ },
+ "used_by": [
+  "jp_p_roof_itabuki_field"
+ ],
+ "used_on": "Thin shingle roofs: Edo townhouses before tile, back-alley tenements, tier 2 houses and sheds.",
+ "sources": [
+  {
+   "asset": "wood_planks_grey",
+   "name": "Wood Planks Grey",
+   "page": "https://polyhaven.com/a/wood_planks_grey",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Rob Tuytel"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

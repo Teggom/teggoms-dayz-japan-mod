@@ -1,0 +1,71 @@
+{
+ "id": "jp_m_stone_field",
+ "family": "stone",
+ "palette_id": "stone_granite",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "none",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\granite.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\stone_ext.paa",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_field_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field_w0.rvmat",
+   "target_srgb": [
+    165.7,
+    142.6,
+    112.5
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "splash band, lichen spots",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_field_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+   "target_srgb": [
+    157.6,
+    134.8,
+    105.0
+   ],
+   "masked_frac": 0.074
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "moss (W6)",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_field_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field_w2.rvmat",
+   "target_srgb": [
+    152.2,
+    129.7,
+    100.1
+   ],
+   "masked_frac": 0.214
+  }
+ },
+ "used_by": [
+  "jp_p_found_soseki",
+  "jp_p_found_step",
+  "jp_p_found_yukashita"
+ ],
+ "used_on": "Rounded field stones under the posts of rural houses and verandas; natural step stones; stones in the under-floor zone.",
+ "sources": [
+  {
+   "asset": "worn_rock_natural_01",
+   "name": "Worn Rock Natural 01",
+   "page": "https://polyhaven.com/a/worn_rock_natural_01",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Rob Tuytel",
+    "Dimitrios Savva"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+}

@@ -38,7 +38,7 @@ class CfgWorlds
 		// GenParams are the vanilla ones, ready for NavMeshGenerator - see spikes/T_terrain/REPORT.md.
 		class Navmesh
 		{
-			navmeshName="\DZ\worlds\enoch\navmesh\navmesh.nm";
+			navmeshName="\JP\worlds\testisland\navmesh\japantestisland.nm";
 			filterIsolatedIslandsOnLoad=1;
 			visualiseOffset=0;
 			class GenParams

@@ -1,0 +1,63 @@
+{
+ "id": "jp_m_wall_namako_tile",
+ "family": "wall",
+ "palette_id": "namako_tile",
+ "palette_by_wear": {},
+ "tile_size_m": 0.91,
+ "texture_px": 512,
+ "px_per_m": 562.6,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
+ "grain": "none",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\pottery.rvmat",
+ "roadway_surface": null,
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "dark even tile",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_namako_tile_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_namako_tile_w0.rvmat",
+   "target_srgb": [
+    35.0,
+    34.0,
+    29.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "lime wash drips",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_namako_tile_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_namako_tile_w1.rvmat",
+   "target_srgb": [
+    37.1,
+    36.1,
+    31.0
+   ],
+   "masked_frac": 0.01
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "chipped tiles, stained joints",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_namako_tile_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_namako_tile_w2.rvmat",
+   "target_srgb": [
+    39.2,
+    38.1,
+    33.1
+   ],
+   "masked_frac": 0.139
+  }
+ },
+ "used_by": [
+  "jp_p_wall_namako"
+ ],
+ "used_on": "The dark square tiles of namako walls on kura lower walls (the white joints are separate plaster geometry).",
+ "sources": [
+  {
+   "procedural": "make_textures.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)",
+ "note": "4 x 4 tiles of 0.2275 m per 0.91 m tile, square to the UVs; rotate the UVs 45 deg for diagonal namako."
+}
