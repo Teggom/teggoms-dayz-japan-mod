@@ -41,6 +41,20 @@ Stephen's calls (2026-09-26):
 - **Scripts**, if you need Enforce Script, live inside your own area (`JP\<area>\scripts\4_World\...`). Declare them
   with your own `CfgMods` class (`JP_<Area>`) in your own config.cpp. Never reopen another area's classes.
 - **One `CfgPatches` class per PBO**, declared once (see the gotchas file below).
+- **Keep the map separable (Stephen, 2026-09-29).** Today everything ships as one `@Japan`. At release it may be
+  split into "Japan Assets" (structures, characters, weapons, plants) and "Japan Map" (worlds), with the map
+  requiring the assets. Keep that split free:
+  - **Dependencies point one way only:** worlds may use the asset PBOs. No asset PBO may reference a world PBO,
+    a world class, map coordinates or anything under `JP\worlds`. That covers `requiredAddons`, config
+    inheritance, script and paths.
+  - **Anything that changes how vanilla DayZ plays goes in its own PBO**, never inside an asset PBO. That covers
+    fire-making or crafting rule changes, loot or economy behaviour, and anything that has to own something only
+    one mod per server can own (for example the player animation graph for riding). Adding new items, recipes
+    for our own items, or actions on our own items is fine inside an asset PBO.
+  - **The overhaul itself (no guns, loot mix, starting gear) lives in the mission files** (`types.xml`,
+    `cfggameplay.json`, `init.c`), not in the mod. The asset PBOs should work harmlessly on a vanilla map.
+  - **If a task seems to need a break from these rules, stop and log it** under "Decisions I made" with the
+    reason. Don't quietly couple the assets to the map.
 
 ## The test island (shared by all spikes)
 
@@ -120,6 +134,8 @@ Stephen then does one bundled check from `TEST_CHECKLIST.md`.
     "Decisions I made".
 11. **It is a proof, not a product.** Don't gold-plate, but looks matter: render previews in Blender and actually
     look at them (Read the PNG) before calling a model done.
+12. **Keep the map separable.** Follow the "Keep the map separable" rules under "Areas and naming". No asset PBO
+    may depend on the map, and changes to how vanilla DayZ plays go in their own PBO.
 
 ## What every spike delivers
 
