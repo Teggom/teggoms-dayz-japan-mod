@@ -336,6 +336,11 @@
    "detail": "0.220 m of the leaf stays in the opening when open"
   },
   {
+   "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+   "ok": true,
+   "detail": "doors1 pull u -0.38 closed -> -1.42 open, doorway -1.53..-0.29"
+  },
+  {
    "check": "C10 door doors1 reachable from both sides (open)",
    "ok": true,
    "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.04 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m"

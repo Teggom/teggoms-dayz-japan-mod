@@ -26,7 +26,7 @@
  "deviation": null,
  "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
  "bbox_m": [
-  0.04,
+  -0.007,
   3.58,
   -0.1,
   2.14,
@@ -146,8 +146,8 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 108,
-  "Resolution 2": 24,
+  "Resolution 1": 114,
+  "Resolution 2": 30,
   "Resolution 3": 12,
   "Geometry": 12,
   "Memory": 0,
@@ -194,7 +194,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 108, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+   "detail": "Resolution 1 114, Resolution 2 30, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
   },
   {
    "check": "C2 library only",
@@ -235,6 +235,11 @@
    "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
    "ok": true,
    "detail": "0.220 m of the leaf stays in the opening when open"
+  },
+  {
+   "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+   "ok": true,
+   "detail": "doors1 pull u -0.14 closed -> -1.64 open, doorway -1.76..-0.06"
   },
   {
    "check": "C10 door doors1 reachable from both sides (open)",

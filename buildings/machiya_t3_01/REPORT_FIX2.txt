@@ -1,0 +1,191 @@
+LAND_JP_MACHIYA_T3_01 - FIX PASS 2 AFTER STEPHEN'S SECOND IN-GAME WALK
+Fix agent, 2026-09-29
+========================================================================
+
+Stephen's verdict: roof, door styles, windows, lattice gaps and the far LOD pass. Three things failed: everything is
+too reflective (interior clay goes green at a glancing angle, with the normal-map swirls in the sheen), every door pull
+is on the wrong edge, and the two-leaf sliding openings show daylight at the jamb.
+
+All three are fixed at the source (the material generator and the part generators), and every derived output was
+rebuilt: 79 library rvmats, the swatch wall ODOL, 138 parts, the house MLOD/ODOL/config, both PBOs, the drop-ins, the
+renders and the sheets. The new rules are PLAYBOOK §15.3 (T10-T12). The new checks are C17-C19 (§15.2).
+
+Result:
+  - House: verify.py 78/78 PASS (checks.json), including C10 (door reach), the C7 sweep/clear checks, C11-C16 and the
+    new C17-C19.
+  - Faces R1/R2/R3 = 11,968 / 4,249 / 1,570 (budget 12,000 / 4,600 / 1,600; before 11,926 / 4,207 / 1,570).
+  - Door clear widths unchanged: 1.46 / 1.06 / 1.06 / 1.24 / 1.06 / 1.06 m.
+  - Parts: 138 variants, 0 check failures (C18 added).
+  - Both PBOs written; nothing was locked (no DayZ process was running). Nothing was started, stopped or killed. No git.
+
+
+1. WHAT CHANGED, AND WHERE
+--------------------------
+
+1.1 Too reflective (materials)
+  Cause: every JP rvmat had Stage6 #(ai,64,64,1)fresnel(1.3,0.7) and Stage7 dz\data\data\env_land_co.paa (the
+  outdoor, mostly green environment). The interior clay's SMDI specular is only 0.009, so the sheen was the
+  environment reflection at grazing angles, not the sun specular. The SMDI map does not keep it off.
+
+  What vanilla does (grepped from P:\DZ):
+    - House plaster walls: all 177 rvmats that use dz\structures\data\plaster\* are the Multi shader, which has no
+      environment map at all.
+    - Vanilla Super walls (structures\walls\data\wall_*.rvmat): #(ai,32,128,1)fresnel(0.49,0.14).
+    - Matte Super wood, straw, logs and plinths (planks.rvmat, logs*.rvmat, slama.rvmat, stoh_slama.rvmat,
+      podezdivka_beton.rvmat, misc_deerstand1_wood*.rvmat, 65 in all): #(ai,32,128,1)fresnel(0.01,0.01) with a BLACK
+      environment map, #(argb,8,8,3)color(0,0,0,1,CO).
+    - Glossy analogues that keep env_land_co: glazed kitchen tiles fresnel(1.42,0); rusty metal
+      (metal_white_lightrust) fresnel(1.3,2.83).
+    - Effective sun specular (specular x SMDI green) of matte vanilla wood: about 0.01-0.02 (benches 0.27 x 0.05,
+      deer stands 0.27 x 0.00-0.07, logs 0.5 x 0).
+
+  Before / after per family (specular / specularPower at _w1; _w0 is x1.1 and _w2 x0.8, as before):
+    Family / materials                      BEFORE (all)                         AFTER
+    Earth + plaster walls: arakabe,         fresnel(1.3,0.7) + env_land          fresnel(0.49,0.14) + black env
+      nakanuri, nakanuri_int, shikkui,      spec 0.10/20, 0.12/25, 0.12/25,      spec unchanged
+      grime decal                           0.15/30, 0.05/10
+    Wood: weathered, kuro, sooted           fresnel(1.3,0.7) + env_land          fresnel(0.01,0.01) + black env
+                                            0.20/40, 0.25/40, 0.15/25            unchanged
+    Wood: street_dark, bengara              same, 0.35/60, 0.30/50               black env; 0.15/60, 0.15/50
+    Bamboo                                  same, 0.35/60                        black env; 0.20/60
+    Board/shingle roofs: kureita, kokera    same, 0.20/35, 0.20/35               black env; unchanged
+    Kakigara (shell) roof                   same, 0.30/50                        black env; 0.20/50
+    Thatch, thatch cut face                 same, 0.08/15                        black env; unchanged
+    Paper (shoji), straw (mushiro)          same, 0.08/20, 0.10/20               black env; unchanged
+    Stone: field, cut                       same, 0.25/40                        black env; unchanged
+    Stone: river                            same, 0.30/50                        black env; 0.20/50
+    Swatch plaques                          same, 0.05/10                        black env; unchanged
+    GLOSSY, kept: kawara, kawara_field,     fresnel(1.3,0.7) + env_land          UNCHANGED (Stephen passed the
+      kawara_far, namako tile, iron         0.60/90, 0.60/90, 0.22/35,           roof; kawara is silvered ibushi,
+                                            0.35/60, 0.50/70                     namako fired tile, iron metal)
+  The five lowered speculars were 2-3x vanilla matte wood (effective 0.027-0.045). They are now at or under 0.02.
+  No texture was regenerated. The SMDI maps were already matte (G 0.00-0.02 for clay, straw, paper and thatch).
+
+  Where:
+    research/materials/build_materials.py   FINISH / FINISH_BY_ID / finish_for(); rvmat_text(..., finish);
+                                            write_rvmats(); SPEC (5 values); --rvmats-only
+    parts/kit/make_part_materials.py        rvmat() uses finish_for; write_rvmat_* ; --rvmats-only
+    parts/kit/make_fix_materials.py         write_rvmat(); --rvmats-only
+    src/JP/common/materials/*/*.rvmat       79 rvmats: 49 matte, 15 wall, 15 glossy
+    src/JP/common/swatch                    plaque rvmat + the swatch wall re-binarized
+  Note: an ODOL embeds its rvmats (the stage strings are inside the p3d). The house and the swatch wall were
+  re-binarized after the rvmat change, and both PBOs contain the new stages (checked in the packed bytes).
+
+1.2 Pulls on the wrong edge
+  Rule the code followed: none. openings.leaf_plank put the iron pull at the leaf's l1 edge, whatever way the leaf slid.
+  Every plank leaf slides +x in its part, so the pull sat on the LEADING edge, which parks behind the wall or the fixed
+  panel. The house's yaw 180 and the mirrored parts (back door, windows) move the pull and the slide together, so they
+  were not the cause. The kura inner door had the same bug.
+  Correct rule (PLAYBOOK T10): the pull goes on the TRAILING edge, the one that closes against the jamb and keeps the
+  0.22 m STUB in the doorway when open. It sits 0.06-0.14 m in from that edge, is 10 mm proud, clears a leaf on the
+  next track (12 mm), and is tagged "pull".
+  Where:
+    jpparts/openings.py   pull_x(); leaf_plank, leaf_shoji, leaf_lattice and kura inner take dirn; _leaf_set
+                          passes it
+    jpparts/core.py       sliding_leaf passes dirn=direction to the leaf builder
+  Affected on the house: the entrance (both leaves), the back door, and kitchen -> storage. These are the only leaves
+  with pulls; shoji, the amado and the window panels have none.
+  Renders (looked at): renders/fix2_entrance_closed.png / _open.png and fix2_back_door_closed.png / _open.png. Closed,
+  the pull is by the post the leaf closes on. Open, it stays in the doorway stub.
+
+1.3 See-through slit at the jamb
+  Cause:
+    - A closed leaf overlapped its post by only OV = 2 cm while running 1.2 cm (inner track) to 6.4 cm (outer track)
+      in front of the post face.
+    - At the entrance's closing post (Stephen's "post on the left" from inside), the outer leaf left a 6.4 cm deep
+      slot, visible from about 17 degrees off the wall normal.
+    - The single doors had the same slot at the fixed panel's stile (4 cm).
+    - The hikichigai and hikiwake meeting stiles overlapped 2 cm across a 1.2 cm gap.
+    - Leaf boards had board_run's 4 mm gaps straight through the leaf (nothing behind them in Resolution 1): daylight
+      lines through every closed plank leaf and the amado.
+  Fix (kit, every building):
+    - jamb_stop(): at the CLOSING jamb, a 45 mm stop on the post, from the wall face out past the outermost leaf, 2 mm
+      off the leaf edge.
+    - jamb_lip(): on a post or fixed stile a leaf SLIDES PAST, a lip filling the gap under the leaf (2 mm clearance).
+    - MEET = 0.05 m meeting-stile overlap for hikichigai and hikiwake. Leaves are +1.5 cm wide (0.895 m, still inside
+      the 0.85-0.95 period width).
+    - LEAF_GAP = 0: leaf boards butt tight (leaf_plank plain and battened, kura inner, tsukiage).
+    - Stops and lips are 3-face visual strips in Resolution 1 and 2, with no collision. The sweep, clear-width and
+      reach checks are unchanged and pass.
+  Used by: twin_leaves (hikichigai doors and the amado window), split_leaves (hikiwake: lips on both posts),
+  single_door_part, sliding_door_part. The window_slide panels needed nothing: the lattice or bars outside already
+  seal them (C17 0).
+  Renders (looked at): fix2_entrance_jamb_inside.png (Stephen's view, closing post) and fix2_entrance_lip_inside.png
+  (the other post). No light line.
+
+
+2. CHECKS RUN
+-------------
+  New checks (parts/kit/jpparts/raycheck.py, buildcheck.py, checks.py):
+    C17 closed-leaf jamb seal (buildings). With every leaf closed, rays go from standing eyes on both sides through
+        targets on the wall face inside the opening, near every leaf edge. That covers jambs and meeting stiles, steep
+        down to ~80 degrees off the wall normal. Straight-on rays at a 3 mm pitch cover the whole leaf. Any ray that
+        reaches 1 m past the wall without hitting Resolution 1 fails.
+    C18 pull on the stub edge (parts + buildings): every "pull" is still inside the doorway when its leaf is open.
+    C19 matte finish (buildings): every non-glossy library rvmat in the visual LODs has the black env map.
+  Proof that the checks catch the defects (the same house rebuilt in memory with the pre-fix kit, scratch script):
+    C17 see-through rays, pre-fix -> now:
+      entrance 1,378 -> 0; hikiwake 1,042 -> 0; back door 262 -> 0; kitchen -> storage 152 -> 0;
+      zashiki amado 2,005 -> 0; the two toriniwa shoji doors 67 / 91 -> 0; kitchen window 4 -> 0;
+      storage tsukiage 24 -> 0 (board gaps); street window 0 -> 0.
+    C18 pre-fix: FAIL on the entrance, the back door and kitchen -> storage (open, the pulls sat 0.5-1.0 m past the doorway's edge, behind the wall);
+    now PASS.
+  Results:
+    build_parts.py      138 parts, 0 failures (C10 reach, C10 stub >= 0.15, C7 sweep/clear, C4 dims, C18)
+    build.py/verify.py  78/78 PASS (C5 budget, C7 sweeps + D1 clear widths, C10 x20, C11 0 leaks, C12-C16, C17 x10,
+                        C18 x3, C19, ODOL bones/axes/selections)
+    CfgConvert          config.cpp and model.cfg OK
+    binarize            house and swatch wall OK (8 warning lines each, the same as before)
+    PBOs                @Japan\addons\jp_common.pbo (113.0 MB) and jp_buildings.pbo (0.98 MB) written. Verified: the
+                        packed bytes hold fresnel(0.49,0.14) / fresnel(0.01,0.01) / color(0,0,0,1,CO) (the ODOL
+                        embedded copies too)
+  Nothing was locked. To repack later without rebuilding:
+    python japan_dev\research\materials\build_materials.py --rvmats-only        (jp_common)
+    python japan_dev\buildings\machiya_t3_01\build.py                          (jp_buildings, reruns verify)
+
+
+3. IN-GAME RE-CHECK FOR STEPHEN (4 items; the Japan server needs a restart for the new PBOs)
+------------------------------------------------------------------------------------------
+1. Materials. Stand in the toriniwa and in the tatami rooms. Look along the interior clay walls at a glancing angle,
+   then at the wood posts and boards, inside and outside.
+   Pass: no green sheen and no swirl pattern in the walls; wood reads matte. The roof tiles keep their slight sheen.
+2. Pulls. Look at the entrance and the back door from outside, and the kitchen -> storage door. Check each one closed
+   and open.
+   Pass: closed, the iron pull is next to the post the leaf closes against. Open, it is in the strip of leaf still in
+   the doorway. Also confirm every door still opens and closes from both sides.
+3. Jambs. Close the front door. From inside, look steeply along the post on the left, then the post on the right,
+   then the middle where the leaves meet. Repeat at the back door and the zashiki amado window.
+   Pass: no daylight line anywhere.
+4. Swatch wall (the material test wall on the island), in daylight.
+   Pass: only the kawara, namako and iron plaques look glossy.
+
+
+4. FAILED / UNKNOWN
+-------------------
+  - Engine behaviour is inferred. The black env map and low fresnel are the vanilla matte recipe, but I cannot render
+    the DayZ shader offline. If a faint sheen remains, it is the sun specular (specular x SMDI green, 0.001-0.02 now):
+    lower SPEC in build_materials.py and run --rvmats-only.
+  - Pulls are on the outside face only (as before). From inside, the entrance leaves show no pull. The brief was the
+    edge, not the face; an inside pull on the inner-track leaf would need to clear the wall by 12 mm.
+  - Not changed: B's old spike materials src\JP\structures\data\*.rvmat (16, still fresnel(1.3,0.7) + env_land). They
+    are generated by spikes\B_building\tools\build_b.py (not mine), and that house is not placed on the island.
+    Characters, plants, weapons and the world layers have their own rvmats (other agents').
+  - Paths written outside the brief's list, all by rerunning the existing build scripts:
+      src\JP\parts\* (138 part MLODs, sidecars, checks) and parts\manifest.json
+      parts\_render and parts\contact_sheets (sheets 3, 3b and 3c)
+      src\JP\buildings\* (house ODOL, config.cpp, model.cfg)
+      test\placements\C.csv and test\ce\C_* (same placement)
+      data\C\_build and data\materials\_build (temp)
+  - build_world.py / build_mission.py were not rerun: the placement and p3d path are unchanged.
+
+
+5. DECISIONS I MADE
+-------------------
+  - Matte = black env map (vanilla's own matte recipe), not just a lower fresnel. The clay was already SMDI-matte and
+    still glowed green, so only removing the env reflection is certain.
+  - Walls take vanilla's wall fresnel(0.49,0.14). Everything else matte takes fresnel(0.01,0.01).
+  - Kawara, namako tile and iron keep their finish unchanged: Stephen passed the roof and the far LOD.
+  - Stops and lips are visual-only (Resolution 1 and 2) to leave collision, sweeps and door reach untouched, and to fit
+    the face budget (+42 R1 faces, 32 left).
+  - Board gaps were fixed at the same time: C17 found them through every closed plank leaf, and they are the same
+    defect class.

@@ -26,7 +26,7 @@
  "deviation": null,
  "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
  "bbox_m": [
-  0.04,
+  -0.007,
   2.67,
   -0.1,
   2.14,
@@ -45,7 +45,7 @@
   {
    "name": "leaf_width_m (period ~0.9)",
    "expected": "0.85-0.95",
-   "measured": 0.88,
+   "measured": 0.895,
    "tol": 0.01,
    "source": "Stephen 2026-09-27"
   },
@@ -153,8 +153,8 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 198,
-  "Resolution 2": 30,
+  "Resolution 1": 204,
+  "Resolution 2": 36,
   "Resolution 3": 18,
   "Geometry": 18,
   "Memory": 0,
@@ -190,7 +190,7 @@
      "bone": "doors2",
      "type": "translation",
      "axis_memory": "doors2_axis",
-     "amount": 0.64,
+     "amount": 0.655,
      "unit": "m (translation; axis 1.00 m)"
     }
    ],
@@ -210,7 +210,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 198, Resolution 2 30, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
+   "detail": "Resolution 1 204, Resolution 2 36, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
   },
   {
    "check": "C2 library only",
@@ -255,7 +255,7 @@
   {
    "check": "C10 door doors1 reachable from both sides (open)",
    "ok": true,
-   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.23 m"
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.23 m"
   },
   {
    "check": "C10 door doors1 reachable from both sides (closed)",
@@ -275,7 +275,7 @@
   {
    "check": "C4 leaf_width_m (period ~0.9)",
    "ok": true,
-   "detail": "expected 0.85-0.95, measured 0.88"
+   "detail": "expected 0.85-0.95, measured 0.895"
   },
   {
    "check": "C4 head_m",

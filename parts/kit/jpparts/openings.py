@@ -32,6 +32,51 @@ def threshold(part, a, b, mat="wood_weathered", depth=POST):
     part.road([(a, 0.0, -depth / 2), (b, 0.0, -depth / 2), (b, 0.0, depth / 2), (a, 0.0, depth / 2)], "boards_ext")
 
 
+# G3 fix 2 (2026-09-29): Stephen, from inside the front door: "post on the left, closed leaf on the right, daylight
+# between them". A closed leaf overlapped its post by only OV = 2 cm while it ran 1.2 cm (inner track) to 6.4 cm (outer
+# track) in front of the post face, so the jamb was an open slot (PLAYBOOK §15 T11, check C17). Real doors close
+# against a stop (todome) on the closing post and slide over a lip on the post they pass.
+JAMB_CLEAR = 0.002       # air between a leaf (edge or face) and a stop / lip
+STOP_W = 0.045           # closing-jamb stop width, on the post face beside the leaf edge
+MEET = 0.05              # hikichigai meeting-stile overlap (was OV = 0.02: a 1.2 cm slot at 59 degrees, C17)
+LEAF_GAP = 0.0           # boards of a door / shutter leaf butt tight: board_run's default 4 mm gap went right through
+#                          the leaf (nothing behind it in Resolution 1), so every closed plank leaf showed daylight lines
+
+
+def strip(x0, x1, y0, y1, z0, z1, zface, mat="wood_weathered", vis=(1, 2), tag="jamb_stop"):
+    """A strip fixed to a post / stile face: only its two x ends and its z face away from the post (z0 or z1 = zface
+    side is hidden against the post; top and bottom meet the tracks) - 3 faces, visual only."""
+    zo = z1 if abs(z0 - zface) < abs(z1 - zface) else z0
+    sz = 1.0 if zo == z1 else -1.0
+    from .core import sheet
+    q = [([(x0, y0, z0), (x0, y1, z0), (x0, y1, z1), (x0, y0, z1)], (-1.0, 0.0, 0.0)),
+         ([(x1, y0, z0), (x1, y1, z0), (x1, y1, z1), (x1, y0, z1)], (1.0, 0.0, 0.0)),
+         ([(x0, y0, zo), (x1, y0, zo), (x1, y1, zo), (x0, y1, zo)], (0.0, 0.0, sz))]
+    return sheet([a for a, _ in q], mat, [n for _, n in q], vis=vis, tag=tag)
+
+
+def jamb_stop(part, x_edge, dirn, y0, y1, z_face, z_far, mat="wood_weathered"):
+    """CLOSING jamb (the leaf's trailing edge closes here and slides away in `dirn`): a stop on the post face, beside
+    the closed leaf's edge, from the wall face out past the outermost leaf face z_far. Seals the jamb (C17)."""
+    xa, xb = x_edge - dirn * JAMB_CLEAR, x_edge - dirn * (JAMB_CLEAR + STOP_W)
+    part.add(strip(min(xa, xb), max(xa, xb), y0, y1, min(z_face, z_far), max(z_face, z_far), z_face, mat,
+                   tag="jamb_stop"))
+
+
+def jamb_lip(part, x0, x1, y0, y1, z_face, z_leaf, mat="wood_weathered"):
+    """A post / stile the leaf SLIDES PAST: a lip on its face filling the gap under the leaf's inner face z_leaf (minus
+    JAMB_CLEAR), so the leaf still slides over it but no ray gets between post and leaf (C17)."""
+    zl = z_leaf - math.copysign(JAMB_CLEAR, z_leaf - z_face)
+    part.add(strip(x0, x1, y0, y1, min(z_face, zl), max(z_face, zl), z_face, mat, tag="jamb_lip"))
+
+
+def pull_x(l0, l1, dirn, w=0.08, inset=0.06):
+    """Hikite / iron pull on the TRAILING edge (the edge that stays in the doorway, STUB, when the leaf is open), so
+    the open leaf can be pulled shut (G3 fix 2, Stephen: "every door with a handle is backwards"). It used to sit at
+    l1 on every leaf, i.e. on the LEADING edge of the +x sliding leaves, which parks behind the wall."""
+    return (l0 + inset, l0 + inset + w) if dirn > 0 else (l1 - inset - w, l1 - inset)
+
+
 def door_conns(part, bay=KEN, park=KEN, park_side=+1, face="exterior"):
     for x in (0.0, bay):
         part.conn("post", (x, 0, 0))
@@ -43,12 +88,13 @@ def door_conns(part, bay=KEN, park=KEN, park_side=+1, face="exterior"):
 
 
 def leaf_plank(style, mat, rng):
-    def build(l0, l1, bot, top, z0, z1, bone):
+    def build(l0, l1, bot, top, z0, z1, bone, dirn=+1):
         out = [box(l0, l1, bot, top, z0, z1, mat, vis=(2, 3), geo=True, view=True, fire=True, tag="leaf")]
         W = l1 - l0
         zin, zout = (z0, z1)
         if style == "plain":
-            for s in board_run(l0, l1, bot, top, z0 + 0.012, z1, rng, 0.20, 0.30, mat, vis=(1,), tag="leaf_board"):
+            for s in board_run(l0, l1, bot, top, z0 + 0.012, z1, rng, 0.20, 0.30, mat, vis=(1,), tag="leaf_board",
+                               gap=LEAF_GAP):
                 out.append(s)
             for yy in (bot + 0.25, (bot + top) / 2, top - 0.30):
                 out.append(box(l0 + 0.05, l1 - 0.05, yy, yy + 0.09, z0, z0 + 0.012, mat, vis=(1,), tag="leaf_batten"))
@@ -59,6 +105,7 @@ def leaf_plank(style, mat, rng):
             out.append(box(l0 + sw, l1 - sw, bot, bot + 0.10, z0, z1, mat, vis=(1,), tag="rail"))
             out.append(box(l0 + sw, l1 - sw, top - 0.08, top, z0, z1, mat, vis=(1,), tag="rail"))
             for s in board_run(l0 + sw, l1 - sw, bot + 0.10, top - 0.08, z0 + 0.012, z1 - 0.01, rng, 0.22, 0.30, mat,
+                               gap=LEAF_GAP,
                                vis=(1,), tag="leaf_board"):
                 out.append(s)
             nb = 4
@@ -79,14 +126,16 @@ def leaf_plank(style, mat, rng):
                 for (xx, yy) in ((kx0 + 0.02, ky0 + 0.25), (kx0 + 0.02, ky1 - 0.25), (kx1 - 0.08, ky0 + 0.6)):
                     out.append(box(xx, xx + 0.06, yy, yy + 0.10, z1 + 0.015, z1 + 0.025, "metal_iron", vis=(1,),
                                    tag="iron"))
-            out.append(box(l1 - 0.20, l1 - 0.12, bot + 0.95, bot + 1.05, z1 + 0.008, z1 + 0.02, "metal_iron", vis=(1,),
-                           tag="iron"))
+            # the pull on the trailing (stub) edge; 10 mm proud, clear of a leaf on the next track (GAP 12 mm)
+            px0, px1 = pull_x(l0, l1, dirn)
+            out.append(box(px0, px1, bot + 0.95, bot + 1.05, z1 - 0.004, z1 + 0.010, "metal_iron", vis=(1,),
+                           tag="pull"))
         return out
     return build
 
 
 def leaf_lattice(papered, mat):
-    def build(l0, l1, bot, top, z0, z1, bone):
+    def build(l0, l1, bot, top, z0, z1, bone, dirn=+1):
         # View Geometry even when open-barred: DayZ targets a door only through a View Geometry component (G3 fix)
         out = [box(l0, l1, bot, top, z0, z1, mat, vis=(2, 3), geo=True, view=True, fire=True, tag="leaf")]
         sw = 0.05
@@ -151,7 +200,7 @@ def fixed_panel(kind, x0, x1, y0, y1, z0, z1, rng=None):
 
 
 def leaf_shoji(low, mat="wood_weathered"):
-    def build(l0, l1, bot, top, z0, z1, bone):
+    def build(l0, l1, bot, top, z0, z1, bone, dirn=+1):
         out = [box(l0, l1, bot, top, z0, z1, {"front": "paper_shoji", "back": "paper_shoji", "default": mat},
                    vis=(2, 3), geo=True, view=True, fire="fabric_thin", uv="fit", tag="leaf")]
         sw = 0.035
@@ -188,6 +237,9 @@ def sliding_door_part(pid, variant, tiers, used, leaf_build, kind, side, thick, 
     threshold(p, A, bay - POST / 2)
     door_conns(p, bay, park, +1, "exterior" if side > 0 else "interior")
     d = p.doors[0]
+    zc = zf + side * (GAP + thick / 2)
+    jamb_stop(p, A - OV, +1, 0.0, DOOR_H + 0.035, zf, zc + side * (thick / 2 + 0.010))      # C17 closing jamb
+    jamb_lip(p, bay - POST / 2, bay + POST / 2, 0.0, DOOR_H + 0.035, zf, zf + side * GAP)   # C17 post it slides past
     p.dim("clear_opening_m", ">=1.00", (bay - POST / 2) - A, source="D1")
     p.dims[-1]["ok"] = (bay - POST) >= 1.0
     p.dim("head_m", DOOR_H, d.opening[3] - d.opening[2], source="D2")
@@ -204,7 +256,7 @@ def _leaf_set(part, specs, y0, height, thick, leaf_build, mats, kind):
     for (l0, l1, zc, dirn, slide, what) in specs:
         bone = "doors%d" % (sum(len(d.anims) for d in part.doors) + len(anims) + 1)
         z0, z1 = zc - thick / 2, zc + thick / 2
-        solids = leaf_build(l0, l1, bot, top, z0, z1, bone) if leaf_build else [
+        solids = leaf_build(l0, l1, bot, top, z0, z1, bone, dirn=dirn) if leaf_build else [
             box(l0, l1, bot, top, z0, z1, mats, vis=(1, 2, 3), geo=True, view=True, fire=True, uv="fit", tag="door")]
         for s in solids:
             s.door = bone
@@ -247,8 +299,8 @@ def twin_leaves(part, x0, x1, y0, height, z_face, side, leaf_build, thick, kind,
     mid = (x0 + x1) / 2
     tr_in = z_face + side * (GAP + thick / 2)
     tr_out = tr_in + side * (thick + GAP)
-    far = (x0 - OV, mid + OV / 2)           # far leaf: left half, outer track
-    near = (mid - OV / 2, x1 + OV)          # near leaf: right half, inner track
+    far = (x0 - OV, mid + MEET / 2)         # far leaf: left half, outer track
+    near = (mid - MEET / 2, x1 + OV)        # near leaf: right half, inner track (MEET overlap at the meeting stiles)
     stop = x1 - stub                        # both trailing edges end here, stacked
     park_end = stop + max(near[1] - near[0], far[1] - far[0])
     anims = _leaf_set(part, [(far[0], far[1], tr_out, +1, stop - far[0], "far leaf, outer track"),
@@ -257,18 +309,23 @@ def twin_leaves(part, x0, x1, y0, height, z_face, side, leaf_build, thick, kind,
     d = _twin_door(part, anims, x0, x1, y0, height, z_face, side, kind, note, tr_in, thick, tr_out,
                    (far[0], park_end), "hikichigai", stub, window)
     d.width = near[1] - near[0]
+    # C17: a stop on the closing post (the far leaf closes against it, out past the outer track) and a lip on the post
+    # the near leaf slides past (fills the 12 mm under it)
+    y1 = y0 + height + 0.035
+    jamb_stop(part, far[0], +1, y0, y1, z_face, tr_out + side * (thick / 2 + 0.010))
+    jamb_lip(part, x1, x1 + POST, y0, y1, z_face, tr_in - side * thick / 2)
     return d
 
 
 def split_leaves(part, x0, x1, y0, height, z_face, side, leaf_build, thick, kind, note="", mats=None, stub=STUB):
     """HIKIWAKE (interior fusuma / shoji pairs, PLAYBOOK §15): two leaves part in the middle and slide in opposite
     directions, each over its own half-ken; one door action. Left leaf on the outer track, right leaf on the inner
-    track (0.02 overlap at the meeting stiles). Each stops with `stub` in the opening."""
+    track (MEET = 0.05 overlap at the meeting stiles, G3 fix 2). Each stops with `stub` in the opening."""
     mid = (x0 + x1) / 2
     tr_in = z_face + side * (GAP + thick / 2)
     tr_out = tr_in + side * (thick + GAP)
-    left = (x0 - OV, mid + OV / 2)
-    right = (mid - OV / 2, x1 + OV)
+    left = (x0 - OV, mid + MEET / 2)         # MEET overlap at the meeting stiles (C17; was OV = 2 cm)
+    right = (mid - MEET / 2, x1 + OV)
     sl = left[1] - (x0 + stub)
     sr = (x1 - stub) - right[0]
     anims = _leaf_set(part, [(left[0], left[1], tr_out, -1, sl, "left leaf, slides left, outer track"),
@@ -277,6 +334,10 @@ def split_leaves(part, x0, x1, y0, height, z_face, side, leaf_build, thick, kind
     d = _twin_door(part, anims, x0, x1, y0, height, z_face, side, kind, note, tr_in, thick, tr_out,
                    (left[0] - sl, right[1] + sr), "hikiwake", stub)
     d.width = left[1] - left[0]
+    # C17: both leaves slide past a post: a lip under each (the left leaf runs on the outer track: fill up to it)
+    y1 = y0 + height + 0.035
+    jamb_lip(part, x0 - POST, x0, y0, y1, z_face, tr_out - side * thick / 2)
+    jamb_lip(part, x1, x1 + POST, y0, y1, z_face, tr_in - side * thick / 2)
     return d
 
 
@@ -363,6 +424,10 @@ def single_door_part(pid, variant, tiers, used, leaf_build, kind, side, thick, n
     d.width = l1 - l0
     if d.sweep[1] > KEN + HALF - POST / 2 + 1e-3:
         raise ValueError("%s: parked leaf ends at %.3f, beyond the half-ken park bay" % (p.name, d.sweep[1]))
+    # C17: a stop on the closing post; a lip on the fixed stile the leaf slides past (its face is 3 cm off the wall
+    # plane, the leaf 7.2 cm: a 4 cm slot under a 2 cm overlap before)
+    jamb_stop(p, l0, +1, 0.0, DOOR_H + 0.035, zf, tr + side * (thick / 2 + 0.010))
+    jamb_lip(p, ox1, ox1 + 0.05, 0.0, DOOR_H + 0.035, side * 0.03, tr - side * thick / 2)
     tracks(p, A, KEN + HALF - POST / 2, zf, side, thick)
     threshold(p, A, ox1)
     for x in (0.0, KEN, KEN + HALF):
@@ -624,9 +689,10 @@ def part_kura_door(variant):
     # inner sliding door (the game door), on the interior face, parks over the next bay inside
     rng = rng_for("kura_inner")
 
-    def inner(l0, l1, bot, top, z0, z1, bone):
+    def inner(l0, l1, bot, top, z0, z1, bone, dirn=+1):
         out = [box(l0, l1, bot, top, z0, z1, "wood_weathered", vis=(2, 3), geo=True, view=True, fire=True, tag="leaf")]
-        out += board_run(l0, l1, bot, bot + 1.0, z0, z1, rng, 0.2, 0.28, "wood_weathered", vis=(1,), tag="leaf_board")
+        out += board_run(l0, l1, bot, bot + 1.0, z0, z1, rng, 0.2, 0.28, "wood_weathered", vis=(1,), tag="leaf_board",
+                         gap=LEAF_GAP)
         out.append(box(l0, l1, bot + 1.0, top, z0, z0 + 0.012, "wood_weathered", vis=(1,), tag="leaf_back"))
         for k in range(12):
             x = l0 + 0.05 + k * (l1 - l0 - 0.1) / 11
@@ -634,7 +700,8 @@ def part_kura_door(variant):
         for (a, b) in ((l0, l0 + 0.05), (l1 - 0.05, l1)):
             out.append(box(a, b, bot, top, z0, z1 + 0.004, "wood_weathered", vis=(1,), tag="stile"))
         out.append(box(l0, l1, top - 0.05, top, z0, z1 + 0.004, "wood_weathered", vis=(1,)))
-        out.append(box(l1 - 0.25, l1 - 0.15, bot + 0.95, bot + 1.10, z0 - 0.012, z0, "metal_iron", vis=(1,), tag="iron"))
+        px0, px1 = pull_x(l0, l1, dirn, w=0.10)
+        out.append(box(px0, px1, bot + 0.95, bot + 1.10, z0 - 0.012, z0, "metal_iron", vis=(1,), tag="pull"))
         return out
     sliding_leaf(p, cx - cw / 2, cx + cw / 2, th, DOOR_H, -0.12, -1, +1, None, thick=0.04, kind="plank",
                  build=inner, park_span=(cx - cw / 2 - OV, KEN + KEN), note="inner sliding door (game door)")
@@ -1256,7 +1323,7 @@ def part_tsukiage(variant):
     bone = p.next_bone()
     rng = rng_for("tsukiage" + variant)
     sol = [box(x0, x1, y0, hy, hz, hz + 0.028, fm, vis=(2, 3), geo=True, view=True, fire=True, tag="leaf")]
-    sol += board_run(x0, x1, y0, hy, hz, hz + 0.022, rng, 0.14, 0.22, fm, vis=(1,), tag="leaf_board")
+    sol += board_run(x0, x1, y0, hy, hz, hz + 0.022, rng, 0.14, 0.22, fm, vis=(1,), tag="leaf_board", gap=LEAF_GAP)
     for yy in (y0 + 0.10, hy - 0.16):
         sol.append(box(x0 + 0.03, x1 - 0.03, yy, yy + 0.06, hz + 0.022, hz + 0.038, fm, vis=(1,), tag="leaf_batten"))
     for s in sol:

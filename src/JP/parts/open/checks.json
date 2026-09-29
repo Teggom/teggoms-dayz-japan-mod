@@ -7,7 +7,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 78, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 84, Resolution 2 30, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -97,7 +97,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 108, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 114, Resolution 2 30, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -138,6 +138,11 @@
      "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
      "ok": true,
      "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+     "ok": true,
+     "detail": "doors1 pull u -0.14 closed -> -1.64 open, doorway -1.76..-0.06"
     },
     {
      "check": "C10 door doors1 reachable from both sides (open)",
@@ -187,7 +192,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 162, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 168, Resolution 2 30, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -228,6 +233,11 @@
      "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
      "ok": true,
      "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+     "ok": true,
+     "detail": "doors1 pull u -0.14 closed -> -1.64 open, doorway -1.76..-0.06"
     },
     {
      "check": "C10 door doors1 reachable from both sides (open)",
@@ -320,6 +330,11 @@
      "detail": "0.220 m of the leaf stays in the opening when open"
     },
     {
+     "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+     "ok": true,
+     "detail": "doors1 pull u -1.28 closed -> -0.18 open, doorway -1.36..-0.06"
+    },
+    {
      "check": "C10 door doors1 reachable from both sides (open)",
      "ok": true,
      "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.82 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.89 m"
@@ -343,6 +358,11 @@
      "check": "C10 door doors2 open leaf keeps >= 0.15 m in the opening (vanilla)",
      "ok": true,
      "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C18 door doors2 pulls on the stub edge (still in the doorway when open)",
+     "ok": true,
+     "detail": "doors2 pull u -1.45 closed -> -2.55 open, doorway -2.67..-1.36"
     },
     {
      "check": "C10 door doors2 reachable from both sides (open)",
@@ -382,7 +402,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 162, Resolution 2 30, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
+     "detail": "Resolution 1 168, Resolution 2 36, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
     },
     {
      "check": "C2 library only",
@@ -425,6 +445,11 @@
      "detail": "0.220 m of the leaf stays in the opening when open"
     },
     {
+     "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+     "ok": true,
+     "detail": "doors1 pull u -0.14 closed -> -1.64 open, doorway -1.76..-0.06; doors2 pull u -0.98 closed -> -1.64 open, doorway -1.76..-0.06"
+    },
+    {
      "check": "C10 door doors1 reachable from both sides (open)",
      "ok": true,
      "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.83 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m"
@@ -447,7 +472,7 @@
     {
      "check": "C4 leaf_width_m (period ~0.9)",
      "ok": true,
-     "detail": "expected 0.85-0.95, measured 0.88"
+     "detail": "expected 0.85-0.95, measured 0.895"
     },
     {
      "check": "C4 head_m",
@@ -472,7 +497,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 126, Resolution 2 36, Resolution 3 24, Geometry 24, Memory 0, Roadway 1, View Geometry 18, Fire Geometry 24"
+     "detail": "Resolution 1 132, Resolution 2 42, Resolution 3 24, Geometry 24, Memory 0, Roadway 1, View Geometry 18, Fire Geometry 24"
     },
     {
      "check": "C2 library only",
@@ -513,6 +538,11 @@
      "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
      "ok": true,
      "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+     "ok": true,
+     "detail": "doors1 pull u -0.14 closed -> -1.24 open, doorway -1.36..-0.06"
     },
     {
      "check": "C10 door doors1 reachable from both sides (open)",
@@ -562,7 +592,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 104, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 110, Resolution 2 30, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -652,7 +682,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 108, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 114, Resolution 2 30, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -742,7 +772,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 198, Resolution 2 30, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
+     "detail": "Resolution 1 204, Resolution 2 36, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
     },
     {
      "check": "C2 library only",
@@ -787,7 +817,7 @@
     {
      "check": "C10 door doors1 reachable from both sides (open)",
      "ok": true,
-     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.23 m"
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.23 m"
     },
     {
      "check": "C10 door doors1 reachable from both sides (closed)",
@@ -807,7 +837,7 @@
     {
      "check": "C4 leaf_width_m (period ~0.9)",
      "ok": true,
-     "detail": "expected 0.85-0.95, measured 0.88"
+     "detail": "expected 0.85-0.95, measured 0.895"
     },
     {
      "check": "C4 head_m",
@@ -837,7 +867,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 198, Resolution 2 30, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
+     "detail": "Resolution 1 204, Resolution 2 36, Resolution 3 18, Geometry 18, Memory 0, Roadway 1, View Geometry 12, Fire Geometry 18"
     },
     {
      "check": "C2 library only",
@@ -872,7 +902,7 @@
     {
      "check": "C7 door doors1 sweep + clear",
      "ok": true,
-     "detail": "leaf slides 0.640 m without touching other geometry; open clear width 1.24 m (>= 1.00), head nan m"
+     "detail": "leaf slides 0.655 m without touching other geometry; open clear width 1.24 m (>= 1.00), head nan m"
     },
     {
      "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
@@ -882,7 +912,7 @@
     {
      "check": "C10 door doors1 reachable from both sides (open)",
      "ok": true,
-     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.74 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.75 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
     },
     {
      "check": "C10 door doors1 reachable from both sides (closed)",
@@ -902,7 +932,7 @@
     {
      "check": "C4 leaf_width_m (period ~0.9)",
      "ok": true,
-     "detail": "expected 0.85-0.95, measured 0.88"
+     "detail": "expected 0.85-0.95, measured 0.895"
     },
     {
      "check": "C4 head_m",
@@ -932,7 +962,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 154, Resolution 2 36, Resolution 3 24, Geometry 24, Memory 0, Roadway 1, View Geometry 18, Fire Geometry 24"
+     "detail": "Resolution 1 160, Resolution 2 42, Resolution 3 24, Geometry 24, Memory 0, Roadway 1, View Geometry 18, Fire Geometry 24"
     },
     {
      "check": "C2 library only",
@@ -1177,7 +1207,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 144, Resolution 2 54, Resolution 3 48, Geometry 42, Memory 0, View Geometry 42, Fire Geometry 42"
+     "detail": "Resolution 1 150, Resolution 2 60, Resolution 3 48, Geometry 42, Memory 0, View Geometry 42, Fire Geometry 42"
     },
     {
      "check": "C2 library only",
@@ -1227,7 +1257,7 @@
     {
      "check": "C10 door doors1 reachable from both sides (closed)",
      "ok": true,
-     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
     },
     {
      "check": "C4 opening_m",
@@ -1545,6 +1575,11 @@
      "detail": "0.220 m of the leaf stays in the opening when open"
     },
     {
+     "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+     "ok": true,
+     "detail": "doors1 pull u -0.38 closed -> -1.42 open, doorway -1.53..-0.29"
+    },
+    {
      "check": "C10 door doors1 reachable from both sides (open)",
      "ok": true,
      "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.04 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m"
@@ -1638,6 +1673,11 @@
      "check": "C10 door doors1 open leaf keeps >= 0.15 m in the opening (vanilla)",
      "ok": true,
      "detail": "0.220 m of the leaf stays in the opening when open"
+    },
+    {
+     "check": "C18 door doors1 pulls on the stub edge (still in the doorway when open)",
+     "ok": true,
+     "detail": "doors1 pull u -0.38 closed -> -1.42 open, doorway -1.53..-0.29"
     },
     {
      "check": "C10 door doors1 reachable from both sides (open)",
@@ -2447,7 +2487,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 222, Resolution 2 24, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 228, Resolution 2 30, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",
@@ -2532,7 +2572,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 228, Resolution 2 30, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
+     "detail": "Resolution 1 234, Resolution 2 36, Resolution 3 12, Geometry 12, Memory 0, Roadway 1, View Geometry 6, Fire Geometry 12"
     },
     {
      "check": "C2 library only",

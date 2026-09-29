@@ -14,7 +14,8 @@ r"""Two small jp_common materials the parts need (parts agent, 2026-09-27). Both
    out as 4 columns x 4 rows = 1.04 x 0.94 m per texture tile (columns 0.26 = ken/7, aligned to ken lines).
 
 Writes data/materials/textures/*.png, src/JP/common/materials/<family>/*.paa|.rvmat|.json and
-src/JP/common/materials/checks_parts.json. Usage: python make_part_materials.py
+src/JP/common/materials/checks_parts.json. Usage: python make_part_materials.py [--rvmats-only]
+(--rvmats-only, G3 fix 2: rewrite the 6 rvmats only, with the finish from build_materials.finish_for.)
 """
 import json
 import os
@@ -109,13 +110,31 @@ def to_paa(png, paa):
 
 
 def rvmat(fam, mid, wear, s, p, decal=False):
-    t = BM.rvmat_text(lp(fam, mid, wear, "_nohq.paa"), lp(fam, mid, wear, "_smdi.paa"), s, p)
+    t = BM.rvmat_text(lp(fam, mid, wear, "_nohq.paa"), lp(fam, mid, wear, "_smdi.paa"), s, p, BM.finish_for(mid))
     if decal:
         t = t.replace('VertexShaderID="Super";\n', 'VertexShaderID="Super";\nrenderFlags[]=\n{\n\t"NoZWrite"\n};\n', 1)
     return t
 
 
-def main():
+def write_rvmat_grime(lv):
+    fam, mid, w = "wall", "jp_m_wall_grime", "_w%d" % lv
+    wb(os.path.join(LIB, fam, mid + w + ".rvmat"), rvmat(fam, mid, w, round(0.05 * [1.1, 1, 0.8][lv], 3), 10, True))
+
+
+def write_rvmat_kawara_field(lv):
+    fam, mid, w = "roof", "jp_m_roof_kawara_field", "_w%d" % lv
+    s, p = BM.SPEC["jp_m_roof_kawara"]
+    f = [1.1, 1.0, 0.8][lv]
+    wb(os.path.join(LIB, fam, mid + w + ".rvmat"), rvmat(fam, mid, w, round(s * f, 3), int(p * f)))
+
+
+def main(argv=()):
+    if "--rvmats-only" in argv:                  # G3 fix 2: rvmats only (finish from BM.finish_for), no textures
+        for lv in range(3):
+            write_rvmat_grime(lv)
+            write_rvmat_kawara_field(lv)
+        print("make_part_materials: 6 rvmats rewritten")
+        return 0
     pal = matcheck.load_palette()
     results = []
     # ---- grime
@@ -135,7 +154,7 @@ def main():
             Image.fromarray((mask * 255).astype(np.uint8)).save(stem + "_mask.png")
         for suf in ("_ca", "_nohq", "_smdi"):
             to_paa(stem + suf + ".png", os.path.join(LIB, fam, mid + w + suf + ".paa"))
-        wb(os.path.join(LIB, fam, mid + w + ".rvmat"), rvmat(fam, mid, w, round(0.05 * [1.1, 1, 0.8][lv], 3), 10, True))
+        write_rvmat_grime(lv)
         a = matcheck.check(stem + "_co.png", pal, "grime_splash", TEX)
         b = matcheck.check(os.path.join(LIB, fam, mid + w + "_ca.paa"), pal, "grime_splash", TEX)
         a["shipped_paa"] = {k: b.get(k) for k in ("mean_srgb", "dE", "verdict", "warnings")}
@@ -178,9 +197,7 @@ def main():
             os.remove(mp)
         for suf in ("_co", "_nohq", "_smdi"):
             to_paa(stem + suf + ".png", os.path.join(LIB, fam, mid + w + suf + ".paa"))
-        s, p = BM.SPEC["jp_m_roof_kawara"]
-        f = [1.1, 1.0, 0.8][lv]
-        wb(os.path.join(LIB, fam, mid + w + ".rvmat"), rvmat(fam, mid, w, round(s * f, 3), int(p * f)))
+        write_rvmat_kawara_field(lv)
         a = matcheck.check(stem + "_co.png", pal, "kawara_ibushi", TEX)
         b = matcheck.check(os.path.join(LIB, fam, mid + w + "_co.paa"), pal, "kawara_ibushi", TEX)
         a["shipped_paa"] = {k: b.get(k) for k in ("mean_srgb", "dE", "verdict", "warnings")}
@@ -216,4 +233,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

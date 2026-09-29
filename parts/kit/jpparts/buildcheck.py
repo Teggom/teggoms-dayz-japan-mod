@@ -8,6 +8,9 @@ Every building's verify.py calls run_g3(M, L, floors, rec) after its own checks:
   C14 interior faces use the interior clay (no exterior-weathered earth looking into a room)
   C15 stable silhouette (Resolution 2 / 3 top heights within 0.10 m of Resolution 1)
   C16 far-LOD kawara material (matte far field in Resolution 2 / 3 only)
+  C17 closed-leaf jamb seal (nothing seen through a closed door / window at a jamb or meeting stile)   G3 fix 2
+  C18 pulls on the stub edge (every pull still in the doorway when its leaf is open)                  G3 fix 2
+  C19 matte finish (no environment reflection on matte library materials)                              G3 fix 2
 M: the building Part in the model frame (M.doors, M.memory, M.solids); L: {lod name: mlod.Lod} read back from the
 MLOD; floors: [{name, rect (model x0,x1,z0,z1), y, obstacles}]; rec(check, ok, detail).
 """
@@ -17,6 +20,7 @@ import re
 from . import mlod, checks as C, core, raycheck as RC
 
 DEV = core.DEV
+GLOSSY = ("jp_m_roof_kawara", "jp_m_wall_namako_tile", "jp_m_metal_iron")   # build_materials.FINISH_BY_ID (glossy)
 
 
 def road_heights(road, x, z):
@@ -53,6 +57,23 @@ def run_g3(M, L, floors, rec):
             rec("C10 DoorsTwin%d reachable from %s (%s)" % (k, "both sides" if len(rr) > 1 else "its leaf side",
                                                             state), not bad,
                 "%s: %s" % (getattr(d, "label", ""), "; ".join("%s: %s" % (s_, v[1]) for s_, v in rr.items())))
+    # C17 closed-leaf jamb seal (G3 fix 2): nothing seen through a closed opening at a jamb or meeting stile
+    T1 = RC.lod_triangles(L["Resolution 1"])
+    for k, d in enumerate(M.doors, 1):
+        if d.kind == "lattice":                       # open-barred koshido leaves are see-through by design
+            continue
+        n_, sl = RC.jamb_slits(d, vcomps, T1)
+        rec("C17 DoorsTwin%d closed: no see-through slit at a jamb or meeting stile" % k, n_ > 0 and not sl,
+            "%s: %d rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the "
+            "leaves), %d see through%s" % (
+                getattr(d, "label", ""), n_, len(sl), (", e.g. eye %s -> %s" % sl[0]) if sl else ""))
+    # C18 pulls on the stub edge (G3 fix 2): every pull is still in the doorway when its leaf is open
+    for k, d in enumerate(M.doors, 1):
+        pp = RC.pull_positions(d, vcomps, M.solids)
+        if pp:
+            rec("C18 DoorsTwin%d pulls on the stub edge (in the doorway when open)" % k, all(x[4] for x in pp),
+                "%s: %s" % (getattr(d, "label", ""), "; ".join("%s u %.2f closed -> %.2f open, doorway %.2f..%.2f" % (
+                    x[0], x[1], x[2], x[3][0], x[3][1]) for x in pp)))
     # C10b vanilla stub: every sliding leaf keeps >= 0.15 m in its opening when open (checked on the parts too)
     # C11 envelope leak: nothing inside a room sees outside except through a door / window
     portals = []
@@ -139,6 +160,22 @@ def run_g3(M, L, floors, rec):
         return float(re.search(r"specular\[\]=\{([0-9.]+)", t_).group(1))
     sf = spec(core.rvmat_path("roof_kawara_far", "_w1"))
     sn = spec(core.rvmat_path("roof_kawara_field", "_w1"))
+    # C19 matte finish (G3 fix 2): every non-glossy library material in the visual LODs has no environment reflection
+    # (vanilla matte Super rvmats: Stage7 #(argb,8,8,3)color(0,0,0,1,CO)); only kawara, namako tile and iron keep one
+    used = {f_[3] for ln in ("Resolution 1", "Resolution 2", "Resolution 3") for f_ in L[ln].faces
+            if f_[3].lower().startswith("jp\\common\\materials\\")}
+    shiny = []
+    for rv in sorted(used):
+        mid = re.sub(r"_w\d\.rvmat$", "", os.path.basename(rv).lower())
+        if mid.startswith(GLOSSY):
+            continue
+        t_ = open(os.path.join(DEV, "src", rv), encoding="utf-8").read()
+        if "color(0,0,0,1,CO)" not in t_.replace(" ", ""):
+            shiny.append(os.path.basename(rv))
+    rec("C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+        not shiny, "%d library rvmats in the visual LODs, %d glossy by design (kawara, namako, iron)%s" % (
+            len(used), sum(1 for rv in used if re.sub(r"_w\d\.rvmat$", "", os.path.basename(rv).lower())
+                           .startswith(GLOSSY)), ("; SHINY: %s" % shiny[:4]) if shiny else ""))
     rec("C16 far-LOD kawara: matte far material in Resolution 2 / 3", fars["Resolution 1"] == 0 and
         fars["Resolution 2"] > 0 and fars["Resolution 3"] > 0 and not any(nears.values()) and sf < sn,
         "far-field faces R1/R2/R3 %d/%d/%d; close field in R2/R3 %d/%d; specular far %.2f < close %.2f" % (

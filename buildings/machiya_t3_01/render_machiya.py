@@ -71,6 +71,24 @@ JOBS = [
     ("windows_open", "Back right, everything open: the storage tsukiage shutter pushed up and out (rotation, engine-"
      "untested), the zashiki amado stowed in its tobukuro, back door open.",
      {"interior": {"cam": [7.6, 2.2, -5.6], "look": [3.4, 1.7, -1.3], "lens": 20}, "open": 1.0}),
+    # G3 fix 2 (2026-09-29): pulls on the stub edge, jamb stops / lips, butt-tight leaf boards
+    ("fix2_entrance_closed", "Entrance closed, from the street: each leaf's iron pull on its CLOSING edge (the outer "
+     "leaf's at the right-hand post beside the new stop, the inner leaf's at the meeting stile); 5 cm meeting overlap.",
+     {"interior": {"cam": [-1.2, 1.45, 6.3], "look": [-2.75, 1.0, 4.68], "lens": 26}}),
+    ("fix2_entrance_open", "Entrance open: both pulls ride in the 0.22 m stub that stays in the doorway, so the open "
+     "leaves can be pulled shut (they used to park behind the wall with the leaves' far edges).",
+     {"interior": {"cam": [-1.2, 1.45, 6.3], "look": [-2.75, 1.0, 4.68], "lens": 26}, "open": 1.0}),
+    ("fix2_entrance_jamb_inside", "Stephen's view, from inside: post on the left, closed leaf on the right. The outer "
+     "leaf ran 6.4 cm in front of this post with 2 cm overlap; a stop on the post now closes the slot (C17: 0 "
+     "see-through rays at the entrance, was 1,348).",
+     {"interior": {"cam": [-2.35, 1.6, 3.7], "look": [-3.62, 1.1, 4.62], "lens": 22}}),
+    ("fix2_entrance_lip_inside", "From inside, the other jamb (post on the right): the near leaf slides past this post "
+     "over a lip that fills the 12 mm under it.",
+     {"interior": {"cam": [-3.1, 1.6, 3.7], "look": [-1.84, 1.1, 4.62], "lens": 22}}),
+    ("fix2_back_door_closed", "Back door closed, from the yard: pull on the closing edge, stop on the post.",
+     {"interior": {"cam": [-1.7, 1.5, -6.6], "look": [-2.95, 1.0, -4.66], "lens": 26}}),
+    ("fix2_back_door_open", "Back door open: the pull stays in the doorway stub.",
+     {"interior": {"cam": [-1.7, 1.5, -6.6], "look": [-2.95, 1.0, -4.66], "lens": 26}, "open": 1.0}),
     ("lod2", "Resolution 2 (LOD1): matte far kawara material, full ridge stack, onigawara.",
      {"view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 26, "lod": 2}),
     ("lod3", "Resolution 3 (LOD2): one far-material plane per slope, ridge stack, onigawara and verge strips kept "
@@ -172,7 +190,7 @@ def compose():
         line = "Checks: %d/%d pass (checks.json). Faces R1/R2/R3 = %s. " % (ok, n, c.get("faces", ""))
     d.text((14, 58), line + "Resolution-1 LOD with the jp_common textures (_w1) unless noted; dark figure = 1.8 m.",
            font=F["s"], fill=(60, 60, 60))
-    d.text((14, 80), "G3 fix pass 2026-09-27: 4 x 3 ken omoya + 4 x 2 ken lean-to; 6 doors (hikichigai, hikiwake, 4 "
+    d.text((14, 80), "G3 fix pass 2 2026-09-29 (pulls, jamb stops, matte rvmats): 4 x 3 ken omoya + 4 x 2 ken lean-to; 6 doors (hikichigai, hikiwake, 4 "
            "single) + 4 openable windows; model front = +z (placed at yaw 180 facing south, centre (1024, 1045)).",
            font=F["s"], fill=(60, 60, 60))
     for i, (out, caption, v) in enumerate(JOBS):

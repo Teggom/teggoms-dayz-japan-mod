@@ -744,7 +744,7 @@ def sliding_leaf(part, x0, x1, y0, height, z_face, side, direction, mats, thick=
     o0, o1 = l0 + direction * slide, l1 + direction * slide
     if park_span and (o0 < park_span[0] - 1e-3 or o1 > park_span[1] + 1e-3):
         raise ValueError("%s: open leaf [%.2f, %.2f] leaves the park span %s" % (part.name, o0, o1, park_span))
-    solids = build(l0, l1, bot, top, z0, z1, bone) if build else [
+    solids = build(l0, l1, bot, top, z0, z1, bone, dirn=direction) if build else [
         box(l0, l1, bot, top, z0, z1, mats, vis=(1, 2, 3), geo=True, view=True, fire=fire, uv="fit", tag="door")]
     for s in solids:
         s.door = bone

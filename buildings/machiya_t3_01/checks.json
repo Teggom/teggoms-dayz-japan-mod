@@ -1,7 +1,7 @@
 {
  "building": "Land_JP_Machiya_T3_01",
- "date": "2026-09-27",
- "faces": "11926/4207/1570",
+ "date": "2026-09-29",
+ "faces": "11968/4249/1570",
  "door_clear_m": [
   1.46,
   1.06,
@@ -14,12 +14,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11926, Resolution 2 4207, Resolution 3 1570, Geometry 1644, Memory 0, Roadway 19, View Geometry 1640, Fire Geometry 1622"
+   "detail": "Resolution 1 11968, Resolution 2 4249, Resolution 3 1570, Geometry 1644, Memory 0, Roadway 19, View Geometry 1640, Fire Geometry 1622"
   },
   {
    "check": "C5 face budget (large / landmark: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 11926, R2 4207, R3 1570"
+   "detail": "R1 11968, R2 4249, R3 1570"
   },
   {
    "check": "Geometry properties + mass",
@@ -69,7 +69,7 @@
   {
    "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves slide 1.50/0.64 m without touching other geometry; open clear 1.46 m, head 2.00 m"
+   "detail": "leaves slide 1.50/0.66 m without touching other geometry; open clear 1.46 m, head 2.00 m"
   },
   {
    "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
@@ -99,7 +99,7 @@
   {
    "check": "C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves slide 0.64/0.64 m without touching other geometry; open clear 1.24 m, head 2.00 m"
+   "detail": "leaves slide 0.66/0.66 m without touching other geometry; open clear 1.24 m, head 2.00 m"
   },
   {
    "check": "C7 DoorsTwin5 selections, memory, model.cfg, config",
@@ -199,7 +199,7 @@
   {
    "check": "C10 DoorsTwin1 reachable from both sides (open)",
    "ok": true,
-   "detail": "Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.79 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m"
+   "detail": "Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.80 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m"
   },
   {
    "check": "C10 DoorsTwin1 reachable from both sides (closed)",
@@ -229,7 +229,7 @@
   {
    "check": "C10 DoorsTwin4 reachable from both sides (open)",
    "ok": true,
-   "detail": "Mise <-> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.74 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
+   "detail": "Mise <-> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.75 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
   },
   {
    "check": "C10 DoorsTwin4 reachable from both sides (closed)",
@@ -297,9 +297,74 @@
    "detail": "Storage window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.69 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.88 m"
   },
   {
+   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Entrance (street): 53472 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Toriniwa -> zashiki: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Toriniwa -> mise: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin4 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Mise <-> zashiki: 53904 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin5 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kitchen back door (yard): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin6 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kitchen -> storage: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin7 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Street window: 17094 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin8 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Zashiki window: 54342 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin9 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kitchen window: 17094 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin10 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Storage window: 16696 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C18 DoorsTwin1 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Entrance (street): doors1 u 3.50 closed -> 2.00 open, doorway 1.88..3.58; doors2 u 2.65 closed -> 2.00 open, doorway 1.88..3.58"
+  },
+  {
+   "check": "C18 DoorsTwin5 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kitchen back door (yard): doors7 u -3.50 closed -> -2.40 open, doorway -3.58..-2.28"
+  },
+  {
+   "check": "C18 DoorsTwin6 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kitchen -> storage: doors8 u 3.50 closed -> 2.40 open, doorway 2.28..3.58"
+  },
+  {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "toriniwa 9600 rays, 12 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; zashiki 11520 rays, 5 out through doors/windows, 0 LEAKS; kitchen 9600 rays, 0 out through doors/windows, 0 LEAKS; storage 11520 rays, 0 out through doors/windows, 0 LEAKS"
+   "detail": "toriniwa 9600 rays, 1 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; zashiki 11520 rays, 0 out through doors/windows, 0 LEAKS; kitchen 9600 rays, 0 out through doors/windows, 0 LEAKS; storage 11520 rays, 0 out through doors/windows, 0 LEAKS"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -322,6 +387,11 @@
    "detail": "6337 columns over 2.5 m compared in each LOD"
   },
   {
+   "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+   "ok": true,
+   "detail": "16 library rvmats in the visual LODs, 4 glossy by design (kawara, namako, iron)"
+  },
+  {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
    "ok": true,
    "detail": "far-field faces R1/R2/R3 0/284/5; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
@@ -329,7 +399,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 959017 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 963423 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

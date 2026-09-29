@@ -889,3 +889,60 @@ an automated check.
 | **C14 Interior material** | T6: no exterior-weathered earth face looks into a room | buildings |
 | **C15 Stable silhouette** | T7b: Resolution 2 / 3 top heights within 0.10 m of Resolution 1 | buildings |
 | **C16 Far-LOD kawara** | T7a: the matte far material in Resolution 2 / 3 only, specular below the close material | buildings |
+| **C17 Closed-leaf jamb seal** | T11: with every leaf closed, no ray gets through the doorway: steep rays (to ~80° off the wall normal) at every jamb and meeting stile, and straight-on rays over the whole leaf band (board gaps) | buildings (`raycheck.jamb_slits`) |
+| **C18 Pull on the stub edge** | T10: every pull (solid tag `pull`) is still inside the doorway when its leaf is open | parts + buildings (`raycheck.pull_positions`) |
+| **C19 Matte finish** | T12: every non-glossy library rvmat in the visual LODs has the black env map | buildings |
+
+### 15.3 Second walk (G3 fix 2, 2026-09-29)
+
+Stephen walked the fixed house: roof, door styles, windows, lattice gaps and far LOD pass. Three things failed; the
+rules below are binding. Details and numbers: `buildings/machiya_t3_01/REPORT_FIX2.txt`.
+
+**T10 The pull goes on the edge that stays in the doorway.**
+- **Stephen:** "Every door with a handle is backwards", both outside doors included.
+- **The cause:** `openings.leaf_plank` put the iron pull at the leaf's `l1` edge whatever way the leaf slid. Every
+  plank leaf slides +x in its part, so the pull sat on the LEADING edge, which parks behind the wall. Nothing was
+  mirrored; the building's yaw and mirroring were innocent.
+- **The rule:** the pull (hikite) sits on the **trailing edge**, the one that closes against the jamb and keeps the
+  `STUB` in the doorway when the leaf is open, so the open leaf can be pulled shut. Centre 0.10 m in from that edge.
+- **Kit:** `openings.pull_x(l0, l1, dirn)`. `core.sliding_leaf` and `openings._leaf_set` pass `dirn` to every leaf
+  builder (`build(..., bone, dirn=+1)`); a new builder must take it and use `pull_x`. Tag the pull `pull`.
+- **Check:** C18.
+
+**T11 A closed opening is opaque at its jambs.**
+- **Stephen:** from inside the front door, "post on the left, closed leaf on the right, daylight between them".
+- **The cause:** a leaf overlapped its post by only `OV` = 2 cm while running 1.2 cm (inner track) to 6.4 cm (outer
+  track) in front of the post face: an open slot, seen at 17° and more off the wall normal. The hikichigai meeting
+  stiles overlapped 2 cm across a 1.2 cm track gap, and leaf boards had 4 mm gaps straight through the leaf.
+- **The rule, as real doors do it:**
+  - At the **closing** jamb, the leaf closes against a **stop** (todome) on the post, from the wall face out past the
+    outermost leaf: `openings.jamb_stop`.
+  - At a post or fixed stile a leaf **slides past**, a **lip** on its face fills the gap under the leaf (2 mm
+    clearance): `openings.jamb_lip`.
+  - Twin leaves overlap `MEET` = 5 cm at the meeting stiles (hikichigai and hikiwake).
+  - Leaf boards butt tight (`LEAF_GAP` = 0). A through-gap needs something behind it.
+  - Stops and lips are 3-face visual strips in Resolution 1 and 2 (no collision), so the sweep and reach checks do
+    not change.
+- **Judge it with C17, not by eye.** The old defect only shows at steep angles; C17 scores the pre-fix house at
+  1,378 see-through rays at the entrance and 1,042 at the hikiwake pair.
+
+**T12 Matte materials have no environment reflection.**
+- **Stephen:** "every material is too reflective"; interior clay went green at glancing angles, with the normal-map
+  swirls in the sheen, although its SMDI specular is only ~0.01.
+- **The cause:** every JP rvmat used `fresnel(1.3,0.7)` with the outdoor, mostly green `env_land_co.paa`, and the
+  SMDI map does not keep that reflection off at grazing angles.
+- **The rule (this supersedes the Stage6/Stage7 line of §9 for matte materials):**
+  - **Matte** (wood, bamboo, board and shingle roofs, thatch, straw, paper, stone): Stage6
+    `#(ai,32,128,1)fresnel(0.01,0.01)`, Stage7 `#(argb,8,8,3)color(0,0,0,1,CO)`, as vanilla `planks.rvmat`,
+    `logs*.rvmat`, `slama.rvmat` and `podezdivka_beton.rvmat` (65 vanilla Super rvmats).
+  - **Earth and plaster walls:** Stage6 `#(ai,32,128,1)fresnel(0.49,0.14)` (vanilla `walls\data\wall_*.rvmat`),
+    Stage7 black. Vanilla house plaster uses the Multi shader, which has no environment map at all.
+  - **Glossy by design** (keep `env_land_co.paa` and `fresnel(1.3,0.7)`): kawara (ibushi, silvered), namako tile,
+    iron. A new glossy material needs a vanilla analogue: glazed tiles `fresnel(1.42,0)`, rusty metal
+    `fresnel(1.3,2.83)`.
+  - Effective sun specular (specular × SMDI green) stays at or under about 0.02 for matte wood, like vanilla benches
+    and deer stands.
+- **Kit:** `build_materials.FINISH` / `finish_for(mid)`; `--rvmats-only` on `build_materials.py`,
+  `make_part_materials.py` and `make_fix_materials.py` rewrites the rvmats without touching textures.
+  **Re-binarize every ODOL that uses a changed rvmat** (the house, the swatch wall): ODOL embeds its materials.
+- **Check:** C19.

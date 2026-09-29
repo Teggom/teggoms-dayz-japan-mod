@@ -2,6 +2,10 @@
 r"""build_materials.py - regenerate the jp_common material library, its checks, the swatch wall and the contact sheets.
 
   python build_materials.py [--no-render] [--no-binarize] [--no-pack] [--sheets-only] [--only ID[,ID...]]
+  python build_materials.py --rvmats-only [--no-pack]
+
+  --rvmats-only (G3 fix 2, 2026-09-29): rewrite every library rvmat and the plaque rvmat from SPEC / FINISH (no
+  textures, no matcheck), then repack. make_part_materials.py and make_fix_materials.py take the same flag for theirs.
 
   --only (parts agent, 2026-09-27): regenerate just these materials (textures, PAAs, rvmats, sidecars), then run
   matcheck over the whole library, repack and refresh the sheets; the swatch wall is not rebuilt (it references the
@@ -106,14 +110,18 @@ USED_ON = {
     "jp_m_straw_mushiro": "The rolled straw mat hung over the doorway of the poorest tier 1 houses.",
 }
 # rvmat specular, specularPower (w1; w0 x1.1, w2 x0.8)
+# G3 fix 2 (2026-09-29): the effective sun specular is specular x SMDI green. Vanilla matte wood sits at about 0.01-0.02
+# (misc_bench* 0.27 x 0.05, misc_deerstand1_wood* 0.27 x 0.00-0.07, logs 0.5 x 0). Five matte materials were 2-3x that
+# and were lowered (texture untouched): wood_street_dark 0.35 -> 0.15 (x SMDI 0.13), wood_bengara 0.3 -> 0.15 (x 0.15),
+# bamboo 0.35 -> 0.2 (x 0.10), roof_kakigara 0.3 -> 0.2 (x 0.09), stone_river 0.3 -> 0.2 (x 0.08).
 SPEC = {
-    "jp_m_wood_weathered": (0.2, 40), "jp_m_wood_street_dark": (0.35, 60), "jp_m_wood_bengara": (0.3, 50),
+    "jp_m_wood_weathered": (0.2, 40), "jp_m_wood_street_dark": (0.15, 60), "jp_m_wood_bengara": (0.15, 50),
     "jp_m_wood_kuro": (0.25, 40), "jp_m_wood_sooted": (0.15, 25), "jp_m_wall_arakabe": (0.1, 20),
     "jp_m_wall_nakanuri": (0.12, 25), "jp_m_wall_shikkui": (0.15, 30), "jp_m_wall_namako_tile": (0.35, 60),
     "jp_m_roof_kawara": (0.6, 90), "jp_m_roof_thatch": (0.08, 15), "jp_m_roof_thatch_cut": (0.08, 15),
-    "jp_m_roof_kureita": (0.2, 35), "jp_m_roof_kokera": (0.2, 35), "jp_m_roof_kakigara": (0.3, 50),
-    "jp_m_stone_field": (0.25, 40), "jp_m_stone_cut": (0.25, 40), "jp_m_stone_river": (0.3, 50),
-    "jp_m_paper_shoji": (0.08, 20), "jp_m_bamboo_weathered": (0.35, 60), "jp_m_metal_iron": (0.5, 70),
+    "jp_m_roof_kureita": (0.2, 35), "jp_m_roof_kokera": (0.2, 35), "jp_m_roof_kakigara": (0.2, 50),
+    "jp_m_stone_field": (0.25, 40), "jp_m_stone_cut": (0.25, 40), "jp_m_stone_river": (0.2, 50),
+    "jp_m_paper_shoji": (0.08, 20), "jp_m_bamboo_weathered": (0.2, 60), "jp_m_metal_iron": (0.5, 70),
     "jp_m_straw_mushiro": (0.1, 20),
 }
 ROADWAY = {"wood": "wood_planks_ext", "stone": "stone_ext", "straw": "textile_carpet_ext"}
@@ -154,7 +162,36 @@ VertexShaderID="Super";
 };
 """ % (k, k) for k in range(1, 8))
 STAGES = {2: "#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)", 3: "#(argb,8,8,3)color(0,0,0,0,MC)",
-          4: "#(argb,8,8,3)color(1,1,1,1,AS)", 6: "#(ai,64,64,1)fresnel(1.3,0.7)", 7: "dz\\data\\data\\env_land_co.paa"}
+          4: "#(argb,8,8,3)color(1,1,1,1,AS)"}
+# Stage6 (fresnel) + Stage7 (environment map) per finish. G3 fix 2 (2026-09-29, Stephen: "every material is too
+# reflective"; interior clay went green at glancing angles with the normal-map swirls in the sheen, although its SMDI
+# specular is only ~0.01). Until then every rvmat used fresnel(1.3,0.7) + the outdoor (green) env_land_co.paa.
+# The vanilla analogues, read from P:\DZ (PLAYBOOK §15 T12):
+#   wall   : vanilla house plaster walls use the Multi shader, which has NO environment map at all (177 of 177 rvmats
+#            that use dz\structures\data\plaster\*); vanilla Super walls (dz\structures\walls\data\wall_*.rvmat) use
+#            #(ai,32,128,1)fresnel(0.49,0.14). -> that fresnel + a black env.
+#   matte  : vanilla matte Super wood / straw / plinth rvmats (industrial\misc\data\planks.rvmat, logs*.rvmat,
+#            slama.rvmat, stoh_slama.rvmat, podezdivka_beton.rvmat, misc_deerstand1_wood*.rvmat, 65 in all) use
+#            #(ai,32,128,1)fresnel(0.01,0.01) + a black env #(argb,8,8,3)color(0,0,0,1,CO): no env reflection.
+#   glossy : fired / glazed ceramic and iron keep the env map (vanilla glazed tiles houvev_*_kitchentiles fresnel(1.42,0),
+#            metal_white_lightrust fresnel(1.3,2.83), both with env_land_co). Only kawara (ibushi, silvered), namako
+#            tile and iron are glossy; Stephen passed the roof as is, so their Stage6/7 are unchanged.
+ENV_LAND = "dz\\data\\data\\env_land_co.paa"
+ENV_NONE = "#(argb,8,8,3)color(0,0,0,1,CO)"
+FINISH = {
+    "wall": ("#(ai,32,128,1)fresnel(0.49,0.14)", ENV_NONE),
+    "matte": ("#(ai,32,128,1)fresnel(0.01,0.01)", ENV_NONE),
+    "glossy": ("#(ai,64,64,1)fresnel(1.3,0.7)", ENV_LAND),
+}
+FINISH_BY_ID = {"jp_m_roof_kawara": "glossy", "jp_m_roof_kawara_field": "glossy", "jp_m_roof_kawara_far": "glossy",
+                "jp_m_wall_namako_tile": "glossy", "jp_m_metal_iron": "glossy"}
+
+
+def finish_for(mid):
+    """'glossy' for the listed ceramics / iron, 'wall' for earth and plaster walls, 'matte' for everything else."""
+    if mid in FINISH_BY_ID:
+        return FINISH_BY_ID[mid]
+    return "wall" if mid.startswith("jp_m_wall_") else "matte"
 
 
 def wb(path, data):
@@ -172,10 +209,26 @@ def ppath(mid, wear, suf):
     return "JP\\common\\materials\\%s\\%s%s%s" % (fam(mid), mid, wear, suf)
 
 
-def rvmat_text(nohq, smdi, s, p):
+def rvmat_text(nohq, smdi, s, p, finish="matte"):
     t = dict(("t%d" % k, v) for k, v in STAGES.items())
-    t.update(t1=nohq, t5=smdi, s=s, p=p)
+    t.update(t1=nohq, t5=smdi, s=s, p=p, t6=FINISH[finish][0], t7=FINISH[finish][1])
     return RVMAT % t
+
+
+def write_rvmats(only=None):
+    """The library rvmats only (no textures): 3 wear levels per material, specular x1.1 / x1.0 / x0.8."""
+    for mid in (only or ORDER):
+        s, p = SPEC[mid]
+        for k, (wear, _) in enumerate(WEARS):
+            f = [1.1, 1.0, 0.8][k]
+            wb(os.path.join(MATDIR, fam(mid), mid + wear + ".rvmat"),
+               rvmat_text(ppath(mid, wear, "_nohq.paa"), ppath(mid, wear, "_smdi.paa"), round(s * f, 3), int(p * f),
+                          finish_for(mid)))
+
+
+def write_plaque_rvmat():
+    wb(os.path.join(SWDIR, "data", "jp_swatch_plaques.rvmat"),
+       rvmat_text("#(rgb,8,8,3)color(0.5,0.5,1,1,NOHQ)", "#(argb,8,8,3)color(1,0.05,0.05,1,SMDI)", 0.05, 10, "matte"))
 
 
 def run(cmd, **kw):
@@ -207,14 +260,11 @@ def library(info, only=None):
                               os.path.join(MATDIR, fam(mid), mid + wear + suf + ".paa")))
     to_paa(pairs)
     man = json.load(open(os.path.join(DATA, "polyhaven", "manifest.json"), encoding="utf-8"))
+    write_rvmats(only)
     for mid in (only or ORDER):
         m = MT.MATS[mid]
-        s, p = SPEC[mid]
         wears = {}
         for k, (wear, name) in enumerate(WEARS):
-            f = [1.1, 1.0, 0.8][k]
-            wb(os.path.join(MATDIR, fam(mid), mid + wear + ".rvmat"),
-               rvmat_text(ppath(mid, wear, "_nohq.paa"), ppath(mid, wear, "_smdi.paa"), round(s * f, 3), int(p * f)))
             i = info.get(mid, [{}] * 3)[k]
             wears[wear] = {"name": name, "look": m["wear"][wear], "co": ppath(mid, wear, "_co.paa"),
                            "rvmat": ppath(mid, wear, ".rvmat"), "target_srgb": i.get("target_srgb"),
@@ -464,8 +514,7 @@ def swatch(do_binarize):
     png = os.path.join(BUILD, "swatch", "jp_swatch_plaques_co.png")
     im.save(png)
     to_paa([(png, os.path.join(SWDIR, "data", "jp_swatch_plaques_co.paa"))])
-    wb(os.path.join(SWDIR, "data", "jp_swatch_plaques.rvmat"),
-       rvmat_text("#(rgb,8,8,3)color(0.5,0.5,1,1,NOHQ)", "#(argb,8,8,3)color(1,0.05,0.05,1,SMDI)", 0.05, 10))
+    write_plaque_rvmat()
     geo = component_lod(mlod.LOD_GEOMETRY)
     geo.properties.update({"class": "house", "map": "house", "damage": "no", "autocenter": "0"})
     geo.mass = [5000.0 / len(geo.points)] * len(geo.points)
@@ -693,6 +742,11 @@ splits, drips, rust, edge wear, streaks), and the swatch plaques (Arial from Win
 
 
 def main(argv):
+    if "--rvmats-only" in argv:                  # G3 fix 2: rewrite the rvmats (finish / specular), no texture work
+        write_rvmats()
+        write_plaque_rvmat()
+        print("library: %d rvmats + the plaque rvmat rewritten" % (3 * len(ORDER)))
+        return 0 if ("--no-pack" in argv or pack()) else 1
     only_sheets = "--sheets-only" in argv
     only = argv[argv.index("--only") + 1].split(",") if "--only" in argv else None
     if not only_sheets:

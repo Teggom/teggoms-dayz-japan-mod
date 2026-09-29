@@ -206,6 +206,11 @@ def check_part(part, path, lods=None):
             st = stub_left(d, gcomps)
             res.append(("C10 door %s open leaf keeps >= 0.15 m in the opening (vanilla)" % ds, st >= 0.15 - 1e-6,
                         "%.3f m of the leaf stays in the opening when open" % st))
+            pp = raycheck.pull_positions(d, gcomps, part.solids)
+            if pp:
+                res.append(("C18 door %s pulls on the stub edge (still in the doorway when open)" % ds,
+                            all(x[4] for x in pp), "; ".join("%s pull u %.2f closed -> %.2f open, doorway %.2f..%.2f"
+                                                             % (x[0], x[1], x[2], x[3][0], x[3][1]) for x in pp)))
         if "View Geometry" in L:
             vcomps = components(L["View Geometry"]) + virtual_walls(part, d) + vposts
             for frac, state in ((1.0, "open"), (0.0, "closed")):

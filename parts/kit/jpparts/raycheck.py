@@ -398,6 +398,115 @@ def leak_exit(o, dv, walls_bbox):
     return tuple(round(o[k] + dv[k] * hi, 2) for k in range(3))
 
 
+# ------------------------------------------------------------------------------------------------ C17 jamb seal
+def door_band(d, comps):
+    """Door-local frame from the door's CLOSED leaf components (comp['door'] = bone): u along the wall (horizontal),
+    n the wall normal, per-leaf (u0, u1) edges, and the band's u / y / n extents. None if the door has no leaves."""
+    bones = [a["bone"] for a in d.anims]
+    closed = [c for c in comps if c.get("door") in bones]
+    if not closed:
+        return None
+    big = max(closed, key=lambda c: (c["bbox"][1] - c["bbox"][0]) * (c["bbox"][5] - c["bbox"][4]) + 1e-9 +
+              (c["bbox"][3] - c["bbox"][2]))
+    bp = broad_planes(big)
+    if not bp:
+        return None
+    n = norm((bp[0][0][0], 0.0, bp[0][0][2]))
+    u = (-n[2], 0.0, n[0])
+    edges = []
+    for c in closed:
+        us = [dot(p, u) for p in c["pts"]]
+        edges.append((min(us), max(us)))
+    allp = [p for c in closed for p in c["pts"]]
+    return dict(u=u, n=n, edges=edges, umin=min(e[0] for e in edges), umax=max(e[1] for e in edges),
+                ymin=min(p[1] for p in allp), ymax=max(p[1] for p in allp),
+                nmin=min(dot(p, n) for p in allp), nmax=max(dot(p, n) for p in allp))
+
+
+def jamb_slits(d, comps, T, near=2.6, span=0.10, step=0.005):
+    """C17 (G3 fix 2, 2026-09-29; Stephen, from inside the front door: "post on the left, closed leaf on the right,
+    daylight between them"). With every leaf CLOSED, nothing may be seen THROUGH the opening: not past a leaf edge at a
+    jamb or a meeting stile, not straight through a leaf.
+    Rays run from standing eyes on both sides (0.45-1.95 m from the leaf band, up to +-2 m along the wall, eye heights
+    1.0 / 1.6 m above the leaf foot, so down to ~80 degrees off the wall normal: a 1 cm slot is only seen at a steep
+    angle) through target points on the wall face INSIDE the opening, within `span` of every leaf edge, and on 1 m
+    past the wall. The wall face is the plane of the door's action point (the kit puts it on the face the leaves run
+    on). A ray that hits no Resolution 1 triangle on that path is a see-through slit. Straight-on rays at a 3 mm pitch
+    over the whole leaf band are added (board gaps). T: Resolution 1 triangles (N,3,3) of the closed object.
+    Returns (n_rays, [(eye, point 1 m past the wall)] slits)."""
+    import numpy as np
+    b = door_band(d, comps)
+    if b is None:
+        return 0, []
+    u, n = np.array(b["u"]), np.array(b["n"])
+    y = np.array((0.0, 1.0, 0.0))
+    nmid = (b["nmin"] + b["nmax"]) / 2
+    nw = float(np.dot(np.array(d.action), n)) if d.action else nmid
+    uc = (b["umin"] + b["umax"]) / 2
+    # triangles near the door only
+    c0 = u * uc + n * nmid + y * (b["ymin"] + b["ymax"]) / 2
+    hw = (b["umax"] - b["umin"]) / 2
+    m = np.all(T.max(1) > c0 - near - hw, 1) & np.all(T.min(1) < c0 + near + hw, 1)
+    Tn = T[m]
+    seams = sorted({round(e, 3) for ed in b["edges"] for e in ed})
+    yl = [b["ymin"] + 0.30, (b["ymin"] + b["ymax"]) / 2, b["ymax"] - 0.30]
+    olo, ohi = b["umin"] + 0.015, b["umax"] - 0.015          # the opening: leaves overlap the posts by OV = 2 cm
+    E, Q = [], []
+    for s in seams:
+        tg = [u * uu + n * nw + y * yy for uu in np.arange(s - span, s + span + 1e-9, step) if olo <= uu <= ohi
+              for yy in yl]
+        for sg in (1.0, -1.0):
+            eyes = [u * (s + k) + n * (nmid + sg * (0.15 + dist)) + y * (b["ymin"] + h)
+                    for dist in (0.3, 0.6, 1.0, 1.8) for k in (-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+                    for h in (1.0, 1.6)]
+            for e in eyes:
+                for q in tg:
+                    dv = q - e
+                    dv = dv / np.linalg.norm(dv)
+                    if abs(dv @ n) < 0.15:            # parallel to the wall: not a view through the opening
+                        continue
+                    E.append(e)
+                    Q.append(q + dv * 1.0)
+    # straight through the closed leaves everywhere (3 mm pitch): board gaps inside a leaf are slits too
+    for uu in np.arange(b["umin"] + 0.03, b["umax"] - 0.03, 0.003):
+        for yy in yl:
+            for sg in (1.0, -1.0):
+                E.append(u * uu + n * (nmid + sg * 0.6) + y * yy)
+                Q.append(u * uu + n * (nmid - sg * 0.6) + y * yy)
+    if not E:
+        return 0, []
+    E, Q = np.asarray(E), np.asarray(Q)
+    D = Q - E
+    L = np.linalg.norm(D, axis=1)
+    D = D / L[:, None]
+    t = cast(Tn, E, D, tmax=60.0, chunk=48)
+    clear = np.where(t >= L - 1e-4)[0]
+    return len(E), [(tuple(round(float(v), 3) for v in E[k]), tuple(round(float(v), 3) for v in Q[k])) for k in clear]
+
+
+def pull_positions(d, comps, solids):
+    """C18 (G3 fix 2; Stephen: "every door with a handle is backwards"). Every pull (solid tag 'pull') of a sliding
+    leaf must still be IN the doorway when the leaf is open (on the trailing / stub edge), so the open leaf can be
+    pulled shut. The doorway = the closed leaves' u band minus 2 cm at each end. Returns [(bone, u_closed, u_open,
+    band, ok)] (empty: the door has no pulls)."""
+    b = door_band(d, comps)
+    if b is None:
+        return []
+    out = []
+    for a in d.anims:
+        if a["type"] != "translation":
+            continue
+        f = anim_point_fn(a, 1.0)
+        for s in solids:
+            if s.door != a["bone"] or s.tag != "pull":
+                continue
+            c = [sum(v[k] for v in s.verts) / len(s.verts) for k in range(3)]
+            uc, uo = dot(c, b["u"]), dot(f(tuple(c)), b["u"])
+            lo, hi = b["umin"] + 0.02, b["umax"] - 0.02
+            out.append((a["bone"], round(uc, 3), round(uo, 3), (round(lo, 3), round(hi, 3)), lo <= uo <= hi))
+    return out
+
+
 # ------------------------------------------------------------------------------------------------ C12 roof pokes
 def roof_pokes(solids, pad=0.03, allow_src=("ridge_walk",)):
     """C12. Roof bodies = closed solids tagged roof_geo_* (the collision slab of each slope piece: rafter underside to

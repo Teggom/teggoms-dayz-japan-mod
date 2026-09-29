@@ -22,8 +22,8 @@
  "deviation": null,
  "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
  "bbox_m": [
-  0.04,
-  2.465,
+  -0.007,
+  2.48,
   0.64,
   2.11,
   -0.07,
@@ -98,8 +98,8 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 144,
-  "Resolution 2": 54,
+  "Resolution 1": 150,
+  "Resolution 2": 60,
   "Resolution 3": 48,
   "Geometry": 42,
   "Memory": 0,
@@ -133,7 +133,7 @@
      "bone": "doors2",
      "type": "translation",
      "axis_memory": "doors2_axis",
-     "amount": 0.64,
+     "amount": 0.655,
      "unit": "m (translation; axis 1.00 m)"
     }
    ],
@@ -151,7 +151,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 144, Resolution 2 54, Resolution 3 48, Geometry 42, Memory 0, View Geometry 42, Fire Geometry 42"
+   "detail": "Resolution 1 150, Resolution 2 60, Resolution 3 48, Geometry 42, Memory 0, View Geometry 42, Fire Geometry 42"
   },
   {
    "check": "C2 library only",
@@ -201,7 +201,7 @@
   {
    "check": "C10 door doors1 reachable from both sides (closed)",
    "ok": true,
-   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
   },
   {
    "check": "C4 opening_m",

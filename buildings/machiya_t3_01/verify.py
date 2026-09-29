@@ -344,7 +344,7 @@ def run(M=None, floors=None, pts=None):
         min(xs) > 924 and max(xs) < 1124 and min(zs) > 924 and max(zs) < 1124 and dist > 8,
         "%.2f x %.2f m incl. eaves; world x %.1f-%.1f, z %.1f-%.1f; nearest sakura trunk %.1f m away; ridge %.2f m"
         % (fw, fd, min(xs), max(xs), min(zs), max(zs), dist, b[3]))
-    BC.run_g3(M, L, floors, rec)          # C10-C16, the G3 checks every building runs (jpparts/buildcheck.py)
+    BC.run_g3(M, L, floors, rec)          # C10-C19, the G3 checks every building runs (jpparts/buildcheck.py)
     # ODOL
     odol = os.path.join(DEV, "src", "JP", "buildings", "machiya", MT.NAME + ".p3d")
     data = open(odol, "rb").read()
@@ -369,7 +369,7 @@ def run(M=None, floors=None, pts=None):
             all(w in names for w in want) and ok_b and ok_t and skel,
             "ODOL v%d, %d bytes; LODs %d; bones+axes %s; twin selections+actions %s; skeleton %s" % (
                 struct.unpack_from("<I", data, 4)[0], len(data), len(names), ok_b, ok_t, skel))
-    out = {"building": MT.CLASS, "date": "2026-09-27", "faces": "%d/%d/%d" % (faces["Resolution 1"],
+    out = {"building": MT.CLASS, "date": "2026-09-29", "faces": "%d/%d/%d" % (faces["Resolution 1"],
                                                                               faces["Resolution 2"],
                                                                               faces["Resolution 3"]),
            "door_clear_m": [round(c, 2) for c in clears], "checks": RES}

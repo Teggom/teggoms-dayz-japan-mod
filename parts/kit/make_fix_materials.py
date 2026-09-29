@@ -15,7 +15,8 @@ both matchecked, same layout as make_part_materials.py (library Super-shader rvm
 
 Writes data/materials/textures/*.png, src/JP/common/materials/<family>/*.paa|.rvmat|.json,
 src/JP/common/materials/checks_fix.json, then repacks @Japan\addons\jp_common.pbo (unless --no-pack).
-Usage: python make_fix_materials.py [--no-pack]
+Usage: python make_fix_materials.py [--no-pack] [--rvmats-only]
+(--rvmats-only, G3 fix 2: rewrite the 6 rvmats only, with the finish from build_materials.finish_for.)
 """
 import json
 import os
@@ -71,6 +72,11 @@ def kawara_far(lv, S=1024):
     return co, n2, rough, mask, dark, spec, gloss
 
 
+def write_rvmat(fam, mid, lv, spec):
+    w, (s, p), f = "_w%d" % lv, spec, [1.1, 1.0, 0.8][lv]
+    MPM.wb(os.path.join(LIB, fam, mid + w + ".rvmat"), MPM.rvmat(fam, mid, w, round(s * f, 3), int(p * f)))
+
+
 def write_set(fam, mid, pid, maker, spec_fn, looks, sidecar_extra, results):
     pal = matcheck.load_palette()
     wears = {}
@@ -90,9 +96,7 @@ def write_set(fam, mid, pid, maker, spec_fn, looks, sidecar_extra, results):
             os.remove(mp)
         for suf in ("_co", "_nohq", "_smdi"):
             MPM.to_paa(stem + suf + ".png", os.path.join(LIB, fam, mid + w + suf + ".paa"))
-        s, p = sidecar_extra["rvmat_spec"]
-        f = [1.1, 1.0, 0.8][lv]
-        MPM.wb(os.path.join(LIB, fam, mid + w + ".rvmat"), MPM.rvmat(fam, mid, w, round(s * f, 3), int(p * f)))
+        write_rvmat(fam, mid, lv, sidecar_extra["rvmat_spec"])
         a = matcheck.check(stem + "_co.png", pal, pid, TEX)
         b = matcheck.check(os.path.join(LIB, fam, mid + w + "_co.paa"), pal, pid, TEX)
         a["shipped_paa"] = {k: b.get(k) for k in ("mean_srgb", "dE", "verdict", "warnings")}
@@ -108,6 +112,12 @@ def write_set(fam, mid, pid, maker, spec_fn, looks, sidecar_extra, results):
 
 
 def main(argv):
+    if "--rvmats-only" in argv:                  # G3 fix 2: rvmats only (finish from BM.finish_for), no textures
+        for lv in range(3):
+            write_rvmat("wall", "jp_m_wall_nakanuri_int", lv, BM.SPEC["jp_m_wall_nakanuri"])
+            write_rvmat("roof", "jp_m_roof_kawara_far", lv, KAWARA_FAR_SPEC)
+        print("make_fix_materials: 6 rvmats rewritten")
+        return 0 if ("--no-pack" in argv or BM.pack()) else 1
     results = []
     write_set("wall", "jp_m_wall_nakanuri_int", "earth_wall_aged", wall_int,
               lambda s, g: (s, g),
