@@ -6,6 +6,9 @@ mod and no server with it. Pure vanilla DayZ plus our own `@Japan` mod: no CF, n
 - Owner and GO/NOGO: Stephen.
 - Plan and verdict: `FEASIBILITY.md`. §8 is the plan, §3 the draft map layout.
 
+**Current work (2026-09-29 on): `PRODUCTION_PLAN.md`.** Read it first. It links the decided catalogue
+(`research/catalogue/KEEP_*.md`) and the phase order.
+
 Stephen's calls (2026-09-26):
 - Spike wave 1 (the five spikes below) is GO.
 - Weapons use vanilla animation sets for now. Custom animations get added per weapon later, if needed.

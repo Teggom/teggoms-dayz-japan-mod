@@ -1,5 +1,8 @@
 # Review index: the 1730 world research (lead, 2026-09-29)
 
+**Update 2026-09-29:** all five sittings are done. The results are in `catalogue/KEEP_*.md`, and the next work is in
+`../PRODUCTION_PLAN.md`.
+
 Start here. Everything below is TEXT research, deliberately over-detailed so Stephen can collapse it. Nothing is
 decided until a KEEP list says so.
 
