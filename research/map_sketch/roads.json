@@ -1,0 +1,604 @@
+{
+ "roads": [
+  {
+   "name": "Chūma road",
+   "japanese": "中馬街道 (三州街道 / 伊那街道)",
+   "points": [
+    [
+     34.955,
+     137.16
+    ],
+    [
+     35.046,
+     137.262
+    ],
+    [
+     35.135,
+     137.318
+    ],
+    [
+     35.208,
+     137.507
+    ],
+    [
+     35.253,
+     137.576
+    ],
+    [
+     35.375,
+     137.689
+    ],
+    [
+     35.445,
+     137.738
+    ],
+    [
+     35.51,
+     137.82
+    ],
+    [
+     35.684,
+     137.897
+    ],
+    [
+     35.769,
+     137.944
+    ],
+    [
+     35.844,
+     137.943
+    ],
+    [
+     35.915,
+     137.982
+    ],
+    [
+     36.04,
+     137.962
+    ],
+    [
+     36.11,
+     137.95
+    ]
+   ],
+   "note": "Okazaki up the Tomoe and Asuke valleys, over the Inabu uplands (Neba, Hiraya, Namiai) to Iida, then north up the Ina valley to Shiojiri; the pack-horse (chūma) salt and goods road from the Mikawa coast into Shinano.",
+   "source": "ja.wikipedia 飯田街道 / 三州街道 (Sanshū or Chūma kaidō, one of the Nagoya/Okazaki-Iida roads mapped 1701-1840); the Chūma carriers' rights were confirmed by the shogunate in 1764, but they had worked the road since the 1600s; Iijima jin'ya on it from 1677."
+  },
+  {
+   "name": "Akiba road",
+   "japanese": "秋葉街道",
+   "points": [
+    [
+     34.77,
+     138.01
+    ],
+    [
+     34.835,
+     137.924
+    ],
+    [
+     34.951,
+     137.911
+    ],
+    [
+     34.981,
+     137.866
+    ],
+    [
+     35.159,
+     137.868
+    ],
+    [
+     35.254,
+     137.911
+    ],
+    [
+     35.32,
+     137.935
+    ],
+    [
+     35.387,
+     137.969
+    ],
+    [
+     35.532,
+     138.077
+    ],
+    [
+     35.585,
+     138.04
+    ],
+    [
+     35.7,
+     138.067
+    ],
+    [
+     35.728,
+     138.07
+    ],
+    [
+     35.83,
+     138.06
+    ],
+    [
+     35.972,
+     138.127
+    ],
+    [
+     35.978,
+     138.16
+    ]
+   ],
+   "note": "Kakegawa - Mori - Inui to the Akiha fire-god shrine, then north along the Median Tectonic Line: Misakubo, Aokuzure pass, Tōyama (Wada, Kamimura), Ōshika, Bunkui pass, Takatō, Tsuetsuki pass to Suwa (Chino). An old salt road turned pilgrim road.",
+   "source": "ja.wikipedia 秋葉街道 (Kakegawa - Mori - Ichinose - Inui - Sakashita - Akiha-san; earlier a salt road, Edo-period Akiha pilgrimage); pass positions from GSI."
+  },
+  {
+   "name": "Suruga road",
+   "japanese": "駿州往還 (河内路 / 身延道)",
+   "points": [
+    [
+     35.05,
+     138.52
+    ],
+    [
+     35.14,
+     138.53
+    ],
+    [
+     35.204,
+     138.505
+    ],
+    [
+     35.29,
+     138.448
+    ],
+    [
+     35.37,
+     138.44
+    ],
+    [
+     35.4,
+     138.44
+    ],
+    [
+     35.46,
+     138.45
+    ],
+    [
+     35.49,
+     138.443
+    ],
+    [
+     35.542,
+     138.458
+    ],
+    [
+     35.556,
+     138.505
+    ],
+    [
+     35.665,
+     138.57
+    ]
+   ],
+   "note": "Okitsu on the Tōkaidō up the Fuji River gorge through Manzawa, Nanbu, Minobu, Shimoyama and Iwama to Kajikazawa, then across the basin to Kōfu. The Minobu pilgrims' road; the river beside it carried boats from 1607.",
+   "source": "ja.wikipedia 駿州往還 (Kawauchi-ji / Minobu-michi, Kōfu - Okitsu, relay stations Iwama, Shimoyama, Nanbu, Manzawa listed under the Anayama; Sengoku-era road kept in the Edo period)."
+  },
+  {
+   "name": "Kamakura road",
+   "japanese": "鎌倉往還 (御坂路)",
+   "points": [
+    [
+     35.665,
+     138.57
+    ],
+    [
+     35.649,
+     138.637
+    ],
+    [
+     35.6,
+     138.7
+    ],
+    [
+     35.5565,
+     138.7636
+    ],
+    [
+     35.543,
+     138.779
+    ],
+    [
+     35.48,
+     138.8
+    ],
+    [
+     35.41,
+     138.86
+    ],
+    [
+     35.3927,
+     138.8641
+    ],
+    [
+     35.361,
+     138.867
+    ],
+    [
+     35.318,
+     138.943
+    ]
+   ],
+   "note": "Kōfu - Isawa - Kurokoma - Misaka pass - Kawaguchi - Yoshida - Lake Yamanaka - Kagosaka pass - Subashiri - Gotemba; beyond Gotemba it crossed the Ashigara pass (shared with the Yagurazawa road). The Fuji-pilgrim and Kai-to-Sagami road.",
+   "source": "MLIT Kantō 'Misaka / Kamakura-ōkan' page and Agency for Cultural Affairs 'Rekishi no michi 100' (1996); post-horse stations at Isawa, Kawaguchi and near Kagosaka; oldest recorded Kai road (Engi-shiki)."
+  },
+  {
+   "name": "Yagurazawa road",
+   "japanese": "矢倉沢往還 (大山街道)",
+   "points": [
+    [
+     35.677,
+     139.736
+    ],
+    [
+     35.643,
+     139.67
+    ],
+    [
+     35.609,
+     139.62
+    ],
+    [
+     35.52,
+     139.489
+    ],
+    [
+     35.442,
+     139.37
+    ],
+    [
+     35.4,
+     139.31
+    ],
+    [
+     35.371,
+     139.239
+    ],
+    [
+     35.345,
+     139.14
+    ],
+    [
+     35.321,
+     139.104
+    ],
+    [
+     35.3197,
+     139.0121
+    ],
+    [
+     35.32,
+     138.97
+    ],
+    [
+     35.318,
+     138.943
+    ],
+    [
+     35.2065,
+     138.915
+    ],
+    [
+     35.1,
+     138.86
+    ]
+   ],
+   "note": "Edo (Akasaka gate) - Sangenjaya - Futako ferry - Nagatsuta - Atsugi - Isehara (for Ōyama) - Hadano - Matsuda - Sekimoto - Yagurazawa checkpoint - Ashigara pass - Gotemba - Numazu. The Ōyama pilgrims' road and the Tōkaidō's back door.",
+   "source": "ja.wikipedia 矢倉沢往還 (Akasaka-mon to Numazu via Ashigara pass, a waki-ōkan of the Tōkaidō; called Ōyama kaidō from the mid-Edo pilgrim boom)."
+  },
+  {
+   "name": "Nakahara road",
+   "japanese": "中原街道",
+   "points": [
+    [
+     35.669,
+     139.749
+    ],
+    [
+     35.626,
+     139.723
+    ],
+    [
+     35.585,
+     139.668
+    ],
+    [
+     35.576,
+     139.66
+    ],
+    [
+     35.5165,
+     139.5573
+    ],
+    [
+     35.4685,
+     139.4924
+    ],
+    [
+     35.4104,
+     139.4162
+    ],
+    [
+     35.36,
+     139.36
+    ],
+    [
+     35.3412,
+     139.3316
+    ]
+   ],
+   "note": "Edo (Toranomon) - Maruko ferry - Kosugi - Saedo - Seya - Yoda - Sagami River - Nakahara (Hiratsuka): a straight inland short-cut used by carters and merchants dodging the Tōkaidō.",
+   "source": "ja.wikipedia 中原街道 (so named after the shogunate's 1604 works; relay points Kosugi, Saedo, Seya, Yoda)."
+  },
+  {
+   "name": "Shimo-kaidō",
+   "japanese": "下街道 (善光寺道)",
+   "points": [
+    [
+     35.175,
+     136.91
+    ],
+    [
+     35.19,
+     136.93
+    ],
+    [
+     35.232,
+     136.955
+    ],
+    [
+     35.284,
+     137.024
+    ],
+    [
+     35.329,
+     137.064
+    ],
+    [
+     35.333,
+     137.099
+    ],
+    [
+     35.333,
+     137.132
+    ],
+    [
+     35.353,
+     137.193
+    ],
+    [
+     35.407,
+     137.309
+    ],
+    [
+     35.435,
+     137.36
+    ],
+    [
+     35.45,
+     137.41
+    ]
+   ],
+   "note": "Nagoya - Kachigawa - Sakashita - Utsu pass - Ikeda - Tajimi - Takayama - Toki - Kamado - Makigane fork on the Nakasendō near Ōi: the busy 'back road' from Nagoya to the Kiso road and Zenkō-ji.",
+   "source": "ja.wikipedia 下街道 (善光寺道): side road of the Nakasendō, stages listed in the 1765 Tōkai Kiso ryōdōchū; unofficial (no licensed stations) but in use through the Edo period."
+  },
+  {
+   "name": "Kami-kaidō",
+   "japanese": "上街道 (木曽街道)",
+   "points": [
+    [
+     35.19,
+     136.905
+    ],
+    [
+     35.227,
+     136.917
+    ],
+    [
+     35.296,
+     136.917
+    ],
+    [
+     35.327,
+     136.934
+    ],
+    [
+     35.353,
+     136.973
+    ],
+    [
+     35.391,
+     136.976
+    ],
+    [
+     35.44,
+     137.07
+    ]
+   ],
+   "note": "Nagoya - Kusunoki - Komaki - Gakuden - Haguro - Zenshiji - Fushimi on the Nakasendō: the Owari domain's official road to the Kiso valley.",
+   "source": "ja.wikipedia 上街道 (木曽街道): Owari domain road, Komaki post laid out 1623-1628, joins the Nakasendō at Fushimi-juku."
+  },
+  {
+   "name": "Yamato road",
+   "japanese": "大和街道 (加太越奈良道)",
+   "points": [
+    [
+     34.85,
+     136.39
+    ],
+    [
+     34.849,
+     136.342
+    ],
+    [
+     34.846,
+     136.256
+    ],
+    [
+     34.8,
+     136.17
+    ],
+    [
+     34.77,
+     136.13
+    ],
+    [
+     34.771,
+     136.054
+    ],
+    [
+     34.754,
+     135.94
+    ],
+    [
+     34.753,
+     135.87
+    ],
+    [
+     34.735,
+     135.821
+    ],
+    [
+     34.685,
+     135.83
+    ]
+   ],
+   "note": "Seki on the Tōkaidō - Kabuto pass - Tsuge - Sanago - Iga Ueno - Shimagahara - Kasagi - Kamo - Kizu - Nara: the Iga road, a short-cut from the Tōkaidō to Nara and on to Osaka.",
+   "source": "Mie Prefecture 'Mie no rekishi kaidō: Yamato kaidō' (bunka.pref.mie.lg.jp); Edo name Kabuto-goe Nara-michi; ex-Tōkaidō of the Nara period."
+  },
+  {
+   "name": "Kuragari road",
+   "japanese": "暗越奈良街道",
+   "points": [
+    [
+     34.69,
+     135.505
+    ],
+    [
+     34.676,
+     135.532
+    ],
+    [
+     34.667,
+     135.567
+    ],
+    [
+     34.669,
+     135.62
+    ],
+    [
+     34.669,
+     135.656
+    ],
+    [
+     34.6658,
+     135.6711
+    ],
+    [
+     34.67,
+     135.7
+    ],
+    [
+     34.683,
+     135.82
+    ]
+   ],
+   "note": "Osaka (Tamatsukuri) east across the Kawachi plain to Hiraoka, over the steep Kuragari pass in the Ikoma hills and down to Nara: the shortest Osaka-Nara road, busy with Ise pilgrims.",
+   "source": "ja.wikipedia 暗越奈良街道 (Nara-period origin; Edo-period secondary road with inns, daimyō and Ise-pilgrim traffic)."
+  },
+  {
+   "name": "Godaisan road",
+   "japanese": "御代参街道",
+   "points": [
+    [
+     34.93,
+     136.28
+    ],
+    [
+     34.96,
+     136.27
+    ],
+    [
+     34.98,
+     136.271
+    ],
+    [
+     35.0,
+     136.26
+    ],
+    [
+     35.05,
+     136.24
+    ],
+    [
+     35.113,
+     136.2
+    ],
+    [
+     35.14,
+     136.2
+    ],
+    [
+     35.17,
+     136.2
+    ]
+   ],
+   "note": "Tsuchiyama on the Tōkaidō north through Kamagake, Ishihara (Hino), Okamoto, Yōkaichi and Obata to the Nakasendō near Echigawa: a true cross-road between the two highways, used by the court's proxy pilgrims to Ise and Taga.",
+   "source": "ja.wikipedia 御代参街道 (opened 1640 for Kasuga-no-Tsubone's Ise-to-Taga pilgrimage; the name itself is only attested late, 1868)."
+  },
+  {
+   "name": "Saku road",
+   "japanese": "佐久甲州街道 (佐久往還)",
+   "points": [
+    [
+     35.7,
+     138.45
+    ],
+    [
+     35.789,
+     138.415
+    ],
+    [
+     35.873,
+     138.425
+    ],
+    [
+     35.917,
+     138.471
+    ],
+    [
+     35.993,
+     138.443
+    ],
+    [
+     36.03,
+     138.46
+    ],
+    [
+     36.16,
+     138.477
+    ],
+    [
+     36.223,
+     138.463
+    ],
+    [
+     36.27,
+     138.46
+    ]
+   ],
+   "note": "Nirasaki on the Kōshū road - Wakamiko - Nagasawa - Hirasawa pass (Nobeyama) - Umi-no-kuchi - down the Chikuma River via Takanomachi and Nozawa to Iwamurada on the Nakasendō: joins the Kōshū road to the Nakasendō behind Yatsugatake.",
+   "source": "sakucci.or.jp 'Saku rekishi no michi: Saku-Kōshū-dō' (Nirasaki - Iwamurada, about 18 ri; relay villages Nakajō, Wakamiko, Nagasawa, Hirasawa, Umi-no-kuchi, Umijiri, Kaminohata, Takanomachi, Nozawa); medieval Zenkō-ji road and Takeda military road."
+  }
+ ]
+}

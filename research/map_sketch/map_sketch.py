@@ -5,11 +5,17 @@ below: move a place by editing its (lat, lon), or add dx/dy pixel nudges. Rerun:
     python map_sketch.py          -> map_sketch.png      v0: 12.8 km, lat/lon squashed into the square
     python map_sketch.py diag     -> map_sketch_20k.png  v1: 20.48 km, Osaka->Edo laid along the SW->NE diagonal
 """
-import os, sys, math, random
+import os, sys, json, math, random
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DIAG = len(sys.argv) > 1 and sys.argv[1] == "diag"
+_VJ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "villages.json")
+_RJ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "roads.json")
+REAL = DIAG and os.path.isfile(_VJ) and os.path.isfile(_RJ)   # v2: real villages + in-between roads
+REAL_VILLAGES = json.load(open(_VJ, encoding="utf-8"))["villages"] if REAL else []
+REAL_ROADS = json.load(open(_RJ, encoding="utf-8"))["roads"] if REAL else []
+INBETWEEN = (40, 120, 40)
 SIZE_KM = 20.48 if DIAG else 12.8
 S = 4800 if DIAG else 3600     # map square, px
 PANEL = 900                    # legend panel on the right
@@ -265,10 +271,19 @@ def main():
         d.line([P(a, b) for _, a, b in sts], fill=col, width=w, joint="curve")
     road(TOKAIDO_ST, TOKAIDO, 12); road(KYOKAIDO, TOKAIDO, 9); road(NAKASENDO_ST, NAKASENDO, 12); road(KOSHU, SIDE, 8)
     for name, pts in SIDE_ROADS:
+        if REAL and name == "Ina road":
+            continue
         d.line(xy(pts), fill=SIDE + (200,), width=6, joint="curve")
+    for rd in REAL_ROADS:
+        pts = [P(a, b) for a, b in rd["points"]]
+        d.line(pts, fill=INBETWEEN + (230,), width=7, joint="curve")
+        mid = pts[len(pts) // 2]
+        d.text((mid[0] + 12, mid[1]), rd["name"], font=f(24, True), fill=INBETWEEN, anchor="lm")
     for sts in (TOKAIDO_ST, KYOKAIDO, NAKASENDO_ST, KOSHU):
-        for name, a, b in sts[1:-1]:
+        for i, (name, a, b) in enumerate(sts[1:-1]):
             x, y = P(a, b)
+            if REAL and name not in KEY_POST and i % 2 == 1:
+                continue
             if name in KEY_POST:
                 d.rectangle([x - 11, y - 11, x + 11, y + 11], fill=POST, outline=(90, 50, 0), width=2)
                 d.text((x + 16, y - 16), name, font=f(24), fill=(90, 50, 0))
@@ -316,8 +331,14 @@ def main():
         if min(math.hypot(x - a, y - b) for a, b in road_pts[::3]) > 1.7 * KM:
             continue
         vills.append((x, y, "mtn" if mtn_mask.getpixel((int(x), int(y))) else "rice"))
+    if REAL:
+        k = {"rice": "rice", "mountain": "mtn", "fishing": "fish"}
+        vills = [(*P(v["lat"], v["lon"]), k[v["kind"]], v["name"]) for v in REAL_VILLAGES]
     counts = {"fish": 0, "mtn": 0, "rice": 0}
-    for x, y, kind in vills:
+    for vv in vills:
+        x, y, kind = vv[:3]
+        if len(vv) > 3:
+            d.text((x + 17, y), vv[3], font=f(22), fill=(30, 30, 30), anchor="lm")
         counts[kind] += 1
         col = {"fish": VIL_FISH, "mtn": VIL_MTN, "rice": VIL_RICE}[kind]
         d.ellipse([x - 13, y - 13, x + 13, y + 13], fill=col, outline=(30, 30, 30), width=2)
@@ -372,6 +393,8 @@ def main():
         for line in ["Density sketch v1, 2026-09-29. Real places,", "turned so Osaka -> Edo runs SW -> NE along",
                      "the diagonal (22 km). North is rotated ~29°.", "Close, not accurate."]:
             d.text((x0, y), line, font=f(28), fill=(60, 60, 60)); y += 36
+        if REAL:
+            d.text((x0, y), "v2: real villages + roads; half the dots.", font=f(28, True), fill=(60, 60, 60)); y += 36
         y += 24
     else:
         d.text((x0, y), "Density sketch v0, 2026-09-29. Real places,", font=f(28), fill=(60, 60, 60)); y += 36
@@ -387,6 +410,9 @@ def main():
     npost = sum(1 for s in TOKAIDO_ST + NAKASENDO_ST + KOSHU + KYOKAIDO if s[0] in KEY_POST)
     row(lambda x, yy: d.rectangle([x - 11, yy - 11, x + 11, yy + 11], fill=POST), "Post town, named", npost)
     nst = len(TOKAIDO_ST) + len(NAKASENDO_ST) + len(KOSHU) + len(KYOKAIDO) - 8
+    if REAL:   # half the unnamed dots are dropped
+        nst = npost + sum(1 for sts in (TOKAIDO_ST, KYOKAIDO, NAKASENDO_ST, KOSHU)
+                          for i, (nm, _, _) in enumerate(sts[1:-1]) if nm not in KEY_POST and i % 2 == 0)
     row(lambda x, yy: d.ellipse([x - 5, yy - 5, x + 5, yy + 5], fill=(90, 50, 0)), "Other real station (dot)", nst - npost)
     row(lambda x, yy: d.ellipse([x - 13, yy - 13, x + 13, yy + 13], fill=VIL_RICE), "Rice village", counts["rice"])
     row(lambda x, yy: d.ellipse([x - 13, yy - 13, x + 13, yy + 13], fill=VIL_MTN), "Mountain village", counts["mtn"])
@@ -399,7 +425,12 @@ def main():
     row(lambda x, yy: d.regular_polygon((x, yy, 14), 3, fill=(255, 255, 255), outline=LM_RES), "Reserve landmark", len(RESERVES))
     row(lambda x, yy: d.ellipse([x - 22, yy - 14, x + 22, yy + 14], outline=GAP, width=5), "Gap-audit area (nearly blank)", len(GAP_AREAS))
     y += 10
-    for col, label in ((TOKAIDO, "Tōkaidō (coast road)"), (NAKASENDO, "Nakasendō (mountain road)"), (SIDE, "Kōshū road + side roads")):
+    legend_lines = [(TOKAIDO, "Tōkaidō (coast road)"), (NAKASENDO, "Nakasendō (mountain road)"),
+                    (SIDE, "Kōshū road + side roads")]
+    if REAL:
+        legend_lines.append((INBETWEEN, "In-between roads (%d, real)" % len(REAL_ROADS)))
+    legend_lines.append((RIVER, "River"))
+    for col, label in legend_lines:
         d.line([(x0, y + 18), (x0 + 50, y + 18)], fill=col, width=10)
         d.text((x0 + 70, y + 18), label, font=f(30), fill=(20, 20, 20), anchor="lm"); y += 48
     y += 20
@@ -410,8 +441,8 @@ def main():
                  "would be about 53 settlements." if not DIAG else "would be about 53; on 20.48 km about 137",
                  "" if not DIAG else "(or about 70 counting only the land half).",
                  "",
-                 "Villages are random placeholders (60):",
-                 "16 on the shore, the rest near roads. Top-20 numbers match",
+                 "Villages: 70 REAL (research/map_sketch/VILLAGES.md)," if REAL else "Villages are random placeholders (60):",
+                 "mostly on the in-between roads. Top-20 numbers match" if REAL else "16 on the shore, the rest near roads. Top-20 numbers match",
                  "research/landmarks/LANDMARKS_RANKED.md.",
                  "",
                  "Top 20:"]:

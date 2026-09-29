@@ -1,0 +1,634 @@
+{
+ "villages": [
+  {
+   "name": "Matsudaira",
+   "japanese": "松平",
+   "lat": 35.0456,
+   "lon": 137.2624,
+   "kind": "rice",
+   "road": "Chūma road",
+   "note": "Hill-valley village where the Matsudaira (later Tokugawa) clan began; clan temple Kōgetsu-in."
+  },
+  {
+   "name": "Asuke",
+   "japanese": "足助",
+   "lat": 35.1354,
+   "lon": 137.3182,
+   "kind": "mountain",
+   "road": "Chūma road",
+   "note": "Chūma road post village where coastal salt was repacked for the mountains ('Asuke salt')."
+  },
+  {
+   "name": "Busetsu",
+   "japanese": "武節",
+   "lat": 35.2075,
+   "lon": 137.5072,
+   "kind": "mountain",
+   "road": "Chūma road",
+   "note": "Inabu uplands post village below the ruined Busetsu castle."
+  },
+  {
+   "name": "Hiraya",
+   "japanese": "平谷",
+   "lat": 35.3233,
+   "lon": 137.6303,
+   "kind": "mountain",
+   "road": "Chūma road",
+   "note": "High pass village on the Mikawa-Shinano border; forestry and charcoal. Namiai checkpoint is 8 km on."
+  },
+  {
+   "name": "Komaba",
+   "japanese": "駒場",
+   "lat": 35.4454,
+   "lon": 137.7383,
+   "kind": "mountain",
+   "road": "Chūma road",
+   "note": "Achi post village; the story says Takeda Shingen died near here in 1573."
+  },
+  {
+   "name": "Iijima",
+   "japanese": "飯島",
+   "lat": 35.6841,
+   "lon": 137.8974,
+   "kind": "rice",
+   "road": "Chūma road",
+   "note": "Ina valley village with the shogunate's intendant office (Iijima jin'ya, 1677)."
+  },
+  {
+   "name": "Miyada",
+   "japanese": "宮田",
+   "lat": 35.7689,
+   "lon": 137.9444,
+   "kind": "rice",
+   "road": "Chūma road",
+   "note": "Ina road post village on the Tenryū terraces below the Central Alps."
+  },
+  {
+   "name": "Matsushima",
+   "japanese": "松島",
+   "lat": 35.915,
+   "lon": 137.982,
+   "kind": "rice",
+   "road": "Chūma road",
+   "note": "Minowa's Ina road post village at the north end of the Ina valley."
+  },
+  {
+   "name": "Mori",
+   "japanese": "森",
+   "lat": 34.8346,
+   "lon": 137.9238,
+   "kind": "rice",
+   "road": "Akiba road",
+   "note": "Market village at the foot of the Akiba road; Oguni shrine (Tōtōmi's first shrine) nearby."
+  },
+  {
+   "name": "Inui",
+   "japanese": "犬居",
+   "lat": 34.9511,
+   "lon": 137.9109,
+   "kind": "mountain",
+   "road": "Akiba road",
+   "note": "Gate village for Akiha-san, below the ruined Inui castle; pilgrims' inns."
+  },
+  {
+   "name": "Misakubo",
+   "japanese": "水窪",
+   "lat": 35.1587,
+   "lon": 137.8684,
+   "kind": "mountain",
+   "road": "Akiba road",
+   "note": "Mountain market village below Aokuzure pass; Nishiure dengaku field-dance."
+  },
+  {
+   "name": "Wada",
+   "japanese": "和田",
+   "lat": 35.3197,
+   "lon": 137.9345,
+   "kind": "mountain",
+   "road": "Akiba road",
+   "note": "Chief village of the Tōyama valley; Shimotsuki fire-and-hot-water festival."
+  },
+  {
+   "name": "Kashio",
+   "japanese": "鹿塩",
+   "lat": 35.585,
+   "lon": 138.04,
+   "kind": "mountain",
+   "road": "Akiba road",
+   "note": "Ōshika village with a mountain salt spring ('deer salt'), rare far from the sea."
+  },
+  {
+   "name": "Ichinose",
+   "japanese": "市野瀬",
+   "lat": 35.7281,
+   "lon": 138.0701,
+   "kind": "mountain",
+   "road": "Akiba road",
+   "note": "Hase valley relay village below Bunkui pass, on the way to Takatō."
+  },
+  {
+   "name": "Manzawa",
+   "japanese": "万沢",
+   "lat": 35.2043,
+   "lon": 138.5049,
+   "kind": "mountain",
+   "road": "Suruga road",
+   "note": "Border relay village between Suruga and Kai on the Fuji River road."
+  },
+  {
+   "name": "Nanbu",
+   "japanese": "南部",
+   "lat": 35.2898,
+   "lon": 138.4475,
+   "kind": "rice",
+   "road": "Suruga road",
+   "note": "Relay village on the Fuji River; the place the Nanbu clan took its name from."
+  },
+  {
+   "name": "Kajikazawa",
+   "japanese": "鰍沢",
+   "lat": 35.5466,
+   "lon": 138.4599,
+   "kind": "rice",
+   "road": "Suruga road",
+   "note": "Head port of the Fuji River boats (from 1607): Kai's tax rice went down, Suruga salt came up."
+  },
+  {
+   "name": "Kurokoma",
+   "japanese": "黒駒",
+   "lat": 35.6,
+   "lon": 138.7,
+   "kind": "mountain",
+   "road": "Kamakura road",
+   "note": "Misaka road village; named for the legendary black horse of Kai."
+  },
+  {
+   "name": "Subashiri",
+   "japanese": "須走",
+   "lat": 35.3609,
+   "lon": 138.8672,
+   "kind": "mountain",
+   "road": "Kamakura road",
+   "note": "Fuji pilgrims' east trailhead; buried under the 1707 Hōei eruption ash and rebuilt."
+  },
+  {
+   "name": "Mizonokuchi",
+   "japanese": "溝口",
+   "lat": 35.5998,
+   "lon": 139.6132,
+   "kind": "rice",
+   "road": "Yagurazawa road",
+   "note": "Ōyama road post village at the Futako ferry over the Tama River."
+  },
+  {
+   "name": "Atsugi",
+   "japanese": "厚木",
+   "lat": 35.4424,
+   "lon": 139.3699,
+   "kind": "rice",
+   "road": "Yagurazawa road",
+   "note": "Sagami River ferry and market village on the Ōyama road."
+  },
+  {
+   "name": "Ōyama",
+   "japanese": "大山",
+   "lat": 35.428,
+   "lon": 139.246,
+   "kind": "mountain",
+   "road": "Yagurazawa road",
+   "note": "Pilgrim-lodge (oshi) village at the foot of Ōyama and its Afuri shrine; Edo craftsmen came in summer."
+  },
+  {
+   "name": "Sekimoto",
+   "japanese": "関本",
+   "lat": 35.3212,
+   "lon": 139.1035,
+   "kind": "rice",
+   "road": "Yagurazawa road",
+   "note": "Post village at the foot of Ashigara pass; gate of the Daiyūzan Saijō-ji temple."
+  },
+  {
+   "name": "Fukara",
+   "japanese": "深良",
+   "lat": 35.2065,
+   "lon": 138.9151,
+   "kind": "rice",
+   "road": "Yagurazawa road",
+   "note": "Watered by the Hakone irrigation tunnel from Lake Ashi (finished 1670)."
+  },
+  {
+   "name": "Seya",
+   "japanese": "瀬谷",
+   "lat": 35.4685,
+   "lon": 139.4924,
+   "kind": "rice",
+   "road": "Nakahara road",
+   "note": "Relay village of the Nakahara road on the Sagami upland."
+  },
+  {
+   "name": "Sakashita",
+   "japanese": "坂下",
+   "lat": 35.2841,
+   "lon": 137.0235,
+   "kind": "rice",
+   "road": "Shimo-kaidō",
+   "note": "Shimo-kaidō stage below Utsu pass."
+  },
+  {
+   "name": "Tajimi",
+   "japanese": "多治見",
+   "lat": 35.3328,
+   "lon": 137.1322,
+   "kind": "rice",
+   "road": "Shimo-kaidō",
+   "note": "Shimo-kaidō village on the Toki River; Mino-ware kilns in the hills around."
+  },
+  {
+   "name": "Komaki",
+   "japanese": "小牧",
+   "lat": 35.2957,
+   "lon": 136.9172,
+   "kind": "rice",
+   "road": "Kami-kaidō",
+   "note": "Post village (laid out 1623-28) under Komaki-yama, Nobunaga's castle hill and Ieyasu's 1584 camp."
+  },
+  {
+   "name": "Tsuge",
+   "japanese": "柘植",
+   "lat": 34.846,
+   "lon": 136.25,
+   "kind": "mountain",
+   "road": "Yamato road",
+   "note": "Iga border post village below Kabuto pass; ninja country, and one of Bashō's claimed birthplaces."
+  },
+  {
+   "name": "Kasagi",
+   "japanese": "笠置",
+   "lat": 34.7539,
+   "lon": 135.9396,
+   "kind": "mountain",
+   "road": "Yamato road",
+   "note": "Village under Kasagi-dera, Emperor Go-Daigo's 1331 mountain stronghold, on the Kizu River."
+  },
+  {
+   "name": "Kizu",
+   "japanese": "木津",
+   "lat": 34.7346,
+   "lon": 135.8209,
+   "kind": "rice",
+   "road": "Yamato road",
+   "note": "River port on the Kizu where timber and goods for Nara were landed."
+  },
+  {
+   "name": "Hiraoka",
+   "japanese": "枚岡",
+   "lat": 34.6691,
+   "lon": 135.6562,
+   "kind": "rice",
+   "road": "Kuragari road",
+   "note": "Village at Hiraoka shrine (Kawachi's first shrine), foot of the Kuragari pass."
+  },
+  {
+   "name": "Hino",
+   "japanese": "日野",
+   "lat": 35.0104,
+   "lon": 136.2579,
+   "kind": "rice",
+   "road": "Godaisan road",
+   "note": "Home village of the Hino merchants (Ōmi pedlars); lacquerware and travelling medicine."
+  },
+  {
+   "name": "Nagasawa",
+   "japanese": "長沢",
+   "lat": 35.8729,
+   "lon": 138.4249,
+   "kind": "mountain",
+   "road": "Saku road",
+   "note": "Saku road relay village on the Yatsugatake skirts."
+  },
+  {
+   "name": "Umi-no-kuchi",
+   "japanese": "海ノ口",
+   "lat": 35.9932,
+   "lon": 138.4427,
+   "kind": "mountain",
+   "road": "Saku road",
+   "note": "Upland relay village; Umi-no-kuchi castle, where young Takeda Shingen won his first fight (1536, legend)."
+  },
+  {
+   "name": "Takanomachi",
+   "japanese": "高野町",
+   "lat": 36.16,
+   "lon": 138.4767,
+   "kind": "rice",
+   "road": "Saku road",
+   "note": "Relay and market village in the upper Chikuma valley."
+  },
+  {
+   "name": "Oyashiki",
+   "japanese": "小屋敷",
+   "lat": 35.7315,
+   "lon": 138.7137,
+   "kind": "rice",
+   "road": "",
+   "note": "Village around Erin-ji, the Takeda family temple with Shingen's grave; Katsunuma's vineyards are 7 km south."
+  },
+  {
+   "name": "Ashikura",
+   "japanese": "芦倉",
+   "lat": 35.6378,
+   "lon": 138.3803,
+   "kind": "mountain",
+   "road": "",
+   "note": "Last village below the Southern Alps (today's Ashiyasu); forestry and charcoal."
+  },
+  {
+   "name": "Yamura",
+   "japanese": "谷村",
+   "lat": 35.5516,
+   "lon": 138.9055,
+   "kind": "rice",
+   "road": "",
+   "note": "Gunnai market village on the Katsura River; Gunnai silk (kaiki). Castle town until 1704."
+  },
+  {
+   "name": "Dōshi",
+   "japanese": "道志",
+   "lat": 35.5159,
+   "lon": 139.0136,
+   "kind": "mountain",
+   "road": "",
+   "note": "Long valley village on the Dōshi road between Sagami and Lake Yamanaka; charcoal."
+  },
+  {
+   "name": "Umegashima",
+   "japanese": "梅ヶ島",
+   "lat": 35.31,
+   "lon": 138.32,
+   "kind": "mountain",
+   "road": "",
+   "note": "Head of the Abe valley; old gold diggings and a hot spring."
+  },
+  {
+   "name": "Utōgi",
+   "japanese": "有東木",
+   "lat": 35.2052,
+   "lon": 138.377,
+   "kind": "mountain",
+   "road": "",
+   "note": "Abe valley hamlet said to be where wasabi was first grown (early 1600s), presented to Ieyasu."
+  },
+  {
+   "name": "Ieyama",
+   "japanese": "家山",
+   "lat": 34.956,
+   "lon": 138.0401,
+   "kind": "mountain",
+   "road": "",
+   "note": "Ōi River valley village (Kawane); tea and timber rafts."
+  },
+  {
+   "name": "Futamata",
+   "japanese": "二俣",
+   "lat": 34.8645,
+   "lon": 137.8158,
+   "kind": "rice",
+   "road": "",
+   "note": "Tenryū River landing for timber rafts; Futamata castle ruin (Nobuyasu's death, 1579). On the Hamamatsu branch of the Akiba road."
+  },
+  {
+   "name": "Kiga",
+   "japanese": "気賀",
+   "lat": 34.8028,
+   "lon": 137.6326,
+   "kind": "rice",
+   "road": "",
+   "note": "Himekaidō checkpoint village at the north inlet of Lake Hamana (checkpoint from 1601)."
+  },
+  {
+   "name": "Nagashino",
+   "japanese": "長篠",
+   "lat": 34.932,
+   "lon": 137.5657,
+   "kind": "rice",
+   "road": "",
+   "note": "Village under Nagashino castle; the 1575 battlefield of Shitaragahara is just west."
+  },
+  {
+   "name": "Taguchi",
+   "japanese": "田口",
+   "lat": 35.0971,
+   "lon": 137.5723,
+   "kind": "mountain",
+   "road": "",
+   "note": "Chief village of the Shitara uplands on the Mikawa-Shinano back road."
+  },
+  {
+   "name": "Nagakute",
+   "japanese": "長久手",
+   "lat": 35.1842,
+   "lon": 137.0486,
+   "kind": "rice",
+   "road": "",
+   "note": "Farming village on the 1584 Komaki-Nagakute battlefield."
+  },
+  {
+   "name": "Seki",
+   "japanese": "関",
+   "lat": 35.4958,
+   "lon": 136.9178,
+   "kind": "rice",
+   "road": "",
+   "note": "Mino sword-smiths' village (Seki blades); also knives and tools."
+  },
+  {
+   "name": "Warabi",
+   "japanese": "蕨生",
+   "lat": 35.5888,
+   "lon": 136.8902,
+   "kind": "mountain",
+   "road": "",
+   "note": "Makidani paper village: hon-Minogami, the best shōji paper."
+  },
+  {
+   "name": "Takasu",
+   "japanese": "高須",
+   "lat": 35.2171,
+   "lon": 136.6226,
+   "kind": "rice",
+   "road": "",
+   "note": "Ring-levee (wajū) village in the Kiso-Nagara-Ibi delta; Takasu domain seat from 1700."
+  },
+  {
+   "name": "Tsushima",
+   "japanese": "津島",
+   "lat": 35.1771,
+   "lon": 136.7414,
+   "kind": "rice",
+   "road": "",
+   "note": "Village-town around Tsushima shrine; summer lantern-boat festival; river port."
+  },
+  {
+   "name": "Shigaraki",
+   "japanese": "信楽",
+   "lat": 34.881,
+   "lon": 136.0472,
+   "kind": "mountain",
+   "road": "",
+   "note": "Shigaraki pottery kilns; its tea jars carried the shogun's Uji tea."
+  },
+  {
+   "name": "Kashiwara",
+   "japanese": "柏原",
+   "lat": 34.5783,
+   "lon": 135.6292,
+   "kind": "rice",
+   "road": "",
+   "note": "Kawachi cotton village at the new Yamato River mouth (rerouted 1704); Kashiwara cargo boats."
+  },
+  {
+   "name": "Tokorozawa",
+   "japanese": "所沢",
+   "lat": 35.8001,
+   "lon": 139.4687,
+   "kind": "rice",
+   "road": "",
+   "note": "Market village on the dry Musashino upland."
+  },
+  {
+   "name": "Ōme",
+   "japanese": "青梅",
+   "lat": 35.7874,
+   "lon": 139.2753,
+   "kind": "mountain",
+   "road": "",
+   "note": "Tama River rafting village at the edge of the hills; Ōme-jima striped cloth."
+  },
+  {
+   "name": "Ōhara",
+   "japanese": "大原",
+   "lat": 35.1215,
+   "lon": 135.8349,
+   "kind": "mountain",
+   "road": "",
+   "note": "Hill village north-east of Kyoto on the Wakasa (mackerel) road; Ōhara women carried firewood to the city; Sanzen-in."
+  },
+  {
+   "name": "Chichibu",
+   "japanese": "秩父大宮",
+   "lat": 36.0031,
+   "lon": 139.0861,
+   "kind": "mountain",
+   "road": "",
+   "note": "Chichibu Ōmiya: Chichibu shrine, silk markets and the 34 Kannon pilgrimage."
+  },
+  {
+   "name": "Nojima",
+   "japanese": "野島",
+   "lat": 35.3263,
+   "lon": 139.6348,
+   "kind": "fishing",
+   "road": "",
+   "note": "Kanazawa fishing village by the Eight Views of Kanazawa; salt pans nearby."
+  },
+  {
+   "name": "Misaki",
+   "japanese": "三崎",
+   "lat": 35.1424,
+   "lon": 139.6208,
+   "kind": "fishing",
+   "road": "",
+   "note": "Tip of Miura: tuna and bonito boats, and an anchorage for ships bound for Edo."
+  },
+  {
+   "name": "Manazuru",
+   "japanese": "真鶴",
+   "lat": 35.1517,
+   "lon": 139.1418,
+   "kind": "fishing",
+   "road": "",
+   "note": "Fishing and stone-quarry village; its Komatsu stone built Edo castle's walls."
+  },
+  {
+   "name": "Itō",
+   "japanese": "伊東",
+   "lat": 34.9677,
+   "lon": 139.1172,
+   "kind": "fishing",
+   "road": "",
+   "note": "Izu fishing village where William Adams built Western ships for Ieyasu (1604-05)."
+  },
+  {
+   "name": "Heda",
+   "japanese": "戸田",
+   "lat": 34.9725,
+   "lon": 138.7783,
+   "kind": "fishing",
+   "road": "",
+   "note": "Fishing village in a sheltered hook-shaped harbour on west Izu."
+  },
+  {
+   "name": "Omaezaki",
+   "japanese": "御前崎",
+   "lat": 34.6044,
+   "lon": 138.2161,
+   "kind": "fishing",
+   "road": "",
+   "note": "Cape fishing village with the shogunate's beacon (Miobi light, 1635)."
+  },
+  {
+   "name": "Irago",
+   "japanese": "伊良湖",
+   "lat": 34.5899,
+   "lon": 137.0434,
+   "kind": "fishing",
+   "road": "",
+   "note": "Fishing village at the tip of Atsumi; Bashō visited in 1687."
+  },
+  {
+   "name": "Morozaki",
+   "japanese": "師崎",
+   "lat": 34.7024,
+   "lon": 136.9666,
+   "kind": "fishing",
+   "road": "",
+   "note": "Fishing village at the tip of Chita."
+  },
+  {
+   "name": "Tokoname",
+   "japanese": "常滑",
+   "lat": 34.8961,
+   "lon": 136.8545,
+   "kind": "fishing",
+   "road": "",
+   "note": "Chita coast kiln-and-harbour village: Tokoname jars shipped by sea."
+  },
+  {
+   "name": "Shiroko",
+   "japanese": "白子",
+   "lat": 34.8295,
+   "lon": 136.5882,
+   "kind": "fishing",
+   "road": "",
+   "note": "Ise-bay port and fishing village; Ise katagami dye-stencil makers."
+  },
+  {
+   "name": "Kitakomatsu",
+   "japanese": "北小松",
+   "lat": 35.2594,
+   "lon": 135.9617,
+   "kind": "fishing",
+   "road": "",
+   "note": "Lake Biwa fishing village under the Hira mountains."
+  },
+  {
+   "name": "Sugaura",
+   "japanese": "菅浦",
+   "lat": 35.4559,
+   "lon": 136.1462,
+   "kind": "fishing",
+   "road": "",
+   "note": "Self-governing lakeside fishing village with gated entrances, north Lake Biwa."
+  }
+ ]
+}
