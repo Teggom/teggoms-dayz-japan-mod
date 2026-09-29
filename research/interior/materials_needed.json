@@ -1,0 +1,726 @@
+{
+ "version": 1,
+ "date": "2026-09-29",
+ "author": "research agent PA2",
+ "note": "Interior materials for the materials agent (Phase B1): one canonical set per NEW material, 3 wear levels (_w0 clean, _w1 normal, _w2 heavy / abandoned), path JP\\common\\materials\\<family>\\ (PLAYBOOK §9). Finish per PLAYBOOK §15.3 T12: matte = fresnel(0.01,0.01) + black env; earth/plaster = fresnel(0.49,0.14) + black env; glossy only where noted (ceramic, lacquer: glazed analogue fresnel(1.42,0)). Interior faces never use exterior weathering (T6). Status \"existing\" rows need no work; they are listed so used_by is complete.",
+ "counts": {
+  "new_materials": 21,
+  "texture_sets": 63,
+  "existing_reused": 10
+ },
+ "materials": [
+  {
+   "id": "jp_m_floor_tatami",
+   "status": "new",
+   "family": "floor",
+   "palette_id": "tatami_aged",
+   "palette_status": "existing",
+   "note": "T2-3 only (no tatami in T1, PLAYBOOK §2.1). Mat = one texture (1.76-1.82 x 0.87-0.91 fills the room between post faces). Matte recipe (T12: fresnel 0.01, black env). Replaces straw_mushiro stand-in in the machiya",
+   "used_by": [
+    "jp_p_fit_floor"
+   ],
+   "tile_size_m": 1.82,
+   "px_per_m": 512,
+   "grain": "rush weave along the mat length; UV one texture per mat, turned with the mat",
+   "penetration_rvmat": "textile_carpet_int (roadway) / wood (fire)",
+   "wear": {
+    "_w0": "re-faced mat: paler, faint green (rare accent, 1 room in 10)",
+    "_w1": "aged gold-brown, worn lanes along paths",
+    "_w2": "stained, mildew blooms, frayed rush, one torn corner: the default for abandoned rooms"
+   }
+  },
+  {
+   "id": "jp_m_floor_tatami_heri",
+   "status": "new",
+   "family": "floor",
+   "palette_id": "tatami_heri",
+   "palette_status": "existing",
+   "note": "The 0.03 edge band (PLAYBOOK §4). Commoners: plain black or dark brown hemp/cotton (N02, N03); a _cha brown tint of the same set gives the second colour. Patterned korai-beri is later/elite (P3)",
+   "used_by": [
+    "jp_p_fit_floor"
+   ],
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "plain hemp weave along the edge",
+   "penetration_rvmat": "textile_carpet_int",
+   "wear": {
+    "_w0": "even black",
+    "_w1": "faded to dark grey-brown, frayed edge",
+    "_w2": "faded, torn, rush showing"
+   }
+  },
+  {
+   "id": "jp_m_floor_boards_int",
+   "status": "new",
+   "family": "floor",
+   "palette_id": "timber_interior",
+   "palette_status": "existing",
+   "note": "Itajiki of daidokoro, living, shop strips, corridors, engawa, storage. Surviving polished floors sample much darker (Kasuya: 42,25,20, i01); keep timber_interior and let _w1 darken",
+   "used_by": [
+    "jp_p_fit_floor",
+    "jp_p_fit_mise_floor",
+    "jp_p_fit_tokonoma"
+   ],
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "along the boards, 0.24-0.30 wide, random offsets",
+   "penetration_rvmat": "wood / wood_planks_int",
+   "wear": {
+    "_w0": "oiled, wiped sheen (matte recipe, sheen from the texture only)",
+    "_w1": "darker traffic lanes, scratches",
+    "_w2": "dusty grey film, water rings, raised grain"
+   }
+  },
+  {
+   "id": "jp_m_floor_boards_rough",
+   "status": "new",
+   "family": "floor",
+   "palette_id": "timber_interior",
+   "palette_status": "existing",
+   "note": "T1 houses, stables, sheds, toilets",
+   "used_by": [
+    "jp_p_fit_floor",
+    "jp_p_fit_setchin"
+   ],
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "adzed, wide uneven boards",
+   "penetration_rvmat": "wood / wood_planks_int",
+   "wear": {
+    "_w0": "fresh adze marks",
+    "_w1": "worn smooth in lanes",
+    "_w2": "split, dirt in the joints"
+   }
+  },
+  {
+   "id": "jp_m_floor_takeyuka",
+   "status": "new",
+   "family": "floor",
+   "palette_id": "bamboo_weathered",
+   "palette_status": "existing",
+   "note": "Bamboo-slat floor of the poorest huts (KEEP_DWELLINGS 1 floor option); covered with mushiro",
+   "used_by": [
+    "jp_p_fit_floor"
+   ],
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "split bamboo slats 0.03-0.04, lashed",
+   "penetration_rvmat": "wood / wood_planks_int",
+   "wear": {
+    "_w0": "pale slats",
+    "_w1": "grey-beige, darkened lanes",
+    "_w2": "split, a few slats missing"
+   }
+  },
+  {
+   "id": "jp_m_ground_doma_earth",
+   "status": "new",
+   "family": "ground",
+   "palette_id": "doma_earth",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "note": "T1 doma and all farm doma. Replaces wall_arakabe stand-in",
+   "used_by": [
+    "jp_p_fit_floor"
+   ],
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "packed earth, straw bits, uneven",
+   "penetration_rvmat": "dirt / dirt_int",
+   "wear": {
+    "_w0": "fresh swept",
+    "_w1": "trodden lanes, ash near the stove",
+    "_w2": "damp patches, leaf litter"
+   }
+  },
+  {
+   "id": "jp_m_ground_doma_tataki",
+   "status": "new",
+   "family": "ground",
+   "palette_id": "doma_earth",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "note": "T2-3 town doma and tori-niwa (tataki: earth + slaked lime + bittern, general in the Edo period in Mikawa and western Japan, N16)",
+   "used_by": [
+    "jp_p_fit_floor"
+   ],
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "hard lime-earth (tataki), faint trowel/tamp marks, fine gravel",
+   "penetration_rvmat": "dirt / dirt_int",
+   "wear": {
+    "_w0": "smooth, even",
+    "_w1": "mottled, darker lanes",
+    "_w2": "cracked, crumbled at the sill"
+   }
+  },
+  {
+   "id": "jp_m_ground_ash",
+   "status": "new",
+   "family": "ground",
+   "palette_id": "ash_grey",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "note": "Irori ash bed and hibachi ash",
+   "used_by": [
+    "jp_f_hibachi",
+    "jp_p_fit_irori"
+   ],
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "fine ash, raked lines",
+   "penetration_rvmat": "dirt / dirt_int",
+   "wear": {
+    "_w0": "raked",
+    "_w1": "charcoal bits, ember marks",
+    "_w2": "damp crust, fallen soot"
+   }
+  },
+  {
+   "id": "jp_m_wall_shikkui_int",
+   "status": "new",
+   "family": "wall",
+   "palette_id": "shikkui_white",
+   "palette_status": "existing",
+   "note": "OPEN_ISSUES/T6: the interior twin of shikkui; earth/plaster recipe fresnel(0.49,0.14), black env (T12)",
+   "used_by": [
+    "jp_p_fit_kamado"
+   ],
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "none; trowel",
+   "penetration_rvmat": "dirt",
+   "wear": {
+    "_w0": "clean lime, mean <=192",
+    "_w1": "faint smoke tint near the ceiling",
+    "_w2": "hairline cracks, damp stain at the base"
+   }
+  },
+  {
+   "id": "jp_m_ceil_boards",
+   "status": "new",
+   "family": "wood",
+   "palette_id": "timber_interior",
+   "palette_status": "existing",
+   "note": "Sao-buchi ceilings (jp_p_fit_ceiling)",
+   "used_by": [
+    "jp_p_fit_ceiling"
+   ],
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "wide sugi boards, straight grain, laps every 0.30-0.45",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "pale sugi",
+    "_w1": "smoke-darkened toward the walls",
+    "_w2": "water stains, one board missing (geometry)"
+   }
+  },
+  {
+   "id": "jp_m_wood_interior",
+   "status": "new",
+   "family": "wood",
+   "palette_id": "timber_interior",
+   "palette_status": "existing",
+   "note": "Interior joinery and ALL furniture bodies (tansu, desks, shelves, boxes, frames). Interior posts currently use wood_weathered: swap at the next machiya build",
+   "used_by": [
+    "jp_f_andon",
+    "jp_f_box",
+    "jp_f_butsudan",
+    "jp_f_byobu",
+    "jp_f_choba_goshi",
+    "jp_f_choba_set",
+    "jp_f_fallen_leaf",
+    "jp_f_hibachi",
+    "jp_f_iko",
+    "jp_f_jar",
+    "jp_f_kama",
+    "jp_f_misedana",
+    "jp_f_mizugame",
+    "jp_f_nagamochi",
+    "jp_f_oke",
+    "jp_f_rack",
+    "jp_f_tabakobon",
+    "jp_f_tableware",
+    "jp_f_tana",
+    "jp_f_tansu",
+    "jp_f_taru",
+    "jp_f_usu",
+    "jp_f_zukue",
+    "jp_p_fit_agarikamachi",
+    "jp_p_fit_ceiling",
+    "jp_p_fit_chigaidana",
+    "jp_p_fit_irori",
+    "jp_p_fit_kamidana",
+    "jp_p_fit_nagashi",
+    "jp_p_fit_oshiire",
+    "jp_p_fit_tokonoma"
+   ],
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "along member",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "clean planed wood",
+    "_w1": "hand-polished edges, grime at hand height",
+    "_w2": "dust film, scratches, pale edge wear"
+   }
+  },
+  {
+   "id": "jp_m_bamboo_sooted",
+   "status": "new",
+   "family": "bamboo",
+   "palette_id": "timber_sooted",
+   "palette_status": "existing",
+   "note": "Jizai-kagi tubes, sunoko ceilings over hearths",
+   "used_by": [
+    "jp_f_jizai_kagi",
+    "jp_p_fit_ceiling"
+   ],
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "culm with nodes",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "smoked brown",
+    "_w1": "glossy black-brown (susu-dake)",
+    "_w2": "crusted soot"
+   }
+  },
+  {
+   "id": "jp_m_paper_fusuma",
+   "status": "new",
+   "family": "paper",
+   "palette_id": "gofun_white",
+   "palette_status": "existing",
+   "note": "Commoner fusuma, screens and cupboard doors: PLAIN paper only (karakami barred for townsmen, T48). The fusuma leaf part is for PA1",
+   "used_by": [
+    "jp_f_byobu",
+    "jp_p_fit_chigaidana",
+    "jp_p_fit_oshiire"
+   ],
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "plain paper sheets, faint seams",
+   "penetration_rvmat": "fabric_thin",
+   "wear": {
+    "_w0": "plain warm paper",
+    "_w1": "yellowed, hand marks by the pulls",
+    "_w2": "torn, stained, patched"
+   }
+  },
+  {
+   "id": "jp_m_textile_cotton_indigo",
+   "status": "new",
+   "family": "textile",
+   "palette_id": "aizome_kon",
+   "palette_status": "existing",
+   "note": "Futon, yogi, zabuton, goods bolts, robes on racks",
+   "used_by": [
+    "jp_f_enza",
+    "jp_f_futon_laid",
+    "jp_f_futon_stack",
+    "jp_f_goods_general",
+    "jp_f_iko"
+   ],
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "cotton weave, faint stripe or kasuri variant",
+   "penetration_rvmat": "fabric_thin",
+   "wear": {
+    "_w0": "even indigo",
+    "_w1": "faded folds",
+    "_w2": "faded, mildew, torn seams"
+   }
+  },
+  {
+   "id": "jp_m_textile_cotton_plain",
+   "status": "new",
+   "family": "textile",
+   "palette_id": "kinari_cloth",
+   "palette_status": "existing",
+   "note": "Bedding linings, cloth wraps (furoshiki), kori lining",
+   "used_by": [
+    "jp_f_futon_laid",
+    "jp_f_futon_stack"
+   ],
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "coarse cotton/hemp weave",
+   "penetration_rvmat": "fabric_thin",
+   "wear": {
+    "_w0": "unbleached",
+    "_w1": "grey-yellow",
+    "_w2": "stained, mildew"
+   }
+  },
+  {
+   "id": "jp_m_ceramic_stoneware_dark",
+   "status": "new",
+   "family": "ceramic",
+   "palette_id": "stoneware_dark",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "note": "GLOSSY by design (T12): glazed-tile analogue fresnel(1.42,0). Water jars, storage jars, privy jar",
+   "used_by": [
+    "jp_f_jar",
+    "jp_f_mizugame",
+    "jp_p_fit_setchin"
+   ],
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "wheel lines, glaze drips",
+   "penetration_rvmat": "pottery",
+   "wear": {
+    "_w0": "glossy iron-brown glaze",
+    "_w1": "dust on the shoulders",
+    "_w2": "crazed, chipped, dry film"
+   }
+  },
+  {
+   "id": "jp_m_ceramic_stoneware_pale",
+   "status": "new",
+   "family": "ceramic",
+   "palette_id": "stoneware_pale",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "note": "GLOSSY (fresnel 1.42,0). Bowls, bottles, round hibachi, lamp dishes. Porcelain (blue-and-white) accents later if wanted",
+   "used_by": [
+    "jp_f_andon",
+    "jp_f_hibachi",
+    "jp_f_jar",
+    "jp_f_tabakobon",
+    "jp_f_tableware"
+   ],
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "wheel lines, ash glaze",
+   "penetration_rvmat": "pottery",
+   "wear": {
+    "_w0": "pale ash glaze",
+    "_w1": "dust",
+    "_w2": "crazed, chipped"
+   }
+  },
+  {
+   "id": "jp_m_lacquer_black",
+   "status": "new",
+   "family": "paint",
+   "palette_id": "sumi_black",
+   "palette_status": "existing",
+   "note": "GLOSSY: needs a vanilla analogue (glazed fresnel 1.42,0 proposed). Trays, clothes racks, butsudan, elite boxes. No gold (elite only, PLAYBOOK §8)",
+   "used_by": [
+    "jp_f_box",
+    "jp_f_butsudan",
+    "jp_f_iko",
+    "jp_f_tableware"
+   ],
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "none; brush marks",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "deep black gloss",
+    "_w1": "rubbed to red-brown at edges",
+    "_w2": "flaking, wood showing"
+   }
+  },
+  {
+   "id": "jp_m_straw_tawara",
+   "status": "new",
+   "family": "straw",
+   "palette_id": "thatch_new",
+   "palette_status": "existing",
+   "note": "Rice bales, straw bags, rope, firewood bindings",
+   "used_by": [
+    "jp_f_firewood",
+    "jp_f_kori",
+    "jp_f_manger",
+    "jp_f_taru",
+    "jp_f_tawara"
+   ],
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "bound straw bundles, rope bands",
+   "penetration_rvmat": "hay",
+   "wear": {
+    "_w0": "golden",
+    "_w1": "grey-gold",
+    "_w2": "dark, frayed, burst"
+   }
+  },
+  {
+   "id": "jp_m_bamboo_weave",
+   "status": "new",
+   "family": "bamboo",
+   "palette_id": "bamboo_weathered",
+   "palette_status": "existing",
+   "note": "Kori trunks, baskets, zaru",
+   "used_by": [
+    "jp_f_basket",
+    "jp_f_kori"
+   ],
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "woven strips (twill/hex)",
+   "penetration_rvmat": "wood",
+   "wear": {
+    "_w0": "pale",
+    "_w1": "grey-beige",
+    "_w2": "broken strips"
+   }
+  },
+  {
+   "id": "jp_m_decal_litter",
+   "status": "new",
+   "family": "ground",
+   "palette_id": "grime_splash",
+   "palette_status": "existing",
+   "note": "Alpha-tested decal like jp_m_wall_grime; mean colour check on the opaque pixels only",
+   "used_by": [
+    "jp_f_debris"
+   ],
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "alpha atlas: autumn leaves, straw, paper scraps, shards, dust patches",
+   "penetration_rvmat": "(no collision)",
+   "wear": {
+    "_w0": "light litter",
+    "_w1": "normal",
+    "_w2": "heavy"
+   }
+  },
+  {
+   "id": "jp_m_wall_nakanuri_int",
+   "status": "existing",
+   "family": "wall",
+   "palette_id": "earth_wall_aged",
+   "palette_status": "existing",
+   "note": "interior clay walls and clay kamado (T6)",
+   "used_by": [
+    "jp_p_fit_kamado",
+    "jp_p_fit_tokonoma"
+   ]
+  },
+  {
+   "id": "jp_m_wood_sooted",
+   "status": "existing",
+   "family": "wood",
+   "palette_id": "timber_sooted",
+   "palette_status": "existing",
+   "note": "hearth beams, under-floor boards, levers",
+   "used_by": [
+    "jp_f_jizai_kagi",
+    "jp_p_fit_agarikamachi",
+    "jp_p_fit_ceiling",
+    "jp_p_fit_floor",
+    "jp_p_fit_irori",
+    "jp_p_fit_kamado"
+   ]
+  },
+  {
+   "id": "jp_m_wood_weathered",
+   "status": "existing",
+   "family": "wood",
+   "palette_id": "timber_weathered",
+   "palette_status": "existing",
+   "note": "firewood, farm pegs and tools",
+   "used_by": [
+    "jp_f_firewood",
+    "jp_f_manger",
+    "jp_f_mino_pegs"
+   ]
+  },
+  {
+   "id": "jp_m_metal_iron",
+   "status": "existing",
+   "family": "metal",
+   "palette_id": "iron_black",
+   "palette_status": "existing",
+   "note": "pots, rims, fittings",
+   "used_by": [
+    "jp_f_choba_set",
+    "jp_f_hibachi",
+    "jp_f_jizai_kagi",
+    "jp_f_kama",
+    "jp_f_mino_pegs",
+    "jp_f_nagamochi",
+    "jp_f_tabakobon",
+    "jp_f_tansu",
+    "jp_p_fit_kamado"
+   ]
+  },
+  {
+   "id": "jp_m_stone_cut",
+   "status": "existing",
+   "family": "stone",
+   "palette_id": "stone_granite",
+   "palette_status": "existing",
+   "note": "kamado base, stone sink, mills",
+   "used_by": [
+    "jp_f_usu",
+    "jp_p_fit_kamado",
+    "jp_p_fit_nagashi"
+   ]
+  },
+  {
+   "id": "jp_m_stone_field",
+   "status": "existing",
+   "family": "stone",
+   "palette_id": "stone_granite",
+   "palette_status": "existing",
+   "note": "kutsunugi stones",
+   "used_by": [
+    "jp_p_fit_kutsunugi"
+   ]
+  },
+  {
+   "id": "jp_m_stone_river",
+   "status": "existing",
+   "family": "stone",
+   "palette_id": "stone_lantern",
+   "palette_status": "existing",
+   "note": "pickle-tub stones",
+   "used_by": [
+    "jp_f_oke"
+   ]
+  },
+  {
+   "id": "jp_m_paper_shoji",
+   "status": "existing",
+   "family": "paper",
+   "palette_id": "washi_shoji",
+   "palette_status": "existing",
+   "note": "andon paper, paper goods, charms",
+   "used_by": [
+    "jp_f_andon",
+    "jp_f_choba_set",
+    "jp_f_fallen_leaf",
+    "jp_f_goods_general",
+    "jp_p_fit_kamidana"
+   ]
+  },
+  {
+   "id": "jp_m_straw_mushiro",
+   "status": "existing",
+   "family": "straw",
+   "palette_id": "thatch_new",
+   "palette_status": "existing",
+   "note": "mushiro mats, enza, mino",
+   "used_by": [
+    "jp_f_enza",
+    "jp_f_goods_general",
+    "jp_f_mino_pegs",
+    "jp_f_mushiro"
+   ]
+  },
+  {
+   "id": "jp_m_bamboo_weathered",
+   "status": "existing",
+   "family": "bamboo",
+   "palette_id": "bamboo_weathered",
+   "palette_status": "existing",
+   "note": "tub hoops, drain spouts",
+   "used_by": [
+    "jp_f_oke",
+    "jp_p_fit_nagashi"
+   ]
+  }
+ ],
+ "requested_palette_entries": [
+  {
+   "id": "doma_earth",
+   "srgb": [
+    136,
+    133,
+    128
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "samples": [
+    {
+     "ref": "i02_kasuya_kamado",
+     "box": [
+      0.62,
+      0.72,
+      0.95,
+      0.95
+     ],
+     "select": "mid 70 % luminance",
+     "value": [
+      188,
+      181,
+      170
+     ]
+    },
+    {
+     "ref": "i06_tsunashima_doma",
+     "box": [
+      0.05,
+      0.72,
+      0.4,
+      0.95
+     ],
+     "select": "mid 70 % luminance",
+     "value": [
+      85,
+      85,
+      86
+     ]
+    }
+   ],
+   "check": "WIDE SPREAD: sunlit Kasuya doma [188, 181, 170] vs shaded Tsunashima doma [85, 85, 86]. Palette note says earth_road darkened 20-30 % = about (156,143,125); the photo mean is greyer. Re-sample from a third doma before B1 if Stephen wants",
+   "why": "Interior earth floors are grey-brown and darker than the road; the machiya uses the arakabe wall clay as a stand-in."
+  },
+  {
+   "id": "stoneware_pale",
+   "srgb": [
+    168,
+    149,
+    115
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "samples": [
+    {
+     "ref": "i50_met_tokkuri_stoneware",
+     "box": [
+      0.35,
+      0.4,
+      0.65,
+      0.7
+     ],
+     "select": "mid 70 % luminance",
+     "value": [
+      168,
+      149,
+      115
+     ]
+    }
+   ],
+   "check": "one museum object (studio light)",
+   "why": "Pale ash-glazed stoneware of 1700-1750 (The Met 666591) for bowls, bottles, braziers and lamp dishes."
+  },
+  {
+   "id": "stoneware_dark",
+   "srgb": [
+    74,
+    52,
+    38
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "samples": [],
+   "check": "needs a licensed photo of an Edo-period iron-glazed jar (Tamba / Seto kitchen ware)",
+   "why": "Iron-brown glazed storage and water jars; no licensed sample found in this pass."
+  },
+  {
+   "id": "ash_grey",
+   "srgb": [
+    150,
+    146,
+    140
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "samples": [],
+   "check": "sample the ash bed of i04 or i01 at the materials stage (small, lit by fire in i04)",
+   "why": "Irori ash beds and hibachi ash."
+  }
+ ]
+}

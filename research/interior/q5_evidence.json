@@ -1,0 +1,177 @@
+{
+ "houses": [
+  {
+   "file": "house_1w01.p3d",
+   "Res 1": 18,
+   "Res 2": 0,
+   "Geometry": 15,
+   "Memory": 0,
+   "Roadway": 0,
+   "ViewGeometry": 16,
+   "FireGeometry": 16,
+   "furniture_in_other_lods": []
+  },
+  {
+   "file": "house_1w09.p3d",
+   "Res 1": 19,
+   "Res 2": 0,
+   "Geometry": 19,
+   "Memory": 0,
+   "Roadway": 0,
+   "ViewGeometry": 12,
+   "FireGeometry": 19,
+   "furniture_in_other_lods": []
+  },
+  {
+   "file": "house_2w01.p3d",
+   "Res 1": 19,
+   "Res 2": 0,
+   "Geometry": 16,
+   "Memory": 0,
+   "Roadway": 0,
+   "ViewGeometry": 19,
+   "FireGeometry": 19,
+   "furniture_in_other_lods": []
+  },
+  {
+   "file": "house_1b01_pub.p3d",
+   "Res 1": 44,
+   "Res 2": 0,
+   "Geometry": 34,
+   "Memory": 0,
+   "Roadway": 0,
+   "ViewGeometry": 41,
+   "FireGeometry": 44,
+   "furniture_in_other_lods": []
+  },
+  {
+   "file": "village_pub.p3d",
+   "Res 1": 46,
+   "Res 2": 0,
+   "Geometry": 37,
+   "Memory": 0,
+   "Roadway": 0,
+   "ViewGeometry": 46,
+   "FireGeometry": 44,
+   "furniture_in_other_lods": []
+  }
+ ],
+ "loot_classes": [
+  {
+   "class": "Land_House_1W01",
+   "points": 18,
+   "raised": 11,
+   "raised_on_furniture": 6,
+   "floor": 7
+  },
+  {
+   "class": "Land_House_1W09",
+   "points": 23,
+   "raised": 13,
+   "raised_on_furniture": 10,
+   "floor": 10
+  },
+  {
+   "class": "Land_House_1W07",
+   "points": 40,
+   "raised": 28,
+   "raised_on_furniture": 25,
+   "floor": 12
+  },
+  {
+   "class": "Land_House_1W12_Brown",
+   "points": 31,
+   "raised": 20,
+   "raised_on_furniture": 17,
+   "floor": 11
+  }
+ ],
+ "loot_totals": {
+  "raised": 72,
+  "raised_on_furniture": 58,
+  "floor": 40,
+  "floor_in_footprint": 3,
+  "range_furniture": [
+   0.1,
+   0.546875
+  ],
+  "range_floor": [
+   0.1,
+   1.199951
+  ]
+ },
+ "surface_heights_by_furniture": {
+  "almara_open": [
+   0.15,
+   0.88
+  ],
+  "case_bedroom_b": [
+   1.16
+  ],
+  "case_d": [
+   0.1,
+   0.11,
+   0.46,
+   0.47,
+   0.48,
+   0.84,
+   0.85,
+   0.86,
+   1.23,
+   1.24
+  ],
+  "foldingbed_matress": [
+   0.61
+  ],
+  "fridge": [
+   1.4,
+   1.41
+  ],
+  "kicthen_desk_a": [
+   1.03
+  ],
+  "kitchen_chair_a": [
+   0.47
+  ],
+  "kitchen_table_a": [
+   0.7
+  ],
+  "kitchenstove_elec": [
+   0.85
+  ],
+  "lobby_table": [
+   0.46,
+   0.48
+  ],
+  "matress_white": [
+   0.6
+  ],
+  "postel_manz_kov": [
+   0.42,
+   0.43
+  ],
+  "postel_panelak1": [
+   0.33
+  ],
+  "skrin_bar": [
+   0.95,
+   1.43
+  ],
+  "stul_kuch1": [
+   0.84,
+   0.85
+  ],
+  "table_drawer": [
+   0.69
+  ],
+  "tv_a": [
+   1.01
+  ],
+  "washing_machine": [
+   1.15
+  ]
+ },
+ "furniture_p3d_lods": "case_d: Res1-2, Geometry, View, Fire; kitchen_table_a and postel_manz_kov: + Roadway; almara_open: Res1-3, Geometry, View, Fire; no Memory LOD; vanilla LOD0 faces 72-586 (q5_lods.py on P:/DZ/structures/furniture)",
+ "config": "P:/DZ/structures/furniture/config.cpp: every furniture p3d also has a class StaticObj_Furniture_<name> : HouseNoDestruct, scope 1",
+ "tools": "research/interior/tools/q5_scan.py, q5_lods.py, q5_loot.py; raw output data/research_int/q5_lods.json, q5_loot.json"
+}

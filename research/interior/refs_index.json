@@ -1,0 +1,560 @@
+{
+ "version": 1,
+ "category": "interior (dwellings, trades, shop sets)",
+ "date": "2026-09-29",
+ "note": "Images local only in data/research_int/refs/ (git-ignored, never shipped). Ids x.., E.. are in research/exterior/refs_index.json; c.., m.., T.. in playbook/refs_index.json. Text is cited, not copied.",
+ "download_policy": "PD / CC0 / CC BY only (never SA/NC/ND), licence re-checked through the Commons API and the Met API at download; User-Agent \"JapanDevResearch/1.0 (DayZ mod research)\", no personal information.",
+ "reused_ids": [
+  "c15_farmhouse_interior",
+  "c21_tatami",
+  "x33_jinrin_bookseller_1690"
+ ],
+ "images": [
+  {
+   "id": "i01_kasuya_irori",
+   "file": "data/research_int/refs/i01_kasuya_irori.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Former Kasuya Family House irori 2025-11-03.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Former_Kasuya_Family_House_irori_2025-11-03.jpg",
+   "licence": "CC0",
+   "author": "Asanagi",
+   "date": "2025-11-03 12:38:48",
+   "supports": "Former Kasuya house (Itabashi, Tokyo farmhouse): irori in a dark polished board floor, chest, kettle"
+  },
+  {
+   "id": "i02_kasuya_kamado",
+   "file": "data/research_int/refs/i02_kasuya_kamado.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Former Kasuya Family House kamado 2025-11-03.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Former_Kasuya_Family_House_kamado_2025-11-03.jpg",
+   "licence": "CC0",
+   "author": "Asanagi",
+   "date": "2025-11-03 12:33:59",
+   "supports": "Former Kasuya house: large clay kamado on the earth doma (doma colour sample, sunlit)"
+  },
+  {
+   "id": "i03_tenmyo_irori",
+   "file": "data/research_int/refs/i03_tenmyo_irori.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Farmhouse of Tenmyo Family 20130323-01.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Farmhouse_of_Tenmyo_Family_20130323-01.jpg",
+   "licence": "CC BY 2.0",
+   "author": "Kentaro Ohno",
+   "date": "2013-03-23",
+   "supports": "Tenmyo farmhouse (Edo-Tokyo Open Air Museum): irori, jizai-kagi, board and tatami rooms"
+  },
+  {
+   "id": "i04_tsunashima_irori",
+   "file": "data/research_int/refs/i04_tsunashima_irori.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Farmhouse of Tsunashima Family 20130323-03.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Farmhouse_of_Tsunashima_Family_20130323-03.jpg",
+   "licence": "CC BY 2.0",
+   "author": "Kentaro Ohno",
+   "date": "2013-03-23",
+   "supports": "Tsunashima farmhouse (Edo-Tokyo Open Air Museum): irori ash bed and frame, kettle, firewood"
+  },
+  {
+   "id": "i05_tsunashima_kamado",
+   "file": "data/research_int/refs/i05_tsunashima_kamado.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Farmhouse of Tsunashima Family 20130323-02.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Farmhouse_of_Tsunashima_Family_20130323-02.jpg",
+   "licence": "CC BY 2.0",
+   "author": "Kentaro Ohno",
+   "date": "2013-03-23",
+   "supports": "Tsunashima farmhouse: two rough clay kamado on stones, tubs"
+  },
+  {
+   "id": "i06_tsunashima_doma",
+   "file": "data/research_int/refs/i06_tsunashima_doma.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Farmhouse of Tsunashima Family 20130323-06.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Farmhouse_of_Tsunashima_Family_20130323-06.jpg",
+   "licence": "CC BY 2.0",
+   "author": "Kentaro Ohno",
+   "date": "2013-03-23",
+   "supports": "Tsunashima farmhouse: doma, kamado row, straw mat over a bench (doma colour sample, shade)"
+  },
+  {
+   "id": "i07_edo_nagaya_room",
+   "file": "data/research_int/refs/i07_edo_nagaya_room.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Japanese Edo Nagaya.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Japanese_Edo_Nagaya.jpg",
+   "licence": "CC BY 2.5",
+   "author": "DryPot",
+   "date": "2011-07-09",
+   "supports": "Fukagawa Edo Museum tenement reconstruction (Tenpo era): room dressing, chests, lamp, tubs"
+  },
+  {
+   "id": "i08_edo_nagaya_kitchen",
+   "file": "data/research_int/refs/i08_edo_nagaya_kitchen.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Edo Kamado.JPG",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Edo_Kamado.JPG",
+   "licence": "CC BY 2.5",
+   "author": "DryPot",
+   "date": "",
+   "supports": "Fukagawa Edo Museum tenement kitchen: stove, sink, water jar"
+  },
+  {
+   "id": "i09_edo_nagaya_hibachi",
+   "file": "data/research_int/refs/i09_edo_nagaya_hibachi.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Edo Hibachi.JPG",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Edo_Hibachi.JPG",
+   "licence": "CC BY 2.5",
+   "author": "DryPot",
+   "date": "",
+   "supports": "Fukagawa Edo Museum tenement room: kamidana, butsudan, box hibachi"
+  },
+  {
+   "id": "i10_hearth_boards",
+   "file": "data/research_int/refs/i10_hearth_boards.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Japanese Traditional Hearth L4817.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Japanese_Traditional_Hearth_L4817.jpg",
+   "licence": "Public domain",
+   "author": "No machine-readable author provided. Fg2 assumed (based on copyright claims).",
+   "date": "11 November 2005 (original upload date)",
+   "supports": "Irori frame in a board floor"
+  },
+  {
+   "id": "i11_kamado_plastered",
+   "file": "data/research_int/refs/i11_kamado_plastered.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Kamado-M1685.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Kamado-M1685.jpg",
+   "licence": "Public domain",
+   "author": "Fg2",
+   "date": "2006-01-07",
+   "supports": "White plastered kamado beside a raised floor"
+  },
+  {
+   "id": "i12_tsubaki_honjin",
+   "file": "data/research_int/refs/i12_tsubaki_honjin.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Koriyamajuku Tsubakihonjin in Ibaraki City Osaka04-r.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Koriyamajuku_Tsubakihonjin_in_Ibaraki_City_Osaka04-r.jpg",
+   "licence": "CC BY 2.5",
+   "author": "Oilstreet",
+   "date": "2011-03-10",
+   "supports": "Tsubaki honjin, Koriyama-juku (rebuilt 1718): formal tatami rooms"
+  },
+  {
+   "id": "i13_echigoya_1768",
+   "file": "data/research_int/refs/i13_echigoya_1768.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Interior in Mitsui Echigoya at Suruga-chō.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Interior_in_Mitsui_Echigoya_at_Suruga-ch%C5%8D.jpg",
+   "licence": "Public domain",
+   "author": "歌川豊春",
+   "date": "1768",
+   "supports": "Utagawa Toyoharu, 1768: interior of the Mitsui Echigoya shop, Suruga-cho (18 years past the window)"
+  },
+  {
+   "id": "i15_moronobu_1685_p5",
+   "file": "data/research_int/refs/i15_moronobu_1685_p5.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:『和国諸職絵尽 諸織 絵本鏡』-A Picture Book Mirror of Various Occupations (Wakoku shoshoku ezukushi) MET 2013 786 a c a 05.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:%E3%80%8E%E5%92%8C%E5%9B%BD%E8%AB%B8%E8%81%B7%E7%B5%B5%E5%B0%BD_%E8%AB%B8%E7%B9%94_%E7%B5%B5%E6%9C%AC%E9%8F%A1%E3%80%8F-A_Picture_Book_Mirror_of_Various_Occupations_(Wakoku_shoshoku_ezukushi)_MET_2013_786_a_c_a_05.jpg",
+   "licence": "CC0",
+   "author": "Hishikawa Moronobu",
+   "date": "1685date QS:P571,+1685-00-00T00:00:00Z/9",
+   "supports": "Hishikawa Moronobu, Wakoku shoshoku ezukushi (1685), The Met: roofer and a lattice shop front"
+  },
+  {
+   "id": "i16_moronobu_1685_p6",
+   "file": "data/research_int/refs/i16_moronobu_1685_p6.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:『和国諸職絵尽 諸織 絵本鏡』-A Picture Book Mirror of Various Occupations (Wakoku shoshoku ezukushi) MET 2013 786 a c a 06.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:%E3%80%8E%E5%92%8C%E5%9B%BD%E8%AB%B8%E8%81%B7%E7%B5%B5%E5%B0%BD_%E8%AB%B8%E7%B9%94_%E7%B5%B5%E6%9C%AC%E9%8F%A1%E3%80%8F-A_Picture_Book_Mirror_of_Various_Occupations_(Wakoku_shoshoku_ezukushi)_MET_2013_786_a_c_a_06.jpg",
+   "licence": "CC0",
+   "author": "Hishikawa Moronobu",
+   "date": "1685date QS:P571,+1685-00-00T00:00:00Z/9",
+   "supports": "Moronobu 1685: lacquerer with a spouted kettle; sword polisher with tubs and a box"
+  },
+  {
+   "id": "i17_moronobu_1685_p7",
+   "file": "data/research_int/refs/i17_moronobu_1685_p7.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:『和国諸職絵尽 諸織 絵本鏡』-A Picture Book Mirror of Various Occupations (Wakoku shoshoku ezukushi) MET 2013 786 a c a 07.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:%E3%80%8E%E5%92%8C%E5%9B%BD%E8%AB%B8%E8%81%B7%E7%B5%B5%E5%B0%BD_%E8%AB%B8%E7%B9%94_%E7%B5%B5%E6%9C%AC%E9%8F%A1%E3%80%8F-A_Picture_Book_Mirror_of_Various_Occupations_(Wakoku_shoshoku_ezukushi)_MET_2013_786_a_c_a_07.jpg",
+   "licence": "CC0",
+   "author": "Hishikawa Moronobu",
+   "date": "1685date QS:P571,+1685-00-00T00:00:00Z/9",
+   "supports": "Moronobu 1685: weaver at a loom on a board floor; dyer treading cloth in tubs"
+  },
+  {
+   "id": "i18_moronobu_1685_p9",
+   "file": "data/research_int/refs/i18_moronobu_1685_p9.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:『和国諸職絵尽 諸織 絵本鏡』-A Picture Book Mirror of Various Occupations (Wakoku shoshoku ezukushi) MET 2013 786 a c a 09.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:%E3%80%8E%E5%92%8C%E5%9B%BD%E8%AB%B8%E8%81%B7%E7%B5%B5%E5%B0%BD_%E8%AB%B8%E7%B9%94_%E7%B5%B5%E6%9C%AC%E9%8F%A1%E3%80%8F-A_Picture_Book_Mirror_of_Various_Occupations_(Wakoku_shoshoku_ezukushi)_MET_2013_786_a_c_a_09.jpg",
+   "licence": "CC0",
+   "author": "Hishikawa Moronobu",
+   "date": "1685date QS:P571,+1685-00-00T00:00:00Z/9",
+   "supports": "Moronobu 1685: woman at buckets and a large jar on a board floor; pole carrier with vessels"
+  },
+  {
+   "id": "i19_moronobu_tub",
+   "file": "data/research_int/refs/i19_moronobu_tub.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Hishikawa Buch.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Hishikawa_Buch.jpg",
+   "licence": "Public domain",
+   "author": "Hishikawa Moronobu",
+   "date": "before 1694date QS:P,+1694-00-00T00:00:0",
+   "supports": "Moronobu (before 1694): large shallow round tub"
+  },
+  {
+   "id": "i20_hachioji_kamado",
+   "file": "data/research_int/refs/i20_hachioji_kamado.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:House of Leader of Hachioji Guards 20120323-05.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:House_of_Leader_of_Hachioji_Guards_20120323-05.jpg",
+   "licence": "CC BY 2.0",
+   "author": "Kentaro Ohno",
+   "date": "2013-03-23",
+   "supports": "House of a Hachioji guard leader (Edo-Tokyo Open Air Museum): two-mouth kamado, iron pot, wooden lid"
+  },
+  {
+   "id": "i21_jizai_kettle",
+   "file": "data/research_int/refs/i21_jizai_kettle.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Hanging kettle in Japan.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Hanging_kettle_in_Japan.jpg",
+   "licence": "CC BY 2.0",
+   "author": "TANAKA Juuyoh (%u7530%u4E2D%u5341%u6D0B)",
+   "date": "2009-12-10 12:20",
+   "supports": "Boso-no-mura: kettle on a jizai-kagi over an irori"
+  },
+  {
+   "id": "i22_kamado_firewood",
+   "file": "data/research_int/refs/i22_kamado_firewood.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Kamado (26736484990).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Kamado_(26736484990).jpg",
+   "licence": "CC0",
+   "author": "aco pbc",
+   "date": "2016-05-14 09:57",
+   "supports": "Clay kamado with split firewood stacked beside it"
+  },
+  {
+   "id": "i23_kendan_tokonoma",
+   "file": "data/research_int/refs/i23_kendan_tokonoma.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Alcove of Kendan Yashiki.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Alcove_of_Kendan_Yashiki.jpg",
+   "licence": "CC BY 2.0",
+   "author": "TANAKA Juuyoh (田中十洋)",
+   "date": "2009-06-07 11:49:41",
+   "supports": "Kendan yashiki: tokonoma with toko-bashira and scroll"
+  },
+  {
+   "id": "i24_hida_farmhouse",
+   "file": "data/research_int/refs/i24_hida_farmhouse.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Hida Folk Village - HidaFolkVillage6453.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Hida_Folk_Village_-_HidaFolkVillage6453.jpg",
+   "licence": "CC0",
+   "author": "lumoplank",
+   "date": "2025-11-08",
+   "supports": "Hida Folk Village: farmhouse interior, raised board floor over the doma"
+  },
+  {
+   "id": "i30_morse_kitchen_farmhouse",
+   "file": "data/research_int/refs/i30_morse_kitchen_farmhouse.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 167 Kitchen in old farmhouse at Kabutoyama.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_167_Kitchen_in_old_farmhouse_at_Kabutoyama.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 167: kitchen in an old farmhouse, Kabutoyama"
+  },
+  {
+   "id": "i31_morse_kitchen_range",
+   "file": "data/research_int/refs/i31_morse_kitchen_range.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 168 Kitchen range.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_168_Kitchen_range.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 168: the usual kitchen range"
+  },
+  {
+   "id": "i32_morse_city_kitchen",
+   "file": "data/research_int/refs/i32_morse_city_kitchen.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 170 Kitchen in city house.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_170_Kitchen_in_city_house.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 170: kitchen in a city house, sink and racks"
+  },
+  {
+   "id": "i33_morse_jizai",
+   "file": "data/research_int/refs/i33_morse_jizai.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 173 Ji-zai.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_173_Ji-zai.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 173: ji-zai in a peasant hut"
+  },
+  {
+   "id": "i34_morse_fireplace_country",
+   "file": "data/research_int/refs/i34_morse_fireplace_country.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 174 Fireplace in country house.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_174_Fireplace_in_country_house.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 174: fireplace (irori) in a country house"
+  },
+  {
+   "id": "i35_morse_kitchen_closet",
+   "file": "data/research_int/refs/i35_morse_kitchen_closet.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 177 Kitchen closet, drawers, cupboard, and stairs combined.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_177_Kitchen_closet,_drawers,_cupboard,_and_stairs_combined.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 177: kitchen closet, drawers, cupboard and stairs combined"
+  },
+  {
+   "id": "i36_morse_hibachi",
+   "file": "data/research_int/refs/i36_morse_hibachi.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 197 Common hibachi.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_197_Common_hibachi.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 197: common hibachi"
+  },
+  {
+   "id": "i37_morse_hibachi_wood",
+   "file": "data/research_int/refs/i37_morse_hibachi_wood.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 198 Hibachi.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_198_Hibachi.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 198: wooden hibachi"
+  },
+  {
+   "id": "i38_morse_tabakobon",
+   "file": "data/research_int/refs/i38_morse_tabakobon.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 201 Tabako-bon.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_201_Tabako-bon.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 201: tabako-bon"
+  },
+  {
+   "id": "i39_morse_andon",
+   "file": "data/research_int/refs/i39_morse_andon.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 206 Lamp.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_206_Lamp.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 206: andon lamp"
+  },
+  {
+   "id": "i40_morse_andon2",
+   "file": "data/research_int/refs/i40_morse_andon2.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 207 Lamp.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_207_Lamp.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 207: andon lamp"
+  },
+  {
+   "id": "i41_morse_ceiling",
+   "file": "data/research_int/refs/i41_morse_ceiling.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes019 SECTION OF CEILING.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes019_SECTION_OF_CEILING.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 19: section of an ordinary ceiling"
+  },
+  {
+   "id": "i42_morse_guestroom_hachiishi",
+   "file": "data/research_int/refs/i42_morse_guestroom_hachiishi.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes096 GUEST-ROOM AT HACHI-ISHI.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes096_GUEST-ROOM_AT_HACHI-ISHI.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 96: inn guest room at Hachi-ishi"
+  },
+  {
+   "id": "i43_morse_guestroom",
+   "file": "data/research_int/refs/i43_morse_guestroom.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes119 GUEST-ROOM.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes119_GUEST-ROOM.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 119: guest room with tokonoma and shelves"
+  },
+  {
+   "id": "i44_morse_country_guestroom",
+   "file": "data/research_int/refs/i44_morse_country_guestroom.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes128 GUEST-ROOM OF A COUNTRY HOUSE.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes128_GUEST-ROOM_OF_A_COUNTRY_HOUSE.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 128: guest room of a country house"
+  },
+  {
+   "id": "i50_met_tokkuri_stoneware",
+   "file": "data/research_int/refs/i50_met_tokkuri_stoneware.jpg",
+   "source": "The Met Open Access",
+   "title": "Sake bottle (Tokkuri)",
+   "page_url": "https://www.metmuseum.org/art/collection/search/666591",
+   "licence": "CC0 (Met Open Access, public domain)",
+   "author": "Japan",
+   "date": "ca. 1700–1750",
+   "medium": "Stoneware with stylized flower and plum design (Ko-Kiyomizu ware)",
+   "dimensions": "H. 6 in. (15.2 cm); W. 5 in. (12.7 cm)",
+   "supports": "The Met 666591: stoneware sake bottle, ca. 1700-1750 (palette sample stoneware_pale)"
+  },
+  {
+   "id": "i51_met_tokkuri_porcelain",
+   "file": "data/research_int/refs/i51_met_tokkuri_porcelain.jpg",
+   "source": "The Met Open Access",
+   "title": "Sake Bottle (Tokkuri) with Flowers and Grasses",
+   "page_url": "https://www.metmuseum.org/art/collection/search/50328",
+   "licence": "CC0 (Met Open Access, public domain)",
+   "author": "Japan",
+   "date": "early 18th century",
+   "medium": "Porcelain with cobalt blue under transparent glaze (Hizen ware, Arita type)",
+   "dimensions": "H. 6 3/8 in. (16.1 cm); Diam. 3 1/2 in. (8.9 cm); Diam. of rim 2 1/8 in. (5.4 cm); Diam. of foot 1 1/2 in. (3.8 cm)",
+   "supports": "The Met 50328: porcelain sake bottle, early 18th c."
+  }
+ ],
+ "text": [
+  {
+   "id": "N01",
+   "url": "https://ja.wikipedia.org/wiki/畳",
+   "supports": "Tatami spread among commoners in the mid-Edo period, rural areas later; Kyoma 1.91x0.955, Chukyoma 1.82x0.91, Edoma/Inakama 1.76x0.88; column-centre (east) vs tatami-apportioned (west) planning"
+  },
+  {
+   "id": "N02",
+   "url": "https://ja.wikipedia.org/wiki/畳縁",
+   "supports": "Heri status ladder: ungen-beri (emperor, deities), dai-mon / sho-mon korai-beri (princes, ministers, court nobles); rules loosened over time; edges of narrow dyed hemp cloth"
+  },
+  {
+   "id": "N03",
+   "url": "https://sawahata-tatami.jp/?p=3502",
+   "supports": "Tatami-maker histories (low-grade web source, via search summary): commoner heri plain black or tea-brown hemp/cotton; tatami craftsmen established and townspeople using tatami mid-to-late Edo"
+  },
+  {
+   "id": "N04",
+   "url": "https://kotobank.jp/word/%E5%BA%8A%E3%81%AE%E9%96%93-105027",
+   "supports": "Tokonoma: commoners forbidden in the Edo period; from the mid-18th c. many houses installed one in the sitting room; upper farmers and townsmen had them, general only after Meiji; about 1 ken wide, ~3 shaku deep (World Encyclopedia; Yamakawa dictionary)"
+  },
+  {
+   "id": "N05",
+   "url": "https://ja.wikipedia.org/wiki/床の間",
+   "supports": "Tokonoma built in headman (shoya) houses to receive lords and intendants; general in urban guest rooms after Meiji"
+  },
+  {
+   "id": "N06",
+   "url": "https://ja.wikipedia.org/wiki/箪笥",
+   "supports": "Tansu appear in Osaka in the Kanbun era (1661-73), spread from the Shotoku era (1711-16); costly, reaching poor commoners only in late Edo; clothes kept in kori, nagamochi and chests before (via search summary)"
+  },
+  {
+   "id": "N07",
+   "url": "https://crd.ndl.go.jp/GENERAL/servlet/detail.reference?id=1000106499",
+   "supports": "NDL reference record: zabuton developed from the shitone and spread gradually in the Edo period; common among ordinary people from Meiji (Nipponica, Heibonsha)"
+  },
+  {
+   "id": "N08",
+   "url": "https://www.arc.ritsumei.ac.jp/artwiki/index.php/%E6%B1%9F%E6%88%B8%E6%99%82%E4%BB%A3%E3%81%AE%E5%AF%9D%E5%85%B7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+   "supports": "Edo bedding (via search summary): straw bundles for commoners early in the period; yogi (sleeved quilt) and futon; Kamigata used quilts from Genroku, Edo kept the yogi; cotton costly"
+  },
+  {
+   "id": "N09",
+   "url": "https://ja.wikipedia.org/wiki/押入れ",
+   "supports": "Oshiire enter house plans mid-to-late Edo and become general after Meiji; bedding was stored in the nando before (via search summary)"
+  },
+  {
+   "id": "N10",
+   "url": "https://cleanup.jp/life/edo/06.shtml",
+   "supports": "Edo tenement kitchen (Tenpo-era reconstruction): ~2 m wide doma kitchen, standing and squatting stoves, shallow sink without a drain hole, water jar and ladle"
+  },
+  {
+   "id": "N11",
+   "url": "https://kotobank.jp/word/%E7%AB%88-466236",
+   "supports": "Kamado / kudo / hettsui: clay stoves built by plasterers; Edo stoves with the fire mouth to the room and the back to the outer wall; two-mouth stoves in tenements (with s-kent.jp column, via search summary)"
+  },
+  {
+   "id": "N12",
+   "url": "https://ja.wikipedia.org/wiki/囲炉裏",
+   "supports": "Irori: square pit in the floor filled with ash; robuchi frame; jizai-kagi with a (fish-shaped) yokogi; hidana drying rack; seating order (yokoza)"
+  },
+  {
+   "id": "N13",
+   "url": "https://ja.wikipedia.org/wiki/行灯",
+   "supports": "Andon: spread in the Edo period; paper on a wood/bamboo frame; oil dish, rush or cotton wick; types oki, ariake, enshu, kake, tsuji"
+  },
+  {
+   "id": "N14",
+   "url": "https://ja.wikipedia.org/wiki/神棚",
+   "supports": "Kamidana: devised and spread by the Ise oshi; by mid-Edo most households kept one; ~90 % of households received Ise charms by late Edo (via search summary)"
+  },
+  {
+   "id": "N15",
+   "url": "https://ja.wikipedia.org/wiki/鉄瓶",
+   "supports": "Tetsubin: the name first recorded 1816, derived from the tea kettle around the Tenpo era; spouted yakan since the Kamakura era (via search summary)"
+  },
+  {
+   "id": "N16",
+   "url": "https://ja.wikipedia.org/wiki/三和土",
+   "supports": "Tataki: earth with slaked lime and bittern, tamped; generalized as the doma floor in the Edo period in Mikawa and western Japan (via search summary)"
+  },
+  {
+   "id": "N17",
+   "url": "https://suumo.jp/yougo/s/saobuchitenjou/",
+   "supports": "Sao-buchi ceiling: boards on parallel battens; ceilings were first for high-status buildings, later in houses (via search summary)"
+  },
+  {
+   "id": "N18",
+   "url": "https://www.city.adachi.tokyo.jp/hakubutsukan/chiikibunka/hakubutsukan/shiryo-shoka.html",
+   "supports": "Adachi city museum, merchant-house tools: shop = doma + choba; choba-goshi a foldable low lattice; choba desk, account books, abacus, coin tally (zeni-masu), locked coin box"
+  },
+  {
+   "id": "N19",
+   "url": "https://ja.wikipedia.org/wiki/長持",
+   "supports": "Nagamochi: about 1.74 m long, 0.75 wide and high, carried on a pole by two; spread from samurai to commoners as cotton bedding grew (via search summary)"
+  },
+  {
+   "id": "N20",
+   "url": "research/buildings/BUILDING_LIST.md",
+   "supports": "This project: §3 room lists per building type and §5 shared-core-kit counts (682 entries)"
+  }
+ ]
+}

@@ -1,0 +1,6501 @@
+{
+ "category": "interiors-dwellings-trades",
+ "version": 1,
+ "author": "research agent PA2",
+ "date": "2026-09-29",
+ "stage": "D",
+ "scope_note": "Interiors of the KEEP shells (dwellings, trade shells and townhouse shop sets; civic shells counted where they share rooms): room-by-tier contents, interior materials, built-in fittings (jp_p_fit_*, merged into shells like kit parts) and the interior core props (jp_f_*, proxies). Trade-specific props (brewery, smithy, kilns, looms) are built with their shells (PRODUCTION_PLAN). Loot tiers ignored. Extra keys per entry: structural (fittings), loot_surface, abandoned_state, wave, pilot, blocks_path, reach.",
+ "entries": [
+  {
+   "id": "jp_p_fit_floor",
+   "name": "Room floor recipes: tatami room, board floor, bamboo-slat floor, doma (promoted from the machiya build)",
+   "what": "The floor of every room by its tag and tier: tatami (T2 best room, T3 living rooms), boards (daidokoro, storage, T1 living), split bamboo (poorest huts), earth doma. The machiya code already has tatami_room / board_floor / doma_floor; they move into the kit and get the real materials.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "daidokoro",
+    "living",
+    "zashiki",
+    "sleeping",
+    "shop",
+    "office",
+    "workshop",
+    "storage",
+    "stable",
+    "engawa",
+    "corridor",
+    "guard",
+    "toilet"
+   ],
+   "period_evidence": "Tatami reach townspeople by the end of the 17th c. [T01], widespread among commoners mid-Edo, rural later [N01]; no tatami in T1 [T58, PLAYBOOK §2.1]; tataki doma general in the Edo period [N16]; surviving floors [i01, i03, i24]",
+   "refs": [
+    {
+     "id": "c21_tatami",
+     "shows": "tatami facing weave and heri edge",
+     "period_image": false
+    },
+    {
+     "id": "i03_tenmyo_irori",
+     "shows": "board room beside a tatami room (farmhouse)",
+     "period_image": true
+    },
+    {
+     "id": "i01_kasuya_irori",
+     "shows": "dark polished board floor",
+     "period_image": true
+    },
+    {
+     "id": "i06_tsunashima_doma",
+     "shows": "earth doma (colour sample)",
+     "period_image": true
+    },
+    {
+     "id": "i02_kasuya_kamado",
+     "shows": "earth doma, sunlit (colour sample)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "tatami_m": {
+     "value": "fills the room between post faces: about 1.78 x 0.87 on the 1.82 grid (Inakama); 0.055 thick; heri 0.03",
+     "source": "PLAYBOOK §3-4 [T01, N01]; machiya build"
+    },
+    "layout": {
+     "value": "shugi (no four corners meet); half mat in the centre of 4.5-mat rooms",
+     "source": "PLAYBOOK §3 (convention)"
+    },
+    "boards_m": {
+     "value": "0.20-0.30 wide, 0.03 thick top boards on a 0.15 base",
+     "source": "machiya build"
+    },
+    "levels_m": {
+     "value": "doma = grade + 0.05; raised floors +0.45 over the doma; storage boards +0.03",
+     "source": "PLAYBOOK §4; machiya build"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tatami facing",
+     "material": "jp_m_floor_tatami",
+     "palette_id": "tatami_aged"
+    },
+    {
+     "surface": "heri",
+     "material": "jp_m_floor_tatami_heri",
+     "palette_id": "tatami_heri"
+    },
+    {
+     "surface": "boards",
+     "material": "jp_m_floor_boards_int",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "rough boards (T1, stable, shed)",
+     "material": "jp_m_floor_boards_rough",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "bamboo slats (T1)",
+     "material": "jp_m_floor_takeyuka",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "doma T1 / farm",
+     "material": "jp_m_ground_doma_earth",
+     "palette_id": "doma_earth"
+    },
+    {
+     "surface": "doma T2-3 (tataki)",
+     "material": "jp_m_ground_doma_tataki",
+     "palette_id": "doma_earth"
+    },
+    {
+     "surface": "under-floor",
+     "material": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted"
+    }
+   ],
+   "connectors": [
+    "floor: one recipe per room rect from rooms.json (tag, floor, level)",
+    "roadway: textile_carpet_int (tatami), wood_planks_int (boards), dirt_int (doma) (PLAYBOOK §9)"
+   ],
+   "variants": [
+    {
+     "id": "_tatami",
+     "differs_by": "tatami room (shugi solver)",
+     "tier": 2
+    },
+    {
+     "id": "_boards",
+     "differs_by": "board floor"
+    },
+    {
+     "id": "_rough",
+     "differs_by": "rough adzed boards",
+     "tier": 1
+    },
+    {
+     "id": "_takeyuka",
+     "differs_by": "bamboo slats under mats",
+     "tier": 1
+    },
+    {
+     "id": "_doma",
+     "differs_by": "earth / tataki"
+    },
+    {
+     "id": "_tatami_lifted",
+     "differs_by": "one or two mats lifted or missing, base boards showing (abandoned; a 0.055 step)",
+     "tier": 3
+    }
+   ],
+   "structural": "NONE (recipes over the room rect); the machiya needs a rebuild to swap its stand-in materials",
+   "loot_surface": "the floor itself: lootFloor points on the Roadway minus prop footprints + 0.4 m",
+   "abandoned_state": "_w2 mats in one room in three, dust lanes, a lifted mat; doma with leaf litter at the doors",
+   "deviations": [
+    "D10: tatami are a floor mesh with a mat layout, loot on the floor"
+   ],
+   "lod_budget": "part of the building budget (machiya: mats modelled per mat in LOD0, one slab in LOD2-3)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 45,
+    "rooms": 172,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D25",
+     "D26",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C1",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_irori",
+   "name": "Sunken hearth (irori) with frame (robuchi), ash bed and hook beam",
+   "what": "The square hearth cut into the board floor of the daidokoro / hiroma: wooden frame, ash bed, and a beam or hook point overhead for the jizai-kagi.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "daidokoro",
+    "living",
+    "guard"
+   ],
+   "period_evidence": "Kitamura house 1687 hiroma with irori [BL §3, E01]; irori with jizai-kagi and fish-shaped yokogi, hidana rack [N12]; surviving farmhouse hearths [i01, i03, i04, i10]",
+   "refs": [
+    {
+     "id": "i03_tenmyo_irori",
+     "shows": "irori in a board room, jizai-kagi from the beam, tatami room behind (Edo-Tokyo museum farmhouse)",
+     "period_image": true
+    },
+    {
+     "id": "i04_tsunashima_irori",
+     "shows": "ash bed, wood frame, kettle on the hook, firewood (Tsunashima farmhouse)",
+     "period_image": true
+    },
+    {
+     "id": "i01_kasuya_irori",
+     "shows": "irori flush in a dark polished board floor, kettle on a hook (Kasuya house, Itabashi)",
+     "period_image": true
+    },
+    {
+     "id": "i10_hearth_boards",
+     "shows": "frame and ash bed in a board floor",
+     "period_image": false
+    },
+    {
+     "id": "i33_morse_jizai",
+     "shows": "Morse 1885: simple peasant ji-zai",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "pit_m": {
+     "value": "0.91 x 0.91 (half-ken square, small houses) or 0.91 x 1.365 / 1.82 (farmhouses, headman)",
+     "assumed": true,
+     "reason": "common museum sizes; snaps to the half-ken grid (rule 9); no period source read"
+    },
+    "frame_m": {
+     "value": "robuchi 0.09 wide x 0.09 deep, top flush with the floor",
+     "assumed": true,
+     "reason": "typical; hardwood"
+    },
+    "ash_bed_m": {
+     "value": "0.12 below the floor (walkable step, Roadway on the ash)",
+     "assumed": true,
+     "reason": "reason: a player who steps in must not fall or stick"
+    },
+    "hook_point_m": {
+     "value": "beam or hook batten 2.30-2.60 above the floor, over the pit centre",
+     "assumed": true,
+     "reason": "reason: carries jp_f_jizai_kagi; clears D2 head room at the pit edge"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "ash bed",
+     "material": "jp_m_ground_ash",
+     "palette_id": "ash_grey"
+    },
+    {
+     "surface": "hook beam, soot above",
+     "material": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted"
+    }
+   ],
+   "connectors": [
+    "floor: cut into a raised board floor (not tatami); the floor recipe leaves the opening and a Roadway at -0.12",
+    "post: centred between grid lines; the hook beam spans post to post"
+   ],
+   "variants": [
+    {
+     "id": "_s",
+     "differs_by": "0.91 square (huts, tenement-size rooms, guard huts)",
+     "tier": 1
+    },
+    {
+     "id": "_l",
+     "differs_by": "0.91 x 1.365 (farmhouse hiroma)",
+     "tier": 2
+    },
+    {
+     "id": "_hidana",
+     "differs_by": "adds a slatted smoke/drying rack (hidana) hung above, sooted",
+     "tier": 1
+    }
+   ],
+   "structural": "FLOOR OPENING in the raised board floor + a hook beam overhead (and a smoke outlet in the roof: exterior jp_p_roof_kemuridashi)",
+   "loot_surface": "none on the frame; the ash bed is a floor point (range <=0.3)",
+   "abandoned_state": "cold grey ash, a few charred sticks, the pot hook empty or with a rusted pot; soot on everything above",
+   "deviations": [
+    "Ash bed walkable at -0.12 (reason)"
+   ],
+   "lod_budget": "part of the building budget: <=200 faces",
+   "banned_tells_to_watch": [
+    "brick or cut-stone hearth (modern)",
+    "a chimney"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 33,
+    "rooms": 47,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T11",
+     "T13",
+     "T14",
+     "T23",
+     "C1",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_kamado",
+   "name": "Clay cooking stove (kamado / kudo / hettsui), promoted from the machiya build",
+   "what": "The built-in clay stove on the doma: one mouth in tenements, two or three in farmhouses and townhouses, a long plastered row in inns and headman kitchens.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma"
+   ],
+   "period_evidence": "Kamado built by plasterers; Edo stoves face the room with their back to the outer wall; tenements use a two-mouth stove [N11]; nagaya kitchen reconstruction [N10, i08]; farmhouse stoves [i02, i05, i20]; the machiya already has one [machiya_t3_01 REPORT §2]",
+   "refs": [
+    {
+     "id": "i05_tsunashima_kamado",
+     "shows": "two rough clay kamado on stones in a farmhouse doma",
+     "period_image": true
+    },
+    {
+     "id": "i02_kasuya_kamado",
+     "shows": "large round clay kamado with an iron rim on the doma (Kasuya house)",
+     "period_image": true
+    },
+    {
+     "id": "i20_hachioji_kamado",
+     "shows": "two-mouth kamado with iron pot and wooden lid (samurai guard leader house)",
+     "period_image": true
+    },
+    {
+     "id": "i11_kamado_plastered",
+     "shows": "white plastered kamado by the raised floor",
+     "period_image": false
+    },
+    {
+     "id": "i08_edo_nagaya_kitchen",
+     "shows": "tenement kitchen: stove, sink, water jar (c.1840 reconstruction)",
+     "period_image": false
+    },
+    {
+     "id": "i31_morse_kitchen_range",
+     "shows": "Morse 1885: the usual kitchen range",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "height_m": {
+     "value": "0.60-0.75 top (machiya build: 0.72)",
+     "source": "machiya_t3_01 build; i05, i20"
+    },
+    "mouth_m": {
+     "value": "pot rim d 0.30-0.45 per mouth; fire mouth 0.30 x 0.26",
+     "source": "machiya_t3_01 build (0.44 rims)"
+    },
+    "footprint_m": {
+     "value": "1 mouth 0.60 x 0.60; 2 mouths 0.70 x 1.30; row of 3-5 at 0.75 per mouth",
+     "assumed": true,
+     "reason": "from the photos; snapped to 0.05"
+    },
+    "clearance_m": {
+     "value": ">=1.00 walkable doma beside it (tori-niwa rule)",
+     "source": "PLAYBOOK §4"
+    }
+   },
+   "materials": [
+    {
+     "surface": "clay body (T1-2)",
+     "material": "jp_m_wall_nakanuri_int",
+     "palette_id": "earth_wall_aged"
+    },
+    {
+     "surface": "plastered body (T3, Kamigata okudo)",
+     "material": "jp_m_wall_shikkui_int",
+     "palette_id": "shikkui_white"
+    },
+    {
+     "surface": "base course",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "rims",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    },
+    {
+     "surface": "soot boards behind",
+     "material": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted"
+    }
+   ],
+   "connectors": [
+    "floor: stands on the doma at doma level",
+    "wall: back against an outer wall or the lean-to wall; soot boards and smoke vent above"
+   ],
+   "variants": [
+    {
+     "id": "_1",
+     "differs_by": "one mouth (tenement, hut)",
+     "tier": 1
+    },
+    {
+     "id": "_2",
+     "differs_by": "two mouths (townhouse, farmhouse; the machiya one)",
+     "tier": 2
+    },
+    {
+     "id": "_row",
+     "differs_by": "plastered row of 3-5 mouths (inn, headman, kuri)",
+     "tier": 3
+    }
+   ],
+   "structural": "NONE in the walls; needs the smoke outlet in the roof and sooted material above (already done on the machiya)",
+   "loot_surface": "top between the rims (0.72): 1 small point (range 0.15) per 2 mouths",
+   "abandoned_state": "cold; one wooden lid fallen, ash spill at the fire mouth, cracked clay face, soot",
+   "deviations": [],
+   "lod_budget": "part of the building budget: <=400 faces (machiya: already inside its 12k)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 32,
+    "rooms": 32,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D21",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T13",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_agarikamachi",
+   "name": "Raised-floor edge beam (agari-kamachi) and under-floor boards (yukashita)",
+   "what": "The polished beam that finishes the raised floor where it meets the doma, with the boards closing the void underneath: the step you sit on to take off your sandals.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "shop",
+    "daidokoro",
+    "living"
+   ],
+   "period_evidence": "Raised living floor ~0.45-0.5 m above the doma [T17]; step (agari-kamachi) at every inn and house entrance [BL §3 hatago]; machiya build [machiya_t3_01: kamachi_lip + yukashita_boards]",
+   "refs": [
+    {
+     "id": "i24_hida_farmhouse",
+     "shows": "raised board floor edge over an earth doma (Hida farmhouse)",
+     "period_image": true
+    },
+    {
+     "id": "i03_tenmyo_irori",
+     "shows": "board floor edge",
+     "period_image": false
+    },
+    {
+     "id": "i42_morse_guestroom_hachiishi",
+     "shows": "Morse 1885: inn room edges",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "beam_m": {
+     "value": "0.12 wide x 0.15 deep, top = finished floor (+0.45 over the doma)",
+     "assumed": true,
+     "reason": "section like a sill (dodai 0.12); PLAYBOOK §4 floor"
+    },
+    "rise_m": {
+     "value": "0.45 (with the hidden ramp under the kutsunugi stone)",
+     "source": "PLAYBOOK §4"
+    }
+   },
+   "materials": [
+    {
+     "surface": "beam (polished)",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "under-floor boards",
+     "material": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted"
+    }
+   ],
+   "connectors": [
+    "floor: the raised floor recipe emits it on every edge that faces a doma",
+    "post: runs post to post"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "plain beam"
+    },
+    {
+     "id": "_shikidai",
+     "differs_by": "wide board step (shikidai) in front: honjin and samurai only (PLAYBOOK §2.2)",
+     "tier": 3
+    }
+   ],
+   "structural": "NONE: part of the raised-floor recipe (promote the machiya kamachi_lip + yukashita_boards into the kit)",
+   "loot_surface": "the beam top is a sit-edge: 1 small point per 1.8 m (range 0.15) on shop and inn entrances",
+   "abandoned_state": "dust band on the beam, scuffed centre, a sandal or two left on the doma below",
+   "deviations": [
+    "D-none"
+   ],
+   "lod_budget": "part of the floor recipe",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 36,
+    "rooms": 81,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_kutsunugi",
+   "name": "Shoe-removal stone (kutsunugi-ishi) with the hidden ramp",
+   "what": "The flat stepping stone in front of every raised floor edge; in our kit it hides the 0.45 walk ramp. Already built as jp_p_found_step_natural.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "engawa"
+   ],
+   "period_evidence": "Standard at raised-floor entrances [T17]; built and walked in game [machiya_t3_01 REPORT_FIX2, G3 passed]",
+   "refs": [
+    {
+     "id": "i24_hida_farmhouse",
+     "shows": "stone at the raised floor edge",
+     "period_image": false
+    },
+    {
+     "id": "c15_farmhouse_interior",
+     "shows": "farmhouse interior, board floor over earth",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "stone_m": {
+     "value": "0.9-1.0 x 0.45-0.55, top 0.15-0.20 above the doma",
+     "source": "machiya build (width 1.04)"
+    },
+    "ramp_deg": {
+     "value": "<=34 under the stone",
+     "source": "machiya build"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "floor: in front of each door or open edge between a doma and a raised floor"
+   ],
+   "variants": [
+    {
+     "id": "_natural",
+     "differs_by": "field stone (exists)"
+    },
+    {
+     "id": "_cut",
+     "differs_by": "dressed stone (T3, samurai)",
+     "tier": 3
+    }
+   ],
+   "structural": "NONE (exists: reuse)",
+   "loot_surface": "none (keep it clear: it is the walking path)",
+   "abandoned_state": "a pair of worn straw sandals left on it, dust",
+   "deviations": [],
+   "lod_budget": "exists",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 33,
+    "rooms": 39,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T13",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_nagashi",
+   "name": "Kitchen sink (nagashi / hashiri): wooden trough, stone in T3",
+   "what": "A shallow sink on the doma beside the water jar: a wooden trough on legs in town houses, a low sink at the floor edge in farmhouses, a cut stone sink in rich houses; drains through the wall.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma"
+   ],
+   "period_evidence": "Nagaya kitchen: shallow sink, water drawn by ladle from the water jar [N10, i08]; sink board in every home kitchen [BL §5.1]; city kitchen with sink and shelves [i32]",
+   "refs": [
+    {
+     "id": "i08_edo_nagaya_kitchen",
+     "shows": "sink, water jar and stove in a tenement kitchen (c.1840 reconstruction)",
+     "period_image": false
+    },
+    {
+     "id": "i32_morse_city_kitchen",
+     "shows": "Morse 1885: city kitchen with sink and racks",
+     "period_image": false
+    },
+    {
+     "id": "i30_morse_kitchen_farmhouse",
+     "shows": "Morse 1885: old farmhouse kitchen, Kabutoyama",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "trough_m": {
+     "value": "0.90-1.20 x 0.45, 0.08 deep",
+     "assumed": true,
+     "reason": "from the reconstruction photo; N10 says shallow"
+    },
+    "top_m": {
+     "value": "standing type 0.75 above the doma; floor type = the raised floor edge",
+     "assumed": true,
+     "reason": "reason: standing height for the doma kitchens we build"
+    },
+    "drain_m": {
+     "value": "bamboo or wooden spout 0.05 through the wall at sill level",
+     "assumed": true,
+     "reason": "form only"
+    }
+   },
+   "materials": [
+    {
+     "surface": "trough, legs",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "stone sink (T3)",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "spout",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    }
+   ],
+   "connectors": [
+    "wall: against an outer wall of the doma, beside the kamado or water jar",
+    "floor: doma level"
+   ],
+   "variants": [
+    {
+     "id": "_wood",
+     "differs_by": "wooden trough on legs (T1-2)",
+     "tier": 1
+    },
+    {
+     "id": "_floor",
+     "differs_by": "low sink at the raised-floor edge (farmhouse)",
+     "tier": 1
+    },
+    {
+     "id": "_stone",
+     "differs_by": "cut stone sink (T3)",
+     "tier": 3
+    }
+   ],
+   "structural": "a small DRAIN HOLE through the wall at the sill (optional; visual only)",
+   "loot_surface": "trough bottom: 1 small point (range 0.2)",
+   "abandoned_state": "dry, a cracked bowl and a ladle left in it, leaf litter blown in",
+   "deviations": [],
+   "lod_budget": "<=250 faces (merged into the building)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 32,
+    "rooms": 32,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D21",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T13",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_kamidana",
+   "name": "God shelf (kamidana) with a small shrine box (miya)",
+   "what": "A plain board shelf high on the wall of the shop, kitchen or living room, holding a small shrine box, a sakaki pot and paper charms.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "shop",
+    "daidokoro",
+    "living",
+    "workshop",
+    "doma"
+   ],
+   "period_evidence": "The Ise oshi devised and spread the daijingu shelf; by mid-Edo most households kept one [N14]; \"almost every workshop and shop\" [BL §5.5]",
+   "refs": [
+    {
+     "id": "i09_edo_nagaya_hibachi",
+     "shows": "tenement room with a god shelf high on the wall (c.1840 reconstruction)",
+     "period_image": false
+    },
+    {
+     "id": "i07_edo_nagaya_room",
+     "shows": "tenement room dressing",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "shelf_m": {
+     "value": "0.90 x 0.30, underside 1.95-2.05",
+     "assumed": true,
+     "reason": "reason: sits on the 2.00 head rail (D2) so nobody walks into it"
+    },
+    "miya_m": {
+     "value": "0.45 x 0.25 x 0.40 high",
+     "assumed": true,
+     "reason": "small single-door shrine box; typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "shelf, brackets",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "shrine box (plain wood)",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "charms",
+     "material": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji"
+    }
+   ],
+   "connectors": [
+    "head: on the 2.00 head rail or a beam, in a room corner"
+   ],
+   "variants": [
+    {
+     "id": "_plain",
+     "differs_by": "shelf + miya"
+    },
+    {
+     "id": "_ebisu",
+     "differs_by": "shop version with an Ebisu/Daikoku pair (shop sets)",
+     "tier": 2
+    }
+   ],
+   "structural": "NONE (hangs on the head rail)",
+   "loot_surface": "none (too high to reach; keep it dressing)",
+   "abandoned_state": "left undisturbed: dusty, the sakaki dead and brown, charms yellowed (respectful: never smashed)",
+   "deviations": [],
+   "lod_budget": "<=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 39,
+    "rooms": 88,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_mise_floor",
+   "name": "Shop front floor: board display strip (mise-ita) along the street edge of the shop room",
+   "what": "The shop room is the raised floor; its street edge is a 0.45-0.91 m board strip where goods are laid out and customers sit on the edge; the rest is tatami (T3) or boards (T2).",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "shop"
+   ],
+   "period_evidence": "Bookseller of 1690: goods laid out on the raised floor at the open front [x33]; Mitsui Echigoya interior (1768, just past the window): clerks on the raised tatami floor, goods on shelves behind [i13]; shop = doma + choba [N18]; the standard shop kit in ~61 entries [BL §5]",
+   "refs": [
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "Jinrin kinmo zui 1690: bookseller, goods on the raised floor at the shop front",
+     "period_image": true
+    },
+    {
+     "id": "i13_echigoya_1768",
+     "shows": "Utagawa Toyoharu 1768: Echigoya dry-goods shop, raised floor, clerks, shelves (18 years past the window)",
+     "period_image": true
+    },
+    {
+     "id": "i15_moronobu_1685_p5",
+     "shows": "Moronobu 1685: lattice shop front and a board bench outside",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "strip_m": {
+     "value": "0.455 (quarter ken) or 0.91 deep x the room width, top = the room floor (+0.45)",
+     "assumed": true,
+     "reason": "reason: snaps to the grid; replaces one tatami row"
+    },
+    "edge_m": {
+     "value": "front edge = agari-kamachi beam",
+     "source": "jp_p_fit_agarikamachi"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_floor_boards_int",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "floor: part of the shop floor recipe (floor=tatami|boards, strip=0.455|0.91 along the street wall)"
+   ],
+   "variants": [
+    {
+     "id": "_455",
+     "differs_by": "narrow strip behind a lattice front (the pilot: degoshi)"
+    },
+    {
+     "id": "_910",
+     "differs_by": "wide strip behind an open suriage-do front",
+     "tier": 2
+    }
+   ],
+   "structural": "FLOOR RECIPE change only (a board strip instead of the front tatami row); the machiya pilot needs its mise floor regenerated",
+   "loot_surface": "the strip is a floor loot zone (range 0.3-0.5) and the display stands on it carry shelf points",
+   "abandoned_state": "goods knocked over along the strip, empty stands, a torn noren fallen inside, dust",
+   "deviations": [],
+   "lod_budget": "part of the floor recipe",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 7,
+    "rooms": 7,
+    "shell_ids": [
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D18",
+     "T1",
+     "T14"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_tokonoma",
+   "name": "Picture alcove (tokonoma) with alcove post (toko-bashira) and raised base (toko-gamachi)",
+   "what": "The recess in the best room for a scroll and a vase. In 1730 commoners were forbidden it; headmen (to receive officials), samurai, honjin and a few great merchants had it.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "zashiki"
+   ],
+   "status_overlay": "samurai",
+   "period_evidence": "Commoners forbidden tokonoma in the Edo period; spreads in sitting rooms from the mid-18th c.; installed by upper farmers and townsmen, general only after Meiji; about 1 ken wide, ~3 shaku deep [N04]; built in headman houses to receive lords and intendants [N05]",
+   "refs": [
+    {
+     "id": "i23_kendan_tokonoma",
+     "shows": "alcove with a toko-bashira and hanging scroll (Kendan yashiki)",
+     "period_image": true
+    },
+    {
+     "id": "i43_morse_guestroom",
+     "shows": "Morse 1885: guest room, tokonoma beside the shelves",
+     "period_image": false
+    },
+    {
+     "id": "i44_morse_country_guestroom",
+     "shows": "Morse 1885: guest room of a country house",
+     "period_image": false
+    },
+    {
+     "id": "i12_tsubaki_honjin",
+     "shows": "Tsubaki honjin (Koriyama-juku, 1718 rebuild): formal tatami rooms",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "width_m": {
+     "value": "1.82 (1 ken); 0.91 in small rooms",
+     "source": "N04"
+    },
+    "depth_m": {
+     "value": "0.91 (3 shaku) or 0.455",
+     "source": "N04"
+    },
+    "base_m": {
+     "value": "toko-gamachi top +0.10-0.15 over the tatami",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "post_m": {
+     "value": "toko-bashira 0.12 square or a round log",
+     "source": "PLAYBOOK §4 post"
+    }
+   },
+   "materials": [
+    {
+     "surface": "toko-bashira, gamachi",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "floor board (toko-ita) or tatami",
+     "material": "jp_m_floor_boards_int",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "back wall",
+     "material": "jp_m_wall_nakanuri_int",
+     "palette_id": "earth_wall_aged"
+    }
+   ],
+   "connectors": [
+    "post: the recess adds one bay 0.91 deep beyond the room wall line (or takes it from the room)",
+    "head: otoshi-gake lintel at ~1.9-2.0"
+   ],
+   "variants": [
+    {
+     "id": "_1ken",
+     "differs_by": "1 ken wide"
+    },
+    {
+     "id": "_half",
+     "differs_by": "half ken (small zashiki, T2 headman)",
+     "tier": 2
+    }
+   ],
+   "structural": "YES: a RECESS in the shell wall (one extra 0.91 bay + a post); decide it per shell at the architect stage, not by the decorator",
+   "loot_surface": "the toko-ita / tatami of the alcove: 1 shelf-type point (range 0.3)",
+   "abandoned_state": "scroll hanging askew or fallen, vase tipped, dust",
+   "deviations": [
+    "Status feature: never in ordinary commoner shells (PLAYBOOK rule 11, N04)"
+   ],
+   "lod_budget": "part of the building budget: <=250 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "reach": {
+    "shells": 16,
+    "rooms": 16,
+    "shell_ids": [
+     "D7",
+     "D11",
+     "D12",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_chigaidana",
+   "name": "Staggered shelves (chigaidana) beside the tokonoma",
+   "what": "The shoin-style staggered shelves with small cupboards, beside a tokonoma. Samurai, honjin and official rooms only.",
+   "importance": "standard",
+   "tiers": [
+    3
+   ],
+   "priority": "P3",
+   "room_tags": [
+    "zashiki"
+   ],
+   "status_overlay": "samurai",
+   "period_evidence": "Tokonoma of upper farmers and townsmen paired with shelves and a writing alcove [search summary of kotobank/touken-world, see N04]; the 1668 Edo rules bar tsuke-shoin for townsmen [T48]",
+   "refs": [
+    {
+     "id": "i43_morse_guestroom",
+     "shows": "Morse 1885: guest room with shelves beside the tokonoma",
+     "period_image": false
+    },
+    {
+     "id": "i44_morse_country_guestroom",
+     "shows": "Morse 1885: country house guest room",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "width_m": {
+     "value": "0.91-1.82 (the toko-waki bay)",
+     "assumed": true,
+     "reason": "matches the tokonoma bay"
+    },
+    "depth_m": {
+     "value": "0.455",
+     "assumed": true,
+     "reason": "half of a 0.91 recess"
+    },
+    "shelves_m": {
+     "value": "two boards at 0.9 / 1.1, stagger 0.15; top cupboard (tenbukuro) under the head",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "shelves, cupboards",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "cupboard doors (plain paper)",
+     "material": "jp_m_paper_fusuma",
+     "palette_id": "gofun_white"
+    }
+   ],
+   "connectors": [
+    "post: in the bay beside a tokonoma"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "two staggered boards + upper cupboard"
+    }
+   ],
+   "structural": "YES: RECESS (the toko-waki bay)",
+   "loot_surface": "both shelf boards: 2 shelf points (range 0.15-0.2)",
+   "abandoned_state": "cupboard doors open, one torn; small lacquer box on the floor",
+   "deviations": [
+    "Status feature (PLAYBOOK §2.2)"
+   ],
+   "lod_budget": "<=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "reach": {
+    "shells": 14,
+    "rooms": 14,
+    "shell_ids": [
+     "D11",
+     "D12",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "T5",
+     "T6",
+     "T7",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_oshiire",
+   "name": "Bedding closet (oshiire) with a middle shelf",
+   "what": "A built-in closet behind sliding doors. Rare in 1730: it enters plans mid-to-late Edo and becomes general after Meiji; before it, bedding went into the nando storeroom.",
+   "importance": "filler",
+   "tiers": [
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "sleeping",
+    "zashiki"
+   ],
+   "period_evidence": "Oshiire appear in plans mid-to-late Edo, general after Meiji; bedding was kept in the nando before [N09]",
+   "refs": [
+    {
+     "id": "i35_morse_kitchen_closet",
+     "shows": "Morse 1885: closets, drawers and cupboards built into the wall",
+     "period_image": false
+    },
+    {
+     "id": "N09",
+     "shows": "oshiire history (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "bay_m": {
+     "value": "0.91 or 1.82 wide x 0.80 deep",
+     "assumed": true,
+     "reason": "modern standard; period form unverified"
+    },
+    "shelf_m": {
+     "value": "middle shelf at 0.75",
+     "assumed": true,
+     "reason": "modern standard"
+    }
+   },
+   "materials": [
+    {
+     "surface": "carcass",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "doors (plain fusuma)",
+     "material": "jp_m_paper_fusuma",
+     "palette_id": "gofun_white"
+    }
+   ],
+   "connectors": [
+    "post: fills one wall bay; doors are a normal fusuma twin (no player passage)"
+   ],
+   "variants": [
+    {
+     "id": "_1ken",
+     "differs_by": "1 ken wide"
+    }
+   ],
+   "structural": "YES: a RECESS or a bay taken from the room (0.80 deep) + fusuma leaves",
+   "loot_surface": "middle shelf + floor of the closet: 2 points",
+   "abandoned_state": "doors half open, bedding pulled half out onto the floor",
+   "deviations": [
+    "Late for 1730: inns and samurai houses only if Stephen allows (decision 8)"
+   ],
+   "lod_budget": "<=250 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 14,
+    "rooms": 22,
+    "shell_ids": [
+     "D11",
+     "D12",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "T5",
+     "T6",
+     "T7",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_ceiling",
+   "name": "Ceiling recipes: sao-buchi board ceiling, joist-and-board loft floor, exposed sooted rafters, bamboo slat (sunoko) over the hearth",
+   "what": "What you see overhead, by tier: exposed sooted roof structure in T1 and farm kitchens, the loft floor on joists in townhouses (as built), a batten-and-board ceiling in T2-3 best rooms, slatted bamboo over an irori.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "zashiki",
+    "living",
+    "sleeping",
+    "daidokoro",
+    "shop",
+    "office"
+   ],
+   "period_evidence": "Sao-buchi: boards on parallel battens; ceilings were once for high-status buildings and spread to houses [N17]; Morse ceiling section [i41]; machiya loft floor as ceiling [machiya_t3_01: sao_joist]; farm kitchens open to the smoked roof [i04, i05]",
+   "refs": [
+    {
+     "id": "i41_morse_ceiling",
+     "shows": "Morse 1885: section of an ordinary ceiling (battens and boards)",
+     "period_image": false
+    },
+    {
+     "id": "i42_morse_guestroom_hachiishi",
+     "shows": "Morse 1885: inn guest room with a board ceiling",
+     "period_image": false
+    },
+    {
+     "id": "i06_tsunashima_doma",
+     "shows": "farmhouse doma open to the dark roof structure",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "height_m": {
+     "value": "2.50-2.70 clear (D6)",
+     "source": "PLAYBOOK §4"
+    },
+    "batten_m": {
+     "value": "sao 0.04 x 0.045 at 0.45 (quarter ken)",
+     "assumed": true,
+     "reason": "typical sao-buchi spacing ~1.5 shaku"
+    },
+    "board_m": {
+     "value": "0.30-0.45 wide, 0.009 thick, lapped",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "sunoko_m": {
+     "value": "split bamboo 0.03 at 0.05 c/c",
+     "assumed": true,
+     "reason": "form only"
+    }
+   },
+   "materials": [
+    {
+     "surface": "ceiling boards",
+     "material": "jp_m_ceil_boards",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "battens",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "exposed rafters (T1, kitchens)",
+     "material": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted"
+    },
+    {
+     "surface": "bamboo slats over the hearth",
+     "material": "jp_m_bamboo_sooted",
+     "palette_id": "timber_sooted"
+    }
+   ],
+   "connectors": [
+    "head: ceiling line 2.50-2.70 over the room floor; the room rect from rooms.json"
+   ],
+   "variants": [
+    {
+     "id": "_saobuchi",
+     "differs_by": "batten-and-board ceiling: T2-3 zashiki, inn rooms, samurai",
+     "tier": 2
+    },
+    {
+     "id": "_neda",
+     "differs_by": "loft floor seen from below (exists in the machiya)",
+     "tier": 2
+    },
+    {
+     "id": "_open",
+     "differs_by": "no ceiling: sooted rafters and thatch underside (T1, farm doma and daidokoro)",
+     "tier": 1
+    },
+    {
+     "id": "_sunoko",
+     "differs_by": "bamboo slats over an irori room",
+     "tier": 1
+    }
+   ],
+   "structural": "NONE (head room stays >=2.10 everywhere; D6 heights)",
+   "loot_surface": "none",
+   "abandoned_state": "a few boards sagging or missing (dark gap), cobwebs as decal, water stain",
+   "deviations": [
+    "D6 ceiling height"
+   ],
+   "lod_budget": "part of the building budget (flat quads)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 37,
+    "rooms": 94,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_p_fit_setchin",
+   "name": "Privy floor (setchin): board floor with a slot over a buried jar",
+   "what": "Inside the toilet shell: a board floor with a long slot, a buried pottery jar under it, a small hand-wash bowl outside.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "toilet"
+   ],
+   "period_evidence": "Toilet shell kept [KEEP_DWELLINGS 26]; privy interiors drawn by Morse (1885) [BL §3]; night-soil was collected and sold (form assumed)",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BUILDING_LIST shared kit and the toilet entries (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "floor_m": {
+     "value": "0.91 x 1.365 (half ken x 0.75 ken)",
+     "assumed": true,
+     "reason": "reason: grid; a door >=1.00 cannot fit a half-ken shell, see open question"
+    },
+    "slot_m": {
+     "value": "0.15 x 0.45",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "floor boards",
+     "material": "jp_m_floor_boards_rough",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "jar rim",
+     "material": "jp_m_ceramic_stoneware_dark",
+     "palette_id": "stoneware_dark"
+    }
+   ],
+   "connectors": [
+    "floor: the toilet shell floor recipe"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "slot + jar"
+    }
+   ],
+   "structural": "YES: FLOOR SLOT (visual only; Geometry stays closed so nobody falls in)",
+   "loot_surface": "1 floor point (range 0.25)",
+   "abandoned_state": "door ajar, straw on the floor",
+   "deviations": [
+    "D1: a real privy door is ~0.6 m; the shell must still give >=1.00 if loot is inside (open question for the architect)"
+   ],
+   "lod_budget": "<=150 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 2,
+    "rooms": 2,
+    "shell_ids": [
+     "D26",
+     "T5"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "B"
+  },
+  {
+   "id": "jp_f_kama",
+   "name": "Iron cooking pot (kama) with wooden lid, and small pot (nabe) with a bail handle",
+   "what": "The rice pot that sits in a kamado rim, and the smaller hanging pot for the irori hook.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "daidokoro"
+   ],
+   "period_evidence": "Pot (nabe) in 63 and cauldron in 20 building entries [BL §5.1]; pot on the kamado with a thick wooden lid [i20]; spouted kettle in a 1685 print [i16]",
+   "refs": [
+    {
+     "id": "i20_hachioji_kamado",
+     "shows": "iron pot with a heavy wooden lid on a kamado",
+     "period_image": true
+    },
+    {
+     "id": "i31_morse_kitchen_range",
+     "shows": "Morse 1885: pots on the range",
+     "period_image": false
+    },
+    {
+     "id": "i04_tsunashima_irori",
+     "shows": "pot hanging over the irori",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "kama_m": {
+     "value": "rim d 0.36-0.44 (fits the kamado rim), body d 0.42, h 0.28, flange ring",
+     "source": "machiya build rims 0.44"
+    },
+    "lid_m": {
+     "value": "d 0.46, 0.04 thick, two cleats",
+     "assumed": true,
+     "reason": "i20"
+    },
+    "nabe_m": {
+     "value": "d 0.28, h 0.16, bail handle",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "pot",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    },
+    {
+     "surface": "lid",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: in a kamado rim (kama) or on the jizai-kagi hook (nabe) or on the floor"
+   ],
+   "variants": [
+    {
+     "id": "_kama",
+     "differs_by": "rice pot with lid"
+    },
+    {
+     "id": "_kama_nolid",
+     "differs_by": "lid off, lying beside (abandoned)"
+    },
+    {
+     "id": "_nabe",
+     "differs_by": "small pot with bail"
+    }
+   ],
+   "loot_surface": "none (too small; the kamado top carries the point)",
+   "abandoned_state": "lid knocked off, rust bloom, burnt crust; one rim left empty",
+   "wave": 1,
+   "pilot": [
+    "kitchen"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 34,
+    "rooms": 54,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T13",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_jizai_kagi",
+   "name": "Pot hook (jizai-kagi) with fish-shaped lever (yokogi)",
+   "what": "The adjustable bamboo-and-iron hook over every irori, with the carved fish lever; hangs from the hook beam of jp_p_fit_irori.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "daidokoro",
+    "living",
+    "guard"
+   ],
+   "period_evidence": "Jizai-kagi and fish yokogi at the irori [N12]; in the Kitamura 1687 set [BL §3]; Morse sketch of a peasant ji-zai [i33]",
+   "refs": [
+    {
+     "id": "i33_morse_jizai",
+     "shows": "Morse 1885: simple peasant ji-zai",
+     "period_image": false
+    },
+    {
+     "id": "i21_jizai_kettle",
+     "shows": "kettle on a jizai over an irori (Boso-no-mura)",
+     "period_image": false
+    },
+    {
+     "id": "i03_tenmyo_irori",
+     "shows": "long bamboo jizai from the beam",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "length_m": {
+     "value": "1.2-1.8 (bamboo tube + iron hook), bottom 0.6-0.9 above the ash",
+     "assumed": true,
+     "reason": "from the photos"
+    },
+    "yokogi_m": {
+     "value": "0.35 x 0.10 x 0.05 fish",
+     "assumed": true,
+     "reason": "from the photos"
+    }
+   },
+   "materials": [
+    {
+     "surface": "bamboo tube (sooted)",
+     "material": "jp_m_bamboo_sooted",
+     "palette_id": "timber_sooted"
+    },
+    {
+     "surface": "hook",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    },
+    {
+     "surface": "fish lever",
+     "material": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted"
+    }
+   ],
+   "connectors": [
+    "proxy_base: at the hook point of jp_p_fit_irori (hangs; no floor contact)"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "with fish lever"
+    },
+    {
+     "id": "_plain",
+     "differs_by": "plain bar lever (poor)",
+     "tier": 1
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "hook empty or holding a rusted nabe, lever jammed high",
+   "wave": 1,
+   "pilot": [],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "open_questions": [
+    "No Geometry: it hangs over the pit, the player cannot bump it"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 33,
+    "rooms": 47,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T11",
+     "T13",
+     "T14",
+     "T23",
+     "C1",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_mizugame",
+   "name": "Water jar (mizugame) with a wooden lid and a dipper",
+   "what": "The big stoneware jar beside the sink that held the day's water; the dipper (hishaku) rests on the lid.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma"
+   ],
+   "period_evidence": "Water jar in 15 building entries [BL §5.1]; nagaya kitchen water jar, drawn by ladle [N10]; big jar on a raised floor in a 1685 print [i18]",
+   "refs": [
+    {
+     "id": "i08_edo_nagaya_kitchen",
+     "shows": "water jar beside the stove and sink (c.1840 reconstruction)",
+     "period_image": false
+    },
+    {
+     "id": "i18_moronobu_1685_p9",
+     "shows": "Moronobu 1685: large jar, buckets and a spouted pot on a board floor",
+     "period_image": true
+    },
+    {
+     "id": "i50_met_tokkuri_stoneware",
+     "shows": "stoneware of 1700-1750: body and glaze colour",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "jar_m": {
+     "value": "d 0.55, h 0.60 (about 90 litres)",
+     "assumed": true,
+     "reason": "from the reconstruction photo; one kitchen day of water"
+    },
+    "lid_m": {
+     "value": "d 0.60 boards, 0.03",
+     "assumed": true,
+     "reason": "i08"
+    }
+   },
+   "materials": [
+    {
+     "surface": "jar",
+     "material": "jp_m_ceramic_stoneware_dark",
+     "palette_id": "stoneware_dark"
+    },
+    {
+     "surface": "lid, dipper",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: on the doma, against a wall beside jp_p_fit_nagashi"
+   ],
+   "variants": [
+    {
+     "id": "_lid",
+     "differs_by": "lid on, dipper on top"
+    },
+    {
+     "id": "_open",
+     "differs_by": "lid off leaning against it, dry inside"
+    },
+    {
+     "id": "_broken",
+     "differs_by": "cracked, a shard missing (abandoned)"
+    }
+   ],
+   "loot_surface": "the lid top at 0.63: 1 shelf point (range 0.2)",
+   "abandoned_state": "lid off and leaning, empty and dusty, or cracked with a shard on the floor",
+   "wave": 1,
+   "pilot": [
+    "kitchen"
+   ],
+   "blocks_path": "keep >=1.00 m past it in a tori-niwa",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 32,
+    "rooms": 32,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D21",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T13",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_oke",
+   "name": "Wooden tubs and buckets (oke, tarai, pickle tub with stone)",
+   "what": "The coopered family: a handled bucket, a shallow washing tub, a tall pickle tub weighted with a stone. The most common kitchen and workshop items of all.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "daidokoro",
+    "workshop",
+    "storage",
+    "bath"
+   ],
+   "period_evidence": "Wooden tubs in 64 and buckets in 38 building entries [BL §5.1]; tubs in Moronobu's 1685 workshops (sword polisher, dyer) [i16, i17]; tub scene before 1694 [i19]",
+   "refs": [
+    {
+     "id": "i16_moronobu_1685_p6",
+     "shows": "Moronobu 1685: sword polisher with two big tubs and a box",
+     "period_image": true
+    },
+    {
+     "id": "i17_moronobu_1685_p7",
+     "shows": "Moronobu 1685: dyer treading cloth in round tubs",
+     "period_image": true
+    },
+    {
+     "id": "i19_moronobu_tub",
+     "shows": "Moronobu (before 1694): large shallow round tub",
+     "period_image": true
+    },
+    {
+     "id": "i05_tsunashima_kamado",
+     "shows": "bucket and tub in a farmhouse doma",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "bucket_m": {
+     "value": "d 0.30, h 0.30, handle ears to 0.45",
+     "assumed": true,
+     "reason": "typical coopered bucket"
+    },
+    "tarai_m": {
+     "value": "d 0.60, h 0.20",
+     "assumed": true,
+     "reason": "i19"
+    },
+    "pickle_m": {
+     "value": "d 0.45, h 0.50 + lid + stone 0.20",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "staves",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "hoops (bamboo)",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_river",
+     "palette_id": "stone_lantern"
+    }
+   ],
+   "connectors": [
+    "proxy_base: on any floor"
+   ],
+   "variants": [
+    {
+     "id": "_bucket",
+     "differs_by": "handled bucket"
+    },
+    {
+     "id": "_tarai",
+     "differs_by": "shallow tub"
+    },
+    {
+     "id": "_pickle",
+     "differs_by": "tall tub, lid, stone"
+    },
+    {
+     "id": "_tipped",
+     "differs_by": "bucket on its side (abandoned)"
+    }
+   ],
+   "loot_surface": "tarai bottom (floor point r 0.25); pickle-tub lid at 0.55 (shelf point r 0.15)",
+   "abandoned_state": "tipped over, hoop sprung, staves gapped and dry; pickle stone on the floor",
+   "wave": 1,
+   "pilot": [
+    "kitchen",
+    "toriniwa"
+   ],
+   "blocks_path": "never inside a door clear zone",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 42,
+    "rooms": 83,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D27",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_tana",
+   "name": "Open wall shelf (tana) on brackets, 1-3 boards",
+   "what": "Plain board shelves on the kitchen, shop or storage wall: bowls, jars, boxes. The main raised loot surface of a Japanese interior.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "daidokoro",
+    "storage",
+    "shop",
+    "workshop",
+    "living"
+   ],
+   "period_evidence": "Racks and shelves in 80 building entries [BL §5.3]; \"one shelf\" even in the poorest tenement [BL §3 ura-nagaya]; kitchen shelves [i32, i08]",
+   "refs": [
+    {
+     "id": "i32_morse_city_kitchen",
+     "shows": "Morse 1885: shelves and racks in a city kitchen",
+     "period_image": false
+    },
+    {
+     "id": "i08_edo_nagaya_kitchen",
+     "shows": "tenement kitchen shelf",
+     "period_image": false
+    },
+    {
+     "id": "i35_morse_kitchen_closet",
+     "shows": "Morse 1885: shelves built into a kitchen",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "width_m": {
+     "value": "0.91 / 1.365 / 1.82 (half-ken steps)",
+     "source": "PLAYBOOK rule 9"
+    },
+    "depth_m": {
+     "value": "0.30",
+     "assumed": true,
+     "reason": "fits a bowl stack; stays out of the walking band"
+    },
+    "boards_m": {
+     "value": "at 0.90 / 1.30 / 1.70 (one to three)",
+     "assumed": true,
+     "reason": "reason: reachable heights; vanilla shelves carry loot 0.11-1.24 (Q5)"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards, brackets",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: on the floor against a wall (legs) or wall-mounted (base point at the lowest board, footprint on the floor for loot subtraction)"
+   ],
+   "variants": [
+    {
+     "id": "_1",
+     "differs_by": "one board"
+    },
+    {
+     "id": "_3",
+     "differs_by": "three boards"
+    },
+    {
+     "id": "_sag",
+     "differs_by": "one bracket gone, board hanging (abandoned)"
+    }
+   ],
+   "loot_surface": "each board: 1 shelf point per 0.9 m (range 0.15-0.2)",
+   "abandoned_state": "a few bowls left, most fallen and broken on the floor below (debris decal), one board sagging",
+   "wave": 1,
+   "pilot": [
+    "kitchen",
+    "storage",
+    "mise"
+   ],
+   "blocks_path": "",
+   "lod_budget": "furniture <=1000 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 41,
+    "rooms": 103,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_firewood",
+   "name": "Firewood stack (maki) and brushwood bundle",
+   "what": "Split logs stacked beside the kamado or under the eaves, and tied brushwood bundles (soda).",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "daidokoro",
+    "workshop",
+    "storage"
+   ],
+   "period_evidence": "Firewood stacks in 18 building entries [BL §5.2]; firewood beside a kamado [i22]",
+   "refs": [
+    {
+     "id": "i22_kamado_firewood",
+     "shows": "split firewood stacked beside a clay kamado",
+     "period_image": false
+    },
+    {
+     "id": "i04_tsunashima_irori",
+     "shows": "firewood at the hearth",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "stack_m": {
+     "value": "0.91 x 0.40 x 0.60 high (half-ken)",
+     "assumed": true,
+     "reason": "reason: grid"
+    },
+    "log_m": {
+     "value": "0.40-0.45 long, d 0.06-0.12",
+     "assumed": true,
+     "reason": "typical split wood"
+    },
+    "bundle_m": {
+     "value": "d 0.35 x 0.9",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "split wood",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "bindings",
+     "material": "jp_m_straw_tawara",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "proxy_base: doma floor against a wall"
+   ],
+   "variants": [
+    {
+     "id": "_stack",
+     "differs_by": "neat stack"
+    },
+    {
+     "id": "_low",
+     "differs_by": "half used"
+    },
+    {
+     "id": "_bundle",
+     "differs_by": "brushwood bundles"
+    }
+   ],
+   "loot_surface": "stack top at 0.60: 1 point (range 0.2)",
+   "abandoned_state": "half used, a few logs rolled across the floor",
+   "wave": 1,
+   "pilot": [
+    "kitchen"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 41,
+    "rooms": 76,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_jar",
+   "name": "Storage jars (miso, oil, salt, pickles), 3 sizes, with lids",
+   "what": "Stoneware jars on the kitchen or storage floor and shelves.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "daidokoro",
+    "storage",
+    "shop"
+   ],
+   "period_evidence": "Jars in 40 building entries [BL §5.3]; stoneware of 1700-1750 [i50]; large jar in a 1685 print [i18]",
+   "refs": [
+    {
+     "id": "i50_met_tokkuri_stoneware",
+     "shows": "The Met: stoneware sake bottle, 1700-1750 (glaze and body colour)",
+     "period_image": true
+    },
+    {
+     "id": "i18_moronobu_1685_p9",
+     "shows": "Moronobu 1685: large jar",
+     "period_image": true
+    },
+    {
+     "id": "i51_met_tokkuri_porcelain",
+     "shows": "The Met: blue-and-white porcelain bottle, early 18th c. (T3 accent)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "small_m": {
+     "value": "d 0.18, h 0.22",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "medium_m": {
+     "value": "d 0.30, h 0.40",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "large_m": {
+     "value": "d 0.45, h 0.60",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "jar",
+     "material": "jp_m_ceramic_stoneware_dark",
+     "palette_id": "stoneware_dark"
+    },
+    {
+     "surface": "pale-glaze variant",
+     "material": "jp_m_ceramic_stoneware_pale",
+     "palette_id": "stoneware_pale"
+    },
+    {
+     "surface": "lid",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor or a tana board"
+   ],
+   "variants": [
+    {
+     "id": "_s",
+     "differs_by": "small"
+    },
+    {
+     "id": "_m",
+     "differs_by": "medium"
+    },
+    {
+     "id": "_l",
+     "differs_by": "large"
+    },
+    {
+     "id": "_broken",
+     "differs_by": "shards (abandoned)"
+    }
+   ],
+   "loot_surface": "large jar lid at 0.62: 1 point (range 0.15)",
+   "abandoned_state": "lids off, one broken in shards on the floor, dried spill stain",
+   "wave": 1,
+   "pilot": [
+    "kitchen",
+    "storage"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 41,
+    "rooms": 76,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_tableware",
+   "name": "Tableware clutter: box trays (hakozen) and legged trays (zen), bowls, dishes, chopsticks",
+   "what": "The meal set of a household: stacked box trays, bowls in lacquer and ceramic. Used as clutter on shelves, floors and trays.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "daidokoro",
+    "doma",
+    "living",
+    "zashiki",
+    "shop"
+   ],
+   "period_evidence": "Trays in 58 and bowls/dishes in 44 building entries [BL §5.1]; hakozen stack in the Kitamura-type set [BL §3]",
+   "refs": [
+    {
+     "id": "i07_edo_nagaya_room",
+     "shows": "tenement room dressing with trays and bowls",
+     "period_image": false
+    },
+    {
+     "id": "N20",
+     "shows": "BL §5.1 (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "hakozen_m": {
+     "value": "0.30 x 0.30 x 0.20",
+     "assumed": true,
+     "reason": "typical box tray"
+    },
+    "zen_m": {
+     "value": "0.36 x 0.36 x 0.15",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "bowl_m": {
+     "value": "d 0.12, h 0.07",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "trays",
+     "material": "jp_m_lacquer_black",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "plain wood trays (T1)",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "bowls",
+     "material": "jp_m_ceramic_stoneware_pale",
+     "palette_id": "stoneware_pale"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor, shelf or tray"
+   ],
+   "variants": [
+    {
+     "id": "_stack",
+     "differs_by": "hakozen stack"
+    },
+    {
+     "id": "_meal",
+     "differs_by": "a zen with bowls, left mid-meal (abandoned)"
+    },
+    {
+     "id": "_scatter",
+     "differs_by": "bowls scattered"
+    }
+   ],
+   "loot_surface": "none (clutter)",
+   "abandoned_state": "a meal left out, bowls overturned",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 36,
+    "rooms": 97,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_andon",
+   "name": "Standing paper lamp (andon), square type, and the small bedside type (ariake)",
+   "what": "The oil lamp in a paper box that lit every room after dark; unlit in our dead world.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "living",
+    "zashiki",
+    "sleeping",
+    "shop",
+    "office",
+    "guard"
+   ],
+   "period_evidence": "Andon spread in the Edo period: wood/bamboo frame, paper cover, oil dish, rush or cotton wick; types oki, ariake, enshu [N13]; lamps in 74 building entries [BL §5.2]",
+   "refs": [
+    {
+     "id": "i39_morse_andon",
+     "shows": "Morse 1885: andon, saucer lamp in a paper frame",
+     "period_image": false
+    },
+    {
+     "id": "i40_morse_andon2",
+     "shows": "Morse 1885: another andon",
+     "period_image": false
+    },
+    {
+     "id": "i07_edo_nagaya_room",
+     "shows": "andon in a tenement room (c.1840 reconstruction)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "kaku_m": {
+     "value": "0.25 x 0.25 x 0.80 high, open top, a drawer in the base",
+     "assumed": true,
+     "reason": "Morse fig. 206 proportions; typical museum pieces"
+    },
+    "ariake_m": {
+     "value": "0.25 x 0.25 x 0.35",
+     "assumed": true,
+     "reason": "typical bedside box"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "paper",
+     "material": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji"
+    },
+    {
+     "surface": "oil dish",
+     "material": "jp_m_ceramic_stoneware_pale",
+     "palette_id": "stoneware_pale"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor, usually a room corner or beside bedding"
+   ],
+   "variants": [
+    {
+     "id": "_kaku",
+     "differs_by": "square standing"
+    },
+    {
+     "id": "_ariake",
+     "differs_by": "small bedside"
+    },
+    {
+     "id": "_tipped",
+     "differs_by": "on its side, paper torn (abandoned)"
+    }
+   ],
+   "loot_surface": "none (too small and tall)",
+   "abandoned_state": "tipped over, paper torn and oil-stained, dish broken",
+   "wave": 1,
+   "pilot": [
+    "zashiki",
+    "mise"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "open_questions": [
+    "Lit lamps are a later decision (light points); ship unlit"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 32,
+    "rooms": 73,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "C1",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_hibachi",
+   "name": "Charcoal brazier (hibachi): round ceramic/wood, and the square wooden box type",
+   "what": "The portable charcoal heater of every town room, shop and inn room, with metal tongs in the ash.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "living",
+    "zashiki",
+    "shop",
+    "office",
+    "sleeping",
+    "guard"
+   ],
+   "period_evidence": "Braziers in 33 entries plus the ~61 shops [BL §5.2]; hibachi on the town-only core list [BL §5.9]",
+   "refs": [
+    {
+     "id": "i36_morse_hibachi",
+     "shows": "Morse 1885: common hibachi",
+     "period_image": false
+    },
+    {
+     "id": "i37_morse_hibachi_wood",
+     "shows": "Morse 1885: wooden hibachi",
+     "period_image": false
+    },
+    {
+     "id": "i09_edo_nagaya_hibachi",
+     "shows": "box hibachi in a tenement room (c.1840 reconstruction)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "round_m": {
+     "value": "d 0.38, h 0.28",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "box_m": {
+     "value": "0.45 x 0.35 x 0.30",
+     "assumed": true,
+     "reason": "typical box brazier"
+    },
+    "tongs_m": {
+     "value": "0.30 iron chopsticks",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "round body",
+     "material": "jp_m_ceramic_stoneware_pale",
+     "palette_id": "stoneware_pale"
+    },
+    {
+     "surface": "box body",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "ash",
+     "material": "jp_m_ground_ash",
+     "palette_id": "ash_grey"
+    },
+    {
+     "surface": "tongs, trivet",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "proxy_base: tatami or boards, near the room centre or the choba"
+   ],
+   "variants": [
+    {
+     "id": "_round",
+     "differs_by": "round"
+    },
+    {
+     "id": "_box",
+     "differs_by": "square wooden box"
+    },
+    {
+     "id": "_tipped",
+     "differs_by": "tipped, ash spilled (abandoned)"
+    }
+   ],
+   "loot_surface": "box rim at 0.30: 1 small point (range 0.12)",
+   "abandoned_state": "cold ash, tongs lying on the mat; one in five tipped with an ash spill decal",
+   "wave": 1,
+   "pilot": [
+    "mise",
+    "zashiki"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "open_questions": [
+    "Naga-hibachi (long brazier with drawers) date not checked: left out"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 32,
+    "rooms": 73,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "C1",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_tabakobon",
+   "name": "Tobacco tray (tabako-bon) with fire pot, ash tube and pipe (kiseru)",
+   "what": "The small wooden tray set out for customers and guests; part of the standard shop kit.",
+   "importance": "filler",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "shop",
+    "zashiki",
+    "living",
+    "office",
+    "guard"
+   ],
+   "period_evidence": "Tobacco tray / pipes in 18 entries plus the ~61 shops [BL §5.6]",
+   "refs": [
+    {
+     "id": "i38_morse_tabakobon",
+     "shows": "Morse 1885: tabako-bon",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "tray_m": {
+     "value": "0.30 x 0.20 x 0.18 with handle",
+     "assumed": true,
+     "reason": "Morse fig. 201 proportions"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tray",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "fire pot",
+     "material": "jp_m_ceramic_stoneware_pale",
+     "palette_id": "stoneware_pale"
+    },
+    {
+     "surface": "pipe",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "proxy_base: tatami or boards"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "tray"
+    },
+    {
+     "id": "_spilled",
+     "differs_by": "on its side, ash spilled"
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "on its side, ash and a pipe on the mat",
+   "wave": 1,
+   "pilot": [
+    "mise"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 31,
+    "rooms": 59,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "C1",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_nagamochi",
+   "name": "Long chest (nagamochi)",
+   "what": "The big lidded clothes and bedding chest with iron fittings for a carrying pole; in storage rooms, nando and kura.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "storage",
+    "sleeping",
+    "loft"
+   ],
+   "period_evidence": "Chests in 36 entries [BL §5.3]; nagamochi ~1.74 x 0.75 x 0.75 m, carried on a pole, spread from samurai to commoners as cotton bedding grew [N19]; tansu were still dear, so the nagamochi is the everyday big chest [N06]",
+   "refs": [
+    {
+     "id": "N19",
+     "shows": "nagamochi size and use (text)",
+     "period_image": false
+    },
+    {
+     "id": "i07_edo_nagaya_room",
+     "shows": "storage chests in a town room",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "1.70 x 0.72 x 0.75 high",
+     "source": "N19 (about 1.74 x 0.75 x 0.75)"
+    },
+    "lid_m": {
+     "value": "flat lid 0.03, iron corner fittings and pole brackets",
+     "source": "N19"
+    }
+   },
+   "materials": [
+    {
+     "surface": "body",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "fittings",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor, long side against a wall"
+   ],
+   "variants": [
+    {
+     "id": "_shut",
+     "differs_by": "lid shut"
+    },
+    {
+     "id": "_open",
+     "differs_by": "lid thrown back against the wall, cloth spilling (abandoned)"
+    }
+   ],
+   "loot_surface": "lid top at 0.75: 2 shelf points (range 0.3); the open variant: 1 point inside at 0.10",
+   "abandoned_state": "lid open, clothes pulled out and dropped, one fitting torn",
+   "wave": 1,
+   "pilot": [
+    "storage"
+   ],
+   "blocks_path": "1.70 m long: only along a wall, never across a path; a 3-mat room gets at most one",
+   "lod_budget": "furniture <=1000 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 24,
+    "rooms": 32,
+    "shell_ids": [
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T5",
+     "T7",
+     "T12",
+     "T3",
+     "T4",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_tansu",
+   "name": "Clothing chest of drawers (isho-dansu), two stacked parts",
+   "what": "The drawer chest of better town houses: two stacked boxes with iron handles. In 1730 still costly, so T2-3 only.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "sleeping",
+    "zashiki",
+    "living",
+    "office",
+    "storage"
+   ],
+   "period_evidence": "Tansu appear in Osaka in the Kanbun era (1661-73) and spread from the Shotoku era (1711-16); costly, reaching poor commoners only in late Edo [N06]",
+   "refs": [
+    {
+     "id": "i01_kasuya_irori",
+     "shows": "chest with iron fittings beside the hearth room (Kasuya house)",
+     "period_image": true
+    },
+    {
+     "id": "i07_edo_nagaya_room",
+     "shows": "drawer chest in a town room (c.1840 reconstruction)",
+     "period_image": false
+    },
+    {
+     "id": "N06",
+     "shows": "tansu history (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "1.00 x 0.45 x 1.00 high (two parts of 0.50)",
+     "assumed": true,
+     "reason": "typical Edo isho-dansu proportions (about 3.3 x 1.5 x 3.3 shaku)"
+    },
+    "drawers": {
+     "value": "4-5 drawers, iron ring pulls, carrying handles on the sides",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "body",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "fittings",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor against a wall; back 0.02 off the wall"
+   ],
+   "variants": [
+    {
+     "id": "_shut",
+     "differs_by": "drawers shut"
+    },
+    {
+     "id": "_ransacked",
+     "differs_by": "two drawers pulled out, one on the floor, clothes spilled (abandoned)"
+    },
+    {
+     "id": "_single",
+     "differs_by": "one part only (T2)",
+     "tier": 2
+    }
+   ],
+   "loot_surface": "top at 1.00: 2 points (range 0.2); ransacked: 1 point in the dropped drawer (floor)",
+   "abandoned_state": "ransacked: drawers out, one on the floor",
+   "wave": 1,
+   "pilot": [
+    "zashiki"
+   ],
+   "blocks_path": "the dropped drawer lies inside the tansu front zone, never in a path",
+   "lod_budget": "furniture <=1000 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 36,
+    "rooms": 76,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_kori",
+   "name": "Wicker trunk (kori), lidded, stackable",
+   "what": "The light woven travel and clothes trunk of townspeople and tenants.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "sleeping",
+    "living",
+    "storage",
+    "loft"
+   ],
+   "period_evidence": "Kori on the town-only core list [BL §5.9]; wicker trunk in the tenement set [BL §3 ura-nagaya]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §3/§5 (text)",
+     "period_image": false
+    },
+    {
+     "id": "i07_edo_nagaya_room",
+     "shows": "tenement room dressing",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "0.60 x 0.40 x 0.30 (lid over the base)",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "wicker",
+     "material": "jp_m_bamboo_weave",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "cord",
+     "material": "jp_m_straw_tawara",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor or on another kori"
+   ],
+   "variants": [
+    {
+     "id": "_1",
+     "differs_by": "single"
+    },
+    {
+     "id": "_2",
+     "differs_by": "stack of two"
+    },
+    {
+     "id": "_open",
+     "differs_by": "lid off beside it"
+    }
+   ],
+   "loot_surface": "lid top at 0.30 (0.60 stacked): 1 point (range 0.2)",
+   "abandoned_state": "lid off, empty or a garment hanging out",
+   "wave": 1,
+   "pilot": [
+    "storage",
+    "zashiki"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 34,
+    "rooms": 55,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T5",
+     "T7",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_box",
+   "name": "Lidded wooden boxes (hako): 3 sizes, stacked",
+   "what": "The most-named item in the whole building list: document, letter, meal, goods and tool boxes.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "storage",
+    "shop",
+    "office",
+    "living",
+    "zashiki",
+    "workshop",
+    "loft"
+   ],
+   "period_evidence": "Wooden boxes in 93 building entries, the top item of the kit [BL §5.3]; boxes beside workers in 1685 [i16]",
+   "refs": [
+    {
+     "id": "i16_moronobu_1685_p6",
+     "shows": "Moronobu 1685: lidded box beside the polisher",
+     "period_image": true
+    },
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "Jinrin kinmo zui 1690: stacked boxes and books at a shop",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "small_m": {
+     "value": "0.30 x 0.20 x 0.12",
+     "assumed": true,
+     "reason": "letter/document box"
+    },
+    "medium_m": {
+     "value": "0.45 x 0.30 x 0.25",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "large_m": {
+     "value": "0.60 x 0.40 x 0.40",
+     "assumed": true,
+     "reason": "goods box"
+    }
+   },
+   "materials": [
+    {
+     "surface": "box",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "lacquer variant (T3, elite)",
+     "material": "jp_m_lacquer_black",
+     "palette_id": "sumi_black"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor, shelf, or on another box"
+   ],
+   "variants": [
+    {
+     "id": "_s",
+     "differs_by": "small"
+    },
+    {
+     "id": "_m",
+     "differs_by": "medium"
+    },
+    {
+     "id": "_l",
+     "differs_by": "large"
+    },
+    {
+     "id": "_stack3",
+     "differs_by": "stack of three"
+    },
+    {
+     "id": "_open",
+     "differs_by": "lid off, spilled"
+    }
+   ],
+   "loot_surface": "large box / stack top: 1 point (range 0.2)",
+   "abandoned_state": "lids off, contents (paper, cloth) spilled, one box on its side",
+   "wave": 1,
+   "pilot": [
+    "storage",
+    "mise"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 37,
+    "rooms": 80,
+    "shell_ids": [
+     "D3",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_tawara",
+   "name": "Straw rice bale (tawara) and straw bag (kamasu)",
+   "what": "Rice, salt and charcoal came in straw bales; stacked in storage, kura, shops and farm doma.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "storage",
+    "doma",
+    "shop",
+    "loft",
+    "workshop"
+   ],
+   "period_evidence": "Straw bales in 30 and straw bags in 20 entries [BL §5.3]; rural core item [BL §5.9]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §5.3 (text)",
+     "period_image": false
+    },
+    {
+     "id": "i06_tsunashima_doma",
+     "shows": "straw goods on a farmhouse doma",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "tawara_m": {
+     "value": "d 0.40, L 0.75 (about 4 to of rice, 60 kg)",
+     "assumed": true,
+     "reason": "typical Edo rice bale"
+    },
+    "kamasu_m": {
+     "value": "0.60 x 0.40 x 0.15 flat bag",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "straw",
+     "material": "jp_m_straw_tawara",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor; stacks as a pyramid 3-2-1"
+   ],
+   "variants": [
+    {
+     "id": "_1",
+     "differs_by": "single bale"
+    },
+    {
+     "id": "_stack6",
+     "differs_by": "pyramid of six"
+    },
+    {
+     "id": "_burst",
+     "differs_by": "burst bale, rice/straw spilled (abandoned)"
+    },
+    {
+     "id": "_kamasu",
+     "differs_by": "straw bag"
+    }
+   ],
+   "loot_surface": "stack top: 1 point (range 0.25)",
+   "abandoned_state": "one burst with a spill decal, rats' work",
+   "wave": 1,
+   "pilot": [
+    "storage"
+   ],
+   "blocks_path": "a 6-stack is 1.2 x 0.75: along walls only",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 39,
+    "rooms": 64,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_rack",
+   "name": "Free-standing board shelving (kura / storage shelves), 3 boards",
+   "what": "Plain post-and-board shelving along storage and kura walls, and the goods shelves behind a shop.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "storage",
+    "loft",
+    "shop",
+    "workshop"
+   ],
+   "period_evidence": "Racks in 80 entries; kura shelving on the T3 storage list [BL §5.3, WORLD_CATALOGUE §2.10]; goods shelves in the 1768 Echigoya [i13]",
+   "refs": [
+    {
+     "id": "i13_echigoya_1768",
+     "shows": "shelves of goods behind the clerks (1768)",
+     "period_image": true
+    },
+    {
+     "id": "i35_morse_kitchen_closet",
+     "shows": "Morse 1885: built-in shelving",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "1.82 (or 0.91) x 0.45 x 1.80 high",
+     "assumed": true,
+     "reason": "reason: grid; stays under the 2.00 head rail"
+    },
+    "boards_m": {
+     "value": "at 0.10 / 0.70 / 1.25",
+     "assumed": true,
+     "reason": "reason: like vanilla case_d loot levels 0.11/0.48/0.86/1.24 (Q5)"
+    }
+   },
+   "materials": [
+    {
+     "surface": "posts, boards",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor against a wall"
+   ],
+   "variants": [
+    {
+     "id": "_1ken",
+     "differs_by": "1.82 wide"
+    },
+    {
+     "id": "_half",
+     "differs_by": "0.91 wide"
+    },
+    {
+     "id": "_collapsed",
+     "differs_by": "one board down at an angle (abandoned)"
+    }
+   ],
+   "loot_surface": "each board: 1-2 shelf points (range 0.15-0.25); the vanilla lootshelves pattern",
+   "abandoned_state": "half emptied, boxes and jars on the floor in front, one board collapsed",
+   "wave": 1,
+   "pilot": [
+    "storage"
+   ],
+   "blocks_path": "0.45 deep along walls only; in a 2 x 2 ken storage keep the centre clear",
+   "lod_budget": "furniture <=1000 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 21,
+    "rooms": 32,
+    "shell_ids": [
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D16",
+     "D17",
+     "D18",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_taru",
+   "name": "Casks (taru): sake, soy and oil barrels, with a low rack",
+   "what": "Coopered casks with rope bindings; the sake shop set racks them, kitchens and storerooms hold one or two.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "storage",
+    "shop",
+    "doma",
+    "workshop"
+   ],
+   "period_evidence": "Casks and barrels in 22 entries [BL §5.3]; sake shop dressing, casks on a rack [KEEP_TRADES A]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §5.3 (text)",
+     "period_image": false
+    },
+    {
+     "id": "i16_moronobu_1685_p6",
+     "shows": "coopered tubs of 1685 (same craft)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "taru_m": {
+     "value": "d 0.45, h 0.50 (4-to cask)",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "rack_m": {
+     "value": "1.82 x 0.60 x 0.30",
+     "assumed": true,
+     "reason": "reason: grid"
+    }
+   },
+   "materials": [
+    {
+     "surface": "staves",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "rope, straw wrap",
+     "material": "jp_m_straw_tawara",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor or rack"
+   ],
+   "variants": [
+    {
+     "id": "_1",
+     "differs_by": "single"
+    },
+    {
+     "id": "_rack3",
+     "differs_by": "three on a rack"
+    },
+    {
+     "id": "_stove",
+     "differs_by": "staved-in, dry (abandoned)"
+    }
+   ],
+   "loot_surface": "cask top at 0.50: 1 point (range 0.15)",
+   "abandoned_state": "one staved in, a dry stain",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 39,
+    "rooms": 61,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_basket",
+   "name": "Baskets (zaru, kago, back basket)",
+   "what": "Bamboo baskets for rice washing, vegetables and carrying; hung on pegs or on the floor.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "doma",
+    "daidokoro",
+    "storage",
+    "workshop"
+   ],
+   "period_evidence": "Baskets in 34 entries [BL §5.3]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §5.3 (text)",
+     "period_image": false
+    },
+    {
+     "id": "i18_moronobu_1685_p9",
+     "shows": "Moronobu 1685: carrier with stacked vessels on a pole",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "zaru_m": {
+     "value": "d 0.40, h 0.08",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "kago_m": {
+     "value": "d 0.35, h 0.30",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "back_m": {
+     "value": "0.45 x 0.35 x 0.60",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "weave",
+     "material": "jp_m_bamboo_weave",
+     "palette_id": "bamboo_weathered"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor or a wall peg"
+   ],
+   "variants": [
+    {
+     "id": "_zaru",
+     "differs_by": "flat sieve"
+    },
+    {
+     "id": "_kago",
+     "differs_by": "deep basket"
+    },
+    {
+     "id": "_back",
+     "differs_by": "back basket"
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "crushed or on its side",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 41,
+    "rooms": 76,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_futon_stack",
+   "name": "Folded bedding stack (sleeping mat futon + sleeved quilt yogi)",
+   "what": "Bedding folded in a corner or in the nando, often behind a low screen.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "sleeping",
+    "zashiki",
+    "living"
+   ],
+   "period_evidence": "Yogi (sleeved quilt) and futon from the Edo period; Kamigata used futon from Genroku, Edo kept the yogi; cotton was costly [N08]; bedding in 44 entries [BL §5.4]; no oshiire yet, bedding in the nando [N09]",
+   "refs": [
+    {
+     "id": "N08",
+     "shows": "Edo bedding (text)",
+     "period_image": false
+    },
+    {
+     "id": "i07_edo_nagaya_room",
+     "shows": "bedding in a tenement room (c.1840 reconstruction)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "stack_m": {
+     "value": "0.95 x 0.65 x 0.45 (two futon + one yogi)",
+     "assumed": true,
+     "reason": "folded in thirds; typical"
+    },
+    "futon_m": {
+     "value": "1.85 x 0.95 x 0.06 unfolded",
+     "assumed": true,
+     "reason": "fits one mat"
+    }
+   },
+   "materials": [
+    {
+     "surface": "covers",
+     "material": "jp_m_textile_cotton_indigo",
+     "palette_id": "aizome_kon"
+    },
+    {
+     "surface": "plain lining",
+     "material": "jp_m_textile_cotton_plain",
+     "palette_id": "kinari_cloth"
+    }
+   ],
+   "connectors": [
+    "proxy_base: tatami or boards, in a corner"
+   ],
+   "variants": [
+    {
+     "id": "_stack",
+     "differs_by": "folded stack"
+    },
+    {
+     "id": "_slumped",
+     "differs_by": "stack slumped over (abandoned)"
+    }
+   ],
+   "loot_surface": "top at 0.45: 1 point (range 0.25)",
+   "abandoned_state": "slumped, one quilt dragged half off, mildew patches",
+   "wave": 1,
+   "pilot": [
+    "zashiki"
+   ],
+   "blocks_path": "",
+   "lod_budget": "furniture <=1000 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 27,
+    "rooms": 49,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T11",
+     "T13",
+     "T14",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_futon_laid",
+   "name": "Laid-out bedding (futon with the quilt thrown back)",
+   "what": "A bed still laid out as its sleeper left it: the dead-world signature of a sleeping room.",
+   "importance": "filler",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "sleeping",
+    "zashiki",
+    "living"
+   ],
+   "period_evidence": "As jp_f_futon_stack [N08]",
+   "refs": [
+    {
+     "id": "N08",
+     "shows": "Edo bedding (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "1.85 x 0.95 x 0.08; quilt thrown back 0.15 thick",
+     "assumed": true,
+     "reason": "one mat"
+    }
+   },
+   "materials": [
+    {
+     "surface": "covers",
+     "material": "jp_m_textile_cotton_indigo",
+     "palette_id": "aizome_kon"
+    },
+    {
+     "surface": "lining",
+     "material": "jp_m_textile_cotton_plain",
+     "palette_id": "kinari_cloth"
+    }
+   ],
+   "connectors": [
+    "proxy_base: flat on tatami, aligned with a mat"
+   ],
+   "variants": [
+    {
+     "id": "_thrown",
+     "differs_by": "quilt thrown back"
+    },
+    {
+     "id": "_dragged",
+     "differs_by": "dragged aside, pillow apart (never across a door band)"
+    }
+   ],
+   "loot_surface": "the whole futon is a loot zone: 1-2 points (range 0.4), like vanilla beds (Q5: points at 0.34-0.52 on beds)",
+   "abandoned_state": "as left; stained, flattened",
+   "wave": 1,
+   "pilot": [
+    "zashiki"
+   ],
+   "blocks_path": "no: a thin 0.08 Geometry slab you step over (vanilla beds have Geometry and Roadway)",
+   "lod_budget": "small prop <=300 faces",
+   "open_questions": [
+    "G4 check: items spawned on the quilt stay on it (vanilla bed points sit 0.33-0.52 up)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 27,
+    "rooms": 49,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T11",
+     "T13",
+     "T14",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_mushiro",
+   "name": "Straw floor mats (mushiro / goza): flat, rolled, and a small pile",
+   "what": "The floor covering of every T1 room and every work floor; rolled and stacked in storage.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "daidokoro",
+    "living",
+    "sleeping",
+    "doma",
+    "storage",
+    "workshop",
+    "stable"
+   ],
+   "period_evidence": "Straw or rush mats in 49 entries [BL §5.4]; T1 rooms: boards or earth with straw and mushiro mats, no tatami [PLAYBOOK §2.1, T58]; mat draped over a bench in a farmhouse doma [i06]",
+   "refs": [
+    {
+     "id": "i06_tsunashima_doma",
+     "shows": "straw mat draped over a bench in a farmhouse doma",
+     "period_image": true
+    },
+    {
+     "id": "c15_farmhouse_interior",
+     "shows": "farmhouse board floor",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "flat_m": {
+     "value": "1.82 x 0.91 x 0.01",
+     "assumed": true,
+     "reason": "reason: one tatami module"
+    },
+    "roll_m": {
+     "value": "d 0.18 x 0.91",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "straw",
+     "material": "jp_m_straw_mushiro",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "proxy_base: flat on boards or earth (no Geometry; decal-like)"
+   ],
+   "variants": [
+    {
+     "id": "_flat",
+     "differs_by": "flat mat"
+    },
+    {
+     "id": "_rolled",
+     "differs_by": "rolled"
+    },
+    {
+     "id": "_torn",
+     "differs_by": "torn, corner curled"
+    }
+   ],
+   "loot_surface": "flat mats are floor loot zones (they do not subtract from floor loot)",
+   "abandoned_state": "curled, torn, straw litter around",
+   "wave": 1,
+   "pilot": [
+    "storage"
+   ],
+   "blocks_path": "flat: none (no Geometry)",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 43,
+    "rooms": 118,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D25",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_enza",
+   "name": "Round straw cushion (enza) and cotton cushion (zabuton)",
+   "what": "Seating: round straw cushions everywhere; cotton zabuton only for guests in T3 shops, inns and samurai rooms.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "daidokoro",
+    "living",
+    "zashiki",
+    "shop",
+    "office"
+   ],
+   "period_evidence": "Round straw cushions (enza) in the Kitamura-type set [BL §3]; cotton-filled zabuton develop from the shitone in mid-Edo, commoners widely only after Meiji [N07]; contradiction 2 of BL §4.2 resolved this way",
+   "refs": [
+    {
+     "id": "N07",
+     "shows": "zabuton history (text)",
+     "period_image": false
+    },
+    {
+     "id": "N20",
+     "shows": "BL §3 (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "enza_m": {
+     "value": "d 0.40, 0.03",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "zabuton_m": {
+     "value": "0.55 x 0.60 x 0.06",
+     "assumed": true,
+     "reason": "typical Edo size, smaller than modern"
+    }
+   },
+   "materials": [
+    {
+     "surface": "straw",
+     "material": "jp_m_straw_mushiro",
+     "palette_id": "thatch_new"
+    },
+    {
+     "surface": "cotton (T3)",
+     "material": "jp_m_textile_cotton_indigo",
+     "palette_id": "aizome_kon"
+    }
+   ],
+   "connectors": [
+    "proxy_base: flat on the floor (no Geometry)"
+   ],
+   "variants": [
+    {
+     "id": "_enza",
+     "differs_by": "straw"
+    },
+    {
+     "id": "_zabuton",
+     "differs_by": "cotton (T3 only)",
+     "tier": 3
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "scattered, one kicked against the wall",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "none (no Geometry)",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 37,
+    "rooms": 77,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_byobu",
+   "name": "Low bedding screen (makura-byobu, 2 panels) and entrance screen (tsuitate)",
+   "what": "The low two-panel screen that hid folded bedding in one-room homes; the single standing screen at an entrance.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "living",
+    "sleeping",
+    "zashiki",
+    "doma"
+   ],
+   "period_evidence": "Folding screens / entrance screens in 21 entries; makura-byobu hides bedding in the tenement [BL §3, §5.4]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §3/§5.4 (text)",
+     "period_image": false
+    },
+    {
+     "id": "i07_edo_nagaya_room",
+     "shows": "tenement room dressing",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "makura_m": {
+     "value": "2 panels of 0.60 x 0.90 high",
+     "assumed": true,
+     "reason": "typical low screen"
+    },
+    "tsuitate_m": {
+     "value": "1.20 x 1.40 high on two feet",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "paper (plain)",
+     "material": "jp_m_paper_fusuma",
+     "palette_id": "gofun_white"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor"
+   ],
+   "variants": [
+    {
+     "id": "_makura",
+     "differs_by": "low 2-panel"
+    },
+    {
+     "id": "_tsuitate",
+     "differs_by": "entrance screen"
+    },
+    {
+     "id": "_fallen",
+     "differs_by": "flat on the floor, torn (abandoned)"
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "fallen flat and torn",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "YES when standing: place only against walls or across a corner; the fallen variant has no Geometry",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 36,
+    "rooms": 85,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_iko",
+   "name": "Clothes rack (iko) with a robe hung over it",
+   "what": "A standing frame over which a kimono is draped; bedrooms and inn rooms.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "sleeping",
+    "zashiki",
+    "living"
+   ],
+   "period_evidence": "Clothes rack / robe on a rack in 38 entries [BL §5.4]; town-only core [BL §5.9]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §5.4 (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "1.50 wide x 0.40 deep x 1.50 high",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame",
+     "material": "jp_m_lacquer_black",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "plain frame (T2)",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "robe",
+     "material": "jp_m_textile_cotton_indigo",
+     "palette_id": "aizome_kon"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor, parallel to a wall"
+   ],
+   "variants": [
+    {
+     "id": "_robe",
+     "differs_by": "with a robe"
+    },
+    {
+     "id": "_bare",
+     "differs_by": "bare"
+    },
+    {
+     "id": "_fallen",
+     "differs_by": "fallen with the robe (abandoned)"
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "fallen, the robe on the mat",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "1.5 m wide: along walls only",
+   "lod_budget": "furniture <=1000 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 27,
+    "rooms": 49,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T11",
+     "T13",
+     "T14",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_zukue",
+   "name": "Low writing / account desk (fuzukue, choba-zukue)",
+   "what": "The low desk at which the shopkeeper kept accounts, and the writing desk of offices and study rooms.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "shop",
+    "office",
+    "zashiki",
+    "living",
+    "guard"
+   ],
+   "period_evidence": "Low writing desk in 30 entries [BL §5.6]; the choba desk behind the lattice [N18]; a craftsman at a low board in 1685 [i16]",
+   "refs": [
+    {
+     "id": "N18",
+     "shows": "merchant-house tools: choba desk, lattice, coin box (text)",
+     "period_image": false
+    },
+    {
+     "id": "i16_moronobu_1685_p6",
+     "shows": "Moronobu 1685: seated work at a low board",
+     "period_image": true
+    },
+    {
+     "id": "i13_echigoya_1768",
+     "shows": "clerks at low desks (1768)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "0.90 x 0.40 x 0.33 high",
+     "assumed": true,
+     "reason": "seated-on-the-floor height"
+    },
+    "drawer": {
+     "value": "one shallow drawer",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "desk",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: tatami or boards"
+   ],
+   "variants": [
+    {
+     "id": "_choba",
+     "differs_by": "account desk with a drawer"
+    },
+    {
+     "id": "_plain",
+     "differs_by": "plain writing desk"
+    },
+    {
+     "id": "_tipped",
+     "differs_by": "on its side (abandoned)"
+    }
+   ],
+   "loot_surface": "top at 0.33: 1 point (range 0.25)",
+   "abandoned_state": "ledger open and scattered, ink box upset",
+   "wave": 1,
+   "pilot": [
+    "mise"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 31,
+    "rooms": 59,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T13",
+     "T14",
+     "T3",
+     "C1",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_choba_goshi",
+   "name": "Counting-desk lattice (choba-goshi / kekkai), 2-3 folds",
+   "what": "The low folding lattice that fences the shopkeeper's desk corner from the customers.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "shop",
+    "office"
+   ],
+   "period_evidence": "A foldable low lattice at the choba of Edo merchant houses, separating customers from the clerk [N18]; counting desk with a lattice screen at T3 shops [WORLD_CATALOGUE §2.10]",
+   "refs": [
+    {
+     "id": "N18",
+     "shows": "choba-goshi (text)",
+     "period_image": false
+    },
+    {
+     "id": "i13_echigoya_1768",
+     "shows": "counter areas of a big shop (1768)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "height_m": {
+     "value": "0.45-0.55",
+     "assumed": true,
+     "reason": "museum pieces; low enough to see over when seated"
+    },
+    "panels_m": {
+     "value": "3 folds of 0.60-0.90",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "lattice",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: tatami, three sides round the zukue"
+   ],
+   "variants": [
+    {
+     "id": "_3",
+     "differs_by": "three folds"
+    },
+    {
+     "id": "_2",
+     "differs_by": "two folds"
+    },
+    {
+     "id": "_knocked",
+     "differs_by": "knocked flat (abandoned)"
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "one fold knocked flat",
+   "wave": 1,
+   "pilot": [
+    "mise"
+   ],
+   "blocks_path": "low (0.5): walkable around; keep it out of the door-to-door band",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 18,
+    "rooms": 19,
+    "shell_ids": [
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "T1",
+     "T5",
+     "T6",
+     "T8",
+     "T9",
+     "T14",
+     "T3",
+     "C2",
+     "C3"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_choba_set",
+   "name": "Account clutter: ledgers (daifukucho), abacus, coin box (zenibako), scales, inkstone box",
+   "what": "The small things on and around the counting desk.",
+   "importance": "filler",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "shop",
+    "office",
+    "guard"
+   ],
+   "period_evidence": "Ledgers 57 + ~61 shops, scales 33, abacus 10 + shops, inkstone 29 [BL §5.6]; coin box with a lock, coin tally board [N18]",
+   "refs": [
+    {
+     "id": "N18",
+     "shows": "merchant-house tools (text)",
+     "period_image": false
+    },
+    {
+     "id": "N20",
+     "shows": "BL §5.6 (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "ledger_m": {
+     "value": "0.24 x 0.17 x 0.03",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "coinbox_m": {
+     "value": "0.40 x 0.30 x 0.25",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "steelyard_m": {
+     "value": "0.60 beam",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "wood",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "paper",
+     "material": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji"
+    },
+    {
+     "surface": "iron",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "proxy_base: on the zukue or the floor beside it"
+   ],
+   "variants": [
+    {
+     "id": "_desk",
+     "differs_by": "on the desk"
+    },
+    {
+     "id": "_scattered",
+     "differs_by": "scattered on the mat"
+    }
+   ],
+   "loot_surface": "none (clutter)",
+   "abandoned_state": "coin box open and empty, ledgers scattered",
+   "wave": 2,
+   "pilot": [
+    "mise"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 20,
+    "rooms": 24,
+    "shell_ids": [
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T8",
+     "T9",
+     "T14",
+     "T3",
+     "C1",
+     "C2",
+     "C3"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_misedana",
+   "name": "Stepped goods stand (misedana / hinadan) for shop display",
+   "what": "A low stepped board stand on the display strip that shows goods to the street; the generic display for the shop sets.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "shop"
+   ],
+   "period_evidence": "Goods displayed on the raised floor at the shop front in 1690 [x33]; shelves of goods in 1768 [i13]; raised display floor is the main shop rule [KEEP_TRADES A]",
+   "refs": [
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "goods laid out and stacked at the raised shop front, 1690",
+     "period_image": true
+    },
+    {
+     "id": "i13_echigoya_1768",
+     "shows": "goods on shelves and floor (1768)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "1.82 or 0.91 wide x 0.60 deep x 0.45 high, 2-3 steps",
+     "assumed": true,
+     "reason": "reason: grid; low so the shop can be seen from the street"
+    },
+    "step_m": {
+     "value": "0.15 rise, 0.20 tread",
+     "assumed": true,
+     "reason": "reason"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: on the jp_p_fit_mise_floor strip, parallel to the street"
+   ],
+   "variants": [
+    {
+     "id": "_1ken",
+     "differs_by": "1.82 wide"
+    },
+    {
+     "id": "_half",
+     "differs_by": "0.91 wide"
+    },
+    {
+     "id": "_toppled",
+     "differs_by": "toppled forward (abandoned)"
+    }
+   ],
+   "loot_surface": "each step: 1 point per 0.9 m (range 0.15)",
+   "abandoned_state": "goods swept off, stand toppled or half empty",
+   "wave": 1,
+   "pilot": [
+    "mise"
+   ],
+   "blocks_path": "only on the display strip, never in the door band",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 7,
+    "rooms": 7,
+    "shell_ids": [
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D18",
+     "T1",
+     "T14"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_goods_general",
+   "name": "General-goods dressing set: cloth bolts, paper bundles, wrapped packages, straw sandals, small boxes",
+   "what": "The goods of the \"general\" shop set (the pilot's shop:general): stacked on the stand and floor. Dressing only; loot lies on and around it.",
+   "importance": "filler",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "shop"
+   ],
+   "period_evidence": "General goods shop in the KEEP dressing sets [KEEP_TRADES A]; paper in 51 entries, straw sandals in 24 [BL §5.7-5.8]; goods at the 1690 shop front [x33]",
+   "refs": [
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "stacked goods at a shop front, 1690",
+     "period_image": true
+    },
+    {
+     "id": "i13_echigoya_1768",
+     "shows": "cloth goods (1768)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "bolt_m": {
+     "value": "0.36 x 0.10 x 0.10 (one tan of cloth rolled)",
+     "assumed": true,
+     "reason": "typical tan bolt"
+    },
+    "bundle_m": {
+     "value": "0.30 x 0.25 x 0.10 paper",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "sandals_m": {
+     "value": "0.24 long pairs tied in strings",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "cloth",
+     "material": "jp_m_textile_cotton_indigo",
+     "palette_id": "aizome_kon"
+    },
+    {
+     "surface": "paper wrap",
+     "material": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji"
+    },
+    {
+     "surface": "straw",
+     "material": "jp_m_straw_mushiro",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "proxy_base: on the misedana or the strip"
+   ],
+   "variants": [
+    {
+     "id": "_stacked",
+     "differs_by": "neat stacks"
+    },
+    {
+     "id": "_swept",
+     "differs_by": "swept off onto the floor (abandoned)"
+    }
+   ],
+   "loot_surface": "none (dressing)",
+   "abandoned_state": "swept off, bolts unrolled across the strip",
+   "wave": 1,
+   "pilot": [
+    "mise"
+   ],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces (per cluster)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 7,
+    "rooms": 7,
+    "shell_ids": [
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D18",
+     "T1",
+     "T14"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_butsudan",
+   "name": "Household Buddhist cabinet (butsudan) or Buddhist shelf",
+   "what": "A small closed cabinet with the family memorial tablets; T2-3 living rooms, a shelf in poorer homes.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "living",
+    "zashiki",
+    "daidokoro"
+   ],
+   "period_evidence": "Butsudan in 34 entries (19 homes) [BL §5.5]; small butsudan in the Kitamura-type set [BL §3]",
+   "refs": [
+    {
+     "id": "i09_edo_nagaya_hibachi",
+     "shows": "tenement room with a butsudan and god shelf (c.1840 reconstruction)",
+     "period_image": false
+    },
+    {
+     "id": "N20",
+     "shows": "BL §5.5 (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "size_m": {
+     "value": "0.50 x 0.40 x 0.80 on a low stand or shelf",
+     "assumed": true,
+     "reason": "typical household size"
+    }
+   },
+   "materials": [
+    {
+     "surface": "cabinet",
+     "material": "jp_m_lacquer_black",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "plain (T2)",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    }
+   ],
+   "connectors": [
+    "proxy_base: floor or a shelf in a room corner"
+   ],
+   "variants": [
+    {
+     "id": "_closed",
+     "differs_by": "doors shut"
+    },
+    {
+     "id": "_open",
+     "differs_by": "doors open, tablets inside"
+    }
+   ],
+   "loot_surface": "none (respect: nothing spawns on it)",
+   "abandoned_state": "undisturbed, dusty, doors shut (respectful; decision 12)",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 27,
+    "rooms": 51,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T11",
+     "T13",
+     "T14",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_mino_pegs",
+   "name": "Wall pegs with straw raincoat (mino), hat (kasa) and tools (hoe, sickle)",
+   "what": "The rural wall: rain gear and tools hung on pegs by the doma door.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "stable",
+    "workshop",
+    "storage"
+   ],
+   "region": "rural",
+   "period_evidence": "Mino and kasa on pegs in the Kitamura-type set; mino in 18, hats in 12, hoe/sickle in the farm set [BL §3, §5.7]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §3/§5.7 (text)",
+     "period_image": false
+    },
+    {
+     "id": "i05_tsunashima_kamado",
+     "shows": "farmhouse doma walls",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "board_m": {
+     "value": "0.91 peg board at 1.60",
+     "assumed": true,
+     "reason": "reason: grid; above hip height"
+    },
+    "mino_m": {
+     "value": "0.90 long",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "straw",
+     "material": "jp_m_straw_mushiro",
+     "palette_id": "thatch_new"
+    },
+    {
+     "surface": "pegs, handles",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "blades",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "proxy_base: wall-mounted; footprint 0.15 deep"
+   ],
+   "variants": [
+    {
+     "id": "_rain",
+     "differs_by": "mino + kasa"
+    },
+    {
+     "id": "_tools",
+     "differs_by": "hoe, sickle, rope coil"
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "one peg empty, the hat on the floor",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 35,
+    "rooms": 49,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D22",
+     "D23",
+     "D24",
+     "D25",
+     "D29",
+     "T1",
+     "T5",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T4",
+     "T23",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_manger",
+   "name": "Manger (kaiba-oke), fodder cutter and straw pile for the stable corner",
+   "what": "Stable dressing inside farmhouses (uchi-umaya) and stable shells.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "stable"
+   ],
+   "region": "rural",
+   "period_evidence": "Manger, fodder cutter, trough in 20 entries [BL §5.7]; inside stable of the Kanto farmhouse variant [KEEP_DWELLINGS 6]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §5.7 (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "manger_m": {
+     "value": "1.20 x 0.45 x 0.40 trough on legs",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "straw_m": {
+     "value": "1.2 x 1.0 x 0.5 pile",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "wood",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "straw",
+     "material": "jp_m_straw_tawara",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "proxy_base: stable floor"
+   ],
+   "variants": [
+    {
+     "id": "_manger",
+     "differs_by": "manger"
+    },
+    {
+     "id": "_straw",
+     "differs_by": "straw pile"
+    },
+    {
+     "id": "_cutter",
+     "differs_by": "fodder cutter"
+    }
+   ],
+   "loot_surface": "manger bottom: 1 point (range 0.2)",
+   "abandoned_state": "empty, straw rotted dark",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 5,
+    "rooms": 5,
+    "shell_ids": [
+     "D6",
+     "D7",
+     "D10",
+     "D25",
+     "T9"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_usu",
+   "name": "Wooden rice mortar and pounder (usu, kine), hand mill (ishi-usu)",
+   "what": "The pounding set on the farm and food-shop doma.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "doma",
+    "workshop"
+   ],
+   "period_evidence": "Mortar and pestle / pounder in 22 entries, stone hand mill in 10 [BL §5.1]; one pounding set serves many trades [BL §5.10]",
+   "refs": [
+    {
+     "id": "N20",
+     "shows": "BL §5.1/§5.10 (text)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "usu_m": {
+     "value": "d 0.50, h 0.55",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "kine_m": {
+     "value": "0.90 long",
+     "assumed": true,
+     "reason": "typical"
+    },
+    "millstone_m": {
+     "value": "d 0.40 pair, h 0.25",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "wood",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "proxy_base: doma floor"
+   ],
+   "variants": [
+    {
+     "id": "_usu",
+     "differs_by": "wooden mortar + pounder"
+    },
+    {
+     "id": "_mill",
+     "differs_by": "stone hand mill"
+    }
+   ],
+   "loot_surface": "usu top at 0.55: 1 point (range 0.2)",
+   "abandoned_state": "pounder fallen, dust in the bowl",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "d 0.5: keep out of tori-niwa bands",
+   "lod_budget": "small prop <=300 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 36,
+    "rooms": 39,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D21",
+     "D24",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 0
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_debris",
+   "name": "Dead-world floor litter: blown leaves, straw, torn paper, bowl shards, dust patches (decal atlas)",
+   "what": "Flat alpha decals laid on floors and at door sills: the \"as it was left\" layer. No collision.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "room_tags": [
+    "doma",
+    "daidokoro",
+    "living",
+    "zashiki",
+    "sleeping",
+    "shop",
+    "office",
+    "storage",
+    "workshop",
+    "engawa",
+    "corridor",
+    "guard",
+    "stable",
+    "bath",
+    "toilet"
+   ],
+   "period_evidence": "Stephen's dead-world rule (PRODUCTION_PLAN standing decisions); autumn season: maple and ginkgo leaves blow in through open doors [KEEP_OUTDOOR]",
+   "refs": [
+    {
+     "id": "i02_kasuya_kamado",
+     "shows": "dusty doma surface (look reference)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "decal_m": {
+     "value": "0.5-1.5 patches, 0.002 above the floor",
+     "assumed": true,
+     "reason": "reason: no z-fighting, no collision"
+    },
+    "shards_m": {
+     "value": "0.03-0.08 pieces",
+     "assumed": true,
+     "reason": "typical"
+    }
+   },
+   "materials": [
+    {
+     "surface": "atlas",
+     "material": "jp_m_decal_litter",
+     "palette_id": "grime_splash"
+    }
+   ],
+   "connectors": [
+    "proxy_base: on any floor; the decorator scatters 2-5 per room, more at open doors"
+   ],
+   "variants": [
+    {
+     "id": "_leaves",
+     "differs_by": "autumn leaves (at doors, engawa)"
+    },
+    {
+     "id": "_straw",
+     "differs_by": "straw and dust"
+    },
+    {
+     "id": "_paper",
+     "differs_by": "torn paper and shoji squares"
+    },
+    {
+     "id": "_shards",
+     "differs_by": "broken bowls under shelves"
+    }
+   ],
+   "loot_surface": "none (does not subtract from floor loot)",
+   "abandoned_state": "this IS the abandoned state",
+   "wave": 1,
+   "pilot": [
+    "toriniwa",
+    "mise",
+    "zashiki",
+    "kitchen",
+    "storage"
+   ],
+   "blocks_path": "none (no Geometry)",
+   "lod_budget": "small prop <=100 faces (quads)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 46,
+    "rooms": 179,
+    "shell_ids": [
+     "D1",
+     "D30",
+     "D2",
+     "D3",
+     "D4",
+     "D5",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D22",
+     "D23",
+     "D24",
+     "D25",
+     "D26",
+     "D27",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T8",
+     "T9",
+     "T11",
+     "T12",
+     "T13",
+     "T14",
+     "T3",
+     "T4",
+     "T23",
+     "C1",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  },
+  {
+   "id": "jp_f_fallen_leaf",
+   "name": "Fallen door leaf: a shoji or fusuma lying on the floor, paper torn",
+   "what": "A sliding leaf off its track, flat on the mats: a cheap strong dead-world signal. Never a working door.",
+   "importance": "filler",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P2",
+   "room_tags": [
+    "zashiki",
+    "living",
+    "sleeping",
+    "corridor",
+    "shop"
+   ],
+   "period_evidence": "Shoji and fusuma leaves at T2-3 [PLAYBOOK §2.1]",
+   "refs": [
+    {
+     "id": "i42_morse_guestroom_hachiishi",
+     "shows": "Morse 1885: shoji leaves of an inn room",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "leaf_m": {
+     "value": "0.91 x 1.95 x 0.03",
+     "source": "kit leaf size (D2 head 2.00)"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame",
+     "material": "jp_m_wood_interior",
+     "palette_id": "timber_interior"
+    },
+    {
+     "surface": "paper",
+     "material": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji"
+    }
+   ],
+   "connectors": [
+    "proxy_base: flat on the floor, never over a door opening"
+   ],
+   "variants": [
+    {
+     "id": "_shoji",
+     "differs_by": "shoji"
+    },
+    {
+     "id": "_fusuma",
+     "differs_by": "fusuma"
+    }
+   ],
+   "loot_surface": "none",
+   "abandoned_state": "torn",
+   "wave": 2,
+   "pilot": [],
+   "blocks_path": "none: no Geometry (visual only)",
+   "lod_budget": "small prop <=200 faces",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "reach": {
+    "shells": 27,
+    "rooms": 61,
+    "shell_ids": [
+     "D3",
+     "D6",
+     "D7",
+     "D8",
+     "D9",
+     "D10",
+     "D11",
+     "D12",
+     "D13",
+     "D14",
+     "D15",
+     "D16",
+     "D17",
+     "D18",
+     "D19",
+     "D20",
+     "D21",
+     "D29",
+     "T1",
+     "T5",
+     "T6",
+     "T7",
+     "T11",
+     "T13",
+     "T14",
+     "C2",
+     "C4"
+    ],
+    "shop_sets": 22
+   },
+   "stage": "D"
+  }
+ ]
+}
