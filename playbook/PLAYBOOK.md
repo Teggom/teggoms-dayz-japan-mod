@@ -79,6 +79,11 @@ Companion files:
 **Recommendation:**
 - **Anchor year:** 1730 (Kyōhō 15).
 - **Allowed window:** 1680–1750.
+- **What the window means (Stephen, 2026-09-29):** the test is "did it exist, or still stand, in 1730". Older things
+  that survived into 1730 are fully in: medieval stones and statues, old shrines and temples, Sengoku castle ruins,
+  early-1600s lantern styles, old building designs still in use. Only two things are out: what didn't exist yet
+  (later inventions and fashions), and what was already gone by 1730 (e.g. Edo castle's keep, burned 1657). The
+  1680–1750 window is for *new* work and fashions: what was being built and bought around 1730.
 
 This narrows the brief's 1650–1750, for these reasons:
 
