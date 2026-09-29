@@ -64,6 +64,25 @@ recolours.
 | 28 | Roofed well | |
 | 29 | Gatehouse with rooms (nagaya-mon) | |
 
+## Stretch ☆: 3 extras per group (Stephen, 2026-09-29: cheap, cut first if shells turn out slow)
+
+| Group | ☆ Shell | Why / reuses |
+|---|---|---|
+| Poor | Rural labourers' row (kado-ya nagaya) | Day labourers and dependents housed in a row on a big farm; tenement parts |
+| Poor | Beach hut (ama-goya / bangoya) | Divers' fire hut and the seasonal fishing-camp shed as a real shell; field-hut parts |
+| Poor | Riverbank shacks (kawara-goya) | A squatters' cluster under bridges and on river flats; lean-to parts |
+| Lower-middle | Flood-country farmhouse | Mino/Owari: house on a raised mound, storehouse (mizuya) higher still, **escape boat hung under the eaves**. On our map |
+| Lower-middle | Separate-kitchen farmhouse (bunto) | Two roofs side by side, a distinct outline; farmhouse parts |
+| Lower-middle | Retirement cottage (inkyo-ya) | The small detached house the parents move into; hut or farmhouse parts |
+| Upper | Merchant's suburban villa (bessō) | Garden villa with the tea hut (21) |
+| Upper | Daimyo garden villa (shimo-yashiki) | The garden-estate character that shell 20 folds away |
+| Upper | Shinano great house (honmune-zukuri) | The broad, gable-fronted Shinano house, split out of shell 8 as its own look |
+| Outbuildings | Boat shed (funa-goya) | Shore and lake villages |
+| Outbuildings | Yard shrine (yashiki-gami / Inari hokora) | A tiny shrine in the corner of the yard |
+| Outbuildings | Flood storehouse on a mound (mizuya) | Goes with the flood-country farmhouse |
+
+**With stretch:** 30 core + 12 ☆ = 42 dwelling shells.
+
 ## Cut, folded or moved
 
 - **Cut (off-map regional forms):** gasshō, chūmon L-house, Nanbu magariya, kabuto silk house, Kai takahe house (also
