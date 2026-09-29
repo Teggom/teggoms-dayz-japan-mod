@@ -1,21 +1,59 @@
-"""Density sketch of the 12.8 km Edo-Kyoto-Osaka map (lead, 2026-09-29).
+"""Density sketch of the Edo-Kyoto-Osaka map (lead, 2026-09-29).
 
-Real lat/lon squashed into the square, so the geography is "close, not accurate". Everything is data in the tables
+Real lat/lon projected into the square, so the geography is "close, not accurate". Everything is data in the tables
 below: move a place by editing its (lat, lon), or add dx/dy pixel nudges. Rerun:
-    python map_sketch.py        -> map_sketch.png next to this file
+    python map_sketch.py          -> map_sketch.png      v0: 12.8 km, lat/lon squashed into the square
+    python map_sketch.py diag     -> map_sketch_20k.png  v1: 20.48 km, Osaka->Edo laid along the SW->NE diagonal
 """
-import os, math, random
+import os, sys, math, random
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-S = 3600                       # map square, px  (12.8 km -> 3.56 m/px)
+DIAG = len(sys.argv) > 1 and sys.argv[1] == "diag"
+SIZE_KM = 20.48 if DIAG else 12.8
+S = 4800 if DIAG else 3600     # map square, px
 PANEL = 900                    # legend panel on the right
 LON0, LON1 = 135.25, 140.0
-LAT0, LAT1 = 34.45, 36.72      # bottom, top
-KM = S / 12.8
+LAT0, LAT1 = 34.45, 36.72      # bottom, top (v0 only)
+KM = S / SIZE_KM
+
+# v1 (diag): true-proportion km from real lat/lon, rotated so Osaka -> Edo points along the SW -> NE diagonal
+OSAKA, EDO = (34.69, 135.50), (35.69, 139.76)
+COSL = math.cos(math.radians(35.2))
+SPAN_KM = 22.0                 # map km from Osaka to Edo along the diagonal (the diagonal is 28.96 km)
+PERP_STRETCH = 1.15            # widen the gap between the two roads a little (more room for Kai / Suwa / Ina)
+def _km(lat, lon):
+    return ((lon - OSAKA[1]) * COSL * 111.0, (lat - OSAKA[0]) * 111.0)
+_ex, _ey = _km(*EDO)
+_ANG = math.atan2(_ey, _ex)
+_SCALE = SPAN_KM / math.hypot(_ex, _ey)
 
 def P(lat, lon):
-    return ((lon - LON0) / (LON1 - LON0) * S, (LAT1 - lat) / (LAT1 - LAT0) * S)
+    if not DIAG:
+        return ((lon - LON0) / (LON1 - LON0) * S, (LAT1 - lat) / (LAT1 - LAT0) * S)
+    u, v = _km(lat, lon)
+    along = (u * math.cos(_ANG) + v * math.sin(_ANG)) * _SCALE
+    perp = (-u * math.sin(_ANG) + v * math.cos(_ANG)) * _SCALE * PERP_STRETCH
+    r2 = math.sqrt(0.5)
+    xk = (along - perp) * r2 + _OFF[0]
+    yk = (along + perp) * r2 + _OFF[1]
+    return (xk * KM, (SIZE_KM - yk) * KM)
+
+_OFF = [0.0, 0.0]
+def fit_content():
+    """v1: centre the bounding box of every road station, town and landmark on the square."""
+    pts = [(a, b) for tbl in (TOKAIDO_ST, NAKASENDO_ST, KOSHU, KYOKAIDO, CASTLE_TOWNS, ONSEN, TEMPLE_TOWNS, PORTS, SALT,
+                              RESERVES) for _, a, b in tbl]
+    pts += [(a, b) for _, a, b, _ in CITIES] + [(a, b) for _, _, a, b in TOP20]
+    xs, ys = zip(*[P(a, b) for a, b in pts])
+    xk = [x / KM for x in xs]; yk = [SIZE_KM - y / KM for y in ys]
+    _OFF[0] = SIZE_KM / 2 - (min(xk) + max(xk)) / 2
+    _OFF[1] = SIZE_KM / 2 - (min(yk) + max(yk)) / 2
+    return max(xk) - min(xk), max(yk) - min(yk)
+
+def ellipse_pts(lat, lon, rl, ro, n=48):
+    """A lat/lon ellipse, projected (it rotates with the map in v1)."""
+    return [P(lat + rl * math.sin(2 * math.pi * k / n), lon + ro * math.cos(2 * math.pi * k / n)) for k in range(n)]
 
 FONT = "C:/Windows/Fonts/segoeui.ttf"
 FONTB = "C:/Windows/Fonts/segoeuib.ttf"
@@ -32,8 +70,9 @@ LM_TOP = (200, 20, 20); LM_RES = (30, 30, 30); GAP = (0, 140, 140); CHECK = (0, 
 
 # ---------------------------------------------------------------- geography
 SEA_POLYS = [
-    # Osaka bay
-    [(34.74, 135.25), (34.70, 135.30), (34.69, 135.43), (34.60, 135.44), (34.50, 135.36), (34.45, 135.33), (34.45, 135.25)],
+    # Osaka bay and the Harima sea (west of Kōbe)
+    [(34.74, 134.20), (34.74, 135.25), (34.70, 135.30), (34.69, 135.43), (34.60, 135.44), (34.50, 135.36),
+     (34.45, 135.33), (34.20, 135.10), (34.20, 134.20)],
     # Pacific with Ise, Mikawa, Suruga, Sagami and Edo bays
     [(34.45, 136.52), (34.72, 136.53), (34.96, 136.63), (35.07, 136.70), (35.09, 136.86), (35.00, 136.87), (34.85, 136.85),
      (34.70, 136.92), (34.85, 137.00), (34.82, 137.20), (34.72, 137.12), (34.60, 137.02), (34.63, 137.28), (34.67, 137.52),
@@ -41,7 +80,7 @@ SEA_POLYS = [
      (35.13, 138.68), (35.08, 138.85), (34.95, 138.77), (34.75, 138.76), (34.60, 138.84), (34.55, 138.95), (34.70, 139.03),
      (34.97, 139.11), (35.10, 139.08), (35.24, 139.16), (35.30, 139.30), (35.31, 139.48), (35.29, 139.56), (35.20, 139.60),
      (35.14, 139.63), (35.28, 139.68), (35.45, 139.66), (35.53, 139.74), (35.63, 139.78), (35.67, 139.82), (35.64, 139.95),
-     (35.60, 140.00), (34.45, 140.00)],
+     (35.60, 140.00), (35.60, 142.50), (32.00, 142.50), (32.00, 136.00), (34.20, 136.00), (34.45, 136.52)],
 ]
 LAKES = [
     [(35.00, 135.87), (35.03, 135.93), (35.13, 136.07), (35.27, 136.23), (35.38, 136.27), (35.50, 136.20), (35.52, 136.13),
@@ -65,6 +104,12 @@ MOUNTAINS = [  # (lat, lon, rlat, rlon, colour) ellipses
     (36.10, 136.75, 0.55, 0.50, HIGH),   # Hida / Echizen / Ibuki (the empty north-west is mountains)
     (36.55, 139.05, 0.20, 0.25, MOUNT),  # Akagi / Haruna
     (36.55, 137.90, 0.20, 0.35, HIGH),   # north Alps edge
+]
+EXTRA_MOUNTAINS = [  # v1 only: the NW corner of the rotated square
+    (35.60, 135.60, 0.40, 0.55, HIGH),   # Tanba / Wakasa highlands
+    (36.50, 136.60, 0.60, 0.80, HIGH),   # Echizen / Hakusan
+    (37.00, 138.00, 0.60, 1.00, HIGH),   # Hida / north Alps / Echigo edge
+    (37.00, 139.50, 0.50, 0.80, MOUNT),  # north Kantō mountains
 ]
 VOLCANOES = [("Fuji", 35.36, 138.73, 0.10), ("Asama", 36.40, 138.52, 0.06), ("Ontake", 35.89, 137.48, 0.05),
              ("Hakone", 35.23, 139.02, 0.03)]
@@ -182,17 +227,18 @@ GAP_AREAS = [("Kai / Kōfu basin (gap audit #1)", 35.66, 138.55, 0.13, 0.22),
 
 
 def main():
+    if DIAG:
+        w, h = fit_content()
+        print("content box %.1f x %.1f km on a %.2f km square" % (w, h, SIZE_KM))
     img = Image.new("RGB", (S + PANEL, S), LAND)
     d = ImageDraw.Draw(img, "RGBA")
     xy = lambda pts: [P(a, b) for a, b in pts]
 
     # mountains
-    for lat, lon, rl, ro, col in MOUNTAINS:
-        cx, cy = P(lat, lon)
-        rx = ro / (LON1 - LON0) * S; ry = rl / (LAT1 - LAT0) * S
-        d.ellipse([cx - rx, cy - ry, cx + rx, cy + ry], fill=col + (150,))
+    for lat, lon, rl, ro, col in MOUNTAINS + (EXTRA_MOUNTAINS if DIAG else []):
+        d.polygon(ellipse_pts(lat, lon, rl, ro), fill=col + (150,))
     for name, lat, lon, r in VOLCANOES:
-        cx, cy = P(lat, lon); rr = r / (LON1 - LON0) * S * 1.6
+        cx, cy = P(lat, lon); rr = math.hypot(*[a - b for a, b in zip(P(lat, lon + r), (cx, cy))]) * 1.6
         d.polygon([(cx, cy - rr), (cx - rr, cy + rr * 0.8), (cx + rr, cy + rr * 0.8)], fill=(130, 110, 100, 220),
                   outline=(60, 50, 40))
         d.text((cx, cy + rr * 0.8 + 6), name, font=f(30, True), fill=(60, 45, 35), anchor="mt")
@@ -204,15 +250,15 @@ def main():
     for name, pts in RIVERS:
         d.line(xy(pts), fill=RIVER, width=10, joint="curve")
     # 1 km grid
-    for i in range(1, 13):
+    for i in range(1, int(SIZE_KM) + 1):
         v = i * KM
         d.line([(v, 0), (v, S)], fill=(0, 0, 0, 28), width=2)
         d.line([(0, v), (S, v)], fill=(0, 0, 0, 28), width=2)
     # gap areas
     for name, lat, lon, rl, ro in GAP_AREAS:
-        cx, cy = P(lat, lon); rx = ro / (LON1 - LON0) * S; ry = rl / (LAT1 - LAT0) * S
-        d.ellipse([cx - rx, cy - ry, cx + rx, cy + ry], outline=GAP + (255,), width=6)
-        d.text((cx, cy - ry - 8), name, font=f(28, True), fill=GAP, anchor="mb")
+        pts = ellipse_pts(lat, lon, rl, ro)
+        d.polygon(pts, outline=GAP + (255,), width=6)
+        d.text((sum(p[0] for p in pts) / len(pts), min(p[1] for p in pts) - 8), name, font=f(28, True), fill=GAP, anchor="mb")
 
     # roads + station ticks
     def road(sts, col, w):
@@ -235,9 +281,8 @@ def main():
     for poly in SEA_POLYS + LAKES:
         md.polygon(xy(poly), fill=255)
     mtn_mask = Image.new("L", (S, S), 0); mm = ImageDraw.Draw(mtn_mask)
-    for lat, lon, rl, ro, col in MOUNTAINS:
-        cx, cy = P(lat, lon); rx = ro / (LON1 - LON0) * S; ry = rl / (LAT1 - LAT0) * S
-        mm.ellipse([cx - rx, cy - ry, cx + rx, cy + ry], fill=255)
+    for lat, lon, rl, ro, col in MOUNTAINS + (EXTRA_MOUNTAINS if DIAG else []):
+        mm.polygon(ellipse_pts(lat, lon, rl, ro), fill=255)
     taken = [P(a, b) for _, a, b in TOKAIDO_ST + NAKASENDO_ST + KOSHU + KYOKAIDO] + \
             [P(a, b) for _, a, b in CASTLE_TOWNS] + [P(a, b) for _, a, b, _ in CITIES]
     vills = []
@@ -316,15 +361,21 @@ def main():
     # scale bar
     d.rectangle([80, S - 110, 80 + 2 * KM, S - 90], fill=(0, 0, 0))
     d.rectangle([80 + KM, S - 108, 80 + 2 * KM - 2, S - 92], fill=(255, 255, 255))
-    d.text((80, S - 120), "0          1 km          2 km   (grid = 1 km, map = 12.8 km)", font=f(28), fill=(0, 0, 0), anchor="lb")
+    d.text((80, S - 120), "0          1 km          2 km   (grid = 1 km, map = %.2f km)" % SIZE_KM, font=f(28), fill=(0, 0, 0), anchor="lb")
     d.text((S - 60, 60), "N ↑", font=f(60, True), fill=(0, 0, 0), anchor="rt")
 
     # ---------------------------------------------------------------- legend panel
     x0 = S + 40; y = 50
     d.rectangle([S, 0, S + PANEL, S], fill=(248, 246, 240))
-    d.text((x0, y), "Edo – Kyoto – Osaka, 12.8 km", font=f(46, True), fill=(0, 0, 0)); y += 64
-    d.text((x0, y), "Density sketch v0, 2026-09-29. Real places,", font=f(28), fill=(60, 60, 60)); y += 36
-    d.text((x0, y), "squashed; close, not accurate.", font=f(28), fill=(60, 60, 60)); y += 60
+    d.text((x0, y), "Edo – Kyoto – Osaka, %s km" % ("20.48" if DIAG else "12.8"), font=f(46, True), fill=(0, 0, 0)); y += 64
+    if DIAG:
+        for line in ["Density sketch v1, 2026-09-29. Real places,", "turned so Osaka -> Edo runs SW -> NE along",
+                     "the diagonal (22 km). North is rotated ~29°.", "Close, not accurate."]:
+            d.text((x0, y), line, font=f(28), fill=(60, 60, 60)); y += 36
+        y += 24
+    else:
+        d.text((x0, y), "Density sketch v0, 2026-09-29. Real places,", font=f(28), fill=(60, 60, 60)); y += 36
+        d.text((x0, y), "squashed; close, not accurate.", font=f(28), fill=(60, 60, 60)); y += 60
 
     def row(draw_fn, label, n=None):
         nonlocal y
@@ -356,7 +407,8 @@ def main():
     d.text((x0, y), "Settlements drawn: %d" % nset, font=f(34, True), fill=(0, 0, 0)); y += 46
     for line in ["Chernarus (15.4 km): 2 capitals, 16 cities,",
                  "59 villages = 77. Same density on 12.8 km",
-                 "would be about 53 settlements.",
+                 "would be about 53 settlements." if not DIAG else "would be about 53; on 20.48 km about 137",
+                 "" if not DIAG else "(or about 70 counting only the land half).",
                  "",
                  "Villages are random placeholders (60):",
                  "16 on the shore, the rest near roads. Top-20 numbers match",
@@ -367,7 +419,7 @@ def main():
     for n, name, _, _ in TOP20:
         d.text((x0 + 10, y), "%2d  %s" % (n, name), font=f(26), fill=(120, 0, 0)); y += 33
 
-    out = os.path.join(HERE, "map_sketch.png")
+    out = os.path.join(HERE, "map_sketch_20k.png" if DIAG else "map_sketch.png")
     img.save(out, optimize=True)
     print("wrote", out, "settlements", nset, "villages", counts, "y_end", y)
 
