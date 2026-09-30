@@ -24,9 +24,13 @@ R_OUT, R_IN = 0.575, 0.48          # tub curb: outside d 1.15, inside d 0.96 (sh
 
 
 # ------------------------------------------------------------------------------------------------ curbs
-def water(r, n=12, wear="_w1", leafy=False, seed=1):
-    out = [flat_poly([(r * math.cos(2 * math.pi * k / n), -r * math.sin(2 * math.pi * k / n)) for k in range(n)],
-                     WATER_Y, WATER, vis=(1, 2), wear=wear)]
+def water(r, n=12, wear="_w1", leafy=False, seed=1, phase=None):
+    """The water disc. F1 (G4 walk, the fire-tub sliver): it takes the curb lathe's own n and phase and reaches 3 mm
+    into the curb wall, whose inner face runs on below it, so no sliver opens between water and wall."""
+    ph = math.pi / n if phase is None else phase
+    r = r + 0.003
+    out = [flat_poly([(r * math.cos(ph + 2 * math.pi * k / n), -r * math.sin(ph + 2 * math.pi * k / n))
+                      for k in range(n)], WATER_Y, WATER, vis=(1, 2), wear=wear)]
     if leafy:
         out.append(litter(seed, 0.05, -0.05, r * 0.7, wear="_w2"))
         out[-1] = xf(out[-1], t=(0.0, WATER_Y, 0.0))
@@ -35,13 +39,18 @@ def water(r, n=12, wear="_w1", leafy=False, seed=1):
 
 def curb_tub(wear=None, leafy=False):
     """Round stave curb, bamboo hoops (list: tub curb d 1.05-1.20 x h 0.60-0.75)."""
-    out = [lathe([(R_OUT, 0.0), (R_OUT, CURB_H), (R_IN, CURB_H), (R_IN, WATER_Y)], 16, WOOD, vis=(1,), wear=wear)]
-    out.append(lathe([(R_OUT, 0.0), (R_OUT, CURB_H), (R_IN, CURB_H), (R_IN, WATER_Y)], 8, WOOD, vis=(2,), wear=wear,
-                     smooth=False))
+    out = [lathe([(R_OUT, 0.0), (R_OUT, CURB_H), (R_IN, CURB_H), (R_IN, WATER_Y - 0.04)], 16, WOOD, vis=(1,),
+                 wear=wear)]
+    out.append(lathe([(R_OUT, 0.0), (R_OUT, CURB_H), (R_IN, CURB_H), (R_IN, WATER_Y - 0.04)], 8, WOOD, vis=(2,),
+                     wear=wear, smooth=False))
     out.append(lathe([(R_OUT, 0.0), (R_OUT, CURB_H), (0.0, CURB_H - 0.1)], 6, WOOD, vis=(3,), wear=wear, smooth=False))
     for y in (0.10, 0.36, 0.60):
         out.append(hoop(R_OUT, y, 0.035, 16, wear=wear))
-    out += water(R_IN, leafy=leafy)
+    out += water(R_IN, n=16, leafy=leafy)
+    out[-1 if not leafy else -2].vis = {1}
+    out += [flat_poly([((R_IN + 0.003) * math.cos(math.pi / 8 + 2 * math.pi * k / 8),
+                        -(R_IN + 0.003) * math.sin(math.pi / 8 + 2 * math.pi * k / 8)) for k in range(8)],
+                      WATER_Y, WATER, vis=(2,), wear="_w1")]            # Res 2: matches the 8-sided Res 2 curb
     return out, [cyl_col(R_OUT, 0.0, CURB_H, n=10)], R_OUT, "tub"
 
 
@@ -80,10 +89,10 @@ def curb_igeta(wear=None, leafy=False):
 def curb_stone(wear=None, leafy=False):
     """Cut granite curb (T3, temples): an octagonal ring of dressed stone, d 1.20 x h 0.65, a coping course."""
     H = 0.65
-    out = [lathe([(0.60, -0.03), (0.60, H - 0.10), (0.63, H - 0.10), (0.63, H), (0.47, H), (0.47, WATER_Y)], 8, CUT,
-                 vis=(1,), wear=wear, smooth=False, phase=math.pi / 8)]
-    out.append(lathe([(0.62, -0.03), (0.62, H), (0.47, H), (0.47, WATER_Y)], 8, CUT, vis=(2,), wear=wear, smooth=False,
-                     phase=math.pi / 8))
+    out = [lathe([(0.60, -0.03), (0.60, H - 0.10), (0.63, H - 0.10), (0.63, H), (0.47, H), (0.47, WATER_Y - 0.04)], 8,
+                 CUT, vis=(1,), wear=wear, smooth=False, phase=math.pi / 8)]
+    out.append(lathe([(0.62, -0.03), (0.62, H), (0.47, H), (0.47, WATER_Y - 0.04)], 8, CUT, vis=(2,), wear=wear,
+                     smooth=False, phase=math.pi / 8))
     out.append(lathe([(0.62, 0.0), (0.62, H), (0.0, H - 0.1)], 6, CUT, vis=(3,), wear=wear, smooth=False))
     out += water(0.47, n=8, leafy=leafy)
     out.append(moss_top(7, 0.35, -0.35, 0.12, H, wear="_w1"))
@@ -257,9 +266,14 @@ def hanetsurube(kind):
     piv = (PX, PH - 0.05, 0.0)
     # forked post, d 0.15, set 0.3 into the ground
     P.add(pole((PX, -0.30, 0.0), (PX, PH - 0.15, 0.0), 0.075, WOOD, n=7, vis=(1, 2, 3), r1=0.065, wear=wear))
-    for sx in (-1, 1):
-        P.add(pole((PX, PH - 0.17, 0.0), (PX + sx * 0.02, PH + 0.12, sx * 0.08), 0.04, WOOD, n=5, vis=(1,), wear=wear))
-    P.add(pole((PX, PH - 0.05, -0.12), (PX, PH - 0.05, 0.12), 0.015, WOOD, n=4, vis=(1,)))     # through-pin
+    # F1 (G4 walk, the forked-post check): the prongs open ACROSS the sweep (z), as before, but they now splay from the
+    # crotch and rise parallel past the pin, so the sweep (r ~0.053 at the pivot) sits between them instead of through
+    # them (the old straight prongs were only 0.033 off the axis at the pin)
+    for sz in (-1, 1):
+        P.add(pole((PX, PH - 0.24, 0.0), (PX, PH - 0.12, sz * 0.10), 0.042, WOOD, n=5, vis=(1,), r1=0.036, wear=wear))
+        P.add(pole((PX, PH - 0.12, sz * 0.10), (PX + sz * 0.01, PH + 0.12, sz * 0.105), 0.036, WOOD, n=5, vis=(1,),
+                   r1=0.03, wear=wear))
+    P.add(pole((PX, PH - 0.05, -0.16), (PX, PH - 0.05, 0.16), 0.015, WOOD, n=4, vis=(1,)))     # through-pin
     P.add(col(PX - 0.07, PX + 0.07, 0.0, PH - 0.25, -0.07, 0.07))
     ang = {"well": 28.0, "field": 28.0, "ab_down": 42.0}[kind]
     a = math.radians(ang)

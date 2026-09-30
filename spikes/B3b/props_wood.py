@@ -36,15 +36,24 @@ def vessel(rb, rt, h, n=12, fill=None, rim=0.016, under=False, vis=(1,), wear=No
     """A stave vessel standing on y = 0: outside, rim, inside down to `fill` (leaf litter / silt disc) or to the
     bottom board at 0.03. Returns [solids] (Res 1 detail + an optional Res 2 shell)."""
     yb = 0.03 if fill is None else fill
-    rib = rb - rim + (rt - rb) * yb / h
-    prof = [(rb, 0.0), (rt, h), (rt - rim, h), (rib, yb)]
+    ri = lambda y: rb - rim + (rt - rb) * y / h          # noqa: E731  inner stave face radius at height y
+    rib = ri(yb)
     if fill is None:
-        prof.append((0.0, yb))
+        prof = [(rb, 0.0), (rt, h), (rt - rim, h), (rib, yb), (0.0, yb)]
+    else:
+        # F1 (G4 walk): the fill disc used to be a polygon at phase 0 while the lathe's vertices sit at phase pi/n, so
+        # its corners poked into the staves and its edges left a sliver open at every stave corner, through which the
+        # back-face-culled outer wall let the street show. Now the inner wall runs 3 cm on below the fill, and the disc
+        # has the lathe's own vertex angles and reaches 3 mm into the stave thickness: sealed at any angle.
+        yl = max(0.0, yb - 0.03)
+        prof = [(rb, 0.0), (rt, h), (rt - rim, h), (ri(yl), yl)]
     if under:
         prof = [(0.0, 0.0)] + prof
     out = [lathe(prof, n, mat, vis=vis, wear=wear, smooth=True)]
     if fill is not None:
-        out.append(flat_poly([(rib * math.cos(2 * math.pi * k / n), -rib * math.sin(2 * math.pi * k / n))
+        ph = math.pi / n                                   # fkit.lathe's default phase
+        rf = rib + 0.003
+        out.append(flat_poly([(rf * math.cos(ph + 2 * math.pi * k / n), -rf * math.sin(ph + 2 * math.pi * k / n))
                               for k in range(n)][::-1], yb, fill_mat, vis=vis, wear=fill_wear))
     for y in hoops:
         out.append(hoop(rb + (rt - rb) * y / h, y, 0.024 if h > 0.3 else 0.02, n, vis=vis, wear=wear))
@@ -513,24 +522,133 @@ def bench(kind):
 
 
 # ================================================================================================ laundry pole
+# F1 (G4 walk): the drying pole runs along x, so a fork or a stake cross that holds it must open ACROSS it (in z) and
+# the pole must sit in the V. Before, both forks and crossed stakes opened along x (in the pole's own plane): the pole
+# could only pass through the crotch. POLE_R = the drying pole's radius; the seat = where it touches both arms.
+POLE_R = 0.023
+FORK_DZ, FORK_RISE, FORK_R = 0.11, 0.22, 0.022      # branch tip offset across the pole, rise above the crotch, radius
+
+
+def fork_seat(h):
+    """Centre height of the drying pole resting in a post_forked(h) V: tangent to both branches."""
+    s = FORK_DZ / math.hypot(FORK_DZ, FORK_RISE)
+    return h - 0.02 + (FORK_R + POLE_R) / s
+
+
 def post_forked(x, h=2.0, wear=None, vis=(1, 2)):
-    """A forked wooden post (monohoshi post): trunk to the fork at h, two short branches."""
+    """A forked wooden post (monohoshi post): trunk to the fork at h, two short branches opening across the pole (z)."""
+    y0 = h - 0.02
     out = [pole((x, -0.08, 0.0), (x, h, 0.0), 0.045, WOOD, n=6, vis=vis, r1=0.035, wear=wear)]
-    out.append(pole((x, h - 0.02, 0.0), (x - 0.11, h + 0.20, 0.0), 0.025, WOOD, n=5, vis=(1,), r1=0.018, wear=wear))
-    out.append(pole((x, h - 0.02, 0.0), (x + 0.12, h + 0.19, 0.0), 0.025, WOOD, n=5, vis=(1,), r1=0.018, wear=wear))
-    out.append(pole((x, h - 0.02, 0.0), (x, h + 0.15, 0.0), 0.05, WOOD, n=3, vis=(2,), r1=0.08, wear=wear))
+    out.append(pole((x, y0, 0.0), (x + 0.01, y0 + FORK_RISE, -FORK_DZ), 0.026, WOOD, n=5, vis=(1,), r1=0.018,
+                    wear=wear))
+    out.append(pole((x, y0, 0.0), (x - 0.01, y0 + FORK_RISE - 0.01, FORK_DZ + 0.005), 0.026, WOOD, n=5, vis=(1,),
+                    r1=0.018, wear=wear))
+    # Res 2: the two branches as one flat V board across the pole
+    for sz in (-1, 1):
+        out.append(pole((x, y0, 0.0), (x, y0 + FORK_RISE, sz * FORK_DZ), 0.03, WOOD, n=3, vis=(2,), r1=0.02,
+                        wear=wear))
     return out
 
 
+CROSS_Y, CROSS_HALF = 1.8, 0.5                      # stakes cross at 1.8 m, feet 1.0 m apart (across the pole)
+STAKE_R = 0.025
+
+
+def cross_seat():
+    """Centre height of the drying pole resting in the V above the crossed stakes."""
+    s = CROSS_HALF / math.hypot(CROSS_HALF, CROSS_Y + 0.05)
+    return CROSS_Y + (STAKE_R + POLE_R) / s
+
+
 def stakes_crossed(x, wear=None, vis=(1, 2)):
-    """Two 2.2 m bamboo stakes crossed at 1.8 m, legs 1.0 apart (along x), lashed."""
+    """Two 2.2 m bamboo stakes crossed at 1.8 m, feet 1.0 apart ACROSS the pole (z), lashed; the pole lies in the V
+    above the lashing."""
     out = []
+    top_y = CROSS_Y + (2.2 - math.hypot(CROSS_HALF, CROSS_Y + 0.05)) * 0.95
+    for sz in (-1, 1):
+        # the two stakes pass each other (one just in front of the other) and touch at the lashing
+        a = (x + sz * STAKE_R, -0.05, sz * CROSS_HALF)
+        b = (x + sz * STAKE_R, top_y, -sz * (top_y - CROSS_Y) * CROSS_HALF / (CROSS_Y + 0.05))
+        out.append(pole(a, b, STAKE_R, BAMBOO, n=5, vis=vis, wear=wear))
+    out.append(pole((x - 0.03, CROSS_Y - 0.03, -0.04), (x + 0.03, CROSS_Y + 0.02, 0.04), 0.03, ROPE, n=4, vis=(1,)))
+    return out
+
+
+KIMONO = "textile_cotton_indigo"     # plain indigo cotton (B1 library, 0.5 m tile): no shop marks on a garment
+COLLAR = ("textile_cotton_indigo", "_w0")   # the collar (eri) facing: the deep, unfaded indigo (a darker band)
+
+
+def kimono_hung(cx, pole_y, wear="_w1", mat=KIMONO, yuki=0.64, body_w=0.31, sleeve=0.48, drop=1.30, rc=0.030):
+    """F1 (G4 walk): a T-shaped kimono (kosode) hung through its sleeves on a drying pole along x at (y = pole_y, z = 0).
+    One continuous two-sided cloth per column: up the back panel, over the pole (a shoulder fold of radius rc), down the
+    front. Sleeve columns |x - cx| in [body_w, yuki] hang `sleeve` m, the body |x - cx| < body_w hangs `drop` m; front
+    and back converge below the fold (sleeves close at their sewn bottoms, the body hangs 2.4 cm apart). UVs at world
+    scale (u = x, v = the arc length down the cloth, / the 0.5 m tile): no stretch anywhere. Returns [solids]."""
+    t = core.mat_info(mat)["tile"]
+
+    def zoff(d, col_drop, sl):
+        if sl:                                  # sleeve: front and back meet at the sewn bottom
+            return rc - (rc - 0.006) * min(1.0, d / col_drop)
+        return rc - (rc - 0.012) * min(1.0, d / 0.5)
+
+    def column(x0, x1, col_drop, ds, sl):
+        # profile (w, y, z): back hem -> back top -> over the pole -> front top -> front hem; w = arc length
+        prof = []
+        for d in reversed(ds):
+            prof.append((pole_y - d, -zoff(d, col_drop, sl)))
+        for a in (135.0, 90.0, 45.0):           # the fold over the pole top (the pole is inside it)
+            prof.append((pole_y + rc * math.sin(math.radians(a)), -rc * math.cos(math.radians(180.0 - a))))
+        for d in ds:
+            prof.append((pole_y - d, zoff(d, col_drop, sl)))
+        w = [0.0]
+        for i in range(1, len(prof)):
+            w.append(w[-1] + math.hypot(prof[i][0] - prof[i - 1][0], prof[i][1] - prof[i - 1][1]))
+        quads, normals, uvs = [], [], []
+        for i in range(len(prof) - 1):
+            (ya, za), (yb, zb) = prof[i], prof[i + 1]
+            q = [(x0, ya, za), (x1, ya, za), (x1, yb, zb), (x0, yb, zb)]
+            n = core.norm(core.newell(q))
+            uv = [(x0 / t, w[i] / t), (x1 / t, w[i] / t), (x1 / t, w[i + 1] / t), (x0 / t, w[i + 1] / t)]
+            quads += [q, q[::-1]]
+            normals += [n, core.mul(n, -1.0)]
+            uvs += [uv, uv[::-1]]
+        s = sheet(quads, mat, normals, vis=(1,), uvs=uvs)
+        s.finalize()
+        s.wear = wear
+        return s
+
+    out = []
+    for a, b in ((-yuki, -body_w), (body_w, yuki)):
+        out.append(column(cx + a, cx + b, sleeve, [0.0, sleeve / 2, sleeve], True))
+    for a, b in ((-body_w, 0.0), (0.0, body_w)):
+        out.append(column(cx + a, cx + b, drop, [0.0, 0.24, sleeve, 0.90, drop], False))
+    # the collar (eri): a pale band from each shoulder down to where the fronts cross, 3 mm proud of the front panel
     for sx in (-1, 1):
-        a = (x + sx * 0.5, -0.05, 0.0)
-        top_y = 1.8 + (2.2 - math.hypot(0.5, 1.85)) * 0.95
-        b = (x - sx * (top_y - 1.8) * 0.5 / 1.85, top_y, 0.0)
-        out.append(pole(a, b, 0.025, BAMBOO, n=5, vis=vis, wear=wear))
-    out.append(pole((x - 0.04, 1.78, -0.03), (x + 0.04, 1.84, 0.03), 0.03, ROPE, n=4, vis=(1,)))
+        p = [(cx + sx * 0.075, pole_y - 0.005), (cx + sx * 0.005, pole_y - 0.46)]
+        lift = 0.003 if sx < 0 else 0.0045            # the right band lies over the left where they cross
+        hw = 0.02
+        q = [(p[0][0] - hw, p[0][1], rc + lift), (p[0][0] + hw, p[0][1], rc + lift),
+             (p[1][0] + hw, p[1][1], zoff(0.46, drop, False) + lift),
+             (p[1][0] - hw, p[1][1], zoff(0.46, drop, False) + lift)]
+        n = core.norm(core.newell(q))
+        if n[2] < 0:
+            q, n = q[::-1], core.mul(n, -1.0)
+        c = sheet([q], COLLAR[0], n, vis=(1,), uvs=[[(0.0, 0.0), (2 * hw / t, 0.0), (2 * hw / t, 0.46 / t),
+                                                     (0.0, 0.46 / t)]])
+        c.finalize()
+        c.wear = COLLAR[1]
+        out.append(c)
+    # Res 2: the T as two flat two-sided quads
+    t2 = []
+    for x0, x1, dd in ((cx - yuki, cx + yuki, sleeve), (cx - body_w, cx + body_w, None)):
+        y0, y1 = (pole_y + rc, pole_y - sleeve) if dd else (pole_y - sleeve, pole_y - drop)
+        q = [(x0, y0, 0.0), (x1, y0, 0.0), (x1, y1, 0.0), (x0, y1, 0.0)]
+        uv = [(x0 / t, 0.0), (x1 / t, 0.0), (x1 / t, (y0 - y1) / t), (x0 / t, (y0 - y1) / t)]
+        t2 += [(q, (0.0, 0.0, 1.0), uv), (q[::-1], (0.0, 0.0, -1.0), uv[::-1])]
+    s2 = sheet([a for a, _, _ in t2], mat, [b for _, b, _ in t2], vis=(2,), uvs=[c for _, _, c in t2])
+    s2.finalize()
+    s2.wear = wear
+    out.append(s2)
     return out
 
 
@@ -542,28 +660,32 @@ def laundry(kind):
     crossed = kind in ("crossed", "load_kaki", "load_daikon", "load_net")
     X = L / 2 - 0.25
     if crossed:
-        y = 1.8
+        y = CROSS_Y
         for sx in (-1, 1):
             add_all(P, stakes_crossed(sx * X, wear))
-            P.add(col(sx * X - 0.55, sx * X + 0.55, 0.0, 1.8, -0.03, 0.03, BAMBOO))
+            P.add(col(sx * X - 0.05, sx * X + 0.05, 0.0, CROSS_Y, -0.55, 0.55, BAMBOO))
+        pole_y = cross_seat()
     elif kind == "ab_down":
         y = 2.0
         add_all(P, post_forked(-X, wear="_w2"))
         lean = xfs(post_forked(X, wear="_w2"), rz=24.0, pivot=(X, 0.0, 0.0))
         add_all(P, lean)
         P.add(col(-X - 0.05, -X + 0.05, 0.0, 2.0, -0.05, 0.05))
+        pole_y = fork_seat(y)
     else:
         y = 2.0
         for sx in (-1, 1):
             add_all(P, post_forked(sx * X, wear=wear))
             P.add(col(sx * X - 0.05, sx * X + 0.05, 0.0, 2.0, -0.05, 0.05))
-    pole_y = y + 0.05
+        pole_y = fork_seat(y)
     if kind == "ab_down":
-        tip = (X - math.sin(math.radians(24)) * 2.0, math.cos(math.radians(24)) * 2.0, 0.0)
-        p0 = (-X - 0.3, pole_y, 0.0)
-        # the pole slipped out of the leaning fork: its +x end lies on the ground
+        # the pole slipped out of the leaning fork: it still rests in the standing fork's V at -X, its +x end on the
+        # ground; it runs on 0.3 m past the seat
+        seat = (-X, pole_y, 0.0)
         p1 = (X + 0.7, 0.025, 0.25)
-        P.add(pole(p0, p1, 0.023, BAMBOO, n=6, vis=(1, 2), wear="_w2"))
+        dv = core.norm(core.sub(p1, seat))
+        p0 = core.sub(seat, core.mul(dv, 0.3))
+        P.add(pole(p0, p1, POLE_R, BAMBOO, n=6, vis=(1, 2), wear="_w2"))
         m = grid_sheet(lambda u, v: (1.1 + 0.9 * u, 0.012 + 0.03 * math.sin(3 * u), -0.1 + 0.8 * v), 3, 2, KINARI,
                        vis=(1,), wear="_w2")
         P.add(m)
@@ -571,21 +693,13 @@ def laundry(kind):
     else:
         P.add(pole((-L / 2, pole_y, 0.0), (L / 2, pole_y, 0.0), 0.023, BAMBOO, n=6, vis=(1, 2), wear=wear))
     if kind == "load_cloth":
-        # a kimono threaded through its sleeves on the pole + a plain cloth; one garment fallen on the ground
-        def kimono(u, v, x0=-1.2, w=1.25, drop=1.30):
-            x = x0 + w * u
-            sway = 0.04 * math.sin(math.pi * u) * v
-            body = abs(u - 0.5) < 0.22
-            h = drop if body else 0.42
-            return (x, pole_y - 0.02 - h * v, sway + 0.01 * math.sin(7 * u))
-        P.add(grid_sheet(lambda u, v: kimono(u, v), 5, 3, "textile_noren", vis=(1,), wear="_w1",
-                         uv=lambda u, v: (0.47 + 0.06 * u, 1.3 * v)))      # plain indigo: the strip between marks
+        # a kimono hung through its sleeves on the pole (the Edo way: the pole runs in one sleeve, across the shoulders
+        # inside the garment and out of the other sleeve) + a plain cloth; one garment fallen on the ground
+        add_all(P, kimono_hung(-0.62, pole_y))
         P.add(grid_sheet(lambda u, v: (0.25 + 0.8 * u, pole_y - 0.02 - 0.95 * v, 0.02 * math.sin(4 * v)), 2, 3, KINARI,
                          vis=(1,), wear="_w2"))
         P.add(grid_sheet(lambda u, v: (0.9 + 1.0 * u, 0.01 + 0.04 * math.sin(5 * u * v), 0.35 + 0.7 * v), 3, 2, KINARI,
                          vis=(1,), wear="_w2"))
-        P.add(grid_sheet(lambda u, v: (-1.2 + 1.2 * u, pole_y - 0.02 - 1.2 * v, 0.0), 1, 1, "textile_noren", vis=(2,),
-                         uv=lambda u, v: (0.47 + 0.06 * u, 1.2 * v)))
     elif kind == "load_kaki":
         rr = random.Random(12)
         for i in range(7):

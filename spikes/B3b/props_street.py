@@ -141,40 +141,107 @@ def gutter(kind):
 
 
 # ================================================================================================ shop front (proxies)
-def noren_panel_uv(i, n_pan, L):
-    """uv for panel i: the middle panel carries the resist-dyed shop mark (one 0.5 m cell), the others plain cloth
-    (the 6 cm strip between marks); below 0.5 m the cloth continues plain."""
-    def uv(u, v):
-        d = v * L
-        vv = d if d <= 0.5 else 0.46 + 0.03 * (d - 0.5) / max(L - 0.5, 0.01)
-        if i == n_pan // 2:
-            uu = 0.08 + 0.34 * u
-        else:
-            uu = 0.47 + 0.06 * u
-        return (uu, vv)
-    return uv
+# F1 (G4 walk, 2026-09-30): the noren atlas (jp_m_textile_noren, 1 m tile = 2 x 2 cells of 0.5 m, 512 px/m) is mapped
+# at its REAL scale everywhere: 1 m of cloth = 1.0 in u and v, the texel density of the shop mark. Measured in the _ca /
+# _mask PNGs: the marks fill u 0.10-0.40 / 0.61-0.89 and v 0.10-0.40 / 0.60-0.90, so the plain cloth that runs the full
+# height is the column u 0.40-0.61 (0.21 m); a 0.33 m panel is two half-width columns mirrored in u across it (no
+# stretch, a mirror seam down the middle that the plain weave hides). _w2 (torn): holes run across the full width at
+# v 0.30-0.50 and 0.86-1.00 (the torn hems), clean cloth at v 0.00-0.30 and 0.50-0.86, so a _w2 panel ends in the
+# 0.86-1.00 hem and above it bounces (mirrors in v) inside the clean 0.50-0.86 band. The old mapping squeezed ~1.1 m of
+# cloth into a 0.03 v strip (and stretched a 0.06 u strip over 0.34 m): the streaks Stephen saw.
+NOREN_PLAIN_U = 0.42            # plain column start (0.40-0.61 is mark-free); + half a panel width at real scale
+NOREN_MARK_U = 0.084            # cell 0 (maru-ni-ichi, u 0.10-0.40): a 0.332 panel centred on it
+NOREN_MARK_ROWS = (0.08, 0.38)  # the mark row on the middle panel (d from the top): v 0.10-0.40 = the mark
+NOREN_HEM = 0.14                # _w2: the last 0.14 m maps onto the torn hem v 0.86-1.00
+NOREN_BOUNCE = (0.50, 0.86)     # _w2: clean band the plain cloth mirrors inside
+
+
+def noren_cuts(L, mark, wear):
+    """Row cuts (metres from the top) where the per-face mapping changes: the mark row, and for _w2 the hem and every
+    bounce of the clean band. Every face then lies inside one linear piece of the mapping."""
+    cuts = {0.0, L}
+    if mark:
+        cuts.update(c for c in NOREN_MARK_ROWS if c < L - 0.05)
+    if wear == "_w2":
+        b = NOREN_BOUNCE[1] - NOREN_BOUNCE[0]
+        e = L - NOREN_HEM
+        while e > 1e-6:
+            cuts.add(round(e, 6))
+            e -= b
+    return sorted(cuts)
+
+
+def noren_v(d, L, wear):
+    """v of plain cloth d metres down a panel of length L (real scale)."""
+    if wear != "_w2":
+        return 0.02 + d
+    if d >= L - NOREN_HEM - 1e-9:
+        return 1.0 - (L - d)
+    b = NOREN_BOUNCE[1] - NOREN_BOUNCE[0]
+    e = (L - NOREN_HEM) - d
+    k = int(e / b + 1e-9)
+    r = e - k * b
+    return NOREN_BOUNCE[1] - r if k % 2 == 0 else NOREN_BOUNCE[0] + r
+
+
+def noren_face_uv(mark, Wp, L, wear):
+    """uvf(s0, s1, d0, d1) -> the 4 corner uvs [(s0,d0), (s1,d0), (s1,d1), (s0,d1)] of one face (s across 0..1, d metres
+    down): the mark row of the middle panel on cell 0, everything else plain (mirrored half columns, real scale)."""
+    def uv(s, d, in_mark):
+        if in_mark:
+            return (NOREN_MARK_U + Wp * s, 0.10 + (d - NOREN_MARK_ROWS[0]))
+        return (NOREN_PLAIN_U + (Wp / 2) * (1.0 - abs(2.0 * s - 1.0)), noren_v(d, L, wear))
+
+    def uvf(s0, s1, d0, d1):
+        dm = (d0 + d1) / 2
+        in_mark = mark and NOREN_MARK_ROWS[0] - 1e-6 <= dm <= NOREN_MARK_ROWS[1] + 1e-6 and \
+            NOREN_MARK_ROWS[1] < L - 0.05
+        return [uv(s0, d0, in_mark), uv(s1, d0, in_mark), uv(s1, d1, in_mark), uv(s0, d1, in_mark)]
+    return uvf
+
+
+def panel_sheet(f, s_cuts, d_cuts, mat, uvf, vis=(1,), wear=None):
+    """A two-sided cloth panel with PER-FACE uvs: f(s, d) -> point (s 0..1 across, d metres down); uvf(s0, s1, d0, d1)
+    -> the 4 corner uvs. The back copy is grid_sheet's (reversed quad, reversed uvs)."""
+    quads, normals, uvs = [], [], []
+    for i in range(len(s_cuts) - 1):
+        for j in range(len(d_cuts) - 1):
+            s0, s1, d0, d1 = s_cuts[i], s_cuts[i + 1], d_cuts[j], d_cuts[j + 1]
+            q = [skit._v(f(s0, d0)), skit._v(f(s1, d0)), skit._v(f(s1, d1)), skit._v(f(s0, d1))]
+            n = core.norm(core.newell(q))
+            uv = uvf(s0, s1, d0, d1)
+            quads += [q, q[::-1]]
+            normals += [n, core.mul(n, -1.0)]
+            uvs += [uv, uv[::-1]]
+    s = core.sheet(quads, mat, normals, vis=vis, uvs=uvs)
+    s.finalize()
+    if wear:
+        s.wear = wear
+    return s
 
 
 def noren(L, wear="_w1", torn=False, top=LINTEL - 0.02, zc=0.10, missing=()):
     out = []
     pw = 0.34
+    Wp = pw - 0.008
     for i in range(3):
         if i in missing:
             continue
         xa = -0.51 + i * pw + 0.004
         rr = random.Random(i + int(L * 10))
         Lp = L * (rr.uniform(0.55, 0.8) if torn and i == 2 else 1.0)
+        mark = i == 1
 
-        def f(u, v, xa=xa, rr=rr, Lp=Lp):
-            x = xa + (pw - 0.008) * u
-            y = top - Lp * v
-            z = zc + 0.02 * math.sin(math.pi * u) * v + 0.03 * v * (i - 1) * 0.3
-            return (x, y, z)
-        out.append(grid_sheet(f, 1, 3, NOREN, vis=(1,), wear=wear, uv=noren_panel_uv(i, 3, Lp)))
+        def f(s, d, xa=xa, Lp=Lp, i=i):
+            v = d / Lp
+            return (xa + Wp * s, top - d, zc + 0.02 * math.sin(math.pi * s) * v + 0.03 * v * (i - 1) * 0.3)
+        cuts = sorted(set(noren_cuts(Lp, mark, wear)) | {round(Lp * k / 3, 6) for k in (1, 2)})
+        out.append(panel_sheet(f, [0.0, 0.5, 1.0], cuts, NOREN, noren_face_uv(mark, Wp, Lp, wear), vis=(1,), wear=wear))
+        # Res 2: the same panel flat, only the mapping cuts (same real-scale mark and plain cloth)
+        out.append(panel_sheet(lambda s, d, xa=xa: (xa + Wp * s, top - d, zc), [0.0, 0.5, 1.0],
+                               noren_cuts(Lp, mark, wear), NOREN, noren_face_uv(mark, Wp, Lp, wear), vis=(2,),
+                               wear=wear))
     out.append(pole((-0.62, top + 0.02, zc), (0.62, top + 0.02, zc), 0.015, BAMBOO, n=5, vis=(1, 2)))
-    # Res 2: one two-sided sheet, the shop mark stretched over the three panels (never the tiled 4-mark atlas)
-    out.append(grid_sheet(lambda u, v: (-0.51 + 1.02 * u, top - L * v, zc), 1, 2 if L > 0.5 else 1, NOREN, vis=(2,),
-                          wear=wear, uv=lambda u, v: (0.5 * u, v * L if v * L <= 0.5 else 0.46 + 0.03 * v)))
     return out
 
 

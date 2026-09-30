@@ -68,6 +68,14 @@ class SPart(FPart):
         self.need = () if flat else tuple(need)
         self.bury = bury
         self.wall_gap = wall_gap
+        self.geo_props = {}
+
+    def lods(self, geo_props=None, mass=None):
+        """FPart.lods plus extra Geometry named properties (F1: the wells need class=house, see build.WELL_GEO)."""
+        props = {"autocenter": "0"}
+        props.update(self.geo_props or {})
+        out = core.Part.lods(self, props, self.mass)
+        return [l for l in out if not mlod.same_res(l.resolution, mlod.LOD_MEMORY)]
 
 
 # ------------------------------------------------------------------------------------------------ transforms
