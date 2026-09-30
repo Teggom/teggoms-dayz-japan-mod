@@ -22,7 +22,7 @@ Fields:
   placements  [{pos: (x, y, z) world, yaw: deg, where: note}]; they go to C.csv (baked into the terrain) and to
               C_mapgrouppos.xml. Test-island spots are in README "The test island".
   verify      module in the folder with run(M, floors, pts) -> bool, or None for the pipeline's generic checks
-  budget      face budget class (PLAYBOOK §12): 'small' | 'standard' | 'large'
+  budget      face budget class (PLAYBOOK §12): 'small' | 'standard' | 'townhouse' | 'large'
   ship        True: staged into src, config, PBO and the drop-ins. False: built and checked offline only (out/)
 """
 
@@ -53,12 +53,13 @@ BUILDINGS = [
         "loot": {"usage": ["Town"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]},
         "placements": [],
         "verify": None,
-        "budget": "standard",
+        "budget": "townhouse",
         "ship": False,
     },
 ]
 
-BUDGETS = {"small": (3000, 1150, 400), "standard": (6000, 2300, 800), "large": (12000, 4600, 1600)}
+BUDGETS = {"small": (3000, 1150, 400), "standard": (6000, 2300, 800), "townhouse": (9000, 3450, 1200),
+           "large": (12000, 4600, 1600)}
 
 
 def get(key):

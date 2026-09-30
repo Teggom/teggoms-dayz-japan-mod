@@ -658,6 +658,7 @@ LOD2 about 13 % of LOD0:
 |---|---|---|---|
 | Small building (≤1 storey, ≤20 m²) | ≤3,000 | ≤1,150 | ≤400 |
 | Standard house | ≤6,000 | ≤2,300 | ≤800 |
+| Townhouse unit (snap-together row units, Stephen 2026-09-29: same per-ken detail as the machiya, many in view) | ≤9,000 | ≤3,450 | ≤1,200 |
 | Large / landmark building | ≤12,000 | ≤4,600 | ≤1,600 |
 | Furniture | ≤1,000 | | |
 | Small prop | ≤300 | | |

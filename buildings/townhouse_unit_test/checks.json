@@ -8,8 +8,8 @@
    "detail": "Resolution 1 8062, Resolution 2 2973, Resolution 3 1107, Geometry 1140, Memory 0, Roadway 17, View Geometry 1136, Fire Geometry 1130"
   },
   {
-   "check": "C5 face budget (standard: 6000 / 2300 / 800)",
-   "ok": false,
+   "check": "C5 face budget (townhouse: 9000 / 3450 / 1200)",
+   "ok": true,
    "detail": "R1 8062, R2 2973, R3 1107"
   },
   {
@@ -200,7 +200,7 @@
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "16 library rvmats in the visual LODs, 4 glossy by design (kawara, namako, iron)"
+   "detail": "16 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
