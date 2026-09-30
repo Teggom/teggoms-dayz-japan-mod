@@ -96,7 +96,7 @@
 - 2026-09-29: **Effort test PENDING (run before Phase B).** Stephen wants to compare the same task at 4 reasoning-effort
   levels (tokens + quality).
   - **Set up:** agent types `opus-medium`, `opus-high`, `opus-xhigh`, `opus-max` in
-    `D:\DayZ-Server_AI-20260907-MultiMap\.claudegents\` (frontmatter `effort:`). The brief is
+    `D:\DayZ-Server_AI-20260907-MultiMap\.claude\agents\` (frontmatter `effort:`). The brief is
     `spikes/effort_test/BRIEF.md`: one prop, the tansu, intact + ransacked, into `spikes/effort_test/<level>/`.
   - **Blocked:** the agents folder didn't exist when the session started, so the new types only load after a SESSION
     RESTART.
