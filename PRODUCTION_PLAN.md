@@ -130,5 +130,16 @@
   (`test/spawns/E.json`) as reference.
 - 2026-09-29: Phase B breakdown agreed with Stephen (B0, B1, B2, B3a, B3b, B4); B0 gained the townhouse-unit template
   and B4 gained the B3b + mise-floor dependencies. Not launched yet.
+- 2026-09-29: **B0 and B1 DONE** (opus-high; B0 409k tokens / 50 min, B1 453k / 39 min). B3a/B3b held back (usage window).
+  - **B0:** helpers in `jpparts` (floors, leanto x6 coverings, udatsu, ridge walk, `assemble.Builder`); multi-building
+    pipeline `python buildings/pipeline.py [key...]` + `buildings/registry.py`; townhouse template
+    `jpparts/templates/townhouse.py` with 4 placeholder hooks for B2. Machiya 78/78, outputs byte-identical. C19 reads
+    the material `finish` field. Commits 0ef810a, 49daa03, 4ce8b31, 07ab8d1.
+  - **B1:** 34 materials x 3 wears (16 of the 50 named already existed), both text atlases (fonts in `research/fonts/`,
+    Yuji Syuku + Yuji Hentaigana Akebono, OFL), jp_common.pbo repacked. Sheets in
+    `research/materials/contact_sheets/b1_*.jpg`. Commits ec9f6a8, 73d2165, ee28a45.
+  - **Open for Stephen:** townhouse unit face budget (test unit 8,062 faces vs the standard 6,000; audit §6 risk 2);
+    the doma floor is bright (137,132,128 vs vanilla 76-127), judge at G4; a faded-red jizō-bib cloth and a brown heri
+    still need palette entries (the bib is B3b's).
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
