@@ -1,0 +1,199 @@
+{
+ "id": "jp_f_goods_general",
+ "build_list": {
+  "name": "General-goods dressing set: cloth bolts, paper bundles, wrapped packages, straw sandals, small boxes",
+  "importance": "filler",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "shop"
+  ],
+  "loot_surface": "none (dressing)",
+  "abandoned_state": "swept off, bolts unrolled across the strip",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces (per cluster)",
+  "dimensions": {
+   "bolt_m": {
+    "value": "0.36 x 0.10 x 0.10 (one tan of cloth rolled)",
+    "assumed": true,
+    "reason": "typical tan bolt"
+   },
+   "bundle_m": {
+    "value": "0.30 x 0.25 x 0.10 paper",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "sandals_m": {
+    "value": "0.24 long pairs tied in strings",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "x33_jinrin_bookseller_1690",
+    "shows": "stacked goods at a shop front, 1690",
+    "period_image": true
+   },
+   {
+    "id": "i13_echigoya_1768",
+    "shows": "cloth goods (1768)",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "shop",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "general-goods shop set (shop:general): clusters <= 300 faces"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shop\\jp_f_goods_general_cloth.p3d",
+   "class": "StaticObj_JP_F_Goods_General_Cloth",
+   "variant": "cloth",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Goods: cloth bolts and sandals, stacked",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 222,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.52,
+    0.376,
+    0.0,
+    0.28,
+    -0.18,
+    0.18
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.52,
+    -0.18,
+    0.12,
+    0.18
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 4.0,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only; loot lies on the step / strip around it"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\shop\\jp_f_goods_general_cloth_swept.p3d",
+   "class": "StaticObj_JP_F_Goods_General_Cloth_Swept",
+   "variant": "cloth",
+   "state": "swept",
+   "abandoned": true,
+   "display": "Goods: cloth swept off, a bolt unrolled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 208,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.683,
+    0.779,
+    0.0,
+    0.106,
+    -0.368,
+    0.954
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only; loot lies on the step / strip around it"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\shop\\jp_f_goods_general_paper.p3d",
+   "class": "StaticObj_JP_F_Goods_General_Paper",
+   "variant": "paper",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Goods: paper bundles, packages, a box",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 108,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.381,
+    0.37,
+    0.0,
+    0.243,
+    -0.16,
+    0.16
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.38,
+    -0.16,
+    0.37,
+    0.16
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 4.0,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only; loot lies on the step / strip around it"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\shop\\jp_f_goods_general_paper_swept.p3d",
+   "class": "StaticObj_JP_F_Goods_General_Paper_Swept",
+   "variant": "paper",
+   "state": "swept",
+   "abandoned": true,
+   "display": "Goods: paper and packages swept off",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 72,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.546,
+    0.5,
+    0.0,
+    0.2,
+    -0.1,
+    0.993
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only; loot lies on the step / strip around it"
+   ]
+  }
+ ]
+}

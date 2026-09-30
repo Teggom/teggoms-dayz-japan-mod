@@ -1,0 +1,431 @@
+{
+ "id": "jp_f_misedana",
+ "build_list": {
+  "name": "Stepped goods stand (misedana / hinadan) for shop display",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "shop"
+  ],
+  "loot_surface": "each step: 1 point per 0.9 m (range 0.15)",
+  "abandoned_state": "goods swept off, stand toppled or half empty",
+  "blocks_path": "only on the display strip, never in the door band",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "size_m": {
+    "value": "1.82 or 0.91 wide x 0.60 deep x 0.45 high, 2-3 steps",
+    "assumed": true,
+    "reason": "reason: grid; low so the shop can be seen from the street"
+   },
+   "step_m": {
+    "value": "0.15 rise, 0.20 tread",
+    "assumed": true,
+    "reason": "reason"
+   }
+  },
+  "refs": [
+   {
+    "id": "x33_jinrin_bookseller_1690",
+    "shows": "goods laid out and stacked at the raised shop front, 1690",
+    "period_image": true
+   },
+   {
+    "id": "i13_echigoya_1768",
+    "shows": "goods on shelves and floor (1768)",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "shop",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shop\\jp_f_misedana_1ken.p3d",
+   "class": "StaticObj_JP_F_Misedana_1ken",
+   "variant": "1ken",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stepped goods stand 1.82 m",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 96,
+    "Resolution 2": 24,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.91,
+    0.91,
+    0.0,
+    0.45,
+    -0.3,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.91,
+    -0.3,
+    0.91,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 12.0,
+   "loot_surfaces": [
+    {
+     "name": "step_1",
+     "kind": "shelf",
+     "y": 0.15,
+     "rect": [
+      -0.86,
+      0.13,
+      0.86,
+      0.27
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.455,
+       0.15,
+       0.2
+      ],
+      [
+       0.455,
+       0.15,
+       0.2
+      ]
+     ]
+    },
+    {
+     "name": "step_2",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      -0.86,
+      -0.07,
+      0.86,
+      0.07
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.455,
+       0.3,
+       -0.0
+      ],
+      [
+       0.455,
+       0.3,
+       -0.0
+      ]
+     ]
+    },
+    {
+     "name": "step_3",
+     "kind": "shelf",
+     "y": 0.45,
+     "rect": [
+      -0.86,
+      -0.27,
+      0.86,
+      -0.13
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.455,
+       0.45,
+       -0.2
+      ],
+      [
+       0.455,
+       0.45,
+       -0.2
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "only on the display strip, never in the door band"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\shop\\jp_f_misedana_1ken_toppled.p3d",
+   "class": "StaticObj_JP_F_Misedana_1ken_Toppled",
+   "variant": "1ken",
+   "state": "toppled",
+   "abandoned": true,
+   "display": "Goods stand 1.82 m, toppled forward",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 96,
+    "Resolution 2": 24,
+    "Resolution 3": 18,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.983,
+    0.874,
+    0.0,
+    0.6,
+    0.203,
+    0.841
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.983,
+    0.203,
+    0.874,
+    0.841
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 12.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "only on the display strip, never in the door band"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\shop\\jp_f_misedana_half.p3d",
+   "class": "StaticObj_JP_F_Misedana_Half",
+   "variant": "half",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stepped goods stand 0.91 m",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 78,
+    "Resolution 2": 24,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    0.0,
+    0.45,
+    -0.3,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    -0.3,
+    0.455,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 7.0,
+   "loot_surfaces": [
+    {
+     "name": "step_1",
+     "kind": "shelf",
+     "y": 0.15,
+     "rect": [
+      -0.405,
+      0.13,
+      0.405,
+      0.27
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.15,
+       0.2
+      ]
+     ]
+    },
+    {
+     "name": "step_2",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      -0.405,
+      -0.07,
+      0.405,
+      0.07
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.3,
+       -0.0
+      ]
+     ]
+    },
+    {
+     "name": "step_3",
+     "kind": "shelf",
+     "y": 0.45,
+     "rect": [
+      -0.405,
+      -0.27,
+      0.405,
+      -0.13
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.45,
+       -0.2
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "only on the display strip, never in the door band"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\shop\\jp_f_misedana_half_toppled.p3d",
+   "class": "StaticObj_JP_F_Misedana_Half_Toppled",
+   "variant": "half",
+   "state": "toppled",
+   "abandoned": true,
+   "display": "Goods stand 0.91 m, toppled forward",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 78,
+    "Resolution 2": 24,
+    "Resolution 3": 18,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.531,
+    0.421,
+    0.0,
+    0.6,
+    0.251,
+    0.793
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.531,
+    0.251,
+    0.421,
+    0.793
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 7.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "only on the display strip, never in the door band"
+   ]
+  }
+ ]
+}

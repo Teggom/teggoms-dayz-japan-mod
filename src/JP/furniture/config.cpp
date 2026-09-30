@@ -578,4 +578,129 @@ class CfgVehicles
 		displayName="Straw mats, pile slid apart";
 		model="\JP\furniture\bedding\jp_f_mushiro_pile_spread.p3d";
 	};
+	// jp_f_zukue (shop)
+	class StaticObj_JP_F_Zukue_Choba: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Account desk (choba-zukue)";
+		model="\JP\furniture\shop\jp_f_zukue_choba.p3d";
+	};
+	class StaticObj_JP_F_Zukue_Choba_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Account desk on its side, ledger scattered";
+		model="\JP\furniture\shop\jp_f_zukue_choba_tipped.p3d";
+	};
+	class StaticObj_JP_F_Zukue_Plain: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Low writing desk (fuzukue)";
+		model="\JP\furniture\shop\jp_f_zukue_plain.p3d";
+	};
+	class StaticObj_JP_F_Zukue_Plain_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Writing desk on its side";
+		model="\JP\furniture\shop\jp_f_zukue_plain_tipped.p3d";
+	};
+	// jp_f_choba_goshi (shop)
+	class StaticObj_JP_F_Choba_Goshi_3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Counting-desk lattice, three folds";
+		model="\JP\furniture\shop\jp_f_choba_goshi_3.p3d";
+	};
+	class StaticObj_JP_F_Choba_Goshi_3_Knocked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Counting-desk lattice, one fold knocked flat";
+		model="\JP\furniture\shop\jp_f_choba_goshi_3_knocked.p3d";
+	};
+	class StaticObj_JP_F_Choba_Goshi_2: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Counting-desk lattice, two folds";
+		model="\JP\furniture\shop\jp_f_choba_goshi_2.p3d";
+	};
+	class StaticObj_JP_F_Choba_Goshi_2_Knocked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Counting-desk lattice (two folds), one knocked flat";
+		model="\JP\furniture\shop\jp_f_choba_goshi_2_knocked.p3d";
+	};
+	// jp_f_misedana (shop)
+	class StaticObj_JP_F_Misedana_1ken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stepped goods stand 1.82 m";
+		model="\JP\furniture\shop\jp_f_misedana_1ken.p3d";
+	};
+	class StaticObj_JP_F_Misedana_1ken_Toppled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods stand 1.82 m, toppled forward";
+		model="\JP\furniture\shop\jp_f_misedana_1ken_toppled.p3d";
+	};
+	class StaticObj_JP_F_Misedana_Half: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stepped goods stand 0.91 m";
+		model="\JP\furniture\shop\jp_f_misedana_half.p3d";
+	};
+	class StaticObj_JP_F_Misedana_Half_Toppled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods stand 0.91 m, toppled forward";
+		model="\JP\furniture\shop\jp_f_misedana_half_toppled.p3d";
+	};
+	// jp_f_goods_general (shop)
+	class StaticObj_JP_F_Goods_General_Cloth: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: cloth bolts and sandals, stacked";
+		model="\JP\furniture\shop\jp_f_goods_general_cloth.p3d";
+	};
+	class StaticObj_JP_F_Goods_General_Cloth_Swept: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: cloth swept off, a bolt unrolled";
+		model="\JP\furniture\shop\jp_f_goods_general_cloth_swept.p3d";
+	};
+	class StaticObj_JP_F_Goods_General_Paper: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: paper bundles, packages, a box";
+		model="\JP\furniture\shop\jp_f_goods_general_paper.p3d";
+	};
+	class StaticObj_JP_F_Goods_General_Paper_Swept: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: paper and packages swept off";
+		model="\JP\furniture\shop\jp_f_goods_general_paper_swept.p3d";
+	};
+	// jp_f_debris (debris)
+	class StaticObj_JP_F_Debris_Leaves: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Litter: autumn leaves blown in";
+		model="\JP\furniture\debris\jp_f_debris_leaves.p3d";
+	};
+	class StaticObj_JP_F_Debris_Straw: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Litter: straw and dust";
+		model="\JP\furniture\debris\jp_f_debris_straw.p3d";
+	};
+	class StaticObj_JP_F_Debris_Paper: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Litter: torn paper and shoji squares";
+		model="\JP\furniture\debris\jp_f_debris_paper.p3d";
+	};
+	class StaticObj_JP_F_Debris_Shards: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Litter: broken bowls";
+		model="\JP\furniture\debris\jp_f_debris_shards.p3d";
+	};
 };

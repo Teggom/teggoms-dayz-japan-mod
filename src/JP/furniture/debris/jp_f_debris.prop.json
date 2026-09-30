@@ -1,0 +1,189 @@
+{
+ "id": "jp_f_debris",
+ "build_list": {
+  "name": "Dead-world floor litter: blown leaves, straw, torn paper, bowl shards, dust patches (decal atlas)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma",
+   "daidokoro",
+   "living",
+   "zashiki",
+   "sleeping",
+   "shop",
+   "office",
+   "storage",
+   "workshop",
+   "engawa",
+   "corridor",
+   "guard",
+   "stable",
+   "bath",
+   "toilet"
+  ],
+  "loot_surface": "none (does not subtract from floor loot)",
+  "abandoned_state": "this IS the abandoned state",
+  "blocks_path": "none (no Geometry)",
+  "lod_budget": "small prop <=100 faces (quads)",
+  "dimensions": {
+   "decal_m": {
+    "value": "0.5-1.5 patches, 0.002 above the floor",
+    "assumed": true,
+    "reason": "reason: no z-fighting, no collision"
+   },
+   "shards_m": {
+    "value": "0.03-0.08 pieces",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "i02_kasuya_kamado",
+    "shows": "dusty doma surface (look reference)",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "debris",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "this IS the abandoned layer (no separate abandoned states)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\debris\\jp_f_debris_leaves.p3d",
+   "class": "StaticObj_JP_F_Debris_Leaves",
+   "variant": "leaves",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Litter: autumn leaves blown in",
+   "anchor": "floor",
+   "budget": 100,
+   "faces": {
+    "Resolution 1": 11,
+    "Resolution 2": 3
+   },
+   "bbox": [
+    -0.639,
+    0.726,
+    0.003,
+    0.004,
+    -0.539,
+    0.362
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "at door sills and engawa edges; the sill side is +z",
+    "no Geometry; does not subtract from floor loot; Resolution 1 only in a house (Q5 rule 1)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\debris\\jp_f_debris_straw.p3d",
+   "class": "StaticObj_JP_F_Debris_Straw",
+   "variant": "straw",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Litter: straw and dust",
+   "anchor": "floor",
+   "budget": 100,
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 3
+   },
+   "bbox": [
+    -0.636,
+    0.486,
+    0.003,
+    0.025,
+    -0.423,
+    0.421
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "no Geometry; does not subtract from floor loot; Resolution 1 only in a house (Q5 rule 1)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\debris\\jp_f_debris_paper.p3d",
+   "class": "StaticObj_JP_F_Debris_Paper",
+   "variant": "paper",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Litter: torn paper and shoji squares",
+   "anchor": "floor",
+   "budget": 100,
+   "faces": {
+    "Resolution 1": 9,
+    "Resolution 2": 2
+   },
+   "bbox": [
+    -0.509,
+    0.359,
+    0.002,
+    0.01,
+    -0.373,
+    0.376
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "no Geometry; does not subtract from floor loot; Resolution 1 only in a house (Q5 rule 1)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\debris\\jp_f_debris_shards.p3d",
+   "class": "StaticObj_JP_F_Debris_Shards",
+   "variant": "shards",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Litter: broken bowls",
+   "anchor": "floor",
+   "budget": 100,
+   "faces": {
+    "Resolution 1": 70,
+    "Resolution 2": 3
+   },
+   "bbox": [
+    -0.297,
+    0.405,
+    0.0,
+    0.013,
+    -0.263,
+    0.271
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "no Geometry; does not subtract from floor loot; Resolution 1 only in a house (Q5 rule 1)"
+   ]
+  }
+ ]
+}
