@@ -17,6 +17,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 10:48 (local) | B3b | 20 outdoor items = 129 models (20 new, 80 variants, 29 abandoned), jp_site.pbo + well script, 1 material | **519k** (147 tool calls) | 40 min | **22%** (5-hour 19%): B3b alone = ~1% weekly, ~9% of a 5-hour window |
 | 2026-09-30 11:33 (local) | B4 (baseline) | launched: furnish + dress the machiya pilot, G4 checklist, time log in TIMELOG_B4.md | - | - | before: **22%** (5-hour 19%) |
 | 2026-09-30 12:43 (local) | B4 | furnished machiya pilot: 32 room props + 5 shop-front proxies, 43 loot pts, 17 yard/street objects, toilet, decorator kit, G4 checklist | **576k** (225 tool calls) | 69 min | **24%** (5-hour 33%): B4 alone = ~2% weekly, ~14% of a 5-hour window |
+| 2026-09-30 12:44 (local) | L1 (baseline) | launched: life layer interior, 50 items, one agent, time log TIMELOG_L1.md | - | - | before: **24%** (5-hour 33%, resets ~13:40) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
