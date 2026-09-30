@@ -278,6 +278,82 @@ class CfgVehicles
 		displayName="Storage jar M, broken";
 		model="\JP\furniture\kitchen\jp_f_jar_m_broken.p3d";
 	};
+	// jp_f_andon (heat_light)
+	class StaticObj_JP_F_Andon_Kaku: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Standing paper lamp (andon)";
+		model="\JP\furniture\heat_light\jp_f_andon_kaku.p3d";
+	};
+	class StaticObj_JP_F_Andon_Kaku_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Andon, knocked over, paper torn";
+		model="\JP\furniture\heat_light\jp_f_andon_kaku_tipped.p3d";
+	};
+	class StaticObj_JP_F_Andon_Ariake: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bedside lamp (ariake andon)";
+		model="\JP\furniture\heat_light\jp_f_andon_ariake.p3d";
+	};
+	class StaticObj_JP_F_Andon_Ariake_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bedside lamp, knocked over";
+		model="\JP\furniture\heat_light\jp_f_andon_ariake_tipped.p3d";
+	};
+	// jp_f_hibachi (heat_light)
+	class StaticObj_JP_F_Hibachi_Round: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Round ceramic brazier (hibachi)";
+		model="\JP\furniture\heat_light\jp_f_hibachi_round.p3d";
+	};
+	class StaticObj_JP_F_Hibachi_Round_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Round brazier, tipped, ash spilled";
+		model="\JP\furniture\heat_light\jp_f_hibachi_round_tipped.p3d";
+	};
+	class StaticObj_JP_F_Hibachi_Box: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden box brazier";
+		model="\JP\furniture\heat_light\jp_f_hibachi_box.p3d";
+	};
+	class StaticObj_JP_F_Hibachi_Box_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Box brazier, tipped, ash spilled";
+		model="\JP\furniture\heat_light\jp_f_hibachi_box_tipped.p3d";
+	};
+	// jp_f_tabakobon (heat_light)
+	class StaticObj_JP_F_Tabakobon: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tobacco tray (tabako-bon)";
+		model="\JP\furniture\heat_light\jp_f_tabakobon.p3d";
+	};
+	class StaticObj_JP_F_Tabakobon_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tobacco tray on its side, ash spilled";
+		model="\JP\furniture\heat_light\jp_f_tabakobon_spilled.p3d";
+	};
+	// jp_f_nagamochi (storage)
+	class StaticObj_JP_F_Nagamochi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Long chest (nagamochi)";
+		model="\JP\furniture\storage\jp_f_nagamochi.p3d";
+	};
+	class StaticObj_JP_F_Nagamochi_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Long chest, lid thrown back, cloth spilling";
+		model="\JP\furniture\storage\jp_f_nagamochi_open.p3d";
+	};
 	// jp_f_tansu (storage)
 	class StaticObj_JP_F_Tansu: HouseNoDestruct
 	{
@@ -302,5 +378,204 @@ class CfgVehicles
 		scope=1;
 		displayName="Tansu, single box (ransacked)";
 		model="\JP\furniture\storage\jp_f_tansu_single_ransacked.p3d";
+	};
+	// jp_f_kori (storage)
+	class StaticObj_JP_F_Kori: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wicker trunk (kori)";
+		model="\JP\furniture\storage\jp_f_kori.p3d";
+	};
+	class StaticObj_JP_F_Kori_2: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wicker trunks, stack of two";
+		model="\JP\furniture\storage\jp_f_kori_2.p3d";
+	};
+	class StaticObj_JP_F_Kori_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wicker trunk, lid off, garment out";
+		model="\JP\furniture\storage\jp_f_kori_open.p3d";
+	};
+	// jp_f_box (storage)
+	class StaticObj_JP_F_Box_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden box, small";
+		model="\JP\furniture\storage\jp_f_box_s.p3d";
+	};
+	class StaticObj_JP_F_Box_M: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden box, medium";
+		model="\JP\furniture\storage\jp_f_box_m.p3d";
+	};
+	class StaticObj_JP_F_Box_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden box, large";
+		model="\JP\furniture\storage\jp_f_box_l.p3d";
+	};
+	class StaticObj_JP_F_Box_Stack3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden boxes, stack of three";
+		model="\JP\furniture\storage\jp_f_box_stack3.p3d";
+	};
+	class StaticObj_JP_F_Box_S_Lacquer: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lacquered box, small (T3)";
+		model="\JP\furniture\storage\jp_f_box_s_lacquer.p3d";
+	};
+	class StaticObj_JP_F_Box_M_Lacquer: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lacquered box, medium (T3)";
+		model="\JP\furniture\storage\jp_f_box_m_lacquer.p3d";
+	};
+	class StaticObj_JP_F_Box_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden box, lid off, spilled";
+		model="\JP\furniture\storage\jp_f_box_open.p3d";
+	};
+	class StaticObj_JP_F_Box_Stack3_Toppled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Box stack, small box knocked off";
+		model="\JP\furniture\storage\jp_f_box_stack3_toppled.p3d";
+	};
+	// jp_f_tawara (storage)
+	class StaticObj_JP_F_Tawara: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw rice bale (tawara)";
+		model="\JP\furniture\storage\jp_f_tawara.p3d";
+	};
+	class StaticObj_JP_F_Tawara_Burst: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice bale, burst, rice spilled";
+		model="\JP\furniture\storage\jp_f_tawara_burst.p3d";
+	};
+	class StaticObj_JP_F_Tawara_Stack6: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice bales, pyramid of six";
+		model="\JP\furniture\storage\jp_f_tawara_stack6.p3d";
+	};
+	class StaticObj_JP_F_Tawara_Stack6_Burst: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice bales, top one burst";
+		model="\JP\furniture\storage\jp_f_tawara_stack6_burst.p3d";
+	};
+	class StaticObj_JP_F_Tawara_Kamasu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw bag (kamasu)";
+		model="\JP\furniture\storage\jp_f_tawara_kamasu.p3d";
+	};
+	class StaticObj_JP_F_Tawara_Kamasu_Stack3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw bags, stack of three";
+		model="\JP\furniture\storage\jp_f_tawara_kamasu_stack3.p3d";
+	};
+	class StaticObj_JP_F_Tawara_Kamasu_Burst: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw bag, split and slumped";
+		model="\JP\furniture\storage\jp_f_tawara_kamasu_burst.p3d";
+	};
+	// jp_f_rack (storage)
+	class StaticObj_JP_F_Rack_1ken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Board shelving 1.82 m (kura shelves)";
+		model="\JP\furniture\storage\jp_f_rack_1ken.p3d";
+	};
+	class StaticObj_JP_F_Rack_1ken_Collapsed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Board shelving 1.82 m, board down, goods on the floor";
+		model="\JP\furniture\storage\jp_f_rack_1ken_collapsed.p3d";
+	};
+	class StaticObj_JP_F_Rack_Half: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Board shelving 0.91 m";
+		model="\JP\furniture\storage\jp_f_rack_half.p3d";
+	};
+	class StaticObj_JP_F_Rack_Half_Collapsed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Board shelving 0.91 m, board down";
+		model="\JP\furniture\storage\jp_f_rack_half_collapsed.p3d";
+	};
+	// jp_f_futon_stack (bedding)
+	class StaticObj_JP_F_Futon_Stack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Folded bedding stack (futon, yogi)";
+		model="\JP\furniture\bedding\jp_f_futon_stack.p3d";
+	};
+	class StaticObj_JP_F_Futon_Stack_Slumped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bedding stack slumped, quilt dragged off";
+		model="\JP\furniture\bedding\jp_f_futon_stack_slumped.p3d";
+	};
+	// jp_f_futon_laid (bedding)
+	class StaticObj_JP_F_Futon_Laid: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Laid-out bedding, quilt thrown back";
+		model="\JP\furniture\bedding\jp_f_futon_laid.p3d";
+	};
+	class StaticObj_JP_F_Futon_Laid_Dragged: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Laid-out bedding, quilt dragged aside, stained";
+		model="\JP\furniture\bedding\jp_f_futon_laid_dragged.p3d";
+	};
+	// jp_f_mushiro (bedding)
+	class StaticObj_JP_F_Mushiro: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw floor mat (mushiro)";
+		model="\JP\furniture\bedding\jp_f_mushiro.p3d";
+	};
+	class StaticObj_JP_F_Mushiro_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw mat, torn, corner curled";
+		model="\JP\furniture\bedding\jp_f_mushiro_torn.p3d";
+	};
+	class StaticObj_JP_F_Mushiro_Rolled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw mat, rolled";
+		model="\JP\furniture\bedding\jp_f_mushiro_rolled.p3d";
+	};
+	class StaticObj_JP_F_Mushiro_Rolled_Loose: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw mat, half unrolled";
+		model="\JP\furniture\bedding\jp_f_mushiro_rolled_loose.p3d";
+	};
+	class StaticObj_JP_F_Mushiro_Pile: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw mats, small pile";
+		model="\JP\furniture\bedding\jp_f_mushiro_pile.p3d";
+	};
+	class StaticObj_JP_F_Mushiro_Pile_Spread: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw mats, pile slid apart";
+		model="\JP\furniture\bedding\jp_f_mushiro_pile_spread.p3d";
 	};
 };

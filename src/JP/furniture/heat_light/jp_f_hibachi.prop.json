@@ -1,0 +1,303 @@
+{
+ "id": "jp_f_hibachi",
+ "build_list": {
+  "name": "Charcoal brazier (hibachi): round ceramic/wood, and the square wooden box type",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "living",
+   "zashiki",
+   "shop",
+   "office",
+   "sleeping",
+   "guard"
+  ],
+  "loot_surface": "box rim at 0.30: 1 small point (range 0.12)",
+  "abandoned_state": "cold ash, tongs lying on the mat; one in five tipped with an ash spill decal",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "round_m": {
+    "value": "d 0.38, h 0.28",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "box_m": {
+    "value": "0.45 x 0.35 x 0.30",
+    "assumed": true,
+    "reason": "typical box brazier"
+   },
+   "tongs_m": {
+    "value": "0.30 iron chopsticks",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "i36_morse_hibachi",
+    "shows": "Morse 1885: common hibachi",
+    "period_image": false
+   },
+   {
+    "id": "i37_morse_hibachi_wood",
+    "shows": "Morse 1885: wooden hibachi",
+    "period_image": false
+   },
+   {
+    "id": "i09_edo_nagaya_hibachi",
+    "shows": "box hibachi in a tenement room (c.1840 reconstruction)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "heat_light",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_hibachi_round.p3d",
+   "class": "StaticObj_JP_F_Hibachi_Round",
+   "variant": "round",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Round ceramic brazier (hibachi)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 192,
+    "Resolution 2": 58,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.19,
+    0.184,
+    0.0,
+    0.434,
+    -0.185,
+    0.185
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.176,
+    -0.176,
+    0.176,
+    0.176
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.38,
+     "measured": 0.38,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cold ash; one in five tipped with the ash spilled (decision 11)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_hibachi_round_tipped.p3d",
+   "class": "StaticObj_JP_F_Hibachi_Round_Tipped",
+   "variant": "round",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Round brazier, tipped, ash spilled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 167,
+    "Resolution 2": 41,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.401,
+    0.468,
+    0.0,
+    0.37,
+    -0.068,
+    0.713
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.152,
+    -0.088,
+    0.292,
+    0.33
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.38,
+     "measured": 0.38,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cold ash; one in five tipped with the ash spilled (decision 11)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_hibachi_box.p3d",
+   "class": "StaticObj_JP_F_Hibachi_Box",
+   "variant": "box",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden box brazier",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 120,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.225,
+    0.225,
+    0.0,
+    0.484,
+    -0.175,
+    0.175
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.225,
+    -0.175,
+    0.225,
+    0.175
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 9.0,
+   "loot_surfaces": [
+    {
+     "name": "rim",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      0.135,
+      -0.145,
+      0.215,
+      0.145
+     ],
+     "range": 0.12,
+     "points": [
+      [
+       0.175,
+       0.3,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cold ash; one in five tipped with the ash spilled (decision 11)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_hibachi_box_tipped.p3d",
+   "class": "StaticObj_JP_F_Hibachi_Box_Tipped",
+   "variant": "box",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Box brazier, tipped, ash spilled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 89,
+    "Resolution 2": 19,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.401,
+    0.468,
+    0.0,
+    0.35,
+    -0.058,
+    0.713
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.295,
+    -0.058,
+    0.217,
+    0.348
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 9.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cold ash; one in five tipped with the ash spilled (decision 11)"
+   ]
+  }
+ ]
+}

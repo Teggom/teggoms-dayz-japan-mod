@@ -1,0 +1,266 @@
+{
+ "id": "jp_f_kori",
+ "build_list": {
+  "name": "Wicker trunk (kori), lidded, stackable",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "sleeping",
+   "living",
+   "storage",
+   "loft"
+  ],
+  "loot_surface": "lid top at 0.30 (0.60 stacked): 1 point (range 0.2)",
+  "abandoned_state": "lid off, empty or a garment hanging out",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "size_m": {
+    "value": "0.60 x 0.40 x 0.30 (lid over the base)",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "N20",
+    "shows": "BL \u00a73/\u00a75 (text)",
+    "period_image": false
+   },
+   {
+    "id": "i07_edo_nagaya_room",
+    "shows": "tenement room dressing",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "storage",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\storage\\jp_f_kori.p3d",
+   "class": "StaticObj_JP_F_Kori",
+   "variant": "1",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wicker trunk (kori)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 90,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.303,
+    0.303,
+    0.0,
+    0.306,
+    -0.204,
+    0.206
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.3,
+    -0.2,
+    0.3,
+    0.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 4.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      -0.25,
+      -0.15,
+      0.25,
+      0.15
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       0.3,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\storage\\jp_f_kori_2.p3d",
+   "class": "StaticObj_JP_F_Kori_2",
+   "variant": "2",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wicker trunks, stack of two",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 180,
+    "Resolution 2": 12,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.303,
+    0.343,
+    0.0,
+    0.606,
+    -0.244,
+    0.224
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.3,
+    -0.24,
+    0.339,
+    0.22
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 8.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.6,
+     "rect": [
+      -0.2,
+      -0.12,
+      0.2,
+      0.12
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.02,
+       0.6,
+       -0.01
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\storage\\jp_f_kori_open.p3d",
+   "class": "StaticObj_JP_F_Kori_Open",
+   "variant": "1",
+   "state": "open",
+   "abandoned": true,
+   "display": "Wicker trunk, lid off, garment out",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 78,
+    "Resolution 2": 12,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.3,
+    0.999,
+    0.0,
+    0.278,
+    -0.212,
+    0.312
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.3,
+    -0.2,
+    0.96,
+    0.25
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 4.0,
+   "loot_surfaces": [
+    {
+     "name": "inside",
+     "kind": "floor",
+     "y": 0.062,
+     "rect": [
+      -0.2,
+      -0.1,
+      0.2,
+      0.1
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.1,
+       0.062,
+       -0.05
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

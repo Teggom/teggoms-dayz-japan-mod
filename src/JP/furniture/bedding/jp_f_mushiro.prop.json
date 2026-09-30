@@ -1,0 +1,325 @@
+{
+ "id": "jp_f_mushiro",
+ "build_list": {
+  "name": "Straw floor mats (mushiro / goza): flat, rolled, and a small pile",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "daidokoro",
+   "living",
+   "sleeping",
+   "doma",
+   "storage",
+   "workshop",
+   "stable"
+  ],
+  "loot_surface": "flat mats are floor loot zones (they do not subtract from floor loot)",
+  "abandoned_state": "curled, torn, straw litter around",
+  "blocks_path": "flat: none (no Geometry)",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "flat_m": {
+    "value": "1.82 x 0.91 x 0.01",
+    "assumed": true,
+    "reason": "reason: one tatami module"
+   },
+   "roll_m": {
+    "value": "d 0.18 x 0.91",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "i06_tsunashima_doma",
+    "shows": "straw mat draped over a bench in a farmhouse doma",
+    "period_image": true
+   },
+   {
+    "id": "c15_farmhouse_interior",
+    "shows": "farmhouse board floor",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "bedding",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\bedding\\jp_f_mushiro.p3d",
+   "class": "StaticObj_JP_F_Mushiro",
+   "variant": "flat",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw floor mat (mushiro)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 17,
+    "Resolution 2": 1
+   },
+   "bbox": [
+    -0.91,
+    0.91,
+    0.0,
+    0.012,
+    -0.455,
+    0.455
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "flat mats have no Geometry (BUILD_LIST Q5 rule 1) and do not subtract from floor loot"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\bedding\\jp_f_mushiro_torn.p3d",
+   "class": "StaticObj_JP_F_Mushiro_Torn",
+   "variant": "flat",
+   "state": "torn",
+   "abandoned": true,
+   "display": "Straw mat, torn, corner curled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 33,
+    "Resolution 2": 2
+   },
+   "bbox": [
+    -0.91,
+    1.273,
+    0.0,
+    0.16,
+    -0.455,
+    0.598
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "flat mats have no Geometry (BUILD_LIST Q5 rule 1) and do not subtract from floor loot"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\bedding\\jp_f_mushiro_rolled.p3d",
+   "class": "StaticObj_JP_F_Mushiro_Rolled",
+   "variant": "rolled",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw mat, rolled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 127,
+    "Resolution 2": 10,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.091,
+    0.3,
+    -0.0,
+    0.192,
+    -0.455,
+    0.455
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.083,
+    -0.455,
+    0.083,
+    0.455
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 3.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "roll_d",
+     "expected": 0.18,
+     "measured": 0.18,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "roll_L",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "flat mats have no Geometry (BUILD_LIST Q5 rule 1) and do not subtract from floor loot"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\bedding\\jp_f_mushiro_rolled_loose.p3d",
+   "class": "StaticObj_JP_F_Mushiro_Rolled_Loose",
+   "variant": "rolled",
+   "state": "loose",
+   "abandoned": true,
+   "display": "Straw mat, half unrolled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 10,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.068,
+    1.005,
+    -0.0,
+    0.142,
+    -0.455,
+    0.721
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.06,
+    -0.455,
+    0.06,
+    0.455
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 3.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "roll_d",
+     "expected": 0.13,
+     "measured": 0.13,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "roll_L",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "flat mats have no Geometry (BUILD_LIST Q5 rule 1) and do not subtract from floor loot"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\bedding\\jp_f_mushiro_pile.p3d",
+   "class": "StaticObj_JP_F_Mushiro_Pile",
+   "variant": "pile",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw mats, small pile",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 51,
+    "Resolution 2": 1
+   },
+   "bbox": [
+    -0.48,
+    0.526,
+    0.0,
+    0.062,
+    -0.51,
+    0.49
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pile_w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "flat mats have no Geometry (BUILD_LIST Q5 rule 1) and do not subtract from floor loot"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\bedding\\jp_f_mushiro_pile_spread.p3d",
+   "class": "StaticObj_JP_F_Mushiro_Pile_Spread",
+   "variant": "pile",
+   "state": "spread",
+   "abandoned": true,
+   "display": "Straw mats, pile slid apart",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 55,
+    "Resolution 2": 1
+   },
+   "bbox": [
+    -0.857,
+    0.955,
+    0.0,
+    0.058,
+    -0.505,
+    0.819
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pile_w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "flat mats have no Geometry (BUILD_LIST Q5 rule 1) and do not subtract from floor loot"
+   ]
+  }
+ ]
+}

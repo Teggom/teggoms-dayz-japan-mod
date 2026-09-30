@@ -131,7 +131,7 @@ def cloth_patch(cx, cz, w, d, yaw, mat=fkit.INDIGO, h=0.012, wear="_w2", vis=(1,
 def pillow(w, d, h, mat, nx=4, nz=3, pinch=0.25, wear=None, vis=(1, 2), sag=0.0):
     """A stuffed straw bag / bedding roll: flat bottom, domed top grid (visual only, closed by explicit normals)."""
     def top_y(u, v):         # u, v in [-1, 1]
-        return h * (pinch + (1 - pinch) * (1 - abs(u) ** 3) * (1 - abs(v) ** 3)) - sag * (1 - u * u)
+        return max(0.01, h * (pinch + (1 - pinch) * (1 - abs(u) ** 3) * (1 - abs(v) ** 3)) - sag * (1 - u * u))
     xs = [-w / 2 + w * i / nx for i in range(nx + 1)]
     zs = [-d / 2 + d * j / nz for j in range(nz + 1)]
     quads, normals, uvs = [], [], []
@@ -165,6 +165,7 @@ def pillow(w, d, h, mat, nx=4, nz=3, pinch=0.25, wear=None, vis=(1, 2), sag=0.0)
     normals.append((0.0, -1.0, 0.0))
     uvs.append([(0, 0), (w / t, 0), (w / t, d / t), (0, d / t)])
     s = sheet(quads, mat, normals, vis=vis, uvs=uvs)
+    fkit.auto_smooth(s, 70.0)
     if wear:
         s.wear = wear
     return s
@@ -174,3 +175,23 @@ def rope_ring(r, y, width, mat, n, vis=(1,), proud=0.008):
     """A rope / hoop band: the outer strip only, a little proud of radius r (cheap: n faces + 2n edges)."""
     return lathe([(r - 0.001, y - width / 2), (r + proud, y - width / 2 + 0.003), (r + proud, y + width / 2 - 0.003),
                   (r - 0.001, y + width / 2)], n, mat, vis=vis)
+
+
+def soft_slab(w, d, h, mat, n=4, wear=None, vis=(1,), squash=1.0):
+    """A folded futon / quilt: a stadium cross-section (rounded folds front and back, radius h/2) extruded
+    along x, closed ends, smooth normals. Footprint w (x) by d (z), height h, base on y = 0."""
+    r = h / 2
+    pts = []
+    for k in range(n + 1):                       # front fold (+z): from bottom to top
+        a = -math.pi / 2 + math.pi * k / n
+        pts.append((d / 2 - r + r * math.cos(a) * squash, r + r * math.sin(a)))
+    for k in range(n + 1):                       # back fold (-z): top to bottom
+        a = math.pi / 2 + math.pi * k / n
+        pts.append((-d / 2 + r + r * math.cos(a) * squash, r + r * math.sin(a)))
+    s = prism([(z, y) for z, y in pts], "x", -w / 2, w / 2, mat, vis=vis)
+    # prism axis 'x' maps (a, b) -> (y, z): swap so a = y, b = z
+    s = prism([(y, z) for z, y in pts], "x", -w / 2, w / 2, mat, vis=vis)
+    fkit.auto_smooth(s, 50.0)
+    if wear:
+        s.wear = wear
+    return s

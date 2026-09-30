@@ -1,0 +1,280 @@
+{
+ "id": "jp_f_andon",
+ "build_list": {
+  "name": "Standing paper lamp (andon), square type, and the small bedside type (ariake)",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "living",
+   "zashiki",
+   "sleeping",
+   "shop",
+   "office",
+   "guard"
+  ],
+  "loot_surface": "none (too small and tall)",
+  "abandoned_state": "tipped over, paper torn and oil-stained, dish broken",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "kaku_m": {
+    "value": "0.25 x 0.25 x 0.80 high, open top, a drawer in the base",
+    "assumed": true,
+    "reason": "Morse fig. 206 proportions; typical museum pieces"
+   },
+   "ariake_m": {
+    "value": "0.25 x 0.25 x 0.35",
+    "assumed": true,
+    "reason": "typical bedside box"
+   }
+  },
+  "refs": [
+   {
+    "id": "i39_morse_andon",
+    "shows": "Morse 1885: andon, saucer lamp in a paper frame",
+    "period_image": false
+   },
+   {
+    "id": "i40_morse_andon2",
+    "shows": "Morse 1885: another andon",
+    "period_image": false
+   },
+   {
+    "id": "i07_edo_nagaya_room",
+    "shows": "andon in a tenement room (c.1840 reconstruction)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "heat_light",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "unlit (decision 14)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_andon_kaku.p3d",
+   "class": "StaticObj_JP_F_Andon_Kaku",
+   "variant": "kaku",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Standing paper lamp (andon)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 174,
+    "Resolution 2": 18,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.127,
+    0.125,
+    0.0,
+    0.8,
+    -0.127,
+    0.137
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.125,
+    -0.125,
+    0.125,
+    0.125
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 3.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.25,
+     "measured": 0.25,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "unlit (no light point), decision 14"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_andon_kaku_tipped.p3d",
+   "class": "StaticObj_JP_F_Andon_Kaku_Tipped",
+   "variant": "kaku",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Andon, knocked over, paper torn",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 152,
+    "Resolution 2": 18,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.113,
+    0.591,
+    0.0,
+    0.264,
+    -0.778,
+    0.561
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.113,
+    -0.778,
+    0.451,
+    0.053
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 3.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.25,
+     "measured": 0.25,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "unlit (no light point), decision 14"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_andon_ariake.p3d",
+   "class": "StaticObj_JP_F_Andon_Ariake",
+   "variant": "ariake",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Bedside lamp (ariake andon)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 146,
+    "Resolution 2": 18,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.135,
+    0.135,
+    0.0,
+    0.35,
+    -0.135,
+    0.135
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.125,
+    -0.125,
+    0.125,
+    0.125
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.25,
+     "measured": 0.25,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "unlit (no light point), decision 14"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_andon_ariake_tipped.p3d",
+   "class": "StaticObj_JP_F_Andon_Ariake_Tipped",
+   "variant": "ariake",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Bedside lamp, knocked over",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 142,
+    "Resolution 2": 18,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.113,
+    0.591,
+    0.0,
+    0.27,
+    -0.361,
+    0.561
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.113,
+    -0.37,
+    0.261,
+    0.053
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.25,
+     "measured": 0.25,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "unlit (no light point), decision 14"
+   ]
+  }
+ ]
+}

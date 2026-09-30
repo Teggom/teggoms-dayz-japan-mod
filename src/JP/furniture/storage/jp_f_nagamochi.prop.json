@@ -1,0 +1,221 @@
+{
+ "id": "jp_f_nagamochi",
+ "build_list": {
+  "name": "Long chest (nagamochi)",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "storage",
+   "sleeping",
+   "loft"
+  ],
+  "loot_surface": "lid top at 0.75: 2 shelf points (range 0.3); the open variant: 1 point inside at 0.10",
+  "abandoned_state": "lid open, clothes pulled out and dropped, one fitting torn",
+  "blocks_path": "1.70 m long: only along a wall, never across a path; a 3-mat room gets at most one",
+  "lod_budget": "furniture <=1000 faces",
+  "dimensions": {
+   "size_m": {
+    "value": "1.70 x 0.72 x 0.75 high",
+    "source": "N19 (about 1.74 x 0.75 x 0.75)"
+   },
+   "lid_m": {
+    "value": "flat lid 0.03, iron corner fittings and pole brackets",
+    "source": "N19"
+   }
+  },
+  "refs": [
+   {
+    "id": "N19",
+    "shows": "nagamochi size and use (text)",
+    "period_image": false
+   },
+   {
+    "id": "i07_edo_nagaya_room",
+    "shows": "storage chests in a town room",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "storage",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\storage\\jp_f_nagamochi.p3d",
+   "class": "StaticObj_JP_F_Nagamochi",
+   "variant": "shut",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Long chest (nagamochi)",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 210,
+    "Resolution 2": 54,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.905,
+    0.905,
+    0.0,
+    0.75,
+    -0.37,
+    0.37
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.85,
+    -0.36,
+    0.85,
+    0.36
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 40.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.75,
+     "rect": [
+      -0.75,
+      -0.26,
+      0.75,
+      0.26
+     ],
+     "range": 0.3,
+     "points": [
+      [
+       -0.42,
+       0.75,
+       0.0
+      ],
+      [
+       0.42,
+       0.75,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.72,
+     "measured": 0.72,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "1.70 m long: along a wall only, never across a path; a 3-mat room gets at most one"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\storage\\jp_f_nagamochi_open.p3d",
+   "class": "StaticObj_JP_F_Nagamochi_Open",
+   "variant": "shut",
+   "state": "open",
+   "abandoned": true,
+   "display": "Long chest, lid thrown back, cloth spilling",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 228,
+    "Resolution 2": 66,
+    "Resolution 3": 12,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "bbox": [
+    -0.905,
+    0.905,
+    0.0,
+    1.484,
+    -0.498,
+    0.889
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.86,
+    -0.43,
+    0.86,
+    0.36
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 40.0,
+   "loot_surfaces": [
+    {
+     "name": "inside",
+     "kind": "floor",
+     "y": 0.1,
+     "rect": [
+      0.3,
+      -0.26,
+      0.775,
+      0.26
+     ],
+     "range": 0.25,
+     "points": [
+      [
+       0.55,
+       0.1,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.72,
+     "measured": 0.72,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "open: the lid stands 0.08 m behind the back face, so place the back >= 0.08 m off the wall",
+    "1.70 m long: along a wall only, never across a path; a 3-mat room gets at most one"
+   ],
+   "needs_behind_m": 0.08
+  }
+ ]
+}

@@ -356,3 +356,28 @@ def rest(ss, y=0.0):
     """Move a group of solids up/down so its lowest vertex sits at y (a lid leaning on the floor)."""
     lo = min(v[1] for s in ss for v in s.verts)
     return [xf(s, t=(0.0, y - lo, 0.0)) for s in ss]
+
+
+def auto_smooth(s, crease=60.0):
+    """Per-vertex smooth normals for any solid: average the normals of the faces meeting at a vertex position
+    whose normal is within `crease` degrees of this face's (a hard edge stays hard)."""
+    s.finalize()
+    key = lambda p: (round(p[0], 4), round(p[1], 4), round(p[2], 4))   # noqa: E731
+    at = {}
+    for fi, f in enumerate(s.faces):
+        for vi in f:
+            at.setdefault(key(s.verts[vi]), []).append(fi)
+    cc = math.cos(math.radians(crease))
+    vn = []
+    for fi, f in enumerate(s.faces):
+        nf = s.fn[fi]
+        row = []
+        for vi in f:
+            acc = (0.0, 0.0, 0.0)
+            for fj in at[key(s.verts[vi])]:
+                if core.dot(s.fn[fj], nf) >= cc:
+                    acc = core.add(acc, s.fn[fj])
+            row.append(core.norm(acc))
+        vn.append(row)
+    s.vn = vn
+    return s

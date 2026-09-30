@@ -221,9 +221,9 @@ def check_model(P, mp, spec):
     f1 = faces.get("Resolution 1", 0)
     f2 = faces.get("Resolution 2", 0)
     f3 = faces.get("Resolution 3", 0)
-    steps = f2 < f1 or f1 <= 24
+    steps = f2 < f1                 # binarize warns when LODs are not ordered by face count
     if P.res3:
-        steps = steps and (f3 < f2 or f2 <= 24)
+        steps = steps and f3 < f2
     ok = all(n in L for n in need) and not extra and 0 < f1 <= budget and steps and ("Memory" not in L) \
         and (("Roadway" in L) == bool(P.roadway))
     add("C5", "LOD set (%s) + budget Res 1 <= %d, LODs step down" % ("+".join(

@@ -1,0 +1,148 @@
+{
+ "id": "jp_f_tabakobon",
+ "build_list": {
+  "name": "Tobacco tray (tabako-bon) with fire pot, ash tube and pipe (kiseru)",
+  "importance": "filler",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "shop",
+   "zashiki",
+   "living",
+   "office",
+   "guard"
+  ],
+  "loot_surface": "none",
+  "abandoned_state": "on its side, ash and a pipe on the mat",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "tray_m": {
+    "value": "0.30 x 0.20 x 0.18 with handle",
+    "assumed": true,
+    "reason": "Morse fig. 201 proportions"
+   }
+  },
+  "refs": [
+   {
+    "id": "i38_morse_tabakobon",
+    "shows": "Morse 1885: tabako-bon",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "heat_light",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_tabakobon.p3d",
+   "class": "StaticObj_JP_F_Tabakobon",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Tobacco tray (tabako-bon)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 142,
+    "Resolution 2": 12,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.15,
+    0.15,
+    0.0,
+    0.18,
+    -0.1,
+    0.1
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.15,
+    -0.1,
+    0.15,
+    0.1
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.2,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.18,
+     "measured": 0.18,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\heat_light\\jp_f_tabakobon_spilled.p3d",
+   "class": "StaticObj_JP_F_Tabakobon_Spilled",
+   "variant": "std",
+   "state": "spilled",
+   "abandoned": true,
+   "display": "Tobacco tray on its side, ash spilled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 138,
+    "Resolution 2": 12,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.323,
+    0.269,
+    0.0,
+    0.218,
+    -0.043,
+    0.375
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.182,
+    -0.043,
+    0.151,
+    0.218
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.2,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.18,
+     "measured": 0.18,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

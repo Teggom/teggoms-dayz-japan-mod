@@ -1,0 +1,202 @@
+{
+ "id": "jp_f_futon_laid",
+ "build_list": {
+  "name": "Laid-out bedding (futon with the quilt thrown back)",
+  "importance": "filler",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "sleeping",
+   "zashiki",
+   "living"
+  ],
+  "loot_surface": "the whole futon is a loot zone: 1-2 points (range 0.4), like vanilla beds (Q5: points at 0.34-0.52 on beds)",
+  "abandoned_state": "as left; stained, flattened",
+  "blocks_path": "no: a thin 0.08 Geometry slab you step over (vanilla beds have Geometry and Roadway)",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "size_m": {
+    "value": "1.85 x 0.95 x 0.08; quilt thrown back 0.15 thick",
+    "assumed": true,
+    "reason": "one mat"
+   }
+  },
+  "refs": [
+   {
+    "id": "N08",
+    "shows": "Edo bedding (text)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "bedding",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\bedding\\jp_f_futon_laid.p3d",
+   "class": "StaticObj_JP_F_Futon_Laid",
+   "variant": "thrown",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Laid-out bedding, quilt thrown back",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 68,
+    "Resolution 2": 12,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.925,
+    0.925,
+    0.0,
+    0.22,
+    -0.495,
+    0.495
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.925,
+    -0.475,
+    0.925,
+    0.475
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 8.0,
+   "loot_surfaces": [
+    {
+     "name": "mattress",
+     "kind": "shelf",
+     "y": 0.08,
+     "rect": [
+      -0.825,
+      -0.375,
+      0.825,
+      0.375
+     ],
+     "range": 0.4,
+     "points": [
+      [
+       -0.45,
+       0.08,
+       0.2
+      ],
+      [
+       -0.45,
+       0.08,
+       -0.2
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.85,
+     "measured": 1.85,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "W",
+     "expected": 0.95,
+     "measured": 0.95,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "0.08 Geometry slab + Roadway (textile_carpet_int) like vanilla beds; never across a door band"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\bedding\\jp_f_futon_laid_dragged.p3d",
+   "class": "StaticObj_JP_F_Futon_Laid_Dragged",
+   "variant": "thrown",
+   "state": "dragged",
+   "abandoned": true,
+   "display": "Laid-out bedding, quilt dragged aside, stained",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 57,
+    "Resolution 2": 12,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.41,
+    1.236,
+    0.0,
+    0.111,
+    -0.479,
+    1.484
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.925,
+    -0.475,
+    0.925,
+    0.475
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 8.0,
+   "loot_surfaces": [
+    {
+     "name": "mattress",
+     "kind": "shelf",
+     "y": 0.083,
+     "rect": [
+      -0.825,
+      -0.375,
+      0.825,
+      0.375
+     ],
+     "range": 0.4,
+     "points": [
+      [
+       -0.45,
+       0.083,
+       0.05
+      ],
+      [
+       0.4,
+       0.08,
+       -0.1
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.85,
+     "measured": 1.85,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "W",
+     "expected": 0.95,
+     "measured": 0.95,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "0.08 Geometry slab + Roadway (textile_carpet_int) like vanilla beds; never across a door band"
+   ]
+  }
+ ]
+}
