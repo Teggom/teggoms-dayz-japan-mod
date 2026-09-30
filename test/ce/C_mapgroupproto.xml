@@ -1907,6 +1907,65 @@
 						<point pos="-1.165714 0.400000 -1.592500" range="0.494286" height="1.235714" />
 				</container>
 		</group>
+		<group name="Land_JP_Hut_West_Ishioki_LeanR">
+				<usage name="Farm" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 -3.600000" range="0.600000" height="1.500000" />
+						<point pos="-0.097143 0.050000 0.810714" range="0.880000" height="2.000000" />
+						<point pos="0.874286 0.050000 1.783571" range="0.785714" height="1.964286" />
+						<point pos="-0.874286 0.050000 -2.107857" range="0.462143" height="1.155357" />
+						<point pos="0.874286 0.050000 -2.107857" range="0.462143" height="1.155357" />
+				</container>
+		</group>
+		<group name="Land_JP_Hut_West_Itabuki">
+				<usage name="Farm" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 2.079286" range="0.490389" height="1.225973" />
+						<point pos="-1.165714 0.400000 -0.237500" range="0.494286" height="1.235714" />
+						<point pos="-1.165714 0.400000 -1.592500" range="0.494286" height="1.235714" />
+				</container>
+		</group>
+		<group name="Land_JP_Hut_West_Ishioki">
+				<usage name="Farm" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 2.079286" range="0.490389" height="1.225973" />
+						<point pos="-1.165714 0.400000 -0.237500" range="0.494286" height="1.235714" />
+						<point pos="-1.165714 0.400000 -1.592500" range="0.494286" height="1.235714" />
+				</container>
+		</group>
+		<group name="Land_JP_Hut_West_Thatch">
+				<usage name="Farm" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.097143 0.050000 0.810714" range="0.880000" height="2.000000" />
+						<point pos="0.874286 0.050000 1.783571" range="0.785714" height="1.964286" />
+						<point pos="-0.874286 0.050000 -2.107857" range="0.462143" height="1.155357" />
+						<point pos="0.874286 0.050000 -2.107857" range="0.462143" height="1.155357" />
+				</container>
+		</group>
 		<group name="Land_JP_Shed_Open_Board">
 				<usage name="Farm" />
 				<container name="lootFloor">

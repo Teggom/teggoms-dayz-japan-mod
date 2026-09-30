@@ -273,6 +273,8 @@ class Shell:
                         continue
                 keep.append(s)
             rp.solids = keep
+        if fam == "ishioki":
+            ishioki_lod(rp, sls, info)
         self.H.merge(rp)
         if joya_posts:
             for (x, z, y0, y1) in K["posts"]:
@@ -309,9 +311,23 @@ class Shell:
                           geo=True, view=True, fire=True, tag="keta"))
         self.H.merge(s)
 
-    def gable(self, side, D, t, E, variant):
+    def gable(self, side, D, t, E, variant, thatch=False):
         g = self.B.P("gable_" + side)
         walls.gable(g, D, t, E, variant)
+        if variant == "_board":
+            # the gable boards have 4 mm gaps with nothing behind them (the panel slab is collision only): show the
+            # slab in Resolution 1 as the boards' inner face, so no ray sees daylight between two boards (C11)
+            for s in g.solids:
+                if s.tag == "gable_geo":
+                    s.vis = {1}
+        if thatch:
+            # under a thatch roof the gable panels stop at the rafter plane and the lath lies 5.5 cm above it: a
+            # closing board along both roof lines seals that slot (C11: rays ran out under the thatch verge)
+            h = D / 2
+            for (a, b) in ((0.0, h), (h, D)):
+                yr = lambda x: E + t * min(x, D - x)       # noqa: E731
+                g.add(prism([(a, yr(a) - 0.03), (b, yr(b) - 0.03), (b, yr(b) + 0.07), (a, yr(a) + 0.07)], "z", -0.03,
+                            0.03, "wood_weathered", vis=(1, 2), tag="gable_closer"))
         self.B.put(g, self.F[side], what="walls.gable %s (%s)" % (variant, side))
         # the gable's barred vent (a declared opening: the smoke / air vent) is a C11 portal
         yaw, o = self.F[side]
@@ -359,6 +375,36 @@ class Shell:
                 "doors": dict(self.dn)}
         info.update(info_extra or {})
         return self.H, info
+
+
+def ishioki_lod(part, sls, info=None):
+    """Stone-weighted boards (ishioki) on a small shell (face budget + C15): keep every third field stone and every
+    other ridge stone in Resolution 1, drop the kit's Resolution 2 stones, and give Resolution 2 / 3 a thin stone
+    layer (0.07 over the boards) and a ridge band instead, so the far silhouette stays within 0.10 m of the stones."""
+    from ..shapes import slab
+    keep, k, kr = [], 0, 0
+    for s in part.solids:
+        if s.tag == "roof_stone":
+            if 1 not in s.vis:
+                continue
+            k += 1
+            if k % 3:
+                continue
+        if s.tag == "ridge_stone":
+            kr += 1
+            if kr % 2 == 0:
+                continue
+        keep.append(s)
+    part.solids = keep
+    st = R.STACK["ishioki"]
+    for sl in sls:
+        for pc in sl.pieces:
+            part.add(slab(pc, lambda x, z, s_=sl: s_.y(x, z, st + 0.005), lambda x, z, s_=sl: s_.y(x, z, st + 0.07),
+                          "roof_kureita", vis=(2, 3), tag="stone_layer_lod"))
+    if info and "ridge" in info:
+        (x0, yr, zr), (x1, _, _) = info["ridge"]
+        part.add(box(x0 + 0.05, x1 - 0.05, yr, yr + 0.13, zr - 0.13, zr + 0.13, "roof_kureita", vis=(2, 3),
+                     tag="ridge_stone_lod"))
 
 
 def _mirror(H, info):
@@ -596,7 +642,7 @@ def kinai(name=None, form="kirizuma", lower="tile", takahe=False, doma="right", 
     S.window(openings.part_tsukiage("_board"), "right", 2.5 * KEN, FLOOR, "Nando window (end, push-up shutter)")
     if not hip:
         for side in ("left", "right"):
-            S.gable(side, D, t, E, "_thatch")
+            S.gable(side, D, t, E, "_thatch", thatch=True)
         if takahe:
             st = R.STACK["thatch"] + 0.60
             for x, sg in ((0.0, -1), (W, 1)):
@@ -673,6 +719,8 @@ def _gable_leanto(S, side, fam, E, t_main, depth=KEN, t_lt=0.30):
     zw = -(POST / 2 + 0.02)                        # against the gable wall's outer face (clear of its posts, C12)
     s, sl = leanto.roof("leanto_" + side, 0.0, D, zw, -depth, eave, fam, t=t_lt, gov=gl,
                         flash_top=top + 0.10, keta_ext=0.06)
+    if fam == "ishioki":
+        ishioki_lod(s, [sl])
     if side == "left":
         fr = (-90.0, (0.0, 0.0, 0.0))              # local x -> -z (0..-D), local -z -> -x
         xo = -depth
@@ -808,7 +856,7 @@ def hut_west(name=None, roof="thatch", leanto=None, floor="board", door="itado",
     for side in ("left", "right"):
         zl = [(0.0, D, DOMA if side == "left" else lv_room)]
         S.wall_line(side, zl, YG, (), **bw_)
-        S.gable(side, D, t, E, "_board")
+        S.gable(side, D, t, E, "_board", thatch=(roof == "thatch"))
     rects = _hut_floor(S, floor, XD, W, D, FLOOR, K=K)
     _kamado(S, "doma", 0.45, -D + 0.45 if raised else -D + 0.55, 0.0, size=(0.60, 0.60))
     if leanto:
@@ -852,7 +900,7 @@ def shed(name=None, size="s", roof="itabuki", open=False, leanto=None, wear="_w2
     S.wall_line("back", [(0.0, W, DOMA)], YT, (), **bw_)
     for side in ("left", "right"):
         S.wall_line(side, [(0.0, D, DOMA)], YG, (), **bw_)
-        S.gable(side, D, t, E, "_board")
+        S.gable(side, D, t, E, "_board", thatch=(roof == "thatch"))
     B.interior = True
     B.merge(FL.doma("floor", -0.06 if open else 0.0, W + (0.06 if open else 0.0), -D, 0.3 if open else 0.0,
                     road=(A_, W - A_, -D + A_, -0.15 if open else -A_), y=DOMA, mats=FL.MATS_DOMA_EARTH))

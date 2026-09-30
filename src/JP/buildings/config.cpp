@@ -52764,6 +52764,804 @@ class CfgVehicles
 			};
 		};
 	};
+	class Land_JP_Hut_West_Ishioki_LeanR: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Poor hut, west type (stone-weighted boards, lean-to right, earth floor, straw-mat door)";
+		model="\JP\buildings\hut\jp_hut_west_ishioki_leanr.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Window (back)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Hut_West_Itabuki: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Poor hut, west type (board roof, bamboo-slat floor)";
+		model="\JP\buildings\hut\jp_hut_west_itabuki.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Door (itado)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Window (back)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Hut_West_Ishioki: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Poor hut, west type (stone-weighted boards)";
+		model="\JP\buildings\hut\jp_hut_west_ishioki.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Door (itado)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Window (back)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Hut_West_Thatch: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Poor hut, west type (thatch gable, earth floor)";
+		model="\JP\buildings\hut\jp_hut_west_thatch.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Door (itado)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Window (back)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
 	class Land_JP_Shed_Open_Board: HouseNoDestruct
 	{
 		scope=1;
