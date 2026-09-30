@@ -1,0 +1,377 @@
+{
+ "id": "jp_s_straw_stack",
+ "build_list": {
+  "name": "Straw stacks, stooks, bundles and rice bales (wara-nio, wara-taba, tawara)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2
+  ],
+  "abandoned_state": "Straw from the last harvest: stacks greyed on top and slumped to one side, caps blown off; bales split with straw spilling; stooks fallen flat.",
+  "placement_rule": "Nio at field edges and on the threshing yard, 1-4 per farm; stooks in rows on stubble; bales only under an eave or in a shed doorway (never in the open field).",
+  "lod_budget": "small prop <=300 faces LOD0 (nio as a 12-sided lathe with a ragged cap ring)",
+  "dimensions": {
+   "nio_m": {
+    "value": "d 1.5-2.2 x h 2.0-3.0 incl. conical cap; centre pole projects 0.3",
+    "source": "O20 (form); sizes assumed",
+    "assumed": true,
+    "reason": "form sourced; size read as \"higher than a man\" in farm photos"
+   },
+   "stook_m": {
+    "value": "6-10 sheaves leaning, footprint d 0.6, h 1.0-1.2",
+    "assumed": true,
+    "reason": "assumed from k34"
+   },
+   "bundle_m": {
+    "value": "d 0.25 x 0.9-1.1, two ties",
+    "assumed": true,
+    "reason": "threshed straw bundle; assumed"
+   },
+   "tawara_m": {
+    "value": "0.75 long x d 0.45, 4 to (about 60 kg) of rice",
+    "assumed": true,
+    "reason": "standard Edo rice bale of 4 to; size from later survivors, assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "k34_straw_rice",
+    "shows": "rice straw tied and stood to dry in a harvested field, October 2008 (colour sample for straw_aged)",
+    "period_image": false
+   },
+   {
+    "id": "c05_ouchi_thatch",
+    "shows": "thatch village context",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "yard",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "AUTUMN signature; nio at field edges and threshing yards, bales under an eave only"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_straw_stack_nio_cyl.p3d",
+   "class": "StaticObj_JP_S_Straw_Stack_Nio_Cyl",
+   "variant": "nio_cyl",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw stack, cylinder with conical cap (Kinai)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 225,
+    "Resolution 2": 27,
+    "View Geometry": 28
+   },
+   "bbox": [
+    -0.939,
+    0.939,
+    0.0,
+    2.702,
+    -0.939,
+    0.939
+   ],
+   "collision": [
+    "view"
+   ],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "nio_d",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "nio_h",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "soft cover: View Geometry only (blocks sight, not bullets; walk-in)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_straw_stack_nio_cone.p3d",
+   "class": "StaticObj_JP_S_Straw_Stack_Nio_Cone",
+   "variant": "nio_cone",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw stack, conical (Kanto)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 189,
+    "Resolution 2": 27,
+    "View Geometry": 14
+   },
+   "bbox": [
+    -0.966,
+    0.966,
+    0.0,
+    2.9,
+    -1.0,
+    1.0
+   ],
+   "collision": [
+    "view"
+   ],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "nio_d",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "nio_h",
+     "expected": 2.6,
+     "measured": 2.6,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "soft cover: View Geometry only (blocks sight, not bullets; walk-in)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_straw_stack_stook.p3d",
+   "class": "StaticObj_JP_S_Straw_Stack_Stook",
+   "variant": "stook",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rice sheaves leaning in a stook",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 144,
+    "Resolution 2": 18,
+    "View Geometry": 10
+   },
+   "bbox": [
+    -0.349,
+    0.352,
+    -0.011,
+    1.159,
+    -0.38,
+    0.38
+   ],
+   "collision": [
+    "view"
+   ],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stook_h",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "footprint_d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.15,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_straw_stack_bundle.p3d",
+   "class": "StaticObj_JP_S_Straw_Stack_Bundle",
+   "variant": "bundle",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Tied straw bundle",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 39,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.5,
+    0.5,
+    0.0,
+    0.257,
+    -0.132,
+    0.119
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bundle_d",
+     "expected": 0.25,
+     "measured": 0.25,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bundle_L",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_straw_stack_tawara_stack.p3d",
+   "class": "StaticObj_JP_S_Straw_Stack_Tawara_Stack",
+   "variant": "tawara_stack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rice bales stacked (5)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 242,
+    "Resolution 2": 12,
+    "Geometry": 50,
+    "View Geometry": 50,
+    "Fire Geometry": 50
+   },
+   "bbox": [
+    -0.851,
+    0.777,
+    0.0,
+    0.746,
+    -0.375,
+    1.042
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -0.375,
+    0.6,
+    0.375
+   ],
+   "roadway": false,
+   "mass_kg": 300.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bales",
+     "expected": 5,
+     "measured": 5.0,
+     "tol": 0,
+     "source": "build_list"
+    },
+    {
+     "name": "bale_L",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "bale_d",
+     "expected": 0.45,
+     "measured": 0.4,
+     "tol": 0.06,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bales under an eave or in a shed doorway only, never in the open field"
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_straw_stack_ab_slumped.p3d",
+   "class": "StaticObj_JP_S_Straw_Stack_Ab_Slumped",
+   "variant": "nio_cyl",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Straw stack slumped, cap blown off",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 105,
+    "Resolution 2": 27,
+    "View Geometry": 14
+   },
+   "bbox": [
+    -0.823,
+    2.737,
+    0.0,
+    2.168,
+    -1.043,
+    1.3
+   ],
+   "collision": [
+    "view"
+   ],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "nio_d",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "nio_h",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "soft cover: View Geometry only (blocks sight, not bullets; walk-in)"
+   ]
+  }
+ ]
+}

@@ -768,4 +768,78 @@ class CfgVehicles
 		displayName="Notice board, two boards fallen, fence gaps";
 		model="\JP\site\roadside\jp_s_kosatsu_ab_boards_down.p3d";
 	};
+	// jp_s_straw_stack (yard)
+	class StaticObj_JP_S_Straw_Stack_Nio_Cyl: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw stack, cylinder with conical cap (Kinai)";
+		model="\JP\site\yard\jp_s_straw_stack_nio_cyl.p3d";
+	};
+	class StaticObj_JP_S_Straw_Stack_Nio_Cone: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw stack, conical (Kanto)";
+		model="\JP\site\yard\jp_s_straw_stack_nio_cone.p3d";
+	};
+	class StaticObj_JP_S_Straw_Stack_Stook: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice sheaves leaning in a stook";
+		model="\JP\site\yard\jp_s_straw_stack_stook.p3d";
+	};
+	class StaticObj_JP_S_Straw_Stack_Bundle: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tied straw bundle";
+		model="\JP\site\yard\jp_s_straw_stack_bundle.p3d";
+	};
+	class StaticObj_JP_S_Straw_Stack_Tawara_Stack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice bales stacked (5)";
+		model="\JP\site\yard\jp_s_straw_stack_tawara_stack.p3d";
+	};
+	class StaticObj_JP_S_Straw_Stack_Ab_Slumped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw stack slumped, cap blown off";
+		model="\JP\site\yard\jp_s_straw_stack_ab_slumped.p3d";
+	};
+	// jp_s_shimenawa (roadside)
+	class StaticObj_JP_S_Shimenawa_Len_1ken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw rope with streamers, 1 ken";
+		model="\JP\site\roadside\jp_s_shimenawa_len_1ken.p3d";
+	};
+	class StaticObj_JP_S_Shimenawa_Len_2ken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw rope with streamers, 2 ken";
+		model="\JP\site\roadside\jp_s_shimenawa_len_2ken.p3d";
+	};
+	class StaticObj_JP_S_Shimenawa_Wrap_D06: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw rope round a 0.6 m trunk";
+		model="\JP\site\roadside\jp_s_shimenawa_wrap_d06.p3d";
+	};
+	class StaticObj_JP_S_Shimenawa_Wrap_D10: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw rope round a 1.0 m trunk";
+		model="\JP\site\roadside\jp_s_shimenawa_wrap_d10.p3d";
+	};
+	class StaticObj_JP_S_Shimenawa_Wrap_D16: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw rope round a 1.6 m trunk (landmark tree)";
+		model="\JP\site\roadside\jp_s_shimenawa_wrap_d16.p3d";
+	};
+	class StaticObj_JP_S_Shimenawa_Ab_Tattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw rope grey and frayed, one end dropped";
+		model="\JP\site\roadside\jp_s_shimenawa_ab_tattered.p3d";
+	};
 };

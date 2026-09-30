@@ -1,0 +1,351 @@
+{
+ "id": "jp_s_shimenawa",
+ "build_list": {
+  "name": "Straw rope (shimenawa) with paper streamers: lengths and wraps",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "A year unrenewed: grey-brown, frayed ends, most paper streamers gone; one end of a hanging length dropped.",
+  "placement_rule": "On the wooden or stone torii tie-beam, around one old tree per shrine grove, over a well or a gate; boundary ropes across village-entry roads at 3 m.",
+  "lod_budget": "small prop <=300 faces LOD0 (twisted rope as an 8-sided sweep with a twist texture)",
+  "dimensions": {
+   "rope_d_m": {
+    "value": "0.04-0.08 (well, gate) to 0.15-0.25 (sacred tree)",
+    "assumed": true,
+    "reason": "read off k37; assumed"
+   },
+   "shide_m": {
+    "value": "paper streamers 0.20-0.30 long, 4 zigzag folds, every 0.4-0.6",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "wrap_m": {
+    "value": "tree wraps for trunk d 0.6 / 1.0 / 1.6",
+    "assumed": true,
+    "reason": "matches the flora list sacred-tree sizes (assumed until F sets them)"
+   }
+  },
+  "refs": [
+   {
+    "id": "k37_shimenawa_tree",
+    "shows": "sacred tree wrapped with a shimenawa (photo)",
+    "period_image": false
+   },
+   {
+    "id": "c10_inari_torii",
+    "shows": "torii context",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "roadside",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "no collision (rope); lengths hang between two anchors at 2.50 m, wraps ring a trunk at 1.6 m"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_shimenawa_len_1ken.p3d",
+   "class": "StaticObj_JP_S_Shimenawa_Len_1ken",
+   "variant": "len_1ken",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw rope with streamers, 1 ken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 148,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.918,
+    0.918,
+    2.085,
+    2.535,
+    -0.035,
+    0.035
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "rope_d",
+     "expected": 0.07,
+     "measured": 0.07,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "anchors at y = 2.50 (torii tie beam, gate, well frame): move to the real anchor height"
+   ],
+   "hang_y": 2.5
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_shimenawa_len_2ken.p3d",
+   "class": "StaticObj_JP_S_Shimenawa_Len_2ken",
+   "variant": "len_2ken",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw rope with streamers, 2 ken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 176,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -1.83,
+    1.83,
+    1.955,
+    2.545,
+    -0.045,
+    0.045
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "span",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "rope_d",
+     "expected": 0.09,
+     "measured": 0.09,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "anchors at y = 2.50 (torii tie beam, gate, well frame): move to the real anchor height"
+   ],
+   "hang_y": 2.5
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_shimenawa_wrap_d06.p3d",
+   "class": "StaticObj_JP_S_Shimenawa_Wrap_D06",
+   "variant": "wrap",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw rope round a 0.6 m trunk",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 206,
+    "Resolution 2": 8
+   },
+   "bbox": [
+    -0.378,
+    0.378,
+    0.996,
+    1.679,
+    -0.37,
+    0.46
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "trunk_d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "rope_d",
+     "expected": 0.1,
+     "measured": 0.1,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "origin = the trunk centre at the ground; the rope rings the trunk at 1.6 m"
+   ],
+   "trunk_d": 0.6
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_shimenawa_wrap_d10.p3d",
+   "class": "StaticObj_JP_S_Shimenawa_Wrap_D10",
+   "variant": "wrap",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw rope round a 1.0 m trunk",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 206,
+    "Resolution 2": 8
+   },
+   "bbox": [
+    -0.625,
+    0.625,
+    0.993,
+    1.709,
+    -0.611,
+    0.726
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "trunk_d",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "rope_d",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "origin = the trunk centre at the ground; the rope rings the trunk at 1.6 m"
+   ],
+   "trunk_d": 1.0
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_shimenawa_wrap_d16.p3d",
+   "class": "StaticObj_JP_S_Shimenawa_Wrap_D16",
+   "variant": "wrap",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw rope round a 1.6 m trunk (landmark tree)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 222,
+    "Resolution 2": 8
+   },
+   "bbox": [
+    -0.986,
+    0.986,
+    0.99,
+    1.749,
+    -0.966,
+    1.114
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "trunk_d",
+     "expected": 1.6,
+     "measured": 1.6,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "rope_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "origin = the trunk centre at the ground; the rope rings the trunk at 1.6 m"
+   ],
+   "trunk_d": 1.6
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_shimenawa_ab_tattered.p3d",
+   "class": "StaticObj_JP_S_Shimenawa_Ab_Tattered",
+   "variant": "len_1ken",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Straw rope grey and frayed, one end dropped",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 92,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.94,
+    0.458,
+    -0.002,
+    2.517,
+    -0.117,
+    0.79
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "rope_d",
+     "expected": 0.07,
+     "measured": 0.07,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "anchors at y = 2.50 (torii tie beam, gate, well frame): move to the real anchor height"
+   ],
+   "hang_y": 2.5
+  }
+ ]
+}

@@ -122,3 +122,16 @@
 2026-09-30 10:43:25 | #115 | jp_s_kosatsu_large | variant (batch) | 5h 18% wk 22%
 2026-09-30 10:43:25 | #116 | jp_s_kosatsu_forest | variant (batch) | 5h 18% wk 22%
 2026-09-30 10:43:25 | #117 | jp_s_kosatsu_ab_boards_down | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:26 | GROUP START | straw_stack, shimenawa | straw | 5h 18% wk 22%
+2026-09-30 10:45:28 | #118 | jp_s_straw_stack_nio_cyl | new model (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #119 | jp_s_straw_stack_nio_cone | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #120 | jp_s_straw_stack_stook | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #121 | jp_s_straw_stack_bundle | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #122 | jp_s_straw_stack_tawara_stack | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #123 | jp_s_straw_stack_ab_slumped | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #124 | jp_s_shimenawa_len_1ken | new model (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #125 | jp_s_shimenawa_len_2ken | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #126 | jp_s_shimenawa_wrap_d06 | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #127 | jp_s_shimenawa_wrap_d10 | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #128 | jp_s_shimenawa_wrap_d16 | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:45:28 | #129 | jp_s_shimenawa_ab_tattered | abandoned (batch) | 5h 18% wk 22%
