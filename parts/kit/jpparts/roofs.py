@@ -106,15 +106,17 @@ def _ccw(poly):
 
 
 def slopes_for(W, D, form, eave_y, t, ov, gov):
-    """The slope list of a roof form over x 0..W, z 0..-D (ridge along x)."""
+    """The slope list of a roof form over x 0..W, z 0..-D (ridge along x). gov: the verge overhang, a number or
+    (left, right) for a kirizuma roof whose two ends differ (a townhouse unit's party end, B0)."""
     h = D / 2
     S = []
+    gl, gr = gov if isinstance(gov, (tuple, list)) else (gov, gov)
     if form == "kirizuma":
-        S.append(Slope("front", [(-gov, ov), (W + gov, ov), (W + gov, -h), (-gov, -h)], (0.0, -1.0), (0.0, 0.0),
-                       (1.0, 0.0), (0.0, ov), eave_y, t, ov, True, verges=(-gov, W + gov)))
-        S.append(Slope("back", [(-gov, -D - ov), (-gov, -h), (W + gov, -h), (W + gov, -D - ov)], (0.0, 1.0), (0.0, -D),
-                       (-1.0, 0.0), (W, -D - ov), eave_y, t, ov, True, verges=(-W - gov + W, gov + W - W)))
-        S[1].verges = (S[1].u_of(W + gov, -D - ov), S[1].u_of(-gov, -D - ov))
+        S.append(Slope("front", [(-gl, ov), (W + gr, ov), (W + gr, -h), (-gl, -h)], (0.0, -1.0), (0.0, 0.0),
+                       (1.0, 0.0), (0.0, ov), eave_y, t, ov, True, verges=(-gl, W + gr)))
+        S.append(Slope("back", [(-gl, -D - ov), (-gl, -h), (W + gr, -h), (W + gr, -D - ov)], (0.0, 1.0), (0.0, -D),
+                       (-1.0, 0.0), (W, -D - ov), eave_y, t, ov, True, verges=(-W - gl + W, gr + W - W)))
+        S[1].verges = (S[1].u_of(W + gr, -D - ov), S[1].u_of(-gl, -D - ov))
         return S
     if form == "yosemune":
         xg0, xg1 = h, W - h
@@ -421,6 +423,7 @@ def roof(part, W, D, form="kirizuma", fam="sangawara", eave_y=EAVE_Y, t=None, ov
     t = PITCH[fam] if t is None else t
     ov = EAVE_OV[fam] if ov is None else ov
     gov = GABLE_OV[fam] if gov is None else gov
+    gl, gr = gov if isinstance(gov, (tuple, list)) else (gov, gov)
     sls = slopes_for(W, D, form, eave_y, t, ov, gov)
     info = {"slopes": [], "t": t, "ov": ov, "gov": gov, "form": form, "fam": fam}
     fire = {"thatch": "hay"}.get(fam, "pottery" if fam in ("sangawara", "hongawara") else "wood")
@@ -449,7 +452,7 @@ def roof(part, W, D, form="kirizuma", fam="sangawara", eave_y=EAVE_Y, t=None, ov
         info["slopes"].append(sl.name)
     # ridge line
     h = D / 2
-    xr0, xr1 = {"kirizuma": (-gov, W + gov), "yosemune": (h, W - h), "irimoya": (D / 4, W - D / 4),
+    xr0, xr1 = {"kirizuma": (-gl, W + gr), "yosemune": (h, W - h), "irimoya": (D / 4, W - D / 4),
                 "kabuto": (D / 6, W - h)}[form]
     stack_top = {"thatch": STACK["thatch"] + 0.60}.get(fam, STACK[fam] + 0.03)
     yr = eave_y + t * h + stack_top
@@ -474,16 +477,36 @@ def roof(part, W, D, form="kirizuma", fam="sangawara", eave_y=EAVE_Y, t=None, ov
             part.add(tube(p0, p1, 0.26, "roof_thatch", n=8, vis=(1, 2), tag="hip_roll", uvscale=(2.0, 2.0)))
         if form in ("irimoya", "kabuto"):
             _small_gables(part, W, D, form, eave_y, t, stack_top, fam)
-        thatch_ridge(part, (xr0 - (gov if form == "kirizuma" else 0.0) * 0.0, yr, -h), (xr1, yr, -h),
+        thatch_ridge(part, (xr0 - (gl if form == "kirizuma" else 0.0) * 0.0, yr, -h), (xr1, yr, -h),
                      ridge_kind or "bamboo")
     else:
         board_ridge(part, (xr0, yr, -h), (xr1, yr, -h), t, stoned=(fam == "ishioki"))
     if form == "kirizuma" or fam != "thatch":
         if form == "kirizuma":
-            for x, sg in ((-gov, -1), (W + gov, 1)):
+            for x, sg in ((-gl, -1), (W + gr, 1)):
                 hafu(part, x, D, t, eave_y, ov, sg, fam)
     part.meta.setdefault("roof", info)
     return sls, info
+
+
+def ridge_walk(info, name="ridge_walk", top=0.14, half=0.14, road_half=0.12, inset=0.05):
+    """The ridge walk (B0 step 0a, from buildings/machiya_t3_01): a collision + Roadway strip over the main ridge stack
+    of roof()'s info, so rooftop players walk the ridge instead of clipping it (PLAYBOOK §15 T9: tile and board roofs
+    are walkable). Thatch roofs are not walkable: returns None. Keep the name 'ridge_walk': the C12 roof-poke check
+    (raycheck.roof_pokes) allows it inside the roof bodies."""
+    fam = info.get("fam", "sangawara")
+    if fam == "thatch":
+        return None
+    kawara = fam in ("sangawara", "hongawara")
+    (xr0, yr, zr), (xr1, _, _) = info["ridge"]
+    s = Part(name, "", "")
+    ytop = yr + top
+    s.add(box(xr0 + inset, xr1 - inset, yr - 0.30, ytop, zr - half, zr + half, "roof_kawara" if kawara else "roof_kureita",
+              vis=(), geo=True, view=True, fire="pottery" if kawara else "wood", tag="ridge_geo"))
+    s.road([(xr0 + inset, ytop, zr - road_half), (xr1 - inset, ytop, zr - road_half),
+            (xr1 - inset, ytop, zr + road_half), (xr0 + inset, ytop, zr + road_half)],
+           "tile_roof" if kawara else "board_roof")
+    return s
 
 
 def _hip_y(sls, p, stack_top):

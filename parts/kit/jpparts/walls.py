@@ -504,6 +504,22 @@ def kawara_cap(part, p0, p1, width=0.32, courses=2, y_base=None):
     return h + 0.075
 
 
+def udatsu_placed(x, pent_y, keta_y, proj=0.50, cap_width=0.30, name=None):
+    """The udatsu placer (B0 step 0a, from buildings/machiya_t3_01): a plastered udatsu wing wall (the _sode recipe)
+    on the street pent at a party-wall line x of a building (kit frame: z 0 = street wall line, +z = street), sized to
+    sit on the pent (foot 0.25 under the pent's wall line pent_y) and stop under the main eave (0.33 under the keta
+    underside keta_y), projecting proj over the pent, with its tile cap (kept in every LOD, §15 T7b).
+    Returns the Part (meta['udatsu'] = (y0, y1, proj))."""
+    s = Part(name or "udatsu_%d" % int(x * 100), "", "")
+    y0, y1, zp = pent_y - 0.25, keta_y - 0.33, proj
+    s.add(box(x - 0.09, x + 0.09, y0, y1, 0.0, zp, "wall_shikkui", vis=(1, 2, 3), geo=True, view=True, fire=True,
+              tag="udatsu"))
+    s.add(box(x - 0.10, x + 0.10, y0 - 0.05, y0, -0.02, zp + 0.02, "wall_shikkui", vis=(1, 2), tag="udatsu_foot"))
+    kawara_cap(s, (x, y1, -0.05), (x, y1, zp + 0.10), width=cap_width)
+    s.meta["udatsu"] = (y0, y1, zp)
+    return s
+
+
 def part_udatsu(variant):
     hon = variant == "_hon"
     p = Part("jp_p_wall_udatsu", variant, "wall", tiers=[3],
