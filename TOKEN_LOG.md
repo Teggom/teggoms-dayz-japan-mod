@@ -20,6 +20,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 12:44 (local) | L1 (baseline) | launched: life layer interior, 50 items, one agent, time log TIMELOG_L1.md | - | - | before: **24%** (5-hour 33%, resets ~13:40) |
 | 2026-09-30 13:38 (local) | L1 | life layer interior: 50 items = 185 models (50 new, 65 variants, 70 abandoned), decorator wall/beam mounting, 4 materials | **654k** (195 tool calls) | 55 min | **25%** (5-hour 46% just before the 13:40 reset): L1 alone = ~1% weekly, ~13% of a 5-hour window |
 | 2026-09-30 13:45 (local) | L2 (baseline) | launched: life layer outdoor, 24 items (+ check B3b text mirroring), time log TIMELOG_L2.md | - | - | before: **25%** (5-hour 0%, fresh window) |
+| 2026-09-30 14:41 (local) | L2 | life layer outdoor: 24 items = 81 models (22 new, 20 variants, 39 abandoned) + the text fix (B3b + L1 text was back-facing = invisible) | **581k** (213 tool calls) | 57 min | **27%** (5-hour 11%): L2 alone = ~2% weekly, ~11% of a 5-hour window |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
@@ -87,3 +88,25 @@ themselves came out of it in the same run (all five ROOM DONE lines share one ti
 
 Twice the items of B3a in 13 more minutes: 50 items / 185 models in 55 min. After the first group (which built
 the wall/beam mounting), groups of 3-10 items took 3.5-7 minutes each.
+
+## L2 time log, summarised (TIMELOG_L2.md)
+
+| Stretch | What | Items | Minutes | 5-hour % |
+|---|---|---|---|---|
+| 13:45-13:50 | setup (reading) | - | 5 | 0 -> 3 |
+| 13:50-14:08 | text fix: B3b + L1 text back-facing (invisible) and mirrored; new TXT check; 37 models rebuilt, 3 PBOs repacked | - | 18 | 3 -> 5 |
+| 14:08-14:10 | era checks (24 kept, 7 swaps inside items) | - | 1.5 | 5 |
+| 14:10-14:15 | 2 materials (net, foliage) | - | 5 | 5 |
+| 14:15-14:20 | autumn yard: rice racks, persimmons, moon-viewing, scarecrow | 4 | 5 | 5 -> 7 |
+| 14:20-14:23 | farm tools, broom, ladder, charcoal | 4 | 3 | 7 |
+| 14:23-14:26 | potted plants, bird cage, bamboo pipe, stable yard | 4 | 3 | 7 -> 8 |
+| 14:26-14:29 | road story: travel gear, palanquin, spilled tenbin, bench dressing, stool, footwear | 6 | 3 | 8 -> 9 |
+| 14:29-14:31 | nets, boat | 2 | 2 | 9 |
+| 14:31-14:34 | fire gear, sandals for sale, shutters, fallen lantern | 4 | 3.5 | 9 |
+| 14:34-14:41 | PBO pack, sheets, shared-code re-runs | - | 7 | 9 -> 11 |
+
+The text fix was the one big stretch (18 min). The 24 items themselves took 20 minutes of group work.
+
+## Running total, Phase B + life layer (2026-09-29/30)
+
+B0 409k, B1 453k, B2 715k, B3a 498k, B3b 519k, B4 576k, L1 654k, L2 581k = **about 4.4M tokens**, weekly **about 18% -> 27%**.

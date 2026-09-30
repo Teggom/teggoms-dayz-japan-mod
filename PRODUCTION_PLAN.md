@@ -197,5 +197,16 @@
   - Found: DayZ models are left-handed, so text laid along +x reads mirrored; B3b's signs are probably mirrored (L2
     checks and fixes first). The armour-chest crest barely shows (black on black).
 - 2026-09-30: L2 (outdoor 24 + the B3b text check) launched.
+- 2026-09-30: **L2 DONE** (opus-high, 581k tokens / 57 min). Commits c2bae75 .. b9be512; `spikes/L2/L2_PROGRESS.md`.
+  - **Text fix:** B3b's text was mirrored AND back-facing (the game wouldn't draw it at all); L1's was back-facing.
+    Fixed with `skit.face_text` / `text_ok` in B3b's and L1's builds, plus a TXT check (66/66). 37 B3b models rebuilt
+    (class names unchanged); jp_site, jp_furniture and jp_buildings repacked (machiya 137/137). Evidence:
+    `l2_textcheck_before.jpg` / `_after.jpg` in research/outdoor_kit/contact_sheets/.
+  - 24 outdoor items = 81 models (22 new, 20 variants, 39 abandoned); era: all kept, 7 swaps inside items.
+    Decorator: `on_site()`, `under_eaves()`. Materials: `jp_m_textile_net`, `jp_m_plant_foliage`. jp_site.pbo = 210
+    classes. Sheets `research/outdoor_kit/contact_sheets/l2_*.jpg`.
+  - **Pitfall for later agents:** B3b's own `spikes/B3b/build.py` rewrites config.cpp WITHOUT the L2 classes. After
+    any B3b rebuild, run `python spikes/L2/build_l2.py --pack`.
+  - Life layer items aren't placed anywhere yet (the machiya keeps B4's dressing); Phase C shells will use them.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
