@@ -578,12 +578,14 @@ def laundry(kind):
             body = abs(u - 0.5) < 0.22
             h = drop if body else 0.42
             return (x, pole_y - 0.02 - h * v, sway + 0.01 * math.sin(7 * u))
-        P.add(grid_sheet(lambda u, v: kimono(u, v), 5, 3, "textile_noren", vis=(1,), wear="_w1"))
+        P.add(grid_sheet(lambda u, v: kimono(u, v), 5, 3, "textile_noren", vis=(1,), wear="_w1",
+                         uv=lambda u, v: (0.47 + 0.06 * u, 1.3 * v)))      # plain indigo: the strip between marks
         P.add(grid_sheet(lambda u, v: (0.25 + 0.8 * u, pole_y - 0.02 - 0.95 * v, 0.02 * math.sin(4 * v)), 2, 3, KINARI,
                          vis=(1,), wear="_w2"))
         P.add(grid_sheet(lambda u, v: (0.9 + 1.0 * u, 0.01 + 0.04 * math.sin(5 * u * v), 0.35 + 0.7 * v), 3, 2, KINARI,
                          vis=(1,), wear="_w2"))
-        P.add(W(-1.2, 0.0, pole_y - 1.2, pole_y - 0.02, -0.005, 0.005, "textile_noren", vis=(2,)))
+        P.add(grid_sheet(lambda u, v: (-1.2 + 1.2 * u, pole_y - 0.02 - 1.2 * v, 0.0), 1, 1, "textile_noren", vis=(2,),
+                         uv=lambda u, v: (0.47 + 0.06 * u, 1.2 * v)))
     elif kind == "load_kaki":
         rr = random.Random(12)
         for i in range(7):

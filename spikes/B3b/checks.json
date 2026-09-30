@@ -3850,7 +3850,7 @@
    "pass": true,
    "faces": {
     "Resolution 1": 120,
-    "Resolution 2": 46,
+    "Resolution 2": 42,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -3898,7 +3898,7 @@
      "detail": {
       "faces": {
        "Resolution 1": 120,
-       "Resolution 2": 46,
+       "Resolution 2": 42,
        "Geometry": 12,
        "View Geometry": 12,
        "Fire Geometry": 12
@@ -17063,7 +17063,7 @@
    "pass": true,
    "faces": {
     "Resolution 1": 39,
-    "Resolution 2": 15
+    "Resolution 2": 13
    },
    "checks": [
     {
@@ -17104,7 +17104,7 @@
      "detail": {
       "faces": {
        "Resolution 1": 39,
-       "Resolution 2": 15
+       "Resolution 2": 13
       },
       "extra": []
      }
@@ -17214,7 +17214,7 @@
    "pass": true,
    "faces": {
     "Resolution 1": 39,
-    "Resolution 2": 15
+    "Resolution 2": 13
    },
    "checks": [
     {
@@ -17255,7 +17255,7 @@
      "detail": {
       "faces": {
        "Resolution 1": 39,
-       "Resolution 2": 15
+       "Resolution 2": 13
       },
       "extra": []
      }
@@ -19019,7 +19019,7 @@
    "pass": true,
    "faces": {
     "Resolution 1": 41,
-    "Resolution 2": 15
+    "Resolution 2": 13
    },
    "checks": [
     {
@@ -19060,7 +19060,7 @@
      "detail": {
       "faces": {
        "Resolution 1": 41,
-       "Resolution 2": 15
+       "Resolution 2": 13
       },
       "extra": []
      }
@@ -22537,7 +22537,7 @@
    "pass": true,
    "faces": {
     "Resolution 1": 126,
-    "Resolution 2": 75,
+    "Resolution 2": 71,
     "Resolution 3": 42,
     "Geometry": 30,
     "Roadway": 1,
@@ -22591,7 +22591,7 @@
      "detail": {
       "faces": {
        "Resolution 1": 126,
-       "Resolution 2": 75,
+       "Resolution 2": 71,
        "Resolution 3": 42,
        "Geometry": 30,
        "Roadway": 1,
@@ -26446,13 +26446,9 @@
     "CfgConvert model.cfg: OK "
    ]
   },
-  "BIN": {
+  "PBO": {
    "pass": true,
-   "detail": {
-    "missing": [],
-    "warning_lines": [],
-    "exit": 0
-   }
+   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_site.pbo"
   }
  },
  "summary": {

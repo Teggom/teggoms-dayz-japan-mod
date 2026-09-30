@@ -172,8 +172,9 @@ def noren(L, wear="_w1", torn=False, top=LINTEL - 0.02, zc=0.10, missing=()):
             return (x, y, z)
         out.append(grid_sheet(f, 1, 3, NOREN, vis=(1,), wear=wear, uv=noren_panel_uv(i, 3, Lp)))
     out.append(pole((-0.62, top + 0.02, zc), (0.62, top + 0.02, zc), 0.015, BAMBOO, n=5, vis=(1, 2)))
-    out.append(W(-0.51, 0.51, top - L, top, zc - 0.003, zc + 0.003, NOREN, vis=(2,)))
-    out[-1].wear = wear
+    # Res 2: one two-sided sheet, the shop mark stretched over the three panels (never the tiled 4-mark atlas)
+    out.append(grid_sheet(lambda u, v: (-0.51 + 1.02 * u, top - L * v, zc), 1, 2 if L > 0.5 else 1, NOREN, vis=(2,),
+                          wear=wear, uv=lambda u, v: (0.5 * u, v * L if v * L <= 0.5 else 0.46 + 0.03 * v)))
     return out
 
 
