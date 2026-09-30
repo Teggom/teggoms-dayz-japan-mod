@@ -1,0 +1,207 @@
+{
+ "id": "jp_s_charcoal_bales",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_charcoal_bales_stack.p3d",
+   "class": "StaticObj_JP_S_Charcoal_Bales_Stack",
+   "variant": "stack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Charcoal bales stacked by a door",
+   "anchor": "wall",
+   "wall_gap": 0.05,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 480,
+    "Resolution 2": 40,
+    "Geometry": 56,
+    "View Geometry": 56,
+    "Fire Geometry": 56
+   },
+   "bbox": [
+    -0.53,
+    0.524,
+    0.0,
+    0.959,
+    0.066,
+    0.394
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.517,
+    0.073,
+    0.517,
+    0.387
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bales",
+     "expected": 4,
+     "measured": 4.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "charcoal bales (sumi-dawara) stacked by a door, 5 cm off the wall (BUILDING_LIST 5.2: 25 entries)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_charcoal_bales_stack.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_charcoal_bales_row2.p3d",
+   "class": "StaticObj_JP_S_Charcoal_Bales_Row2",
+   "variant": "row2",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Two charcoal bales against a wall",
+   "anchor": "wall",
+   "wall_gap": 0.05,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 276,
+    "Resolution 2": 20,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "bbox": [
+    -0.36,
+    0.354,
+    0.0,
+    0.623,
+    0.066,
+    0.394
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.347,
+    0.073,
+    0.347,
+    0.387
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bales",
+     "expected": 2,
+     "measured": 2.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "charcoal bales (sumi-dawara) stacked by a door, 5 cm off the wall (BUILDING_LIST 5.2: 25 entries)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_charcoal_bales_row2.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_charcoal_bales_ab_burst.p3d",
+   "class": "StaticObj_JP_S_Charcoal_Bales_Ab_Burst",
+   "variant": "stack",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Charcoal bale fallen and burst, charcoal spilled",
+   "anchor": "wall",
+   "wall_gap": 0.05,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 390,
+    "Resolution 2": 20,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "bbox": [
+    -0.42,
+    0.958,
+    0.0,
+    0.622,
+    0.066,
+    1.303
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.407,
+    0.073,
+    0.656,
+    0.894
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bales",
+     "expected": 2,
+     "measured": 2.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "charcoal bales (sumi-dawara) stacked by a door, 5 cm off the wall (BUILDING_LIST 5.2: 25 entries)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_charcoal_bales_ab_burst.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#57",
+ "refs_local": []
+}

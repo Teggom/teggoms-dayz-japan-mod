@@ -1,0 +1,221 @@
+{
+ "id": "jp_s_ladder",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [
+  "a ladder against the eaves (roof and fire access); Geometry: one slab (not climbable)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_ladder_lean.p3d",
+   "class": "StaticObj_JP_S_Ladder_Lean",
+   "variant": "wood",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden ladder leaned against the eaves",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 102,
+    "Resolution 2": 36,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.24,
+    0.24,
+    0.0,
+    2.908,
+    0.013,
+    0.828
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.25,
+    0.003,
+    0.25,
+    0.837
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 3.0,
+     "measured": 3.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "top_h",
+     "expected": 2.897777478867205,
+     "measured": 2.9081,
+     "tol": 0.08,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "leaned against the eaves at 15 degrees (top 2.90 m): place with the wall plane on the facade"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_ladder_lean.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_ladder_bamboo.p3d",
+   "class": "StaticObj_JP_S_Ladder_Bamboo",
+   "variant": "bamboo",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Bamboo ladder leaned against the eaves",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 236,
+    "Resolution 2": 44,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.245,
+    0.245,
+    0.0,
+    3.489,
+    0.014,
+    0.995
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.25,
+    0.011,
+    0.25,
+    1.001
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 3.6,
+     "measured": 3.6,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "top_h",
+     "expected": 3.477332974640646,
+     "measured": 3.4885,
+     "tol": 0.08,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "leaned against the eaves at 15 degrees (top 3.48 m): place with the wall plane on the facade"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_ladder_bamboo.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_ladder_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Ladder_Ab_Fallen",
+   "variant": "wood",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Ladder fallen on the ground, rungs broken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 105,
+    "Resolution 2": 36,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.858,
+    0.812,
+    0.0,
+    0.049,
+    -1.45,
+    1.584
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.868,
+    -1.452,
+    0.245,
+    1.586
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 3.0,
+     "measured": 3.0,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_ladder_ab_fallen.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#56",
+ "refs_local": []
+}

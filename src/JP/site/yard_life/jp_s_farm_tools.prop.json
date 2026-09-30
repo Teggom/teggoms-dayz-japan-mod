@@ -1,0 +1,168 @@
+{
+ "id": "jp_s_farm_tools",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_farm_tools_lean.p3d",
+   "class": "StaticObj_JP_S_Farm_Tools_Lean",
+   "variant": "lean",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Farm tools leaned on a wall: hoe, rake, flail, sickle",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 94,
+    "Resolution 2": 33
+   },
+   "bbox": [
+    -0.6,
+    0.79,
+    0.0,
+    1.68,
+    0.001,
+    0.476
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tools",
+     "expected": 4,
+     "measured": 4.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "farm tools against a yard wall: hoe (kuwa), bamboo rake (kumade), flail (kururi-bo), sickle on a nail; no threshing comb (a floor machine). Visual only."
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_farm_tools_lean.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_farm_tools_pair.p3d",
+   "class": "StaticObj_JP_S_Farm_Tools_Pair",
+   "variant": "pair",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Hoe and rake leaned on a wall",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 49,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.6,
+    0.561,
+    0.0,
+    1.557,
+    0.001,
+    0.476
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tools",
+     "expected": 2,
+     "measured": 2.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "farm tools against a yard wall: hoe (kuwa), bamboo rake (kumade), flail (kururi-bo), sickle on a nail; no threshing comb (a floor machine). Visual only."
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_farm_tools_pair.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_farm_tools_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Farm_Tools_Ab_Fallen",
+   "variant": "lean",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Farm tools slid down into the leaves, rusted",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 98,
+    "Resolution 2": 33
+   },
+   "bbox": [
+    -1.549,
+    0.937,
+    0.0,
+    1.33,
+    0.001,
+    1.378
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tools",
+     "expected": 4,
+     "measured": 4.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "farm tools against a yard wall: hoe (kuwa), bamboo rake (kumade), flail (kururi-bo), sickle on a nail; no threshing comb (a floor machine). Visual only."
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_farm_tools_ab_fallen.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#54",
+ "refs_local": []
+}

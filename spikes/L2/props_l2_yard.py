@@ -481,3 +481,257 @@ PROPS.append({"id": "jp_s_scarecrow", "cat": CAT, "ll": "#62", "mount": "field",
                   M("jp_s_scarecrow_ab_down", "kasa", "abandoned", "Scarecrow fallen face down in the stubble",
                     lambda: scarecrow("ab_down")),
               ]})
+
+
+# ================================================================================================ helpers: leaning
+def lean_to_wall(ss, L, theta, x=0.0, top_z=0.012, cols=()):
+    """Tools built standing on the origin along +y (length L) leaned back against the wall plane z = 0: the top
+    touches at top_z, the foot rests on the ground. Returns (visual, collision) solids, both lifted so the lowest
+    visual point is y = 0."""
+    a = math.radians(theta)
+    d = top_z + L * math.sin(a)
+    vs = xfs(ss, rx=-theta, t=(x, 0.0, d))
+    cs = xfs(list(cols), rx=-theta, t=(x, 0.0, d))
+    lo = min(v[1] for s in vs for v in s.verts)
+    vs = xfs(vs, t=(0.0, -lo, 0.0))
+    cs = xfs(cs, t=(0.0, -lo, 0.0))
+    return vs, cs
+
+
+# ================================================================================================ 54 farm tools
+def hoe(wear=None):
+    """Hira-guwa: a 1.15 m oak handle, the iron blade set at an angle at its foot, a wooden head block."""
+    out = [pole((0.0, 0.0, 0.0), (0.0, 1.15, 0.0), 0.017, WOOD, n=5, vis=(1, 2)),
+           box(-0.03, 0.03, 0.0, 0.07, -0.03, 0.03, WOOD, vis=(1,))]
+    bl = box(-0.075, 0.075, 0.0, 0.004, 0.0, 0.22, IRON, vis=(1,))
+    out.append(xf(bl, rx=-20.0, t=(0.0, 0.02, 0.02)))
+    return K.wear_all(out, wear)
+
+
+def rake(wear=None):
+    """Kumade: bamboo rake, a 1.35 m bamboo handle and a fan of split-bamboo tines (one flat fan)."""
+    out = [pole((0.0, 0.0, 0.0), (0.0, 1.35, 0.0), 0.016, BAMBOO, n=5, vis=(1, 2))]
+    fan = [(0.0, 1.20)] + [(0.28 * math.sin(math.radians(a)), 1.20 + 0.40 * math.cos(math.radians(a)))
+                           for a in range(-40, 41, 20)]
+    out.append(prism(fan, "z", -0.006, 0.006, BAMBOO, vis=(1,)))
+    return K.wear_all(out, wear)
+
+
+def flail(wear=None):
+    """Kururi-bo: a 1.7 m pole with a swinging bar of three bamboo slats on a peg at its top."""
+    out = [pole((0.0, 0.0, 0.0), (0.0, 1.70, 0.0), 0.018, BAMBOO, n=5, vis=(1, 2))]
+    for k in range(3):
+        out.append(box(-0.045 + 0.03 * k, -0.02 + 0.03 * k, 1.05, 1.68, 0.02, 0.032, BAMBOO, vis=(1,)))
+    out.append(box(-0.05, 0.05, 1.64, 1.69, 0.015, 0.035, WOOD, vis=(1,)))
+    return K.wear_all(out, wear)
+
+
+def sickle(wear=None):
+    """Kama: 0.30 handle, a curved iron blade (flat prism), hung by its handle from a nail."""
+    out = [box(-0.014, 0.014, -0.30, 0.0, -0.01, 0.01, WOOD, vis=(1,))]
+    bl = [(0.0, -0.30), (0.03, -0.30), (0.19, -0.26), (0.24, -0.20)]
+    out.append(prism(bl, "z", -0.002, 0.002, IRON, vis=(1,)))
+    return K.wear_all(out, wear)
+
+
+def farm_tools(kind):
+    ab = kind.startswith("ab")
+    wear = "_w2" if ab else None
+    P = SPart("farm_tools", budget="small", mass=6.0, anchor="wall", wall_gap=0.0, flat=True,
+              wear="_w2" if ab else "_w1")
+    P.add(K.lkit.peg(0.55, 1.30))                       # the nail the sickle hangs from
+    if kind in ("lean", "pair"):
+        tools = [(hoe, 1.15, 12.0, -0.45), (rake, 1.60, 14.0, 0.05)]
+        if kind == "lean":
+            tools.append((flail, 1.70, 10.0, 0.35))
+        for fn, L, th, x in tools:
+            vs, _ = lean_to_wall(fn(wear), L, th, x=x, top_z=0.035)
+            add_all(P, vs)
+        if kind == "lean":
+            add_all(P, xfs(sickle(), t=(0.55, 1.32, 0.05)))
+        P.add(W(-0.6, 0.45, 0.0, 1.5, 0.02, 0.10, WOOD, vis=(2,)))
+        P.dim("tools", 4 if kind == "lean" else 2, len(tools) + (1 if kind == "lean" else 0), tol=0)
+    else:   # ab_fallen: slid down the wall into the leaves, the sickle on the ground, iron rusted
+        r = random.Random(54)
+        for fn, L, x, a in ((hoe, 1.15, -0.4, 80.0), (rake, 1.60, 0.1, 70.0), (flail, 1.70, 0.5, 95.0)):
+            ss = xfs(fn("_w2"), rx=90.0)
+            ss = rest(xfs(ss, ry=a + r.uniform(-8, 8), t=(x, 0.0, 0.55)), 0.0)
+            z0 = min(v[2] for q in ss for v in q.verts)
+            add_all(P, xfs(ss, t=(0.0, 0.0, max(0.0, 0.08 - z0))))
+        add_all(P, rest(xfs(sickle("_w2"), rx=90.0, ry=30.0, t=(0.6, 0.0, 0.3)), 0.0))
+        P.add(litter(541, 0.0, 0.85, 0.6, sx=1.6))
+        P.add(W(-0.9, 0.9, 0.0, 0.06, 0.1, 1.2, WOOD, vis=(2,)))
+        P.dim("tools", 4, 4, tol=0)
+    P.notes.append("farm tools against a yard wall: hoe (kuwa), bamboo rake (kumade), flail (kururi-bo), sickle on "
+                   "a nail; no threshing comb (a floor machine). Visual only.")
+    return P
+
+
+PROPS.append({"id": "jp_s_farm_tools", "cat": CAT, "ll": "#54", "mount": "yard", "tiers": [1, 2],
+              "models": [
+                  M("jp_s_farm_tools_lean", "lean", "intact", "Farm tools leaned on a wall: hoe, rake, flail, sickle",
+                    lambda: farm_tools("lean")),
+                  M("jp_s_farm_tools_pair", "pair", "intact", "Hoe and rake leaned on a wall", lambda: farm_tools("pair")),
+                  M("jp_s_farm_tools_ab_fallen", "lean", "abandoned", "Farm tools slid down into the leaves, rusted",
+                    lambda: farm_tools("ab_fallen")),
+              ]})
+
+
+# ================================================================================================ 55 broom + leaf pile
+def broom(wear=None):
+    """Take-boki: a 1.3 m bamboo handle, a flat fan of bamboo twigs tied at its foot (built lying along +z)."""
+    out = [pole((0.0, 0.03, -0.75), (0.0, 0.03, 0.40), 0.014, BAMBOO, n=5, vis=(1, 2))]
+    fan = [(-0.04, 0.35), (0.04, 0.35), (0.22, 0.95), (0.10, 1.02), (-0.10, 1.02), (-0.22, 0.95)]
+    out.append(prism(fan, "y", 0.005, 0.05, BAMBOO, vis=(1,)))
+    out.append(xf(K.lkit.rope_ring(0.03, 0.0, 0.03, ROPE, 5), rx=90.0, t=(0.0, 0.03, 0.37)))
+    return K.wear_all(out, wear)
+
+
+def leaf_pile(kind):
+    ab = kind.startswith("ab")
+    P = SPart("leaf_pile", budget="small", mass=1.0, flat=True, wear="_w2" if ab else "_w1")
+    if kind in ("broom", "small"):
+        P.add(K.mound(551, 0.0, 0.0, 0.45, 0.16, LEAF, sx=1.3, wear="_w1", vis=(1, 2)))
+        P.add(K.mound(552, 0.28, -0.1, 0.28, 0.10, LEAF, sx=1.1, wear="_w2", vis=(1,)))
+        P.add(litter(553, 0.1, 0.0, 0.9, sx=1.4))
+        if kind == "broom":
+            add_all(P, xfs(broom(), ry=-65.0, t=(-0.2, 0.0, 0.75)))
+        P.dim("pile_h", 0.16, 0.16, tol=0.01)
+    else:   # ab_scattered: the wind has spread the pile, the broom lies where it fell
+        for k, (x, z, rr) in enumerate(((0.0, 0.0, 0.32), (0.55, 0.25, 0.22), (-0.45, 0.35, 0.18))):
+            P.add(K.mound(554 + 10 * k, x, z, rr, 0.05 - 0.01 * k, LEAF, sx=1.4, wear="_w2", vis=(1, 2) if k == 0 else (1,)))
+        for k, (x, z, rr) in enumerate(((1.1, 0.4, 0.6), (-1.0, -0.3, 0.7), (0.2, 0.9, 0.5))):
+            P.add(litter(555 + k, x, z, rr, sx=1.3))
+        add_all(P, xfs(broom("_w2"), ry=150.0, t=(0.9, 0.0, -0.8)))
+        P.dim("pile_h", 0.05, 0.05, tol=0.01)
+    P.notes.append("autumn: a raked leaf pile and the bamboo broom (take-boki); visual only, walk-through")
+    return P
+
+
+PROPS.append({"id": "jp_s_leaf_pile", "cat": CAT, "ll": "#55", "mount": "yard", "tiers": [1, 2, 3],
+              "models": [
+                  M("jp_s_leaf_pile_broom", "broom", "intact", "Raked leaf pile with a bamboo broom",
+                    lambda: leaf_pile("broom")),
+                  M("jp_s_leaf_pile_small", "small", "intact", "Raked leaf pile", lambda: leaf_pile("small"),
+                    mount="street"),
+                  M("jp_s_leaf_pile_ab_scattered", "broom", "abandoned", "Leaf pile spread by the wind, broom fallen",
+                    lambda: leaf_pile("ab_scattered")),
+              ]})
+
+
+# ================================================================================================ 56 ladder
+def ladder_parts(L, bamboo=False, missing=(), wear=None):
+    rail = BAMBOO if bamboo else WOOD
+    out = []
+    for sx in (-1, 1):
+        x = sx * 0.21
+        if bamboo:
+            out.append(pole((x, 0.0, 0.0), (x, L, 0.0), 0.028, BAMBOO, n=6, vis=(1, 2), r1=0.022))
+        else:
+            out.append(W(x - 0.03, x + 0.03, 0.0, L, -0.02, 0.02, WOOD, vis=(1, 2)))
+    n = int(L / 0.30)
+    for k in range(1, n + 1):
+        if k in missing:
+            continue
+        y = 0.30 * k - 0.05
+        out.append(pole((-0.21, y, 0.0), (0.21, y, 0.0), 0.016, rail, n=4 if bamboo else 5, vis=(1,)))
+        if bamboo:
+            for sx in (-1, 1):
+                out.append(box(sx * 0.21 - 0.035, sx * 0.21 + 0.035, y - 0.02, y + 0.02, -0.035, 0.035, ROPE, vis=(1,)))
+    for k in range(1, n + 1, 3):
+        y = 0.30 * k - 0.05
+        out.append(W(-0.2, 0.2, y - 0.015, y + 0.015, -0.015, 0.015, rail, vis=(2,)))
+    cols = [col(-0.25, 0.25, 0.0, L, -0.03, 0.03, rail)]
+    return K.wear_all(out, wear), cols, n
+
+
+def ladder(kind):
+    ab = kind.startswith("ab")
+    P = SPart("ladder", budget="small", mass=12.0, anchor="wall" if not ab else "floor", wall_gap=0.0,
+              wear="_w2" if ab else "_w1")
+    if kind in ("lean", "bamboo"):
+        L = 3.0 if kind == "lean" else 3.6
+        ss, cs, n = ladder_parts(L, bamboo=kind == "bamboo")
+        th = 15.0
+        vs, cs = lean_to_wall(ss, L, th, top_z=0.012 + (0.028 if kind == "bamboo" else 0.02), cols=cs)
+        add_all(P, vs + cs)
+        P.dim("length", L, L, tol=0.01)
+        P.dim("top_h", L * math.cos(math.radians(th)), max(v[1] for s in vs for v in s.verts), tol=0.08)
+        P.notes.append("leaned against the eaves at 15 degrees (top %.2f m): place with the wall plane on the facade"
+                       % (L * math.cos(math.radians(th))))
+    else:   # ab_fallen: down on the ground, two rungs gone, one rail split
+        ss, cs, n = ladder_parts(3.0, missing=(4, 7), wear="_w2")
+        ss = xfs(ss, rx=90.0, ry=12.0, t=(0.0, 0.03, -1.4))
+        cs = xfs(cs, rx=90.0, ry=12.0, t=(0.0, 0.03, -1.4))
+        add_all(P, ss + cs)
+        for k, a in ((4, 40.0), (7, -25.0)):
+            b = pole((-0.2, 0.0, 0.0), (0.2, 0.0, 0.0), 0.016, WOOD, n=5, vis=(1,), wear="_w2")
+            P.add(xf(b, ry=a, t=(0.45 + 0.1 * k / 4, 0.016, -1.4 + 0.30 * k)))
+        P.add(litter(561, 0.1, 0.0, 1.0, sx=0.6, sz=1.6))
+        ground(P)
+        P.dim("length", 3.0, 3.0, tol=0.01)
+    return P
+
+
+PROPS.append({"id": "jp_s_ladder", "cat": CAT, "ll": "#56", "mount": "yard", "tiers": [1, 2, 3],
+              "notes": ["a ladder against the eaves (roof and fire access); Geometry: one slab (not climbable)"],
+              "models": [
+                  M("jp_s_ladder_lean", "wood", "intact", "Wooden ladder leaned against the eaves",
+                    lambda: ladder("lean")),
+                  M("jp_s_ladder_bamboo", "bamboo", "intact", "Bamboo ladder leaned against the eaves",
+                    lambda: ladder("bamboo"), mount="street"),
+                  M("jp_s_ladder_ab_fallen", "wood", "abandoned", "Ladder fallen on the ground, rungs broken",
+                    lambda: ladder("ab_fallen")),
+              ]})
+
+
+# ================================================================================================ 57 charcoal bales
+import props_life_meal as LM      # noqa: E402  L1 (read-only): sumi_bale(), charcoal_bits()
+
+
+def charcoal_bales(kind):
+    ab = kind.startswith("ab")
+    P = SPart("charcoal_bales", budget="box", mass=60.0, anchor="wall", wall_gap=0.05, wear="_w2" if ab else "_w1")
+    R, h = 0.17, 0.62
+    zc = 0.05 + R + 0.01
+    wear = "_w2" if ab else None
+    if kind == "stack":
+        for x in (-0.36, 0.0, 0.36):
+            add_all(P, LM.sumi_bale(x, zc, R=R, h=h, open_top=False, wear=wear))
+            P.add(cyl_col(R, 0.0, h, n=8, cx=x, cz=zc))
+        top = LM.sumi_bale(0.0, 0.0, R=R, h=h, open_top=False, wear=wear)
+        top = xfs(top, t=(0.0, -h / 2, 0.0))
+        top = xfs(top, rz=90.0, t=(-0.1, h + R + 0.005, zc))
+        add_all(P, top)
+        P.add(xf(cyl_col(R, -h / 2, h / 2, n=8), rz=90.0, t=(-0.1, h + R + 0.005, zc)))
+        P.dim("bales", 4, 4, tol=0)
+    elif kind == "row2":
+        for x in (-0.19, 0.19):
+            add_all(P, LM.sumi_bale(x, zc, R=R, h=h, open_top=(x > 0), wear=wear))
+            P.add(cyl_col(R, 0.0, h, n=8, cx=x, cz=zc))
+        P.dim("bales", 2, 2, tol=0)
+    else:   # ab_burst: one bale fallen and burst, charcoal spilled
+        add_all(P, LM.sumi_bale(-0.25, zc, R=R, h=h, open_top=True, wear="_w2"))
+        P.add(cyl_col(R, 0.0, h, n=8, cx=-0.25, cz=zc))
+        fb = LM.sumi_bale(0.0, 0.0, R=R, h=h, open_top=False, wear="_w2")
+        fb = xfs(fb, t=(0.0, -h / 2, 0.0))
+        fb = xfs(fb, rx=90.0, ry=-35.0, t=(0.35, R, 0.55))
+        add_all(P, fb)
+        P.add(xf(xf(cyl_col(R, -h / 2, h / 2, n=8), rx=90.0), ry=-35.0, t=(0.35, R, 0.55)))
+        add_all(P, LM.charcoal_bits(0.55, 0.95, 0.0, 0.28, 16, 571))
+        P.add(K.mound(572, 0.5, 0.9, 0.25, 0.04, SOOTW, sx=1.4, wear="_w2", vis=(1,)))
+        P.add(litter(573, 0.3, 0.7, 0.6))
+        P.dim("bales", 2, 2, tol=0)
+    P.notes.append("charcoal bales (sumi-dawara) stacked by a door, 5 cm off the wall (BUILDING_LIST 5.2: 25 entries)")
+    return P
+
+
+PROPS.append({"id": "jp_s_charcoal_bales", "cat": CAT, "ll": "#57", "mount": "yard", "tiers": [1, 2, 3],
+              "models": [
+                  M("jp_s_charcoal_bales_stack", "stack", "intact", "Charcoal bales stacked by a door",
+                    lambda: charcoal_bales("stack")),
+                  M("jp_s_charcoal_bales_row2", "row2", "intact", "Two charcoal bales against a wall",
+                    lambda: charcoal_bales("row2")),
+                  M("jp_s_charcoal_bales_ab_burst", "stack", "abandoned", "Charcoal bale fallen and burst, charcoal "
+                    "spilled", lambda: charcoal_bales("ab_burst")),
+              ]})

@@ -21,3 +21,17 @@
 2026-09-30 14:19:28 | #13 | jp_s_scarecrow_naruko | variant (batch) | 5h 7% wk 26%
 2026-09-30 14:19:28 | #14 | jp_s_scarecrow_ab_leaning | abandoned (batch) | 5h 7% wk 26%
 2026-09-30 14:19:28 | #15 | jp_s_scarecrow_ab_down | abandoned (batch) | 5h 7% wk 26%
+2026-09-30 14:19:58 | GROUP START | #54 farm tools, #55 broom + leaf pile, #56 ladder, #57 charcoal bales | - | 5h 7% wk 26%
+2026-09-30 14:23:14 | #16 | jp_s_farm_tools_lean | new model (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #17 | jp_s_farm_tools_pair | variant (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #18 | jp_s_farm_tools_ab_fallen | abandoned (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #19 | jp_s_leaf_pile_broom | new model (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #20 | jp_s_leaf_pile_small | variant (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #21 | jp_s_leaf_pile_ab_scattered | abandoned (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #22 | jp_s_ladder_lean | new model (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #23 | jp_s_ladder_bamboo | variant (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #24 | jp_s_ladder_ab_fallen | abandoned (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #25 | jp_s_charcoal_bales_stack | new model (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #26 | jp_s_charcoal_bales_row2 | variant (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | #27 | jp_s_charcoal_bales_ab_burst | abandoned (batch) | 5h 7% wk 26%
+2026-09-30 14:23:14 | GROUP START | #58 potted plants, #59 bird cage, #60 bamboo pipe + trough, #61 stable yard | - | 5h 7% wk 26%
