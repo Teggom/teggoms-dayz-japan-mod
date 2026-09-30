@@ -54,9 +54,13 @@ def floor_fn(road):
     return f
 
 
-def run_g3(M, L, floors, rec):
-    """The checks added after Stephen's first in-game walk (G3, 2026-09-27; PLAYBOOK §15)."""
-    rooms = [{"name": f["name"], "rect": f["rect"], "y": f["y"], "obstacles": f.get("obstacles", [])} for f in floors]
+def run_g3(M, L, floors, rec, extra_portals=()):
+    """The checks added after Stephen's first in-game walk (G3, 2026-09-27; PLAYBOOK §15).
+    C2 (2026-09-30): extra_portals [(name, (x0, x1, y0, y1, z0, z1))] = declared openings without a leaf (a mushiro
+    doorway, a smoke gable's lattice) that C11 counts like a door; a floor with enclosed=False (an open-sided shed or
+    lean-to) is left out of C11. Both default to nothing: every older building checks exactly as before."""
+    rooms = [{"name": f["name"], "rect": f["rect"], "y": f["y"], "obstacles": f.get("obstacles", [])} for f in floors
+             if f.get("enclosed", True)]
     road = L["Roadway"]
     vcomps = C.components(L["View Geometry"])
     fa = floor_fn(road)
@@ -103,6 +107,7 @@ def run_g3(M, L, floors, rec):
                 bx[2] = min(bx[2], d.action[1] - getattr(d, "act_h", 1.0))
             portals.append(("DoorsTwin%d" % k, (bx[0] - nx, bx[1] + nx, bx[2] - 0.06, bx[3] + 0.06, bx[4] - nz,
                                                   bx[5] + nz)))
+    portals += [(n_, tuple(b_)) for n_, b_ in extra_portals]
     res = RC.envelope_leak(L["Resolution 1"], rooms, portals)
     wb = M.bbox()
     detail, nleak = [], 0
@@ -111,6 +116,9 @@ def run_g3(M, L, floors, rec):
         ex = sorted({RC.leak_exit(o, dv, wb) for o, dv in leaks[:40]})[:3]
         detail.append("%s %d rays, %d out through doors/windows, %d LEAKS%s" % (name, n, via, len(leaks),
                                                                                (" e.g. exit %s" % ex) if ex else ""))
+    opn = [f["name"] for f in floors if not f.get("enclosed", True)]
+    if opn:
+        detail.append("open-sided by design (not checked): %s" % ", ".join(opn))
     rec("C11 envelope leak: rooms see outside only through doors / windows", nleak == 0, "; ".join(detail))
     # C12 roof pokes: nothing from another sub-part enters a roof body, in any LOD
     pk = RC.roof_pokes(M.solids)

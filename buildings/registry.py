@@ -227,6 +227,95 @@ for _b in C1_TOWNHOUSES + C1_POSTTOWN + C1_HATAGO:
     _b["placements"] = C1_PLACEMENTS.get(_b["key"], [])
 BUILDINGS += C1_TOWNHOUSES + C1_POSTTOWN + C1_HATAGO
 
+# ------------------------------------------------------------------------------------------------ C2 families
+# Phase C wave 1 (agent C2, 2026-09-30): rural shells from parts/kit/jpparts/templates/rural.py (buildings/ruralkit.py
+# builds them, buildings/shellcheck.py checks them). Test-island hamlet spots: C2_PLACEMENTS (spikes/C2/layout.py).
+from jpparts.templates import rural as _ru  # noqa: E402
+
+_LOOT_FARM = {"usage": ["Farm", "Village"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+_LOOT_SHED = {"usage": ["Farm"], "categories": ["tools", "containers", "food"], "tags": ["floor"]}
+C2_PLACEMENTS = {}
+
+
+def _rural(key, dir_, cls, display, params, loot, mass):
+    return {"key": key, "dir": dir_, "module": "rural_shells", "class": cls, "name": "jp_" + key, "display": display,
+            "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
+            "placements": [], "verify": "shellcheck", "budget": _ru.budget_class(**params), "ship": True}
+
+
+C2_FARMHOUSES = [
+    # DW06 Kanto farmhouse (hiroma type): roof form x inside stable x doma end (street view; canonical = doma left,
+    # DayZ is left-handed: the kit frame's high x is the street-view left); ridge kinds for variety
+    _rural("farmhouse_kanto_yosemune", "farmhouse", "Land_JP_Farmhouse_Kanto_Yosemune",
+           "Kanto farmhouse (hiroma type, hipped thatch)",
+           {"kind": "kanto", "form": "yosemune", "ridge": "bamboo"}, _LOOT_FARM, 80000.0),
+    _rural("farmhouse_kanto_yosemune_umaya", "farmhouse", "Land_JP_Farmhouse_Kanto_Yosemune_Umaya",
+           "Kanto farmhouse with inside stable (hipped thatch)",
+           {"kind": "kanto", "form": "yosemune", "ridge": "shiba", "stable": True}, _LOOT_FARM, 80000.0),
+    _rural("farmhouse_kanto_yosemune_umaya_domar", "farmhouse", "Land_JP_Farmhouse_Kanto_Yosemune_Umaya_DomaR",
+           "Kanto farmhouse with inside stable (hipped thatch, doma right)",
+           {"kind": "kanto", "form": "yosemune", "ridge": "umanori", "stable": True, "doma": "right"}, _LOOT_FARM,
+           80000.0),
+    _rural("farmhouse_kanto_irimoya_domar", "farmhouse", "Land_JP_Farmhouse_Kanto_Irimoya_DomaR",
+           "Kanto farmhouse (irimoya thatch with smoke gables, doma right)",
+           {"kind": "kanto", "form": "irimoya", "ridge": "bamboo", "doma": "right"}, _LOOT_FARM, 80000.0),
+    # DW07 Kinai farmhouse with the ox: main roof form x lower roofs (tile / board); yamato-mune on the tiled kirizuma
+    _rural("farmhouse_kinai_kirizuma_tile_takahe", "farmhouse", "Land_JP_Farmhouse_Kinai_Kirizuma_Tile_Takahe",
+           "Kinai farmhouse with ox (yamato-mune: thatch gable, takahe, tiled lower roofs)",
+           {"kind": "kinai", "form": "kirizuma", "lower": "tile", "takahe": True}, _LOOT_FARM, 80000.0),
+    _rural("farmhouse_kinai_kirizuma_board", "farmhouse", "Land_JP_Farmhouse_Kinai_Kirizuma_Board",
+           "Kinai farmhouse with ox (thatch gable, board lower roofs)",
+           {"kind": "kinai", "form": "kirizuma", "lower": "board", "doma": "left"}, _LOOT_FARM, 80000.0),
+    _rural("farmhouse_kinai_irimoya_tile", "farmhouse", "Land_JP_Farmhouse_Kinai_Irimoya_Tile",
+           "Kinai farmhouse with ox (irimoya thatch, tiled lower roofs)",
+           {"kind": "kinai", "form": "irimoya", "lower": "tile", "doma": "left"}, _LOOT_FARM, 80000.0),
+    _rural("farmhouse_kinai_irimoya_board", "farmhouse", "Land_JP_Farmhouse_Kinai_Irimoya_Board",
+           "Kinai farmhouse with ox (irimoya thatch, board lower roofs)",
+           {"kind": "kinai", "form": "irimoya", "lower": "board"}, _LOOT_FARM, 80000.0),
+]
+C2_HUTS = [
+    # DW01 poor hut, east (thatch hipped): 2 sizes x floor (earth / bamboo slats / boards) x door (itado / mushiro)
+    _rural("hut_east_s_earth_mushiro", "hut", "Land_JP_Hut_East_S_Earth_Mushiro",
+           "Poor hut, east type (small, earth floor, straw-mat door)",
+           {"kind": "hut_east", "size": "s", "floor": "earth", "door": "mushiro"}, _LOOT_FARM, 15000.0),
+    _rural("hut_east_s_sunoko", "hut", "Land_JP_Hut_East_S_Sunoko", "Poor hut, east type (small, bamboo-slat floor)",
+           {"kind": "hut_east", "size": "s", "floor": "sunoko", "door": "itado"}, _LOOT_FARM, 15000.0),
+    _rural("hut_east_l_board", "hut", "Land_JP_Hut_East_L_Board", "Poor hut, east type (large, board floor)",
+           {"kind": "hut_east", "size": "l", "floor": "board", "door": "itado"}, _LOOT_FARM, 20000.0),
+    _rural("hut_east_l_earth", "hut", "Land_JP_Hut_East_L_Earth", "Poor hut, east type (large, earth floor)",
+           {"kind": "hut_east", "size": "l", "floor": "earth", "door": "itado"}, _LOOT_FARM, 20000.0),
+    # DW30 poor hut, west / mountain (gable, board walls): roof x side lean-to x floor / door
+    _rural("hut_west_thatch_leanl", "hut", "Land_JP_Hut_West_Thatch_LeanL",
+           "Poor hut, west type (thatch gable, lean-to left, board floor)",
+           {"kind": "hut_west", "roof": "thatch", "leanto": "left", "floor": "board", "door": "itado"}, _LOOT_FARM,
+           15000.0),
+    _rural("hut_west_ishioki_leanr", "hut", "Land_JP_Hut_West_Ishioki_LeanR",
+           "Poor hut, west type (stone-weighted boards, lean-to right, earth floor, straw-mat door)",
+           {"kind": "hut_west", "roof": "ishioki", "leanto": "right", "floor": "earth", "door": "mushiro"}, _LOOT_FARM,
+           15000.0),
+    _rural("hut_west_itabuki", "hut", "Land_JP_Hut_West_Itabuki", "Poor hut, west type (board roof, bamboo-slat floor)",
+           {"kind": "hut_west", "roof": "itabuki", "floor": "sunoko", "door": "itado"}, _LOOT_FARM, 15000.0),
+    _rural("hut_west_ishioki", "hut", "Land_JP_Hut_West_Ishioki", "Poor hut, west type (stone-weighted boards)",
+           {"kind": "hut_west", "roof": "ishioki", "floor": "board", "door": "itado"}, _LOOT_FARM, 15000.0),
+    _rural("hut_west_thatch", "hut", "Land_JP_Hut_West_Thatch", "Poor hut, west type (thatch gable, earth floor)",
+           {"kind": "hut_west", "roof": "thatch", "floor": "earth", "door": "itado"}, _LOOT_FARM, 15000.0),
+]
+C2_SHEDS = [
+    # DW24 shed / barn: open-sided / walled x roof (board / thatch / stone) x woodshed lean-to
+    _rural("shed_open_board", "shed", "Land_JP_Shed_Open_Board", "Shed, open front (board roof)",
+           {"kind": "shed", "roof": "itabuki", "open": True}, _LOOT_SHED, 8000.0),
+    _rural("shed_open_thatch", "shed", "Land_JP_Shed_Open_Thatch", "Shed, open front (thatch)",
+           {"kind": "shed", "roof": "thatch", "open": True}, _LOOT_SHED, 8000.0),
+    _rural("shed_walled_stone_woodshed", "shed", "Land_JP_Shed_Walled_Stone_Woodshed",
+           "Shed, walled (stone-weighted boards) with a woodshed lean-to",
+           {"kind": "shed", "roof": "ishioki", "leanto": "right"}, _LOOT_SHED, 10000.0),
+    _rural("barn_walled_thatch", "shed", "Land_JP_Barn_Walled_Thatch", "Barn, walled (thatch, 4 x 3 ken)",
+           {"kind": "shed", "size": "l", "roof": "thatch"}, _LOOT_SHED, 15000.0),
+]
+for _b in C2_FARMHOUSES + C2_HUTS + C2_SHEDS:
+    _b["placements"] = C2_PLACEMENTS.get(_b["key"], [])
+BUILDINGS += C2_FARMHOUSES + C2_HUTS + C2_SHEDS
+
 
 def get(key):
     for b in BUILDINGS:

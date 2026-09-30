@@ -562,6 +562,10 @@ def main(argv):
             ok = verify_parallel([bd["b"]["key"] for bd in built], jobs) and ok
         else:
             for bd in built:
+                if "params" in bd["b"] and len(built) > 1:
+                    # C2: a family recipe keeps per-model state (POSTS, PASSAGES, PORTALS) at module level; after
+                    # building several, it holds the LAST model's. Rebuild this one in memory before its checks.
+                    bd = build_model(bd["b"], stage=False)
                 ok = run_verify(bd) and ok
     return 0 if ok else 1
 

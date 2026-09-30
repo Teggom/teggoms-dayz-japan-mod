@@ -40,7 +40,9 @@ NOMINAL = ((1024.0, 25.0, 1045.0), 180.0)       # CE frame check when a shell ha
 RESERVED = {"player spawn": (1019.0, 1029.0, 980.0, 990.0), "item grid": (998.0, 1052.0, 966.0, 978.0),
             "machiya shop + yard": (1014.0, 1034.0, 1036.0, 1062.0), "sakura W": (980.0, 990.0, 1005.0, 1015.0),
             "sakura E": (1058.0, 1068.0, 1005.0, 1015.0), "bamboo grove": (1080.0, 1110.0, 955.0, 995.0),
-            "weapon range": (995.0, 1055.0, 925.0, 950.0)}
+            "weapon range": (995.0, 1055.0, 925.0, 950.0), "swatch wall (M)": (952.0, 963.0, 1095.0, 1105.0)}
+# C2: the C1 test street (z 1080) is another agent's; the hamlet (C2) must stay clear of it
+RESERVED_BY_KEY = {"c1 test street": (978.0, 1068.0, 1062.0, 1098.0)}
 
 
 def placement_boxes(b, M):
@@ -107,11 +109,12 @@ def run(bd):
     has_kawara = any(s.tag == "kawara_field" for s in M.solids)
     corrug = sum(len(s.faces) for s in M.solids if s.tag == "kawara_field" and 1 in s.vis)
     stones = sum(1 for s in M.solids if s.tag == "dodai_stone")
+    soseki = sum(1 for s in M.solids if s.tag == "soseki")         # C2: rural posts stand on field stones
     rec("C8 era lint (no glass, kawara geometry, separate plinth stones)",
-        not glass and (corrug > 100 or not has_kawara) and stones >= 4,
-        "glass paths %d; %s; %d individual dodai stones" % (
+        not glass and (corrug > 100 or not has_kawara) and stones + soseki >= 4,
+        "glass paths %d; %s; %d individual dodai stones%s" % (
             len(glass), "%d corrugated kawara field faces in LOD0" % corrug if has_kawara else "no kawara (board roof)",
-            stones))
+            stones, (", %d soseki under the posts" % soseki) if soseki else ""))
     posts = getattr(mod, "POSTS", [])
     off = [(round(x, 3), round(z, 3)) for (x, z, _, _) in posts if not (C.on_grid(x, 0.455) and C.on_grid(z, 0.455))]
     rec("C3 grid snap (post nodes on the 0.455 grid)", bool(posts) and not off,
@@ -192,8 +195,8 @@ def run(bd):
             hi += 0.01
         head = min([c["bbox"][2] for c in passage if c["bbox"][0] < hi and c["bbox"][1] > lo and
                     c["bbox"][4] < z0m + 0.3 and c["bbox"][5] > z0m - 0.3 and c["bbox"][2] > y0 + 0.5] or [99]) - y0
-        rec("C7 toriniwa -> kitchen passage (open) clear + head", hi - lo >= 1.0 and head >= 1.995,
-            "clear %.2f m, head %.2f m" % (hi - lo, head))
+        rec(getattr(mod, "PASSAGE_LABEL", "C7 toriniwa -> kitchen passage (open) clear + head"),
+            hi - lo >= 1.0 and head >= 1.995, "clear %.2f m, head %.2f m" % (hi - lo, head))
     smp = C.roadway_samples(road)
     miss = [(round(x, 2), round(y, 2), round(z, 2)) for x, y, z, _ in smp
             if (lambda t: t is None or abs(t - y) > 0.03)(MV.geo_top_below(gcomps, x, y, z))]
@@ -301,15 +304,16 @@ def run(bd):
     for (x0, x1, z0, z1) in boxes:
         if not (924 < x0 and x1 < 1124 and 924 < z0 and z1 < 1124):
             clash.append("outside the test yard")
-        for nm, (a0, a1, c0, c1) in RESERVED.items():
+        extra = RESERVED_BY_KEY if b.get("dir") in ("farmhouse", "hut", "shed") else {}
+        for nm, (a0, a1, c0, c1) in list(RESERVED.items()) + list(extra.items()):
             if x0 < a1 and x1 > a0 and z0 < c1 and z1 > c0:
                 clash.append(nm)
     rec("Placement inside the test yard, clear of the reserved spots", not clash,
         ("%d placement(s): %s" % (len(boxes), "; ".join("x %.1f-%.1f z %.1f-%.1f" % bx for bx in boxes)) if boxes
          else "not placed on the island (shipped in the PBO only)") + ("; CLASH %s" % sorted(set(clash)) if clash
                                                                         else ""))
-    BC.run_g3(M, L, floors, rec)
-    odol = os.path.join(DEV, "src", "JP", "buildings", b["model_dir"], name + ".p3d")
+    BC.run_g3(M, L, floors, rec, extra_portals=getattr(mod, "PORTALS", ()))
+    odol =os.path.join(DEV, "src", "JP", "buildings", b["model_dir"], name + ".p3d")
     data = open(odol, "rb").read()
     if data[:4] != b"ODOL":
         rec("Binarize -> ODOL", False, "src p3d is not ODOL (binarize did not run?)")
