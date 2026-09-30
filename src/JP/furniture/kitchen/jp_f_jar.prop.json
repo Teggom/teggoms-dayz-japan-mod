@@ -1,0 +1,559 @@
+{
+ "id": "jp_f_jar",
+ "build_list": {
+  "name": "Storage jars (miso, oil, salt, pickles), 3 sizes, with lids",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma",
+   "daidokoro",
+   "storage",
+   "shop"
+  ],
+  "loot_surface": "large jar lid at 0.62: 1 point (range 0.15)",
+  "abandoned_state": "lids off, one broken in shards on the floor, dried spill stain",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "small_m": {
+    "value": "d 0.18, h 0.22",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "medium_m": {
+    "value": "d 0.30, h 0.40",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "large_m": {
+    "value": "d 0.45, h 0.60",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "i50_met_tokkuri_stoneware",
+    "shows": "The Met: stoneware sake bottle, 1700-1750 (glaze and body colour)",
+    "period_image": true
+   },
+   {
+    "id": "i18_moronobu_1685_p9",
+    "shows": "Moronobu 1685: large jar",
+    "period_image": true
+   },
+   {
+    "id": "i51_met_tokkuri_porcelain",
+    "shows": "The Met: blue-and-white porcelain bottle, early 18th c. (T3 accent)",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "kitchen",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_s.p3d",
+   "class": "StaticObj_JP_F_Jar_S",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Storage jar S",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 24,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.083,
+    0.083,
+    0.0,
+    0.255,
+    -0.09,
+    0.09
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.081,
+    -0.081,
+    0.081,
+    0.081
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.18,
+     "measured": 0.18,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_m.p3d",
+   "class": "StaticObj_JP_F_Jar_M",
+   "variant": "m",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Storage jar M",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 150,
+    "Resolution 2": 24,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.143,
+    0.143,
+    0.0,
+    0.435,
+    -0.15,
+    0.15
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.136,
+    -0.136,
+    0.136,
+    0.136
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_l.p3d",
+   "class": "StaticObj_JP_F_Jar_L",
+   "variant": "l",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Storage jar L",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 180,
+    "Resolution 2": 24,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.217,
+    0.217,
+    0.0,
+    0.635,
+    -0.225,
+    0.225
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.204,
+    -0.204,
+    0.204,
+    0.204
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 18.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.62,
+     "rect": [
+      -0.135,
+      -0.135,
+      0.135,
+      0.135
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0675,
+       0.62,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_s_pale.p3d",
+   "class": "StaticObj_JP_F_Jar_S_Pale",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Storage jar S (pale glaze)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 24,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.083,
+    0.083,
+    0.0,
+    0.255,
+    -0.09,
+    0.09
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.081,
+    -0.081,
+    0.081,
+    0.081
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.18,
+     "measured": 0.18,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_m_pale.p3d",
+   "class": "StaticObj_JP_F_Jar_M_Pale",
+   "variant": "m",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Storage jar M (pale glaze)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 150,
+    "Resolution 2": 24,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.143,
+    0.143,
+    0.0,
+    0.435,
+    -0.15,
+    0.15
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.136,
+    -0.136,
+    0.136,
+    0.136
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_s_open.p3d",
+   "class": "StaticObj_JP_F_Jar_S_Open",
+   "variant": "s",
+   "state": "open",
+   "abandoned": true,
+   "display": "Storage jar S, lid off",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 123,
+    "Resolution 2": 48,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.083,
+    0.225,
+    0.0,
+    0.22,
+    -0.09,
+    0.191
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.081,
+    -0.081,
+    0.081,
+    0.081
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.18,
+     "measured": 0.18,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_m_open.p3d",
+   "class": "StaticObj_JP_F_Jar_M_Open",
+   "variant": "m",
+   "state": "open",
+   "abandoned": true,
+   "display": "Storage jar M, lid off",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 148,
+    "Resolution 2": 48,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.143,
+    0.358,
+    0.0,
+    0.4,
+    -0.15,
+    0.281
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.136,
+    -0.136,
+    0.136,
+    0.136
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_l_open.p3d",
+   "class": "StaticObj_JP_F_Jar_L_Open",
+   "variant": "l",
+   "state": "open",
+   "abandoned": true,
+   "display": "Storage jar L, lid off",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 177,
+    "Resolution 2": 54,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.217,
+    0.523,
+    0.0,
+    0.6,
+    -0.225,
+    0.492
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.204,
+    -0.204,
+    0.204,
+    0.204
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 18.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jar_m_broken.p3d",
+   "class": "StaticObj_JP_F_Jar_M_Broken",
+   "variant": "m",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Storage jar M, broken",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 120,
+    "Resolution 2": 18,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.284,
+    0.473,
+    0.0,
+    0.177,
+    -0.15,
+    0.64
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.139,
+    -0.139,
+    0.139,
+    0.139
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

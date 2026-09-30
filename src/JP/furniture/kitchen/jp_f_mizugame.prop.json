@@ -1,0 +1,233 @@
+{
+ "id": "jp_f_mizugame",
+ "build_list": {
+  "name": "Water jar (mizugame) with a wooden lid and a dipper",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma"
+  ],
+  "loot_surface": "the lid top at 0.63: 1 shelf point (range 0.2)",
+  "abandoned_state": "lid off and leaning, empty and dusty, or cracked with a shard on the floor",
+  "blocks_path": "keep >=1.00 m past it in a tori-niwa",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "jar_m": {
+    "value": "d 0.55, h 0.60 (about 90 litres)",
+    "assumed": true,
+    "reason": "from the reconstruction photo; one kitchen day of water"
+   },
+   "lid_m": {
+    "value": "d 0.60 boards, 0.03",
+    "assumed": true,
+    "reason": "i08"
+   }
+  },
+  "refs": [
+   {
+    "id": "i08_edo_nagaya_kitchen",
+    "shows": "water jar beside the stove and sink (c.1840 reconstruction)",
+    "period_image": false
+   },
+   {
+    "id": "i18_moronobu_1685_p9",
+    "shows": "Moronobu 1685: large jar, buckets and a spouted pot on a board floor",
+    "period_image": true
+   },
+   {
+    "id": "i50_met_tokkuri_stoneware",
+    "shows": "stoneware of 1700-1750: body and glaze colour",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "kitchen",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_mizugame.p3d",
+   "class": "StaticObj_JP_F_Mizugame",
+   "variant": "lid",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Water jar (mizugame), lid and dipper",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 280,
+    "Resolution 2": 68,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.29,
+    0.294,
+    0.0,
+    0.717,
+    -0.29,
+    0.29
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.262,
+    -0.275,
+    0.262,
+    0.275
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 35.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.63,
+     "rect": [
+      -0.2,
+      -0.2,
+      0.2,
+      0.2
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.1,
+       0.63,
+       -0.14
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "jar_d",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "jar_h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_mizugame_open.p3d",
+   "class": "StaticObj_JP_F_Mizugame_Open",
+   "variant": "lid",
+   "state": "open",
+   "abandoned": true,
+   "display": "Water jar, lid off leaning, dry",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 280,
+    "Resolution 2": 68,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.694,
+    0.551,
+    0.0,
+    0.6,
+    -0.266,
+    0.652
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.262,
+    -0.275,
+    0.262,
+    0.275
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 35.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "jar_d",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "jar_h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_mizugame_broken.p3d",
+   "class": "StaticObj_JP_F_Mizugame_Broken",
+   "variant": "lid",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Water jar, cracked, piece on the floor",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 281,
+    "Resolution 2": 68,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.303,
+    0.92,
+    0.0,
+    0.6,
+    -0.35,
+    0.768
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.262,
+    -0.35,
+    0.92,
+    0.275
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 35.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "jar_d",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "jar_h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

@@ -1,0 +1,1000 @@
+{
+ "id": "jp_f_tana",
+ "build_list": {
+  "name": "Open wall shelf (tana) on brackets, 1-3 boards",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma",
+   "daidokoro",
+   "storage",
+   "shop",
+   "workshop",
+   "living"
+  ],
+  "loot_surface": "each board: 1 shelf point per 0.9 m (range 0.15-0.2)",
+  "abandoned_state": "a few bowls left, most fallen and broken on the floor below (debris decal), one board sagging",
+  "blocks_path": "",
+  "lod_budget": "furniture <=1000 faces",
+  "dimensions": {
+   "width_m": {
+    "value": "0.91 / 1.365 / 1.82 (half-ken steps)",
+    "source": "PLAYBOOK rule 9"
+   },
+   "depth_m": {
+    "value": "0.30",
+    "assumed": true,
+    "reason": "fits a bowl stack; stays out of the walking band"
+   },
+   "boards_m": {
+    "value": "at 0.90 / 1.30 / 1.70 (one to three)",
+    "assumed": true,
+    "reason": "reason: reachable heights; vanilla shelves carry loot 0.11-1.24 (Q5)"
+   }
+  },
+  "refs": [
+   {
+    "id": "i32_morse_city_kitchen",
+    "shows": "Morse 1885: shelves and racks in a city kitchen",
+    "period_image": false
+   },
+   {
+    "id": "i08_edo_nagaya_kitchen",
+    "shows": "tenement kitchen shelf",
+    "period_image": false
+   },
+   {
+    "id": "i35_morse_kitchen_closet",
+    "shows": "Morse 1885: shelves built into a kitchen",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "kitchen",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "wall-hung; widths 0.91 / 1.365 / 1.82 (half-ken steps)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_091_1.p3d",
+   "class": "StaticObj_JP_F_Tana_091_1",
+   "variant": "091_1",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall shelf 0.91 m, 1 board",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 242,
+    "Resolution 2": 18,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    0.65,
+    1.09,
+    0.0,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    0.0,
+    0.455,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.405,
+      0.03,
+      0.405,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       0.9,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_091_1_sag.p3d",
+   "class": "StaticObj_JP_F_Tana_091_1_Sag",
+   "variant": "091_1",
+   "state": "sag",
+   "abandoned": true,
+   "display": "Wall shelf 0.91 m, 1 board, sagging",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 12,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.569,
+    0.492,
+    -0.0,
+    0.923,
+    0.0,
+    0.828
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.408,
+    0.0,
+    0.459,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing",
+    "abandoned: one bracket gone, board 1 hanging; shards, a bowl and a stain on the floor below (visual, no Geometry)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_091_3.p3d",
+   "class": "StaticObj_JP_F_Tana_091_3",
+   "variant": "091_3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall shelf 0.91 m, 3 boards",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 326,
+    "Resolution 2": 54,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    0.65,
+    1.89,
+    0.0,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    0.0,
+    0.455,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 18.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.405,
+      0.03,
+      0.405,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       0.9,
+       0.15
+      ]
+     ]
+    },
+    {
+     "name": "board_2",
+     "kind": "shelf",
+     "y": 1.3,
+     "rect": [
+      -0.405,
+      0.03,
+      0.405,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       1.3,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_091_3_sag.p3d",
+   "class": "StaticObj_JP_F_Tana_091_3_Sag",
+   "variant": "091_3",
+   "state": "sag",
+   "abandoned": true,
+   "display": "Wall shelf 0.91 m, 3 boards, sagging",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 230,
+    "Resolution 2": 48,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.569,
+    0.492,
+    -0.0,
+    1.7,
+    0.0,
+    0.828
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    0.0,
+    0.459,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 18.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.405,
+      0.03,
+      0.405,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       0.9,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing",
+    "abandoned: one bracket gone, board 2 hanging; shards, a bowl and a stain on the floor below (visual, no Geometry)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_136_1.p3d",
+   "class": "StaticObj_JP_F_Tana_136_1",
+   "variant": "136_1",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall shelf 1.36 m, 1 board",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 242,
+    "Resolution 2": 18,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.682,
+    0.682,
+    0.65,
+    1.09,
+    0.0,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.682,
+    0.0,
+    0.682,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.6325,
+      0.03,
+      0.6325,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       0.9,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.365,
+     "measured": 1.365,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_136_1_sag.p3d",
+   "class": "StaticObj_JP_F_Tana_136_1_Sag",
+   "variant": "136_1",
+   "state": "sag",
+   "abandoned": true,
+   "display": "Wall shelf 1.36 m, 1 board, sagging",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 12,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.651,
+    0.686,
+    -0.0,
+    0.915,
+    0.0,
+    0.828
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.651,
+    0.0,
+    0.686,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.365,
+     "measured": 1.365,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing",
+    "abandoned: one bracket gone, board 1 hanging; shards, a bowl and a stain on the floor below (visual, no Geometry)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_136_3.p3d",
+   "class": "StaticObj_JP_F_Tana_136_3",
+   "variant": "136_3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall shelf 1.36 m, 3 boards",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 326,
+    "Resolution 2": 54,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.682,
+    0.682,
+    0.65,
+    1.89,
+    0.0,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.682,
+    0.0,
+    0.682,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 18.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.6325,
+      0.03,
+      0.6325,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       0.9,
+       0.15
+      ]
+     ]
+    },
+    {
+     "name": "board_2",
+     "kind": "shelf",
+     "y": 1.3,
+     "rect": [
+      -0.6325,
+      0.03,
+      0.6325,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       1.3,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.365,
+     "measured": 1.365,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_136_3_sag.p3d",
+   "class": "StaticObj_JP_F_Tana_136_3_Sag",
+   "variant": "136_3",
+   "state": "sag",
+   "abandoned": true,
+   "display": "Wall shelf 1.36 m, 3 boards, sagging",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 230,
+    "Resolution 2": 48,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.682,
+    0.686,
+    -0.0,
+    1.7,
+    0.0,
+    0.828
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.682,
+    0.0,
+    0.686,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 18.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.6325,
+      0.03,
+      0.6325,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       0.9,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.365,
+     "measured": 1.365,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing",
+    "abandoned: one bracket gone, board 2 hanging; shards, a bowl and a stain on the floor below (visual, no Geometry)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_182_1.p3d",
+   "class": "StaticObj_JP_F_Tana_182_1",
+   "variant": "182_1",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall shelf 1.82 m, 1 board",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 260,
+    "Resolution 2": 24,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.91,
+    0.91,
+    0.65,
+    1.09,
+    0.0,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.91,
+    0.0,
+    0.91,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.86,
+      0.03,
+      0.86,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       -0.43,
+       0.9,
+       0.15
+      ],
+      [
+       0.43,
+       0.9,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_182_1_sag.p3d",
+   "class": "StaticObj_JP_F_Tana_182_1_Sag",
+   "variant": "182_1",
+   "state": "sag",
+   "abandoned": true,
+   "display": "Wall shelf 1.82 m, 1 board, sagging",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 122,
+    "Resolution 2": 18,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.886,
+    0.913,
+    -0.0,
+    0.912,
+    0.0,
+    0.828
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.886,
+    0.0,
+    0.913,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing",
+    "abandoned: one bracket gone, board 1 hanging; shards, a bowl and a stain on the floor below (visual, no Geometry)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_182_3.p3d",
+   "class": "StaticObj_JP_F_Tana_182_3",
+   "variant": "182_3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall shelf 1.82 m, 3 boards",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 380,
+    "Resolution 2": 72,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.91,
+    0.91,
+    0.65,
+    1.89,
+    0.0,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.91,
+    0.0,
+    0.91,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 18.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.86,
+      0.03,
+      0.86,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       -0.43,
+       0.9,
+       0.15
+      ],
+      [
+       0.43,
+       0.9,
+       0.15
+      ]
+     ]
+    },
+    {
+     "name": "board_2",
+     "kind": "shelf",
+     "y": 1.3,
+     "rect": [
+      -0.86,
+      0.03,
+      0.86,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       -0.43,
+       1.3,
+       0.15
+      ],
+      [
+       0.43,
+       1.3,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_tana_182_3_sag.p3d",
+   "class": "StaticObj_JP_F_Tana_182_3_Sag",
+   "variant": "182_3",
+   "state": "sag",
+   "abandoned": true,
+   "display": "Wall shelf 1.82 m, 3 boards, sagging",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 284,
+    "Resolution 2": 66,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.91,
+    0.913,
+    -0.0,
+    1.7,
+    0.0,
+    0.828
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.91,
+    0.0,
+    0.913,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 18.0,
+   "loot_surfaces": [
+    {
+     "name": "board_1",
+     "kind": "shelf",
+     "y": 0.9,
+     "rect": [
+      -0.86,
+      0.03,
+      0.86,
+      0.27
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       -0.43,
+       0.9,
+       0.15
+      ],
+      [
+       0.43,
+       0.9,
+       0.15
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-hung: origin on the floor, wall plane z = 0; loot only on boards <= 1.40 m (vanilla cap), so the 1.70 board is dressing",
+    "abandoned: one bracket gone, board 2 hanging; shards, a bowl and a stain on the floor below (visual, no Geometry)"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,246 @@
+{
+ "id": "jp_f_jizai_kagi",
+ "build_list": {
+  "name": "Pot hook (jizai-kagi) with fish-shaped lever (yokogi)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "daidokoro",
+   "living",
+   "guard"
+  ],
+  "loot_surface": "none",
+  "abandoned_state": "hook empty or holding a rusted nabe, lever jammed high",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "length_m": {
+    "value": "1.2-1.8 (bamboo tube + iron hook), bottom 0.6-0.9 above the ash",
+    "assumed": true,
+    "reason": "from the photos"
+   },
+   "yokogi_m": {
+    "value": "0.35 x 0.10 x 0.05 fish",
+    "assumed": true,
+    "reason": "from the photos"
+   }
+  },
+  "refs": [
+   {
+    "id": "i33_morse_jizai",
+    "shows": "Morse 1885: simple peasant ji-zai",
+    "period_image": false
+   },
+   {
+    "id": "i21_jizai_kettle",
+    "shows": "kettle on a jizai over an irori (Boso-no-mura)",
+    "period_image": false
+   },
+   {
+    "id": "i03_tenmyo_irori",
+    "shows": "long bamboo jizai from the beam",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "kitchen",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "hanging prop: Resolution 1 only in the house (Q5)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jizai_kagi.p3d",
+   "class": "StaticObj_JP_F_Jizai_Kagi",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Pot hook (jizai-kagi) with fish lever",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 123,
+    "Resolution 2": 63
+   },
+   "bbox": [
+    -0.2,
+    0.15,
+    -1.5,
+    0.0,
+    -0.027,
+    0.059
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "lever_len",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hangs from the hook beam of jp_p_fit_irori: origin = beam underside; no Geometry (BUILD_LIST); keep >= 2.00 head room except over the pit. Hook bottom 1.50 below the beam (list 1.2-1.8)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jizai_kagi_abandoned.p3d",
+   "class": "StaticObj_JP_F_Jizai_Kagi_Abandoned",
+   "variant": "std",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Pot hook, lever jammed high, rusted pot",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 276,
+    "Resolution 2": 63
+   },
+   "bbox": [
+    -0.2,
+    0.205,
+    -1.786,
+    0.0,
+    -0.135,
+    0.135
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "lever_len",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hangs from the hook beam of jp_p_fit_irori: origin = beam underside; no Geometry (BUILD_LIST); keep >= 2.00 head room except over the pit. Hook bottom 1.50 below the beam (list 1.2-1.8)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jizai_kagi_plain.p3d",
+   "class": "StaticObj_JP_F_Jizai_Kagi_Plain",
+   "variant": "plain",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Pot hook, plain bar lever",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 50
+   },
+   "bbox": [
+    -0.16,
+    0.16,
+    -1.5,
+    0.0,
+    -0.027,
+    0.053
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "lever_len",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hangs from the hook beam of jp_p_fit_irori: origin = beam underside; no Geometry (BUILD_LIST); keep >= 2.00 head room except over the pit. Hook bottom 1.50 below the beam (list 1.2-1.8)"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_jizai_kagi_plain_abandoned.p3d",
+   "class": "StaticObj_JP_F_Jizai_Kagi_Plain_Abandoned",
+   "variant": "plain",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Pot hook (plain), jammed, rusted pot",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 257,
+    "Resolution 2": 50
+   },
+   "bbox": [
+    -0.16,
+    0.205,
+    -1.786,
+    0.0,
+    -0.135,
+    0.135
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "lever_len",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hangs from the hook beam of jp_p_fit_irori: origin = beam underside; no Geometry (BUILD_LIST); keep >= 2.00 head room except over the pit. Hook bottom 1.50 below the beam (list 1.2-1.8)"
+   ]
+  }
+ ]
+}

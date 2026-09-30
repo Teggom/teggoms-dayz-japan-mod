@@ -1,0 +1,428 @@
+{
+ "id": "jp_f_oke",
+ "build_list": {
+  "name": "Wooden tubs and buckets (oke, tarai, pickle tub with stone)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma",
+   "daidokoro",
+   "workshop",
+   "storage",
+   "bath"
+  ],
+  "loot_surface": "tarai bottom (floor point r 0.25); pickle-tub lid at 0.55 (shelf point r 0.15)",
+  "abandoned_state": "tipped over, hoop sprung, staves gapped and dry; pickle stone on the floor",
+  "blocks_path": "never inside a door clear zone",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "bucket_m": {
+    "value": "d 0.30, h 0.30, handle ears to 0.45",
+    "assumed": true,
+    "reason": "typical coopered bucket"
+   },
+   "tarai_m": {
+    "value": "d 0.60, h 0.20",
+    "assumed": true,
+    "reason": "i19"
+   },
+   "pickle_m": {
+    "value": "d 0.45, h 0.50 + lid + stone 0.20",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "i16_moronobu_1685_p6",
+    "shows": "Moronobu 1685: sword polisher with two big tubs and a box",
+    "period_image": true
+   },
+   {
+    "id": "i17_moronobu_1685_p7",
+    "shows": "Moronobu 1685: dyer treading cloth in round tubs",
+    "period_image": true
+   },
+   {
+    "id": "i19_moronobu_tub",
+    "shows": "Moronobu (before 1694): large shallow round tub",
+    "period_image": true
+   },
+   {
+    "id": "i05_tsunashima_kamado",
+    "shows": "bucket and tub in a farmhouse doma",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "kitchen",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "coopered family; B3b can call oke(kind, state) for yard tubs"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_oke_bucket.p3d",
+   "class": "StaticObj_JP_F_Oke_Bucket",
+   "variant": "bucket",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Handled bucket (oke)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 174,
+    "Resolution 2": 42,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.16,
+    0.16,
+    0.0,
+    0.45,
+    -0.152,
+    0.152
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.139,
+    -0.139,
+    0.139,
+    0.139
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 2.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "ears",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_oke_tipped.p3d",
+   "class": "StaticObj_JP_F_Oke_Tipped",
+   "variant": "bucket",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Bucket on its side",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 178,
+    "Resolution 2": 42,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.142,
+    0.383,
+    0.0,
+    0.303,
+    -0.058,
+    0.57
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.126,
+    -0.059,
+    0.252,
+    0.33
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 2.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "ears",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_oke_tarai.p3d",
+   "class": "StaticObj_JP_F_Oke_Tarai",
+   "variant": "tarai",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shallow washing tub (tarai)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 208,
+    "Resolution 2": 24,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -0.297,
+    0.297,
+    0.0,
+    0.2,
+    -0.297,
+    0.297
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.3,
+    -0.3,
+    0.3,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 5.0,
+   "loot_surfaces": [
+    {
+     "name": "bottom",
+     "kind": "floor",
+     "y": 0.03,
+     "rect": [
+      -0.2,
+      -0.2,
+      0.2,
+      0.2
+     ],
+     "range": 0.25,
+     "points": [
+      [
+       0.0,
+       0.03,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_oke_tarai_dry.p3d",
+   "class": "StaticObj_JP_F_Oke_Tarai_Dry",
+   "variant": "tarai",
+   "state": "dry",
+   "abandoned": true,
+   "display": "Tarai, dried out, stave and hoop off",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 214,
+    "Resolution 2": 24,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -0.412,
+    0.553,
+    0.0,
+    0.2,
+    -0.395,
+    0.412
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.3,
+    -0.3,
+    0.3,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 5.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_oke_pickle.p3d",
+   "class": "StaticObj_JP_F_Oke_Pickle",
+   "variant": "pickle",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Pickle tub with lid and stone",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 258,
+    "Resolution 2": 90,
+    "Geometry": 44,
+    "View Geometry": 44,
+    "Fire Geometry": 44
+   },
+   "bbox": [
+    -0.227,
+    0.227,
+    0.0,
+    0.68,
+    -0.227,
+    0.227
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.208,
+    -0.208,
+    0.208,
+    0.208
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 25.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      -0.2,
+      -0.2,
+      0.2,
+      0.2
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.13,
+       0.55,
+       0.09
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_oke_pickle_open.p3d",
+   "class": "StaticObj_JP_F_Oke_Pickle_Open",
+   "variant": "pickle",
+   "state": "open",
+   "abandoned": true,
+   "display": "Pickle tub, lid off, stone on the floor",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 288,
+    "Resolution 2": 90,
+    "Geometry": 44,
+    "View Geometry": 44,
+    "Fire Geometry": 44
+   },
+   "bbox": [
+    -0.472,
+    0.615,
+    0.0,
+    0.5,
+    -0.225,
+    0.498
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.472,
+    -0.208,
+    0.208,
+    0.26
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 25.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

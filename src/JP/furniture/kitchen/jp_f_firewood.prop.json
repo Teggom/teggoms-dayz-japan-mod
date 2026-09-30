@@ -1,0 +1,308 @@
+{
+ "id": "jp_f_firewood",
+ "build_list": {
+  "name": "Firewood stack (maki) and brushwood bundle",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma",
+   "daidokoro",
+   "workshop",
+   "storage"
+  ],
+  "loot_surface": "stack top at 0.60: 1 point (range 0.2)",
+  "abandoned_state": "half used, a few logs rolled across the floor",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "stack_m": {
+    "value": "0.91 x 0.40 x 0.60 high (half-ken)",
+    "assumed": true,
+    "reason": "reason: grid"
+   },
+   "log_m": {
+    "value": "0.40-0.45 long, d 0.06-0.12",
+    "assumed": true,
+    "reason": "typical split wood"
+   },
+   "bundle_m": {
+    "value": "d 0.35 x 0.9",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "i22_kamado_firewood",
+    "shows": "split firewood stacked beside a clay kamado",
+    "period_image": false
+   },
+   {
+    "id": "i04_tsunashima_irori",
+    "shows": "firewood at the hearth",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "kitchen",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "B3b: fkit-based stack(length, depth, height, log_d, mats) and bundle() take outdoor sizes"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_firewood_stack.p3d",
+   "class": "StaticObj_JP_F_Firewood_Stack",
+   "variant": "stack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Firewood stack (maki)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 255,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    0.0,
+    0.591,
+    -0.229,
+    0.229
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    -0.18,
+    0.455,
+    0.18
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 35.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 0.5704,
+     "rect": [
+      -0.35,
+      -0.15,
+      0.35,
+      0.15
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       -0.185,
+       0.5704,
+       0.0222
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "stack",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.6,
+     "measured": 0.5912,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "logs along z (end grain front and back); hidden faces dropped, a dark core fills the gaps"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_firewood_low.p3d",
+   "class": "StaticObj_JP_F_Firewood_Low",
+   "variant": "stack",
+   "state": "low",
+   "abandoned": true,
+   "display": "Firewood stack, half used, logs rolled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 177,
+    "Resolution 2": 36,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.496,
+    0.552,
+    0.0,
+    0.294,
+    -0.229,
+    0.758
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    -0.18,
+    0.455,
+    0.18
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 35.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 0.2851,
+     "rect": [
+      -0.35,
+      -0.15,
+      0.35,
+      0.15
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.126,
+       0.2851,
+       -0.0165
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "stack",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "logs along z (end grain front and back); hidden faces dropped, a dark core fills the gaps"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_firewood_bundle.p3d",
+   "class": "StaticObj_JP_F_Firewood_Bundle",
+   "variant": "bundle",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Brushwood bundles (soda)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 278,
+    "Resolution 2": 20,
+    "Geometry": 26,
+    "View Geometry": 26,
+    "Fire Geometry": 26
+   },
+   "bbox": [
+    -0.387,
+    0.37,
+    0.0,
+    0.365,
+    -0.489,
+    0.488
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.37,
+    -0.45,
+    0.353,
+    0.45
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 12.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bundle_d",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "bundle_L",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_firewood_bundle_loose.p3d",
+   "class": "StaticObj_JP_F_Firewood_Bundle_Loose",
+   "variant": "bundle",
+   "state": "loose",
+   "abandoned": true,
+   "display": "Brushwood bundle burst, sticks scattered",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 229,
+    "Resolution 2": 19,
+    "Geometry": 19,
+    "View Geometry": 19,
+    "Fire Geometry": 19
+   },
+   "bbox": [
+    -0.387,
+    0.84,
+    0.0,
+    0.366,
+    -0.658,
+    0.699
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.37,
+    -0.45,
+    0.4,
+    0.45
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 12.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bundle_d",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "bundle_L",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

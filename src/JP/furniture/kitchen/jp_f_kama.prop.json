@@ -1,0 +1,279 @@
+{
+ "id": "jp_f_kama",
+ "build_list": {
+  "name": "Iron cooking pot (kama) with wooden lid, and small pot (nabe) with a bail handle",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma",
+   "daidokoro"
+  ],
+  "loot_surface": "none (too small; the kamado top carries the point)",
+  "abandoned_state": "lid knocked off, rust bloom, burnt crust; one rim left empty",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "kama_m": {
+    "value": "rim d 0.36-0.44 (fits the kamado rim), body d 0.42, h 0.28, flange ring",
+    "source": "machiya build rims 0.44"
+   },
+   "lid_m": {
+    "value": "d 0.46, 0.04 thick, two cleats",
+    "assumed": true,
+    "reason": "i20"
+   },
+   "nabe_m": {
+    "value": "d 0.28, h 0.16, bail handle",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "i20_hachioji_kamado",
+    "shows": "iron pot with a heavy wooden lid on a kamado",
+    "period_image": true
+   },
+   {
+    "id": "i31_morse_kitchen_range",
+    "shows": "Morse 1885: pots on the range",
+    "period_image": false
+   },
+   {
+    "id": "i04_tsunashima_irori",
+    "shows": "pot hanging over the irori",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "kitchen",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "kama seats in a kamado rim by its flange: see seat_y"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_kama.p3d",
+   "class": "StaticObj_JP_F_Kama",
+   "variant": "kama",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rice pot (kama) with lid",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 230,
+    "Resolution 2": 68,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.246,
+    0.246,
+    0.0,
+    0.345,
+    -0.252,
+    0.252
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.212,
+    -0.212,
+    0.212,
+    0.212
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 9.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "body_d",
+     "expected": 0.42,
+     "measured": 0.424,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "flange_d",
+     "expected": 0.5,
+     "measured": 0.504,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "seat_y 0.168: the flange underside; place the proxy at kamado rim top - 0.168 (rim hole d 0.44)"
+   ],
+   "seat_y": 0.168
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_kama_nolid.p3d",
+   "class": "StaticObj_JP_F_Kama_Nolid",
+   "variant": "kama",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Rice pot, lid off, rusted",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 254,
+    "Resolution 2": 68,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.246,
+    0.369,
+    0.0,
+    0.431,
+    -0.252,
+    0.628
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.212,
+    -0.212,
+    0.212,
+    0.212
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 9.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "body_d",
+     "expected": 0.42,
+     "measured": 0.424,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "flange_d",
+     "expected": 0.5,
+     "measured": 0.504,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "seat_y 0.168: the flange underside; place the proxy at kamado rim top - 0.168 (rim hole d 0.44)"
+   ],
+   "seat_y": 0.168
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_kama_nabe.p3d",
+   "class": "StaticObj_JP_F_Kama_Nabe",
+   "variant": "nabe",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small pot (nabe) with bail",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 168,
+    "Resolution 2": 51,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.152,
+    0.152,
+    0.0,
+    0.294,
+    -0.136,
+    0.136
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.129,
+    -0.129,
+    0.129,
+    0.129
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 3.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "body_d",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_kama_nabe_rusted.p3d",
+   "class": "StaticObj_JP_F_Kama_Nabe_Rusted",
+   "variant": "nabe",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Small pot, rusted, burnt crust",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 153,
+    "Resolution 2": 21,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.152,
+    0.152,
+    0.0,
+    0.16,
+    -0.14,
+    0.136
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.129,
+    -0.129,
+    0.129,
+    0.129
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 3.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "body_d",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}
