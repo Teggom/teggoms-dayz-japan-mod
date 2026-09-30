@@ -98,6 +98,9 @@ Brief: PRODUCTION_PLAN Phase B item B4 -> gate G4. Time log: `japan_dev/TIMELOG_
 - The machiya's old `machiya_t3_01_sheet.jpg` still shows the pre-B4 floor.
 - Navmesh regeneration after G4.
 
+## Commits
+- be762bc: everything above. The time-log END + this line follow in the next commit.
+
 ## How to resume / rerun
 - `python buildings/pipeline.py`: all shipped buildings, then binarize, pack and verify (~10 min).
 - `python spikes/B3a/build.py kamidana nagashi --no-binarize` then `python spikes/B4/build_fittings.py --pack`.

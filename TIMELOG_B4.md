@@ -19,3 +19,4 @@
 2026-09-30 12:40:11 | SHEETS DONE | renders | machiya_t3_01_shop_rooms.jpg + _site.jpg (13 renders incl. loot plan, toilet) | 5h 32% wk 24%
 2026-09-30 12:40:11 | GROUP START | checklist + progress | TEST_CHECKLIST G4, B4_PROGRESS, commit | 5h 32% wk 24%
 2026-09-30 12:42:28 | CHECKLIST DONE | TEST_CHECKLIST.md | G4 bundled walk ~15 min; B4_PROGRESS.md written | 5h 33% wk 24%
+2026-09-30 12:42:48 | END | B4 | done; commit be762bc + log commit | 5h 33% wk 24%
