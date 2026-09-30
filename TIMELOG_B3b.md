@@ -53,3 +53,24 @@
 2026-09-30 10:31:27 | #49 | jp_s_well_hanetsurube_well | new model (batch) | 5h 15% wk 21%
 2026-09-30 10:31:27 | #50 | jp_s_well_hanetsurube_field | variant (batch) | 5h 15% wk 21%
 2026-09-30 10:31:27 | #51 | jp_s_well_hanetsurube_ab_down | abandoned (batch) | 5h 15% wk 21%
+2026-09-30 10:31:28 | GROUP START | stone_jizo, stele, jizo_hut (+ bib material) | stone | 5h 15% wk 21%
+2026-09-30 10:32:51 | MATERIALS ADDED | jp_m_textile_bib_red (+ palette bib_red_faded), jp_common.pbo repacked | - | 5h 16% wk 21%
+2026-09-30 10:36:36 | #52 | jp_s_stone_jizo_s | new model (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #53 | jp_s_stone_jizo_m | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #54 | jp_s_stone_jizo_l | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #55 | jp_s_stone_jizo_halo | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #56 | jp_s_stone_jizo_bib | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #57 | jp_s_stone_jizo_offer | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #58 | jp_s_stone_jizo_ab_tipped | abandoned (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #59 | jp_s_jizo_hut_box | new model (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #60 | jp_s_jizo_hut_hall | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #61 | jp_s_jizo_hut_stone_roof | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #62 | jp_s_jizo_hut_ab_open | abandoned (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #63 | jp_s_stele_koshin | new model (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #64 | jp_s_stele_relief_panel | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #65 | jp_s_stele_natural_slab | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #66 | jp_s_stele_arched | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #67 | jp_s_stele_pillar | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #68 | jp_s_stele_round | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #69 | jp_s_stele_group3 | variant (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | #70 | jp_s_stele_ab_tipped | abandoned (batch) | 5h 16% wk 21%

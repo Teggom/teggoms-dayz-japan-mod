@@ -11606,6 +11606,4126 @@
      ]
     }
    ]
+  },
+  "jp_s_stone_jizo_s": {
+   "prop": "jp_s_stone_jizo",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "s",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 163,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 163,
+       "Resolution 2": 42,
+       "Resolution 3": 27,
+       "Geometry": 20,
+       "View Geometry": 20,
+       "Fire Geometry": 20
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.45,
+       "measured": 0.45,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "plinth_h",
+       "expected": 0.2,
+       "measured": 0.2,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 0.65,
+       "measured": 0.65,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 60.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stone_jizo_m": {
+   "prop": "jp_s_stone_jizo",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "m",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 164,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 164,
+       "Resolution 2": 42,
+       "Resolution 3": 27,
+       "Geometry": 20,
+       "View Geometry": 20,
+       "Fire Geometry": 20
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.9,
+       "measured": 0.9,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "plinth_h",
+       "expected": 0.3,
+       "measured": 0.3,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.2,
+       "measured": 1.2,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 300.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stone_jizo_l": {
+   "prop": "jp_s_stone_jizo",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "l",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 218,
+    "Resolution 2": 54,
+    "Resolution 3": 39,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 218,
+       "Resolution 2": 54,
+       "Resolution 3": 39,
+       "Geometry": 20,
+       "View Geometry": 20,
+       "Fire Geometry": 20
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 1.36,
+       "measured": 1.36,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "plinth_h",
+       "expected": 0.42,
+       "measured": 0.42,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.78,
+       "measured": 1.78,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 900.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stone_jizo_halo": {
+   "prop": "jp_s_stone_jizo",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "halo",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 184,
+    "Resolution 2": 59,
+    "Resolution 3": 29,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 184,
+       "Resolution 2": 59,
+       "Resolution 3": 29,
+       "Geometry": 23,
+       "View Geometry": 23,
+       "Fire Geometry": 23
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.62,
+       "measured": 0.62,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "plinth_h",
+       "expected": 0.22,
+       "measured": 0.22,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.17,
+       "measured": 1.17,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w2": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w2",
+       "mean_srgb": [
+        55.9,
+        53.7,
+        47.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 7.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.4,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stone_jizo_bib": {
+   "prop": "jp_s_stone_jizo",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "m",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 204,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_bib_red_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 204,
+       "Resolution 2": 42,
+       "Resolution 3": 27,
+       "Geometry": 20,
+       "View Geometry": 20,
+       "Fire Geometry": 20
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.9,
+       "measured": 0.9,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "plinth_h",
+       "expected": 0.3,
+       "measured": 0.3,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.2,
+       "measured": 1.2,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 300.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true,
+      "jp_m_textile_bib_red_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_textile_bib_red_w2",
+       "mean_srgb": [
+        123.8,
+        75.0,
+        57.0
+       ],
+       "palette": "bib_red_faded",
+       "dE76": 7.3,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stone_jizo_offer": {
+   "prop": "jp_s_stone_jizo",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "m",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 280,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 280,
+       "Resolution 2": 42,
+       "Resolution 3": 27,
+       "Geometry": 20,
+       "View Geometry": 20,
+       "Fire Geometry": 20
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.9,
+       "measured": 0.9,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "plinth_h",
+       "expected": 0.3,
+       "measured": 0.3,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.2,
+       "measured": 1.2,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 300.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_river_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w2",
+       "mean_srgb": [
+        33.0,
+        25.0,
+        18.8
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.5,
+       "tolerance": 12,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stone_jizo_ab_tipped": {
+   "prop": "jp_s_stone_jizo",
+   "cat": "roadside",
+   "state": "abandoned",
+   "variant": "m",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 167,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 167,
+       "Resolution 2": 42,
+       "Resolution 3": 27,
+       "Geometry": 12,
+       "View Geometry": 12,
+       "Fire Geometry": 12
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.9,
+       "measured": 0.9,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "plinth_h",
+       "expected": 0.3,
+       "measured": 0.3,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 0.3,
+       "measured": 0.3,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": -0.0071,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 300.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0099,
+      "pair": [
+       "Component01",
+       "Component02"
+      ]
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_decal_carved_text_w2": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true,
+      "jp_m_stone_carved_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_carved_text_w2",
+       "mean_srgb": [
+        55.9,
+        53.7,
+        47.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 7.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_w2",
+       "mean_srgb": [
+        66.1,
+        63.2,
+        55.3
+       ],
+       "palette": "stone_lantern",
+       "dE76": 3.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_jizo_hut_box": {
+   "prop": "jp_s_jizo_hut",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "box",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 342,
+    "Resolution 2": 115,
+    "Resolution 3": 57,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\roof\\jp_m_roof_kureita_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 342,
+       "Resolution 2": 115,
+       "Resolution 3": 57,
+       "Geometry": 18,
+       "View Geometry": 18,
+       "Fire Geometry": 18
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "plan",
+       "expected": 0.9,
+       "measured": 0.9,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "floor_h",
+       "expected": 0.6,
+       "measured": 0.6,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "height",
+       "expected": 1.75,
+       "measured": 1.8,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.11,
+      "geo_min_y": 0.0,
+      "bury": 0.12,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 3,
+      "problems": {},
+      "mass": 120.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_roof_kureita_w1",
+       "mean_srgb": [
+        123.0,
+        128.0,
+        134.0
+       ],
+       "palette": "roof_board_silver",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_street_dark_w1",
+       "mean_srgb": [
+        86.5,
+        58.2,
+        44.1
+       ],
+       "palette": "timber_street_dark",
+       "dE76": 1.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_jizo_hut_hall": {
+   "prop": "jp_s_jizo_hut",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "hall",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 379,
+    "Resolution 2": 120,
+    "Resolution 3": 60,
+    "Geometry": 66,
+    "View Geometry": 66,
+    "Fire Geometry": 66
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\roof\\jp_m_roof_kureita_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 379,
+       "Resolution 2": 120,
+       "Resolution 3": 60,
+       "Geometry": 66,
+       "View Geometry": 66,
+       "Fire Geometry": 66
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "plan",
+       "expected": 1.82,
+       "measured": 1.82,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "eave_h",
+       "expected": 1.9,
+       "measured": 1.9,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "ridge_h",
+       "expected": 2.8,
+       "measured": 2.8,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.14,
+      "geo_min_y": 0.0,
+      "bury": 0.15,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 11,
+      "problems": {},
+      "mass": 900.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": [
+       "Component08",
+       "Component09"
+      ]
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 11
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 11
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_roof_kureita_w1",
+       "mean_srgb": [
+        123.0,
+        128.0,
+        134.0
+       ],
+       "palette": "roof_board_silver",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_cut_w1",
+       "mean_srgb": [
+        160.3,
+        137.4,
+        107.5
+       ],
+       "palette": "stone_granite",
+       "dE76": 1.0,
+       "tolerance": 9,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_jizo_hut_stone_roof": {
+   "prop": "jp_s_jizo_hut",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "stone_roof",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 227,
+    "Resolution 2": 104,
+    "Resolution 3": 89,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 227,
+       "Resolution 2": 104,
+       "Resolution 3": 89,
+       "Geometry": 18,
+       "View Geometry": 18,
+       "Fire Geometry": 18
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.45,
+       "measured": 0.45,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "roof_h",
+       "expected": 0.88,
+       "measured": 0.88,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.08,
+      "geo_min_y": 0.0,
+      "bury": 0.1,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 3,
+      "problems": {},
+      "mass": 700.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_leaf_litter_w2": true,
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.4,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_jizo_hut_ab_open": {
+   "prop": "jp_s_jizo_hut",
+   "cat": "roadside",
+   "state": "abandoned",
+   "variant": "box",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 346,
+    "Resolution 2": 115,
+    "Resolution 3": 57,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\roof\\jp_m_roof_kureita_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 346,
+       "Resolution 2": 115,
+       "Resolution 3": 57,
+       "Geometry": 18,
+       "View Geometry": 18,
+       "Fire Geometry": 18
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "plan",
+       "expected": 0.9,
+       "measured": 0.9,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "floor_h",
+       "expected": 0.6,
+       "measured": 0.6,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "height",
+       "expected": 1.75,
+       "measured": 1.8,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.11,
+      "geo_min_y": 0.0,
+      "bury": 0.12,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 3,
+      "problems": {},
+      "mass": 120.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w2": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_roof_kureita_w2",
+       "mean_srgb": [
+        103.0,
+        107.9,
+        113.7
+       ],
+       "palette": "roof_board_silver",
+       "dE76": 8.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_street_dark_w2",
+       "mean_srgb": [
+        90.5,
+        66.3,
+        53.7
+       ],
+       "palette": "timber_street_dark",
+       "dE76": 4.9,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stele_koshin": {
+   "prop": "jp_s_stele",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "koshin",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 290,
+    "Resolution 2": 27,
+    "Geometry": 15,
+    "View Geometry": 15,
+    "Fire Geometry": 15
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 290,
+       "Resolution 2": 27,
+       "Geometry": 15,
+       "View Geometry": 15,
+       "Fire Geometry": 15
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "koshin_total_h",
+       "expected": 1.22,
+       "measured": 1.23,
+       "tol": 0.02,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "shaft_w",
+       "expected": 0.35,
+       "measured": 0.35,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stele_relief_panel": {
+   "prop": "jp_s_stele",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "relief_panel",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 171,
+    "Resolution 2": 23,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 171,
+       "Resolution 2": 23,
+       "Geometry": 23,
+       "View Geometry": 23,
+       "Fire Geometry": 23
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "panel_h",
+       "expected": 0.85,
+       "measured": 0.85,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stele_natural_slab": {
+   "prop": "jp_s_stele",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "natural_slab",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 21,
+    "Geometry": 21,
+    "View Geometry": 21,
+    "Fire Geometry": 21
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 25,
+       "Resolution 2": 21,
+       "Geometry": 21,
+       "View Geometry": 21,
+       "Fire Geometry": 21
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "slab_h",
+       "expected": 1.1,
+       "measured": 1.1,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.12,
+      "geo_min_y": -0.12,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 1,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stele_arched": {
+   "prop": "jp_s_stele",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "arched",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 23,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 25,
+       "Resolution 2": 23,
+       "Geometry": 23,
+       "View Geometry": 23,
+       "Fire Geometry": 23
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "arched_h",
+       "expected": 0.78,
+       "measured": 0.78,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stele_pillar": {
+   "prop": "jp_s_stele",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "pillar",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 14,
+    "Resolution 2": 11,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 14,
+       "Resolution 2": 11,
+       "Geometry": 6,
+       "View Geometry": 6,
+       "Fire Geometry": 6
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "post_h",
+       "expected": 1.2,
+       "measured": 1.2,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "post_w",
+       "expected": 0.22,
+       "measured": 0.22,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.25,
+      "geo_min_y": 0.0,
+      "bury": 0.26,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 1,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stele_round": {
+   "prop": "jp_s_stele",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "round",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 35,
+    "Resolution 2": 30,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 35,
+       "Resolution 2": 30,
+       "Geometry": 30,
+       "View Geometry": 30,
+       "Fire Geometry": 30
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "round_h",
+       "expected": 0.6,
+       "measured": 0.6,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.08,
+      "geo_min_y": -0.08,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 1,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stele_group3": {
+   "prop": "jp_s_stele",
+   "cat": "roadside",
+   "state": "intact",
+   "variant": "group3",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 116,
+    "Resolution 2": 103,
+    "Geometry": 79,
+    "View Geometry": 79,
+    "Fire Geometry": 79
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 116,
+       "Resolution 2": 103,
+       "Geometry": 79,
+       "View Geometry": 79,
+       "Fire Geometry": 79
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "group_n",
+       "expected": 3,
+       "measured": 3.0,
+       "tol": 0,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.12,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_carved_text_w1",
+       "mean_srgb": [
+        60.5,
+        58.2,
+        51.9
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_stele_ab_tipped": {
+   "prop": "jp_s_stele",
+   "cat": "roadside",
+   "state": "abandoned",
+   "variant": "koshin",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 297,
+    "Resolution 2": 27,
+    "Geometry": 15,
+    "View Geometry": 15,
+    "Fire Geometry": 15
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 297,
+       "Resolution 2": 27,
+       "Geometry": 15,
+       "View Geometry": 15,
+       "Fire Geometry": 15
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "koshin_total_h",
+       "expected": 1.22,
+       "measured": 1.23,
+       "tol": 0.02,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "shaft_w",
+       "expected": 0.35,
+       "measured": 0.35,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.3208,
+      "geo_min_y": -0.2629,
+      "bury": 0.34,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 250.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": [
+       "Component01",
+       "Component02"
+      ]
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_decal_carved_text_w2": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_carved_text_w2",
+       "mean_srgb": [
+        55.9,
+        53.7,
+        47.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 7.3,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.4,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_w2",
+       "mean_srgb": [
+        66.1,
+        63.2,
+        55.3
+       ],
+       "palette": "stone_lantern",
+       "dE76": 3.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
   }
  },
  "global": {
@@ -11626,7 +15746,7 @@
   }
  },
  "summary": {
-  "models": 51,
-  "pass": 51
+  "models": 70,
+  "pass": 70
  }
 }

@@ -92,6 +92,7 @@
    "roadway": true,
    "mass_kg": 20.0,
    "well": false,
+   "text_cells": [],
    "loot_surfaces": [
     {
      "name": "seat",
@@ -184,6 +185,7 @@
    "roadway": true,
    "mass_kg": 35.0,
    "well": false,
+   "text_cells": [],
    "loot_surfaces": [
     {
      "name": "seat",
@@ -281,6 +283,7 @@
    "roadway": true,
    "mass_kg": 20.0,
    "well": false,
+   "text_cells": [],
    "loot_surfaces": [
     {
      "name": "seat",
@@ -367,6 +370,7 @@
    "roadway": false,
    "mass_kg": 20.0,
    "well": false,
+   "text_cells": [],
    "loot_surfaces": [],
    "dims": [
     {
@@ -433,6 +437,7 @@
    "roadway": false,
    "mass_kg": 20.0,
    "well": false,
+   "text_cells": [],
    "loot_surfaces": [],
    "dims": [
     {

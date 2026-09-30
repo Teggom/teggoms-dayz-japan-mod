@@ -1,3 +1,116 @@
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\roadside D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\roadside D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\site\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\site\roadside\jp_s_jizo_hut_ab_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_jizo_hut_ab_open.p3d
+<model = "P:\JP\site\roadside\jp_s_jizo_hut_ab_open.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_jizo_hut_box.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_jizo_hut_box.p3d
+<model = "P:\JP\site\roadside\jp_s_jizo_hut_box.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_jizo_hut_hall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_jizo_hut_hall.p3d
+<model = "P:\JP\site\roadside\jp_s_jizo_hut_hall.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_jizo_hut_stone_roof.p3d
+<model = "P:\JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stele_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_ab_tipped.p3d
+<model = "P:\JP\site\roadside\jp_s_stele_ab_tipped.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stele_arched.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_arched.p3d
+<model = "P:\JP\site\roadside\jp_s_stele_arched.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stele_group3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_group3.p3d
+<model = "P:\JP\site\roadside\jp_s_stele_group3.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stele_koshin.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_koshin.p3d
+<model = "P:\JP\site\roadside\jp_s_stele_koshin.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stele_natural_slab.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_natural_slab.p3d
+<model = "P:\JP\site\roadside\jp_s_stele_natural_slab.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stele_pillar.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_pillar.p3d
+<model = "P:\JP\site\roadside\jp_s_stele_pillar.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stele_relief_panel.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_relief_panel.p3d
+<model = "P:\JP\site\roadside\jp_s_stele_relief_panel.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stele_round.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_round.p3d
+<model = "P:\JP\site\roadside\jp_s_stele_round.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stone_jizo_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stone_jizo_ab_tipped.p3d
+<model = "P:\JP\site\roadside\jp_s_stone_jizo_ab_tipped.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stone_jizo_bib.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stone_jizo_bib.p3d
+<model = "P:\JP\site\roadside\jp_s_stone_jizo_bib.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stone_jizo_halo.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stone_jizo_halo.p3d
+<model = "P:\JP\site\roadside\jp_s_stone_jizo_halo.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stone_jizo_l.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stone_jizo_l.p3d
+<model = "P:\JP\site\roadside\jp_s_stone_jizo_l.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stone_jizo_m.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stone_jizo_m.p3d
+<model = "P:\JP\site\roadside\jp_s_stone_jizo_m.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stone_jizo_offer.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stone_jizo_offer.p3d
+<model = "P:\JP\site\roadside\jp_s_stone_jizo_offer.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_stone_jizo_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stone_jizo_s.p3d
+<model = "P:\JP\site\roadside\jp_s_stone_jizo_s.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_jizo_hut_ab_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_jizo_hut_box.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_jizo_hut_hall.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_jizo_hut_stone_roof.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_ab_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_arched.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_group3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_koshin.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_natural_slab.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_pillar.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_relief_panel.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_round.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_ab_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_bib.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_halo.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_l.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_m.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_offer.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_s.p3d: 0.00,0.00
+
 C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\street D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street *.p3d
 
 BINARIZE rev.163709
@@ -163,7 +276,6 @@ UV mapping too varied on jp\common\materials\wood\jp_m_wood_endgrain_w2_co.paa, 
 </model>
 Convert model P:\JP\site\yard\jp_s_firewood_stack_bundle.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_bundle.p3d
 <model = "P:\JP\site\yard\jp_s_firewood_stack_bundle.p3d">
-TexMaterial loading race detected for jp\common\materials\wood\jp_m_wood_endgrain_w1.rvmat
 </model>
 Convert model P:\JP\site\yard\jp_s_firewood_stack_free_posts.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_free_posts.p3d
 <model = "P:\JP\site\yard\jp_s_firewood_stack_free_posts.p3d">

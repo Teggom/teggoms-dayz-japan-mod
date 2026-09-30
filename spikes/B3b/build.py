@@ -264,7 +264,8 @@ def sidecar(prop, built):
             "display": m["display"], "anchor": P.anchor, "wall_gap": P.wall_gap if P.anchor == "wall" else None,
             "budget": P.budget, "faces": faces, "bbox": [round(v, 3) for v in vb], "collision": list(P.need),
             "footprint_xz": fp, "roadway": bool(P.roadway), "mass_kg": P.mass if "geo" in P.need else None,
-            "well": bool(m.get("well")), "loot_surfaces": P.loot, "dims": P.dims, "notes": P.notes, **P.extra})
+            "well": bool(m.get("well")),
+            "text_cells": sorted({s.cell for s in P.solids if getattr(s, "cell", None)}), "loot_surfaces": P.loot, "dims": P.dims, "notes": P.notes, **P.extra})
     return sc
 
 

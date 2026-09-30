@@ -100,6 +100,10 @@
    "roadway": false,
    "mass_kg": 400.0,
    "well": false,
+   "text_cells": [
+    "decal_sumi_text:mark_marudai",
+    "decal_sumi_text:oke_yosui"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -174,6 +178,9 @@
    "roadway": false,
    "mass_kg": 400.0,
    "well": false,
+   "text_cells": [
+    "decal_sumi_text:oke_yosui"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -240,6 +247,9 @@
    "roadway": false,
    "mass_kg": 2.5,
    "well": false,
+   "text_cells": [
+    "decal_sumi_text:mark_marudai"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -295,6 +305,7 @@
    "roadway": false,
    "mass_kg": 60.0,
    "well": false,
+   "text_cells": [],
    "loot_surfaces": [],
    "dims": [
     {
@@ -355,6 +366,9 @@
    "roadway": false,
    "mass_kg": 400.0,
    "well": false,
+   "text_cells": [
+    "decal_sumi_text:oke_yosui"
+   ],
    "loot_surfaces": [],
    "dims": [
     {

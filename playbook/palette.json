@@ -1816,6 +1816,27 @@
    "hex": "#BEB5A0",
    "method": "assumed",
    "tolerance_dE76": 12
+  },
+  {
+   "id": "bib_red_faded",
+   "name": "Jizo bib red, faded (a year or two outdoors)",
+   "material": "red-dyed cotton (safflower / madder), sun- and rain-faded",
+   "group": "textile",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "the rag bibs on about 1 Jizo in 3 (jp_m_textile_bib_red; G1 A3 answer 4: faded, never bright)",
+   "note": "Added 2026-09-30 by B3b. No licensed sample of a period-faded bib: a dull brick red between a fresh bib (modern, bright) and the grey the cloth fades to; judge in game. The Jizo-bib date is disputed (OUTDOOR_LIST 3.3): used sparingly.",
+   "srgb": [
+    142,
+    80,
+    68
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "hex": "#8E5044"
   }
  ]
 }

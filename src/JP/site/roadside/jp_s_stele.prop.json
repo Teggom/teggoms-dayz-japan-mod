@@ -1,0 +1,529 @@
+{
+ "id": "jp_s_stele",
+ "build_list": {
+  "name": "Inscribed stone family: Koshin pillar and roadside steles with text decals",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "As the Jizo: stones endure. Leaning, sunk, lichen blotting the text; grass tufts at the base; offerings gone.",
+  "placement_rule": "Road forks, village boundaries and crossroads, facing the road; Koshin stones singly or on a low mound (terrain); direction stones at every fork of a main road.",
+  "lod_budget": "small prop <=300 faces LOD0 per stone",
+  "dimensions": {
+   "koshin_pillar_m": {
+    "value": "shaft 0.95 x 0.35 x 0.25 + base 0.28 = 1.22 total",
+    "source": "O07, O09"
+   },
+   "koshin_relief": {
+    "value": "Shomen Kongo (4 or 6 arms) with sun and moon above, 3 monkeys below, sometimes 2 cocks",
+    "source": "O07 (1698), O07b (1727: sun, moon, 2 cocks)"
+   },
+   "natural_slab_m": {
+    "value": "0.6-1.4 high, 0.4-0.8 wide, 0.15-0.30 thick",
+    "assumed": true,
+    "reason": "dosojin, nenbutsu, mountain-god stones are natural slabs; assumed"
+   },
+   "arched_slab_m": {
+    "value": "0.5-0.9 high x 0.30-0.40, rounded top",
+    "assumed": true,
+    "reason": "shared with the kushigata gravestone; assumed"
+   },
+   "direction_post_m": {
+    "value": "square pillar 0.9-1.5 x 0.20-0.25",
+    "assumed": true,
+    "reason": "michi-shirube; assumed"
+   },
+   "text": {
+    "value": "carved decals: Koshin, namu amida butsu, dosojin, bato Kannon, \"right: Edo road\", boundary names, era dates (Genroku, Hoei, Shotoku, Kyoho)",
+    "source": "OUTDOOR_LIST §7.7"
+   }
+  },
+  "refs": [
+   {
+    "id": "k41_koshin_sendabori",
+    "shows": "Koshin stones by a village road, Matsudo (photo)",
+    "period_image": false
+   },
+   {
+    "id": "k19_koshinto",
+    "shows": "inscribed (text-type) Koshin stone, Nikko (photo)",
+    "period_image": false
+   },
+   {
+    "id": "c24_jizo_cemetery",
+    "shows": "weathered stone and lichen",
+    "period_image": false
+   },
+   {
+    "id": "k02_bunken_ezu_p12",
+    "shows": "roadside marker post and mile mound on the Tokaido, 1690 (schematic)",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "roadside",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "carved text cells (jp_m_decal_carved_text): koshin_kuyoto, bato_kanzeon, namuamidabutsu, dosojin, michishirube_edo_oyama, sakai_kore_yori_higashi"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stele_koshin.p3d",
+   "class": "StaticObj_JP_S_Stele_Koshin",
+   "variant": "koshin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Koshin pillar with Shomen Kongo relief",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 290,
+    "Resolution 2": 27,
+    "Geometry": 15,
+    "View Geometry": 15,
+    "Fire Geometry": 15
+   },
+   "bbox": [
+    -0.275,
+    0.275,
+    -0.06,
+    1.23,
+    -0.225,
+    0.225
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.275,
+    -0.225,
+    0.275,
+    0.225
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:koshin_kuyoto"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "koshin_total_h",
+     "expected": 1.22,
+     "measured": 1.23,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_w",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stele_relief_panel.p3d",
+   "class": "StaticObj_JP_S_Stele_Relief_Panel",
+   "variant": "relief_panel",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Bato Kannon relief panel",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 171,
+    "Resolution 2": 23,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "bbox": [
+    -0.31,
+    0.31,
+    -0.05,
+    0.99,
+    -0.17,
+    0.17
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.31,
+    -0.17,
+    0.31,
+    0.17
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:bato_kanzeon"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "panel_h",
+     "expected": 0.85,
+     "measured": 0.85,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stele_natural_slab.p3d",
+   "class": "StaticObj_JP_S_Stele_Natural_Slab",
+   "variant": "natural_slab",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Natural slab with deep-cut characters",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 21,
+    "Geometry": 21,
+    "View Geometry": 21,
+    "Fire Geometry": 21
+   },
+   "bbox": [
+    -0.282,
+    0.296,
+    -0.12,
+    1.1,
+    -0.15,
+    0.124
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.282,
+    -0.15,
+    0.296,
+    0.12
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:koshin_kuyoto"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "slab_h",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stele_arched.p3d",
+   "class": "StaticObj_JP_S_Stele_Arched",
+   "variant": "arched",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Arched-top nenbutsu stone",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 23,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "bbox": [
+    -0.26,
+    0.26,
+    -0.05,
+    0.92,
+    -0.155,
+    0.155
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.26,
+    -0.155,
+    0.26,
+    0.155
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:namuamidabutsu"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "arched_h",
+     "expected": 0.78,
+     "measured": 0.78,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stele_pillar.p3d",
+   "class": "StaticObj_JP_S_Stele_Pillar",
+   "variant": "pillar",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Direction / boundary post",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 14,
+    "Resolution 2": 11,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.11,
+    0.113,
+    -0.25,
+    1.2,
+    -0.113,
+    0.113
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.11,
+    -0.11,
+    0.11,
+    0.11
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:michishirube_edo_oyama",
+    "decal_carved_text:sakai_kore_yori_higashi"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_w",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stele_round.p3d",
+   "class": "StaticObj_JP_S_Stele_Round",
+   "variant": "round",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Round road-god stone (dosojin)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 35,
+    "Resolution 2": 30,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -0.295,
+    0.305,
+    -0.08,
+    0.6,
+    -0.219,
+    0.219
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.295,
+    -0.219,
+    0.305,
+    0.205
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:dosojin"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "round_h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stele_group3.p3d",
+   "class": "StaticObj_JP_S_Stele_Group3",
+   "variant": "group3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three roadside stones on one base",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 116,
+    "Resolution 2": 103,
+    "Geometry": 79,
+    "View Geometry": 79,
+    "Fire Geometry": 79
+   },
+   "bbox": [
+    -1.191,
+    1.088,
+    -0.12,
+    1.02,
+    -0.426,
+    1.088
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.62,
+    -0.3,
+    0.682,
+    0.3
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:dosojin",
+    "decal_carved_text:koshin_kuyoto",
+    "decal_carved_text:namuamidabutsu"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "group_n",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stele_ab_tipped.p3d",
+   "class": "StaticObj_JP_S_Stele_Ab_Tipped",
+   "variant": "koshin",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Koshin pillar leaning and half sunk, lichen",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 297,
+    "Resolution 2": 27,
+    "Geometry": 15,
+    "View Geometry": 15,
+    "Fire Geometry": 15
+   },
+   "bbox": [
+    -0.68,
+    0.543,
+    -0.321,
+    1.03,
+    -0.419,
+    0.916
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.308,
+    -0.419,
+    0.279,
+    0.218
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:koshin_kuyoto"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "koshin_total_h",
+     "expected": 1.22,
+     "measured": 1.23,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_w",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

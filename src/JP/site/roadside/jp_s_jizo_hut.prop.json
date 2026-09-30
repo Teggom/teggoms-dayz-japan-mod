@@ -1,0 +1,312 @@
+{
+ "id": "jp_s_jizo_hut",
+ "build_list": {
+  "name": "Jizo hut and street-corner box (Jizo-do / tsuji-jizo box)",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Roof boards lifted and mossy, the lattice door hanging or fallen; the figure inside untouched; dead flowers and leaves on the floor.",
+  "placement_rule": "At street corners (towns, against a corner house) and at village entrances; 1 per 2-3 roadside Jizo.",
+  "lod_budget": "small building class is too big: medium site object <=1,500 faces LOD0 (hall), box <=600",
+  "dimensions": {
+   "box_m": {
+    "value": "0.9 x 0.9 plan (half ken), 1.5-1.8 high, raised floor 0.6",
+    "assumed": true,
+    "reason": "fits jp_s_stone_jizo _s/_m; on the half-ken grid"
+   },
+   "hall_m": {
+    "value": "1.82 x 1.82 open front, eave 1.9, ridge 2.8 (walk-under shelter)",
+    "assumed": true,
+    "reason": "one ken; a tiny rain shelter hook"
+   },
+   "lattice_front_m": {
+    "value": "bars 0.03 at 0.09, opening leaf",
+    "assumed": true,
+    "reason": "reuses the koshi part style; assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "c24_jizo_cemetery",
+    "shows": "Jizo stones context",
+    "period_image": false
+   },
+   {
+    "id": "x27_morse_village_yamashiro",
+    "shows": "Kansai village street context (Morse 1885)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "roadside",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_jizo_hut_box.p3d",
+   "class": "StaticObj_JP_S_Jizo_Hut_Box",
+   "variant": "box",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Jizo box (street corner), small Jizo inside",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 342,
+    "Resolution 2": 115,
+    "Resolution 3": 57,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.62,
+    0.62,
+    -0.11,
+    1.8,
+    -0.63,
+    0.63
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -0.63,
+    0.6,
+    0.63
+   ],
+   "roadway": false,
+   "mass_kg": 120.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "plan",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "floor_h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 1.75,
+     "measured": 1.8,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_jizo_hut_hall.p3d",
+   "class": "StaticObj_JP_S_Jizo_Hut_Hall",
+   "variant": "hall",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Jizo hall, one ken, open front",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 379,
+    "Resolution 2": 120,
+    "Resolution 3": 60,
+    "Geometry": 66,
+    "View Geometry": 66,
+    "Fire Geometry": 66
+   },
+   "bbox": [
+    -1.41,
+    1.41,
+    -0.14,
+    2.87,
+    -1.38,
+    1.38
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.41,
+    -1.36,
+    1.41,
+    1.36
+   ],
+   "roadway": false,
+   "mass_kg": 900.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "plan",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "eave_h",
+     "expected": 1.9,
+     "measured": 1.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "ridge_h",
+     "expected": 2.8,
+     "measured": 2.8,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "class": "StaticObj_JP_S_Jizo_Hut_Stone_Roof",
+   "variant": "stone_roof",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone-roofed Jizo niche (mountain)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 227,
+    "Resolution 2": 104,
+    "Resolution 3": 89,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.485,
+    0.605,
+    -0.08,
+    0.883,
+    -0.42,
+    0.424
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.435,
+    -0.37,
+    0.555,
+    0.363
+   ],
+   "roadway": false,
+   "mass_kg": 700.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "roof_h",
+     "expected": 0.88,
+     "measured": 0.88,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_jizo_hut_ab_open.p3d",
+   "class": "StaticObj_JP_S_Jizo_Hut_Ab_Open",
+   "variant": "box",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Jizo box, lattice door fallen, roof lifted",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 346,
+    "Resolution 2": 115,
+    "Resolution 3": 57,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.719,
+    0.987,
+    -0.11,
+    1.8,
+    -0.63,
+    1.331
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -0.63,
+    0.6,
+    0.63
+   ],
+   "roadway": false,
+   "mass_kg": 120.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "plan",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "floor_h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 1.75,
+     "measured": 1.8,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

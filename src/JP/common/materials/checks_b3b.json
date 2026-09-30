@@ -1,0 +1,111 @@
+{
+ "check": "C1 palette (tools/matcheck), B3b materials",
+ "palette_entry_added": true,
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_bib_red_w0_co.png",
+   "palette_id": "bib_red_faded",
+   "wear": "",
+   "mean_srgb": [
+    156.2,
+    83.9,
+    71.9
+   ],
+   "target_srgb": [
+    142,
+    80,
+    68
+   ],
+   "dE": 5.39,
+   "dE_to_entry": 5.39,
+   "tol": 12.0,
+   "spread_p75": 2.7,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     156.0,
+     84.1,
+     71.8
+    ],
+    "dE": 5.27,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_bib_red_w1_co.png",
+   "palette_id": "bib_red_faded",
+   "wear": "",
+   "mean_srgb": [
+    142.0,
+    80.0,
+    68.0
+   ],
+   "target_srgb": [
+    142,
+    80,
+    68
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 12.0,
+   "spread_p75": 3.0,
+   "observed_spread": null,
+   "masked_frac": 0.003,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_bib_red_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     142.0,
+     80.0,
+     68.1
+    ],
+    "dE": 0.07,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_bib_red_w2_co.png",
+   "palette_id": "bib_red_faded",
+   "wear": "",
+   "mean_srgb": [
+    123.7,
+    74.9,
+    56.9
+   ],
+   "target_srgb": [
+    142,
+    80,
+    68
+   ],
+   "dE": 7.28,
+   "dE_to_entry": 7.28,
+   "tol": 12.0,
+   "spread_p75": 3.2,
+   "observed_spread": null,
+   "masked_frac": 0.113,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_bib_red_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     123.7,
+     74.9,
+     56.8
+    ],
+    "dE": 7.29,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  }
+ ]
+}

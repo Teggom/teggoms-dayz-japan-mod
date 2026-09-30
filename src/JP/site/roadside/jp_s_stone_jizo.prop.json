@@ -1,0 +1,530 @@
+{
+ "id": "jp_s_stone_jizo",
+ "build_list": {
+  "name": "Stone Jizo figure (tsuji-jizo): standing monk on a lotus or plinth, 3 sizes",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Stone does not rot: the figures stand, greener with moss and lichen, offerings withered, bibs rotted to rags; a few toppled by a quake or a flood.",
+  "placement_rule": "At crossroads, bridge ends, village entrances and pass tops, facing the road; six in a row at graveyard gates; never in the middle of a road.",
+  "lod_budget": "small prop <=300 faces LOD0 (the carving is in the normal map; silhouette: head, shoulders, staff)",
+  "dimensions": {
+   "figure_m": {
+    "value": "small 0.45, standard 0.90, large 1.36 (figure only)",
+    "source": "O27 (1.36 m figure on a 1.78 m total)"
+   },
+   "plinth_m": {
+    "value": "lotus or plain square base 0.20-0.42 high",
+    "source": "O27 (total minus figure = 0.42)"
+   },
+   "staff": {
+    "value": "shakujo staff in the right hand, jewel in the left; head shaven",
+    "source": "OUTDOOR_LIST §2 W §5"
+   }
+  },
+  "refs": [
+   {
+    "id": "c24_jizo_cemetery",
+    "shows": "Jizo and grave stones, weathered stone",
+    "period_image": false
+   },
+   {
+    "id": "k30_rokujizo",
+    "shows": "six-Jizo row of stone figures (photo)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "roadside",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "about 1 in 3 placements use _bib (faded rag bib + cap, G1 A3 answer 4)",
+  "six in a row at graveyard gates = six _s or _m placements"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stone_jizo_s.p3d",
+   "class": "StaticObj_JP_S_Stone_Jizo_S",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone Jizo, small (0.45)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 163,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.18,
+    0.18,
+    -0.05,
+    0.7,
+    -0.183,
+    0.18
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.18,
+    -0.18,
+    0.18,
+    0.18
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "plinth_h",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 0.65,
+     "measured": 0.65,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stone_jizo_m.p3d",
+   "class": "StaticObj_JP_S_Stone_Jizo_M",
+   "variant": "m",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone Jizo, standard (0.90)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 164,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.25,
+    0.25,
+    -0.05,
+    1.299,
+    -0.253,
+    0.253
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.25,
+    -0.25,
+    0.25,
+    0.25
+   ],
+   "roadway": false,
+   "mass_kg": 300.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "plinth_h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stone_jizo_l.p3d",
+   "class": "StaticObj_JP_S_Stone_Jizo_L",
+   "variant": "l",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone Jizo, large on a lotus (1.36)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 218,
+    "Resolution 2": 54,
+    "Resolution 3": 39,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.36,
+    0.36,
+    -0.05,
+    1.93,
+    -0.363,
+    0.363
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.36,
+    -0.36,
+    0.36,
+    0.36
+   ],
+   "roadway": false,
+   "mass_kg": 900.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 1.36,
+     "measured": 1.36,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "plinth_h",
+     "expected": 0.42,
+     "measured": 0.42,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.78,
+     "measured": 1.78,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stone_jizo_halo.p3d",
+   "class": "StaticObj_JP_S_Stone_Jizo_Halo",
+   "variant": "halo",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Boat-halo Jizo stone (funagata)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 184,
+    "Resolution 2": 59,
+    "Resolution 3": 29,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "bbox": [
+    -0.25,
+    0.25,
+    -0.05,
+    1.17,
+    -0.253,
+    0.25
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.25,
+    -0.25,
+    0.25,
+    0.25
+   ],
+   "roadway": false,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.62,
+     "measured": 0.62,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "plinth_h",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.17,
+     "measured": 1.17,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stone_jizo_bib.p3d",
+   "class": "StaticObj_JP_S_Stone_Jizo_Bib",
+   "variant": "m",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone Jizo with a faded rag bib and cap",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 204,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.25,
+    0.25,
+    -0.05,
+    1.299,
+    -0.253,
+    0.253
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.25,
+    -0.25,
+    0.25,
+    0.25
+   ],
+   "roadway": false,
+   "mass_kg": 300.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "plinth_h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stone_jizo_offer.p3d",
+   "class": "StaticObj_JP_S_Stone_Jizo_Offer",
+   "variant": "m",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone Jizo with offerings (cup, stones, dead flowers)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 280,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.305,
+    0.25,
+    -0.05,
+    1.299,
+    -0.253,
+    0.556
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.25,
+    -0.25,
+    0.25,
+    0.25
+   ],
+   "roadway": false,
+   "mass_kg": 300.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "plinth_h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\roadside\\jp_s_stone_jizo_ab_tipped.p3d",
+   "class": "StaticObj_JP_S_Stone_Jizo_Ab_Tipped",
+   "variant": "m",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Stone Jizo toppled, head broken off",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 167,
+    "Resolution 2": 42,
+    "Resolution 3": 27,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.519,
+    0.937,
+    -0.05,
+    0.303,
+    -0.253,
+    1.127
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.328,
+    -0.25,
+    0.25,
+    1.012
+   ],
+   "roadway": false,
+   "mass_kg": 300.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "plinth_h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

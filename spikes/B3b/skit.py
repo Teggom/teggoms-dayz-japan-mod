@@ -233,6 +233,7 @@ def decal(tl, tr, br, bl, mat, cellname, wear=None, vis=(1,), crop=None):
     n = core.norm(core.newell(q))
     s = sheet([q], mat, n, vis=vis, uvs=[[(u0, v0), (u1, v0), (u1, v1), (u0, v1)]])
     s.finalize()
+    s.cell = "%s:%s" % (mat, cellname)
     if wear:
         s.wear = wear
     return s

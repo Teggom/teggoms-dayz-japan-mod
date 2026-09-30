@@ -363,4 +363,121 @@ class CfgVehicles
 		displayName="Lever well, lashing rotted, pole down";
 		model="\JP\site\water\jp_s_well_hanetsurube_ab_down.p3d";
 	};
+	// jp_s_stone_jizo (roadside)
+	class StaticObj_JP_S_Stone_Jizo_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone Jizo, small (0.45)";
+		model="\JP\site\roadside\jp_s_stone_jizo_s.p3d";
+	};
+	class StaticObj_JP_S_Stone_Jizo_M: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone Jizo, standard (0.90)";
+		model="\JP\site\roadside\jp_s_stone_jizo_m.p3d";
+	};
+	class StaticObj_JP_S_Stone_Jizo_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone Jizo, large on a lotus (1.36)";
+		model="\JP\site\roadside\jp_s_stone_jizo_l.p3d";
+	};
+	class StaticObj_JP_S_Stone_Jizo_Halo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Boat-halo Jizo stone (funagata)";
+		model="\JP\site\roadside\jp_s_stone_jizo_halo.p3d";
+	};
+	class StaticObj_JP_S_Stone_Jizo_Bib: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone Jizo with a faded rag bib and cap";
+		model="\JP\site\roadside\jp_s_stone_jizo_bib.p3d";
+	};
+	class StaticObj_JP_S_Stone_Jizo_Offer: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone Jizo with offerings (cup, stones, dead flowers)";
+		model="\JP\site\roadside\jp_s_stone_jizo_offer.p3d";
+	};
+	class StaticObj_JP_S_Stone_Jizo_Ab_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone Jizo toppled, head broken off";
+		model="\JP\site\roadside\jp_s_stone_jizo_ab_tipped.p3d";
+	};
+	// jp_s_jizo_hut (roadside)
+	class StaticObj_JP_S_Jizo_Hut_Box: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Jizo box (street corner), small Jizo inside";
+		model="\JP\site\roadside\jp_s_jizo_hut_box.p3d";
+	};
+	class StaticObj_JP_S_Jizo_Hut_Hall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Jizo hall, one ken, open front";
+		model="\JP\site\roadside\jp_s_jizo_hut_hall.p3d";
+	};
+	class StaticObj_JP_S_Jizo_Hut_Stone_Roof: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone-roofed Jizo niche (mountain)";
+		model="\JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d";
+	};
+	class StaticObj_JP_S_Jizo_Hut_Ab_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Jizo box, lattice door fallen, roof lifted";
+		model="\JP\site\roadside\jp_s_jizo_hut_ab_open.p3d";
+	};
+	// jp_s_stele (roadside)
+	class StaticObj_JP_S_Stele_Koshin: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Koshin pillar with Shomen Kongo relief";
+		model="\JP\site\roadside\jp_s_stele_koshin.p3d";
+	};
+	class StaticObj_JP_S_Stele_Relief_Panel: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bato Kannon relief panel";
+		model="\JP\site\roadside\jp_s_stele_relief_panel.p3d";
+	};
+	class StaticObj_JP_S_Stele_Natural_Slab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Natural slab with deep-cut characters";
+		model="\JP\site\roadside\jp_s_stele_natural_slab.p3d";
+	};
+	class StaticObj_JP_S_Stele_Arched: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Arched-top nenbutsu stone";
+		model="\JP\site\roadside\jp_s_stele_arched.p3d";
+	};
+	class StaticObj_JP_S_Stele_Pillar: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Direction / boundary post";
+		model="\JP\site\roadside\jp_s_stele_pillar.p3d";
+	};
+	class StaticObj_JP_S_Stele_Round: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Round road-god stone (dosojin)";
+		model="\JP\site\roadside\jp_s_stele_round.p3d";
+	};
+	class StaticObj_JP_S_Stele_Group3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Three roadside stones on one base";
+		model="\JP\site\roadside\jp_s_stele_group3.p3d";
+	};
+	class StaticObj_JP_S_Stele_Ab_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Koshin pillar leaning and half sunk, lichen";
+		model="\JP\site\roadside\jp_s_stele_ab_tipped.p3d";
+	};
 };
