@@ -1,0 +1,58 @@
+{
+ "building": "Land_JP_Kura_Kuro_Hinged",
+ "p3d": "\\JP\\buildings\\kura\\jp_kura_kuro_hinged.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (the door side); built by parts/kit/jpparts/templates/kura.py; two floors: 'kura' (ground) and 'nikai' (upper, by the stair)",
+ "rooms": [
+  {
+   "name": "kura",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 0.45,
+   "rect_kit": [
+    0.12,
+    5.34,
+    -3.52,
+    -0.12
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "ground floor: boards on the footing, the stair up along the back wall",
+   "enclosed": true,
+   "rect_model": [
+    -2.61,
+    2.61,
+    -1.7,
+    1.7
+   ],
+   "fittings": []
+  },
+  {
+   "name": "nikai",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 2.85,
+   "rect_kit": [
+    0.12,
+    5.34,
+    -3.52,
+    -0.12
+   ],
+   "doors": [],
+   "note": "upper floor (the kura's storey, reached by the stair; G1-5 elevation)",
+   "enclosed": true,
+   "rect_model": [
+    -2.61,
+    2.61,
+    -1.7,
+    1.7
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 8,
+ "loot_by_room": {
+  "kura": 4,
+  "nikai": 4
+ }
+}

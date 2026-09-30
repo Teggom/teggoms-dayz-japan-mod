@@ -110,6 +110,7 @@ def run(bd):
     corrug = sum(len(s.faces) for s in M.solids if s.tag == "kawara_field" and 1 in s.vis)
     stones = sum(1 for s in M.solids if s.tag == "dodai_stone")
     soseki = sum(1 for s in M.solids if s.tag == "soseki")         # C2: rural posts stand on field stones
+    soseki += sum(1 for s in M.solids if s.tag == "footing")       # C3: a kura stands on individual cut blocks
     rec("C8 era lint (no glass, kawara geometry, separate plinth stones)",
         not glass and (corrug > 100 or not has_kawara) and stones + soseki >= 4,
         "glass paths %d; %s; %d individual dodai stones%s" % (
@@ -175,7 +176,14 @@ def run(bd):
             "%s (%s): bones %s" % (getattr(d, "label", ""), getattr(d, "style", ""),
                                    "+".join(a["bone"] for a in d.anims)) if not probs else "; ".join(probs[:4]))
         if getattr(d, "passable", True):
-            ok, msg, clear = MV.door_world(d, gcomps)
+            gc = gcomps
+            if getattr(mod, "DOOR_CHECK_OTHERS_OPEN", False):
+                # C3 (kura '_hinged'): the outer plaster leaves are shutters over the same doorway (initOpened 1):
+                # the inner door's clear width is measured with them open, as C10 measures reach
+                from jpparts import raycheck as RC
+                sh = [od for od in M.doors if od is not d and not getattr(od, "passable", True)]
+                gc = RC.open_state(gcomps, sh, 1.0) if sh else gcomps
+            ok, msg, clear = MV.door_world(d, gc)
             clears.append(clear or 0.0)
             rec("C7 DoorsTwin%d sweep + clear (>= 1.00, D1) + head (D2)" % k, ok, msg)
         else:

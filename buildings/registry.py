@@ -325,6 +325,36 @@ for _b in C2_FARMHOUSES + C2_HUTS + C2_SHEDS:
 BUILDINGS += C2_FARMHOUSES + C2_HUTS + C2_SHEDS
 
 
+# ------------------------------------------------------------------------------------------------ C3 kura
+# Phase C wave 1 (agent C3, 2026-09-30): DW22 plastered storehouse from parts/kit/jpparts/templates/kura.py
+# (buildings/kurakit.py builds it, buildings/shellcheck.py checks it). Sangawara only: hongawara is a status roof
+# (PLAYBOOK §2.1 T3 / §2.2), not a merchant's kura.
+from jpparts.templates import kura as _ku  # noqa: E402
+
+_LOOT_KURA = {"usage": ["Town", "Village"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+C3_PLACEMENTS = {}
+
+
+def _kura(key, cls, display, params):
+    return {"key": key, "dir": "kura", "module": "kura_shells", "class": cls, "name": "jp_" + key, "display": display,
+            "params": dict(params), "model_dir": "kura", "mass": 40000.0, "sound": "doorWoodSlide", "loot": _LOOT_KURA,
+            "placements": [], "verify": "shellcheck", "budget": _ku.budget_class(**params), "ship": True}
+
+
+C3_KURA = [
+    _kura("kura_namako", "Land_JP_Kura_Namako", "Kura (plastered storehouse, namako lower walls)",
+          {"lower": "namako", "door": "_open", "roof": "sangawara", "window": "_slide"}),
+    _kura("kura_kuro_hinged", "Land_JP_Kura_Kuro_Hinged",
+          "Kura (plastered storehouse, black boarded lower walls, hinged plaster door leaves)",
+          {"lower": "shitami", "door": "_hinged", "roof": "sangawara", "window": "_hinged"}),
+    _kura("kura_plain", "Land_JP_Kura_Plain", "Kura (plastered storehouse, plain)",
+          {"lower": "plain", "door": "_open", "roof": "sangawara", "window": "_slide"}),
+]
+for _b in C3_KURA:
+    _b["placements"] = C3_PLACEMENTS.get(_b["key"], [])
+BUILDINGS += C3_KURA
+
+
 def get(key):
     for b in BUILDINGS:
         if b["key"] == key:
