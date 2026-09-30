@@ -141,5 +141,16 @@
   - **Open for Stephen:** townhouse unit face budget (test unit 8,062 faces vs the standard 6,000; audit §6 risk 2);
     the doma floor is bright (137,132,128 vs vanilla 76-127), judge at G4; a faded-red jizō-bib cloth and a brown heri
     still need palette entries (the bib is B3b's).
+- 2026-09-29: Townhouse face budget class added (Stephen): 9,000 / 3,450 / 1,200 (PLAYBOOK §12, registry `townhouse`).
+- 2026-09-30: **B2 DONE** (opus-high, 715k tokens / 72 min). Commits c2f1bb6, de169eb, af6a588; detail in `parts/B2_PROGRESS.md`.
+  - 10 parts, 0 check failures: koyagumi (7 variants + sooted), party wall, party roof end, pent corner, seam cap
+    (townhouse hooks all filled), stall, stair, half door, floor pit, sunoko.
+  - Machiya 78/78, MLOD byte-identical. All 60 townhouse combos build; test unit 41/41 at 7,912 faces; toilet 17/17.
+  - Kit fixes: C13/C16 on non-tile roofs, half-door portal in C11, board eaves in every LOD (9 board-roof sample parts
+    changed), gable vents under the roof line (3 samples changed).
+  - **Open for Stephen:** 8 combos over the townhouse budget, all Kamigata 4-ken end/corner (worst 10,468 / 3,687 /
+    1,342); raise the budget for 4-ken Kamigata, or trim them. _tile/_kura gables leave 0.12 m slits at the post lines
+    (fixing it changes the machiya). Engawa and kura-eave corners not built. The half door is untested in the engine.
+  - B3a (interior props) next, on Stephen's go; B3b after.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
