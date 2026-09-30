@@ -18,6 +18,8 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 11:33 (local) | B4 (baseline) | launched: furnish + dress the machiya pilot, G4 checklist, time log in TIMELOG_B4.md | - | - | before: **22%** (5-hour 19%) |
 | 2026-09-30 12:43 (local) | B4 | furnished machiya pilot: 32 room props + 5 shop-front proxies, 43 loot pts, 17 yard/street objects, toilet, decorator kit, G4 checklist | **576k** (225 tool calls) | 69 min | **24%** (5-hour 33%): B4 alone = ~2% weekly, ~14% of a 5-hour window |
 | 2026-09-30 12:44 (local) | L1 (baseline) | launched: life layer interior, 50 items, one agent, time log TIMELOG_L1.md | - | - | before: **24%** (5-hour 33%, resets ~13:40) |
+| 2026-09-30 13:38 (local) | L1 | life layer interior: 50 items = 185 models (50 new, 65 variants, 70 abandoned), decorator wall/beam mounting, 4 materials | **654k** (195 tool calls) | 55 min | **25%** (5-hour 46% just before the 13:40 reset): L1 alone = ~1% weekly, ~13% of a 5-hour window |
+| 2026-09-30 13:45 (local) | L2 (baseline) | launched: life layer outdoor, 24 items (+ check B3b text mirroring), time log TIMELOG_L2.md | - | - | before: **25%** (5-hour 0%, fresh window) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
@@ -67,3 +69,21 @@ The agent notes the usage tool sometimes returned a stale reading, so the % step
 
 The decorator was the big stretch: it's the new shared code every later furnished building uses. The rooms
 themselves came out of it in the same run (all five ROOM DONE lines share one timestamp).
+
+## L1 time log, summarised (TIMELOG_L1.md)
+
+| Stretch | What | Items | Minutes | 5-hour % |
+|---|---|---|---|---|
+| 12:44-12:48 | setup (reading) | - | 4 | 33 -> 35 |
+| 12:48-12:49 | era checks (50 kept, 3 swaps inside items) | - | 0.5 | 35 |
+| 12:49-12:58 | life-layer kit (lkit: text, mounting) | - | 10 | 35 -> 37 |
+| 12:58-13:12 | A: walls, posts, beams + decorator mounting | 14 | 14 | 37 -> 41 |
+| 13:12-13:17 | B: religious corner | 3 | 5 | 41 |
+| 13:17-13:24 | C: meals and kitchen | 9 | 7 | 41 -> 43 |
+| 13:24-13:28 | D: living rooms | 10 | 4 | 43 -> 44 |
+| 13:28-13:32 | E: work at home | 8 | 4 | 44 -> 45 |
+| 13:32-13:35 | F: tier markers | 6 | 3.5 | 45 |
+| 13:35-13:38 | materials, PBO pack, sheets | - | 3 | 45 -> 46 |
+
+Twice the items of B3a in 13 more minutes: 50 items / 185 models in 55 min. After the first group (which built
+the wall/beam mounting), groups of 3-10 items took 3.5-7 minutes each.

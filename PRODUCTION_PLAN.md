@@ -188,5 +188,14 @@
   - **Gate G4 = Stephen's walk: TEST_CHECKLIST.md (~15 min).**
 - 2026-09-30: **Life layer approved as drafted** (research/interior/LIFE_LAYER.md, 74 items). Order: L1 = interior 50
   (one agent), then L2 = outdoor 24. Built into B4's decorator catalogue so they're placeable at once.
+- 2026-09-30: **L1 DONE** (opus-high, 654k tokens / 55 min). 50 interior items = 185 models (50 new, 65 variants, 70
+  abandoned); era verdicts in `research/interior/LIFE_LAYER_ERA.md` (all kept, 3 swaps inside items); decorator mounts
+  (wall / post / beam / doorway / surface / floor / kamado) + `on_wall`, `on_beam`, `in_doorway`, `on_surface`;
+  materials added: `jp_m_decal_sumi_text_life`, `jp_m_food_rice`, `jp_m_food_hoshigaki`, `jp_m_textile_kaya`.
+  jp_furniture.pbo = 297 classes. Sheets `research/interior/contact_sheets/l1_*.jpg`. Commits a20d910 .. dbb6149.
+  Furnished machiya re-verified by the lead through the pipeline: 137/137.
+  - Found: DayZ models are left-handed, so text laid along +x reads mirrored; B3b's signs are probably mirrored (L2
+    checks and fixes first). The armour-chest crest barely shows (black on black).
+- 2026-09-30: L2 (outdoor 24 + the B3b text check) launched.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
