@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Barn_Walled_Thatch",
+ "p3d": "\\JP\\buildings\\shed\\jp_barn_walled_thatch.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/rural.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    7.220000000000001,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "shed floor",
+   "enclosed": true,
+   "rect_model": [
+    -3.58,
+    3.58,
+    -2.67,
+    2.67
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 9,
+ "loot_by_room": {
+  "floor": 9
+ }
+}

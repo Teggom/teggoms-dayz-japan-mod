@@ -1979,3 +1979,48 @@
 						<point pos="0.800357 0.050000 -1.783571" range="0.769643" height="1.924107" />
 				</container>
 		</group>
+		<group name="Land_JP_Shed_Open_Thatch">
+				<usage name="Farm" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.138929 0.050000 0.810714" range="0.857500" height="2.000000" />
+						<point pos="0.800357 0.050000 1.783571" range="0.769643" height="1.924107" />
+						<point pos="-0.138929 0.050000 -0.810714" range="0.857500" height="2.000000" />
+						<point pos="0.800357 0.050000 -1.783571" range="0.769643" height="1.924107" />
+				</container>
+		</group>
+		<group name="Land_JP_Shed_Walled_Stone_Woodshed">
+				<usage name="Farm" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 -3.600000" range="0.600000" height="1.500000" />
+						<point pos="-0.097143 0.050000 0.810714" range="0.880000" height="2.000000" />
+						<point pos="0.874286 0.050000 1.783571" range="0.785714" height="1.964286" />
+						<point pos="-0.097143 0.050000 -0.810714" range="0.880000" height="2.000000" />
+						<point pos="0.874286 0.050000 -1.783571" range="0.785714" height="1.964286" />
+				</container>
+		</group>
+		<group name="Land_JP_Barn_Walled_Thatch">
+				<usage name="Farm" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.864762 0.050000 1.514286" range="0.956667" height="2.000000" />
+						<point pos="0.432381 0.050000 1.211429" range="0.956667" height="2.000000" />
+						<point pos="1.513333 0.050000 2.120000" range="0.956667" height="2.000000" />
+						<point pos="-0.864762 0.050000 -0.000000" range="0.956667" height="2.000000" />
+						<point pos="0.216190 0.050000 -0.908571" range="0.956667" height="2.000000" />
+						<point pos="1.297143 0.050000 -0.000000" range="0.956667" height="2.000000" />
+						<point pos="-0.864762 0.050000 -1.817143" range="0.956667" height="2.000000" />
+						<point pos="0.432381 0.050000 -2.422857" range="0.956667" height="2.000000" />
+						<point pos="1.513333 0.050000 -1.514286" range="0.956667" height="2.000000" />
+				</container>
+		</group>

@@ -1,42 +1,42 @@
 {
- "building": "Land_JP_Hut_East_S_Earth_Mushiro",
- "key": "hut_east_s_earth_mushiro",
+ "building": "Land_JP_Shed_Open_Thatch",
+ "key": "shed_open_thatch",
  "date": "2026-09-30",
  "budget": "standard",
- "faces": "2355/1420/458",
+ "faces": "2249/658/278",
  "door_clear_m": [],
- "checks_n": 30,
+ "checks_n": 24,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 2355, Resolution 2 1420, Resolution 3 458, Geometry 932, Memory 0, Roadway 5, View Geometry 926, Fire Geometry 926"
+   "detail": "Resolution 1 2249, Resolution 2 658, Resolution 3 278, Geometry 650, Memory 0, Roadway 1, View Geometry 650, Fire Geometry 650"
   },
   {
    "check": "C5 face budget (standard: 6000 / 2300 / 800)",
    "ok": true,
-   "detail": "R1 2355, R2 1420, R3 458"
+   "detail": "R1 2249, R2 658, R3 278"
   },
   {
    "check": "Geometry properties + mass",
    "ok": true,
-   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 15000 kg"
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 8000 kg"
   },
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "103 components, 0 bad, 0 faces outside components"
+   "detail": "67 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "102 components, 0 bad, 0 faces outside components"
+   "detail": "67 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "102 components, 0 bad, 0 faces outside components"
+   "detail": "67 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -51,47 +51,32 @@
   {
    "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
    "ok": true,
-   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 11 soseki under the posts"
+   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 10 soseki under the posts"
   },
   {
    "check": "C3 grid snap (post nodes on the 0.455 grid)",
    "ok": true,
-   "detail": "11 posts"
-  },
-  {
-   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
-   "ok": true,
-   "detail": "Window (back) (window_slide): bones doors1"
-  },
-  {
-   "check": "C7 DoorsTwin1 window sweep",
-   "ok": true,
-   "detail": "window_slide moves closed -> open without touching other geometry"
-  },
-  {
-   "check": "C7 open doorway (mushiro, no leaf) clear >= 1.00 + head >= 2.00",
-   "ok": true,
-   "detail": "clear 1.68 m, head 2.00 m"
+   "detail": "10 posts"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "80/80 samples"
+   "detail": "16/16 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "190/190 samples over doma"
+   "detail": "225/225 samples over floor"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
    "ok": true,
-   "detail": "lowest 2.88 m"
+   "detail": "lowest 3.22 m"
   },
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "4 points (doma 4)"
+   "detail": "4 points (floor 4)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
@@ -104,24 +89,9 @@
    "detail": "not placed on the island (shipped in the PBO only)"
   },
   {
-   "check": "C10 DoorsTwin1 reachable from its leaf side (open)",
-   "ok": true,
-   "detail": "Window (back): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
-  },
-  {
-   "check": "C10 DoorsTwin1 reachable from its leaf side (closed)",
-   "ok": true,
-   "detail": "Window (back): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
-  },
-  {
-   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
-   "ok": true,
-   "detail": "Window (back): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
-  },
-  {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "doma 9600 rays, 330 out through doors/windows, 0 LEAKS"
+   "detail": "open-sided by design (not checked): floor"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -141,12 +111,12 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "2734 columns over 2.5 m compared in each LOD"
+   "detail": "2421 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "15 library rvmats in the visual LODs, 0 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "9 library rvmats in the visual LODs, 0 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -156,7 +126,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 352648 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 227528 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

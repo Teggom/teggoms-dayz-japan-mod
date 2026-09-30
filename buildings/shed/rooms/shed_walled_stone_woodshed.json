@@ -1,0 +1,58 @@
+{
+ "building": "Land_JP_Shed_Walled_Stone_Woodshed",
+ "p3d": "\\JP\\buildings\\shed\\jp_shed_walled_stone_woodshed.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/rural.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall",
+ "rooms": [
+  {
+   "name": "leanto",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    5.53,
+    7.13,
+    -3.49,
+    -0.15
+   ],
+   "doors": [],
+   "note": "open lean-to on the right gable (woodshed / work space)",
+   "enclosed": false,
+   "rect_model": [
+    2.8,
+    4.4,
+    -1.67,
+    1.67
+   ],
+   "fittings": []
+  },
+  {
+   "name": "floor",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "shed floor",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 5,
+ "loot_by_room": {
+  "leanto": 1,
+  "floor": 4
+ }
+}
