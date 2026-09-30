@@ -3,7 +3,7 @@
  "key": "farmhouse_kanto_irimoya_domar",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "9468/3865/1378",
+ "faces": "9468/3865/1392",
  "door_clear_m": [
   1.46,
   1.06,
@@ -16,12 +16,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 9468, Resolution 2 3865, Resolution 3 1378, Geometry 3749, Memory 0, Roadway 13, View Geometry 3674, Fire Geometry 3698"
+   "detail": "Resolution 1 9468, Resolution 2 3865, Resolution 3 1392, Geometry 3749, Memory 0, Roadway 13, View Geometry 3674, Fire Geometry 3698"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 9468, R2 3865, R3 1378"
+   "detail": "R1 9468, R2 3865, R3 1392"
   },
   {
    "check": "Geometry properties + mass",
@@ -396,7 +396,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1010879 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1012736 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

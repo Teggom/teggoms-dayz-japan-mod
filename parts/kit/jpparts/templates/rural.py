@@ -282,6 +282,14 @@ class Shell:
                 self.post(round(x, 4), round(z, 4), y1, y0=0.0, size=POST if slim else JOYA_POST,
                           mat="wood_sooted" if soot else "wood_weathered", adzed=not slim, interior=True,
                           stone=bool(stone_fn and stone_fn(x, z)))
+        if form == "irimoya":
+            # the sasu / ridge pole seen from above through an irimoya smoke gable stay in every LOD (C15)
+            xg = (D / 4, W - D / 4)
+            for s in self.H.solids:
+                if s.tag in ("sasu", "sumi_sasu", "tsuma_sasu", "munagi", "lashing") and s.vis:
+                    b_ = s.bbox()
+                    if any(b_[0] - 0.3 < x_ < b_[1] + 0.3 for x_ in xg):
+                        s.vis = set(s.vis) | {3}
         if fam != "thatch":
             rw = R.ridge_walk(info)
             if rw:

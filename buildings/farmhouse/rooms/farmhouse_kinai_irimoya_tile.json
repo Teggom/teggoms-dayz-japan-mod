@@ -1,0 +1,188 @@
+{
+ "building": "Land_JP_Farmhouse_Kinai_Irimoya_Tile",
+ "p3d": "\\JP\\buildings\\farmhouse\\jp_farmhouse_kinai_irimoya_tile.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/rural.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall",
+ "rooms": [
+  {
+   "name": "niwa",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    7.3500000000000005,
+    12.68,
+    -7.220000000000001,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "niwa: entry, kamado spot, the ox stall",
+   "enclosed": true,
+   "rect_model": [
+    0.98,
+    6.31,
+    -3.58,
+    3.58
+   ],
+   "fittings": [
+    {
+     "kind": "stall",
+     "room": "niwa",
+     "rect": [
+      4.43,
+      6.25,
+      -3.58,
+      -0.91
+     ],
+     "note": "jp_p_frame_stall _ox (the ox, required), bars down"
+    },
+    {
+     "kind": "kamado",
+     "room": "niwa",
+     "centre": [
+      5.87,
+      2.002
+     ],
+     "yaw": 270.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kabata",
+     "room": "niwa",
+     "note": "not built: the kabata washing pit needs running water (a new pit kind + water material); left for later"
+    }
+   ]
+  },
+  {
+   "name": "mise",
+   "tag": "living",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    3.700000000000001,
+    7.21,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin5"
+   ],
+   "note": "mise (front living room), open to the niwa",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    0.84,
+    0.06,
+    3.58
+   ],
+   "fittings": []
+  },
+  {
+   "name": "daidokoro",
+   "tag": "daidokoro",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    3.700000000000001,
+    7.21,
+    -7.220000000000001,
+    -3.7
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin5"
+   ],
+   "note": "daidokoro with the irori, open to the niwa",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    0.84,
+    -3.58,
+    -0.06
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "daidokoro",
+     "rect": [
+      -1.593,
+      -0.228,
+      -2.275,
+      -1.365
+     ],
+     "floor_y": 0.5,
+     "pit": "irori",
+     "hook": [
+      -0.91,
+      3.82,
+      -1.82
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    }
+   ]
+  },
+  {
+   "name": "zashiki",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.0600000000000005,
+    3.58,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4"
+   ],
+   "note": "zashiki",
+   "enclosed": true,
+   "rect_model": [
+    -6.31,
+    -2.79,
+    0.06,
+    3.58
+   ],
+   "fittings": []
+  },
+  {
+   "name": "nando",
+   "tag": "sleeping",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.0600000000000005,
+    3.58,
+    -7.220000000000001,
+    -3.7
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "nando",
+   "enclosed": true,
+   "rect_model": [
+    -6.31,
+    -2.79,
+    -3.58,
+    -0.06
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 15,
+ "loot_by_room": {
+  "niwa": 7,
+  "mise": 2,
+  "daidokoro": 2,
+  "zashiki": 2,
+  "nando": 2
+ }
+}
