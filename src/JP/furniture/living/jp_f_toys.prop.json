@@ -1,0 +1,218 @@
+{
+ "id": "jp_f_toys",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "living",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "era check kept with swaps (LIFE_LAYER_ERA 34)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_toys_koma.p3d",
+   "class": "StaticObj_JP_F_Toys_Koma",
+   "variant": "koma",
+   "state": "left",
+   "abandoned": true,
+   "display": "A spinning top and its string",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 57,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.068,
+    0.282,
+    0.0,
+    0.065,
+    -0.034,
+    0.101
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "koma_d",
+     "expected": 0.07,
+     "measured": 0.07,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "children's toys that pass 1730 (LIFE_LAYER_ERA 34): top, battledore + shuttlecock, a rag doll, a rattle drum; no kendama, no daruma"
+   ],
+   "master": "spikes/L1/out/living/jp_f_toys_koma.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_toys_hagoita.p3d",
+   "class": "StaticObj_JP_F_Toys_Hagoita",
+   "variant": "hagoita",
+   "state": "left",
+   "abandoned": true,
+   "display": "A battledore and shuttlecock",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 29,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.127,
+    0.17,
+    0.0,
+    0.036,
+    -0.117,
+    0.258
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "koma_d",
+     "expected": 0.07,
+     "measured": 0.07,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "children's toys that pass 1730 (LIFE_LAYER_ERA 34): top, battledore + shuttlecock, a rag doll, a rattle drum; no kendama, no daruma"
+   ],
+   "master": "spikes/L1/out/living/jp_f_toys_hagoita.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_toys_doll.p3d",
+   "class": "StaticObj_JP_F_Toys_Doll",
+   "variant": "doll",
+   "state": "left",
+   "abandoned": true,
+   "display": "A small cloth doll",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 66,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.038,
+    0.125,
+    0.0,
+    0.1,
+    -0.195,
+    0.022
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "koma_d",
+     "expected": 0.07,
+     "measured": 0.07,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "children's toys that pass 1730 (LIFE_LAYER_ERA 34): top, battledore + shuttlecock, a rag doll, a rattle drum; no kendama, no daruma"
+   ],
+   "master": "spikes/L1/out/living/jp_f_toys_doll.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_toys_scattered.p3d",
+   "class": "StaticObj_JP_F_Toys_Scattered",
+   "variant": "set",
+   "state": "left",
+   "abandoned": true,
+   "display": "Toys left on the floor together",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 170,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.415,
+    0.518,
+    0.0,
+    0.1,
+    -0.138,
+    0.477
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "koma_d",
+     "expected": 0.07,
+     "measured": 0.07,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "children's toys that pass 1730 (LIFE_LAYER_ERA 34): top, battledore + shuttlecock, a rag doll, a rattle drum; no kendama, no daruma"
+   ],
+   "master": "spikes/L1/out/living/jp_f_toys_scattered.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 34,
+ "refs_local": []
+}

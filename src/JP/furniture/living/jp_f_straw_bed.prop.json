@@ -1,0 +1,264 @@
+{
+ "id": "jp_f_straw_bed",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "living",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_straw_bed_pile.p3d",
+   "class": "StaticObj_JP_F_Straw_Bed_Pile",
+   "variant": "pile",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw bedding under a straw mat",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 30,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.9,
+    0.9,
+    0.0,
+    0.261,
+    -0.45,
+    0.45
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.9,
+    -0.45,
+    0.9,
+    0.45
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 10.0,
+   "loot_surfaces": [
+    {
+     "name": "bed",
+     "kind": "shelf",
+     "y": 0.2095,
+     "rect": [
+      -0.8,
+      -0.35,
+      0.8,
+      0.35
+     ],
+     "range": 0.4,
+     "points": [
+      [
+       -0.45,
+       0.2095,
+       0.1
+      ],
+      [
+       0.35,
+       0.2295,
+       -0.1
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the poor's bed (T1): a straw heap under a straw mat, a paper quilt; a thin Geometry slab + Roadway like the laid futon (walk over it, loot on it)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_straw_bed_pile.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_straw_bed_quilt.p3d",
+   "class": "StaticObj_JP_F_Straw_Bed_Quilt",
+   "variant": "quilt",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw bedding, a paper quilt thrown back",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 34,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.9,
+    0.9,
+    0.0,
+    0.261,
+    -0.45,
+    0.45
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.9,
+    -0.45,
+    0.9,
+    0.45
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 10.0,
+   "loot_surfaces": [
+    {
+     "name": "bed",
+     "kind": "shelf",
+     "y": 0.2095,
+     "rect": [
+      -0.8,
+      -0.35,
+      0.8,
+      0.35
+     ],
+     "range": 0.4,
+     "points": [
+      [
+       -0.45,
+       0.2095,
+       0.1
+      ],
+      [
+       0.35,
+       0.2295,
+       -0.1
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the poor's bed (T1): a straw heap under a straw mat, a paper quilt; a thin Geometry slab + Roadway like the laid futon (walk over it, loot on it)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_straw_bed_quilt.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_straw_bed_scattered.p3d",
+   "class": "StaticObj_JP_F_Straw_Bed_Scattered",
+   "variant": "pile",
+   "state": "scattered",
+   "abandoned": true,
+   "display": "Straw bedding scattered and flattened",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 28,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.05,
+    1.4,
+    0.0,
+    0.106,
+    -0.6,
+    0.991
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.9,
+    -0.45,
+    0.9,
+    0.45
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 10.0,
+   "loot_surfaces": [
+    {
+     "name": "bed",
+     "kind": "shelf",
+     "y": 0.085,
+     "rect": [
+      -0.8,
+      -0.35,
+      0.8,
+      0.35
+     ],
+     "range": 0.4,
+     "points": [
+      [
+       -0.45,
+       0.085,
+       0.1
+      ],
+      [
+       0.35,
+       0.0922,
+       -0.1
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the poor's bed (T1): a straw heap under a straw mat, a paper quilt; a thin Geometry slab + Roadway like the laid futon (walk over it, loot on it)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_straw_bed_scattered.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 36,
+ "refs_local": []
+}

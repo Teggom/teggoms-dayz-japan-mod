@@ -103,3 +103,41 @@
 2026-09-30 13:22:56 | #95 | jp_f_hiuchi_box | new model (batch) | 5h 43% wk 25%
 2026-09-30 13:22:56 | #96 | jp_f_hiuchi_open | variant (batch) | 5h 43% wk 25%
 2026-09-30 13:22:56 | #97 | jp_f_hiuchi_spilled | abandoned (batch) | 5h 43% wk 25%
+2026-09-30 13:23:49 | GROUP START | D: items 27-36 (living rooms and bedrooms) | - | 5h 43% wk 25%
+2026-09-30 13:28:04 | #98 | jp_f_enza | new model (batch) | 5h 44% wk 25%
+2026-09-30 13:28:04 | #99 | jp_f_enza_stack3 | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:04 | #100 | jp_f_enza_zabuton | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:04 | #101 | jp_f_enza_zabuton_stack3 | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:04 | #102 | jp_f_enza_kicked | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:04 | #103 | jp_f_enza_zabuton_folded | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:04 | #104 | jp_f_byobu_makura | new model (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #105 | jp_f_byobu_tsuitate | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #106 | jp_f_byobu_makura_fallen | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #107 | jp_f_byobu_tsuitate_fallen | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #108 | jp_f_iko_robe | new model (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #109 | jp_f_iko_plain | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #110 | jp_f_iko_empty | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #111 | jp_f_iko_fallen | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #112 | jp_f_clothes_kimono | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #113 | jp_f_clothes_kimono_obi | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #114 | jp_f_clothes_haori | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #115 | jp_f_sewing_box | new model (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #116 | jp_f_sewing_work | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #117 | jp_f_sewing_spilled | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #118 | jp_f_mirror_stand | new model (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #119 | jp_f_mirror_stand_open | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #120 | jp_f_mirror_stand_tipped | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #121 | jp_f_goban_go | new model (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #122 | jp_f_goban_shogi | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #123 | jp_f_goban_go_scattered | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #124 | jp_f_goban_shogi_scattered | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #125 | jp_f_toys_koma | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #126 | jp_f_toys_hagoita | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #127 | jp_f_toys_doll | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #128 | jp_f_toys_scattered | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #129 | jp_f_shokudai_tall | new model (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #130 | jp_f_shokudai_short | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #131 | jp_f_shokudai_tipped | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #132 | jp_f_straw_bed_pile | new model (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #133 | jp_f_straw_bed_quilt | variant (batch) | 5h 44% wk 25%
+2026-09-30 13:28:05 | #134 | jp_f_straw_bed_scattered | abandoned (batch) | 5h 44% wk 25%

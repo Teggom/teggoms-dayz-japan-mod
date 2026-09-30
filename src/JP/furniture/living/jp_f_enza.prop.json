@@ -1,0 +1,342 @@
+{
+ "id": "jp_f_enza",
+ "build_list": {
+  "name": "Round straw cushion (enza) and cotton cushion (zabuton)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "daidokoro",
+   "living",
+   "zashiki",
+   "shop",
+   "office"
+  ],
+  "loot_surface": "none",
+  "abandoned_state": "scattered, one kicked against the wall",
+  "blocks_path": "none (no Geometry)",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "enza_m": {
+    "value": "d 0.40, 0.03",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "zabuton_m": {
+    "value": "0.55 x 0.60 x 0.06",
+    "assumed": true,
+    "reason": "typical Edo size, smaller than modern"
+   }
+  },
+  "refs": [
+   {
+    "id": "N07",
+    "shows": "zabuton history (text)",
+    "period_image": false
+   },
+   {
+    "id": "N20",
+    "shows": "BL §3 (text)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "living",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_enza; zabuton T3 only"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_enza.p3d",
+   "class": "StaticObj_JP_F_Enza",
+   "variant": "enza",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Round straw cushion (enza)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 132,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.193,
+    0.193,
+    0.0,
+    0.036,
+    -0.193,
+    0.193
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "round straw enza everywhere; cotton zabuton T3 only (G1 A2-9); no Geometry (walk over)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_enza.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_enza_stack3.p3d",
+   "class": "StaticObj_JP_F_Enza_Stack3",
+   "variant": "enza",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three straw cushions stacked",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 252,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.193,
+    0.22,
+    0.0,
+    0.104,
+    -0.216,
+    0.193
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "round straw enza everywhere; cotton zabuton T3 only (G1 A2-9); no Geometry (walk over)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_enza_stack3.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_enza_zabuton.p3d",
+   "class": "StaticObj_JP_F_Enza_Zabuton",
+   "variant": "zabuton",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Cotton cushion (zabuton), T3",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 34,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.3,
+    0.3,
+    0.0,
+    0.065,
+    -0.275,
+    0.275
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "round straw enza everywhere; cotton zabuton T3 only (G1 A2-9); no Geometry (walk over)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_enza_zabuton.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_enza_zabuton_stack3.p3d",
+   "class": "StaticObj_JP_F_Enza_Zabuton_Stack3",
+   "variant": "zabuton",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three zabuton stacked, T3",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 102,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.343,
+    0.343,
+    0.0,
+    0.175,
+    -0.323,
+    0.323
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "round straw enza everywhere; cotton zabuton T3 only (G1 A2-9); no Geometry (walk over)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_enza_zabuton_stack3.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_enza_kicked.p3d",
+   "class": "StaticObj_JP_F_Enza_Kicked",
+   "variant": "enza",
+   "state": "kicked",
+   "abandoned": true,
+   "display": "Straw cushion kicked against the wall",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 135,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.193,
+    0.527,
+    0.0,
+    0.373,
+    0.003,
+    0.441
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "round straw enza everywhere; cotton zabuton T3 only (G1 A2-9); no Geometry (walk over)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_enza_kicked.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_enza_zabuton_folded.p3d",
+   "class": "StaticObj_JP_F_Enza_Zabuton_Folded",
+   "variant": "zabuton",
+   "state": "folded",
+   "abandoned": true,
+   "display": "Zabuton folded over, askew, T3",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 17,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.25,
+    0.502,
+    0.0,
+    0.11,
+    -0.307,
+    0.376
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "round straw enza everywhere; cotton zabuton T3 only (G1 A2-9); no Geometry (walk over)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_enza_zabuton_folded.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 27,
+ "refs_local": [
+  "i07_edo_nagaya_room"
+ ]
+}

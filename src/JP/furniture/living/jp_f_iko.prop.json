@@ -1,0 +1,288 @@
+{
+ "id": "jp_f_iko",
+ "build_list": {
+  "name": "Clothes rack (iko) with a robe hung over it",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "sleeping",
+   "zashiki",
+   "living"
+  ],
+  "loot_surface": "none",
+  "abandoned_state": "fallen, the robe on the mat",
+  "blocks_path": "1.5 m wide: along walls only",
+  "lod_budget": "furniture <=1000 faces",
+  "dimensions": {
+   "size_m": {
+    "value": "1.50 wide x 0.40 deep x 1.50 high",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "N20",
+    "shows": "BL §5.4 (text)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "living",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_iko"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_iko_robe.p3d",
+   "class": "StaticObj_JP_F_Iko_Robe",
+   "variant": "robe",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Clothes rack, lacquered, a robe spread over it",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 96,
+    "Resolution 2": 36,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.825,
+    0.825,
+    0.0,
+    1.502,
+    -0.2,
+    0.2
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.76,
+    -0.2,
+    0.76,
+    0.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 7.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.5,
+     "measured": 1.49,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "clothes rack (iko) with a robe spread over it; 1.5 m wide: along walls only (BUILD_LIST jp_f_iko)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_iko_robe.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_iko_plain.p3d",
+   "class": "StaticObj_JP_F_Iko_Plain",
+   "variant": "plain",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Clothes rack, plain, an under-robe hung",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 96,
+    "Resolution 2": 36,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.825,
+    0.825,
+    0.0,
+    1.502,
+    -0.2,
+    0.2
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.76,
+    -0.2,
+    0.76,
+    0.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 7.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.5,
+     "measured": 1.49,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "clothes rack (iko) with a robe spread over it; 1.5 m wide: along walls only (BUILD_LIST jp_f_iko)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_iko_plain.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_iko_empty.p3d",
+   "class": "StaticObj_JP_F_Iko_Empty",
+   "variant": "plain",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Clothes rack, plain, a sash end over the rail",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 54,
+    "Resolution 2": 30,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.825,
+    0.825,
+    0.0,
+    1.5,
+    -0.2,
+    0.2
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.76,
+    -0.2,
+    0.76,
+    0.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 7.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.5,
+     "measured": 1.49,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "clothes rack (iko) with a robe spread over it; 1.5 m wide: along walls only (BUILD_LIST jp_f_iko)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_iko_empty.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_iko_fallen.p3d",
+   "class": "StaticObj_JP_F_Iko_Fallen",
+   "variant": "robe",
+   "state": "fallen",
+   "abandoned": true,
+   "display": "Clothes rack fallen, the robe on the mat",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 67,
+    "Resolution 2": 30,
+    "Resolution 3": 6
+   },
+   "bbox": [
+    -0.825,
+    0.825,
+    0.0,
+    0.4,
+    -1.495,
+    1.465
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.5,
+     "measured": 1.49,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "clothes rack (iko) with a robe spread over it; 1.5 m wide: along walls only (BUILD_LIST jp_f_iko)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_iko_fallen.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 29,
+ "refs_local": []
+}

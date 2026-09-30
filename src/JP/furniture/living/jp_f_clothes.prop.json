@@ -1,0 +1,169 @@
+{
+ "id": "jp_f_clothes",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "living",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "the abandoned layer"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_clothes_kimono.p3d",
+   "class": "StaticObj_JP_F_Clothes_Kimono",
+   "variant": "kimono",
+   "state": "dropped",
+   "abandoned": true,
+   "display": "A kimono dropped on the mat",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 26,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.639,
+    0.801,
+    0.0,
+    0.068,
+    -0.654,
+    0.645
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "kimono_L",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "clothes dropped on the mat (the abandoned layer); no Geometry"
+   ],
+   "master": "spikes/L1/out/living/jp_f_clothes_kimono.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_clothes_kimono_obi.p3d",
+   "class": "StaticObj_JP_F_Clothes_Kimono_Obi",
+   "variant": "kimono_obi",
+   "state": "dropped",
+   "abandoned": true,
+   "display": "An under-kimono and a sash on the mat",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 32,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.847,
+    0.828,
+    0.0,
+    0.073,
+    -0.696,
+    0.687
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "kimono_L",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "clothes dropped on the mat (the abandoned layer); no Geometry"
+   ],
+   "master": "spikes/L1/out/living/jp_f_clothes_kimono_obi.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_clothes_haori.p3d",
+   "class": "StaticObj_JP_F_Clothes_Haori",
+   "variant": "haori",
+   "state": "dropped",
+   "abandoned": true,
+   "display": "A short jacket and a sash on the mat",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 29,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.584,
+    0.872,
+    0.0,
+    0.052,
+    -0.626,
+    0.494
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "kimono_L",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "clothes dropped on the mat (the abandoned layer); no Geometry"
+   ],
+   "master": "spikes/L1/out/living/jp_f_clothes_haori.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 30,
+ "refs_local": [
+  "m03_kosode_stencil"
+ ]
+}

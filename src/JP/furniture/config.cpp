@@ -1325,4 +1325,236 @@ class CfgVehicles
 		displayName="Fire-striker box tipped, tinder spilled";
 		model="\JP\furniture\meal\jp_f_hiuchi_spilled.p3d";
 	};
+	// jp_f_enza (living)
+	class StaticObj_JP_F_Enza: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Round straw cushion (enza)";
+		model="\JP\furniture\living\jp_f_enza.p3d";
+	};
+	class StaticObj_JP_F_Enza_Stack3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Three straw cushions stacked";
+		model="\JP\furniture\living\jp_f_enza_stack3.p3d";
+	};
+	class StaticObj_JP_F_Enza_Zabuton: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cotton cushion (zabuton), T3";
+		model="\JP\furniture\living\jp_f_enza_zabuton.p3d";
+	};
+	class StaticObj_JP_F_Enza_Zabuton_Stack3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Three zabuton stacked, T3";
+		model="\JP\furniture\living\jp_f_enza_zabuton_stack3.p3d";
+	};
+	class StaticObj_JP_F_Enza_Kicked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw cushion kicked against the wall";
+		model="\JP\furniture\living\jp_f_enza_kicked.p3d";
+	};
+	class StaticObj_JP_F_Enza_Zabuton_Folded: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Zabuton folded over, askew, T3";
+		model="\JP\furniture\living\jp_f_enza_zabuton_folded.p3d";
+	};
+	// jp_f_byobu (living)
+	class StaticObj_JP_F_Byobu_Makura: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Low bedding screen, two leaves";
+		model="\JP\furniture\living\jp_f_byobu_makura.p3d";
+	};
+	class StaticObj_JP_F_Byobu_Tsuitate: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Entrance screen on two feet";
+		model="\JP\furniture\living\jp_f_byobu_tsuitate.p3d";
+	};
+	class StaticObj_JP_F_Byobu_Makura_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bedding screen knocked flat, torn";
+		model="\JP\furniture\living\jp_f_byobu_makura_fallen.p3d";
+	};
+	class StaticObj_JP_F_Byobu_Tsuitate_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Entrance screen fallen, torn";
+		model="\JP\furniture\living\jp_f_byobu_tsuitate_fallen.p3d";
+	};
+	// jp_f_iko (living)
+	class StaticObj_JP_F_Iko_Robe: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clothes rack, lacquered, a robe spread over it";
+		model="\JP\furniture\living\jp_f_iko_robe.p3d";
+	};
+	class StaticObj_JP_F_Iko_Plain: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clothes rack, plain, an under-robe hung";
+		model="\JP\furniture\living\jp_f_iko_plain.p3d";
+	};
+	class StaticObj_JP_F_Iko_Empty: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clothes rack, plain, a sash end over the rail";
+		model="\JP\furniture\living\jp_f_iko_empty.p3d";
+	};
+	class StaticObj_JP_F_Iko_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clothes rack fallen, the robe on the mat";
+		model="\JP\furniture\living\jp_f_iko_fallen.p3d";
+	};
+	// jp_f_clothes (living)
+	class StaticObj_JP_F_Clothes_Kimono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A kimono dropped on the mat";
+		model="\JP\furniture\living\jp_f_clothes_kimono.p3d";
+	};
+	class StaticObj_JP_F_Clothes_Kimono_Obi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="An under-kimono and a sash on the mat";
+		model="\JP\furniture\living\jp_f_clothes_kimono_obi.p3d";
+	};
+	class StaticObj_JP_F_Clothes_Haori: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A short jacket and a sash on the mat";
+		model="\JP\furniture\living\jp_f_clothes_haori.p3d";
+	};
+	// jp_f_sewing (living)
+	class StaticObj_JP_F_Sewing_Box: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sewing box (haribako) with a pincushion";
+		model="\JP\furniture\living\jp_f_sewing_box.p3d";
+	};
+	class StaticObj_JP_F_Sewing_Work: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sewing box and a half-sewn garment";
+		model="\JP\furniture\living\jp_f_sewing_work.p3d";
+	};
+	class StaticObj_JP_F_Sewing_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sewing box, drawer out, spools rolled";
+		model="\JP\furniture\living\jp_f_sewing_spilled.p3d";
+	};
+	// jp_f_mirror_stand (living)
+	class StaticObj_JP_F_Mirror_Stand: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Mirror stand, the mirror under its cloth";
+		model="\JP\furniture\living\jp_f_mirror_stand.p3d";
+	};
+	class StaticObj_JP_F_Mirror_Stand_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Mirror stand, the bronze mirror uncovered";
+		model="\JP\furniture\living\jp_f_mirror_stand_open.p3d";
+	};
+	class StaticObj_JP_F_Mirror_Stand_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Mirror stand knocked over, the mirror on the mat";
+		model="\JP\furniture\living\jp_f_mirror_stand_tipped.p3d";
+	};
+	// jp_f_goban (living)
+	class StaticObj_JP_F_Goban_Go: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Go board with stones and bowls";
+		model="\JP\furniture\living\jp_f_goban_go.p3d";
+	};
+	class StaticObj_JP_F_Goban_Shogi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shogi board with pieces";
+		model="\JP\furniture\living\jp_f_goban_shogi.p3d";
+	};
+	class StaticObj_JP_F_Goban_Go_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Go board, a bowl tipped, stones strewn";
+		model="\JP\furniture\living\jp_f_goban_go_scattered.p3d";
+	};
+	class StaticObj_JP_F_Goban_Shogi_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shogi board, pieces strewn";
+		model="\JP\furniture\living\jp_f_goban_shogi_scattered.p3d";
+	};
+	// jp_f_toys (living)
+	class StaticObj_JP_F_Toys_Koma: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A spinning top and its string";
+		model="\JP\furniture\living\jp_f_toys_koma.p3d";
+	};
+	class StaticObj_JP_F_Toys_Hagoita: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A battledore and shuttlecock";
+		model="\JP\furniture\living\jp_f_toys_hagoita.p3d";
+	};
+	class StaticObj_JP_F_Toys_Doll: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A small cloth doll";
+		model="\JP\furniture\living\jp_f_toys_doll.p3d";
+	};
+	class StaticObj_JP_F_Toys_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Toys left on the floor together";
+		model="\JP\furniture\living\jp_f_toys_scattered.p3d";
+	};
+	// jp_f_shokudai (living)
+	class StaticObj_JP_F_Shokudai_Tall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tall lacquered candle stand, unlit";
+		model="\JP\furniture\living\jp_f_shokudai_tall.p3d";
+	};
+	class StaticObj_JP_F_Shokudai_Short: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Short iron candle stand";
+		model="\JP\furniture\living\jp_f_shokudai_short.p3d";
+	};
+	class StaticObj_JP_F_Shokudai_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Candle stand knocked over, the candle broken";
+		model="\JP\furniture\living\jp_f_shokudai_tipped.p3d";
+	};
+	// jp_f_straw_bed (living)
+	class StaticObj_JP_F_Straw_Bed_Pile: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw bedding under a straw mat";
+		model="\JP\furniture\living\jp_f_straw_bed_pile.p3d";
+	};
+	class StaticObj_JP_F_Straw_Bed_Quilt: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw bedding, a paper quilt thrown back";
+		model="\JP\furniture\living\jp_f_straw_bed_quilt.p3d";
+	};
+	class StaticObj_JP_F_Straw_Bed_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw bedding scattered and flattened";
+		model="\JP\furniture\living\jp_f_straw_bed_scattered.p3d";
+	};
 };

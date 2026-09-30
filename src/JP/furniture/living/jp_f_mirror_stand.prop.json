@@ -1,0 +1,165 @@
+{
+ "id": "jp_f_mirror_stand",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "living",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_mirror_stand.p3d",
+   "class": "StaticObj_JP_F_Mirror_Stand",
+   "variant": "covered",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Mirror stand, the mirror under its cloth",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 68,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.14,
+    0.14,
+    0.0,
+    0.52,
+    -0.11,
+    0.114
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.52,
+     "measured": 0.52,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "mirror stand (kyodai), bronze mirror under its cloth (LIFE_LAYER_ERA 32)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_mirror_stand.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_mirror_stand_open.p3d",
+   "class": "StaticObj_JP_F_Mirror_Stand_Open",
+   "variant": "open",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Mirror stand, the bronze mirror uncovered",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 60,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.14,
+    0.14,
+    0.0,
+    0.52,
+    -0.11,
+    0.114
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.52,
+     "measured": 0.52,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "mirror stand (kyodai), bronze mirror under its cloth (LIFE_LAYER_ERA 32)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_mirror_stand_open.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\living\\jp_f_mirror_stand_tipped.p3d",
+   "class": "StaticObj_JP_F_Mirror_Stand_Tipped",
+   "variant": "open",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Mirror stand knocked over, the mirror on the mat",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 100,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.264,
+    0.407,
+    0.0,
+    0.232,
+    -0.528,
+    0.537
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.52,
+     "measured": 0.52,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "mirror stand (kyodai), bronze mirror under its cloth (LIFE_LAYER_ERA 32)"
+   ],
+   "master": "spikes/L1/out/living/jp_f_mirror_stand_tipped.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 32,
+ "refs_local": []
+}
