@@ -223,5 +223,10 @@
     re-walk (steps in F1_PROGRESS.md).
   - Checks: B3a 113, L1 185, B3b 129, L2 81, TXT 66, shell 78, furnished 137, toilet 19, combos 60, all pass.
   - **Next: Stephen's ~10 min re-walk (TEST_CHECKLIST.md) closes G4.**
+- 2026-09-30: **G4 PASSED** (Stephen's re-walk: "everything looks good"). The well binds: server + client log
+  `[JPWell] Land_JP_S_Well_Tsurube_Curb_Stone at <1026.4, 25, 1053.3> IsWell=1`. **PHASE B DONE.**
+  - TODO: remove the WELL_DIAG diagnostic (F1_PROGRESS.md steps) when no server is running; the test server was
+    still up at the time (never stop it; do it on the next pack).
+  - Next: Phase C wave 1 (proposal to Stephen; nothing launched without his yes).
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
