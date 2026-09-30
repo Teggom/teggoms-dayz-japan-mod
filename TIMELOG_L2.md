@@ -50,3 +50,23 @@
 2026-09-30 14:26:07 | #40 | jp_s_stable_yard_trough_stone | variant (batch) | 5h 8% wk 26%
 2026-09-30 14:26:07 | #41 | jp_s_stable_yard_ab_saddle_fallen | abandoned (batch) | 5h 8% wk 26%
 2026-09-30 14:26:07 | GROUP START | #63 travel gear, #64 palanquin, #65 tenbin spill, #70 bench dressing, #73 stool, #74 footwear | - | 5h 8% wk 26%
+2026-09-30 14:28:51 | #42 | jp_s_travel_gear_set | new model (batch) | 5h 9% wk 27%
+2026-09-30 14:28:51 | #43 | jp_s_travel_gear_hat_stick | variant (batch) | 5h 9% wk 27%
+2026-09-30 14:28:51 | #44 | jp_s_travel_gear_ab_burst | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:51 | #45 | jp_s_kago_down | new model (batch) | 5h 9% wk 27%
+2026-09-30 14:28:51 | #46 | jp_s_kago_ab_tipped | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:51 | #47 | jp_s_kago_ab_broken | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:51 | #48 | jp_s_tenbin_spill_boxes | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:51 | #49 | jp_s_tenbin_spill_fish | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:51 | #50 | jp_s_tenbin_spill_veg | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #51 | jp_s_bench_dress_tea | new model (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #52 | jp_s_bench_dress_tobacco | variant (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #53 | jp_s_bench_dress_cloth | variant (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #54 | jp_s_bench_dress_ab_spilled | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #55 | jp_s_stool_std | new model (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #56 | jp_s_stool_ab_tipped | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #57 | jp_s_stool_ab_broken | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #58 | jp_s_footwear_pairs | new model (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #59 | jp_s_footwear_ab_scattered | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | #60 | jp_s_footwear_ab_single | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:28:52 | GROUP START | #66 fishing nets, #67 boat | - | 5h 9% wk 27%

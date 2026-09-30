@@ -1,0 +1,208 @@
+{
+ "id": "jp_s_tenbin_spill",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "street_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_tenbin_spill_boxes.p3d",
+   "class": "StaticObj_JP_S_Tenbin_Spill_Boxes",
+   "variant": "boxes",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Peddler's boxes overturned, goods spilled",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 76,
+    "Resolution 2": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -1.276,
+    1.249,
+    0.0,
+    0.3,
+    -0.32,
+    1.352
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.973,
+    -0.224,
+    0.848,
+    0.867
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text_life:chochin_iseya"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "boxes",
+     "expected": 2,
+     "measured": 2.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "extends B3b's jp_s_tenbin: the peddler's load overturned where the carrier dropped it"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_tenbin_spill_boxes.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_tenbin_spill_fish.p3d",
+   "class": "StaticObj_JP_S_Tenbin_Spill_Fish",
+   "variant": "fish",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Fish seller's tubs overturned, fish dried black",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 211,
+    "Resolution 2": 30,
+    "Geometry": 34,
+    "View Geometry": 34,
+    "Fire Geometry": 34
+   },
+   "bbox": [
+    -1.276,
+    1.249,
+    -0.0,
+    0.582,
+    -0.32,
+    1.352
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.977,
+    -0.224,
+    0.877,
+    0.777
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tubs",
+     "expected": 2,
+     "measured": 2.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "extends B3b's jp_s_tenbin: the peddler's load overturned where the carrier dropped it"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_tenbin_spill_fish.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_tenbin_spill_veg.p3d",
+   "class": "StaticObj_JP_S_Tenbin_Spill_Veg",
+   "variant": "baskets",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Vegetable baskets overturned, daikon rotted",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 282,
+    "Resolution 2": 6,
+    "Geometry": 26,
+    "View Geometry": 26,
+    "Fire Geometry": 26
+   },
+   "bbox": [
+    -1.276,
+    1.249,
+    0.0,
+    0.346,
+    -0.32,
+    1.5
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.945,
+    -0.224,
+    0.838,
+    0.775
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "baskets",
+     "expected": 2,
+     "measured": 2.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "extends B3b's jp_s_tenbin: the peddler's load overturned where the carrier dropped it"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_tenbin_spill_veg.p3d",
+   "mount": "road",
+   "mount_note": "on a road or highway, dropped: base centre on the ground (visual; never across a building door)",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#65",
+ "refs_local": [
+  "k28_kusakabe_peddler"
+ ]
+}
