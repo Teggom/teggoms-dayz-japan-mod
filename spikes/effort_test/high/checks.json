@@ -1,0 +1,430 @@
+{
+ "asset": "jp_f_tansu (effort test high)",
+ "checks": [
+  {
+   "id": "RT",
+   "name": "intact: MLOD reads back",
+   "pass": true,
+   "detail": [
+    "Fire Geometry",
+    "Geometry",
+    "LOD 10000",
+    "Memory",
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "View Geometry"
+   ]
+  },
+  {
+   "id": "C2",
+   "name": "intact: library materials only",
+   "pass": true,
+   "detail": {
+    "materials": [
+     "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+     "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w1.rvmat",
+     "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat"
+    ],
+    "bad": []
+   }
+  },
+  {
+   "id": "C5",
+   "name": "intact: LOD set + budget (furniture <=1000, brief <=1500)",
+   "pass": true,
+   "detail": {
+    "faces": {
+     "Resolution 1": 792,
+     "Resolution 2": 234,
+     "Resolution 3": 42,
+     "LOD 10000": 12,
+     "Geometry": 12,
+     "Memory": 0,
+     "View Geometry": 12,
+     "Fire Geometry": 12
+    },
+    "res2_ratio": 0.3,
+    "res3_ratio": 0.05
+   }
+  },
+  {
+   "id": "C4",
+   "name": "intact: carcass 1.00 x 0.45 x 1.00 (+-2 %)",
+   "pass": true,
+   "detail": {
+    "width": 1.0,
+    "depth": 0.45,
+    "height": 1.0,
+    "overall_res1_bbox": [
+     -0.516,
+     0.516,
+     -0.0025,
+     1.0025,
+     -0.225,
+     0.2335
+    ]
+   }
+  },
+  {
+   "id": "C6a",
+   "name": "intact: base at y=0 (visual and Geometry within 0-2 cm)",
+   "pass": true,
+   "detail": {
+    "res1_min_y": -0.0025,
+    "geo_min_y": 0.0
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "intact: Geometry components closed + convex, mass, autocenter=0",
+   "pass": true,
+   "detail": {
+    "components": 2,
+    "problems": {},
+    "mass": 45.0,
+    "props": {
+     "autocenter": "0"
+    }
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "intact: View Geometry components closed + convex",
+   "pass": true,
+   "detail": {
+    "components": 2,
+    "problems": {}
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "intact: Fire Geometry components closed + convex",
+   "pass": true,
+   "detail": {
+    "components": 2,
+    "problems": {}
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "intact: LOD 10000 components closed + convex",
+   "pass": true,
+   "detail": {
+    "note": "no Component selections (shadow volume)",
+    "faces": 12
+   }
+  },
+  {
+   "id": "C6b",
+   "name": "intact: no Geometry interpenetration > 1 cm",
+   "pass": true,
+   "detail": {
+    "worst_m": 0.0
+   }
+  },
+  {
+   "id": "LOOT",
+   "name": "intact: loot points (top at 1.00 x2)",
+   "pass": true,
+   "detail": {
+    "loot_top": [
+     [
+      -0.25,
+      1.0,
+      0.0
+     ],
+     [
+      0.25,
+      1.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "RT",
+   "name": "ransacked: MLOD reads back",
+   "pass": true,
+   "detail": [
+    "Fire Geometry",
+    "Geometry",
+    "LOD 10000",
+    "Memory",
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "View Geometry"
+   ]
+  },
+  {
+   "id": "C2",
+   "name": "ransacked: library materials only",
+   "pass": true,
+   "detail": {
+    "materials": [
+     "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+     "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w1.rvmat",
+     "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat"
+    ],
+    "bad": []
+   }
+  },
+  {
+   "id": "C5",
+   "name": "ransacked: LOD set + budget (furniture <=1000, brief <=1500)",
+   "pass": true,
+   "detail": {
+    "faces": {
+     "Resolution 1": 888,
+     "Resolution 2": 330,
+     "Resolution 3": 60,
+     "LOD 10000": 36,
+     "Geometry": 36,
+     "Memory": 0,
+     "View Geometry": 36,
+     "Fire Geometry": 36
+    },
+    "res2_ratio": 0.37,
+    "res3_ratio": 0.07
+   }
+  },
+  {
+   "id": "C4",
+   "name": "ransacked: carcass 1.00 x 0.45 x 1.00 (+-2 %)",
+   "pass": true,
+   "detail": {
+    "width": 1.0,
+    "depth": 0.45,
+    "height": 1.0,
+    "overall_res1_bbox": [
+     -0.516,
+     0.516,
+     -0.0025,
+     1.0025,
+     -0.225,
+     0.803
+    ]
+   }
+  },
+  {
+   "id": "C6a",
+   "name": "ransacked: base at y=0 (visual and Geometry within 0-2 cm)",
+   "pass": true,
+   "detail": {
+    "res1_min_y": -0.0025,
+    "geo_min_y": 0.0
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "ransacked: Geometry components closed + convex, mass, autocenter=0",
+   "pass": true,
+   "detail": {
+    "components": 6,
+    "problems": {},
+    "mass": 45.0,
+    "props": {
+     "autocenter": "0"
+    }
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "ransacked: View Geometry components closed + convex",
+   "pass": true,
+   "detail": {
+    "components": 6,
+    "problems": {}
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "ransacked: Fire Geometry components closed + convex",
+   "pass": true,
+   "detail": {
+    "components": 6,
+    "problems": {}
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "ransacked: LOD 10000 components closed + convex",
+   "pass": true,
+   "detail": {
+    "note": "no Component selections (shadow volume)",
+    "faces": 36
+   }
+  },
+  {
+   "id": "C6b",
+   "name": "ransacked: no Geometry interpenetration > 1 cm",
+   "pass": true,
+   "detail": {
+    "worst_m": 0.0
+   }
+  },
+  {
+   "id": "LOOT",
+   "name": "ransacked: loot points (top at 1.00 x2, 1 in the dropped drawer)",
+   "pass": true,
+   "detail": {
+    "loot_top": [
+     [
+      -0.25,
+      1.0,
+      0.0
+     ],
+     [
+      0.25,
+      1.0,
+      0.0
+     ]
+    ],
+    "loot_drawer": [
+     -0.001,
+     0.01,
+     0.55
+    ],
+    "dropped_drawer": {
+     "x": [
+      -0.495,
+      0.495
+     ],
+     "z": [
+      0.316,
+      0.803
+     ],
+     "zone_x": [
+      -0.5,
+      0.5
+     ],
+     "zone_z": [
+      0.225,
+      0.825
+     ]
+    },
+    "in_front_zone": true
+   }
+  },
+  {
+   "id": "C19",
+   "name": "matte wood rvmats: black env map + fresnel(0.01,0.01)",
+   "pass": true,
+   "detail": {
+    "wood_street_dark_w1": [
+     true,
+     true
+    ],
+    "wood_street_dark_w2": [
+     true,
+     true
+    ]
+   }
+  },
+  {
+   "id": "C1",
+   "name": "palette (mean _co vs palette entry, dE76)",
+   "pass": true,
+   "detail": [
+    {
+     "material": "jp_m_wood_street_dark_w1",
+     "mean_srgb": [
+      86.8,
+      58.5,
+      44.4
+     ],
+     "palette": "timber_interior",
+     "target": [
+      69,
+      52,
+      46
+     ],
+     "dE76": 9.0,
+     "tolerance": 14,
+     "pass": true
+    },
+    {
+     "material": "jp_m_wood_street_dark_w1",
+     "mean_srgb": [
+      86.8,
+      58.5,
+      44.4
+     ],
+     "palette": "timber_street_dark",
+     "target": [
+      84,
+      56,
+      42
+     ],
+     "dE76": 1.1,
+     "tolerance": 14,
+     "pass": true
+    },
+    {
+     "material": "jp_m_wood_street_dark_w2",
+     "mean_srgb": [
+      91.2,
+      67.0,
+      54.4
+     ],
+     "palette": "timber_interior",
+     "target": [
+      69,
+      52,
+      46
+     ],
+     "dE76": 9.0,
+     "tolerance": 14,
+     "pass": true
+    },
+    {
+     "material": "jp_m_metal_iron_w1",
+     "mean_srgb": [
+      78.6,
+      69.1,
+      62.8
+     ],
+     "palette": "iron_black",
+     "target": [
+      76,
+      72,
+      69
+     ],
+     "dE76": 3.5,
+     "tolerance": 10,
+     "pass": true
+    }
+   ]
+  },
+  {
+   "id": "CFG",
+   "name": "CfgConvert config.cpp + model.cfg (to bin and back)",
+   "pass": true,
+   "detail": [
+    "CfgConvert config.cpp: OK ",
+    "CfgConvert model.cfg: OK "
+   ]
+  },
+  {
+   "id": "BIN",
+   "name": "binarize: both ODOL, no warning/error lines",
+   "pass": true,
+   "detail": {
+    "odol_bytes": {
+     "intact": 54972,
+     "ransacked": 69889
+    },
+    "warning_lines": [],
+    "boilerplate_lines": 8,
+    "exit": 0
+   }
+  },
+  {
+   "id": "PBO",
+   "name": "packed",
+   "pass": true,
+   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_efftest_high.pbo"
+  }
+ ]
+}

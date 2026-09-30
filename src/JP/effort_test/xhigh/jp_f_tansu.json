@@ -1,0 +1,251 @@
+{
+ "id": "jp_f_tansu",
+ "name": "Clothing chest of drawers (isho-dansu), two stacked parts",
+ "made_by": "spikes/effort_test/xhigh/build.py (effort test, 2026-09-29)",
+ "variants": {
+  "": {
+   "p3d": "\\JP\\effort_test\\xhigh\\jp_f_tansu.p3d",
+   "class": "JP_EffTest_xhigh_Tansu",
+   "state": "intact, drawers shut, dusty"
+  },
+  "_ransacked": {
+   "p3d": "\\JP\\effort_test\\xhigh\\jp_f_tansu_ransacked.p3d",
+   "class": "JP_EffTest_xhigh_Tansu_Ransacked",
+   "state": "the lock drawer on the floor in front, three drawers pulled out, one shut",
+   "drawers": {
+    "L1": {
+     "state": "pull",
+     "pull_m": 0.18,
+     "opening": [
+      -0.48,
+      0.48,
+      0.26,
+      0.48
+     ],
+     "part": "lower"
+    },
+    "L2": {
+     "state": "pull",
+     "pull_m": 0.05,
+     "opening": [
+      -0.48,
+      0.48,
+      0.02,
+      0.24
+     ],
+     "part": "lower"
+    },
+    "U1_xneg": {
+     "state": "pull",
+     "pull_m": 0.2,
+     "opening": [
+      -0.476,
+      -0.01,
+      0.81,
+      0.98
+     ],
+     "part": "upper"
+    },
+    "U1_xpos": {
+     "state": "shut",
+     "pull_m": null,
+     "opening": [
+      0.01,
+      0.476,
+      0.81,
+      0.98
+     ],
+     "part": "upper"
+    },
+    "U2": {
+     "state": "drop",
+     "pull_m": null,
+     "opening": [
+      -0.476,
+      0.476,
+      0.52,
+      0.79
+     ],
+     "part": "upper"
+    }
+   },
+   "dropped": {
+    "drawer": "U2",
+    "pos": [
+     0.03,
+     0.0,
+     0.7
+    ],
+    "yaw_deg": -8.0,
+    "outer_m": [
+     0.948,
+     0.4,
+     0.266
+    ]
+   }
+  }
+ },
+ "datum": "origin = base centre on the floor; +y up; +z = the front (drawers); +x = the chest's own right (a viewer facing the drawers sees it on the LEFT); autocenter=0",
+ "size_m": {
+  "width": 1.0,
+  "depth": 0.45,
+  "height": 1.0,
+  "parts": [
+   0.5,
+   0.5
+  ],
+  "note": "body; iron fittings add up to 9 mm (side handles) and 10 mm (pulls)"
+ },
+ "connectors": [
+  {
+   "type": "proxy_base",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "on the floor against a wall, back 0.02 off the wall (BUILD_LIST row 26)"
+  }
+ ],
+ "footprint": {
+  "x": [
+   -0.5,
+   0.5
+  ],
+  "z": [
+   -0.225,
+   0.225
+  ]
+ },
+ "front_zone": {
+  "x": [
+   -0.55,
+   0.55
+  ],
+  "z": [
+   0.225,
+   1.125
+  ],
+  "rule": "kept clear by the decorator: no other prop, not part of a path or a clear band; state B's dropped drawer lies inside it"
+ },
+ "loot_surfaces": [
+  {
+   "surface": "top",
+   "height": 1.0,
+   "rect": {
+    "x": [
+     -0.47,
+     0.47
+    ],
+    "z": [
+     -0.2,
+     0.2
+    ]
+   },
+   "points": [
+    {
+     "name": "loot_top_1",
+     "model": [
+      -0.25,
+      1.0,
+      0.0
+     ],
+     "range": 0.2,
+     "surface": "top"
+    },
+    {
+     "name": "loot_top_2",
+     "model": [
+      0.25,
+      1.0,
+      0.0
+     ],
+     "range": 0.2,
+     "surface": "top"
+    }
+   ],
+   "container": "lootshelves",
+   "tag": "shelves",
+   "states": [
+    "",
+    "_ransacked"
+   ]
+  },
+  {
+   "surface": "dropped drawer bottom",
+   "height": 0.01,
+   "points": [
+    {
+     "name": "loot_drawer",
+     "model": [
+      0.03,
+      0.01,
+      0.7
+     ],
+     "range": 0.15,
+     "surface": "dropped drawer bottom (floor)"
+    }
+   ],
+   "container": "lootshelves",
+   "tag": "shelves",
+   "states": [
+    "_ransacked"
+   ],
+   "note": "the drawer's inside is about 0.90 x 0.35 m; range 0.15 keeps the item inside its walls"
+  }
+ ],
+ "loot_note": "BUILD_LIST row 26: top at 1.00, 2 points (range 0.2); ransacked: 1 point in the dropped drawer (floor). No Memory LOD (BUILD_LIST Q5 binding item 2): the points live here. The furnished house's generator adds them as lootshelves points and subtracts footprint + front zone from lootFloor.",
+ "materials": [
+  {
+   "surface": "body, drawer fronts",
+   "wanted": "jp_m_wood_interior (timber_interior), not built yet",
+   "used": "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat",
+   "why": "closest library wood to timber_interior (dE76 8.8 < tolerance 14); _w2 = dusty, pale edge wear"
+  },
+  {
+   "surface": "carcass inside (seen through the ransacked openings)",
+   "used": "JP\\common\\materials\\wood\\jp_m_wood_sooted_w0.rvmat",
+   "why": "near-black: stands in for the occlusion inside a closed cabinet"
+  },
+  {
+   "surface": "drawer boxes (sides, back, bottom)",
+   "used": "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat",
+   "why": "paler unfinished secondary wood, reads against the dark show faces"
+  },
+  {
+   "surface": "fittings",
+   "wanted": "jp_m_metal_iron (iron_black)",
+   "used": "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+   "why": "the planned material itself"
+  }
+ ],
+ "faces": {
+  "A": {
+   "Resolution 1": 600,
+   "Resolution 2": 155,
+   "Resolution 3": 21,
+   "Geometry": 6,
+   "View Geometry": 6,
+   "Fire Geometry": 6
+  },
+  "B": {
+   "Resolution 1": 663,
+   "Resolution 2": 178,
+   "Resolution 3": 44,
+   "Geometry": 54,
+   "View Geometry": 54,
+   "Fire Geometry": 54
+  }
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "room_tags": [
+  "sleeping",
+  "zashiki",
+  "living",
+  "office",
+  "storage"
+ ]
+}

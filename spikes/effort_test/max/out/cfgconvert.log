@@ -1,0 +1,3 @@
+CfgConvert -bin: rc=0 
+CfgConvert -txt: rc=0 
+round trip classes: ['CfgPatches', 'JP_EffTest_max', 'CfgVehicles', 'HouseNoDestruct', 'JP_EffTest_max_Tansu', 'JP_EffTest_max_Tansu_Ransacked']; models: ['\\JP\\effort_test\\max\\jp_f_tansu.p3d', '\\JP\\effort_test\\max\\jp_f_tansu_ransacked.p3d']; missing: []

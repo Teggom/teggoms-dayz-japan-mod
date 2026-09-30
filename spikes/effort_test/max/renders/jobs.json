@@ -1,0 +1,295 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\renders",
+ "res": [
+  600,
+  480
+ ],
+ "jobs": [
+  {
+   "out": "A_front",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu.p3d",
+   "lod": 1,
+   "view": {
+    "az": 0,
+    "el": 5,
+    "dist": 8,
+    "ortho": 1.32
+   },
+   "target": [
+    0,
+    0.5,
+    0
+   ],
+   "cap": "Intact, front (ortho): two boxes, 4 drawers, 2 ring pulls + an oval lock plate each, joint clasp"
+  },
+  {
+   "out": "A_34",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu.p3d",
+   "lod": 1,
+   "view": {
+    "az": 36,
+    "el": 18,
+    "dist": 4.1,
+    "lens": 45
+   },
+   "target": [
+    -0.28,
+    0.85,
+    0.0
+   ],
+   "human": [
+    -1.15,
+    -0.05
+   ],
+   "cap": "Intact 3/4 beside a 1.8 m figure: 1.00 x 0.45 x 1.00 m; dusty street_dark wood (_w2), iron _w1"
+  },
+  {
+   "out": "A_back",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu.p3d",
+   "lod": 1,
+   "view": {
+    "az": 212,
+    "el": 22,
+    "dist": 3.0,
+    "lens": 45
+   },
+   "target": [
+    0,
+    0.5,
+    0
+   ],
+   "cap": "Intact, back 3/4: back boards, corner caps on all 16 corners, side handles"
+  },
+  {
+   "out": "A_close",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu.p3d",
+   "lod": 1,
+   "view": {
+    "az": 34,
+    "el": 12,
+    "dist": 0.95,
+    "lens": 50,
+    "sun_off": 55
+   },
+   "target": [
+    0.3,
+    0.84,
+    0.13
+   ],
+   "cap": "Close-up: ring pull (kan) on its plate, lock plate + keyhole, corner cap, bail handle on the side"
+  },
+  {
+   "out": "B_front",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+   "lod": 1,
+   "view": {
+    "az": 0,
+    "el": 5,
+    "dist": 8,
+    "ortho": 1.4
+   },
+   "target": [
+    0.03,
+    0.5,
+    0.2
+   ],
+   "cap": "Ransacked, front (ortho): 3 drawers pulled out, the 4th on the floor"
+  },
+  {
+   "out": "B_34",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+   "lod": 1,
+   "view": {
+    "az": 36,
+    "el": 27,
+    "dist": 3.3,
+    "lens": 45
+   },
+   "target": [
+    0.0,
+    0.42,
+    0.28
+   ],
+   "cap": "Ransacked 3/4: the empty slot is dark (sooted faces stand in for shadow), drawer boxes raw wood"
+  },
+  {
+   "out": "B_34r",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+   "lod": 1,
+   "view": {
+    "az": -40,
+    "el": 27,
+    "dist": 3.3,
+    "lens": 45
+   },
+   "target": [
+    0.0,
+    0.42,
+    0.28
+   ],
+   "cap": "Ransacked, other side: the dropped drawer lies askew in the front zone"
+  },
+  {
+   "out": "B_close",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+   "lod": 1,
+   "view": {
+    "az": 18,
+    "el": 40,
+    "dist": 1.45,
+    "lens": 45,
+    "sun_off": 25
+   },
+   "target": [
+    0.0,
+    0.5,
+    0.33
+   ],
+   "cap": "Close-up into the pulled drawers and the empty slot; loot lies in the dropped drawer"
+  },
+  {
+   "out": "A_res2",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu.p3d",
+   "lod": 2,
+   "view": {
+    "az": 38,
+    "el": 22,
+    "dist": 3.0,
+    "lens": 45
+   },
+   "target": [
+    0,
+    0.5,
+    0
+   ],
+   "cap": "Intact, Resolution 2: fittings as blocks, front corner caps only"
+  },
+  {
+   "out": "A_res3",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu.p3d",
+   "lod": 3,
+   "view": {
+    "az": 38,
+    "el": 22,
+    "dist": 3.0,
+    "lens": 45
+   },
+   "target": [
+    0,
+    0.5,
+    0
+   ],
+   "cap": "Intact, Resolution 3: two blocks + four drawer fronts"
+  },
+  {
+   "out": "B_res2",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+   "lod": 2,
+   "view": {
+    "az": 36,
+    "el": 27,
+    "dist": 3.3,
+    "lens": 45
+   },
+   "target": [
+    0.0,
+    0.42,
+    0.28
+   ],
+   "cap": "Ransacked, Resolution 2"
+  },
+  {
+   "out": "B_res3",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+   "lod": 3,
+   "view": {
+    "az": 36,
+    "el": 27,
+    "dist": 3.3,
+    "lens": 45
+   },
+   "target": [
+    0.0,
+    0.42,
+    0.28
+   ],
+   "cap": "Ransacked, Resolution 3: blocks, the dark slot and the hollow floor drawer kept"
+  },
+  {
+   "out": "B_coll",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+   "lod": 1,
+   "ghost": true,
+   "overlay": [
+    "geo",
+    "view"
+   ],
+   "view": {
+    "az": 36,
+    "el": 27,
+    "dist": 3.3,
+    "lens": 45
+   },
+   "target": [
+    0.0,
+    0.42,
+    0.28
+   ],
+   "cap": "Ransacked collision: Geometry (red, 10 convex parts, the floor drawer hollow) and View/Fire (blue, 6)"
+  },
+  {
+   "out": "B_top",
+   "p3d": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+   "lod": 1,
+   "view": {
+    "az": 0,
+    "el": 89.5,
+    "dist": 6,
+    "ortho": 1.75,
+    "sun_off": 30
+   },
+   "target": [
+    0.05,
+    0.5,
+    0.33
+   ],
+   "markers": [
+    [
+     -0.25,
+     1.0,
+     0.0
+    ],
+    [
+     0.25,
+     1.0,
+     0.0
+    ],
+    [
+     0.1212,
+     0.01,
+     0.6416
+    ]
+   ],
+   "zone": [
+    -0.52,
+    0.66,
+    0.225,
+    1.01
+   ],
+   "cap": "Top view: loot points (green: 2 on the top, 1 in the dropped drawer) and the front zone (yellow)"
+  }
+ ],
+ "save_blend": {
+  "path": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\tansu_preview.blend",
+  "models": [
+   [
+    "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu.p3d",
+    0.0
+   ],
+   [
+    "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\spikes\\effort_test\\max\\out\\jp_f_tansu_ransacked.p3d",
+    1.6
+   ]
+  ]
+ }
+}

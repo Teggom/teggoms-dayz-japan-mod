@@ -1,0 +1,20 @@
+<!-- jp_f_tansu loot surfaces (effort test xhigh). Reference only: a furnished house's generator transforms these into the house frame. CE frame: lx = model z, ly = model y, lz = -model x. -->
+<group name="JP_EffTest_xhigh_Tansu">
+	<container name="lootshelves">
+		<category name="tools" />
+		<category name="clothes" />
+		<tag name="shelves" />
+		<point pos="0.000000 1.000000 0.250000" range="0.200000" height="0.500000" />  <!-- loot_top_1 -->
+		<point pos="0.000000 1.000000 -0.250000" range="0.200000" height="0.500000" />  <!-- loot_top_2 -->
+	</container>
+</group>
+<group name="JP_EffTest_xhigh_Tansu_Ransacked">
+	<container name="lootshelves">
+		<category name="tools" />
+		<category name="clothes" />
+		<tag name="shelves" />
+		<point pos="0.000000 1.000000 0.250000" range="0.200000" height="0.500000" />  <!-- loot_top_1 -->
+		<point pos="0.000000 1.000000 -0.250000" range="0.200000" height="0.500000" />  <!-- loot_top_2 -->
+		<point pos="0.700000 0.010000 -0.030000" range="0.150000" height="0.375000" />  <!-- loot_drawer -->
+	</container>
+</group>

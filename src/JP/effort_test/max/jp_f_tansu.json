@@ -1,0 +1,209 @@
+{
+ "id": "jp_f_tansu",
+ "build_list_row": 26,
+ "name": "Clothing chest of drawers (isho-dansu), two stacked parts",
+ "tiers": [
+  2,
+  3
+ ],
+ "room_tags": [
+  "zashiki",
+  "sleeping"
+ ],
+ "level": "standard",
+ "frame": "origin = base centre on the floor (autocenter=0); +y up; +z = front (drawers); p3d x right",
+ "dims_m": {
+  "width": 1.0,
+  "depth": 0.45,
+  "height": 1.0,
+  "box_height": 0.5,
+  "drawers": 4,
+  "drawer_front": [
+   0.954,
+   0.214
+  ],
+  "drawer_depth": 0.41
+ },
+ "footprint_xz": [
+  -0.5,
+  -0.225,
+  0.5,
+  0.225
+ ],
+ "materials": {
+  "body": "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat (stand-in for jp_m_wood_interior; palette timber_street_dark, C1 vs timber_interior dE 8.8/14)",
+  "drawer_boxes": "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat (raw wood inside; C1 vs timber_interior dE 10.2/14)",
+  "cavity": "JP\\common\\materials\\wood\\jp_m_wood_sooted_w0.rvmat (faces looking into the carcass: stands in for shadow)",
+  "fittings": "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat (iron_black)",
+  "fire": "dz\\data\\data\\penetration\\wood.rvmat"
+ },
+ "mass_kg": 45.0,
+ "states": {
+  "intact": {
+   "p3d": "JP\\effort_test\\max\\jp_f_tansu.p3d",
+   "class": "JP_EffTest_max_Tansu",
+   "lod_faces": {
+    "Resolution 1": 778,
+    "Resolution 2": 246,
+    "Resolution 3": 36,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "container": "lootshelves",
+     "tag": "shelves",
+     "height": 1.0,
+     "rect_xz": [
+      -0.5,
+      -0.225,
+      0.5,
+      0.225
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       -0.25,
+       1.0,
+       0.0
+      ],
+      [
+       0.25,
+       1.0,
+       0.0
+      ]
+     ],
+     "ce_points": [
+      [
+       0.0,
+       1.0,
+       0.25
+      ],
+      [
+       0.0,
+       1.0,
+       -0.25
+      ]
+     ]
+    }
+   ],
+   "front_zone_xz": {
+    "x": [
+     -0.52,
+     0.52
+    ],
+    "z": [
+     0.225,
+     0.66
+    ],
+    "why": "a drawer pulled fully out (+ its ring pulls)"
+   }
+  },
+  "ransacked": {
+   "p3d": "JP\\effort_test\\max\\jp_f_tansu_ransacked.p3d",
+   "class": "JP_EffTest_max_Tansu_Ransacked",
+   "lod_faces": {
+    "Resolution 1": 874,
+    "Resolution 2": 342,
+    "Resolution 3": 84,
+    "Geometry": 60,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "container": "lootshelves",
+     "tag": "shelves",
+     "height": 1.0,
+     "rect_xz": [
+      -0.5,
+      -0.225,
+      0.5,
+      0.225
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       -0.25,
+       1.0,
+       0.0
+      ],
+      [
+       0.25,
+       1.0,
+       0.0
+      ]
+     ],
+     "ce_points": [
+      [
+       0.0,
+       1.0,
+       0.25
+      ],
+      [
+       0.0,
+       1.0,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "name": "dropped_drawer",
+     "container": "lootshelves",
+     "tag": "shelves",
+     "height": 0.01,
+     "poly_xz": [
+      [
+       -0.2597,
+       0.319
+      ],
+      [
+       0.619,
+       0.6046
+      ],
+      [
+       0.5022,
+       0.9641
+      ],
+      [
+       -0.3766,
+       0.6785
+      ]
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.1212,
+       0.01,
+       0.6416
+      ]
+     ],
+     "note": "inside the dropped drawer on the floor (bottom board top face); range 0.15 keeps it inside the 0.92 x 0.38 m inner bottom",
+     "ce_points": [
+      [
+       0.6416,
+       0.01,
+       -0.1212
+      ]
+     ]
+    }
+   ],
+   "front_zone_xz": {
+    "x": [
+     -0.52,
+     0.66
+    ],
+    "z": [
+     0.225,
+     1.01
+    ],
+    "why": "pulled drawers + the dropped drawer (inside this zone)"
+   }
+  }
+ },
+ "loot_note": "BUILD_LIST row 26: top at 1.00: 2 points (range 0.2); ransacked: 1 point in the dropped drawer (floor). Container lootshelves / tag shelves (Q5). ce_points = CE frame (mz, my, -mx).",
+ "made_by": "japan_dev/spikes/effort_test/max/build.py"
+}

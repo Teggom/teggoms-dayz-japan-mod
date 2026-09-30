@@ -1,0 +1,270 @@
+{
+ "asset": "jp_f_tansu (effort test xhigh)",
+ "faces": {
+  "A": {
+   "Resolution 1": 600,
+   "Resolution 2": 155,
+   "Resolution 3": 21,
+   "Geometry": 6,
+   "View Geometry": 6,
+   "Fire Geometry": 6
+  },
+  "B": {
+   "Resolution 1": 663,
+   "Resolution 2": 178,
+   "Resolution 3": 44,
+   "Geometry": 54,
+   "View Geometry": 54,
+   "Fire Geometry": 54
+  }
+ },
+ "pass": 49,
+ "total": 49,
+ "checks": [
+  {
+   "check": "A C5 LOD set (BUILD_LIST: Res 1-3, Geo, View, Fire, no Memory)",
+   "ok": true,
+   "detail": "Resolution 1 600, Resolution 2 155, Resolution 3 21, Geometry 6, View Geometry 6, Fire Geometry 6"
+  },
+  {
+   "check": "A C5 budget Res 1 <= 1000 faces, <= 1500 triangles",
+   "ok": true,
+   "detail": "Res 1 600 faces = 1200 triangles (vanilla case_d 148, case_a 120 triangles)"
+  },
+  {
+   "check": "A C5 LOD chain decreasing",
+   "ok": true,
+   "detail": "Res 2 = 26 % of Res 1, Res 3 = 4 % (playbook ratio ~38 % / 13 %); triangles {'Resolution 1': 1200, 'Resolution 2': 310, 'Resolution 3': 42}"
+  },
+  {
+   "check": "A C2 library only",
+   "ok": true,
+   "detail": "every texture / rvmat under JP\\common\\materials (on disk) or a vanilla penetration rvmat"
+  },
+  {
+   "check": "A C8 era lint",
+   "ok": true,
+   "detail": "materials: street_dark / weathered / sooted wood + wrought iron only"
+  },
+  {
+   "check": "A C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "A C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "A C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "A C7 Fire penetration rvmats",
+   "ok": true,
+   "detail": "dz\\data\\data\\penetration\\wood.rvmat"
+  },
+  {
+   "check": "A C7 Geometry mass + autocenter=0",
+   "ok": true,
+   "detail": "mass 45.00 kg over 8 points (by component volume), properties {'autocenter': '0'}"
+  },
+  {
+   "check": "A C6 base on the floor (0-2 cm)",
+   "ok": true,
+   "detail": "R1 0.0000, R2 0.0000, R3 0.0000, Geometry 0.0000, View Geometry 0.0000, Fire Geometry 0.0000"
+  },
+  {
+   "check": "A C4 body 1.00 x 0.45 x 1.00 (+-1 cm / 2 %)",
+   "ok": true,
+   "detail": "wood body 1.000 x 0.450 x 1.000 m (w x d x h); with fittings 1.018 x 0.456 x 1.002"
+  },
+  {
+   "check": "A C4 two stacked parts of 0.50",
+   "ok": true,
+   "detail": "lower 0.00-0.50, upper 0.50-1.00 (upper 4 mm smaller at front and sides)"
+  },
+  {
+   "check": "A C4 drawers 4-5, iron ring pulls, side handles",
+   "ok": true,
+   "detail": "5 drawers (2 small over 1 wide in the upper part, 2 wide in the lower), 8 ring pulls, 3 lock plates, 4 side handles, 10 corner plates; 521 iron faces"
+  },
+  {
+   "check": "A visual Resolution 1: no degenerate / z-fighting faces",
+   "ok": true,
+   "detail": "0 degenerate, 0 coplanar overlapping pairs"
+  },
+  {
+   "check": "A visual Resolution 2: no degenerate / z-fighting faces",
+   "ok": true,
+   "detail": "0 degenerate, 0 coplanar overlapping pairs"
+  },
+  {
+   "check": "A visual Resolution 3: no degenerate / z-fighting faces",
+   "ok": true,
+   "detail": "0 degenerate, 0 coplanar overlapping pairs"
+  },
+  {
+   "check": "A C6 no interpenetration > 1 cm between pieces",
+   "ok": true,
+   "detail": "worst 0.0 mm (none)"
+  },
+  {
+   "check": "A C6 loot loot_top_1 on the top",
+   "ok": true,
+   "detail": "Geometry top at 1.000 under the point (1.000); range 0.20 inside the top: True"
+  },
+  {
+   "check": "A C6 loot loot_top_2 on the top",
+   "ok": true,
+   "detail": "Geometry top at 1.000 under the point (1.000); range 0.20 inside the top: True"
+  },
+  {
+   "check": "A loot note in the sidecar (BUILD_LIST row 26)",
+   "ok": true,
+   "detail": "jp_f_tansu.json loot_surfaces: loot_top_1, loot_top_2"
+  },
+  {
+   "check": "B C5 LOD set (BUILD_LIST: Res 1-3, Geo, View, Fire, no Memory)",
+   "ok": true,
+   "detail": "Resolution 1 663, Resolution 2 178, Resolution 3 44, Geometry 54, View Geometry 54, Fire Geometry 54"
+  },
+  {
+   "check": "B C5 budget Res 1 <= 1000 faces, <= 1500 triangles",
+   "ok": true,
+   "detail": "Res 1 663 faces = 1326 triangles (vanilla case_d 148, case_a 120 triangles)"
+  },
+  {
+   "check": "B C5 LOD chain decreasing",
+   "ok": true,
+   "detail": "Res 2 = 27 % of Res 1, Res 3 = 7 % (playbook ratio ~38 % / 13 %); triangles {'Resolution 1': 1326, 'Resolution 2': 356, 'Resolution 3': 88}"
+  },
+  {
+   "check": "B C2 library only",
+   "ok": true,
+   "detail": "every texture / rvmat under JP\\common\\materials (on disk) or a vanilla penetration rvmat"
+  },
+  {
+   "check": "B C8 era lint",
+   "ok": true,
+   "detail": "materials: street_dark / weathered / sooted wood + wrought iron only"
+  },
+  {
+   "check": "B C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "B C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "B C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "B C7 Fire penetration rvmats",
+   "ok": true,
+   "detail": "dz\\data\\data\\penetration\\wood.rvmat"
+  },
+  {
+   "check": "B C7 Geometry mass + autocenter=0",
+   "ok": true,
+   "detail": "mass 45.00 kg over 72 points (by component volume), properties {'autocenter': '0'}"
+  },
+  {
+   "check": "B C6 base on the floor (0-2 cm)",
+   "ok": true,
+   "detail": "R1 0.0000, R2 0.0000, R3 0.0000, Geometry 0.0000, View Geometry 0.0000, Fire Geometry 0.0000"
+  },
+  {
+   "check": "B visual Resolution 1: no degenerate / z-fighting faces",
+   "ok": true,
+   "detail": "0 degenerate, 0 coplanar overlapping pairs"
+  },
+  {
+   "check": "B visual Resolution 2: no degenerate / z-fighting faces",
+   "ok": true,
+   "detail": "0 degenerate, 0 coplanar overlapping pairs"
+  },
+  {
+   "check": "B visual Resolution 3: no degenerate / z-fighting faces",
+   "ok": true,
+   "detail": "0 degenerate, 0 coplanar overlapping pairs"
+  },
+  {
+   "check": "B C6 no interpenetration > 1 cm between pieces",
+   "ok": true,
+   "detail": "worst 4.0 mm (body / pulled_U1_xneg)"
+  },
+  {
+   "check": "B C6 loot loot_top_1 on the top",
+   "ok": true,
+   "detail": "Geometry top at 1.000 under the point (1.000); range 0.20 inside the top: True"
+  },
+  {
+   "check": "B C6 loot loot_top_2 on the top",
+   "ok": true,
+   "detail": "Geometry top at 1.000 under the point (1.000); range 0.20 inside the top: True"
+  },
+  {
+   "check": "B C6 loot loot_drawer in the dropped drawer",
+   "ok": true,
+   "detail": "drawer bottom (Geometry) at 0.010 under the point (0.010); range 0.15 inside the walls: True"
+  },
+  {
+   "check": "B loot note in the sidecar (BUILD_LIST row 26)",
+   "ok": true,
+   "detail": "jp_f_tansu.json loot_surfaces: loot_drawer, loot_top_1, loot_top_2"
+  },
+  {
+   "check": "B C6 dropped drawer inside the front zone",
+   "ok": true,
+   "detail": "zone x [-0.55, 0.55] z [0.225, 1.125]; drawer spans x -0.467..0.527, z 0.436..0.964 (Geometry + Res 1)"
+  },
+  {
+   "check": "C19 matte finish (wood), iron glossy by design",
+   "ok": true,
+   "detail": "4 rvmats: jp_m_metal_iron_w1.rvmat, jp_m_wood_sooted_w0.rvmat, jp_m_wood_street_dark_w2.rvmat, jp_m_wood_weathered_w1.rvmat"
+  },
+  {
+   "check": "C1 palette (whole-texture means)",
+   "ok": true,
+   "detail": "jp_m_metal_iron_w1 mean (78,69,62) vs iron_black dE 3.5 (tol 10) | jp_m_wood_sooted_w0 mean (38,29,23) vs timber_sooted dE 1.0 (tol 12) | jp_m_wood_street_dark_w2 mean (91,67,54) vs timber_street_dark dE 5.2 (tol 14); vs the wanted timber_interior dE 9.0 (tol 14) | jp_m_wood_weathered_w1 mean (111,80,71) vs timber_weathered dE 2.6 (tol 14)"
+  },
+  {
+   "check": "CfgConvert config.cpp + model.cfg (to bin and back)",
+   "ok": true,
+   "detail": "config.cpp: no output | model.cfg: no output"
+  },
+  {
+   "check": "binarize clean",
+   "ok": true,
+   "detail": "both p3d -> ODOL (jp_f_tansu.p3d 47011 B, jp_f_tansu_ransacked.p3d 65052 B); 42 log lines, flagged 0, unexplained 0 (the rest is the same config noise as the machiya's log); spikes\\effort_test\\xhigh\\out\\binarize.log"
+  },
+  {
+   "check": "A ODOL read-back",
+   "ok": true,
+   "detail": "ODOL v55, autoCenter 0, LODs [1.0, 2.0, 3.0, '1e+13', '6e+15', '7e+15'], faces [600, 155, 21, 6, 6, 6], bbox y 0.000..1.002, 3 texture paths all library"
+  },
+  {
+   "check": "B ODOL read-back",
+   "ok": true,
+   "detail": "ODOL v55, autoCenter 0, LODs [1.0, 2.0, 3.0, '1e+13', '6e+15', '7e+15'], faces [663, 178, 44, 54, 54, 54], bbox y 0.000..1.002, 4 texture paths all library"
+  },
+  {
+   "check": "PBO contents",
+   "ok": true,
+   "detail": "@Japan\\addons\\jp_efftest_xhigh.pbo: prefix JP\\effort_test\\xhigh, entries ['config.cpp', 'jp_f_tansu.p3d', 'jp_f_tansu_ransacked.p3d'], p3d ODOL {'jp_f_tansu.p3d': True, 'jp_f_tansu_ransacked.p3d': True}, SHA-1 trailer OK, 113378 bytes"
+  },
+  {
+   "check": "config: one CfgPatches, two static classes, models exist, no map coupling",
+   "ok": true,
+   "detail": "CfgPatches ['JP_EffTest_xhigh'], requiredAddons {\"DZ_Data\", \"JP_Common\"}, classes ['JP_EffTest_xhigh_Tansu', 'JP_EffTest_xhigh_Tansu_Ransacked']"
+  }
+ ]
+}

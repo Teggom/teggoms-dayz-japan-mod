@@ -1,0 +1,32 @@
+00:02.312  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\a_front.png'
+00:02.515  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\a_34.png'
+00:02.703  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\a_back.png'
+00:02.921  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\a_close.png'
+00:03.125  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\b_front.png'
+00:03.312  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\b_34.png'
+00:03.515  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\b_back.png'
+00:03.703  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\b_close.png'
+00:03.906  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\a_lod2.png'
+00:04.109  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\a_lod3.png'
+00:04.312  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\b_lod2.png'
+00:04.531  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\renders\b_geo.png'
+rendered a_front
+rendered a_34
+rendered a_back
+rendered a_close
+rendered b_front
+rendered b_34
+rendered b_back
+rendered b_close
+rendered a_lod2
+rendered a_lod3
+rendered b_lod2
+rendered b_geo
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit
+
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\render.py:128: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  red.use_nodes = True
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\high\render.py:72: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True

@@ -1,0 +1,252 @@
+{
+ "level": "max",
+ "states": {
+  "intact": {
+   "faces": {
+    "Resolution 1": 778,
+    "Resolution 2": 246,
+    "Resolution 3": 36,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 778, Resolution 2 246, Resolution 3 36, Geometry 12, View Geometry 12, Fire Geometry 12"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C5 LOD set = vanilla furniture (Res 1-3, Geometry, View, Fire)",
+     "ok": true,
+     "detail": "Fire Geometry, Geometry, Resolution 1, Resolution 2, Resolution 3, View Geometry"
+    },
+    {
+     "check": "C5 budget Resolution 1 <= 1000",
+     "ok": true,
+     "detail": "778 faces"
+    },
+    {
+     "check": "C5 budget Resolution 2 <= 400",
+     "ok": true,
+     "detail": "246 faces"
+    },
+    {
+     "check": "C5 budget Resolution 3 <= 130",
+     "ok": true,
+     "detail": "36 faces"
+    },
+    {
+     "check": "Geometry props + mass",
+     "ok": true,
+     "detail": "props {'autocenter': '0'}, mass 45.00 kg on 16 points"
+    },
+    {
+     "check": "C4 width",
+     "ok": true,
+     "detail": "expected 1.000 (BUILD_LIST row 26), measured 1.0000"
+    },
+    {
+     "check": "C4 depth",
+     "ok": true,
+     "detail": "expected 0.450 (BUILD_LIST row 26), measured 0.4500"
+    },
+    {
+     "check": "C4 height",
+     "ok": true,
+     "detail": "expected 1.000 (BUILD_LIST row 26), measured 1.0000"
+    },
+    {
+     "check": "C4 two stacked boxes of 0.50 (joint height)",
+     "ok": true,
+     "detail": "expected 0.500 (BUILD_LIST row 26), measured 0.5000"
+    },
+    {
+     "check": "C4 drawers: 4, iron ring pulls 2 per drawer, side handles 4",
+     "ok": true,
+     "detail": "rings 8, grips 4, locks 4"
+    },
+    {
+     "check": "C6 base on the floor (0-2 cm)",
+     "ok": true,
+     "detail": "lowest point y = 0.0000, top 1.0020"
+    },
+    {
+     "check": "C6 no interpenetration > 1 cm between separate pieces (Geometry)",
+     "ok": true,
+     "detail": "2 components, clear"
+    },
+    {
+     "check": "C6 loot points on a Geometry top, >= 0.25 m clear above",
+     "ok": true,
+     "detail": "top (-0.250, 1.000, 0.000): on Component02, clear above 9.90 m; top (0.250, 1.000, 0.000): on Component02, clear above 9.90 m"
+    },
+    {
+     "check": "C19 matte finish (non-glossy rvmats have the black env map)",
+     "ok": true,
+     "detail": "3 rvmats: jp_m_metal_iron_w1.rvmat, jp_m_wood_sooted_w0.rvmat, jp_m_wood_street_dark_w2.rvmat"
+    },
+    {
+     "check": "ODOL in src (binarized, version 55)",
+     "ok": true,
+     "detail": "6 LODs: Resolution 1, Resolution 2, Resolution 3, Geometry, View Geometry, Fire Geometry"
+    }
+   ]
+  },
+  "ransacked": {
+   "faces": {
+    "Resolution 1": 874,
+    "Resolution 2": 342,
+    "Resolution 3": 84,
+    "Geometry": 60,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 874, Resolution 2 342, Resolution 3 84, Geometry 60, View Geometry 36, Fire Geometry 36"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "10 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C5 LOD set = vanilla furniture (Res 1-3, Geometry, View, Fire)",
+     "ok": true,
+     "detail": "Fire Geometry, Geometry, Resolution 1, Resolution 2, Resolution 3, View Geometry"
+    },
+    {
+     "check": "C5 budget Resolution 1 <= 1000",
+     "ok": true,
+     "detail": "874 faces"
+    },
+    {
+     "check": "C5 budget Resolution 2 <= 400",
+     "ok": true,
+     "detail": "342 faces"
+    },
+    {
+     "check": "C5 budget Resolution 3 <= 130",
+     "ok": true,
+     "detail": "84 faces"
+    },
+    {
+     "check": "Geometry props + mass",
+     "ok": true,
+     "detail": "props {'autocenter': '0'}, mass 45.00 kg on 80 points"
+    },
+    {
+     "check": "C4 width",
+     "ok": true,
+     "detail": "expected 1.000 (BUILD_LIST row 26), measured 1.0000"
+    },
+    {
+     "check": "C4 depth",
+     "ok": true,
+     "detail": "expected 0.450 (BUILD_LIST row 26), measured 0.4500"
+    },
+    {
+     "check": "C4 height",
+     "ok": true,
+     "detail": "expected 1.000 (BUILD_LIST row 26), measured 1.0000"
+    },
+    {
+     "check": "C4 two stacked boxes of 0.50 (joint height)",
+     "ok": true,
+     "detail": "expected 0.500 (BUILD_LIST row 26), measured 0.5000"
+    },
+    {
+     "check": "C4 drawers: 4, iron ring pulls 2 per drawer, side handles 4",
+     "ok": true,
+     "detail": "rings 8, grips 4, locks 4"
+    },
+    {
+     "check": "C6 base on the floor (0-2 cm)",
+     "ok": true,
+     "detail": "lowest point y = 0.0000, top 1.0020"
+    },
+    {
+     "check": "C6 no interpenetration > 1 cm between separate pieces (Geometry)",
+     "ok": true,
+     "detail": "10 components, clear"
+    },
+    {
+     "check": "C6 loot points on a Geometry top, >= 0.25 m clear above",
+     "ok": true,
+     "detail": "top (-0.250, 1.000, 0.000): on Component05, clear above 9.90 m; top (0.250, 1.000, 0.000): on Component05, clear above 9.90 m; dropped_drawer (0.121, 0.010, 0.642): on Component06, clear above 0.38 m"
+    },
+    {
+     "check": "C6 drawer boxes inside their cavities (drooped drawer included)",
+     "ok": true,
+     "detail": "all vertices inside; droop {'L1': 6.2}; closest approach to the board above 0.0010 m"
+    },
+    {
+     "check": "Dropped drawer inside the front zone",
+     "ok": true,
+     "detail": "drawer z 0.303..0.988, zone z 0.225..1.010, x -0.520..0.660"
+    },
+    {
+     "check": "C19 matte finish (non-glossy rvmats have the black env map)",
+     "ok": true,
+     "detail": "4 rvmats: jp_m_metal_iron_w1.rvmat, jp_m_wood_sooted_w0.rvmat, jp_m_wood_street_dark_w2.rvmat, jp_m_wood_weathered_w2.rvmat"
+    },
+    {
+     "check": "ODOL in src (binarized, version 55)",
+     "ok": true,
+     "detail": "6 LODs: Resolution 1, Resolution 2, Resolution 3, Geometry, View Geometry, Fire Geometry"
+    }
+   ]
+  }
+ },
+ "binarize_ok": true,
+ "cfgconvert_ok": true,
+ "pbo": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_efftest_max.pbo"
+}

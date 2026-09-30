@@ -1,0 +1,44 @@
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\effort_test\xhigh -binpath=P:\bin P:\JP\effort_test\xhigh D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\xhigh\_build\binarized *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\effort_test\xhigh -binpath=P:\bin P:\JP\effort_test\xhigh D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\xhigh\_build\binarized *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\effort_test\xhigh\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\effort_test\xhigh\jp_f_tansu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\xhigh\_build\binarized\jp_f_tansu.p3d
+<model = "P:\JP\effort_test\xhigh\jp_f_tansu.p3d">
+</model>
+Convert model P:\JP\effort_test\xhigh\jp_f_tansu_ransacked.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\xhigh\_build\binarized\jp_f_tansu_ransacked.p3d
+<model = "P:\JP\effort_test\xhigh\jp_f_tansu_ransacked.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\effort_test\xhigh\jp_f_tansu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\effort_test\xhigh\jp_f_tansu_ransacked.p3d: 0.00,0.00

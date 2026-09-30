@@ -1,0 +1,40 @@
+00:02.344  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\A_front.png'
+00:02.625  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\A_34.png'
+00:02.906  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\A_back.png'
+00:03.172  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\A_close.png'
+00:03.484  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\B_front.png'
+00:03.765  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\B_34.png'
+00:04.047  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\B_34r.png'
+00:04.328  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\B_close.png'
+00:04.594  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\A_res2.png'
+00:04.875  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\A_res3.png'
+00:05.172  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\B_res2.png'
+00:05.437  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\B_res3.png'
+00:05.734  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\B_coll.png'
+00:06.031  render           | Saved: 'D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\renders\B_top.png'
+rendered A_front
+rendered A_34
+rendered A_back
+rendered A_close
+rendered B_front
+rendered B_34
+rendered B_34r
+rendered B_close
+rendered A_res2
+rendered A_res3
+rendered B_res2
+rendered B_res3
+rendered B_coll
+rendered B_top
+Info: Saved as "tansu_preview.blend"
+saved D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\tansu_preview.blend
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit
+
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\render_blend.py:211: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w.use_nodes = True
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\render_blend.py:93: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\effort_test\max\render_blend.py:50: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True

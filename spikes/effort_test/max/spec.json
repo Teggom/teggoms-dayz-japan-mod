@@ -1,0 +1,28 @@
+{
+ "id": "jp_f_tansu",
+ "build_list_row": 26,
+ "research_level": "standard (PLAYBOOK 11): 2 photo references (one a surviving piece in an Edo-period house, one a museum reconstruction), one text source for the date",
+ "references": {
+  "i07": "data/research_int/refs/i07_edo_nagaya_room.jpg - Fukagawa Edo Museum tenement room (Tenpo-era reconstruction): a two-part isho-dansu, 2 full-width drawers per box, 2 iron ring pulls and an oval lock plate per drawer, iron clasp across the joint, T/L corner fittings, a side carrying handle. Photo DryPot, CC BY 2.5, Wikimedia Commons",
+  "i01": "data/research_int/refs/i01_kasuya_irori.jpg - former Kasuya house (surviving Edo farmhouse, Itabashi): two stacked chests, weathered dusty grey-brown sugi, iron corner plates, vertical bail handle high on the side of the upper box, lock plate. Photo Asanagi, CC0, Wikimedia Commons",
+  "N06": "research/interior/refs_index.json N06 - tansu appear in Osaka in the Kanbun era (1661-73), spread from the Shotoku era (1711-16), costly: T2-3 only in 1730"
+ },
+ "dimensions": [
+  {"name": "width", "value_m": 1.00, "source": "BUILD_LIST row 26 (assumed there)", "measured_by": "checks.json C4 (Resolution 1 wood carcass)"},
+  {"name": "depth", "value_m": 0.45, "source": "BUILD_LIST row 26 (assumed there)", "measured_by": "C4"},
+  {"name": "height", "value_m": 1.00, "source": "BUILD_LIST row 26: two parts of 0.50 (assumed there)", "measured_by": "C4 (top) and C4 joint height 0.50 (Geometry blocks)"},
+  {"name": "drawers", "value": 4, "source": "BUILD_LIST says 4-5 (assumed); i07 shows 4, two per box"},
+  {"name": "drawer front", "value_m": [0.954, 0.214], "source": "fills a 0.96 x 0.22 opening with a 3 mm gap (assumed)"},
+  {"name": "drawer depth", "value_m": 0.41, "source": "carcass inner depth 0.438 minus clearance (assumed)"},
+  {"name": "boards", "value_m": {"carcass": 0.020, "back": 0.012, "drawer sides/back": 0.012, "drawer bottom": 0.010, "front": 0.020}, "source": "assumed (typical joinery)"},
+  {"name": "ring pull", "value_m": {"ring outer diameter": 0.064, "plate": 0.048, "centres from the middle": 0.285}, "source": "i07: ring about a third of the drawer height, about a fifth of the width in from each end"},
+  {"name": "lock plate", "value_m": [0.060, 0.080], "source": "i07: oval plate in the upper half of every drawer"},
+  {"name": "side handle", "value_m": {"grip": 0.158, "drop": 0.045, "pivots under the box top": 0.060}, "source": "i01 / i07: a bail handle high on each side of each box (assumed size)"},
+  {"name": "corner caps", "value_m": 0.045, "source": "i01 / i07 corner fittings (simplified to caps on all 16 corners)"},
+  {"name": "mass", "value_kg": 45, "source": "assumed (empty two-part sugi chest)"}
+ ],
+ "deviations": [
+  "Drawer fronts sit 4 mm behind the carcass face (the references are flush): the shadow line keeps the four drawers readable at DayZ viewing distances.",
+  "Cavity faces use jp_m_wood_sooted_w0 as a stand-in for shadow inside the carcass (the engine has no baked occlusion)."
+ ]
+}

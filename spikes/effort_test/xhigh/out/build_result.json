@@ -1,0 +1,255 @@
+{
+ "cfgconvert": {
+  "config.cpp": {
+   "ok": true,
+   "msg": ""
+  },
+  "model.cfg": {
+   "ok": true,
+   "msg": ""
+  }
+ },
+ "binarize": {
+  "returncode": 0,
+  "log": "spikes\\effort_test\\xhigh\\out\\binarize.log",
+  "lines": 42,
+  "unexplained_lines": [],
+  "flagged_lines": [],
+  "converted": {
+   "jp_f_tansu.p3d": {
+    "odol": true,
+    "bytes": 47011,
+    "mentioned_in_log": true
+   },
+   "jp_f_tansu_ransacked.p3d": {
+    "odol": true,
+    "bytes": 65052,
+    "mentioned_in_log": true
+   }
+  },
+  "ok": true
+ },
+ "pbo": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_efftest_xhigh.pbo",
+ "infos": {
+  "A": {
+   "state": "A",
+   "drawers": {
+    "L1": {
+     "state": "shut",
+     "pull_m": null,
+     "opening": [
+      -0.48,
+      0.48,
+      0.26,
+      0.48
+     ],
+     "part": "lower"
+    },
+    "L2": {
+     "state": "shut",
+     "pull_m": null,
+     "opening": [
+      -0.48,
+      0.48,
+      0.02,
+      0.24
+     ],
+     "part": "lower"
+    },
+    "U1_xneg": {
+     "state": "shut",
+     "pull_m": null,
+     "opening": [
+      -0.476,
+      -0.01,
+      0.81,
+      0.98
+     ],
+     "part": "upper"
+    },
+    "U1_xpos": {
+     "state": "shut",
+     "pull_m": null,
+     "opening": [
+      0.01,
+      0.476,
+      0.81,
+      0.98
+     ],
+     "part": "upper"
+    },
+    "U2": {
+     "state": "shut",
+     "pull_m": null,
+     "opening": [
+      -0.476,
+      0.476,
+      0.52,
+      0.79
+     ],
+     "part": "upper"
+    }
+   },
+   "loot": [
+    {
+     "name": "loot_top_1",
+     "model": [
+      -0.25,
+      1.0,
+      0.0
+     ],
+     "range": 0.2,
+     "surface": "top"
+    },
+    {
+     "name": "loot_top_2",
+     "model": [
+      0.25,
+      1.0,
+      0.0
+     ],
+     "range": 0.2,
+     "surface": "top"
+    }
+   ],
+   "components": [
+    "body"
+   ],
+   "faces": {
+    "Resolution 1": 600,
+    "Resolution 2": 155,
+    "Resolution 3": 21,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "tris_res1": 1200
+  },
+  "B": {
+   "state": "B",
+   "drawers": {
+    "L1": {
+     "state": "pull",
+     "pull_m": 0.18,
+     "opening": [
+      -0.48,
+      0.48,
+      0.26,
+      0.48
+     ],
+     "part": "lower"
+    },
+    "L2": {
+     "state": "pull",
+     "pull_m": 0.05,
+     "opening": [
+      -0.48,
+      0.48,
+      0.02,
+      0.24
+     ],
+     "part": "lower"
+    },
+    "U1_xneg": {
+     "state": "pull",
+     "pull_m": 0.2,
+     "opening": [
+      -0.476,
+      -0.01,
+      0.81,
+      0.98
+     ],
+     "part": "upper"
+    },
+    "U1_xpos": {
+     "state": "shut",
+     "pull_m": null,
+     "opening": [
+      0.01,
+      0.476,
+      0.81,
+      0.98
+     ],
+     "part": "upper"
+    },
+    "U2": {
+     "state": "drop",
+     "pull_m": null,
+     "opening": [
+      -0.476,
+      0.476,
+      0.52,
+      0.79
+     ],
+     "part": "upper"
+    }
+   },
+   "loot": [
+    {
+     "name": "loot_top_1",
+     "model": [
+      -0.25,
+      1.0,
+      0.0
+     ],
+     "range": 0.2,
+     "surface": "top"
+    },
+    {
+     "name": "loot_top_2",
+     "model": [
+      0.25,
+      1.0,
+      0.0
+     ],
+     "range": 0.2,
+     "surface": "top"
+    },
+    {
+     "name": "loot_drawer",
+     "model": [
+      0.03,
+      0.01,
+      0.7
+     ],
+     "range": 0.15,
+     "surface": "dropped drawer bottom (floor)"
+    }
+   ],
+   "components": [
+    "body",
+    "pulled_L1",
+    "pulled_L2",
+    "pulled_U1_xneg",
+    "drop_bottom",
+    "drop_front",
+    "drop_back",
+    "drop_left",
+    "drop_right"
+   ],
+   "dropped": {
+    "drawer": "U2",
+    "pos": [
+     0.03,
+     0.0,
+     0.7
+    ],
+    "yaw_deg": -8.0,
+    "outer_m": [
+     0.948,
+     0.4,
+     0.266
+    ]
+   },
+   "faces": {
+    "Resolution 1": 663,
+    "Resolution 2": 178,
+    "Resolution 3": 44,
+    "Geometry": 54,
+    "View Geometry": 54,
+    "Fire Geometry": 54
+   },
+   "tris_res1": 1326
+  }
+ }
+}

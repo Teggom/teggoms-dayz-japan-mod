@@ -1,0 +1,24 @@
+{
+ "id": "jp_f_tansu",
+ "name": "Clothing chest of drawers (isho-dansu), two stacked parts (kasane-dansu)",
+ "importance": "standard (PLAYBOOK 11)",
+ "era_note": "Tansu appear in Osaka in the Kanbun era (1661-73) and spread from the Shotoku era (1711-16); still costly in 1730, so T2-3 only [N06, BUILD_LIST row 26]",
+ "references": [
+  {"id": "i01_kasuya_irori", "file": "data/research_int/refs/i01_kasuya_irori.jpg", "licence": "CC0, Asanagi (Wikimedia Commons)", "kind": "surviving farmhouse (Former Kasuya house, Itabashi), period_image in build_list.json", "shows": "stacked chests of drawers, dark worn wood, iron corner fittings and a U carrying handle on the side, ring pulls"},
+  {"id": "i07_edo_nagaya_room", "file": "data/research_int/refs/i07_edo_nagaya_room.jpg", "licence": "CC BY 2.5, DryPot (Wikimedia Commons)", "kind": "museum reconstruction (Fukagawa Edo Museum, Tenpo era, c.1840)", "shows": "a two-part tansu: two drawers per part, two ring pulls per drawer, a round plate at the centre of each drawer, iron corner plates at the joint between the parts"},
+  {"id": "N06", "url": "https://ja.wikipedia.org/wiki/箪笥", "kind": "text", "shows": "tansu history and dating"}
+ ],
+ "caveat": "Neither photo is a dated 1730 object: i01 shows chests kept in a surviving house, i07 is a c.1840 reconstruction. The form (two stacked boxes, iron ring pulls, corner irons, side handles) is common to both and to the build list.",
+ "dimensions": {
+  "overall_m": {"value": [1.00, 0.45, 1.00], "order": "width, depth, height", "assumed": true, "source": "BUILD_LIST row 26 (about 3.3 x 1.5 x 3.3 shaku)", "measured": "1.000 x 0.450 x 1.000 (verify.py C4)"},
+  "parts_m": {"value": [0.50, 0.50], "assumed": true, "source": "BUILD_LIST row 26", "built": "lower 0.00-0.50, upper 0.50-1.00; the upper part is 4 mm smaller at the front and sides so the two boxes read"},
+  "drawers": {"value": 5, "source": "BUILD_LIST row 26 says 4-5 (assumed)", "built": "upper: two small (0.466 x 0.166) over one wide lock drawer (0.948 x 0.266); lower: two wide (0.956 x 0.216)"},
+  "board_m": {"value": 0.020, "assumed": true, "reason": "tansu carcass boards are about 2 cm; the front frame shows the board edges"},
+  "drawer_depth_m": {"value": 0.40, "assumed": true, "reason": "carcass inside depth 0.434 minus clearance"},
+  "ring_pull_m": {"plate_d": 0.060, "ring_outer_d": 0.060, "wire": 0.0065, "assumed": true, "reason": "scaled from i07 against the drawer height"},
+  "lock_plate_d_m": {"value": 0.090, "assumed": true, "reason": "round plate at the centre of the wide drawers, as in i07"},
+  "corner_plate_m": {"value": 0.055, "assumed": true},
+  "side_handle_m": {"plate": [0.15, 0.04], "bail": [0.126, 0.061], "assumed": true, "reason": "U handle hanging flat against the side, as in i01"}
+ },
+ "palette": {"body": "timber_interior wanted (jp_m_wood_interior not built); stand-in jp_m_wood_street_dark_w2, dE76 9.0", "fittings": "iron_black (jp_m_metal_iron_w1, dE76 3.5)"}
+}
