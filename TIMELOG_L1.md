@@ -194,3 +194,6 @@
 2026-09-30 13:34:56 | #183 | jp_f_fallen_leaf_fusuma | abandoned (batch) | 5h 45% wk 25%
 2026-09-30 13:34:56 | #184 | jp_f_fallen_leaf_shoji_broken | abandoned (batch) | 5h 45% wk 25%
 2026-09-30 13:34:56 | #185 | jp_f_fallen_leaf_fusuma_torn | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:35:27 | MATERIALS ADDED | jp_m_decal_sumi_text_life, jp_m_food_rice, jp_m_food_hoshigaki, jp_m_textile_kaya; jp_common.pbo repacked | - | 5h 45% wk 25%
+2026-09-30 13:35:37 | PBO PACKED | jp_furniture.pbo: 297 StaticObj_JP_F_* (110 B3a + 2 B4 + 185 L1), all ODOL | - | 5h 45% wk 25%
+2026-09-30 13:37:22 | SHEETS DONE | research/interior/contact_sheets/l1_*.jpg (10 sheets); B3a re-check 112/112, combos 60/60 | - | 5h 46% wk 25%

@@ -112,6 +112,323 @@
     "warnings": [],
     "masked": false
    }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_rice_w0_co.png",
+   "palette_id": "rice_grain",
+   "wear": "",
+   "mean_srgb": [
+    211.3,
+    201.5,
+    175.4
+   ],
+   "target_srgb": [
+    206,
+    196,
+    170
+   ],
+   "dE": 1.97,
+   "dE_to_entry": 1.97,
+   "tol": 12.0,
+   "spread_p75": 27.8,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "mean 211 brighter than 205 (vanilla white ~150)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     210.5,
+     201.8,
+     175.0
+    ],
+    "dE": 2.06,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_rice_w1_co.png",
+   "palette_id": "rice_grain",
+   "wear": "",
+   "mean_srgb": [
+    199.0,
+    187.6,
+    158.3
+   ],
+   "target_srgb": [
+    206,
+    196,
+    170
+   ],
+   "dE": 3.6,
+   "dE_to_entry": 3.6,
+   "tol": 12.0,
+   "spread_p75": 25.7,
+   "observed_spread": null,
+   "masked_frac": 0.004,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_rice_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     198.7,
+     187.6,
+     158.2
+    ],
+    "dE": 3.62,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_rice_w2_co.png",
+   "palette_id": "rice_grain",
+   "wear": "",
+   "mean_srgb": [
+    188.7,
+    173.3,
+    139.7
+   ],
+   "target_srgb": [
+    206,
+    196,
+    170
+   ],
+   "dE": 9.49,
+   "dE_to_entry": 9.49,
+   "tol": 12.0,
+   "spread_p75": 24.5,
+   "observed_spread": null,
+   "masked_frac": 0.079,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_rice_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     188.5,
+     173.3,
+     139.8
+    ],
+    "dE": 9.46,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_hoshigaki_w0_co.png",
+   "palette_id": "hoshigaki",
+   "wear": "",
+   "mean_srgb": [
+    139.5,
+    75.4,
+    43.6
+   ],
+   "target_srgb": [
+    128,
+    70,
+    42
+   ],
+   "dE": 4.69,
+   "dE_to_entry": 4.69,
+   "tol": 12.0,
+   "spread_p75": 4.8,
+   "observed_spread": null,
+   "masked_frac": 0.161,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_hoshigaki_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     139.1,
+     75.6,
+     43.8
+    ],
+    "dE": 4.48,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_hoshigaki_w1_co.png",
+   "palette_id": "hoshigaki",
+   "wear": "",
+   "mean_srgb": [
+    128.0,
+    70.0,
+    42.0
+   ],
+   "target_srgb": [
+    128,
+    70,
+    42
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 12.0,
+   "spread_p75": 4.5,
+   "observed_spread": null,
+   "masked_frac": 0.29,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_hoshigaki_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     127.5,
+     70.2,
+     42.2
+    ],
+    "dE": 0.35,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_hoshigaki_w2_co.png",
+   "palette_id": "hoshigaki",
+   "wear": "",
+   "mean_srgb": [
+    114.0,
+    62.3,
+    38.2
+   ],
+   "target_srgb": [
+    128,
+    70,
+    42
+   ],
+   "dE": 5.38,
+   "dE_to_entry": 5.38,
+   "tol": 12.0,
+   "spread_p75": 4.0,
+   "observed_spread": null,
+   "masked_frac": 0.128,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_food_hoshigaki_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     113.9,
+     62.3,
+     38.2
+    ],
+    "dE": 5.44,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kaya_w0_co.png",
+   "palette_id": "kaya_moegi",
+   "wear": "",
+   "mean_srgb": [
+    102.9,
+    116.9,
+    78.7
+   ],
+   "target_srgb": [
+    98,
+    112,
+    74
+   ],
+   "dE": 1.97,
+   "dE_to_entry": 1.97,
+   "tol": 12.0,
+   "spread_p75": 2.5,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     102.6,
+     117.1,
+     79.1
+    ],
+    "dE": 2.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kaya_w1_co.png",
+   "palette_id": "kaya_moegi",
+   "wear": "",
+   "mean_srgb": [
+    94.2,
+    106.9,
+    65.9
+   ],
+   "target_srgb": [
+    98,
+    112,
+    74
+   ],
+   "dE": 2.82,
+   "dE_to_entry": 2.82,
+   "tol": 12.0,
+   "spread_p75": 3.4,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     94.3,
+     106.7,
+     65.5
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kaya_w2_co.png",
+   "palette_id": "kaya_moegi",
+   "wear": "",
+   "mean_srgb": [
+    84.4,
+    100.4,
+    55.5
+   ],
+   "target_srgb": [
+    98,
+    112,
+    74
+   ],
+   "dE": 6.7,
+   "dE_to_entry": 6.7,
+   "tol": 12.0,
+   "spread_p75": 4.0,
+   "observed_spread": null,
+   "masked_frac": 0.005,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kaya_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     84.2,
+     100.3,
+     55.5
+    ],
+    "dE": 6.69,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
   }
  ]
 }
