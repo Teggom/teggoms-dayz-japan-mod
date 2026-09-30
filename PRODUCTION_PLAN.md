@@ -208,5 +208,9 @@
   - **Pitfall for later agents:** B3b's own `spikes/B3b/build.py` rewrites config.cpp WITHOUT the L2 classes. After
     any B3b rebuild, run `python spikes/L2/build_l2.py --pack`.
   - Life layer items aren't placed anywhere yet (the machiya keeps B4's dressing); Phase C shells will use them.
+- 2026-09-30: **G4 walk (Stephen): ~95% good.** 8 findings (noren streaks, fire-tub see-through, laundry cloth +
+  forks, floating kama lid, kamidana roof turned, floating chest cloth, no Roadway on the goods stand) + the well gives
+  no actions. Lead's investigation: causes found for 7; the well matches vanilla on paper. **F1** launched: fix all 8,
+  add a temporary well diagnostic, re-check. Then a short re-walk closes G4.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.

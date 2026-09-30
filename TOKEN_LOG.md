@@ -21,6 +21,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 13:38 (local) | L1 | life layer interior: 50 items = 185 models (50 new, 65 variants, 70 abandoned), decorator wall/beam mounting, 4 materials | **654k** (195 tool calls) | 55 min | **25%** (5-hour 46% just before the 13:40 reset): L1 alone = ~1% weekly, ~13% of a 5-hour window |
 | 2026-09-30 13:45 (local) | L2 (baseline) | launched: life layer outdoor, 24 items (+ check B3b text mirroring), time log TIMELOG_L2.md | - | - | before: **25%** (5-hour 0%, fresh window) |
 | 2026-09-30 14:41 (local) | L2 | life layer outdoor: 24 items = 81 models (22 new, 20 variants, 39 abandoned) + the text fix (B3b + L1 text was back-facing = invisible) | **581k** (213 tool calls) | 57 min | **27%** (5-hour 11%): L2 alone = ~2% weekly, ~11% of a 5-hour window |
+| 2026-09-30 15:01 (local) | F1 (baseline) | launched: the 8 G4 walk fixes + a well diagnostic, time log TIMELOG_F1.md | - | - | before: **27%** (5-hour 13%) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
