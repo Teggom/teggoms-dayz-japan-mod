@@ -24,6 +24,9 @@ Stand in the street in front of the house and look it over:
   spilled, a wooden board cover over the gutter with a stone slab at the door, and a small Jizo in a wooden box at the
   corner beside the entrance.
 - A carrying pole leans on the side wall next to the entrance.
+- **Japanese text (new, fixed after B4):** the signboard, the noren, the paper lantern, the banner and the marks on
+  the fire tub should all show brush text. Until 2026-09-30 the text faced into the boards and the game didn't draw
+  it at all. Can you see text on each? Does any of it read mirrored (backwards)?
 
 Does anything float, sink into the ground, or poke through the house?
 
@@ -90,5 +93,6 @@ Go through the kitchen and out the back door.
   3. the well: did drink, wash and fill all work?
   4. the toilet's half door
   5. the doma colour: keep it, or darken it?
+  6. the sign text: visible everywhere, and reading the right way round?
 
 Screenshots help but aren't required.
