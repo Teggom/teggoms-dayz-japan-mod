@@ -1,0 +1,27 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\9a_koyagumi_assembly",
+ "res": [
+  960,
+  720
+ ],
+ "jobs": [
+  [
+   "hip_cut",
+   "Hipped tile roof (koya_hip), covering above 3.05 m cut away: hip rafters (sumigi), end purlins on struts on the end beams (tsunagi), jack rafters to the hips, the ridge beam on its strut.",
+   {
+    "build": "b2:koya_hip",
+    "cut": {
+     "y_gt": 3.05
+    },
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     3.6,
+     2.8,
+     -2.7
+    ],
+    "dist": 19
+   }
+  ]
+ ]
+}

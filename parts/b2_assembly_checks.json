@@ -1,0 +1,520 @@
+{
+ "koya_farmhouse": {
+  "faces": {
+   "Resolution 1": 5424,
+   "Resolution 2": 3182,
+   "Resolution 3": 2126,
+   "Geometry": 2796,
+   "Roadway": 1,
+   "View Geometry": 2796,
+   "Fire Geometry": 2796
+  },
+  "koyagumi": {
+   "system": "sasu",
+   "members": "log",
+   "form": "yosemune",
+   "geya": [
+    1.82,
+    1.82
+   ],
+   "counts": {
+    "joya_plate": 2,
+    "joya_post": 12,
+    "geya_bari": 12,
+    "tie_beam": 6,
+    "sasu": 8,
+    "lashing": 2,
+    "munagi": 1,
+    "moya": 22,
+    "sumi_sasu": 4,
+    "tsuma_sasu": 2
+   },
+   "frame_lines": [
+    1.82,
+    3.64,
+    5.46,
+    7.28,
+    9.1,
+    10.92
+   ],
+   "levels": {
+    "eave": 2.8800000000000003,
+    "beam_top": 4.52,
+    "geya_beam_top": 2.7,
+    "joya_plate_top": {
+     "front": 4.7,
+     "back": 4.7
+    },
+    "floor": 0.05
+   },
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ]
+  },
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 5424, Resolution 2 3182, Resolution 3 2126, Geometry 2796, Roadway 1, View Geometry 2796, Fire Geometry 2796"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "123 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "123 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "123 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "KY1 framing stays under the roof (members <= 2 cm over the rafter plane; rafters in the roof body; sasu tips inside the thatch)",
+    "ok": true,
+    "detail": "1032 vertices, 0 over"
+   },
+   {
+    "check": "KY2 head room under the framing >= 2.10 m (D4 + margin)",
+    "ok": true,
+    "detail": "lowest member geya_bari at 2.45 m over the floor"
+   },
+   {
+    "check": "KY3 every frame line's beam ends on a post",
+    "ok": true,
+    "detail": "6 frame lines, all on wall posts"
+   },
+   {
+    "check": "C12 roof / wall intersection (no other sub-part inside a roof body > 3 cm)",
+    "ok": true,
+    "detail": "0 tile / board roof bodies clear"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 813674 bytes"
+   }
+  ]
+ },
+ "koya_farm_soot": {
+  "faces": {
+   "Resolution 1": 5424,
+   "Resolution 2": 3182,
+   "Resolution 3": 2126,
+   "Geometry": 2796,
+   "Roadway": 1,
+   "View Geometry": 2796,
+   "Fire Geometry": 2796
+  },
+  "koyagumi": {
+   "system": "sasu",
+   "members": "log",
+   "form": "yosemune",
+   "geya": [
+    1.82,
+    1.82
+   ],
+   "counts": {
+    "joya_plate": 2,
+    "joya_post": 12,
+    "geya_bari": 12,
+    "tie_beam": 6,
+    "sasu": 8,
+    "lashing": 2,
+    "munagi": 1,
+    "moya": 22,
+    "sumi_sasu": 4,
+    "tsuma_sasu": 2
+   },
+   "frame_lines": [
+    1.82,
+    3.64,
+    5.46,
+    7.28,
+    9.1,
+    10.92
+   ],
+   "levels": {
+    "eave": 2.8800000000000003,
+    "beam_top": 4.52,
+    "geya_beam_top": 2.7,
+    "joya_plate_top": {
+     "front": 4.7,
+     "back": 4.7
+    },
+    "floor": 0.05
+   },
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ],
+   "sooted_roof_solids": 172
+  },
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 5424, Resolution 2 3182, Resolution 3 2126, Geometry 2796, Roadway 1, View Geometry 2796, Fire Geometry 2796"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "123 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "123 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "123 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "KY1 framing stays under the roof (members <= 2 cm over the rafter plane; rafters in the roof body; sasu tips inside the thatch)",
+    "ok": true,
+    "detail": "1032 vertices, 0 over"
+   },
+   {
+    "check": "KY2 head room under the framing >= 2.10 m (D4 + margin)",
+    "ok": true,
+    "detail": "lowest member geya_bari at 2.45 m over the floor"
+   },
+   {
+    "check": "KY3 every frame line's beam ends on a post",
+    "ok": true,
+    "detail": "6 frame lines, all on wall posts"
+   },
+   {
+    "check": "C12 roof / wall intersection (no other sub-part inside a roof body > 3 cm)",
+    "ok": true,
+    "detail": "0 tile / board roof bodies clear"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 820354 bytes"
+   }
+  ]
+ },
+ "koya_hut": {
+  "faces": {
+   "Resolution 1": 2136,
+   "Resolution 2": 1206,
+   "Resolution 3": 844,
+   "Geometry": 998,
+   "Roadway": 1,
+   "View Geometry": 986,
+   "Fire Geometry": 986
+  },
+  "koyagumi": {
+   "system": "sasu",
+   "members": "log",
+   "form": "kirizuma",
+   "geya": [
+    0.0,
+    0.0
+   ],
+   "counts": {
+    "tie_beam": 2,
+    "sasu": 4,
+    "lashing": 2,
+    "munagi": 1,
+    "moya": 6
+   },
+   "frame_lines": [
+    1.82,
+    3.64
+   ],
+   "levels": {
+    "eave": 2.8800000000000003,
+    "beam_top": 2.7,
+    "geya_beam_top": 2.7,
+    "joya_plate_top": {
+     "front": 2.88,
+     "back": 2.88
+    },
+    "floor": 0.05
+   },
+   "slopes": [
+    "front",
+    "back"
+   ],
+   "sooted_roof_solids": 46
+  },
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 2136, Resolution 2 1206, Resolution 3 844, Geometry 998, Roadway 1, View Geometry 986, Fire Geometry 986"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "59 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "57 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "57 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "KY1 framing stays under the roof (members <= 2 cm over the rafter plane; rafters in the roof body; sasu tips inside the thatch)",
+    "ok": true,
+    "detail": "248 vertices, 0 over"
+   },
+   {
+    "check": "KY2 head room under the framing >= 2.10 m (D4 + margin)",
+    "ok": true,
+    "detail": "lowest member ushibari at 2.37 m over the floor"
+   },
+   {
+    "check": "KY3 every frame line's beam ends on a post",
+    "ok": true,
+    "detail": "2 frame lines, all on wall posts"
+   },
+   {
+    "check": "C12 roof / wall intersection (no other sub-part inside a roof body > 3 cm)",
+    "ok": true,
+    "detail": "0 tile / board roof bodies clear"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 322949 bytes"
+   }
+  ]
+ },
+ "koya_workshop": {
+  "faces": {
+   "Resolution 1": 4039,
+   "Resolution 2": 1274,
+   "Resolution 3": 625,
+   "Geometry": 505,
+   "Roadway": 3,
+   "View Geometry": 505,
+   "Fire Geometry": 505
+  },
+  "koyagumi": {
+   "system": "wagoya",
+   "members": "sawn",
+   "form": "kirizuma",
+   "geya": [
+    0.0,
+    0.0
+   ],
+   "counts": {
+    "tie_beam": 3,
+    "moya": 4,
+    "tsuka": 12,
+    "munagi": 1,
+    "munazuka": 3,
+    "koyanuki": 3,
+    "rafter_runs": 2
+   },
+   "frame_lines": [
+    1.82,
+    3.64,
+    5.46
+   ],
+   "levels": {
+    "eave": 2.8800000000000003,
+    "beam_top": 2.7,
+    "geya_beam_top": 2.7,
+    "joya_plate_top": {
+     "front": 2.88,
+     "back": 2.88
+    },
+    "floor": 0.05
+   },
+   "slopes": [
+    "front",
+    "back"
+   ]
+  },
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 4039, Resolution 2 1274, Resolution 3 625, Geometry 505, Roadway 3, View Geometry 505, Fire Geometry 505"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "47 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "47 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "47 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "KY1 framing stays under the roof (members <= 2 cm over the rafter plane; rafters in the roof body; sasu tips inside the thatch)",
+    "ok": true,
+    "detail": "1074 vertices, 0 over"
+   },
+   {
+    "check": "KY2 head room under the framing >= 2.10 m (D4 + margin)",
+    "ok": true,
+    "detail": "lowest member hari at 2.38 m over the floor"
+   },
+   {
+    "check": "KY3 every frame line's beam ends on a post",
+    "ok": true,
+    "detail": "3 frame lines, all on wall posts"
+   },
+   {
+    "check": "C12 roof / wall intersection (no other sub-part inside a roof body > 3 cm)",
+    "ok": true,
+    "detail": "2 tile / board roof bodies clear"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 345288 bytes"
+   }
+  ]
+ },
+ "koya_hip": {
+  "faces": {
+   "Resolution 1": 5125,
+   "Resolution 2": 1156,
+   "Resolution 3": 769,
+   "Geometry": 483,
+   "Roadway": 5,
+   "View Geometry": 483,
+   "Fire Geometry": 483
+  },
+  "koyagumi": {
+   "system": "wagoya",
+   "members": "sawn",
+   "form": "yosemune",
+   "geya": [
+    0.0,
+    0.0
+   ],
+   "counts": {
+    "tie_beam": 3,
+    "moya": 8,
+    "tsuka": 10,
+    "munagi": 1,
+    "munazuka": 1,
+    "sumigi": 4,
+    "tsunagi": 2,
+    "rafter_runs": 4
+   },
+   "frame_lines": [
+    1.82,
+    3.64,
+    5.46
+   ],
+   "levels": {
+    "eave": 2.8800000000000003,
+    "beam_top": 2.7,
+    "geya_beam_top": 2.7,
+    "joya_plate_top": {
+     "front": 2.88,
+     "back": 2.88
+    },
+    "floor": 0.05
+   },
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ]
+  },
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 5125, Resolution 2 1156, Resolution 3 769, Geometry 483, Roadway 5, View Geometry 483, Fire Geometry 483"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "43 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "43 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "43 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "KY1 framing stays under the roof (members <= 2 cm over the rafter plane; rafters in the roof body; sasu tips inside the thatch)",
+    "ok": true,
+    "detail": "1514 vertices, 0 over"
+   },
+   {
+    "check": "KY2 head room under the framing >= 2.10 m (D4 + margin)",
+    "ok": true,
+    "detail": "lowest member hari at 2.38 m over the floor"
+   },
+   {
+    "check": "KY3 every frame line's beam ends on a post",
+    "ok": true,
+    "detail": "3 frame lines, all on wall posts"
+   },
+   {
+    "check": "C12 roof / wall intersection (no other sub-part inside a roof body > 3 cm)",
+    "ok": true,
+    "detail": "4 tile / board roof bodies clear"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 403543 bytes"
+   }
+  ]
+ }
+}

@@ -28,6 +28,9 @@ openings.register(reg)
 found.register(reg)
 from . import roofparts
 roofparts.register(reg)
+# ---- B2 (2026-09-29): missing parts, wave 1
+from . import koyagumi
+koyagumi.register(reg)
 try:
     from . import trim
     trim.register(reg)

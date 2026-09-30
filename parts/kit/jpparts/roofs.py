@@ -173,21 +173,24 @@ def sheathing(part, sl, h0=0.06, mat="wood_weathered", vis=(1, 2, 3)):
                       {"bottom": mat, "default": mat}, vis=vis, tag="sheathing"))
 
 
-def rafters(part, sl, spacing=0.303, sec=(0.045, 0.06), round_=False, only_eave=True, mat="wood_weathered", vis=(1,)):
+def rafters(part, sl, spacing=0.303, sec=(0.045, 0.06), round_=False, only_eave=True, mat="wood_weathered", vis=(1,),
+            d_start=0.03, tag="rafter"):
+    """Rafters on a slope from d_start (plan distance in from the eave edge) to the eave soffit end (only_eave) or the
+    top of the slope. B2's koyagumi continues the eave rafters inside with d_start = ov + 0.25."""
     u0, u1 = sl.u_range()
     k = math.ceil(u0 / spacing)
     while k * spacing < u1:
         u = k * spacing
         dmax = sl.depth_at(u)
-        if dmax > 0.2:
+        if dmax > max(0.2, d_start + 0.05):
             ex, ez = sl.eave_point(u)
             d1 = min(dmax, sl.ov + 0.25) if only_eave else dmax
-            a = (ex + sl.inw[0] * 0.03, ez + sl.inw[1] * 0.03)
+            a = (ex + sl.inw[0] * d_start, ez + sl.inw[1] * d_start)
             b = (ex + sl.inw[0] * d1, ez + sl.inw[1] * d1)
             if round_:
                 pa = (a[0], sl.y(a[0], a[1], 0.0) + 0.035, a[1])
                 pb = (b[0], sl.y(b[0], b[1], 0.0) + 0.035, b[1])
-                part.add(tube(pa, pb, 0.035, "wood_weathered", n=6, vis=vis, tag="rafter"))
+                part.add(tube(pa, pb, 0.035, mat, n=6, vis=vis, tag=tag))
             else:
                 # open-topped (hidden under the sheathing): bottom, two sides, foot = 4 faces
                 w = sec[0] / 2
@@ -200,7 +203,7 @@ def rafters(part, sl, spacing=0.303, sec=(0.045, 0.06), round_=False, only_eave=
                       [P(a[0], a[1], -1, 0.0), P(a[0], a[1], 1, 0.0), P(a[0], a[1], 1, sec[1]), P(a[0], a[1], -1, sec[1])]]
                 hint = [(0.0, -1.0, 0.0), (-ux, 0.0, -uz), (ux, 0.0, uz), (-sl.inw[0], 0.0, -sl.inw[1])]
                 part.add(Solid([p for q in qs for p in q], [[4 * i, 4 * i + 1, 4 * i + 2, 4 * i + 3] for i in range(4)],
-                               mat, vis=vis, normals=hint, tag="rafter", grain="long"))
+                               mat, vis=vis, normals=hint, tag=tag, grain="long"))
         k += 1
 
 

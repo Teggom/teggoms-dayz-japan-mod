@@ -18067,6 +18067,1526 @@
    "recipe": null
   },
   {
+   "id": "jp_p_frame_koyagumi_wagoya",
+   "part": "jp_p_frame_koyagumi",
+   "variant": "_wagoya",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_koyagumi_wagoya.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_koyagumi",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "tile / board roof framing of rooms open to the roof: kuri kitchens, workshops, smithy, sake and soy works (TR09-TR24), the shed; sawn beams, struts, purlins, ridge beam, rafters to the ridge",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 24.2,
+     "measured": 24.2277,
+     "tol": 0.1,
+     "source": "roofs.PITCH (the frame follows the roof)"
+    },
+    {
+     "name": "frame_line_spacing_m",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "PLAYBOOK §4 (1 ken bays)"
+    },
+    {
+     "name": "tie_beam_depth_m",
+     "expected": "0.24-0.32",
+     "measured": 0.27,
+     "tol": 0.01,
+     "source": "period sections (A): koyabari 8-10 sun; ushibari logs 25-35 cm"
+    },
+    {
+     "name": "purlin_spacing_m",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "3 shaku (A)"
+    },
+    {
+     "name": "purlin_section_m",
+     "expected": 0.105,
+     "measured": 0.105,
+     "tol": 0.01,
+     "source": "3.5 sun sawn / 4 sun round (A)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -5.46
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -5.46
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -5.46
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      4.1085,
+      -2.73
+     ],
+     "note": "rafter apex over the ridge line"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 387,
+    "Resolution 2": 153,
+    "Resolution 3": 12,
+    "Geometry": 39,
+    "View Geometry": 39,
+    "Fire Geometry": 39
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "4 x 3 ken footprint as the roof generator: x 0..7.28 along the ridge, z 0 (front wall line) .. -5.46; y 0 = floor, eave line (keta top) 2.88. The sample carries the outer keta (outer_plates) for context; buildings pass outer_plates=False (their walls own the keta)",
+   "recipe": "koyagumi.koyagumi(roof_part, W, D, roofs.roof(...) info, eave_y, system, members, geya, soot)"
+  },
+  {
+   "id": "jp_p_frame_koyagumi_wagoya_log",
+   "part": "jp_p_frame_koyagumi",
+   "variant": "_wagoya_log",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_koyagumi_wagoya_log.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_koyagumi",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "rustic framing of barns, sheds and work buildings (DW24, TR-S): round log tie beams, round struts and purlins under a board roof",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 24.2,
+     "measured": 24.2277,
+     "tol": 0.1,
+     "source": "roofs.PITCH (the frame follows the roof)"
+    },
+    {
+     "name": "frame_line_spacing_m",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "PLAYBOOK §4 (1 ken bays)"
+    },
+    {
+     "name": "tie_beam_depth_m",
+     "expected": "0.26-0.32 (log dia.)",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "period sections (A): koyabari 8-10 sun; ushibari logs 25-35 cm"
+    },
+    {
+     "name": "purlin_spacing_m",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "3 shaku (A)"
+    },
+    {
+     "name": "purlin_section_m",
+     "expected": 0.12,
+     "measured": 0.12,
+     "tol": 0.01,
+     "source": "3.5 sun sawn / 4 sun round (A)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -5.46
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -5.46
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      4.1085,
+      -2.73
+     ],
+     "note": "rafter apex over the ridge line"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 470,
+    "Resolution 2": 284,
+    "Resolution 3": 12,
+    "Geometry": 102,
+    "View Geometry": 102,
+    "Fire Geometry": 102
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "3 x 3 ken footprint as the roof generator: x 0..5.46 along the ridge, z 0 (front wall line) .. -5.46; y 0 = floor, eave line (keta top) 2.88. The sample carries the outer keta (outer_plates) for context; buildings pass outer_plates=False (their walls own the keta)",
+   "recipe": "koyagumi.koyagumi(roof_part, W, D, roofs.roof(...) info, eave_y, system, members, geya, soot)"
+  },
+  {
+   "id": "jp_p_frame_koyagumi_wagoya_hip",
+   "part": "jp_p_frame_koyagumi",
+   "variant": "_wagoya_hip",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_koyagumi_wagoya_hip.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_koyagumi",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "hipped tile roof framing (inns, big houses, temple kuri): hip rafters, end purlins, end beams",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 24.2,
+     "measured": 24.2277,
+     "tol": 0.1,
+     "source": "roofs.PITCH (the frame follows the roof)"
+    },
+    {
+     "name": "frame_line_spacing_m",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "PLAYBOOK §4 (1 ken bays)"
+    },
+    {
+     "name": "tie_beam_depth_m",
+     "expected": "0.24-0.32",
+     "measured": 0.27,
+     "tol": 0.01,
+     "source": "period sections (A): koyabari 8-10 sun; ushibari logs 25-35 cm"
+    },
+    {
+     "name": "purlin_spacing_m",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "3 shaku (A)"
+    },
+    {
+     "name": "purlin_section_m",
+     "expected": 0.105,
+     "measured": 0.105,
+     "tol": 0.01,
+     "source": "3.5 sun sawn / 4 sun round (A)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -5.46
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -5.46
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -5.46
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      4.1085,
+      -2.73
+     ],
+     "note": "rafter apex over the ridge line"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 521,
+    "Resolution 2": 201,
+    "Resolution 3": 24,
+    "Geometry": 63,
+    "View Geometry": 63,
+    "Fire Geometry": 63
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "4 x 3 ken footprint as the roof generator: x 0..7.28 along the ridge, z 0 (front wall line) .. -5.46; y 0 = floor, eave line (keta top) 2.88. The sample carries the outer keta (outer_plates) for context; buildings pass outer_plates=False (their walls own the keta)",
+   "recipe": "koyagumi.koyagumi(roof_part, W, D, roofs.roof(...) info, eave_y, system, members, geya, soot)"
+  },
+  {
+   "id": "jp_p_frame_koyagumi_sasu",
+   "part": "jp_p_frame_koyagumi",
+   "variant": "_sasu",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_koyagumi_sasu.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_koyagumi",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1
+   ],
+   "used_for": "poor hut / tenant house open to the thatch (DW01, DW30): sasu A-frames on log tie beams, crossed and lashed at the ridge, round purlins",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 45.0,
+     "measured": 45.0,
+     "tol": 0.1,
+     "source": "roofs.PITCH (the frame follows the roof)"
+    },
+    {
+     "name": "frame_line_spacing_m",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "PLAYBOOK §4 (1 ken bays)"
+    },
+    {
+     "name": "tie_beam_depth_m",
+     "expected": "0.26-0.32 (log dia.)",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "period sections (A): koyabari 8-10 sun; ushibari logs 25-35 cm"
+    },
+    {
+     "name": "sasu_diameter_m",
+     "expected": "0.12-0.18",
+     "measured": 0.15,
+     "tol": 0.01,
+     "source": "(A) minka sasu 4-6 sun"
+    },
+    {
+     "name": "moya_spacing_m",
+     "expected": "0.45-0.90",
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "(A)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -3.64
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -3.64
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      4.7,
+      -1.82
+     ],
+     "note": "rafter apex over the ridge line"
+    }
+   ],
+   "materials": [
+    {
+     "key": "straw_rope",
+     "id": "jp_m_straw_rope",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 226,
+    "Resolution 2": 214,
+    "Resolution 3": 12,
+    "Geometry": 154,
+    "View Geometry": 154,
+    "Fire Geometry": 154
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "3 x 2 ken footprint as the roof generator: x 0..5.46 along the ridge, z 0 (front wall line) .. -3.64; y 0 = floor, eave line (keta top) 2.88. The sample carries the outer keta (outer_plates) for context; buildings pass outer_plates=False (their walls own the keta)",
+   "recipe": "koyagumi.koyagumi(roof_part, W, D, roofs.roof(...) info, eave_y, system, members, geya, soot)"
+  },
+  {
+   "id": "jp_p_frame_koyagumi_sasu_sooted",
+   "part": "jp_p_frame_koyagumi",
+   "variant": "_sasu_sooted",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_koyagumi_sasu_sooted.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_koyagumi",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1
+   ],
+   "used_for": "the same hut, SOOTED wear level: 'no ceiling, open to soot-black thatch' (BUILDING_LIST §3 poor)",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 45.0,
+     "measured": 45.0,
+     "tol": 0.1,
+     "source": "roofs.PITCH (the frame follows the roof)"
+    },
+    {
+     "name": "frame_line_spacing_m",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "PLAYBOOK §4 (1 ken bays)"
+    },
+    {
+     "name": "tie_beam_depth_m",
+     "expected": "0.26-0.32 (log dia.)",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "period sections (A): koyabari 8-10 sun; ushibari logs 25-35 cm"
+    },
+    {
+     "name": "sasu_diameter_m",
+     "expected": "0.12-0.18",
+     "measured": 0.15,
+     "tol": 0.01,
+     "source": "(A) minka sasu 4-6 sun"
+    },
+    {
+     "name": "moya_spacing_m",
+     "expected": "0.45-0.90",
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "(A)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -3.64
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -3.64
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      4.7,
+      -1.82
+     ],
+     "note": "rafter apex over the ridge line"
+    }
+   ],
+   "materials": [
+    {
+     "key": "straw_rope",
+     "id": "jp_m_straw_rope",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 226,
+    "Resolution 2": 214,
+    "Resolution 3": 12,
+    "Geometry": 154,
+    "View Geometry": 154,
+    "Fire Geometry": 154
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "3 x 2 ken footprint as the roof generator: x 0..5.46 along the ridge, z 0 (front wall line) .. -3.64; y 0 = floor, eave line (keta top) 2.88. The sample carries the outer keta (outer_plates) for context; buildings pass outer_plates=False (their walls own the keta)",
+   "recipe": "koyagumi.koyagumi(roof_part, W, D, roofs.roof(...) info, eave_y, system, members, geya, soot)"
+  },
+  {
+   "id": "jp_p_frame_koyagumi_sasu_geya",
+   "part": "jp_p_frame_koyagumi",
+   "variant": "_sasu_geya",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_koyagumi_sasu_geya.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_koyagumi",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "Kanto farmhouse (DW06) and big thatch houses: JOYA core (3 ken) with its posts, plates and cambered ushibari, GEYA aisles (1 ken) front and back under the same sweeping thatch slope (G1 A1-4)",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 45.0,
+     "measured": 45.0,
+     "tol": 0.1,
+     "source": "roofs.PITCH (the frame follows the roof)"
+    },
+    {
+     "name": "frame_line_spacing_m",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "PLAYBOOK §4 (1 ken bays)"
+    },
+    {
+     "name": "tie_beam_depth_m",
+     "expected": "0.26-0.32 (log dia.)",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "period sections (A): koyabari 8-10 sun; ushibari logs 25-35 cm"
+    },
+    {
+     "name": "sasu_diameter_m",
+     "expected": "0.12-0.18",
+     "measured": 0.15,
+     "tol": 0.01,
+     "source": "(A) minka sasu 4-6 sun"
+    },
+    {
+     "name": "moya_spacing_m",
+     "expected": "0.45-0.90",
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "(A)"
+    },
+    {
+     "name": "joya_span_ken",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0.01,
+     "source": "G1 A1-4: joya 3 ken + geya"
+    },
+    {
+     "name": "geya_depth_front_ken",
+     "expected": 1,
+     "measured": 1.0,
+     "tol": 0.0,
+     "source": "G1 A1-4"
+    },
+    {
+     "name": "geya_depth_back_ken",
+     "expected": 1,
+     "measured": 1.0,
+     "tol": 0.0,
+     "source": "G1 A1-4"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      7.28,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      7.28,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      9.1,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      9.1,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      10.92,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      10.92,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      7.28,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      9.1,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      10.92,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      7.28,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      9.1,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      10.92,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      7.43,
+      -4.55
+     ],
+     "note": "rafter apex over the ridge line"
+    }
+   ],
+   "materials": [
+    {
+     "key": "straw_rope",
+     "id": "jp_m_straw_rope",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1094,
+    "Resolution 2": 1082,
+    "Resolution 3": 192,
+    "Geometry": 862,
+    "View Geometry": 862,
+    "Fire Geometry": 862
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "7 x 5 ken footprint as the roof generator: x 0..12.74 along the ridge, z 0 (front wall line) .. -9.10; y 0 = floor, eave line (keta top) 2.88. The sample carries the outer keta (outer_plates) for context; buildings pass outer_plates=False (their walls own the keta)",
+   "recipe": "koyagumi.koyagumi(roof_part, W, D, roofs.roof(...) info, eave_y, system, members, geya, soot)"
+  },
+  {
+   "id": "jp_p_frame_koyagumi_sasu_geya_sooted",
+   "part": "jp_p_frame_koyagumi",
+   "variant": "_sasu_geya_sooted",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_koyagumi_sasu_geya_sooted.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_koyagumi",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "the joya / geya farmhouse frame, SOOTED wear level (W5; Hida 'big smoke-black beams', irori smoke)",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 45.0,
+     "measured": 45.0,
+     "tol": 0.1,
+     "source": "roofs.PITCH (the frame follows the roof)"
+    },
+    {
+     "name": "frame_line_spacing_m",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "PLAYBOOK §4 (1 ken bays)"
+    },
+    {
+     "name": "tie_beam_depth_m",
+     "expected": "0.26-0.32 (log dia.)",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "period sections (A): koyabari 8-10 sun; ushibari logs 25-35 cm"
+    },
+    {
+     "name": "sasu_diameter_m",
+     "expected": "0.12-0.18",
+     "measured": 0.15,
+     "tol": 0.01,
+     "source": "(A) minka sasu 4-6 sun"
+    },
+    {
+     "name": "moya_spacing_m",
+     "expected": "0.45-0.90",
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "(A)"
+    },
+    {
+     "name": "joya_span_ken",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0.01,
+     "source": "G1 A1-4: joya 3 ken + geya"
+    },
+    {
+     "name": "geya_depth_front_ken",
+     "expected": 1,
+     "measured": 1.0,
+     "tol": 0.0,
+     "source": "G1 A1-4"
+    },
+    {
+     "name": "geya_depth_back_ken",
+     "expected": 1,
+     "measured": 1.0,
+     "tol": 0.0,
+     "source": "G1 A1-4"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      7.28,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      7.28,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      9.1,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      9.1,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      10.92,
+      0.0,
+      0.0
+     ],
+     "note": "frame line at the front wall (the wall post carries the tie / aisle beam)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      10.92,
+      0.0,
+      -9.1
+     ],
+     "note": "frame line at the back wall"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      7.28,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      9.1,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      10.92,
+      0.0,
+      -1.82
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      7.28,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      9.1,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "post",
+     "pos": [
+      10.92,
+      0.0,
+      -7.28
+     ],
+     "note": "joya post (in the part), 4.52 high"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      7.43,
+      -4.55
+     ],
+     "note": "rafter apex over the ridge line"
+    }
+   ],
+   "materials": [
+    {
+     "key": "straw_rope",
+     "id": "jp_m_straw_rope",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1094,
+    "Resolution 2": 1082,
+    "Resolution 3": 192,
+    "Geometry": 862,
+    "View Geometry": 862,
+    "Fire Geometry": 862
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "7 x 5 ken footprint as the roof generator: x 0..12.74 along the ridge, z 0 (front wall line) .. -9.10; y 0 = floor, eave line (keta top) 2.88. The sample carries the outer keta (outer_plates) for context; buildings pass outer_plates=False (their walls own the keta)",
+   "recipe": "koyagumi.koyagumi(roof_part, W, D, roofs.roof(...) info, eave_y, system, members, geya, soot)"
+  },
+  {
    "id": "jp_p_trim_grime_wall",
    "part": "jp_p_trim_grime",
    "variant": "_wall",

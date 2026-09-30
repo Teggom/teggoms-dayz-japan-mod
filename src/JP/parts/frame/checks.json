@@ -310,6 +310,491 @@
      "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
+  },
+  {
+   "id": "jp_p_frame_koyagumi_wagoya",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 387, Resolution 2 153, Resolution 3 12, Geometry 39, View Geometry 39, Fire Geometry 39"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 24.2, measured 24.2277"
+    },
+    {
+     "check": "C4 frame_line_spacing_m",
+     "ok": true,
+     "detail": "expected 1.82, measured 1.82"
+    },
+    {
+     "check": "C4 tie_beam_depth_m",
+     "ok": true,
+     "detail": "expected 0.24-0.32, measured 0.27"
+    },
+    {
+     "check": "C4 purlin_spacing_m",
+     "ok": true,
+     "detail": "expected 0.91, measured 0.91"
+    },
+    {
+     "check": "C4 purlin_section_m",
+     "ok": true,
+     "detail": "expected 0.105, measured 0.105"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "8 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_koyagumi_wagoya_log",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 470, Resolution 2 284, Resolution 3 12, Geometry 102, View Geometry 102, Fire Geometry 102"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 24.2, measured 24.2277"
+    },
+    {
+     "check": "C4 frame_line_spacing_m",
+     "ok": true,
+     "detail": "expected 1.82, measured 1.82"
+    },
+    {
+     "check": "C4 tie_beam_depth_m",
+     "ok": true,
+     "detail": "expected 0.26-0.32 (log dia.), measured 0.3"
+    },
+    {
+     "check": "C4 purlin_spacing_m",
+     "ok": true,
+     "detail": "expected 0.91, measured 0.91"
+    },
+    {
+     "check": "C4 purlin_section_m",
+     "ok": true,
+     "detail": "expected 0.12, measured 0.12"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_koyagumi_wagoya_hip",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 521, Resolution 2 201, Resolution 3 24, Geometry 63, View Geometry 63, Fire Geometry 63"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "10 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "10 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "10 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 24.2, measured 24.2277"
+    },
+    {
+     "check": "C4 frame_line_spacing_m",
+     "ok": true,
+     "detail": "expected 1.82, measured 1.82"
+    },
+    {
+     "check": "C4 tie_beam_depth_m",
+     "ok": true,
+     "detail": "expected 0.24-0.32, measured 0.27"
+    },
+    {
+     "check": "C4 purlin_spacing_m",
+     "ok": true,
+     "detail": "expected 0.91, measured 0.91"
+    },
+    {
+     "check": "C4 purlin_section_m",
+     "ok": true,
+     "detail": "expected 0.105, measured 0.105"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "8 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_koyagumi_sasu",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 226, Resolution 2 214, Resolution 3 12, Geometry 154, View Geometry 154, Fire Geometry 154"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 45.0, measured 45.0"
+    },
+    {
+     "check": "C4 frame_line_spacing_m",
+     "ok": true,
+     "detail": "expected 1.82, measured 1.82"
+    },
+    {
+     "check": "C4 tie_beam_depth_m",
+     "ok": true,
+     "detail": "expected 0.26-0.32 (log dia.), measured 0.3"
+    },
+    {
+     "check": "C4 sasu_diameter_m",
+     "ok": true,
+     "detail": "expected 0.12-0.18, measured 0.15"
+    },
+    {
+     "check": "C4 moya_spacing_m",
+     "ok": true,
+     "detail": "expected 0.45-0.90, measured 0.6"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_koyagumi_sasu_sooted",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 226, Resolution 2 214, Resolution 3 12, Geometry 154, View Geometry 154, Fire Geometry 154"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 45.0, measured 45.0"
+    },
+    {
+     "check": "C4 frame_line_spacing_m",
+     "ok": true,
+     "detail": "expected 1.82, measured 1.82"
+    },
+    {
+     "check": "C4 tie_beam_depth_m",
+     "ok": true,
+     "detail": "expected 0.26-0.32 (log dia.), measured 0.3"
+    },
+    {
+     "check": "C4 sasu_diameter_m",
+     "ok": true,
+     "detail": "expected 0.12-0.18, measured 0.15"
+    },
+    {
+     "check": "C4 moya_spacing_m",
+     "ok": true,
+     "detail": "expected 0.45-0.90, measured 0.6"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_koyagumi_sasu_geya",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 1094, Resolution 2 1082, Resolution 3 192, Geometry 862, View Geometry 862, Fire Geometry 862"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "57 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "57 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "57 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 45.0, measured 45.0"
+    },
+    {
+     "check": "C4 frame_line_spacing_m",
+     "ok": true,
+     "detail": "expected 1.82, measured 1.82"
+    },
+    {
+     "check": "C4 tie_beam_depth_m",
+     "ok": true,
+     "detail": "expected 0.26-0.32 (log dia.), measured 0.3"
+    },
+    {
+     "check": "C4 sasu_diameter_m",
+     "ok": true,
+     "detail": "expected 0.12-0.18, measured 0.15"
+    },
+    {
+     "check": "C4 moya_spacing_m",
+     "ok": true,
+     "detail": "expected 0.45-0.90, measured 0.6"
+    },
+    {
+     "check": "C4 joya_span_ken",
+     "ok": true,
+     "detail": "expected 3, measured 3.0"
+    },
+    {
+     "check": "C4 geya_depth_front_ken",
+     "ok": true,
+     "detail": "expected 1, measured 1.0"
+    },
+    {
+     "check": "C4 geya_depth_back_ken",
+     "ok": true,
+     "detail": "expected 1, measured 1.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "26 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_koyagumi_sasu_geya_sooted",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 1094, Resolution 2 1082, Resolution 3 192, Geometry 862, View Geometry 862, Fire Geometry 862"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "57 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "57 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "57 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 45.0, measured 45.0"
+    },
+    {
+     "check": "C4 frame_line_spacing_m",
+     "ok": true,
+     "detail": "expected 1.82, measured 1.82"
+    },
+    {
+     "check": "C4 tie_beam_depth_m",
+     "ok": true,
+     "detail": "expected 0.26-0.32 (log dia.), measured 0.3"
+    },
+    {
+     "check": "C4 sasu_diameter_m",
+     "ok": true,
+     "detail": "expected 0.12-0.18, measured 0.15"
+    },
+    {
+     "check": "C4 moya_spacing_m",
+     "ok": true,
+     "detail": "expected 0.45-0.90, measured 0.6"
+    },
+    {
+     "check": "C4 joya_span_ken",
+     "ok": true,
+     "detail": "expected 3, measured 3.0"
+    },
+    {
+     "check": "C4 geya_depth_front_ken",
+     "ok": true,
+     "detail": "expected 1, measured 1.0"
+    },
+    {
+     "check": "C4 geya_depth_back_ken",
+     "ok": true,
+     "detail": "expected 1, measured 1.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "26 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
   }
  ]
 }

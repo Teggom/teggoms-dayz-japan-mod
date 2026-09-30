@@ -28,10 +28,12 @@ CELL = (480, 400)
 # sheet -> (title, scale m, filter(part id) -> bool, view)
 G3_NEW = ("jp_p_open_itado_single", "jp_p_open_shoji_ext_hikiwake", "jp_p_open_shoji_ext_single",
           "jp_p_open_window_slide", "jp_p_open_amado_window", "jp_p_open_tsukiage")
+B2_PARTS = ("jp_p_frame_koyagumi", "jp_p_frame_stall", "jp_p_wall_party", "jp_p_roof_party_end", "jp_p_roof_corner",
+            "jp_p_roof_seam_cap", "jp_p_stair", "jp_p_open_halfdoor", "jp_p_floor_pit", "jp_p_floor_sunoko")
 KAWARA_PARTS = ("jp_p_roof_sangawara", "jp_p_roof_kawara_ridge", "jp_p_roof_onigawara", "jp_p_roof_hongawara")
 SHEET_DEFS = [
     ("1_frame", "Frame: posts, beams, dashigeta (G1 d4: flagged deviation)", 6.5,
-     lambda p: p.startswith("jp_p_frame_"), "3q"),
+     lambda p: p.startswith("jp_p_frame_") and not p.startswith(B2_PARTS), "3q"),
     ("2a_walls", "Walls: recipes (1-ken samples), wainscot, shitami, namako", 5.5,
      lambda p: p.startswith("jp_p_wall_") and not p.startswith(("jp_p_wall_gable", "jp_p_wall_udatsu")), "3q"),
     ("2b_gables", "Gable ends (3-ken span, from the eave line up) and udatsu", 9.0,
@@ -53,6 +55,9 @@ SHEET_DEFS = [
      lambda p: p.startswith(("jp_p_roof_forms", "jp_p_roof_thatch_body")), "3q"),
     ("7_trim", "Trim: W1 grime decal band (jp_m_wall_grime), shown on its context wall / post", 3.0,
      lambda p: p.startswith("jp_p_trim_"), "3q"),
+    # B2 (2026-09-29): missing parts, wave 1
+    ("9_koyagumi", "B2 koyagumi: visible roof framing (frame only; grey posts = context at the frame lines)", 19.0,
+     lambda p: p.startswith("jp_p_frame_koyagumi"), "3q"),
 ]
 OVERRIDES = {}      # name -> dict of job overrides (set by family modules via registry.RENDER_HINTS)
 
