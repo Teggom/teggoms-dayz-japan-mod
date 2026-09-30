@@ -1,0 +1,74 @@
+{
+ "id": "jp_m_straw_rope",
+ "family": "straw",
+ "palette_id": "straw_aged",
+ "palette_by_wear": {
+  "_w0": "thatch_new"
+ },
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "u round the rope (0.5 m per tile), v along it",
+ "grain": "three strands, twist at ~60 deg",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\hay.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "golden new straw",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_rope_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope_w0.rvmat",
+   "target_srgb": [
+    167.7,
+    142.2,
+    90.6
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-gold",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_rope_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+   "target_srgb": [
+    104.5,
+    90.1,
+    68.9
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "grey-brown, frayed, dark ends",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_rope_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
+   "target_srgb": [
+    87.2,
+    73.6,
+    53.0
+   ],
+   "masked_frac": 0.105
+  }
+ },
+ "used_by": [
+  "jp_s_firewood_stack",
+  "jp_s_handcart",
+  "jp_s_laundry_pole",
+  "jp_s_shimenawa",
+  "jp_s_stall",
+  "jp_s_straw_stack",
+  "jp_s_tenbin",
+  "jp_s_well_hanetsurube",
+  "jp_s_well_tsurube"
+ ],
+ "used_on": "shimenawa, well ropes, bundle ties, lashings, bale ropes",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/outdoor_kit/materials_needed.json"
+}

@@ -1,0 +1,77 @@
+{
+ "id": "jp_m_decal_moss",
+ "family": "stone",
+ "palette_id": "moss_on_stone",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; decal faces 3 mm off the stone tops and north faces",
+ "grain": "none; alpha patches",
+ "penetration_rvmat": null,
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "thin lichen spots",
+   "co": "JP\\common\\materials\\stone\\jp_m_decal_moss_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_decal_moss_w0.rvmat",
+   "target_srgb": [
+    124.1,
+    140.6,
+    112.1
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.158
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "moss cushions on top faces",
+   "co": "JP\\common\\materials\\stone\\jp_m_decal_moss_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+   "target_srgb": [
+    125.0,
+    128.0,
+    92.0
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.195
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "thick moss with dead leaves caught in it",
+   "co": "JP\\common\\materials\\stone\\jp_m_decal_moss_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+   "target_srgb": [
+    112.5,
+    118.8,
+    78.8
+   ],
+   "masked_frac": 0.037,
+   "alpha_cover": 0.472
+  }
+ },
+ "used_by": [
+  "jp_s_chozubachi",
+  "jp_s_grave_stones",
+  "jp_s_stele",
+  "jp_s_stone_jizo",
+  "jp_s_stone_lantern",
+  "jp_s_stone_steps",
+  "jp_s_torii_stone",
+  "jp_s_torii_wood"
+ ],
+ "used_on": "Moss and lichen as separate alpha decal geometry laid on tops of stones, torii kasagi, lantern roofs and north faces: variety without a second UV set (decision 10)",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/outdoor_kit/materials_needed.json",
+ "alpha": "decal",
+ "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
+ "note": "G1 decision 10: moss as a separate decal material."
+}

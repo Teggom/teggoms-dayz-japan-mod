@@ -1,0 +1,64 @@
+{
+ "id": "jp_m_wood_endgrain",
+ "family": "wood",
+ "palette_id": "timber_weathered",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "NOT tileable: one 0.5 m log end, pith at (0.5, 0.5); map a disc of the log's diameter centred there",
+ "grain": "growth rings, radial checks",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh cut, pale rings",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w0.rvmat",
+   "target_srgb": [
+    146.6,
+    98.9,
+    78.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "greyed rings, checks",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
+   "target_srgb": [
+    103.9,
+    74.9,
+    66.2
+   ],
+   "masked_frac": 0.004
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "dark, split, lichen",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w2.rvmat",
+   "target_srgb": [
+    89.6,
+    64.5,
+    56.1
+   ],
+   "masked_frac": 0.092
+  }
+ },
+ "used_by": [
+  "jp_s_firewood_stack"
+ ],
+ "used_on": "firewood ends, post tops, beam ends",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/outdoor_kit/materials_needed.json"
+}

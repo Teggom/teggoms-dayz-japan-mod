@@ -1,0 +1,272 @@
+{
+ "id": "jp_m_decal_sumi_text",
+ "family": "paint",
+ "palette_id": "sumi_black",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 1024,
+ "px_per_m": 1024.0,
+ "uv": "TEXT ATLAS, not world-scale: map a face onto one cell's rectangle (\"cells\": u0, v0, u1, v1 with v down), keeping the cell's aspect; 1024 px = 1 m, so a cell's size is the text's real size. Lay the decal face 2-3 mm off the surface; never in Geometry/View/Fire. Text runs top to bottom, columns right to left.",
+ "grain": "brush strokes (Yuji Syuku kanji, Yuji Hentaigana Akebono kana)",
+ "penetration_rvmat": null,
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "crisp black ink",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w0.rvmat",
+   "target_srgb": [
+    47.7,
+    47.7,
+    47.7
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.09
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "faded to grey-brown",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w1.rvmat",
+   "target_srgb": [
+    74.0,
+    66.4,
+    60.1
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.074
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "ghost of text, flaking",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2.rvmat",
+   "target_srgb": [
+    76.3,
+    68.7,
+    62.3
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.0
+  }
+ },
+ "used_by": [
+  "jp_s_fire_tub",
+  "jp_s_grave_wood",
+  "jp_s_kosatsu",
+  "jp_s_lantern_sign",
+  "jp_s_nobori",
+  "jp_s_shopfront",
+  "jp_s_torii_wood"
+ ],
+ "used_on": "Ink text atlas: shop names, inn names, house marks, edict lines, sotoba text, banner text",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/outdoor_kit/materials_needed.json",
+ "alpha": "decal",
+ "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
+ "note": "Ink on boards, paper and cloth: the 1711 Shotoku edict board, shop signs (hentaigana kana), lanterns, sotoba, torii plaques, a dedication banner, fire-tub marks. Fonts: SIL OFL 1.1, Yuji Project Authors. Nothing emissive.",
+ "cells": {
+  "kosatsu_chuko_1711": {
+   "uv": [
+    0.0,
+    0.0,
+    1.0,
+    0.4199
+   ],
+   "for": "jp_s_kosatsu boards (the 1711 Shotoku loyalty-and-filial-piety board)",
+   "text": "定 / 一 忠孝をはげまし夫婦兄弟諸親類にむつましく召仕の者に至るまで憐愍を加ふべし若不忠不孝の者あらば重罪たるべき事 / 一 家業を専にし懈る事なく万事其分限に過べからざる事 / 右之条々可相守之者也 / 正徳元年五月 日 / 奉行"
+  },
+  "kanban_oyado": {
+   "uv": [
+    0.0,
+    0.4395,
+    0.1172,
+    0.7422
+   ],
+   "for": "jp_s_shopfront / jp_s_lantern_sign _chochin_inn: inn",
+   "text": "御宿"
+  },
+  "kanban_miki": {
+   "uv": [
+    0.1172,
+    0.4395,
+    0.2344,
+    0.7422
+   ],
+   "for": "sake shop sign",
+   "text": "御酒"
+  },
+  "kanban_osobakiri": {
+   "uv": [
+    0.2344,
+    0.4395,
+    0.3174,
+    0.7422
+   ],
+   "for": "soba shop (hentaigana so-ba)",
+   "text": "御そば切"
+  },
+  "kanban_okashidokoro": {
+   "uv": [
+    0.3174,
+    0.4395,
+    0.4004,
+    0.7422
+   ],
+   "for": "confectioner",
+   "text": "御菓子所"
+  },
+  "kanban_yakushu": {
+   "uv": [
+    0.4004,
+    0.4395,
+    0.5176,
+    0.7422
+   ],
+   "for": "medicine shop (yakushu)",
+   "text": "薬種"
+  },
+  "kanban_oyasumidokoro": {
+   "uv": [
+    0.5176,
+    0.4395,
+    0.6152,
+    0.7422
+   ],
+   "for": "tea house / rest stop",
+   "text": "御休処"
+  },
+  "kanban_gofuku": {
+   "uv": [
+    0.6152,
+    0.4395,
+    0.7324,
+    0.7422
+   ],
+   "for": "cloth (gofuku) shop",
+   "text": "呉服"
+  },
+  "chochin_goshinto": {
+   "uv": [
+    0.7324,
+    0.4395,
+    0.8301,
+    0.7422
+   ],
+   "for": "festival / shrine lantern (go-shinto)",
+   "text": "御神燈"
+  },
+  "chochin_honcho": {
+   "uv": [
+    0.8301,
+    0.4395,
+    0.9473,
+    0.7422
+   ],
+   "for": "ward-gate lantern (Honcho ward)",
+   "text": "本町"
+  },
+  "sotoba_namuamida": {
+   "uv": [
+    0.0,
+    0.7617,
+    0.0488,
+    1.0
+   ],
+   "for": "jp_s_grave_wood sotoba",
+   "text": "南無阿弥陀仏"
+  },
+  "gaku_hachimangu": {
+   "uv": [
+    0.0488,
+    0.7617,
+    0.1318,
+    1.0
+   ],
+   "for": "jp_s_torii_wood plaque (Hachiman shrine)",
+   "text": "八幡宮"
+  },
+  "gaku_inari": {
+   "uv": [
+    0.1318,
+    0.7617,
+    0.1904,
+    1.0
+   ],
+   "for": "jp_s_torii_wood plaque (Inari)",
+   "text": "稲荷大明神"
+  },
+  "nobori_hono_inari": {
+   "uv": [
+    0.1904,
+    0.7617,
+    0.2979,
+    1.0
+   ],
+   "for": "jp_s_nobori: dedication banner (stretch the cell up the banner)",
+   "text": "奉納 / 稲荷大明神"
+  },
+  "oke_hinoyojin": {
+   "uv": [
+    0.2979,
+    0.7617,
+    0.3662,
+    1.0
+   ],
+   "for": "jp_s_fire_tub: fire-watch on buckets",
+   "text": "火之用心"
+  },
+  "oke_yosui": {
+   "uv": [
+    0.3662,
+    0.7617,
+    0.4639,
+    1.0
+   ],
+   "for": "jp_s_fire_tub: 'water for use' on the tub",
+   "text": "用水"
+  },
+  "mark_marudai": {
+   "uv": [
+    0.4639,
+    0.7617,
+    0.5811,
+    0.8789
+   ],
+   "for": "jp_s_fire_tub house mark on buckets (circle + dai)",
+   "text": "大"
+  },
+  "kanban_manju": {
+   "uv": [
+    0.5811,
+    0.7617,
+    0.6396,
+    1.0
+   ],
+   "for": "manju (steamed bun) shop, hentaigana",
+   "text": "まんぢう"
+  },
+  "kanban_tabako": {
+   "uv": [
+    0.6396,
+    0.7617,
+    0.7129,
+    1.0
+   ],
+   "for": "tobacco shop, hentaigana",
+   "text": "たばこ"
+  }
+ },
+ "fonts": [
+  "research/fonts/yujisyuku/YujiSyuku-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)",
+  "research/fonts/yujihentaiganaakebono/YujiHentaiganaAkebono-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)"
+ ]
+}

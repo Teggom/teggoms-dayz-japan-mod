@@ -1,0 +1,75 @@
+{
+ "id": "jp_m_straw_stack",
+ "family": "straw",
+ "palette_id": "straw_aged",
+ "palette_by_wear": {
+  "_w0": "thatch_new"
+ },
+ "tile_size_m": 1.0,
+ "texture_px": 256,
+ "px_per_m": 256.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; v = 0 at the top of the stack",
+ "grain": "stalks down the face (v)",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\hay.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh harvest gold",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_stack_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_stack_w0.rvmat",
+   "target_srgb": [
+    176.0,
+    150.0,
+    98.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-gold weathered top",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_stack_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
+   "target_srgb": [
+    107.0,
+    92.5,
+    71.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "grey-black top with moss, slumped",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_stack_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+   "target_srgb": [
+    79.3,
+    66.9,
+    51.9
+   ],
+   "masked_frac": 0.03
+  }
+ },
+ "used_by": [
+  "jp_s_straw_stack"
+ ],
+ "used_on": "straw stacks, stooks, bundles, bale ends",
+ "sources": [
+  {
+   "asset": "reed_roof_04",
+   "name": "Reed Roof 04",
+   "page": "https://polyhaven.com/a/reed_roof_04",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Rob Tuytel"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/outdoor_kit/materials_needed.json"
+}

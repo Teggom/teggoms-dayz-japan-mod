@@ -1,0 +1,80 @@
+{
+ "id": "jp_m_stone_carved",
+ "family": "stone",
+ "palette_id": "stone_lantern",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "none; softened chisel marks",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\granite.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\stone_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh-cut grey granite/andesite, crisp chisel marks",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_carved_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_w0.rvmat",
+   "target_srgb": [
+    84.7,
+    81.6,
+    73.4
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "darkened, lichen spots (grey-green, orange), grime in carving",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_carved_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+   "target_srgb": [
+    73.0,
+    70.0,
+    62.0
+   ],
+   "masked_frac": 0.088
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "heavy moss on tops and north faces (W6), black lichen streaks",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_carved_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat",
+   "target_srgb": [
+    66.1,
+    63.2,
+    55.3
+   ],
+   "masked_frac": 0.34
+  }
+ },
+ "used_by": [
+  "jp_s_chozubachi",
+  "jp_s_grave_stones",
+  "jp_s_grave_wood",
+  "jp_s_nobori",
+  "jp_s_stele",
+  "jp_s_stone_jizo",
+  "jp_s_stone_lantern",
+  "jp_s_torii_stone"
+ ],
+ "used_on": "THE weathered stone for figures, steles, lanterns, gravestones and basins; the palette entry was sampled from Kasuga lanterns (c22)",
+ "sources": [
+  {
+   "asset": "rock_surface",
+   "name": "Rock Surface",
+   "page": "https://polyhaven.com/a/rock_surface",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Amal Kumar"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/outdoor_kit/materials_needed.json"
+}

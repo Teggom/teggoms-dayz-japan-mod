@@ -1,0 +1,79 @@
+{
+ "id": "jp_m_ground_leaf_litter",
+ "family": "ground",
+ "palette_id": "leaf_litter_autumn",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 512,
+ "px_per_m": 256.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "none",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\dirt_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh autumn leaves (red, yellow, brown)",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w0.rvmat",
+   "target_srgb": [
+    126.4,
+    80.3,
+    52.3
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "brown leaves in silt",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+   "target_srgb": [
+    112.0,
+    76.0,
+    52.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "black rotted leaves and mud",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+   "target_srgb": [
+    81.8,
+    54.7,
+    41.2
+   ],
+   "masked_frac": 0.0
+  }
+ },
+ "used_by": [
+  "jp_s_chozubachi",
+  "jp_s_fire_tub",
+  "jp_s_gutter",
+  "jp_s_oke",
+  "jp_s_stele",
+  "jp_s_stone_steps"
+ ],
+ "used_on": "The abandoned layer: gutter beds, tub bottoms, basin hollows, step treads, Jizo huts; AUTUMN",
+ "sources": [
+  {
+   "asset": "dry_decay_leaves",
+   "name": "Dry Decay Leaves",
+   "page": "https://polyhaven.com/a/dry_decay_leaves",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Amal Kumar"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/outdoor_kit/materials_needed.json",
+ "note": "Tile 2.0 m at 256 px/m (A3 asked 1.0 m at 256 px/m): keeps the scan's real leaf size."
+}

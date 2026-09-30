@@ -1,0 +1,82 @@
+{
+ "id": "jp_m_textile_noren",
+ "family": "textile",
+ "palette_id": "aizome_kon",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale, 1 m tile = 2 x 2 cells of 0.5 m, one resist-dyed shop mark per cell (1 maru-ni-ichi, 2 igeta, 3 yamagata-ni-maru, 4 hishi); UV a panel onto a cell; torn hems (_w2) run along v = 0.5 and 1.0",
+ "grain": "plain cotton weave",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "deep indigo with white resist marks",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_noren_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_noren_w0.rvmat",
+   "target_srgb": [
+    49.6,
+    57.5,
+    61.5
+   ],
+   "masked_frac": 0.095,
+   "alpha_cover": 1.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "faded, sun-bleached folds",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_noren_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_noren_w1.rvmat",
+   "target_srgb": [
+    61.6,
+    68.8,
+    71.4
+   ],
+   "masked_frac": 0.095,
+   "alpha_cover": 1.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "grey-blue, torn hem (alpha), stains",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_noren_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_noren_w2.rvmat",
+   "target_srgb": [
+    64.1,
+    72.6,
+    73.3
+   ],
+   "masked_frac": 0.192,
+   "alpha_cover": 0.934
+  }
+ },
+ "used_by": [
+  "jp_s_laundry_pole",
+  "jp_s_nobori",
+  "jp_s_shopfront"
+ ],
+ "used_on": "noren, indigo banners, indigo laundry",
+ "sources": [
+  {
+   "asset": "rough_linen",
+   "name": "Rough Linen",
+   "page": "https://polyhaven.com/a/rough_linen",
+   "licence": "CC0 1.0",
+   "authors": [
+    "colormass",
+    "Rico Cilliers"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/outdoor_kit/materials_needed.json",
+ "alpha": "cut",
+ "render": "_ca alpha = holes / tears / gaps; renderFlags AlphaTest32 (vanilla ghillie / fur pattern). RGB continues under the holes.",
+ "note": "Two-sided geometry (the rvmat does not make faces two-sided)."
+}
