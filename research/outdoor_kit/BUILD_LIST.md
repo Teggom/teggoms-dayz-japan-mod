@@ -6,7 +6,7 @@
 
 **Scope:** the 27 most-reused outdoor items: OUTDOOR_LIST §5 and the KEEP_OUTDOOR build-first list, with two swaps (see "What changed from the §5 list"). Trees, fences, bridges and setting-specific props are out.
 
-**Files:** `build_list.json` (validates against `playbook/templates/build_list_schema.json`; the builders read it), `materials_needed.json` (what jp_common lacks), `refs_index.json` (images k.., text O..), `CREDITS.md` (every download and its licence). Images: `data/research_okit/refs/`. All five files come from `tools/gen_build_list.py`: edit the data there and rerun it. **Images: 4 downloaded, 31 picked and licence-checked but linked only:** upload.wikimedia.org rate-limited our generic User-Agent (HTTP 429). `tools/fetch_refs.py` resumes; then rerun this generator (it samples `straw_aged` from k34 then).
+**Files:** `build_list.json` (validates against `playbook/templates/build_list_schema.json`; the builders read it), `materials_needed.json` (what jp_common lacks), `refs_index.json` (images k.., text O..), `CREDITS.md` (every download and its licence). Images: `data/research_okit/refs/`. All five files come from `tools/gen_build_list.py`: edit the data there and rerun it. **Images: 14 downloaded, 21 picked and licence-checked but linked only:** upload.wikimedia.org rate-limited our generic User-Agent (HTTP 429). `tools/fetch_refs.py` resumes; then rerun this generator (it samples `straw_aged` from k34 then).
 
 **Reading the tables:** `[O07]`, `[T54]`, `k06` or `x31` are sources. `(assumed)` means no source gives the value; the reason is in the JSON. **W1** = wave 1 (Phase B3, for the B4 pilot and Phase C wave 1); **W2** = wave 2 (with the shrine and temple ladder).
 
