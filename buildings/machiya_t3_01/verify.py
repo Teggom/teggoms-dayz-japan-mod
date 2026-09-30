@@ -127,15 +127,22 @@ def door_world(d, gcomps):
         "HITS %s" % hits[:3], clear, head), clear
 
 
-def run(M=None, floors=None, pts=None):
+def run(M=None, floors=None, pts=None, name=None, cls=None, here=None, extra=None):
+    """The 78 machiya checks. B4: the furnished variant (buildings/machiya_t3_01_shop) runs them too, on its own MLOD /
+    ODOL / config class (name, cls, here), with its proxy triangles stripped from the LODs before any geometry check;
+    extra(M, L, floors, pts, rec, raw_lods) then adds the decorator checks. Loot: the Roadway / range check applies
+    to the floor points (no 'prop'); the CE check compares every point, in CE order."""
+    from jpparts import proxies as PX
     del RES[:]
+    name, cls, here = name or MT.NAME, cls or MT.CLASS, here or HERE
     if M is None:
         M, floors, _ = MT.model()
     if pts is None:
         pts = []
         for f in floors:
             pts += bloot.floor_points(f)
-    lods = mlod.read_mlod(os.path.join(HERE, "out", MT.NAME + ".p3d"))
+    raw = mlod.read_mlod(os.path.join(here, "out", name + ".p3d"))
+    lods = [PX.strip(l) for l in raw]
     L = {mlod.lod_name(l.resolution): l for l in lods}
     want = ["Resolution 1", "Resolution 2", "Resolution 3", "Geometry", "Memory", "Roadway", "View Geometry",
             "Fire Geometry"]
@@ -195,7 +202,7 @@ def run(M=None, floors=None, pts=None):
     mcfg = open(os.path.join(DEV, "src", "JP", "buildings", "machiya", "model.cfg")).read()
     ccfg = open(os.path.join(DEV, "src", "JP", "buildings", "config.cpp")).read()
     # config.cpp holds every shipped building (buildings/pipeline.py, B0): check this building's class only
-    m_ = re.search(r"\tclass %s: HouseNoDestruct\n\t\{.*?\n\t\};\n" % MT.CLASS, ccfg, re.S)
+    m_ = re.search(r"\tclass %s: HouseNoDestruct\n\t\{.*?\n\t\};\n" % cls, ccfg, re.S)
     ccfg = m_.group(0) if m_ else ""
     gcomps = C.components(geo)
     clears = []
@@ -233,11 +240,11 @@ def run(M=None, floors=None, pts=None):
                     probs.append("%s_axis point order differs from the recipe (rotation sense!)" % b)
             if not mem.selections.get(b):
                 probs.append("memory leaf point %s missing" % b)
-            cls = b[0].upper() + b[1:]
+            acls = b[0].upper() + b[1:]
             last = ("offset1=%.4f;" % a["amount"]) if a["type"] == "translation" else ("angle1=%.6f;" % a["amount"])
             if not re.search(r'class %s\s*\{[^}]*type="%s";[^}]*source="DoorsTwin%d";[^}]*selection="%s";'
-                             r'[^}]*axis="%s_axis";[^}]*%s' % (cls, a["type"], k, b, b, re.escape(last)), mcfg):
-                probs.append("model.cfg %s wrong" % cls)
+                             r'[^}]*axis="%s_axis";[^}]*%s' % (acls, a["type"], k, b, b, re.escape(last)), mcfg):
+                probs.append("model.cfg %s wrong" % acls)
         if not mem.selections.get(tw + "_action"):
             probs.append("memory %s_action missing" % tw)
         if not re.search(r'class DoorsTwin%d\s*\{[^}]*component="DoorsTwin%d";[^}]*soundPos="doorsTwin%d_action";'
@@ -308,9 +315,11 @@ def run(M=None, floors=None, pts=None):
         n - miss_f, n, ", ".join(f["name"] for f in floors)))
     rec("C7 head room >= 2.10 over every floor", not low, "lowest %.2f m%s" % (lowest, "; low %s" % low[:3] if low
                                                                                  else ""))
-    # loot points
+    # loot points (the floor ones: raised points on furniture are the decorator's D11)
     badl = []
     for p in pts:
+        if p.get("prop"):
+            continue
         x, y, z = p["model"]
         if not any(abs(h - y) < 0.02 for h, _ in road_heights(road, x, z)):
             badl.append(("off roadway", p["model"]))
@@ -330,7 +339,7 @@ def run(M=None, floors=None, pts=None):
         "%d points (%s)%s" % (len(pts), ", ".join("%s %d" % kv for kv in by.items()), "; bad %s" % badl[:2] if badl
                               else ""))
     ce = open(os.path.join(DEV, "test", "ce", "C_mapgroupproto.xml")).read()
-    m_ = re.search(r'<group name="%s">.*?</group>' % MT.CLASS, ce, re.S)       # this building's loot group only
+    m_ = re.search(r'<group name="%s">.*?</group>' % cls, ce, re.S)       # this building's loot group only
     ce = m_.group(0) if m_ else ""
     cepts = [tuple(float(v) for v in m.group(1).split()) for m in re.finditer(r'<point pos="([^"]+)"', ce)]
     worst = max([max(abs(a - b) for a, b in zip(bloot.ce_to_world(l, POS, YAW), bloot.model_to_world(p["model"], POS,
@@ -351,7 +360,7 @@ def run(M=None, floors=None, pts=None):
         % (fw, fd, min(xs), max(xs), min(zs), max(zs), dist, b[3]))
     BC.run_g3(M, L, floors, rec)          # C10-C19, the G3 checks every building runs (jpparts/buildcheck.py)
     # ODOL
-    odol = os.path.join(DEV, "src", "JP", "buildings", "machiya", MT.NAME + ".p3d")
+    odol = os.path.join(DEV, "src", "JP", "buildings", "machiya", name + ".p3d")
     data = open(odol, "rb").read()
     if data[:4] != b"ODOL":
         rec("Binarize -> ODOL", False, "src p3d is not ODOL (binarize did not run?)")
@@ -369,16 +378,20 @@ def run(M=None, floors=None, pts=None):
         bones = [a["bone"] for d in M.doors for a in d.anims]
         ok_b = all(b_ in low_s and b_ + "_axis" in low_s for b_ in bones)
         ok_t = all("doorstwin%d" % k in low_s and "doorstwin%d_action" % k in low_s for k in range(1, len(M.doors) + 1))
-        skel = any((MT.NAME + "_skeleton") in s for s in low_s)
+        skel = any((name + "_skeleton") in s for s in low_s)
         rec("Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)", res is not None and
             all(w in names for w in want) and ok_b and ok_t and skel,
             "ODOL v%d, %d bytes; LODs %d; bones+axes %s; twin selections+actions %s; skeleton %s" % (
                 struct.unpack_from("<I", data, 4)[0], len(data), len(names), ok_b, ok_t, skel))
-    out = {"building": MT.CLASS, "date": "2026-09-29", "faces": "%d/%d/%d" % (faces["Resolution 1"],
-                                                                              faces["Resolution 2"],
-                                                                              faces["Resolution 3"]),
-           "door_clear_m": [round(c, 2) for c in clears], "checks": RES}
-    with open(os.path.join(HERE, "checks.json"), "wb") as f:
+    n78 = len(RES)
+    if extra:
+        extra(M, L, floors, pts, rec, raw)
+    out = {"building": cls, "date": "2026-09-30", "faces": "%d/%d/%d" % (faces["Resolution 1"],
+                                                                         faces["Resolution 2"],
+                                                                         faces["Resolution 3"]),
+           "door_clear_m": [round(c, 2) for c in clears], "machiya_checks": n78,
+           "machiya_failures": sum(1 for r in RES[:n78] if not r["ok"]), "checks": RES}
+    with open(os.path.join(here, "checks.json"), "wb") as f:
         f.write(json.dumps(out, indent=1).encode("utf-8"))
     nf = sum(1 for r in RES if not r["ok"])
     print("RESULT: %s (%d checks, %d failures)" % ("PASS" if not nf else "FAIL", len(RES), nf))

@@ -1,0 +1,118 @@
+{
+ "id": "jp_f_nagashi",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "fittings",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "fitting 6 as a proxied prop (B4): standing wooden sink, wall-backed"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\fittings\\jp_f_nagashi_wood.p3d",
+   "class": "StaticObj_JP_F_Nagashi_Wood",
+   "variant": "wood",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Kitchen sink (nagashi), wooden trough on legs",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 97,
+    "Resolution 2": 60,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.5,
+    0.5,
+    0.0,
+    0.79,
+    0.0,
+    0.45
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.5,
+    0.0,
+    0.5,
+    0.45
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 25.0,
+   "loot_surfaces": [
+    {
+     "name": "trough",
+     "kind": "shelf",
+     "y": 0.67,
+     "rect": [
+      -0.42,
+      0.08,
+      0.42,
+      0.37
+     ],
+     "range": 0.18,
+     "points": [
+      [
+       0.0,
+       0.67,
+       0.225
+      ]
+     ]
+    },
+    {
+     "name": "under_shelf",
+     "kind": "shelf",
+     "y": 0.16,
+     "rect": [
+      -0.4,
+      0.08,
+      0.4,
+      0.37
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.16,
+       0.225
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "top",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wall-backed standing sink (hashiri) of town kitchens [N10, i08, i32]; dry, leaves in the trough"
+   ]
+  }
+ ]
+}

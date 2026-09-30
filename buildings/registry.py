@@ -35,10 +35,44 @@ BUILDINGS = [
         "mass": 60000.0,
         "sound": "doorWoodSlide",
         "loot": {"usage": ["Town"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]},
+        # B4 (2026-09-30): the bare shell stays shipped (its class is the base of every furnished variant) but its
+        # island spot now holds the furnished pilot below
+        "placements": [],
+        "verify": "verify",
+        "budget": "large",
+        "ship": True,
+    },
+    {
+        # B4 pilot: the same shell + the furniture as proxies (PLAYBOOK §10.4 furnished variant), loot on the floors
+        # and the props' surfaces, the street front and back yard dressed (site objects -> C.csv)
+        "key": "machiya_t3_01_shop",
+        "module": "machiya_t3_01_shop",
+        "display": "Machiya (tier 3), general-goods shop",
+        "model_dir": "machiya",
+        "mass": 60000.0,
+        "sound": "doorWoodSlide",
+        "loot": {"usage": ["Town"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]},
         "placements": [{"pos": (1024.0, 25.0, 1045.0), "yaw": 180.0,
                         "where": "test island: the building spot, front (model +z) facing south to the spawn"}],
         "verify": "verify",
         "budget": "large",
+        "ship": True,
+    },
+    {
+        # B2's walk-in toilet (half door), shipped by B4 into the pilot's back yard for the half door's first
+        # in-game test. Model (2.3, -11.2) in the machiya's frame, door facing the house.
+        "key": "toilet_t1_01",
+        "module": "toilet_t1_01",
+        "display": "Outhouse (setchin)",
+        "model_dir": "toilet",
+        "mass": 3000.0,
+        "sound": "doorWoodNolatch",
+        "loot": {"usage": ["Town", "Village"], "categories": ["tools", "containers", "clothes", "food"],
+                 "tags": ["floor"]},
+        "placements": [{"pos": (1021.7, 25.0, 1056.2), "yaw": 180.0,
+                        "where": "test island: the machiya pilot's back yard, door facing the house (south)"}],
+        "verify": None,
+        "budget": "small",
         "ship": True,
     },
     {

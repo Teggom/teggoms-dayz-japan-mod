@@ -1,0 +1,27 @@
+{
+ "building": "Land_JP_Toilet_T1_01",
+ "p3d": "\\JP\\buildings\\toilet\\jp_toilet_t1_01.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = the door side",
+ "rooms": [
+  {
+   "name": "toilet",
+   "tag": "toilet",
+   "floor": "boards",
+   "level_m": 0.12,
+   "rect_model": [
+    -0.85,
+    0.85,
+    -1.305,
+    1.305
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "walk-in outhouse, drop slot at the back"
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "toilet": 1
+ }
+}

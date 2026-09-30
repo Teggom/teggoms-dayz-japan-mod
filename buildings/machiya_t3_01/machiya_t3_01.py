@@ -80,6 +80,7 @@ TSUKI_Y = 0.36              # storage tsukiage placed so its shutter clears the 
 FLOORS = []                 # walkable floors for loot + checks: {name, tag, rect (kit frame), y, obstacles}
 POSTS = []                  # (x, z) of every post node, for the C3 grid check
 LOG = []                    # which library part / recipe went where
+MISE = {}                   # the shop floor's strip / tatami / yose rectangles (kit frame), from floors.mise
 
 
 # ------------------------------------------------------------------------------------------------ helpers
@@ -121,6 +122,7 @@ def kamado(B, x0, x1, z0, z1):
 # ------------------------------------------------------------------------------------------------ build
 def build():
     del ROOMS[:], FLOORS[:], POSTS[:], LOG[:], WINDOWS[:]
+    MISE.clear()
     H = Part(NAME, "", "buildings", tiers=[3], used_for="tier-3 Kamigata town machiya (Ioka type)")
     H.wear = "_w1"
     B = Builder(H, posts=POSTS, log=LOG)
@@ -277,15 +279,23 @@ def build():
     LOG.append("loft floor: sealed (no stair, no hatch); ceiling boards on joists at 0.91")
 
     # ======================================================================== FLOORS
+    # B4 (2026-09-30): the B1 interior materials replace the stand-ins (tataki doma, tatami + heri, interior boards),
+    # and the shop room gets its board display strip (jp_p_fit_mise_floor _455, behind the degoshi lattice)
     B.merge(FL.doma("doma_tori", 0.0, XT, ZB, 0.0, road=(POST / 2, XT - POST / 2, ZB - POST / 2, -POST / 2),
-                    y=DOMA))
+                    y=DOMA, mats=FL.MATS_DOMA_T3))
     B.merge(FL.doma("doma_kitchen", 0.0, XS, ZG, ZB, road=(POST / 2, XS - POST / 2, ZG + POST / 2, ZB - POST / 2),
-                    y=DOMA))
-    B.merge(FL.tatami("tatami_mise", XT + POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2, top=FLOOR,
-                      base=DOMA))
+                    y=DOMA, mats=FL.MATS_DOMA_T3))
+    mise = FL.mise("floor_mise", XT + POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2, top=FLOOR, base=DOMA,
+                   variant="_455", street="+z", mats_tatami=FL.MATS_TATAMI_B1, mats_boards=FL.MATS_BOARDS_B1)
+    B.merge(mise)
+    MISE.update(mise.meta["mise"])
+    LOG.append("floors.mise _455 (jp_p_fit_mise_floor): board strip %.3f along the street edge, %d mat rows of %.3f, "
+               "tatami-yose board %.3f at the back" % (0.455, MISE["rows"], MISE["cell"],
+                                                       MISE["yose"][3] - MISE["yose"][2] if MISE["yose"] else 0.0))
     B.merge(FL.tatami("tatami_zashiki", XT + POST / 2, W - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2, top=FLOOR,
-                      base=DOMA))
-    B.merge(FL.boards("boards_storage", XS + POST / 2, W - POST / 2, ZG + POST / 2, ZB - POST / 2, STORE))
+                      base=DOMA, mats=FL.MATS_TATAMI_B1))
+    B.merge(FL.boards("boards_storage", XS + POST / 2, W - POST / 2, ZG + POST / 2, ZB - POST / 2, STORE,
+                      mats=FL.MATS_BOARDS_B1))
 
     B.interior = False
     # ======================================================================== GEYA (rear lean-to)
@@ -373,7 +383,8 @@ def build():
     room("toriniwa", "doma", "earth", DOMA, floor_rect(POST / 2, XT - POST / 2, ZB + POST / 2, -POST / 2), ["DoorsTwin1", "DoorsTwin2",
          "DoorsTwin3"], "entry passage, 1 ken, full omoya depth; two stepping stones hide the 0.45 ramps")
     room("mise", "shop:general", "tatami", FLOOR, floor_rect(XT + POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2),
-         ["DoorsTwin3", "DoorsTwin4"], "shop room behind the degoshi / koshi front; 9 mats")
+         ["DoorsTwin3", "DoorsTwin4"], "shop room behind the degoshi / koshi front; board display strip 0.455 along "
+         "the street edge (mise-ita), 6 mats, a tatami-yose board at the back")
     room("zashiki", "zashiki", "tatami", FLOOR, floor_rect(XT + POST / 2, W - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2),
          ["DoorsTwin2", "DoorsTwin4"], "best room, koshi window on the side; plain (no tokonoma status features, §2.2); 9 mats")
     room("kitchen", "doma", "earth", DOMA, floor_rect(POST / 2, XS - POST / 2, ZG + POST / 2, ZB - POST / 2),

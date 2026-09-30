@@ -115,20 +115,41 @@ def shugi_layout(nx, nz, blocked=()):
     return mats
 
 
-def tatami(name, x0, x1, z0, z1, top=0.50, base=DOMA_Y, holes=(), hole_fn=None):
+MATS_TATAMI = {"facing": "straw_mushiro", "heri": "wood_sooted", "base": "wood_sooted", "lod": "straw_mushiro"}
+MATS_BOARDS = {"board": "wood_weathered", "base": "wood_sooted", "lod": "wood_weathered", "slab": False}
+MATS_DOMA = {"top": "wall_arakabe", "body": "stone_cut"}
+# the B1 interior materials (B4 pilot, 2026-09-30): pass these as `mats` to use them; the defaults above are the
+# stand-ins every building used before B1 (unchanged, so old recipes build exactly what they built)
+MATS_TATAMI_B1 = {"facing": "floor_tatami", "heri": "floor_tatami_heri", "base": "wood_sooted", "lod": "floor_tatami",
+                  "fit": True}
+MATS_BOARDS_B1 = {"board": "floor_boards_int", "base": "wood_sooted", "lod": "floor_boards_int", "slab": True}
+MATS_DOMA_T3 = {"top": "ground_doma_tataki", "body": "stone_cut"}
+MATS_DOMA_EARTH = {"top": "ground_doma_earth", "body": "stone_cut"}
+
+
+def _mats(default, mats):
+    m = dict(default)
+    m.update(mats or {})
+    return m
+
+
+def tatami(name, x0, x1, z0, z1, top=0.50, base=DOMA_Y, holes=(), hole_fn=None, mats=None, cells=None):
     """Raised room floor: support block (Geometry), base under the mats, one slab per mat (TATAMI_T, straw_mushiro as
     the rush facing), heri edges along the long sides (LOD 1), one slab in LOD 2/3. Roadway 'tatami' at `top`.
-    `base` = the level the floor stands on (the doma)."""
+    `base` = the level the floor stands on (the doma).
+    mats: MATS_TATAMI keys (B1: MATS_TATAMI_B1, whose 'fit' maps the one-mat texture once onto every mat, its length
+    along the mat). cells: (nx, nz) half-ken cells, default = the rect rounded to the 0.91 grid."""
+    mt = _mats(MATS_TATAMI, mats)
     hs = norm_holes(holes)
     s = Part(name, "", "")
     rects = rect_minus((x0, x1, z0, z1), hs)
     for (a, b, c, d) in rects:
-        s.add(box(a, b, base, top, c, d, {"top": "straw_mushiro", "default": "wood_weathered"}, vis=(2, 3), geo=True,
+        s.add(box(a, b, base, top, c, d, {"top": mt["lod"], "default": "wood_weathered"}, vis=(2, 3), geo=True,
                   view=True, fire="wood", tag="floor_lod"))
     for (a, b, c, d) in rects:
-        s.add(box(a, b, base, top - TATAMI_T, c, d, {"top": "wood_sooted", "default": "wood_weathered"}, vis=(1,),
+        s.add(box(a, b, base, top - TATAMI_T, c, d, {"top": mt["base"], "default": "wood_weathered"}, vis=(1,),
                   tag="floor_base"))
-    nx, nz = int(round((x1 - x0) / HALF)), int(round((z1 - z0) / HALF))
+    nx, nz = cells if cells else (int(round((x1 - x0) / HALF)), int(round((z1 - z0) / HALF)))
     cx, cz = (x1 - x0) / nx, (z1 - z0) / nz
     blocked = []
     for h in hs:
@@ -141,16 +162,25 @@ def tatami(name, x0, x1, z0, z1, top=0.50, base=DOMA_Y, holes=(), hole_fn=None):
     for (i0, i1, j0, j1) in shugi_layout(nx, nz, blocked):
         a, b, c, d = x0 + i0 * cx + 0.002, x0 + i1 * cx - 0.002, z0 + j0 * cz + 0.002, z0 + j1 * cz - 0.002
         along_x = (i1 - i0) > (j1 - j0)
-        s.add(open_box(a, b, top - TATAMI_T, top, c, d, "straw_mushiro", ("top", "xlo", "xhi", "zlo", "zhi"), "tatami",
-                       uvrot=0.0 if along_x else 90.0, uvscale=(0.9, 0.9)))
+        if mt.get("fit"):
+            # one texture tile per mat, u along the mat's length (the B1 tatami texture is one 1.82 x 0.91 mat)
+            if along_x:
+                uvk = dict(uvscale=(b - a, d - c), uvoff=(-a / (b - a), -c / (d - c)), grain="")
+            else:
+                uvk = dict(uvscale=(b - a, d - c), uvrot=90.0, uvoff=(d / (d - c), -a / (b - a)), grain="")
+            s.add(open_box(a, b, top - TATAMI_T, top, c, d, mt["facing"], ("top", "xlo", "xhi", "zlo", "zhi"),
+                           "tatami", **uvk))
+        else:
+            s.add(open_box(a, b, top - TATAMI_T, top, c, d, mt["facing"], ("top", "xlo", "xhi", "zlo", "zhi"),
+                           "tatami", uvrot=0.0 if along_x else 90.0, uvscale=(0.9, 0.9)))
         hw = 0.03
         if along_x:
             for zz in (c, d - hw):
-                s.add(open_box(a, b, top - 0.004, top + 0.001, zz, zz + hw, "wood_sooted", ("top", "zlo", "zhi"),
+                s.add(open_box(a, b, top - 0.004, top + 0.001, zz, zz + hw, mt["heri"], ("top", "zlo", "zhi"),
                                "heri"))
         else:
             for xx in (a, b - hw):
-                s.add(open_box(xx, xx + hw, top - 0.004, top + 0.001, c, d, "wood_sooted", ("top", "xlo", "xhi"),
+                s.add(open_box(xx, xx + hw, top - 0.004, top + 0.001, c, d, mt["heri"], ("top", "xlo", "xhi"),
                                "heri"))
     for (a, b, c, d) in rects:
         s.road([(a, top, c), (b, top, c), (b, top, d), (a, top, d)], "tatami")
@@ -159,15 +189,26 @@ def tatami(name, x0, x1, z0, z1, top=0.50, base=DOMA_Y, holes=(), hole_fn=None):
 
 
 # ------------------------------------------------------------------------------------------------ boards
-def boards(name, x0, x1, z0, z1, y, along_x=False, holes=(), hole_fn=None):
+def boards(name, x0, x1, z0, z1, y, along_x=False, holes=(), hole_fn=None, mats=None):
     """Board floor on sleepers: a 0.15 support block (LOD 2/3 + Geometry), random-width boards 0.20-0.30 (LOD 1),
-    a sooted base under them. along_x: boards run along x (else along z). Roadway 'boards' at y."""
+    a sooted base under them. along_x: boards run along x (else along z). Roadway 'boards' at y.
+    mats: MATS_BOARDS keys. 'slab': True lays ONE top slab whose texture carries the boards (B1's jp_m_floor_boards_int
+    paints ~0.26 m boards, grain along v), turned so the grain runs along the boards' direction."""
+    mt = _mats(MATS_BOARDS, mats)
     hs = norm_holes(holes)
     s = Part(name, "", "")
     rects = rect_minus((x0, x1, z0, z1), hs)
     for (ra, rb, rc, rd) in rects:
-        s.add(box(ra, rb, y - 0.15, y, rc, rd, "wood_weathered", vis=(2, 3), geo=True, view=True, fire="wood",
+        s.add(box(ra, rb, y - 0.15, y, rc, rd, mt["lod"], vis=(2, 3), geo=True, view=True, fire="wood",
                   tag="floor_lod"))
+    if mt.get("slab"):
+        for (ra, rb, rc, rd) in rects:
+            s.add(open_box(ra, rb, y - 0.03, y, rc, rd, mt["board"], ("top", "xlo", "xhi", "zlo", "zhi"), "floor_board",
+                           grain="", uvrot=90.0 if along_x else 0.0))
+            s.add(box(ra, rb, y - 0.15, y - 0.03, rc, rd, mt["base"], vis=(1,), tag="floor_base"))
+            s.road([(ra, y, rc), (rb, y, rc), (rb, y, rd), (ra, y, rd)], "boards")
+        _finish_holes(s, hs, y, hole_fn)
+        return s
     rng = rng_for(name)
     a, b = (z0, z1) if along_x else (x0, x1)
     p = a
@@ -196,19 +237,66 @@ def boards(name, x0, x1, z0, z1, y, along_x=False, holes=(), hole_fn=None):
 
 
 # ------------------------------------------------------------------------------------------------ doma
-def doma(name, x0, x1, z0, z1, road=None, y=DOMA_Y, holes=(), hole_fn=None):
+def doma(name, x0, x1, z0, z1, road=None, y=DOMA_Y, holes=(), hole_fn=None, mats=None):
     """Earth floor (tataki): a 0.20 slab, arakabe top on a stone_cut body, in every LOD and the Geometry. road: the
     walkable rectangle (x0, x1, z0, z1) for the Roadway 'doma' (usually inset from the walls by half a post);
-    default = the slab."""
+    default = the slab. mats: MATS_DOMA keys (B1: MATS_DOMA_T3 tataki, MATS_DOMA_EARTH)."""
+    mt = _mats(MATS_DOMA, mats)
     hs = norm_holes(holes)
     s = Part(name, "", "")
     for (a, b, c, d) in rect_minus((x0, x1, z0, z1), hs):
-        s.add(box(a, b, y - 0.20, y, c, d, {"top": "wall_arakabe", "default": "stone_cut"}, vis=(1, 2, 3),
+        s.add(box(a, b, y - 0.20, y, c, d, {"top": mt["top"], "default": mt["body"]}, vis=(1, 2, 3),
                   geo=True, view=True, fire="dirt", tag="doma"))
     rx0, rx1, rz0, rz1 = road if road else (x0, x1, z0, z1)
     for (a, b, c, d) in rect_minus((rx0, rx1, rz0, rz1), hs):
         s.road([(a, y, c), (b, y, c), (b, y, d), (a, y, d)], "doma")
     _finish_holes(s, hs, y, hole_fn)
+    return s
+
+
+# ------------------------------------------------------------------------------------------------ shop floor
+MISE_STRIP = {"_455": 0.455, "_910": 0.91}
+
+
+def mise(name, x0, x1, z0, z1, top=0.50, base=DOMA_Y, variant="_455", street="+z", cell=None, mats_tatami=None,
+         mats_boards=None):
+    """jp_p_fit_mise_floor (research/interior/BUILD_LIST.md fitting 8): the shop room's raised floor with a board
+    display strip (mise-ita) along its street edge, where goods are laid out, and tatami behind it.
+      variant  '_455' narrow strip behind a lattice front (degoshi); '_910' wide strip behind an open front
+      street   '+z' or '-z': the street edge of the rect
+      cell     depth of one tatami cell (default: the rect depth over its half-ken count, so the mats match the other
+               rooms of the house). The mats keep their standard size; whatever depth is left after the strip and the
+               whole mat rows is closed with a plain board band (tatami-yose) at the back of the room, as carpenters
+               filled off-module rooms.
+    Returns one Part (strip + tatami + yose). part.meta['mise'] = the three plan rectangles and the row count."""
+    strip = MISE_STRIP[variant]
+    depth = z1 - z0
+    if cell is None:
+        cell = depth / max(1, int(round(depth / HALF)))
+    rows = max(1, int((depth - strip) / cell + 1e-3))
+    tat = rows * cell
+    yose = depth - strip - tat
+    if street == "+z":
+        r_strip = (x0, x1, z1 - strip, z1)
+        r_tat = (x0, x1, z1 - strip - tat, z1 - strip)
+        r_yose = (x0, x1, z0, z0 + yose)
+    else:
+        r_strip = (x0, x1, z0, z0 + strip)
+        r_tat = (x0, x1, z0 + strip, z0 + strip + tat)
+        r_yose = (x0, x1, z1 - yose, z1)
+    s = Part(name, "", "")
+    nx = int(round((x1 - x0) / HALF))
+    s.merge(boards(name + "_strip", *r_strip, top, along_x=True, mats=mats_boards))
+    s.merge(tatami(name + "_tatami", *r_tat, top=top, base=base, mats=mats_tatami, cells=(nx, rows)))
+    if yose > 0.02:
+        s.merge(boards(name + "_yose", *r_yose, top, along_x=True, mats=mats_boards))
+        # the board bands stand on the doma like the mats' support block (Geometry and the far LODs)
+    for r in (r_strip, r_yose):
+        if r[3] - r[2] > 0.02:
+            s.add(box(r[0], r[1], base, top - 0.15, r[2], r[3], "wood_sooted", vis=(), geo=True, view=True,
+                      fire="wood", tag="floor_support"))
+    s.meta["mise"] = {"variant": variant, "strip": r_strip, "tatami": r_tat, "yose": r_yose if yose > 0.02 else None,
+                      "rows": rows, "cell": cell}
     return s
 
 

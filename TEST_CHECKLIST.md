@@ -1,7 +1,8 @@
-# Japan test island: one bundled check (~25 min)
+# Japan test island: one bundled check, gate G4 (~15 min)
 
-This is a **mechanics** test. Several looks are already known to be wrong: the house style, the kimono cut, and the
-katana tip (being rebuilt). Those get fixed through the playbook process. Here, just tell me whether things *work*.
+This is the **furnished machiya walk**. The house you walked at G3 now stands furnished as a general-goods shop,
+with its street front and back yard dressed. Pictures of what you should see:
+`buildings/machiya_t3_01_shop/machiya_t3_01_shop_rooms.jpg` and `machiya_t3_01_shop_site.jpg`.
 
 **Start:**
 1. Run `start-japan-test-island.bat` in the server folder. It starts only the test server, on its own port, so the
@@ -11,75 +12,83 @@ katana tip (being rebuilt). Those get fixed through the playbook process. Here, 
 **If it won't load, kicks you, or something is invisible:** just tell me. I read the server and client logs myself,
 so you don't need to dig.
 
-**Directions** are from the spawn. You spawn on a flat dirt square facing north.
+**Directions** are from the spawn. You spawn on a flat dirt square facing north. The house is ~55 m straight ahead.
+Its entrance is the bay with the long **blue noren** hanging over it. The yard is behind the house.
 
-## 1. First look (1 min)
+## 1. Street front (2 min)
 
-- **The house** is ~55 m north. There's a sakura on each side of the path. The bamboo grove is ~70 m east. Items lie
-  on the ground just south of you, and the sea is on the horizon.
-- **Ground:** sharp ground textures, grass clutter off the square, trees sitting on the ground (not floating or sunk).
+Stand in the street in front of the house and look it over:
+- **The noren** on the entrance, a paper lantern (kake-andon) beside it, and a short curtain under the front roof.
+- **The signboard** hanging at the far corner, and a fire bucket on a peg at that end of the house.
+- **In the street:** a tipped bench, a cart with rice bales, a tattered banner, a big fire tub with its buckets
+  spilled, a wooden board cover over the gutter with a stone slab at the door, and a small Jizo in a wooden box at the
+  corner beside the entrance.
+- A carrying pole leans on the side wall next to the entrance.
 
-## 2. House (5 min)
+Does anything float, sink into the ground, or poke through the house?
 
-- **Doors:** open and close a few. Try the front door (left end of the front), a paper door inside, and the one
-  upstairs. **Do they slide sideways along the wall?** Or into the frame or the wrong way?
-- **Walking:**
-  - through the earthen passage to the back door
-  - step up onto the raised rooms (the flat stones)
-  - **walk up the steep stair** and back down
+## 2. Walk the rooms (6 min)
 
-  Any falling through, sticking, or bouncing?
-- **Loot:** anything lying on the floors? Is any of it floating or sunk?
-- **The second copy** stands ~70 m north-east. Do its doors work too?
+- **The earthen passage (toriniwa):** it should still be easy to walk from the entrance to the kitchen. There's a
+  shelf on the wall, two buckets and some leaves on the floor.
+- **The shop room (mise, off the passage by the street):**
+  - a **board strip** now runs along the lattice front (it used to be tatami)
+  - a stepped goods stand on it, a desk with a low lattice screen in the back corner, a brazier, a spilled tobacco
+    tray, and a shelf on the end wall with one board down
+- **The best room (zashiki, behind the shop):** bedding laid out, a folded stack in the corner, a chest with its
+  drawers pulled out, an unlit paper lamp, a brazier and a wicker trunk.
+- **The kitchen:** two pots on the stove (one lid off), a wooden sink with a shelf over it, a big water jar, firewood,
+  and a small **god shelf (kamidana)** high on the wall.
+- **The storage room (off the kitchen):** shelving, a long chest with its lid thrown back, rice bales, boxes, wicker
+  trunks, a big jar and a straw mat.
 
-## 3. Weapons (6 min)
+In every room:
+- **Doors:** open and close each one with the furniture in. Can you still reach them from both sides?
+- **Walking:** can you get from every door to every other door without squeezing past furniture? Do you snag on
+  anything?
+- **Furniture:** can you walk through anything that looks solid, like the chest, the stand or the shelves? Does it
+  float or sink?
 
-**The range** is ~40 m south: hay bales, 2 standing infected and a deer. There's no navmesh of our own yet; the island
-borrows Livonia's as a stopgap, so they may stand still or wander oddly.
+## 3. Loot (2 min)
 
-- **Katana vs the vanilla Sword:** light attack, heavy attack, kill an infected. Are the hands on the handle?
-- **Yari vs SpearStone:** the same test.
-- **JP_Yumi** (the long bow, held like a bow):
-  1. Put the Ya (arrows) in your inventory.
-  2. Raise it, press R, wait ~1 s, then fire at a hay bale.
-  3. Walk up and take the arrow back.
+Loot should now lie **on the furniture** as well as on the floors: shelf boards, the stand's steps, the desk, the
+chest top, the rice bales, the sink, and the bedding.
+- Is anything floating above a surface, sunk into one, or stuck inside furniture?
+- Is anything out of reach up high?
 
-  **Any freeze?**
-- **JP_Yumi_XB** (the same bow, held like a crossbow): the same steps. Does load, fire and recover work? Can you live
-  with how it looks as a fallback?
+The test island only has 40 loot types, spread over every building. Expect a handful of items, not a full house.
 
-## 4. Clothes (5 min)
+## 4. The yard (3 min)
 
-- **Put on** the Kasa (straw hat), the **short** kimono and the Tabi/Waraji.
-- **Move:** run, crouch, go prone, raise a weapon.
-  - Anything poking through?
-  - Does the V at the neck show your own skin tone?
-  - Is the hat rim in the way in first person?
-- **Long kimono:** a quick look walking and crouching. I expect it to break when moving; I just want your verdict.
-- **Optional:** repeat on a female character.
+Go through the kitchen and out the back door.
+- **The well** is ~3.5 m out, with a rope on its beam. Crouch at the stone curb and try each of these:
+  1. drink
+  2. wash your hands
+  3. fill a bottle (a WaterBottle is on the item grid by the spawn, and there's also T's Canteen)
+- **Around it:** tubs and a bucket by the back door, firewood stacked against the kitchen's outside wall, and a
+  laundry pole with its cloth half fallen.
+- **The toilet** at the back of the yard, door facing the house. Its door is a **hinged half door** that swings out.
+  This is its first test in the engine:
+  - open and close it from both sides
+  - walk in and out
+  - check whether it swings the right way (outwards)
 
-## 5. Trees and bamboo (4 min)
+## 5. House leftovers from G3 (2 min)
 
-- **Chop a bamboo clump** with the Hatchet from the item grid. You should get 3 poles, then the clump falls. Pick up
-  and hold a pole.
-- **Sakura:** stand under one, then look back at it from ~150 m. Still a sakura? Do the trees sway in wind?
-
-## 6. Island extras (optional, 5 min)
-
-| What | Where | What to check |
-|---|---|---|
-| Road | north from the square's north-east corner | Does it sit on the ground? |
-| Vanilla control house | ~210 m east-south-east | Loot inside? That proves the loot system works on this map |
-| Canal | east coast, ~500 m east-south-east | Sea water fills it |
-| Pond | ~240 m west-south-west | Water visible, fresh water to drink |
+- **Gable ends:** from outside, look up at the triangle under the roof at each side of the house. On 2026-09-30 we
+  closed the 0.12 m slits at the post lines. Can you see any daylight through them?
+- **Doma colour:** the earth floor of the passage and the kitchen now uses the new tataki material. B1 flagged it as
+  bright: its colour is 137,132,128, where vanilla floors run 76-127. Is it too light next to the vanilla houses?
 
 ## Tell me
 
 - What failed.
 - What looked wrong.
 - Your verdicts on:
-  1. JP_Yumi vs JP_Yumi_XB
-  2. the long kimono
-  3. the stair steepness
+  1. how full the rooms feel: too sparse, about right, or too cluttered?
+  2. loot on the furniture: does it read as "left lying out"?
+  3. the well: did drink, wash and fill all work?
+  4. the toilet's half door
+  5. the doma colour: keep it, or darken it?
 
 Screenshots help but aren't required.

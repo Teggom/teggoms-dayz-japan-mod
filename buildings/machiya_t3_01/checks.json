@@ -1,7 +1,7 @@
 {
  "building": "Land_JP_Machiya_T3_01",
- "date": "2026-09-29",
- "faces": "11968/4249/1570",
+ "date": "2026-09-30",
+ "faces": "11917/4261/1570",
  "door_clear_m": [
   1.46,
   1.06,
@@ -10,16 +10,18 @@
   1.06,
   1.06
  ],
+ "machiya_checks": 78,
+ "machiya_failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11968, Resolution 2 4249, Resolution 3 1570, Geometry 1644, Memory 0, Roadway 19, View Geometry 1640, Fire Geometry 1622"
+   "detail": "Resolution 1 11917, Resolution 2 4261, Resolution 3 1570, Geometry 1668, Memory 0, Roadway 21, View Geometry 1664, Fire Geometry 1646"
   },
   {
    "check": "C5 face budget (large / landmark: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 11968, R2 4249, R3 1570"
+   "detail": "R1 11917, R2 4261, R3 1570"
   },
   {
    "check": "Geometry properties + mass",
@@ -29,17 +31,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "275 components, 0 bad, 0 faces outside components"
+   "detail": "279 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "274 components, 0 bad, 0 faces outside components"
+   "detail": "278 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "271 components, 0 bad, 0 faces outside components"
+   "detail": "275 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -169,7 +171,7 @@
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "304/304 samples"
+   "detail": "336/336 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
@@ -389,7 +391,7 @@
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "16 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "19 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -399,7 +401,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 962284 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 971690 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

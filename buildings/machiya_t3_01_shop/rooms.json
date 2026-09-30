@@ -1,0 +1,151 @@
+{
+ "building": "Land_JP_Machiya_T3_01_Shop",
+ "p3d": "\\JP\\buildings\\machiya\\jp_machiya_t3_01_shop.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = street front, +x = the rooms side (the toriniwa is -x); placed at yaw 180 (front south)",
+ "rooms": [
+  {
+   "name": "toriniwa",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    1.76,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2",
+    "DoorsTwin3"
+   ],
+   "note": "entry passage, 1 ken, full omoya depth; two stepping stones hide the 0.45 ramps",
+   "rect_model": [
+    -3.58,
+    -1.88,
+    -0.85,
+    4.49
+   ]
+  },
+  {
+   "name": "mise",
+   "tag": "shop:general",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    1.88,
+    7.22,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin4"
+   ],
+   "note": "shop room behind the degoshi / koshi front; board display strip 0.455 along the street edge (mise-ita), 6 mats, a tatami-yose board at the back",
+   "rect_model": [
+    -1.76,
+    3.58,
+    1.88,
+    4.49
+   ]
+  },
+  {
+   "name": "zashiki",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    1.88,
+    7.22,
+    -5.4,
+    -2.79
+   ],
+   "doors": [
+    "DoorsTwin2",
+    "DoorsTwin4"
+   ],
+   "note": "best room, koshi window on the side; plain (no tokonoma status features, \u00a72.2); 9 mats",
+   "rect_model": [
+    -1.76,
+    3.58,
+    -0.85,
+    1.76
+   ]
+  },
+  {
+   "name": "kitchen",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -9.04,
+    -5.52
+   ],
+   "doors": [
+    "DoorsTwin5",
+    "DoorsTwin6"
+   ],
+   "note": "hashiri-niwa kitchen with the built-in kamado; subtag kitchen",
+   "rect_model": [
+    -3.58,
+    -0.06,
+    -4.49,
+    -0.97
+   ]
+  },
+  {
+   "name": "storage",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 0.08,
+   "rect_kit": [
+    3.7,
+    7.22,
+    -9.04,
+    -5.52
+   ],
+   "doors": [
+    "DoorsTwin6"
+   ],
+   "note": "monooki, board floor",
+   "rect_model": [
+    0.06,
+    3.58,
+    -4.49,
+    -0.97
+   ]
+  },
+  {
+   "name": "loft",
+   "tag": "loft",
+   "floor": "boards",
+   "level_m": 3.15,
+   "rect_kit": [
+    0.0,
+    7.28,
+    -5.46,
+    0.0
+   ],
+   "doors": [],
+   "note": "SEALED (G0-4): no access, no loot",
+   "rect_model": [
+    -3.64,
+    3.64,
+    -0.91,
+    4.55
+   ]
+  }
+ ],
+ "loot_points": 43,
+ "loot_by_room": {
+  "toriniwa": 3,
+  "mise": 11,
+  "zashiki": 9,
+  "kitchen": 7,
+  "storage": 13,
+  "loft": 0
+ }
+}

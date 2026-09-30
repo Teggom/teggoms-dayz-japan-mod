@@ -703,4 +703,18 @@ class CfgVehicles
 		displayName="Litter: broken bowls";
 		model="\JP\furniture\debris\jp_f_debris_shards.p3d";
 	};
+	// jp_f_kamidana (fittings)
+	class StaticObj_JP_F_Kamidana_Plain: HouseNoDestruct
+	{
+		scope=1;
+		displayName="God shelf (kamidana) with shrine box";
+		model="\JP\furniture\fittings\jp_f_kamidana_plain.p3d";
+	};
+	// jp_f_nagashi (fittings)
+	class StaticObj_JP_F_Nagashi_Wood: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Kitchen sink (nagashi), wooden trough on legs";
+		model="\JP\furniture\fittings\jp_f_nagashi_wood.p3d";
+	};
 };

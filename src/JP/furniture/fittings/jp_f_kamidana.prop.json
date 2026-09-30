@@ -1,0 +1,70 @@
+{
+ "id": "jp_f_kamidana",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "fittings",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside)",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "fitting 7 as a proxied prop (B4): hanging, Resolution 1 only in the house; undisturbed, no loot"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\fittings\\jp_f_kamidana_plain.p3d",
+   "class": "StaticObj_JP_F_Kamidana_Plain",
+   "variant": "plain",
+   "state": "intact",
+   "abandoned": false,
+   "display": "God shelf (kamidana) with shrine box",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 293,
+    "Resolution 2": 23
+   },
+   "bbox": [
+    -0.45,
+    0.45,
+    1.83,
+    2.5,
+    0.0,
+    0.3
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shelf_width",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "shelf_underside",
+     "expected": 2.05,
+     "measured": 2.05,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hanging prop: Resolution 1 only in the house, no Geometry (BUILD_LIST Q5 rule 1); undisturbed, no loot (G1 A2-12); shelf underside 2.05 so head room under it stays >= 2.00"
+   ]
+  }
+ ]
+}

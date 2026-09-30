@@ -40,7 +40,8 @@ TOOLS = r"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin"
 BINARIZE = os.path.join(TOOLS, "Binarize", "binarize.exe")
 CFGCONVERT = os.path.join(TOOLS, "CfgConvert", "CfgConvert.exe")
 CHECKS = os.path.join(HERE, "checks.json")
-MODULES = ["props_kitchen", "props_heat", "props_storage", "props_bedding", "props_shop", "props_debris"]
+MODULES = ["props_kitchen", "props_heat", "props_storage", "props_bedding", "props_shop", "props_debris",
+           "props_fittings"]      # props_fittings: kamidana + nagashi as proxied props, added by B4 (2026-09-30)
 BL = {e["id"]: e for e in json.load(open(os.path.join(DEV, "research", "interior", "build_list.json"),
                                          encoding="utf-8"))["entries"]}
 
