@@ -58,7 +58,7 @@ WELL_GEO = {"class": "house", "map": "waterpump"}
 # '[JPWell] <type> at <pos> IsWell=<0|1>' to the script log (server and client) from DeferredInit (EntityAI calls it
 # 34 ms after creation), so the log shows whether the map wells are created as our Well classes. Set False and rebuild
 # (python spikes/B3b/build.py wells, then spikes/L2/build_l2.py --pack) to remove it.
-WELL_DIAG = True
+WELL_DIAG = False  # C1 2026-09-30: the well passed in game (G4 re-walk), diagnostic removed
 
 
 def wb(path, text):
