@@ -112,3 +112,10 @@
   shallow canal, big river, street channel, village stream, moat) with cross-sections, edges, planting, bridges and
   house frontage, plus EVERY map settlement assigned a type (Stephen: "each city we have will need to fall into one of
   these categories"). A G1-style review for Stephen when done.
+- 2026-09-29: **Effort test RESULT.** Tokens: medium 164k, high 252k, xhigh 438k, max 450k. In game, Stephen found
+  **high** "looks pretty good" and about the same as xhigh at ~42% fewer tokens.
+  **POLICY: every modelling/building agent runs at effort HIGH** (`subagent_type: opus-high`, defined in
+  `D:\DayZ-Server_AI-20260907-MultiMap\.claudegents\`). The four tansus stay on the test island
+  (`test/spawns/E.json`) as reference.
+- 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
+  dropped, Kanō + Minakuchi castle towns added.

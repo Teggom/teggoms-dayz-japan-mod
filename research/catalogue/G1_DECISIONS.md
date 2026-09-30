@@ -49,3 +49,15 @@ The recommendations at the top of `research/interior/BUILD_LIST.md` are binding:
 - Re-sample the doma colour before building
 
 **Gate G1 PASSED for all three build lists, 2026-09-29.**
+
+## Waterways (research/waterways/WATERWAYS.md): 10 decisions, ALL ACCEPTED 2026-09-29 ("yes to all")
+1. Add type g (shore landing: harbour, beach, lake shore).
+2. Split type c into three: levee river, braided gravel river with no bridge, small town river.
+3. Type b (Takase) is Kyoto's hero, built mostly from type a parts.
+4. Coastal canal towns use the real sea; inland waterways use pond water.
+5. Abandoned water levels: canals full; Takase and street channels near-dry; moats green.
+6. Mid-street channels only where a source shows them.
+7. No cherry rows along canals; wild cherries only on the Sumida levee.
+8. Drop Numazu's castle (built 1777–79). DONE in map_sketch.py.
+9. Kanō and Minakuchi get small moats (low priority); added as castle towns in map_sketch.py. DONE.
+10. Test a stepped pond river in the engine before any river build list.

@@ -194,7 +194,8 @@ CASTLE_TOWNS = [
  ("Takasaki", 36.32, 139.00), ("Matsumoto", 36.24, 137.97), ("Ōgaki", 35.36, 136.61), ("Yoshida", 34.77, 137.39),
  ("Kakegawa", 34.77, 138.01), ("Kameyama", 34.855, 136.45), ("Zeze", 34.99, 135.88), ("Iida", 35.51, 137.82),
  ("Takatō", 35.83, 138.06), ("Ueda", 36.40, 138.25), ("Komoro", 36.33, 138.43), ("Tanaka", 34.88, 138.24),
- ("Iga Ueno", 34.77, 136.13), ("Inuyama", 35.39, 136.94), ("Yodo", 34.905, 135.72), ("Numazu", 35.10, 138.86),
+ ("Iga Ueno", 34.77, 136.13), ("Inuyama", 35.39, 136.94), ("Yodo", 34.905, 135.72),
+ ("Kanō", 35.41, 136.77), ("Minakuchi", 34.97, 136.17),   # added 2026-09-29 (waterways research); Numazu dropped: castle built 1777-79
 ]
 ONSEN = [("Hakone Yumoto", 35.23, 139.10), ("Atami", 35.10, 139.07), ("Shuzenji", 34.97, 138.93), ("Arima", 34.80, 135.25),
          ("Kusatsu-onsen", 36.62, 138.60), ("Ōjigoku", 35.245, 139.02)]
