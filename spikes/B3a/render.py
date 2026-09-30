@@ -340,8 +340,17 @@ def compose(props_all):
             prop = byid[pid]
             y = 60 + r * rowh
             refs = (build.BL.get(pid, {}).get("refs") or [])
-            imgs = [(x["id"], ref_path(x["id"])) for x in refs]
-            imgs = [t for t in imgs if t[1]][:2]
+            imgs = []
+            for x in refs:
+                rp = ref_path(x["id"])
+                if not rp:
+                    continue
+                try:
+                    Image.open(rp).verify()      # some saved refs are HTML error pages (i31, i35)
+                except Exception:
+                    continue
+                imgs.append((x["id"], rp))
+            imgs = imgs[:2]
             for k in range(2):
                 x0 = 10 + k * FW
                 if k < len(imgs):
