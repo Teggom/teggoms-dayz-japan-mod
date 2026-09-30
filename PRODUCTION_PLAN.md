@@ -93,3 +93,15 @@
   - **A3** `research/outdoor_kit/BUILD_LIST.md`: 27 items / 162 variant models; 11 decisions. 31 reference images are
     pending: rerun `research/outdoor_kit/tools/fetch_refs.py` (Wikimedia 429'd), then `gen_build_list.py`.
 - 2026-09-29: G1 passed. All 29 decisions and rulings are in `research/catalogue/G1_DECISIONS.md` (binding for Phase B).
+- 2026-09-29: **Effort test PENDING (run before Phase B).** Stephen wants to compare the same task at 4 reasoning-effort
+  levels (tokens + quality).
+  - **Set up:** agent types `opus-medium`, `opus-high`, `opus-xhigh`, `opus-max` in
+    `D:\DayZ-Server_AI-20260907-MultiMap\.claudegents\` (frontmatter `effort:`). The brief is
+    `spikes/effort_test/BRIEF.md`: one prop, the tansu, intact + ransacked, into `spikes/effort_test/<level>/`.
+  - **Blocked:** the agents folder didn't exist when the session started, so the new types only load after a SESSION
+    RESTART.
+  - **After the restart:** launch the 4 in parallel (subagent_type `opus-<level>`, prompt = "LEVEL = <level>, follow
+    BRIEF.md"), then compare subagent_tokens and the contact sheets.
+  - The session itself runs at effort xhigh. Earlier general-purpose agents most likely inherited that.
+  - Also on restart: check `data/research_okit/slow_fetch.log`. If the image downloader died, rerun
+    `python research/outdoor_kit/tools/slow_fetch.py` in the background (it's resumable).
