@@ -23,11 +23,29 @@ Binding for Phase B agents. The build lists are:
 10. **Moss** as a separate decal material: YES.
 11. **Village torii** are "standard", not "hero" (PLAYBOOK §11 research depth): YES.
 
-## A1 parts audit: 4 rulings, PENDING
-- Walk-in toilets vs a sealed booth
-- Kiso (tier 2) may use the dashigeta overhang
-- Two-storey exceptions: sentō rest room, pleasure-quarter houses, ageya; barracks?
-- The 3-ken span rule urban-only
+## A1 parts audit: 4 rulings, ANSWERED 2026-09-29
+1. **Toilets are walk-in:** a 1 × 1.5 ken outhouse with one door (D1 applies), not a sealed booth. The `open_halfdoor`
+   part is needed.
+2. **Kiso post towns (tier 2) may use the dashigeta / dashibari overhang:** YES, an exception to G1-4's "tier 3 only".
+3. **Two-storey exceptions: "whatever is historically accurate"** (Stephen). Each building gets the storeys its period
+   form had, with a source cited in its build notes. As researched:
+   - the sentō upstairs rest room: two storeys, yes
+   - pleasure-quarter houses and the ageya (Sumiya): two storeys, yes
+   - daimyo-mansion perimeter rows (nagaya): two storeys where the period form was
+   - ashigaru rows (kumi-yashiki): one storey
+   
+   Ordinary houses keep the G1-5 cap.
+4. **The 3-ken main-roof span rule is URBAN-ONLY:** YES. Farmhouses carry their aisles (geya) under one sweeping thatch
+   roof.
 
-## A2 interior: 14 decisions, PENDING
-See `research/interior/BUILD_LIST.md`, top section.
+## A2 interior: 14 decisions, ALL ACCEPTED 2026-09-29 ("yes to all")
+The recommendations at the top of `research/interior/BUILD_LIST.md` are binding:
+- Inakama tatami, about 1.78 × 0.87 m (the kit's); shūgi layout; no tatami in T1; plain black or brown heri
+- A 1.00 m clear band between doors; furniture covers at most 25% of a room's floor; at least one raised loot surface
+  per room
+- Shop display: a board strip with stepped stands + a chōba corner
+- No tokonoma and no oshiire in commoner houses (later than 1730); straw enza cushions, zabuton only in T3; no tetsubin
+- Moderate "as left" disorder; shrines left undisturbed; andon unlit
+- Re-sample the doma colour before building
+
+**Gate G1 PASSED for all three build lists, 2026-09-29.**

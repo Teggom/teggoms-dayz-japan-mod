@@ -41,7 +41,7 @@
 
 ## The order
 
-### Phase A: plan (research only; 3 agents in parallel) — DONE 2026-09-29, awaiting Stephen's G1 review
+### Phase A: plan (research only; 3 agents in parallel) — DONE 2026-09-29; G1 PASSED (research/catalogue/G1_DECISIONS.md)
 | Task | Owner | Output |
 |---|---|---|
 | **A1. Parts-kit gap audit.** Every KEEP shell against the kit: which are buildable today, which parts are missing (ranked by how many shells need each), and the variant axes per shell (the doors, windows, lattice and roof swaps that give Stephen's variety) | agent PA1 | `research/production/PARTS_GAP_AUDIT.md` + `parts_gap.json` |
@@ -92,3 +92,4 @@
     decisions.
   - **A3** `research/outdoor_kit/BUILD_LIST.md`: 27 items / 162 variant models; 11 decisions. 31 reference images are
     pending: rerun `research/outdoor_kit/tools/fetch_refs.py` (Wikimedia 429'd), then `gen_build_list.py`.
+- 2026-09-29: G1 passed. All 29 decisions and rulings are in `research/catalogue/G1_DECISIONS.md` (binding for Phase B).
