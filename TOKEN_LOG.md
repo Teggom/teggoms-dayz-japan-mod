@@ -28,6 +28,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 17:28 (local) | C2 (baseline) | launched: rural template + ~18-25 rural shells + the grand-inn storey source check + a hamlet on the island, time log TIMELOG_C2.md | - | - | before: **31%** (5-hour 42%, resets ~18:40) |
 | 2026-09-30 18:31 (local) | C2 | rural template + 21 rural shells (1,050 checks), grand-inn source check, hamlet on the island | **658k** (257 tool calls) | 63 min | **33%** (5-hour 56%): C2 alone = ~2% weekly, ~14% of a 5-hour window |
 | 2026-09-30 18:41 (local) | C3 (baseline) | launched: kura + furnished variants of every wave-1 type + street/hamlet dressing + the bundled walk, time log TIMELOG_C3.md | - | - | before: **33%** (5-hour 0%, fresh window) |
+| 2026-09-30 19:53 (local) | C3 | 3 kura shells + 14 furnished variants (every wave-1 type) + street/hamlet dressing (101 objects) + the ~28 min walk | **793k** (295 tool calls) | 71 min | **36%** (5-hour 20%): C3 alone = ~3% weekly, ~20% of a 5-hour window |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
@@ -149,3 +150,20 @@ its variants are nearly free.
 
 The template was the cost (26 min, ~6% of the 5-hour window); after it, whole building families took 0.5-3.5
 minutes each. Same lesson as C1: build the template once, the variants are nearly free.
+
+## C3 time log, summarised (TIMELOG_C3.md)
+
+| Stretch | What | Minutes | 5-hour % |
+|---|---|---|---|
+| 18:42-18:47 | setup (reading) | 5 | 0 -> 3 |
+| 18:47-19:01 | kura template + 3 shells | 13.5 | 3 -> ? |
+| 19:01-19:18 | furnishing kit (furnishkit, fittings, furnish_sets) | 17 | -> 12 |
+| 19:18-19:33 | all 14 furnished variants in one run (per-type lines share timestamps) | 15 | 12 -> 14 |
+| 19:33-19:40 | island swap + street + hamlet dressing, world/mission rebuild | 6.5 | 14 -> 15 |
+| 19:40-19:50 | re-runs (105 buildings, 6,001 checks) | 9 | 15 -> 16 |
+| 19:50-19:53 | sheets + checklist | 3.5 | 16 -> 20 |
+
+## Running total: Phase B + life layer + G4 fixes + Phase C wave 1 (2026-09-29/30)
+
+B0 409k, B1 453k, B2 715k, B3a 498k, B3b 519k, B4 576k, L1 654k, L2 581k, F1 573k, C1 532k, C2 658k, C3 793k =
+**about 6.96M tokens**, weekly **about 18% -> 36%**.

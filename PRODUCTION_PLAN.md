@@ -257,5 +257,15 @@
     up 0.42 m with no pent (Kinai lower roofs are the pents). Judge the look at the wave-1 walk.
 - 2026-09-30: Stephen: **grand inn keeps two storeys** (deliberate exception, G1_DECISIONS A1-3); the Kanto farmhouse look
   is checked on the wave-1 walk. **C3 launched.**
+- 2026-09-30: **C3 DONE** (opus-high, 793k tokens / 71 min). Commits 61e5b49 .. bcd659a; spikes/C3/C3_PROGRESS.md.
+  - Kura: 3 shells (Land_JP_Kura_Namako, _Kuro_Hinged = the first hinged plaster doors, _Plain), two floors by
+    jp_p_stair _open, 115 checks; template jpparts/templates/kura.py.
+  - 14 furnished variants: Kamigata rice + paper shops, Edo cloth + corner sake shops, post-town home, ordinary inn,
+    grand inn (upstairs dressed), Kanto + Kinai farmhouses, east + west huts (T1), walled shed, 2 kura. 1,341 checks.
+    Code: uildings/furnishkit.py, urnish_sets.py, jpparts/fittings.py; per-room summary spikes/C3/summary.py.
+  - Island: 12 shells swapped for furnished variants, 2 kura, 59 free objects (	est/placements/C3.csv) + 42 tied to
+    buildings. Re-runs: 105 buildings, 6,001 checks, 0 failures; combos 60/60.
+  - Not done: navmesh (zombies won't path inside); townhouse shops keep a tatami front room (no board strip: shell change).
+  - **Next: Stephen's bundled wave-1 walk (TEST_CHECKLIST.md, ~28 min, 9 verdicts).**
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
