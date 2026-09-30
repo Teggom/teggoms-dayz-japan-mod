@@ -1,0 +1,66 @@
+{
+ "building": "Land_JP_Hut_East_S_Earth_Mushiro",
+ "p3d": "\\JP\\buildings\\hut\\jp_hut_east_s_earth_mushiro.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/rural.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [],
+   "note": "doma (the whole hut: earth floor, straw mats on it are C3's; the stone-ringed hearth)",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "doma",
+     "rect": [
+      0.55,
+      1.27,
+      -0.36,
+      0.36
+     ],
+     "floor_y": 0.05,
+     "pit": "irori_doma",
+     "hook": [
+      0.91,
+      2.62,
+      0.0
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    },
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -2.28,
+      -1.27
+     ],
+     "yaw": 0.0,
+     "size": [
+      0.6,
+      0.6
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  }
+ ],
+ "loot_points": 4,
+ "loot_by_room": {
+  "doma": 4
+ }
+}

@@ -1840,6 +1840,58 @@
 						<point pos="0.874286 0.050000 -2.107857" range="0.462143" height="1.155357" />
 				</container>
 		</group>
+		<group name="Land_JP_Hut_East_S_Sunoko">
+				<usage name="Farm" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 2.079286" range="0.490389" height="1.225973" />
+						<point pos="-1.165714 0.400000 -0.237500" range="0.494286" height="1.235714" />
+						<point pos="-1.165714 0.400000 -1.592500" range="0.494286" height="1.235714" />
+				</container>
+		</group>
+		<group name="Land_JP_Hut_East_L_Board">
+				<usage name="Farm" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.864762 0.050000 2.280000" range="0.837143" height="2.000000" />
+						<point pos="0.432381 0.050000 2.537143" range="0.942857" height="2.000000" />
+						<point pos="1.729524 0.050000 2.280000" range="0.840476" height="2.000000" />
+						<point pos="-1.459286 0.400000 -0.465000" range="1.079136" height="2.000000" />
+						<point pos="1.459286 0.400000 -0.465000" range="1.079136" height="2.000000" />
+						<point pos="-1.459286 0.400000 -2.275000" range="0.784286" height="1.960714" />
+						<point pos="1.459286 0.400000 -2.275000" range="0.784286" height="1.960714" />
+				</container>
+		</group>
+		<group name="Land_JP_Hut_East_L_Earth">
+				<usage name="Farm" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.864762 0.050000 1.211429" range="0.956667" height="2.000000" />
+						<point pos="0.432381 0.050000 1.514286" range="0.956667" height="2.000000" />
+						<point pos="1.513333 0.050000 2.422857" range="0.956667" height="2.000000" />
+						<point pos="-1.513333 0.050000 -0.000000" range="0.956667" height="2.000000" />
+						<point pos="0.000000 0.050000 -0.000000" range="0.956667" height="2.000000" />
+						<point pos="1.297143 0.050000 0.302857" range="0.956667" height="2.000000" />
+						<point pos="-1.729524 0.050000 -2.120000" range="0.840476" height="2.000000" />
+						<point pos="0.000000 0.050000 -3.028571" range="0.448571" height="1.121429" />
+						<point pos="1.729524 0.050000 -2.120000" range="0.840476" height="2.000000" />
+				</container>
+		</group>
 		<group name="Land_JP_Hut_West_Thatch_LeanL">
 				<usage name="Farm" />
 				<usage name="Village" />
