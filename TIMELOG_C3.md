@@ -36,3 +36,6 @@
 2026-09-30 19:51:20 | SHEETS DONE | C3 | c3_kura, c3_rooms (57 room views), c3_plans (17 loot plans), c3_street, c3_hamlet | 5h 19% wk 35%
 2026-09-30 19:51:20 | GROUP DONE | sheets | 5 sheets in research/production/contact_sheets/c3_*.jpg, all looked at | C3 | sheets | 5h 19% wk 35%
 2026-09-30 19:51:20 | GROUP START | checklist (the bundled wave-1 walk) | C3 | checklist | 5h 19% wk 35%
+2026-09-30 19:52:47 | CHECKLIST DONE | C3 | TEST_CHECKLIST.md: one ~28 min walk (hamlet, 2 kura, street), 9 verdicts | 5h 20% wk 36%
+2026-09-30 19:52:47 | GROUP DONE | checklist | TEST_CHECKLIST.md rewritten for the wave-1 walk | C3 | checklist | 5h 20% wk 36%
+2026-09-30 19:52:47 | END | C3 | phaseC-wave1 | 5h 20% wk 36%
