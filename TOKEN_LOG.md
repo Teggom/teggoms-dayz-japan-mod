@@ -24,6 +24,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 15:01 (local) | F1 (baseline) | launched: the 8 G4 walk fixes + a well diagnostic, time log TIMELOG_F1.md | - | - | before: **27%** (5-hour 13%) |
 | 2026-09-30 15:44 (local) | F1 | the 8 G4 fixes + the well's real cause (class=house) + Roadway on sturdy furniture; everything rebuilt, all checks | **573k** (256 tool calls) | 43 min | **29%** (5-hour 25%): F1 alone = ~2% weekly |
 | 2026-09-30 16:11 (local) | C1 (baseline) | launched: Phase C wave 1 town shells (60 townhouse units + post-town house + inn, test rows on the island, well diag removal), time log TIMELOG_C1.md | - | - | before: **29%** (5-hour 26%) |
+| 2026-09-30 17:25 (local) | C1 | town shells: 69 townhouse units + 8 post-town houses + 4 inns = 81 shells, 4,717 checks, test street on the island | **532k** (194 tool calls) | 74 min | **31%** (5-hour 40%): C1 alone = ~2% weekly, ~14% of a 5-hour window |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
@@ -113,3 +114,16 @@ The text fix was the one big stretch (18 min). The 24 items themselves took 20 m
 ## Running total, Phase B + life layer (2026-09-29/30)
 
 B0 409k, B1 453k, B2 715k, B3a 498k, B3b 519k, B4 576k, L1 654k, L2 581k = **about 4.4M tokens**, weekly **about 18% -> 27%**.
+
+## C1 time log, summarised (TIMELOG_C1.md)
+
+| Stretch | What | Minutes | 5-hour % |
+|---|---|---|---|
+| 16:11-16:13 | well diagnostic removed, jp_site repacked | 1.5 | 26 -> 27 |
+| 16:13-16:25 | setup (reading) + a 9x faster ray check | 12 | 27 -> ? |
+| 16:25-16:45 | (not logged: template options detached / tokaido / 5 ken / upper storey / stable, family pipeline) | 20 | |
+| 16:45-17:23 | all 81 shells: 69 townhouse units, 8 post-town houses, 4 inns, checks, pack | 38 | -> 39 |
+| 17:23-17:25 | island street + world/mission rebuild, sheets | 2 | 39 -> 40 |
+
+81 shells in 74 minutes, for about the same tokens as 24 props: once the template can express a building,
+its variants are nearly free.

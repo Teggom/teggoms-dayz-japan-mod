@@ -233,5 +233,15 @@
   west, shed) + a farmhouse template + a hamlet on the island; C3 = kura + furnished versions of every wave-1 type
   (decorator + life layer) + street/yard dressing + ONE bundled walk. Sequential, opus-high, time-logged.
   **C1 launched** (also removes the WELL_DIAG diagnostic).
+- 2026-09-30: **C1 DONE** (opus-high, 532k tokens / 74 min). Commits 7598034 .. f56a565; spikes/C1/C1_PROGRESS.md.
+  - 81 shells: 69 townhouse units (Land_JP_Townhouse_<Region>_<N>ken_<Pos>_<Tori>[_Suffix]: the 60 + 6 Edo board-roof
+    middles, 1 Edo kakigara, Kamigata 3-ken _Kyo / _Komeya fronts), 8 post-town houses (Land_JP_PostTownHouse_*), 4
+    inns (Land_JP_Hatago_*, incl. Hatago_Grand with the stair). 4,717 checks, 0 failures (uildings/shellcheck.py).
+  - Budgets: worst townhouse-class 8,580 / 3,157 / 1,196; large-class Std_Mushiko R1 11,892, grand inn R3 1,565.
+  - Kit changes (template options, family pipeline, rafter/verge/pent fixes, faster ray check) changed the machiya
+    slightly: re-verified 78/78, furnished 137/137. WELL_DIAG removed. jp_buildings.pbo 51.5 MB, 84 classes.
+  - Island: test street at z 1080 north of the machiya (Kamigata + Edo rows north side; post-town houses + 2 inns south).
+  - **Open:** the grand inn's storey source (Ohashiya 1716) was cited from memory: verify before it ships to a map.
+    No navmesh. Sheets esearch/production/contact_sheets/c1_*.jpg.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
