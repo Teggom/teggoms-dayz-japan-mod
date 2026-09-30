@@ -1,0 +1,562 @@
+{
+ "id": "jp_s_well_tsurube",
+ "build_list": {
+  "name": "Pulley well (tsurube-ido): curb, frame, pulley, two buckets; roofed variant",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Frames stand; the rope has rotted and one bucket sits on the curb; lids are askew or gone; the wash slab is silted with leaves. Water is still there (decision 3).",
+  "placement_rule": "Yards: 3-8 m behind the house, near the kitchen door; towns: in the back-alley court (one per nagaya court); never in the street itself.",
+  "lod_budget": "medium site object <=1,500 faces LOD0 (decision 9)",
+  "dimensions": {
+   "shaft_diameter_m": {
+    "value": "0.9-1.0 inside",
+    "source": "O22"
+   },
+   "curb_m": {
+    "value": "outside d 1.05-1.20 (round tub curb) or 1.20 x 1.20 (square igeta), h 0.60-0.75",
+    "assumed": true,
+    "reason": "shaft plus a 0.08-0.10 wall; height from Morse figs 287-288 (k13, k14) read against a figure"
+   },
+   "frame_height_m": {
+    "value": "2.2-2.4 to the pulley axle",
+    "assumed": true,
+    "reason": "read off Morse fig 289 (k10); keeps the rope clear of a standing head"
+   },
+   "bucket_m": {
+    "value": "d 0.26 x h 0.28 with an iron band (tsurube-oke)",
+    "source": "O23 (iron fittings); size assumed"
+   },
+   "roof_m": {
+    "value": "small gable, 1.6 x 1.8 plan, eave 2.1, board or shingle (roofed variant)",
+    "assumed": true,
+    "reason": "Morse fig 293 (k12); matches dwelling shell 28"
+   }
+  },
+  "refs": [
+   {
+    "id": "k10_morse_well_frame",
+    "shows": "wooden well-frame with pulley (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "k12_morse_well_kaga",
+    "shows": "well at the Kaga yashiki, Tokyo: roofed frame (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "k14_morse_well_curb_stone",
+    "shows": "stone well-curb (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "k13_morse_well_curb_old",
+    "shows": "ancient form of wooden well-curb, igeta (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "k32_harunobu_well",
+    "shows": "pulley well, buckets and a tub, Suzuki Harunobu (d. 1770), 1760s",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "water",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "every model is a Land_JP_S_Well_* class extending the vanilla Well script class: drink, wash hands and fill bottles like the vanilla well pumps",
+  "_roofed = dwelling shell 28 (KEEP_DWELLINGS)",
+  "the curb is one closed collision cylinder: nobody falls in; the water is a black disc 8 cm up (the terrain has no holes)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_tsurube_curb_tub.p3d",
+   "class": "Land_JP_S_Well_Tsurube_Curb_Tub",
+   "variant": "curb_tub",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Pulley well, round tub curb",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 399,
+    "Resolution 2": 71,
+    "Resolution 3": 30,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "bbox": [
+    -0.885,
+    1.725,
+    -0.12,
+    2.62,
+    -0.575,
+    0.65
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.885,
+    -0.575,
+    1.725,
+    0.65
+   ],
+   "roadway": false,
+   "mass_kg": 800.0,
+   "well": true,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "frame_h",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pulley_axle_h",
+     "expected": 2.3,
+     "measured": 2.3,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_d",
+     "expected": 1.15,
+     "measured": 1.15,
+     "tol": 0.06,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_h",
+     "expected": 0.7,
+     "measured": 0.7,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_d_inside",
+     "expected": 0.95,
+     "measured": 0.96,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "Land_ class extends Well (drink, wash hands, fill bottles); target = the curb (View Geometry)"
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_tsurube_curb_igeta.p3d",
+   "class": "Land_JP_S_Well_Tsurube_Curb_Igeta",
+   "variant": "curb_igeta",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Pulley well, square igeta curb",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 371,
+    "Resolution 2": 67,
+    "Resolution 3": 42,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -1.01,
+    1.85,
+    -0.12,
+    2.62,
+    -0.7,
+    0.7
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.01,
+    -0.7,
+    1.85,
+    0.7
+   ],
+   "roadway": false,
+   "mass_kg": 800.0,
+   "well": true,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "frame_h",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pulley_axle_h",
+     "expected": 2.3,
+     "measured": 2.3,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_w",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.06,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_h",
+     "expected": 0.65,
+     "measured": 0.65,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_d_inside",
+     "expected": 0.95,
+     "measured": 1.05,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "Land_ class extends Well (drink, wash hands, fill bottles); target = the curb (View Geometry)"
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_tsurube_curb_stone.p3d",
+   "class": "Land_JP_S_Well_Tsurube_Curb_Stone",
+   "variant": "curb_stone",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Pulley well, stone curb",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 345,
+    "Resolution 2": 69,
+    "Resolution 3": 30,
+    "Geometry": 38,
+    "View Geometry": 38,
+    "Fire Geometry": 38
+   },
+   "bbox": [
+    -0.94,
+    1.78,
+    -0.12,
+    2.62,
+    -0.62,
+    0.65
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.94,
+    -0.573,
+    1.78,
+    0.65
+   ],
+   "roadway": false,
+   "mass_kg": 800.0,
+   "well": true,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "frame_h",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pulley_axle_h",
+     "expected": 2.3,
+     "measured": 2.3,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_d",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.06,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_h",
+     "expected": 0.65,
+     "measured": 0.65,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_d_inside",
+     "expected": 0.95,
+     "measured": 0.94,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "Land_ class extends Well (drink, wash hands, fill bottles); target = the curb (View Geometry)"
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_tsurube_roofed.p3d",
+   "class": "Land_JP_S_Well_Tsurube_Roofed",
+   "variant": "roofed",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Roofed pulley well (dwelling 28)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 507,
+    "Resolution 2": 95,
+    "Resolution 3": 42,
+    "Geometry": 48,
+    "View Geometry": 48,
+    "Fire Geometry": 48
+   },
+   "bbox": [
+    -0.922,
+    1.725,
+    -0.12,
+    2.69,
+    -0.864,
+    0.864
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.9,
+    -0.8,
+    1.725,
+    0.8
+   ],
+   "roadway": false,
+   "mass_kg": 800.0,
+   "well": true,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "frame_h",
+     "expected": 2.1,
+     "measured": 2.1,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pulley_axle_h",
+     "expected": 2.3,
+     "measured": 2.3,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "roof_plan_x",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "eave_h",
+     "expected": 2.1,
+     "measured": 2.1,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_d",
+     "expected": 1.15,
+     "measured": 1.15,
+     "tol": 0.06,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_h",
+     "expected": 0.7,
+     "measured": 0.7,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_d_inside",
+     "expected": 0.95,
+     "measured": 0.96,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "Land_ class extends Well (drink, wash hands, fill bottles); target = the curb (View Geometry)"
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_tsurube_lid.p3d",
+   "class": "Land_JP_S_Well_Tsurube_Lid",
+   "variant": "lid",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Well curb with a board lid",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 178,
+    "Resolution 2": 74,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.937,
+    1.725,
+    -0.05,
+    0.865,
+    -0.653,
+    1.223
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.547,
+    -0.575,
+    1.725,
+    0.65
+   ],
+   "roadway": false,
+   "mass_kg": 800.0,
+   "well": true,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "curb_d",
+     "expected": 1.15,
+     "measured": 1.15,
+     "tol": 0.06,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_h",
+     "expected": 0.7,
+     "measured": 0.7,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_d_inside",
+     "expected": 0.95,
+     "measured": 0.96,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "Land_ class extends Well (drink, wash hands, fill bottles); target = the curb (View Geometry)"
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_tsurube_ab_open.p3d",
+   "class": "Land_JP_S_Well_Tsurube_Ab_Open",
+   "variant": "curb_tub",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Pulley well, rope rotted, lid askew",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 333,
+    "Resolution 2": 71,
+    "Resolution 3": 30,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "bbox": [
+    -1.933,
+    1.725,
+    -0.12,
+    2.62,
+    -0.575,
+    1.83
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.885,
+    -0.575,
+    1.725,
+    0.65
+   ],
+   "roadway": false,
+   "mass_kg": 800.0,
+   "well": true,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "frame_h",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pulley_axle_h",
+     "expected": 2.3,
+     "measured": 2.3,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_d",
+     "expected": 1.15,
+     "measured": 1.15,
+     "tol": 0.06,
+     "source": "build_list"
+    },
+    {
+     "name": "curb_h",
+     "expected": 0.7,
+     "measured": 0.7,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_d_inside",
+     "expected": 0.95,
+     "measured": 0.96,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "Land_ class extends Well (drink, wash hands, fill bottles); target = the curb (View Geometry)"
+  }
+ ]
+}

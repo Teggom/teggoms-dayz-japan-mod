@@ -1,0 +1,281 @@
+{
+ "id": "jp_s_well_hanetsurube",
+ "build_list": {
+  "name": "Lever well (hanetsurube): counterweighted sweep on a post over a curb",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2
+  ],
+  "abandoned_state": "The lashing of the bucket pole has rotted: the sweep rests weight-down with the bamboo lying across the curb; post standing.",
+  "placement_rule": "Farm yards and village commons, 5-15 m from the house; field version at a ditch corner. Its tall sweep is a skyline tell: at most 1 per farmstead.",
+  "lod_budget": "medium site object <=1,500 faces LOD0; the sweep must keep its silhouette in every LOD (PLAYBOOK T7b spirit)",
+  "dimensions": {
+   "post_m": {
+    "value": "2.4-3.0 high, forked or with a through-pin, d 0.15",
+    "assumed": true,
+    "reason": "no period measurement found; read as \"twice a man\" in later photos"
+   },
+   "sweep_pole_m": {
+    "value": "5.5-7.0 long, pivot at 1/3 from the weight end",
+    "assumed": true,
+    "reason": "lever ratio lets the weight lift a full bucket; assumed"
+   },
+   "counterweight_m": {
+    "value": "river stone or bundle of stones d 0.35-0.45, lashed",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "bucket_pole_m": {
+    "value": "bamboo 3.5-4.5 reaching into the shaft",
+    "assumed": true,
+    "reason": "shallow Kanto/Kinai water tables (O23)"
+   },
+   "curb_m": {
+    "value": "as jp_s_well_tsurube _curb_tub / _curb_igeta",
+    "assumed": true,
+    "reason": "shared mesh"
+   }
+  },
+  "refs": [
+   {
+    "id": "k11_morse_well_rustic",
+    "shows": "rustic well-frame (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "k13_morse_well_curb_old",
+    "shows": "wooden igeta curb (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "c20_minkaen_c",
+    "shows": "farmhouse yard context (open-air museum)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "water",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "the sweep and post keep their silhouette in Res 1-3",
+  "_field is a field sweep over a ditch: no Well class (not a drinking well)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_hanetsurube_well.p3d",
+   "class": "Land_JP_S_Well_Hanetsurube_Well",
+   "variant": "well",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Lever well (hanetsurube)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 293,
+    "Resolution 2": 97,
+    "Resolution 3": 74,
+    "Geometry": 66,
+    "View Geometry": 66,
+    "Fire Geometry": 66
+   },
+   "bbox": [
+    -3.594,
+    3.357,
+    -0.3,
+    4.563,
+    -0.575,
+    0.7
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -3.587,
+    -0.575,
+    3.357,
+    0.7
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": true,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bucket_pole",
+     "expected": 3.8,
+     "measured": 3.8779,
+     "tol": 0.7,
+     "source": "build_list"
+    },
+    {
+     "name": "post_h",
+     "expected": 2.7,
+     "measured": 2.7,
+     "tol": 0.3,
+     "source": "build_list"
+    },
+    {
+     "name": "sweep_L",
+     "expected": 6.0,
+     "measured": 6.0,
+     "tol": 0.5,
+     "source": "build_list"
+    },
+    {
+     "name": "pivot_frac",
+     "expected": 0.3333333333333333,
+     "measured": 0.3333,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "Land_ class extends Well (drink, wash hands, fill bottles); target = the curb"
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_hanetsurube_field.p3d",
+   "class": "StaticObj_JP_S_Well_Hanetsurube_Field",
+   "variant": "field",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Field sweep over a ditch",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 337,
+    "Resolution 2": 72,
+    "Resolution 3": 62,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "bbox": [
+    -3.594,
+    2.864,
+    -0.3,
+    4.563,
+    -0.808,
+    1.265
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -3.587,
+    -0.164,
+    1.753,
+    0.206
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bucket_pole",
+     "expected": 3.8,
+     "measured": 3.9279,
+     "tol": 0.7,
+     "source": "build_list"
+    },
+    {
+     "name": "post_h",
+     "expected": 2.7,
+     "measured": 2.7,
+     "tol": 0.3,
+     "source": "build_list"
+    },
+    {
+     "name": "sweep_L",
+     "expected": 6.0,
+     "measured": 6.0,
+     "tol": 0.5,
+     "source": "build_list"
+    },
+    {
+     "name": "pivot_frac",
+     "expected": 0.3333333333333333,
+     "measured": 0.3333,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "field sweep over a ditch: not a well"
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_well_hanetsurube_ab_down.p3d",
+   "class": "Land_JP_S_Well_Hanetsurube_Ab_Down",
+   "variant": "well",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Lever well, lashing rotted, pole down",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 306,
+    "Resolution 2": 97,
+    "Resolution 3": 74,
+    "Geometry": 66,
+    "View Geometry": 66,
+    "Fire Geometry": 66
+   },
+   "bbox": [
+    -3.326,
+    2.798,
+    -0.3,
+    5.356,
+    -0.575,
+    1.645
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -3.316,
+    -0.575,
+    2.798,
+    0.7
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": true,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 2.7,
+     "measured": 2.7,
+     "tol": 0.3,
+     "source": "build_list"
+    },
+    {
+     "name": "sweep_L",
+     "expected": 6.0,
+     "measured": 6.0,
+     "tol": 0.5,
+     "source": "build_list"
+    },
+    {
+     "name": "pivot_frac",
+     "expected": 0.3333333333333333,
+     "measured": 0.3333,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "drink_wash": "Land_ class extends Well (drink, wash hands, fill bottles); target = the curb"
+  }
+ ]
+}

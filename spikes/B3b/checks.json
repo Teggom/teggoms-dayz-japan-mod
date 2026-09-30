@@ -8879,6 +8879,2733 @@
      ]
     }
    ]
+  },
+  "jp_s_well_tsurube_curb_tub": {
+   "prop": "jp_s_well_tsurube",
+   "cat": "water",
+   "state": "intact",
+   "variant": "curb_tub",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 399,
+    "Resolution 2": 71,
+    "Resolution 3": 30,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 399,
+       "Resolution 2": 71,
+       "Resolution 3": 30,
+       "Geometry": 42,
+       "View Geometry": 42,
+       "Fire Geometry": 42
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "frame_h",
+       "expected": 2.5,
+       "measured": 2.5,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "pulley_axle_h",
+       "expected": 2.3,
+       "measured": 2.3,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_d",
+       "expected": 1.15,
+       "measured": 1.15,
+       "tol": 0.06,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_h",
+       "expected": 0.7,
+       "measured": 0.7,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "shaft_d_inside",
+       "expected": 0.95,
+       "measured": 0.96,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.12,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 5,
+      "problems": {},
+      "mass": 800.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_metal_iron_w1",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_well_tsurube_curb_igeta": {
+   "prop": "jp_s_well_tsurube",
+   "cat": "water",
+   "state": "intact",
+   "variant": "curb_igeta",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 371,
+    "Resolution 2": 67,
+    "Resolution 3": 42,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 371,
+       "Resolution 2": 67,
+       "Resolution 3": 42,
+       "Geometry": 30,
+       "View Geometry": 30,
+       "Fire Geometry": 30
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "frame_h",
+       "expected": 2.5,
+       "measured": 2.5,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "pulley_axle_h",
+       "expected": 2.3,
+       "measured": 2.3,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_w",
+       "expected": 1.2,
+       "measured": 1.2,
+       "tol": 0.06,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_h",
+       "expected": 0.65,
+       "measured": 0.65,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "shaft_d_inside",
+       "expected": 0.95,
+       "measured": 1.05,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.12,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 5,
+      "problems": {},
+      "mass": 800.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_metal_iron_w1",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w2",
+       "mean_srgb": [
+        52.0,
+        52.0,
+        52.0
+       ],
+       "palette": "sumi_black",
+       "dE76": 0.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_well_tsurube_curb_stone": {
+   "prop": "jp_s_well_tsurube",
+   "cat": "water",
+   "state": "intact",
+   "variant": "curb_stone",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 345,
+    "Resolution 2": 69,
+    "Resolution 3": 30,
+    "Geometry": 38,
+    "View Geometry": 38,
+    "Fire Geometry": 38
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 345,
+       "Resolution 2": 69,
+       "Resolution 3": 30,
+       "Geometry": 38,
+       "View Geometry": 38,
+       "Fire Geometry": 38
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "frame_h",
+       "expected": 2.5,
+       "measured": 2.5,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "pulley_axle_h",
+       "expected": 2.3,
+       "measured": 2.3,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_d",
+       "expected": 1.2,
+       "measured": 1.2,
+       "tol": 0.06,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_h",
+       "expected": 0.65,
+       "measured": 0.65,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "shaft_d_inside",
+       "expected": 0.95,
+       "measured": 0.94,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.12,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 5,
+      "problems": {},
+      "mass": 800.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_decal_moss_w1": true,
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_metal_iron_w1",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_cut_w1",
+       "mean_srgb": [
+        160.3,
+        137.4,
+        107.5
+       ],
+       "palette": "stone_granite",
+       "dE76": 1.0,
+       "tolerance": 9,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_well_tsurube_roofed": {
+   "prop": "jp_s_well_tsurube",
+   "cat": "water",
+   "state": "intact",
+   "variant": "roofed",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 507,
+    "Resolution 2": 95,
+    "Resolution 3": 42,
+    "Geometry": 48,
+    "View Geometry": 48,
+    "Fire Geometry": 48
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\roof\\jp_m_roof_kureita_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 507,
+       "Resolution 2": 95,
+       "Resolution 3": 42,
+       "Geometry": 48,
+       "View Geometry": 48,
+       "Fire Geometry": 48
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "frame_h",
+       "expected": 2.1,
+       "measured": 2.1,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "pulley_axle_h",
+       "expected": 2.3,
+       "measured": 2.3,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "roof_plan_x",
+       "expected": 1.8,
+       "measured": 1.8,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "eave_h",
+       "expected": 2.1,
+       "measured": 2.1,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_d",
+       "expected": 1.15,
+       "measured": 1.15,
+       "tol": 0.06,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_h",
+       "expected": 0.7,
+       "measured": 0.7,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "shaft_d_inside",
+       "expected": 0.95,
+       "measured": 0.96,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.12,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 6,
+      "problems": {},
+      "mass": 800.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 6
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 6
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_metal_iron_w1",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_roof_kureita_w1",
+       "mean_srgb": [
+        123.0,
+        128.0,
+        134.0
+       ],
+       "palette": "roof_board_silver",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_well_tsurube_lid": {
+   "prop": "jp_s_well_tsurube",
+   "cat": "water",
+   "state": "intact",
+   "variant": "lid",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 178,
+    "Resolution 2": 74,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 178,
+       "Resolution 2": 74,
+       "Resolution 3": 24,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "curb_d",
+       "expected": 1.15,
+       "measured": 1.15,
+       "tol": 0.06,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_h",
+       "expected": 0.7,
+       "measured": 0.7,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "shaft_d_inside",
+       "expected": 0.95,
+       "measured": 0.96,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.05,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 800.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_decal_moss_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.0,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_river_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_well_tsurube_ab_open": {
+   "prop": "jp_s_well_tsurube",
+   "cat": "water",
+   "state": "abandoned",
+   "variant": "curb_tub",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 333,
+    "Resolution 2": 71,
+    "Resolution 3": 30,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 333,
+       "Resolution 2": 71,
+       "Resolution 3": 30,
+       "Geometry": 42,
+       "View Geometry": 42,
+       "Fire Geometry": 42
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "frame_h",
+       "expected": 2.5,
+       "measured": 2.5,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "pulley_axle_h",
+       "expected": 2.3,
+       "measured": 2.3,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_d",
+       "expected": 1.15,
+       "measured": 1.15,
+       "tol": 0.06,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "curb_h",
+       "expected": 0.7,
+       "measured": 0.7,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "shaft_d_inside",
+       "expected": 0.95,
+       "measured": 0.96,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.12,
+      "geo_min_y": 0.0,
+      "bury": 0.13,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 5,
+      "problems": {},
+      "mass": 800.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w2": true,
+      "jp_m_straw_rope_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w2",
+       "mean_srgb": [
+        145.1,
+        133.5,
+        122.8
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 9.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_metal_iron_w1",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_metal_iron_w2",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w2",
+       "mean_srgb": [
+        152.2,
+        129.7,
+        100.1
+       ],
+       "palette": "stone_granite",
+       "dE76": 4.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_well_hanetsurube_well": {
+   "prop": "jp_s_well_hanetsurube",
+   "cat": "water",
+   "state": "intact",
+   "variant": "well",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 293,
+    "Resolution 2": 97,
+    "Resolution 3": 74,
+    "Geometry": 66,
+    "View Geometry": 66,
+    "Fire Geometry": 66
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 293,
+       "Resolution 2": 97,
+       "Resolution 3": 74,
+       "Geometry": 66,
+       "View Geometry": 66,
+       "Fire Geometry": 66
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "bucket_pole",
+       "expected": 3.8,
+       "measured": 3.8779,
+       "tol": 0.7,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "post_h",
+       "expected": 2.7,
+       "measured": 2.7,
+       "tol": 0.3,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "sweep_L",
+       "expected": 6.0,
+       "measured": 6.0,
+       "tol": 0.5,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "pivot_frac",
+       "expected": 0.3333333333333333,
+       "measured": 0.3333,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.3,
+      "geo_min_y": 0.0,
+      "bury": 0.3,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 5,
+      "problems": {},
+      "mass": 600.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_metal_iron_w1",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_river_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_well_hanetsurube_field": {
+   "prop": "jp_s_well_hanetsurube",
+   "cat": "water",
+   "state": "intact",
+   "variant": "field",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 337,
+    "Resolution 2": 72,
+    "Resolution 3": 62,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 337,
+       "Resolution 2": 72,
+       "Resolution 3": 62,
+       "Geometry": 42,
+       "View Geometry": 42,
+       "Fire Geometry": 42
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "bucket_pole",
+       "expected": 3.8,
+       "measured": 3.9279,
+       "tol": 0.7,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "post_h",
+       "expected": 2.7,
+       "measured": 2.7,
+       "tol": 0.3,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "sweep_L",
+       "expected": 6.0,
+       "measured": 6.0,
+       "tol": 0.5,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "pivot_frac",
+       "expected": 0.3333333333333333,
+       "measured": 0.3333,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.3,
+      "geo_min_y": 0.0,
+      "bury": 0.3,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 3,
+      "problems": {},
+      "mass": 600.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_metal_iron_w1",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w2",
+       "mean_srgb": [
+        52.0,
+        52.0,
+        52.0
+       ],
+       "palette": "sumi_black",
+       "dE76": 0.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w1",
+       "mean_srgb": [
+        157.6,
+        134.8,
+        105.0
+       ],
+       "palette": "stone_granite",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_river_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_s_well_hanetsurube_ab_down": {
+   "prop": "jp_s_well_hanetsurube",
+   "cat": "water",
+   "state": "abandoned",
+   "variant": "well",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 306,
+    "Resolution 2": 97,
+    "Resolution 3": 74,
+    "Geometry": 66,
+    "View Geometry": 66,
+    "Fire Geometry": 66
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_field_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 306,
+       "Resolution 2": 97,
+       "Resolution 3": 74,
+       "Geometry": 66,
+       "View Geometry": 66,
+       "Fire Geometry": 66
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "post_h",
+       "expected": 2.7,
+       "measured": 2.7,
+       "tol": 0.3,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "sweep_L",
+       "expected": 6.0,
+       "measured": 6.0,
+       "tol": 0.5,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "pivot_frac",
+       "expected": 0.3333333333333333,
+       "measured": 0.3333,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.3,
+      "geo_min_y": 0.0,
+      "bury": 0.3,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 5,
+      "problems": {},
+      "mass": 600.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w2": true,
+      "jp_m_straw_rope_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w2",
+       "mean_srgb": [
+        145.1,
+        133.5,
+        122.8
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 9.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_metal_iron_w2",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_lacquer_black_w1",
+       "mean_srgb": [
+        47.7,
+        47.7,
+        47.7
+       ],
+       "palette": "sumi_black",
+       "dE76": 2.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_field_w2",
+       "mean_srgb": [
+        152.2,
+        129.7,
+        100.1
+       ],
+       "palette": "stone_granite",
+       "dE76": 4.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_river_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    }
+   ]
   }
  },
  "global": {
@@ -8899,7 +11626,7 @@
   }
  },
  "summary": {
-  "models": 42,
-  "pass": 42
+  "models": 51,
+  "pass": 51
  }
 }

@@ -79,6 +79,33 @@ Convert model P:\JP\site\water\jp_s_fire_tub_open.p3d -> D:\DayZ-Server_AI-20260
 Convert model P:\JP\site\water\jp_s_fire_tub_rural.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_fire_tub_rural.p3d
 <model = "P:\JP\site\water\jp_s_fire_tub_rural.p3d">
 </model>
+Convert model P:\JP\site\water\jp_s_well_hanetsurube_ab_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_hanetsurube_ab_down.p3d
+<model = "P:\JP\site\water\jp_s_well_hanetsurube_ab_down.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_well_hanetsurube_field.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_hanetsurube_field.p3d
+<model = "P:\JP\site\water\jp_s_well_hanetsurube_field.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_well_hanetsurube_well.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_hanetsurube_well.p3d
+<model = "P:\JP\site\water\jp_s_well_hanetsurube_well.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_well_tsurube_ab_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_ab_open.p3d
+<model = "P:\JP\site\water\jp_s_well_tsurube_ab_open.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_well_tsurube_curb_igeta.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_curb_igeta.p3d
+<model = "P:\JP\site\water\jp_s_well_tsurube_curb_igeta.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_well_tsurube_curb_stone.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_curb_stone.p3d
+<model = "P:\JP\site\water\jp_s_well_tsurube_curb_stone.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_well_tsurube_curb_tub.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_curb_tub.p3d
+<model = "P:\JP\site\water\jp_s_well_tsurube_curb_tub.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_well_tsurube_lid.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_lid.p3d
+<model = "P:\JP\site\water\jp_s_well_tsurube_lid.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_well_tsurube_roofed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_roofed.p3d
+<model = "P:\JP\site\water\jp_s_well_tsurube_roofed.p3d">
+</model>
 
 FileServer MaxCacheSize = 23987 MB
 No entry '.CfgAmmo'.
@@ -111,6 +138,15 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_eave.p3d: 0.00,
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_full.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_open.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_rural.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_hanetsurube_ab_down.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_hanetsurube_field.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_hanetsurube_well.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_tsurube_ab_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_tsurube_curb_igeta.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_tsurube_curb_stone.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_tsurube_curb_tub.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_tsurube_lid.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_well_tsurube_roofed.p3d: 0.00,0.00
 
 C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\yard D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard *.p3d
 
@@ -127,6 +163,7 @@ UV mapping too varied on jp\common\materials\wood\jp_m_wood_endgrain_w2_co.paa, 
 </model>
 Convert model P:\JP\site\yard\jp_s_firewood_stack_bundle.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_bundle.p3d
 <model = "P:\JP\site\yard\jp_s_firewood_stack_bundle.p3d">
+TexMaterial loading race detected for jp\common\materials\wood\jp_m_wood_endgrain_w1.rvmat
 </model>
 Convert model P:\JP\site\yard\jp_s_firewood_stack_free_posts.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_free_posts.p3d
 <model = "P:\JP\site\yard\jp_s_firewood_stack_free_posts.p3d">

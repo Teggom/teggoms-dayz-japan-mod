@@ -307,4 +307,60 @@ class CfgVehicles
 		displayName="Handcart wreck, wheels off, slats gone";
 		model="\JP\site\yard\jp_s_handcart_ab_wreck.p3d";
 	};
+	// jp_s_well_tsurube (water)
+	class Land_JP_S_Well_Tsurube_Curb_Tub: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pulley well, round tub curb";
+		model="\JP\site\water\jp_s_well_tsurube_curb_tub.p3d";
+	};
+	class Land_JP_S_Well_Tsurube_Curb_Igeta: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pulley well, square igeta curb";
+		model="\JP\site\water\jp_s_well_tsurube_curb_igeta.p3d";
+	};
+	class Land_JP_S_Well_Tsurube_Curb_Stone: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pulley well, stone curb";
+		model="\JP\site\water\jp_s_well_tsurube_curb_stone.p3d";
+	};
+	class Land_JP_S_Well_Tsurube_Roofed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Roofed pulley well (dwelling 28)";
+		model="\JP\site\water\jp_s_well_tsurube_roofed.p3d";
+	};
+	class Land_JP_S_Well_Tsurube_Lid: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Well curb with a board lid";
+		model="\JP\site\water\jp_s_well_tsurube_lid.p3d";
+	};
+	class Land_JP_S_Well_Tsurube_Ab_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pulley well, rope rotted, lid askew";
+		model="\JP\site\water\jp_s_well_tsurube_ab_open.p3d";
+	};
+	// jp_s_well_hanetsurube (water)
+	class Land_JP_S_Well_Hanetsurube_Well: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lever well (hanetsurube)";
+		model="\JP\site\water\jp_s_well_hanetsurube_well.p3d";
+	};
+	class StaticObj_JP_S_Well_Hanetsurube_Field: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Field sweep over a ditch";
+		model="\JP\site\water\jp_s_well_hanetsurube_field.p3d";
+	};
+	class Land_JP_S_Well_Hanetsurube_Ab_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lever well, lashing rotted, pole down";
+		model="\JP\site\water\jp_s_well_hanetsurube_ab_down.p3d";
+	};
 };

@@ -43,3 +43,13 @@
 2026-09-30 10:27:44 | #40 | jp_s_handcart_ab_tipped | abandoned (batch) | 5h 15% wk 21%
 2026-09-30 10:27:44 | #41 | jp_s_handcart_ab_broken | abandoned (batch) | 5h 15% wk 21%
 2026-09-30 10:27:44 | #42 | jp_s_handcart_ab_wreck | abandoned (batch) | 5h 15% wk 21%
+2026-09-30 10:28:12 | GROUP START | well_tsurube, well_hanetsurube | wells | 5h 15% wk 21%
+2026-09-30 10:31:27 | #43 | jp_s_well_tsurube_curb_tub | new model (batch) | 5h 15% wk 21%
+2026-09-30 10:31:27 | #44 | jp_s_well_tsurube_curb_igeta | variant (batch) | 5h 15% wk 21%
+2026-09-30 10:31:27 | #45 | jp_s_well_tsurube_curb_stone | variant (batch) | 5h 15% wk 21%
+2026-09-30 10:31:27 | #46 | jp_s_well_tsurube_roofed | variant (batch) | 5h 15% wk 21%
+2026-09-30 10:31:27 | #47 | jp_s_well_tsurube_lid | variant (batch) | 5h 15% wk 21%
+2026-09-30 10:31:27 | #48 | jp_s_well_tsurube_ab_open | abandoned (batch) | 5h 15% wk 21%
+2026-09-30 10:31:27 | #49 | jp_s_well_hanetsurube_well | new model (batch) | 5h 15% wk 21%
+2026-09-30 10:31:27 | #50 | jp_s_well_hanetsurube_field | variant (batch) | 5h 15% wk 21%
+2026-09-30 10:31:27 | #51 | jp_s_well_hanetsurube_ab_down | abandoned (batch) | 5h 15% wk 21%
