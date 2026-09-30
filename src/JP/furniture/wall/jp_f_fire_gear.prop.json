@@ -1,0 +1,165 @@
+{
+ "id": "jp_f_fire_gear",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_fire_gear.p3d",
+   "class": "StaticObj_JP_F_Fire_Gear",
+   "variant": "full",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fire buckets on a shelf, fire hook on pegs",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 285,
+    "Resolution 2": 51
+   },
+   "bbox": [
+    -0.75,
+    0.86,
+    1.26,
+    2.07,
+    0.0,
+    0.3
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shelf_y",
+     "expected": 1.62,
+     "measured": 1.62,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "town fire rules (Kyoho 1718-20): fire buckets with the house mark and a fire hook (BUILDING_LIST 5.6: 20 entries); visual only (no loot on the bucket shelf: it is above 1.40 over most floors)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_fire_gear.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_fire_gear_buckets.p3d",
+   "class": "StaticObj_JP_F_Fire_Gear_Buckets",
+   "variant": "buckets",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Two fire buckets hung on pegs",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 164,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.315,
+    0.315,
+    1.26,
+    1.73,
+    0.001,
+    0.275
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "peg_y",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "town fire rules (Kyoho 1718-20): fire buckets with the house mark and a fire hook (BUILDING_LIST 5.6: 20 entries); visual only (no loot on the bucket shelf: it is above 1.40 over most floors)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_fire_gear_buckets.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_fire_gear_fallen.p3d",
+   "class": "StaticObj_JP_F_Fire_Gear_Fallen",
+   "variant": "full",
+   "state": "fallen",
+   "abandoned": true,
+   "display": "Fire gear, a bucket on the floor, the hook askew",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 288,
+    "Resolution 2": 51
+   },
+   "bbox": [
+    -0.722,
+    0.934,
+    0.0,
+    2.07,
+    0.0,
+    0.783
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shelf_y",
+     "expected": 1.62,
+     "measured": 1.62,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "town fire rules (Kyoho 1718-20): fire buckets with the house mark and a fire hook (BUILDING_LIST 5.6: 20 entries); visual only (no loot on the bucket shelf: it is above 1.40 over most floors)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_fire_gear_fallen.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 14,
+ "refs_local": []
+}

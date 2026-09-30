@@ -1837,6 +1837,67 @@
    "method": "assumed",
    "tolerance_dE76": 12,
    "hex": "#8E5044"
+  },
+  {
+   "id": "rice_grain",
+   "name": "Rice grains, polished (town) to part-polished",
+   "material": "rice / millet grain",
+   "group": "food",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "rice in bowls and measures, grain spills (jp_m_food_rice)",
+   "note": "Added 2026-09-30 by L1. Assumed: an off-white with a warm cast (Edo townspeople ate polished rice; rural houses mixed grains, which reads a little darker). Judge in game.",
+   "srgb": [
+    206,
+    196,
+    170
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "hex": "#CEC4AA"
+  },
+  {
+   "id": "hoshigaki",
+   "name": "Dried persimmon (hoshigaki), with a white sugar bloom",
+   "material": "dried fruit",
+   "group": "food",
+   "tiers": [
+    1,
+    2
+   ],
+   "use": "persimmon strings under beams and eaves (jp_m_food_hoshigaki)",
+   "note": "Added 2026-09-30 by L1. Assumed: dark orange-brown flesh, the white bloom (ko) of a few weeks' drying. Judge in game.",
+   "srgb": [
+    128,
+    70,
+    42
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "hex": "#80462A"
+  },
+  {
+   "id": "kaya_moegi",
+   "name": "Mosquito-net hemp, faded moegi green",
+   "material": "hemp gauze (Omi kaya)",
+   "group": "textile",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "the folded mosquito net (jp_m_textile_kaya); the red edge uses jp_m_textile_bib_red",
+   "note": "Added 2026-09-30 by L1. Omi nets were green with a red edge (BUILDING_LIST 1500). Assumed: a dulled yellow-green after years of summer use. Judge in game.",
+   "srgb": [
+    98,
+    112,
+    74
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "hex": "#62704A"
   }
  ]
 }

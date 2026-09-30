@@ -1,0 +1,189 @@
+{
+ "id": "jp_f_noren_inner",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_noren_inner_2.p3d",
+   "class": "StaticObj_JP_F_Noren_Inner_2",
+   "variant": "2",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Inner noren, two panels (0.88)",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 69,
+    "Resolution 2": 11
+   },
+   "bbox": [
+    -0.52,
+    0.52,
+    -1.135,
+    0.0,
+    -0.016,
+    0.03
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.88,
+     "measured": 0.88,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "length",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "inner noren between the shop and the back rooms: hangs from the door head (mount 'doorway', origin at the head underside, centred in the opening); no collision, players walk through; bottom 0.88 above a 2.00 head"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_noren_inner_2.p3d",
+   "mount": "doorway",
+   "mount_note": "in a doorway head: origin = the head (kamoi) underside at the opening centre, in the opening plane",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 1.135
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_noren_inner_3.p3d",
+   "class": "StaticObj_JP_F_Noren_Inner_3",
+   "variant": "3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Inner noren, three panels (1.32)",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 87,
+    "Resolution 2": 11
+   },
+   "bbox": [
+    -0.74,
+    0.74,
+    -1.135,
+    0.0,
+    -0.016,
+    0.03
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 1.32,
+     "measured": 1.32,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "length",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "inner noren between the shop and the back rooms: hangs from the door head (mount 'doorway', origin at the head underside, centred in the opening); no collision, players walk through; bottom 0.88 above a 2.00 head"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_noren_inner_3.p3d",
+   "mount": "doorway",
+   "mount_note": "in a doorway head: origin = the head (kamoi) underside at the opening centre, in the opening plane",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 1.135
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_noren_inner_torn.p3d",
+   "class": "StaticObj_JP_F_Noren_Inner_Torn",
+   "variant": "2",
+   "state": "torn",
+   "abandoned": true,
+   "display": "Inner noren, a panel torn off",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 51,
+    "Resolution 2": 11
+   },
+   "bbox": [
+    -0.52,
+    0.52,
+    -1.12,
+    0.0,
+    -0.016,
+    0.03
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.88,
+     "measured": 0.88,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "length",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "inner noren between the shop and the back rooms: hangs from the door head (mount 'doorway', origin at the head underside, centred in the opening); no collision, players walk through; bottom 0.88 above a 2.00 head"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_noren_inner_torn.p3d",
+   "mount": "doorway",
+   "mount_note": "in a doorway head: origin = the head (kamoi) underside at the opening centre, in the opening plane",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 1.12
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 12,
+ "refs_local": []
+}

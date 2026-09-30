@@ -1,0 +1,190 @@
+{
+ "id": "jp_m_decal_sumi_text_life",
+ "family": "paint",
+ "palette_id": "sumi_black",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 1024,
+ "px_per_m": 1024.0,
+ "uv": "TEXT ATLAS, not world-scale (as jp_m_decal_sumi_text): map a face onto one cell's rectangle (\"cells\": u0, v0, u1, v1 with v down), keeping the cell's aspect; 1024 px = 1 m. Lay the decal 2-3 mm off the surface; never in Geometry/View/Fire. Text runs top to bottom, columns right to left.",
+ "grain": "brush strokes (Yuji Syuku kanji, Yuji Hentaigana Akebono kana)",
+ "penetration_rvmat": null,
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "crisp black ink",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_life_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_life_w0.rvmat",
+   "target_srgb": [
+    47.7,
+    47.7,
+    47.7
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.082
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "faded to grey-brown",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_life_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_life_w1.rvmat",
+   "target_srgb": [
+    74.0,
+    66.4,
+    60.1
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.068
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "ghost of text, flaking",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_life_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_life_w2.rvmat",
+   "target_srgb": [
+    76.3,
+    68.7,
+    62.3
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.0
+  }
+ },
+ "used_by": [
+  "jp_f_ofuda",
+  "jp_f_koyomi",
+  "jp_f_chochin",
+  "jp_f_choba_set",
+  "jp_f_taru"
+ ],
+ "used_on": "Ink text for the life layer (charms, calendar, lanterns, ledgers, casks)",
+ "sources": [
+  {
+   "procedural": "make_l1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_l1_materials.py (agent L1, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/LIFE_LAYER.md (L1, the interior life layer)",
+ "alpha": "decal",
+ "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
+ "note": "The life layer's ink: paper charms, the Kyoho 15 (1730) calendar, lantern shop names and crests, the ledger cover, a sake-cask mark. Fonts: SIL OFL 1.1, Yuji Project Authors. Nothing emissive.",
+ "cells": {
+  "ofuda_jingu": {
+   "uv": [
+    0.0,
+    0.0,
+    0.0977,
+    0.4395
+   ],
+   "for": "jp_f_ofuda: Ise Jingu taima (the most widely held house charm)",
+   "text": "天照皇大神宮"
+  },
+  "ofuda_akiba": {
+   "uv": [
+    0.0977,
+    0.0,
+    0.1953,
+    0.4395
+   ],
+   "for": "jp_f_ofuda: Akiba fire charm (kitchens, Edo)",
+   "text": "秋葉山大権現"
+  },
+  "ofuda_somin": {
+   "uv": [
+    0.1953,
+    0.0,
+    0.293,
+    0.4688
+   ],
+   "for": "jp_f_ofuda: Somin Shorai door charm",
+   "text": "蘇民将来子孫之門"
+  },
+  "ofuda_goo": {
+   "uv": [
+    0.293,
+    0.0,
+    0.3906,
+    0.3223
+   ],
+   "for": "jp_f_ofuda: Kumano Goo hoin",
+   "text": "牛王宝印"
+  },
+  "koyomi_kyoho15": {
+   "uv": [
+    0.4102,
+    0.0,
+    1.0,
+    0.4883
+   ],
+   "for": "jp_f_koyomi: the printed calendar for Kyoho 15 (1730), month heads and the 24 seasonal nodes",
+   "text": "享保十五年庚戌暦 / 正月:立春雨水 二月:啓蟄春分 三月:清明穀雨 四月:立夏小満 五月:芒種夏至 六月:小暑大暑 七月:立秋処暑 八月:白露秋分 九月:寒露霜降 十月:立冬小雪 十一月:大雪冬至 十二月:小寒大寒"
+  },
+  "chochin_iseya": {
+   "uv": [
+    0.0,
+    0.5078,
+    0.1367,
+    0.8594
+   ],
+   "for": "jp_f_chochin: shop name Iseya (the commonest Edo shop name)",
+   "text": "伊勢屋"
+  },
+  "chochin_yamatoya": {
+   "uv": [
+    0.1367,
+    0.5078,
+    0.2734,
+    0.8594
+   ],
+   "for": "jp_f_chochin: shop name Yamatoya",
+   "text": "大和屋"
+  },
+  "crest_igeta": {
+   "uv": [
+    0.2734,
+    0.5078,
+    0.4102,
+    0.6445
+   ],
+   "for": "jp_f_chochin / jp_f_yoroibitsu: family crest, well-frame in a ring",
+   "text": "(crest: igeta in a ring)"
+  },
+  "crest_mitsubiki": {
+   "uv": [
+    0.4102,
+    0.5078,
+    0.5469,
+    0.6445
+   ],
+   "for": "jp_f_chochin: family crest, three bars in a ring",
+   "text": "(crest: three bars in a ring)"
+  },
+  "daifukucho": {
+   "uv": [
+    0.5469,
+    0.5078,
+    0.6836,
+    0.8594
+   ],
+   "for": "jp_f_choba_set: ledger cover 'daifukucho' with the year",
+   "text": "大福帳 / 享保十五年"
+  },
+  "taru_morohaku": {
+   "uv": [
+    0.6836,
+    0.5078,
+    0.8008,
+    0.7812
+   ],
+   "for": "jp_f_taru: 'morohaku' (fine polished sake) on the cask wrap",
+   "text": "諸白"
+  }
+ },
+ "fonts": [
+  "research/fonts/yujisyuku/YujiSyuku-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)",
+  "research/fonts/yujihentaiganaakebono/YujiHentaiganaAkebono-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)"
+ ]
+}

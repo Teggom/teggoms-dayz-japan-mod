@@ -1,0 +1,65 @@
+{
+ "id": "jp_m_textile_kaya",
+ "family": "textile",
+ "palette_id": "kaya_moegi",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 512,
+ "px_per_m": 1024.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "open hemp gauze, threads along u and v",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "moegi green gauze",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_kaya_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_kaya_w0.rvmat",
+   "target_srgb": [
+    103.0,
+    117.0,
+    78.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "faded along the folds",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_kaya_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_kaya_w1.rvmat",
+   "target_srgb": [
+    94.2,
+    107.0,
+    65.9
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "mildew, holes",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_kaya_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_kaya_w2.rvmat",
+   "target_srgb": [
+    84.4,
+    100.4,
+    55.4
+   ],
+   "masked_frac": 0.005
+  }
+ },
+ "used_by": [
+  "jp_f_kaya"
+ ],
+ "used_on": "The mosquito net, folded and hung up for autumn",
+ "sources": [
+  {
+   "procedural": "make_l1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_l1_materials.py (agent L1, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/LIFE_LAYER.md (L1, the interior life layer)",
+ "note": "Folded / draped net: opaque. The red edge band is jp_m_textile_bib_red geometry."
+}

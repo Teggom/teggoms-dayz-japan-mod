@@ -1,0 +1,170 @@
+{
+ "id": "jp_f_kaya",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "era check kept (LIFE_LAYER_ERA 13); folded away for autumn"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_kaya_draped.p3d",
+   "class": "StaticObj_JP_F_Kaya_Draped",
+   "variant": "draped",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Mosquito net folded over a pole",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 63,
+    "Resolution 2": 11
+   },
+   "bbox": [
+    -0.48,
+    0.48,
+    -0.55,
+    0.0,
+    -0.08,
+    0.074
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole_w",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "mosquito net (kaya) folded away for autumn (LIFE_LAYER_ERA 13: kept, T2-3): Omi green hemp with a red edge (material jp_m_textile_kaya added by L1)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_kaya_draped.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 0.55
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_kaya_bundle.p3d",
+   "class": "StaticObj_JP_F_Kaya_Bundle",
+   "variant": "bundle",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Mosquito net tied in a bundle on a hook",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 54,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.275,
+    0.275,
+    -0.445,
+    0.0,
+    -0.076,
+    0.14
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole_w",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "mosquito net (kaya) folded away for autumn (LIFE_LAYER_ERA 13: kept, T2-3): Omi green hemp with a red edge (material jp_m_textile_kaya added by L1)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_kaya_bundle.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 0.445
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_kaya_loose.p3d",
+   "class": "StaticObj_JP_F_Kaya_Loose",
+   "variant": "draped",
+   "state": "loose",
+   "abandoned": true,
+   "display": "Mosquito net come loose, hanging in a swag",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 86,
+    "Resolution 2": 11
+   },
+   "bbox": [
+    -0.48,
+    0.604,
+    -1.35,
+    0.0,
+    -0.08,
+    0.074
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole_w",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "mosquito net (kaya) folded away for autumn (LIFE_LAYER_ERA 13: kept, T2-3): Omi green hemp with a red edge (material jp_m_textile_kaya added by L1)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_kaya_loose.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 1.35
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 13,
+ "refs_local": []
+}

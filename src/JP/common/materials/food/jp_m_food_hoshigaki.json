@@ -1,0 +1,64 @@
+{
+ "id": "jp_m_food_hoshigaki",
+ "family": "food",
+ "palette_id": "hoshigaki",
+ "palette_by_wear": {},
+ "tile_size_m": 0.25,
+ "texture_px": 256,
+ "px_per_m": 1024.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "wrinkles along v (the fruit hangs stalk up)",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh-dried, orange-brown",
+   "co": "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w0.rvmat",
+   "target_srgb": [
+    139.5,
+    75.4,
+    43.6
+   ],
+   "masked_frac": 0.161
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "dark, white sugar bloom",
+   "co": "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w1.rvmat",
+   "target_srgb": [
+    128.0,
+    70.0,
+    42.0
+   ],
+   "masked_frac": 0.29
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "black rot, mould",
+   "co": "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w2.rvmat",
+   "target_srgb": [
+    114.0,
+    62.3,
+    38.2
+   ],
+   "masked_frac": 0.128
+  }
+ },
+ "used_by": [
+  "jp_f_hoshigaki"
+ ],
+ "used_on": "Dried persimmons on strings (autumn)",
+ "sources": [
+  {
+   "procedural": "make_l1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_l1_materials.py (agent L1, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/LIFE_LAYER.md (L1, the interior life layer)"
+}

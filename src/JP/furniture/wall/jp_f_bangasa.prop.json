@@ -1,0 +1,165 @@
+{
+ "id": "jp_f_bangasa",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_bangasa_hung.p3d",
+   "class": "StaticObj_JP_F_Bangasa_Hung",
+   "variant": "hung",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Oiled-paper umbrella hung on a peg",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 69,
+    "Resolution 2": 8
+   },
+   "bbox": [
+    -0.051,
+    0.051,
+    0.74,
+    1.89,
+    0.001,
+    0.126
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "peg_y",
+     "expected": 1.86,
+     "measured": 1.86,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "oiled-paper umbrella (bangasa), BUILDING_LIST 1615-1617"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_bangasa_hung.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_bangasa_leaning.p3d",
+   "class": "StaticObj_JP_F_Bangasa_Leaning",
+   "variant": "leaning",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Oiled-paper umbrella leaning on the wall",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 55,
+    "Resolution 2": 8
+   },
+   "bbox": [
+    -0.051,
+    0.051,
+    0.0,
+    1.05,
+    0.002,
+    0.285
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.08,
+     "measured": 1.08,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "oiled-paper umbrella (bangasa), BUILDING_LIST 1615-1617"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_bangasa_leaning.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_bangasa_open_torn.p3d",
+   "class": "StaticObj_JP_F_Bangasa_Open_Torn",
+   "variant": "open",
+   "state": "torn",
+   "abandoned": true,
+   "display": "Umbrella dropped open, paper split",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 169,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.513,
+    0.511,
+    0.0,
+    0.747,
+    -0.469,
+    0.474
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "open_d",
+     "expected": 1.04,
+     "measured": 1.04,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "an umbrella dropped open, upside down, the oiled paper split between the ribs"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_bangasa_open_torn.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 11,
+ "refs_local": []
+}

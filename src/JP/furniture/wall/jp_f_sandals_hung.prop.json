@@ -1,0 +1,158 @@
+{
+ "id": "jp_f_sandals_hung",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_sandals_hung_wall.p3d",
+   "class": "StaticObj_JP_F_Sandals_Hung_Wall",
+   "variant": "wall",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw sandals in bunches on wall pegs",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 190,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.33,
+    0.3,
+    1.3,
+    1.74,
+    0.0,
+    0.138
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "peg_y",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "straw sandals (waraji) tied in bunches (24 entries, BUILDING_LIST 5.7)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_sandals_hung_wall.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_sandals_hung_beam.p3d",
+   "class": "StaticObj_JP_F_Sandals_Hung_Beam",
+   "variant": "beam",
+   "state": "intact",
+   "abandoned": false,
+   "display": "A bunch of straw sandals on a beam hook",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 101,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.168,
+    0.164,
+    -0.42,
+    0.0,
+    -0.02,
+    0.098
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "a bunch of new straw sandals on a beam hook (spares, or stock for sale)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_sandals_hung_beam.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    1,
+    2
+   ],
+   "hang_len": 0.42
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_sandals_hung_fallen.p3d",
+   "class": "StaticObj_JP_F_Sandals_Hung_Fallen",
+   "variant": "wall",
+   "state": "fallen",
+   "abandoned": true,
+   "display": "Straw sandals, one bunch burst on the floor",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 209,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.538,
+    0.3,
+    0.0,
+    1.74,
+    0.0,
+    0.656
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "peg_y",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "straw sandals (waraji) tied in bunches (24 entries, BUILDING_LIST 5.7)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_sandals_hung_fallen.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 7,
+ "refs_local": []
+}

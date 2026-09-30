@@ -1,0 +1,218 @@
+{
+ "id": "jp_f_ofuda",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "paper charms on a post: Ise taima, Akiba fire charm, Somin Shorai, Goo hoin (life atlas)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_ofuda_single.p3d",
+   "class": "StaticObj_JP_F_Ofuda_Single",
+   "variant": "single",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Paper charm (Ise taima) on a post",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 7,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.04,
+    0.04,
+    1.55,
+    1.85,
+    0.0,
+    0.002
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "card_w",
+     "expected": 0.075,
+     "measured": 0.075,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pasted on a post face (mount 'post'): the post face is z = 0; the card is 7.5 cm wide, so any post >= 0.10 takes it"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_ofuda_single.p3d",
+   "mount": "post",
+   "mount_note": "on a post face: origin on the floor below, the post face is z = 0 (anchor 'wall'); height built in",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_ofuda_akiba.p3d",
+   "class": "StaticObj_JP_F_Ofuda_Akiba",
+   "variant": "akiba",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fire charm (Akiba) on a kitchen post",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 7,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.04,
+    0.04,
+    1.55,
+    1.85,
+    0.0,
+    0.002
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "card_w",
+     "expected": 0.075,
+     "measured": 0.075,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pasted on a post face (mount 'post'): the post face is z = 0; the card is 7.5 cm wide, so any post >= 0.10 takes it"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_ofuda_akiba.p3d",
+   "mount": "post",
+   "mount_note": "on a post face: origin on the floor below, the post face is z = 0 (anchor 'wall'); height built in",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_ofuda_row.p3d",
+   "class": "StaticObj_JP_F_Ofuda_Row",
+   "variant": "row",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three paper charms on a post, old and new",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 21,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.041,
+    0.04,
+    1.17,
+    1.99,
+    0.0,
+    0.002
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "card_w",
+     "expected": 0.075,
+     "measured": 0.075,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pasted on a post face (mount 'post'): the post face is z = 0; the card is 7.5 cm wide, so any post >= 0.10 takes it"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_ofuda_row.p3d",
+   "mount": "post",
+   "mount_note": "on a post face: origin on the floor below, the post face is z = 0 (anchor 'wall'); height built in",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_ofuda_torn.p3d",
+   "class": "StaticObj_JP_F_Ofuda_Torn",
+   "variant": "row",
+   "state": "torn",
+   "abandoned": true,
+   "display": "Paper charms, faded, one peeling, one torn away",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 22,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.04,
+    0.04,
+    1.4,
+    1.99,
+    0.0,
+    0.051
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "card_w",
+     "expected": 0.075,
+     "measured": 0.075,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pasted on a post face (mount 'post'): the post face is z = 0; the card is 7.5 cm wide, so any post >= 0.10 takes it"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_ofuda_torn.p3d",
+   "mount": "post",
+   "mount_note": "on a post face: origin on the floor below, the post face is z = 0 (anchor 'wall'); height built in",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 2,
+ "refs_local": []
+}

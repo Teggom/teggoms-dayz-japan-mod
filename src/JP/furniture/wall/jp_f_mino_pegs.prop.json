@@ -1,0 +1,220 @@
+{
+ "id": "jp_f_mino_pegs",
+ "build_list": {
+  "name": "Wall pegs with straw raincoat (mino), hat (kasa) and tools (hoe, sickle)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2
+  ],
+  "room_tags": [
+   "doma",
+   "stable",
+   "workshop",
+   "storage"
+  ],
+  "loot_surface": "none",
+  "abandoned_state": "one peg empty, the hat on the floor",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "board_m": {
+    "value": "0.91 peg board at 1.60",
+    "assumed": true,
+    "reason": "reason: grid; above hip height"
+   },
+   "mino_m": {
+    "value": "0.90 long",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "N20",
+    "shows": "BL §3/§5.7 (text)",
+    "period_image": false
+   },
+   {
+    "id": "i05_tsunashima_kamado",
+    "shows": "farmhouse doma walls",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_mino_pegs; visual only, no loot"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_mino_pegs.p3d",
+   "class": "StaticObj_JP_F_Mino_Pegs",
+   "variant": "full",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall pegs: straw raincoat, hat, hoe, sickle",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 166,
+    "Resolution 2": 28
+   },
+   "bbox": [
+    -0.71,
+    0.652,
+    0.517,
+    1.65,
+    0.0,
+    0.19
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "board_y",
+     "expected": 1.6,
+     "measured": 1.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "board_w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rural doma wall by the door (BUILD_LIST jp_f_mino_pegs, Kitamura-type set); visual only"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_mino_pegs.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_mino_pegs_rain.p3d",
+   "class": "StaticObj_JP_F_Mino_Pegs_Rain",
+   "variant": "rain",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall pegs: straw raincoat and hat",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 22
+   },
+   "bbox": [
+    -0.71,
+    0.455,
+    0.69,
+    1.65,
+    0.0,
+    0.19
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "board_y",
+     "expected": 1.6,
+     "measured": 1.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "board_w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rural doma wall by the door (BUILD_LIST jp_f_mino_pegs, Kitamura-type set); visual only"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_mino_pegs_rain.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_mino_pegs_fallen.p3d",
+   "class": "StaticObj_JP_F_Mino_Pegs_Fallen",
+   "variant": "full",
+   "state": "fallen",
+   "abandoned": true,
+   "display": "Wall pegs, the hat fallen, one peg empty",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 155,
+    "Resolution 2": 28
+   },
+   "bbox": [
+    -0.62,
+    0.905,
+    0.0,
+    1.657,
+    0.0,
+    0.69
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "board_y",
+     "expected": 1.6,
+     "measured": 1.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "board_w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rural doma wall by the door (BUILD_LIST jp_f_mino_pegs, Kitamura-type set); visual only"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_mino_pegs_fallen.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 1,
+ "refs_local": [
+  "i06_tsunashima_doma"
+ ]
+}

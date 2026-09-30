@@ -1,0 +1,67 @@
+{
+ "id": "jp_m_food_rice",
+ "family": "food",
+ "palette_id": "rice_grain",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 512,
+ "px_per_m": 1024.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "none; loose grains",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean polished grains",
+   "co": "JP\\common\\materials\\food\\jp_m_food_rice_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_rice_w0.rvmat",
+   "target_srgb": [
+    211.6,
+    201.5,
+    175.4
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "dusty, husk flecks",
+   "co": "JP\\common\\materials\\food\\jp_m_food_rice_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_rice_w1.rvmat",
+   "target_srgb": [
+    199.0,
+    187.6,
+    158.3
+   ],
+   "masked_frac": 0.004
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "grey mould, droppings",
+   "co": "JP\\common\\materials\\food\\jp_m_food_rice_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_rice_w2.rvmat",
+   "target_srgb": [
+    188.7,
+    173.3,
+    139.7
+   ],
+   "masked_frac": 0.079
+  }
+ },
+ "used_by": [
+  "jp_f_meal_left",
+  "jp_f_masu",
+  "jp_f_mi",
+  "jp_f_kamidana_set"
+ ],
+ "used_on": "Rice in bowls and measures, grain spills",
+ "sources": [
+  {
+   "procedural": "make_l1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_l1_materials.py (agent L1, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/LIFE_LAYER.md (L1, the interior life layer)"
+}

@@ -1,0 +1,348 @@
+{
+ "id": "jp_f_chochin",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "unlit; crest / shop name from the life atlas"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_chochin_crest.p3d",
+   "class": "StaticObj_JP_F_Chochin_Crest",
+   "variant": "crest",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Paper lantern with a family crest",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 139,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.145,
+    0.145,
+    -0.6,
+    0.0,
+    -0.15,
+    0.15
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.42,
+     "measured": 0.42,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hanging paper lantern, unlit (G1 A2-14), text from the life atlas (B1 pipeline fonts)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_chochin_crest.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 0.6
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_chochin_crest2.p3d",
+   "class": "StaticObj_JP_F_Chochin_Crest2",
+   "variant": "crest2",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Paper lantern, three-bar crest",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 139,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.145,
+    0.145,
+    -0.6,
+    0.0,
+    -0.15,
+    0.15
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.42,
+     "measured": 0.42,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hanging paper lantern, unlit (G1 A2-14), text from the life atlas (B1 pipeline fonts)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_chochin_crest2.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 0.6
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_chochin_shop.p3d",
+   "class": "StaticObj_JP_F_Chochin_Shop",
+   "variant": "shop",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Paper lantern, shop name Iseya",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 139,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.145,
+    0.145,
+    -0.6,
+    0.0,
+    -0.15,
+    0.15
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.42,
+     "measured": 0.42,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hanging paper lantern, unlit (G1 A2-14), text from the life atlas (B1 pipeline fonts)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_chochin_shop.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 0.6
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_chochin_shop2.p3d",
+   "class": "StaticObj_JP_F_Chochin_Shop2",
+   "variant": "shop2",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Paper lantern, shop name Yamatoya",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 139,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.145,
+    0.145,
+    -0.6,
+    0.0,
+    -0.15,
+    0.15
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.42,
+     "measured": 0.42,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hanging paper lantern, unlit (G1 A2-14), text from the life atlas (B1 pipeline fonts)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_chochin_shop2.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 0.6
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_chochin_torn.p3d",
+   "class": "StaticObj_JP_F_Chochin_Torn",
+   "variant": "shop",
+   "state": "torn",
+   "abandoned": true,
+   "display": "Paper lantern, torn, hanging askew",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 139,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.124,
+    0.199,
+    -0.608,
+    0.0,
+    -0.181,
+    0.148
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.42,
+     "measured": 0.42,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hanging paper lantern, unlit (G1 A2-14), text from the life atlas (B1 pipeline fonts)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_chochin_torn.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    2,
+    3
+   ],
+   "hang_len": 0.608
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_chochin_fallen.p3d",
+   "class": "StaticObj_JP_F_Chochin_Fallen",
+   "variant": "crest",
+   "state": "fallen",
+   "abandoned": true,
+   "display": "Paper lantern fallen and crushed",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.275,
+    0.476,
+    0.0,
+    0.303,
+    -0.127,
+    0.351
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a lantern fallen from its hook, crushed (floor)"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_chochin_fallen.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 10,
+ "refs_local": []
+}

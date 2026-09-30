@@ -1,0 +1,172 @@
+{
+ "id": "jp_f_hoshigaki",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "wall",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "autumn"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_hoshigaki_3.p3d",
+   "class": "StaticObj_JP_F_Hoshigaki_3",
+   "variant": "3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Dried persimmons, three strings",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 274,
+    "Resolution 2": 27
+   },
+   "bbox": [
+    -0.34,
+    0.34,
+    -0.995,
+    0.0,
+    -0.038,
+    0.039
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "strings",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0.0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "autumn: persimmon strings (renkaki) under a beam or the loft joists (BUILDING_LIST 746); hangs 0.99 m, so hang it over a hearth, a corner or a shelf, not across a walking line"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_hoshigaki_3.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    1,
+    2
+   ],
+   "hang_len": 0.995
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_hoshigaki_5.p3d",
+   "class": "StaticObj_JP_F_Hoshigaki_5",
+   "variant": "5",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Dried persimmons, five strings",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 294,
+    "Resolution 2": 39
+   },
+   "bbox": [
+    -0.56,
+    0.56,
+    -0.695,
+    0.0,
+    -0.037,
+    0.038
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "strings",
+     "expected": 5,
+     "measured": 5.0,
+     "tol": 0.0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "autumn: persimmon strings (renkaki) under a beam or the loft joists (BUILDING_LIST 746); hangs 0.69 m, so hang it over a hearth, a corner or a shelf, not across a walking line"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_hoshigaki_5.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    1,
+    2
+   ],
+   "hang_len": 0.695
+  },
+  {
+   "p3d": "\\JP\\furniture\\wall\\jp_f_hoshigaki_rotten.p3d",
+   "class": "StaticObj_JP_F_Hoshigaki_Rotten",
+   "variant": "3",
+   "state": "rotten",
+   "abandoned": true,
+   "display": "Dried persimmons, blackened, gaps, a broken string",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 184,
+    "Resolution 2": 27
+   },
+   "bbox": [
+    -0.34,
+    0.34,
+    -0.995,
+    0.0,
+    -0.035,
+    0.039
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "strings",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0.0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "autumn: persimmon strings (renkaki) under a beam or the loft joists (BUILDING_LIST 746); hangs 0.99 m, so hang it over a hearth, a corner or a shelf, not across a walking line"
+   ],
+   "master": "spikes/L1/out/wall/jp_f_hoshigaki_rotten.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "tiers": [
+    1,
+    2
+   ],
+   "hang_len": 0.995
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 8,
+ "refs_local": [
+  "k35_firewood_hoshigaki"
+ ]
+}
