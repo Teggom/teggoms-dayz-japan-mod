@@ -22,7 +22,7 @@ SHEETS = os.path.join(DEV, "research", "production", "contact_sheets")
 sys.path.insert(0, os.path.join(DEV, "buildings"))
 sys.path.insert(0, KIT)
 
-HAMLET_O = (952.0, 1040.0)            # the hamlet's centre on the island: scene coordinates = world - this
+HAMLET_O = (950.0, 1024.0)            # the hamlet's centre on the island: scene coordinates = world - this
 ROOF_TAGS = ("thatch_body", "thatch_band", "lath", "rafter", "hip_roll", "thatch_ridge", "ridge_bamboo", "binding",
              "umanori", "umanori_pole", "turf", "iris", "sheathing", "board_field", "board_field_lod", "eave_stack",
              "kawara_field", "roof_geo_front", "roof_geo_back", "roof_geo_left", "roof_geo_right", "hafu",

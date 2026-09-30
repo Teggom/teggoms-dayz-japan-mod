@@ -17,3 +17,9 @@
 2026-09-30 18:16:48 | GROUP START | test-island hamlet placement | C2 | 2 farmhouses, 3 huts, 2 sheds, west yard | 5h 52% wk 32%
 2026-09-30 18:20:34 | PBO PACKED | C2 | jp_buildings.pbo 64.6 MB (106 files) + jp_worlds_testisland via build_world; no server running | 5h 53% wk 32%
 2026-09-30 18:20:34 | ISLAND BUILT | C2 | hamlet x 930-970 z 999-1048: 2 farmhouses, 3 huts, 2 sheds; world + mission rebuilt, verify_oprw PASS 3585/3585 | 5h 53% wk 32%
+2026-09-30 18:20:45 | GROUP DONE | test-island hamlet placement | 7 shells placed, placement checks pass, verify_oprw PASS | C2 | commit 0e99655 | 5h 53% wk 32%
+2026-09-30 18:20:45 | GROUP START | re-runs after shared-code changes | C2 | machiya 78, shop 137, toilet 19, combos 60, C1 81 shells | 5h 53% wk 32%
+2026-09-30 18:29:17 | GROUP DONE | re-runs after shared-code changes | machiya 78/78, shop 137/137, toilet 19/19, combos 60/60, C1 81/81 shells pass | C2 | tracked check files byte-identical | 5h 55% wk 33%
+2026-09-30 18:29:17 | GROUP START | render sheets | C2 | family, hamlet, interior | 5h 55% wk 33%
+2026-09-30 18:30:28 | GROUP DONE | render sheets | c2_family (21), c2_hamlet (4 views), c2_interior (9 views) | C2 | research/production/contact_sheets/c2_*.jpg | 5h 56% wk 33%
+2026-09-30 18:30:28 | SHEETS DONE | C2 | c2_family.jpg, c2_hamlet.jpg, c2_interior.jpg | 5h 56% wk 33%
