@@ -1,0 +1,73 @@
+{
+ "id": "jp_m_ceil_boards",
+ "family": "wood",
+ "palette_id": "timber_interior",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "along v; wide boards (~0.35 m) lapped, lap shadow at each joint",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "pale sugi",
+   "co": "JP\\common\\materials\\wood\\jp_m_ceil_boards_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_ceil_boards_w0.rvmat",
+   "target_srgb": [
+    98.5,
+    73.2,
+    58.9
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "smoke-darkened toward the walls",
+   "co": "JP\\common\\materials\\wood\\jp_m_ceil_boards_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_ceil_boards_w1.rvmat",
+   "target_srgb": [
+    69.0,
+    52.0,
+    46.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "water stains, one board missing (geometry)",
+   "co": "JP\\common\\materials\\wood\\jp_m_ceil_boards_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_ceil_boards_w2.rvmat",
+   "target_srgb": [
+    64.4,
+    47.6,
+    41.7
+   ],
+   "masked_frac": 0.121
+  }
+ },
+ "used_by": [
+  "jp_p_fit_ceiling"
+ ],
+ "used_on": "Sao-buchi ceilings (jp_p_fit_ceiling)",
+ "sources": [
+  {
+   "asset": "hinoki_planks",
+   "name": "Hinoki Planks",
+   "page": "https://polyhaven.com/a/hinoki_planks",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Charlotte Baglioni"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "jp_m_paper_fusuma",
+ "family": "paper",
+ "palette_id": "gofun_white",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "plain sheets 1/3 x 1/2 m, faint overlaps",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\fabric_thin.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "plain warm paper",
+   "co": "JP\\common\\materials\\paper\\jp_m_paper_fusuma_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_fusuma_w0.rvmat",
+   "target_srgb": [
+    192.0,
+    187.2,
+    176.5
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "yellowed, hand marks by the pulls",
+   "co": "JP\\common\\materials\\paper\\jp_m_paper_fusuma_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_fusuma_w1.rvmat",
+   "target_srgb": [
+    189.0,
+    178.3,
+    157.6
+   ],
+   "masked_frac": 0.087
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "torn, stained, patched",
+   "co": "JP\\common\\materials\\paper\\jp_m_paper_fusuma_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\paper\\jp_m_paper_fusuma_w2.rvmat",
+   "target_srgb": [
+    189.2,
+    178.1,
+    159.4
+   ],
+   "masked_frac": 0.182
+  }
+ },
+ "used_by": [
+  "jp_f_byobu",
+  "jp_p_fit_chigaidana",
+  "jp_p_fit_oshiire"
+ ],
+ "used_on": "Commoner fusuma, screens and cupboard doors: PLAIN paper only (karakami barred for townsmen, T48). The fusuma leaf part is for PA1",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json",
+ "note": "PLAIN paper only (karakami barred for townsmen)."
+}

@@ -1,0 +1,68 @@
+{
+ "id": "jp_m_straw_tawara",
+ "family": "straw",
+ "palette_id": "thatch_new",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; u along the bale",
+ "grain": "straws along u, rope bands every 0.25 m across",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\hay.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "golden",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_tawara_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_tawara_w0.rvmat",
+   "target_srgb": [
+    170.4,
+    144.8,
+    93.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-gold",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1.rvmat",
+   "target_srgb": [
+    149.1,
+    130.2,
+    92.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "dark, frayed, burst",
+   "co": "JP\\common\\materials\\straw\\jp_m_straw_tawara_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_tawara_w2.rvmat",
+   "target_srgb": [
+    144.6,
+    125.0,
+    84.3
+   ],
+   "masked_frac": 0.089
+  }
+ },
+ "used_by": [
+  "jp_f_firewood",
+  "jp_f_kori",
+  "jp_f_manger",
+  "jp_f_taru",
+  "jp_f_tawara"
+ ],
+ "used_on": "Rice bales, straw bags, rope, firewood bindings",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

@@ -182,9 +182,13 @@ FINISH = {
     "wall": ("#(ai,32,128,1)fresnel(0.49,0.14)", ENV_NONE),
     "matte": ("#(ai,32,128,1)fresnel(0.01,0.01)", ENV_NONE),
     "glossy": ("#(ai,64,64,1)fresnel(1.3,0.7)", ENV_LAND),
+    # B1 (2026-09-29): glazed stoneware and lacquer, the vanilla glazed-tile analogue (houvev_*_kitchentiles)
+    "glazed": ("#(ai,64,64,1)fresnel(1.42,0)", ENV_LAND),
 }
 FINISH_BY_ID = {"jp_m_roof_kawara": "glossy", "jp_m_roof_kawara_field": "glossy", "jp_m_roof_kawara_far": "glossy",
-                "jp_m_wall_namako_tile": "glossy", "jp_m_metal_iron": "glossy"}
+                "jp_m_wall_namako_tile": "glossy", "jp_m_metal_iron": "glossy",
+                "jp_m_ceramic_stoneware_dark": "glazed", "jp_m_ceramic_stoneware_pale": "glazed",
+                "jp_m_lacquer_black": "glazed"}
 
 
 def finish_for(mid):
@@ -732,6 +736,33 @@ tiles are geometry), `jp_m_roof_thatch_cut`, the board courses of `jp_m_roof_kur
 from Wood Planks Grey), the shells of `jp_m_roof_kakigara`, `jp_m_paper_shoji`, `jp_m_bamboo_weathered`,
 `jp_m_metal_iron` (rust colour from Rust Coarse 01), `jp_m_straw_mushiro`, every wear overlay (moss, lichen, cracks,
 splits, drips, rust, edge wear, streaks), and the swatch plaques (Arial from Windows, rendered to a texture).
+
+B1 (2026-09-29, `make_b1_materials.py`): procedural with numpy/PIL: `jp_m_floor_takeyuka`, `jp_m_ground_ash`,
+`jp_m_ceramic_stoneware_dark` / `_pale`, `jp_m_lacquer_black`, `jp_m_straw_tawara`, `jp_m_bamboo_weave`,
+`jp_m_decal_moss`, `jp_m_straw_rope`, `jp_m_wood_endgrain`, the four generic shop marks of `jp_m_textile_noren`
+(drawn shapes, no font), the rib pass of `jp_m_paper_chochin`, and every B1 wear overlay. Built on library recipes:
+`jp_m_wall_shikkui_int` (White Plaster 02), `jp_m_bamboo_sooted` (make_textures bamboo), `jp_m_paper_fusuma` /
+`jp_m_paper_chochin` (make_textures shoji paper), `jp_m_stone_carved` (Rock Surface), `jp_m_straw_stack` (Reed Roof
+04), `jp_m_paint_shu` (Weathered Planks). The rest use the Poly Haven scans listed above (see "Became").
+
+## Fonts (SIL Open Font License 1.1), rendered into textures
+
+`jp_m_decal_sumi_text` and `jp_m_decal_carved_text` (B1, 2026-09-29) are text atlases rendered from:
+- **Yuji Syuku** (`research/fonts/yujisyuku/`), Copyright the Yuji Project Authors (Kinuta Font Factory), SIL OFL 1.1:
+  every kanji.
+- **Yuji Hentaigana Akebono** (`research/fonts/yujihentaiganaakebono/`), Copyright the Yuji Project Authors (Kinuta
+  Font Factory), SIL OFL 1.1: the kana, drawn as hentaigana.
+
+Fetched from the google/fonts repository (ofl/) by the lead; the licence text (OFL.txt) sits next to each font. Only
+rendered text ships in the PBO, never the font files.
+
+## Palette samples used by B1 (reference photos, local only, never shipped)
+
+`doma_earth` and `ash_grey` were (re)sampled from the interior research photos in `data/research_int/refs/`
+(Wikimedia Commons; full list in `research/interior/refs_index.json`): i01 / i02 Former Kasuya Family House by
+Asanagi (CC0); i04 / i05 / i06 Farmhouse of Tsunashima Family by Kentaro Ohno (CC BY 2.0). Only a mean colour
+was taken from them. `leaf_litter_autumn` comes from the CC0 Poly Haven scan dry_decay_leaves. Details in
+`playbook/palette.json`.
 
 ## Vanilla DayZ referenced, not shipped
 

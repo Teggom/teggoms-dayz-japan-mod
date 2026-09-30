@@ -1,0 +1,74 @@
+{
+ "id": "jp_m_ground_doma_earth",
+ "family": "ground",
+ "palette_id": "doma_earth",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "none; packed earth, straw bits, pebbles",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\dirt_int.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh swept",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w0.rvmat",
+   "target_srgb": [
+    145.5,
+    139.7,
+    134.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "trodden lanes, ash near the stove",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w1.rvmat",
+   "target_srgb": [
+    137.0,
+    132.0,
+    128.0
+   ],
+   "masked_frac": 0.076
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "damp patches, leaf litter",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w2.rvmat",
+   "target_srgb": [
+    129.3,
+    124.3,
+    120.4
+   ],
+   "masked_frac": 0.129
+  }
+ },
+ "used_by": [
+  "jp_p_fit_floor"
+ ],
+ "used_on": "T1 doma and all farm doma. Replaces wall_arakabe stand-in",
+ "sources": [
+  {
+   "asset": "clay_floor_001",
+   "name": "Clay Floor 001",
+   "page": "https://polyhaven.com/a/clay_floor_001",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Dimitrios Savva",
+    "Rico Cilliers"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

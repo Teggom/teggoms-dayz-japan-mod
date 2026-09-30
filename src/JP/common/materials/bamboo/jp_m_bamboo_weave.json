@@ -1,0 +1,65 @@
+{
+ "id": "jp_m_bamboo_weave",
+ "family": "bamboo",
+ "palette_id": "bamboo_weathered",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "2/2 twill of ~1.5 cm strips",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "pale",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w0.rvmat",
+   "target_srgb": [
+    183.8,
+    167.3,
+    145.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-beige",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w1.rvmat",
+   "target_srgb": [
+    163.6,
+    151.7,
+    140.8
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "broken strips",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w2.rvmat",
+   "target_srgb": [
+    153.0,
+    141.3,
+    130.5
+   ],
+   "masked_frac": 0.037
+  }
+ },
+ "used_by": [
+  "jp_f_basket",
+  "jp_f_kori"
+ ],
+ "used_on": "Kori trunks, baskets, zaru",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

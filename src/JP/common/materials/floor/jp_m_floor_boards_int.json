@@ -1,0 +1,75 @@
+{
+ "id": "jp_m_floor_boards_int",
+ "family": "floor",
+ "palette_id": "timber_interior",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "along v; boards ~0.26 m wide",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\wood_planks_int.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "oiled, wiped sheen (matte recipe, sheen from the texture only)",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_boards_int_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_boards_int_w0.rvmat",
+   "target_srgb": [
+    81.1,
+    60.2,
+    50.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "darker traffic lanes, scratches",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_boards_int_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_boards_int_w1.rvmat",
+   "target_srgb": [
+    69.0,
+    52.0,
+    46.0
+   ],
+   "masked_frac": 0.005
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "dusty grey film, water rings, raised grain",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_boards_int_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_boards_int_w2.rvmat",
+   "target_srgb": [
+    76.4,
+    64.4,
+    61.4
+   ],
+   "masked_frac": 0.01
+  }
+ },
+ "used_by": [
+  "jp_p_fit_floor",
+  "jp_p_fit_mise_floor",
+  "jp_p_fit_tokonoma"
+ ],
+ "used_on": "Itajiki of daidokoro, living, shop strips, corridors, engawa, storage. Surviving polished floors sample much darker (Kasuya: 42,25,20, i01); keep timber_interior and let _w1 darken",
+ "sources": [
+  {
+   "asset": "hinoki_planks",
+   "name": "Hinoki Planks",
+   "page": "https://polyhaven.com/a/hinoki_planks",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Charlotte Baglioni"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

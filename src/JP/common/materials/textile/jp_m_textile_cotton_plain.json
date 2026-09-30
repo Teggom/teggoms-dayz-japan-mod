@@ -1,0 +1,75 @@
+{
+ "id": "jp_m_textile_cotton_plain",
+ "family": "textile",
+ "palette_id": "kinari_cloth",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "coarse cotton / hemp weave",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "unbleached",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w0.rvmat",
+   "target_srgb": [
+    184.5,
+    175.6,
+    154.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-yellow",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w1.rvmat",
+   "target_srgb": [
+    172.8,
+    162.0,
+    136.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "stained, mildew",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w2.rvmat",
+   "target_srgb": [
+    168.9,
+    156.3,
+    129.3
+   ],
+   "masked_frac": 0.089
+  }
+ },
+ "used_by": [
+  "jp_f_futon_laid",
+  "jp_f_futon_stack"
+ ],
+ "used_on": "Bedding linings, cloth wraps (furoshiki), kori lining",
+ "sources": [
+  {
+   "asset": "rough_linen",
+   "name": "Rough Linen",
+   "page": "https://polyhaven.com/a/rough_linen",
+   "licence": "CC0 1.0",
+   "authors": [
+    "colormass",
+    "Rico Cilliers"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

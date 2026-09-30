@@ -1,0 +1,66 @@
+{
+ "id": "jp_m_ceramic_stoneware_dark",
+ "family": "ceramic",
+ "palette_id": "stoneware_dark",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; u round the pot",
+ "grain": "throwing ridges along u (round the pot), glaze runs along v",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\pottery.rvmat",
+ "roadway_surface": null,
+ "finish": "glazed",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "glossy iron-brown glaze",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w0.rvmat",
+   "target_srgb": [
+    74.0,
+    52.0,
+    38.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "dust on the shoulders",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w1.rvmat",
+   "target_srgb": [
+    76.4,
+    54.2,
+    40.1
+   ],
+   "masked_frac": 0.223
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "crazed, chipped, dry film",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
+   "target_srgb": [
+    81.3,
+    58.7,
+    44.4
+   ],
+   "masked_frac": 0.29
+  }
+ },
+ "used_by": [
+  "jp_f_jar",
+  "jp_f_mizugame",
+  "jp_p_fit_setchin"
+ ],
+ "used_on": "GLOSSY by design (T12): glazed-tile analogue fresnel(1.42,0). Water jars, storage jars, privy jar",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

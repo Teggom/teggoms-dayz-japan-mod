@@ -29,6 +29,15 @@ ASSETS = {
     "rock_surface": "jp_m_stone_cut",
     "seaside_rock": "jp_m_stone_river",
     "rust_coarse_01": "jp_m_metal_iron (rust layer)",
+    # B1 (2026-09-29): interior + outdoor-kit materials (make_b1_materials.py)
+    "tatami_mat": "jp_m_floor_tatami",
+    "hinoki_planks": "jp_m_floor_boards_int, jp_m_ceil_boards, jp_m_wood_interior",
+    "old_planks_02": "jp_m_floor_boards_rough",
+    "clay_floor_001": "jp_m_ground_doma_earth, jp_m_ground_doma_tataki",
+    "rough_linen": "jp_m_textile_cotton_indigo, jp_m_textile_cotton_plain, jp_m_textile_noren, jp_m_textile_kinari, "
+                   "jp_m_floor_tatami_heri (weave)",
+    "dry_decay_leaves": "jp_m_ground_leaf_litter, jp_m_decal_litter (leaves)",
+    "bamboo_wall": "jp_m_reed_yoshizu (reed rows)",
 }
 MAPS = {"Diffuse": "diff", "nor_dx": "nor_dx", "Rough": "rough"}
 RES = "1k"

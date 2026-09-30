@@ -1,0 +1,64 @@
+{
+ "id": "jp_m_floor_takeyuka",
+ "family": "floor",
+ "palette_id": "bamboo_weathered",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "split bamboo slats 0.03-0.04 along v, lashing cords every 0.5 m",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\wood_planks_int.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "pale slats",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_takeyuka_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_takeyuka_w0.rvmat",
+   "target_srgb": [
+    183.8,
+    167.3,
+    145.7
+   ],
+   "masked_frac": 0.02
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grey-beige, darkened lanes",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_takeyuka_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_takeyuka_w1.rvmat",
+   "target_srgb": [
+    169.0,
+    157.0,
+    146.0
+   ],
+   "masked_frac": 0.02
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "split, a few slats missing",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_takeyuka_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_takeyuka_w2.rvmat",
+   "target_srgb": [
+    153.0,
+    141.3,
+    130.5
+   ],
+   "masked_frac": 0.13
+  }
+ },
+ "used_by": [
+  "jp_p_fit_floor"
+ ],
+ "used_on": "Bamboo-slat floor of the poorest huts (KEEP_DWELLINGS 1 floor option); covered with mushiro",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

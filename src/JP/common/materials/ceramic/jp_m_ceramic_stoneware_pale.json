@@ -1,0 +1,68 @@
+{
+ "id": "jp_m_ceramic_stoneware_pale",
+ "family": "ceramic",
+ "palette_id": "stoneware_pale",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; u round the pot",
+ "grain": "throwing ridges along u, ash-glaze runs along v, fine crackle",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\pottery.rvmat",
+ "roadway_surface": null,
+ "finish": "glazed",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "pale ash glaze",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_pale_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_pale_w0.rvmat",
+   "target_srgb": [
+    168.0,
+    149.0,
+    115.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "dust",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_pale_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_pale_w1.rvmat",
+   "target_srgb": [
+    170.7,
+    151.6,
+    117.5
+   ],
+   "masked_frac": 0.147
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "crazed, chipped",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_pale_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_pale_w2.rvmat",
+   "target_srgb": [
+    176.2,
+    156.9,
+    122.6
+   ],
+   "masked_frac": 0.228
+  }
+ },
+ "used_by": [
+  "jp_f_andon",
+  "jp_f_hibachi",
+  "jp_f_jar",
+  "jp_f_tabakobon",
+  "jp_f_tableware"
+ ],
+ "used_on": "GLOSSY (fresnel 1.42,0). Bowls, bottles, round hibachi, lamp dishes. Porcelain (blue-and-white) accents later if wanted",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

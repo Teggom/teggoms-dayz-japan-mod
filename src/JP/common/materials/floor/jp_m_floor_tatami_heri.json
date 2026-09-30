@@ -1,0 +1,75 @@
+{
+ "id": "jp_m_floor_tatami_heri",
+ "family": "floor",
+ "palette_id": "tatami_heri",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; the 0.03 m band may use any strip of v",
+ "grain": "plain hemp/cotton weave",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\textile_carpet_int.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "even black",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_w0.rvmat",
+   "target_srgb": [
+    38.0,
+    36.0,
+    40.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "faded to dark grey-brown, frayed edge",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_w1.rvmat",
+   "target_srgb": [
+    54.9,
+    48.0,
+    47.1
+   ],
+   "masked_frac": 0.001
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "faded, torn, rush showing",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_w2.rvmat",
+   "target_srgb": [
+    59.9,
+    52.3,
+    50.0
+   ],
+   "masked_frac": 0.049
+  }
+ },
+ "used_by": [
+  "jp_p_fit_floor"
+ ],
+ "used_on": "The 0.03 edge band (PLAYBOOK §4). Commoners: plain black or dark brown hemp/cotton (N02, N03); a _cha brown tint of the same set gives the second colour. Patterned korai-beri is later/elite (P3)",
+ "sources": [
+  {
+   "asset": "rough_linen",
+   "name": "Rough Linen",
+   "page": "https://polyhaven.com/a/rough_linen",
+   "licence": "CC0 1.0",
+   "authors": [
+    "colormass",
+    "Rico Cilliers"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json",
+ "note": "Plain black (commoner). A cha-brown second colour is not made (would need its own palette entry)."
+}

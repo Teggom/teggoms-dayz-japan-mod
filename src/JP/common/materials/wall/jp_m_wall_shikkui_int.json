@@ -1,0 +1,74 @@
+{
+ "id": "jp_m_wall_shikkui_int",
+ "family": "wall",
+ "palette_id": "shikkui_white",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; v = 0 at the top of a storey-high wall (smoke at the top, damp at the foot)",
+ "grain": "none; trowel",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": null,
+ "finish": "wall",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean lime, mean <=192",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_int_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_int_w0.rvmat",
+   "target_srgb": [
+    178.7,
+    177.1,
+    175.1
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "faint smoke tint near the ceiling",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_int_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_int_w1.rvmat",
+   "target_srgb": [
+    178.7,
+    177.1,
+    175.1
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "hairline cracks, damp stain at the base",
+   "co": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_int_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui_int_w2.rvmat",
+   "target_srgb": [
+    178.7,
+    177.1,
+    175.1
+   ],
+   "masked_frac": 0.102
+  }
+ },
+ "used_by": [
+  "jp_p_fit_kamado"
+ ],
+ "used_on": "OPEN_ISSUES/T6: the interior twin of shikkui; earth/plaster recipe fresnel(0.49,0.14), black env (T12)",
+ "sources": [
+  {
+   "asset": "white_plaster_02",
+   "name": "White Plaster 02",
+   "page": "https://polyhaven.com/a/white_plaster_02",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Rob Tuytel"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json",
+ "note": "Interior twin of jp_m_wall_shikkui (PLAYBOOK §15 T6): no exterior weathering, mean under 192."
+}

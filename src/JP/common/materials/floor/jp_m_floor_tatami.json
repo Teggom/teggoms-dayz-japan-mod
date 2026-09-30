@@ -1,0 +1,78 @@
+{
+ "id": "jp_m_floor_tatami",
+ "family": "floor",
+ "palette_id": "tatami_aged",
+ "palette_by_wear": {},
+ "tile_size_m": 1.82,
+ "texture_px": [
+  1024,
+  512
+ ],
+ "px_per_m": 562.6,
+ "uv": "ONE MAT PER TEXTURE: u = 0..1 along the mat length, v = 0..1 across it (1.76-1.82 x 0.87-0.91), turned with the mat; the heri are separate geometry (jp_m_floor_tatami_heri)",
+ "grain": "rush stalks across the mat (along v), warp threads along u (the length)",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\textile_carpet_int.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "re-faced mat: paler, faint green (rare accent, 1 room in 10)",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_w0.rvmat",
+   "target_srgb": [
+    143.0,
+    130.6,
+    99.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "aged gold-brown, worn lanes along paths",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_w1.rvmat",
+   "target_srgb": [
+    127.0,
+    108.0,
+    90.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "stained, mildew blooms, frayed rush, one torn corner: the default for abandoned rooms",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_w2.rvmat",
+   "target_srgb": [
+    118.3,
+    100.7,
+    86.1
+   ],
+   "masked_frac": 0.104
+  }
+ },
+ "used_by": [
+  "jp_p_fit_floor"
+ ],
+ "used_on": "T2-3 only (no tatami in T1, PLAYBOOK §2.1). Mat = one texture (1.76-1.82 x 0.87-0.91 fills the room between post faces). Matte recipe (T12: fresnel 0.01, black env). Replaces straw_mushiro stand-in in the machiya",
+ "sources": [
+  {
+   "asset": "tatami_mat",
+   "name": "Tatami Mat",
+   "page": "https://polyhaven.com/a/tatami_mat",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Charlotte Baglioni"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json",
+ "tile_size_v_m": 0.91,
+ "note": "The scan's green heri are cut off; the mat body only. _w2 has one torn corner at u,v ~ (1,1)."
+}

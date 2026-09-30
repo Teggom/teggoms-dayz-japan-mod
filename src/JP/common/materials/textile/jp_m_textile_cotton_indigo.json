@@ -1,0 +1,78 @@
+{
+ "id": "jp_m_textile_cotton_indigo",
+ "family": "textile",
+ "palette_id": "aizome_kon",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "cotton weave, a faint 3 cm stripe along v",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "even indigo",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w0.rvmat",
+   "target_srgb": [
+    51.8,
+    59.8,
+    63.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "faded folds",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w1.rvmat",
+   "target_srgb": [
+    58.5,
+    66.5,
+    70.6
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "faded, mildew, torn seams",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w2.rvmat",
+   "target_srgb": [
+    62.7,
+    69.9,
+    72.5
+   ],
+   "masked_frac": 0.015
+  }
+ },
+ "used_by": [
+  "jp_f_enza",
+  "jp_f_futon_laid",
+  "jp_f_futon_stack",
+  "jp_f_goods_general",
+  "jp_f_iko"
+ ],
+ "used_on": "Futon, yogi, zabuton, goods bolts, robes on racks",
+ "sources": [
+  {
+   "asset": "rough_linen",
+   "name": "Rough Linen",
+   "page": "https://polyhaven.com/a/rough_linen",
+   "licence": "CC0 1.0",
+   "authors": [
+    "colormass",
+    "Rico Cilliers"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

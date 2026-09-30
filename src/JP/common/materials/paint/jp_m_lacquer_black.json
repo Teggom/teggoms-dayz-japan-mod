@@ -1,0 +1,68 @@
+{
+ "id": "jp_m_lacquer_black",
+ "family": "paint",
+ "palette_id": "sumi_black",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "brush marks along u",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": null,
+ "finish": "glazed",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "deep black gloss",
+   "co": "JP\\common\\materials\\paint\\jp_m_lacquer_black_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_black_w0.rvmat",
+   "target_srgb": [
+    43.4,
+    43.4,
+    43.4
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "rubbed to red-brown at edges",
+   "co": "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
+   "target_srgb": [
+    47.7,
+    47.7,
+    47.7
+   ],
+   "masked_frac": 0.032
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "flaking, wood showing",
+   "co": "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
+   "target_srgb": [
+    52.0,
+    52.0,
+    52.0
+   ],
+   "masked_frac": 0.117
+  }
+ },
+ "used_by": [
+  "jp_f_box",
+  "jp_f_butsudan",
+  "jp_f_iko",
+  "jp_f_tableware"
+ ],
+ "used_on": "GLOSSY: needs a vanilla analogue (glazed fresnel 1.42,0 proposed). Trays, clothes racks, butsudan, elite boxes. No gold (elite only, PLAYBOOK §8)",
+ "sources": [
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json",
+ "note": "No gold (elite only, PLAYBOOK §8)."
+}

@@ -1,0 +1,103 @@
+{
+ "id": "jp_m_wood_interior",
+ "family": "wood",
+ "palette_id": "timber_interior",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "along v (member length)",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean planed wood",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_interior_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_interior_w0.rvmat",
+   "target_srgb": [
+    81.1,
+    60.2,
+    50.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "hand-polished edges, grime at hand height",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_interior_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_interior_w1.rvmat",
+   "target_srgb": [
+    69.0,
+    52.0,
+    46.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "dust film, scratches, pale edge wear",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_interior_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_interior_w2.rvmat",
+   "target_srgb": [
+    73.5,
+    62.2,
+    60.7
+   ],
+   "masked_frac": 0.013
+  }
+ },
+ "used_by": [
+  "jp_f_andon",
+  "jp_f_box",
+  "jp_f_butsudan",
+  "jp_f_byobu",
+  "jp_f_choba_goshi",
+  "jp_f_choba_set",
+  "jp_f_fallen_leaf",
+  "jp_f_hibachi",
+  "jp_f_iko",
+  "jp_f_jar",
+  "jp_f_kama",
+  "jp_f_misedana",
+  "jp_f_mizugame",
+  "jp_f_nagamochi",
+  "jp_f_oke",
+  "jp_f_rack",
+  "jp_f_tabakobon",
+  "jp_f_tableware",
+  "jp_f_tana",
+  "jp_f_tansu",
+  "jp_f_taru",
+  "jp_f_usu",
+  "jp_f_zukue",
+  "jp_p_fit_agarikamachi",
+  "jp_p_fit_ceiling",
+  "jp_p_fit_chigaidana",
+  "jp_p_fit_irori",
+  "jp_p_fit_kamidana",
+  "jp_p_fit_nagashi",
+  "jp_p_fit_oshiire",
+  "jp_p_fit_tokonoma"
+ ],
+ "used_on": "Interior joinery and ALL furniture bodies (tansu, desks, shelves, boxes, frames). Interior posts currently use wood_weathered: swap at the next machiya build",
+ "sources": [
+  {
+   "asset": "hinoki_planks",
+   "name": "Hinoki Planks",
+   "page": "https://polyhaven.com/a/hinoki_planks",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Charlotte Baglioni"
+   ]
+  },
+  {
+   "procedural": "make_b1_materials.py"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "requested_by": "research/interior/materials_needed.json"
+}

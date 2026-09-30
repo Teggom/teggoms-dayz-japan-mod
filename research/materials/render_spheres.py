@@ -88,7 +88,8 @@ for j in jobs:
         if old is not None:
             bpy.data.images.remove(old)
     # UV sphere: u runs around (2 pi r = 3.14 m), v pole to pole (pi r = 1.57 m) -> real-world texel scale
-    mp.inputs["Scale"].default_value = (math.pi / j["tile_m"], math.pi * 0.5 / j["tile_m"], 1)
+    # tile_v_m (optional, B1 2026-09-29): non-square tiles such as one tatami mat per texture (1.82 x 0.91 m)
+    mp.inputs["Scale"].default_value = (math.pi / j["tile_m"], math.pi * 0.5 / j.get("tile_v_m", j["tile_m"]), 1)
     sc.render.filepath = j["out"]
     bpy.ops.render.render(write_still=True)
     print("rendered", j["out"])
