@@ -50,4 +50,4 @@ Task: PRODUCTION_PLAN Phase B item B2 = PARTS_GAP_AUDIT §5 parts 1-7 (+ optiona
 
 ## Commits
 - c2f1bb6 koyagumi checkpoint
-- parts 2-8: (this commit; one checkpoint, the shared registry / manifest / sheet files made a split commit inconsistent)
+- de169eb parts 2-8 (one checkpoint; one checkpoint, the shared registry / manifest / sheet files made a split commit inconsistent)
