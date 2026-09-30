@@ -1,0 +1,250 @@
+{
+ "id": "jp_f_yoroibitsu",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tier",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_yoroibitsu.p3d",
+   "class": "StaticObj_JP_F_Yoroibitsu",
+   "variant": "lacquer",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Armour chest, lacquered, crested",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 91,
+    "Resolution 2": 12,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.262,
+    0.262,
+    0.0,
+    0.558,
+    -0.212,
+    0.213
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.25,
+    -0.2,
+    0.25,
+    0.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 25.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      -0.2,
+      -0.15,
+      0.2,
+      0.15
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       0.55,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "armour chest (yoroi-bitsu), upper tier marker, the crest on its front (life atlas); loot on the lid; the open chest is empty (as left)"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_yoroibitsu.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    "U"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_yoroibitsu_plain.p3d",
+   "class": "StaticObj_JP_F_Yoroibitsu_Plain",
+   "variant": "plain",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Armour chest, plain wood",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 91,
+    "Resolution 2": 12,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.262,
+    0.262,
+    0.0,
+    0.558,
+    -0.212,
+    0.213
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.25,
+    -0.2,
+    0.25,
+    0.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 25.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      -0.2,
+      -0.15,
+      0.2,
+      0.15
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       0.55,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "armour chest (yoroi-bitsu), upper tier marker, the crest on its front (life atlas); loot on the lid; the open chest is empty (as left)"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_yoroibitsu_plain.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    "U"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_yoroibitsu_open.p3d",
+   "class": "StaticObj_JP_F_Yoroibitsu_Open",
+   "variant": "lacquer",
+   "state": "open",
+   "abandoned": true,
+   "display": "Armour chest thrown open, empty",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 95,
+    "Resolution 2": 12,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.262,
+    0.797,
+    0.0,
+    0.49,
+    -0.2,
+    0.663
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.25,
+    -0.2,
+    0.25,
+    0.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 25.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "armour chest (yoroi-bitsu), upper tier marker, the crest on its front (life atlas); loot on the lid; the open chest is empty (as left)"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_yoroibitsu_open.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    "U"
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 46,
+ "refs_local": []
+}

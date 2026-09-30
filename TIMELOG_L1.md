@@ -171,3 +171,26 @@
 2026-09-30 13:32:05 | #161 | jp_f_masu_set | new model (batch) | 5h 45% wk 25%
 2026-09-30 13:32:05 | #162 | jp_f_masu_to | variant (batch) | 5h 45% wk 25%
 2026-09-30 13:32:05 | #163 | jp_f_masu_spilled | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:05 | GROUP START | F: items 45-50 (tier markers and the rest) | - | 5h 45% wk 25%
+2026-09-30 13:34:55 | #164 | jp_f_katanakake_stand | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #165 | jp_f_katanakake_wall | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #166 | jp_f_katanakake_stand_empty | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #167 | jp_f_katanakake_wall_empty | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #168 | jp_f_yoroibitsu | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #169 | jp_f_yoroibitsu_plain | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #170 | jp_f_yoroibitsu_open | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #171 | jp_f_yumi_rack_wall | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #172 | jp_f_yumi_rack_stand | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #173 | jp_f_yumi_rack_wall_empty | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #174 | jp_f_tea_matcha | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #175 | jp_f_tea_dobin | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #176 | jp_f_tea_broken | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #177 | jp_f_manger_trough | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:34:55 | #178 | jp_f_manger_cutter | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:34:56 | #179 | jp_f_manger_straw | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:34:56 | #180 | jp_f_manger_trough_empty | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:56 | #181 | jp_f_manger_straw_rotted | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:56 | #182 | jp_f_fallen_leaf_shoji | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:56 | #183 | jp_f_fallen_leaf_fusuma | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:56 | #184 | jp_f_fallen_leaf_shoji_broken | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:34:56 | #185 | jp_f_fallen_leaf_fusuma_torn | abandoned (batch) | 5h 45% wk 25%

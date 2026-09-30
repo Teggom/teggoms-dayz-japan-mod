@@ -1,0 +1,353 @@
+{
+ "id": "jp_f_manger",
+ "build_list": {
+  "name": "Manger (kaiba-oke), fodder cutter and straw pile for the stable corner",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2
+  ],
+  "room_tags": [
+   "stable"
+  ],
+  "loot_surface": "manger bottom: 1 point (range 0.2)",
+  "abandoned_state": "empty, straw rotted dark",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "manger_m": {
+    "value": "1.20 x 0.45 x 0.40 trough on legs",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "straw_m": {
+    "value": "1.2 x 1.0 x 0.5 pile",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "N20",
+    "shows": "BL §5.7 (text)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "tier",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_manger"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_manger_trough.p3d",
+   "class": "StaticObj_JP_F_Manger_Trough",
+   "variant": "trough",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Manger (kaiba-oke) on legs, some fodder",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 68,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.6,
+    0.637,
+    0.0,
+    0.4,
+    -0.245,
+    0.245
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.6,
+    -0.225,
+    0.6,
+    0.225
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "bottom",
+     "kind": "shelf",
+     "y": 0.22,
+     "rect": [
+      -0.55,
+      -0.175,
+      -0.05,
+      0.175
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       -0.3,
+       0.22,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "manger (kaiba-oke) on legs for the inside stable (BUILD_LIST jp_f_manger); loot on its bottom"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_manger_trough.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_manger_cutter.p3d",
+   "class": "StaticObj_JP_F_Manger_Cutter",
+   "variant": "cutter",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fodder cutter and a straw bundle",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 86,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.384,
+    0.35,
+    0.0,
+    0.328,
+    -0.495,
+    0.756
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "board_L",
+     "expected": 0.7,
+     "measured": 0.7,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "fodder cutter (oshikiri): a lever blade on a block, cut straw beside it"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_manger_cutter.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_manger_straw.p3d",
+   "class": "StaticObj_JP_F_Manger_Straw",
+   "variant": "straw",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw pile of the stable corner",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 83,
+    "Resolution 2": 35
+   },
+   "bbox": [
+    -0.846,
+    0.808,
+    0.0,
+    0.5,
+    -0.701,
+    0.748
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "straw pile of the stable corner; no Geometry (you wade through it)"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_manger_straw.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_manger_trough_empty.p3d",
+   "class": "StaticObj_JP_F_Manger_Trough_Empty",
+   "variant": "trough",
+   "state": "empty",
+   "abandoned": true,
+   "display": "Manger, empty, stained",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 71,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.6,
+    0.734,
+    0.0,
+    0.4,
+    -0.245,
+    0.66
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.6,
+    -0.225,
+    0.6,
+    0.225
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "bottom",
+     "kind": "shelf",
+     "y": 0.22,
+     "rect": [
+      -0.55,
+      -0.175,
+      -0.05,
+      0.175
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       -0.3,
+       0.22,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "manger (kaiba-oke) on legs for the inside stable (BUILD_LIST jp_f_manger); loot on its bottom"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_manger_trough_empty.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_manger_straw_rotted.p3d",
+   "class": "StaticObj_JP_F_Manger_Straw_Rotted",
+   "variant": "straw",
+   "state": "rotted",
+   "abandoned": true,
+   "display": "Straw pile, rotted dark and flattened",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 83,
+    "Resolution 2": 35
+   },
+   "bbox": [
+    -0.846,
+    0.808,
+    0.0,
+    0.22,
+    -0.701,
+    0.748
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "straw pile of the stable corner; no Geometry (you wade through it)"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_manger_straw_rotted.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 49,
+ "refs_local": []
+}

@@ -1,0 +1,224 @@
+{
+ "id": "jp_f_katanakake",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tier",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_katanakake_stand.p3d",
+   "class": "StaticObj_JP_F_Katanakake_Stand",
+   "variant": "stand",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Sword rack with a pair of swords",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 24,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.501,
+    0.5,
+    0.0,
+    0.46,
+    -0.11,
+    0.11
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.25,
+    -0.11,
+    0.25,
+    0.11
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 5.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "sword rack, upper houses only (samurai, headman); the as-left rack is empty: the swords were taken; no loot"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_katanakake_stand.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    "U"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_katanakake_wall.p3d",
+   "class": "StaticObj_JP_F_Katanakake_Wall",
+   "variant": "wall",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wall sword rack with a pair of swords",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 120,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.551,
+    0.5,
+    1.25,
+    1.558,
+    0.0,
+    0.11
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "y",
+     "expected": 1.45,
+     "measured": 1.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "sword rack, upper houses only (samurai, headman); the as-left rack is empty: the swords were taken; no loot"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_katanakake_wall.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    "U"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_katanakake_stand_empty.p3d",
+   "class": "StaticObj_JP_F_Katanakake_Stand_Empty",
+   "variant": "stand",
+   "state": "empty",
+   "abandoned": true,
+   "display": "Sword rack, the swords taken",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 69,
+    "Resolution 2": 24,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.5,
+    0.5,
+    0.0,
+    0.46,
+    -0.16,
+    0.543
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.267,
+    -0.16,
+    0.267,
+    0.16
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 5.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "sword rack, upper houses only (samurai, headman); the as-left rack is empty: the swords were taken; no loot"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_katanakake_stand_empty.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    "U"
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\tier\\jp_f_katanakake_wall_empty.p3d",
+   "class": "StaticObj_JP_F_Katanakake_Wall_Empty",
+   "variant": "wall",
+   "state": "empty",
+   "abandoned": true,
+   "display": "Wall sword rack, the swords taken",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 63,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.5,
+    0.5,
+    0.003,
+    1.55,
+    0.0,
+    0.559
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "y",
+     "expected": 1.45,
+     "measured": 1.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "sword rack, upper houses only (samurai, headman); the as-left rack is empty: the swords were taken; no loot"
+   ],
+   "master": "spikes/L1/out/tier/jp_f_katanakake_wall_empty.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    "U"
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 45,
+ "refs_local": []
+}

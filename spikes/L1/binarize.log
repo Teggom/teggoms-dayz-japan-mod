@@ -461,6 +461,131 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_of
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_shimenawa.p3d: -0.00,0.16
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_shimenawa_old.p3d: -0.00,0.16
 
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\tier D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\tier D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\furniture\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\furniture\tier\jp_f_fallen_leaf_fusuma.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_fallen_leaf_fusuma.p3d
+<model = "P:\JP\furniture\tier\jp_f_fallen_leaf_fusuma.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_fallen_leaf_fusuma_torn.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_fallen_leaf_fusuma_torn.p3d
+<model = "P:\JP\furniture\tier\jp_f_fallen_leaf_fusuma_torn.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_fallen_leaf_shoji.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_fallen_leaf_shoji.p3d
+<model = "P:\JP\furniture\tier\jp_f_fallen_leaf_shoji.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_fallen_leaf_shoji_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_fallen_leaf_shoji_broken.p3d
+<model = "P:\JP\furniture\tier\jp_f_fallen_leaf_shoji_broken.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_katanakake_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_stand.p3d
+<model = "P:\JP\furniture\tier\jp_f_katanakake_stand.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_katanakake_stand_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_stand_empty.p3d
+<model = "P:\JP\furniture\tier\jp_f_katanakake_stand_empty.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_katanakake_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_wall.p3d
+<model = "P:\JP\furniture\tier\jp_f_katanakake_wall.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_katanakake_wall_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_wall_empty.p3d
+<model = "P:\JP\furniture\tier\jp_f_katanakake_wall_empty.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_manger_cutter.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_manger_cutter.p3d
+<model = "P:\JP\furniture\tier\jp_f_manger_cutter.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_manger_straw.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_manger_straw.p3d
+<model = "P:\JP\furniture\tier\jp_f_manger_straw.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_manger_straw_rotted.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_manger_straw_rotted.p3d
+<model = "P:\JP\furniture\tier\jp_f_manger_straw_rotted.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_manger_trough.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_manger_trough.p3d
+<model = "P:\JP\furniture\tier\jp_f_manger_trough.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_manger_trough_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_manger_trough_empty.p3d
+<model = "P:\JP\furniture\tier\jp_f_manger_trough_empty.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_tea_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_tea_broken.p3d
+<model = "P:\JP\furniture\tier\jp_f_tea_broken.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_tea_dobin.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_tea_dobin.p3d
+<model = "P:\JP\furniture\tier\jp_f_tea_dobin.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_tea_matcha.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_tea_matcha.p3d
+<model = "P:\JP\furniture\tier\jp_f_tea_matcha.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_yoroibitsu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yoroibitsu.p3d
+<model = "P:\JP\furniture\tier\jp_f_yoroibitsu.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_yoroibitsu_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yoroibitsu_open.p3d
+<model = "P:\JP\furniture\tier\jp_f_yoroibitsu_open.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_yoroibitsu_plain.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yoroibitsu_plain.p3d
+<model = "P:\JP\furniture\tier\jp_f_yoroibitsu_plain.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_yumi_rack_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yumi_rack_stand.p3d
+<model = "P:\JP\furniture\tier\jp_f_yumi_rack_stand.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_yumi_rack_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yumi_rack_wall.p3d
+<model = "P:\JP\furniture\tier\jp_f_yumi_rack_wall.p3d">
+</model>
+Convert model P:\JP\furniture\tier\jp_f_yumi_rack_wall_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yumi_rack_wall_empty.p3d
+<model = "P:\JP\furniture\tier\jp_f_yumi_rack_wall_empty.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_fallen_leaf_fusuma.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_fallen_leaf_fusuma_torn.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_fallen_leaf_shoji.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_fallen_leaf_shoji_broken.p3d: 0.19,-0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_stand.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_stand_empty.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_wall.p3d: -0.03,0.05
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_wall_empty.p3d: 0.00,0.28
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_manger_cutter.p3d: -0.02,0.13
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_manger_straw.p3d: -0.02,0.02
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_manger_straw_rotted.p3d: -0.02,0.02
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_manger_trough.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_manger_trough_empty.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_tea_broken.p3d: -0.11,0.10
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_tea_dobin.p3d: 0.00,-0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_tea_matcha.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_yoroibitsu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_yoroibitsu_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_yoroibitsu_plain.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_yumi_rack_stand.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_yumi_rack_wall.p3d: -0.00,0.06
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_yumi_rack_wall_empty.p3d: -0.00,0.06
+
 C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\wall D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall *.p3d
 
 BINARIZE rev.163709
@@ -603,6 +728,7 @@ Convert model P:\JP\furniture\wall\jp_f_tool_wall_wood.p3d -> D:\DayZ-Server_AI-
 </model>
 Convert model P:\JP\furniture\wall\jp_f_utensil_board.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_utensil_board.p3d
 <model = "P:\JP\furniture\wall\jp_f_utensil_board.p3d">
+TexMaterial loading race detected for jp\common\materials\bamboo\jp_m_bamboo_weathered_w1.rvmat
 UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000819408, max 0.00195122, min 0.000741191
 </model>
 Convert model P:\JP\furniture\wall\jp_f_utensil_board_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_utensil_board_fallen.p3d

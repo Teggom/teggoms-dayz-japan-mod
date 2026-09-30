@@ -1739,4 +1739,142 @@ class CfgVehicles
 		displayName="Measure tipped, the rice spilled";
 		model="\JP\furniture\work\jp_f_masu_spilled.p3d";
 	};
+	// jp_f_katanakake (tier)
+	class StaticObj_JP_F_Katanakake_Stand: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sword rack with a pair of swords";
+		model="\JP\furniture\tier\jp_f_katanakake_stand.p3d";
+	};
+	class StaticObj_JP_F_Katanakake_Wall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wall sword rack with a pair of swords";
+		model="\JP\furniture\tier\jp_f_katanakake_wall.p3d";
+	};
+	class StaticObj_JP_F_Katanakake_Stand_Empty: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sword rack, the swords taken";
+		model="\JP\furniture\tier\jp_f_katanakake_stand_empty.p3d";
+	};
+	class StaticObj_JP_F_Katanakake_Wall_Empty: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wall sword rack, the swords taken";
+		model="\JP\furniture\tier\jp_f_katanakake_wall_empty.p3d";
+	};
+	// jp_f_yoroibitsu (tier)
+	class StaticObj_JP_F_Yoroibitsu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Armour chest, lacquered, crested";
+		model="\JP\furniture\tier\jp_f_yoroibitsu.p3d";
+	};
+	class StaticObj_JP_F_Yoroibitsu_Plain: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Armour chest, plain wood";
+		model="\JP\furniture\tier\jp_f_yoroibitsu_plain.p3d";
+	};
+	class StaticObj_JP_F_Yoroibitsu_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Armour chest thrown open, empty";
+		model="\JP\furniture\tier\jp_f_yoroibitsu_open.p3d";
+	};
+	// jp_f_yumi_rack (tier)
+	class StaticObj_JP_F_Yumi_Rack_Wall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bows on wall hooks and a quiver";
+		model="\JP\furniture\tier\jp_f_yumi_rack_wall.p3d";
+	};
+	class StaticObj_JP_F_Yumi_Rack_Stand: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Upright bow stand with bows and a quiver";
+		model="\JP\furniture\tier\jp_f_yumi_rack_stand.p3d";
+	};
+	class StaticObj_JP_F_Yumi_Rack_Wall_Empty: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bow hooks, one bow left, the string snapped";
+		model="\JP\furniture\tier\jp_f_yumi_rack_wall_empty.p3d";
+	};
+	// jp_f_tea (tier)
+	class StaticObj_JP_F_Tea_Matcha: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tea set: bowl, caddy, whisk, scoop on a tray";
+		model="\JP\furniture\tier\jp_f_tea_matcha.p3d";
+	};
+	class StaticObj_JP_F_Tea_Dobin: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clay tea pot and two bowls on a tray";
+		model="\JP\furniture\tier\jp_f_tea_dobin.p3d";
+	};
+	class StaticObj_JP_F_Tea_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tea set: the bowl broken, the pot tipped";
+		model="\JP\furniture\tier\jp_f_tea_broken.p3d";
+	};
+	// jp_f_manger (tier)
+	class StaticObj_JP_F_Manger_Trough: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Manger (kaiba-oke) on legs, some fodder";
+		model="\JP\furniture\tier\jp_f_manger_trough.p3d";
+	};
+	class StaticObj_JP_F_Manger_Cutter: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fodder cutter and a straw bundle";
+		model="\JP\furniture\tier\jp_f_manger_cutter.p3d";
+	};
+	class StaticObj_JP_F_Manger_Straw: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw pile of the stable corner";
+		model="\JP\furniture\tier\jp_f_manger_straw.p3d";
+	};
+	class StaticObj_JP_F_Manger_Trough_Empty: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Manger, empty, stained";
+		model="\JP\furniture\tier\jp_f_manger_trough_empty.p3d";
+	};
+	class StaticObj_JP_F_Manger_Straw_Rotted: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw pile, rotted dark and flattened";
+		model="\JP\furniture\tier\jp_f_manger_straw_rotted.p3d";
+	};
+	// jp_f_fallen_leaf (tier)
+	class StaticObj_JP_F_Fallen_Leaf_Shoji: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A shoji leaf fallen flat";
+		model="\JP\furniture\tier\jp_f_fallen_leaf_shoji.p3d";
+	};
+	class StaticObj_JP_F_Fallen_Leaf_Fusuma: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A fusuma leaf fallen flat";
+		model="\JP\furniture\tier\jp_f_fallen_leaf_fusuma.p3d";
+	};
+	class StaticObj_JP_F_Fallen_Leaf_Shoji_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A shoji leaf snapped, paper torn";
+		model="\JP\furniture\tier\jp_f_fallen_leaf_shoji_broken.p3d";
+	};
+	class StaticObj_JP_F_Fallen_Leaf_Fusuma_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A fusuma leaf, the paper torn open";
+		model="\JP\furniture\tier\jp_f_fallen_leaf_fusuma_torn.p3d";
+	};
 };
