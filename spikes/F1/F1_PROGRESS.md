@@ -28,3 +28,9 @@ before/after sheet `spikes/F1/f1_fixes.jpg`, short re-check in TEST_CHECKLIST.md
 ## Remove the well diagnostic later
 `spikes/B3b/build.py`: `WELL_DIAG = False`, then `python spikes/B3b/build.py well_tsurube well_hanetsurube` and
 `python spikes/L2/build_l2.py --pack`. Keep `WELL_GEO`.
+
+## Checks (after the last change)
+B3a 113/113, L1 185/185, B3b 129/129, L2 81/81, TXT 66/66, machiya shell 78/78, furnished 137/137, toilet 19/19, townhouse combos 60/60 (combos.json unchanged). C.csv / CE files unchanged: no world rebuild needed.
+
+## Commits
+fcd7dd7 (B3b source), 3d3c46d (everything rebuilt), then the time-log END.

@@ -19,3 +19,4 @@
 2026-09-30 15:43:18 | REBUILD DONE | B3a 113 + L1 185 -> jp_furniture.pbo (298 cl); B3b 129 + L2 81 -> jp_site.pbo (210 cl); pipeline.py: jp_buildings.pbo; C.csv/CE unchanged (no world rebuild needed) | F1 | G4-fixes | 5h 25% wk 29%
 2026-09-30 15:43:18 | CHECKS DONE | B3a 113/113, L1 185/185, B3b 129/129, L2 81/81, TXT 66/66, shell 78/78, shop 137/137, toilet 19/19, combos 60/60 (combos.json unchanged); binarize 0 warnings | F1 | G4-fixes | 5h 25% wk 29%
 2026-09-30 15:43:18 | CHECKLIST DONE | TEST_CHECKLIST.md = ~10 min G4 re-check of the 8 fixes + well; sheet spikes/F1/f1_fixes.jpg | F1 | G4-fixes | 5h 25% wk 29%
+2026-09-30 15:44:04 | END | commits fcd7dd7, 3d3c46d (+ this log) | F1 | G4-fixes | 5h 25% wk 29%
