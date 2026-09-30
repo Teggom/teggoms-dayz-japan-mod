@@ -402,7 +402,7 @@ def compose(props_all):
             ms = prop["models"]
             ok = sum(1 for m in ms if chk.get(m["p3d"], {}).get("pass"))
             r1 = [chk.get(m["p3d"], {}).get("faces", {}).get("Resolution 1", 0) for m in ms]
-            name = ("#%s " % prop.get("ll", "") + (prop["models"][0]["display"] or ""))[:70]
+            name = ("%s " % prop.get("ll", "") + (prop["models"][0]["display"] or ""))[:70]
             d.text((2 * FW + RW + 20, y + LH + 8), "%s  (%s)" % (pid, prop["cat"]), fill=(240, 240, 240), font=fb)
             d.text((2 * FW + RW + 20, y + LH + 38), name, fill=(200, 200, 200), font=f)
             d.text((2 * FW + RW + 20, y + LH + 62), "%d models, checks %d/%d pass; Res 1 faces %d-%d" % (

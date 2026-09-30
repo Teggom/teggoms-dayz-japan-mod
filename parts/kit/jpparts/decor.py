@@ -25,6 +25,10 @@ room (they hang on walls and beams or sit on surfaces: LIFE_LAYER.md "the rule t
 item is placed, check_all adds D15 (surface items rest on their host's surface) and D16 (hanging items keep 2.00 m
 head room over the floor unless placed over a hearth / corner / furniture / doorway: it["over"]).
 
+Outdoor life layer (L2, 2026-09-30): src/JP/site/yard_life and street_life sidecars carry mount yard | street | eaves |
+road | shore | field (bench dressing: 'surface', on_surface on a B3b bench). Place them with on_site() (a site item for
+D.place_site) and hung eaves pieces with under_eaves(); by_mount("shore") etc. lists them. No new checks.
+
 An item is a dict made by item(): {name (p3d basename), room, x, z, y, yaw, info (the catalogue entry), why, seat}.
 Frames: the building MODEL frame (x, y up, z = street front); yaw clockwise from +z seen from above (proxies.frame).
 """
@@ -147,6 +151,42 @@ def on_surface(name, host, surface=None, dx=0.0, dz=0.0, yaw=0.0, why="", count=
     it = item(name, host["room"], m[0], m[2], host["yaw"] + yaw, y=m[1], why=why, count=count)
     it.update(on_floor=False, mounted="surface", host=host, surface=s["name"], local=local)
     return it
+
+
+# ------------------------------------------------------------------------------------------------ outdoor (L2)
+# L2 (2026-09-30): the outdoor life layer (src/JP/site/yard_life, street_life) carries a sidecar mount: yard | street |
+# eaves | road | shore | field (and 'surface' for the bench dressing, placed with on_surface on a B3b bench). They are
+# separate map objects (D.place_site), not proxies; B3b's own site props keep their anchor-derived mounts.
+OUTDOOR_MOUNTS = ("yard", "street", "eaves", "road", "shore", "field")
+
+
+def on_site(name, x, z, yaw=0.0, setting=None, y=None, why=""):
+    """An outdoor life-layer object as a site item (base centre on the ground at (x, z); yaw so its +z faces the
+    street / the viewer). setting: the place it goes (one of OUTDOOR_MOUNTS); it must match the sidecar mount, except
+    that a 'yard' or 'street' object may go in either (they are interchangeable dressing)."""
+    info = catalog().get(name)
+    if info is None:
+        raise KeyError("no prop %r in the sidecars" % name)
+    m = info["mount"]
+    if m not in OUTDOOR_MOUNTS:
+        raise ValueError("%s mounts on %r (not an outdoor life-layer mount)" % (name, m))
+    if setting and setting != m and not {setting, m} <= {"yard", "street"}:
+        raise ValueError("%s is a %r object, not %r" % (name, m, setting))
+    it = item(name, setting or m, x, z, yaw, y=y, why=why, count=False)
+    it["mounted"] = m
+    return it
+
+
+def under_eaves(name, x, z, yaw, eave_y, why=""):
+    """An eaves piece (persimmon curtain, bird cage, sandals for sale): (x, z) = the point on the facade (the prop's
+    z = 0 plane), yaw so its +z faces the street, eave_y = the eave / bracket underside above the ground there. The
+    prop is built for an eave at its sidecar hang_y, so it is lifted by eave_y - hang_y."""
+    info = catalog().get(name)
+    if info is None or info["mount"] != "eaves":
+        raise ValueError("%s is not an eaves piece" % name)
+    if not info.get("hang_y"):
+        raise ValueError("%s stands on the veranda (no hang_y): on_site(..., y=the veranda floor)" % name)
+    return on_site(name, x, z, yaw, "eaves", y=eave_y - info["hang_y"], why=why)
 
 
 def lods_for(it):

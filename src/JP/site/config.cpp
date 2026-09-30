@@ -842,4 +842,514 @@ class CfgVehicles
 		displayName="Straw rope grey and frayed, one end dropped";
 		model="\JP\site\roadside\jp_s_shimenawa_ab_tattered.p3d";
 	};
+	// jp_s_hasa (yard_life)
+	class StaticObj_JP_S_Hasa_Low: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice drying rack on crossed stakes, hung with sheaves";
+		model="\JP\site\yard_life\jp_s_hasa_low.p3d";
+	};
+	class StaticObj_JP_S_Hasa_Tiers: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tiered rice drying rack, three rails of sheaves";
+		model="\JP\site\yard_life\jp_s_hasa_tiers.p3d";
+	};
+	class StaticObj_JP_S_Hasa_Empty: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tiered rice drying rack, empty";
+		model="\JP\site\yard_life\jp_s_hasa_empty.p3d";
+	};
+	class StaticObj_JP_S_Hasa_Ab_Sagged: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice drying rack, one stake pair leaning, rail sagged, sheaves grey and fallen";
+		model="\JP\site\yard_life\jp_s_hasa_ab_sagged.p3d";
+	};
+	class StaticObj_JP_S_Hasa_Ab_Collapsed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice drying rack blown down, sheaves in heaps";
+		model="\JP\site\yard_life\jp_s_hasa_ab_collapsed.p3d";
+	};
+	// jp_s_kaki_curtain (yard_life)
+	class StaticObj_JP_S_Kaki_Curtain_1ken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Persimmon curtain under the eaves, six strings";
+		model="\JP\site\yard_life\jp_s_kaki_curtain_1ken.p3d";
+	};
+	class StaticObj_JP_S_Kaki_Curtain_Half: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Persimmon curtain, three strings";
+		model="\JP\site\yard_life\jp_s_kaki_curtain_half.p3d";
+	};
+	class StaticObj_JP_S_Kaki_Curtain_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Persimmon curtain fallen, fruit black on the ground";
+		model="\JP\site\yard_life\jp_s_kaki_curtain_ab_fallen.p3d";
+	};
+	// jp_s_tsukimi (yard_life)
+	class StaticObj_JP_S_Tsukimi_Stand: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Moon-viewing offering: dango on a stand, pampas grass";
+		model="\JP\site\yard_life\jp_s_tsukimi_stand.p3d";
+	};
+	class StaticObj_JP_S_Tsukimi_Ab_Dried: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Moon-viewing offering, dango mouldy and pecked, grass snapped";
+		model="\JP\site\yard_life\jp_s_tsukimi_ab_dried.p3d";
+	};
+	class StaticObj_JP_S_Tsukimi_Ab_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Moon-viewing stand knocked over, dango scattered";
+		model="\JP\site\yard_life\jp_s_tsukimi_ab_tipped.p3d";
+	};
+	// jp_s_scarecrow (yard_life)
+	class StaticObj_JP_S_Scarecrow_Kasa: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Scarecrow in a sedge hat and straw cape";
+		model="\JP\site\yard_life\jp_s_scarecrow_kasa.p3d";
+	};
+	class StaticObj_JP_S_Scarecrow_Naruko: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bird clappers on a rope between stakes";
+		model="\JP\site\yard_life\jp_s_scarecrow_naruko.p3d";
+	};
+	class StaticObj_JP_S_Scarecrow_Ab_Leaning: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Scarecrow leaning, hat blown off";
+		model="\JP\site\yard_life\jp_s_scarecrow_ab_leaning.p3d";
+	};
+	class StaticObj_JP_S_Scarecrow_Ab_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Scarecrow fallen face down in the stubble";
+		model="\JP\site\yard_life\jp_s_scarecrow_ab_down.p3d";
+	};
+	// jp_s_farm_tools (yard_life)
+	class StaticObj_JP_S_Farm_Tools_Lean: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Farm tools leaned on a wall: hoe, rake, flail, sickle";
+		model="\JP\site\yard_life\jp_s_farm_tools_lean.p3d";
+	};
+	class StaticObj_JP_S_Farm_Tools_Pair: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hoe and rake leaned on a wall";
+		model="\JP\site\yard_life\jp_s_farm_tools_pair.p3d";
+	};
+	class StaticObj_JP_S_Farm_Tools_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Farm tools slid down into the leaves, rusted";
+		model="\JP\site\yard_life\jp_s_farm_tools_ab_fallen.p3d";
+	};
+	// jp_s_leaf_pile (yard_life)
+	class StaticObj_JP_S_Leaf_Pile_Broom: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Raked leaf pile with a bamboo broom";
+		model="\JP\site\yard_life\jp_s_leaf_pile_broom.p3d";
+	};
+	class StaticObj_JP_S_Leaf_Pile_Small: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Raked leaf pile";
+		model="\JP\site\yard_life\jp_s_leaf_pile_small.p3d";
+	};
+	class StaticObj_JP_S_Leaf_Pile_Ab_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Leaf pile spread by the wind, broom fallen";
+		model="\JP\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d";
+	};
+	// jp_s_ladder (yard_life)
+	class StaticObj_JP_S_Ladder_Lean: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden ladder leaned against the eaves";
+		model="\JP\site\yard_life\jp_s_ladder_lean.p3d";
+	};
+	class StaticObj_JP_S_Ladder_Bamboo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo ladder leaned against the eaves";
+		model="\JP\site\yard_life\jp_s_ladder_bamboo.p3d";
+	};
+	class StaticObj_JP_S_Ladder_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ladder fallen on the ground, rungs broken";
+		model="\JP\site\yard_life\jp_s_ladder_ab_fallen.p3d";
+	};
+	// jp_s_charcoal_bales (yard_life)
+	class StaticObj_JP_S_Charcoal_Bales_Stack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Charcoal bales stacked by a door";
+		model="\JP\site\yard_life\jp_s_charcoal_bales_stack.p3d";
+	};
+	class StaticObj_JP_S_Charcoal_Bales_Row2: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Two charcoal bales against a wall";
+		model="\JP\site\yard_life\jp_s_charcoal_bales_row2.p3d";
+	};
+	class StaticObj_JP_S_Charcoal_Bales_Ab_Burst: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Charcoal bale fallen and burst, charcoal spilled";
+		model="\JP\site\yard_life\jp_s_charcoal_bales_ab_burst.p3d";
+	};
+	// jp_s_potted (yard_life)
+	class StaticObj_JP_S_Potted_Stand: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Potted plants on a stepped stand";
+		model="\JP\site\yard_life\jp_s_potted_stand.p3d";
+	};
+	class StaticObj_JP_S_Potted_Pair: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A potted pine in a tub and an azalea";
+		model="\JP\site\yard_life\jp_s_potted_pair.p3d";
+	};
+	class StaticObj_JP_S_Potted_Ab_Dead: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Potted plants dead on their stand, one pot broken";
+		model="\JP\site\yard_life\jp_s_potted_ab_dead.p3d";
+	};
+	class StaticObj_JP_S_Potted_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Plant stand tipped over, pots spilled";
+		model="\JP\site\yard_life\jp_s_potted_ab_fallen.p3d";
+	};
+	// jp_s_bird_cage (yard_life)
+	class StaticObj_JP_S_Bird_Cage_Hung: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Empty bird cage hung under the eaves";
+		model="\JP\site\yard_life\jp_s_bird_cage_hung.p3d";
+	};
+	class StaticObj_JP_S_Bird_Cage_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Empty bird cage, door open, feeder tipped";
+		model="\JP\site\yard_life\jp_s_bird_cage_open.p3d";
+	};
+	class StaticObj_JP_S_Bird_Cage_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bird cage fallen, paper torn";
+		model="\JP\site\yard_life\jp_s_bird_cage_ab_fallen.p3d";
+	};
+	// jp_s_kakei (yard_life)
+	class StaticObj_JP_S_Kakei_Trough: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo water pipe into a wooden trough";
+		model="\JP\site\yard_life\jp_s_kakei_trough.p3d";
+	};
+	class StaticObj_JP_S_Kakei_Stone: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo water pipe into a stone basin";
+		model="\JP\site\yard_life\jp_s_kakei_stone.p3d";
+	};
+	class StaticObj_JP_S_Kakei_Ab_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo pipe fallen, trough dry and broken";
+		model="\JP\site\yard_life\jp_s_kakei_ab_broken.p3d";
+	};
+	// jp_s_stable_yard (yard_life)
+	class StaticObj_JP_S_Stable_Yard_Tie_Post: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Horse tie post and a feed trough";
+		model="\JP\site\yard_life\jp_s_stable_yard_tie_post.p3d";
+	};
+	class StaticObj_JP_S_Stable_Yard_Saddle_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pack saddle on a rack";
+		model="\JP\site\yard_life\jp_s_stable_yard_saddle_rack.p3d";
+	};
+	class StaticObj_JP_S_Stable_Yard_Trough_Stone: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone water trough, leaves inside";
+		model="\JP\site\yard_life\jp_s_stable_yard_trough_stone.p3d";
+	};
+	class StaticObj_JP_S_Stable_Yard_Ab_Saddle_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pack saddle fallen off its rack";
+		model="\JP\site\yard_life\jp_s_stable_yard_ab_saddle_fallen.p3d";
+	};
+	// jp_s_travel_gear (street_life)
+	class StaticObj_JP_S_Travel_Gear_Set: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Dropped travel gear: hat, stick, bundle, sandal";
+		model="\JP\site\street_life\jp_s_travel_gear_set.p3d";
+	};
+	class StaticObj_JP_S_Travel_Gear_Hat_Stick: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A sedge hat and a walking stick in the road";
+		model="\JP\site\street_life\jp_s_travel_gear_hat_stick.p3d";
+	};
+	class StaticObj_JP_S_Travel_Gear_Ab_Burst: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Travel bundle burst open, hat crushed";
+		model="\JP\site\street_life\jp_s_travel_gear_ab_burst.p3d";
+	};
+	// jp_s_kago (street_life)
+	class StaticObj_JP_S_Kago_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Palanquin (kago) set down in the road";
+		model="\JP\site\street_life\jp_s_kago_down.p3d";
+	};
+	class StaticObj_JP_S_Kago_Ab_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Palanquin tipped on its side";
+		model="\JP\site\street_life\jp_s_kago_ab_tipped.p3d";
+	};
+	class StaticObj_JP_S_Kago_Ab_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Palanquin broken, pole thrown down, roof mat in the road";
+		model="\JP\site\street_life\jp_s_kago_ab_broken.p3d";
+	};
+	// jp_s_tenbin_spill (street_life)
+	class StaticObj_JP_S_Tenbin_Spill_Boxes: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Peddler's boxes overturned, goods spilled";
+		model="\JP\site\street_life\jp_s_tenbin_spill_boxes.p3d";
+	};
+	class StaticObj_JP_S_Tenbin_Spill_Fish: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fish seller's tubs overturned, fish dried black";
+		model="\JP\site\street_life\jp_s_tenbin_spill_fish.p3d";
+	};
+	class StaticObj_JP_S_Tenbin_Spill_Veg: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Vegetable baskets overturned, daikon rotted";
+		model="\JP\site\street_life\jp_s_tenbin_spill_veg.p3d";
+	};
+	// jp_s_bench_dress (street_life)
+	class StaticObj_JP_S_Bench_Dress_Tea: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tea tray with two cups (bench dressing)";
+		model="\JP\site\street_life\jp_s_bench_dress_tea.p3d";
+	};
+	class StaticObj_JP_S_Bench_Dress_Tobacco: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tobacco tray, pipe and a cup (bench dressing)";
+		model="\JP\site\street_life\jp_s_bench_dress_tobacco.p3d";
+	};
+	class StaticObj_JP_S_Bench_Dress_Cloth: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Folded cloth and a tipped cup (bench dressing)";
+		model="\JP\site\street_life\jp_s_bench_dress_cloth.p3d";
+	};
+	class StaticObj_JP_S_Bench_Dress_Ab_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cups knocked over, tobacco tray tipped, ash spilled (bench dressing)";
+		model="\JP\site\street_life\jp_s_bench_dress_ab_spilled.p3d";
+	};
+	// jp_s_stool (street_life)
+	class StaticObj_JP_S_Stool_Std: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden stool";
+		model="\JP\site\street_life\jp_s_stool_std.p3d";
+	};
+	class StaticObj_JP_S_Stool_Ab_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden stool knocked over";
+		model="\JP\site\street_life\jp_s_stool_ab_tipped.p3d";
+	};
+	class StaticObj_JP_S_Stool_Ab_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden stool, a leg broken off";
+		model="\JP\site\street_life\jp_s_stool_ab_broken.p3d";
+	};
+	// jp_s_footwear (street_life)
+	class StaticObj_JP_S_Footwear_Pairs: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clogs and sandals at an entrance";
+		model="\JP\site\street_life\jp_s_footwear_pairs.p3d";
+	};
+	class StaticObj_JP_S_Footwear_Ab_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clogs scattered, one upside down";
+		model="\JP\site\street_life\jp_s_footwear_ab_scattered.p3d";
+	};
+	class StaticObj_JP_S_Footwear_Ab_Single: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A single clog, thong broken";
+		model="\JP\site\street_life\jp_s_footwear_ab_single.p3d";
+	};
+	// jp_s_fishnet (street_life)
+	class StaticObj_JP_S_Fishnet_Poles: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fishing nets drying on three bamboo poles";
+		model="\JP\site\street_life\jp_s_fishnet_poles.p3d";
+	};
+	class StaticObj_JP_S_Fishnet_Small: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A fishing net drying on two poles";
+		model="\JP\site\street_life\jp_s_fishnet_small.p3d";
+	};
+	class StaticObj_JP_S_Fishnet_Heap: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A fishing net heaped on the sand";
+		model="\JP\site\street_life\jp_s_fishnet_heap.p3d";
+	};
+	class StaticObj_JP_S_Fishnet_Ab_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Net drying poles snapped, the net slumped";
+		model="\JP\site\street_life\jp_s_fishnet_ab_down.p3d";
+	};
+	// jp_s_boat (street_life)
+	class StaticObj_JP_S_Boat_Up: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small plank boat pulled up on a bank";
+		model="\JP\site\street_life\jp_s_boat_up.p3d";
+	};
+	class StaticObj_JP_S_Boat_Tilted: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small boat on the bank, rolled on its bilge";
+		model="\JP\site\street_life\jp_s_boat_tilted.p3d";
+	};
+	class StaticObj_JP_S_Boat_Upturned: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small boat upturned on two logs";
+		model="\JP\site\street_life\jp_s_boat_upturned.p3d";
+	};
+	class StaticObj_JP_S_Boat_Ab_Rotten: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small boat rotting on the bank, side planks gone";
+		model="\JP\site\street_life\jp_s_boat_ab_rotten.p3d";
+	};
+	// jp_s_fire_watch (street_life)
+	class StaticObj_JP_S_Fire_Watch_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fire gear rack: buckets, fire hook, ladder";
+		model="\JP\site\street_life\jp_s_fire_watch_rack.p3d";
+	};
+	class StaticObj_JP_S_Fire_Watch_Ladder_Tower: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fire-watch ladder with an alarm bell";
+		model="\JP\site\street_life\jp_s_fire_watch_ladder_tower.p3d";
+	};
+	class StaticObj_JP_S_Fire_Watch_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fire gear rack, ladder and buckets fallen";
+		model="\JP\site\street_life\jp_s_fire_watch_ab_fallen.p3d";
+	};
+	// jp_s_sandals_sale (street_life)
+	class StaticObj_JP_S_Sandals_Sale_Eave: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw sandals hung for sale under the eaves";
+		model="\JP\site\street_life\jp_s_sandals_sale_eave.p3d";
+	};
+	class StaticObj_JP_S_Sandals_Sale_Stand: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw sandals for sale on a rack";
+		model="\JP\site\street_life\jp_s_sandals_sale_stand.p3d";
+	};
+	class StaticObj_JP_S_Sandals_Sale_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sandal rack blown over, sandals rotting";
+		model="\JP\site\street_life\jp_s_sandals_sale_ab_fallen.p3d";
+	};
+	// jp_s_amado (street_life)
+	class StaticObj_JP_S_Amado_Half_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shop shutters half open (two slid together)";
+		model="\JP\site\street_life\jp_s_amado_half_open.p3d";
+	};
+	class StaticObj_JP_S_Amado_Leaning: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A shop shutter leaned against the front";
+		model="\JP\site\street_life\jp_s_amado_leaning.p3d";
+	};
+	class StaticObj_JP_S_Amado_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A shop shutter fallen flat in the street";
+		model="\JP\site\street_life\jp_s_amado_fallen.p3d";
+	};
+	class StaticObj_JP_S_Amado_Ab_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A fallen shop shutter snapped in two";
+		model="\JP\site\street_life\jp_s_amado_ab_broken.p3d";
+	};
+	// jp_s_lantern_fallen (street_life)
+	class StaticObj_JP_S_Lantern_Fallen_Chochin: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A torn paper lantern fallen in the street";
+		model="\JP\site\street_life\jp_s_lantern_fallen_chochin.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Fallen_Andon: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A box lamp fallen on its back";
+		model="\JP\site\street_life\jp_s_lantern_fallen_andon.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Fallen_Crushed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A crest lantern trodden flat";
+		model="\JP\site\street_life\jp_s_lantern_fallen_crushed.p3d";
+	};
 };

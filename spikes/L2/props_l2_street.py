@@ -307,6 +307,7 @@ def bench_dress(kind):
 
 
 PROPS.append({"id": "jp_s_bench_dress", "cat": CAT, "ll": "#70", "mount": "surface", "tiers": [2, 3],
+              "refs": ["i38_morse_tabakobon"],
               "models": [
                   M("jp_s_bench_dress_tea", "tea", "intact", "Tea tray with two cups (bench dressing)",
                     lambda: bench_dress("tea")),
@@ -882,6 +883,7 @@ def lean_to_wall_s(ss, L, theta, top_z=0.028, cols=()):
 
 
 PROPS.append({"id": "jp_s_amado", "cat": CAT, "ll": "#71", "mount": "street", "tiers": [2, 3],
+              "refs": ["x25_morse_amado_box"],
               "notes": ["shop rain shutters (amado, BUILDING_LIST 776); wall pieces: the facade is z = 0"],
               "models": [
                   M("jp_s_amado_half_open", "run", "intact", "Shop shutters half open (two slid together)",

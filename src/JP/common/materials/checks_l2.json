@@ -3,6 +3,111 @@
  "palette_entries_added": [],
  "results": [
   {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_net_w0_co.png",
+   "palette_id": "cha_koge",
+   "wear": "",
+   "mean_srgb": [
+    113.2,
+    81.0,
+    51.2
+   ],
+   "target_srgb": [
+    106,
+    77,
+    50
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 10.0,
+   "spread_p75": 5.8,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     113.2,
+     81.0,
+     51.2
+    ],
+    "dE": 3.03,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_net_w1_co.png",
+   "palette_id": "cha_koge",
+   "wear": "",
+   "mean_srgb": [
+    106.0,
+    77.0,
+    50.0
+   ],
+   "target_srgb": [
+    106,
+    77,
+    50
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 10.0,
+   "spread_p75": 6.4,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     106.0,
+     77.0,
+     50.0
+    ],
+    "dE": 0.03,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_net_w2_co.png",
+   "palette_id": "cha_koge",
+   "wear": "",
+   "mean_srgb": [
+    112.0,
+    87.8,
+    65.5
+   ],
+   "target_srgb": [
+    106,
+    77,
+    50
+   ],
+   "dE": 6.0,
+   "dE_to_entry": 6.0,
+   "tol": 10.0,
+   "spread_p75": 6.6,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     112.1,
+     87.8,
+     65.5
+    ],
+    "dE": 5.99,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
    "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_foliage_w0_co.png",
    "palette_id": "foliage_green",
    "wear": "",

@@ -1,0 +1,398 @@
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\street_life D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\street_life D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\site\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\site\street_life\jp_s_amado_ab_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_amado_ab_broken.p3d
+<model = "P:\JP\site\street_life\jp_s_amado_ab_broken.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_amado_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_amado_fallen.p3d
+<model = "P:\JP\site\street_life\jp_s_amado_fallen.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_amado_half_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_amado_half_open.p3d
+<model = "P:\JP\site\street_life\jp_s_amado_half_open.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_amado_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_amado_leaning.p3d
+<model = "P:\JP\site\street_life\jp_s_amado_leaning.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_bench_dress_ab_spilled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_bench_dress_ab_spilled.p3d
+<model = "P:\JP\site\street_life\jp_s_bench_dress_ab_spilled.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_bench_dress_cloth.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_bench_dress_cloth.p3d
+<model = "P:\JP\site\street_life\jp_s_bench_dress_cloth.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_bench_dress_tea.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_bench_dress_tea.p3d
+<model = "P:\JP\site\street_life\jp_s_bench_dress_tea.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_bench_dress_tobacco.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_bench_dress_tobacco.p3d
+<model = "P:\JP\site\street_life\jp_s_bench_dress_tobacco.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_boat_ab_rotten.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_boat_ab_rotten.p3d
+<model = "P:\JP\site\street_life\jp_s_boat_ab_rotten.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_boat_tilted.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_boat_tilted.p3d
+<model = "P:\JP\site\street_life\jp_s_boat_tilted.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_boat_up.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_boat_up.p3d
+<model = "P:\JP\site\street_life\jp_s_boat_up.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_boat_upturned.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_boat_upturned.p3d
+<model = "P:\JP\site\street_life\jp_s_boat_upturned.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_fire_watch_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_fire_watch_ab_fallen.p3d
+<model = "P:\JP\site\street_life\jp_s_fire_watch_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_fire_watch_ladder_tower.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_fire_watch_ladder_tower.p3d
+<model = "P:\JP\site\street_life\jp_s_fire_watch_ladder_tower.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_fire_watch_rack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_fire_watch_rack.p3d
+<model = "P:\JP\site\street_life\jp_s_fire_watch_rack.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_fishnet_ab_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_fishnet_ab_down.p3d
+<model = "P:\JP\site\street_life\jp_s_fishnet_ab_down.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_fishnet_heap.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_fishnet_heap.p3d
+<model = "P:\JP\site\street_life\jp_s_fishnet_heap.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_fishnet_poles.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_fishnet_poles.p3d
+<model = "P:\JP\site\street_life\jp_s_fishnet_poles.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_fishnet_small.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_fishnet_small.p3d
+<model = "P:\JP\site\street_life\jp_s_fishnet_small.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_footwear_ab_scattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_footwear_ab_scattered.p3d
+<model = "P:\JP\site\street_life\jp_s_footwear_ab_scattered.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_footwear_ab_single.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_footwear_ab_single.p3d
+<model = "P:\JP\site\street_life\jp_s_footwear_ab_single.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_footwear_pairs.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_footwear_pairs.p3d
+<model = "P:\JP\site\street_life\jp_s_footwear_pairs.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_kago_ab_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_kago_ab_broken.p3d
+<model = "P:\JP\site\street_life\jp_s_kago_ab_broken.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_kago_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_kago_ab_tipped.p3d
+<model = "P:\JP\site\street_life\jp_s_kago_ab_tipped.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_kago_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_kago_down.p3d
+<model = "P:\JP\site\street_life\jp_s_kago_down.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_lantern_fallen_andon.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_lantern_fallen_andon.p3d
+<model = "P:\JP\site\street_life\jp_s_lantern_fallen_andon.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_lantern_fallen_chochin.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_lantern_fallen_chochin.p3d
+<model = "P:\JP\site\street_life\jp_s_lantern_fallen_chochin.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_lantern_fallen_crushed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_lantern_fallen_crushed.p3d
+<model = "P:\JP\site\street_life\jp_s_lantern_fallen_crushed.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_sandals_sale_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_sandals_sale_ab_fallen.p3d
+<model = "P:\JP\site\street_life\jp_s_sandals_sale_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_sandals_sale_eave.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_sandals_sale_eave.p3d
+<model = "P:\JP\site\street_life\jp_s_sandals_sale_eave.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_sandals_sale_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_sandals_sale_stand.p3d
+<model = "P:\JP\site\street_life\jp_s_sandals_sale_stand.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_stool_ab_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_stool_ab_broken.p3d
+<model = "P:\JP\site\street_life\jp_s_stool_ab_broken.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_stool_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_stool_ab_tipped.p3d
+<model = "P:\JP\site\street_life\jp_s_stool_ab_tipped.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_stool_std.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_stool_std.p3d
+<model = "P:\JP\site\street_life\jp_s_stool_std.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_tenbin_spill_boxes.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_tenbin_spill_boxes.p3d
+<model = "P:\JP\site\street_life\jp_s_tenbin_spill_boxes.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_tenbin_spill_fish.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_tenbin_spill_fish.p3d
+<model = "P:\JP\site\street_life\jp_s_tenbin_spill_fish.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_tenbin_spill_veg.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_tenbin_spill_veg.p3d
+<model = "P:\JP\site\street_life\jp_s_tenbin_spill_veg.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_travel_gear_ab_burst.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_travel_gear_ab_burst.p3d
+<model = "P:\JP\site\street_life\jp_s_travel_gear_ab_burst.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_travel_gear_hat_stick.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_travel_gear_hat_stick.p3d
+<model = "P:\JP\site\street_life\jp_s_travel_gear_hat_stick.p3d">
+</model>
+Convert model P:\JP\site\street_life\jp_s_travel_gear_set.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\street_life\jp_s_travel_gear_set.p3d
+<model = "P:\JP\site\street_life\jp_s_travel_gear_set.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_amado_ab_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_amado_fallen.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_amado_half_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_amado_leaning.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_bench_dress_ab_spilled.p3d: 0.01,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_bench_dress_cloth.p3d: -0.00,0.02
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_bench_dress_tea.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_bench_dress_tobacco.p3d: 0.07,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_boat_ab_rotten.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_boat_tilted.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_boat_up.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_boat_upturned.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_fire_watch_ab_fallen.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_fire_watch_ladder_tower.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_fire_watch_rack.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_fishnet_ab_down.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_fishnet_heap.p3d: 0.07,0.05
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_fishnet_poles.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_fishnet_small.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_footwear_ab_scattered.p3d: 0.05,0.23
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_footwear_ab_single.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_footwear_pairs.p3d: 0.03,0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_kago_ab_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_kago_ab_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_kago_down.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_lantern_fallen_andon.p3d: -0.07,0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_lantern_fallen_chochin.p3d: 0.01,-0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_lantern_fallen_crushed.p3d: 0.06,-0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_sandals_sale_ab_fallen.p3d: 0.02,0.54
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_sandals_sale_eave.p3d: 0.00,0.19
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_sandals_sale_stand.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_stool_ab_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_stool_ab_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_stool_std.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_tenbin_spill_boxes.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_tenbin_spill_fish.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_tenbin_spill_veg.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_travel_gear_ab_burst.p3d: 0.02,-0.15
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_travel_gear_hat_stick.p3d: -0.09,-0.03
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street_life\jp_s_travel_gear_set.p3d: -0.04,0.10
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\yard_life D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\yard_life D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\site\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\site\yard_life\jp_s_bird_cage_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_bird_cage_ab_fallen.p3d
+<model = "P:\JP\site\yard_life\jp_s_bird_cage_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_bird_cage_hung.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_bird_cage_hung.p3d
+<model = "P:\JP\site\yard_life\jp_s_bird_cage_hung.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_bird_cage_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_bird_cage_open.p3d
+<model = "P:\JP\site\yard_life\jp_s_bird_cage_open.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_charcoal_bales_ab_burst.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_charcoal_bales_ab_burst.p3d
+<model = "P:\JP\site\yard_life\jp_s_charcoal_bales_ab_burst.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_charcoal_bales_row2.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_charcoal_bales_row2.p3d
+<model = "P:\JP\site\yard_life\jp_s_charcoal_bales_row2.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_charcoal_bales_stack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_charcoal_bales_stack.p3d
+<model = "P:\JP\site\yard_life\jp_s_charcoal_bales_stack.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_farm_tools_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_farm_tools_ab_fallen.p3d
+<model = "P:\JP\site\yard_life\jp_s_farm_tools_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_farm_tools_lean.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_farm_tools_lean.p3d
+<model = "P:\JP\site\yard_life\jp_s_farm_tools_lean.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_farm_tools_pair.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_farm_tools_pair.p3d
+<model = "P:\JP\site\yard_life\jp_s_farm_tools_pair.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_hasa_ab_collapsed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_hasa_ab_collapsed.p3d
+<model = "P:\JP\site\yard_life\jp_s_hasa_ab_collapsed.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_hasa_ab_sagged.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_hasa_ab_sagged.p3d
+<model = "P:\JP\site\yard_life\jp_s_hasa_ab_sagged.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_hasa_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_hasa_empty.p3d
+<model = "P:\JP\site\yard_life\jp_s_hasa_empty.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_hasa_low.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_hasa_low.p3d
+<model = "P:\JP\site\yard_life\jp_s_hasa_low.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_hasa_tiers.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_hasa_tiers.p3d
+<model = "P:\JP\site\yard_life\jp_s_hasa_tiers.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_kakei_ab_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_kakei_ab_broken.p3d
+<model = "P:\JP\site\yard_life\jp_s_kakei_ab_broken.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_kakei_stone.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_kakei_stone.p3d
+<model = "P:\JP\site\yard_life\jp_s_kakei_stone.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_kakei_trough.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_kakei_trough.p3d
+<model = "P:\JP\site\yard_life\jp_s_kakei_trough.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_kaki_curtain_1ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_kaki_curtain_1ken.p3d
+<model = "P:\JP\site\yard_life\jp_s_kaki_curtain_1ken.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_kaki_curtain_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_kaki_curtain_ab_fallen.p3d
+<model = "P:\JP\site\yard_life\jp_s_kaki_curtain_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_kaki_curtain_half.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_kaki_curtain_half.p3d
+<model = "P:\JP\site\yard_life\jp_s_kaki_curtain_half.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_ladder_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_ladder_ab_fallen.p3d
+<model = "P:\JP\site\yard_life\jp_s_ladder_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_ladder_bamboo.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_ladder_bamboo.p3d
+<model = "P:\JP\site\yard_life\jp_s_ladder_bamboo.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_ladder_lean.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_ladder_lean.p3d
+<model = "P:\JP\site\yard_life\jp_s_ladder_lean.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_leaf_pile_ab_scattered.p3d
+<model = "P:\JP\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_leaf_pile_broom.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_leaf_pile_broom.p3d
+<model = "P:\JP\site\yard_life\jp_s_leaf_pile_broom.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_leaf_pile_small.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_leaf_pile_small.p3d
+<model = "P:\JP\site\yard_life\jp_s_leaf_pile_small.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_potted_ab_dead.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_potted_ab_dead.p3d
+<model = "P:\JP\site\yard_life\jp_s_potted_ab_dead.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_potted_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_potted_ab_fallen.p3d
+<model = "P:\JP\site\yard_life\jp_s_potted_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_potted_pair.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_potted_pair.p3d
+<model = "P:\JP\site\yard_life\jp_s_potted_pair.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_potted_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_potted_stand.p3d
+<model = "P:\JP\site\yard_life\jp_s_potted_stand.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_scarecrow_ab_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_scarecrow_ab_down.p3d
+<model = "P:\JP\site\yard_life\jp_s_scarecrow_ab_down.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_scarecrow_ab_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_scarecrow_ab_leaning.p3d
+<model = "P:\JP\site\yard_life\jp_s_scarecrow_ab_leaning.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_scarecrow_kasa.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_scarecrow_kasa.p3d
+<model = "P:\JP\site\yard_life\jp_s_scarecrow_kasa.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_scarecrow_naruko.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_scarecrow_naruko.p3d
+<model = "P:\JP\site\yard_life\jp_s_scarecrow_naruko.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_stable_yard_ab_saddle_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_stable_yard_ab_saddle_fallen.p3d
+<model = "P:\JP\site\yard_life\jp_s_stable_yard_ab_saddle_fallen.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_stable_yard_saddle_rack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_stable_yard_saddle_rack.p3d
+<model = "P:\JP\site\yard_life\jp_s_stable_yard_saddle_rack.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_stable_yard_tie_post.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_stable_yard_tie_post.p3d
+<model = "P:\JP\site\yard_life\jp_s_stable_yard_tie_post.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_stable_yard_trough_stone.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_stable_yard_trough_stone.p3d
+<model = "P:\JP\site\yard_life\jp_s_stable_yard_trough_stone.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_tsukimi_ab_dried.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_tsukimi_ab_dried.p3d
+<model = "P:\JP\site\yard_life\jp_s_tsukimi_ab_dried.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_tsukimi_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_tsukimi_ab_tipped.p3d
+<model = "P:\JP\site\yard_life\jp_s_tsukimi_ab_tipped.p3d">
+</model>
+Convert model P:\JP\site\yard_life\jp_s_tsukimi_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_tsukimi_stand.p3d
+<model = "P:\JP\site\yard_life\jp_s_tsukimi_stand.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_bird_cage_ab_fallen.p3d: -0.01,0.11
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_bird_cage_hung.p3d: 0.00,0.23
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_bird_cage_open.p3d: 0.00,0.22
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_charcoal_bales_ab_burst.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_charcoal_bales_row2.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_charcoal_bales_stack.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_farm_tools_ab_fallen.p3d: -0.31,0.69
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_farm_tools_lean.p3d: 0.09,0.24
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_farm_tools_pair.p3d: -0.02,0.24
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_hasa_ab_collapsed.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_hasa_ab_sagged.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_hasa_empty.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_hasa_low.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_hasa_tiers.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_kakei_ab_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_kakei_stone.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_kakei_trough.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_kaki_curtain_1ken.p3d: 0.00,0.19
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_kaki_curtain_ab_fallen.p3d: -0.03,0.60
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_kaki_curtain_half.p3d: 0.00,0.19
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_ladder_ab_fallen.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_ladder_bamboo.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_ladder_lean.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d: -0.13,-0.14
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_leaf_pile_broom.p3d: 0.03,0.19
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_leaf_pile_small.p3d: 0.03,0.04
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_ab_dead.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_ab_fallen.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_pair.p3d: 0.15,0.04
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_stand.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_scarecrow_ab_down.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_scarecrow_ab_leaning.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_scarecrow_kasa.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_scarecrow_naruko.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_stable_yard_ab_saddle_fallen.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_stable_yard_saddle_rack.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_stable_yard_tie_post.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_stable_yard_trough_stone.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_tsukimi_ab_dried.p3d: 0.11,0.10
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_tsukimi_ab_tipped.p3d: 0.58,0.24
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_tsukimi_stand.p3d: 0.11,-0.01
+

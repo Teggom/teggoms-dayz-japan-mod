@@ -92,3 +92,5 @@
 2026-09-30 14:33:04 | #79 | jp_s_lantern_fallen_chochin | abandoned (batch) | 5h 10% wk 27%
 2026-09-30 14:33:04 | #80 | jp_s_lantern_fallen_andon | abandoned (batch) | 5h 10% wk 27%
 2026-09-30 14:33:04 | #81 | jp_s_lantern_fallen_crushed | abandoned (batch) | 5h 10% wk 27%
+2026-09-30 14:34:26 | PBO PACKED | jp_site.pbo 210 classes (129 B3b + 81 L2), 81/81 ODOL; jp_common.pbo with textile_net + plant_foliage | - | 5h 10% wk 27%
+2026-09-30 14:40:45 | SHEETS DONE | research/outdoor_kit/contact_sheets/l2_{g_yard,g_yard_2,h_street,h_street_2}.jpg + l2_textcheck_{before,after}.jpg | - | 5h 11% wk 27%
