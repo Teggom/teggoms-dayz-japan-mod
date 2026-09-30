@@ -166,7 +166,10 @@ def check_model(P, mp, spec):
     ok = hung or (-(P.bury + 0.002) <= vb[2] <= 0.002 + 0.02 and (gb is None or -(P.bury + 0.002) <= gb[2] <= 0.03))
     det = {"res1_min_y": round(vb[2], 4), "geo_min_y": round(gb[2], 4) if gb else None, "bury": P.bury, "hung": hung}
     if P.anchor == "wall":
-        ok = ok and P.wall_gap - 0.002 <= vb[4] <= P.wall_gap + 0.02
+        if hung:      # hung pieces touch the wall at their hooks / bracket (a brace may dip 1.5 cm behind)
+            ok = ok and -0.015 <= vb[4] <= 0.15
+        else:
+            ok = ok and P.wall_gap - 0.002 <= vb[4] <= P.wall_gap + 0.02
         det.update({"res1_min_z (wall plane z=0)": round(vb[4], 4), "wall_gap": P.wall_gap})
     add("C6a", "anchor '%s': base on the terrain (0-2 cm / bury), wall gap" % P.anchor, ok, det)
     if "Geometry" in L:

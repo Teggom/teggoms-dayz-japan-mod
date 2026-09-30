@@ -74,3 +74,51 @@
 2026-09-30 10:36:36 | #68 | jp_s_stele_round | variant (batch) | 5h 16% wk 21%
 2026-09-30 10:36:36 | #69 | jp_s_stele_group3 | variant (batch) | 5h 16% wk 21%
 2026-09-30 10:36:36 | #70 | jp_s_stele_ab_tipped | abandoned (batch) | 5h 16% wk 21%
+2026-09-30 10:36:36 | GROUP START | gutter, shopfront, lantern_sign, nobori, stall, kosatsu | street | 5h 16% wk 21%
+2026-09-30 10:43:25 | #71 | jp_s_gutter_stone_1ken | new model (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #72 | jp_s_gutter_stone_half | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #73 | jp_s_gutter_corner | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #74 | jp_s_gutter_slab | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #75 | jp_s_gutter_board_1ken | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #76 | jp_s_gutter_outfall | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #77 | jp_s_gutter_earth_1ken | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #78 | jp_s_gutter_ab_silted | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #79 | jp_s_shopfront_noren_long | new model (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #80 | jp_s_shopfront_noren_half | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #81 | jp_s_shopfront_mizuhiki | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #82 | jp_s_shopfront_sudare_up | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #83 | jp_s_shopfront_sudare_down | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #84 | jp_s_shopfront_kanban_hang | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #85 | jp_s_shopfront_kanban_stand | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #86 | jp_s_shopfront_shape_brush | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #87 | jp_s_shopfront_shape_geta | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #88 | jp_s_shopfront_shape_tabi | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #89 | jp_s_shopfront_shape_gourd | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #90 | jp_s_shopfront_shape_umbrella | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #91 | jp_s_shopfront_shape_fan | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #92 | jp_s_shopfront_ab_noren_torn | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #93 | jp_s_shopfront_ab_fallen | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #94 | jp_s_shopfront_ab_kanban_askew | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #95 | jp_s_lantern_sign_chochin_shop | new model (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #96 | jp_s_lantern_sign_chochin_inn | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #97 | jp_s_lantern_sign_chochin_gate | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #98 | jp_s_lantern_sign_kake | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #99 | jp_s_lantern_sign_oki | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #100 | jp_s_lantern_sign_tsuji | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #101 | jp_s_lantern_sign_ab_torn | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #102 | jp_s_lantern_sign_ab_fallen | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #103 | jp_s_nobori_shop | new model (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #104 | jp_s_nobori_shrine | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #105 | jp_s_nobori_socket_stones | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #106 | jp_s_nobori_ab_tattered | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #107 | jp_s_nobori_ab_down | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #108 | jp_s_stall_reed | new model (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #109 | jp_s_stall_booth | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #110 | jp_s_stall_yatai | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #111 | jp_s_stall_row3 | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #112 | jp_s_stall_ab_collapsed | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #113 | jp_s_stall_ab_frame | abandoned (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #114 | jp_s_kosatsu_std | new model (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #115 | jp_s_kosatsu_large | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #116 | jp_s_kosatsu_forest | variant (batch) | 5h 18% wk 22%
+2026-09-30 10:43:25 | #117 | jp_s_kosatsu_ab_boards_down | abandoned (batch) | 5h 18% wk 22%

@@ -480,4 +480,292 @@ class CfgVehicles
 		displayName="Koshin pillar leaning and half sunk, lichen";
 		model="\JP\site\roadside\jp_s_stele_ab_tipped.p3d";
 	};
+	// jp_s_gutter (street)
+	class StaticObj_JP_S_Gutter_Stone_1ken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Street gutter, stone-lined, 1 ken";
+		model="\JP\site\street\jp_s_gutter_stone_1ken.p3d";
+	};
+	class StaticObj_JP_S_Gutter_Stone_Half: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Street gutter, stone-lined, half ken";
+		model="\JP\site\street\jp_s_gutter_stone_half.p3d";
+	};
+	class StaticObj_JP_S_Gutter_Corner: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Street gutter, 90-degree corner";
+		model="\JP\site\street\jp_s_gutter_corner.p3d";
+	};
+	class StaticObj_JP_S_Gutter_Slab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Street gutter with a slab crossing (door)";
+		model="\JP\site\street\jp_s_gutter_slab.p3d";
+	};
+	class StaticObj_JP_S_Gutter_Board_1ken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Alley drain with dobu-ita covers, 1 ken";
+		model="\JP\site\street\jp_s_gutter_board_1ken.p3d";
+	};
+	class StaticObj_JP_S_Gutter_Outfall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Gutter outfall into a canal or ditch";
+		model="\JP\site\street\jp_s_gutter_outfall.p3d";
+	};
+	class StaticObj_JP_S_Gutter_Earth_1ken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rural earth-banked gutter, field-stone edge";
+		model="\JP\site\street\jp_s_gutter_earth_1ken.p3d";
+	};
+	class StaticObj_JP_S_Gutter_Ab_Silted: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Street gutter silted with leaves, a stone tipped in";
+		model="\JP\site\street\jp_s_gutter_ab_silted.p3d";
+	};
+	// jp_s_shopfront (street)
+	class StaticObj_JP_S_Shopfront_Noren_Long: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Long noren, 3 panels, shop mark";
+		model="\JP\site\street\jp_s_shopfront_noren_long.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Noren_Half: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Half noren (eating house)";
+		model="\JP\site\street\jp_s_shopfront_noren_half.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Mizuhiki: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Eave curtain (mizuhiki-noren), 1 ken";
+		model="\JP\site\street\jp_s_shopfront_mizuhiki.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Sudare_Up: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Reed blind rolled up";
+		model="\JP\site\street\jp_s_shopfront_sudare_up.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Sudare_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Reed blind down, slumped and holed";
+		model="\JP\site\street\jp_s_shopfront_sudare_down.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Kanban_Hang: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (confectioner)";
+		model="\JP\site\street\jp_s_shopfront_kanban_hang.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Kanban_Stand: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Standing signboard (soba)";
+		model="\JP\site\street\jp_s_shopfront_kanban_stand.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Shape_Brush: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: giant brush";
+		model="\JP\site\street\jp_s_shopfront_shape_brush.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Shape_Geta: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: geta";
+		model="\JP\site\street\jp_s_shopfront_shape_geta.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Shape_Tabi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: tabi";
+		model="\JP\site\street\jp_s_shopfront_shape_tabi.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Shape_Gourd: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: medicine gourd";
+		model="\JP\site\street\jp_s_shopfront_shape_gourd.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Shape_Umbrella: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: umbrella";
+		model="\JP\site\street\jp_s_shopfront_shape_umbrella.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Shape_Fan: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: fan";
+		model="\JP\site\street\jp_s_shopfront_shape_fan.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Ab_Noren_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Noren faded to grey-blue, a panel torn off";
+		model="\JP\site\street\jp_s_shopfront_ab_noren_torn.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Noren pole dropped, noren heaped on the threshold";
+		model="\JP\site\street\jp_s_shopfront_ab_fallen.p3d";
+	};
+	class StaticObj_JP_S_Shopfront_Ab_Kanban_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard hanging from one cord";
+		model="\JP\site\street\jp_s_shopfront_ab_kanban_askew.p3d";
+	};
+	// jp_s_lantern_sign (street)
+	class StaticObj_JP_S_Lantern_Sign_Chochin_Shop: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shop lantern (sake)";
+		model="\JP\site\street\jp_s_lantern_sign_chochin_shop.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Sign_Chochin_Inn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Inn lantern";
+		model="\JP\site\street\jp_s_lantern_sign_chochin_inn.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Sign_Chochin_Gate: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ward-gate lantern (Honcho)";
+		model="\JP\site\street\jp_s_lantern_sign_chochin_gate.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Sign_Kake: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging box sign lamp (kake-andon)";
+		model="\JP\site\street\jp_s_lantern_sign_kake.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Sign_Oki: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Standing sign lamp (oki-andon)";
+		model="\JP\site\street\jp_s_lantern_sign_oki.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Sign_Tsuji: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Crossroads lamp on a post (tsuji-andon)";
+		model="\JP\site\street\jp_s_lantern_sign_tsuji.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Sign_Ab_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shop lantern, paper split and holed";
+		model="\JP\site\street\jp_s_lantern_sign_ab_torn.p3d";
+	};
+	class StaticObj_JP_S_Lantern_Sign_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Standing lamp tipped, a lantern crushed on the ground";
+		model="\JP\site\street\jp_s_lantern_sign_ab_fallen.p3d";
+	};
+	// jp_s_nobori (street)
+	class StaticObj_JP_S_Nobori_Shop: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shop banner (soba) on a bamboo pole";
+		model="\JP\site\street\jp_s_nobori_shop.p3d";
+	};
+	class StaticObj_JP_S_Nobori_Shrine: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine dedication banners, a pair";
+		model="\JP\site\street\jp_s_nobori_shrine.p3d";
+	};
+	class StaticObj_JP_S_Nobori_Socket_Stones: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Banner socket stones, banner taken down";
+		model="\JP\site\street\jp_s_nobori_socket_stones.p3d";
+	};
+	class StaticObj_JP_S_Nobori_Ab_Tattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Banner shredded to a strip, pole leaning";
+		model="\JP\site\street\jp_s_nobori_ab_tattered.p3d";
+	};
+	class StaticObj_JP_S_Nobori_Ab_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Banner pole fallen across the approach";
+		model="\JP\site\street\jp_s_nobori_ab_down.p3d";
+	};
+	// jp_s_stall (street)
+	class StaticObj_JP_S_Stall_Reed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Reed-screen stall with counter";
+		model="\JP\site\street\jp_s_stall_reed.p3d";
+	};
+	class StaticObj_JP_S_Stall_Booth: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Plank booth (kake-mise)";
+		model="\JP\site\street\jp_s_stall_booth.p3d";
+	};
+	class StaticObj_JP_S_Stall_Yatai: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Roofed street stall (yatai), no wheels";
+		model="\JP\site\street\jp_s_stall_yatai.p3d";
+	};
+	class StaticObj_JP_S_Stall_Row3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Three reed stalls (market row)";
+		model="\JP\site\street\jp_s_stall_row3.p3d";
+	};
+	class StaticObj_JP_S_Stall_Ab_Collapsed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Reed stall collapsed, mat fallen in";
+		model="\JP\site\street\jp_s_stall_ab_collapsed.p3d";
+	};
+	class StaticObj_JP_S_Stall_Ab_Frame: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bare stall frame, screens gone";
+		model="\JP\site\street\jp_s_stall_ab_frame.p3d";
+	};
+	// jp_s_kosatsu (roadside)
+	class StaticObj_JP_S_Kosatsu_Std: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Notice board (kosatsuba), post-town size";
+		model="\JP\site\roadside\jp_s_kosatsu_std.p3d";
+	};
+	class StaticObj_JP_S_Kosatsu_Large: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Notice board, bridge-end size (Fuchu type)";
+		model="\JP\site\roadside\jp_s_kosatsu_large.p3d";
+	};
+	class StaticObj_JP_S_Kosatsu_Forest: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Single roofed notice board (forest)";
+		model="\JP\site\roadside\jp_s_kosatsu_forest.p3d";
+	};
+	class StaticObj_JP_S_Kosatsu_Ab_Boards_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Notice board, two boards fallen, fence gaps";
+		model="\JP\site\roadside\jp_s_kosatsu_ab_boards_down.p3d";
+	};
 };

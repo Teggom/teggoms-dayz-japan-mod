@@ -1,0 +1,587 @@
+{
+ "id": "jp_s_stall",
+ "build_list": {
+  "name": "Stall family: reed-screen stall, board booth (kake-mise), roofed street stall (yatai)",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "abandoned_state": "Temporary structures collapse first: mats fallen in, screens flattened or blown away, frames leaning; yatai stand but with rotted counters.",
+  "placement_rule": "At bridge ends, riverbanks, temple approaches and post-town edges; in rows of 3-8 on market days; yatai at street corners. Never in front of a permanent shop door.",
+  "lod_budget": "medium site object <=1,500 faces LOD0 for the yatai; reed stall <=600",
+  "dimensions": {
+   "yatai_m": {
+    "value": "1.82 wide x 0.91 deep, roof to 2.2, counter 0.85",
+    "source": "O18 (6 x 3 shaku; late source, used for size only)"
+   },
+   "reed_stall_m": {
+    "value": "1 ken x 1 ken (1.82 x 1.82) poles, reed panels 0.91 x 1.8, board counter 0.8 high",
+    "assumed": true,
+    "reason": "on the ken grid; assumed"
+   },
+   "kake_mise_m": {
+    "value": "1.5 ken x 1 ken plank booth, mat roof at 2.1-2.4",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "pole_d_m": {
+    "value": "0.06-0.08 (bamboo or thin log)",
+    "assumed": true,
+    "reason": "assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "x31_masanobu_ryogoku_1748",
+    "shows": "reed-screened stalls along the riverbank, c.1748 (background)",
+    "period_image": true
+   },
+   {
+    "id": "x36_hiroshige_ishibe",
+    "shows": "roadside stands with reed screens (c.1833)",
+    "period_image": true
+   },
+   {
+    "id": "c18_hiroshige_mariko",
+    "shows": "tea-stand context (c.1833)",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "street",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "counters are Roadway + loot surfaces"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_stall_reed.p3d",
+   "class": "StaticObj_JP_S_Stall_Reed",
+   "variant": "reed",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Reed-screen stall with counter",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 114,
+    "Resolution 2": 90,
+    "Resolution 3": 48,
+    "Geometry": 30,
+    "Roadway": 1,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -1.01,
+    1.01,
+    -0.05,
+    2.12,
+    -1.06,
+    1.16
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.945,
+    -0.945,
+    0.945,
+    1.16
+   ],
+   "roadway": true,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [
+    {
+     "name": "counter",
+     "kind": "shelf",
+     "y": 0.8,
+     "rect": [
+      -0.8,
+      0.76,
+      0.8,
+      1.14
+     ],
+     "range": 0.25,
+     "points": [
+      [
+       -0.45,
+       0.8,
+       0.96
+      ],
+      [
+       0.45,
+       0.8,
+       0.96
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "plan",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "counter_h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_stall_booth.p3d",
+   "class": "StaticObj_JP_S_Stall_Booth",
+   "variant": "booth",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Plank booth (kake-mise)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 78,
+    "Resolution 3": 42,
+    "Geometry": 48,
+    "Roadway": 1,
+    "View Geometry": 48,
+    "Fire Geometry": 48
+   },
+   "bbox": [
+    -1.748,
+    1.596,
+    -0.05,
+    2.33,
+    -1.085,
+    1.081
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.36,
+    -0.905,
+    1.36,
+    0.905
+   ],
+   "roadway": true,
+   "mass_kg": 250.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [
+    {
+     "name": "counter",
+     "kind": "shelf",
+     "y": 0.84,
+     "rect": [
+      -1.2,
+      0.56,
+      1.2,
+      0.89
+     ],
+     "range": 0.25,
+     "points": [
+      [
+       -0.8,
+       0.84,
+       0.73
+      ],
+      [
+       0.0,
+       0.84,
+       0.73
+      ],
+      [
+       0.8,
+       0.84,
+       0.73
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "plan_w",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "roof_h",
+     "expected": 2.2,
+     "measured": 2.2,
+     "tol": 0.2,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_stall_yatai.p3d",
+   "class": "StaticObj_JP_S_Stall_Yatai",
+   "variant": "yatai",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Roofed street stall (yatai), no wheels",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 75,
+    "Resolution 3": 42,
+    "Geometry": 30,
+    "Roadway": 1,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -1.24,
+    1.183,
+    0.0,
+    2.27,
+    -0.705,
+    1.409
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.11,
+    -0.705,
+    1.11,
+    0.705
+   ],
+   "roadway": true,
+   "mass_kg": 150.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [
+    {
+     "name": "counter",
+     "kind": "shelf",
+     "y": 0.85,
+     "rect": [
+      -0.8,
+      0.205,
+      0.3,
+      0.455
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       -0.5,
+       0.85,
+       0.335
+      ],
+      [
+       0.1,
+       0.85,
+       0.335
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "yatai_w",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "counter_h",
+     "expected": 0.85,
+     "measured": 0.85,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "roof_h",
+     "expected": 2.2,
+     "measured": 2.27,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_stall_row3.p3d",
+   "class": "StaticObj_JP_S_Stall_Row3",
+   "variant": "row3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three reed stalls (market row)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 290,
+    "Resolution 2": 234,
+    "Resolution 3": 108,
+    "Geometry": 66,
+    "Roadway": 3,
+    "View Geometry": 66,
+    "Fire Geometry": 66
+   },
+   "bbox": [
+    -2.83,
+    2.83,
+    -0.05,
+    2.12,
+    -1.06,
+    1.16
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -2.765,
+    -0.945,
+    2.765,
+    1.16
+   ],
+   "roadway": true,
+   "mass_kg": 180.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [
+    {
+     "name": "counter0",
+     "kind": "shelf",
+     "y": 0.8,
+     "rect": [
+      -2.62,
+      0.76,
+      -1.02,
+      1.14
+     ],
+     "range": 0.25,
+     "points": [
+      [
+       -1.82,
+       0.8,
+       0.96
+      ]
+     ]
+    },
+    {
+     "name": "counter1",
+     "kind": "shelf",
+     "y": 0.8,
+     "rect": [
+      -0.8,
+      0.76,
+      0.8,
+      1.14
+     ],
+     "range": 0.25,
+     "points": [
+      [
+       0.0,
+       0.8,
+       0.96
+      ]
+     ]
+    },
+    {
+     "name": "counter2",
+     "kind": "shelf",
+     "y": 0.8,
+     "rect": [
+      1.02,
+      0.76,
+      2.62,
+      1.14
+     ],
+     "range": 0.25,
+     "points": [
+      [
+       1.82,
+       0.8,
+       0.96
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "row_L",
+     "expected": 5.46,
+     "measured": 5.46,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_stall_ab_collapsed.p3d",
+   "class": "StaticObj_JP_S_Stall_Ab_Collapsed",
+   "variant": "reed",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Reed stall collapsed, mat fallen in",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 99,
+    "Resolution 2": 72,
+    "Resolution 3": 33,
+    "Geometry": 30,
+    "Roadway": 1,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -1.54,
+    1.325,
+    -0.05,
+    2.1,
+    -4.459,
+    1.471
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.945,
+    -0.945,
+    0.945,
+    1.16
+   ],
+   "roadway": true,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [
+    {
+     "name": "counter",
+     "kind": "shelf",
+     "y": 0.8,
+     "rect": [
+      -0.8,
+      0.76,
+      0.8,
+      1.14
+     ],
+     "range": 0.25,
+     "points": [
+      [
+       -0.45,
+       0.8,
+       0.96
+      ],
+      [
+       0.45,
+       0.8,
+       0.96
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "plan",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "counter_h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_stall_ab_frame.p3d",
+   "class": "StaticObj_JP_S_Stall_Ab_Frame",
+   "variant": "reed",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Bare stall frame, screens gone",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 64,
+    "Resolution 2": 60,
+    "Resolution 3": 36,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -1.54,
+    1.325,
+    -0.05,
+    2.1,
+    -1.251,
+    1.471
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.945,
+    -0.945,
+    0.945,
+    0.945
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "plan",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "counter_h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

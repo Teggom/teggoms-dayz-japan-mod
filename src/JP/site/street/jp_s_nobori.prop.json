@@ -1,0 +1,356 @@
+{
+ "id": "jp_s_nobori",
+ "build_list": {
+  "name": "Banner pole (nobori): cloth banner on a bamboo pole with a crossbar, shop and shrine",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Left up after the autumn festival: shredded to strips, poles leaning in their sockets, some fallen across the approach.",
+  "placement_rule": "Pairs at shrine approaches and ward entrances; singly at shop fronts; rows along a sando only at the hero shrine.",
+  "lod_budget": "small prop <=300 faces LOD0; cloth two-sided",
+  "dimensions": {
+   "banner_m": {
+    "value": "0.45 x 3.0-4.5",
+    "assumed": true,
+    "reason": "shop banners about 1.5 shaku wide; assumed"
+   },
+   "pole_m": {
+    "value": "bamboo 5.0-7.0, crossbar 0.5 at the top",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "socket": {
+    "value": "pole in a stone socket pair (nobori-tate ishi) or lashed to a post",
+    "source": "OUTDOOR_LIST §2 W §5"
+   }
+  },
+  "refs": [
+   {
+    "id": "k39_nobori_hiko",
+    "shows": "row of shrine nobori (photo)",
+    "period_image": false
+   },
+   {
+    "id": "x36_hiroshige_ishibe",
+    "shows": "roadside context (c.1833)",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "street",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "festival leftovers (G1 A3 answer 7): weathered and messed up"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_nobori_shop.p3d",
+   "class": "StaticObj_JP_S_Nobori_Shop",
+   "variant": "shop",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shop banner (soba) on a bamboo pole",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 55,
+    "Resolution 2": 34,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.09,
+    0.55,
+    -0.15,
+    6.0,
+    -0.21,
+    0.21
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.09,
+    -0.21,
+    0.09,
+    0.21
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_osobakiri"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 6.0,
+     "measured": 6.0,
+     "tol": 1.0,
+     "source": "build_list"
+    },
+    {
+     "name": "banner",
+     "expected": 3.4,
+     "measured": 3.4,
+     "tol": 1.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "text": "banner text stretched up the cloth (B1's note on nobori_hono_inari)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_nobori_shrine.p3d",
+   "class": "StaticObj_JP_S_Nobori_Shrine",
+   "variant": "shrine",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shrine dedication banners, a pair",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 109,
+    "Resolution 2": 68,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "bbox": [
+    -0.99,
+    1.45,
+    -0.15,
+    6.0,
+    -0.21,
+    0.21
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.99,
+    -0.21,
+    0.99,
+    0.21
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:nobori_hono_inari"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 6.0,
+     "measured": 6.0,
+     "tol": 1.0,
+     "source": "build_list"
+    },
+    {
+     "name": "banner",
+     "expected": 3.4,
+     "measured": 3.4,
+     "tol": 1.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "text": "banner text stretched up the cloth (B1's note on nobori_hono_inari)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_nobori_socket_stones.p3d",
+   "class": "StaticObj_JP_S_Nobori_Socket_Stones",
+   "variant": "socket",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Banner socket stones, banner taken down",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 16,
+    "Resolution 2": 12,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.09,
+    0.09,
+    -0.15,
+    0.503,
+    -0.21,
+    0.21
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.09,
+    -0.21,
+    0.09,
+    0.21
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 6.0,
+     "measured": 6.0,
+     "tol": 1.0,
+     "source": "build_list"
+    },
+    {
+     "name": "banner",
+     "expected": 3.4,
+     "measured": 3.4,
+     "tol": 1.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "text": "banner text stretched up the cloth (B1's note on nobori_hono_inari)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_nobori_ab_tattered.p3d",
+   "class": "StaticObj_JP_S_Nobori_Ab_Tattered",
+   "variant": "shrine_single",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Banner shredded to a strip, pole leaning",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 55,
+    "Resolution 2": 34,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.096,
+    1.162,
+    -0.15,
+    5.961,
+    -0.21,
+    0.21
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.09,
+    -0.21,
+    0.717,
+    0.21
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:nobori_hono_inari"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 6.0,
+     "measured": 6.0,
+     "tol": 1.0,
+     "source": "build_list"
+    },
+    {
+     "name": "banner",
+     "expected": 3.4,
+     "measured": 3.4,
+     "tol": 1.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "text": "banner text stretched up the cloth (B1's note on nobori_hono_inari)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_nobori_ab_down.p3d",
+   "class": "StaticObj_JP_S_Nobori_Ab_Down",
+   "variant": "shrine_single",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Banner pole fallen across the approach",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 50,
+    "Resolution 2": 22,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.381,
+    1.003,
+    -0.15,
+    0.503,
+    -0.21,
+    6.102
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.09,
+    -0.21,
+    0.635,
+    6.104
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 6.0,
+     "measured": 6.0,
+     "tol": 1.0,
+     "source": "build_list"
+    },
+    {
+     "name": "banner",
+     "expected": 3.4,
+     "measured": 3.4,
+     "tol": 1.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "text": "banner text stretched up the cloth (B1's note on nobori_hono_inari)"
+  }
+ ]
+}

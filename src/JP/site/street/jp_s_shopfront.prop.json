@@ -1,0 +1,817 @@
+{
+ "id": "jp_s_shopfront",
+ "build_list": {
+  "name": "Shop-front kit: noren, mizuhiki-noren, sudare, hanging and standing signboards, shape signs",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "abandoned_state": "Cloth goes first: noren faded from indigo to grey-blue and shredded, some fallen with their poles; sudare slumped and holed; signboards hanging askew from one cord, text bleached.",
+  "placement_rule": "Noren only on open shop and eating-house doors (not on houses or kura); one sign type per shop; shape signs only on the matching trade (KEEP_TRADES dressing sets).",
+  "lod_budget": "small prop <=300 faces LOD0 per piece; noren as 3 slightly bent quads per panel, two-sided",
+  "dimensions": {
+   "noren_m": {
+    "value": "3 panels x 0.34 = 1.02 wide per door; long 1.60, standard 1.13, half 0.56",
+    "source": "O19 (modern trade sizes on the old kujira shaku; panel width 1 haba)"
+   },
+   "mizuhiki_m": {
+    "value": "0.30-0.40 deep, full front width, unsplit",
+    "source": "O19"
+   },
+   "sudare_m": {
+    "value": "0.91 or 1.82 wide x 0.9-1.8 long, rolled d 0.10-0.12 when up",
+    "assumed": true,
+    "reason": "on the half-ken grid; assumed"
+   },
+   "kake_kanban_m": {
+    "value": "0.9-1.5 long x 0.25-0.35 x 0.04, hung under the eave",
+    "assumed": true,
+    "reason": "assumed from prints"
+   },
+   "oki_kanban_m": {
+    "value": "0.45 x 1.2 high on feet",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "shape_signs": {
+    "value": "6: giant brush 1.2, geta 0.6, tabi 0.7, medicine gourd 0.6, umbrella 1.0, fan 0.8",
+    "assumed": true,
+    "reason": "OUTDOOR_LIST §7.13 picks; sizes assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "k06_moronobu_ageyamachi",
+    "shows": "mizuhiki/split noren with crests along the eave, c.1680",
+    "period_image": true
+   },
+   {
+    "id": "k05_moronobu_street_1680",
+    "shows": "short noren at a doorway, c.1680",
+    "period_image": true
+   },
+   {
+    "id": "k09_masanobu_ishiyama_1740",
+    "shows": "rolled sudare tied up under the eaves, 1740",
+    "period_image": true
+   },
+   {
+    "id": "x33_jinrin_bookseller_1690",
+    "shows": "shop front and signboard, 1690",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "street",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "PROXIES for the furnished shop variant p3d (PLAYBOOK 10.4, G1 A3 answer 8); wall plane z = 0, y = 0 at the wall foot; noren on open shop / eating-house doors only; shape signs only on the matching trade",
+  "the six shape signs are six models (one per trade) rather than one _shape_x6 model"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_noren_long.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Noren_Long",
+   "variant": "noren_long",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Long noren, 3 panels, shop mark",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 39,
+    "Resolution 2": 15
+   },
+   "bbox": [
+    -0.62,
+    0.62,
+    0.38,
+    2.02,
+    0.0,
+    0.112
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "noren_L",
+     "expected": 1.6,
+     "measured": 1.6,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "noren_W",
+     "expected": 1.02,
+     "measured": 1.02,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.0,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_noren_half.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Noren_Half",
+   "variant": "noren_half",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Half noren (eating house)",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 39,
+    "Resolution 2": 15
+   },
+   "bbox": [
+    -0.62,
+    0.62,
+    1.42,
+    2.02,
+    0.0,
+    0.112
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "noren_L",
+     "expected": 0.56,
+     "measured": 0.56,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "noren_W",
+     "expected": 1.02,
+     "measured": 1.02,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.0,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_mizuhiki.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Mizuhiki",
+   "variant": "mizuhiki",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Eave curtain (mizuhiki-noren), 1 ken",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 21,
+    "Resolution 2": 15
+   },
+   "bbox": [
+    -0.96,
+    0.96,
+    2.0,
+    2.379,
+    0.105,
+    0.132
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "mizuhiki_d",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.35,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_sudare_up.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Sudare_Up",
+   "variant": "sudare_up",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Reed blind rolled up",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 50,
+    "Resolution 2": 14
+   },
+   "bbox": [
+    -0.485,
+    0.485,
+    2.288,
+    2.608,
+    0.017,
+    0.143
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "rolled_d",
+     "expected": 0.11,
+     "measured": 0.11,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.6,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_sudare_down.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Sudare_Down",
+   "variant": "sudare_down",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Reed blind down, slumped and holed",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 24,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.485,
+    0.485,
+    1.383,
+    2.608,
+    0.022,
+    0.119
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "sudare_L",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.6,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_kanban_hang.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Kanban_Hang",
+   "variant": "kanban_hang",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Hanging signboard (confectioner)",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.15,
+    0.15,
+    1.3,
+    2.81,
+    0.0,
+    0.4
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_okashidokoro"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "board",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.75,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_kanban_stand.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Kanban_Stand",
+   "variant": "kanban_stand",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Standing signboard (soba)",
+   "anchor": "wall",
+   "wall_gap": 0.25,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 26,
+    "Resolution 2": 24,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.25,
+    0.25,
+    0.0,
+    1.25,
+    0.25,
+    0.65
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.25,
+    0.25,
+    0.25,
+    0.65
+   ],
+   "roadway": false,
+   "mass_kg": 20.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_osobakiri"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stand_h",
+     "expected": 1.25,
+     "measured": 1.25,
+     "tol": 0.06,
+     "source": "build_list"
+    },
+    {
+     "name": "stand_w",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_shape_brush.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Brush",
+   "variant": "shape",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shape sign: giant brush",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 50,
+    "Resolution 2": 44
+   },
+   "bbox": [
+    -0.083,
+    0.083,
+    1.2,
+    2.575,
+    0.0,
+    0.563
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shape_size",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.25,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "trade": "brush / writing shop",
+   "hang_y": 2.55,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_shape_geta.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Geta",
+   "variant": "shape",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shape sign: geta",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 42,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.11,
+    0.11,
+    1.8,
+    2.575,
+    0.0,
+    0.6
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shape_size",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.25,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "trade": "geta (clog) maker",
+   "hang_y": 2.55,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_shape_tabi.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Tabi",
+   "variant": "shape",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shape sign: tabi",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 22,
+    "Resolution 2": 16
+   },
+   "bbox": [
+    -0.14,
+    0.14,
+    1.7,
+    2.575,
+    0.0,
+    0.55
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shape_size",
+     "expected": 0.7,
+     "measured": 0.7,
+     "tol": 0.25,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "trade": "tabi (sock) maker",
+   "hang_y": 2.55,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_shape_gourd.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Gourd",
+   "variant": "shape",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shape sign: medicine gourd",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 68,
+    "Resolution 2": 62
+   },
+   "bbox": [
+    -0.166,
+    0.166,
+    1.8,
+    2.575,
+    0.0,
+    0.646
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shape_size",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.25,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "trade": "medicine seller",
+   "hang_y": 2.55,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_shape_umbrella.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Umbrella",
+   "variant": "shape",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shape sign: umbrella",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 50,
+    "Resolution 2": 38
+   },
+   "bbox": [
+    -0.083,
+    0.083,
+    1.4,
+    2.575,
+    0.0,
+    0.563
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shape_size",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "trade": "umbrella maker",
+   "hang_y": 2.55,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_shape_fan.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Fan",
+   "variant": "shape",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shape sign: fan",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 35,
+    "Resolution 2": 23
+   },
+   "bbox": [
+    -0.395,
+    0.395,
+    1.93,
+    2.575,
+    0.0,
+    0.55
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shape_size",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.25,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "trade": "fan maker",
+   "hang_y": 2.55,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_ab_noren_torn.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Ab_Noren_Torn",
+   "variant": "noren",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Noren faded to grey-blue, a panel torn off",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 41,
+    "Resolution 2": 15
+   },
+   "bbox": [
+    -0.62,
+    0.62,
+    0.012,
+    2.02,
+    0.0,
+    0.55
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "noren_L",
+     "expected": 1.13,
+     "measured": 1.13,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "noren_W",
+     "expected": 1.02,
+     "measured": 1.02,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.0,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Ab_Fallen",
+   "variant": "noren",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Noren pole dropped, noren heaped on the threshold",
+   "anchor": "wall",
+   "wall_gap": 0.1,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 36,
+    "Resolution 2": 15
+   },
+   "bbox": [
+    -0.709,
+    0.676,
+    0.0,
+    0.152,
+    0.105,
+    0.984
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "noren_W",
+     "expected": 1.02,
+     "measured": 1.02,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_shopfront_ab_kanban_askew.p3d",
+   "class": "StaticObj_JP_S_Shopfront_Ab_Kanban_Askew",
+   "variant": "kanban_hang",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Hanging signboard hanging from one cord",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.628,
+    0.126,
+    1.232,
+    2.81,
+    0.0,
+    0.4
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_okashidokoro"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "board",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.75,
+   "proxy": "shop-front proxy: wall plane z = 0, y = 0 at the wall foot, lintel 2.00 (move y to the real lintel)"
+  }
+ ]
+}

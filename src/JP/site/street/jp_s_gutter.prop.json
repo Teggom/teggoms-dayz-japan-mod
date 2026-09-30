@@ -1,0 +1,540 @@
+{
+ "id": "jp_s_gutter",
+ "build_list": {
+  "name": "Street gutter kit (omote-dobu): stone-lined segment, slab crossing, dobu-ita cover, outfall",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "abandoned_state": "Silted to half depth with leaves and mud; weeds along the joints; a few dobu-ita boards gone or snapped so the drain gapes.",
+  "placement_rule": "Continuous along every town street front, 0.3 m outside the house line, a slab at each door; down the centre of back alleys with boards; highway ditches are terrain only.",
+  "lod_budget": "small prop <=300 faces LOD0 per piece; Geometry only on slabs and boards (the channel stays walkable), Roadway on slabs and boards",
+  "dimensions": {
+   "segment_length_m": {
+    "value": "1.82 (1 ken) and 0.91 pieces",
+    "assumed": true,
+    "reason": "snaps to the house grid (PLAYBOOK rule 9) so every front gets whole pieces"
+   },
+   "channel_m": {
+    "value": "omote-dobu inside 0.30 wide x 0.25-0.30 deep; alley dobu 0.20 x 0.20",
+    "assumed": true,
+    "reason": "O24 gives 3-6 shaku for the big lot-boundary drains; the street-front gutter is narrower (step-over width); assumed"
+   },
+   "lining_m": {
+    "value": "dressed stones 0.15-0.20 thick, top flush with grade",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "slab_crossing_m": {
+    "value": "granite slab 0.60-0.90 x 0.45 x 0.12 bridging the gutter at each door",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "dobu_ita_m": {
+    "value": "boards 0.91 long x 0.24-0.30 wide x 0.03, laid across",
+    "assumed": true,
+    "reason": "assumed; boards rattle (noise hook)"
+   }
+  },
+  "refs": [
+   {
+    "id": "x38_morse_gutter",
+    "shows": "bamboo eave gutter and downpipe feeding a street drain (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "x27_morse_village_yamashiro",
+    "shows": "Kansai village street with a stone-edged drain (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "c01_narai_street",
+    "shows": "post-town street edge with a gutter (surviving street)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "street",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "pieces snap to the half-ken grid along a house front, 0.3 m out; they sit in a terrain ditch (tops flush with grade): the ditch is cut by the terrain / placement agent",
+  "Geometry + Roadway only on the slab and the dobu-ita boards: the channel stays walkable"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_stone_1ken.p3d",
+   "class": "StaticObj_JP_S_Gutter_Stone_1ken",
+   "variant": "stone_1ken",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Street gutter, stone-lined, 1 ken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 49,
+    "Resolution 2": 13,
+    "Resolution 3": 12
+   },
+   "bbox": [
+    -0.91,
+    0.91,
+    -0.34,
+    0.0,
+    -0.33,
+    0.33
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "channel_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "channel_d",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "segment",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "terrain": "sits in a terrain ditch (tops flush with grade); the ditch is the terrain / placement agent's cut"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_stone_half.p3d",
+   "class": "StaticObj_JP_S_Gutter_Stone_Half",
+   "variant": "stone_half",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Street gutter, stone-lined, half ken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 13,
+    "Resolution 3": 12
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    -0.34,
+    0.0,
+    -0.33,
+    0.33
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "channel_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "channel_d",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "segment",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "terrain": "sits in a terrain ditch (tops flush with grade); the ditch is the terrain / placement agent's cut"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_corner.p3d",
+   "class": "StaticObj_JP_S_Gutter_Corner",
+   "variant": "corner",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Street gutter, 90-degree corner",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 38,
+    "Resolution 2": 14,
+    "Resolution 3": 12
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    -0.34,
+    0.0,
+    -0.451,
+    0.455
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "channel_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "channel_d",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "segment",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "terrain": "sits in a terrain ditch (tops flush with grade); the ditch is the terrain / placement agent's cut"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "class": "StaticObj_JP_S_Gutter_Slab",
+   "variant": "slab",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Street gutter with a slab crossing (door)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 31,
+    "Resolution 2": 19,
+    "Resolution 3": 18,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    -0.34,
+    0.1,
+    -0.33,
+    0.33
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.4,
+    -0.33,
+    0.4,
+    0.33
+   ],
+   "roadway": true,
+   "mass_kg": 150.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "slab",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "channel_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "channel_d",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "segment",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "terrain": "sits in a terrain ditch (tops flush with grade); the ditch is the terrain / placement agent's cut"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "class": "StaticObj_JP_S_Gutter_Board_1ken",
+   "variant": "board_1ken",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Alley drain with dobu-ita covers, 1 ken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 24,
+    "Resolution 3": 18,
+    "Geometry": 12,
+    "Roadway": 1,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.91,
+    0.91,
+    -0.23,
+    0.03,
+    -0.149,
+    0.149
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.905,
+    -0.14,
+    0.905,
+    0.14
+   ],
+   "roadway": true,
+   "mass_kg": 150.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "alley_dobu_w",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "dobu_ita",
+     "expected": 0.91,
+     "measured": 0.9,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "segment",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "terrain": "sits in a terrain ditch (tops flush with grade); the ditch is the terrain / placement agent's cut"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_outfall.p3d",
+   "class": "StaticObj_JP_S_Gutter_Outfall",
+   "variant": "outfall",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Gutter outfall into a canal or ditch",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 41,
+    "Resolution 2": 25,
+    "Resolution 3": 18
+   },
+   "bbox": [
+    -0.455,
+    1.205,
+    -0.98,
+    0.0,
+    -0.45,
+    0.45
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "drop",
+     "expected": 0.5,
+     "measured": 0.46,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "channel_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "channel_d",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "segment",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "terrain": "sits in a terrain ditch (tops flush with grade); the ditch is the terrain / placement agent's cut"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_earth_1ken.p3d",
+   "class": "StaticObj_JP_S_Gutter_Earth_1ken",
+   "variant": "earth_1ken",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rural earth-banked gutter, field-stone edge",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 231,
+    "Resolution 2": 15,
+    "Resolution 3": 12
+   },
+   "bbox": [
+    -0.918,
+    0.943,
+    -0.2,
+    0.05,
+    -0.38,
+    0.38
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "segment",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "terrain": "sits in a terrain ditch (tops flush with grade); the ditch is the terrain / placement agent's cut"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_ab_silted.p3d",
+   "class": "StaticObj_JP_S_Gutter_Ab_Silted",
+   "variant": "stone_1ken",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Street gutter silted with leaves, a stone tipped in",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 53,
+    "Resolution 2": 13,
+    "Resolution 3": 12
+   },
+   "bbox": [
+    -0.962,
+    0.91,
+    -0.367,
+    0.006,
+    -0.375,
+    0.441
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "channel_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "channel_d",
+     "expected": 0.28,
+     "measured": 0.28,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "segment",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "terrain": "sits in a terrain ditch (tops flush with grade); the ditch is the terrain / placement agent's cut"
+  }
+ ]
+}

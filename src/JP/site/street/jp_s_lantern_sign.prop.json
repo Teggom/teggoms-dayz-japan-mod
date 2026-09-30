@@ -1,0 +1,477 @@
+{
+ "id": "jp_s_lantern_sign",
+ "build_list": {
+  "name": "Shop lanterns and sign lamps: hanging chochin, box lamp (kake-, oki-, tsuji-andon)",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "abandoned_state": "Paper rots in a year: lanterns hang as split, holed husks with the bamboo ribs showing; some on the ground; box lamps with the paper panels gone, frames intact. No light anywhere.",
+  "placement_rule": "One chochin or kake-andon per shop or inn front at the entrance; oki-andon only at eating houses and inns; tsuji-andon at crossings and ward gates.",
+  "lod_budget": "small prop <=300 faces LOD0 (chochin as a 12-sided lathe; ribs in texture)",
+  "dimensions": {
+   "chochin_m": {
+    "value": "oblong d 0.30 x 0.55 (shop), d 0.45 x 0.80 (inn, gate), top and bottom rings of wood",
+    "assumed": true,
+    "reason": "read off x31 against figures; assumed"
+   },
+   "kake_andon_m": {
+    "value": "box 0.30 x 0.15 x 0.45, bracket from the wall at 1.9-2.2",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "oki_andon_m": {
+    "value": "0.35 x 0.35 x 0.9-1.0 on legs",
+    "source": "O25 (Enshu andon about 0.81 high; street sign lamps a little taller, assumed)"
+   },
+   "tsuji_andon_m": {
+    "value": "box 0.40 x 0.40 x 0.60 on a 2.0 m post with a small roof",
+    "assumed": true,
+    "reason": "assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "x31_masanobu_ryogoku_1748",
+    "shows": "hanging chochin with crests and a standing andon, c.1748",
+    "period_image": true
+   },
+   {
+    "id": "x30_shinagawa_1726",
+    "shows": "standing paper andon on a Shinagawa tea-house floor, 1726",
+    "period_image": true
+   },
+   {
+    "id": "c18_hiroshige_mariko",
+    "shows": "tea-house sign lamp context (c.1833)",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "street",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "never emissive (dead world, no light anywhere)",
+  "hung pieces are proxies / wall-backed: wall plane z = 0"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_lantern_sign_chochin_shop.p3d",
+   "class": "StaticObj_JP_S_Lantern_Sign_Chochin_Shop",
+   "variant": "chochin_shop",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shop lantern (sake)",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.145,
+    0.145,
+    1.5,
+    2.23,
+    -0.01,
+    0.55
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_miki"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "chochin_d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "chochin_h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.2,
+   "paper": "never emissive; _w1 = yellowed and water-stained (the list's '_ab_torn default' is _ab_torn)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_lantern_sign_chochin_inn.p3d",
+   "class": "StaticObj_JP_S_Lantern_Sign_Chochin_Inn",
+   "variant": "chochin_inn",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Inn lantern",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.217,
+    0.217,
+    1.25,
+    2.23,
+    -0.01,
+    0.625
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_oyado"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "chochin_d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "chochin_h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.2,
+   "paper": "never emissive; _w1 = yellowed and water-stained (the list's '_ab_torn default' is _ab_torn)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_lantern_sign_chochin_gate.p3d",
+   "class": "StaticObj_JP_S_Lantern_Sign_Chochin_Gate",
+   "variant": "chochin_gate",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Ward-gate lantern (Honcho)",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.217,
+    0.217,
+    1.25,
+    2.23,
+    -0.01,
+    0.625
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:chochin_honcho"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "chochin_d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "chochin_h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.2,
+   "paper": "never emissive; _w1 = yellowed and water-stained (the list's '_ab_torn default' is _ab_torn)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_lantern_sign_kake.p3d",
+   "class": "StaticObj_JP_S_Lantern_Sign_Kake",
+   "variant": "kake",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Hanging box sign lamp (kake-andon)",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 57,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.15,
+    0.15,
+    1.54,
+    2.08,
+    -0.012,
+    0.325
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_oyasumidokoro"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "kake_box_h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.05
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_lantern_sign_oki.p3d",
+   "class": "StaticObj_JP_S_Lantern_Sign_Oki",
+   "variant": "oki",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Standing sign lamp (oki-andon)",
+   "anchor": "wall",
+   "wall_gap": 0.22,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 69,
+    "Resolution 2": 30,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.175,
+    0.175,
+    0.0,
+    0.95,
+    0.225,
+    0.575
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.18,
+    0.22,
+    0.18,
+    0.58
+   ],
+   "roadway": false,
+   "mass_kg": 8.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_oyado"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "oki_h",
+     "expected": 0.95,
+     "measured": 0.95,
+     "tol": 0.06,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_lantern_sign_tsuji.p3d",
+   "class": "StaticObj_JP_S_Lantern_Sign_Tsuji",
+   "variant": "tsuji",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Crossroads lamp on a post (tsuji-andon)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 91,
+    "Resolution 2": 30,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.33,
+    0.33,
+    -0.3,
+    2.92,
+    -0.31,
+    0.31
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.2,
+    -0.2,
+    0.2,
+    0.2
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:chochin_honcho"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "tsuji_box",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_lantern_sign_ab_torn.p3d",
+   "class": "StaticObj_JP_S_Lantern_Sign_Ab_Torn",
+   "variant": "chochin_shop",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Shop lantern, paper split and holed",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.145,
+    0.145,
+    1.5,
+    2.23,
+    -0.01,
+    0.55
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_miki"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "chochin_d",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "chochin_h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.2,
+   "paper": "never emissive; _w1 = yellowed and water-stained (the list's '_ab_torn default' is _ab_torn)"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_lantern_sign_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Lantern_Sign_Ab_Fallen",
+   "variant": "oki",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Standing lamp tipped, a lantern crushed on the ground",
+   "anchor": "wall",
+   "wall_gap": 0.1,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 186,
+    "Resolution 2": 42,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.548,
+    0.844,
+    0.0,
+    0.385,
+    0.114,
+    1.313
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.18,
+    0.114,
+    0.18,
+    1.076
+   ],
+   "roadway": false,
+   "mass_kg": 8.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:kanban_miki",
+    "decal_sumi_text:kanban_oyado"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "oki_h",
+     "expected": 0.95,
+     "measured": 0.95,
+     "tol": 0.06,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

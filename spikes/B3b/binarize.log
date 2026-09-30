@@ -19,6 +19,18 @@ Convert model P:\JP\site\roadside\jp_s_jizo_hut_hall.p3d -> D:\DayZ-Server_AI-20
 Convert model P:\JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_jizo_hut_stone_roof.p3d
 <model = "P:\JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d">
 </model>
+Convert model P:\JP\site\roadside\jp_s_kosatsu_ab_boards_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_kosatsu_ab_boards_down.p3d
+<model = "P:\JP\site\roadside\jp_s_kosatsu_ab_boards_down.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_kosatsu_forest.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_kosatsu_forest.p3d
+<model = "P:\JP\site\roadside\jp_s_kosatsu_forest.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_kosatsu_large.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_kosatsu_large.p3d
+<model = "P:\JP\site\roadside\jp_s_kosatsu_large.p3d">
+</model>
+Convert model P:\JP\site\roadside\jp_s_kosatsu_std.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_kosatsu_std.p3d
+<model = "P:\JP\site\roadside\jp_s_kosatsu_std.p3d">
+</model>
 Convert model P:\JP\site\roadside\jp_s_stele_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_ab_tipped.p3d
 <model = "P:\JP\site\roadside\jp_s_stele_ab_tipped.p3d">
 </model>
@@ -95,6 +107,10 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_jizo_hut_ab_open.p3d:
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_jizo_hut_box.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_jizo_hut_hall.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_jizo_hut_stone_roof.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_ab_boards_down.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_forest.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_large.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_std.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_ab_tipped.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_arched.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_group3.p3d: 0.00,0.00
@@ -135,6 +151,136 @@ Convert model P:\JP\site\street\jp_s_bench_long.p3d -> D:\DayZ-Server_AI-2026090
 Convert model P:\JP\site\street\jp_s_bench_mat.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_bench_mat.p3d
 <model = "P:\JP\site\street\jp_s_bench_mat.p3d">
 </model>
+Convert model P:\JP\site\street\jp_s_gutter_ab_silted.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_gutter_ab_silted.p3d
+<model = "P:\JP\site\street\jp_s_gutter_ab_silted.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_gutter_board_1ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_gutter_board_1ken.p3d
+<model = "P:\JP\site\street\jp_s_gutter_board_1ken.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_gutter_corner.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_gutter_corner.p3d
+<model = "P:\JP\site\street\jp_s_gutter_corner.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_gutter_earth_1ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_gutter_earth_1ken.p3d
+<model = "P:\JP\site\street\jp_s_gutter_earth_1ken.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_gutter_outfall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_gutter_outfall.p3d
+<model = "P:\JP\site\street\jp_s_gutter_outfall.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_gutter_slab.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_gutter_slab.p3d
+<model = "P:\JP\site\street\jp_s_gutter_slab.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_gutter_stone_1ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_gutter_stone_1ken.p3d
+<model = "P:\JP\site\street\jp_s_gutter_stone_1ken.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_gutter_stone_half.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_gutter_stone_half.p3d
+<model = "P:\JP\site\street\jp_s_gutter_stone_half.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_lantern_sign_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_lantern_sign_ab_fallen.p3d
+<model = "P:\JP\site\street\jp_s_lantern_sign_ab_fallen.p3d">
+TexMaterial loading race detected for jp\common\materials\paper\jp_m_paper_chochin_w2.rvmat
+</model>
+Convert model P:\JP\site\street\jp_s_lantern_sign_ab_torn.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_lantern_sign_ab_torn.p3d
+<model = "P:\JP\site\street\jp_s_lantern_sign_ab_torn.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_lantern_sign_chochin_gate.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_lantern_sign_chochin_gate.p3d
+<model = "P:\JP\site\street\jp_s_lantern_sign_chochin_gate.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_lantern_sign_chochin_inn.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_lantern_sign_chochin_inn.p3d
+<model = "P:\JP\site\street\jp_s_lantern_sign_chochin_inn.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_lantern_sign_chochin_shop.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_lantern_sign_chochin_shop.p3d
+<model = "P:\JP\site\street\jp_s_lantern_sign_chochin_shop.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_lantern_sign_kake.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_lantern_sign_kake.p3d
+<model = "P:\JP\site\street\jp_s_lantern_sign_kake.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_lantern_sign_oki.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_lantern_sign_oki.p3d
+<model = "P:\JP\site\street\jp_s_lantern_sign_oki.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_lantern_sign_tsuji.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_lantern_sign_tsuji.p3d
+<model = "P:\JP\site\street\jp_s_lantern_sign_tsuji.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_nobori_ab_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_nobori_ab_down.p3d
+<model = "P:\JP\site\street\jp_s_nobori_ab_down.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_nobori_ab_tattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_nobori_ab_tattered.p3d
+<model = "P:\JP\site\street\jp_s_nobori_ab_tattered.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_nobori_shop.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_nobori_shop.p3d
+<model = "P:\JP\site\street\jp_s_nobori_shop.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_nobori_shrine.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_nobori_shrine.p3d
+<model = "P:\JP\site\street\jp_s_nobori_shrine.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_nobori_socket_stones.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_nobori_socket_stones.p3d
+<model = "P:\JP\site\street\jp_s_nobori_socket_stones.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_ab_fallen.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_ab_kanban_askew.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_ab_kanban_askew.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_ab_kanban_askew.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_ab_noren_torn.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_ab_noren_torn.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_ab_noren_torn.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_kanban_hang.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_kanban_hang.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_kanban_hang.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_kanban_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_kanban_stand.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_kanban_stand.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_mizuhiki.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_mizuhiki.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_mizuhiki.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_noren_half.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_noren_half.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_noren_half.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_noren_long.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_noren_long.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_noren_long.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_shape_brush.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_shape_brush.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_shape_brush.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_shape_fan.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_shape_fan.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_shape_fan.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_shape_geta.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_shape_geta.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_shape_geta.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_shape_gourd.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_shape_gourd.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_shape_gourd.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_shape_tabi.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_shape_tabi.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_shape_tabi.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_shape_umbrella.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_shape_umbrella.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_shape_umbrella.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_sudare_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_sudare_down.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_sudare_down.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_shopfront_sudare_up.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_shopfront_sudare_up.p3d
+<model = "P:\JP\site\street\jp_s_shopfront_sudare_up.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_stall_ab_collapsed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_stall_ab_collapsed.p3d
+<model = "P:\JP\site\street\jp_s_stall_ab_collapsed.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_stall_ab_frame.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_stall_ab_frame.p3d
+<model = "P:\JP\site\street\jp_s_stall_ab_frame.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_stall_booth.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_stall_booth.p3d
+<model = "P:\JP\site\street\jp_s_stall_booth.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_stall_reed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_stall_reed.p3d
+<model = "P:\JP\site\street\jp_s_stall_reed.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_stall_row3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_stall_row3.p3d
+<model = "P:\JP\site\street\jp_s_stall_row3.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_stall_yatai.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_stall_yatai.p3d
+<model = "P:\JP\site\street\jp_s_stall_yatai.p3d">
+</model>
 
 FileServer MaxCacheSize = 23987 MB
 No entry '.CfgAmmo'.
@@ -167,6 +313,49 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_ab_broken.p3d: 0.
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_ab_tipped.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_long.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_mat.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_gutter_ab_silted.p3d: -0.03,0.03
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_gutter_board_1ken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_gutter_corner.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_gutter_earth_1ken.p3d: 0.01,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_gutter_outfall.p3d: 0.38,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_gutter_slab.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_gutter_stone_1ken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_gutter_stone_half.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_lantern_sign_ab_fallen.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_lantern_sign_ab_torn.p3d: 0.00,0.27
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_lantern_sign_chochin_gate.p3d: 0.00,0.31
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_lantern_sign_chochin_inn.p3d: 0.00,0.31
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_lantern_sign_chochin_shop.p3d: 0.00,0.27
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_lantern_sign_kake.p3d: 0.00,0.16
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_lantern_sign_oki.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_lantern_sign_tsuji.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_nobori_ab_down.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_nobori_ab_tattered.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_nobori_shop.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_nobori_shrine.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_nobori_socket_stones.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_ab_fallen.p3d: -0.02,0.54
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_ab_kanban_askew.p3d: -0.25,0.20
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_ab_noren_torn.p3d: 0.00,0.28
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_kanban_hang.p3d: 0.00,0.20
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_kanban_stand.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_mizuhiki.p3d: 0.00,0.12
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_noren_half.p3d: 0.00,0.06
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_noren_long.p3d: 0.00,0.06
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_shape_brush.p3d: 0.00,0.28
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_shape_fan.p3d: 0.00,0.28
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_shape_geta.p3d: 0.00,0.30
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_shape_gourd.p3d: 0.00,0.32
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_shape_tabi.p3d: 0.00,0.28
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_shape_umbrella.p3d: 0.00,0.28
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_sudare_down.p3d: 0.00,0.07
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_shopfront_sudare_up.p3d: 0.00,0.08
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_stall_ab_collapsed.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_stall_ab_frame.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_stall_booth.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_stall_reed.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_stall_row3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_stall_yatai.p3d: 0.00,0.00
 
 C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\water D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water *.p3d
 
@@ -363,6 +552,7 @@ Convert model P:\JP\site\yard\jp_s_tenbin_boxes.p3d -> D:\DayZ-Server_AI-2026090
 </model>
 Convert model P:\JP\site\yard\jp_s_tenbin_buckets.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_tenbin_buckets.p3d
 <model = "P:\JP\site\yard\jp_s_tenbin_buckets.p3d">
+TexMaterial loading race detected for jp\common\materials\ground\jp_m_ground_leaf_litter_w1.rvmat
 </model>
 Convert model P:\JP\site\yard\jp_s_tenbin_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_tenbin_leaning.p3d
 <model = "P:\JP\site\yard\jp_s_tenbin_leaning.p3d">
