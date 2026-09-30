@@ -95,6 +95,14 @@ def _other(side):
     return "right" if side == "left" else "left"
 
 
+def budget_class(frontage=3, region="kamigata", position="end", **_):
+    """Face budget class (PLAYBOOK §12, buildings/registry.BUDGETS) for a unit. Stephen 2026-09-30: the Kamigata 4-ken
+    end and corner units may run over the townhouse budget (worst 10,468 faces), so they are 'large'."""
+    if region == "kamigata" and frontage == 4 and position in ("end", "corner"):
+        return "large"
+    return "townhouse"
+
+
 def build(frontage=3, region="kamigata", position="end", free="right", tori="left", covering=None, geya_ken=1,
           shopfront="_degoshi", hooks=None, name=None):
     """Build one unit. Returns (H, info): H in the kit frame (lot from info['lot'][0] to info['lot'][1] along x),

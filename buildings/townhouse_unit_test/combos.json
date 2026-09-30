@@ -1,12 +1,19 @@
 {
  "built": 60,
  "with_problems": 0,
- "budget": [
-  9000,
-  3450,
-  1200
- ],
- "over_budget": 8,
+ "budgets": {
+  "townhouse": [
+   9000,
+   3450,
+   1200
+  ],
+  "large": [
+   12000,
+   4600,
+   1600
+  ]
+ },
+ "over_budget": 0,
  "worst": {
   "params": {
    "frontage": 4,
@@ -20,7 +27,8 @@
    3687,
    1342
   ],
-  "in_budget": false,
+  "budget_class": "large",
+  "in_budget": true,
   "problems": []
  },
  "rows": [
@@ -37,6 +45,7 @@
     2311,
     922
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -53,6 +62,7 @@
     2321,
     993
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -69,6 +79,7 @@
     2167,
     874
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -85,6 +96,7 @@
     2157,
     803
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -100,6 +112,7 @@
     1864,
     664
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -115,6 +128,7 @@
     1864,
     664
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -131,6 +145,7 @@
     2407,
     940
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -147,6 +162,7 @@
     2549,
     1042
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -163,6 +179,7 @@
     2395,
     923
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -179,6 +196,7 @@
     2253,
     821
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -195,6 +213,7 @@
     1823,
     808
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -211,6 +230,7 @@
     1893,
     886
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -227,6 +247,7 @@
     1782,
     805
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -243,6 +264,7 @@
     1712,
     727
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -258,6 +280,7 @@
     1501,
     582
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -273,6 +296,7 @@
     1501,
     582
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -289,6 +313,7 @@
     1901,
     838
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -305,6 +330,7 @@
     2043,
     940
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -321,6 +347,7 @@
     1932,
     859
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -337,6 +364,7 @@
     1790,
     757
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -353,6 +381,7 @@
     2919,
     1072
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -369,6 +398,7 @@
     2929,
     1143
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -385,6 +415,7 @@
     2775,
     1024
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -401,6 +432,7 @@
     2765,
     953
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -416,6 +448,7 @@
     2472,
     814
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -431,6 +464,7 @@
     2472,
     814
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -447,6 +481,7 @@
     3015,
     1090
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -463,6 +498,7 @@
     3157,
     1192
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -479,6 +515,7 @@
     3003,
     1073
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -495,6 +532,7 @@
     2861,
     971
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -511,6 +549,7 @@
     2179,
     928
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -527,6 +566,7 @@
     2249,
     1006
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -543,6 +583,7 @@
     2138,
     925
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -559,6 +600,7 @@
     2068,
     847
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -574,6 +616,7 @@
     1857,
     702
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -589,6 +632,7 @@
     1857,
     702
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -605,6 +649,7 @@
     2257,
     958
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -621,6 +666,7 @@
     2399,
     1060
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -637,6 +683,7 @@
     2288,
     979
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -653,6 +700,7 @@
     2146,
     877
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -669,7 +717,8 @@
     3449,
     1222
    ],
-   "in_budget": false,
+   "budget_class": "large",
+   "in_budget": true,
    "problems": []
   },
   {
@@ -685,7 +734,8 @@
     3459,
     1293
    ],
-   "in_budget": false,
+   "budget_class": "large",
+   "in_budget": true,
    "problems": []
   },
   {
@@ -701,7 +751,8 @@
     3305,
     1174
    ],
-   "in_budget": false,
+   "budget_class": "large",
+   "in_budget": true,
    "problems": []
   },
   {
@@ -717,7 +768,8 @@
     3295,
     1103
    ],
-   "in_budget": false,
+   "budget_class": "large",
+   "in_budget": true,
    "problems": []
   },
   {
@@ -732,6 +784,7 @@
     3002,
     964
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -747,6 +800,7 @@
     3002,
     964
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -763,7 +817,8 @@
     3545,
     1240
    ],
-   "in_budget": false,
+   "budget_class": "large",
+   "in_budget": true,
    "problems": []
   },
   {
@@ -779,7 +834,8 @@
     3687,
     1342
    ],
-   "in_budget": false,
+   "budget_class": "large",
+   "in_budget": true,
    "problems": []
   },
   {
@@ -795,7 +851,8 @@
     3533,
     1223
    ],
-   "in_budget": false,
+   "budget_class": "large",
+   "in_budget": true,
    "problems": []
   },
   {
@@ -811,7 +868,8 @@
     3391,
     1121
    ],
-   "in_budget": false,
+   "budget_class": "large",
+   "in_budget": true,
    "problems": []
   },
   {
@@ -827,6 +885,7 @@
     2457,
     1048
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -843,6 +902,7 @@
     2527,
     1126
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -859,6 +919,7 @@
     2416,
     1045
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -875,6 +936,7 @@
     2346,
     967
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -890,6 +952,7 @@
     2135,
     822
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -905,6 +968,7 @@
     2135,
     822
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -921,6 +985,7 @@
     2535,
     1078
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -937,6 +1002,7 @@
     2677,
     1180
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -953,6 +1019,7 @@
     2566,
     1099
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   },
@@ -969,6 +1036,7 @@
     2424,
     997
    ],
+   "budget_class": "townhouse",
    "in_budget": true,
    "problems": []
   }

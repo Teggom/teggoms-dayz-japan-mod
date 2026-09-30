@@ -152,5 +152,10 @@
     1,342); raise the budget for 4-ken Kamigata, or trim them. _tile/_kura gables leave 0.12 m slits at the post lines
     (fixing it changes the machiya). Engawa and kura-eave corners not built. The half door is untested in the engine.
   - B3a (interior props) next, on Stephen's go; B3b after.
+- 2026-09-30: Stephen's calls on the B2 open items:
+  - Kamigata 4-ken end/corner units may be over: `townhouse.budget_class()` gives them 'large'; combos 60/60 clean.
+  - Gable slits FIXED in `walls.gable` (_tile/_kura infill now continuous). This changes the machiya: rebuilt, 78/78,
+    PBO repacked. **Check the machiya's gable ends (loft) at the G4 walk.**
+  - The half door gets tested in game later (next walk).
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.

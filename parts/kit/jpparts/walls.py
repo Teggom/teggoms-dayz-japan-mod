@@ -344,10 +344,13 @@ def gable(part, D, t, eave_y=EAVE_Y, variant="_thatch", z=0.0):
     exposed = variant in ("_thatch",)
     polys = []
     cols = [0.0] + xs + [D]
+    # only _thatch and _board draw gable posts (below); _tile and _kura hide theirs in the plaster, so their infill
+    # columns meet with no post gap (a 0.12 m see-through slit at every frame line before 2026-09-30)
+    gap = 0.06 if variant in ("_thatch", "_board") else 0.0
     for i in range(len(cols) - 1):
         a, b = cols[i], cols[i + 1]
-        a2 = a + (0.06 if i > 0 else 0.0)
-        b2 = b - (0.06 if i < len(cols) - 2 else 0.0)
+        a2 = a + (gap if i > 0 else 0.0)
+        b2 = b - (gap if i < len(cols) - 2 else 0.0)
         for (lo, hi) in ((eave_y, yc - 0.06), (yc + 0.06, 99.0)) if exposed else ((eave_y, 99.0),):
             poly = [(a2, lo), (b2, lo), (b2, min(hi, yr(b2))), (a2, min(hi, yr(a2)))]
             # clip by the roof line (linear inside a column that does not cross the ridge)
