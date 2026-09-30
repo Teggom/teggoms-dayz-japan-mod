@@ -686,3 +686,156 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_utensil_board.p3d: 0
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_utensil_board_fallen.p3d: 0.00,0.33
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_utensil_board_small.p3d: 0.00,0.06
 
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\work D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\work D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\furniture\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\furniture\work\jp_f_choba_set_desk.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_choba_set_desk.p3d
+<model = "P:\JP\furniture\work\jp_f_choba_set_desk.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_choba_set_scattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_choba_set_scattered.p3d
+<model = "P:\JP\furniture\work\jp_f_choba_set_scattered.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_choba_set_tenbin.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_choba_set_tenbin.p3d
+<model = "P:\JP\furniture\work\jp_f_choba_set_tenbin.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_choba_set_zenibako.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_choba_set_zenibako.p3d
+<model = "P:\JP\furniture\work\jp_f_choba_set_zenibako.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_choba_set_zenibako_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_choba_set_zenibako_open.p3d
+<model = "P:\JP\furniture\work\jp_f_choba_set_zenibako_open.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_itoguruma.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_itoguruma.p3d
+<model = "P:\JP\furniture\work\jp_f_itoguruma.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_itoguruma_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_itoguruma_broken.p3d
+<model = "P:\JP\furniture\work\jp_f_itoguruma_broken.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_itoguruma_thread.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_itoguruma_thread.p3d
+<model = "P:\JP\furniture\work\jp_f_itoguruma_thread.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_izaribata.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_izaribata.p3d
+<model = "P:\JP\furniture\work\jp_f_izaribata.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_izaribata_bare.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_izaribata_bare.p3d
+<model = "P:\JP\furniture\work\jp_f_izaribata_bare.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_izaribata_cut.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_izaribata_cut.p3d
+<model = "P:\JP\furniture\work\jp_f_izaribata_cut.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_masu_set.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_masu_set.p3d
+<model = "P:\JP\furniture\work\jp_f_masu_set.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_masu_spilled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_masu_spilled.p3d
+<model = "P:\JP\furniture\work\jp_f_masu_spilled.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_masu_to.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_masu_to.p3d
+<model = "P:\JP\furniture\work\jp_f_masu_to.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_mi.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_mi.p3d
+<model = "P:\JP\furniture\work\jp_f_mi.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_mi_furui.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_mi_furui.p3d
+<model = "P:\JP\furniture\work\jp_f_mi_furui.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_mi_spilled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_mi_spilled.p3d
+<model = "P:\JP\furniture\work\jp_f_mi_spilled.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_mi_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_mi_wall.p3d
+<model = "P:\JP\furniture\work\jp_f_mi_wall.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_straw_work_beating.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_straw_work_beating.p3d
+<model = "P:\JP\furniture\work\jp_f_straw_work_beating.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_straw_work_sandal.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_straw_work_sandal.p3d
+<model = "P:\JP\furniture\work\jp_f_straw_work_sandal.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_straw_work_scattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_straw_work_scattered.p3d
+<model = "P:\JP\furniture\work\jp_f_straw_work_scattered.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_usu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu.p3d
+<model = "P:\JP\furniture\work\jp_f_usu.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_usu_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu_fallen.p3d
+<model = "P:\JP\furniture\work\jp_f_usu_fallen.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_usu_ishiusu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu_ishiusu.p3d
+<model = "P:\JP\furniture\work\jp_f_usu_ishiusu.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_usu_ishiusu_off.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu_ishiusu_off.p3d
+<model = "P:\JP\furniture\work\jp_f_usu_ishiusu_off.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_usu_mallet.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu_mallet.p3d
+<model = "P:\JP\furniture\work\jp_f_usu_mallet.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_writing_box.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_writing_box.p3d
+<model = "P:\JP\furniture\work\jp_f_writing_box.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_writing_box_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_writing_box_open.p3d
+<model = "P:\JP\furniture\work\jp_f_writing_box_open.p3d">
+</model>
+Convert model P:\JP\furniture\work\jp_f_writing_box_spilled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_writing_box_spilled.p3d
+<model = "P:\JP\furniture\work\jp_f_writing_box_spilled.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_choba_set_desk.p3d: 0.04,0.04
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_choba_set_scattered.p3d: 0.02,0.27
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_choba_set_tenbin.p3d: -0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_choba_set_zenibako.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_choba_set_zenibako_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_itoguruma.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_itoguruma_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_itoguruma_thread.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_izaribata.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_izaribata_bare.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_izaribata_cut.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_masu_set.p3d: 0.14,0.05
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_masu_spilled.p3d: 0.00,0.16
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_masu_to.p3d: 0.00,-0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_mi.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_mi_furui.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_mi_spilled.p3d: -0.12,0.08
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_mi_wall.p3d: 0.00,0.14
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_straw_work_beating.p3d: 0.00,0.20
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_straw_work_sandal.p3d: 0.12,0.14
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_straw_work_scattered.p3d: 0.07,0.22
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_usu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_usu_fallen.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_usu_ishiusu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_usu_ishiusu_off.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_usu_mallet.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_writing_box.p3d: 0.16,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_writing_box_open.p3d: -0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_writing_box_spilled.p3d: 0.32,0.06
+

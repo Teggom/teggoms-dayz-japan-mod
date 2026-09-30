@@ -1,0 +1,192 @@
+{
+ "id": "jp_f_izaribata",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "work",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_izaribata.p3d",
+   "class": "StaticObj_JP_F_Izaribata",
+   "variant": "cloth",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Ground loom (izari-bata) with cloth on it",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 74,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.75,
+    0.75,
+    0.0,
+    0.95,
+    -0.34,
+    0.34
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.6,
+    -0.35,
+    0.73,
+    0.35
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 20.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hand loom (izari-bata) with cloth on the breast beam (BUILDING_LIST 1456-1457); the seat board end has no collision (sit-in space); T1-2"
+   ],
+   "master": "spikes/L1/out/work/jp_f_izaribata.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_izaribata_bare.p3d",
+   "class": "StaticObj_JP_F_Izaribata_Bare",
+   "variant": "bare",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Ground loom, warped, no cloth yet",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 86,
+    "Resolution 2": 74,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.75,
+    0.75,
+    0.0,
+    0.95,
+    -0.34,
+    0.34
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.6,
+    -0.35,
+    0.73,
+    0.35
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 20.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hand loom (izari-bata) with cloth on the breast beam (BUILDING_LIST 1456-1457); the seat board end has no collision (sit-in space); T1-2"
+   ],
+   "master": "spikes/L1/out/work/jp_f_izaribata_bare.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_izaribata_cut.p3d",
+   "class": "StaticObj_JP_F_Izaribata_Cut",
+   "variant": "cloth",
+   "state": "cut",
+   "abandoned": true,
+   "display": "Ground loom, the warp cut, cloth across the floor",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 91,
+    "Resolution 2": 68,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.375,
+    0.75,
+    0.0,
+    0.95,
+    -0.34,
+    0.34
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.6,
+    -0.35,
+    0.73,
+    0.35
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 20.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hand loom (izari-bata) with cloth on the breast beam (BUILDING_LIST 1456-1457); the seat board end has no collision (sit-in space); T1-2"
+   ],
+   "master": "spikes/L1/out/work/jp_f_izaribata_cut.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 38,
+ "refs_local": []
+}

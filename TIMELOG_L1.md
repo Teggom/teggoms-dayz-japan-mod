@@ -141,3 +141,33 @@
 2026-09-30 13:28:05 | #132 | jp_f_straw_bed_pile | new model (batch) | 5h 44% wk 25%
 2026-09-30 13:28:05 | #133 | jp_f_straw_bed_quilt | variant (batch) | 5h 44% wk 25%
 2026-09-30 13:28:05 | #134 | jp_f_straw_bed_scattered | abandoned (batch) | 5h 44% wk 25%
+2026-09-30 13:28:06 | GROUP START | E: items 37-44 (work at home) | - | 5h 44% wk 25%
+2026-09-30 13:32:04 | #135 | jp_f_itoguruma | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #136 | jp_f_itoguruma_thread | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #137 | jp_f_itoguruma_broken | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #138 | jp_f_izaribata | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #139 | jp_f_izaribata_bare | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #140 | jp_f_izaribata_cut | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #141 | jp_f_straw_work_sandal | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #142 | jp_f_straw_work_beating | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #143 | jp_f_straw_work_scattered | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #144 | jp_f_mi | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #145 | jp_f_mi_wall | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #146 | jp_f_mi_furui | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #147 | jp_f_mi_spilled | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #148 | jp_f_usu | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #149 | jp_f_usu_mallet | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #150 | jp_f_usu_ishiusu | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #151 | jp_f_usu_fallen | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #152 | jp_f_usu_ishiusu_off | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #153 | jp_f_writing_box | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #154 | jp_f_writing_box_open | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #155 | jp_f_writing_box_spilled | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:04 | #156 | jp_f_choba_set_desk | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:32:05 | #157 | jp_f_choba_set_zenibako | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:05 | #158 | jp_f_choba_set_tenbin | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:05 | #159 | jp_f_choba_set_scattered | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:05 | #160 | jp_f_choba_set_zenibako_open | abandoned (batch) | 5h 45% wk 25%
+2026-09-30 13:32:05 | #161 | jp_f_masu_set | new model (batch) | 5h 45% wk 25%
+2026-09-30 13:32:05 | #162 | jp_f_masu_to | variant (batch) | 5h 45% wk 25%
+2026-09-30 13:32:05 | #163 | jp_f_masu_spilled | abandoned (batch) | 5h 45% wk 25%

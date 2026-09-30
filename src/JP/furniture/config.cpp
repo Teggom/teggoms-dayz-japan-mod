@@ -1557,4 +1557,186 @@ class CfgVehicles
 		displayName="Straw bedding scattered and flattened";
 		model="\JP\furniture\living\jp_f_straw_bed_scattered.p3d";
 	};
+	// jp_f_itoguruma (work)
+	class StaticObj_JP_F_Itoguruma: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Spinning wheel (itoguruma)";
+		model="\JP\furniture\work\jp_f_itoguruma.p3d";
+	};
+	class StaticObj_JP_F_Itoguruma_Thread: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Spinning wheel with thread and a basket of cotton";
+		model="\JP\furniture\work\jp_f_itoguruma_thread.p3d";
+	};
+	class StaticObj_JP_F_Itoguruma_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Spinning wheel, the wheel knocked off and broken";
+		model="\JP\furniture\work\jp_f_itoguruma_broken.p3d";
+	};
+	// jp_f_izaribata (work)
+	class StaticObj_JP_F_Izaribata: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ground loom (izari-bata) with cloth on it";
+		model="\JP\furniture\work\jp_f_izaribata.p3d";
+	};
+	class StaticObj_JP_F_Izaribata_Bare: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ground loom, warped, no cloth yet";
+		model="\JP\furniture\work\jp_f_izaribata_bare.p3d";
+	};
+	class StaticObj_JP_F_Izaribata_Cut: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ground loom, the warp cut, cloth across the floor";
+		model="\JP\furniture\work\jp_f_izaribata_cut.p3d";
+	};
+	// jp_f_straw_work (work)
+	class StaticObj_JP_F_Straw_Work_Sandal: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw work: a half-made sandal on a stool, a bundle";
+		model="\JP\furniture\work\jp_f_straw_work_sandal.p3d";
+	};
+	class StaticObj_JP_F_Straw_Work_Beating: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw-beating stone and mallet, a bundle";
+		model="\JP\furniture\work\jp_f_straw_work_beating.p3d";
+	};
+	class StaticObj_JP_F_Straw_Work_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw work scattered, the stool tipped";
+		model="\JP\furniture\work\jp_f_straw_work_scattered.p3d";
+	};
+	// jp_f_mi (work)
+	class StaticObj_JP_F_Mi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Winnowing basket (mi)";
+		model="\JP\furniture\work\jp_f_mi.p3d";
+	};
+	class StaticObj_JP_F_Mi_Wall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Winnowing basket hung on a wall peg";
+		model="\JP\furniture\work\jp_f_mi_wall.p3d";
+	};
+	class StaticObj_JP_F_Mi_Furui: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice sieve (furui)";
+		model="\JP\furniture\work\jp_f_mi_furui.p3d";
+	};
+	class StaticObj_JP_F_Mi_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Winnowing basket tipped, grain spilled";
+		model="\JP\furniture\work\jp_f_mi_spilled.p3d";
+	};
+	// jp_f_usu (work)
+	class StaticObj_JP_F_Usu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice mortar (usu) with a pounder";
+		model="\JP\furniture\work\jp_f_usu.p3d";
+	};
+	class StaticObj_JP_F_Usu_Mallet: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice mortar with a mallet pounder";
+		model="\JP\furniture\work\jp_f_usu_mallet.p3d";
+	};
+	class StaticObj_JP_F_Usu_Ishiusu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone hand mill on a straw mat";
+		model="\JP\furniture\work\jp_f_usu_ishiusu.p3d";
+	};
+	class StaticObj_JP_F_Usu_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice mortar, the pounder fallen, dust in the bowl";
+		model="\JP\furniture\work\jp_f_usu_fallen.p3d";
+	};
+	class StaticObj_JP_F_Usu_Ishiusu_Off: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone hand mill, the top stone off";
+		model="\JP\furniture\work\jp_f_usu_ishiusu_off.p3d";
+	};
+	// jp_f_writing_box (work)
+	class StaticObj_JP_F_Writing_Box: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Writing box and a paper stack";
+		model="\JP\furniture\work\jp_f_writing_box.p3d";
+	};
+	class StaticObj_JP_F_Writing_Box_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Writing box open: inkstone, brushes, paper";
+		model="\JP\furniture\work\jp_f_writing_box_open.p3d";
+	};
+	class StaticObj_JP_F_Writing_Box_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Writing box knocked, papers slid, ink spilled";
+		model="\JP\furniture\work\jp_f_writing_box_spilled.p3d";
+	};
+	// jp_f_choba_set (work)
+	class StaticObj_JP_F_Choba_Set_Desk: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ledgers, abacus and writing box for the desk";
+		model="\JP\furniture\work\jp_f_choba_set_desk.p3d";
+	};
+	class StaticObj_JP_F_Choba_Set_Zenibako: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Coin box (zenibako), locked";
+		model="\JP\furniture\work\jp_f_choba_set_zenibako.p3d";
+	};
+	class StaticObj_JP_F_Choba_Set_Tenbin: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Money balance on its box";
+		model="\JP\furniture\work\jp_f_choba_set_tenbin.p3d";
+	};
+	class StaticObj_JP_F_Choba_Set_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ledgers splayed, abacus upturned, papers";
+		model="\JP\furniture\work\jp_f_choba_set_scattered.p3d";
+	};
+	class StaticObj_JP_F_Choba_Set_Zenibako_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Coin box forced open, empty";
+		model="\JP\furniture\work\jp_f_choba_set_zenibako_open.p3d";
+	};
+	// jp_f_masu (work)
+	class StaticObj_JP_F_Masu_Set: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Measures (masu), three sizes, and the strickle";
+		model="\JP\furniture\work\jp_f_masu_set.p3d";
+	};
+	class StaticObj_JP_F_Masu_To: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A one-to measure heaped with rice, the strickle across";
+		model="\JP\furniture\work\jp_f_masu_to.p3d";
+	};
+	class StaticObj_JP_F_Masu_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Measure tipped, the rice spilled";
+		model="\JP\furniture\work\jp_f_masu_spilled.p3d";
+	};
 };

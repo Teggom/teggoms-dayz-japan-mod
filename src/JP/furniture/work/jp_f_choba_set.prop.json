@@ -1,0 +1,331 @@
+{
+ "id": "jp_f_choba_set",
+ "build_list": {
+  "name": "Account clutter: ledgers (daifukucho), abacus, coin box (zenibako), scales, inkstone box",
+  "importance": "filler",
+  "tiers": [
+   2,
+   3
+  ],
+  "room_tags": [
+   "shop",
+   "office",
+   "guard"
+  ],
+  "loot_surface": "none (clutter)",
+  "abandoned_state": "coin box open and empty, ledgers scattered",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "ledger_m": {
+    "value": "0.24 x 0.17 x 0.03",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "coinbox_m": {
+    "value": "0.40 x 0.30 x 0.25",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "steelyard_m": {
+    "value": "0.60 beam",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "N18",
+    "shows": "merchant-house tools (text)",
+    "period_image": false
+   },
+   {
+    "id": "N20",
+    "shows": "BL §5.6 (text)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "work",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_choba_set"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_choba_set_desk.p3d",
+   "class": "StaticObj_JP_F_Choba_Set_Desk",
+   "variant": "desk",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Ledgers, abacus and writing box for the desk",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 194,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.223,
+    0.293,
+    0.0,
+    0.077,
+    -0.133,
+    0.212
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "ledger_w",
+     "expected": 0.17,
+     "measured": 0.174,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "account clutter (BUILD_LIST jp_f_choba_set): ledgers (life-atlas cover 'daifukucho, Kyoho 15'), abacus, writing box, coin box, balance; the coin box carries a loot point on its lid"
+   ],
+   "master": "spikes/L1/out/work/jp_f_choba_set_desk.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_choba_set_zenibako.p3d",
+   "class": "StaticObj_JP_F_Choba_Set_Zenibako",
+   "variant": "zenibako",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Coin box (zenibako), locked",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 36,
+    "Resolution 2": 18,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.205,
+    0.205,
+    0.0,
+    0.252,
+    -0.155,
+    0.17
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.2,
+    -0.15,
+    0.2,
+    0.15
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 8.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.25,
+     "rect": [
+      -0.18,
+      -0.13,
+      0.18,
+      0.13
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.11,
+       0.25,
+       0.06
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "account clutter (BUILD_LIST jp_f_choba_set): ledgers (life-atlas cover 'daifukucho, Kyoho 15'), abacus, writing box, coin box, balance; the coin box carries a loot point on its lid"
+   ],
+   "master": "spikes/L1/out/work/jp_f_choba_set_zenibako.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_choba_set_tenbin.p3d",
+   "class": "StaticObj_JP_F_Choba_Set_Tenbin",
+   "variant": "tenbin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Money balance on its box",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 70,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.235,
+    0.229,
+    0.0,
+    0.42,
+    -0.1,
+    0.1
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.42,
+     "measured": 0.42,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "account clutter (BUILD_LIST jp_f_choba_set): ledgers (life-atlas cover 'daifukucho, Kyoho 15'), abacus, writing box, coin box, balance; the coin box carries a loot point on its lid"
+   ],
+   "master": "spikes/L1/out/work/jp_f_choba_set_tenbin.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_choba_set_scattered.p3d",
+   "class": "StaticObj_JP_F_Choba_Set_Scattered",
+   "variant": "desk",
+   "state": "scattered",
+   "abandoned": true,
+   "display": "Ledgers splayed, abacus upturned, papers",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 211,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.452,
+    0.499,
+    0.0,
+    0.039,
+    -0.166,
+    0.703
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "ledger_w",
+     "expected": 0.17,
+     "measured": 0.174,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "account clutter (BUILD_LIST jp_f_choba_set): ledgers (life-atlas cover 'daifukucho, Kyoho 15'), abacus, writing box, coin box, balance; the coin box carries a loot point on its lid"
+   ],
+   "master": "spikes/L1/out/work/jp_f_choba_set_scattered.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_choba_set_zenibako_open.p3d",
+   "class": "StaticObj_JP_F_Choba_Set_Zenibako_Open",
+   "variant": "zenibako",
+   "state": "open",
+   "abandoned": true,
+   "display": "Coin box forced open, empty",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 28,
+    "Resolution 2": 18,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.429,
+    0.46,
+    0.0,
+    0.525,
+    -0.238,
+    0.582
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.2,
+    -0.15,
+    0.2,
+    0.15
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 8.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "account clutter (BUILD_LIST jp_f_choba_set): ledgers (life-atlas cover 'daifukucho, Kyoho 15'), abacus, writing box, coin box, balance; the coin box carries a loot point on its lid"
+   ],
+   "master": "spikes/L1/out/work/jp_f_choba_set_zenibako_open.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 43,
+ "refs_local": []
+}

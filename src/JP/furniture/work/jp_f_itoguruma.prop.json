@@ -1,0 +1,192 @@
+{
+ "id": "jp_f_itoguruma",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "work",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_itoguruma.p3d",
+   "class": "StaticObj_JP_F_Itoguruma",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Spinning wheel (itoguruma)",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 218,
+    "Resolution 2": 48,
+    "Resolution 3": 6,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.456,
+    0.45,
+    0.0,
+    0.74,
+    -0.12,
+    0.2
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.46,
+    -0.11,
+    0.42,
+    0.11
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "wheel_d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cotton spinning wheel (itoguruma), farm and village women's work (BUILDING_LIST 300, 304, 1436)"
+   ],
+   "master": "spikes/L1/out/work/jp_f_itoguruma.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_itoguruma_thread.p3d",
+   "class": "StaticObj_JP_F_Itoguruma_Thread",
+   "variant": "thread",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Spinning wheel with thread and a basket of cotton",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 315,
+    "Resolution 2": 48,
+    "Resolution 3": 6,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.456,
+    0.45,
+    0.0,
+    0.74,
+    -0.12,
+    0.449
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.46,
+    -0.11,
+    0.42,
+    0.11
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "wheel_d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cotton spinning wheel (itoguruma), farm and village women's work (BUILDING_LIST 300, 304, 1436)"
+   ],
+   "master": "spikes/L1/out/work/jp_f_itoguruma_thread.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_itoguruma_broken.p3d",
+   "class": "StaticObj_JP_F_Itoguruma_Broken",
+   "variant": "std",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Spinning wheel, the wheel knocked off and broken",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 173,
+    "Resolution 2": 48,
+    "Resolution 3": 6,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.45,
+    0.552,
+    0.0,
+    0.74,
+    -0.12,
+    0.759
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.42,
+    -0.11,
+    0.42,
+    0.751
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "wheel_d",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cotton spinning wheel (itoguruma), farm and village women's work (BUILDING_LIST 300, 304, 1436)"
+   ],
+   "master": "spikes/L1/out/work/jp_f_itoguruma_broken.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 37,
+ "refs_local": []
+}

@@ -1,0 +1,461 @@
+{
+ "id": "jp_f_usu",
+ "build_list": {
+  "name": "Wooden rice mortar and pounder (usu, kine), hand mill (ishi-usu)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma",
+   "workshop"
+  ],
+  "loot_surface": "usu top at 0.55: 1 point (range 0.2)",
+  "abandoned_state": "pounder fallen, dust in the bowl",
+  "blocks_path": "d 0.5: keep out of tori-niwa bands",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "usu_m": {
+    "value": "d 0.50, h 0.55",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "kine_m": {
+    "value": "0.90 long",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "millstone_m": {
+    "value": "d 0.40 pair, h 0.25",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "N20",
+    "shows": "BL §5.1/§5.10 (text)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "work",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_usu"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_usu.p3d",
+   "class": "StaticObj_JP_F_Usu",
+   "variant": "usu",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rice mortar (usu) with a pounder",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 122,
+    "Resolution 2": 24,
+    "Resolution 3": 12,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.238,
+    0.529,
+    0.0,
+    0.898,
+    -0.25,
+    0.25
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.231,
+    -0.231,
+    0.231,
+    0.231
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 40.0,
+   "loot_surfaces": [
+    {
+     "name": "rim",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      -0.25,
+      -0.25,
+      0.25,
+      0.25
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.225,
+       0.55,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rice mortar and pounder, stone hand mill (BUILD_LIST jp_f_usu); loot on the rim / millstone"
+   ],
+   "master": "spikes/L1/out/work/jp_f_usu.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_usu_mallet.p3d",
+   "class": "StaticObj_JP_F_Usu_Mallet",
+   "variant": "usu",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rice mortar with a mallet pounder",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 103,
+    "Resolution 2": 24,
+    "Resolution 3": 12,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.238,
+    0.238,
+    0.0,
+    1.308,
+    -0.25,
+    0.384
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.231,
+    -0.231,
+    0.231,
+    0.231
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 40.0,
+   "loot_surfaces": [
+    {
+     "name": "rim",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      -0.25,
+      -0.25,
+      0.25,
+      0.25
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.225,
+       0.55,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rice mortar and pounder, stone hand mill (BUILD_LIST jp_f_usu); loot on the rim / millstone"
+   ],
+   "master": "spikes/L1/out/work/jp_f_usu_mallet.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_usu_ishiusu.p3d",
+   "class": "StaticObj_JP_F_Usu_Ishiusu",
+   "variant": "ishiusu",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone hand mill on a straw mat",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 92,
+    "Resolution 2": 80,
+    "Resolution 3": 12,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "bbox": [
+    -0.3,
+    0.3,
+    0.0,
+    0.34,
+    -0.3,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.185,
+    -0.185,
+    0.185,
+    0.185
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 0.24,
+     "rect": [
+      -0.15,
+      -0.15,
+      0.15,
+      0.15
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.1,
+       0.24,
+       0.08
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rice mortar and pounder, stone hand mill (BUILD_LIST jp_f_usu); loot on the rim / millstone"
+   ],
+   "master": "spikes/L1/out/work/jp_f_usu_ishiusu.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_usu_fallen.p3d",
+   "class": "StaticObj_JP_F_Usu_Fallen",
+   "variant": "usu",
+   "state": "fallen",
+   "abandoned": true,
+   "display": "Rice mortar, the pounder fallen, dust in the bowl",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 140,
+    "Resolution 2": 24,
+    "Resolution 3": 12,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.238,
+    0.968,
+    0.0,
+    0.55,
+    -0.25,
+    0.624
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.231,
+    -0.231,
+    0.231,
+    0.231
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 40.0,
+   "loot_surfaces": [
+    {
+     "name": "rim",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      -0.25,
+      -0.25,
+      0.25,
+      0.25
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.225,
+       0.55,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rice mortar and pounder, stone hand mill (BUILD_LIST jp_f_usu); loot on the rim / millstone"
+   ],
+   "master": "spikes/L1/out/work/jp_f_usu_fallen.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_usu_ishiusu_off.p3d",
+   "class": "StaticObj_JP_F_Usu_Ishiusu_Off",
+   "variant": "ishiusu",
+   "state": "off",
+   "abandoned": true,
+   "display": "Stone hand mill, the top stone off",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 105,
+    "Resolution 2": 80,
+    "Resolution 3": 12,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "bbox": [
+    -0.3,
+    0.472,
+    0.0,
+    0.42,
+    -0.3,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.185,
+    -0.185,
+    0.47,
+    0.235
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "bottom_stone",
+     "kind": "shelf",
+     "y": 0.135,
+     "rect": [
+      -0.15,
+      -0.15,
+      0.15,
+      0.15
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.1,
+       0.135,
+       -0.08
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rice mortar and pounder, stone hand mill (BUILD_LIST jp_f_usu); loot on the rim / millstone"
+   ],
+   "master": "spikes/L1/out/work/jp_f_usu_ishiusu_off.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 41,
+ "refs_local": []
+}

@@ -1,0 +1,212 @@
+{
+ "id": "jp_f_mi",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "work",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_mi.p3d",
+   "class": "StaticObj_JP_F_Mi",
+   "variant": "mi",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Winnowing basket (mi)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 52,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.308,
+    0.308,
+    0.004,
+    0.197,
+    -0.275,
+    0.275
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "mi_w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "winnowing basket (mi) and rice sieve (furui): rural core (BUILDING_LIST 2835)"
+   ],
+   "master": "spikes/L1/out/work/jp_f_mi.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_mi_wall.p3d",
+   "class": "StaticObj_JP_F_Mi_Wall",
+   "variant": "mi_wall",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Winnowing basket hung on a wall peg",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 61,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.308,
+    0.308,
+    0.957,
+    1.53,
+    0.001,
+    0.289
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "mi_w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "winnowing basket (mi) and rice sieve (furui): rural core (BUILDING_LIST 2835)"
+   ],
+   "master": "spikes/L1/out/work/jp_f_mi_wall.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_mi_furui.p3d",
+   "class": "StaticObj_JP_F_Mi_Furui",
+   "variant": "furui",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rice sieve (furui)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 34,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.215,
+    0.215,
+    0.0,
+    0.08,
+    -0.225,
+    0.225
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "mi_w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "winnowing basket (mi) and rice sieve (furui): rural core (BUILDING_LIST 2835)"
+   ],
+   "master": "spikes/L1/out/work/jp_f_mi_furui.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\work\\jp_f_mi_spilled.p3d",
+   "class": "StaticObj_JP_F_Mi_Spilled",
+   "variant": "mi",
+   "state": "spilled",
+   "abandoned": true,
+   "display": "Winnowing basket tipped, grain spilled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 100,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.665,
+    0.429,
+    0.0,
+    0.444,
+    -0.378,
+    0.533
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "mi_w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "winnowing basket (mi) and rice sieve (furui): rural core (BUILDING_LIST 2835)"
+   ],
+   "master": "spikes/L1/out/work/jp_f_mi_spilled.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 40,
+ "refs_local": []
+}
