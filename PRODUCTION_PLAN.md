@@ -105,3 +105,10 @@
   - The session itself runs at effort xhigh. Earlier general-purpose agents most likely inherited that.
   - Also on restart: check `data/research_okit/slow_fetch.log`. If the image downloader died, rerun
     `python research/outdoor_kit/tools/slow_fetch.py` in the background (it's resumable).
+- 2026-09-29: Outdoor kit refs sorted.
+  - Wikimedia blocks our downloader, so Stephen saved 21 by hand (7 flagged weak in meta.json); 16 Morse figures + an
+    LoC festival print were added; straw_aged sampled.
+- 2026-09-29: **Waterway research (agent WW) launched** → `research/waterways/`: ~6 town waterway types (city canal,
+  shallow canal, big river, street channel, village stream, moat) with cross-sections, edges, planting, bridges and
+  house frontage, plus EVERY map settlement assigned a type (Stephen: "each city we have will need to fall into one of
+  these categories"). A G1-style review for Stephen when done.
