@@ -72,8 +72,13 @@ def _load_lib():
             out[sc["id"][5:]] = {
                 "id": sc["id"], "family": sc["family"], "tile": float(sc["tile_size_m"]),
                 "tile_v": float(sc.get("tile_size_v_m", sc["tile_size_m"])),
-                "grain": sc.get("grain", ""), "fire": os.path.basename(sc["penetration_rvmat"])[:-len(".rvmat")],
+                # decals (moss, litter) have no penetration material: fire None (never on a Fire Geometry solid)
+                "grain": sc.get("grain", ""),
+                "fire": os.path.basename(sc["penetration_rvmat"])[:-len(".rvmat")] if sc.get("penetration_rvmat")
+                else None,
                 "road": sc.get("roadway_surface"), "alpha": bool(sc.get("alpha")), "palette_id": sc.get("palette_id"),
+                # the rvmat finish (build_materials.FINISH: matte / wall / glossy / glazed); older sidecars have none
+                "finish": sc.get("finish"),
             }
     return out
 

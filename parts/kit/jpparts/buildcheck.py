@@ -21,6 +21,17 @@ from . import mlod, checks as C, core, raycheck as RC
 
 DEV = core.DEV
 GLOSSY = ("jp_m_roof_kawara", "jp_m_wall_namako_tile", "jp_m_metal_iron")   # build_materials.FINISH_BY_ID (glossy)
+REFLECTIVE = ("glossy", "glazed")      # finishes that keep an environment reflection (build_materials.FINISH)
+
+
+def reflective(mid):
+    """True when a library material is glossy / glazed by design (C19 exempts it): the sidecar's 'finish' field
+    (B1 sidecars carry it, e.g. the glazed stoneware and lacquer), else the pre-B1 glossy list (kawara, namako, iron),
+    whose sidecars have no finish field."""
+    fin = core.LIBRARY.get(mid[5:], {}).get("finish") if mid.startswith("jp_m_") else None
+    if fin:
+        return fin in REFLECTIVE
+    return mid.startswith(GLOSSY)
 
 
 def road_heights(road, x, z):
@@ -167,15 +178,16 @@ def run_g3(M, L, floors, rec):
     shiny = []
     for rv in sorted(used):
         mid = re.sub(r"_w\d\.rvmat$", "", os.path.basename(rv).lower())
-        if mid.startswith(GLOSSY):
+        if reflective(mid):
             continue
         t_ = open(os.path.join(DEV, "src", rv), encoding="utf-8").read()
         if "color(0,0,0,1,CO)" not in t_.replace(" ", ""):
             shiny.append(os.path.basename(rv))
     rec("C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
-        not shiny, "%d library rvmats in the visual LODs, %d glossy by design (kawara, namako, iron)%s" % (
-            len(used), sum(1 for rv in used if re.sub(r"_w\d\.rvmat$", "", os.path.basename(rv).lower())
-                           .startswith(GLOSSY)), ("; SHINY: %s" % shiny[:4]) if shiny else ""))
+        not shiny, "%d library rvmats in the visual LODs, %d glossy / glazed by design (sidecar finish, else kawara, "
+        "namako, iron)%s" % (len(used), sum(1 for rv in used if reflective(re.sub(r"_w\d\.rvmat$", "",
+                                                                                   os.path.basename(rv).lower()))),
+                             ("; SHINY: %s" % shiny[:4]) if shiny else ""))
     rec("C16 far-LOD kawara: matte far material in Resolution 2 / 3", fars["Resolution 1"] == 0 and
         fars["Resolution 2"] > 0 and fars["Resolution 3"] > 0 and not any(nears.values()) and sf < sn,
         "far-field faces R1/R2/R3 %d/%d/%d; close field in R2/R3 %d/%d; specular far %.2f < close %.2f" % (
