@@ -1,0 +1,299 @@
+{
+ "id": "jp_s_boat",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "street_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_boat_up.p3d",
+   "class": "StaticObj_JP_S_Boat_Up",
+   "variant": "plank",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small plank boat pulled up on a bank",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 124,
+    "Resolution 2": 40,
+    "Resolution 3": 6,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.618,
+    0.618,
+    0.0,
+    0.74,
+    -2.6,
+    2.733
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -2.6,
+    0.6,
+    2.6
+   ],
+   "roadway": false,
+   "mass_kg": 150.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 5.2,
+     "measured": 5.2,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "beam",
+     "expected": 1.24,
+     "measured": 1.24,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a small plank boat pulled up on a bank, sculling oar (ro) inside (BUILDING_LIST 5: boats 26); one Geometry block + a bow wedge: cover, not a vehicle"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_boat_up.p3d",
+   "mount": "shore",
+   "mount_note": "on a beach, river bank or landing: base centre on the ground above the water line",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_boat_tilted.p3d",
+   "class": "StaticObj_JP_S_Boat_Tilted",
+   "variant": "plank",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small boat on the bank, rolled on its bilge",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 127,
+    "Resolution 2": 40,
+    "Resolution 3": 6,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.832,
+    0.864,
+    0.0,
+    0.885,
+    -2.867,
+    2.733
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.71,
+    -2.6,
+    0.571,
+    2.6
+   ],
+   "roadway": false,
+   "mass_kg": 150.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 5.2,
+     "measured": 5.2,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "beam",
+     "expected": 1.24,
+     "measured": 1.24,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a small plank boat pulled up on a bank, sculling oar (ro) inside (BUILDING_LIST 5: boats 26); one Geometry block + a bow wedge: cover, not a vehicle"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_boat_tilted.p3d",
+   "mount": "shore",
+   "mount_note": "on a beach, river bank or landing: base centre on the ground above the water line",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_boat_upturned.p3d",
+   "class": "StaticObj_JP_S_Boat_Upturned",
+   "variant": "plank",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Small boat upturned on two logs",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 119,
+    "Resolution 2": 60,
+    "Resolution 3": 6,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.832,
+    0.864,
+    0.003,
+    0.9,
+    -2.867,
+    2.733
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.8,
+    -2.6,
+    0.8,
+    2.6
+   ],
+   "roadway": false,
+   "mass_kg": 150.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 5.2,
+     "measured": 5.2,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "beam",
+     "expected": 1.24,
+     "measured": 1.24,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a small plank boat pulled up on a bank, sculling oar (ro) inside (BUILDING_LIST 5: boats 26); one Geometry block + a bow wedge: cover, not a vehicle"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_boat_upturned.p3d",
+   "mount": "shore",
+   "mount_note": "on a beach, river bank or landing: base centre on the ground above the water line",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_boat_ab_rotten.p3d",
+   "class": "StaticObj_JP_S_Boat_Ab_Rotten",
+   "variant": "plank",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Small boat rotting on the bank, side planks gone",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 123,
+    "Resolution 2": 40,
+    "Resolution 3": 6,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.832,
+    0.864,
+    -0.05,
+    0.965,
+    -2.867,
+    2.692
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -2.62,
+    0.6,
+    2.578
+   ],
+   "roadway": false,
+   "mass_kg": 150.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 5.2,
+     "measured": 5.2,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "beam",
+     "expected": 1.24,
+     "measured": 1.24,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a small plank boat pulled up on a bank, sculling oar (ro) inside (BUILDING_LIST 5: boats 26); one Geometry block + a bow wedge: cover, not a vehicle"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_boat_ab_rotten.p3d",
+   "mount": "shore",
+   "mount_note": "on a beach, river bank or landing: base centre on the ground above the water line",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#67",
+ "refs_local": [
+  "x31_masanobu_ryogoku_1748"
+ ]
+}

@@ -421,3 +421,224 @@ PROPS.append({"id": "jp_s_footwear", "cat": CAT, "ll": "#74", "mount": "street",
                   M("jp_s_footwear_ab_single", "single", "abandoned", "A single clog, thong broken",
                     lambda: footwear("ab_single"), mount="road"),
               ]})
+
+
+# ================================================================================================ 66 fishing nets
+def net_span(xa, xb, top, drop_f, drop_b, wear=None, seed=1, vis=(1,), nu=4, nv=4, sway=0.0):
+    """A net hung over a rail at `top` between xa and xb: the front part drops drop_f, the back drop_b (two-sided,
+    alpha-cut jp_m_textile_net)."""
+    r = random.Random(seed)
+    jig = [r.uniform(-0.06, 0.06) for _ in range(nu + 1)]
+
+    def f(u, v):
+        t = 2 * v - 1                        # -1 = front hem, 0 = over the rail, 1 = back hem
+        d = drop_f if t < 0 else drop_b
+        y = top + 0.01 - d * abs(t) ** 1.1 + (jig[int(round(u * nu))] if abs(t) > 0.9 else 0.0)
+        z = 0.06 * t + 0.08 * math.sin(math.pi * u) * abs(t) * (1 if t < 0 else -1) + sway * abs(t)
+        return (xa + (xb - xa) * u, y, z)
+    return grid_sheet(f, nu, nv, NET, vis=vis, two_sided=True, wear=wear)
+
+
+def floats_row(x0, x1, y, z, n, wear=None, seed=1):
+    """Wooden net floats (ukiki): small turned cylinders along the hem (wood, never glass)."""
+    r = random.Random(seed)
+    out = []
+    for k in range(n):
+        x = x0 + (x1 - x0) * (k + 0.5) / n
+        s = lathe([(0.0, -0.05), (0.026, -0.04), (0.03, 0.0), (0.026, 0.04), (0.0, 0.05)], 5, WOOD, vis=(1,), wear=wear)
+        out.append(xf(s, rz=90.0 + r.uniform(-20, 20), t=(x, y + r.uniform(-0.03, 0.03), z)))
+    return out
+
+
+def sinkers_row(x0, x1, y, z, n, wear=None):
+    out = []
+    for k in range(n):
+        x = x0 + (x1 - x0) * (k + 0.5) / n
+        b = W(-0.02, 0.02, -0.035, 0.0, -0.02, 0.02, DARKC, vis=(1,))
+        if wear:
+            b.wear = wear
+        out.append(xf(b, t=(x, y, z)))
+    return out
+
+
+def fishnet(kind):
+    ab = kind.startswith("ab")
+    wear = "_w2" if ab else None
+    P = SPart("fishnet", budget="box", mass=20.0, bury=0.32, wear="_w2" if ab else "_w1")
+    top = 2.20
+    if kind in ("poles", "small"):
+        xs = (-1.8, 0.0, 1.8) if kind == "poles" else (-0.9, 0.9)
+        for x in xs:
+            P.add(pole((x, -0.30, 0.0), (x, 2.45, 0.0), 0.035, BAMBOO, n=6, vis=(1, 2), r1=0.028))
+            P.add(col(x - 0.035, x + 0.035, -0.30, 2.45, -0.035, 0.035, BAMBOO))
+        P.add(pole((xs[0] - 0.15, top, 0.0), (xs[-1] + 0.15, top, 0.0), 0.02, BAMBOO, n=5, vis=(1, 2)))
+        for i, (xa, xb) in enumerate(zip(xs, xs[1:])):
+            P.add(net_span(xa + 0.06, xb - 0.06, top + 0.02, 1.55, 1.25, seed=660 + i))
+            add_all(P, floats_row(xa + 0.1, xb - 0.1, top + 0.02 - 1.55, -0.07, 6, seed=661 + i))
+            add_all(P, sinkers_row(xa + 0.1, xb - 0.1, top + 0.02 - 1.25, 0.07, 6))
+            P.add(W(xa, xb, top - 1.4, top, -0.04, 0.04, NET, vis=(2,)))
+        P.dim("rail_h", 2.20, top, tol=0.01)
+        P.dim("span", 1.8, xs[1] - xs[0], tol=0.01)
+    elif kind == "ab_down":
+        # the middle pole snapped: its top half lies on the sand, the net slumped to the ground from the left pole
+        P.add(pole((-1.8, -0.30, 0.0), (-1.8, 2.45, 0.0), 0.035, BAMBOO, n=6, vis=(1, 2), r1=0.028, wear=wear))
+        P.add(col(-1.835, -1.765, -0.30, 2.45, -0.035, 0.035, BAMBOO))
+        P.add(pole((0.0, -0.30, 0.0), (0.0, 0.9, 0.0), 0.035, BAMBOO, n=6, vis=(1, 2), wear=wear))
+        P.add(col(-0.035, 0.035, -0.30, 0.9, -0.035, 0.035, BAMBOO))
+        P.add(pole((0.1, 0.03, 0.2), (1.7, 0.03, 0.9), 0.03, BAMBOO, n=6, vis=(1, 2), wear=wear))
+        P.add(col_solid(beam((0.1, 0.03, 0.2), (1.7, 0.03, 0.9), 0.06, 0.06, BAMBOO)))
+        sl = grid_sheet(lambda u, v: (-1.75 + 1.9 * u, max(0.02, (2.2 - 2.4 * u) * (1 - v)) + 0.03 * math.sin(7 * u + v),
+                                      0.05 + 0.9 * v * (0.3 + u)), 4, 3, NET, vis=(1,), two_sided=True, wear="_w2")
+        P.add(sl)
+        P.add(pillow(0.9, 0.6, 0.14, NET, wear="_w2", vis=(1,)))
+        P.solids[-1] = xf(P.solids[-1], ry=20.0, t=(0.8, 0.0, 0.55))
+        add_all(P, floats_row(0.3, 1.4, 0.03, 0.9, 5, wear="_w2", seed=662))
+        P.add(W(-1.8, 1.7, 0.0, 1.0, 0.0, 0.9, NET, vis=(2,)))
+        P.add(litter(663, 0.0, 0.5, 1.0, sx=1.8))
+        P.dim("span", 1.8, 1.8, tol=0.01)
+    else:   # heap: a net heaped on the sand to mend, floats and sinkers showing
+        P.need = ()
+        P.flat = True
+        P.bury = 0.02
+        P.add(pillow(1.1, 0.8, 0.22, NET, wear="_w1", vis=(1,)))
+        P.add(xf(pillow(0.8, 0.6, 0.16, NET, wear="_w2", vis=(1,)), ry=35.0, t=(0.2, 0.0, 0.1)))
+        add_all(P, floats_row(-0.6, 0.6, 0.06, 0.5, 6, seed=664))
+        add_all(P, sinkers_row(-0.5, 0.5, 0.035, -0.45, 5))
+        P.add(W(-0.55, 0.55, 0.0, 0.2, -0.4, 0.4, NET, vis=(2,)))
+        P.dim("heap_w", 1.1, 1.1, tol=0.01)
+    P.notes.append("nets drying on bamboo poles (BUILDING_LIST 343-346, 1766-1767); wooden floats, clay sinkers, "
+                   "never glass; nets are alpha-cut (see-through), only the poles collide")
+    return P
+
+
+PROPS.append({"id": "jp_s_fishnet", "cat": CAT, "ll": "#66", "mount": "shore", "tiers": [1, 2],
+              "models": [
+                  M("jp_s_fishnet_poles", "poles", "intact", "Fishing nets drying on three bamboo poles",
+                    lambda: fishnet("poles")),
+                  M("jp_s_fishnet_small", "small", "intact", "A fishing net drying on two poles",
+                    lambda: fishnet("small")),
+                  M("jp_s_fishnet_heap", "heap", "intact", "A fishing net heaped on the sand", lambda: fishnet("heap")),
+                  M("jp_s_fishnet_ab_down", "poles", "abandoned", "Net drying poles snapped, the net slumped",
+                    lambda: fishnet("ab_down")),
+              ]})
+
+
+# ================================================================================================ 67 small boat
+def boat_stations(n=9):
+    """(z, half-width gunwale, half-width bottom, bottom y, gunwale y) from the stern (z -2.6) to the bow (z +2.6)."""
+    out = []
+    for i in range(n):
+        s = i / (n - 1)
+        z = -2.6 + 5.2 * s
+        if s < 0.55:
+            wg = 0.46 + 0.16 * math.sin(math.pi * s / 1.1)
+            wb = 0.36 + 0.10 * math.sin(math.pi * s / 1.1)
+        else:
+            k = (s - 0.55) / 0.45
+            wg = 0.62 * (1 - k ** 1.6) + 0.04 * k
+            wb = 0.46 * (1 - k ** 1.3) + 0.02 * k
+        yb = 0.0 if s < 0.6 else 0.36 * ((s - 0.6) / 0.4) ** 1.6
+        yg = 0.45 - 0.04 * math.sin(math.pi * s) + 0.22 * max(0.0, s - 0.7) / 0.3
+        out.append((z, wg, wb, yb, yg))
+    return out
+
+
+def hull_shell(st, t=0.03, mat=WOOD, wear=None, vis=(1,), skip_side=()):
+    """Open plank hull from stations: outer bottom + sides, inner bottom + sides (offset t), gunwale strips, transom,
+    stem. Sheets with explicit normals (the shape is not convex). skip_side: station indices whose left side plank is
+    missing (rotten)."""
+    Lb = [(-wb, yb, z) for z, wg, wb, yb, yg in st]
+    Rb = [(wb, yb, z) for z, wg, wb, yb, yg in st]
+    Lg = [(-wg, yg, z) for z, wg, wb, yb, yg in st]
+    Rg = [(wg, yg, z) for z, wg, wb, yb, yg in st]
+    iLb = [(-wb + t, yb + t, z) for z, wg, wb, yb, yg in st]
+    iRb = [(wb - t, yb + t, z) for z, wg, wb, yb, yg in st]
+    iLg = [(-wg + t, yg, z) for z, wg, wb, yb, yg in st]
+    iRg = [(wg - t, yg, z) for z, wg, wb, yb, yg in st]
+    down, up = (lambda p: (0.0, -1.0, 0.0)), (lambda p: (0.0, 1.0, 0.0))
+    out = [K.strip(Lb, Rb, mat, down, vis=vis, wear=wear), K.strip(iLb, iRb, mat, up, vis=vis, wear=wear)]
+    if skip_side:
+        keep = [i for i in range(len(st) - 1) if i not in skip_side]
+        for i in keep:
+            out.append(K.strip(Lb[i:i + 2], Lg[i:i + 2], mat, lambda p: (-1.0, 0.0, 0.0), vis=vis, wear=wear))
+            out.append(K.strip(iLb[i:i + 2], iLg[i:i + 2], mat, lambda p: (1.0, 0.0, 0.0), vis=vis, wear=wear))
+    else:
+        out.append(K.strip(Lb, Lg, mat, lambda p: (-1.0, 0.0, 0.0), vis=vis, wear=wear))
+        out.append(K.strip(iLb, iLg, mat, lambda p: (1.0, 0.0, 0.0), vis=vis, wear=wear))
+    out.append(K.strip(Rb, Rg, mat, lambda p: (1.0, 0.0, 0.0), vis=vis, wear=wear))
+    out.append(K.strip(iRb, iRg, mat, lambda p: (-1.0, 0.0, 0.0), vis=vis, wear=wear))
+    out.append(K.strip(Lg, iLg, mat, up, vis=vis, wear=wear))
+    out.append(K.strip(iRg, Rg, mat, up, vis=vis, wear=wear))
+    z0, wg0, wb0, yb0, yg0 = st[0]
+    tr = [(-wb0, yb0, z0), (wb0, yb0, z0), (wg0, yg0, z0), (-wg0, yg0, z0)]
+    out.append(K.quad_sheet(tr, mat, (0.0, 0.0, -1.0), vis=vis, wear=wear))
+    out.append(K.quad_sheet([(p[0] * 0.9, p[1] + (t if p[1] == yb0 else 0.0), p[2] + t) for p in tr], mat,
+                            (0.0, 0.0, 1.0), vis=vis, wear=wear))
+    zb, wgb, wbb, ybb, ygb = st[-1]
+    out.append(beam((0.0, ybb - 0.02, zb - 0.02), (0.0, ygb + 0.06, zb + 0.10), 0.07, 0.07, mat, vis=vis, wear=wear))
+    return out
+
+
+def boat_parts(wear=None, rotten=False):
+    st = boat_stations()
+    ss = hull_shell(st, wear=wear, skip_side=(3, 4) if rotten else ())
+    lo = hull_shell(boat_stations(5), vis=(2,), wear=wear)
+    lo = [s for s in lo if len(s.faces) > 1 or s.fn[0][1] > -0.5 or True]
+    lo3 = [W(-0.55, 0.55, 0.0, 0.45, -2.6, 2.6, WOOD, vis=(3,))]
+    for z in (-0.9, 0.6):
+        ss.append(W(-0.52, 0.52, 0.34, 0.37, z - 0.12, z + 0.12, WOOD, vis=(1,)))
+    ss.append(pole((-0.3, 0.06, -2.2), (0.35, 0.35, 1.3), 0.02, WOOD, n=4, vis=(1,)))       # the sculling oar (ro)
+    ss.append(xf(W(-0.07, 0.07, 0.0, 0.015, -0.35, 0.0, WOOD, vis=(1,)), t=(-0.3, 0.05, -2.2)))
+    ss.append(K.flat_coil(0.2, -1.6, 0.14, 0.02, ROPE, n=8, m=3))
+    ss[-1] = xf(ss[-1], t=(0.0, 0.03, 0.0))
+    ss.append(leaves(671, 0.0, -0.3, 0.3, 0.035, wear="_w2", sx=1.0, sz=4.0))
+    cols = [col(-0.60, 0.60, 0.0, 0.45, -2.6, 1.2, WOOD),
+            hull3([(-0.6, 0.02, 1.2), (0.6, 0.02, 1.2), (-0.6, 0.45, 1.2), (0.6, 0.45, 1.2), (-0.05, 0.36, 2.6),
+                   (0.05, 0.36, 2.6), (-0.05, 0.70, 2.6), (0.05, 0.70, 2.6)], WOOD)]
+    return K.wear_all(ss, wear), lo + lo3, cols
+
+
+def boat(kind):
+    ab = kind.startswith("ab")
+    P = SPart("boat", budget="box", res3=True, mass=150.0, wear="_w2" if ab else "_w1")
+    ss, lo, cs = boat_parts(wear="_w2" if ab else None, rotten=kind == "ab_rotten")
+    if kind == "up":
+        add_all(P, ss + lo + cs)
+    elif kind == "tilted":
+        ops = [dict(rz=18.0)]
+    elif kind == "upturned":
+        ss = [s for s in ss if s.mats == WOOD and s.bbox()[3] - s.bbox()[2] > 0.1 or s.mats == WOOD and len(s.faces) > 2]
+        ops = [dict(rz=180.0)]
+    else:
+        ops = [dict(rx=-3.0)]
+    if kind != "up":
+        allv = xfs(ss + lo, **ops[0])
+        allc = xfs(cs, **ops[0])
+        lo_y = min(v[1] for s in allv for v in s.verts) - (0.16 if kind == "upturned" else 0.0)
+        add_all(P, xfs(allv, t=(0.0, -lo_y, 0.0)) + xfs(allc, t=(0.0, -lo_y, 0.0)))
+        if kind == "upturned":
+            for z in (-1.3, 1.0):          # two logs under the upturned hull
+                P.add(K.lkit.lcyl("x", 0.08, z, 0.08, -0.8, 0.8, WOOD, n=6, vis=(1, 2)))
+                P.add(col(-0.8, 0.8, 0.0, 0.155, z - 0.07, z + 0.07, WOOD))
+        P.add(litter(672, 0.0, 0.0, 1.2, sx=0.8, sz=2.4))
+        if kind == "ab_rotten":
+            P.bury = 0.06
+            P.solids = [xf(s, t=(0.0, -0.05, 0.0)) for s in P.solids]
+    P.dim("length", 5.2, 5.2, tol=0.02)
+    P.dim("beam", 1.24, 1.24, tol=0.02)
+    P.notes.append("a small plank boat pulled up on a bank, sculling oar (ro) inside (BUILDING_LIST 5: boats 26); "
+                   "one Geometry block + a bow wedge: cover, not a vehicle")
+    return P
+
+
+PROPS.append({"id": "jp_s_boat", "cat": CAT, "ll": "#67", "mount": "shore", "tiers": [1, 2],
+              "refs": ["x31_masanobu_ryogoku_1748"],
+              "models": [
+                  M("jp_s_boat_up", "plank", "intact", "Small plank boat pulled up on a bank", lambda: boat("up")),
+                  M("jp_s_boat_tilted", "plank", "intact", "Small boat on the bank, rolled on its bilge",
+                    lambda: boat("tilted")),
+                  M("jp_s_boat_upturned", "plank", "abandoned", "Small boat upturned on two logs",
+                    lambda: boat("upturned")),
+                  M("jp_s_boat_ab_rotten", "plank", "abandoned", "Small boat rotting on the bank, side planks gone",
+                    lambda: boat("ab_rotten")),
+              ]})

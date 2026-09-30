@@ -70,3 +70,12 @@
 2026-09-30 14:28:52 | #59 | jp_s_footwear_ab_scattered | abandoned (batch) | 5h 9% wk 27%
 2026-09-30 14:28:52 | #60 | jp_s_footwear_ab_single | abandoned (batch) | 5h 9% wk 27%
 2026-09-30 14:28:52 | GROUP START | #66 fishing nets, #67 boat | - | 5h 9% wk 27%
+2026-09-30 14:30:54 | #61 | jp_s_fishnet_poles | new model (batch) | 5h 9% wk 27%
+2026-09-30 14:30:54 | #62 | jp_s_fishnet_small | variant (batch) | 5h 9% wk 27%
+2026-09-30 14:30:54 | #63 | jp_s_fishnet_heap | variant (batch) | 5h 9% wk 27%
+2026-09-30 14:30:54 | #64 | jp_s_fishnet_ab_down | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:30:54 | #65 | jp_s_boat_up | new model (batch) | 5h 9% wk 27%
+2026-09-30 14:30:54 | #66 | jp_s_boat_tilted | variant (batch) | 5h 9% wk 27%
+2026-09-30 14:30:54 | #67 | jp_s_boat_upturned | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:30:54 | #68 | jp_s_boat_ab_rotten | abandoned (batch) | 5h 9% wk 27%
+2026-09-30 14:30:54 | GROUP START | #68 fire watch gear, #69 sandals for sale, #71 shop shutters, #72 fallen lantern | - | 5h 9% wk 27%
