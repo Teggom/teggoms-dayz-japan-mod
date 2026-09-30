@@ -1,0 +1,192 @@
+{
+ "id": "jp_p_stair_open",
+ "part": "jp_p_stair",
+ "variant": "_open",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_stair_open.p3d",
+ "build_list": {
+  "entry": "jp_p_stair",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "plain open stair (stringers + treads) for the kura loft and work buildings (DW22 loft, G1-5 elevation): 1.10 wide, 37.8 deg walk ramp",
+ "datum": "flight along +x from the foot (x 0, y 0 = lower floor top) to the head (x = run, y = rise = upper floor top); width from z 0 (wall side) to z -1.10",
+ "recipe": "stair.stair(part, width, rise, kind) + floors.<kind>(holes=[stair.well_rect(...) + 'stair'], hole_fn=stair.well_fn(open_side='x1'))",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.03,
+  3.185,
+  0.0,
+  2.5,
+  -1.11,
+  0.01
+ ],
+ "dims": [
+  {
+   "name": "ramp_deg",
+   "expected": "<=38",
+   "measured": 37.0,
+   "tol": 0.0,
+   "source": "PLAYBOOK D4 / §15 T9 (37.8 walks fine)",
+   "ok": true
+  },
+  {
+   "name": "width_m",
+   "expected": ">=1.10",
+   "measured": 1.1,
+   "tol": 0.01,
+   "source": "PLAYBOOK D4",
+   "ok": true
+  },
+  {
+   "name": "riser_m",
+   "expected": "0.18-0.22 (A)",
+   "measured": 0.2,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "steps",
+   "expected": 12,
+   "measured": 12.0,
+   "tol": 0,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "stair_foot",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "first riser at the lower floor top, wall-side edge of the flight"
+  },
+  {
+   "type": "stair_head",
+   "pos": [
+    3.185,
+    2.4,
+    0.0
+   ],
+   "note": "top of the ramp = upper floor top (run 3.185, on the grid)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 234,
+  "Resolution 2": 90,
+  "Resolution 3": 18,
+  "Geometry": 5,
+  "Roadway": 1,
+  "View Geometry": 5,
+  "Fire Geometry": 5
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "flight": {
+   "run": 3.185,
+   "n": 12,
+   "riser": 0.2,
+   "going": 0.2654,
+   "angle": 36.9992
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 234, Resolution 2 90, Resolution 3 18, Geometry 5, Roadway 1, View Geometry 5, Fire Geometry 5"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 ramp_deg",
+   "ok": true,
+   "detail": "expected <=38, measured 37.0"
+  },
+  {
+   "check": "C4 width_m",
+   "ok": true,
+   "detail": "expected >=1.10, measured 1.1"
+  },
+  {
+   "check": "C4 riser_m",
+   "ok": true,
+   "detail": "expected 0.18-0.22 (A), measured 0.2"
+  },
+  {
+   "check": "C4 steps",
+   "ok": true,
+   "detail": "expected 12, measured 12.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

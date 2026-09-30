@@ -1,0 +1,239 @@
+{
+ "id": "jp_p_wall_party_omoya",
+ "part": "jp_p_wall_party",
+ "variant": "_omoya",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_party_omoya.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_party",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "party wall of a snap-together townhouse unit (DW11 / DW12, DW10 rows): its own end wall, half a wall inside the lot, stone course + dodai, earth wall, floor beam, upper wall and a plain earth gable cut to the roof section and sealed to the rafter underside",
+ "datum": "the unit's end wall line as a wall part: x 0..3 ken along it (back -> front), +z = out towards the lot line (LOT_PAD 0.064 out); y 0 = grade; townhouse levels (sill 0.27, ceiling 3.00, loft 3.15, eave 4.63)",
+ "recipe": "party.build_party_wall(B, frame, D, levels, pitch, 'omoya' | 'geya') (townhouse hook party_wall)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.06,
+  5.52,
+  -0.15,
+  5.858,
+  -0.06,
+  0.06
+ ],
+ "dims": [
+  {
+   "name": "gable_top_m (rafter underside at the ridge)",
+   "expected": 5.858499999999999,
+   "measured": 5.8585,
+   "tol": 0.005,
+   "source": "sealed to the roof underside (PARTS_GAP_AUDIT §3 part 14)"
+  },
+  {
+   "name": "wall_thickness_m",
+   "expected": 0.075,
+   "measured": 0.075,
+   "tol": 0.01,
+   "source": "shinkabe nakanuri (kit)"
+  },
+  {
+   "name": "lot_line_offset_m",
+   "expected": "0.064",
+   "measured": 0.064,
+   "tol": 0.01,
+   "source": "audit §6 risk 1: half a wall + 4 mm inside the lot line",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "post in the part"
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "post in the part"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "post in the part"
+  },
+  {
+   "type": "post",
+   "pos": [
+    2.73,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "post in the part"
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "post in the part"
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.27,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_nakanuri",
+   "id": "jp_m_wall_nakanuri",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_nakanuri_int",
+   "id": "jp_m_wall_nakanuri_int",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 133,
+  "Resolution 2": 133,
+  "Resolution 3": 21,
+  "Geometry": 133,
+  "View Geometry": 133,
+  "Fire Geometry": 133
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 133, Resolution 2 133, Resolution 3 21, Geometry 133, View Geometry 133, Fire Geometry 133"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "22 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "22 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "22 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, granite, wood"
+  },
+  {
+   "check": "C4 gable_top_m (rafter underside at the ridge)",
+   "ok": true,
+   "detail": "expected 5.858499999999999, measured 5.8585"
+  },
+  {
+   "check": "C4 wall_thickness_m",
+   "ok": true,
+   "detail": "expected 0.075, measured 0.075"
+  },
+  {
+   "check": "C4 lot_line_offset_m",
+   "ok": true,
+   "detail": "expected 0.064, measured 0.064"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

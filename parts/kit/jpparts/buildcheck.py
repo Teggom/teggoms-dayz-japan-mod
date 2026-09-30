@@ -98,6 +98,9 @@ def run_g3(M, L, floors, rec):
             u = [abs(a0["axis"][1][q] - a0["axis"][0][q]) for q in range(3)]
             nx = 0.20 if u[2] > u[0] else 0.06            # the wall normal is x when the leaf runs along z
             nz = 0.20 if u[0] >= u[2] else 0.06
+            if getattr(d, "half", False) and d.action:      # B2 half door: its whole doorway (the open top, the gap
+                bx[3] = max(bx[3], d.action[1] + getattr(d, "half_top", 1.0))      # under the leaf) is the portal
+                bx[2] = min(bx[2], d.action[1] - getattr(d, "act_h", 1.0))
             portals.append(("DoorsTwin%d" % k, (bx[0] - nx, bx[1] + nx, bx[2] - 0.06, bx[3] + 0.06, bx[4] - nz,
                                                   bx[5] + nz)))
     res = RC.envelope_leak(L["Resolution 1"], rooms, portals)
@@ -116,7 +119,9 @@ def run_g3(M, L, floors, rec):
         else "; ".join("%s/%s (LOD %s) into %s %s by %.2f m" % x for x in pk[:4]))
     # C13 tile seating
     ts = C.tile_seating(M)
-    rec("C13 kawara seated on the clay bed, fascia at every eave", ts is not None and ts[0], ts[1] if ts else "no kawara")
+    # B2: a building with no kawara at all (board or thatch roofs only) has nothing to seat: pass, and say so
+    rec("C13 kawara seated on the clay bed, fascia at every eave", ts is None or ts[0],
+        ts[1] if ts else "no kawara on this building (board / thatch roofs): nothing to seat")
     # C14 interior faces never use the exterior-weathered earth
     bad = []
     for f_ in L["Resolution 1"].faces:
@@ -188,8 +193,11 @@ def run_g3(M, L, floors, rec):
         "namako, iron)%s" % (len(used), sum(1 for rv in used if reflective(re.sub(r"_w\d\.rvmat$", "",
                                                                                    os.path.basename(rv).lower()))),
                              ("; SHINY: %s" % shiny[:4]) if shiny else ""))
-    rec("C16 far-LOD kawara: matte far material in Resolution 2 / 3", fars["Resolution 1"] == 0 and
-        fars["Resolution 2"] > 0 and fars["Resolution 3"] > 0 and not any(nears.values()) and sf < sn,
+    # B2: a building without a kawara field (board / thatch roofs only) passes when no far field appears either
+    has_field = any("jp_m_roof_kawara_field" in f_[2].lower() for f_ in L["Resolution 1"].faces)
+    rec("C16 far-LOD kawara: matte far material in Resolution 2 / 3", (fars["Resolution 1"] == 0 and
+        fars["Resolution 2"] > 0 and fars["Resolution 3"] > 0 and not any(nears.values()) and sf < sn) if has_field
+        else not any(fars.values()),
         "far-field faces R1/R2/R3 %d/%d/%d; close field in R2/R3 %d/%d; specular far %.2f < close %.2f" % (
             fars["Resolution 1"], fars["Resolution 2"], fars["Resolution 3"], nears["Resolution 2"],
             nears["Resolution 3"], sf, sn))

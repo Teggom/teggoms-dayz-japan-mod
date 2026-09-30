@@ -1,0 +1,250 @@
+{
+ "id": "jp_p_open_halfdoor_hinged",
+ "part": "jp_p_open_halfdoor",
+ "variant": "_hinged",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_halfdoor_hinged.p3d",
+ "build_list": {
+  "entry": "jp_p_open_halfdoor",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "walk-in toilet / booth door (DW26, G1 A1-1): half-height hinged board leaf (rotation door, swings out 90 deg; ENGINE-UNTESTED like every rotation door) in a 1-ken bay with a door post and a fixed board panel; doorway 1.04 x 2.00",
+ "datum": "1-ken bay between post nodes x=0 and x=1.82; y 0 = floor; +z = out (the leaf swings out)",
+ "recipe": null,
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.025,
+  1.76,
+  0.0,
+  2.0,
+  -0.05,
+  0.13
+ ],
+ "dims": [
+  {
+   "name": "clear_width_m",
+   "expected": ">=1.00",
+   "measured": 1.04,
+   "tol": 0.01,
+   "source": "PLAYBOOK D1 (G1 A1-1: D1 applies to the toilet)",
+   "ok": true
+  },
+  {
+   "name": "clear_height_m",
+   "expected": ">=2.00",
+   "measured": 2.0,
+   "tol": 0.01,
+   "source": "PLAYBOOK D2",
+   "ok": true
+  },
+  {
+   "name": "leaf_band_m",
+   "expected": "0.25-1.45",
+   "measured": "0.25-1.45",
+   "tol": 0.01,
+   "source": "half door (A): the top of the doorway stays open",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ],
+   "note": "the wall's head rail over the doorway (wall_run head=True)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "straw_rope",
+   "id": "jp_m_straw_rope",
+   "palette_id": "straw_aged",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 132,
+  "Resolution 2": 42,
+  "Resolution 3": 18,
+  "Geometry": 18,
+  "Memory": 0,
+  "View Geometry": 18,
+  "Fire Geometry": 18
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [
+  {
+   "source": "DoorsTwin1",
+   "kind": "plank",
+   "display": "door",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "rotation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.5708,
+     "unit": "rad"
+    }
+   ],
+   "anim_period": 0.9,
+   "init_opened": 0.4,
+   "sound": "doorWoodSlide",
+   "clear_width_m": 1.04,
+   "engine_tested": false,
+   "note": "half-height hinged board door (toilet / booth), swings out 90 deg"
+  }
+ ],
+ "notes": [
+  "The wall recipe must leave the hole walls.wall_run(openings=[(0.06, 1.76, 0.0, 2.0)]) and keep its head rail (head=True). C11 counts the open top of the doorway as part of the door's portal (Door.half)."
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 132, Resolution 2 42, Resolution 3 18, Geometry 18, Memory 0, View Geometry 18, Fire Geometry 18"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "rotation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep (window / hinged)",
+   "ok": true,
+   "detail": "moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.35 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.35 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.41 m"
+  },
+  {
+   "check": "C4 clear_width_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.04"
+  },
+  {
+   "check": "C4 clear_height_m",
+   "ok": true,
+   "detail": "expected >=2.00, measured 2.0"
+  },
+  {
+   "check": "C4 leaf_band_m",
+   "ok": true,
+   "detail": "expected 0.25-1.45, measured 0.25-1.45"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

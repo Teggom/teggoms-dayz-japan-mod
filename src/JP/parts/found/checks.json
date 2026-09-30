@@ -585,6 +585,461 @@
      "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
+  },
+  {
+   "id": "jp_p_stair_box",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 312, Resolution 2 168, Resolution 3 5, Geometry 5, Roadway 1, View Geometry 5, Fire Geometry 5"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 ramp_deg",
+     "ok": true,
+     "detail": "expected <=38, measured 37.57"
+    },
+    {
+     "check": "C4 width_m",
+     "ok": true,
+     "detail": "expected >=1.10, measured 1.2"
+    },
+    {
+     "check": "C4 riser_m",
+     "ok": true,
+     "detail": "expected 0.18-0.22 (A), measured 0.2"
+    },
+    {
+     "check": "C4 steps",
+     "ok": true,
+     "detail": "expected 14, measured 14.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_stair_open",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 234, Resolution 2 90, Resolution 3 18, Geometry 5, Roadway 1, View Geometry 5, Fire Geometry 5"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 ramp_deg",
+     "ok": true,
+     "detail": "expected <=38, measured 37.0"
+    },
+    {
+     "check": "C4 width_m",
+     "ok": true,
+     "detail": "expected >=1.10, measured 1.1"
+    },
+    {
+     "check": "C4 riser_m",
+     "ok": true,
+     "detail": "expected 0.18-0.22 (A), measured 0.2"
+    },
+    {
+     "check": "C4 steps",
+     "ok": true,
+     "detail": "expected 12, measured 12.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_stair_well",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 471, Resolution 2 246, Resolution 3 23, Geometry 35, Roadway 4, View Geometry 35, Fire Geometry 35"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "64/64 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 well_length_m",
+     "ok": true,
+     "detail": "expected 2.866, measured 2.8665"
+    },
+    {
+     "check": "C4 head_room_m",
+     "ok": true,
+     "detail": "expected >=2.05, measured 2.05"
+    },
+    {
+     "check": "C4 ramp_deg",
+     "ok": true,
+     "detail": "expected <=38, measured 37.57"
+    },
+    {
+     "check": "C4 width_m",
+     "ok": true,
+     "detail": "expected >=1.10, measured 1.2"
+    },
+    {
+     "check": "C4 riser_m",
+     "ok": true,
+     "detail": "expected 0.18-0.22 (A), measured 0.2"
+    },
+    {
+     "check": "C4 steps",
+     "ok": true,
+     "detail": "expected 14, measured 14.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_floor_pit_irori",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 144, Resolution 2 78, Resolution 3 54, Geometry 78, Roadway 5, View Geometry 78, Fire Geometry 78"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "13 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "13 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "13 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "dirt, wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "80/80 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 hearth_m",
+     "ok": true,
+     "detail": "expected 0.91 x 0.91 (3 x 3 shaku), measured 0.91"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_floor_pit_irori_doma",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 378, Resolution 2 351, Resolution 3 30, Geometry 54, Roadway 5, View Geometry 54, Fire Geometry 54"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "dirt"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "80/80 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 hearth_m",
+     "ok": true,
+     "detail": "expected 0.6-0.9 (A), measured 0.72"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_floor_pit_slot",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 99, Resolution 2 66, Resolution 3 24, Geometry 54, Roadway 4, View Geometry 54, Fire Geometry 54"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "64/64 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 slot_m",
+     "ok": true,
+     "detail": "expected 0.30 x 0.17 (A), measured 0.3"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_floor_sunoko_take",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 29, Resolution 2 6, Resolution 3 6, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 slat_gap_m",
+     "ok": true,
+     "detail": "expected texture, measured 0.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_floor_sunoko_slat",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 108, Resolution 2 6, Resolution 3 6, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "1 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 slat_gap_m",
+     "ok": true,
+     "detail": "expected 0.02-0.04, measured 0.03"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
   }
  ]
 }

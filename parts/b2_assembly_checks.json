@@ -218,13 +218,13 @@
  },
  "koya_hut": {
   "faces": {
-   "Resolution 1": 2136,
-   "Resolution 2": 1206,
-   "Resolution 3": 844,
-   "Geometry": 998,
+   "Resolution 1": 1932,
+   "Resolution 2": 1110,
+   "Resolution 3": 796,
+   "Geometry": 938,
    "Roadway": 1,
-   "View Geometry": 986,
-   "Fire Geometry": 986
+   "View Geometry": 938,
+   "Fire Geometry": 938
   },
   "koyagumi": {
    "system": "sasu",
@@ -265,22 +265,22 @@
    {
     "check": "C5 LODs",
     "ok": true,
-    "detail": "Resolution 1 2136, Resolution 2 1206, Resolution 3 844, Geometry 998, Roadway 1, View Geometry 986, Fire Geometry 986"
+    "detail": "Resolution 1 1932, Resolution 2 1110, Resolution 3 796, Geometry 938, Roadway 1, View Geometry 938, Fire Geometry 938"
    },
    {
     "check": "C7 Geometry closed + convex",
     "ok": true,
-    "detail": "59 components, 0 bad, 0 faces outside"
+    "detail": "49 components, 0 bad, 0 faces outside"
    },
    {
     "check": "C7 View Geometry closed + convex",
     "ok": true,
-    "detail": "57 components, 0 bad, 0 faces outside"
+    "detail": "49 components, 0 bad, 0 faces outside"
    },
    {
     "check": "C7 Fire Geometry closed + convex",
     "ok": true,
-    "detail": "57 components, 0 bad, 0 faces outside"
+    "detail": "49 components, 0 bad, 0 faces outside"
    },
    {
     "check": "C2 library materials only",
@@ -310,7 +310,7 @@
    {
     "check": "Binarize (cwd P:\\) -> ODOL",
     "ok": true,
-    "detail": "ODOL, 322949 bytes"
+    "detail": "ODOL, 303634 bytes"
    }
   ]
  },
@@ -514,6 +514,298 @@
     "check": "Binarize (cwd P:\\) -> ODOL",
     "ok": true,
     "detail": "ODOL, 403543 bytes"
+   }
+  ]
+ },
+ "stair_hatago": {
+  "faces": {
+   "Resolution 1": 878,
+   "Resolution 2": 488,
+   "Resolution 3": 265,
+   "Geometry": 277,
+   "Roadway": 5,
+   "View Geometry": 277,
+   "Fire Geometry": 277
+  },
+  "koyagumi": null,
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 878, Resolution 2 488, Resolution 3 265, Geometry 277, Roadway 5, View Geometry 277, Fire Geometry 277"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "25 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "25 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "25 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "ST1 walk ramp <= 38 deg (D4, 37.8 walked in game)",
+    "ok": true,
+    "detail": "ramp faces [37.57] deg"
+   },
+   {
+    "check": "ST2 flight width >= 1.10 m (D4)",
+    "ok": true,
+    "detail": "1.20 m"
+   },
+   {
+    "check": "ST3 head room >= 2.05 m over the flight (D4)",
+    "ok": true,
+    "detail": "lowest 2.09 m over the ramp at (1.64, -0.21, 'Component21')"
+   },
+   {
+    "check": "ST4 the ramp meets the lower floor at its foot and the upper floor at its head",
+    "ok": true,
+    "detail": "foot [0.5, 0.515, 3.3] / head side [0.5, 3.3] (floors 0.50 / 3.30)"
+   },
+   {
+    "check": "ST5 stairwell cut: no upper-floor Roadway over the flight",
+    "ok": true,
+    "detail": "0 samples covered"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 121776 bytes"
+   }
+  ]
+ },
+ "stair_kura": {
+  "faces": {
+   "Resolution 1": 779,
+   "Resolution 2": 410,
+   "Resolution 3": 278,
+   "Geometry": 277,
+   "Roadway": 5,
+   "View Geometry": 277,
+   "Fire Geometry": 277
+  },
+  "koyagumi": null,
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 779, Resolution 2 410, Resolution 3 278, Geometry 277, Roadway 5, View Geometry 277, Fire Geometry 277"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "25 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "25 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "25 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "ST1 walk ramp <= 38 deg (D4, 37.8 walked in game)",
+    "ok": true,
+    "detail": "ramp faces [37.0] deg"
+   },
+   {
+    "check": "ST2 flight width >= 1.10 m (D4)",
+    "ok": true,
+    "detail": "1.10 m"
+   },
+   {
+    "check": "ST3 head room >= 2.05 m over the flight (D4)",
+    "ok": true,
+    "detail": "lowest 2.09 m over the ramp at (0.51, -0.21, 'Component21')"
+   },
+   {
+    "check": "ST4 the ramp meets the lower floor at its foot and the upper floor at its head",
+    "ok": true,
+    "detail": "foot [0.3, 0.315, 2.7] / head side [0.3, 2.7] (floors 0.30 / 2.70)"
+   },
+   {
+    "check": "ST5 stairwell cut: no upper-floor Roadway over the flight",
+    "ok": true,
+    "detail": "0 samples covered"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 109127 bytes"
+   }
+  ]
+ },
+ "toilet": {
+  "faces": {
+   "Resolution 1": 1325,
+   "Resolution 2": 779,
+   "Resolution 3": 333,
+   "Geometry": 323,
+   "Memory": 0,
+   "Roadway": 6,
+   "View Geometry": 323,
+   "Fire Geometry": 323
+  },
+  "koyagumi": null,
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 1325, Resolution 2 779, Resolution 3 333, Geometry 323, Memory 0, Roadway 6, View Geometry 323, Fire Geometry 323"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "54 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "54 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "54 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "C7 DoorsTwin1 sweep (rotation, swings out)",
+    "ok": true,
+    "detail": "clear"
+   },
+   {
+    "check": "C10 DoorsTwin1 reachable from both sides (open)",
+    "ok": true,
+    "detail": "Toilet door (half door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+   },
+   {
+    "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+    "ok": true,
+    "detail": "Toilet door (half door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.41 m"
+   },
+   {
+    "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+    "ok": true,
+    "detail": "Toilet door (half door): 17262 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": "toilet 11520 rays, 223 out through doors/windows, 0 LEAKS"
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "2 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "no kawara on this building (board / thatch roofs): nothing to seat"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "792 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "6 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "D1 clear width through the doorway with the leaf open >= 1.00 m",
+    "ok": true,
+    "detail": "1.02 m (leaf swung out, 0.7 m deep body column)"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 146363 bytes"
+   }
+  ]
+ },
+ "stall_doma": {
+  "faces": {
+   "Resolution 1": 590,
+   "Resolution 2": 408,
+   "Resolution 3": 298,
+   "Geometry": 298,
+   "Roadway": 1,
+   "View Geometry": 298,
+   "Fire Geometry": 298
+  },
+  "koyagumi": null,
+  "checks": [
+   {
+    "check": "C5 LODs",
+    "ok": true,
+    "detail": "Resolution 1 590, Resolution 2 408, Resolution 3 298, Geometry 298, Roadway 1, View Geometry 298, Fire Geometry 298"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "23 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "23 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "23 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "SL1 stall entry (bars down) >= 1.00 m clear, head >= 2.05",
+    "ok": true,
+    "detail": "1.67 m clear between the front posts, head 2.12 m"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 104840 bytes"
    }
   ]
  }

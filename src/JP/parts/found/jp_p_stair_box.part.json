@@ -1,0 +1,203 @@
+{
+ "id": "jp_p_stair_box",
+ "part": "jp_p_stair",
+ "variant": "_box",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_stair_box.p3d",
+ "build_list": {
+  "entry": "jp_p_stair",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "box stair with the kaidan-dansu look (drawers in its side) for the grand hatago's upper floor (TR05 size 2, G1-5) and shops: 1.20 wide, 37.8 deg walk ramp",
+ "datum": "flight along +x from the foot (x 0, y 0 = lower floor top) to the head (x = run, y = rise = upper floor top); width from z 0 (wall side) to z -1.20",
+ "recipe": "stair.stair(part, width, rise, kind) + floors.<kind>(holes=[stair.well_rect(...) + 'stair'], hole_fn=stair.well_fn(open_side='x1'))",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.02,
+  3.64,
+  0.0,
+  2.8,
+  -1.226,
+  0.0
+ ],
+ "dims": [
+  {
+   "name": "ramp_deg",
+   "expected": "<=38",
+   "measured": 37.57,
+   "tol": 0.0,
+   "source": "PLAYBOOK D4 / §15 T9 (37.8 walks fine)",
+   "ok": true
+  },
+  {
+   "name": "width_m",
+   "expected": ">=1.10",
+   "measured": 1.2,
+   "tol": 0.01,
+   "source": "PLAYBOOK D4",
+   "ok": true
+  },
+  {
+   "name": "riser_m",
+   "expected": "0.18-0.22 (A)",
+   "measured": 0.2,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "steps",
+   "expected": 14,
+   "measured": 14.0,
+   "tol": 0,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "stair_foot",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "first riser at the lower floor top, wall-side edge of the flight"
+  },
+  {
+   "type": "stair_head",
+   "pos": [
+    3.64,
+    2.8,
+    0.0
+   ],
+   "note": "top of the ramp = upper floor top (run 3.640, on the grid)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_interior",
+   "id": "jp_m_wood_interior",
+   "palette_id": "timber_interior",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_interior<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 312,
+  "Resolution 2": 168,
+  "Resolution 3": 5,
+  "Geometry": 5,
+  "Roadway": 1,
+  "View Geometry": 5,
+  "Fire Geometry": 5
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "flight": {
+   "run": 3.64,
+   "n": 14,
+   "riser": 0.2,
+   "going": 0.26,
+   "angle": 37.5686
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 312, Resolution 2 168, Resolution 3 5, Geometry 5, Roadway 1, View Geometry 5, Fire Geometry 5"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 ramp_deg",
+   "ok": true,
+   "detail": "expected <=38, measured 37.57"
+  },
+  {
+   "check": "C4 width_m",
+   "ok": true,
+   "detail": "expected >=1.10, measured 1.2"
+  },
+  {
+   "check": "C4 riser_m",
+   "ok": true,
+   "detail": "expected 0.18-0.22 (A), measured 0.2"
+  },
+  {
+   "check": "C4 steps",
+   "ok": true,
+   "detail": "expected 14, measured 14.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

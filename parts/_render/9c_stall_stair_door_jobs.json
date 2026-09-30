@@ -1,0 +1,186 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\9c_stall_stair_door",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_frame_stall_ox",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      -2.73
+     ]
+    ]
+   ],
+   "caption": "Kinai farmhouse ox stall in the niwa (DW07, required): 1 x 1.5 ken, board partitions, bars down (as left), manger and tether ring on the back wall, straw bedding"
+  },
+  {
+   "name": "jp_p_frame_stall_ox_closed",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      -2.73
+     ]
+    ]
+   ],
+   "caption": "the same ox stall with its two mase-bo in place (dressing; not enterable)"
+  },
+  {
+   "name": "jp_p_frame_stall_umaya",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      -2.73
+     ]
+    ]
+   ],
+   "caption": "Kanto farmhouse inside stable (umaya) in a doma corner (DW06 variant): 1.5 x 1.5 ken, one partition (the building's walls close the rest), sooted from the kitchen smoke"
+  },
+  {
+   "name": "jp_p_frame_stall_row2",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      -2.73
+     ]
+    ]
+   ],
+   "caption": "two stalls side by side for the post-town house / inn stable (DW10 variant, TR09): 2 x 1.5 ken with a divider"
+  },
+  {
+   "name": "jp_p_stair_box",
+   "scale": 6.5,
+   "view": "back",
+   "context": [],
+   "caption": "box stair with the kaidan-dansu look (drawers in its side) for the grand hatago's upper floor (TR05 size 2, G1-5) and shops: 1.20 wide, 37.8 deg walk ramp"
+  },
+  {
+   "name": "jp_p_stair_open",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "plain open stair (stringers + treads) for the kura loft and work buildings (DW22 loft, G1-5 elevation): 1.10 wide, 37.8 deg walk ramp"
+  },
+  {
+   "name": "jp_p_stair_well",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "the upper floor's stairwell for the _box stair: the floor (floors.boards) cut by a 'stair' hole, rim boards and a guard rail on the three open sides; shown with its stair"
+  },
+  {
+   "name": "jp_p_open_halfdoor_hinged",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "open": 0.6,
+   "caption": "walk-in toilet / booth door (DW26, G1 A1-1): half-height hinged board leaf (rotation door, swings out 90 deg; ENGINE-UNTESTED like every rotation door) in a 1-ken bay with a door post and a fixed board panel; doorway 1.04 x 2.00"
+  },
+  {
+   "name": "jp_p_open_halfdoor_open",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_frame_post_planed",
+     0.0,
+     [
+      1.82,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "caption": "the same half door as left: static, standing open (no animation) - dressing or a toilet whose door is gone"
+  },
+  {
+   "name": "jp_p_floor_pit_irori",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "sunken hearth (irori) in a raised board floor: sooted robuchi frame flush with the floor, clay walls, ash bed 0.20 down with charred firewood (the kettle hook / fitting is PA2's)"
+  },
+  {
+   "name": "jp_p_floor_pit_irori_doma",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "hearth pit in an earth floor ringed with field stones (poor huts DW01 / DW30, work sheds)"
+  },
+  {
+   "name": "jp_p_floor_pit_slot",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "the walk-in toilet's drop slot (DW26): rim boards over a closed, lined pit"
+  },
+  {
+   "name": "jp_p_floor_sunoko_take",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "split-bamboo floor (take-yuka / sunoko-yuka) of the Kinai tenant house and poor huts (DW01 / DW30 floor axis), on bamboo sleepers"
+  },
+  {
+   "name": "jp_p_floor_sunoko_slat",
+   "scale": 6.5,
+   "view": "3q",
+   "context": [],
+   "caption": "board slat floor with gaps (sunoko): kitchen sink and wash floors, bath floors"
+  }
+ ]
+}

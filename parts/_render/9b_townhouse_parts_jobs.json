@@ -1,0 +1,174 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\9b_townhouse_parts",
+ "res": [
+  480,
+  400
+ ],
+ "jobs": [
+  {
+   "name": "jp_p_wall_party_omoya",
+   "scale": 9.0,
+   "view": "3q",
+   "context": [],
+   "caption": "party wall of a snap-together townhouse unit (DW11 / DW12, DW10 rows): its own end wall, half a wall inside the lot, stone course + dodai, earth wall, floor beam, upper wall and a plain earth gable cut to the roof section and sealed to the rafter underside"
+  },
+  {
+   "name": "jp_p_wall_party_geya",
+   "scale": 9.0,
+   "view": "3q",
+   "context": [],
+   "caption": "party wall of a townhouse unit's rear lean-to kitchen: earth wall on a stone course under the lean-to's roof line"
+  },
+  {
+   "name": "jp_p_roof_party_end_kawara",
+   "scale": 9.0,
+   "view": "3q_left",
+   "context": [],
+   "drop": true,
+   "caption": "flush roof end at a townhouse party line (DW11 / DW12): no verge tiles, bargeboard or onigawara; plaster closure band over the covering's section and a ridge end plate; the roof stops 2 mm inside the lot line"
+  },
+  {
+   "name": "jp_p_roof_party_end_board",
+   "scale": 9.0,
+   "view": "3q_left",
+   "context": [],
+   "drop": true,
+   "caption": "flush roof end at a townhouse party line (DW11 / DW12): no verge tiles, bargeboard or onigawara; board closure band over the covering's section and a ridge end plate; the roof stops 2 mm inside the lot line"
+  },
+  {
+   "name": "jp_p_roof_corner_tile",
+   "scale": 9.0,
+   "view": "3q_left",
+   "context": [
+    [
+     "jp_p_roof_hisashi_tile",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_roof_hisashi_tile",
+     90.0,
+     [
+      0.0,
+      0.0,
+      -3.64
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "hipped corner of a tiled street pent wrapping a corner townhouse unit / corner hatago (Kamigata, DW11)"
+  },
+  {
+   "name": "jp_p_roof_corner_board",
+   "scale": 9.0,
+   "view": "3q_left",
+   "context": [
+    [
+     "jp_p_roof_hisashi_board",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_roof_hisashi_board",
+     90.0,
+     [
+      0.0,
+      0.0,
+      -3.64
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "hipped corner of a board pent wrapping a corner (Edo corner unit, DW12)"
+  },
+  {
+   "name": "jp_p_roof_corner_skirt",
+   "scale": 9.0,
+   "view": "3q_left",
+   "context": [
+    [
+     "jp_p_roof_hisashi_skirt",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_roof_hisashi_skirt",
+     90.0,
+     [
+      0.0,
+      0.0,
+      -3.64
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "corner of the farmhouse skirt pent on posts (G1-6), with its corner post (DW06)"
+  },
+  {
+   "name": "jp_p_roof_seam_cap_kawara",
+   "scale": 9.0,
+   "view": "3q_left",
+   "context": [
+    [
+     "jp_p_roof_party_end_kawara",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_roof_party_end_kawara",
+     180.0,
+     [
+      -0.128,
+      0.0,
+      -5.46
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "cap over the seam between two townhouse units' roofs, built by the seam's owner only (one per seam, like the udatsu): a small noshi ridge on mortar with a round cap, and a ridge bridge over the main roof (both slopes) and the lean-to"
+  },
+  {
+   "name": "jp_p_roof_seam_cap_board",
+   "scale": 9.0,
+   "view": "3q_left",
+   "context": [
+    [
+     "jp_p_roof_party_end_board",
+     0.0,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "jp_p_roof_party_end_board",
+     180.0,
+     [
+      -0.128,
+      0.0,
+      -5.46
+     ]
+    ]
+   ],
+   "drop": true,
+   "caption": "cap over the seam between two townhouse units' roofs, built by the seam's owner only (one per seam, like the udatsu): a cap board with a batten over the main roof (both slopes) and the lean-to, and the Edo street pent"
+  }
+ ]
+}

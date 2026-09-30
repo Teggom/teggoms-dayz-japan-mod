@@ -1,0 +1,197 @@
+{
+ "id": "jp_p_wall_party_geya",
+ "part": "jp_p_wall_party",
+ "variant": "_geya",
+ "group": "wall",
+ "p3d": "JP\\parts\\wall\\jp_p_wall_party_geya.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_party",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "party wall of a townhouse unit's rear lean-to kitchen: earth wall on a stone course under the lean-to's roof line",
+ "datum": "the unit's end wall line as a wall part: x 0..1 ken along it (back -> front), +z = out towards the lot line (LOT_PAD 0.064 out); y 0 = grade; townhouse levels (sill 0.27, ceiling 3.00, loft 3.15, eave 4.63)",
+ "recipe": "party.build_party_wall(B, frame, D, levels, pitch, 'omoya' | 'geya') (townhouse hook party_wall)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.06,
+  1.88,
+  -0.15,
+  3.442,
+  -0.06,
+  0.06
+ ],
+ "dims": [
+  {
+   "name": "wall_thickness_m",
+   "expected": 0.075,
+   "measured": 0.075,
+   "tol": 0.01,
+   "source": "shinkabe nakanuri (kit)"
+  },
+  {
+   "name": "lot_line_offset_m",
+   "expected": "0.064",
+   "measured": 0.064,
+   "tol": 0.01,
+   "source": "audit §6 risk 1: half a wall + 4 mm inside the lot line",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "post in the part"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "post in the part"
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.27,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_nakanuri",
+   "id": "jp_m_wall_nakanuri",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_nakanuri_int",
+   "id": "jp_m_wall_nakanuri_int",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 48,
+  "Resolution 2": 48,
+  "Resolution 3": 18,
+  "Geometry": 48,
+  "View Geometry": 48,
+  "Fire Geometry": 48
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 48, Resolution 2 48, Resolution 3 18, Geometry 48, View Geometry 48, Fire Geometry 48"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, granite, wood"
+  },
+  {
+   "check": "C4 wall_thickness_m",
+   "ok": true,
+   "detail": "expected 0.075, measured 0.075"
+  },
+  {
+   "check": "C4 lot_line_offset_m",
+   "ok": true,
+   "detail": "expected 0.064, measured 0.064"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

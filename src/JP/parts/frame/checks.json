@@ -795,6 +795,266 @@
      "detail": "26 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
+  },
+  {
+   "id": "jp_p_frame_stall_ox",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 328, Resolution 2 146, Resolution 3 36, Geometry 36, View Geometry 36, Fire Geometry 36"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "6 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 stall_width_m",
+     "ok": true,
+     "detail": "expected 1.82-2.73, measured 1.82"
+    },
+    {
+     "check": "C4 stall_depth_m",
+     "ok": true,
+     "detail": "expected 2.73, measured 2.73"
+    },
+    {
+     "check": "C4 head_clear_m",
+     "ok": true,
+     "detail": "expected >=2.05, measured 2.12"
+    },
+    {
+     "check": "C4 bar_heights_m",
+     "ok": true,
+     "detail": "expected 0.6 / 1.1 (A), measured 0.62 / 1.12"
+    },
+    {
+     "check": "C4 stall_entry_clear_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.66"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_stall_ox_closed",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 334, Resolution 2 146, Resolution 3 36, Geometry 62, View Geometry 62, Fire Geometry 62"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 stall_width_m",
+     "ok": true,
+     "detail": "expected 1.82-2.73, measured 1.82"
+    },
+    {
+     "check": "C4 stall_depth_m",
+     "ok": true,
+     "detail": "expected 2.73, measured 2.73"
+    },
+    {
+     "check": "C4 head_clear_m",
+     "ok": true,
+     "detail": "expected >=2.05, measured 2.12"
+    },
+    {
+     "check": "C4 bar_heights_m",
+     "ok": true,
+     "detail": "expected 0.6 / 1.1 (A), measured 0.62 / 1.12"
+    },
+    {
+     "check": "C4 stall_entry_clear_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.66"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_stall_umaya",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 250, Resolution 2 122, Resolution 3 30, Geometry 30, View Geometry 30, Fire Geometry 30"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 stall_width_m",
+     "ok": true,
+     "detail": "expected 1.82-2.73, measured 2.73"
+    },
+    {
+     "check": "C4 stall_depth_m",
+     "ok": true,
+     "detail": "expected 2.73, measured 2.73"
+    },
+    {
+     "check": "C4 head_clear_m",
+     "ok": true,
+     "detail": "expected >=2.05, measured 2.12"
+    },
+    {
+     "check": "C4 bar_heights_m",
+     "ok": true,
+     "detail": "expected 0.6 / 1.1 (A), measured 0.62 / 1.12"
+    },
+    {
+     "check": "C4 stall_entry_clear_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 2.57"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_frame_stall_row2",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 572, Resolution 2 256, Resolution 3 54, Geometry 54, View Geometry 54, Fire Geometry 54"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "9 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 stall_width_m",
+     "ok": true,
+     "detail": "expected 1.82-2.73, measured 1.82"
+    },
+    {
+     "check": "C4 stall_depth_m",
+     "ok": true,
+     "detail": "expected 2.73, measured 2.73"
+    },
+    {
+     "check": "C4 head_clear_m",
+     "ok": true,
+     "detail": "expected >=2.05, measured 2.12"
+    },
+    {
+     "check": "C4 bar_heights_m",
+     "ok": true,
+     "detail": "expected 0.6 / 1.1 (A), measured 0.62 / 1.12"
+    },
+    {
+     "check": "C4 stall_entry_clear_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.66"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
   }
  ]
 }

@@ -487,7 +487,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 169, Resolution 2 115, Resolution 3 91, Geometry 97, View Geometry 91, Fire Geometry 91"
+     "detail": "Resolution 1 170, Resolution 2 116, Resolution 3 92, Geometry 98, View Geometry 92, Fire Geometry 92"
     },
     {
      "check": "C2 library only",
@@ -582,7 +582,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 234, Resolution 2 180, Resolution 3 30, Geometry 64, View Geometry 58, Fire Geometry 58"
+     "detail": "Resolution 1 150, Resolution 2 150, Resolution 3 30, Geometry 52, View Geometry 52, Fire Geometry 52"
     },
     {
      "check": "C2 library only",
@@ -592,17 +592,17 @@
     {
      "check": "C7 Geometry closed+convex",
      "ok": true,
-     "detail": "11 components, all closed and convex"
+     "detail": "9 components, all closed and convex"
     },
     {
      "check": "C7 View Geometry closed+convex",
      "ok": true,
-     "detail": "10 components, all closed and convex"
+     "detail": "9 components, all closed and convex"
     },
     {
      "check": "C7 Fire Geometry closed+convex",
      "ok": true,
-     "detail": "10 components, all closed and convex"
+     "detail": "9 components, all closed and convex"
     },
     {
      "check": "C7 Fire penetration mats",
@@ -627,7 +627,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 99, Resolution 2 69, Resolution 3 45, Geometry 51, View Geometry 45, Fire Geometry 45"
+     "detail": "Resolution 1 100, Resolution 2 70, Resolution 3 46, Geometry 52, View Geometry 46, Fire Geometry 46"
     },
     {
      "check": "C2 library only",
@@ -938,6 +938,111 @@
      "check": "C3 grid snap",
      "ok": true,
      "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_wall_party_omoya",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 133, Resolution 2 133, Resolution 3 21, Geometry 133, View Geometry 133, Fire Geometry 133"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "22 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "22 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "22 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "dirt, granite, wood"
+    },
+    {
+     "check": "C4 gable_top_m (rafter underside at the ridge)",
+     "ok": true,
+     "detail": "expected 5.858499999999999, measured 5.8585"
+    },
+    {
+     "check": "C4 wall_thickness_m",
+     "ok": true,
+     "detail": "expected 0.075, measured 0.075"
+    },
+    {
+     "check": "C4 lot_line_offset_m",
+     "ok": true,
+     "detail": "expected 0.064, measured 0.064"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_wall_party_geya",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 48, Resolution 2 48, Resolution 3 18, Geometry 48, View Geometry 48, Fire Geometry 48"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "8 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "dirt, granite, wood"
+    },
+    {
+     "check": "C4 wall_thickness_m",
+     "ok": true,
+     "detail": "expected 0.075, measured 0.075"
+    },
+    {
+     "check": "C4 lot_line_offset_m",
+     "ok": true,
+     "detail": "expected 0.064, measured 0.064"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
   }

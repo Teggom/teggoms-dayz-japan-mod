@@ -927,7 +927,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 48, Resolution 2 18, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 48, Resolution 2 18, Resolution 3 18, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -987,7 +987,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 102, Resolution 2 18, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 102, Resolution 2 18, Resolution 3 18, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -1127,7 +1127,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 48, Resolution 2 18, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 48, Resolution 2 18, Resolution 3 18, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -1187,7 +1187,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 93, Resolution 2 63, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 93, Resolution 2 63, Resolution 3 18, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -1247,7 +1247,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 48, Resolution 2 18, Resolution 3 12, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 48, Resolution 2 18, Resolution 3 18, Geometry 6, Roadway 1, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -2017,7 +2017,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 54, Resolution 2 54, Resolution 3 12"
+     "detail": "Resolution 1 54, Resolution 2 54, Resolution 3 24"
     },
     {
      "check": "C2 library only",
@@ -2157,7 +2157,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 171, Resolution 2 60, Resolution 3 18, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+     "detail": "Resolution 1 171, Resolution 2 60, Resolution 3 24, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
     },
     {
      "check": "C2 library only",
@@ -2217,7 +2217,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 424, Resolution 2 165, Resolution 3 18, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+     "detail": "Resolution 1 424, Resolution 2 165, Resolution 3 24, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
     },
     {
      "check": "C2 library only",
@@ -2277,7 +2277,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 289, Resolution 2 125, Resolution 3 36, Geometry 30, Roadway 1, View Geometry 30, Fire Geometry 30"
+     "detail": "Resolution 1 289, Resolution 2 125, Resolution 3 42, Geometry 30, Roadway 1, View Geometry 30, Fire Geometry 30"
     },
     {
      "check": "C2 library only",
@@ -2623,6 +2623,341 @@
      "check": "C4 hook_spacing_m",
      "ok": true,
      "detail": "expected 0.91, measured 0.91"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_party_end_kawara",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 968, Resolution 2 320, Resolution 3 126, Geometry 12, Roadway 2, View Geometry 12, Fire Geometry 12"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "2 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "645/645 field points within reach of the bed; 2 eave tile sets, 2 fascia boards"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "32/32 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 edge_inside_lot_line_m",
+     "ok": true,
+     "detail": "expected 0.002, measured 0.002"
+    },
+    {
+     "check": "C4 closure_band_m",
+     "ok": true,
+     "detail": "expected 0.03, measured 0.03"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_party_end_board",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 282, Resolution 2 131, Resolution 3 81, Geometry 21, Roadway 2, View Geometry 21, Fire Geometry 21"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "32/32 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 edge_inside_lot_line_m",
+     "ok": true,
+     "detail": "expected 0.002, measured 0.002"
+    },
+    {
+     "check": "C4 closure_band_m",
+     "ok": true,
+     "detail": "expected 0.03, measured 0.03"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_corner_tile",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 219, Resolution 2 127, Resolution 3 43, Geometry 30, Roadway 2, View Geometry 30, Fire Geometry 30"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "pottery, wood"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "52/52 field points within reach of the bed; 2 eave tile sets, 2 fascia boards"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "20/20 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 projection_m",
+     "ok": true,
+     "detail": "expected 0.91, measured 0.91"
+    },
+    {
+     "check": "C4 pitch_sun",
+     "ok": true,
+     "detail": "expected 4, measured 4.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_corner_board",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 102, Resolution 2 78, Resolution 3 30, Geometry 30, Roadway 2, View Geometry 30, Fire Geometry 30"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "20/20 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 projection_m",
+     "ok": true,
+     "detail": "expected 0.91, measured 0.91"
+    },
+    {
+     "check": "C4 pitch_sun",
+     "ok": true,
+     "detail": "expected 2.75, measured 2.75"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_corner_skirt",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 118, Resolution 2 78, Resolution 3 36, Geometry 30, Roadway 2, View Geometry 30, Fire Geometry 30"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "20/20 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 projection_m",
+     "ok": true,
+     "detail": "expected 1.2, measured 1.2"
+    },
+    {
+     "check": "C4 pitch_sun",
+     "ok": true,
+     "detail": "expected 2.5, measured 2.5"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_seam_cap_kawara",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 127, Resolution 2 99, Resolution 3 69"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C4 cap_width_m",
+     "ok": true,
+     "detail": "expected 0.16-0.20, measured 0.2"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_seam_cap_board",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 24, Resolution 2 12, Resolution 3 12"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C4 cap_width_m",
+     "ok": true,
+     "detail": "expected 0.16-0.20, measured 0.2"
     },
     {
      "check": "C3 grid snap",

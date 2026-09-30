@@ -72,8 +72,10 @@ def roof(name, x0, x1, z_wall, z_eave, eave_y, fam="sangawara", t=None, ov=None,
         if verges[0]:
             K.verge(s, F, sl.verges[1], 0.0, rl, +1)
         yw = sl.y(0.0, zw - 0.10, stack) + 0.02
-        K.ridge(s, (x0 - gl, yw, zw - 0.10), (x1 + gr, yw, zw - 0.10), courses=1, width=0.16, cap_d=0.0001, mortar=True,
-                end_tiles=False)
+        # a verge end left plain (a party end, B2) keeps the flashing course inside the lot (noshi run 1 cm past p)
+        K.ridge(s, (x0 - gl + (0.012 if not verges[0] else 0.0), yw, zw - 0.10),
+                (x1 + gr - (0.012 if not verges[1] else 0.0), yw, zw - 0.10), courses=1, width=0.16, cap_d=0.0001,
+                mortar=True, end_tiles=False)
         y_flash0 = yw - 0.02
     elif fam in BOARDS:
         R.collision(s, sl, stack + 0.012, "wood", "board_roof")
@@ -97,7 +99,8 @@ def roof(name, x0, x1, z_wall, z_eave, eave_y, fam="sangawara", t=None, ov=None,
         top = flash_top if flash_top is not None else y_flash0 + 0.42
         s.add(box(x0 - gl, x1 + gr, y_flash0, top, zw - 0.03, zw, "wood_weathered", vis=(1, 2), tag="flashing"))
     if keta:
-        frame.keta(s, x0 - keta_ext, x1 + keta_ext, z=z_eave, y_top=eave_y)
+        ke0, ke1 = keta_ext if isinstance(keta_ext, (tuple, list)) else (keta_ext, keta_ext)
+        frame.keta(s, x0 - ke0, x1 + ke1, z=z_eave, y_top=eave_y)
     if fam != "thatch":
         for x, sg, on in ((x0 - gl, -1.0, verges[0]), (x1 + gr, 1.0, verges[1])):
             if not on:
@@ -115,7 +118,7 @@ def roof(name, x0, x1, z_wall, z_eave, eave_y, fam="sangawara", t=None, ov=None,
             if fam in BOARDS:
                 cc = add(c, add((sg * 0.05, 0.0, 0.0), mul(up, 0.10)))
                 s.add(oriented_box(cc, d, up, (1.0, 0.0, 0.0), L / 2 + 0.03, 0.025, 0.02, "wood_weathered",
-                                   vis=(1, 2), tag="verge_batten"))
+                                   vis=(1, 2, 3), tag="verge_batten"))
     s.meta["leanto"] = {"fam": fam, "t": t, "ov": ov, "gov": (gl, gr), "eave_y": eave_y, "z_wall": zw,
                         "z_eave": z_eave, "x": (x0, x1)}
     return s, sl

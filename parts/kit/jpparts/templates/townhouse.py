@@ -35,27 +35,35 @@ wall line, so two neighbouring units' end posts stand PARTY_GAP apart and no two
 unit seals on its own, because a neighbour may be missing). Neighbours snap lot line to lot line: unit spacing =
 info['lot_width']. model() puts the origin on the lot centre at grade.
 
-Hooks (B2 fills them; signature fn(B, ctx) -> None; ctx is described in _ctx()):
-  party_wall      one call per party side (ctx['side']): build the party wall on the unit's end wall line - the
-                  partition cut to the roof section, sealed to the roof underside, interior materials both sides
-                  (jp_p_wall_party). Placeholder: a stone footing, a plain shinkabe to the ceiling, the upper plaster
-                  wall and a tile gable, i.e. a normal end wall.
-  party_roof_end  one call per party side, BEFORE the main roof is merged: ctx['roof_part'] is the main roof Part and
-                  ctx['gov'] its verge overhangs; replace the verge / hafu / onigawara at the party end by the flush
-                  end with step closures (jp_p_roof_party_end), e.g. drop solids by tag and position and add the end.
-                  Placeholder: the normal verge, with its overhang cut so the bargeboard stops at the lot line.
-  roof_corner     corner units only: close the corner square between the street pent and the side pent (pent corner,
-                  jp_p_roof_corner). Placeholder: nothing; the two pents stop at the corner, leaving it open.
-  seam_cap        Edo units only, one call per party side: the board / plaster cap strip over the seam between
-                  neighbouring pents and roofs (Edo units have no udatsu). Placeholder: nothing; the seam shows.
+Hooks: signature fn(B, ctx) -> None; ctx is described in ctx() (plus side, frame, part, roof_part, roof_info).
+B2 (2026-09-29) filled them with the real parts (jpparts/party.py; HOOKS below). hooks={name: None} brings back B0's
+placeholder for that hook.
+  party_wall      one call per party side and part ('omoya' | 'geya'): jp_p_wall_party on the unit's end wall line
+                  (stone course + dodai, earth wall with the interior clay on the room face, floor beam, upper wall,
+                  a plain earth gable cut to the roof section and sealed to the rafter underside; the lean-to's sloped
+                  wall); one far-LOD slab in Resolution 3.
+  party_roof_end  one call per party side after the lean-to and before the main roof is merged. While it is set the
+                  template builds the main roof and the lean-to with PLAIN party ends (roofs.roof plain_ends,
+                  leanto.roof verges) running to LOT_GAP (2 mm) inside the lot line; the hook adds the closure bands
+                  (main roof, street pent unless this unit's own udatsu stands on the seam, lean-to) and the ridge end
+                  plate (jp_p_roof_party_end).
+  roof_corner     corner units only: the hipped pent corner between the street pent and the side pent
+                  (jp_p_roof_corner), mirrored for a right corner.
+  seam_cap        one call per party side, both regions; only the seam's OWNER builds (ctx['owner'], the udatsu rule):
+                  main roof + lean-to, and in Edo the street pent (jp_p_roof_seam_cap). Kamigata's udatsu covers the
+                  pent seam.
+Always (B2): keta, pent purlins, pent brackets and flashing stop inside the lot line on a party side (no face of one
+unit is coplanar with its neighbour's); an udatsu owner's pent stops at its udatsu's inner face.
 """
 import math
 
 from ..core import Part, box, KEN, HALF, POST
-from .. import walls, frame, found, openings, roofs as R, roofparts, trim, floors as FL, leanto
+from .. import walls, frame, found, openings, roofs as R, roofparts, trim, floors as FL, leanto, party as PT
 from ..assemble import Builder, to_world
 
-HOOKS = {"party_wall": None, "party_roof_end": None, "roof_corner": None, "seam_cap": None}
+# B2 (2026-09-29): the real parts fill the hooks (jpparts/party.py). Pass hooks={name: None} to get B0's placeholder.
+HOOKS = {"party_wall": PT.hook_party_wall, "party_roof_end": PT.hook_party_roof_end,
+         "roof_corner": PT.hook_roof_corner, "seam_cap": PT.hook_seam_cap}
 SV = {"left": "right", "right": "left"}      # street-view side <-> kit-frame x side (the DayZ frame is left-handed)
 
 PARTY_GAP = 0.008            # between two neighbouring units' end posts (no coplanar faces)
@@ -123,12 +131,23 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         """A canonical kit side as the street-view side of the finished (possibly mirrored) unit."""
         return SV[s] if xtori == "left" else s
     gfam = rg["geya"]
-    # verge overhang per side: free = the covering's gable overhang; party = cut so the bargeboard ends at the lot line
+    # verge overhang per side: free = the covering's gable overhang; party = the flush party end 2 mm inside the lot
+    # line (B2 party_roof_end: roofs.roof plain_ends), or B0's placeholder verge cut so its bargeboard ends at the lot
+    # line when that hook is off
     g_free = R.GABLE_OV[fam]
-    g_party = LOT_PAD - HAFU_OUT
+    flush_end = bool(hk["party_roof_end"])
+    g_party = LOT_PAD - PT.LOT_GAP if flush_end else LOT_PAD - HAFU_OUT
     gov = (g_party if "left" in party else g_free, g_party if "right" in party else g_free)
     ggov = (g_party if "left" in party else R.GABLE_OV[gfam], g_party if "right" in party else R.GABLE_OV[gfam])
+    plain = (flush_end and "left" in party, flush_end and "right" in party)
     lot = (-LOT_PAD if "left" in party else 0.0, W + LOT_PAD if "right" in party else W)
+    # the seam this unit owns (udatsu in Kamigata, seam cap): the party line on its LOW-x side in the finished
+    # (possibly mirrored) unit; a mirrored unit's final low-x side is its canonical high-x side
+    useam = "left" if xtori == "left" else "right"
+    keta_ext = lambda sd: (LOT_PAD - PT.LOT_GAP) if sd in party else 0.30      # noqa: E731  no keta into a neighbour
+    pent_cfg = PENT_CFG[rg["pent"]]
+    geya_cfg = {"z_wall": ZB - POST / 2, "z_eave": ZG, "eave_y": GEYA_EAVE, "t": leanto.PITCH[gfam],
+                "ov": R.EAVE_OV[gfam], "fam": gfam}
 
     nm = name or "jp_townhouse_%s_%dk_%s" % (region, frontage, position)
     H = Part(nm, "", "buildings", tiers=[2, 3], used_for="snap-together townhouse unit (%s, %d ken, %s)"
@@ -158,7 +177,11 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
                         "geya_back": F_BACK_G, "geya_left": F_LEFT_G, "geya_right": F_RIGHT_G},
              "levels": {"doma": DOMA, "sill": SILL, "floor": FLOOR, "ceil": CEIL, "loft": LOFT, "keta": KETA_O,
                         "eave": EAVE_O, "gable_tie": GTIE, "pent": PENT_Y, "geya_eave": GEYA_EAVE},
-             "pitch": T_MAIN, "lot_pad": LOT_PAD, "party_gap": PARTY_GAP}
+             "pitch": T_MAIN, "lot_pad": LOT_PAD, "party_gap": PARTY_GAP, "courses": rg["courses"],
+             "pent": (rg["pent"],) + pent_cfg, "geya": geya_cfg}
+        if "side" in kw:
+            c["owner"] = kw["side"] == useam
+            c["udatsu_here"] = bool(rg["udatsu"]) and kw["side"] == useam and kw["side"] in party
         c.update(kw)
         return c
 
@@ -197,7 +220,7 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         # Edo nuriya: the upper street front plastered all over (okabe), no mushiko
         B.wall(F_FRONT, "front_up", "okabe", 0.0, W, LOFT, KETA_O, finish="shikkui", thick=0.15)
     s = B.P("keta_front")
-    frame.keta(s, -0.30, W + 0.30, z=0.0, y_top=EAVE_O)
+    frame.keta(s, -keta_ext("left"), W + keta_ext("right"), z=0.0, y_top=EAVE_O)
     H.merge(s)
     # street pent: to the lot line on a party side (meets the neighbour's), to the wall line at a corner (the corner
     # square is roof_corner's), 0.09 inside an udatsu'd free gable (machiya)
@@ -205,13 +228,15 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
 
     def pent_end(side):
         if side in party:
-            return LOT_PAD - 0.002
+            if rg["udatsu"] and side == useam:
+                return LOT_PAD - 0.09          # this unit's own udatsu stands on the seam: stop at its inner face
+            return LOT_PAD - PT.LOT_GAP
         if side == corner:
             return 0.0
         return -0.09 if rg["udatsu"] else 0.0
     px0, px1 = 0.0 - pent_end("left"), W + pent_end("right")
     s = B.P("pent_front")
-    roofparts.pent(s, px0, px1, PENT_Y, proj, pt, rg["pent"])
+    roofparts.pent(s, px0, px1, PENT_Y, proj, pt, rg["pent"], flush=("left" in party, "right" in party), node0=0.0)
     H.merge(s)
     log.append("roofparts.pent %s over the street front, x %.2f..%.2f" % (rg["pent"], px0, px1))
     if rg["udatsu"]:
@@ -219,7 +244,6 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         # finished (possibly mirrored) unit, so a row has exactly one per seam; an end unit also carries one on its
         # free gable. A mirrored unit's final low-x side is its canonical high-x side.
         xs = []
-        useam = "left" if xtori == "left" else "right"
         if useam in party:
             xs.append(-LOT_PAD if useam == "left" else W + LOT_PAD)
         if cfree and cfree != corner:
@@ -326,7 +350,7 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
     B.put(s, F_BACK_O)
     B.wall(F_BACK_O, "back_o_upper", "shinkabe", 0.0, W, LOFT, KETA_O, finish="shikkui", head=False)
     s = B.P("keta_back")
-    frame.keta(s, -0.30, W + 0.30, z=ZB, y_top=EAVE_O)
+    frame.keta(s, -keta_ext("left"), W + keta_ext("right"), z=ZB, y_top=EAVE_O)
     H.merge(s)
 
     # ================================================================== ROOM EDGE x = 1 ken (toriniwa side)
@@ -417,7 +441,8 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         else:
             B.dodai_stones(fr, 0.0, DG, 51 if side == "left" else 61, SILL)
             B.sloped_wall(fr, "geya_%s" % side, gnodes, SILL, yt, head_y=SILL + 2.0, koshiita_h=0.90, grime=True)
-    g, sl_g = leanto.roof("roof_geya", 0.0, W, ZB - POST / 2, ZG, GEYA_EAVE, gfam, gov=ggov, flash_top=KETA_O - 0.02)
+    g, sl_g = leanto.roof("roof_geya", 0.0, W, ZB - POST / 2, ZG, GEYA_EAVE, gfam, gov=ggov, flash_top=KETA_O - 0.02,
+                          verges=(not plain[0], not plain[1]), keta_ext=(keta_ext("left"), keta_ext("right")))
     H.merge(g)
     log.append("leanto.roof %s over the kitchen" % gfam)
 
@@ -427,17 +452,19 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
 
     # ================================================================== MAIN ROOF + party roof ends
     s = B.P("roof_main")
-    sls, rinfo = R.roof(s, W, DO, "kirizuma", fam, eave_y=EAVE_O, courses=rg["courses"], eave_style="plain", gov=gov)
+    sls, rinfo = R.roof(s, W, DO, "kirizuma", fam, eave_y=EAVE_O, courses=rg["courses"], eave_style="plain", gov=gov,
+                        plain_ends=plain)
     for side in sorted(party):
         if hk["party_roof_end"]:
             hk["party_roof_end"](B, ctx(side=side, roof_part=s, roof_info=rinfo))
         else:
             placeholders.append("party_roof_end %s: a normal verge, bargeboard cut back to the lot line" % street(side))
-        if region == "edo":
-            if hk["seam_cap"]:
-                hk["seam_cap"](B, ctx(side=side, roof_info=rinfo))
-            else:
-                placeholders.append("seam_cap %s: none (Edo has no udatsu; the seam shows)" % street(side))
+        # B2: the seam cap goes on in both regions (main roof + lean-to; Edo also the street pent, which Kamigata's
+        # udatsu covers); only the seam's owner builds it
+        if hk["seam_cap"]:
+            hk["seam_cap"](B, ctx(side=side, roof_part=s, roof_info=rinfo))
+        elif region == "edo":
+            placeholders.append("seam_cap %s: none (Edo has no udatsu; the seam shows)" % street(side))
     H.merge(s)
     rw = R.ridge_walk(rinfo)
     if rw:

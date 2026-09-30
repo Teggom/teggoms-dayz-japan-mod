@@ -4,8 +4,9 @@ r"""One unit from the townhouse template (B0 step 0c), built through the pipelin
   python buildings/pipeline.py townhouse_unit_test      (registry: ship=False -> out/ + checks.json only; it is not
                                                          in config.cpp, the PBO or on the test island)
 
-It is B2's test bed: set townhouse.HOOKS (or pass hooks=) for jp_p_wall_party / jp_p_roof_party_end /
-jp_p_roof_corner and rebuild. Change PARAMS to try another unit (frontage 2/3/4, kamigata/edo, end/middle/corner).
+B2 (2026-09-29) filled townhouse.HOOKS with the real party parts (jp_p_wall_party, jp_p_roof_party_end,
+jp_p_roof_corner, jp_p_roof_seam_cap; jpparts/party.py): no placeholders are left. Change PARAMS to try another unit
+(frontage 2/3/4, kamigata/edo, end/middle/corner); combos.py builds all 60 combinations.
 """
 import os
 import sys
@@ -16,7 +17,7 @@ sys.path.insert(0, os.path.join(DEV, "parts", "kit"))
 from jpparts.templates import townhouse  # noqa: E402
 
 # a Kamigata 3-ken END unit, free gable and toriniwa on the right seen from the street: one free gable (with its
-# udatsu and the Ioka gable pent), one party side (placeholders). Sides are street-view (townhouse docstring).
+# udatsu and the Ioka gable pent), one party side (B2's party wall and flush party roof end). Sides are street-view.
 PARAMS = {"frontage": 3, "region": "kamigata", "position": "end", "free": "right", "tori": "right"}
 NAME = "jp_townhouse_unit_test"
 CLASS = "Land_JP_Townhouse_Unit_Test"

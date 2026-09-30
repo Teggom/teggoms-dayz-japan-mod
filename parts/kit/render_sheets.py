@@ -35,7 +35,8 @@ SHEET_DEFS = [
     ("1_frame", "Frame: posts, beams, dashigeta (G1 d4: flagged deviation)", 6.5,
      lambda p: p.startswith("jp_p_frame_") and not p.startswith(B2_PARTS), "3q"),
     ("2a_walls", "Walls: recipes (1-ken samples), wainscot, shitami, namako", 5.5,
-     lambda p: p.startswith("jp_p_wall_") and not p.startswith(("jp_p_wall_gable", "jp_p_wall_udatsu")), "3q"),
+     lambda p: p.startswith("jp_p_wall_") and not p.startswith(("jp_p_wall_gable", "jp_p_wall_udatsu") + B2_PARTS),
+     "3q"),
     ("2b_gables", "Gable ends (3-ken span, from the eave line up) and udatsu", 9.0,
      lambda p: p.startswith(("jp_p_wall_gable", "jp_p_wall_udatsu")), "3q"),
     ("3_openings", "Openings: sliding doors (shown 60 % open), windows, lattices, shop closures", 7.5,
@@ -49,8 +50,9 @@ SHEET_DEFS = [
     ("5a_roof_kawara", "Kawara as geometry: field, eave, verge, ridges, onigawara, hongawara", 3.6,
      lambda p: p.startswith(KAWARA_PARTS), "3q"),
     ("5b_roof_parts", "Board and thatch roof parts, eaves, pents, vents, bargeboards, gutter", 8.0,
-     lambda p: p.startswith("jp_p_roof_") and not p.startswith(KAWARA_PARTS + ("jp_p_roof_forms",
-                                                                               "jp_p_roof_thatch_body")), "3q"),
+     lambda p: p.startswith("jp_p_roof_") and not p.startswith(KAWARA_PARTS + B2_PARTS + ("jp_p_roof_forms",
+                                                                                          "jp_p_roof_thatch_body")),
+     "3q"),
     ("6_roof_forms", "Roof forms and thatch bodies from the generator (whole roofs, 4 x 3 ken)", 15.0,
      lambda p: p.startswith(("jp_p_roof_forms", "jp_p_roof_thatch_body")), "3q"),
     ("7_trim", "Trim: W1 grime decal band (jp_m_wall_grime), shown on its context wall / post", 3.0,
@@ -58,6 +60,13 @@ SHEET_DEFS = [
     # B2 (2026-09-29): missing parts, wave 1
     ("9_koyagumi", "B2 koyagumi: visible roof framing (frame only; grey posts = context at the frame lines)", 19.0,
      lambda p: p.startswith("jp_p_frame_koyagumi"), "3q"),
+    ("9b_townhouse_parts", "B2 townhouse party parts: party wall, flush party roof end, pent corner, seam cap (roofs "
+     "dropped to the ground; grey = context parts)", 9.0,
+     lambda p: p.startswith(("jp_p_wall_party", "jp_p_roof_party_end", "jp_p_roof_corner", "jp_p_roof_seam_cap")),
+     "3q"),
+    ("9c_stall_stair_door", "B2 stall, stair and half-door (+ floor pit / sunoko); grey = context", 6.5,
+     lambda p: p.startswith(("jp_p_frame_stall", "jp_p_stair", "jp_p_open_halfdoor", "jp_p_floor_pit",
+                             "jp_p_floor_sunoko")), "3q"),
 ]
 OVERRIDES = {}      # name -> dict of job overrides (set by family modules via registry.RENDER_HINTS)
 

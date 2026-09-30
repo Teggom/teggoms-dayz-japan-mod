@@ -1,0 +1,103 @@
+{
+ "id": "jp_p_roof_seam_cap_board",
+ "part": "jp_p_roof_seam_cap",
+ "variant": "_board",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_seam_cap_board.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_seam_cap",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "cap over the seam between two townhouse units' roofs, built by the seam's owner only (one per seam, like the udatsu): a cap board with a batten over the main roof (both slopes) and the lean-to, and the Edo street pent",
+ "datum": "the seam (lot line) at x = -0.064 of the jp_p_roof_party_end sample: main roof 3 ken, eave 4.63; the sheet shows it on two snapped party-end strips",
+ "recipe": "party.seam_main / party.cap_line (townhouse hook seam_cap)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.164,
+  0.036,
+  4.37,
+  6.013,
+  -6.285,
+  0.825
+ ],
+ "dims": [
+  {
+   "name": "cap_width_m",
+   "expected": "0.16-0.20",
+   "measured": 0.2,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "the owner unit's party wall line (the seam is LOT_PAD outside it)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 24,
+  "Resolution 2": 12,
+  "Resolution 3": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 24, Resolution 2 12, Resolution 3 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 cap_width_m",
+   "ok": true,
+   "detail": "expected 0.16-0.20, measured 0.2"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

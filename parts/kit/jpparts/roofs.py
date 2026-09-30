@@ -35,6 +35,7 @@ class Slope:
         self.ov = ov
         self.full_ridge = full_ridge
         self.verges = verges          # u positions of verge edges (kirizuma ends)
+        self.plain = (False, False)   # B2: a verge end left plain (party end): (u-low end, u-high end)
         self.cos = math.cos(math.atan(t))
 
     def s(self, x, z):
@@ -244,8 +245,9 @@ def cover_kawara(part, sl, fam="sangawara", eave_style="tomoe", h0=None):
     F = sl.frame(h0)
     u0, u1 = sl.u_range()
     vw = 0.13
-    fu0 = sl.verges[0] + vw if sl.verges else u0
-    fu1 = sl.verges[1] - vw if sl.verges else u1
+    pl = getattr(sl, "plain", (False, False))
+    fu0 = sl.verges[0] + (0.0 if pl[0] else vw) if sl.verges else u0
+    fu1 = sl.verges[1] - (0.0 if pl[1] else vw) if sl.verges else u1
     if sl.verges:
         rl = sl.depth_at((u0 + u1) / 2) / sl.cos
         r1fn = None
@@ -258,8 +260,10 @@ def cover_kawara(part, sl, fam="sangawara", eave_style="tomoe", h0=None):
         K.field(part, F, fu0, fu1, K.EXPO, rl if rl else 0.0, r1_fn=r1fn, rows_eave=2, rows_ridge=1 if rl else 0)
     K.eave_tiles(part, F, fu0 if sl.verges else u0, fu1 if sl.verges else u1, style=eave_style)
     if sl.verges:
-        K.verge(part, F, sl.verges[0], 0.0, rl, -1)
-        K.verge(part, F, sl.verges[1], 0.0, rl, +1)
+        if not pl[0]:
+            K.verge(part, F, sl.verges[0], 0.0, rl, -1)
+        if not pl[1]:
+            K.verge(part, F, sl.verges[1], 0.0, rl, +1)
     return F
 
 
@@ -307,12 +311,13 @@ def cover_boards(part, sl, fam, worn=False, rows_eave=3, rows_ridge=1):
     for pc in sl.pieces:
         part.add(slab(pc, lambda x, z: sl.y(x, z, h0 - 0.012), lambda x, z: sl.y(x, z, h0 - 0.002), mat, vis=(2, 3),
                       tag="board_field_lod", uvscale=uvs))
-    # eave edge: the visible stack of board ends (0.05-0.08)
+    # eave edge: the visible stack of board ends (0.05-0.08); in every LOD (B2: it stands 4 cm past the far slab's
+    # eave, and C15 / T7b wants a stable silhouette)
     ea = F.P(u0, -0.02, -0.02)
     eb = F.P(u1, -0.02, -0.02)
     d, e1, e2 = frame_of(tuple(eb[k] - ea[k] for k in range(3)))
     c = tuple((ea[k] + eb[k]) / 2 for k in range(3))
-    part.add(oriented_box(c, d, F.n, F.up, (u1 - u0) / 2, 0.035, 0.04, mat, vis=(1, 2), tag="eave_stack",
+    part.add(oriented_box(c, d, F.n, F.up, (u1 - u0) / 2, 0.035, 0.04, mat, vis=(1, 2, 3), tag="eave_stack",
                           uvscale=uvs))
     if worn:
         for _ in range(9):
@@ -422,12 +427,19 @@ def hip_lines(sls, W, D, form, ov):
 
 
 def roof(part, W, D, form="kirizuma", fam="sangawara", eave_y=EAVE_Y, t=None, ov=None, gov=None, walkable=True,
-         courses=None, eave_style="tomoe", ridge_kind=None, soffit=True, worn=False):
+         courses=None, eave_style="tomoe", ridge_kind=None, soffit=True, worn=False, plain_ends=(False, False)):
+    """plain_ends (kirizuma only; B2 jp_p_roof_party_end): (left, right) verge ends left PLAIN for a party line: no
+    verge tiles (the field runs to the edge), no bargeboard or purlin ends, no onigawara or ridge-end tile; the ridge
+    stops 2.5 cm inside the edge so nothing crosses into the neighbour's lot. The closures are party.roof_end's."""
     t = PITCH[fam] if t is None else t
     ov = EAVE_OV[fam] if ov is None else ov
     gov = GABLE_OV[fam] if gov is None else gov
     gl, gr = gov if isinstance(gov, (tuple, list)) else (gov, gov)
     sls = slopes_for(W, D, form, eave_y, t, ov, gov)
+    pe = tuple(bool(v) for v in plain_ends) if form == "kirizuma" else (False, False)
+    if any(pe):
+        sls[0].plain = (pe[0], pe[1])                 # front: u runs +x (u-low = left)
+        sls[1].plain = (pe[1], pe[0])                 # back: u runs -x (u-low = right)
     info = {"slopes": [], "t": t, "ov": ov, "gov": gov, "form": form, "fam": fam}
     fire = {"thatch": "hay"}.get(fam, "pottery" if fam in ("sangawara", "hongawara") else "wood")
     h_top = STACK[fam] + (0.05 if fam in ("sangawara", "hongawara") else 0.012)
@@ -460,11 +472,19 @@ def roof(part, W, D, form="kirizuma", fam="sangawara", eave_y=EAVE_Y, t=None, ov
     stack_top = {"thatch": STACK["thatch"] + 0.60}.get(fam, STACK[fam] + 0.03)
     yr = eave_y + t * h + stack_top
     info["ridge"] = ((xr0, yr, -h), (xr1, yr, -h))
+    if any(pe):
+        info["plain_ends"] = pe
     if fam in ("sangawara", "hongawara"):
         c = courses or (5 if fam == "hongawara" else 3)
-        K.ridge(part, (xr0 + 0.04, yr - 0.02, -h), (xr1 - 0.04, yr - 0.02, -h), courses=c)
+        if any(pe):
+            K.ridge(part, (xr0 + (0.025 if pe[0] else 0.04), yr - 0.02, -h),
+                    (xr1 - (0.025 if pe[1] else 0.04), yr - 0.02, -h), courses=c, end_tiles=(not pe[0], not pe[1]))
+        else:
+            K.ridge(part, (xr0 + 0.04, yr - 0.02, -h), (xr1 - 0.04, yr - 0.02, -h), courses=c)
         if form == "kirizuma":
-            for x, f in ((xr0, (-1.0, 0.0, 0.0)), (xr1, (1.0, 0.0, 0.0))):
+            for x, f, plain in ((xr0, (-1.0, 0.0, 0.0), pe[0]), (xr1, (1.0, 0.0, 0.0), pe[1])):
+                if plain:
+                    continue
                 K.onigawara(part, (x + (0.04 if f[0] < 0 else -0.04), yr - 0.03, -h), f,
                             height=0.38 if c >= 5 else 0.30, width=0.33)
         for (e, tp) in hip_lines(sls, W, D, form, ov):
@@ -486,8 +506,9 @@ def roof(part, W, D, form="kirizuma", fam="sangawara", eave_y=EAVE_Y, t=None, ov
         board_ridge(part, (xr0, yr, -h), (xr1, yr, -h), t, stoned=(fam == "ishioki"))
     if form == "kirizuma" or fam != "thatch":
         if form == "kirizuma":
-            for x, sg in ((-gl, -1), (W + gr, 1)):
-                hafu(part, x, D, t, eave_y, ov, sg, fam)
+            for x, sg, plain in ((-gl, -1, pe[0]), (W + gr, 1, pe[1])):
+                if not plain:
+                    hafu(part, x, D, t, eave_y, ov, sg, fam)
     part.meta.setdefault("roof", info)
     return sls, info
 
@@ -663,7 +684,7 @@ def hafu(part, x, D, t, eave_y, ov, sg, fam, board=(0.03, 0.24), purlins=True):
             if kind == "board":
                 cc = add(c, add((sg * (board[0] + 0.02), 0.0, 0.0), mul(up, board[1] / 2 - 0.02)))
                 part.add(oriented_box(cc, d, up, (1.0, 0.0, 0.0), math.dist(a, b) / 2 + 0.03, 0.025, 0.02,
-                                      "wood_weathered", vis=(1, 2), tag="verge_batten"))
+                                      "wood_weathered", vis=(1, 2, 3), tag="verge_batten"))
         if purlins:
             k = 1
             while True:

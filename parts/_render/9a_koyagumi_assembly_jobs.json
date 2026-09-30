@@ -6,21 +6,41 @@
  ],
  "jobs": [
   [
-   "hip_cut",
-   "Hipped tile roof (koya_hip), covering above 3.05 m cut away: hip rafters (sumigi), end purlins on struts on the end beams (tsunagi), jack rafters to the hips, the ridge beam on its strut.",
+   "hut_in",
+   "Poor hut 3 x 2 ken (koya_hut, sooted): sasu on log tie beams, lashed crossing, ridge pole; thatch gable walls. 'No ceiling, open to soot-black thatch'.",
    {
-    "build": "b2:koya_hip",
+    "build": "b2:koya_hut",
+    "interior": {
+     "cam": [
+      0.6,
+      1.6,
+      -0.4
+     ],
+     "look": [
+      4.2,
+      3.6,
+      -2.4
+     ],
+     "lens": 14
+    }
+   }
+  ],
+  [
+   "hut_cut",
+   "The hut with the front slope cut away.",
+   {
+    "build": "b2:koya_hut",
     "cut": {
-     "y_gt": 3.05
+     "z_gt": -1.82
     },
     "view": "3q",
     "persp": 30,
     "target": [
-     3.6,
-     2.8,
-     -2.7
+     2.7,
+     2.6,
+     -1.8
     ],
-    "dist": 19
+    "dist": 16
    }
   ]
  ]

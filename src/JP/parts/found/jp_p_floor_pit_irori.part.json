@@ -1,0 +1,199 @@
+{
+ "id": "jp_p_floor_pit_irori",
+ "part": "jp_p_floor_pit",
+ "variant": "_irori",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_floor_pit_irori.p3d",
+ "build_list": {
+  "entry": "jp_p_floor_pit",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2
+ ],
+ "used_for": "sunken hearth (irori) in a raised board floor: sooted robuchi frame flush with the floor, clay walls, ash bed 0.20 down with charred firewood (the kettle hook / fitting is PA2's)",
+ "datum": "a 1 x 1 ken floor sample, x 0..1.82, z 0..-1.82; y 0 = grade; the floor top at 0.45",
+ "recipe": "floors.<kind>(holes=[(x0, x1, z0, z1, 'pit')], hole_fn=pits.pit_fn('irori'))",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.0,
+  1.82,
+  0.0,
+  0.465,
+  -1.82,
+  0.0
+ ],
+ "dims": [
+  {
+   "name": "hearth_m",
+   "expected": "0.91 x 0.91 (3 x 3 shaku)",
+   "measured": 0.91,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "floor",
+   "pos": [
+    0.0,
+    0.45,
+    0.0
+   ],
+   "note": "floor top"
+  }
+ ],
+ "materials": [
+  {
+   "key": "ground_ash",
+   "id": "jp_m_ground_ash",
+   "palette_id": "ash_grey",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_ash<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_nakanuri_int",
+   "id": "jp_m_wall_nakanuri_int",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 144,
+  "Resolution 2": 78,
+  "Resolution 3": 54,
+  "Geometry": 78,
+  "Roadway": 5,
+  "View Geometry": 78,
+  "Fire Geometry": 78
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "hole": [
+   0.455,
+   1.365,
+   -1.365,
+   -0.455
+  ]
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 144, Resolution 2 78, Resolution 3 54, Geometry 78, Roadway 5, View Geometry 78, Fire Geometry 78"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "13 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "13 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "13 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "80/80 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 hearth_m",
+   "ok": true,
+   "detail": "expected 0.91 x 0.91 (3 x 3 shaku), measured 0.91"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

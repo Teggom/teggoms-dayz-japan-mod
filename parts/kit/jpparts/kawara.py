@@ -253,8 +253,9 @@ def ridge(part, p0, p1, courses=3, width=0.22, cap_d=0.16, mortar=True, end_tile
     if cap_d > 0.01:        # flashing strips (cap_d ~0) get no cap: a 0.1 mm half-tube was 13 invisible faces per LOD
         part.add(half_tube(add(a, mul(d, -0.02)), add(b, mul(d, 0.02)), cap_d / 2, TILE, n=6, vis=(1, 2, 3),
                            tag="ganburi"))
-    if end_tiles:
-        for q, sg in ((a, -1), (b, 1)):
+    ends = tuple(end_tiles) if isinstance(end_tiles, (tuple, list)) else (end_tiles, end_tiles)
+    for q, sg, on in ((a, -1, ends[0]), (b, 1, ends[1])):
+        if on:
             part.add(tube(add(q, mul(d, sg * 0.02)), add(q, mul(d, sg * 0.05)), cap_d / 2 + 0.01, TILE, n=8, vis=(1,),
                           tag="ridge_end"))
             part.add(oriented_box(add(q, mul(d, sg * 0.035)), d, e2, e1, 0.015, cap_d / 2 + 0.01, cap_d / 2 + 0.01, TILE,

@@ -31,6 +31,16 @@ roofparts.register(reg)
 # ---- B2 (2026-09-29): missing parts, wave 1
 from . import koyagumi
 koyagumi.register(reg)
+from . import party
+party.register(reg)
+from . import stall
+stall.register(reg)
+from . import stair
+stair.register(reg)
+from . import halfdoor
+halfdoor.register(reg)
+from . import pits
+pits.register(reg)
 try:
     from . import trim
     trim.register(reg)
@@ -56,4 +66,23 @@ RENDER_HINTS = {
     "jp_p_roof_eave_soffit_tile": {"view": "under", "no_ground": True, "drop": False},
     "jp_p_roof_eave_soffit_board": {"view": "under", "no_ground": True, "drop": False},
     "jp_p_roof_eave_soffit_thatch": {"view": "under", "no_ground": True, "drop": False},
+    # B2 parts
+    "jp_p_stair_box": {"view": "back"},
+    "jp_p_roof_party_end_kawara": {"view": "3q_left", "drop": True},
+    "jp_p_roof_party_end_board": {"view": "3q_left", "drop": True},
+    "jp_p_roof_seam_cap_kawara": {"view": "3q_left", "drop": True,
+                                  "context": [["jp_p_roof_party_end_kawara", 0.0, [0.0, 0.0, 0.0]],
+                                              ["jp_p_roof_party_end_kawara", 180.0, [-0.128, 0.0, -5.46]]]},
+    "jp_p_roof_seam_cap_board": {"view": "3q_left", "drop": True,
+                                 "context": [["jp_p_roof_party_end_board", 0.0, [0.0, 0.0, 0.0]],
+                                             ["jp_p_roof_party_end_board", 180.0, [-0.128, 0.0, -5.46]]]},
+    "jp_p_roof_corner_tile": {"view": "3q_left", "drop": True,
+                              "context": [["jp_p_roof_hisashi_tile", 0.0, [0.0, 0.0, 0.0]],
+                                          ["jp_p_roof_hisashi_tile", 90.0, [0.0, 0.0, -3.64]]]},
+    "jp_p_roof_corner_board": {"view": "3q_left", "drop": True,
+                               "context": [["jp_p_roof_hisashi_board", 0.0, [0.0, 0.0, 0.0]],
+                                           ["jp_p_roof_hisashi_board", 90.0, [0.0, 0.0, -3.64]]]},
+    "jp_p_roof_corner_skirt": {"view": "3q_left", "drop": True,
+                               "context": [["jp_p_roof_hisashi_skirt", 0.0, [0.0, 0.0, 0.0]],
+                                           ["jp_p_roof_hisashi_skirt", 90.0, [0.0, 0.0, -3.64]]]},
 }

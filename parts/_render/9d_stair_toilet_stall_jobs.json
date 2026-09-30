@@ -1,0 +1,140 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\9d_stair_toilet_stall",
+ "res": [
+  960,
+  720
+ ],
+ "jobs": [
+  [
+   "hatago_stair",
+   "Box stair (kaidan-dansu look, drawers in its side) between the raised lower floor (0.50) and a walkable upper floor (3.30) of a 3 x 2 ken post frame: 37.6 deg walk ramp, 1.20 wide, 2 ken run.",
+   {
+    "build": "b2:stair_hatago",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     2.7,
+     2.0,
+     -1.8
+    ],
+    "dist": 15,
+    "human": [
+     4.8,
+     -2.4,
+     0.5
+    ]
+   }
+  ],
+  [
+   "hatago_well",
+   "The upper floor's stairwell from above: the 'stair' hole cut by floors.boards(holes=...), rim boards and a guard rail on the two open sides (the wall side and the arrival end stay open).",
+   {
+    "build": "b2:stair_hatago",
+    "view": "3q_left",
+    "persp": 30,
+    "target": [
+     2.7,
+     3.3,
+     -1.5
+    ],
+    "dist": 11
+   }
+  ],
+  [
+   "hatago_up",
+   "Walking up: head room over the flight >= 2.05 (the well starts where the upper floor would come closer; ST3).",
+   {
+    "build": "b2:stair_hatago",
+    "interior": {
+     "cam": [
+      0.15,
+      2.1,
+      -0.65
+     ],
+     "look": [
+      4.4,
+      3.8,
+      -0.65
+     ],
+     "lens": 18
+    }
+   }
+  ],
+  [
+   "kura_stair",
+   "Open stair (stringers, treads, no risers) to a kura-type loft 2.40 up: 37.0 deg, 1.10 wide.",
+   {
+    "build": "b2:stair_kura",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     2.2,
+     1.6,
+     -1.8
+    ],
+    "dist": 13
+   }
+  ],
+  [
+   "toilet_out",
+   "Walk-in toilet 1 x 1.5 ken (G1 A1-1): board walls, itabuki roof, the half door (rotation, swings out; shown 60 % open), fixed board panel beside it. Doorway 1.04 x 2.00 (D1).",
+   {
+    "build": "b2:toilet",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     1.3,
+     -1.0
+    ],
+    "dist": 9,
+    "open": 0.6,
+    "human": [
+     2.6,
+     0.9,
+     0.0
+    ]
+   }
+  ],
+  [
+   "toilet_in",
+   "Inside the toilet: board floor with the drop slot over a closed pit (a floors 'pit' hole), the half door closed, the open top of the doorway above it.",
+   {
+    "build": "b2:toilet",
+    "interior": {
+     "cam": [
+      0.95,
+      1.55,
+      -2.4
+     ],
+     "look": [
+      0.9,
+      0.9,
+      0.2
+     ],
+     "lens": 16
+    }
+   }
+  ],
+  [
+   "stall",
+   "Ox stall (jp_p_frame_stall _ox) in a doma corner (DW07): board partitions, bars down as left (one on the floor, one leaning), manger with fodder, tether ring, straw bedding.",
+   {
+    "build": "b2:stall_doma",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     1.0,
+     1.0,
+     -1.4
+    ],
+    "dist": 9,
+    "human": [
+     3.0,
+     0.8,
+     0.05
+    ]
+   }
+  ]
+ ]
+}

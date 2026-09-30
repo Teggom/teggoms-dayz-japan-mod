@@ -1,0 +1,199 @@
+{
+ "id": "jp_p_floor_pit_irori_doma",
+ "part": "jp_p_floor_pit",
+ "variant": "_irori_doma",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_floor_pit_irori_doma.p3d",
+ "build_list": {
+  "entry": "jp_p_floor_pit",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2
+ ],
+ "used_for": "hearth pit in an earth floor ringed with field stones (poor huts DW01 / DW30, work sheds)",
+ "datum": "a 1 x 1 ken floor sample, x 0..1.82, z 0..-1.82; y 0 = grade; the floor top at 0.05",
+ "recipe": "floors.<kind>(holes=[(x0, x1, z0, z1, 'pit')], hole_fn=pits.pit_fn('irori_doma'))",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.0,
+  1.82,
+  -0.27,
+  0.129,
+  -1.82,
+  0.0
+ ],
+ "dims": [
+  {
+   "name": "hearth_m",
+   "expected": "0.6-0.9 (A)",
+   "measured": 0.72,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "floor",
+   "pos": [
+    0.0,
+    0.05,
+    0.0
+   ],
+   "note": "floor top"
+  }
+ ],
+ "materials": [
+  {
+   "key": "ground_ash",
+   "id": "jp_m_ground_ash",
+   "palette_id": "ash_grey",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_ash<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 378,
+  "Resolution 2": 351,
+  "Resolution 3": 30,
+  "Geometry": 54,
+  "Roadway": 5,
+  "View Geometry": 54,
+  "Fire Geometry": 54
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "hole": [
+   0.55,
+   1.27,
+   -1.27,
+   -0.55
+  ]
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 378, Resolution 2 351, Resolution 3 30, Geometry 54, Roadway 5, View Geometry 54, Fire Geometry 54"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "80/80 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 hearth_m",
+   "ok": true,
+   "detail": "expected 0.6-0.9 (A), measured 0.72"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

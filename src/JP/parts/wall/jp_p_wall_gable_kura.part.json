@@ -117,12 +117,12 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 99,
-  "Resolution 2": 69,
-  "Resolution 3": 45,
-  "Geometry": 51,
-  "View Geometry": 45,
-  "Fire Geometry": 45
+  "Resolution 1": 100,
+  "Resolution 2": 70,
+  "Resolution 3": 46,
+  "Geometry": 52,
+  "View Geometry": 46,
+  "Fire Geometry": 46
  },
  "contributes": [
   "Resolution 1",
@@ -143,7 +143,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 99, Resolution 2 69, Resolution 3 45, Geometry 51, View Geometry 45, Fire Geometry 45"
+   "detail": "Resolution 1 100, Resolution 2 70, Resolution 3 46, Geometry 52, View Geometry 46, Fire Geometry 46"
   },
   {
    "check": "C2 library only",

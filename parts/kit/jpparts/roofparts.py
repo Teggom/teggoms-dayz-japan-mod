@@ -422,8 +422,11 @@ def part_hafu(variant):
     return p
 
 
-def pent(part, x0, x1, y_wall, proj, t, kind, posts=False, bracket_step=HALF):
-    """Hisashi: brackets from the wall posts, rafters, sheathing and the covering; eave line parallel to the wall."""
+def pent(part, x0, x1, y_wall, proj, t, kind, posts=False, bracket_step=HALF, flush=(False, False), node0=None):
+    """Hisashi: brackets from the wall posts, rafters, sheathing and the covering; eave line parallel to the wall.
+    flush (B2, party ends of townhouse units): (left, right) ends stop exactly at x0 / x1 - the purlin and the ridge
+    flashing do not run past them (a neighbour's pent starts 4 mm on) - and the brackets stand on the post nodes
+    node0 + k * bracket_step inside the run instead of starting at x0."""
     fam = {"tile": "sangawara", "gable": "sangawara", "board": "itabuki", "ishioki": "ishioki", "skirt": "ishioki"}[kind]
     ov = proj
     y_e = y_wall - t * proj
@@ -442,7 +445,8 @@ def pent(part, x0, x1, y_wall, proj, t, kind, posts=False, bracket_step=HALF):
         rl = (ov - 0.06) / sl.cos
         K.eave_tiles(part, F, x0, x1, style="plain")
         K.field(part, F, x0, x1, K.EXPO, rl, rows_eave=1, rows_ridge=0)
-        K.ridge(part, (x0, sl.y(0, 0.06, R.STACK[fam]) + 0.02, 0.10), (x1, sl.y(0, 0.06, R.STACK[fam]) + 0.02, 0.10),
+        K.ridge(part, (x0 + (0.012 if flush[0] else 0.0), sl.y(0, 0.06, R.STACK[fam]) + 0.02, 0.10),
+                (x1 - (0.012 if flush[1] else 0.0), sl.y(0, 0.06, R.STACK[fam]) + 0.02, 0.10),
                 courses=1, width=0.16, cap_d=0.0001, mortar=True, end_tiles=False)
     else:
         R.cover_boards(part, sl, fam, rows_eave=2, rows_ridge=0)
@@ -452,10 +456,13 @@ def pent(part, x0, x1, y_wall, proj, t, kind, posts=False, bracket_step=HALF):
     part.add(box(x0, x1, y_wall - 0.05, y_wall + 0.12, 0.06, 0.09, "wood_weathered", vis=(1, 2), tag="flashing"))
     # purlin at the arm ends + brackets (udegi) from every post
     ye = sl.y(0, ov - 0.12, 0.0)
-    part.add(box(x0 - 0.05, x1 + 0.05, ye - 0.10, ye, ov - 0.18, ov - 0.10, "wood_weathered", vis=(1, 2, 3), geo=True,
-                 view=True, fire=True, tag="pent_purlin"))
+    part.add(box(x0 - (0.0 if flush[0] else 0.05), x1 + (0.0 if flush[1] else 0.05), ye - 0.10, ye, ov - 0.18, ov - 0.10,
+                 "wood_weathered", vis=(1, 2, 3), geo=True, view=True, fire=True, tag="pent_purlin"))
     x = x0
-    while x <= x1 + 1e-6:
+    if node0 is not None:
+        x = node0 + math.ceil((x0 + (0.04 if flush[0] else 0.0) - node0) / bracket_step - 1e-6) * bracket_step
+    x_end = x1 - (0.04 if flush[1] else 0.0)
+    while x <= x_end + 1e-6:
         if posts:
             part.add(box(x - 0.06, x + 0.06, 0.0, ye - 0.10, ov - 0.20, ov - 0.08, "wood_weathered", vis=(1, 2, 3),
                          geo=True, view=True, fire=True, tag="pent_post"))

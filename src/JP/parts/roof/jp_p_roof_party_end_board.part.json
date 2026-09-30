@@ -1,0 +1,189 @@
+{
+ "id": "jp_p_roof_party_end_board",
+ "part": "jp_p_roof_party_end",
+ "variant": "_board",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_party_end_board.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_party_end",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "flush roof end at a townhouse party line (DW11 / DW12): no verge tiles, bargeboard or onigawara; board closure band over the covering's section and a ridge end plate; the roof stops 2 mm inside the lot line",
+ "datum": "a 1-ken strip of a 3-ken kirizuma main roof (townhouse eave 4.63), party end on the left: lot line x = -0.064, roof edge x = -0.062; the right end keeps a normal verge for comparison",
+ "recipe": "roofs.roof(..., plain_ends=(left, right)) + party.roof_end(roof, x_edge, side, ...)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.062,
+  2.24,
+  4.159,
+  6.058,
+  -6.271,
+  0.811
+ ],
+ "dims": [
+  {
+   "name": "edge_inside_lot_line_m",
+   "expected": 0.002,
+   "measured": 0.002,
+   "tol": 0.0001,
+   "source": "4 mm between neighbours, no coplanar faces"
+  },
+  {
+   "name": "closure_band_m",
+   "expected": 0.03,
+   "measured": 0.03,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "the unit's party wall line"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -5.46
+   ]
+  },
+  {
+   "type": "verge",
+   "pos": [
+    -0.062,
+    4.63,
+    0.0
+   ],
+   "note": "flush party end (lot line - 2 mm)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kokera",
+   "id": "jp_m_roof_kokera",
+   "palette_id": "roof_board_silver",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kureita",
+   "id": "jp_m_roof_kureita",
+   "palette_id": "roof_board_silver",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 282,
+  "Resolution 2": 131,
+  "Resolution 3": 81,
+  "Geometry": 21,
+  "Roadway": 2,
+  "View Geometry": 21,
+  "Fire Geometry": 21
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 282, Resolution 2 131, Resolution 3 81, Geometry 21, Roadway 2, View Geometry 21, Fire Geometry 21"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "32/32 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 edge_inside_lot_line_m",
+   "ok": true,
+   "detail": "expected 0.002, measured 0.002"
+  },
+  {
+   "check": "C4 closure_band_m",
+   "ok": true,
+   "detail": "expected 0.03, measured 0.03"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,31 +1,31 @@
 {
  "building": "Land_JP_Townhouse_Unit_Test",
- "faces": "8062/2973/1107",
+ "faces": "7912/2765/953",
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 8062, Resolution 2 2973, Resolution 3 1107, Geometry 1140, Memory 0, Roadway 17, View Geometry 1136, Fire Geometry 1130"
+   "detail": "Resolution 1 7912, Resolution 2 2765, Resolution 3 953, Geometry 1173, Memory 0, Roadway 17, View Geometry 1169, Fire Geometry 1163"
   },
   {
    "check": "C5 face budget (townhouse: 9000 / 3450 / 1200)",
    "ok": true,
-   "detail": "R1 8062, R2 2973, R3 1107"
+   "detail": "R1 7912, R2 2765, R3 953"
   },
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "191 components, 0 bad, 0 faces outside components"
+   "detail": "196 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "190 components, 0 bad, 0 faces outside components"
+   "detail": "195 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "189 components, 0 bad, 0 faces outside components"
+   "detail": "194 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C2 library materials only",
@@ -185,7 +185,7 @@
   {
    "check": "C13 kawara seated on the clay bed, fascia at every eave",
    "ok": true,
-   "detail": "2669/2669 field points within reach of the bed; 5 eave tile sets, 5 fascia boards"
+   "detail": "2745/2745 field points within reach of the bed; 5 eave tile sets, 5 fascia boards"
   },
   {
    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
@@ -195,7 +195,7 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "3877 columns over 2.5 m compared in each LOD"
+   "detail": "3872 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
@@ -205,7 +205,7 @@
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
    "ok": true,
-   "detail": "far-field faces R1/R2/R3 0/220/5; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   "detail": "far-field faces R1/R2/R3 0/223/5; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   }
  ]
 }

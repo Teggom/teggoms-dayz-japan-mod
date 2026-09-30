@@ -1,0 +1,236 @@
+{
+ "id": "jp_p_frame_stall_ox_closed",
+ "part": "jp_p_frame_stall",
+ "variant": "_ox_closed",
+ "group": "frame",
+ "p3d": "JP\\parts\\frame\\jp_p_frame_stall_ox_closed.p3d",
+ "build_list": {
+  "entry": "jp_p_frame_stall",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2
+ ],
+ "used_for": "the same ox stall with its two mase-bo in place (dressing; not enterable)",
+ "datum": "origin = the left front post at the doma top (y 0); +x along the stall front (1.82), the stall goes -z to the building's back wall line at z -2.73 (the wall is the building's)",
+ "recipe": "stall.stall(part, width, depth, sides, divider_at, bars, manger, soot)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.063,
+  1.883,
+  0.0,
+  2.27,
+  -2.71,
+  0.06
+ ],
+ "dims": [
+  {
+   "name": "stall_width_m",
+   "expected": "1.82-2.73",
+   "measured": 1.82,
+   "tol": 0.01,
+   "source": "(A) umaya 1 x 1.5 ken per animal"
+  },
+  {
+   "name": "stall_depth_m",
+   "expected": 2.73,
+   "measured": 2.73,
+   "tol": 0.01,
+   "source": "(A) 1.5 ken"
+  },
+  {
+   "name": "head_clear_m",
+   "expected": ">=2.05",
+   "measured": 2.12,
+   "tol": 0.01,
+   "source": "PLAYBOOK D2 / D4",
+   "ok": true
+  },
+  {
+   "name": "bar_heights_m",
+   "expected": "0.6 / 1.1 (A)",
+   "measured": "0.62 / 1.12",
+   "tol": 0.01,
+   "source": "(A) mase-bo",
+   "ok": true
+  },
+  {
+   "name": "stall_entry_clear_m",
+   "expected": ">=1.00",
+   "measured": 1.66,
+   "tol": 0.01,
+   "source": "PLAYBOOK D1 (bars down)",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "stall front post (in the part)"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "note": "stall front post (in the part)"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -2.73
+   ],
+   "note": "the building's wall line behind the stall"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "straw_stack",
+   "id": "jp_m_straw_stack",
+   "palette_id": "straw_aged",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_stack<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 334,
+  "Resolution 2": 146,
+  "Resolution 3": 36,
+  "Geometry": 62,
+  "View Geometry": 62,
+  "Fire Geometry": 62
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 334, Resolution 2 146, Resolution 3 36, Geometry 62, View Geometry 62, Fire Geometry 62"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 stall_width_m",
+   "ok": true,
+   "detail": "expected 1.82-2.73, measured 1.82"
+  },
+  {
+   "check": "C4 stall_depth_m",
+   "ok": true,
+   "detail": "expected 2.73, measured 2.73"
+  },
+  {
+   "check": "C4 head_clear_m",
+   "ok": true,
+   "detail": "expected >=2.05, measured 2.12"
+  },
+  {
+   "check": "C4 bar_heights_m",
+   "ok": true,
+   "detail": "expected 0.6 / 1.1 (A), measured 0.62 / 1.12"
+  },
+  {
+   "check": "C4 stall_entry_clear_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.66"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

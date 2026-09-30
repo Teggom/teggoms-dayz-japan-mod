@@ -363,7 +363,14 @@ def gable(part, D, t, eave_y=EAVE_Y, variant="_thatch", z=0.0):
         vw, vh = (0.8, 0.4) if variant != "_kura" else (0.5, 0.35)
         vx1 = D / 2 - 0.06 - 0.02
         vy0 = yc + 0.12
-        vent = (vx1 - vw, vx1, vy0, vy0 + vh)
+        # B2 (T8, C12): the vent frame (0.03 over the opening) stays 2 cm under the roof line at its outer edge; on a
+        # flat gable (board roofs at 19-24 deg) it shrinks, and goes when it no longer fits over the collar
+        top = yr(vx1 - vw) - 0.05
+        if vy0 + vh > top and variant == "_kura":          # no collar under a kura vent: it may sit lower
+            vy0 = max(eave_y + 0.25, top - vh)
+        vh = min(vh, top - vy0)
+        if vh >= 0.20:
+            vent = (vx1 - vw, vx1, vy0, vy0 + vh)
     for poly in polys:
         pieces = [poly]
         if vent:
@@ -395,8 +402,8 @@ def gable(part, D, t, eave_y=EAVE_Y, variant="_thatch", z=0.0):
             top = yr(x)
             part.add(box(x - 0.06, x + 0.06, eave_y, top - 0.02, z - 0.06, z + 0.06, fm, vis=(1, 2, 3), geo=True,
                          view=True, fire=True, tag="gable_post"))
-        # collar tie between the roof lines
-        xa = (yc - eave_y) / t
+        # collar tie between the roof lines; B2 (T8, C12): its top corners 2 cm under the roof line
+        xa = (yc + 0.06 + 0.02 - eave_y) / t
         part.add(box(xa, D - xa, yc - 0.06, yc + 0.06, z - 0.06, z + 0.06, fm, vis=(1, 2, 3), geo=True, view=True,
                      fire=True, tag="collar"))
     if vent:

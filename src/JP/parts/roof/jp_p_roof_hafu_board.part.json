@@ -86,7 +86,7 @@
  "lod_faces": {
   "Resolution 1": 54,
   "Resolution 2": 54,
-  "Resolution 3": 12
+  "Resolution 3": 24
  },
  "contributes": [
   "Resolution 1",
@@ -101,7 +101,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 54, Resolution 2 54, Resolution 3 12"
+   "detail": "Resolution 1 54, Resolution 2 54, Resolution 3 24"
   },
   {
    "check": "C2 library only",

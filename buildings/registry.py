@@ -42,8 +42,9 @@ BUILDINGS = [
         "ship": True,
     },
     {
-        # B0 step 0c: one unit from the townhouse template, built to show the template runs. The test bed for B2's
-        # party wall / party roof end / roof corner. NOT shipped: no config class, no PBO, no island placement.
+        # B0 step 0c: one unit from the townhouse template, built to show the template runs; since B2 it carries
+        # the real party wall / party roof end (combos.py: all 60 combinations). NOT shipped: no config class, no
+        # PBO, no island placement.
         "key": "townhouse_unit_test",
         "module": "townhouse_unit_test",
         "display": "Townhouse unit (test)",

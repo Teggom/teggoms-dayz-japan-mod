@@ -24,36 +24,39 @@ ROW = [dict(frontage=3, region="kamigata", position="end", free="right", tori="r
        dict(frontage=4, region="kamigata", position="corner", free="left", tori="right")]
 ROW_EDO = [dict(frontage=2, region="edo", position="end", free="right", tori="right"),
            dict(frontage=3, region="edo", position="middle", tori="right", covering="itabuki"),
-           dict(frontage=2, region="edo", position="end", free="left", tori="left")]
+           dict(frontage=3, region="edo", position="corner", free="left", tori="left")]
 
 JOBS = [
     ("street", "The test unit (Kamigata, 3 ken, END; free gable and toriniwa on the right): entrance, koshi window, "
-     "one degoshi bay, street "
-     "pent running to the party lot line on the left, udatsu on the free gable, mushiko upper front.",
+     "one degoshi bay, street pent to the party lot line on the left, udatsu on the free gable, mushiko upper front.",
      {"view": "front", "scale": 9.5, "target": [0.0, 3.2, 4.0]}),
-    ("q_free", "3/4 from the street, free gable: board wall, Ioka gable pent, tile gable, lean-to kitchen behind.",
-     {"view": "3q_left", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 22}),
-    ("q_party", "3/4 from the street, PARTY side: PLACEHOLDERS (stone footing, plain clay wall, normal verge cut back "
-     "to the lot line). B2's party wall / party roof end replace these.",
+    ("q_party", "The PARTY side with no neighbour (each unit seals on its own): jp_p_wall_party (stone course, dodai, "
+     "plain earth wall and gable sealed to the roof), the flush party roof end (plaster closure band, ridge end "
+     "plate, no verge), pent and lean-to closures.",
      {"view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 22}),
-    ("back", "Back: single plank back door into the lean-to kitchen (1 ken deep, sangawara lean-to from leanto.roof).",
+    ("back", "Back: single plank back door into the lean-to kitchen (1 ken deep, sangawara lean-to from "
+     "leanto.roof), its party end flush with a closure band.",
      {"view": "back", "persp": 30, "target": [0.0, 2.4, 0.0], "dist": 22}),
-    ("plan", "Plan cut at 1.3 m: toriniwa (doma) + 2 single shoji doors, mise and oku (tatami, shugi), hikiwake "
-     "pair between them, kitchen doma. North is down.",
-     {"view": "top", "scale": 10.5, "cut_y": 1.3, "no_human": True}),
-    ("row_street", "A snapped ROW (Kamigata), right to left: 3-ken end unit, 2-ken middle unit (toriniwa left), "
-     "4-ken corner unit. "
-     "Lot line to lot line; one udatsu per seam; the corner square between the street pent and the side pent is "
-     "open (roof_corner placeholder).",
+    ("row_street", "A snapped Kamigata ROW, right to left: 3-ken end, 2-ken middle (toriniwa left), 4-ken CORNER. "
+     "Lot line to lot line; one udatsu and one seam cap per seam (the owner builds it); the corner pent wraps "
+     "round the corner (jp_p_roof_corner).",
      {"row": "kamigata", "view": "front", "scale": 17.0, "target": [0.0, 3.2, 4.0]}),
-    ("row_3q", "The Kamigata row from the corner end: wrapped side pent (placeholder corner), party seams.",
+    ("row_3q", "The Kamigata row from the corner end: the hipped pent corner, party roof ends flush under the seam "
+     "caps (two noshi courses under a round cap), no verge tiles at a party line.",
      {"row": "kamigata", "view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 30}),
-    ("row_edo", "An Edo row: plastered nuriya fronts, board pents, board lean-tos; the middle unit has an itabuki main "
-     "roof. No udatsu: the seams show (seam_cap placeholder) and the roof steps are open (party_roof_end).",
+    ("row_edo", "An Edo row, right to left: 2-ken end, 3-ken middle with an itabuki main roof, 3-ken CORNER: plastered "
+     "fronts, board pents, board lean-tos; board seam caps (no udatsu in Edo), the tile / board step closed by the "
+     "tile unit's plaster band.",
      {"row": "edo", "view": "3q", "persp": 30, "target": [0.0, 2.6, 0.0], "dist": 26}),
-    ("seam_close", "Up close at a Kamigata party seam from the street: two end posts 8 mm apart, pents meeting at the "
-     "lot line under the udatsu, verges cut back (placeholder gap between the roofs).",
+    ("seam_close", "Up close at a Kamigata party seam: end posts 8 mm apart, the pents meeting under the udatsu, the "
+     "two flush roof ends 4 mm apart under the seam cap and its ridge bridge.",
      {"row": "kamigata", "interior": {"cam": [-1.5, 5.6, 7.0], "look": [-4.6, 4.3, 0.5], "lens": 30}}),
+    ("seam_edo", "Up close at an Edo seam (tile end unit | itabuki middle unit): board cap and batten over the main "
+     "roofs and the street pents; the plaster closure band closes the tile roof's section above the lower boards.",
+     {"row": "edo", "interior": {"cam": [-1.2, 6.4, 6.0], "look": [-3.7, 4.6, -0.5], "lens": 28}}),
+    ("corner_close", "The Kamigata corner unit's pent corner from the street corner: two pents on a hip with a hip "
+     "ridge, purlin returns on a diagonal bracket, flashing returns over the corner post; nothing through a roof.",
+     {"row": "kamigata", "interior": {"cam": [12.6, 5.2, 5.4], "look": [8.4, 3.0, 0.1], "lens": 26}}),
 ]
 
 
@@ -139,7 +142,7 @@ def compose():
     rows = (len(JOBS) + cols - 1) // cols
     im = Image.new("RGB", (cols * cw + (cols + 1) * 10, 90 + rows * (ch + cap + 10) + 10), (236, 234, 229))
     d = ImageDraw.Draw(im)
-    d.text((14, 12), "Townhouse unit template (B0 step 0c) - test unit + snapped rows, PLACEHOLDERS at party / corner",
+    d.text((14, 12), "Townhouse unit template with B2's party parts - test unit + snapped rows (Kamigata, Edo)",
            font=F["h1"], fill=(20, 20, 20))
     chk = os.path.join(HERE, "checks.json")
     if os.path.isfile(chk):

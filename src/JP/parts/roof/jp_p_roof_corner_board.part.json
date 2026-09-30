@@ -1,0 +1,170 @@
+{
+ "id": "jp_p_roof_corner_board",
+ "part": "jp_p_roof_corner",
+ "variant": "_board",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_corner_board.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_corner",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "hipped corner of a board pent wrapping a corner (Edo corner unit, DW12)",
+ "datum": "the LEFT corner of two pents (as jp_p_roof_hisashi_board: attach 3.00, project 0.91): wall corner at the origin, the street pent along +x (z 0), the side pent along -z (x 0); fills x -0.91..0, z 0..0.91; mirror for a right corner",
+ "recipe": "party.corner_pent(part, projection, pitch, y_wall, kind) (townhouse hook roof_corner)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -1.006,
+  0.032,
+  2.493,
+  3.12,
+  -0.032,
+  1.006
+ ],
+ "dims": [
+  {
+   "name": "projection_m",
+   "expected": 0.91,
+   "measured": 0.91,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "pitch_sun",
+   "expected": 2.75,
+   "measured": 2.75,
+   "tol": 0.05,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "the corner post of the building"
+  },
+  {
+   "type": "eave",
+   "pos": [
+    -0.91,
+    2.6498,
+    0.91
+   ],
+   "note": "outer corner of the two eaves (hip foot)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kokera",
+   "id": "jp_m_roof_kokera",
+   "palette_id": "roof_board_silver",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 102,
+  "Resolution 2": 78,
+  "Resolution 3": 30,
+  "Geometry": 30,
+  "Roadway": 2,
+  "View Geometry": 30,
+  "Fire Geometry": 30
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 102, Resolution 2 78, Resolution 3 30, Geometry 30, Roadway 2, View Geometry 30, Fire Geometry 30"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "5 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "5 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "5 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "20/20 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 projection_m",
+   "ok": true,
+   "detail": "expected 0.91, measured 0.91"
+  },
+  {
+   "check": "C4 pitch_sun",
+   "ok": true,
+   "detail": "expected 2.75, measured 2.75"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

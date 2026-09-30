@@ -1700,12 +1700,12 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 169,
-    "Resolution 2": 115,
-    "Resolution 3": 91,
-    "Geometry": 97,
-    "View Geometry": 91,
-    "Fire Geometry": 91
+    "Resolution 1": 170,
+    "Resolution 2": 116,
+    "Resolution 3": 92,
+    "Geometry": 98,
+    "View Geometry": 92,
+    "Fire Geometry": 92
    },
    "contributes": [
     "Resolution 1",
@@ -1920,12 +1920,12 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 234,
-    "Resolution 2": 180,
+    "Resolution 1": 150,
+    "Resolution 2": 150,
     "Resolution 3": 30,
-    "Geometry": 64,
-    "View Geometry": 58,
-    "Fire Geometry": 58
+    "Geometry": 52,
+    "View Geometry": 52,
+    "Fire Geometry": 52
    },
    "contributes": [
     "Resolution 1",
@@ -2048,12 +2048,12 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 99,
-    "Resolution 2": 69,
-    "Resolution 3": 45,
-    "Geometry": 51,
-    "View Geometry": 45,
-    "Fire Geometry": 45
+    "Resolution 1": 100,
+    "Resolution 2": 70,
+    "Resolution 3": 46,
+    "Geometry": 52,
+    "View Geometry": 46,
+    "Fire Geometry": 46
    },
    "contributes": [
     "Resolution 1",
@@ -13923,7 +13923,7 @@
    "lod_faces": {
     "Resolution 1": 48,
     "Resolution 2": 18,
-    "Resolution 3": 12,
+    "Resolution 3": 18,
     "Geometry": 6,
     "Roadway": 1,
     "View Geometry": 6,
@@ -14031,7 +14031,7 @@
    "lod_faces": {
     "Resolution 1": 102,
     "Resolution 2": 18,
-    "Resolution 3": 12,
+    "Resolution 3": 18,
     "Geometry": 6,
     "Roadway": 1,
     "View Geometry": 6,
@@ -14344,7 +14344,7 @@
    "lod_faces": {
     "Resolution 1": 48,
     "Resolution 2": 18,
-    "Resolution 3": 12,
+    "Resolution 3": 18,
     "Geometry": 6,
     "Roadway": 1,
     "View Geometry": 6,
@@ -14464,7 +14464,7 @@
    "lod_faces": {
     "Resolution 1": 93,
     "Resolution 2": 63,
-    "Resolution 3": 12,
+    "Resolution 3": 18,
     "Geometry": 6,
     "Roadway": 1,
     "View Geometry": 6,
@@ -14570,7 +14570,7 @@
    "lod_faces": {
     "Resolution 1": 48,
     "Resolution 2": 18,
-    "Resolution 3": 12,
+    "Resolution 3": 18,
     "Geometry": 6,
     "Roadway": 1,
     "View Geometry": 6,
@@ -16530,7 +16530,7 @@
    "lod_faces": {
     "Resolution 1": 54,
     "Resolution 2": 54,
-    "Resolution 3": 12
+    "Resolution 3": 24
    },
    "contributes": [
     "Resolution 1",
@@ -16954,7 +16954,7 @@
    "lod_faces": {
     "Resolution 1": 171,
     "Resolution 2": 60,
-    "Resolution 3": 18,
+    "Resolution 3": 24,
     "Geometry": 42,
     "Roadway": 1,
     "View Geometry": 42,
@@ -17111,7 +17111,7 @@
    "lod_faces": {
     "Resolution 1": 424,
     "Resolution 2": 165,
-    "Resolution 3": 18,
+    "Resolution 3": 24,
     "Geometry": 42,
     "Roadway": 1,
     "View Geometry": 42,
@@ -17268,7 +17268,7 @@
    "lod_faces": {
     "Resolution 1": 289,
     "Resolution 2": 125,
-    "Resolution 3": 36,
+    "Resolution 3": 42,
     "Geometry": 30,
     "Roadway": 1,
     "View Geometry": 30,
@@ -19585,6 +19585,3066 @@
    "deviation": null,
    "datum": "7 x 5 ken footprint as the roof generator: x 0..12.74 along the ridge, z 0 (front wall line) .. -9.10; y 0 = floor, eave line (keta top) 2.88. The sample carries the outer keta (outer_plates) for context; buildings pass outer_plates=False (their walls own the keta)",
    "recipe": "koyagumi.koyagumi(roof_part, W, D, roofs.roof(...) info, eave_y, system, members, geya, soot)"
+  },
+  {
+   "id": "jp_p_wall_party_omoya",
+   "part": "jp_p_wall_party",
+   "variant": "_omoya",
+   "group": "wall",
+   "p3d": "JP\\parts\\wall\\jp_p_wall_party_omoya.p3d",
+   "build_list": {
+    "entry": "jp_p_wall_party",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "party wall of a snap-together townhouse unit (DW11 / DW12, DW10 rows): its own end wall, half a wall inside the lot, stone course + dodai, earth wall, floor beam, upper wall and a plain earth gable cut to the roof section and sealed to the rafter underside",
+   "dims": [
+    {
+     "name": "gable_top_m (rafter underside at the ridge)",
+     "expected": 5.858499999999999,
+     "measured": 5.8585,
+     "tol": 0.005,
+     "source": "sealed to the roof underside (PARTS_GAP_AUDIT §3 part 14)"
+    },
+    {
+     "name": "wall_thickness_m",
+     "expected": 0.075,
+     "measured": 0.075,
+     "tol": 0.01,
+     "source": "shinkabe nakanuri (kit)"
+    },
+    {
+     "name": "lot_line_offset_m",
+     "expected": "0.064",
+     "measured": 0.064,
+     "tol": 0.01,
+     "source": "audit §6 risk 1: half a wall + 4 mm inside the lot line",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "post in the part"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "post in the part"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "post in the part"
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "post in the part"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "post in the part"
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.27,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_nakanuri",
+     "id": "jp_m_wall_nakanuri",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_nakanuri_int",
+     "id": "jp_m_wall_nakanuri_int",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 133,
+    "Resolution 2": 133,
+    "Resolution 3": 21,
+    "Geometry": 133,
+    "View Geometry": 133,
+    "Fire Geometry": 133
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "the unit's end wall line as a wall part: x 0..3 ken along it (back -> front), +z = out towards the lot line (LOT_PAD 0.064 out); y 0 = grade; townhouse levels (sill 0.27, ceiling 3.00, loft 3.15, eave 4.63)",
+   "recipe": "party.build_party_wall(B, frame, D, levels, pitch, 'omoya' | 'geya') (townhouse hook party_wall)"
+  },
+  {
+   "id": "jp_p_wall_party_geya",
+   "part": "jp_p_wall_party",
+   "variant": "_geya",
+   "group": "wall",
+   "p3d": "JP\\parts\\wall\\jp_p_wall_party_geya.p3d",
+   "build_list": {
+    "entry": "jp_p_wall_party",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "party wall of a townhouse unit's rear lean-to kitchen: earth wall on a stone course under the lean-to's roof line",
+   "dims": [
+    {
+     "name": "wall_thickness_m",
+     "expected": 0.075,
+     "measured": 0.075,
+     "tol": 0.01,
+     "source": "shinkabe nakanuri (kit)"
+    },
+    {
+     "name": "lot_line_offset_m",
+     "expected": "0.064",
+     "measured": 0.064,
+     "tol": 0.01,
+     "source": "audit §6 risk 1: half a wall + 4 mm inside the lot line",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "post in the part"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "post in the part"
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.27,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_nakanuri",
+     "id": "jp_m_wall_nakanuri",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_nakanuri_int",
+     "id": "jp_m_wall_nakanuri_int",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 48,
+    "Resolution 2": 48,
+    "Resolution 3": 18,
+    "Geometry": 48,
+    "View Geometry": 48,
+    "Fire Geometry": 48
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "the unit's end wall line as a wall part: x 0..1 ken along it (back -> front), +z = out towards the lot line (LOT_PAD 0.064 out); y 0 = grade; townhouse levels (sill 0.27, ceiling 3.00, loft 3.15, eave 4.63)",
+   "recipe": "party.build_party_wall(B, frame, D, levels, pitch, 'omoya' | 'geya') (townhouse hook party_wall)"
+  },
+  {
+   "id": "jp_p_roof_party_end_kawara",
+   "part": "jp_p_roof_party_end",
+   "variant": "_kawara",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_party_end_kawara.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_party_end",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "flush roof end at a townhouse party line (DW11 / DW12): no verge tiles, bargeboard or onigawara; plaster closure band over the covering's section and a ridge end plate; the roof stops 2 mm inside the lot line",
+   "dims": [
+    {
+     "name": "edge_inside_lot_line_m",
+     "expected": 0.002,
+     "measured": 0.002,
+     "tol": 0.0001,
+     "source": "4 mm between neighbours, no coplanar faces"
+    },
+    {
+     "name": "closure_band_m",
+     "expected": 0.03,
+     "measured": 0.03,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "the unit's party wall line"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -5.46
+     ]
+    },
+    {
+     "type": "verge",
+     "pos": [
+      -0.062,
+      4.63,
+      0.0
+     ],
+     "note": "flush party end (lot line - 2 mm)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_field",
+     "id": "jp_m_roof_kawara_field",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_shikkui",
+     "id": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 968,
+    "Resolution 2": 320,
+    "Resolution 3": 126,
+    "Geometry": 12,
+    "Roadway": 2,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "a 1-ken strip of a 3-ken kirizuma main roof (townhouse eave 4.63), party end on the left: lot line x = -0.064, roof edge x = -0.062; the right end keeps a normal verge for comparison",
+   "recipe": "roofs.roof(..., plain_ends=(left, right)) + party.roof_end(roof, x_edge, side, ...)"
+  },
+  {
+   "id": "jp_p_roof_party_end_board",
+   "part": "jp_p_roof_party_end",
+   "variant": "_board",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_party_end_board.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_party_end",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "flush roof end at a townhouse party line (DW11 / DW12): no verge tiles, bargeboard or onigawara; board closure band over the covering's section and a ridge end plate; the roof stops 2 mm inside the lot line",
+   "dims": [
+    {
+     "name": "edge_inside_lot_line_m",
+     "expected": 0.002,
+     "measured": 0.002,
+     "tol": 0.0001,
+     "source": "4 mm between neighbours, no coplanar faces"
+    },
+    {
+     "name": "closure_band_m",
+     "expected": 0.03,
+     "measured": 0.03,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "the unit's party wall line"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -5.46
+     ]
+    },
+    {
+     "type": "verge",
+     "pos": [
+      -0.062,
+      4.63,
+      0.0
+     ],
+     "note": "flush party end (lot line - 2 mm)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 282,
+    "Resolution 2": 131,
+    "Resolution 3": 81,
+    "Geometry": 21,
+    "Roadway": 2,
+    "View Geometry": 21,
+    "Fire Geometry": 21
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "a 1-ken strip of a 3-ken kirizuma main roof (townhouse eave 4.63), party end on the left: lot line x = -0.064, roof edge x = -0.062; the right end keeps a normal verge for comparison",
+   "recipe": "roofs.roof(..., plain_ends=(left, right)) + party.roof_end(roof, x_edge, side, ...)"
+  },
+  {
+   "id": "jp_p_roof_corner_tile",
+   "part": "jp_p_roof_corner",
+   "variant": "_tile",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_corner_tile.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_corner",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    3
+   ],
+   "used_for": "hipped corner of a tiled street pent wrapping a corner townhouse unit / corner hatago (Kamigata, DW11)",
+   "dims": [
+    {
+     "name": "projection_m",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pitch_sun",
+     "expected": 4,
+     "measured": 4.0,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "the corner post of the building"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      -0.91,
+      2.836,
+      0.91
+     ],
+     "note": "outer corner of the two eaves (hip foot)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_field",
+     "id": "jp_m_roof_kawara_field",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_shikkui",
+     "id": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 219,
+    "Resolution 2": 127,
+    "Resolution 3": 43,
+    "Geometry": 30,
+    "Roadway": 2,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "the LEFT corner of two pents (as jp_p_roof_hisashi_tile: attach 3.30, project 0.91): wall corner at the origin, the street pent along +x (z 0), the side pent along -z (x 0); fills x -0.91..0, z 0..0.91; mirror for a right corner",
+   "recipe": "party.corner_pent(part, projection, pitch, y_wall, kind) (townhouse hook roof_corner)"
+  },
+  {
+   "id": "jp_p_roof_corner_board",
+   "part": "jp_p_roof_corner",
+   "variant": "_board",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_corner_board.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_corner",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "hipped corner of a board pent wrapping a corner (Edo corner unit, DW12)",
+   "dims": [
+    {
+     "name": "projection_m",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pitch_sun",
+     "expected": 2.75,
+     "measured": 2.75,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "the corner post of the building"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      -0.91,
+      2.6498,
+      0.91
+     ],
+     "note": "outer corner of the two eaves (hip foot)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 102,
+    "Resolution 2": 78,
+    "Resolution 3": 30,
+    "Geometry": 30,
+    "Roadway": 2,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "the LEFT corner of two pents (as jp_p_roof_hisashi_board: attach 3.00, project 0.91): wall corner at the origin, the street pent along +x (z 0), the side pent along -z (x 0); fills x -0.91..0, z 0..0.91; mirror for a right corner",
+   "recipe": "party.corner_pent(part, projection, pitch, y_wall, kind) (townhouse hook roof_corner)"
+  },
+  {
+   "id": "jp_p_roof_corner_skirt",
+   "part": "jp_p_roof_corner",
+   "variant": "_skirt",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_corner_skirt.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_corner",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2
+   ],
+   "used_for": "corner of the farmhouse skirt pent on posts (G1-6), with its corner post (DW06)",
+   "dims": [
+    {
+     "name": "projection_m",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pitch_sun",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "the corner post of the building"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      -1.2,
+      2.3,
+      1.2
+     ],
+     "note": "outer corner of the two eaves (hip foot)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 118,
+    "Resolution 2": 78,
+    "Resolution 3": 36,
+    "Geometry": 30,
+    "Roadway": 2,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "the LEFT corner of two pents (as jp_p_roof_hisashi_skirt: attach 2.70, project 1.20): wall corner at the origin, the street pent along +x (z 0), the side pent along -z (x 0); fills x -1.20..0, z 0..1.20; mirror for a right corner",
+   "recipe": "party.corner_pent(part, projection, pitch, y_wall, kind) (townhouse hook roof_corner)"
+  },
+  {
+   "id": "jp_p_roof_seam_cap_kawara",
+   "part": "jp_p_roof_seam_cap",
+   "variant": "_kawara",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_seam_cap_kawara.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_seam_cap",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "cap over the seam between two townhouse units' roofs, built by the seam's owner only (one per seam, like the udatsu): a small noshi ridge on mortar with a round cap, and a ridge bridge over the main roof (both slopes) and the lean-to",
+   "dims": [
+    {
+     "name": "cap_width_m",
+     "expected": "0.16-0.20",
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "the owner unit's party wall line (the seam is LOT_PAD outside it)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_shikkui",
+     "id": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 127,
+    "Resolution 2": 99,
+    "Resolution 3": 69
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "the seam (lot line) at x = -0.064 of the jp_p_roof_party_end sample: main roof 3 ken, eave 4.63; the sheet shows it on two snapped party-end strips",
+   "recipe": "party.seam_main / party.cap_line (townhouse hook seam_cap)"
+  },
+  {
+   "id": "jp_p_roof_seam_cap_board",
+   "part": "jp_p_roof_seam_cap",
+   "variant": "_board",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_seam_cap_board.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_seam_cap",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "cap over the seam between two townhouse units' roofs, built by the seam's owner only (one per seam, like the udatsu): a cap board with a batten over the main roof (both slopes) and the lean-to, and the Edo street pent",
+   "dims": [
+    {
+     "name": "cap_width_m",
+     "expected": "0.16-0.20",
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "the owner unit's party wall line (the seam is LOT_PAD outside it)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 24,
+    "Resolution 2": 12,
+    "Resolution 3": 12
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "the seam (lot line) at x = -0.064 of the jp_p_roof_party_end sample: main roof 3 ken, eave 4.63; the sheet shows it on two snapped party-end strips",
+   "recipe": "party.seam_main / party.cap_line (townhouse hook seam_cap)"
+  },
+  {
+   "id": "jp_p_frame_stall_ox",
+   "part": "jp_p_frame_stall",
+   "variant": "_ox",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_stall_ox.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_stall",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "Kinai farmhouse ox stall in the niwa (DW07, required): 1 x 1.5 ken, board partitions, bars down (as left), manger and tether ring on the back wall, straw bedding",
+   "dims": [
+    {
+     "name": "stall_width_m",
+     "expected": "1.82-2.73",
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "(A) umaya 1 x 1.5 ken per animal"
+    },
+    {
+     "name": "stall_depth_m",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.01,
+     "source": "(A) 1.5 ken"
+    },
+    {
+     "name": "head_clear_m",
+     "expected": ">=2.05",
+     "measured": 2.12,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2 / D4",
+     "ok": true
+    },
+    {
+     "name": "bar_heights_m",
+     "expected": "0.6 / 1.1 (A)",
+     "measured": "0.62 / 1.12",
+     "tol": 0.01,
+     "source": "(A) mase-bo",
+     "ok": true
+    },
+    {
+     "name": "stall_entry_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.66,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (bars down)",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -2.73
+     ],
+     "note": "the building's wall line behind the stall"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "straw_stack",
+     "id": "jp_m_straw_stack",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_stack<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 328,
+    "Resolution 2": 146,
+    "Resolution 3": 36,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "origin = the left front post at the doma top (y 0); +x along the stall front (1.82), the stall goes -z to the building's back wall line at z -2.73 (the wall is the building's)",
+   "recipe": "stall.stall(part, width, depth, sides, divider_at, bars, manger, soot)"
+  },
+  {
+   "id": "jp_p_frame_stall_ox_closed",
+   "part": "jp_p_frame_stall",
+   "variant": "_ox_closed",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_stall_ox_closed.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_stall",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "the same ox stall with its two mase-bo in place (dressing; not enterable)",
+   "dims": [
+    {
+     "name": "stall_width_m",
+     "expected": "1.82-2.73",
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "(A) umaya 1 x 1.5 ken per animal"
+    },
+    {
+     "name": "stall_depth_m",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.01,
+     "source": "(A) 1.5 ken"
+    },
+    {
+     "name": "head_clear_m",
+     "expected": ">=2.05",
+     "measured": 2.12,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2 / D4",
+     "ok": true
+    },
+    {
+     "name": "bar_heights_m",
+     "expected": "0.6 / 1.1 (A)",
+     "measured": "0.62 / 1.12",
+     "tol": 0.01,
+     "source": "(A) mase-bo",
+     "ok": true
+    },
+    {
+     "name": "stall_entry_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.66,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (bars down)",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -2.73
+     ],
+     "note": "the building's wall line behind the stall"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "straw_stack",
+     "id": "jp_m_straw_stack",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_stack<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 334,
+    "Resolution 2": 146,
+    "Resolution 3": 36,
+    "Geometry": 62,
+    "View Geometry": 62,
+    "Fire Geometry": 62
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "origin = the left front post at the doma top (y 0); +x along the stall front (1.82), the stall goes -z to the building's back wall line at z -2.73 (the wall is the building's)",
+   "recipe": "stall.stall(part, width, depth, sides, divider_at, bars, manger, soot)"
+  },
+  {
+   "id": "jp_p_frame_stall_umaya",
+   "part": "jp_p_frame_stall",
+   "variant": "_umaya",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_stall_umaya.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_stall",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "Kanto farmhouse inside stable (umaya) in a doma corner (DW06 variant): 1.5 x 1.5 ken, one partition (the building's walls close the rest), sooted from the kitchen smoke",
+   "dims": [
+    {
+     "name": "stall_width_m",
+     "expected": "1.82-2.73",
+     "measured": 2.73,
+     "tol": 0.01,
+     "source": "(A) umaya 1 x 1.5 ken per animal"
+    },
+    {
+     "name": "stall_depth_m",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.01,
+     "source": "(A) 1.5 ken"
+    },
+    {
+     "name": "head_clear_m",
+     "expected": ">=2.05",
+     "measured": 2.12,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2 / D4",
+     "ok": true
+    },
+    {
+     "name": "bar_heights_m",
+     "expected": "0.6 / 1.1 (A)",
+     "measured": "0.62 / 1.12",
+     "tol": 0.01,
+     "source": "(A) mase-bo",
+     "ok": true
+    },
+    {
+     "name": "stall_entry_clear_m",
+     "expected": ">=1.00",
+     "measured": 2.57,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (bars down)",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -2.73
+     ],
+     "note": "the building's wall line behind the stall"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "straw_stack",
+     "id": "jp_m_straw_stack",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_stack<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 250,
+    "Resolution 2": 122,
+    "Resolution 3": 30,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "origin = the left front post at the doma top (y 0); +x along the stall front (2.73), the stall goes -z to the building's back wall line at z -2.73 (the wall is the building's)",
+   "recipe": "stall.stall(part, width, depth, sides, divider_at, bars, manger, soot)"
+  },
+  {
+   "id": "jp_p_frame_stall_row2",
+   "part": "jp_p_frame_stall",
+   "variant": "_row2",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_stall_row2.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_stall",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2
+   ],
+   "used_for": "two stalls side by side for the post-town house / inn stable (DW10 variant, TR09): 2 x 1.5 ken with a divider",
+   "dims": [
+    {
+     "name": "stall_width_m",
+     "expected": "1.82-2.73",
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "(A) umaya 1 x 1.5 ken per animal"
+    },
+    {
+     "name": "stall_depth_m",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.01,
+     "source": "(A) 1.5 ken"
+    },
+    {
+     "name": "head_clear_m",
+     "expected": ">=2.05",
+     "measured": 2.12,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2 / D4",
+     "ok": true
+    },
+    {
+     "name": "bar_heights_m",
+     "expected": "0.6 / 1.1 (A)",
+     "measured": "0.62 / 1.12",
+     "tol": 0.01,
+     "source": "(A) mase-bo",
+     "ok": true
+    },
+    {
+     "name": "stall_entry_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.66,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (bars down)",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "hidden": true,
+     "note": "stall front post (in the part)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -2.73
+     ],
+     "note": "the building's wall line behind the stall"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "straw_stack",
+     "id": "jp_m_straw_stack",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_stack<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 572,
+    "Resolution 2": 256,
+    "Resolution 3": 54,
+    "Geometry": 54,
+    "View Geometry": 54,
+    "Fire Geometry": 54
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "origin = the left front post at the doma top (y 0); +x along the stall front (3.64), the stall goes -z to the building's back wall line at z -2.73 (the wall is the building's)",
+   "recipe": "stall.stall(part, width, depth, sides, divider_at, bars, manger, soot)"
+  },
+  {
+   "id": "jp_p_stair_box",
+   "part": "jp_p_stair",
+   "variant": "_box",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_stair_box.p3d",
+   "build_list": {
+    "entry": "jp_p_stair",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "box stair with the kaidan-dansu look (drawers in its side) for the grand hatago's upper floor (TR05 size 2, G1-5) and shops: 1.20 wide, 37.8 deg walk ramp",
+   "dims": [
+    {
+     "name": "ramp_deg",
+     "expected": "<=38",
+     "measured": 37.57,
+     "tol": 0.0,
+     "source": "PLAYBOOK D4 / §15 T9 (37.8 walks fine)",
+     "ok": true
+    },
+    {
+     "name": "width_m",
+     "expected": ">=1.10",
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "riser_m",
+     "expected": "0.18-0.22 (A)",
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "steps",
+     "expected": 14,
+     "measured": 14.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "stair_foot",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "first riser at the lower floor top, wall-side edge of the flight"
+    },
+    {
+     "type": "stair_head",
+     "pos": [
+      3.64,
+      2.8,
+      0.0
+     ],
+     "note": "top of the ramp = upper floor top (run 3.640, on the grid)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_interior",
+     "id": "jp_m_wood_interior",
+     "palette_id": "timber_interior",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_interior<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 312,
+    "Resolution 2": 168,
+    "Resolution 3": 5,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "flight along +x from the foot (x 0, y 0 = lower floor top) to the head (x = run, y = rise = upper floor top); width from z 0 (wall side) to z -1.20",
+   "recipe": "stair.stair(part, width, rise, kind) + floors.<kind>(holes=[stair.well_rect(...) + 'stair'], hole_fn=stair.well_fn(open_side='x1'))"
+  },
+  {
+   "id": "jp_p_stair_open",
+   "part": "jp_p_stair",
+   "variant": "_open",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_stair_open.p3d",
+   "build_list": {
+    "entry": "jp_p_stair",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "plain open stair (stringers + treads) for the kura loft and work buildings (DW22 loft, G1-5 elevation): 1.10 wide, 37.8 deg walk ramp",
+   "dims": [
+    {
+     "name": "ramp_deg",
+     "expected": "<=38",
+     "measured": 37.0,
+     "tol": 0.0,
+     "source": "PLAYBOOK D4 / §15 T9 (37.8 walks fine)",
+     "ok": true
+    },
+    {
+     "name": "width_m",
+     "expected": ">=1.10",
+     "measured": 1.1,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "riser_m",
+     "expected": "0.18-0.22 (A)",
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "steps",
+     "expected": 12,
+     "measured": 12.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "stair_foot",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "first riser at the lower floor top, wall-side edge of the flight"
+    },
+    {
+     "type": "stair_head",
+     "pos": [
+      3.185,
+      2.4,
+      0.0
+     ],
+     "note": "top of the ramp = upper floor top (run 3.185, on the grid)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 234,
+    "Resolution 2": 90,
+    "Resolution 3": 18,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "flight along +x from the foot (x 0, y 0 = lower floor top) to the head (x = run, y = rise = upper floor top); width from z 0 (wall side) to z -1.10",
+   "recipe": "stair.stair(part, width, rise, kind) + floors.<kind>(holes=[stair.well_rect(...) + 'stair'], hole_fn=stair.well_fn(open_side='x1'))"
+  },
+  {
+   "id": "jp_p_stair_well",
+   "part": "jp_p_stair",
+   "variant": "_well",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_stair_well.p3d",
+   "build_list": {
+    "entry": "jp_p_stair",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "the upper floor's stairwell for the _box stair: the floor (floors.boards) cut by a 'stair' hole, rim boards and a guard rail on the three open sides; shown with its stair",
+   "dims": [
+    {
+     "name": "well_length_m",
+     "expected": 2.866,
+     "measured": 2.8665,
+     "tol": 0.01,
+     "source": "head room >= 2.05 over the flight (D4)"
+    },
+    {
+     "name": "head_room_m",
+     "expected": ">=2.05",
+     "measured": 2.05,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4 (tread tops under the upper floor)",
+     "ok": true
+    },
+    {
+     "name": "ramp_deg",
+     "expected": "<=38",
+     "measured": 37.57,
+     "tol": 0.0,
+     "source": "PLAYBOOK D4 / §15 T9 (37.8 walks fine)",
+     "ok": true
+    },
+    {
+     "name": "width_m",
+     "expected": ">=1.10",
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "riser_m",
+     "expected": "0.18-0.22 (A)",
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "steps",
+     "expected": 14,
+     "measured": 14.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "stair_foot",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "first riser at the lower floor top, wall-side edge of the flight"
+    },
+    {
+     "type": "stair_head",
+     "pos": [
+      3.64,
+      2.8,
+      0.0
+     ],
+     "note": "top of the ramp = upper floor top (run 3.640, on the grid)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_interior",
+     "id": "jp_m_wood_interior",
+     "palette_id": "timber_interior",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_interior<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 471,
+    "Resolution 2": 246,
+    "Resolution 3": 23,
+    "Geometry": 35,
+    "Roadway": 4,
+    "View Geometry": 35,
+    "Fire Geometry": 35
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "flight along +x from the foot (x 0, y 0 = lower floor top) to the head (x = run, y = rise = upper floor top); width from z 0 (wall side) to z -1.20",
+   "recipe": "stair.stair(part, width, rise, kind) + floors.<kind>(holes=[stair.well_rect(...) + 'stair'], hole_fn=stair.well_fn(open_side='x1'))"
+  },
+  {
+   "id": "jp_p_open_halfdoor_hinged",
+   "part": "jp_p_open_halfdoor",
+   "variant": "_hinged",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_halfdoor_hinged.p3d",
+   "build_list": {
+    "entry": "jp_p_open_halfdoor",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "walk-in toilet / booth door (DW26, G1 A1-1): half-height hinged board leaf (rotation door, swings out 90 deg; ENGINE-UNTESTED like every rotation door) in a 1-ken bay with a door post and a fixed board panel; doorway 1.04 x 2.00",
+   "dims": [
+    {
+     "name": "clear_width_m",
+     "expected": ">=1.00",
+     "measured": 1.04,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (G1 A1-1: D1 applies to the toilet)",
+     "ok": true
+    },
+    {
+     "name": "clear_height_m",
+     "expected": ">=2.00",
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2",
+     "ok": true
+    },
+    {
+     "name": "leaf_band_m",
+     "expected": "0.25-1.45",
+     "measured": "0.25-1.45",
+     "tol": 0.01,
+     "source": "half door (A): the top of the doorway stays open",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "the wall's head rail over the doorway (wall_run head=True)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "straw_rope",
+     "id": "jp_m_straw_rope",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 132,
+    "Resolution 2": 42,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "rotation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      }
+     ],
+     "anim_period": 0.9,
+     "init_opened": 0.4,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.04,
+     "engine_tested": false,
+     "note": "half-height hinged board door (toilet / booth), swings out 90 deg"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x=0 and x=1.82; y 0 = floor; +z = out (the leaf swings out)",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_open_halfdoor_open",
+   "part": "jp_p_open_halfdoor",
+   "variant": "_open",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_halfdoor_open.p3d",
+   "build_list": {
+    "entry": "jp_p_open_halfdoor",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "the same half door as left: static, standing open (no animation) - dressing or a toilet whose door is gone",
+   "dims": [
+    {
+     "name": "clear_width_m",
+     "expected": ">=1.00",
+     "measured": 1.04,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (G1 A1-1: D1 applies to the toilet)",
+     "ok": true
+    },
+    {
+     "name": "clear_height_m",
+     "expected": ">=2.00",
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2",
+     "ok": true
+    },
+    {
+     "name": "leaf_band_m",
+     "expected": "0.25-1.45",
+     "measured": "0.25-1.45",
+     "tol": 0.01,
+     "source": "half door (A): the top of the doorway stays open",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "the wall's head rail over the doorway (wall_run head=True)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "straw_rope",
+     "id": "jp_m_straw_rope",
+     "palette_id": "straw_aged",
+     "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 132,
+    "Resolution 2": 42,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x=0 and x=1.82; y 0 = floor; +z = out (the leaf swings out)",
+   "recipe": null
+  },
+  {
+   "id": "jp_p_floor_pit_irori",
+   "part": "jp_p_floor_pit",
+   "variant": "_irori",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_floor_pit_irori.p3d",
+   "build_list": {
+    "entry": "jp_p_floor_pit",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "sunken hearth (irori) in a raised board floor: sooted robuchi frame flush with the floor, clay walls, ash bed 0.20 down with charred firewood (the kettle hook / fitting is PA2's)",
+   "dims": [
+    {
+     "name": "hearth_m",
+     "expected": "0.91 x 0.91 (3 x 3 shaku)",
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.45,
+      0.0
+     ],
+     "note": "floor top"
+    }
+   ],
+   "materials": [
+    {
+     "key": "ground_ash",
+     "id": "jp_m_ground_ash",
+     "palette_id": "ash_grey",
+     "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_ash<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_nakanuri_int",
+     "id": "jp_m_wall_nakanuri_int",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri_int<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 144,
+    "Resolution 2": 78,
+    "Resolution 3": 54,
+    "Geometry": 78,
+    "Roadway": 5,
+    "View Geometry": 78,
+    "Fire Geometry": 78
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "a 1 x 1 ken floor sample, x 0..1.82, z 0..-1.82; y 0 = grade; the floor top at 0.45",
+   "recipe": "floors.<kind>(holes=[(x0, x1, z0, z1, 'pit')], hole_fn=pits.pit_fn('irori'))"
+  },
+  {
+   "id": "jp_p_floor_pit_irori_doma",
+   "part": "jp_p_floor_pit",
+   "variant": "_irori_doma",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_floor_pit_irori_doma.p3d",
+   "build_list": {
+    "entry": "jp_p_floor_pit",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "hearth pit in an earth floor ringed with field stones (poor huts DW01 / DW30, work sheds)",
+   "dims": [
+    {
+     "name": "hearth_m",
+     "expected": "0.6-0.9 (A)",
+     "measured": 0.72,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.05,
+      0.0
+     ],
+     "note": "floor top"
+    }
+   ],
+   "materials": [
+    {
+     "key": "ground_ash",
+     "id": "jp_m_ground_ash",
+     "palette_id": "ash_grey",
+     "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_ash<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 378,
+    "Resolution 2": 351,
+    "Resolution 3": 30,
+    "Geometry": 54,
+    "Roadway": 5,
+    "View Geometry": 54,
+    "Fire Geometry": 54
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "a 1 x 1 ken floor sample, x 0..1.82, z 0..-1.82; y 0 = grade; the floor top at 0.05",
+   "recipe": "floors.<kind>(holes=[(x0, x1, z0, z1, 'pit')], hole_fn=pits.pit_fn('irori_doma'))"
+  },
+  {
+   "id": "jp_p_floor_pit_slot",
+   "part": "jp_p_floor_pit",
+   "variant": "_slot",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_floor_pit_slot.p3d",
+   "build_list": {
+    "entry": "jp_p_floor_pit",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "the walk-in toilet's drop slot (DW26): rim boards over a closed, lined pit",
+   "dims": [
+    {
+     "name": "slot_m",
+     "expected": "0.30 x 0.17 (A)",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.12,
+      0.0
+     ],
+     "note": "floor top"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 99,
+    "Resolution 2": 66,
+    "Resolution 3": 24,
+    "Geometry": 54,
+    "Roadway": 4,
+    "View Geometry": 54,
+    "Fire Geometry": 54
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "a 1 x 1 ken floor sample, x 0..1.82, z 0..-1.82; y 0 = grade; the floor top at 0.12",
+   "recipe": "floors.<kind>(holes=[(x0, x1, z0, z1, 'pit')], hole_fn=pits.pit_fn('slot'))"
+  },
+  {
+   "id": "jp_p_floor_sunoko_take",
+   "part": "jp_p_floor_sunoko",
+   "variant": "_take",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_floor_sunoko_take.p3d",
+   "build_list": {
+    "entry": "jp_p_floor_sunoko",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2
+   ],
+   "used_for": "split-bamboo floor (take-yuka / sunoko-yuka) of the Kinai tenant house and poor huts (DW01 / DW30 floor axis), on bamboo sleepers",
+   "dims": [
+    {
+     "name": "slat_gap_m",
+     "expected": "texture",
+     "measured": 0.0,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.3,
+      0.0
+     ],
+     "note": "floor top"
+    }
+   ],
+   "materials": [
+    {
+     "key": "bamboo_weathered",
+     "id": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered",
+     "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "floor_takeyuka",
+     "id": "jp_m_floor_takeyuka",
+     "palette_id": "bamboo_weathered",
+     "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_takeyuka<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "ground_doma_earth",
+     "id": "jp_m_ground_doma_earth",
+     "palette_id": "doma_earth",
+     "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_doma_earth<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 29,
+    "Resolution 2": 6,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "a 1 x 1 ken floor, x 0..1.82, z 0..-1.82; floor top 0.30",
+   "recipe": "pits.sunoko(name, x0, x1, z0, z1, y, kind) (floors.boards-style; holes + hole_fn)"
+  },
+  {
+   "id": "jp_p_floor_sunoko_slat",
+   "part": "jp_p_floor_sunoko",
+   "variant": "_slat",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_floor_sunoko_slat.p3d",
+   "build_list": {
+    "entry": "jp_p_floor_sunoko",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "board slat floor with gaps (sunoko): kitchen sink and wash floors, bath floors",
+   "dims": [
+    {
+     "name": "slat_gap_m",
+     "expected": "0.02-0.04",
+     "measured": 0.03,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.3,
+      0.0
+     ],
+     "note": "floor top"
+    }
+   ],
+   "materials": [
+    {
+     "key": "ground_doma_earth",
+     "id": "jp_m_ground_doma_earth",
+     "palette_id": "doma_earth",
+     "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_doma_earth<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 108,
+    "Resolution 2": 6,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "a 1 x 1 ken floor, x 0..1.82, z 0..-1.82; floor top 0.30",
+   "recipe": "pits.sunoko(name, x0, x1, z0, z1, y, kind) (floors.boards-style; holes + hole_fn)"
   },
   {
    "id": "jp_p_trim_grime_wall",
