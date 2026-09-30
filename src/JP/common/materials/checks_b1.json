@@ -1,0 +1,3603 @@
+{
+ "check": "C1 palette (tools/matcheck), B1 materials",
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_bamboo_sooted_w0_co.png",
+   "palette_id": "timber_sooted",
+   "wear": "",
+   "mean_srgb": [
+    53.4,
+    39.1,
+    26.9
+   ],
+   "target_srgb": [
+    36,
+    28,
+    22
+   ],
+   "dE": 8.06,
+   "dE_to_entry": 8.06,
+   "tol": 12.0,
+   "spread_p75": 1.5,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.5)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     53.5,
+     39.0,
+     26.8
+    ],
+    "dE": 8.11,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_bamboo_sooted_w1_co.png",
+   "palette_id": "timber_sooted",
+   "wear": "",
+   "mean_srgb": [
+    38.1,
+    30.0,
+    24.0
+   ],
+   "target_srgb": [
+    36,
+    28,
+    22
+   ],
+   "dE": 1.0,
+   "dE_to_entry": 1.0,
+   "tol": 12.0,
+   "spread_p75": 1.7,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     38.0,
+     30.1,
+     24.0
+    ],
+    "dE": 1.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_bamboo_sooted_w2_co.png",
+   "palette_id": "timber_sooted",
+   "wear": "",
+   "mean_srgb": [
+    36.0,
+    28.0,
+    22.0
+   ],
+   "target_srgb": [
+    36,
+    28,
+    22
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 12.0,
+   "spread_p75": 1.5,
+   "observed_spread": null,
+   "masked_frac": 0.242,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_bamboo_sooted_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.5)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     36.1,
+     28.0,
+     21.7
+    ],
+    "dE": 0.23,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_bamboo_weave_w0_co.png",
+   "palette_id": "bamboo_weathered",
+   "wear": "",
+   "mean_srgb": [
+    183.8,
+    167.3,
+    145.7
+   ],
+   "target_srgb": [
+    169,
+    157,
+    146
+   ],
+   "dE": 7.21,
+   "dE_to_entry": 7.21,
+   "tol": 14.0,
+   "spread_p75": 5.8,
+   "observed_spread": 26.0,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     183.9,
+     167.3,
+     145.9
+    ],
+    "dE": 7.15,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_bamboo_weave_w1_co.png",
+   "palette_id": "bamboo_weathered",
+   "wear": "",
+   "mean_srgb": [
+    163.6,
+    151.7,
+    140.8
+   ],
+   "target_srgb": [
+    169,
+    157,
+    146
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 14.0,
+   "spread_p75": 5.3,
+   "observed_spread": 26.0,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     163.6,
+     151.7,
+     140.9
+    ],
+    "dE": 2.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_bamboo_weave_w2_co.png",
+   "palette_id": "bamboo_weathered",
+   "wear": "",
+   "mean_srgb": [
+    153.0,
+    141.3,
+    130.5
+   ],
+   "target_srgb": [
+    169,
+    157,
+    146
+   ],
+   "dE": 6.0,
+   "dE_to_entry": 6.0,
+   "tol": 14.0,
+   "spread_p75": 5.1,
+   "observed_spread": 26.0,
+   "masked_frac": 0.037,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_bamboo_weave_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     152.9,
+     141.3,
+     130.5
+    ],
+    "dE": 6.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceil_boards_w0_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    98.5,
+    73.1,
+    58.9
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 11.83,
+   "dE_to_entry": 11.83,
+   "tol": 14.0,
+   "spread_p75": 1.7,
+   "observed_spread": 47.1,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     98.5,
+     73.2,
+     58.9
+    ],
+    "dE": 11.86,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceil_boards_w1_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    69.0,
+    52.0,
+    46.0
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 0.01,
+   "dE_to_entry": 0.01,
+   "tol": 14.0,
+   "spread_p75": 1.8,
+   "observed_spread": 47.1,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     69.0,
+     52.1,
+     45.5
+    ],
+    "dE": 0.36,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceil_boards_w2_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    64.4,
+    47.6,
+    41.7
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 14.0,
+   "spread_p75": 1.1,
+   "observed_spread": 47.1,
+   "masked_frac": 0.121,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceil_boards_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.1)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     64.4,
+     47.6,
+     41.3
+    ],
+    "dE": 2.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_dark_w0_co.png",
+   "palette_id": "stoneware_dark",
+   "wear": "",
+   "mean_srgb": [
+    74.0,
+    52.0,
+    38.0
+   ],
+   "target_srgb": [
+    74,
+    52,
+    38
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 12.0,
+   "spread_p75": 2.9,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     74.0,
+     52.0,
+     37.9
+    ],
+    "dE": 0.06,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_dark_w1_co.png",
+   "palette_id": "stoneware_dark",
+   "wear": "",
+   "mean_srgb": [
+    76.4,
+    54.2,
+    40.1
+   ],
+   "target_srgb": [
+    74,
+    52,
+    38
+   ],
+   "dE": 1.0,
+   "dE_to_entry": 1.0,
+   "tol": 12.0,
+   "spread_p75": 3.2,
+   "observed_spread": null,
+   "masked_frac": 0.223,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_dark_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     76.5,
+     54.2,
+     40.0
+    ],
+    "dE": 1.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_dark_w2_co.png",
+   "palette_id": "stoneware_dark",
+   "wear": "",
+   "mean_srgb": [
+    81.3,
+    58.7,
+    44.4
+   ],
+   "target_srgb": [
+    74,
+    52,
+    38
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 12.0,
+   "spread_p75": 2.7,
+   "observed_spread": null,
+   "masked_frac": 0.29,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_dark_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     81.2,
+     58.7,
+     44.5
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_pale_w0_co.png",
+   "palette_id": "stoneware_pale",
+   "wear": "",
+   "mean_srgb": [
+    168.0,
+    149.0,
+    115.0
+   ],
+   "target_srgb": [
+    168,
+    149,
+    115
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 14.0,
+   "spread_p75": 4.1,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     168.0,
+     149.0,
+     114.9
+    ],
+    "dE": 0.05,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_pale_w1_co.png",
+   "palette_id": "stoneware_pale",
+   "wear": "",
+   "mean_srgb": [
+    170.7,
+    151.6,
+    117.5
+   ],
+   "target_srgb": [
+    168,
+    149,
+    115
+   ],
+   "dE": 1.0,
+   "dE_to_entry": 1.0,
+   "tol": 14.0,
+   "spread_p75": 3.8,
+   "observed_spread": null,
+   "masked_frac": 0.147,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_pale_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     170.7,
+     151.7,
+     117.4
+    ],
+    "dE": 1.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_pale_w2_co.png",
+   "palette_id": "stoneware_pale",
+   "wear": "",
+   "mean_srgb": [
+    176.2,
+    156.9,
+    122.6
+   ],
+   "target_srgb": [
+    168,
+    149,
+    115
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 14.0,
+   "spread_p75": 3.5,
+   "observed_spread": null,
+   "masked_frac": 0.228,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_stoneware_pale_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     176.2,
+     156.9,
+     122.6
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_w0_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    80.0,
+    77.0,
+    68.8
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 9.0,
+   "spread_p75": 3.5,
+   "observed_spread": 8.8,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     80.0,
+     77.0,
+     68.8
+    ],
+    "dE": 3.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_w1_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    73.0,
+    70.0,
+    62.0
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 9.0,
+   "spread_p75": 3.1,
+   "observed_spread": 8.8,
+   "masked_frac": 0.074,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     73.0,
+     70.0,
+     62.1
+    ],
+    "dE": 0.05,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_w2_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    66.1,
+    63.2,
+    55.3
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 9.0,
+   "spread_p75": 2.8,
+   "observed_spread": 8.8,
+   "masked_frac": 0.061,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     66.1,
+     63.2,
+     55.1
+    ],
+    "dE": 2.99,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_litter_w0_co.png",
+   "palette_id": "grime_splash",
+   "wear": "",
+   "mean_srgb": [
+    111.5,
+    96.2,
+    78.0
+   ],
+   "target_srgb": [
+    104,
+    89,
+    71
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 6.0,
+   "spread_p75": 5.0,
+   "observed_spread": 1.8,
+   "masked_frac": 0.005,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_litter_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     111.5,
+     96.2,
+     78.0
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_litter_w1_co.png",
+   "palette_id": "grime_splash",
+   "wear": "",
+   "mean_srgb": [
+    104.0,
+    89.0,
+    71.0
+   ],
+   "target_srgb": [
+    104,
+    89,
+    71
+   ],
+   "dE": 0.01,
+   "dE_to_entry": 0.01,
+   "tol": 6.0,
+   "spread_p75": 4.8,
+   "observed_spread": 1.8,
+   "masked_frac": 0.01,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_litter_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     104.0,
+     89.0,
+     71.0
+    ],
+    "dE": 0.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_litter_w2_co.png",
+   "palette_id": "grime_splash",
+   "wear": "",
+   "mean_srgb": [
+    96.6,
+    81.8,
+    64.1
+   ],
+   "target_srgb": [
+    104,
+    89,
+    71
+   ],
+   "dE": 3.01,
+   "dE_to_entry": 3.01,
+   "tol": 6.0,
+   "spread_p75": 4.5,
+   "observed_spread": 1.8,
+   "masked_frac": 0.017,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_litter_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     96.5,
+     81.8,
+     64.1
+    ],
+    "dE": 3.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_moss_w0_co.png",
+   "palette_id": "moss_on_stone",
+   "wear": "",
+   "mean_srgb": [
+    124.1,
+    140.6,
+    112.2
+   ],
+   "target_srgb": [
+    125,
+    128,
+    92
+   ],
+   "dE": 8.25,
+   "dE_to_entry": 8.25,
+   "tol": 14.0,
+   "spread_p75": 8.0,
+   "observed_spread": 22.7,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     124.2,
+     140.6,
+     111.8
+    ],
+    "dE": 8.12,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_moss_w1_co.png",
+   "palette_id": "moss_on_stone",
+   "wear": "",
+   "mean_srgb": [
+    125.0,
+    128.0,
+    92.0
+   ],
+   "target_srgb": [
+    125,
+    128,
+    92
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 14.0,
+   "spread_p75": 6.8,
+   "observed_spread": 22.7,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     125.0,
+     128.0,
+     92.0
+    ],
+    "dE": 0.03,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_moss_w2_co.png",
+   "palette_id": "moss_on_stone",
+   "wear": "",
+   "mean_srgb": [
+    112.5,
+    118.8,
+    78.8
+   ],
+   "target_srgb": [
+    125,
+    128,
+    92
+   ],
+   "dE": 4.9,
+   "dE_to_entry": 4.9,
+   "tol": 14.0,
+   "spread_p75": 6.9,
+   "observed_spread": 22.7,
+   "masked_frac": 0.037,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_moss_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     112.5,
+     118.8,
+     79.0
+    ],
+    "dE": 4.84,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_sumi_text_w0_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    47.7,
+    47.7,
+    47.7
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 10.0,
+   "spread_p75": 0.9,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 0.9)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     47.7,
+     47.7,
+     47.7
+    ],
+    "dE": 1.97,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_sumi_text_w1_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    74.0,
+    66.4,
+    60.1
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 8.83,
+   "dE_to_entry": 8.83,
+   "tol": 10.0,
+   "spread_p75": 1.3,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.3)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     74.1,
+     66.4,
+     60.3
+    ],
+    "dE": 8.82,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_sumi_text_w2_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    76.3,
+    68.7,
+    62.3
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 9.64,
+   "dE_to_entry": 9.64,
+   "tol": 10.0,
+   "spread_p75": 1.4,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.4)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     76.4,
+     68.7,
+     62.5
+    ],
+    "dE": 9.63,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_int_w0_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    81.1,
+    60.2,
+    50.2
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 5.1,
+   "dE_to_entry": 5.1,
+   "tol": 14.0,
+   "spread_p75": 1.8,
+   "observed_spread": 47.1,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     81.1,
+     60.2,
+     50.0
+    ],
+    "dE": 5.15,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_int_w1_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    69.0,
+    52.0,
+    46.0
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 0.01,
+   "dE_to_entry": 0.01,
+   "tol": 14.0,
+   "spread_p75": 2.2,
+   "observed_spread": 47.1,
+   "masked_frac": 0.005,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_int_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     69.0,
+     52.0,
+     45.8
+    ],
+    "dE": 0.16,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_int_w2_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    76.4,
+    64.4,
+    61.4
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 6.17,
+   "dE_to_entry": 6.17,
+   "tol": 14.0,
+   "spread_p75": 3.5,
+   "observed_spread": 47.1,
+   "masked_frac": 0.01,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_int_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     76.4,
+     64.4,
+     61.5
+    ],
+    "dE": 6.2,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_rough_w0_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    78.7,
+    57.9,
+    48.0
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 4.36,
+   "dE_to_entry": 4.36,
+   "tol": 14.0,
+   "spread_p75": 2.4,
+   "observed_spread": 47.1,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     78.7,
+     58.0,
+     47.8
+    ],
+    "dE": 4.47,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_rough_w1_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    71.3,
+    54.2,
+    48.2
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 1.0,
+   "dE_to_entry": 1.0,
+   "tol": 14.0,
+   "spread_p75": 2.2,
+   "observed_spread": 47.1,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     71.3,
+     54.2,
+     48.0
+    ],
+    "dE": 1.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_rough_w2_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    63.9,
+    47.7,
+    43.2
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 2.24,
+   "dE_to_entry": 2.24,
+   "tol": 14.0,
+   "spread_p75": 1.9,
+   "observed_spread": 47.1,
+   "masked_frac": 0.062,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_boards_rough_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     63.9,
+     47.7,
+     42.9
+    ],
+    "dE": 2.16,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_takeyuka_w0_co.png",
+   "palette_id": "bamboo_weathered",
+   "wear": "",
+   "mean_srgb": [
+    183.9,
+    167.3,
+    145.7
+   ],
+   "target_srgb": [
+    169,
+    157,
+    146
+   ],
+   "dE": 7.22,
+   "dE_to_entry": 7.22,
+   "tol": 14.0,
+   "spread_p75": 4.9,
+   "observed_spread": 26.0,
+   "masked_frac": 0.02,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_takeyuka_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     184.1,
+     167.2,
+     145.7
+    ],
+    "dE": 7.23,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_takeyuka_w1_co.png",
+   "palette_id": "bamboo_weathered",
+   "wear": "",
+   "mean_srgb": [
+    169.1,
+    157.0,
+    146.0
+   ],
+   "target_srgb": [
+    169,
+    157,
+    146
+   ],
+   "dE": 0.02,
+   "dE_to_entry": 0.02,
+   "tol": 14.0,
+   "spread_p75": 5.6,
+   "observed_spread": 26.0,
+   "masked_frac": 0.02,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_takeyuka_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     168.8,
+     157.1,
+     145.9
+    ],
+    "dE": 0.14,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_takeyuka_w2_co.png",
+   "palette_id": "bamboo_weathered",
+   "wear": "",
+   "mean_srgb": [
+    153.0,
+    141.3,
+    130.5
+   ],
+   "target_srgb": [
+    169,
+    157,
+    146
+   ],
+   "dE": 5.99,
+   "dE_to_entry": 5.99,
+   "tol": 14.0,
+   "spread_p75": 4.6,
+   "observed_spread": 26.0,
+   "masked_frac": 0.13,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_takeyuka_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     153.3,
+     141.3,
+     130.7
+    ],
+    "dE": 5.96,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_heri_w0_co.png",
+   "palette_id": "tatami_heri",
+   "wear": "",
+   "mean_srgb": [
+    38.0,
+    36.0,
+    40.0
+   ],
+   "target_srgb": [
+    38,
+    36,
+    40
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 12.0,
+   "spread_p75": 1.0,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.0)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     37.9,
+     36.0,
+     39.6
+    ],
+    "dE": 0.33,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_heri_w1_co.png",
+   "palette_id": "tatami_heri",
+   "wear": "",
+   "mean_srgb": [
+    54.9,
+    48.0,
+    47.1
+   ],
+   "target_srgb": [
+    38,
+    36,
+    40
+   ],
+   "dE": 7.28,
+   "dE_to_entry": 7.28,
+   "tol": 12.0,
+   "spread_p75": 1.1,
+   "observed_spread": null,
+   "masked_frac": 0.001,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_heri_w1_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.1)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     55.0,
+     48.1,
+     46.8
+    ],
+    "dE": 7.46,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_heri_w2_co.png",
+   "palette_id": "tatami_heri",
+   "wear": "",
+   "mean_srgb": [
+    59.9,
+    52.3,
+    50.0
+   ],
+   "target_srgb": [
+    38,
+    36,
+    40
+   ],
+   "dE": 9.49,
+   "dE_to_entry": 9.49,
+   "tol": 12.0,
+   "spread_p75": 1.1,
+   "observed_spread": null,
+   "masked_frac": 0.049,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_heri_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.1)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     60.2,
+     52.3,
+     50.4
+    ],
+    "dE": 9.45,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_w0_co.png",
+   "palette_id": "tatami_aged",
+   "wear": "",
+   "mean_srgb": [
+    143.0,
+    130.6,
+    99.0
+   ],
+   "target_srgb": [
+    127,
+    108,
+    90
+   ],
+   "dE": 11.18,
+   "dE_to_entry": 11.18,
+   "tol": 14.0,
+   "spread_p75": 2.1,
+   "observed_spread": 28.4,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     142.9,
+     130.7,
+     98.8
+    ],
+    "dE": 11.26,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_w1_co.png",
+   "palette_id": "tatami_aged",
+   "wear": "",
+   "mean_srgb": [
+    127.0,
+    108.0,
+    90.0
+   ],
+   "target_srgb": [
+    127,
+    108,
+    90
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 14.0,
+   "spread_p75": 1.8,
+   "observed_spread": 28.4,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     127.0,
+     108.0,
+     90.2
+    ],
+    "dE": 0.13,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_w2_co.png",
+   "palette_id": "tatami_aged",
+   "wear": "",
+   "mean_srgb": [
+    118.3,
+    100.7,
+    86.1
+   ],
+   "target_srgb": [
+    127,
+    108,
+    90
+   ],
+   "dE": 3.61,
+   "dE_to_entry": 3.61,
+   "tol": 14.0,
+   "spread_p75": 1.8,
+   "observed_spread": 28.4,
+   "masked_frac": 0.104,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_floor_tatami_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     118.3,
+     100.7,
+     86.1
+    ],
+    "dE": 3.58,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_ash_w0_co.png",
+   "palette_id": "ash_grey",
+   "wear": "",
+   "mean_srgb": [
+    157.9,
+    153.9,
+    147.8
+   ],
+   "target_srgb": [
+    150,
+    146,
+    140
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 12.0,
+   "spread_p75": 2.7,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     157.8,
+     153.9,
+     148.1
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_ash_w1_co.png",
+   "palette_id": "ash_grey",
+   "wear": "",
+   "mean_srgb": [
+    150.0,
+    146.0,
+    140.0
+   ],
+   "target_srgb": [
+    150,
+    146,
+    140
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 12.0,
+   "spread_p75": 2.3,
+   "observed_spread": null,
+   "masked_frac": 0.054,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_ash_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     149.9,
+     146.0,
+     140.5
+    ],
+    "dE": 0.3,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_ash_w2_co.png",
+   "palette_id": "ash_grey",
+   "wear": "",
+   "mean_srgb": [
+    135.1,
+    130.4,
+    122.9
+   ],
+   "target_srgb": [
+    150,
+    146,
+    140
+   ],
+   "dE": 6.08,
+   "dE_to_entry": 6.08,
+   "tol": 12.0,
+   "spread_p75": 2.0,
+   "observed_spread": null,
+   "masked_frac": 0.254,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_ash_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     135.1,
+     130.5,
+     122.4
+    ],
+    "dE": 6.13,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_earth_w0_co.png",
+   "palette_id": "doma_earth",
+   "wear": "",
+   "mean_srgb": [
+    145.5,
+    139.7,
+    134.0
+   ],
+   "target_srgb": [
+    137,
+    132,
+    128
+   ],
+   "dE": 3.16,
+   "dE_to_entry": 3.16,
+   "tol": 14.0,
+   "spread_p75": 3.9,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     145.5,
+     139.7,
+     134.0
+    ],
+    "dE": 3.15,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_earth_w1_co.png",
+   "palette_id": "doma_earth",
+   "wear": "",
+   "mean_srgb": [
+    137.0,
+    132.0,
+    128.0
+   ],
+   "target_srgb": [
+    137,
+    132,
+    128
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 14.0,
+   "spread_p75": 3.9,
+   "observed_spread": null,
+   "masked_frac": 0.076,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_earth_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     136.9,
+     132.0,
+     128.3
+    ],
+    "dE": 0.14,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_earth_w2_co.png",
+   "palette_id": "doma_earth",
+   "wear": "",
+   "mean_srgb": [
+    129.3,
+    124.3,
+    120.4
+   ],
+   "target_srgb": [
+    137,
+    132,
+    128
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 14.0,
+   "spread_p75": 3.5,
+   "observed_spread": null,
+   "masked_frac": 0.129,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_earth_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     129.2,
+     124.3,
+     120.6
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_tataki_w0_co.png",
+   "palette_id": "doma_earth",
+   "wear": "",
+   "mean_srgb": [
+    152.6,
+    147.6,
+    143.5
+   ],
+   "target_srgb": [
+    137,
+    132,
+    128
+   ],
+   "dE": 6.01,
+   "dE_to_entry": 6.01,
+   "tol": 14.0,
+   "spread_p75": 1.6,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     152.6,
+     147.7,
+     144.0
+    ],
+    "dE": 6.05,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_tataki_w1_co.png",
+   "palette_id": "doma_earth",
+   "wear": "",
+   "mean_srgb": [
+    144.8,
+    139.7,
+    135.7
+   ],
+   "target_srgb": [
+    137,
+    132,
+    128
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 14.0,
+   "spread_p75": 4.3,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     144.8,
+     139.8,
+     136.0
+    ],
+    "dE": 3.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_tataki_w2_co.png",
+   "palette_id": "doma_earth",
+   "wear": "",
+   "mean_srgb": [
+    139.6,
+    134.6,
+    130.6
+   ],
+   "target_srgb": [
+    137,
+    132,
+    128
+   ],
+   "dE": 1.0,
+   "dE_to_entry": 1.0,
+   "tol": 14.0,
+   "spread_p75": 3.5,
+   "observed_spread": null,
+   "masked_frac": 0.058,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_doma_tataki_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     139.6,
+     134.6,
+     130.9
+    ],
+    "dE": 1.03,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_leaf_litter_w0_co.png",
+   "palette_id": "leaf_litter_autumn",
+   "wear": "",
+   "mean_srgb": [
+    126.4,
+    80.3,
+    52.3
+   ],
+   "target_srgb": [
+    112,
+    76,
+    52
+   ],
+   "dE": 6.4,
+   "dE_to_entry": 6.4,
+   "tol": 14.0,
+   "spread_p75": 10.1,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     126.3,
+     80.3,
+     52.3
+    ],
+    "dE": 6.37,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_leaf_litter_w1_co.png",
+   "palette_id": "leaf_litter_autumn",
+   "wear": "",
+   "mean_srgb": [
+    112.0,
+    76.0,
+    52.0
+   ],
+   "target_srgb": [
+    112,
+    76,
+    52
+   ],
+   "dE": 0.01,
+   "dE_to_entry": 0.01,
+   "tol": 14.0,
+   "spread_p75": 5.0,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     112.0,
+     76.0,
+     51.9
+    ],
+    "dE": 0.07,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_leaf_litter_w2_co.png",
+   "palette_id": "leaf_litter_autumn",
+   "wear": "",
+   "mean_srgb": [
+    81.8,
+    54.7,
+    41.2
+   ],
+   "target_srgb": [
+    112,
+    76,
+    52
+   ],
+   "dE": 12.37,
+   "dE_to_entry": 12.37,
+   "tol": 14.0,
+   "spread_p75": 3.2,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     81.8,
+     54.8,
+     41.0
+    ],
+    "dE": 12.3,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_lacquer_black_w0_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    43.4,
+    43.4,
+    43.4
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 4.0,
+   "dE_to_entry": 4.0,
+   "tol": 10.0,
+   "spread_p75": 0.9,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 0.9)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     43.5,
+     43.3,
+     43.5
+    ],
+    "dE": 4.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_lacquer_black_w1_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    47.7,
+    47.7,
+    47.7
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 10.0,
+   "spread_p75": 0.9,
+   "observed_spread": null,
+   "masked_frac": 0.032,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_lacquer_black_w1_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 0.9)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     47.7,
+     47.7,
+     47.6
+    ],
+    "dE": 1.97,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_lacquer_black_w2_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    52.0,
+    52.0,
+    52.0
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 10.0,
+   "spread_p75": 0.9,
+   "observed_spread": null,
+   "masked_frac": 0.117,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_lacquer_black_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 0.9)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     52.0,
+     52.1,
+     51.8
+    ],
+    "dE": 0.17,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paint_shu_w0_co.png",
+   "palette_id": "shu_vermilion",
+   "wear": "",
+   "mean_srgb": [
+    146.0,
+    20.0,
+    1.0
+   ],
+   "target_srgb": [
+    146,
+    20,
+    1
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 7.0,
+   "spread_p75": 3.0,
+   "observed_spread": 6.9,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     146.1,
+     19.9,
+     0.0
+    ],
+    "dE": 0.42,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paint_shu_w1_co.png",
+   "palette_id": "shu_vermilion",
+   "wear": "",
+   "mean_srgb": [
+    148.5,
+    33.6,
+    12.4
+   ],
+   "target_srgb": [
+    146,
+    20,
+    1
+   ],
+   "dE": 4.69,
+   "dE_to_entry": 4.69,
+   "tol": 7.0,
+   "spread_p75": 4.2,
+   "observed_spread": 6.9,
+   "masked_frac": 0.012,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paint_shu_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     148.6,
+     33.6,
+     12.1
+    ],
+    "dE": 4.61,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paint_shu_w2_co.png",
+   "palette_id": "shu_vermilion",
+   "wear": "",
+   "mean_srgb": [
+    150.4,
+    38.3,
+    14.6
+   ],
+   "target_srgb": [
+    146,
+    20,
+    1
+   ],
+   "dE": 5.83,
+   "dE_to_entry": 5.83,
+   "tol": 7.0,
+   "spread_p75": 4.7,
+   "observed_spread": 6.9,
+   "masked_frac": 0.157,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paint_shu_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     150.4,
+     38.3,
+     14.5
+    ],
+    "dE": 5.82,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_chochin_w0_co.png",
+   "palette_id": "washi_shoji",
+   "wear": "",
+   "mean_srgb": [
+    199.2,
+    185.7,
+    159.2
+   ],
+   "target_srgb": [
+    200,
+    195,
+    182
+   ],
+   "dE": 8.6,
+   "dE_to_entry": 8.6,
+   "tol": 12.0,
+   "spread_p75": 3.8,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     199.2,
+     185.7,
+     159.3
+    ],
+    "dE": 8.57,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_chochin_w1_co.png",
+   "palette_id": "washi_shoji",
+   "wear": "",
+   "mean_srgb": [
+    194.3,
+    180.2,
+    152.1
+   ],
+   "target_srgb": [
+    200,
+    195,
+    182
+   ],
+   "dE": 10.34,
+   "dE_to_entry": 10.34,
+   "tol": 12.0,
+   "spread_p75": 3.8,
+   "observed_spread": null,
+   "masked_frac": 0.068,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_chochin_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     194.2,
+     180.2,
+     152.2
+    ],
+    "dE": 10.31,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_chochin_w2_co.png",
+   "palette_id": "washi_shoji",
+   "wear": "",
+   "mean_srgb": [
+    188.1,
+    174.8,
+    148.7
+   ],
+   "target_srgb": [
+    200,
+    195,
+    182
+   ],
+   "dE": 10.68,
+   "dE_to_entry": 10.68,
+   "tol": 12.0,
+   "spread_p75": 3.8,
+   "observed_spread": null,
+   "masked_frac": 0.092,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_chochin_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     188.1,
+     174.8,
+     148.7
+    ],
+    "dE": 10.65,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_fusuma_w0_co.png",
+   "palette_id": "gofun_white",
+   "wear": "",
+   "mean_srgb": [
+    191.9,
+    187.2,
+    176.5
+   ],
+   "target_srgb": [
+    205,
+    201,
+    192
+   ],
+   "dE": 5.1,
+   "dE_to_entry": 5.1,
+   "tol": 12.0,
+   "spread_p75": 2.6,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     192.1,
+     187.2,
+     176.2
+    ],
+    "dE": 5.14,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_fusuma_w1_co.png",
+   "palette_id": "gofun_white",
+   "wear": "",
+   "mean_srgb": [
+    189.0,
+    178.3,
+    157.6
+   ],
+   "target_srgb": [
+    205,
+    201,
+    192
+   ],
+   "dE": 10.64,
+   "dE_to_entry": 10.64,
+   "tol": 12.0,
+   "spread_p75": 2.6,
+   "observed_spread": null,
+   "masked_frac": 0.087,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_fusuma_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     189.0,
+     178.4,
+     157.4
+    ],
+    "dE": 10.7,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_fusuma_w2_co.png",
+   "palette_id": "gofun_white",
+   "wear": "",
+   "mean_srgb": [
+    189.2,
+    178.1,
+    159.4
+   ],
+   "target_srgb": [
+    205,
+    201,
+    192
+   ],
+   "dE": 10.05,
+   "dE_to_entry": 10.05,
+   "tol": 12.0,
+   "spread_p75": 2.7,
+   "observed_spread": null,
+   "masked_frac": 0.182,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_paper_fusuma_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     189.2,
+     178.1,
+     159.2
+    ],
+    "dE": 10.12,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_reed_yoshizu_w0_co.png",
+   "palette_id": "sudare_reed",
+   "wear": "",
+   "mean_srgb": [
+    181.3,
+    158.3,
+    136.2
+   ],
+   "target_srgb": [
+    168,
+    148,
+    133
+   ],
+   "dE": 5.66,
+   "dE_to_entry": 5.66,
+   "tol": 14.0,
+   "spread_p75": 7.1,
+   "observed_spread": 31.3,
+   "masked_frac": 0.033,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_reed_yoshizu_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     181.3,
+     158.3,
+     136.2
+    ],
+    "dE": 5.64,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_reed_yoshizu_w1_co.png",
+   "palette_id": "sudare_reed",
+   "wear": "",
+   "mean_srgb": [
+    158.4,
+    143.6,
+    134.8
+   ],
+   "target_srgb": [
+    168,
+    148,
+    133
+   ],
+   "dE": 4.58,
+   "dE_to_entry": 4.58,
+   "tol": 14.0,
+   "spread_p75": 6.5,
+   "observed_spread": 31.3,
+   "masked_frac": 0.033,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_reed_yoshizu_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     158.3,
+     143.6,
+     134.8
+    ],
+    "dE": 4.6,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_reed_yoshizu_w2_co.png",
+   "palette_id": "sudare_reed",
+   "wear": "",
+   "mean_srgb": [
+    147.1,
+    133.3,
+    126.3
+   ],
+   "target_srgb": [
+    168,
+    148,
+    133
+   ],
+   "dE": 7.87,
+   "dE_to_entry": 7.87,
+   "tol": 14.0,
+   "spread_p75": 6.1,
+   "observed_spread": 31.3,
+   "masked_frac": 0.119,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_reed_yoshizu_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     147.1,
+     133.3,
+     126.1
+    ],
+    "dE": 7.8,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_carved_w0_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    84.7,
+    81.6,
+    73.4
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 5.0,
+   "dE_to_entry": 5.0,
+   "tol": 9.0,
+   "spread_p75": 2.1,
+   "observed_spread": 8.8,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     84.7,
+     81.7,
+     73.3
+    ],
+    "dE": 5.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_carved_w1_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    73.0,
+    70.0,
+    62.0
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 9.0,
+   "spread_p75": 2.2,
+   "observed_spread": 8.8,
+   "masked_frac": 0.088,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_carved_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     73.0,
+     70.1,
+     62.0
+    ],
+    "dE": 0.04,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_carved_w2_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    66.1,
+    63.2,
+    55.3
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 9.0,
+   "spread_p75": 2.3,
+   "observed_spread": 8.8,
+   "masked_frac": 0.34,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_carved_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     66.0,
+     63.2,
+     55.5
+    ],
+    "dE": 3.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_rope_w0_co.png",
+   "palette_id": "thatch_new",
+   "wear": "",
+   "mean_srgb": [
+    167.7,
+    142.2,
+    90.6
+   ],
+   "target_srgb": [
+    176,
+    150,
+    98
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 12.0,
+   "spread_p75": 5.6,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     167.6,
+     142.2,
+     90.5
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_rope_w1_co.png",
+   "palette_id": "straw_aged",
+   "wear": "",
+   "mean_srgb": [
+    104.5,
+    90.1,
+    68.9
+   ],
+   "target_srgb": [
+    97,
+    83,
+    62
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 14.0,
+   "spread_p75": 3.8,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     104.6,
+     90.2,
+     68.9
+    ],
+    "dE": 3.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_rope_w2_co.png",
+   "palette_id": "straw_aged",
+   "wear": "",
+   "mean_srgb": [
+    87.2,
+    73.6,
+    53.0
+   ],
+   "target_srgb": [
+    97,
+    83,
+    62
+   ],
+   "dE": 4.0,
+   "dE_to_entry": 4.0,
+   "tol": 14.0,
+   "spread_p75": 3.4,
+   "observed_spread": null,
+   "masked_frac": 0.105,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_rope_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     87.3,
+     73.6,
+     53.0
+    ],
+    "dE": 3.99,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_stack_w0_co.png",
+   "palette_id": "thatch_new",
+   "wear": "",
+   "mean_srgb": [
+    176.0,
+    150.0,
+    98.0
+   ],
+   "target_srgb": [
+    176,
+    150,
+    98
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 12.0,
+   "spread_p75": 7.1,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     176.0,
+     150.0,
+     98.0
+    ],
+    "dE": 0.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_stack_w1_co.png",
+   "palette_id": "straw_aged",
+   "wear": "",
+   "mean_srgb": [
+    107.0,
+    92.5,
+    71.2
+   ],
+   "target_srgb": [
+    97,
+    83,
+    62
+   ],
+   "dE": 4.0,
+   "dE_to_entry": 4.0,
+   "tol": 14.0,
+   "spread_p75": 5.6,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     107.0,
+     92.5,
+     71.2
+    ],
+    "dE": 4.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_stack_w2_co.png",
+   "palette_id": "straw_aged",
+   "wear": "",
+   "mean_srgb": [
+    79.3,
+    66.9,
+    51.9
+   ],
+   "target_srgb": [
+    97,
+    83,
+    62
+   ],
+   "dE": 7.7,
+   "dE_to_entry": 7.7,
+   "tol": 14.0,
+   "spread_p75": 4.5,
+   "observed_spread": null,
+   "masked_frac": 0.03,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_stack_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     79.3,
+     66.9,
+     51.8
+    ],
+    "dE": 7.68,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_tawara_w0_co.png",
+   "palette_id": "thatch_new",
+   "wear": "",
+   "mean_srgb": [
+    170.5,
+    144.8,
+    93.1
+   ],
+   "target_srgb": [
+    176,
+    150,
+    98
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 12.0,
+   "spread_p75": 5.5,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     170.6,
+     144.8,
+     93.1
+    ],
+    "dE": 1.99,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_tawara_w1_co.png",
+   "palette_id": "thatch_new",
+   "wear": "",
+   "mean_srgb": [
+    149.1,
+    130.2,
+    92.7
+   ],
+   "target_srgb": [
+    176,
+    150,
+    98
+   ],
+   "dE": 11.36,
+   "dE_to_entry": 11.36,
+   "tol": 12.0,
+   "spread_p75": 4.7,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     149.0,
+     130.2,
+     92.7
+    ],
+    "dE": 11.37,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_tawara_w2_co.png",
+   "palette_id": "thatch_new",
+   "wear": "",
+   "mean_srgb": [
+    144.6,
+    125.1,
+    84.3
+   ],
+   "target_srgb": [
+    176,
+    150,
+    98
+   ],
+   "dE": 11.69,
+   "dE_to_entry": 11.69,
+   "tol": 12.0,
+   "spread_p75": 4.8,
+   "observed_spread": null,
+   "masked_frac": 0.089,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_straw_tawara_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     144.5,
+     125.1,
+     84.4
+    ],
+    "dE": 11.71,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_cotton_indigo_w0_co.png",
+   "palette_id": "aizome_kon",
+   "wear": "",
+   "mean_srgb": [
+    51.8,
+    59.8,
+    63.7
+   ],
+   "target_srgb": [
+    54,
+    62,
+    66
+   ],
+   "dE": 1.0,
+   "dE_to_entry": 1.0,
+   "tol": 6.0,
+   "spread_p75": 1.3,
+   "observed_spread": 3.3,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.3)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     51.8,
+     59.7,
+     63.7
+    ],
+    "dE": 1.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_cotton_indigo_w1_co.png",
+   "palette_id": "aizome_kon",
+   "wear": "",
+   "mean_srgb": [
+    58.5,
+    66.5,
+    70.6
+   ],
+   "target_srgb": [
+    54,
+    62,
+    66
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 6.0,
+   "spread_p75": 2.1,
+   "observed_spread": 3.3,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     58.5,
+     66.6,
+     70.2
+    ],
+    "dE": 2.03,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_cotton_indigo_w2_co.png",
+   "palette_id": "aizome_kon",
+   "wear": "",
+   "mean_srgb": [
+    62.7,
+    69.9,
+    72.5
+   ],
+   "target_srgb": [
+    54,
+    62,
+    66
+   ],
+   "dE": 3.64,
+   "dE_to_entry": 3.64,
+   "tol": 6.0,
+   "spread_p75": 2.6,
+   "observed_spread": 3.3,
+   "masked_frac": 0.015,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_cotton_indigo_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     62.8,
+     69.9,
+     72.2
+    ],
+    "dE": 3.7,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_cotton_plain_w0_co.png",
+   "palette_id": "kinari_cloth",
+   "wear": "",
+   "mean_srgb": [
+    184.5,
+    175.6,
+    154.7
+   ],
+   "target_srgb": [
+    190,
+    181,
+    160
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 12.0,
+   "spread_p75": 3.0,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     184.5,
+     175.6,
+     154.7
+    ],
+    "dE": 2.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_cotton_plain_w1_co.png",
+   "palette_id": "kinari_cloth",
+   "wear": "",
+   "mean_srgb": [
+    172.8,
+    162.0,
+    136.2
+   ],
+   "target_srgb": [
+    190,
+    181,
+    160
+   ],
+   "dE": 7.62,
+   "dE_to_entry": 7.62,
+   "tol": 12.0,
+   "spread_p75": 2.7,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     172.8,
+     162.0,
+     136.2
+    ],
+    "dE": 7.62,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_cotton_plain_w2_co.png",
+   "palette_id": "kinari_cloth",
+   "wear": "",
+   "mean_srgb": [
+    168.9,
+    156.3,
+    129.3
+   ],
+   "target_srgb": [
+    190,
+    181,
+    160
+   ],
+   "dE": 9.86,
+   "dE_to_entry": 9.86,
+   "tol": 12.0,
+   "spread_p75": 2.6,
+   "observed_spread": null,
+   "masked_frac": 0.089,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_cotton_plain_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     168.9,
+     156.3,
+     129.2
+    ],
+    "dE": 9.87,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kinari_w0_co.png",
+   "palette_id": "kinari_cloth",
+   "wear": "",
+   "mean_srgb": [
+    181.8,
+    172.9,
+    152.1
+   ],
+   "target_srgb": [
+    190,
+    181,
+    160
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 12.0,
+   "spread_p75": 2.7,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     181.8,
+     172.9,
+     152.1
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kinari_w1_co.png",
+   "palette_id": "kinari_cloth",
+   "wear": "",
+   "mean_srgb": [
+    168.9,
+    159.4,
+    137.2
+   ],
+   "target_srgb": [
+    190,
+    181,
+    160
+   ],
+   "dE": 8.06,
+   "dE_to_entry": 8.06,
+   "tol": 12.0,
+   "spread_p75": 2.7,
+   "observed_spread": null,
+   "masked_frac": 0.005,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kinari_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     168.9,
+     159.5,
+     137.1
+    ],
+    "dE": 8.06,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kinari_w2_co.png",
+   "palette_id": "kinari_cloth",
+   "wear": "",
+   "mean_srgb": [
+    167.1,
+    153.4,
+    126.7
+   ],
+   "target_srgb": [
+    190,
+    181,
+    160
+   ],
+   "dE": 10.82,
+   "dE_to_entry": 10.82,
+   "tol": 12.0,
+   "spread_p75": 2.7,
+   "observed_spread": null,
+   "masked_frac": 0.111,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_kinari_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     167.0,
+     153.5,
+     126.7
+    ],
+    "dE": 10.82,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_noren_w0_co.png",
+   "palette_id": "aizome_kon",
+   "wear": "",
+   "mean_srgb": [
+    49.6,
+    57.5,
+    61.5
+   ],
+   "target_srgb": [
+    54,
+    62,
+    66
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 6.0,
+   "spread_p75": 1.2,
+   "observed_spread": 3.3,
+   "masked_frac": 0.095,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_noren_w0_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.2)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     49.6,
+     57.5,
+     61.6
+    ],
+    "dE": 2.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_noren_w1_co.png",
+   "palette_id": "aizome_kon",
+   "wear": "",
+   "mean_srgb": [
+    61.6,
+    68.8,
+    71.4
+   ],
+   "target_srgb": [
+    54,
+    62,
+    66
+   ],
+   "dE": 3.16,
+   "dE_to_entry": 3.16,
+   "tol": 6.0,
+   "spread_p75": 1.9,
+   "observed_spread": 3.3,
+   "masked_frac": 0.095,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_noren_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     61.7,
+     68.8,
+     71.1
+    ],
+    "dE": 3.25,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_noren_w2_co.png",
+   "palette_id": "aizome_kon",
+   "wear": "",
+   "mean_srgb": [
+    64.1,
+    72.6,
+    73.3
+   ],
+   "target_srgb": [
+    54,
+    62,
+    66
+   ],
+   "dE": 5.03,
+   "dE_to_entry": 5.03,
+   "tol": 6.0,
+   "spread_p75": 2.3,
+   "observed_spread": 3.3,
+   "masked_frac": 0.192,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_textile_noren_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     64.3,
+     72.7,
+     73.0
+    ],
+    "dE": 5.15,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_shikkui_int_w0_co.png",
+   "palette_id": "shikkui_white",
+   "wear": "",
+   "mean_srgb": [
+    178.7,
+    177.1,
+    175.1
+   ],
+   "target_srgb": [
+    192,
+    194,
+    196
+   ],
+   "dE": 5.73,
+   "dE_to_entry": 6.52,
+   "tol": 14.0,
+   "spread_p75": 2.6,
+   "observed_spread": 14.3,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     178.6,
+     177.2,
+     174.8
+    ],
+    "dE": 5.71,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_shikkui_int_w1_co.png",
+   "palette_id": "shikkui_white",
+   "wear": "",
+   "mean_srgb": [
+    178.7,
+    177.1,
+    175.1
+   ],
+   "target_srgb": [
+    192,
+    194,
+    196
+   ],
+   "dE": 5.74,
+   "dE_to_entry": 6.53,
+   "tol": 14.0,
+   "spread_p75": 2.9,
+   "observed_spread": 14.3,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     178.6,
+     177.2,
+     174.8
+    ],
+    "dE": 5.72,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_shikkui_int_w2_co.png",
+   "palette_id": "shikkui_white",
+   "wear": "",
+   "mean_srgb": [
+    178.7,
+    177.2,
+    175.1
+   ],
+   "target_srgb": [
+    192,
+    194,
+    196
+   ],
+   "dE": 5.72,
+   "dE_to_entry": 6.52,
+   "tol": 14.0,
+   "spread_p75": 2.9,
+   "observed_spread": 14.3,
+   "masked_frac": 0.102,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wall_shikkui_int_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     178.7,
+     177.2,
+     174.8
+    ],
+    "dE": 5.71,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_w0_co.png",
+   "palette_id": "timber_weathered",
+   "wear": "",
+   "mean_srgb": [
+    146.6,
+    98.9,
+    78.7
+   ],
+   "target_srgb": [
+    118,
+    82,
+    73
+   ],
+   "dE": 11.7,
+   "dE_to_entry": 11.7,
+   "tol": 14.0,
+   "spread_p75": 6.3,
+   "observed_spread": 29.1,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     146.6,
+     98.9,
+     78.5
+    ],
+    "dE": 11.75,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_w1_co.png",
+   "palette_id": "timber_weathered",
+   "wear": "",
+   "mean_srgb": [
+    103.9,
+    74.9,
+    66.2
+   ],
+   "target_srgb": [
+    118,
+    82,
+    73
+   ],
+   "dE": 1.73,
+   "dE_to_entry": 4.86,
+   "tol": 14.0,
+   "spread_p75": 4.8,
+   "observed_spread": 29.1,
+   "masked_frac": 0.004,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     103.9,
+     74.9,
+     66.2
+    ],
+    "dE": 1.71,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_w2_co.png",
+   "palette_id": "timber_weathered",
+   "wear": "",
+   "mean_srgb": [
+    89.6,
+    64.5,
+    56.1
+   ],
+   "target_srgb": [
+    118,
+    82,
+    73
+   ],
+   "dE": 5.61,
+   "dE_to_entry": 9.81,
+   "tol": 14.0,
+   "spread_p75": 4.2,
+   "observed_spread": 29.1,
+   "masked_frac": 0.092,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     89.6,
+     64.6,
+     56.4
+    ],
+    "dE": 5.59,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_interior_w0_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    81.1,
+    60.2,
+    50.2
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 5.09,
+   "dE_to_entry": 5.09,
+   "tol": 14.0,
+   "spread_p75": 1.6,
+   "observed_spread": 47.1,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     81.1,
+     60.2,
+     49.9
+    ],
+    "dE": 5.2,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_interior_w1_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    69.0,
+    52.0,
+    46.0
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 0.03,
+   "dE_to_entry": 0.03,
+   "tol": 14.0,
+   "spread_p75": 1.8,
+   "observed_spread": 47.1,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     69.0,
+     52.1,
+     45.6
+    ],
+    "dE": 0.32,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_interior_w2_co.png",
+   "palette_id": "timber_interior",
+   "wear": "",
+   "mean_srgb": [
+    73.5,
+    62.2,
+    60.7
+   ],
+   "target_srgb": [
+    69,
+    52,
+    46
+   ],
+   "dE": 6.01,
+   "dE_to_entry": 6.01,
+   "tol": 14.0,
+   "spread_p75": 3.1,
+   "observed_spread": 47.1,
+   "masked_frac": 0.013,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_interior_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     73.6,
+     62.3,
+     60.8
+    ],
+    "dE": 6.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  }
+ ]
+}
