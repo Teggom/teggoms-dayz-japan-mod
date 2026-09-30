@@ -50,12 +50,23 @@
 
 → **Gate: Stephen reviews the three build lists** (G1, about 10 minutes each).
 
-### Phase B: foundations (parallel, after the A gate)
-1. **B1. Interior materials** (through the materials pipeline and the matte recipe)
-2. **B2. Missing parts, wave 1:** only what Phase C wave 1 needs (from A1)
-3. **B3. Core props, wave 1:** about 20 interior + 20 outdoor, each with its abandoned state
-4. **B4. Pilot:** furnish `machiya_t3_01` and dress its yard. This proves the props, proxy and loot-surface pipeline on
-   a building Stephen already knows.
+### Phase B: foundations (after the A gate; agents at effort high, `opus-high`)
+0. **B0. Kit cleanup (A1 step 0a + 0b + the townhouse-unit template from 0c). FIRST; nothing new is built before it.**
+   Move the machiya's floors, lean-to, udatsu placer and ridge walk into `jpparts` (lean-to learns all six coverings);
+   replace the one-building `build.py` with a registry that builds many buildings without overwriting the others'
+   config, placements and CE files; add the townhouse-unit template (frontage, end / middle / corner) as the test bed
+   for B2 parts 2-4. Proof: rebuild the machiya and get an identical result (`verify.py` 78/78 PASS).
+1. **B1. Interior materials** (through the materials pipeline and the matte recipe): the 21 interior materials
+   (incl. `jp_m_wall_shikkui_int`) plus the outdoor kit's new ones (moss decal, weathered granite, straw rope). Needs
+   nothing; runs alongside B0.
+2. **B2. Missing parts, wave 1** (after B0): koyagumi first, then party wall, party roof end, roof corner, stall,
+   stair, open half-door (required: toilets are walk-in), then the floor pit as optional variety.
+3. **B3a / B3b. Core props, wave 1** (need nothing; run alongside B0 and B1): 24 interior (A2) and about 20 outdoor
+   (A3), each with its abandoned state. B3b includes the handcart disrepair variants and the Japanese brush-font
+   signs. **Each agent owns its own output folder; nobody edits the shared materials registry or config except B1.**
+4. **B4. Pilot** (after B0, B1, B3a AND B3b): furnish `machiya_t3_01` and dress its yard, including the regenerated mise
+   floor with the board strip (needs B0's `floors`). This proves the props, proxy and loot-surface pipeline on a
+   building Stephen already knows.
 
 → **Gate G4: one in-game walk** of the furnished house.
 
@@ -117,5 +128,7 @@
   **POLICY: every modelling/building agent runs at effort HIGH** (`subagent_type: opus-high`, defined in
   `D:\DayZ-Server_AI-20260907-MultiMap\.claude\agents\`). The four tansus stay on the test island
   (`test/spawns/E.json`) as reference.
+- 2026-09-29: Phase B breakdown agreed with Stephen (B0, B1, B2, B3a, B3b, B4); B0 gained the townhouse-unit template
+  and B4 gained the B3b + mise-floor dependencies. Not launched yet.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
