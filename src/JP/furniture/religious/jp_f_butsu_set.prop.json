@@ -1,0 +1,216 @@
+{
+ "id": "jp_f_butsu_set",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "religious",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\religious\\jp_f_butsu_set_full.p3d",
+   "class": "StaticObj_JP_F_Butsu_Set_Full",
+   "variant": "full",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Butsudan set: tablets, incense burner, candle, vase, bell",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 258,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.18,
+    0.23,
+    0.0,
+    0.271,
+    -0.085,
+    0.13
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "set for the butsudan or the Buddhist shelf (mount surface): tablets, incense burner, candle, vase, bell; undisturbed, no loot (G1 A2-12); the 'dusty' state: dried flowers, candle burnt down"
+   ],
+   "master": "spikes/L1/out/religious/jp_f_butsu_set_full.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\religious\\jp_f_butsu_set_simple.p3d",
+   "class": "StaticObj_JP_F_Butsu_Set_Simple",
+   "variant": "simple",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Butsudan set: a tablet, burner and vase",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 149,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.11,
+    0.119,
+    0.0,
+    0.271,
+    -0.08,
+    0.08
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "set for the butsudan or the Buddhist shelf (mount surface): tablets, incense burner, candle, vase, bell; undisturbed, no loot (G1 A2-12); the 'dusty' state: dried flowers, candle burnt down"
+   ],
+   "master": "spikes/L1/out/religious/jp_f_butsu_set_simple.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\religious\\jp_f_butsu_set_full_dusty.p3d",
+   "class": "StaticObj_JP_F_Butsu_Set_Full_Dusty",
+   "variant": "full",
+   "state": "dusty",
+   "abandoned": true,
+   "display": "Butsudan set, flowers dried, candle burnt down",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 279,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.256,
+    0.23,
+    0.0,
+    0.223,
+    -0.154,
+    0.215
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "set for the butsudan or the Buddhist shelf (mount surface): tablets, incense burner, candle, vase, bell; undisturbed, no loot (G1 A2-12); the 'dusty' state: dried flowers, candle burnt down"
+   ],
+   "master": "spikes/L1/out/religious/jp_f_butsu_set_full_dusty.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\religious\\jp_f_butsu_set_simple_dusty.p3d",
+   "class": "StaticObj_JP_F_Butsu_Set_Simple_Dusty",
+   "variant": "simple",
+   "state": "dusty",
+   "abandoned": true,
+   "display": "Butsudan set, simple, dusty",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 170,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.156,
+    0.149,
+    0.0,
+    0.223,
+    -0.087,
+    0.139
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "set for the butsudan or the Buddhist shelf (mount surface): tablets, incense burner, candle, vase, bell; undisturbed, no loot (G1 A2-12); the 'dusty' state: dried flowers, candle burnt down"
+   ],
+   "master": "spikes/L1/out/religious/jp_f_butsu_set_simple_dusty.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 16,
+ "refs_local": []
+}

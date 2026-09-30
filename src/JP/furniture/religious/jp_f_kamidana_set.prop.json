@@ -1,0 +1,216 @@
+{
+ "id": "jp_f_kamidana_set",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "religious",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\religious\\jp_f_kamidana_set_offerings.p3d",
+   "class": "StaticObj_JP_F_Kamidana_Set_Offerings",
+   "variant": "offerings",
+   "state": "intact",
+   "abandoned": false,
+   "display": "God-shelf offerings: sanbo, flasks, sakaki",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 286,
+    "Resolution 2": 34
+   },
+   "bbox": [
+    -0.25,
+    0.25,
+    0.0,
+    0.271,
+    -0.085,
+    0.085
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "offerings for a god shelf (mount surface; B4's jp_f_kamidana_plain already has its vases and cup: use these on other kamidana, or the shimenawa alone there): sanbo with rice and salt, white flasks, sakaki sprigs; undisturbed, no loot; 'dry' = the sakaki browned, the dishes empty, dust"
+   ],
+   "master": "spikes/L1/out/religious/jp_f_kamidana_set_offerings.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\religious\\jp_f_kamidana_set_shimenawa.p3d",
+   "class": "StaticObj_JP_F_Kamidana_Set_Shimenawa",
+   "variant": "shimenawa",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Sacred rope with paper streamers for a god shelf",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 96,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.454,
+    0.452,
+    1.802,
+    2.051,
+    0.002,
+    0.315
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the sacred rope with paper streamers for the front edge of the god shelf: place it at the same point and yaw as jp_f_kamidana_plain (mount wall; heights built in, shelf 2.05)"
+   ],
+   "master": "spikes/L1/out/religious/jp_f_kamidana_set_shimenawa.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\religious\\jp_f_kamidana_set_offerings_dry.p3d",
+   "class": "StaticObj_JP_F_Kamidana_Set_Offerings_Dry",
+   "variant": "offerings",
+   "state": "dry",
+   "abandoned": true,
+   "display": "God-shelf offerings, sakaki dried, dishes empty",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 298,
+    "Resolution 2": 34
+   },
+   "bbox": [
+    -0.351,
+    0.315,
+    0.0,
+    0.222,
+    -0.203,
+    0.21
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "offerings for a god shelf (mount surface; B4's jp_f_kamidana_plain already has its vases and cup: use these on other kamidana, or the shimenawa alone there): sanbo with rice and salt, white flasks, sakaki sprigs; undisturbed, no loot; 'dry' = the sakaki browned, the dishes empty, dust"
+   ],
+   "master": "spikes/L1/out/religious/jp_f_kamidana_set_offerings_dry.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\religious\\jp_f_kamidana_set_shimenawa_old.p3d",
+   "class": "StaticObj_JP_F_Kamidana_Set_Shimenawa_Old",
+   "variant": "shimenawa",
+   "state": "old",
+   "abandoned": true,
+   "display": "Sacred rope, faded, a streamer gone",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 88,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.454,
+    0.452,
+    1.802,
+    2.051,
+    0.002,
+    0.315
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the sacred rope with paper streamers for the front edge of the god shelf: place it at the same point and yaw as jp_f_kamidana_plain (mount wall; heights built in, shelf 2.05)"
+   ],
+   "master": "spikes/L1/out/religious/jp_f_kamidana_set_shimenawa_old.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 17,
+ "refs_local": []
+}
