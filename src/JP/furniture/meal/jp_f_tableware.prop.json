@@ -1,0 +1,304 @@
+{
+ "id": "jp_f_tableware",
+ "build_list": {
+  "name": "Tableware clutter: box trays (hakozen) and legged trays (zen), bowls, dishes, chopsticks",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "daidokoro",
+   "doma",
+   "living",
+   "zashiki",
+   "shop"
+  ],
+  "loot_surface": "none (clutter)",
+  "abandoned_state": "a meal left out, bowls overturned",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "hakozen_m": {
+    "value": "0.30 x 0.30 x 0.20",
+    "assumed": true,
+    "reason": "typical box tray"
+   },
+   "zen_m": {
+    "value": "0.36 x 0.36 x 0.15",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "bowl_m": {
+    "value": "d 0.12, h 0.07",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "i07_edo_nagaya_room",
+    "shows": "tenement room dressing with trays and bowls",
+    "period_image": false
+   },
+   {
+    "id": "N20",
+    "shows": "BL §5.1 (text)",
+    "period_image": false
+   }
+  ]
+ },
+ "category": "meal",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_tableware"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_tableware_hakozen_stack.p3d",
+   "class": "StaticObj_JP_F_Tableware_Hakozen_Stack",
+   "variant": "hakozen_stack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Box trays (hakozen), three stacked, lacquer",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 36,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.165,
+    0.165,
+    0.0,
+    0.6,
+    -0.165,
+    0.165
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stack_h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tableware clutter (mount surface or floor): box trays, legged trays, bowls; no loot (clutter)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_tableware_hakozen_stack.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_tableware_hakozen_plain.p3d",
+   "class": "StaticObj_JP_F_Tableware_Hakozen_Plain",
+   "variant": "hakozen_plain",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Box trays, plain wood, two stacked",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 54,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.17,
+    0.302,
+    0.0,
+    0.4,
+    -0.17,
+    0.17
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stack_h",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tableware clutter (mount surface or floor): box trays, legged trays, bowls; no loot (clutter)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_tableware_hakozen_plain.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_tableware_zen.p3d",
+   "class": "StaticObj_JP_F_Tableware_Zen",
+   "variant": "zen",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Legged tray (zen) with lidded bowls",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 204,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.18,
+    0.18,
+    0.0,
+    0.22,
+    -0.18,
+    0.18
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "zen_w",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tableware clutter (mount surface or floor): box trays, legged trays, bowls; no loot (clutter)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_tableware_zen.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_tableware_bowls.p3d",
+   "class": "StaticObj_JP_F_Tableware_Bowls",
+   "variant": "bowls",
+   "state": "intact",
+   "abandoned": false,
+   "display": "A stack of bowls and dishes",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 257,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.132,
+    0.168,
+    0.0,
+    0.091,
+    -0.06,
+    0.16
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bowl_d",
+     "expected": 0.12,
+     "measured": 0.124,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tableware clutter (mount surface or floor): box trays, legged trays, bowls; no loot (clutter)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_tableware_bowls.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_tableware_scattered.p3d",
+   "class": "StaticObj_JP_F_Tableware_Scattered",
+   "variant": "scattered",
+   "state": "scattered",
+   "abandoned": true,
+   "display": "Tableware knocked over, bowls upturned",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 94,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.37,
+    0.455,
+    0.0,
+    0.3,
+    -0.205,
+    0.47
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tray_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tableware clutter (mount surface or floor): box trays, legged trays, bowls; no loot (clutter)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_tableware_scattered.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 18,
+ "refs_local": [
+  "i18_moronobu_1685_p9"
+ ]
+}

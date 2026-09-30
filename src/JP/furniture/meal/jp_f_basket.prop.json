@@ -1,0 +1,430 @@
+{
+ "id": "jp_f_basket",
+ "build_list": {
+  "name": "Baskets (zaru, kago, back basket)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "doma",
+   "daidokoro",
+   "storage",
+   "workshop"
+  ],
+  "loot_surface": "none",
+  "abandoned_state": "crushed or on its side",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "zaru_m": {
+    "value": "d 0.40, h 0.08",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "kago_m": {
+    "value": "d 0.35, h 0.30",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "back_m": {
+    "value": "0.45 x 0.35 x 0.60",
+    "assumed": true,
+    "reason": "typical"
+   }
+  },
+  "refs": [
+   {
+    "id": "N20",
+    "shows": "BL §5.3 (text)",
+    "period_image": false
+   },
+   {
+    "id": "i18_moronobu_1685_p9",
+    "shows": "Moronobu 1685: carrier with stacked vessels on a pole",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "meal",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_basket"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_basket_zaru.p3d",
+   "class": "StaticObj_JP_F_Basket_Zaru",
+   "variant": "zaru",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Flat sieve basket (zaru)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 80,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.198,
+    0.198,
+    0.0,
+    0.081,
+    -0.208,
+    0.208
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bamboo baskets: sieve (zaru), tall basket (kago), back basket (seoi-kago); no loot"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_basket_zaru.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_basket_zaru_stack.p3d",
+   "class": "StaticObj_JP_F_Basket_Zaru_Stack",
+   "variant": "zaru",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three sieve baskets stacked",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 240,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.198,
+    0.198,
+    0.0,
+    0.111,
+    -0.208,
+    0.208
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bamboo baskets: sieve (zaru), tall basket (kago), back basket (seoi-kago); no loot"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_basket_zaru_stack.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_basket_zaru_wall.p3d",
+   "class": "StaticObj_JP_F_Basket_Zaru_Wall",
+   "variant": "zaru_wall",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Sieve basket hung on a wall peg",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 89,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.198,
+    0.198,
+    1.152,
+    1.58,
+    0.001,
+    0.153
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a flat sieve basket hung on a wall peg"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_basket_zaru_wall.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_basket_kago.p3d",
+   "class": "StaticObj_JP_F_Basket_Kago",
+   "variant": "kago",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Tall basket (kago)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 72,
+    "Resolution 2": 10,
+    "Geometry": 10,
+    "View Geometry": 10,
+    "Fire Geometry": 10
+   },
+   "bbox": [
+    -0.175,
+    0.163,
+    0.0,
+    0.3,
+    -0.166,
+    0.166
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.152,
+    -0.175,
+    0.152,
+    0.175
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bamboo baskets: sieve (zaru), tall basket (kago), back basket (seoi-kago); no loot"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_basket_kago.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_basket_back.p3d",
+   "class": "StaticObj_JP_F_Basket_Back",
+   "variant": "back",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Back basket (seoi-kago) with straps",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 51,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.235,
+    0.235,
+    0.0,
+    0.6,
+    -0.288,
+    0.185
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.225,
+    -0.175,
+    0.225,
+    0.175
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bamboo baskets: sieve (zaru), tall basket (kago), back basket (seoi-kago); no loot"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_basket_back.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_basket_kago_tipped.p3d",
+   "class": "StaticObj_JP_F_Basket_Kago_Tipped",
+   "variant": "kago",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Tall basket on its side, leaves spilled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 96,
+    "Resolution 2": 6,
+    "Geometry": 10,
+    "View Geometry": 10,
+    "Fire Geometry": 10
+   },
+   "bbox": [
+    -0.116,
+    0.399,
+    0.0,
+    0.325,
+    -0.339,
+    0.273
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.131,
+    -0.336,
+    0.281,
+    0.076
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bamboo baskets: sieve (zaru), tall basket (kago), back basket (seoi-kago); no loot"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_basket_kago_tipped.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_basket_back_crushed.p3d",
+   "class": "StaticObj_JP_F_Basket_Back_Crushed",
+   "variant": "back",
+   "state": "crushed",
+   "abandoned": true,
+   "display": "Back basket on its side",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 51,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.068,
+    0.622,
+    0.0,
+    0.47,
+    -0.16,
+    0.421
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.068,
+    -0.145,
+    0.611,
+    0.399
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 1.5,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bamboo baskets: sieve (zaru), tall basket (kago), back basket (seoi-kago); no loot"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_basket_back_crushed.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 24,
+ "refs_local": []
+}

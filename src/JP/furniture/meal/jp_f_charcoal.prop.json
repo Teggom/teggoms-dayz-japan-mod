@@ -1,0 +1,299 @@
+{
+ "id": "jp_f_charcoal",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "meal",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_charcoal_bale.p3d",
+   "class": "StaticObj_JP_F_Charcoal_Bale",
+   "variant": "bale",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Charcoal bale (sumi-dawara), open",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 156,
+    "Resolution 2": 10,
+    "Geometry": 10,
+    "View Geometry": 10,
+    "Fire Geometry": 10
+   },
+   "bbox": [
+    -0.17,
+    0.164,
+    0.0,
+    0.623,
+    -0.164,
+    0.164
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.147,
+    -0.17,
+    0.147,
+    0.17
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 15.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 0.59,
+     "rect": [
+      -0.08,
+      -0.08,
+      0.08,
+      0.08
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.59,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.62,
+     "measured": 0.62,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "charcoal bales (25 entries, BUILDING_LIST 5.2); standing bales carry a loot point on top"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_charcoal_bale.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_charcoal_bales3.p3d",
+   "class": "StaticObj_JP_F_Charcoal_Bales3",
+   "variant": "bales3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three charcoal bales",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 396,
+    "Resolution 2": 30,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -0.36,
+    0.354,
+    0.0,
+    0.624,
+    -0.164,
+    1.054
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.337,
+    -0.17,
+    0.337,
+    1.056
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 15.0,
+   "loot_surfaces": [
+    {
+     "name": "top_l",
+     "kind": "shelf",
+     "y": 0.59,
+     "rect": [
+      -0.27,
+      -0.08,
+      -0.11,
+      0.08
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.19,
+       0.59,
+       0.0
+      ]
+     ]
+    },
+    {
+     "name": "top_r",
+     "kind": "shelf",
+     "y": 0.59,
+     "rect": [
+      0.11,
+      -0.06,
+      0.27,
+      0.1
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.19,
+       0.59,
+       0.02
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.62,
+     "measured": 0.62,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "charcoal bales (25 entries, BUILDING_LIST 5.2); standing bales carry a loot point on top"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_charcoal_bales3.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_charcoal_scuttle.p3d",
+   "class": "StaticObj_JP_F_Charcoal_Scuttle",
+   "variant": "scuttle",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Charcoal scuttle with tongs",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 96,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.16,
+    0.236,
+    0.0,
+    0.303,
+    -0.11,
+    0.11
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "charcoal scuttle (sumitori) with tongs (mount floor or surface; beside the hibachi)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_charcoal_scuttle.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_charcoal_burst.p3d",
+   "class": "StaticObj_JP_F_Charcoal_Burst",
+   "variant": "bale",
+   "state": "burst",
+   "abandoned": true,
+   "display": "Charcoal bale burst, charcoal spilled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 244,
+    "Resolution 2": 10,
+    "Geometry": 10,
+    "View Geometry": 10,
+    "Fire Geometry": 10
+   },
+   "bbox": [
+    -0.294,
+    0.553,
+    0.0,
+    0.329,
+    -0.048,
+    0.737
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.138,
+    -0.05,
+    0.35,
+    0.633
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 15.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.62,
+     "measured": 0.62,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "charcoal bales (25 entries, BUILDING_LIST 5.2); standing bales carry a loot point on top"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_charcoal_burst.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 25,
+ "refs_local": []
+}

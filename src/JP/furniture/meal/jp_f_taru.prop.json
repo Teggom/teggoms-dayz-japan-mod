@@ -1,0 +1,487 @@
+{
+ "id": "jp_f_taru",
+ "build_list": {
+  "name": "Casks (taru): sake, soy and oil barrels, with a low rack",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "room_tags": [
+   "storage",
+   "shop",
+   "doma",
+   "workshop"
+  ],
+  "loot_surface": "cask top at 0.50: 1 point (range 0.15)",
+  "abandoned_state": "one staved in, a dry stain",
+  "blocks_path": "",
+  "lod_budget": "small prop <=300 faces",
+  "dimensions": {
+   "taru_m": {
+    "value": "d 0.45, h 0.50 (4-to cask)",
+    "assumed": true,
+    "reason": "typical"
+   },
+   "rack_m": {
+    "value": "1.82 x 0.60 x 0.30",
+    "assumed": true,
+    "reason": "reason: grid"
+   }
+  },
+  "refs": [
+   {
+    "id": "N20",
+    "shows": "BL §5.3 (text)",
+    "period_image": false
+   },
+   {
+    "id": "i16_moronobu_1685_p6",
+    "shows": "coopered tubs of 1685 (same craft)",
+    "period_image": true
+   }
+  ]
+ },
+ "category": "meal",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "★ BUILD_LIST jp_f_taru"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_taru_cask.p3d",
+   "class": "StaticObj_JP_F_Taru_Cask",
+   "variant": "cask",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Coopered cask (taru)",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 170,
+    "Resolution 2": 18,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.22,
+    0.22,
+    0.0,
+    0.5,
+    -0.231,
+    0.231
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.208,
+    -0.208,
+    0.208,
+    0.208
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 0.48,
+     "rect": [
+      -0.12,
+      -0.12,
+      0.12,
+      0.12
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.48,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "casks: coopered or straw-wrapped (komo) with the mark 'morohaku' (fine sake); loot on the tops"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_taru_cask.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_taru_komo.p3d",
+   "class": "StaticObj_JP_F_Taru_Komo",
+   "variant": "komo",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw-wrapped sake cask, marked",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 161,
+    "Resolution 2": 18,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.222,
+    0.222,
+    0.0,
+    0.53,
+    -0.233,
+    0.235
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.208,
+    -0.208,
+    0.208,
+    0.208
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 0.53,
+     "rect": [
+      -0.12,
+      -0.12,
+      0.12,
+      0.12
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.53,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "casks: coopered or straw-wrapped (komo) with the mark 'morohaku' (fine sake); loot on the tops"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_taru_komo.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_taru_rack3.p3d",
+   "class": "StaticObj_JP_F_Taru_Rack3",
+   "variant": "rack3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three casks on a low rack",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 525,
+    "Resolution 2": 78,
+    "Resolution 3": 6,
+    "Geometry": 48,
+    "View Geometry": 48,
+    "Fire Geometry": 48
+   },
+   "bbox": [
+    -0.91,
+    0.91,
+    0.0,
+    0.83,
+    -0.3,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.91,
+    -0.3,
+    0.91,
+    0.3
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "top0",
+     "kind": "shelf",
+     "y": 0.78,
+     "rect": [
+      -0.67,
+      -0.12,
+      -0.43,
+      0.12
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.55,
+       0.78,
+       0.0
+      ]
+     ]
+    },
+    {
+     "name": "top1",
+     "kind": "shelf",
+     "y": 0.83,
+     "rect": [
+      -0.12,
+      -0.12,
+      0.12,
+      0.12
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.83,
+       0.0
+      ]
+     ]
+    },
+    {
+     "name": "top2",
+     "kind": "shelf",
+     "y": 0.78,
+     "rect": [
+      0.43,
+      -0.12,
+      0.67,
+      0.12
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.55,
+       0.78,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "rack_w",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "rack_h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "casks: coopered or straw-wrapped (komo) with the mark 'morohaku' (fine sake); loot on the tops"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_taru_rack3.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_taru_staved.p3d",
+   "class": "StaticObj_JP_F_Taru_Staved",
+   "variant": "cask",
+   "state": "staved",
+   "abandoned": true,
+   "display": "Cask staved in, dry",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 183,
+    "Resolution 2": 18,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.377,
+    0.586,
+    0.0,
+    0.5,
+    -0.231,
+    0.607
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.208,
+    -0.208,
+    0.208,
+    0.208
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "casks: coopered or straw-wrapped (komo) with the mark 'morohaku' (fine sake); loot on the tops"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_taru_staved.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_taru_rack3_ab.p3d",
+   "class": "StaticObj_JP_F_Taru_Rack3_Ab",
+   "variant": "rack3",
+   "state": "rolled",
+   "abandoned": true,
+   "display": "Cask rack, one cask gone, one rolled off",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 529,
+    "Resolution 2": 78,
+    "Resolution 3": 6,
+    "Geometry": 48,
+    "View Geometry": 48,
+    "Fire Geometry": 48
+   },
+   "bbox": [
+    -0.91,
+    1.146,
+    0.0,
+    0.83,
+    -0.3,
+    0.865
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.91,
+    -0.3,
+    0.91,
+    0.861
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "top1",
+     "kind": "shelf",
+     "y": 0.83,
+     "rect": [
+      -0.12,
+      -0.12,
+      0.12,
+      0.12
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.83,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "rack_w",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "rack_h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "casks: coopered or straw-wrapped (komo) with the mark 'morohaku' (fine sake); loot on the tops"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_taru_rack3_ab.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 23,
+ "refs_local": []
+}

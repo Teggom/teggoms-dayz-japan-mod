@@ -1,0 +1,168 @@
+{
+ "id": "jp_f_meal_left",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "meal",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [
+  "the dead-world signature"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_meal_left_zen.p3d",
+   "class": "StaticObj_JP_F_Meal_Left_Zen",
+   "variant": "zen",
+   "state": "left",
+   "abandoned": true,
+   "display": "A meal left on its tray, a cup knocked over",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 245,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.18,
+    0.52,
+    -0.0,
+    0.192,
+    -0.191,
+    0.192
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "zen_w",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a meal left out mid-way: dried rice, soup dregs, pickled plums, a knocked-over sake cup (dead-world signature; mount floor or surface; no loot)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_meal_left_zen.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_meal_left_two.p3d",
+   "class": "StaticObj_JP_F_Meal_Left_Two",
+   "variant": "two",
+   "state": "left",
+   "abandoned": true,
+   "display": "Two meals left, one tray pushed back, the flask down",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 300,
+    "Resolution 2": 30
+   },
+   "bbox": [
+    -0.501,
+    0.331,
+    0.0,
+    0.192,
+    -0.981,
+    0.18
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "zen_w",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a meal left out mid-way: dried rice, soup dregs, pickled plums, a knocked-over sake cup (dead-world signature; mount floor or surface; no loot)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_meal_left_two.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\furniture\\meal\\jp_f_meal_left_hakozen.p3d",
+   "class": "StaticObj_JP_F_Meal_Left_Hakozen",
+   "variant": "hakozen",
+   "state": "left",
+   "abandoned": true,
+   "display": "A poor meal on a box-tray lid",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 132,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.15,
+    0.678,
+    0.0,
+    0.17,
+    -0.265,
+    0.205
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tray_w",
+     "expected": 0.31,
+     "measured": 0.31,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a meal left out mid-way: dried rice, soup dregs, pickled plums, a knocked-over sake cup (dead-world signature; mount floor or surface; no loot)"
+   ],
+   "master": "spikes/L1/out/meal/jp_f_meal_left_hakozen.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor",
+   "tiers": [
+    1
+   ]
+  }
+ ],
+ "made_by": "spikes/L1/build_l1.py (agent L1, 2026-09-30) on spikes/B3a/build.py",
+ "life_layer": 19,
+ "refs_local": []
+}
