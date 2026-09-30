@@ -253,16 +253,6 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_kamigata_2k_middle_torir.p3d",
-   "pos": [
-    993.004,
-    25.0,
-    1087.64
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
    "p3d": "JP\\buildings\\townhouse\\jp_townhouse_edo_2k_endl_torir.p3d",
    "pos": [
     1045.268,
@@ -273,29 +263,9 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_edo_2k_middle_torir.p3d",
-   "pos": [
-    1054.592,
-    25.000001907348633,
-    1087.64
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
    "p3d": "JP\\buildings\\townhouse\\jp_townhouse_kamigata_3k_endl_toril.p3d",
    "pos": [
     988.358,
-    25.0,
-    1087.64
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_kamigata_3k_middle_toril.p3d",
-   "pos": [
-    997.682,
     25.0,
     1087.64
    ],
@@ -313,16 +283,6 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_edo_3k_cornerr_toril.p3d",
-   "pos": [
-    1059.238,
-    25.0,
-    1087.64
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
    "p3d": "JP\\buildings\\townhouse\\jp_townhouse_edo_3k_middle_toril_board.p3d",
    "pos": [
     1049.914,
@@ -330,16 +290,6 @@
     1087.64
    ],
    "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\posttown\\jp_posttown_det_tile_nuriya.p3d",
-   "pos": [
-    988.73,
-    25.0,
-    1072.36
-   ],
-   "yaw": 0.0,
    "src": "placement:C.csv"
   },
   {
@@ -363,69 +313,9 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\hatago\\jp_hatago_std_tile.p3d",
-   "pos": [
-    1013.122,
-    24.999998092651367,
-    1071.45
-   ],
-   "yaw": 0.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\hatago\\jp_hatago_grand.p3d",
-   "pos": [
-    1026.222,
-    25.0,
-    1071.45
-   ],
-   "yaw": 0.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\farmhouse\\jp_farmhouse_kanto_yosemune_umaya.p3d",
-   "pos": [
-    942.0,
-    25.0,
-    1029.0
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\farmhouse\\jp_farmhouse_kinai_kirizuma_tile_takahe.p3d",
-   "pos": [
-    963.5,
-    25.0,
-    1028.0
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
    "p3d": "JP\\buildings\\hut\\jp_hut_east_s_earth_mushiro.p3d",
    "pos": [
     933.5,
-    25.0,
-    1003.0
-   ],
-   "yaw": 0.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\hut\\jp_hut_east_l_board.p3d",
-   "pos": [
-    962.5,
-    25.0,
-    1002.5
-   ],
-   "yaw": 0.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\hut\\jp_hut_west_thatch_leanl.p3d",
-   "pos": [
-    947.0,
     25.0,
     1003.0
    ],
@@ -443,7 +333,547 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\shed\\jp_shed_walled_ishioki_woodshed.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_f_th_kamigata_3k_middle_komeya.p3d",
+   "pos": [
+    997.682,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    995.742,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    999.502,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    997.682,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_oke_tarai.p3d",
+   "pos": [
+    996.082,
+    25.0,
+    1092.39
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_firewood_stack_bundle.p3d",
+   "pos": [
+    999.482,
+    25.000001907348633,
+    1091.44
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_th_kamigata_2k_middle_kamiya.p3d",
+   "pos": [
+    993.004,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    994.034,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    992.094,
+    24.999998092651367,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_oke_ab_tipped.p3d",
+   "pos": [
+    992.404,
+    25.000001907348633,
+    1092.54
+   ],
+   "yaw": 210.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_th_edo_2k_middle_gofuku.p3d",
+   "pos": [
+    1054.592,
+    25.000001907348633,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    1055.622,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1053.682,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_oke_tarai.p3d",
+   "pos": [
+    1053.892,
+    25.0,
+    1092.59
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_th_edo_3k_cornerr_sakaya.p3d",
+   "pos": [
+    1059.238,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    1057.328,
+    24.999996185302734,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1061.058,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1059.238,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\water\\jp_s_fire_tub_open.p3d",
+   "pos": [
+    1063.788,
+    25.000001907348633,
+    1084.24
+   ],
+   "yaw": 270.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_oke_taru_lid.p3d",
+   "pos": [
+    1057.738,
+    25.0,
+    1092.24
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_pt_det_tile_nuriya_home.p3d",
+   "pos": [
+    988.73,
+    25.0,
+    1072.36
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_sandals_sale_eave.p3d",
+   "pos": [
+    987.13,
+    27.458749961853027,
+    1076.4537717050314
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_bench_1ken.p3d",
+   "pos": [
+    987.43,
+    25.0,
+    1076.96
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    990.67,
+    25.0,
+    1077.76
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    986.91,
+    25.0,
+    1077.76
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    988.73,
+    25.0,
+    1077.76
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_oke_tarai.p3d",
+   "pos": [
+    990.33,
+    25.0,
+    1067.61
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_inn_std_tile.p3d",
+   "pos": [
+    1013.122,
+    24.999998092651367,
+    1071.45
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_sandals_sale_eave.p3d",
+   "pos": [
+    1011.922,
+    27.458748054504394,
+    1076.4437717050314
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_bench_long.p3d",
+   "pos": [
+    1010.422,
+    24.999998092651367,
+    1076.9
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    1016.882,
+    25.0,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1009.482,
+    24.999998092651367,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1011.302,
+    25.0,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1013.122,
+    24.999998092651367,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1014.942,
+    24.999996185302734,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_firewood_stack_wall_1ken_h120.p3d",
+   "pos": [
+    1010.392,
+    25.0,
+    1066.45
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_inn_grand.p3d",
+   "pos": [
+    1026.222,
+    25.0,
+    1071.45
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_shopfront_kanban_stand.p3d",
+   "pos": [
+    1022.622,
+    25.0,
+    1076.75
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_bench_ab_tipped.p3d",
+   "pos": [
+    1024.422,
+    25.000001907348633,
+    1076.85
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    1029.982,
+    25.0,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1022.582,
+    25.0,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1024.402,
+    25.0,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1026.222,
+    24.999998092651367,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1028.042,
+    24.999998092651367,
+    1077.65
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_firewood_stack_wall_1ken_h120.p3d",
+   "pos": [
+    1023.492,
+    25.0,
+    1066.45
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_farmhouse_kanto.p3d",
+   "pos": [
+    942.0,
+    25.0,
+    1029.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_kaki_curtain_1ken.p3d",
+   "pos": [
+    943.0,
+    27.528750014305114,
+    1024.1492388361692
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_farm_tools_lean.p3d",
+   "pos": [
+    936.3050000011921,
+    25.83991378545761,
+    1023.6616350501776
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_charcoal_bales_stack.p3d",
+   "pos": [
+    943.2,
+    25.0,
+    1034.1
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_farmhouse_kinai.p3d",
+   "pos": [
+    963.5,
+    25.0,
+    1028.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_kaki_curtain_half.p3d",
+   "pos": [
+    962.3,
+    27.378750014305115,
+    1024.0892388361692
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_farm_tools_pair.p3d",
+   "pos": [
+    965.3195000171661,
+    25.778528094291687,
+    1023.6616350501776
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_hut_east_l_board.p3d",
+   "pos": [
+    962.5,
+    25.0,
+    1002.5
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_hut_west_thatch_leanl.p3d",
+   "pos": [
+    947.0,
+    25.0,
+    1003.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_shed_walled_woodshed.p3d",
    "pos": [
     962.0,
     25.0,
@@ -451,6 +881,616 @@
    ],
    "yaw": 180.0,
    "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_kura_namako.p3d",
+   "pos": [
+    1000.0,
+    25.0,
+    1097.5
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_f_kura_kuro_hinged.p3d",
+   "pos": [
+    975.0,
+    25.0,
+    1041.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_kago_ab_tipped.p3d",
+   "pos": [
+    1016.0,
+    25.0,
+    1079.6
+   ],
+   "yaw": 75.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_travel_gear_hat_stick.p3d",
+   "pos": [
+    1011.1032530324952,
+    25.07386313378811,
+    1080.400567663521
+   ],
+   "yaw": 20.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_travel_gear_ab_burst.p3d",
+   "pos": [
+    1021.5323675301522,
+    25.09389106184244,
+    1081.043288603919
+   ],
+   "yaw": 200.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_footwear_ab_scattered.p3d",
+   "pos": [
+    1026.162025401401,
+    25.050000000745058,
+    1079.0740499498584
+   ],
+   "yaw": 30.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_tenbin_spill_veg.p3d",
+   "pos": [
+    999.8,
+    25.0,
+    1079.8
+   ],
+   "yaw": 105.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_tenbin_spill_fish.p3d",
+   "pos": [
+    1051.8,
+    25.0,
+    1080.0
+   ],
+   "yaw": 250.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_lantern_fallen_chochin.p3d",
+   "pos": [
+    1006.3000735021029,
+    25.164107352495193,
+    1080.5887232251275
+   ],
+   "yaw": 40.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_lantern_fallen_crushed.p3d",
+   "pos": [
+    1047.1404446587853,
+    25.144888877868652,
+    1079.3874662612102
+   ],
+   "yaw": 160.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_amado_fallen.p3d",
+   "pos": [
+    993.2,
+    25.0,
+    1081.0
+   ],
+   "yaw": 95.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_stool_ab_tipped.p3d",
+   "pos": [
+    1030.6,
+    25.0,
+    1079.3
+   ],
+   "yaw": 60.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_handcart_ab_broken.p3d",
+   "pos": [
+    1038.5,
+    25.0,
+    1080.4
+   ],
+   "yaw": 80.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_small.p3d",
+   "pos": [
+    1057.0327395747174,
+    25.08049999922514,
+    1080.33243574844
+   ],
+   "yaw": 10.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_ab_scattered.p3d",
+   "pos": [
+    985.8705702424049,
+    25.029999999329448,
+    1080.0590733408928
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_fire_watch_ladder_tower.p3d",
+   "pos": [
+    1033.0,
+    25.0,
+    1086.8
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_fire_watch_rack.p3d",
+   "pos": [
+    1028.5,
+    25.0,
+    1085.2
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_kosatsu_std.p3d",
+   "pos": [
+    1017.5,
+    25.0,
+    1087.5
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_lantern_sign_tsuji.p3d",
+   "pos": [
+    1040.2,
+    25.0,
+    1083.2
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\water\\jp_s_fire_tub_full.p3d",
+   "pos": [
+    1008.9,
+    25.0,
+    1083.2
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\water\\jp_s_fire_tub_ab_scattered.p3d",
+   "pos": [
+    1042.0,
+    25.0,
+    1085.3
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_bib.p3d",
+   "pos": [
+    1011.2,
+    25.0,
+    1085.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_potted_pair.p3d",
+   "pos": [
+    984.7465613245964,
+    25.30000001192093,
+    1076.2382526218892
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_nobori_ab_tattered.p3d",
+   "pos": [
+    1008.0,
+    25.0,
+    1077.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    987.4,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    989.3,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1002.3,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1004.2,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1045.3,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1049.0,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1050.9,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    996.3,
+    25.0,
+    1077.7
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    998.2,
+    25.0,
+    1077.7
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1001.9,
+    25.0,
+    1077.7
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1003.8,
+    25.0,
+    1077.7
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_hasa_tiers.p3d",
+   "pos": [
+    974.0,
+    25.0,
+    1012.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_hasa_ab_sagged.p3d",
+   "pos": [
+    974.0,
+    25.0,
+    1019.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_hasa_low.p3d",
+   "pos": [
+    929.0,
+    25.0,
+    1011.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_straw_stack_nio_cone.p3d",
+   "pos": [
+    955.0,
+    26.450000047683716,
+    1016.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_straw_stack_nio_cyl.p3d",
+   "pos": [
+    930.5,
+    26.350760221481323,
+    1036.5
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_straw_stack_stook.p3d",
+   "pos": [
+    927.8,
+    25.574026107788086,
+    1016.5
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_straw_stack_stook.p3d",
+   "pos": [
+    928.9,
+    25.574026107788086,
+    1018.4
+   ],
+   "yaw": 30.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_straw_stack_stook.p3d",
+   "pos": [
+    927.6,
+    25.574026107788086,
+    1020.3
+   ],
+   "yaw": 70.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_straw_stack_ab_slumped.p3d",
+   "pos": [
+    971.452877342701,
+    26.084163427352905,
+    1036.628705739975
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_straw_stack_tawara_stack.p3d",
+   "pos": [
+    951.0,
+    25.0,
+    1047.5
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_scarecrow_kasa.p3d",
+   "pos": [
+    977.5,
+    25.0,
+    1004.0
+   ],
+   "yaw": 300.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_scarecrow_naruko.p3d",
+   "pos": [
+    927.8,
+    25.0,
+    1005.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_laundry_pole_load_kaki.p3d",
+   "pos": [
+    952.6,
+    25.0,
+    1022.3
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_laundry_pole_load_daikon.p3d",
+   "pos": [
+    955.6,
+    25.0,
+    1008.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_kakei_trough.p3d",
+   "pos": [
+    953.2,
+    25.0,
+    1036.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\water\\jp_s_well_hanetsurube_well.p3d",
+   "pos": [
+    955.0,
+    25.0,
+    1001.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_stable_yard_tie_post.p3d",
+   "pos": [
+    931.0,
+    25.0,
+    1021.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_stable_yard_saddle_rack.p3d",
+   "pos": [
+    929.4,
+    25.0,
+    1026.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_stable_yard_trough_stone.p3d",
+   "pos": [
+    930.8,
+    25.0,
+    1018.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_charcoal_bales_ab_burst.p3d",
+   "pos": [
+    967.6,
+    25.0,
+    1041.8
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_farm_tools_ab_fallen.p3d",
+   "pos": [
+    939.7482318565019,
+    25.66509783267975,
+    1008.7521906545192
+   ],
+   "yaw": 20.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_broom.p3d",
+   "pos": [
+    947.5266097784042,
+    25.076929926872253,
+    1008.3942988932133
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_ladder_ab_fallen.p3d",
+   "pos": [
+    968.4,
+    25.0,
+    1008.6
+   ],
+   "yaw": 60.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_oke_ab_staves.p3d",
+   "pos": [
+    944.8,
+    25.0,
+    1009.5
+   ],
+   "yaw": 0.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_offer.p3d",
+   "pos": [
+    978.3,
+    25.0,
+    1029.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:C3.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_koshin.p3d",
+   "pos": [
+    978.3,
+    25.0,
+    1031.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:C3.csv"
   },
   {
    "p3d": "JP\\plants\\tree\\jp_sakura_01.p3d",
