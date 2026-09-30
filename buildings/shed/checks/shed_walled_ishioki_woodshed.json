@@ -1,6 +1,6 @@
 {
- "building": "Land_JP_Shed_Walled_Stone_Woodshed",
- "key": "shed_walled_stone_woodshed",
+ "building": "Land_JP_Shed_Walled_Ishioki_Woodshed",
+ "key": "shed_walled_ishioki_woodshed",
  "date": "2026-09-30",
  "budget": "standard",
  "faces": "4861/965/437",
@@ -98,7 +98,7 @@
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
    "ok": true,
-   "detail": "not placed on the island (shipped in the PBO only)"
+   "detail": "1 placement(s): x 956.3-965.2 z 1042.6-1048.4"
   },
   {
    "check": "C10 DoorsTwin1 reachable from both sides (open)",
@@ -153,7 +153,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 406827 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 406919 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

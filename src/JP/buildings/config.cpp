@@ -53702,11 +53702,11 @@ class CfgVehicles
 			};
 		};
 	};
-	class Land_JP_Shed_Walled_Stone_Woodshed: HouseNoDestruct
+	class Land_JP_Shed_Walled_Ishioki_Woodshed: HouseNoDestruct
 	{
 		scope=1;
 		displayName="Shed, walled (stone-weighted boards) with a woodshed lean-to";
-		model="\JP\buildings\shed\jp_shed_walled_stone_woodshed.p3d";
+		model="\JP\buildings\shed\jp_shed_walled_ishioki_woodshed.p3d";
 		class Doors
 		{
 			class DoorsTwin1

@@ -1,0 +1,257 @@
+﻿terrain: 512x512 at 4.0 m, heights -29.3 .. 177.1 m, DEM vertical scale 0.47, land 1.50 km2
+yard: 2601 vertices, min 25.0000 max 25.0000 (must be exactly 25.0)
+road: 9 pieces, 188 m, height 25.0 -> 40.1 m, max grade 13.0%, deepest cut 8.7 m
+canal: coast at x=1556 on z=900, cut from (1616, 900) to (1446, 903), floor -2.5 m
+pond: centre (800, 905) r=16 m, water level 25.10 m
+placements: 49 rows in test/placements/*.csv
+  placed JP\buildings\machiya\jp_machiya_t3_01_shop.p3d from C.csv at (1024.0, 25.00, 1045.0) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1026.7, 25.00, 1038.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1024.9, 25.00, 1038.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1023.1, 25.00, 1038.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1021.3, 25.00, 1038.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_bench_ab_tipped.p3d from C.csv at (1024.5, 25.00, 1039.9) yaw 0, centre from odol
+  placed JP\site\water\jp_s_fire_tub_open.p3d from C.csv at (1019.5, 25.00, 1039.4) yaw 180, centre from odol
+  placed JP\site\street\jp_s_nobori_ab_tattered.p3d from C.csv at (1020.6, 25.00, 1038.0) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_handcart_load_bales.p3d from C.csv at (1023.0, 25.00, 1035.2) yaw 250, centre from odol
+  placed JP\site\yard\jp_s_tenbin_leaning.p3d from C.csv at (1027.8, 25.00, 1041.7) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_box.p3d from C.csv at (1029.3, 25.00, 1038.4) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_firewood_stack_wall_1ken_h120.p3d from C.csv at (1027.8, 25.00, 1047.5) yaw 90, centre from odol
+  placed JP\site\yard\jp_s_oke_tarai.p3d from C.csv at (1025.4, 25.00, 1050.4) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_oke_teoke.p3d from C.csv at (1024.7, 25.00, 1050.2) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_oke_ab_tipped.p3d from C.csv at (1024.3, 25.00, 1051.0) yaw 220, centre from odol
+  placed JP\site\water\jp_s_well_tsurube_curb_stone.p3d from C.csv at (1026.4, 25.00, 1053.3) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_laundry_pole_load_cloth.p3d from C.csv at (1022.0, 25.00, 1052.3) yaw 180, centre from odol
+  placed JP\site\roadside\jp_s_shimenawa_len_1ken.p3d from C.csv at (1026.4, 24.86, 1053.2) yaw 180, centre from odol
+  placed JP\buildings\toilet\jp_toilet_t1_01.p3d from C.csv at (1021.7, 25.00, 1056.2) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_kamigata_2k_middle_torir.p3d from C.csv at (993.0, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_edo_2k_endl_torir.p3d from C.csv at (1045.3, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_edo_2k_middle_torir.p3d from C.csv at (1054.6, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_kamigata_3k_endl_toril.p3d from C.csv at (988.4, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_kamigata_3k_middle_toril.p3d from C.csv at (997.7, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_kamigata_3k_cornerr_torir.p3d from C.csv at (1003.2, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_edo_3k_cornerr_toril.p3d from C.csv at (1059.2, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_edo_3k_middle_toril_board.p3d from C.csv at (1049.9, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\posttown\jp_posttown_det_tile_nuriya.p3d from C.csv at (988.7, 25.00, 1072.4) yaw 0, centre from odol
+  placed JP\buildings\posttown\jp_posttown_row_endl.p3d from C.csv at (1002.8, 25.00, 1072.4) yaw 0, centre from odol
+  placed JP\buildings\posttown\jp_posttown_row_middle.p3d from C.csv at (997.3, 25.00, 1072.4) yaw 0, centre from odol
+  placed JP\buildings\hatago\jp_hatago_std_tile.p3d from C.csv at (1013.1, 25.00, 1071.5) yaw 0, centre from odol
+  placed JP\buildings\hatago\jp_hatago_grand.p3d from C.csv at (1026.2, 25.00, 1071.5) yaw 0, centre from odol
+  placed JP\buildings\farmhouse\jp_farmhouse_kanto_yosemune_umaya.p3d from C.csv at (942.0, 25.00, 1029.0) yaw 180, centre from odol
+  placed JP\buildings\farmhouse\jp_farmhouse_kinai_kirizuma_tile_takahe.p3d from C.csv at (963.5, 25.00, 1028.0) yaw 180, centre from odol
+  placed JP\buildings\hut\jp_hut_east_s_earth_mushiro.p3d from C.csv at (933.5, 25.00, 1003.0) yaw 0, centre from odol
+  placed JP\buildings\hut\jp_hut_east_l_board.p3d from C.csv at (962.5, 25.00, 1002.5) yaw 0, centre from odol
+  placed JP\buildings\hut\jp_hut_west_thatch_leanl.p3d from C.csv at (947.0, 25.00, 1003.0) yaw 0, centre from odol
+  placed JP\buildings\shed\jp_shed_open_thatch.p3d from C.csv at (941.0, 25.00, 1045.5) yaw 180, centre from odol
+  placed JP\buildings\shed\jp_shed_walled_ishioki_woodshed.p3d from C.csv at (962.0, 25.00, 1045.5) yaw 180, centre from odol
+  placed JP\plants\tree\jp_sakura_01.p3d from F.csv at (985.0, 24.95, 1010.0) yaw 20, centre from odol
+  placed JP\plants\tree\jp_sakura_02.p3d from F.csv at (1063.0, 24.95, 1010.0) yaw 200, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1098.3, 24.95, 958.9) yaw 5, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1089.6, 24.95, 965.6) yaw 348, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1100.7, 24.95, 981.0) yaw 58, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1088.2, 24.95, 975.2) yaw 349, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1106.0, 24.95, 969.4) yaw 274, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1095.9, 24.95, 991.1) yaw 136, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1106.3, 24.95, 987.3) yaw 328, centre from odol
+  placed JP\common\swatch\jp_swatch_wall.p3d from M.csv at (957.5, 25.00, 1100.0) yaw 180, centre from odol
+objects: 3594 total - trees 3010 (+344 coastal pines), bushes 144, rocks 36, road pieces 9, house 1, pond 1, placements 49
+surfaces: cp_grass 12.1%, cp_grass_tall 6.5%, cp_broadleaf_sparse1 8.9%, cp_rock 4.0%, cp_gravel 67.5%, cp_dirt 1.1%
+route B: TB input set in D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\data\T_terrain\route_b (3594 objects, 81 templates)
+  tile 000_000: cp_gravel, cp_grass
+  tile 001_000: cp_gravel, cp_rock, cp_grass, cp_broadleaf_sparse1, cp_grass_tall
+  tile 002_000: cp_gravel, cp_rock, cp_broadleaf_sparse1, cp_grass, cp_grass_tall
+  tile 003_000: cp_gravel, cp_grass, cp_rock, cp_grass_tall, cp_broadleaf_sparse1
+  tile 004_000: cp_gravel
+  tile 000_001: cp_gravel, cp_grass, cp_grass_tall, cp_broadleaf_sparse1, cp_rock
+  tile 001_001: cp_broadleaf_sparse1, cp_rock, cp_grass, cp_grass_tall, cp_dirt, cp_gravel
+  tile 002_001: cp_broadleaf_sparse1, cp_grass_tall, cp_grass, cp_rock, cp_dirt
+  tile 003_001: cp_gravel, cp_broadleaf_sparse1, cp_grass_tall, cp_grass, cp_rock
+  tile 004_001: cp_gravel
+  tile 000_002: cp_gravel, cp_grass, cp_grass_tall, cp_broadleaf_sparse1
+  tile 001_002: cp_grass, cp_grass_tall, cp_dirt, cp_gravel, cp_broadleaf_sparse1
+  tile 002_002: cp_grass, cp_grass_tall, cp_dirt, cp_gravel, cp_broadleaf_sparse1, cp_rock
+  tile 003_002: cp_gravel, cp_grass_tall, cp_grass, cp_broadleaf_sparse1, cp_rock
+  tile 004_002: cp_gravel
+  tile 000_003: cp_gravel
+  tile 001_003: cp_gravel, cp_grass, cp_grass_tall, cp_broadleaf_sparse1
+  tile 002_003: cp_gravel, cp_grass, cp_grass_tall
+  tile 003_003: cp_gravel
+  tile 004_003: cp_gravel
+  tile 000_004: cp_gravel
+  tile 001_004: cp_gravel
+  tile 002_004: cp_gravel
+  tile 003_004: cp_gravel
+  tile 004_004: cp_gravel
+layers: 5 x 5 tiles of 512 px (1 m/px, 16 px overlap)
+8WVR: D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\src\JP\worlds\testisland\world\japantestisland.wrp (1422238 bytes, 26 materials, 3594 objects + dummy) - read back OK
+CfgConvert -bin config.cpp: exit 0 
+binarize pond: exit 0, 0.8 s, ODOL=True
+binarize world: exit 0, 0.8 s, log data/T_terrain/binarize_world.log
+  binarize: Note: 'CAWorld' is declared, but definition was not found. Creating empty class (source: P:\JP\worlds\testisland\config.cpp)
+  binarize: Note: 'ChernarusPlus' is declared, but definition was not found. Creating empty class (source: P:\JP\worlds\testisland\config.cpp)
+  binarize: 18:20:08.91  ENTITY    (W): dz\structures\residential\houses\house_1w01.p3d: house, config class missing
+  binarize: 18:20:08.102 ENTITY    (W): jp\buildings\machiya\jp_machiya_t3_01_shop.p3d: house, config class missing
+  binarize: 18:20:08.113 ENTITY    (W): jp\site\water\jp_s_well_tsurube_curb_stone.p3d: house, config class missing
+  binarize: 18:20:08.116 ENTITY    (W): jp\buildings\toilet\jp_toilet_t1_01.p3d: house, config class missing
+  binarize: 18:20:08.118 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_kamigata_2k_middle_torir.p3d: house, config class missing
+  binarize: 18:20:08.122 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_edo_2k_endl_torir.p3d: house, config class missing
+  binarize: 18:20:08.125 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_edo_2k_middle_torir.p3d: house, config class missing
+  binarize: 18:20:08.128 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_kamigata_3k_endl_toril.p3d: house, config class missing
+  binarize: 18:20:08.131 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_kamigata_3k_middle_toril.p3d: house, config class missing
+  binarize: 18:20:08.135 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_kamigata_3k_cornerr_torir.p3d: house, config class missing
+  binarize: 18:20:08.140 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_edo_3k_cornerr_toril.p3d: house, config class missing
+  binarize: 18:20:08.144 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_edo_3k_middle_toril_board.p3d: house, config class missing
+  binarize: 18:20:08.150 ENTITY    (W): jp\buildings\posttown\jp_posttown_det_tile_nuriya.p3d: house, config class missing
+  binarize: 18:20:08.155 ENTITY    (W): jp\buildings\posttown\jp_posttown_row_endl.p3d: house, config class missing
+  binarize: 18:20:08.159 ENTITY    (W): jp\buildings\posttown\jp_posttown_row_middle.p3d: house, config class missing
+  binarize: 18:20:08.164 ENTITY    (W): jp\buildings\hatago\jp_hatago_std_tile.p3d: house, config class missing
+  binarize: 18:20:08.171 ENTITY    (W): jp\buildings\hatago\jp_hatago_grand.p3d: house, config class missing
+  binarize: 18:20:08.180 ENTITY    (W): jp\buildings\farmhouse\jp_farmhouse_kanto_yosemune_umaya.p3d: house, config class missing
+  binarize: 18:20:08.189 ENTITY    (W): jp\buildings\farmhouse\jp_farmhouse_kinai_kirizuma_tile_takahe.p3d: house, config class missing
+  binarize: 18:20:08.193 ENTITY    (W): jp\buildings\hut\jp_hut_east_s_earth_mushiro.p3d: house, config class missing
+  binarize: 18:20:08.196 ENTITY    (W): jp\buildings\hut\jp_hut_east_l_board.p3d: house, config class missing
+  binarize: 18:20:08.200 ENTITY    (W): jp\buildings\hut\jp_hut_west_thatch_leanl.p3d: house, config class missing
+  binarize: 18:20:08.201 ENTITY    (W): jp\buildings\shed\jp_shed_open_thatch.p3d: house, config class missing
+  binarize: 18:20:08.203 ENTITY    (W): jp\buildings\shed\jp_shed_walled_ishioki_woodshed.p3d: house, config class missing
+  binarize: 18:20:08.210 ENTITY    (W): jp\common\swatch\jp_swatch_wall.p3d: house, config class missing
+  binarize: Trying to access error value.
+  binarize: Trying to access error value.
+  binarize: Trying to access error value.
+  binarize config lookups that fell back to defaults: 39 distinct (see log)
+OPRW: OPRW v29 tag 0FNE appId 0, land (128, 128), terrain (512, 512), cell 16.0, 81 models, 25 rvmats, 1469375 bytes
+OPRW object records: 4083 (non-road objects in the 8WVR: 3585)
+navmesh: packed D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\src\JP\worlds\testisland\navmesh\japantestisland.nm (1273872 bytes) - regenerate it after any terrain/object change
+texHeaders.bin: 9973 bytes
+packed 97 files -> D:\DayZ-Server_AI-20260907-MultiMap\@Japan\addons\jp_worlds_testisland.pbo (prefix=JP\worlds\testisland, 7263707 bytes)
+done in 16 s
+placecheck island  (2026-09-30 18:20)
+objects 3609 (checked 24, from cache 3585); load 1.60 s, check 0.12 s
+
+category   objects      ok    FAIL skipped
+building        29      27       2       0
+plant         3509    3488      21       0
+prop            23      17       6       0
+road             9       4       5       0
+rock            36      35       1       0
+skip             3       0       0       3
+
+FAILURES (35) - every one with its fix in failures.csv
+  by model:  model                            category  problem          n   median      max
+             b_crataeguslaevigata_2s.p3d      plant     floats          10    0.076    0.175
+             b_sambucusnigra_2s.p3d           plant     floats           6    0.070    0.146
+             grav_25.p3d                      road      road             4    0.133    0.214
+             b_rosacanina_2s.p3d              plant     floats           3    0.051    0.064
+             jp_s_gutter_board_1ken.p3d       prop      sunk/buried      3    0.230    0.230
+             grav_6konec.p3d                  road      road             1    0.119    0.119
+             b_sambucusnigra_1s.p3d           plant     floats           1    0.027    0.027
+             t_quercusrobur_2s.p3d            plant     sunk/buried      1    1.317    1.317
+             rock_apart2.p3d                  rock      floats           1    0.020    0.020
+             jp_s_gutter_slab.p3d             prop      sunk/buried      1    0.340    0.340
+             jp_s_handcart_load_bales.p3d     building  floats           1    0.044    0.044
+             jp_s_jizo_hut_box.p3d            prop      sunk/buried      1    0.110    0.110
+             jp_s_shimenawa_len_1ken.p3d      prop      floats           1    1.945    1.945
+             jp_efftest_medium_tansu_ransacke building  floats           1    0.035    0.035
+  worst 40:
+  jp_s_shimenawa_len_1ken.p3 prop      (1026.40, 27.170, 1053.20) floats 1.945 m, side centre, fix dy -1.945
+  t_quercusrobur_2s.p3d      plant     (1310.81, 87.129, 1604.60) buried: terrain 1.317 m above its ground line, side back (SE), fix dy +1.317
+  jp_s_gutter_slab.p3d       prop      (1026.73, 25.000, 1038.80) sunk 0.340 m, side back-left (NE), fix dy +0.340
+  jp_s_gutter_board_1ken.p3d prop      (1024.91, 25.000, 1038.80) sunk 0.230 m, side left (E), fix dy +0.230
+  jp_s_gutter_board_1ken.p3d prop      (1023.09, 25.000, 1038.80) sunk 0.230 m, side left (E), fix dy +0.230
+  jp_s_gutter_board_1ken.p3d prop      (1021.27, 25.000, 1038.80) sunk 0.230 m, side left (E), fix dy +0.230
+  grav_25.p3d                road      (1109.82, 27.614, 1199.76) road surface off terrain: +0.21 / -0.01 m (drape)
+  b_crataeguslaevigata_2s.p3 plant     (1141.66, 45.980, 1268.35) base not sunk: highest contact point +0.175 m vs soil (needs <= -0.02), side front (S), fix dy -0.195
+  b_crataeguslaevigata_2s.p3 plant     (1144.63, 54.951, 1301.91) base not sunk: highest contact point +0.175 m vs soil (needs <= -0.02), side front (S), fix dy -0.195
+  b_crataeguslaevigata_2s.p3 plant     (681.57, 10.298, 565.83) base not sunk: highest contact point +0.146 m vs soil (needs <= -0.02), side front (E), fix dy -0.166
+  b_sambucusnigra_2s.p3d     plant     (899.40, 18.361, 633.27) base not sunk: highest contact point +0.146 m vs soil (needs <= -0.02), side back (W), fix dy -0.166
+  grav_25.p3d                road      (1106.51, 25.003, 1136.93) road surface off terrain: +0.13 / -0.00 m (drape)
+  grav_25.p3d                road      (1122.08, 36.178, 1267.90) road surface off terrain: +0.13 / -0.06 m (drape)
+  grav_6konec.p3d            road      (1126.13, 39.428, 1282.99) road surface off terrain: +0.12 / -0.20 m (drape)
+  grav_25.p3d                road      (1109.82, 26.154, 1174.76) road surface off terrain: +0.11 / -0.01 m (drape)
+  jp_s_jizo_hut_box.p3d      prop      (1029.30, 25.000, 1038.40) sunk 0.110 m, side left (E), fix dy +0.110
+  b_crataeguslaevigata_2s.p3 plant     (608.54, 81.598, 1225.98) base not sunk: highest contact point +0.109 m vs soil (needs <= -0.02), side front (W), fix dy -0.129
+  b_sambucusnigra_2s.p3d     plant     (747.16, 46.250, 1103.94) base not sunk: highest contact point +0.080 m vs soil (needs <= -0.02), side back (E), fix dy -0.100
+  b_crataeguslaevigata_2s.p3 plant     (1467.65, 131.570, 1341.36) base not sunk: highest contact point +0.076 m vs soil (needs <= -0.02), side front (SW), fix dy -0.096
+  b_sambucusnigra_2s.p3d     plant     (621.37, 42.579, 1034.04) base not sunk: highest contact point +0.070 m vs soil (needs <= -0.02), side back (SW), fix dy -0.090
+  b_rosacanina_2s.p3d        plant     (1055.26, 159.493, 1582.16) base not sunk: highest contact point +0.064 m vs soil (needs <= -0.02), side front-right (NE), fix dy -0.084
+  b_crataeguslaevigata_2s.p3 plant     (662.86, 50.517, 1044.42) base not sunk: highest contact point +0.054 m vs soil (needs <= -0.02), side front-left (W), fix dy -0.074
+  b_rosacanina_2s.p3d        plant     (574.67, 10.304, 713.72) base not sunk: highest contact point +0.051 m vs soil (needs <= -0.02), side front-right (W), fix dy -0.071
+  jp_s_handcart_load_bales.p building  (1023.00, 25.000, 1035.20) floats 0.044 m, side front (SW), fix dy -0.044
+  JP_EffTest_medium_Tansu_Ra building  (1034.00, 25.000, 998.00) floats 0.035 m, side back (N), fix dy -0.035
+  b_rosacanina_2s.p3d        plant     (678.95, 35.993, 975.20) base not sunk: highest contact point +0.028 m vs soil (needs <= -0.02), side front-right (W), fix dy -0.048
+  b_sambucusnigra_1s.p3d     plant     (974.73, 155.884, 1556.72) base not sunk: highest contact point +0.027 m vs soil (needs <= -0.02), side back-right (W), fix dy -0.047
+  b_crataeguslaevigata_2s.p3 plant     (1397.71, 145.335, 1393.12) base not sunk: highest contact point +0.024 m vs soil (needs <= -0.02), side front (E), fix dy -0.044
+  b_sambucusnigra_2s.p3d     plant     (918.10, 153.181, 1582.71) base not sunk: highest contact point +0.022 m vs soil (needs <= -0.02), side back (NW), fix dy -0.042
+  rock_apart2.p3d            rock      (1159.94, 1.634, 472.04) base not sunk: highest contact point +0.020 m vs soil (needs <= -0.05), side right (S), fix dy -0.070
+  b_crataeguslaevigata_2s.p3 plant     (693.54, 45.445, 1030.70) base not sunk: highest contact point +0.019 m vs soil (needs <= -0.02), side front-left (W), fix dy -0.039
+  b_sambucusnigra_2s.p3d     plant     (1392.28, 45.502, 1074.32) base not sunk: highest contact point +0.003 m vs soil (needs <= -0.02), side back (SE), fix dy -0.023
+  b_sambucusnigra_2s.p3d     plant     (598.23, 55.181, 1118.01) base not sunk: highest contact point -0.002 m vs soil (needs <= -0.02), side back (SW), fix dy -0.018
+  b_crataeguslaevigata_2s.p3 plant     (796.00, 42.724, 1207.37) base not sunk: highest contact point -0.003 m vs soil (needs <= -0.02), side front-left (SW), fix dy -0.017
+  b_crataeguslaevigata_2s.p3 plant     (918.77, 154.262, 1464.93) base not sunk: highest contact point -0.000 m vs soil (needs <= -0.02), side front-left (NW), fix dy -0.020
+
+DROP-IN OBJECTS (test/placements + test/spawns), pass or fail. gap = bottom - support at the worst contact
+point (+ floats, - sunk); bc_y = the model's boundingCenter.y (the spawner-origin caveat in the docstring).
+  jp_machiya_t3_01_shop.p3d      building  test\placements\C.csv:2    (1024.00, 25.000, 1045.00) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:3    (1026.73, 25.000, 1038.80) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:4    (1024.91, 25.000, 1038.80) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:5    (1023.09, 25.000, 1038.80) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:6    (1021.27, 25.000, 1038.80) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_bench_ab_tipped.p3d       prop      test\placements\C.csv:7    (1024.45, 25.000, 1039.90) highest +0.004 lowest +0.003 bc_y 0.000 -> ok
+  jp_s_fire_tub_open.p3d         skip      test\placements\C.csv:8    (1019.45, 25.000, 1039.40) highest +nan lowest +nan bc_y 0.000 -> not checked
+  jp_s_nobori_ab_tattered.p3d    building  test\placements\C.csv:9    (1020.60, 25.000, 1038.00) highest -0.101 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_handcart_load_bales.p3d   building  test\placements\C.csv:10   (1023.00, 25.000, 1035.20) highest +0.044 lowest +0.003 embed 0.000 bc_y 0.000 -> floats 0.044 m
+  jp_s_tenbin_leaning.p3d        prop      test\placements\C.csv:11   (1027.85, 25.000, 1041.70) highest +0.005 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_jizo_hut_box.p3d          prop      test\placements\C.csv:12   (1029.30, 25.000, 1038.40) highest -0.110 lowest -0.110 bc_y 0.000 -> sunk 0.110 m
+  jp_s_firewood_stack_wall_1ken_ prop      test\placements\C.csv:13   (1027.84, 25.000, 1047.50) highest +0.004 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_oke_tarai.p3d             prop      test\placements\C.csv:14   (1025.40, 25.000, 1050.40) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_oke_teoke.p3d             prop      test\placements\C.csv:15   (1024.70, 25.000, 1050.20) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_oke_ab_tipped.p3d         prop      test\placements\C.csv:16   (1024.35, 25.000, 1050.95) highest +0.004 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_well_tsurube_curb_stone.p skip      test\placements\C.csv:17   (1026.40, 25.000, 1053.30) highest +nan lowest +nan bc_y 0.000 -> not checked
+  jp_s_laundry_pole_load_cloth.p building  test\placements\C.csv:18   (1022.00, 25.000, 1052.30) highest -0.080 lowest -0.080 embed 0.000 bc_y 0.000 -> ok
+  jp_s_shimenawa_len_1ken.p3d    prop      test\placements\C.csv:19   (1026.40, 27.170, 1053.20) highest +1.945 lowest +1.945 bc_y 2.310 -> floats 1.945 m
+  jp_toilet_t1_01.p3d            building  test\placements\C.csv:20   (1021.70, 25.000, 1056.20) highest -0.550 lowest -0.580 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_kamigata_2k_middl building  test\placements\C.csv:21   (993.00, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_edo_2k_endl_torir building  test\placements\C.csv:22   (1045.27, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_edo_2k_middle_tor building  test\placements\C.csv:23   (1054.59, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_kamigata_3k_endl_ building  test\placements\C.csv:24   (988.36, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_kamigata_3k_middl building  test\placements\C.csv:25   (997.68, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_kamigata_3k_corne building  test\placements\C.csv:26   (1003.24, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_edo_3k_cornerr_to building  test\placements\C.csv:27   (1059.24, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_edo_3k_middle_tor building  test\placements\C.csv:28   (1049.91, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_posttown_det_tile_nuriya.p3 building  test\placements\C.csv:29   (988.73, 25.000, 1072.36) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_posttown_row_endl.p3d       building  test\placements\C.csv:30   (1002.81, 25.000, 1072.36) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_posttown_row_middle.p3d     building  test\placements\C.csv:31   (997.25, 25.000, 1072.36) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_hatago_std_tile.p3d         building  test\placements\C.csv:32   (1013.12, 25.000, 1071.45) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_hatago_grand.p3d            building  test\placements\C.csv:33   (1026.22, 25.000, 1071.45) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_farmhouse_kanto_yosemune_um building  test\placements\C.csv:34   (942.00, 25.000, 1029.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_farmhouse_kinai_kirizuma_ti building  test\placements\C.csv:35   (963.50, 25.000, 1028.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_hut_east_s_earth_mushiro.p3 building  test\placements\C.csv:36   (933.50, 25.000, 1003.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_hut_east_l_board.p3d        building  test\placements\C.csv:37   (962.50, 25.000, 1002.50) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_hut_west_thatch_leanl.p3d   building  test\placements\C.csv:38   (947.00, 25.000, 1003.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_shed_open_thatch.p3d        building  test\placements\C.csv:39   (941.00, 25.000, 1045.50) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_shed_walled_ishioki_woodshe building  test\placements\C.csv:40   (962.00, 25.000, 1045.50) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_sakura_01.p3d               plant     test\placements\F.csv:2    (985.00, 24.950, 1010.00) highest -0.183 lowest -0.222 embed 0.050 bc_y 0.000 -> ok
+  jp_sakura_02.p3d               plant     test\placements\F.csv:3    (1063.00, 24.950, 1010.00) highest -0.188 lowest -0.214 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:4    (1098.30, 24.950, 958.90) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:5    (1089.60, 24.950, 965.60) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:6    (1100.70, 24.950, 981.00) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:7    (1088.20, 24.950, 975.20) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:8    (1106.00, 24.950, 969.40) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:9    (1095.90, 24.950, 991.10) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:10   (1106.30, 24.950, 987.30) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_swatch_wall.p3d             building  test\placements\M.csv:2    (957.50, 25.000, 1100.00) highest -0.150 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  StaticObj_Misc_HayBale         prop      test\spawns\A.json:0       (1004.00, 25.770, 944.00) highest +0.004 lowest +0.004 bc_y 0.672 -> ok
+  StaticObj_Misc_HayBale_Packed  prop      test\spawns\A.json:1       (1016.00, 25.830, 940.00) highest +0.007 lowest +0.003 bc_y 0.730 -> ok
+  StaticObj_Misc_HayBale_Packed  prop      test\spawns\A.json:2       (1030.00, 25.830, 933.00) highest +0.007 lowest +0.003 bc_y 0.730 -> ok
+  StaticObj_Target_Support       prop      test\spawns\A.json:3       (1043.00, 26.430, 928.00) highest +0.001 lowest +0.000 bc_y 0.757 -> ok
+  StaticObj_Target_Concrete1     prop      test\spawns\A.json:4       (1024.00, 26.600, 926.50) highest +0.005 lowest +0.000 bc_y 1.608 -> ok
+  JP_EffTest_medium_Tansu        building  test\spawns\E.json:0       (1034.00, 25.000, 994.00) highest +0.021 lowest +0.000 embed 0.000 bc_y 0.000 -> ok
+  JP_EffTest_medium_Tansu_Ransac building  test\spawns\E.json:1       (1034.00, 25.000, 998.00) highest +0.035 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.035 m
+  JP_EffTest_high_Tansu          prop      test\spawns\E.json:2       (1041.00, 25.000, 994.00) highest +0.000 lowest -0.002 bc_y 0.000 -> ok
+  JP_EffTest_high_Tansu_Ransacke prop      test\spawns\E.json:3       (1041.00, 25.000, 998.00) highest +0.000 lowest -0.002 bc_y 0.000 -> ok
+  JP_EffTest_xhigh_Tansu         prop      test\spawns\E.json:4       (1048.00, 25.000, 994.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  JP_EffTest_xhigh_Tansu_Ransack prop      test\spawns\E.json:5       (1048.00, 25.000, 998.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  JP_EffTest_max_Tansu           prop      test\spawns\E.json:6       (1055.00, 25.000, 994.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  JP_EffTest_max_Tansu_Ransacked prop      test\spawns\E.json:7       (1055.00, 25.000, 998.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  JP_Sakura_01_Static            plant     test\spawns\F.json:0       (1110.00, 24.950, 1050.00) highest -0.183 lowest -0.222 embed 0.050 bc_y 0.000 -> ok
+  JP_BambooClump_01_Static       plant     test\spawns\F.json:1       (1110.00, 24.950, 1068.00) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+
+wrote D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\data\placecheck\island\failures.csv

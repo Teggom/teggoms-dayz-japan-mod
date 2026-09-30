@@ -1,0 +1,6 @@
+﻿8WVR : land (128, 128) terrain (512, 512) cell 16.0, 26 materials, 3594 objects
+OPRW : OPRW v29 tag '0FNE' appId 0 land (128, 128) terrain (512, 512) cell 16.0, 1469375 bytes
+models: 81 distinct in 8WVR, 81 in OPRW table
+rvmats: 25 in 8WVR, 25 found in OPRW, missing 0
+objects: 3585/3585 non-road objects found with the same model and transform (max abs diff 0); 9/9 road parts found by position
+VERDICT: PASS

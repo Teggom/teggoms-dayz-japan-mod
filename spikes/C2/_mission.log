@@ -1,0 +1,39 @@
+﻿events: every event inactive except ['Loot']
+types: vanilla loot shrunk to 40 items at nominal 1 (TEST_LOOT_MAX)
+types: 1 from F.xml
+types: 4 from W.xml
+mapgroupproto: 1 groups from B_mapgroupproto.xml
+mapgroupproto: 105 groups from C_mapgroupproto.xml
+mapgrouppos: 22 groups from C_mapgrouppos.xml
+  mapgrouppos: Land_JP_Machiya_T3_01_Shop from C_mapgrouppos.xml matches its wrp object exactly (1024.000 25.000 1045.000)
+  mapgrouppos: Land_JP_Toilet_T1_01 from C_mapgrouppos.xml matches its wrp object exactly (1021.700 25.000 1056.200)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_2ken_Middle_ToriR from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_Townhouse_Edo_2ken_EndL_ToriR from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_Townhouse_Edo_2ken_Middle_ToriR from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_3ken_EndL_ToriL from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_3ken_Middle_ToriL from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_3ken_CornerR_ToriR from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_Townhouse_Edo_3ken_CornerR_ToriL from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_Townhouse_Edo_3ken_Middle_ToriL_Board from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_PostTownHouse_Det_TileNuriya from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_PostTownHouse_Row_EndL from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_PostTownHouse_Row_Middle from C_mapgrouppos.xml kept as written (no wrp object of that class within 10 m - fine for runtime-spawned buildings)
+  mapgrouppos: Land_JP_Hatago_Std_Tile from C_mapgrouppos.xml matches its wrp object exactly (1013.122 25.000 1071.450)
+  mapgrouppos: Land_JP_Hatago_Grand from C_mapgrouppos.xml matches its wrp object exactly (1026.222 25.000 1071.450)
+  mapgrouppos: Land_JP_Farmhouse_Kanto_Yosemune_Umaya from C_mapgrouppos.xml matches its wrp object exactly (942.000 25.000 1029.000)
+  mapgrouppos: Land_JP_Farmhouse_Kinai_Kirizuma_Tile_Takahe from C_mapgrouppos.xml matches its wrp object exactly (963.500 25.000 1028.000)
+  mapgrouppos: Land_JP_Hut_East_S_Earth_Mushiro from C_mapgrouppos.xml matches its wrp object exactly (933.500 25.000 1003.000)
+  mapgrouppos: Land_JP_Hut_East_L_Board from C_mapgrouppos.xml matches its wrp object exactly (962.500 25.000 1002.500)
+  mapgrouppos: Land_JP_Hut_West_Thatch_LeanL from C_mapgrouppos.xml matches its wrp object exactly (947.000 25.000 1003.000)
+  mapgrouppos: Land_JP_Shed_Open_Thatch from C_mapgrouppos.xml matches its wrp object exactly (941.000 25.000 1045.500)
+  mapgrouppos: Land_JP_Shed_Walled_Ishioki_Woodshed from C_mapgrouppos.xml matches its wrp object exactly (962.000 25.000 1045.500)
+mapgrouppos: control house Land_House_1W01 at (1235.9, 19.21, 917.5)
+areaflags.map: 2048x2048 cells of 1 m, usage 0x180 (Town|Village), value 0x3 (Tier1|Tier2), 20971544 bytes
+object spawner: spawns/A.json (5 objects)
+object spawner: spawns/E.json (8 objects)
+object spawner: spawns/F.json (2 objects)
+creature: ZmbM_CitizenASkinny_Blue at (1010.0, 950.0) yaw 0 from A_creatures.txt
+creature: ZmbF_CitizenANormal_Beige at (1022.0, 938.0) yaw 0 from A_creatures.txt
+creature: Animal_CervusElaphus at (1037.0, 942.0) yaw 90 from A_creatures.txt
+init.c: 36 items in 2 rows (x 1000..1046.5, z 975..973.5), 3 creatures
+mission: D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\mission\japantest.japantestisland - 93 files, all xml/json parse

@@ -234,7 +234,15 @@ from jpparts.templates import rural as _ru  # noqa: E402
 
 _LOOT_FARM = {"usage": ["Farm", "Village"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
 _LOOT_SHED = {"usage": ["Farm"], "categories": ["tools", "containers", "food"], "tags": ["floor"]}
-C2_PLACEMENTS = {}
+C2_PLACEMENTS = {
+    "farmhouse_kanto_yosemune_umaya": [{"pos": (942.000, 25.0, 1029.000), "yaw": 180.0, "where": "test island: C2 hamlet (west yard), Kanto farmhouse, front south onto the yard"}],
+    "farmhouse_kinai_kirizuma_tile_takahe": [{"pos": (963.500, 25.0, 1028.000), "yaw": 180.0, "where": "test island: C2 hamlet (west yard), Kinai farmhouse, front south onto the yard"}],
+    "hut_east_s_earth_mushiro": [{"pos": (933.500, 25.0, 1003.000), "yaw": 0.0, "where": "test island: C2 hamlet (west yard), hut east (small, earth floor), front north"}],
+    "hut_west_thatch_leanl": [{"pos": (947.000, 25.0, 1003.000), "yaw": 0.0, "where": "test island: C2 hamlet (west yard), hut west (thatch, lean-to), front north"}],
+    "hut_east_l_board": [{"pos": (962.500, 25.0, 1002.500), "yaw": 0.0, "where": "test island: C2 hamlet (west yard), hut east (large, board floor), front north"}],
+    "shed_open_thatch": [{"pos": (941.000, 25.0, 1045.500), "yaw": 180.0, "where": "test island: C2 hamlet (west yard), open shed behind the Kanto farmhouse"}],
+    "shed_walled_ishioki_woodshed": [{"pos": (962.000, 25.0, 1045.500), "yaw": 180.0, "where": "test island: C2 hamlet (west yard), walled shed with woodshed lean-to behind the Kinai house"}],
+}
 
 
 def _rural(key, dir_, cls, display, params, loot, mass):
@@ -306,7 +314,7 @@ C2_SHEDS = [
            {"kind": "shed", "roof": "itabuki", "open": True}, _LOOT_SHED, 8000.0),
     _rural("shed_open_thatch", "shed", "Land_JP_Shed_Open_Thatch", "Shed, open front (thatch)",
            {"kind": "shed", "roof": "thatch", "open": True}, _LOOT_SHED, 8000.0),
-    _rural("shed_walled_stone_woodshed", "shed", "Land_JP_Shed_Walled_Stone_Woodshed",
+    _rural("shed_walled_ishioki_woodshed", "shed", "Land_JP_Shed_Walled_Ishioki_Woodshed",
            "Shed, walled (stone-weighted boards) with a woodshed lean-to",
            {"kind": "shed", "roof": "ishioki", "leanto": "right"}, _LOOT_SHED, 10000.0),
     _rural("barn_walled_thatch", "shed", "Land_JP_Barn_Walled_Thatch", "Barn, walled (thatch, 4 x 3 ken)",
