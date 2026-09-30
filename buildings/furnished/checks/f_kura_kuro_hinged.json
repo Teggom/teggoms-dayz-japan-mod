@@ -43,7 +43,7 @@
   {
    "check": "C7 Fire Geometry penetration rvmats",
    "ok": true,
-   "detail": "dirt, granite, pottery, stone, wood"
+   "detail": "dirt, granite, pottery, wood"
   },
   {
    "check": "C2 library materials only",
@@ -343,7 +343,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 419999 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 419535 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

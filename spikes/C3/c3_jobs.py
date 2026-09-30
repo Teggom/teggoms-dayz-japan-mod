@@ -101,6 +101,47 @@ def _furn_rooms():
     return rooms_jobs, plan_jobs
 
 
+S = "The dressed test street (z 1080): "
+STREET = [
+    ("st_west", S + "from the west end at eye height: the Kamigata row (north, left) with the rice dealer and the paper "
+     "shop furnished, the post-town houses and the inns (south, right), the dead-world litter in the street.",
+     {"scene": "street", "cam": [-42.0, 1.7, -0.3], "look": [0.0, 2.2, 0.8], "lens": 20}),
+    ("st_east", S + "from the east end: the Edo row (the sake shop on the corner, the cloth dealer), the fire-watch ladder "
+     "and the notice board on the ward corner, the grand inn beyond.",
+     {"scene": "street", "cam": [42.0, 1.7, 0.2], "look": [0.0, 2.2, 0.8], "lens": 20}),
+    ("st_corner", S + "the ward corner: fire-watch ladder with its bell, the bucket rack, the notice board, the Jizo, a "
+     "tipped palanquin in the street.", {"scene": "street", "cam": [-4.0, 1.7, -1.5], "look": [10.0, 2.2, 5.5],
+                                           "lens": 18}),
+    ("st_inns", S + "the two inns (south side): noren and inn lanterns, benches, sandals for sale under the eave, "
+     "scattered clogs.", {"scene": "street", "cam": [-1.0, 1.7, 1.6], "look": [-6.0, 2.4, -7.0], "lens": 16}),
+    ("st_shops", S + "the Kamigata shops: noren, hanging signboard, the brush-shaped sign, gutter covers, a vendor's "
+     "spilled load.", {"scene": "street", "cam": [-20.0, 1.7, 0.4], "look": [-29.0, 2.2, 5.5], "lens": 16}),
+    ("st_air", S + "from above: the rows, the ward corner, and the town kura behind the Kamigata row.",
+     {"scene": "street", "cam": [30.0, 30.0, -34.0], "look": [-6.0, 0.0, 5.0], "lens": 22}),
+    ("st_kura", S + "the town kura (Land_JP_Kura_Namako_Furnished) behind the Kamigata row, its door south.",
+     {"scene": "street", "cam": [-19.5, 1.7, 13.2], "look": [-24.0, 3.0, 17.5], "lens": 20}),
+]
+H = "The dressed hamlet (west yard): "
+HAMLET = [
+    ("hm_south", H + "from the south field: stooks, bird clappers and the low rice rack; the huts, the farmhouses behind.",
+     {"scene": "hamlet", "cam": [4.0, 1.7, -30.0], "look": [0.0, 3.0, 0.0], "lens": 16}),
+    ("hm_yard", H + "the threshing yard: straw stack, persimmons drying on a pole, the Kanto farmhouse with its persimmon "
+     "curtain and tools by the door.", {"scene": "hamlet", "cam": [4.0, 1.7, -12.0], "look": [-8.0, 2.5, 3.0],
+                                         "lens": 16}),
+    ("hm_kinai", H + "the Kinai farmhouse: persimmons under the lower roof, tools by the door, the rice racks beyond.",
+     {"scene": "hamlet", "cam": [8.0, 1.7, -12.0], "look": [14.0, 2.5, 3.0], "lens": 16}),
+    ("hm_stable", H + "the stable yard beside the Kanto house: tie post, pack saddle on its rack, stone trough, stooks.",
+     {"scene": "hamlet", "cam": [-10.5, 1.7, -9.0], "look": [-20.0, 1.2, -2.0], "lens": 18}),
+    ("hm_water", H + "the bamboo pipe into its trough between the houses, and the lever well by the huts.",
+     {"scene": "hamlet", "cam": [3.0, 1.7, 6.0], "look": [3.2, 0.8, 12.0], "lens": 20}),
+    ("hm_kura", H + "the hamlet kura (Land_JP_Kura_Kuro_Hinged_Furnished, black boards, hinged plaster leaves), the "
+     "Jizo and Koshin stone at the hamlet entrance.", {"scene": "hamlet", "cam": [15.0, 1.7, 15.0],
+                                                        "look": [25.0, 2.5, 17.0], "lens": 18}),
+    ("hm_air", H + "from above the south-east.", {"scene": "hamlet", "cam": [40.0, 34.0, -40.0], "look": [0.0, 0.0, 4.0],
+                                                   "lens": 22}),
+]
+
+
 class _Lazy(dict):
     def __missing__(self, k):
         if k in ("rooms", "plans"):
@@ -110,9 +151,11 @@ class _Lazy(dict):
         raise KeyError(k)
 
 
-JOBS = _Lazy(kura=KURA)
-JOBS_ALL = ("kura", "rooms", "plans")
+JOBS = _Lazy(kura=KURA, street=STREET, hamlet=HAMLET)
+JOBS_ALL = ("kura", "rooms", "plans", "street", "hamlet")
 SHEETS = {
+    "street": ("C3 the dressed test street (player height)", "", 2, 800, 500, 60, 95),
+    "hamlet": ("C3 the dressed hamlet (player height)", "", 2, 800, 500, 60, 95),
     "kura": ("C3 kura (DW22): three shells, two floors by stair", "", 4, 480, 360, 76, 58),
     "rooms": ("C3 furnished rooms (props as proxies, life layer)", "", 4, 480, 320, 92, 58),
     "plans": ("C3 loot plans (green = floor, orange = on props)", "", 4, 450, 450, 40, 56),

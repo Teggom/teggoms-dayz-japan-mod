@@ -24,3 +24,9 @@
 2026-09-30 19:33:07 | GROUP DONE | furnished west hut | 58 checks 0 failures (T1, lean-to woodshed) | C3 | furnish | 5h 14% wk 35%
 2026-09-30 19:33:07 | GROUP DONE | furnished shed/barn | 46 checks 0 failures | C3 | furnish | 5h 14% wk 35%
 2026-09-30 19:33:07 | GROUP DONE | furnished kura | 2 variants (namako 53, kuro hinged 67), 0 failures, both floors dressed | C3 | furnish | 5h 14% wk 35%
+2026-09-30 19:33:12 | GROUP START | island swap + street dressing | C3 | island | 5h 14% wk 35%
+2026-09-30 19:33:12 | GROUP START | hamlet dressing | C3 | hamlet | 5h 14% wk 35%
+2026-09-30 19:35:46 | PBO PACKED | C3 | jp_buildings.pbo | 5h 15% wk 35%
+2026-09-30 19:39:45 | ISLAND BUILT | C3 | world 3698 objects, placements 153 rows, verify_oprw PASS 3689/3689, mission 93 files parse | 5h 16% wk 35%
+2026-09-30 19:39:45 | GROUP DONE | island swap + street dressing | 12 bases swapped for furnished variants + 2 kura placed; 33 free street objects (C3.csv) + 42 building-bound street/yard objects (site); dress_island check 0 problems; placecheck new flags all by design (gutters in ditches, buried posts, hung eaves pieces, tilted fallen props) | C3 | island | 5h 16% wk 35%
+2026-09-30 19:39:45 | GROUP DONE | hamlet dressing | 26 free objects (rice racks, stooks, scarecrow + clappers, persimmon + daikon poles, kakei, lever well, stable yard, charcoal, tools, Jizo + Koshin), kura in the hamlet; 0 problems | C3 | hamlet | 5h 16% wk 35%

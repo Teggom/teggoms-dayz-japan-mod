@@ -83,7 +83,7 @@ HAMLET = [
     ("jp_s_straw_stack_stook", 928.9, 1018.4, 30, "rice stooks drying in the field"),
     ("jp_s_straw_stack_stook", 927.6, 1020.3, 70, "rice stooks drying in the field"),
     ("jp_s_straw_stack_ab_slumped", 970.5, 1036.5, 0, "a straw stack slumped, cap blown off"),
-    ("jp_s_straw_stack_tawara_stack", 956.6, 1043.8, 0, "rice bales stacked by the sheds"),
+    ("jp_s_straw_stack_tawara_stack", 951.0, 1047.5, 0, "rice bales stacked by the sheds"),
     ("jp_s_scarecrow_kasa", 977.5, 1004.0, 300, "a scarecrow in a hat and raincoat"),
     ("jp_s_scarecrow_naruko", 927.8, 1005.5, 90, "bird clappers on a rope over the field"),
     ("jp_s_laundry_pole_load_kaki", 952.6, 1022.3, 90, "persimmons drying on a pole in the yard"),
@@ -183,7 +183,8 @@ def main():
     boxes = []
     for n, it, why in items:
         box = fp_box(it)
-        boxes.append((n, box))
+        walk = not DC.blocks(it)                  # a walk-on slab (gutter cover) may lie at a door and abut others
+        boxes.append((n, box, walk))
         if not (925.0 < box[0] and box[1] < 1123.0 and 925.0 < box[2] and box[3] < 1123.0):
             probs.append((n, "outside the flat pad"))
         for rn, r in RESERVED.items():
@@ -193,7 +194,7 @@ def main():
             if overlap(box, wb, 0.10):
                 probs.append((n, "into building " + key))
             for a in aprons:
-                if overlap(box, a):
+                if overlap(box, a) and not walk:
                     probs.append((n, "door apron of " + key))
             for sn, sb in sboxes:
                 if overlap(box, sb, 0.05):
@@ -201,9 +202,19 @@ def main():
         for on, ox, oz in others:
             if box[0] - 1.5 < ox < box[1] + 1.5 and box[2] - 1.5 < oz < box[3] + 1.5:
                 probs.append((n, "near " + on))
+    # every building's own yard / street objects against every OTHER building's walls and door aprons
+    for key, wb, aprons, sboxes in bb:
+        for sn, sb in sboxes:
+            for key2, wb2, aprons2, _ in bb:
+                if key2 == key:
+                    continue
+                if overlap(sb, wb2, 0.10):
+                    probs.append(("%s of %s" % (sn, key), "into building " + key2))
+                if not sn.startswith("jp_s_gutter") and any(overlap(sb, a) for a in aprons2):
+                    probs.append(("%s of %s" % (sn, key), "door apron of " + key2))
     for i in range(len(boxes)):
         for j in range(i + 1, len(boxes)):
-            if overlap(boxes[i][1], boxes[j][1], 0.10):
+            if overlap(boxes[i][1], boxes[j][1], 0.10) and not (boxes[i][2] and boxes[j][2]):
                 probs.append((boxes[i][0], "overlaps " + boxes[j][0]))
     rows = ["p3d,x,z,yaw_deg,y_offset"]
     for n, it, why in items:

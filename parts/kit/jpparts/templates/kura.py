@@ -235,7 +235,7 @@ def kura(name=None, lower="namako", door="_open", roof="sangawara", window="_sli
     st = B.P("kura_step")
     xa, xb = cx - 0.67, cx + 0.67
     st.add(prism([(FLOOR, z0r), (0.0, z0r + run), (0.0, z0r)], "x", xa, xb, "stone_cut", vis=(), geo=True, view=False,
-                 fire="stone", tag="ramp"))
+                 fire="granite", tag="ramp"))
     st.road([(xa, FLOOR, z0r), (xb, FLOOR, z0r), (xb, 0.0, z0r + run), (xa, 0.0, z0r + run)], "stone_ext")
     rng = rng_for("kura_step" + (name or ""))
     st.add(rough_block(rng, cx - 0.78, cx + 0.78, -0.05, FLOOR, FACE, 0.62, "stone_cut", chamfer=0.02, top_jit=0.002,
