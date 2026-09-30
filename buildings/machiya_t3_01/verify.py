@@ -194,6 +194,9 @@ def run(M=None, floors=None, pts=None):
     # doors: selections, memory, model.cfg, config
     mcfg = open(os.path.join(DEV, "src", "JP", "buildings", "machiya", "model.cfg")).read()
     ccfg = open(os.path.join(DEV, "src", "JP", "buildings", "config.cpp")).read()
+    # config.cpp holds every shipped building (buildings/pipeline.py, B0): check this building's class only
+    m_ = re.search(r"\tclass %s: HouseNoDestruct\n\t\{.*?\n\t\};\n" % MT.CLASS, ccfg, re.S)
+    ccfg = m_.group(0) if m_ else ""
     gcomps = C.components(geo)
     clears = []
     for k, d in enumerate(M.doors, 1):
@@ -327,6 +330,8 @@ def run(M=None, floors=None, pts=None):
         "%d points (%s)%s" % (len(pts), ", ".join("%s %d" % kv for kv in by.items()), "; bad %s" % badl[:2] if badl
                               else ""))
     ce = open(os.path.join(DEV, "test", "ce", "C_mapgroupproto.xml")).read()
+    m_ = re.search(r'<group name="%s">.*?</group>' % MT.CLASS, ce, re.S)       # this building's loot group only
+    ce = m_.group(0) if m_ else ""
     cepts = [tuple(float(v) for v in m.group(1).split()) for m in re.finditer(r'<point pos="([^"]+)"', ce)]
     worst = max([max(abs(a - b) for a, b in zip(bloot.ce_to_world(l, POS, YAW), bloot.model_to_world(p["model"], POS,
                                                                                                      YAW)))

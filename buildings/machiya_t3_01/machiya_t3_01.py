@@ -31,6 +31,8 @@ from jpparts.assemble import Builder, to_world  # noqa: E402
 
 NAME = "jp_machiya_t3_01"
 CLASS = "Land_JP_Machiya_T3_01"
+FRAME_NOTE = ("model: origin = footprint centre at grade, +z = street front, +x = the rooms side (the toriniwa is -x); "
+              "placed at yaw 180 (front south)")          # rooms.json (buildings/pipeline.py)
 
 # ------------------------------------------------------------------------------------------------ dimensions
 W = 4 * KEN                 # frontage 4 ken (Ioka: 4 kyo-ken)
