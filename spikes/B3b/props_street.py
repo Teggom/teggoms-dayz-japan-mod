@@ -347,7 +347,7 @@ def chochin(R, H, cellname, wear="_w1", text_wear="_w1", vis=(1,), crushed=False
 
     def rad(y):
         t = y / H
-        return R * (0.55 + 0.45 * math.sin(math.pi * t)) + 0.004
+        return R * (0.55 + 0.45 * math.sin(math.pi * t)) + 0.009   # L2: at 4 mm the strip came within 0.02 mm of the paper (z-fight)
 
     def f(u, v):
         y = y0 + th * (1 - v)

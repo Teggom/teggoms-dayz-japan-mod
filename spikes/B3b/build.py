@@ -279,6 +279,7 @@ def write_all(sel):
         built = []
         for m in prop["models"]:
             P = m["build"]()
+            skit.face_text(P.solids, mirror_u=True)      # L2 text fix: face out + read right in game (skit.py)
             P.pid = m["p3d"]
             lods = P.lods()
             mp = os.path.join(OUT, prop["cat"], m["p3d"] + ".p3d")

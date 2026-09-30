@@ -256,6 +256,51 @@ def text_on(center, right, up, h, mat, cellname, wear=None, off=0.003, normal=No
     return decal(tl, tr, br, bl, mat, cellname, wear=wear, vis=vis, crop=crop)
 
 
+# ------------------------------------------------------------------------------------------------ text facing (L2 fix)
+# L2, 2026-09-30 (spikes/L2/textface.py, research/outdoor_kit/contact_sheets/l2_textcheck_*.jpg): DayZ model space is
+# LEFT-handed (x east, y up, z north) and the game draws single-sided faces from their outward side only. decal() /
+# text_on() above assume right x up = outward in a right-handed sense, so the quads they write (and grid-sheet text
+# built the same way) (a) face INTO their host surface (outward = -(right x up)): invisible in game from the front,
+# and (b) run the texture u along 'right', which a viewer outside sees as his LEFT: mirrored. face_text() turns such
+# solids round and, when asked, mirrors u within the solid's own cell range. text_ok() = text_on() already fixed.
+TEXT_MATS = ("decal_sumi_text", "decal_carved_text", "decal_sumi_text_life")
+
+
+def is_text(s):
+    return isinstance(s.mats, str) and s.mats in TEXT_MATS
+
+
+def face_text(solids, mirror_u=True):
+    """Fix text solids in place (see above): flip every face's outward normal; mirror u if mirror_u. Returns how many
+    solids it turned. B3b's builders call it with mirror_u=True (their u runs along 'right'), L1's with False (lkit.text
+    and lkit.uvcell already mirror u)."""
+    k = 0
+    for s in solids:
+        if not is_text(s) or getattr(s, "_text_faced", False):
+            continue
+        s.finalize()
+        if mirror_u:
+            us = [a for f in s.fuv for a, _ in f]
+            lo, hi = min(us), max(us)
+            s.fuv = [[(lo + hi - a, b) for a, b in f] for f in s.fuv]
+        s.fn = [core.mul(n, -1.0) for n in s.fn]
+        if s.normals is not None:
+            s.normals = s.fn
+        if getattr(s, "vn", None) is not None:
+            s.vn = [[core.mul(q, -1.0) for q in ff] for ff in s.vn]
+        s._text_faced = True
+        k += 1
+    return k
+
+
+def text_ok(center, right, up, h, mat, cellname, wear=None, off=0.003, vis=(1,), width=None, crop=None):
+    """text_on(), faced out along right x up and reading correctly in game (u runs to the viewer's right). New code
+    (L2 on) uses this; right x up is the side the text is read from."""
+    s = text_on(center, right, up, h, mat, cellname, wear=wear, off=off, vis=vis, width=width, crop=crop)
+    face_text([s], mirror_u=True)
+    return s
+
+
 def moss_top(seed, cx, cz, r0, y, sx=1.0, sz=1.0, wear="_w1", vis=(1,)):
     """A moss / lichen patch 3 mm above a top face (decal)."""
     pts = [(cx + x, cz + z) for x, z in blob(seed, r0, sx=sx, sz=sz)]

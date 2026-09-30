@@ -26,6 +26,7 @@ DEV = os.path.abspath(os.path.join(HERE, "..", ".."))
 B3A = os.path.join(DEV, "spikes", "B3a")
 sys.path[:0] = [HERE, B3A]
 import build as B  # noqa: E402
+import lkit  # noqa: E402
 
 L1_MODULES = ["props_life_wall", "props_life_religious", "props_life_meal", "props_life_living", "props_life_work",
               "props_life_tier"]
@@ -83,6 +84,7 @@ def write_all(sel):
         built = []
         for m in prop["models"]:
             P = m["build"]()
+            lkit.skit.face_text(P.solids, mirror_u=False)   # L2 text fix: face the text out (u is already mirrored)
             P.pid = m["p3d"]
             lods = P.lods()
             mp = os.path.join(OUT_L1, prop["cat"], m["p3d"] + ".p3d")

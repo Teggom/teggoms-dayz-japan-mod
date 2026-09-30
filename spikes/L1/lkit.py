@@ -196,6 +196,8 @@ def only_vis(ss, vis):
 # front (+z), the model's +x is on the VIEWER'S LEFT (B3a render.py's camera shows the same). A decal whose texture u
 # runs along +x on a +z face therefore reads MIRRORED. text() and uvcell() run u against the face's 'right' vector
 # (right x up = the outward normal, as skit.text_on), so the atlas reads as drawn when seen from outside the face.
+# L2 (2026-09-30): text_on's quad itself faces INTO the host (outward = -(right x up)), so build_l1.py turns every
+# text solid round after building (skit.face_text(mirror_u=False)); new code should use skit.text_ok().
 def text(center, right, up, h, mat, cellname, wear="_w1", off=0.002, vis=(1,), width=None, crop=None):
     """skit.text_on with the texture u mirrored: reads correctly in game (see the note above)."""
     s = text_on(center, right, up, h, mat, cellname, wear=wear, off=off, vis=vis, width=width, crop=crop)
