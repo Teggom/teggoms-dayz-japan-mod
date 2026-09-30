@@ -23,3 +23,4 @@
 2026-09-30 18:29:17 | GROUP START | render sheets | C2 | family, hamlet, interior | 5h 55% wk 33%
 2026-09-30 18:30:28 | GROUP DONE | render sheets | c2_family (21), c2_hamlet (4 views), c2_interior (9 views) | C2 | research/production/contact_sheets/c2_*.jpg | 5h 56% wk 33%
 2026-09-30 18:30:28 | SHEETS DONE | C2 | c2_family.jpg, c2_hamlet.jpg, c2_interior.jpg | 5h 56% wk 33%
+2026-09-30 18:30:34 | END | C2 | 21 shells, 1,050 checks pass; commits 6541883..3259d30 | 5h 56% wk 33%
