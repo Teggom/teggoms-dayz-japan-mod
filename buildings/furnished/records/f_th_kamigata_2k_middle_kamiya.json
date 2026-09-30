@@ -1,0 +1,115 @@
+{
+ "key": "f_th_kamigata_2k_middle_kamiya",
+ "class": "Land_JP_Townhouse_Kamigata_2ken_Middle_ToriR_Kamiya",
+ "name": "jp_f_th_kamigata_2k_middle_kamiya",
+ "model": "\\JP\\buildings\\furnished\\jp_f_th_kamigata_2k_middle_kamiya.p3d",
+ "model_dir": "furnished",
+ "doors": [
+  "Entrance (street)",
+  "Toriniwa -> oku",
+  "Toriniwa -> mise",
+  "Kitchen back door (yard)",
+  "Street window"
+ ],
+ "faces": {
+  "Resolution 1": 4554,
+  "Resolution 2": 1888,
+  "Resolution 3": 682,
+  "Geometry": 924,
+  "Memory": 0,
+  "Roadway": 15,
+  "View Geometry": 908,
+  "Fire Geometry": 914
+ },
+ "loot_points": 16,
+ "config_class": "\tclass Land_JP_Townhouse_Kamigata_2ken_Middle_ToriR_Kamiya: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Townhouse (Kamigata, 2 ken, Middle, toriniwa right), furnished: paper and sundries shop\";\n\t\tmodel=\"\\JP\\buildings\\furnished\\jp_f_th_kamigata_2k_middle_kamiya.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t\tclass DoorsTwin1\n\t\t\t{\n\t\t\t\tdisplayName=\"Entrance (street)\";\n\t\t\t\tcomponent=\"DoorsTwin1\";\n\t\t\t\tsoundPos=\"doorsTwin1_action\";\n\t\t\t\tanimPeriod=1;\n\t\t\t\tinitPhase=0;\n\t\t\t\tinitOpened=0.3;\n\t\t\t\tsoundOpen=\"doorWoodSlideOpen\";\n\t\t\t\tsoundClose=\"doorWoodSlideClose\";\n\t\t\t\tsoundLocked=\"doorWoodSlideRattle\";\n\t\t\t\tsoundOpenABit=\"doorWoodSlideOpenABit\";\n\t\t\t};\n\t\t\tclass DoorsTwin2\n\t\t\t{\n\t\t\t\tdisplayName=\"Toriniwa -> oku\";\n\t\t\t\tcomponent=\"DoorsTwin2\";\n\t\t\t\tsoundPos=\"doorsTwin2_action\";\n\t\t\t\tanimPeriod=0.8;\n\t\t\t\tinitPhase=0;\n\t\t\t\tinitOpened=0.5;\n\t\t\t\tsoundOpen=\"doorWoodSlideOpen\";\n\t\t\t\tsoundClose=\"doorWoodSlideClose\";\n\t\t\t\tsoundLocked=\"doorWoodSlideRattle\";\n\t\t\t\tsoundOpenABit=\"doorWoodSlideOpenABit\";\n\t\t\t};\n\t\t\tclass DoorsTwin3\n\t\t\t{\n\t\t\t\tdisplayName=\"Toriniwa -> mise\";\n\t\t\t\tcomponent=\"DoorsTwin3\";\n\t\t\t\tsoundPos=\"doorsTwin3_action\";\n\t\t\t\tanimPeriod=0.8;\n\t\t\t\tinitPhase=0;\n\t\t\t\tinitOpened=0.5;\n\t\t\t\tsoundOpen=\"doorWoodSlideOpen\";\n\t\t\t\tsoundClose=\"doorWoodSlideClose\";\n\t\t\t\tsoundLocked=\"doorWoodSlideRattle\";\n\t\t\t\tsoundOpenABit=\"doorWoodSlideOpenABit\";\n\t\t\t};\n\t\t\tclass DoorsTwin4\n\t\t\t{\n\t\t\t\tdisplayName=\"Kitchen back door (yard)\";\n\t\t\t\tcomponent=\"DoorsTwin4\";\n\t\t\t\tsoundPos=\"doorsTwin4_action\";\n\t\t\t\tanimPeriod=1;\n\t\t\t\tinitPhase=0;\n\t\t\t\tinitOpened=0.3;\n\t\t\t\tsoundOpen=\"doorWoodSlideOpen\";\n\t\t\t\tsoundClose=\"doorWoodSlideClose\";\n\t\t\t\tsoundLocked=\"doorWoodSlideRattle\";\n\t\t\t\tsoundOpenABit=\"doorWoodSlideOpenABit\";\n\t\t\t};\n\t\t\tclass DoorsTwin5\n\t\t\t{\n\t\t\t\tdisplayName=\"Street window\";\n\t\t\t\tcomponent=\"DoorsTwin5\";\n\t\t\t\tsoundPos=\"doorsTwin5_action\";\n\t\t\t\tanimPeriod=0.6;\n\t\t\t\tinitPhase=0;\n\t\t\t\tinitOpened=0.4;\n\t\t\t\tsoundOpen=\"doorWoodSlideOpen\";\n\t\t\t\tsoundClose=\"doorWoodSlideClose\";\n\t\t\t\tsoundLocked=\"doorWoodSlideRattle\";\n\t\t\t\tsoundOpenABit=\"doorWoodSlideOpenABit\";\n\t\t\t};\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t\tclass DoorsTwin1\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\thitpoints=1000;\n\t\t\t\t\t\ttransferToGlobalCoef=0;\n\t\t\t\t\t};\n\t\t\t\t\tcomponentNames[]=\n\t\t\t\t\t{\n\t\t\t\t\t\t\"doorstwin1\"\n\t\t\t\t\t};\n\t\t\t\t\tfatalInjuryCoef=-1;\n\t\t\t\t\tclass ArmorType\n\t\t\t\t\t{\n\t\t\t\t\t\tclass Projectile\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=3;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass Melee\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=5;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass FragGrenade\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=10;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass DoorsTwin2\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\thitpoints=1000;\n\t\t\t\t\t\ttransferToGlobalCoef=0;\n\t\t\t\t\t};\n\t\t\t\t\tcomponentNames[]=\n\t\t\t\t\t{\n\t\t\t\t\t\t\"doorstwin2\"\n\t\t\t\t\t};\n\t\t\t\t\tfatalInjuryCoef=-1;\n\t\t\t\t\tclass ArmorType\n\t\t\t\t\t{\n\t\t\t\t\t\tclass Projectile\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=3;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass Melee\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=5;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass FragGrenade\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=10;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass DoorsTwin3\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\thitpoints=1000;\n\t\t\t\t\t\ttransferToGlobalCoef=0;\n\t\t\t\t\t};\n\t\t\t\t\tcomponentNames[]=\n\t\t\t\t\t{\n\t\t\t\t\t\t\"doorstwin3\"\n\t\t\t\t\t};\n\t\t\t\t\tfatalInjuryCoef=-1;\n\t\t\t\t\tclass ArmorType\n\t\t\t\t\t{\n\t\t\t\t\t\tclass Projectile\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=3;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass Melee\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=5;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass FragGrenade\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=10;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass DoorsTwin4\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\thitpoints=1000;\n\t\t\t\t\t\ttransferToGlobalCoef=0;\n\t\t\t\t\t};\n\t\t\t\t\tcomponentNames[]=\n\t\t\t\t\t{\n\t\t\t\t\t\t\"doorstwin4\"\n\t\t\t\t\t};\n\t\t\t\t\tfatalInjuryCoef=-1;\n\t\t\t\t\tclass ArmorType\n\t\t\t\t\t{\n\t\t\t\t\t\tclass Projectile\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=3;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass Melee\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=5;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass FragGrenade\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=10;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass DoorsTwin5\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\thitpoints=1000;\n\t\t\t\t\t\ttransferToGlobalCoef=0;\n\t\t\t\t\t};\n\t\t\t\t\tcomponentNames[]=\n\t\t\t\t\t{\n\t\t\t\t\t\t\"doorstwin5\"\n\t\t\t\t\t};\n\t\t\t\t\tfatalInjuryCoef=-1;\n\t\t\t\t\tclass ArmorType\n\t\t\t\t\t{\n\t\t\t\t\t\tclass Projectile\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=3;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass Melee\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=5;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass FragGrenade\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=10;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_f_th_kamigata_2k_middle_kamiya_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\t\t\t\"doors1\",\"\",\n\t\t\t\"doors2\",\"\",\n\t\t\t\"doors3\",\"\",\n\t\t\t\"doors4\",\"\",\n\t\t\t\"doors5\",\"\",\n\t\t\t\"doors6\",\"\"\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_f_th_kamigata_2k_middle_kamiya: Default\n\t{\n\t\tskeletonName=\"jp_f_th_kamigata_2k_middle_kamiya_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t\tclass Doors1\n\t\t\t{\n\t\t\t\ttype=\"translation\";\n\t\t\t\tsource=\"DoorsTwin1\";\n\t\t\t\tselection=\"doors1\";\n\t\t\t\taxis=\"doors1_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\toffset0=0;\n\t\t\t\toffset1=1.5000;\n\t\t\t};\n\t\t\tclass Doors2\n\t\t\t{\n\t\t\t\ttype=\"translation\";\n\t\t\t\tsource=\"DoorsTwin1\";\n\t\t\t\tselection=\"doors2\";\n\t\t\t\taxis=\"doors2_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\toffset0=0;\n\t\t\t\toffset1=0.6550;\n\t\t\t};\n\t\t\tclass Doors3\n\t\t\t{\n\t\t\t\ttype=\"translation\";\n\t\t\t\tsource=\"DoorsTwin2\";\n\t\t\t\tselection=\"doors3\";\n\t\t\t\taxis=\"doors3_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\toffset0=0;\n\t\t\t\toffset1=1.1000;\n\t\t\t};\n\t\t\tclass Doors4\n\t\t\t{\n\t\t\t\ttype=\"translation\";\n\t\t\t\tsource=\"DoorsTwin3\";\n\t\t\t\tselection=\"doors4\";\n\t\t\t\taxis=\"doors4_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\toffset0=0;\n\t\t\t\toffset1=1.1000;\n\t\t\t};\n\t\t\tclass Doors5\n\t\t\t{\n\t\t\t\ttype=\"translation\";\n\t\t\t\tsource=\"DoorsTwin4\";\n\t\t\t\tselection=\"doors5\";\n\t\t\t\taxis=\"doors5_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\toffset0=0;\n\t\t\t\toffset1=1.1000;\n\t\t\t};\n\t\t\tclass Doors6\n\t\t\t{\n\t\t\t\ttype=\"translation\";\n\t\t\t\tsource=\"DoorsTwin5\";\n\t\t\t\tselection=\"doors6\";\n\t\t\t\taxis=\"doors6_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\toffset0=0;\n\t\t\t\toffset1=0.5900;\n\t\t\t};\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Townhouse_Kamigata_2ken_Middle_ToriR_Kamiya\">",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"0.099286 0.050000 0.781429\" range=\"0.573571\" height=\"1.433929\" />",
+  "\t\t\t\t\t\t<point pos=\"2.693571 0.050000 0.781429\" range=\"0.468332\" height=\"1.170830\" />",
+  "\t\t\t\t\t\t<point pos=\"2.016429 0.500000 -0.652857\" range=\"0.468779\" height=\"1.171948\" />",
+  "\t\t\t\t\t\t<point pos=\"-2.730000 0.050000 0.874286\" range=\"0.638754\" height=\"1.596885\" />",
+  "\t\t\t\t</container>",
+  "\t\t\t\t<container name=\"lootshelves\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"shelves\" />",
+  "\t\t\t\t\t\t<point pos=\"0.200000 0.950000 1.605000\" range=\"0.180000\" height=\"0.450000\" />",
+  "\t\t\t\t\t\t<point pos=\"3.050000 0.650000 -0.750000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"3.250000 0.800000 -0.750000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"3.450000 0.950000 -0.750000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.280000 0.830000 -1.320000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.250000 0.580000 -1.035000\" range=\"0.400000\" height=\"1.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.250000 0.580000 -1.435000\" range=\"0.400000\" height=\"1.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.595000 1.000000 -0.870000\" range=\"0.200000\" height=\"0.500000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.595000 1.000000 -0.370000\" range=\"0.200000\" height=\"0.500000\" />",
+  "\t\t\t\t\t\t<point pos=\"-3.350000 0.720000 -0.250000\" range=\"0.180000\" height=\"0.450000\" />",
+  "\t\t\t\t\t\t<point pos=\"-3.350000 0.210000 -0.250000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"-2.440000 0.680000 -1.500000\" range=\"0.200000\" height=\"0.500000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "proxies": {
+  "Resolution 1": 32,
+  "Geometry": 13,
+  "View Geometry": 13,
+  "Fire Geometry": 13
+ },
+ "proxy_addons": [
+  "JP_Furniture",
+  "JP_Site"
+ ],
+ "loot_containers": {
+  "lootFloor": 4,
+  "lootshelves": 12
+ },
+ "site": [
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "x": -1.03,
+   "z": 5.1,
+   "yaw": 0.0,
+   "y": 0.0,
+   "why": "stone slab over the gutter at the door"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "x": 0.91,
+   "z": 5.1,
+   "yaw": 0.0,
+   "y": 0.0,
+   "why": "covered street gutter (dobu-ita)"
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_oke_ab_tipped.p3d",
+   "x": 0.6,
+   "z": -4.9,
+   "yaw": 30.0,
+   "y": 0.0,
+   "why": "a tipped tub in the back yard"
+  }
+ ],
+ "params": {
+  "base": "th_kamigata_2k_middle_torir",
+  "dress": "kamigata_kamiya"
+ },
+ "bbox": [
+  -2.034,
+  1.92,
+  -0.15,
+  6.276,
+  -4.661,
+  4.685
+ ]
+}

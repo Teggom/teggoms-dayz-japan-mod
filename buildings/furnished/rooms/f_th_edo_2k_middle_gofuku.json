@@ -1,0 +1,108 @@
+{
+ "building": "Land_JP_Townhouse_Edo_2ken_Middle_ToriR_Gofuku",
+ "p3d": "\\JP\\buildings\\furnished\\jp_f_th_edo_2k_middle_gofuku.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "toriniwa",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    1.76,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2",
+    "DoorsTwin3"
+   ],
+   "note": "entry passage, 1 ken, full omoya depth",
+   "rect_model": [
+    -1.76,
+    -0.06,
+    -1.76,
+    3.58
+   ],
+   "lot_width": 3.768
+  },
+  {
+   "name": "mise",
+   "tag": "shop:general",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    1.8800000000000001,
+    3.58,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "shop room",
+   "rect_model": [
+    0.06,
+    1.76,
+    0.97,
+    3.58
+   ],
+   "lot_width": 3.768
+  },
+  {
+   "name": "oku",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    1.8800000000000001,
+    3.58,
+    -5.4,
+    -2.79
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "back room",
+   "rect_model": [
+    0.06,
+    1.76,
+    -1.76,
+    0.85
+   ],
+   "lot_width": 3.768
+  },
+  {
+   "name": "kitchen",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -7.220000000000001,
+    -5.52
+   ],
+   "doors": [
+    "DoorsTwin4"
+   ],
+   "note": "hashiri kitchen (no kamado yet: B3a/B4)",
+   "rect_model": [
+    -1.76,
+    1.76,
+    -3.58,
+    -1.88
+   ],
+   "lot_width": 3.768
+  }
+ ],
+ "loot_points": 16,
+ "loot_by_room": {
+  "toriniwa": 3,
+  "mise": 5,
+  "oku": 4,
+  "kitchen": 4
+ }
+}

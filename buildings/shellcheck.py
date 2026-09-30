@@ -63,7 +63,15 @@ def run(bd):
     def rec(check, ok, detail):
         RES.append({"check": check, "ok": bool(ok), "detail": detail})
         print("%-4s %-52s %s" % ("OK" if ok else "FAIL", check, detail))
-    lods = mlod.read_mlod(bd["mlod"])
+    raw = mlod.read_mlod(bd["mlod"])
+    furnished = getattr(mod, "D", None) is not None and hasattr(mod, "proxies")
+    if furnished:
+        # C3: a furnished variant (the B4 pattern): the shell checks run on the LODs with the proxy triangles stripped;
+        # the decorator checks (decor.check_all, D1-D16) read the raw LODs for the proxy records
+        from jpparts import proxies as PX
+        lods = [PX.strip(l) for l in raw]
+    else:
+        lods = raw
     L = {mlod.lod_name(l.resolution): l for l in lods}
     want = ["Resolution 1", "Resolution 2", "Resolution 3", "Geometry", "Memory", "Roadway", "View Geometry",
             "Fire Geometry"]
@@ -321,6 +329,17 @@ def run(bd):
          else "not placed on the island (shipped in the PBO only)") + ("; CLASH %s" % sorted(set(clash)) if clash
                                                                         else ""))
     BC.run_g3(M, L, floors, rec, extra_portals=getattr(mod, "PORTALS", ()))
+    if furnished:
+        from jpparts import decor as DC, raycheck as RC
+
+        def door_fn(d, gc):
+            if getattr(mod, "DOOR_CHECK_OTHERS_OPEN", False):
+                sh = [od for od in M.doors if od is not d and not getattr(od, "passable", True)]
+                gc = RC.open_state(gc, sh, 1.0) if sh else gc
+            return MV.door_world(d, gc)
+        DC.check_all(mod.D, M, L, pts, rec, door_fn=door_fn,
+                     extra_openings=getattr(mod, "EXTRA_OPENINGS", None), fixed_band=getattr(mod, "FIXED_BAND", None),
+                     site_bounds=getattr(mod, "SITE_BOUNDS", None), mlod_lods=raw)
     odol =os.path.join(DEV, "src", "JP", "buildings", b["model_dir"], name + ".p3d")
     data = open(odol, "rb").read()
     if data[:4] != b"ODOL":

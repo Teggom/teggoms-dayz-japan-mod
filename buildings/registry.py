@@ -355,6 +355,72 @@ for _b in C3_KURA:
 BUILDINGS += C3_KURA
 
 
+# ------------------------------------------------------------------------------------------------ C3 furnished variants
+# The B4 pattern for every wave-1 type (buildings/furnishkit.py + buildings/furnish_sets.py): the base shell's recipe
+# with the SAME params (identical shell geometry) + fittings + props as proxies + loot on floors and prop surfaces +
+# street / yard objects. Class = the base class + the dressing. A furnished variant takes its base's island spot
+# (C3_SWAP: base key -> furnished key); the bare shell stays shipped in the PBO.
+def _find(key):
+    return next(x for x in BUILDINGS if x["key"] == key)
+
+
+def _furn(key, base, dress, suffix, display):
+    b = _find(base)
+    return {"key": key, "dir": "furnished", "module": "furnished_shells", "class": b["class"] + "_" + suffix,
+            "name": "jp_" + key, "display": b["display"] + ", " + display,
+            "params": {"base": base, "dress": dress}, "model_dir": "furnished", "mass": b["mass"],
+            "sound": b["sound"], "loot": b["loot"], "placements": [], "verify": "shellcheck", "budget": b["budget"],
+            "ship": True}
+
+
+C3_FURNISHED = [
+    _furn("f_th_kamigata_3k_middle_komeya", "th_kamigata_3k_middle_toril", "kamigata_komeya", "Komeya",
+          "furnished: rice dealer"),
+    _furn("f_th_kamigata_2k_middle_kamiya", "th_kamigata_2k_middle_torir", "kamigata_kamiya", "Kamiya",
+          "furnished: paper and sundries shop"),
+    _furn("f_th_edo_2k_middle_gofuku", "th_edo_2k_middle_torir", "edo_gofuku", "Gofuku", "furnished: cloth dealer"),
+    _furn("f_th_edo_3k_cornerr_sakaya", "th_edo_3k_cornerr_toril", "edo_sakaya", "Sakaya", "furnished: sake shop"),
+    _furn("f_pt_det_tile_nuriya_home", "pt_det_tile_nuriya", "posttown_home", "Home", "furnished: home"),
+    _furn("f_inn_std_tile", "inn_std_tile", "inn_std", "Furnished", "furnished"),
+    _furn("f_inn_grand", "inn_grand", "inn_grand", "Furnished", "furnished (upstairs guest rooms)"),
+    _furn("f_farmhouse_kanto", "farmhouse_kanto_yosemune_umaya", "farm_kanto", "Furnished", "furnished"),
+    _furn("f_farmhouse_kinai", "farmhouse_kinai_kirizuma_tile_takahe", "farm_kinai", "Furnished", "furnished"),
+    _furn("f_hut_east_l_board", "hut_east_l_board", "hut_east", "Furnished", "furnished (T1)"),
+    _furn("f_hut_west_thatch_leanl", "hut_west_thatch_leanl", "hut_west", "Furnished", "furnished (T1)"),
+    _furn("f_shed_walled_woodshed", "shed_walled_ishioki_woodshed", "shed_barn", "Furnished", "furnished (storage)"),
+    _furn("f_kura_namako", "kura_namako", "kura_storage", "Furnished", "furnished (storage)"),
+    _furn("f_kura_kuro_hinged", "kura_kuro_hinged", "kura_storage", "Furnished", "furnished (storage)"),
+]
+# base key -> furnished key: the furnished variant takes the base's island spot
+C3_SWAP = {"th_kamigata_3k_middle_toril": "f_th_kamigata_3k_middle_komeya",
+           "th_kamigata_2k_middle_torir": "f_th_kamigata_2k_middle_kamiya",
+           "th_edo_2k_middle_torir": "f_th_edo_2k_middle_gofuku",
+           "th_edo_3k_cornerr_toril": "f_th_edo_3k_cornerr_sakaya",
+           "pt_det_tile_nuriya": "f_pt_det_tile_nuriya_home",
+           "inn_std_tile": "f_inn_std_tile",
+           "inn_grand": "f_inn_grand",
+           "farmhouse_kanto_yosemune_umaya": "f_farmhouse_kanto",
+           "farmhouse_kinai_kirizuma_tile_takahe": "f_farmhouse_kinai",
+           "hut_east_l_board": "f_hut_east_l_board",
+           "hut_west_thatch_leanl": "f_hut_west_thatch_leanl",
+           "shed_walled_ishioki_woodshed": "f_shed_walled_woodshed"}
+# new spots for furnished variants whose base had none (the kura: behind the town row, in the hamlet)
+C3_FURN_PLACEMENTS = {
+    "f_kura_namako": [{"pos": (1000.0, 25.0, 1097.5), "yaw": 180.0,
+                       "where": "test island: behind the C1 Kamigata row (town kura at the back of the lots), door south"}],
+    "f_kura_kuro_hinged": [{"pos": (975.0, 25.0, 1041.0), "yaw": 270.0,
+                            "where": "test island: C2 hamlet, east edge, door west onto the lane"}],
+}
+for _f in C3_FURNISHED:
+    _base = _f["params"]["base"]
+    if C3_SWAP.get(_base) == _f["key"]:
+        _bb = _find(_base)
+        _f["placements"] = [dict(p, where=p["where"] + " (C3: furnished)") for p in _bb["placements"]]
+        _bb["placements"] = []
+    _f["placements"] += C3_FURN_PLACEMENTS.get(_f["key"], [])
+BUILDINGS += C3_FURNISHED
+
+
 def get(key):
     for b in BUILDINGS:
         if b["key"] == key:

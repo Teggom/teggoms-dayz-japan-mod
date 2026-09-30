@@ -251,6 +251,10 @@ def blender_main(spec):
                 for p in pts:
                     if lo is not None and p.get("floor") != lo:
                         continue
+                    if v.get("loot_min_y") is not None and p["model"][1] < v["loot_min_y"]:
+                        continue
+                    if cut is not None and p["model"][1] > cut:
+                        continue
                     rgb = (0.1, 0.85, 0.15) if p.get("container", "lootFloor") == "lootFloor" else (1.0, 0.45, 0.0)
                     x, y, z = p["model"]
                     markers.append(((x, y + 0.03, z), rgb))
@@ -355,7 +359,7 @@ def main(argv):
         run_jobs(jobs, min(jobs_n, len(jobs)))
         return 0
     import c3_jobs
-    sets = [a for a in argv if a in c3_jobs.JOBS] or list(c3_jobs.JOBS)
+    sets = [a for a in argv if a in c3_jobs.JOBS_ALL] or list(c3_jobs.JOBS_ALL)
     if "--compose" not in argv:
         run_jobs([j for s in sets for j in c3_jobs.JOBS[s]], jobs_n)
     for s in sets:

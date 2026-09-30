@@ -1,0 +1,92 @@
+{
+ "building": "Land_JP_Hut_East_L_Board_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_f_hut_east_l_board.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    2.66,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "doma",
+   "enclosed": true,
+   "rect_model": [
+    -3.58,
+    -0.98,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -3.19,
+      -2.28
+     ],
+     "yaw": 0.0,
+     "size": [
+      0.6,
+      0.6
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "living",
+   "tag": "living",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    2.8,
+    7.220000000000001,
+    -5.4,
+    -0.06
+   ],
+   "doors": [],
+   "note": "living floor with the irori, open to the doma",
+   "enclosed": true,
+   "rect_model": [
+    -0.84,
+    3.58,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "living",
+     "rect": [
+      1.365,
+      2.275,
+      -0.455,
+      0.455
+     ],
+     "floor_y": 0.4,
+     "pit": "irori",
+     "hook": [
+      1.82,
+      2.62,
+      0.0
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    }
+   ]
+  }
+ ],
+ "loot_points": 10,
+ "loot_by_room": {
+  "doma": 4,
+  "living": 6
+ }
+}

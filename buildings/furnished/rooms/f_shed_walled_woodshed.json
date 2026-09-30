@@ -1,0 +1,58 @@
+{
+ "building": "Land_JP_Shed_Walled_Ishioki_Woodshed_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_f_shed_walled_woodshed.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "leanto",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    5.53,
+    7.13,
+    -3.49,
+    -0.15
+   ],
+   "doors": [],
+   "note": "open lean-to on the right gable (woodshed / work space)",
+   "enclosed": false,
+   "rect_model": [
+    2.8,
+    4.4,
+    -1.67,
+    1.67
+   ],
+   "fittings": []
+  },
+  {
+   "name": "floor",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "shed floor",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 17,
+ "loot_by_room": {
+  "leanto": 4,
+  "floor": 13
+ }
+}

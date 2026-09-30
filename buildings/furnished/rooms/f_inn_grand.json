@@ -1,0 +1,158 @@
+{
+ "building": "Land_JP_Hatago_Grand_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_f_inn_grand.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "toriniwa",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    7.34,
+    9.04,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2",
+    "DoorsTwin3"
+   ],
+   "note": "entry passage, 1 ken, full omoya depth",
+   "rect_model": [
+    2.79,
+    4.49,
+    -0.85,
+    4.49
+   ],
+   "lot_width": 9.1
+  },
+  {
+   "name": "mise",
+   "tag": "office",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.0600000000000005,
+    7.22,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin4"
+   ],
+   "note": "shop room",
+   "rect_model": [
+    -4.49,
+    2.67,
+    1.88,
+    4.49
+   ],
+   "lot_width": 9.1
+  },
+  {
+   "name": "oku",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.0600000000000005,
+    7.22,
+    -5.4,
+    -2.79
+   ],
+   "doors": [
+    "DoorsTwin2",
+    "DoorsTwin4"
+   ],
+   "note": "back room (the stair up)",
+   "rect_model": [
+    -4.49,
+    2.67,
+    -0.85,
+    1.76
+   ],
+   "lot_width": 9.1
+  },
+  {
+   "name": "kitchen",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.0600000000000005,
+    9.04,
+    -9.04,
+    -5.52
+   ],
+   "doors": [
+    "DoorsTwin6"
+   ],
+   "note": "hashiri kitchen (no kamado yet: B3a/B4)",
+   "rect_model": [
+    -4.49,
+    4.49,
+    -4.49,
+    -0.97
+   ],
+   "lot_width": 9.1
+  },
+  {
+   "name": "nikai_front",
+   "tag": "zashiki",
+   "floor": "boards",
+   "level_m": 3.15,
+   "rect_kit": [
+    0.0600000000000005,
+    9.04,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin5"
+   ],
+   "note": "upstairs front room (street windows)",
+   "rect_model": [
+    -4.49,
+    4.49,
+    1.88,
+    4.49
+   ],
+   "lot_width": 9.1
+  },
+  {
+   "name": "nikai_back",
+   "tag": "zashiki",
+   "floor": "boards",
+   "level_m": 3.15,
+   "rect_kit": [
+    0.0600000000000005,
+    9.04,
+    -5.4,
+    -2.79
+   ],
+   "doors": [
+    "DoorsTwin5"
+   ],
+   "note": "upstairs back room (the stairwell)",
+   "rect_model": [
+    -4.49,
+    4.49,
+    -0.85,
+    1.76
+   ],
+   "lot_width": 9.1
+  }
+ ],
+ "loot_points": 50,
+ "loot_by_room": {
+  "toriniwa": 3,
+  "mise": 6,
+  "oku": 6,
+  "kitchen": 18,
+  "nikai_front": 9,
+  "nikai_back": 8
+ }
+}
