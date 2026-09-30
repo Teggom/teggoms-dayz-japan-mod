@@ -157,5 +157,12 @@
   - Gable slits FIXED in `walls.gable` (_tile/_kura infill now continuous). This changes the machiya: rebuilt, 78/78,
     PBO repacked. **Check the machiya's gable ends (loft) at the G4 walk.**
   - The half door gets tested in game later (next walk).
+- 2026-09-30: **B3a DONE** (opus-high, 498k tokens / 42 min; TOKEN_LOG.md, TIMELOG_B3a.md). 24 props = 110 models
+  (24 new, 36 variants, 50 abandoned), all checks pass, 62 loot surfaces in the `.prop.json` sidecars;
+  `@Japan/addons/jp_furniture.pbo` (JP_Furniture, `StaticObj_JP_F_*`). Pipeline in `spikes/B3a/`; progress + B3b
+  reuse notes in `src/JP/furniture/B3a_PROGRESS.md`; sheets `research/interior/contact_sheets/b3a_*.jpg`.
+  Commits 564eec5, 940d634, 4409d95, e80c005, 64a5b3b. Untested in game.
+  - Gaps: no rice/grain material (spills use paper), kori wicker looks pale grey in bamboo_weave, firewood redder
+    than ref i22. Refs i31/i35/i38 are saved HTML error pages.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
