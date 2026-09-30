@@ -1,0 +1,280 @@
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\street D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\street D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\site\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\site\street\jp_s_bench_1ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_bench_1ken.p3d
+<model = "P:\JP\site\street\jp_s_bench_1ken.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_bench_ab_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_bench_ab_broken.p3d
+<model = "P:\JP\site\street\jp_s_bench_ab_broken.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_bench_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_bench_ab_tipped.p3d
+<model = "P:\JP\site\street\jp_s_bench_ab_tipped.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_bench_long.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_bench_long.p3d
+<model = "P:\JP\site\street\jp_s_bench_long.p3d">
+</model>
+Convert model P:\JP\site\street\jp_s_bench_mat.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street\jp_s_bench_mat.p3d
+<model = "P:\JP\site\street\jp_s_bench_mat.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_1ken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_ab_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_ab_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_long.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\street\jp_s_bench_mat.p3d: 0.00,0.00
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\water D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\water D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\site\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\site\water\jp_s_fire_tub_ab_scattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_fire_tub_ab_scattered.p3d
+<model = "P:\JP\site\water\jp_s_fire_tub_ab_scattered.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_fire_tub_eave.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_fire_tub_eave.p3d
+<model = "P:\JP\site\water\jp_s_fire_tub_eave.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_fire_tub_full.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_fire_tub_full.p3d
+<model = "P:\JP\site\water\jp_s_fire_tub_full.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_fire_tub_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_fire_tub_open.p3d
+<model = "P:\JP\site\water\jp_s_fire_tub_open.p3d">
+</model>
+Convert model P:\JP\site\water\jp_s_fire_tub_rural.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_fire_tub_rural.p3d
+<model = "P:\JP\site\water\jp_s_fire_tub_rural.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_ab_scattered.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_eave.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_full.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\water\jp_s_fire_tub_rural.p3d: 0.00,0.00
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\yard D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\yard D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\site\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\site\yard\jp_s_firewood_stack_ab_collapsed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_ab_collapsed.p3d
+<model = "P:\JP\site\yard\jp_s_firewood_stack_ab_collapsed.p3d">
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_endgrain_w2_co.paa, stage 0: texel size used 0.000907971, max 0.00195346, min 0.000178513
+</model>
+Convert model P:\JP\site\yard\jp_s_firewood_stack_bundle.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_bundle.p3d
+<model = "P:\JP\site\yard\jp_s_firewood_stack_bundle.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_firewood_stack_free_posts.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_free_posts.p3d
+<model = "P:\JP\site\yard\jp_s_firewood_stack_free_posts.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_firewood_stack_half.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_half.p3d
+<model = "P:\JP\site\yard\jp_s_firewood_stack_half.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_firewood_stack_wall_1ken_h120.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_wall_1ken_h120.p3d
+<model = "P:\JP\site\yard\jp_s_firewood_stack_wall_1ken_h120.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_firewood_stack_wall_1ken_h180.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_wall_1ken_h180.p3d
+<model = "P:\JP\site\yard\jp_s_firewood_stack_wall_1ken_h180.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_handcart_ab_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_handcart_ab_broken.p3d
+<model = "P:\JP\site\yard\jp_s_handcart_ab_broken.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_handcart_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_handcart_ab_tipped.p3d
+<model = "P:\JP\site\yard\jp_s_handcart_ab_tipped.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_handcart_ab_wreck.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_handcart_ab_wreck.p3d
+<model = "P:\JP\site\yard\jp_s_handcart_ab_wreck.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_handcart_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_handcart_empty.p3d
+<model = "P:\JP\site\yard\jp_s_handcart_empty.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_handcart_load_bales.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_handcart_load_bales.p3d
+<model = "P:\JP\site\yard\jp_s_handcart_load_bales.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_handcart_load_barrels.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_handcart_load_barrels.p3d
+<model = "P:\JP\site\yard\jp_s_handcart_load_barrels.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_handcart_small.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_handcart_small.p3d
+<model = "P:\JP\site\yard\jp_s_handcart_small.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_laundry_pole_ab_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_laundry_pole_ab_down.p3d
+<model = "P:\JP\site\yard\jp_s_laundry_pole_ab_down.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_laundry_pole_crossed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_laundry_pole_crossed.p3d
+<model = "P:\JP\site\yard\jp_s_laundry_pole_crossed.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_laundry_pole_forked.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_laundry_pole_forked.p3d
+<model = "P:\JP\site\yard\jp_s_laundry_pole_forked.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_laundry_pole_load_cloth.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_laundry_pole_load_cloth.p3d
+<model = "P:\JP\site\yard\jp_s_laundry_pole_load_cloth.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_laundry_pole_load_daikon.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_laundry_pole_load_daikon.p3d
+<model = "P:\JP\site\yard\jp_s_laundry_pole_load_daikon.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_laundry_pole_load_kaki.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_laundry_pole_load_kaki.p3d
+<model = "P:\JP\site\yard\jp_s_laundry_pole_load_kaki.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_laundry_pole_load_net.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_laundry_pole_load_net.p3d
+<model = "P:\JP\site\yard\jp_s_laundry_pole_load_net.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_oke_ab_staves.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_oke_ab_staves.p3d
+<model = "P:\JP\site\yard\jp_s_oke_ab_staves.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_oke_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_oke_ab_tipped.p3d
+<model = "P:\JP\site\yard\jp_s_oke_ab_tipped.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_oke_ninai.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_oke_ninai.p3d
+<model = "P:\JP\site\yard\jp_s_oke_ninai.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_oke_stake.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_oke_stake.p3d
+<model = "P:\JP\site\yard\jp_s_oke_stake.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_oke_tarai.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_oke_tarai.p3d
+<model = "P:\JP\site\yard\jp_s_oke_tarai.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_oke_taru_lid.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_oke_taru_lid.p3d
+<model = "P:\JP\site\yard\jp_s_oke_taru_lid.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_oke_teoke.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_oke_teoke.p3d
+<model = "P:\JP\site\yard\jp_s_oke_teoke.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_tenbin_ab_dropped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_tenbin_ab_dropped.p3d
+<model = "P:\JP\site\yard\jp_s_tenbin_ab_dropped.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_tenbin_baskets.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_tenbin_baskets.p3d
+<model = "P:\JP\site\yard\jp_s_tenbin_baskets.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_tenbin_boxes.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_tenbin_boxes.p3d
+<model = "P:\JP\site\yard\jp_s_tenbin_boxes.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_tenbin_buckets.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_tenbin_buckets.p3d
+<model = "P:\JP\site\yard\jp_s_tenbin_buckets.p3d">
+</model>
+Convert model P:\JP\site\yard\jp_s_tenbin_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_tenbin_leaning.p3d
+<model = "P:\JP\site\yard\jp_s_tenbin_leaning.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_firewood_stack_ab_collapsed.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_firewood_stack_bundle.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_firewood_stack_free_posts.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_firewood_stack_half.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_firewood_stack_wall_1ken_h120.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_firewood_stack_wall_1ken_h180.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_handcart_ab_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_handcart_ab_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_handcart_ab_wreck.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_handcart_empty.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_handcart_load_bales.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_handcart_load_barrels.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_handcart_small.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_laundry_pole_ab_down.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_laundry_pole_crossed.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_laundry_pole_forked.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_laundry_pole_load_cloth.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_laundry_pole_load_daikon.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_laundry_pole_load_kaki.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_laundry_pole_load_net.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_oke_ab_staves.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_oke_ab_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_oke_ninai.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_oke_stake.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_oke_tarai.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_oke_taru_lid.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_oke_teoke.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_tenbin_ab_dropped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_tenbin_baskets.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_tenbin_boxes.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_tenbin_buckets.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard\jp_s_tenbin_leaning.p3d: 0.00,0.00
+

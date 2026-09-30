@@ -1,0 +1,446 @@
+{
+ "id": "jp_s_firewood_stack",
+ "build_list": {
+  "name": "Firewood stack (maki-zumi) and brushwood bundles (soda)",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Stacks were full for winter when the people left: stacks stay mostly intact, greyed, one end slumped; brushwood bundles lean and rot; leaf litter at the base.",
+  "placement_rule": "Against the doma or kitchen wall under an eave, or between two stakes in the yard; never across a door or window; 1-3 modules per house.",
+  "lod_budget": "small prop <=300 faces LOD0 per 1-ken module (billets as merged prisms; end grain carries the look)",
+  "dimensions": {
+   "billet_length_m": {
+    "value": "0.30-0.36 (1 shaku to 1.2 shaku)",
+    "assumed": true,
+    "reason": "kitchen-fire billets are cut to about one shaku so they fit a kamado mouth; no period measurement found"
+   },
+   "billet_diameter_m": {
+    "value": "0.06-0.14, split halves and quarters",
+    "assumed": true,
+    "reason": "read off k35/k36; random per billet (W8)"
+   },
+   "stack_module_m": {
+    "value": "1 ken long (1.82) x 1.2 or 1.8 high x 1 billet deep; half-ken (0.91) end module",
+    "assumed": true,
+    "reason": "snaps to the house grid (PLAYBOOK rule 9) so a stack fills a wall bay exactly"
+   },
+   "brushwood_bundle_m": {
+    "value": "d 0.35-0.45 x 0.9-1.2 long, two straw-rope ties",
+    "assumed": true,
+    "reason": "hand-carried bundle; assumed from R §4 \"brushwood / thatch bundles\""
+   }
+  },
+  "refs": [
+   {
+    "id": "k35_firewood_hoshigaki",
+    "shows": "billets stacked under an eave with persimmons drying above (autumn yard; modern photo, form only)",
+    "period_image": false
+   },
+   {
+    "id": "k36_firewood_motai",
+    "shows": "firewood wall along a Nakasendo post-town house (modern photo, form only)",
+    "period_image": false
+   },
+   {
+    "id": "c05_ouchi_thatch",
+    "shows": "thatched post town: where stacks sit against the walls",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "yard",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "wall stacks: wall plane z = 0, stack 5 cm off it, 1 billet (0.33 m) deep; half-ken grid"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_wall_1ken_h120.p3d",
+   "class": "StaticObj_JP_S_Firewood_Stack_Wall_1ken_H120",
+   "variant": "wall_1ken_h120",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Firewood stack on a wall, 1 ken x 1.2 m",
+   "anchor": "wall",
+   "wall_gap": 0.05,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 138,
+    "Resolution 2": 24,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.042,
+    1.088,
+    0.0,
+    1.2,
+    0.05,
+    0.778
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    0.06,
+    0.91,
+    0.37
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.33,
+     "measured": 0.33,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_wall_1ken_h180.p3d",
+   "class": "StaticObj_JP_S_Firewood_Stack_Wall_1ken_H180",
+   "variant": "wall_1ken_h180",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Firewood stack on a wall, 1 ken x 1.8 m",
+   "anchor": "wall",
+   "wall_gap": 0.05,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 209,
+    "Resolution 2": 36,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.042,
+    1.088,
+    0.0,
+    1.8,
+    0.05,
+    0.778
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    0.06,
+    0.91,
+    0.37
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.33,
+     "measured": 0.33,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_half.p3d",
+   "class": "StaticObj_JP_S_Firewood_Stack_Half",
+   "variant": "half",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Firewood stack end piece, half ken, stepped",
+   "anchor": "wall",
+   "wall_gap": 0.05,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 99,
+    "Resolution 2": 33,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -1.042,
+    1.088,
+    0.0,
+    1.2,
+    0.05,
+    0.778
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.455,
+    0.06,
+    0.455,
+    0.37
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.33,
+     "measured": 0.33,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_free_posts.p3d",
+   "class": "StaticObj_JP_S_Firewood_Stack_Free_Posts",
+   "variant": "free_posts",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Firewood stack between two stakes, board cap",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 227,
+    "Resolution 2": 78,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -1.031,
+    1.029,
+    -0.08,
+    1.32,
+    -0.25,
+    0.25
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.0,
+    -0.165,
+    1.0,
+    0.165
+   ],
+   "roadway": false,
+   "mass_kg": 500.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.33,
+     "measured": 0.33,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_bundle.p3d",
+   "class": "StaticObj_JP_S_Firewood_Stack_Bundle",
+   "variant": "bundle",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Brushwood bundle (soda) leaning on a wall",
+   "anchor": "wall",
+   "wall_gap": 0.05,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 143,
+    "Resolution 2": 10,
+    "Geometry": 13,
+    "View Geometry": 13,
+    "Fire Geometry": 13
+   },
+   "bbox": [
+    -0.374,
+    0.322,
+    0.0,
+    1.152,
+    0.029,
+    0.979
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.19,
+    0.045,
+    0.171,
+    0.749
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bundle_d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.05,
+     "source": "build_list"
+    },
+    {
+     "name": "bundle_L",
+     "expected": 1.05,
+     "measured": 1.05,
+     "tol": 0.15,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "one brushwood bundle (soda) leaning 20 deg on a wall; place 1-6 side by side, yawed a little"
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_ab_collapsed.p3d",
+   "class": "StaticObj_JP_S_Firewood_Stack_Ab_Collapsed",
+   "variant": "wall_1ken_h120",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Firewood stack, one end slumped, spilled",
+   "anchor": "wall",
+   "wall_gap": 0.05,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 222,
+    "Resolution 2": 108,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.91,
+    1.223,
+    0.0,
+    1.2,
+    0.05,
+    1.348
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    0.06,
+    0.91,
+    0.37
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "depth",
+     "expected": 0.33,
+     "measured": 0.33,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

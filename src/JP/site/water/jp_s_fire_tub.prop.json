@@ -1,0 +1,386 @@
+{
+ "id": "jp_s_fire_tub",
+ "build_list": {
+  "name": "Corner fire tub with bucket pyramid (tsuji no oo-oke) and eave buckets",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "abandoned_state": "Pyramids have fallen in wind; buckets lie scattered round the tub; the tub holds rotting leaves and a skin of dark rainwater (not a water source).",
+  "placement_rule": "At street crossings and alley mouths, 1 per corner, against the corner house; eave buckets on every 2nd-3rd town front. Never one tub per house (trap).",
+  "lod_budget": "small prop set: tub <=300, pyramid <=300 (buckets merged) LOD0",
+  "dimensions": {
+   "capacity": {
+    "value": "6 koku = about 1,080 L",
+    "source": "O03 (6 koku; 1 koku = 180.4 L)"
+   },
+   "tub_m": {
+    "value": "d 1.25 x h 1.00 outside (1,080 L needs about d 1.15 x 1.0 inside)",
+    "assumed": true,
+    "reason": "derived from the 6-koku capacity"
+   },
+   "teoke_pyramid": {
+    "value": "10 hand buckets in 3 tiers (6+3+1) on a board lid; bucket d 0.26",
+    "assumed": true,
+    "reason": "pyramid read off reconstructions (k21); count assumed"
+   },
+   "stand_m": {
+    "value": "stone or timber base 0.15-0.30 high",
+    "assumed": true,
+    "reason": "keeps the tub off the mud; assumed"
+   },
+   "eave_bucket": {
+    "value": "1-2 teoke hung on a peg at 1.9-2.1 m",
+    "assumed": true,
+    "reason": "assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "k21_edo_bousui",
+    "shows": "reconstructed Edo fire tub with a bucket pyramid (Fukagawa Edo Museum street set)",
+    "period_image": false
+   },
+   {
+    "id": "k22_hirakata_jinja",
+    "shows": "donated shrine fire tub (tensui-oke) with a donor mark, Hirakata shrine (photo)",
+    "period_image": false
+   },
+   {
+    "id": "x31_masanobu_ryogoku_1748",
+    "shows": "Edo riverside town, c.1748 (context only: no tub visible)",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "water",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "corner tub at crossings only (never one per house, 1789+ trap); not a water source (leaves and dark rainwater)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_fire_tub_full.p3d",
+   "class": "StaticObj_JP_S_Fire_Tub_Full",
+   "variant": "full",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Corner fire tub with a bucket pyramid",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 492,
+    "Resolution 2": 76,
+    "Resolution 3": 24,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -0.725,
+    0.725,
+    0.0,
+    2.015,
+    -0.725,
+    0.725
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.72,
+    -0.72,
+    0.72,
+    0.72
+   ],
+   "roadway": false,
+   "mass_kg": 400.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pyramid",
+     "expected": 10,
+     "measured": 10.0,
+     "tol": 0,
+     "source": "build_list"
+    },
+    {
+     "name": "tub_d",
+     "expected": 1.25,
+     "measured": 1.25,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "tub_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "base",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.08,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "no_iron": true
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_fire_tub_open.p3d",
+   "class": "StaticObj_JP_S_Fire_Tub_Open",
+   "variant": "open",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Fire tub, lid gone, three buckets down",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 365,
+    "Resolution 2": 22,
+    "Resolution 3": 18,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -1.224,
+    1.379,
+    -0.005,
+    1.22,
+    -0.725,
+    1.623
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.72,
+    -0.72,
+    0.72,
+    0.72
+   ],
+   "roadway": false,
+   "mass_kg": 400.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tub_d",
+     "expected": 1.25,
+     "measured": 1.25,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "tub_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "base",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.08,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "no_iron": true
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_fire_tub_eave.p3d",
+   "class": "StaticObj_JP_S_Fire_Tub_Eave",
+   "variant": "eave",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fire bucket on an eave peg (building proxy)",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 85,
+    "Resolution 2": 18,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.135,
+    0.135,
+    1.59,
+    2.04,
+    0.0,
+    0.295
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.12,
+    0.0,
+    0.12,
+    0.28
+   ],
+   "roadway": false,
+   "mass_kg": 2.5,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "peg_y",
+     "expected": 2.0,
+     "measured": 2.02,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hung: y = 0 is the ground at the wall foot; the peg sits at 2.02 m (list 1.9-2.1)"
+   ],
+   "no_iron": true
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_fire_tub_rural.p3d",
+   "class": "StaticObj_JP_S_Fire_Tub_Rural",
+   "variant": "rural",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rain barrel under an eave (rural)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 98,
+    "Resolution 2": 42,
+    "Resolution 3": 40,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.362,
+    0.808,
+    -0.06,
+    0.84,
+    -0.33,
+    0.896
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.305,
+    -0.305,
+    0.305,
+    0.305
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.66,
+     "measured": 0.66,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "capacity_l",
+     "expected": 180.0,
+     "measured": 202.2777,
+     "tol": 30.0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "no_iron": true
+  },
+  {
+   "p3d": "\\JP\\site\\water\\jp_s_fire_tub_ab_scattered.p3d",
+   "class": "StaticObj_JP_S_Fire_Tub_Ab_Scattered",
+   "variant": "full",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Fire tub, pyramid collapsed, buckets scattered",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 489,
+    "Resolution 2": 58,
+    "Resolution 3": 18,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -1.309,
+    1.379,
+    -0.005,
+    1.22,
+    -1.085,
+    1.623
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.72,
+    -0.72,
+    0.72,
+    0.72
+   ],
+   "roadway": false,
+   "mass_kg": 400.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tub_d",
+     "expected": 1.25,
+     "measured": 1.25,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "tub_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "base",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.08,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "no_iron": true
+  }
+ ]
+}

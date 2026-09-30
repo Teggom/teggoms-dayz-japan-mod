@@ -1,0 +1,572 @@
+{
+ "id": "jp_s_handcart",
+ "build_list": {
+  "name": "Handcart (daihachi-guruma) and small cart (niguruma)",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Carts stand where the owners left them: half loaded, handles on the ground, one in three tipped or with a broken wheel; wood grey, tyres rusted.",
+  "placement_rule": "In streets along the house line, in yards by the kura, at bridge ends and on the highway shoulder; never blocking a door. The DayZ car-wreck role: cover in open streets.",
+  "lod_budget": "medium site object <=1,500 faces LOD0 (decision 9); wheels 12 spokes as flat bars",
+  "dimensions": {
+   "bed_m": {
+    "value": "2.42 long x 0.76 wide (8 shaku x 2.5 shaku)",
+    "source": "O04"
+   },
+   "wheel_diameter_m": {
+    "value": "1.06 (3.5 shaku), wooden spoked wheels with iron tyres",
+    "source": "O04 (diameter); tyre assumed"
+   },
+   "shafts_m": {
+    "value": "bed rails continue 0.9 forward as handles with a cross bar",
+    "assumed": true,
+    "reason": "read off later photos (k31)"
+   },
+   "niguruma_m": {
+    "value": "small cart: bed 1.5 x 0.6, wheel 0.75",
+    "assumed": true,
+    "reason": "the Daishichi (under 8 shaku) class in O04; sizes assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "k31_daihachi_uzumasa",
+    "shows": "a daihachi-guruma on a film-studio Edo street (2002 photo, form only)",
+    "period_image": false
+   },
+   {
+    "id": "x37_eisen_narai",
+    "shows": "post-town street context (1830s)",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "yard",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "G1: several variants at increasing disrepair (sidecar 'disrepair' 1-4): parked (1), tipped (2), broken wheel (3), wreck (4); the DayZ car-wreck role: cover in open streets"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_handcart_empty.p3d",
+   "class": "StaticObj_JP_S_Handcart_Empty",
+   "variant": "daihachi",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Handcart (daihachi-guruma), handles down",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 552,
+    "Resolution 2": 100,
+    "Resolution 3": 54,
+    "Geometry": 46,
+    "View Geometry": 46,
+    "Fire Geometry": 46
+   },
+   "bbox": [
+    -0.834,
+    0.87,
+    0.0,
+    1.116,
+    -1.522,
+    2.023
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.53,
+    -1.167,
+    0.53,
+    2.023
+   ],
+   "roadway": false,
+   "mass_kg": 90.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bed_L",
+     "expected": 2.42,
+     "measured": 2.42,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bed_W",
+     "expected": 0.76,
+     "measured": 0.76,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "wheel_d",
+     "expected": 1.06,
+     "measured": 1.06,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "handles",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "disrepair": 1
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_handcart_load_bales.p3d",
+   "class": "StaticObj_JP_S_Handcart_Load_Bales",
+   "variant": "daihachi",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Handcart with rice bales roped on",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 828,
+    "Resolution 2": 106,
+    "Resolution 3": 60,
+    "Geometry": 52,
+    "View Geometry": 52,
+    "Fire Geometry": 52
+   },
+   "bbox": [
+    -0.834,
+    0.87,
+    0.0,
+    1.471,
+    -1.522,
+    2.023
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.53,
+    -1.167,
+    0.53,
+    2.023
+   ],
+   "roadway": false,
+   "mass_kg": 90.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bed_L",
+     "expected": 2.42,
+     "measured": 2.42,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bed_W",
+     "expected": 0.76,
+     "measured": 0.76,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "wheel_d",
+     "expected": 1.06,
+     "measured": 1.06,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "handles",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "disrepair": 1
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_handcart_load_barrels.p3d",
+   "class": "StaticObj_JP_S_Handcart_Load_Barrels",
+   "variant": "daihachi",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Handcart with barrels",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 788,
+    "Resolution 2": 124,
+    "Resolution 3": 60,
+    "Geometry": 74,
+    "View Geometry": 74,
+    "Fire Geometry": 74
+   },
+   "bbox": [
+    -0.834,
+    0.87,
+    0.0,
+    1.514,
+    -1.522,
+    2.023
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.53,
+    -1.167,
+    0.53,
+    2.023
+   ],
+   "roadway": false,
+   "mass_kg": 90.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bed_L",
+     "expected": 2.42,
+     "measured": 2.42,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bed_W",
+     "expected": 0.76,
+     "measured": 0.76,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "wheel_d",
+     "expected": 1.06,
+     "measured": 1.06,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "handles",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "disrepair": 1
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_handcart_small.p3d",
+   "class": "StaticObj_JP_S_Handcart_Small",
+   "variant": "niguruma",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small cart (niguruma)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 528,
+    "Resolution 2": 100,
+    "Resolution 3": 54,
+    "Geometry": 46,
+    "View Geometry": 46,
+    "Fire Geometry": 46
+   },
+   "bbox": [
+    -0.834,
+    0.87,
+    0.0,
+    0.842,
+    -1.522,
+    1.403
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.45,
+    -0.7,
+    0.45,
+    1.403
+   ],
+   "roadway": false,
+   "mass_kg": 45.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bed_L",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bed_W",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "wheel_d",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "handles",
+     "expected": 0.7,
+     "measured": 0.7,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "disrepair": 1
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_handcart_ab_tipped.p3d",
+   "class": "StaticObj_JP_S_Handcart_Ab_Tipped",
+   "variant": "daihachi",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Handcart tipped on its side, load spilled",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 702,
+    "Resolution 2": 100,
+    "Resolution 3": 54,
+    "Geometry": 76,
+    "View Geometry": 76,
+    "Fire Geometry": 76
+   },
+   "bbox": [
+    -0.742,
+    2.181,
+    0.0,
+    1.415,
+    -1.167,
+    2.023
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.742,
+    -1.167,
+    1.925,
+    2.023
+   ],
+   "roadway": false,
+   "mass_kg": 90.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bed_L",
+     "expected": 2.42,
+     "measured": 2.42,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bed_W",
+     "expected": 0.76,
+     "measured": 0.76,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "wheel_d",
+     "expected": 1.06,
+     "measured": 1.06,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "handles",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "disrepair": 2
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_handcart_ab_broken.p3d",
+   "class": "StaticObj_JP_S_Handcart_Ab_Broken",
+   "variant": "daihachi",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Handcart with a broken wheel, bed down",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 536,
+    "Resolution 2": 100,
+    "Resolution 3": 36,
+    "Geometry": 46,
+    "View Geometry": 46,
+    "Fire Geometry": 46
+   },
+   "bbox": [
+    -0.523,
+    1.861,
+    0.0,
+    1.118,
+    -1.228,
+    2.068
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.516,
+    -1.228,
+    1.831,
+    2.068
+   ],
+   "roadway": false,
+   "mass_kg": 90.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bed_L",
+     "expected": 2.42,
+     "measured": 2.42,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bed_W",
+     "expected": 0.76,
+     "measured": 0.76,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "wheel_d",
+     "expected": 1.06,
+     "measured": 1.06,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "handles",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "disrepair": 3
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_handcart_ab_wreck.p3d",
+   "class": "StaticObj_JP_S_Handcart_Ab_Wreck",
+   "variant": "daihachi",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Handcart wreck, wheels off, slats gone",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 499,
+    "Resolution 2": 88,
+    "Resolution 3": 18,
+    "Geometry": 34,
+    "View Geometry": 34,
+    "Fire Geometry": 34
+   },
+   "bbox": [
+    -1.67,
+    0.907,
+    0.0,
+    1.104,
+    -1.865,
+    2.026
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.64,
+    -1.295,
+    0.737,
+    2.026
+   ],
+   "roadway": false,
+   "mass_kg": 90.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bed_L",
+     "expected": 2.42,
+     "measured": 2.42,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bed_W",
+     "expected": 0.76,
+     "measured": 0.76,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "wheel_d",
+     "expected": 1.06,
+     "measured": 1.06,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "handles",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "disrepair": 4
+  }
+ ]
+}

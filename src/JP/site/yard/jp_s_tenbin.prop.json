@@ -1,0 +1,324 @@
+{
+ "id": "jp_s_tenbin",
+ "build_list": {
+  "name": "Shoulder pole and loads (tenbin-bo) with swappable loads",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Dropped where the carrier stopped: pole on the ground, one load tipped; baskets greyed and split.",
+  "placement_rule": "Leaning by shop doors and yard walls; dropped singly on roads and bridges (rare: 1 per few hundred metres of road).",
+  "lod_budget": "small prop <=300 faces LOD0",
+  "dimensions": {
+   "pole_m": {
+    "value": "1.52-1.82 x 0.05 x 0.03, slightly curved",
+    "source": "O21 (museum poles 1.37 and 1.52 m; 6 shaku = 1.82 common)"
+   },
+   "rope_drop_m": {
+    "value": "0.45-0.60 from pole to load rim",
+    "assumed": true,
+    "reason": "loads hang at knee height when carried; assumed"
+   },
+   "basket_m": {
+    "value": "d 0.45 x h 0.20-0.30 round baskets",
+    "assumed": true,
+    "reason": "read off k06/k28"
+   }
+  },
+  "refs": [
+   {
+    "id": "k06_moronobu_ageyamachi",
+    "shows": "two round baskets set down from a carrying pole in a street, c.1680",
+    "period_image": true
+   },
+   {
+    "id": "k28_kusakabe_peddler",
+    "shows": "vegetable peddler with pole and two baskets (1880s photo)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "yard",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_tenbin_baskets.p3d",
+   "class": "StaticObj_JP_S_Tenbin_Baskets",
+   "variant": "baskets",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shoulder pole with two baskets",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 143,
+    "Resolution 2": 26,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.975,
+    0.971,
+    0.0,
+    0.295,
+    -0.232,
+    0.232
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.945,
+    -0.225,
+    0.945,
+    0.225
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "load_d",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_tenbin_buckets.p3d",
+   "class": "StaticObj_JP_S_Tenbin_Buckets",
+   "variant": "buckets",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shoulder pole with two buckets",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 214,
+    "Resolution 2": 30,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.95,
+    0.95,
+    0.0,
+    0.665,
+    -0.19,
+    0.19
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.915,
+    -0.19,
+    0.915,
+    0.19
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "load_d",
+     "expected": 0.38,
+     "measured": 0.38,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_tenbin_boxes.p3d",
+   "class": "StaticObj_JP_S_Tenbin_Boxes",
+   "variant": "boxes",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shoulder pole with peddler's boxes",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 54,
+    "Resolution 2": 30,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.955,
+    0.955,
+    0.0,
+    0.515,
+    -0.155,
+    0.155
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.88,
+    -0.15,
+    0.88,
+    0.15
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "load_d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_tenbin_leaning.p3d",
+   "class": "StaticObj_JP_S_Tenbin_Leaning",
+   "variant": "leaning",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shoulder pole leaning on a wall",
+   "anchor": "wall",
+   "wall_gap": 0.03,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 26,
+    "Geometry": 26,
+    "View Geometry": 26,
+    "Fire Geometry": 26
+   },
+   "bbox": [
+    -0.725,
+    0.721,
+    0.0,
+    1.629,
+    0.03,
+    0.562
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.695,
+    0.024,
+    0.695,
+    0.555
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 1.7,
+     "measured": 1.7215,
+     "tol": 0.06,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_tenbin_ab_dropped.p3d",
+   "class": "StaticObj_JP_S_Tenbin_Ab_Dropped",
+   "variant": "baskets",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Shoulder pole dropped, basket overturned",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 139,
+    "Resolution 2": 12,
+    "Geometry": 26,
+    "View Geometry": 26,
+    "Fire Geometry": 26
+   },
+   "bbox": [
+    -0.971,
+    1.885,
+    0.0,
+    0.328,
+    -0.145,
+    1.216
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.945,
+    -0.145,
+    1.091,
+    0.575
+   ],
+   "roadway": false,
+   "mass_kg": 12.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 1.7,
+     "measured": 1.6846,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

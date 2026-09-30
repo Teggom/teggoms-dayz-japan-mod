@@ -1,0 +1,464 @@
+{
+ "id": "jp_s_laundry_pole",
+ "build_list": {
+  "name": "Laundry and drying pole (monohoshi-zao) with swappable loads",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Cloth left out a year is faded, torn and partly fallen; persimmons and daikon have dried black and some strings snapped; poles stand but one in three leans.",
+  "placement_rule": "In the back yard or back alley, parallel to the house wall 1.5-3 m out; in fishing villages between houses; never across a path.",
+  "lod_budget": "small prop <=300 faces LOD0 (pole + posts); each load <=300",
+  "dimensions": {
+   "pole_m": {
+    "value": "3.64 (2 ken) x d 0.04-0.05 bamboo",
+    "assumed": true,
+    "reason": "two ken spans a yard; a madake culm this long is 4-5 cm thick"
+   },
+   "post_height_m": {
+    "value": "1.8-2.1 to the fork",
+    "assumed": true,
+    "reason": "hanging height a person reaches with a raised arm"
+   },
+   "crossed_stakes_m": {
+    "value": "two 2.2 m poles crossed at 1.8 m, legs 1.0 apart",
+    "assumed": true,
+    "reason": "the cheap rural support in R §6"
+   }
+  },
+  "refs": [
+   {
+    "id": "k33_harunobu_araihari_1767",
+    "shows": "washed cloth stretched on bamboo stretchers in a yard (1767)",
+    "period_image": true
+   },
+   {
+    "id": "k35_firewood_hoshigaki",
+    "shows": "persimmon strings hung under an eave (autumn load)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "yard",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "loads are whole models (pole + posts + load) so one placement dresses a yard"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_laundry_pole_forked.p3d",
+   "class": "StaticObj_JP_S_Laundry_Pole_Forked",
+   "variant": "forked",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Drying pole on forked posts",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 66,
+    "Resolution 2": 40,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -1.82,
+    1.82,
+    -0.08,
+    2.208,
+    -0.04,
+    0.08
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.62,
+    -0.05,
+    1.62,
+    0.05
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "fork_h",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "loads": "forked"
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_laundry_pole_crossed.p3d",
+   "class": "StaticObj_JP_S_Laundry_Pole_Crossed",
+   "variant": "crossed",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Drying pole on crossed stakes",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 58,
+    "Resolution 2": 46,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -2.093,
+    2.093,
+    -0.08,
+    2.052,
+    -0.054,
+    0.054
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -2.12,
+    -0.03,
+    2.12,
+    0.03
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "fork_h",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "loads": "crossed"
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_laundry_pole_load_cloth.p3d",
+   "class": "StaticObj_JP_S_Laundry_Pole_Load_Cloth",
+   "variant": "forked",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Drying pole, faded kimono, one cloth fallen",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 120,
+    "Resolution 2": 46,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -1.82,
+    1.9,
+    -0.08,
+    2.208,
+    -0.04,
+    1.05
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.62,
+    -0.05,
+    1.62,
+    0.05
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "fork_h",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "loads": "load_cloth"
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_laundry_pole_load_kaki.p3d",
+   "class": "StaticObj_JP_S_Laundry_Pole_Load_Kaki",
+   "variant": "crossed",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Persimmons dried black on strings (autumn)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 267,
+    "Resolution 2": 88,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -2.093,
+    2.093,
+    -0.08,
+    2.052,
+    -0.054,
+    0.275
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -2.12,
+    -0.03,
+    2.12,
+    0.03
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "fork_h",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "loads": "load_kaki"
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_laundry_pole_load_daikon.p3d",
+   "class": "StaticObj_JP_S_Laundry_Pole_Load_Daikon",
+   "variant": "crossed",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Daikon hung in pairs, shrivelled (autumn)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 242,
+    "Resolution 2": 94,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -2.093,
+    2.093,
+    -0.08,
+    2.052,
+    -0.07,
+    0.07
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -2.12,
+    -0.03,
+    2.12,
+    0.03
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "fork_h",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "loads": "load_daikon"
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_laundry_pole_load_net.p3d",
+   "class": "StaticObj_JP_S_Laundry_Pole_Load_Net",
+   "variant": "crossed",
+   "state": "intact",
+   "abandoned": false,
+   "display": "A small net draped on the pole (fishing village)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 228,
+    "Resolution 2": 52,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -2.093,
+    2.093,
+    -0.08,
+    2.052,
+    -0.054,
+    0.06
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -2.12,
+    -0.03,
+    2.12,
+    0.03
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "fork_h",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "loads": "load_net"
+  },
+  {
+   "p3d": "\\JP\\site\\yard\\jp_s_laundry_pole_ab_down.p3d",
+   "class": "StaticObj_JP_S_Laundry_Pole_Ab_Down",
+   "variant": "forked",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Drying pole down, one post leaning",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 80,
+    "Resolution 2": 40,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.88,
+    2.28,
+    -0.08,
+    2.219,
+    -0.489,
+    1.086
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.62,
+    -0.05,
+    -1.52,
+    0.05
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pole",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "fork_h",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "loads": "ab_down"
+  }
+ ]
+}
