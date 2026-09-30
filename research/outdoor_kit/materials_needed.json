@@ -1,0 +1,516 @@
+{
+ "version": 1,
+ "date": "2026-09-29",
+ "author": "research agent PA3 (A3)",
+ "note": "Materials jp_common LACKS for the outdoor core kit: one canonical set each, 3 wear levels (_w0 clean, _w1 normal, _w2 heavy), path JP\\common\\materials\\<family>\\ (PLAYBOOK §9). Matte finish per PLAYBOOK T12 (black env, low fresnel). Decals are alpha-tested geometry, not a second UV set. The dead world places _w1/_w2 by default. Check PA2 (interior) for textile and paper duplicates before building.",
+ "counts": {
+  "new_materials": 13,
+  "texture_sets": 39,
+  "reused_existing": 11
+ },
+ "materials": [
+  {
+   "id": "jp_m_stone_carved",
+   "family": "stone",
+   "palette_id": "stone_lantern",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "none; softened tool marks",
+   "penetration_rvmat": "granite",
+   "finish": "matte",
+   "wear": {
+    "_w0": "fresh-cut grey granite/andesite, crisp chisel marks",
+    "_w1": "darkened, lichen spots (grey-green, orange), grime in carving",
+    "_w2": "heavy moss on tops and north faces (W6), black lichen streaks"
+   },
+   "source_plan": "Poly Haven rock_surface / worn_rock_natural_01 (already downloaded for jp_m_stone_cut) regraded to stone_lantern; or an ambientCG CC0 granite",
+   "note": "THE weathered stone for figures, steles, lanterns, gravestones and basins; the palette entry was sampled from Kasuga lanterns (c22)",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_chozubachi",
+    "jp_s_grave_stones",
+    "jp_s_grave_wood",
+    "jp_s_nobori",
+    "jp_s_stele",
+    "jp_s_stone_jizo",
+    "jp_s_stone_lantern",
+    "jp_s_torii_stone"
+   ]
+  },
+  {
+   "id": "jp_m_decal_moss",
+   "family": "stone",
+   "palette_id": "moss_on_stone",
+   "palette_status": "existing",
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "none; alpha-tested patches",
+   "penetration_rvmat": "(visual only)",
+   "finish": "matte, alpha test",
+   "wear": {
+    "_w0": "thin lichen spots",
+    "_w1": "moss cushions on top faces",
+    "_w2": "thick moss with dead leaves caught in it"
+   },
+   "source_plan": "procedural (numpy noise masks) over an ambientCG CC0 moss colour, like make_textures.py",
+   "note": "Moss and lichen as separate alpha decal geometry laid on tops of stones, torii kasagi, lantern roofs and north faces: variety without a second UV set (decision 10)",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_chozubachi",
+    "jp_s_grave_stones",
+    "jp_s_stele",
+    "jp_s_stone_jizo",
+    "jp_s_stone_lantern",
+    "jp_s_stone_steps",
+    "jp_s_torii_stone",
+    "jp_s_torii_wood"
+   ]
+  },
+  {
+   "id": "jp_m_decal_carved_text",
+   "family": "stone",
+   "palette_id": "stone_lantern",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 1024,
+   "grain": "none",
+   "penetration_rvmat": "(visual only)",
+   "finish": "matte, alpha test + normal",
+   "wear": {
+    "_w0": "sharp V-cut characters",
+    "_w1": "softened, grime in the cuts",
+    "_w2": "lichen over half the text"
+   },
+   "source_plan": "rendered from an SIL OFL brush font into height -> normal + AO (decision 5); the text list is the jp_s_stele \"text\" dimension",
+   "note": "Carved inscriptions (Koshin, namu amida butsu, directions, donor names, era dates Genroku-Kyoho) as 2 mm proud decal faces",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_chozubachi",
+    "jp_s_grave_stones",
+    "jp_s_stele",
+    "jp_s_stone_lantern",
+    "jp_s_torii_stone"
+   ]
+  },
+  {
+   "id": "jp_m_decal_sumi_text",
+   "family": "paint",
+   "palette_id": "sumi_black",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 1024,
+   "grain": "brush strokes",
+   "penetration_rvmat": "(visual only)",
+   "finish": "matte, alpha test",
+   "wear": {
+    "_w0": "crisp black ink",
+    "_w1": "faded to grey-brown",
+    "_w2": "ghost of text, flaking"
+   },
+   "source_plan": "rendered from an SIL OFL brush font (decision 5)",
+   "note": "Ink text atlas: shop names, inn names, house marks, edict lines, sotoba text, banner text",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_fire_tub",
+    "jp_s_grave_wood",
+    "jp_s_kosatsu",
+    "jp_s_lantern_sign",
+    "jp_s_nobori",
+    "jp_s_shopfront",
+    "jp_s_torii_wood"
+   ]
+  },
+  {
+   "id": "jp_m_straw_rope",
+   "family": "straw",
+   "palette_id": "straw_aged",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "twist along the rope",
+   "penetration_rvmat": "hay",
+   "finish": "matte",
+   "wear": {
+    "_w0": "golden new straw",
+    "_w1": "grey-gold",
+    "_w2": "grey-brown, frayed, dark ends"
+   },
+   "source_plan": "procedural twist over a Poly Haven / ambientCG CC0 straw or hay scan",
+   "note": "shimenawa, well ropes, bundle ties, lashings, bale ropes",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_firewood_stack",
+    "jp_s_handcart",
+    "jp_s_laundry_pole",
+    "jp_s_shimenawa",
+    "jp_s_stall",
+    "jp_s_straw_stack",
+    "jp_s_tenbin",
+    "jp_s_well_hanetsurube",
+    "jp_s_well_tsurube"
+   ]
+  },
+  {
+   "id": "jp_m_straw_stack",
+   "family": "straw",
+   "palette_id": "straw_aged",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "tile_size_m": 1.0,
+   "px_per_m": 256,
+   "grain": "stalks down the stack face; heads inward",
+   "penetration_rvmat": "hay",
+   "finish": "matte",
+   "wear": {
+    "_w0": "fresh harvest gold",
+    "_w1": "grey-gold weathered top",
+    "_w2": "grey-black top with moss, slumped"
+   },
+   "source_plan": "Poly Haven reed_roof_04 (already downloaded) regraded lighter, or a CC0 hay scan",
+   "note": "straw stacks, stooks, bundles, bale ends",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_straw_stack"
+   ]
+  },
+  {
+   "id": "jp_m_textile_noren",
+   "family": "textile",
+   "palette_id": "aizome_kon",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "plain cotton weave",
+   "penetration_rvmat": "cloth (vanilla penetration for textiles; B to confirm the rvmat name)",
+   "finish": "matte, two-sided, alpha for tears",
+   "wear": {
+    "_w0": "deep indigo with white resist marks",
+    "_w1": "faded, sun-bleached folds",
+    "_w2": "grey-blue, torn hem (alpha), stains"
+   },
+   "source_plan": "procedural weave + indigo from the aizome palette; 4 shop-mark resist designs",
+   "note": "noren, indigo banners, indigo laundry",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_laundry_pole",
+    "jp_s_nobori",
+    "jp_s_shopfront"
+   ]
+  },
+  {
+   "id": "jp_m_textile_kinari",
+   "family": "textile",
+   "palette_id": "kinari_cloth",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "plain cotton / hemp weave",
+   "penetration_rvmat": "cloth (as above)",
+   "finish": "matte, two-sided, alpha for tears",
+   "wear": {
+    "_w0": "undyed cream",
+    "_w1": "grey, mildew spots",
+    "_w2": "grey-brown, shredded (alpha)"
+   },
+   "source_plan": "procedural weave, or an ambientCG CC0 fabric regraded",
+   "note": "nobori, laundry, Jizo bibs (plus a faded red tint variant), mizuhiki noren",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_laundry_pole",
+    "jp_s_nobori",
+    "jp_s_shopfront",
+    "jp_s_stone_jizo"
+   ]
+  },
+  {
+   "id": "jp_m_paper_chochin",
+   "family": "paper",
+   "palette_id": "washi_shoji",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "fibres; rib shadows",
+   "penetration_rvmat": "fabric_thin",
+   "finish": "matte, alpha for holes",
+   "wear": {
+    "_w0": "oiled warm white with black text",
+    "_w1": "yellowed, water-stained",
+    "_w2": "split and holed (alpha), ribs showing"
+   },
+   "source_plan": "procedural from jp_m_paper_shoji plus a rib-shadow pass",
+   "note": "chochin and andon paper; never emissive (no light in the dead world)",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_lantern_sign"
+   ]
+  },
+  {
+   "id": "jp_m_reed_yoshizu",
+   "family": "straw",
+   "palette_id": "sudare_reed",
+   "palette_status": "existing",
+   "tile_size_m": 1.0,
+   "px_per_m": 512,
+   "grain": "vertical reeds, tied every 0.3",
+   "penetration_rvmat": "hay",
+   "finish": "matte, alpha for gaps",
+   "wear": {
+    "_w0": "pale reed",
+    "_w1": "grey reed",
+    "_w2": "broken reeds, holes"
+   },
+   "source_plan": "procedural reed strips over the jp_m_roof_thatch source; palette sudare_reed already sampled",
+   "note": "reed screens (stalls, fences) and sudare blinds",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_shopfront",
+    "jp_s_stall"
+   ]
+  },
+  {
+   "id": "jp_m_paint_shu",
+   "family": "paint",
+   "palette_id": "shu_vermilion",
+   "palette_status": "existing",
+   "tile_size_m": 2.0,
+   "px_per_m": 512,
+   "grain": "along member under the paint",
+   "penetration_rvmat": "wood",
+   "finish": "matte",
+   "wear": {
+    "_w0": "even vermilion",
+    "_w1": "chalky, darkened, edges worn to wood",
+    "_w2": "peeling in patches to grey wood (toward timber_weathered, max 0.4)"
+   },
+   "source_plan": "jp_m_wood_weathered grain under a vermilion layer (like jp_m_wood_bengara)",
+   "note": "RESTRICTED: shrines only (PLAYBOOK §8): vermilion torii, yard-shrine mini torii",
+   "needed_in_wave": 2,
+   "used_by": [
+    "jp_s_torii_wood"
+   ]
+  },
+  {
+   "id": "jp_m_wood_endgrain",
+   "family": "wood",
+   "palette_id": "timber_weathered",
+   "palette_status": "existing",
+   "tile_size_m": 0.5,
+   "px_per_m": 512,
+   "grain": "growth rings, radial checks",
+   "penetration_rvmat": "wood",
+   "finish": "matte",
+   "wear": {
+    "_w0": "fresh cut, pale rings",
+    "_w1": "greyed rings, checks",
+    "_w2": "dark, split, lichen"
+   },
+   "source_plan": "Poly Haven or ambientCG CC0 log end-grain scan",
+   "note": "firewood ends, post tops, beam ends",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_firewood_stack"
+   ]
+  },
+  {
+   "id": "jp_m_ground_leaf_litter",
+   "family": "ground",
+   "palette_id": "leaf_litter_autumn",
+   "palette_status": "REQUESTED (see requested_palette_entries)",
+   "tile_size_m": 1.0,
+   "px_per_m": 256,
+   "grain": "none",
+   "penetration_rvmat": "dirt",
+   "finish": "matte",
+   "wear": {
+    "_w0": "fresh autumn leaves (red, yellow, brown)",
+    "_w1": "brown leaves in silt",
+    "_w2": "black rotted leaves and mud"
+   },
+   "source_plan": "ambientCG CC0 forest-floor / leaves scan regraded to autumn (maple, zelkova, ginkgo colours)",
+   "note": "The abandoned layer: gutter beds, tub bottoms, basin hollows, step treads, Jizo huts; AUTUMN",
+   "needed_in_wave": 1,
+   "used_by": [
+    "jp_s_chozubachi",
+    "jp_s_fire_tub",
+    "jp_s_gutter",
+    "jp_s_oke",
+    "jp_s_stele",
+    "jp_s_stone_steps"
+   ]
+  }
+ ],
+ "reused_from_jp_common": [
+  {
+   "id": "jp_m_wood_weathered",
+   "family": "wood",
+   "palette_id": "timber_weathered",
+   "used_by": [
+    "jp_s_bench",
+    "jp_s_fire_tub",
+    "jp_s_firewood_stack",
+    "jp_s_grave_wood",
+    "jp_s_gutter",
+    "jp_s_handcart",
+    "jp_s_jizo_hut",
+    "jp_s_kosatsu",
+    "jp_s_laundry_pole",
+    "jp_s_oke",
+    "jp_s_shopfront",
+    "jp_s_stall",
+    "jp_s_straw_stack",
+    "jp_s_tenbin",
+    "jp_s_torii_wood",
+    "jp_s_well_hanetsurube",
+    "jp_s_well_tsurube"
+   ]
+  },
+  {
+   "id": "jp_m_wood_street_dark",
+   "family": "wood",
+   "palette_id": "timber_street_dark",
+   "used_by": [
+    "jp_s_jizo_hut",
+    "jp_s_kosatsu",
+    "jp_s_lantern_sign",
+    "jp_s_shopfront"
+   ]
+  },
+  {
+   "id": "jp_m_wood_kuro",
+   "family": "wood",
+   "palette_id": "kuro_board",
+   "used_by": [
+    "jp_s_torii_wood"
+   ]
+  },
+  {
+   "id": "jp_m_bamboo_weathered",
+   "family": "bamboo",
+   "palette_id": "bamboo_weathered",
+   "used_by": [
+    "jp_s_chozubachi",
+    "jp_s_fire_tub",
+    "jp_s_firewood_stack",
+    "jp_s_grave_wood",
+    "jp_s_kosatsu",
+    "jp_s_laundry_pole",
+    "jp_s_nobori",
+    "jp_s_oke",
+    "jp_s_shopfront",
+    "jp_s_stall",
+    "jp_s_tenbin",
+    "jp_s_well_hanetsurube"
+   ]
+  },
+  {
+   "id": "jp_m_metal_iron",
+   "family": "metal",
+   "palette_id": "iron_black",
+   "used_by": [
+    "jp_s_handcart",
+    "jp_s_lantern_sign",
+    "jp_s_oke",
+    "jp_s_well_tsurube"
+   ]
+  },
+  {
+   "id": "jp_m_stone_cut",
+   "family": "stone",
+   "palette_id": "stone_granite",
+   "used_by": [
+    "jp_s_fire_tub",
+    "jp_s_grave_stones",
+    "jp_s_gutter",
+    "jp_s_kosatsu",
+    "jp_s_stone_steps",
+    "jp_s_torii_stone",
+    "jp_s_well_tsurube"
+   ]
+  },
+  {
+   "id": "jp_m_stone_field",
+   "family": "stone",
+   "palette_id": "stone_granite",
+   "used_by": [
+    "jp_s_gutter",
+    "jp_s_jizo_hut",
+    "jp_s_stone_steps",
+    "jp_s_torii_wood",
+    "jp_s_well_tsurube"
+   ]
+  },
+  {
+   "id": "jp_m_stone_river",
+   "family": "stone",
+   "palette_id": "stone_lantern",
+   "used_by": [
+    "jp_s_oke",
+    "jp_s_stone_jizo",
+    "jp_s_well_hanetsurube"
+   ]
+  },
+  {
+   "id": "jp_m_roof_kureita",
+   "family": "roof",
+   "palette_id": "roof_board_silver",
+   "used_by": [
+    "jp_s_jizo_hut",
+    "jp_s_kosatsu",
+    "jp_s_lantern_sign",
+    "jp_s_well_tsurube"
+   ]
+  },
+  {
+   "id": "jp_m_straw_mushiro",
+   "family": "straw",
+   "palette_id": "thatch_new",
+   "used_by": [
+    "jp_s_bench",
+    "jp_s_stall"
+   ]
+  },
+  {
+   "id": "jp_m_paper_shoji",
+   "family": "paper",
+   "palette_id": "washi_shoji",
+   "used_by": [
+    "jp_s_shimenawa",
+    "jp_s_stone_lantern"
+   ]
+  }
+ ],
+ "requested_palette_entries": [
+  {
+   "id": "straw_aged",
+   "method": "assumed (sample pending: k34_straw_rice not downloaded yet; rerun fetch_refs.py then this script)",
+   "tolerance_dE76": 14,
+   "ref": "k34_straw_rice",
+   "box": [
+    0.3,
+    0.35,
+    0.7,
+    0.75
+   ],
+   "select": "mid 70 % luminance",
+   "why": "Straw rope, stacks and bundles one season old: lighter and warmer than roof thatch_weathered (70,60,58), greyer than thatch_new (176,150,98, assumed). Sampled from an October photo of rice straw (PD, k34) once it is downloaded.",
+   "srgb": [
+    150,
+    131,
+    98
+   ],
+   "samples": []
+  },
+  {
+   "id": "leaf_litter_autumn",
+   "srgb": [
+    96,
+    70,
+    46
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 14,
+   "samples": [],
+   "why": "Mean of mixed wet autumn leaf litter; needs a licensed sample (an ambientCG CC0 leaf scan will do) before the material ships."
+  }
+ ]
+}

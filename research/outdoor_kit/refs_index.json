@@ -1,0 +1,576 @@
+{
+ "version": 1,
+ "category": "site-outdoor-core-kit",
+ "date": "2026-09-29",
+ "note": "Images local only in data/research_okit/refs/ (never shipped). Ids x.. are in research/exterior/refs_index.json (data/research_ext/refs/); c.., m.., T.. in playbook/refs_index.json. O.. are text sources (cited, not copied). Many O entries were read through a search-engine summary only, which is marked; verify before a hero build.",
+ "download_policy": "PD / CC0 / CC BY only (no -SA), Wikimedia Commons API, generic User-Agent \"JapanDevResearch/1.0 (DayZ mod research)\", thumbnails <=1600 px. Credits: research/outdoor_kit/CREDITS.md.",
+ "exterior_ids_reused": [
+  "x27_morse_village_yamashiro",
+  "x30_shinagawa_1726",
+  "x31_masanobu_ryogoku_1748",
+  "x33_jinrin_bookseller_1690",
+  "x36_hiroshige_ishibe",
+  "x37_eisen_narai",
+  "x38_morse_gutter"
+ ],
+ "playbook_ids_reused": [
+  "c01_narai_street",
+  "c05_ouchi_thatch",
+  "c09_himeji",
+  "c10_inari_torii",
+  "c16_hakone_sekisho",
+  "c18_hiroshige_mariko",
+  "c20_minkaen_c",
+  "c22_kasuga_lanterns",
+  "c24_jizo_cemetery"
+ ],
+ "images": [
+  {
+   "id": "k02_bunken_ezu_p12",
+   "file": "data/research_okit/refs/k02_bunken_ezu_p12.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:NDL-DC 1287041 2 1287740 Tokaido Bunken Ezu 0012 0000crd.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:NDL-DC_1287041_2_1287740_Tokaido_Bunken_Ezu_0012_0000crd.jpg",
+   "licence": "Public domain",
+   "author": "Ochikochi Dōin",
+   "date": "unknown",
+   "supports": "Tokaido bunken ezu (1690, Hishikawa Moronobu): the road near Hara with pine avenue, mile mound and a roadside marker (schematic)",
+   "status": "downloaded"
+  },
+  {
+   "id": "k05_moronobu_street_1680",
+   "file": "data/research_okit/refs/k05_moronobu_street_1680.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:MET DP124572.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:MET_DP124572.jpg",
+   "licence": "CC0",
+   "author": "Hishikawa Moronobu",
+   "date": "circa 1680",
+   "supports": "Hishikawa Moronobu, Yoshiwara street scene, c.1680 (MET, CC0): lattice front, short noren, a porter with a load",
+   "status": "downloaded"
+  },
+  {
+   "id": "k06_moronobu_ageyamachi",
+   "file": "data/research_okit/refs/k06_moronobu_ageyamachi.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:The Entrance to Ageya-machi, from the series Scenes in the Yoshiwara (Yoshiwara no tei) (IA mma the entrance to ageyamachi from the series scenes in the yoshiwara yoshiw 37252).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:The_Entrance_to_Ageya-machi,_from_the_series_Scenes_in_the_Yoshiwara_(Yoshiwara_no_tei)_(IA_mma_the_entrance_to_ageyamachi_from_the_series_scenes_in_the_yoshiwara_yoshiw_37252).jpg",
+   "licence": "Public domain",
+   "author": "Hishikawa Moronobu",
+   "date": "unknown",
+   "supports": "Hishikawa Moronobu, entrance to Ageya-machi, c.1680: split noren with crests along the eave, a low plank bench-platform with goods, two baskets from a carrying pole, stone-weighted board roofs",
+   "status": "downloaded"
+  },
+  {
+   "id": "k09_masanobu_ishiyama_1740",
+   "file": "data/research_okit/refs/k09_masanobu_ishiyama_1740.jpg",
+   "source": "Wikimedia Commons",
+   "title": "File:Okumura Masanobu - Lady Murasaki at Ishiyama Overlooking a Panorama with Seven Views of Lake B - 1916.1147 - Cleveland Museum of Art.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Okumura_Masanobu_-_Lady_Murasaki_at_Ishiyama_Overlooking_a_Panorama_with_Seven_Views_of_Lake_B_-_1916.1147_-_Cleveland_Museum_of_Art.jpg",
+   "licence": "CC0",
+   "author": "Okumura Masanobu",
+   "date": "1740",
+   "supports": "Okumura Masanobu, perspective print, 1740 (Cleveland, CC0): rolled sudare tied up under the eaves",
+   "status": "downloaded"
+  },
+  {
+   "id": "k10_morse_well_frame",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 289 Wooden well-frame.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_289_Wooden_well-frame.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 289: wooden well-frame with pulley"
+  },
+  {
+   "id": "k11_morse_well_rustic",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 290 Rustic well-frame.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_290_Rustic_well-frame.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 290: rustic well-frame"
+  },
+  {
+   "id": "k12_morse_well_kaga",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 293 Well at Kaga Yashiki, Tokio.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_293_Well_at_Kaga_Yashiki,_Tokio.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 293: roofed well at the Kaga yashiki, Tokyo"
+  },
+  {
+   "id": "k13_morse_well_curb_old",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 287 Ancient form of well-curb.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_287_Ancient_form_of_well-curb.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 287: ancient form of wooden well-curb (igeta)"
+  },
+  {
+   "id": "k14_morse_well_curb_stone",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 288 Stone well-curb in private garden.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_288_Stone_well-curb_in_private_garden.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 288: stone well-curb in a private garden"
+  },
+  {
+   "id": "k15_morse_chozubachi",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 240 Chōdzu-bachi.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_240_Ch%C5%8Ddzu-bachi.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 240: stone water basin (chozubachi)"
+  },
+  {
+   "id": "k16_morse_toro_tokio",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 264 Ishi-dōrō in Tokio.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_264_Ishi-d%C5%8Dr%C5%8D_in_Tokio.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 264: stone lantern in Tokyo"
+  },
+  {
+   "id": "k17_morse_toro_utsunomiya",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:JapanHomes 267 Ishi-dōrō in Utsunomiya.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:JapanHomes_267_Ishi-d%C5%8Dr%C5%8D_in_Utsunomiya.jpg",
+   "licence": "Public domain",
+   "author": "Edward S. Morse",
+   "date": "1885-11",
+   "supports": "Morse 1885 fig. 267: stone lantern in Utsunomiya"
+  },
+  {
+   "id": "k19_koshinto",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Kosinto0091.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Kosinto0091.jpg",
+   "licence": "Public domain",
+   "author": "Fg2",
+   "date": "Unknown date",
+   "supports": "inscribed Koshin stone, Nikko (photo, PD)"
+  },
+  {
+   "id": "k20_kosatsuba_kashiwabara",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:The ruin of Kōsatsuba in Kashiwabara 20210308.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:The_ruin_of_K%C5%8Dsatsuba_in_Kashiwabara_20210308.jpg",
+   "licence": "CC0",
+   "author": "先従隗始",
+   "date": "2021-03-08 10:58:02",
+   "supports": "site of the Kashiwabara-juku kosatsuba (photo, CC0)"
+  },
+  {
+   "id": "k21_edo_bousui",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Japanese Edo Bousui.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Japanese_Edo_Bousui.jpg",
+   "licence": "CC BY 2.5",
+   "author": "DryPot",
+   "date": "2011-07-09",
+   "supports": "fire tub with a bucket pyramid, Fukagawa Edo Museum street reconstruction (photo, CC BY 2.5)"
+  },
+  {
+   "id": "k22_hirakata_jinja",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Hirakata-jinja (Matsudo, Matsudo) 04.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Hirakata-jinja_(Matsudo,_Matsudo)_04.jpg",
+   "licence": "CC0",
+   "author": "Higa4",
+   "date": "2021-12-25 16:09:59",
+   "supports": "Hirakata shrine, Matsudo: donated fire tub (tensui-oke) with a donor mark (photo, CC0)"
+  },
+  {
+   "id": "k23_kasuga_lanterns",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Stone lanterns in Kasuga-taisha-1.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Stone_lanterns_in_Kasuga-taisha-1.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Immanuelle",
+   "date": "2024-05-28 12:52:32",
+   "supports": "stone lanterns at Kasuga Taisha (photo, CC BY 4.0)"
+  },
+  {
+   "id": "k24_chozubachi",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Chozubachi chozuya water purification in Shinto shrine in Japan.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Chozubachi_chozuya_water_purification_in_Shinto_shrine_in_Japan.jpg",
+   "licence": "CC BY 3.0",
+   "author": "Marek Ślusarczyk (Tupungato) Photo portfolio",
+   "date": "2016-11-25",
+   "supports": "chozubachi with ladles at a shrine (photo, CC BY 3.0)"
+  },
+  {
+   "id": "k25_gorinto",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Gorinto.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Gorinto.jpg",
+   "licence": "Public domain",
+   "author": "Tarourashima",
+   "date": "2008-04-06",
+   "supports": "gorinto five-ring stupa (photo, PD)"
+  },
+  {
+   "id": "k26_gorinto_gamou",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Grave of Gamou Ujisato in Koutokuji.JPG",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Grave_of_Gamou_Ujisato_in_Koutokuji.JPG",
+   "licence": "CC0",
+   "author": "Saigen Jiro",
+   "date": "2014-08-03 11:49:46",
+   "supports": "large gorinto grave of Gamo Ujisato, Kotoku-ji (photo, CC0)"
+  },
+  {
+   "id": "k27_hida_torii",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Hidatorii.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Hidatorii.jpg",
+   "licence": "Public domain",
+   "author": "Ngresonance",
+   "date": "2007-01-17",
+   "supports": "unpainted wooden torii, Hida (photo, PD)"
+  },
+  {
+   "id": "k28_kusakabe_peddler",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Vegetable peddler Kusakabe Kimbei.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Vegetable_peddler_Kusakabe_Kimbei.jpg",
+   "licence": "Public domain",
+   "author": "possibly by Kusakabe Kimbei (日下部 金幣|) (1841 - 1934)",
+   "date": "possibly between 1841 and 1934",
+   "supports": "Kusakabe Kimbei, vegetable peddler with pole and baskets, 1880s (PD)"
+  },
+  {
+   "id": "k29_hiroshige_numazu",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Numazu (5765899882).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Numazu_(5765899882).jpg",
+   "licence": "Public domain",
+   "author": "Utagawa Hiroshige",
+   "date": "between circa 1840 and circa 1842",
+   "supports": "Utagawa Hiroshige, Numazu (Kyoka Tokaido), 1838-42 (San Diego Museum of Art, PD): Tokaido post station with a notice board and a tea house"
+  },
+  {
+   "id": "k30_rokujizo",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:六地蔵石仏.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:%E5%85%AD%E5%9C%B0%E8%94%B5%E7%9F%B3%E4%BB%8F.jpg",
+   "licence": "CC0",
+   "author": "Souka Kinmei",
+   "date": "2024-12-10",
+   "supports": "six stone Jizo figures in a row (rokujizo sekibutsu; photo, CC0)"
+  },
+  {
+   "id": "k31_daihachi_uzumasa",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Toei Uzumasa-0321.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Toei_Uzumasa-0321.jpg",
+   "licence": "Public domain",
+   "author": "Fg2",
+   "date": "2002",
+   "supports": "daihachi-guruma on the Toei Uzumasa Edo street set (photo, PD)"
+  },
+  {
+   "id": "k32_harunobu_well",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:At the Well on New Year's Morning (IA mma at the well on new years morning 36635).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:At_the_Well_on_New_Year%27s_Morning_(IA_mma_at_the_well_on_new_years_morning_36635).jpg",
+   "licence": "Public domain",
+   "author": "Suzuki Harunobu",
+   "date": "unknown",
+   "supports": "Suzuki Harunobu (d. 1770), At the well on New Year's morning (MET, PD; the Commons date '1799' cannot be right): well frame with pulley, wooden buckets, a tub"
+  },
+  {
+   "id": "k33_harunobu_araihari_1767",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Araihari LCCN2008660584.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Araihari_LCCN2008660584.jpg",
+   "licence": "Public domain",
+   "author": "Suzuki, Harunobu, 1725?-1770, artist",
+   "date": "1767",
+   "supports": "Suzuki Harunobu, Araihari (cloth stretching), 1767 (LoC, PD): laundry yard, tubs"
+  },
+  {
+   "id": "k34_straw_rice",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Straw of the rice.08Oct9.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Straw_of_the_rice.08Oct9.jpg",
+   "licence": "Public domain",
+   "author": "池田正樹 (talk) masaki ikeda",
+   "date": "2008-10-09",
+   "supports": "rice straw drying in a harvested field, 9 October 2008 (photo, PD): straw_aged sample"
+  },
+  {
+   "id": "k35_firewood_hoshigaki",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:岩手県 干し柿 薪 (45239013034).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:%E5%B2%A9%E6%89%8B%E7%9C%8C_%E5%B9%B2%E3%81%97%E6%9F%BF_%E8%96%AA_(45239013034).jpg",
+   "licence": "CC BY 2.0",
+   "author": "Hajime NAKANO from Tokyo, Japan",
+   "date": "2018-11-17 12:59",
+   "supports": "firewood stacked under an eave with persimmons drying, Iwate, November (photo, CC BY 2.0)"
+  },
+  {
+   "id": "k36_firewood_motai",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Motai-juku, Saku, Nagano, Japan (3577074903).jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Motai-juku,_Saku,_Nagano,_Japan_(3577074903).jpg",
+   "licence": "CC BY 2.0",
+   "author": "yeowatzup",
+   "date": "2009-04-29 16:27",
+   "supports": "Motai-juku, Saku (Nakasendo): firewood along a house (photo, CC BY 2.0)"
+  },
+  {
+   "id": "k37_shimenawa_tree",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Shikaumi Shrine Sacred Tree.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Shikaumi_Shrine_Sacred_Tree.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Immanuelle",
+   "date": "2024-05-30 10:33:08",
+   "supports": "sacred tree with shimenawa, Shikaumi shrine (photo, CC BY 4.0)"
+  },
+  {
+   "id": "k38_shrine_steps",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Kashima Daijingu Shrine, stone steps in the precincts. Niita district, Koriyama city, Fukushima prefecture.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Kashima_Daijingu_Shrine,_stone_steps_in_the_precincts._Niita_district,_Koriyama_city,_Fukushima_prefecture.jpg",
+   "licence": "CC BY 4.0",
+   "author": "さかおり",
+   "date": "2023-10-25 12:33:20",
+   "supports": "stone steps, Kashima Daijingu, Koriyama (photo, CC BY 4.0)"
+  },
+  {
+   "id": "k39_nobori_hiko",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Hiko Shrine banners.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Hiko_Shrine_banners.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Immanuelle",
+   "date": "2024-08-21 11:55:42",
+   "supports": "shrine banners, Hiko shrine (photo, CC BY 4.0)"
+  },
+  {
+   "id": "k40_motoki_torii",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Motoki Stone Torii in 2026 01.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Motoki_Stone_Torii_in_2026_01.jpg",
+   "licence": "CC BY 4.0",
+   "author": "Halowand",
+   "date": "2026-08-02 16:13:22",
+   "supports": "Motoki stone torii, Yamagata, Heian period, still standing (photo, CC BY 4.0)"
+  },
+  {
+   "id": "k41_koshin_sendabori",
+   "file": null,
+   "status": "linked only (upload.wikimedia.org answered 429; rerun fetch_refs.py to download)",
+   "source": "Wikimedia Commons",
+   "title": "File:Sendabori no Kōshin-tō (Kanegasaku, Matsudo) 01.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Sendabori_no_K%C5%8Dshin-t%C5%8D_(Kanegasaku,_Matsudo)_01.jpg",
+   "licence": "CC0",
+   "author": "Higa4",
+   "date": "2022-04-10 13:01:10",
+   "supports": "Sendabori Koshin stones, Kanegasaku, Matsudo (photo, CC0)"
+  }
+ ],
+ "text": [
+  {
+   "id": "O01",
+   "url": "https://www.gotokyo.org/jp/spot/968/index.html",
+   "supports": "Fuchu kosatsuba (Koshu road x Kawagoe road), a surviving Edo-period notice board: 4.6 m wide, about 5 m high, roofed; general kosatsuba 3-4 m high, 3-5 m wide (with jinriki.info/kaidolist/yogo/kosatsuba.html). Read via search summary"
+  },
+  {
+   "id": "O03",
+   "url": "https://www.gakken.jp/kagakusouken/spread/oedo/06/kaisetsu1.html",
+   "supports": "Edo town fire-fighting: big tubs of about 6 koku at street crossings with hand buckets stacked on top; houses keep tensui-oke and buckets filled. Read via search summary (it misstates 6 koku as 108 L; 6 koku = about 1,080 L)"
+  },
+  {
+   "id": "O04",
+   "url": "https://www.chiba-muse.or.jp/MURA/digitalmuseum/machinami/all_8.html",
+   "supports": "Chiba prefectural museum, street facilities: daihachi-guruma bed 8 shaku x 2.5 shaku, wheel 3.5 shaku, from after the 1657 fire; carts branded at Denmacho 1700-03 (2,239 carts); roads 4 ken; wells, tensui-oke, kosatsuba, kido listed"
+  },
+  {
+   "id": "O05",
+   "url": "https://www.lib.city.funabashi.lg.jp/viewer/info.html?idSubTop=2&id=396",
+   "supports": "Funabashi library: gravestone chronology. Board-shaped (itabi-gata) from the 1620s, peak 1660s-90s, declining in the Kyoho era (1720s); round-headed from Kyoho, peak mid-late 18th c.; pointed pillar appears Kyoho, peak late 18th-early 19th c."
+  },
+  {
+   "id": "O06",
+   "url": "https://www.ris.ac.jp/museum/profile/lvhgqo0000004877-att/magechi20_compressed.pdf",
+   "supports": "Rissho University museum: boat-halo (funagata kohai) figure gravestones from the late Kan-ei era to the late Edo period; large and well carved until about Kyoho, smaller and cruder after; later mostly child graves (Jizo). Read via search summary"
+  },
+  {
+   "id": "O07",
+   "url": "https://www.city.edogawa.tokyo.jp/e_bunkazai/bunkazai/toroku/minzokushiryo106.html",
+   "supports": "Edogawa ward: Shinzo-in standing Shomen Kongo Koshin stone, Genroku 11 (1698), 122 cm, four arms, two attendants, four yasha; Tofuku-in stone said to be Kyoho 12 (1727): sun, moon, Shomen Kongo, demon, two cocks (minzokushiryo107.html). Read via search summary"
+  },
+  {
+   "id": "O08",
+   "url": "https://www.city.nerima.tokyo.jp/kankomoyoshi/annai/rekishiwoshiru/rekishibunkazai/bunkazai/b039.html",
+   "supports": "Nerima ward: round-carved Shomen Kongo Koshin stone, Kyoho 12 (1727), 148 cm. Read via search summary"
+  },
+  {
+   "id": "O09",
+   "url": "https://www.city.hirosaki.aomori.jp/gaiyou/bunkazai/shi/shi83.html",
+   "supports": "Hirosaki: Shomen Kongo Koshin stone, andesite square pillar, 122.5 cm (shaft 94.5 cm, base 28 cm). Read via search summary"
+  },
+  {
+   "id": "O10",
+   "url": "https://www.weblio.jp/content/%E6%98%A5%E6%97%A5%E7%81%AF%E7%B1%A0",
+   "supports": "Kasuga lantern parts (hoju, kasa, hibukuro, chudai, sao, kiso) and a mason's proportion for a 10-shaku lantern: 2.0 / 1.3 / 1.7 / 1.0 / 3.6 / 0.5 shaku. Read via search summary"
+  },
+  {
+   "id": "O11",
+   "url": "https://www.city.okazaki.lg.jp/bunka/torikumi_bunka/1004568/1004592/1004595/1004634.html",
+   "supports": "Okazaki city: myojin stone torii, total height 271.0 cm, post span 181.5 cm, granite, one-piece kasagi. Read via search summary"
+  },
+  {
+   "id": "O12",
+   "url": "https://www.city.kato.lg.jp/kakukanogoannai/kyouikushinkoubu/shogaigakushuka/bunkazai/siteibunkazai/kensiteibunkazai/1510384600965.html",
+   "supports": "Kato city: Kawataka Sumiyoshi shrine myojin stone torii, span 2.5 m, height 2.8 m. Read via search summary"
+  },
+  {
+   "id": "O13",
+   "url": "https://ja.wikipedia.org/wiki/%E5%85%83%E6%9C%A8%E3%81%AE%E7%9F%B3%E9%B3%A5%E5%B1%85",
+   "supports": "Motoki stone torii, Yamagata: the oldest surviving torii (Heian), myojin form, 351 cm high"
+  },
+  {
+   "id": "O14",
+   "url": "https://online.bunka.go.jp/heritages/detail/249273",
+   "supports": "Chozubachi inscribed Tenna 2 (1682): height 56.9 cm, top 82.3 x 48.4 cm; with city.takahashi.lg.jp/bunkazai/map/0048.html: Omononushi shrine granite basin 150 x 75 x 75 cm, hollow 35 cm deep, rim 10.7 cm. Read via search summary"
+  },
+  {
+   "id": "O15",
+   "url": "https://online.bunka.go.jp/heritages/detail/184686",
+   "supports": "Toshogu stone myojin torii: donated Kan-ei 10 (1633), repair inscription Kyoho 19 (1734). Read via search summary"
+  },
+  {
+   "id": "O16",
+   "url": "https://sotouba.net/blog/knowledge/stupa/sotouba-size/",
+   "supports": "Sotoba sizes: board sotoba about 1 cm thick, 60-180 cm; a 3.5-shaku slat is 1050 x 75 x 9 mm (modern trade source; the form is old). Read via search summary"
+  },
+  {
+   "id": "O17",
+   "url": "https://ja.wikipedia.org/wiki/%E7%B8%81%E5%8F%B0",
+   "supports": "Endai: bench about 45 cm wide, 160 cm long, 45 cm high, wood or bamboo, general in the Edo period (ukiyo-e); called shogi-dai in Kansai. Read via search summary"
+  },
+  {
+   "id": "O18",
+   "url": "https://nichimen.or.jp/know/zatsugaku/29/",
+   "supports": "Edo yatai after Morisada manko (1837-53, a late source): 6 shaku wide, 3 shaku deep; carried (katsugi) and stand (tachi-uri) types; no wheels. Read via search summary"
+  },
+  {
+   "id": "O19",
+   "url": "https://www.order-noren.com/support/knowledge/",
+   "supports": "Noren sizes (trade source on the old kujira shaku): standard 3 shaku (113 cm), long about 160 cm, half about 56 cm, mizuhiki 30-40 cm unsplit; one panel (haba) about 34 cm, 3 panels usual. Read via search summary"
+  },
+  {
+   "id": "O20",
+   "url": "https://kotobank.jp/word/%E8%97%81%E5%A1%9A-665655",
+   "supports": "Warazuka / nio: threshed straw stacked into a cylinder or cone round a centre pole in the stubble; many regional names (niho, nigo, nyu, noguro). Read via search summary"
+  },
+  {
+   "id": "O21",
+   "url": "https://ja.wikipedia.org/wiki/%E5%A4%A9%E7%A7%A4%E6%A3%92",
+   "supports": "Tenbin-bo: museum poles 152 cm (2.4-6.0 cm wide, 1.5-3.0 thick) and 137 cm; 6 shaku (182 cm) common; loads hung by rope at both ends (with online.bunka.go.jp/heritages/detail/145206). Read via search summary"
+  },
+  {
+   "id": "O22",
+   "url": "https://www.geolab.jp/documents/science/science-159/",
+   "supports": "Wells: dug wells about 1 m across; Edo excavations show shafts lined with stacked bottomless tubs, or dry stone. Read via search summary"
+  },
+  {
+   "id": "O23",
+   "url": "https://ja.wikipedia.org/wiki/%E9%87%A3%E7%93%B6",
+   "supports": "Tsurube: rope tsurube, two buckets on one rope over an upper pulley, pole tsurube, counterweighted hane-tsurube; wooden buckets with iron fittings from the Nara period"
+  },
+  {
+   "id": "O24",
+   "url": "https://www.mizu.gr.jp/kikanshi/no18/02.html",
+   "supports": "Mizkan water culture: Edo drains on lot boundaries in stone or wood, 3-6 shaku wide, covered; wood boards and pipes rot fast and needed regular cleaning. Read via search summary"
+  },
+  {
+   "id": "O25",
+   "url": "https://ja.wikipedia.org/wiki/%E8%A1%8C%E7%81%AF",
+   "supports": "Andon: oki-, kake-, tsuri-, tsuji-andon; kake-andon hung at shop fronts as signs with the shop name; tsuji-andon in front of guard posts as street lights; an Enshu andon about 81 cm high. Read via search summary"
+  },
+  {
+   "id": "O27",
+   "url": "https://www.city.kurashiki.okayama.jp/5407.htm",
+   "supports": "Kurashiki city: Edo-period stone standing Jizo, total 178.0 cm, figure 136.0 cm. Read via search summary"
+  }
+ ]
+}

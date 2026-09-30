@@ -1,0 +1,3940 @@
+{
+ "category": "site-outdoor-core-kit",
+ "version": 1,
+ "author": "research agent PA3 (A3)",
+ "date": "2026-09-29",
+ "stage": "S",
+ "scope_note": "The ~25 most-reused outdoor site objects (OUTDOOR_LIST §5, KEEP_OUTDOOR build-first list): props placed as map objects (JP\\site\\<group>\\, jp_s_*) or as proxies on building variants. Dead world: every entry has an abandoned state. Out of scope: trees and flora (F), fences and walls (later outdoor group), bridges and wells-as-buildings beyond this kit (KEEP_CIVIC), setting-specific props (built with their shell), terrain work.",
+ "entries": [
+  {
+   "id": "jp_s_firewood_stack",
+   "name": "Firewood stack (maki-zumi) and brushwood bundles (soda)",
+   "what": "Split billets stacked against an eave wall or free-standing between posts, plus tied brushwood bundles: the most-placed outdoor object in every setting.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "firewood and brushwood are the universal fuel; charcoal and firewood trade in towns [OUTDOOR_LIST §2 R §6 / W §8, S108]; stacked firewood under eaves in a CC BY photo of a Tohoku farmyard with persimmons drying [k35] (modern, form only)",
+   "refs": [
+    {
+     "id": "k35_firewood_hoshigaki",
+     "shows": "billets stacked under an eave with persimmons drying above (autumn yard; modern photo, form only)",
+     "period_image": false
+    },
+    {
+     "id": "k36_firewood_motai",
+     "shows": "firewood wall along a Nakasendo post-town house (modern photo, form only)",
+     "period_image": false
+    },
+    {
+     "id": "c05_ouchi_thatch",
+     "shows": "thatched post town: where stacks sit against the walls",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "billet_length_m": {
+     "value": "0.30-0.36 (1 shaku to 1.2 shaku)",
+     "assumed": true,
+     "reason": "kitchen-fire billets are cut to about one shaku so they fit a kamado mouth; no period measurement found"
+    },
+    "billet_diameter_m": {
+     "value": "0.06-0.14, split halves and quarters",
+     "assumed": true,
+     "reason": "read off k35/k36; random per billet (W8)"
+    },
+    "stack_module_m": {
+     "value": "1 ken long (1.82) x 1.2 or 1.8 high x 1 billet deep; half-ken (0.91) end module",
+     "assumed": true,
+     "reason": "snaps to the house grid (PLAYBOOK rule 9) so a stack fills a wall bay exactly"
+    },
+    "brushwood_bundle_m": {
+     "value": "d 0.35-0.45 x 0.9-1.2 long, two straw-rope ties",
+     "assumed": true,
+     "reason": "hand-carried bundle; assumed from R §4 \"brushwood / thatch bundles\""
+    }
+   },
+   "materials": [
+    {
+     "surface": "billet bark and sides",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "cut ends",
+     "material": "jp_m_wood_endgrain",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "ties",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    },
+    {
+     "surface": "brushwood twigs",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain or a stone course; back face 0.05 off a wall on the ken grid"
+   ],
+   "variants": [
+    {
+     "id": "_wall_1ken_h120",
+     "differs_by": "against a wall, 1 ken x 1.2 m"
+    },
+    {
+     "id": "_wall_1ken_h180",
+     "differs_by": "against a wall, 1 ken x 1.8 m (winter-full)"
+    },
+    {
+     "id": "_half",
+     "differs_by": "half-ken end piece, stepped top"
+    },
+    {
+     "id": "_free_posts",
+     "differs_by": "free-standing between two stakes with a board cap"
+    },
+    {
+     "id": "_bundle",
+     "differs_by": "one brushwood bundle; place 1-6 leaning"
+    },
+    {
+     "id": "_ab_collapsed",
+     "differs_by": "ABANDONED: slumped end, billets spilled on the ground"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 per 1-ken module (billets as merged prisms; end grain carries the look)",
+   "banned_tells_to_watch": [
+    "chainsaw-flat identical ends",
+    "modern plastic tarp or pallets"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Stacks were full for winter when the people left: stacks stay mostly intact, greyed, one end slumped; brushwood bundles lean and rot; leaf litter at the base.",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "mountain village",
+     "fishing village",
+     "salt village",
+     "post town",
+     "intermediate stop",
+     "castle town",
+     "jinya town",
+     "great city",
+     "port town",
+     "mining town",
+     "river-crossing town",
+     "hot-spring town",
+     "marginal settlement",
+     "wild mountain",
+     "wild coast"
+    ],
+    "flavour": []
+   },
+   "setting_kit_families": [
+    "Firewood stack",
+    "Brushwood / thatch bundles",
+    "Driftwood stacks",
+    "Fuel stacks for salt boiling"
+   ],
+   "placement_rule": "Against the doma or kitchen wall under an eave, or between two stakes in the yard; never across a door or window; 1-3 modules per house.",
+   "wave": 1,
+   "effort_sessions": 0.3,
+   "research_level": "filler"
+  },
+  {
+   "id": "jp_s_laundry_pole",
+   "name": "Laundry and drying pole (monohoshi-zao) with swappable loads",
+   "what": "A bamboo pole on two forked posts or crossed stakes: laundry in towns, persimmons, daikon and nets in autumn villages.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "monohoshi-zao on forked posts, kimono threaded through the sleeves [OUTDOOR_LIST §2 U Streets S162]; cloth stretched on bamboo (araihari) in a Harunobu print of 1767 [k33]; hung persimmons (hoshigaki) [k35]",
+   "refs": [
+    {
+     "id": "k33_harunobu_araihari_1767",
+     "shows": "washed cloth stretched on bamboo stretchers in a yard (1767)",
+     "period_image": true
+    },
+    {
+     "id": "k35_firewood_hoshigaki",
+     "shows": "persimmon strings hung under an eave (autumn load)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "pole_m": {
+     "value": "3.64 (2 ken) x d 0.04-0.05 bamboo",
+     "assumed": true,
+     "reason": "two ken spans a yard; a madake culm this long is 4-5 cm thick"
+    },
+    "post_height_m": {
+     "value": "1.8-2.1 to the fork",
+     "assumed": true,
+     "reason": "hanging height a person reaches with a raised arm"
+    },
+    "crossed_stakes_m": {
+     "value": "two 2.2 m poles crossed at 1.8 m, legs 1.0 apart",
+     "assumed": true,
+     "reason": "the cheap rural support in R §6"
+    }
+   },
+   "materials": [
+    {
+     "surface": "pole, stakes",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "forked posts",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "cloth load",
+     "material": "jp_m_textile_kinari",
+     "palette_id": "kinari_cloth"
+    },
+    {
+     "surface": "indigo cloth load",
+     "material": "jp_m_textile_noren",
+     "palette_id": "aizome_kon"
+    },
+    {
+     "surface": "persimmon / daikon load",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; loads are child proxies hung at load points 0.30 apart along the pole"
+   ],
+   "variants": [
+    {
+     "id": "_forked",
+     "differs_by": "two forked wooden posts (towns, yards)"
+    },
+    {
+     "id": "_crossed",
+     "differs_by": "crossed bamboo stakes (villages, shore)"
+    },
+    {
+     "id": "_load_cloth",
+     "differs_by": "kimono and cloth threaded on the pole: faded, one fallen"
+    },
+    {
+     "id": "_load_kaki",
+     "differs_by": "strings of peeled persimmons, dried dark (AUTUMN)"
+    },
+    {
+     "id": "_load_daikon",
+     "differs_by": "daikon hung in pairs, shrivelled (AUTUMN)"
+    },
+    {
+     "id": "_load_net",
+     "differs_by": "a small net draped (fishing village)"
+    },
+    {
+     "id": "_ab_down",
+     "differs_by": "ABANDONED: one post leaning, pole slipped to the ground at one end"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 (pole + posts); each load <=300",
+   "banned_tells_to_watch": [
+    "wire or plastic pegs",
+    "western trousers and shirts: garments are kimono shapes"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Cloth left out a year is faded, torn and partly fallen; persimmons and daikon have dried black and some strings snapped; poles stand but one in three leans.",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "mountain village",
+     "fishing village",
+     "castle town",
+     "jinya town",
+     "great city",
+     "port town",
+     "marginal settlement"
+    ],
+    "flavour": [
+     "post town",
+     "temple town",
+     "river-crossing town",
+     "hot-spring town"
+    ]
+   },
+   "setting_kit_families": [
+    "Laundry pole",
+    "Hanging produce (persimmons, daikon, chillies, seed bags)"
+   ],
+   "placement_rule": "In the back yard or back alley, parallel to the house wall 1.5-3 m out; in fishing villages between houses; never across a path.",
+   "wave": 1,
+   "effort_sessions": 0.3,
+   "research_level": "filler"
+  },
+  {
+   "id": "jp_s_straw_stack",
+   "name": "Straw stacks, stooks, bundles and rice bales (wara-nio, wara-taba, tawara)",
+   "what": "The AUTUMN signature: straw stacks round a centre pole in the stubble, stooks drying, tied bundles and stacked rice bales by barns.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2
+   ],
+   "region": "rural",
+   "priority": "P1",
+   "period_evidence": "straw stacks round a centre pole with a straw cap, many regional names (niho, nigo) [OUTDOOR_LIST §2 R §4; O20]; rice bales stacked (R, port towns); autumn season decision [KEEP_OUTDOOR]",
+   "refs": [
+    {
+     "id": "k34_straw_rice",
+     "shows": "rice straw tied and stood to dry in a harvested field, October 2008 (colour sample for straw_aged)",
+     "period_image": false
+    },
+    {
+     "id": "c05_ouchi_thatch",
+     "shows": "thatch village context",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "nio_m": {
+     "value": "d 1.5-2.2 x h 2.0-3.0 incl. conical cap; centre pole projects 0.3",
+     "source": "O20 (form); sizes assumed",
+     "assumed": true,
+     "reason": "form sourced; size read as \"higher than a man\" in farm photos"
+    },
+    "stook_m": {
+     "value": "6-10 sheaves leaning, footprint d 0.6, h 1.0-1.2",
+     "assumed": true,
+     "reason": "assumed from k34"
+    },
+    "bundle_m": {
+     "value": "d 0.25 x 0.9-1.1, two ties",
+     "assumed": true,
+     "reason": "threshed straw bundle; assumed"
+    },
+    "tawara_m": {
+     "value": "0.75 long x d 0.45, 4 to (about 60 kg) of rice",
+     "assumed": true,
+     "reason": "standard Edo rice bale of 4 to; size from later survivors, assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stack surface",
+     "material": "jp_m_straw_stack",
+     "palette_id": "straw_aged"
+    },
+    {
+     "surface": "ties, cap binding, bale lids",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    },
+    {
+     "surface": "centre pole",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain (stubble field or yard); stacks sink 0.05 into the ground"
+   ],
+   "variants": [
+    {
+     "id": "_nio_cyl",
+     "differs_by": "cylindrical stack with a conical cap (Kinai)"
+    },
+    {
+     "id": "_nio_cone",
+     "differs_by": "conical stack (Kanto)"
+    },
+    {
+     "id": "_stook",
+     "differs_by": "sheaves leaning in a ring"
+    },
+    {
+     "id": "_bundle",
+     "differs_by": "single tied bundle (place in 3s-12s)"
+    },
+    {
+     "id": "_tawara_stack",
+     "differs_by": "rice bales stacked 2-3 high, 3-6 bales"
+    },
+    {
+     "id": "_ab_slumped",
+     "differs_by": "ABANDONED: stack slumped, cap blown off, grey and darker on top"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 (nio as a 12-sided lathe with a ragged cap ring)",
+   "banned_tells_to_watch": [
+    "round machine bales or plastic wrap",
+    "square baler bales"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "status_overlay": "commoner",
+   "abandoned_state": "Straw from the last harvest: stacks greyed on top and slumped to one side, caps blown off; bales split with straw spilling; stooks fallen flat.",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "mountain village",
+     "port town"
+    ],
+    "flavour": []
+   },
+   "setting_kit_families": [
+    "Straw stack / sheaf stack",
+    "Straw bundles in stooks",
+    "Brushwood / thatch bundles",
+    "Rice bales stacked"
+   ],
+   "placement_rule": "Nio at field edges and on the threshing yard, 1-4 per farm; stooks in rows on stubble; bales only under an eave or in a shed doorway (never in the open field).",
+   "wave": 1,
+   "effort_sessions": 0.5,
+   "research_level": "filler"
+  },
+  {
+   "id": "jp_s_oke",
+   "name": "Wash tubs, buckets and barrels: the cooperage family (tarai, oke, teoke, taru)",
+   "what": "One set of stave-and-hoop meshes that dresses yards, inn doors, graves, wells and fire corners: wash tub, hand bucket, carrying bucket, pickle barrel, buckets upside down on stakes.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "wash tub (tarai) in yards, no washboard (Meiji) [OUTDOOR_LIST §2 R §6]; upturned buckets on stakes (oke-hoshi) R §6; wooden well buckets with iron bands from the Nara period [O23]",
+   "refs": [
+    {
+     "id": "k32_harunobu_well",
+     "shows": "well bucket and wash tub at a well (1760s, near-period)",
+     "period_image": true
+    },
+    {
+     "id": "k33_harunobu_araihari_1767",
+     "shows": "wash tubs in a laundry yard (1767)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "tarai_m": {
+     "value": "d 0.60-0.80 x h 0.20-0.25",
+     "assumed": true,
+     "reason": "wash tub for clothes; assumed from prints"
+    },
+    "teoke_m": {
+     "value": "d 0.24-0.28 x h 0.25 + handle 0.20",
+     "assumed": true,
+     "reason": "hand bucket, same mesh as the fire-tub pyramid buckets"
+    },
+    "ninai_oke_m": {
+     "value": "d 0.38 x h 0.38 with two tall ears for a carrying pole",
+     "assumed": true,
+     "reason": "carrying bucket; assumed"
+    },
+    "taru_m": {
+     "value": "d 0.50-0.60 x h 0.60-0.70 with a lid and weight stone",
+     "assumed": true,
+     "reason": "pickle barrel; assumed"
+    },
+    "hoop": {
+     "value": "split-bamboo hoops (taga), 2-3 per vessel; iron band only on well buckets",
+     "source": "O23 (iron fittings)"
+    }
+   },
+   "materials": [
+    {
+     "surface": "staves",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "bamboo hoops",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "iron band (well bucket)",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    },
+    {
+     "surface": "leaf litter inside",
+     "material": "jp_m_ground_leaf_litter",
+     "palette_id": "leaf_litter_autumn"
+    },
+    {
+     "surface": "weight stone",
+     "material": "jp_m_stone_river",
+     "palette_id": "stone_lantern"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain, a board floor or a stake top (upturned)"
+   ],
+   "variants": [
+    {
+     "id": "_tarai",
+     "differs_by": "wash tub"
+    },
+    {
+     "id": "_teoke",
+     "differs_by": "hand bucket (shared with the fire tub and grave rack)"
+    },
+    {
+     "id": "_ninai",
+     "differs_by": "carrying bucket (tenbin load)"
+    },
+    {
+     "id": "_taru_lid",
+     "differs_by": "pickle barrel with lid and stone"
+    },
+    {
+     "id": "_stake",
+     "differs_by": "bucket upside down on a stake (oke-hoshi)"
+    },
+    {
+     "id": "_ab_tipped",
+     "differs_by": "ABANDONED: tipped on its side, one hoop sprung"
+    },
+    {
+     "id": "_ab_staves",
+     "differs_by": "ABANDONED: collapsed into loose staves and a hoop"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 per vessel (12-16 staves as a faceted cylinder, hoops as rings)",
+   "banned_tells_to_watch": [
+    "galvanised or enamel buckets",
+    "ridged washboard (Meiji)",
+    "metal hoops on ordinary tubs"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Tubs left standing hold rotten leaves and silt (no water: nothing is clean); a third are tipped over; a few have dried out and collapsed into staves.",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "mountain village",
+     "fishing village",
+     "post town",
+     "intermediate stop",
+     "river-crossing town",
+     "hot-spring town",
+     "marginal settlement"
+    ],
+    "flavour": [
+     "wild coast"
+    ]
+   },
+   "setting_kit_families": [
+    "Wash tubs + buckets drying on stakes",
+    "Foot-washing tubs at inn doors",
+    "Pickle barrels with weight stones",
+    "Divers' tubs and beach fire ring"
+   ],
+   "placement_rule": "By the well, the back door or the kitchen wall; foot-washing tubs at inn entrances; never in the street centre. Interior list (PA2) may list the same vessels: one mesh family serves both.",
+   "wave": 1,
+   "effort_sessions": 0.5,
+   "research_level": "filler"
+  },
+  {
+   "id": "jp_s_tenbin",
+   "name": "Shoulder pole and loads (tenbin-bo) with swappable loads",
+   "what": "A carrying pole with two loads: every peddler's and farmer's carrier, stood against a wall or dropped in the road.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "peddler with a pole and two baskets in a Moronobu print, c.1680 [k06]; pole and baskets, buckets, boxes, rope-net soil carrier [OUTDOOR_LIST §2 U, S155]",
+   "refs": [
+    {
+     "id": "k06_moronobu_ageyamachi",
+     "shows": "two round baskets set down from a carrying pole in a street, c.1680",
+     "period_image": true
+    },
+    {
+     "id": "k28_kusakabe_peddler",
+     "shows": "vegetable peddler with pole and two baskets (1880s photo)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "pole_m": {
+     "value": "1.52-1.82 x 0.05 x 0.03, slightly curved",
+     "source": "O21 (museum poles 1.37 and 1.52 m; 6 shaku = 1.82 common)"
+    },
+    "rope_drop_m": {
+     "value": "0.45-0.60 from pole to load rim",
+     "assumed": true,
+     "reason": "loads hang at knee height when carried; assumed"
+    },
+    "basket_m": {
+     "value": "d 0.45 x h 0.20-0.30 round baskets",
+     "assumed": true,
+     "reason": "read off k06/k28"
+    }
+   },
+   "materials": [
+    {
+     "surface": "pole",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "ropes",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    },
+    {
+     "surface": "baskets",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "buckets",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; loads as child proxies at the two rope points"
+   ],
+   "variants": [
+    {
+     "id": "_baskets",
+     "differs_by": "two round baskets (vegetables, fish)"
+    },
+    {
+     "id": "_buckets",
+     "differs_by": "two ninai-oke buckets (water, night soil)"
+    },
+    {
+     "id": "_boxes",
+     "differs_by": "two stacked boxes (peddler's goods)"
+    },
+    {
+     "id": "_leaning",
+     "differs_by": "pole leaning on a wall, loads on the ground"
+    },
+    {
+     "id": "_ab_dropped",
+     "differs_by": "ABANDONED: dropped in the road, one basket overturned, goods spilled and rotted"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Dropped where the carrier stopped: pole on the ground, one load tipped; baskets greyed and split.",
+   "settings": {
+    "core": [
+     "rice village",
+     "fishing village",
+     "salt village",
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "river-crossing town"
+    ],
+    "flavour": [
+     "marginal settlement"
+    ]
+   },
+   "setting_kit_families": [
+    "Shoulder pole and loads (tenbin-bō)",
+    "Peddler kits",
+    "Night-soil buckets and pole"
+   ],
+   "placement_rule": "Leaning by shop doors and yard walls; dropped singly on roads and bridges (rare: 1 per few hundred metres of road).",
+   "wave": 1,
+   "effort_sessions": 0.3,
+   "research_level": "filler"
+  },
+  {
+   "id": "jp_s_handcart",
+   "name": "Handcart (daihachi-guruma) and small cart (niguruma)",
+   "what": "The dead world's abandoned vehicle: a two-wheeled plank cart left in streets, yards and on highways, loaded or tipped.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "1,273 carts counted in Edo in 1703 [PLAYBOOK §1, T54]; 2,239 carts branded at Denmacho 1700-03, invented after the 1657 fire [O04]",
+   "refs": [
+    {
+     "id": "k31_daihachi_uzumasa",
+     "shows": "a daihachi-guruma on a film-studio Edo street (2002 photo, form only)",
+     "period_image": false
+    },
+    {
+     "id": "x37_eisen_narai",
+     "shows": "post-town street context (1830s)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "bed_m": {
+     "value": "2.42 long x 0.76 wide (8 shaku x 2.5 shaku)",
+     "source": "O04"
+    },
+    "wheel_diameter_m": {
+     "value": "1.06 (3.5 shaku), wooden spoked wheels with iron tyres",
+     "source": "O04 (diameter); tyre assumed"
+    },
+    "shafts_m": {
+     "value": "bed rails continue 0.9 forward as handles with a cross bar",
+     "assumed": true,
+     "reason": "read off later photos (k31)"
+    },
+    "niguruma_m": {
+     "value": "small cart: bed 1.5 x 0.6, wheel 0.75",
+     "assumed": true,
+     "reason": "the Daishichi (under 8 shaku) class in O04; sizes assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "bed, wheels",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "tyres, hub bands",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    },
+    {
+     "surface": "load ropes",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; wheels touch at two points, handle end on the ground or propped on a stone"
+   ],
+   "variants": [
+    {
+     "id": "_empty",
+     "differs_by": "empty, handles down"
+    },
+    {
+     "id": "_load_bales",
+     "differs_by": "rice bales roped on (reuses jp_s_straw_stack _tawara)"
+    },
+    {
+     "id": "_load_barrels",
+     "differs_by": "sake or soy barrels (reuses jp_s_oke _taru)"
+    },
+    {
+     "id": "_small",
+     "differs_by": "niguruma, one person"
+    },
+    {
+     "id": "_ab_tipped",
+     "differs_by": "ABANDONED: tipped on its side, load spilled"
+    },
+    {
+     "id": "_ab_broken",
+     "differs_by": "ABANDONED: one wheel broken, bed on the ground"
+    }
+   ],
+   "lod_budget": "medium site object <=1,500 faces LOD0 (decision 9); wheels 12 spokes as flat bars",
+   "open_questions": [
+    "Is it a cover object only, or should Stephen want a pushable cart later (vehicle scripting, out of scope)?"
+   ],
+   "banned_tells_to_watch": [
+    "rubber tyres",
+    "metal spokes",
+    "wheelbarrow (late Edo-Meiji)"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Carts stand where the owners left them: half loaded, handles on the ground, one in three tipped or with a broken wheel; wood grey, tyres rusted.",
+   "settings": {
+    "core": [
+     "great city"
+    ],
+    "flavour": [
+     "post town",
+     "castle town",
+     "port town"
+    ]
+   },
+   "setting_kit_families": [
+    "Handcart (daihachi / niguruma)"
+   ],
+   "placement_rule": "In streets along the house line, in yards by the kura, at bridge ends and on the highway shoulder; never blocking a door. The DayZ car-wreck role: cover in open streets.",
+   "wave": 1,
+   "effort_sessions": 0.6,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_well_tsurube",
+   "name": "Pulley well (tsurube-ido): curb, frame, pulley, two buckets; roofed variant",
+   "what": "The town and yard well: a curb with a crossbeam frame and a pulley, two buckets on one rope; the roofed version is dwelling shell 28.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "two buckets alternating over an upper pulley (futamata tsurube) [O23]; Edo dug wells about 1 m across, lined with stacked bottomless tubs or dry stone [O22]; pulley well at a yard in Harunobu, 1760s [k32]",
+   "refs": [
+    {
+     "id": "k10_morse_well_frame",
+     "shows": "wooden well-frame with pulley (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "k12_morse_well_kaga",
+     "shows": "well at the Kaga yashiki, Tokyo: roofed frame (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "k14_morse_well_curb_stone",
+     "shows": "stone well-curb (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "k13_morse_well_curb_old",
+     "shows": "ancient form of wooden well-curb, igeta (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "k32_harunobu_well",
+     "shows": "pulley well, buckets and a tub, Suzuki Harunobu (d. 1770), 1760s",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "shaft_diameter_m": {
+     "value": "0.9-1.0 inside",
+     "source": "O22"
+    },
+    "curb_m": {
+     "value": "outside d 1.05-1.20 (round tub curb) or 1.20 x 1.20 (square igeta), h 0.60-0.75",
+     "assumed": true,
+     "reason": "shaft plus a 0.08-0.10 wall; height from Morse figs 287-288 (k13, k14) read against a figure"
+    },
+    "frame_height_m": {
+     "value": "2.2-2.4 to the pulley axle",
+     "assumed": true,
+     "reason": "read off Morse fig 289 (k10); keeps the rope clear of a standing head"
+    },
+    "bucket_m": {
+     "value": "d 0.26 x h 0.28 with an iron band (tsurube-oke)",
+     "source": "O23 (iron fittings); size assumed"
+    },
+    "roof_m": {
+     "value": "small gable, 1.6 x 1.8 plan, eave 2.1, board or shingle (roofed variant)",
+     "assumed": true,
+     "reason": "Morse fig 293 (k12); matches dwelling shell 28"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tub curb, frame",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "stone curb",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "pulley, bucket bands",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    },
+    {
+     "surface": "rope",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    },
+    {
+     "surface": "roof (roofed variant)",
+     "material": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver"
+    },
+    {
+     "surface": "wash slab",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; wash slab (nagashi-ishi) ring at grade",
+    "memory point \"well\" at the curb top centre for the drink/wash actions"
+   ],
+   "variants": [
+    {
+     "id": "_curb_tub",
+     "differs_by": "round wooden tub curb with bamboo hoops"
+    },
+    {
+     "id": "_curb_igeta",
+     "differs_by": "square timber igeta curb"
+    },
+    {
+     "id": "_curb_stone",
+     "differs_by": "stone curb (T3, temples)"
+    },
+    {
+     "id": "_roofed",
+     "differs_by": "with a small board gable roof = dwelling shell 28"
+    },
+    {
+     "id": "_lid",
+     "differs_by": "curb with a board lid only, no frame (well curb and lid; old well in the woods)"
+    },
+    {
+     "id": "_ab_open",
+     "differs_by": "ABANDONED: rope gone, one bucket on the curb, one at the bottom; lid askew; leaves in the wash slab"
+    }
+   ],
+   "lod_budget": "medium site object <=1,500 faces LOD0 (decision 9)",
+   "open_questions": [
+    "Engine: config class inherits the vanilla Well script class (4_world/entities/building/well.c: drink + wash hands) through a one-line 4_World class in our asset PBO; confirm the action targets a static map object of ours in the first in-game check."
+   ],
+   "banned_tells_to_watch": [
+    "hand pump (vanilla Chernarus well pump)",
+    "concrete ring curb",
+    "metal chain"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Frames stand; the rope has rotted and one bucket sits on the curb; lids are askew or gone; the wash slab is silted with leaves. Water is still there (decision 3).",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "fishing village",
+     "salt village",
+     "post town",
+     "intermediate stop",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "mining town",
+     "river-crossing town",
+     "hot-spring town",
+     "marginal settlement"
+    ],
+    "flavour": [
+     "wild mountain"
+    ]
+   },
+   "setting_kit_families": [
+    "Well, pulley or lever (tsurube-ido / hanetsurube)",
+    "Communal well (mura-ido / idobata)",
+    "Well curb and lid",
+    "Old well in the woods",
+    "Well-god offering"
+   ],
+   "placement_rule": "Yards: 3-8 m behind the house, near the kitchen door; towns: in the back-alley court (one per nagaya court); never in the street itself.",
+   "wave": 1,
+   "effort_sessions": 0.8,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_well_hanetsurube",
+   "name": "Lever well (hanetsurube): counterweighted sweep on a post over a curb",
+   "what": "The village well and field sweep: a long pole pivoting on a forked post, stone counterweight at one end, bucket on a bamboo pole at the other.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2
+   ],
+   "region": "rural",
+   "priority": "P1",
+   "period_evidence": "hane-tsurube named among the tsurube types [O23]; lever well mostly rural, also at town edges and temple yards [OUTDOOR_LIST §2 R §6, S157]; T1 exteriors have a lever well [PLAYBOOK §2.1]",
+   "refs": [
+    {
+     "id": "k11_morse_well_rustic",
+     "shows": "rustic well-frame (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "k13_morse_well_curb_old",
+     "shows": "wooden igeta curb (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "c20_minkaen_c",
+     "shows": "farmhouse yard context (open-air museum)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "post_m": {
+     "value": "2.4-3.0 high, forked or with a through-pin, d 0.15",
+     "assumed": true,
+     "reason": "no period measurement found; read as \"twice a man\" in later photos"
+    },
+    "sweep_pole_m": {
+     "value": "5.5-7.0 long, pivot at 1/3 from the weight end",
+     "assumed": true,
+     "reason": "lever ratio lets the weight lift a full bucket; assumed"
+    },
+    "counterweight_m": {
+     "value": "river stone or bundle of stones d 0.35-0.45, lashed",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "bucket_pole_m": {
+     "value": "bamboo 3.5-4.5 reaching into the shaft",
+     "assumed": true,
+     "reason": "shallow Kanto/Kinai water tables (O23)"
+    },
+    "curb_m": {
+     "value": "as jp_s_well_tsurube _curb_tub / _curb_igeta",
+     "assumed": true,
+     "reason": "shared mesh"
+    }
+   },
+   "materials": [
+    {
+     "surface": "post, sweep",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "bucket pole",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "counterweight",
+     "material": "jp_m_stone_river",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "lashing",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; reuses the tsurube curb meshes; memory point \"well\" as the pulley well"
+   ],
+   "variants": [
+    {
+     "id": "_well",
+     "differs_by": "over a well curb (yard)"
+    },
+    {
+     "id": "_field",
+     "differs_by": "field sweep over a ditch or pit, no curb (R §2 field version)"
+    },
+    {
+     "id": "_ab_down",
+     "differs_by": "ABANDONED: sweep lashing rotted, pole dropped with the bucket end on the ground, weight end up"
+    }
+   ],
+   "lod_budget": "medium site object <=1,500 faces LOD0; the sweep must keep its silhouette in every LOD (PLAYBOOK T7b spirit)",
+   "banned_tells_to_watch": [
+    "metal pivot hardware",
+    "concrete curb"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "status_overlay": "commoner",
+   "abandoned_state": "The lashing of the bucket pole has rotted: the sweep rests weight-down with the bamboo lying across the curb; post standing.",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "fishing village",
+     "salt village",
+     "post town",
+     "intermediate stop",
+     "castle town",
+     "jinya town",
+     "temple town",
+     "port town",
+     "mining town",
+     "river-crossing town",
+     "hot-spring town",
+     "marginal settlement"
+    ],
+    "flavour": []
+   },
+   "setting_kit_families": [
+    "Well, pulley or lever (tsurube-ido / hanetsurube)"
+   ],
+   "placement_rule": "Farm yards and village commons, 5-15 m from the house; field version at a ditch corner. Its tall sweep is a skyline tell: at most 1 per farmstead.",
+   "wave": 1,
+   "effort_sessions": 0.6,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_fire_tub",
+   "name": "Corner fire tub with bucket pyramid (tsuji no oo-oke) and eave buckets",
+   "what": "The big wooden fire tub at town crossings with small hand buckets stacked on its lid, plus buckets hung at the eaves: the 1730 fire kit, NOT a tub at every house.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "large tubs of about 6 koku at town crossings with hand buckets stacked on top [O03]; eave buckets required after the Meireki fire (FDM) [OUTDOOR_LIST §2 U Fire]; a tensui-oke at every house is 1789+ (period trap, KEEP_OUTDOOR)",
+   "refs": [
+    {
+     "id": "k21_edo_bousui",
+     "shows": "reconstructed Edo fire tub with a bucket pyramid (Fukagawa Edo Museum street set)",
+     "period_image": false
+    },
+    {
+     "id": "k22_hirakata_jinja",
+     "shows": "donated shrine fire tub (tensui-oke) with a donor mark, Hirakata shrine (photo)",
+     "period_image": false
+    },
+    {
+     "id": "x31_masanobu_ryogoku_1748",
+     "shows": "Edo riverside town, c.1748 (context only: no tub visible)",
+     "period_image": true
+    }
+   ],
+   "open_questions": [
+    "No pre-1750 image of a corner tub with a bucket pyramid was found; the form rests on O03 and museum reconstructions (k21). Check a Kyoho-era print before calling it final."
+   ],
+   "dimensions": {
+    "capacity": {
+     "value": "6 koku = about 1,080 L",
+     "source": "O03 (6 koku; 1 koku = 180.4 L)"
+    },
+    "tub_m": {
+     "value": "d 1.25 x h 1.00 outside (1,080 L needs about d 1.15 x 1.0 inside)",
+     "assumed": true,
+     "reason": "derived from the 6-koku capacity"
+    },
+    "teoke_pyramid": {
+     "value": "10 hand buckets in 3 tiers (6+3+1) on a board lid; bucket d 0.26",
+     "assumed": true,
+     "reason": "pyramid read off reconstructions (k21); count assumed"
+    },
+    "stand_m": {
+     "value": "stone or timber base 0.15-0.30 high",
+     "assumed": true,
+     "reason": "keeps the tub off the mud; assumed"
+    },
+    "eave_bucket": {
+     "value": "1-2 teoke hung on a peg at 1.9-2.1 m",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "tub staves",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "hoops",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "house-mark on buckets",
+     "material": "jp_m_decal_sumi_text",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "base stone",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "leaf litter and silt",
+     "material": "jp_m_ground_leaf_litter",
+     "palette_id": "leaf_litter_autumn"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain at a crossing corner, against a house corner post line",
+    "eave bucket: proxy on a building peg memory point"
+   ],
+   "variants": [
+    {
+     "id": "_full",
+     "differs_by": "tub + lid + 10-bucket pyramid"
+    },
+    {
+     "id": "_open",
+     "differs_by": "tub, no lid, 3 buckets on the ground"
+    },
+    {
+     "id": "_eave",
+     "differs_by": "single bucket on an eave peg (proxy for building fronts)"
+    },
+    {
+     "id": "_rural",
+     "differs_by": "smaller rain barrel under an eave (rural, R §6; about 1 koku)"
+    },
+    {
+     "id": "_ab_scattered",
+     "differs_by": "ABANDONED: pyramid collapsed, buckets scattered, lid off, tub half full of leaves and dark water"
+    }
+   ],
+   "lod_budget": "small prop set: tub <=300, pyramid <=300 (buckets merged) LOD0",
+   "banned_tells_to_watch": [
+    "per-house rain tub on every front (1789+)",
+    "hand fire pump (1750s+)",
+    "cast-iron or bronze tub outside temples"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Pyramids have fallen in wind; buckets lie scattered round the tub; the tub holds rotting leaves and a skin of dark rainwater (not a water source).",
+   "settings": {
+    "core": [
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "port town",
+     "river-crossing town"
+    ],
+    "flavour": [
+     "temple town"
+    ]
+   },
+   "setting_kit_families": [
+    "Corner fire tub with bucket pyramid + eave buckets",
+    "Rain barrel / water jar"
+   ],
+   "placement_rule": "At street crossings and alley mouths, 1 per corner, against the corner house; eave buckets on every 2nd-3rd town front. Never one tub per house (trap).",
+   "wave": 1,
+   "effort_sessions": 0.5,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_gutter",
+   "name": "Street gutter kit (omote-dobu): stone-lined segment, slab crossing, dobu-ita cover, outfall",
+   "what": "The drain along town house fronts and down back alleys, in snap-to-ken pieces laid on the terrain ditch: stone-lined run, stone slab crossing at doors, board cover (dobu-ita), corner and outfall.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "roadside ditch and street gutter carrying rain and wash water [OUTDOOR_LIST §2 U / W, S058]; Edo drains along lot boundaries in stone or wood, 3-6 shaku, boards rot fast [O24]; alley centre drain with board covers (dobu-ita) [OUTDOOR_LIST §2 U]",
+   "refs": [
+    {
+     "id": "x38_morse_gutter",
+     "shows": "bamboo eave gutter and downpipe feeding a street drain (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "x27_morse_village_yamashiro",
+     "shows": "Kansai village street with a stone-edged drain (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "c01_narai_street",
+     "shows": "post-town street edge with a gutter (surviving street)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "segment_length_m": {
+     "value": "1.82 (1 ken) and 0.91 pieces",
+     "assumed": true,
+     "reason": "snaps to the house grid (PLAYBOOK rule 9) so every front gets whole pieces"
+    },
+    "channel_m": {
+     "value": "omote-dobu inside 0.30 wide x 0.25-0.30 deep; alley dobu 0.20 x 0.20",
+     "assumed": true,
+     "reason": "O24 gives 3-6 shaku for the big lot-boundary drains; the street-front gutter is narrower (step-over width); assumed"
+    },
+    "lining_m": {
+     "value": "dressed stones 0.15-0.20 thick, top flush with grade",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "slab_crossing_m": {
+     "value": "granite slab 0.60-0.90 x 0.45 x 0.12 bridging the gutter at each door",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "dobu_ita_m": {
+     "value": "boards 0.91 long x 0.24-0.30 wide x 0.03, laid across",
+     "assumed": true,
+     "reason": "assumed; boards rattle (noise hook)"
+    }
+   },
+   "materials": [
+    {
+     "surface": "lining, slabs",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "earth-bank variant",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "dobu-ita boards",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "silt and leaves in the bed",
+     "material": "jp_m_ground_leaf_litter",
+     "palette_id": "leaf_litter_autumn"
+    }
+   ],
+   "connectors": [
+    "post: segment ends on half-ken lines along the front sill line, 0.30 in front of the pent posts",
+    "terrain: seated in a terrain-tool ditch (the linear ditch is terrain work, OUTDOOR_LIST §7.5)"
+   ],
+   "variants": [
+    {
+     "id": "_stone_1ken",
+     "differs_by": "stone-lined straight, 1 ken"
+    },
+    {
+     "id": "_stone_half",
+     "differs_by": "stone-lined straight, half ken"
+    },
+    {
+     "id": "_corner",
+     "differs_by": "90-degree corner"
+    },
+    {
+     "id": "_slab",
+     "differs_by": "slab crossing piece"
+    },
+    {
+     "id": "_board_1ken",
+     "differs_by": "alley run with dobu-ita covers"
+    },
+    {
+     "id": "_outfall",
+     "differs_by": "outfall into a canal or ditch"
+    },
+    {
+     "id": "_earth_1ken",
+     "differs_by": "earth-banked rural gutter with field-stone edge"
+    },
+    {
+     "id": "_ab_silted",
+     "differs_by": "ABANDONED: bed silted and leaf-filled, one lining stone tipped in; boards missing or broken"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 per piece; Geometry only on slabs and boards (the channel stays walkable), Roadway on slabs and boards",
+   "open_questions": [
+    "Terrain: the ditch the pieces sit in is T's terrain-tool work; the lead must decide who cuts it (placement agent or terrain agent)."
+   ],
+   "banned_tells_to_watch": [
+    "concrete U-channel",
+    "iron grates",
+    "kerbstones"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Silted to half depth with leaves and mud; weeds along the joints; a few dobu-ita boards gone or snapped so the drain gapes.",
+   "settings": {
+    "core": [
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "mining town",
+     "river-crossing town",
+     "hot-spring town",
+     "marginal settlement",
+     "highway"
+    ],
+    "flavour": []
+   },
+   "setting_kit_families": [
+    "Earth street with gutters and slab crossings",
+    "Roadside ditch / street gutter",
+    "Alley drain boards (dobu-ita)"
+   ],
+   "placement_rule": "Continuous along every town street front, 0.3 m outside the house line, a slab at each door; down the centre of back alleys with boards; highway ditches are terrain only.",
+   "wave": 1,
+   "effort_sessions": 0.6,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_chozubachi",
+   "name": "Purification basin (chozubachi) with ladle; roofless shrine form",
+   "what": "The stone ablution basin before a shrine, often donated and dated; many village shrines had no roof over it.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P2",
+   "period_evidence": "stone basin inscribed Tenna 2 (1682): h 0.57, w 0.82, d 0.48 [O14]; Omononushi shrine granite basin 1.50 x 0.75 x 0.75, basin depth 0.35 [O14]; many village shrines unroofed [OUTDOOR_LIST §2 U, S185]",
+   "refs": [
+    {
+     "id": "k15_morse_chozubachi",
+     "shows": "stone water basin (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "k24_chozubachi",
+     "shows": "chozubachi with ladles at a shrine (photo)",
+     "period_image": false
+    },
+    {
+     "id": "c22_kasuga_lanterns",
+     "shows": "weathered granite + moss colour context",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "basin_small_m": {
+     "value": "0.82 x 0.48 x 0.57 high",
+     "source": "O14 (Tenna 2 = 1682 basin)"
+    },
+    "basin_large_m": {
+     "value": "1.50 x 0.75 x 0.75 high; water hollow 0.35 deep; rim 0.107",
+     "source": "O14 (Omononushi shrine)"
+    },
+    "plinth_m": {
+     "value": "one or two flat stones 0.15-0.25 under the basin",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "ladle_m": {
+     "value": "bamboo or wood cup d 0.08 on a 0.45 handle",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "basin, plinth",
+     "material": "jp_m_stone_carved",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "carved donor text and date",
+     "material": "jp_m_decal_carved_text",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "ladle",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "moss",
+     "material": "jp_m_decal_moss",
+     "palette_id": "moss_on_stone"
+    },
+    {
+     "surface": "leaves in the hollow",
+     "material": "jp_m_ground_leaf_litter",
+     "palette_id": "leaf_litter_autumn"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain at the sando side, 3-6 m before the torii or hall; can sit under a temizuya shell (KEEP_CIVIC Shinto 5)"
+   ],
+   "variants": [
+    {
+     "id": "_small",
+     "differs_by": "Tenna-size basin (village)"
+    },
+    {
+     "id": "_large",
+     "differs_by": "long basin (town shrines)"
+    },
+    {
+     "id": "_natural",
+     "differs_by": "natural stone with a cut hollow (mountain shrine)"
+    },
+    {
+     "id": "_ab_dry",
+     "differs_by": "ABANDONED (default): dry, leaves and moss in the hollow, ladles fallen"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "banned_tells_to_watch": [
+    "bamboo spout fountain running water in a dead world",
+    "dragon spout (mostly later)"
+   ],
+   "region": "all",
+   "abandoned_state": "Dry, leaf-filled hollow with green algae stains; ladles fallen and split; moss on the north side.",
+   "settings": {
+    "core": [
+     "rice village",
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "hot-spring town"
+    ],
+    "flavour": [
+     "fishing village"
+    ]
+   },
+   "setting_kit_families": [
+    "Purification basin (chōzubachi) + ladle",
+    "Courtyard garden kit (lantern, basin, stones)"
+   ],
+   "placement_rule": "Beside the approach, right-hand side walking in, 3-6 m before the hall; one per shrine; garden variant by a veranda.",
+   "wave": 2,
+   "effort_sessions": 0.4,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_stone_jizo",
+   "name": "Stone Jizo figure (tsuji-jizo): standing monk on a lotus or plinth, 3 sizes",
+   "what": "The roadside guardian at crossroads, bridges and village entrances; the same figure makes the six-Jizo row and small child graves.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P1",
+   "period_evidence": "roadside Jizo at crossroads and village entrances [OUTDOOR_LIST §2 W §5, S078]; Edo-period standing stone Jizo total 1.78 m, figure 1.36 m [O27]; boat-halo figure stones made from the 1640s, large ones until Kyoho [O06]",
+   "refs": [
+    {
+     "id": "c24_jizo_cemetery",
+     "shows": "Jizo and grave stones, weathered stone",
+     "period_image": false
+    },
+    {
+     "id": "k30_rokujizo",
+     "shows": "six-Jizo row of stone figures (photo)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "figure_m": {
+     "value": "small 0.45, standard 0.90, large 1.36 (figure only)",
+     "source": "O27 (1.36 m figure on a 1.78 m total)"
+    },
+    "plinth_m": {
+     "value": "lotus or plain square base 0.20-0.42 high",
+     "source": "O27 (total minus figure = 0.42)"
+    },
+    "staff": {
+     "value": "shakujo staff in the right hand, jewel in the left; head shaven",
+     "source": "OUTDOOR_LIST §2 W §5"
+    }
+   },
+   "materials": [
+    {
+     "surface": "figure, plinth",
+     "material": "jp_m_stone_carved",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "moss and lichen",
+     "material": "jp_m_decal_moss",
+     "palette_id": "moss_on_stone"
+    },
+    {
+     "surface": "bib and cap (variant)",
+     "material": "jp_m_textile_kinari",
+     "palette_id": "kinari_cloth"
+    },
+    {
+     "surface": "offering cup, coins",
+     "material": "jp_m_stone_river",
+     "palette_id": "stone_lantern"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain or on a jp_s_stele base; fits inside jp_s_jizo_hut"
+   ],
+   "variants": [
+    {
+     "id": "_s",
+     "differs_by": "small (0.45) for child graves and the six-Jizo row"
+    },
+    {
+     "id": "_m",
+     "differs_by": "standard (0.90) roadside"
+    },
+    {
+     "id": "_l",
+     "differs_by": "large (1.36) on a lotus plinth, pass tops and town edges"
+    },
+    {
+     "id": "_halo",
+     "differs_by": "figure in relief on a boat-shaped halo (funagata) = also a gravestone"
+    },
+    {
+     "id": "_bib",
+     "differs_by": "with a faded cloth bib and cap (decision 6)"
+    },
+    {
+     "id": "_offer",
+     "differs_by": "offering set: stone cup, small stones piled, withered flowers"
+    },
+    {
+     "id": "_ab_tipped",
+     "differs_by": "ABANDONED: toppled face-down or leaning, head cracked (rare, 1 in 10)"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 (the carving is in the normal map; silhouette: head, shoulders, staff)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "banned_tells_to_watch": [
+    "bright new red bibs everywhere",
+    "cute modern Jizo faces"
+   ],
+   "region": "all",
+   "abandoned_state": "Stone does not rot: the figures stand, greener with moss and lichen, offerings withered, bibs rotted to rags; a few toppled by a quake or a flood.",
+   "settings": {
+    "core": [
+     "rice village",
+     "mountain village",
+     "fishing village",
+     "post town",
+     "intermediate stop",
+     "jinya town",
+     "temple town",
+     "river-crossing town",
+     "highway"
+    ],
+    "flavour": [
+     "new-field village",
+     "castle town",
+     "great city",
+     "mining town",
+     "hot-spring town",
+     "marginal settlement",
+     "wild mountain"
+    ]
+   },
+   "setting_kit_families": [
+    "Roadside Jizō (+ Jizō hut)",
+    "Six-Jizō row",
+    "Pass-top Jizō + offering heap",
+    "Landslide scar with Jizō",
+    "Sulphur workings + hell-valley Jizō",
+    "Stone Buddha / stone Buddha rows"
+   ],
+   "placement_rule": "At crossroads, bridge ends, village entrances and pass tops, facing the road; six in a row at graveyard gates; never in the middle of a road.",
+   "wave": 1,
+   "effort_sessions": 0.8,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_jizo_hut",
+   "name": "Jizo hut and street-corner box (Jizo-do / tsuji-jizo box)",
+   "what": "A waist-to-head-high roofed wooden box or tiny open hall sheltering a Jizo at a street corner or roadside; one per ward in Kyoto.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P1",
+   "period_evidence": "roofed box or tiny hall sheltering a Jizo, one per Kyoto ward [OUTDOOR_LIST §2 W §5, S079]",
+   "refs": [
+    {
+     "id": "c24_jizo_cemetery",
+     "shows": "Jizo stones context",
+     "period_image": false
+    },
+    {
+     "id": "x27_morse_village_yamashiro",
+     "shows": "Kansai village street context (Morse 1885)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "box_m": {
+     "value": "0.9 x 0.9 plan (half ken), 1.5-1.8 high, raised floor 0.6",
+     "assumed": true,
+     "reason": "fits jp_s_stone_jizo _s/_m; on the half-ken grid"
+    },
+    "hall_m": {
+     "value": "1.82 x 1.82 open front, eave 1.9, ridge 2.8 (walk-under shelter)",
+     "assumed": true,
+     "reason": "one ken; a tiny rain shelter hook"
+    },
+    "lattice_front_m": {
+     "value": "bars 0.03 at 0.09, opening leaf",
+     "assumed": true,
+     "reason": "reuses the koshi part style; assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame, boards",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "roof boards",
+     "material": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver"
+    },
+    {
+     "surface": "lattice",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "stone base",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain or a stone base; Jizo figure as a child proxy on the floor board"
+   ],
+   "variants": [
+    {
+     "id": "_box",
+     "differs_by": "waist-to-head box on a post or stone base (Kyoto street corner)"
+    },
+    {
+     "id": "_hall",
+     "differs_by": "one-ken open hall (roadside)"
+    },
+    {
+     "id": "_stone_roof",
+     "differs_by": "stone slab roof over a figure, no box (mountain)"
+    },
+    {
+     "id": "_ab_open",
+     "differs_by": "ABANDONED: lattice door fallen off, roof boards lifted, leaves inside"
+    }
+   ],
+   "lod_budget": "small building class is too big: medium site object <=1,500 faces LOD0 (hall), box <=600",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "abandoned_state": "Roof boards lifted and mossy, the lattice door hanging or fallen; the figure inside untouched; dead flowers and leaves on the floor.",
+   "settings": {
+    "core": [
+     "rice village",
+     "mountain village",
+     "fishing village",
+     "post town",
+     "intermediate stop",
+     "jinya town",
+     "river-crossing town",
+     "highway"
+    ],
+    "flavour": [
+     "new-field village",
+     "castle town",
+     "great city",
+     "mining town",
+     "hot-spring town",
+     "marginal settlement"
+    ]
+   },
+   "setting_kit_families": [
+    "Roadside Jizō (+ Jizō hut)"
+   ],
+   "placement_rule": "At street corners (towns, against a corner house) and at village entrances; 1 per 2-3 roadside Jizo.",
+   "wave": 1,
+   "effort_sessions": 0.4,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_stele",
+   "name": "Inscribed stone family: Koshin pillar and roadside steles with text decals",
+   "what": "Six stone shapes carrying carved relief or text: the Koshin stone, dosojin, bato Kannon, direction and boundary stones, nenbutsu and memorial stones, all one family.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P1",
+   "period_evidence": "Koshin pillar with Shomen Kongo, 1.22 m, 1698 [O07]; round-carved Koshin 1.48 m, 1727 [O08]; Koshin 1.225 m (shaft 0.945, base 0.28), andesite [O09]; Koshin stones from 1664, common in 1730 [OUTDOOR_LIST §2 W §5, S085; §3.3]",
+   "refs": [
+    {
+     "id": "k41_koshin_sendabori",
+     "shows": "Koshin stones by a village road, Matsudo (photo)",
+     "period_image": false
+    },
+    {
+     "id": "k19_koshinto",
+     "shows": "inscribed (text-type) Koshin stone, Nikko (photo)",
+     "period_image": false
+    },
+    {
+     "id": "c24_jizo_cemetery",
+     "shows": "weathered stone and lichen",
+     "period_image": false
+    },
+    {
+     "id": "k02_bunken_ezu_p12",
+     "shows": "roadside marker post and mile mound on the Tokaido, 1690 (schematic)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "koshin_pillar_m": {
+     "value": "shaft 0.95 x 0.35 x 0.25 + base 0.28 = 1.22 total",
+     "source": "O07, O09"
+    },
+    "koshin_relief": {
+     "value": "Shomen Kongo (4 or 6 arms) with sun and moon above, 3 monkeys below, sometimes 2 cocks",
+     "source": "O07 (1698), O07b (1727: sun, moon, 2 cocks)"
+    },
+    "natural_slab_m": {
+     "value": "0.6-1.4 high, 0.4-0.8 wide, 0.15-0.30 thick",
+     "assumed": true,
+     "reason": "dosojin, nenbutsu, mountain-god stones are natural slabs; assumed"
+    },
+    "arched_slab_m": {
+     "value": "0.5-0.9 high x 0.30-0.40, rounded top",
+     "assumed": true,
+     "reason": "shared with the kushigata gravestone; assumed"
+    },
+    "direction_post_m": {
+     "value": "square pillar 0.9-1.5 x 0.20-0.25",
+     "assumed": true,
+     "reason": "michi-shirube; assumed"
+    },
+    "text": {
+     "value": "carved decals: Koshin, namu amida butsu, dosojin, bato Kannon, \"right: Edo road\", boundary names, era dates (Genroku, Hoei, Shotoku, Kyoho)",
+     "source": "OUTDOOR_LIST §7.7"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_carved",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "carved text",
+     "material": "jp_m_decal_carved_text",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "moss and lichen",
+     "material": "jp_m_decal_moss",
+     "palette_id": "moss_on_stone"
+    },
+    {
+     "surface": "mound earth (Koshin mound)",
+     "material": "jp_m_ground_leaf_litter",
+     "palette_id": "leaf_litter_autumn"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; 1-3 stones may share one base stone; decals are separate geometry faces 2 mm proud"
+   ],
+   "variants": [
+    {
+     "id": "_koshin",
+     "differs_by": "Koshin square pillar with Shomen Kongo relief"
+    },
+    {
+     "id": "_relief_panel",
+     "differs_by": "relief panel (bato Kannon horse head, dosojin couple)"
+    },
+    {
+     "id": "_natural_slab",
+     "differs_by": "natural slab with deep-cut characters"
+    },
+    {
+     "id": "_arched",
+     "differs_by": "arched-top slab"
+    },
+    {
+     "id": "_pillar",
+     "differs_by": "square direction / boundary post"
+    },
+    {
+     "id": "_round",
+     "differs_by": "round stone (dosojin, water god)"
+    },
+    {
+     "id": "_group3",
+     "differs_by": "three stones on one base (a roadside cluster)"
+    },
+    {
+     "id": "_ab_tipped",
+     "differs_by": "ABANDONED: leaning 10-20 degrees, half sunk, lichen over the text"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 per stone",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "banned_tells_to_watch": [
+    "paired dosojin everywhere (mostly 1804-30: a few only)",
+    "Fuji-ko or Ontake-ko stones (1779+/1785+)",
+    "Tokuhon-style nenbutsu stones (c.1800)"
+   ],
+   "region": "all",
+   "abandoned_state": "As the Jizo: stones endure. Leaning, sunk, lichen blotting the text; grass tufts at the base; offerings gone.",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "mountain village",
+     "post town",
+     "great city",
+     "temple town",
+     "mining town",
+     "highway",
+     "wild mountain"
+    ],
+    "flavour": [
+     "fishing village",
+     "intermediate stop",
+     "castle town",
+     "jinya town",
+     "river-crossing town",
+     "marginal settlement"
+    ]
+   },
+   "setting_kit_families": [
+    "Kōshin stone / mound",
+    "Dōsojin (character / couple / round-stone)",
+    "Batō Kannon",
+    "Direction stone / wooden signpost",
+    "Village boundary post / stone",
+    "Nenbutsu / daimoku stone",
+    "Water-god stone",
+    "Mountain-god stone / hokora",
+    "Pilgrim-club stone (kō-hi)",
+    "Execution-ground memorial stones",
+    "Inscribed stele / memorial stupa"
+   ],
+   "placement_rule": "Road forks, village boundaries and crossroads, facing the road; Koshin stones singly or on a low mound (terrain); direction stones at every fork of a main road.",
+   "wave": 1,
+   "effort_sessions": 0.9,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_shimenawa",
+   "name": "Straw rope (shimenawa) with paper streamers: lengths and wraps",
+   "what": "The sacred straw rope with white zigzag streamers, in straight lengths and tree or rock wraps: marks sacred trees, rocks, wells, torii and village boundaries.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P1",
+   "period_evidence": "sacred tree with shimenawa [OUTDOOR_LIST §2 W §7]; New Year straw rope over doors, gates and wells [OUTDOOR_LIST §2 R §9, S176]; village boundary rope (kanjo-nawa, Kinai) [R §13]",
+   "refs": [
+    {
+     "id": "k37_shimenawa_tree",
+     "shows": "sacred tree wrapped with a shimenawa (photo)",
+     "period_image": false
+    },
+    {
+     "id": "c10_inari_torii",
+     "shows": "torii context",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "rope_d_m": {
+     "value": "0.04-0.08 (well, gate) to 0.15-0.25 (sacred tree)",
+     "assumed": true,
+     "reason": "read off k37; assumed"
+    },
+    "shide_m": {
+     "value": "paper streamers 0.20-0.30 long, 4 zigzag folds, every 0.4-0.6",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "wrap_m": {
+     "value": "tree wraps for trunk d 0.6 / 1.0 / 1.6",
+     "assumed": true,
+     "reason": "matches the flora list sacred-tree sizes (assumed until F sets them)"
+    }
+   },
+   "materials": [
+    {
+     "surface": "rope",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    },
+    {
+     "surface": "shide paper",
+     "material": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji"
+    }
+   ],
+   "connectors": [
+    "straight lengths hang between two memory points (torii tie-beam, gate posts, trees); wraps as proxies at trunk height 1.5-2.5"
+   ],
+   "variants": [
+    {
+     "id": "_len_1ken",
+     "differs_by": "straight hanging length, 1 ken, sagging"
+    },
+    {
+     "id": "_len_2ken",
+     "differs_by": "2 ken"
+    },
+    {
+     "id": "_wrap_d06",
+     "differs_by": "tree wrap for a 0.6 m trunk"
+    },
+    {
+     "id": "_wrap_d10",
+     "differs_by": "1.0 m trunk"
+    },
+    {
+     "id": "_wrap_d16",
+     "differs_by": "1.6 m trunk (landmark tree)"
+    },
+    {
+     "id": "_ab_tattered",
+     "differs_by": "ABANDONED (default): grey, frayed, shide gone or brown shreds"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 (twisted rope as an 8-sided sweep with a twist texture)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "abandoned_state": "A year unrenewed: grey-brown, frayed ends, most paper streamers gone; one end of a hanging length dropped.",
+   "settings": {
+    "core": [
+     "rice village",
+     "post town",
+     "castle town",
+     "great city",
+     "temple town"
+    ],
+    "flavour": [
+     "mountain village",
+     "fishing village",
+     "intermediate stop",
+     "jinya town",
+     "hot-spring town",
+     "highway",
+     "wild mountain"
+    ]
+   },
+   "setting_kit_families": [
+    "Sacred tree with shimenawa",
+    "Seasonal door dressing (kadomatsu, shimenawa, Bon altar, fires)",
+    "Village boundary rope (kanjō-nawa)",
+    "Well-god offering",
+    "Sacred rock (iwakura)"
+   ],
+   "placement_rule": "On the wooden or stone torii tie-beam, around one old tree per shrine grove, over a well or a gate; boundary ropes across village-entry roads at 3 m.",
+   "wave": 1,
+   "effort_sessions": 0.3,
+   "research_level": "filler"
+  },
+  {
+   "id": "jp_s_kosatsu",
+   "name": "Official notice board (kosatsuba): roofed frame on a stone base with a fence",
+   "what": "The shogunate edict board at bridge ends, crossings and every post town: a roofed frame holding inscribed boards, on a stone or earth base, fenced.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "status_overlay": "official",
+   "priority": "P1",
+   "period_evidence": "the Shotoku kosatsu boards of 1711 [PLAYBOOK §1, T23]; roofed boards at bridge ends and main crossings [OUTDOOR_LIST §2 U]; Fuchu kosatsuba (Koshu road, surviving Edo structure) 4.6 m wide, about 5 m high [O01]",
+   "refs": [
+    {
+     "id": "k20_kosatsuba_kashiwabara",
+     "shows": "site of the Kashiwabara-juku kosatsuba on the Nakasendo (context photo)",
+     "period_image": false
+    },
+    {
+     "id": "k29_hiroshige_numazu",
+     "shows": "notice board at Numazu on the Tokaido (1838-42 print; depiction only)",
+     "period_image": true
+    },
+    {
+     "id": "c16_hakone_sekisho",
+     "shows": "official black-board context (reconstruction)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "frame_m": {
+     "value": "3.6-4.6 wide x 3.0-5.0 high to the ridge",
+     "source": "O01 (Fuchu 4.6 x ~5; typical 3-5 wide x 3-4 high)"
+    },
+    "boards_m": {
+     "value": "5-7 boards, each 0.9-1.2 wide x 0.35-0.55 high, hung in two rows under the roof",
+     "assumed": true,
+     "reason": "assumed from prints"
+    },
+    "base_m": {
+     "value": "stone-faced earth base 0.6-0.9 high, 0.9 wider than the frame each side",
+     "assumed": true,
+     "reason": "assumed from k20 and prints"
+    },
+    "fence_m": {
+     "value": "palisade or bamboo fence 0.9-1.2 high, 0.9-1.8 in front",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "frame",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "boards",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "edict text",
+     "material": "jp_m_decal_sumi_text",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "roof",
+     "material": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver"
+    },
+    {
+     "surface": "base",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "fence",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; base is part of the mesh (Geometry + Roadway on the base top)"
+   ],
+   "variants": [
+    {
+     "id": "_std",
+     "differs_by": "post-town size, 3.6 wide"
+    },
+    {
+     "id": "_large",
+     "differs_by": "bridge-end size, 4.6 wide (Fuchu type)"
+    },
+    {
+     "id": "_forest",
+     "differs_by": "single roofed board on two posts (forest / hunting-ground notice)"
+    },
+    {
+     "id": "_ab_boards_down",
+     "differs_by": "ABANDONED: two boards fallen and split, text faded, fence gaps"
+    }
+   ],
+   "lod_budget": "medium site object <=1,500 faces LOD0",
+   "open_questions": [
+    "Board text: real 1711 Shotoku edict wording (public-domain law text) as decals? Readable in-game lore (see decision 5)."
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "abandoned_state": "Boards bleached, ink faded to ghosts, two fallen from their pegs; roof mossy; the fence has gaps.",
+   "settings": {
+    "core": [
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "port town",
+     "river-crossing town",
+     "wild mountain"
+    ],
+    "flavour": [
+     "rice village",
+     "mountain village",
+     "mining town"
+    ]
+   },
+   "setting_kit_families": [
+    "Notice board (kōsatsuba, BL site)",
+    "Forest markers (tomeyama stakes, brands, claim stakes, notice board)"
+   ],
+   "placement_rule": "At bridge ends, the main crossing of a post town and town entrances, facing the road; 1 per post town or ward; also serves KEEP_CIVIC Government 6 (decision 2).",
+   "wave": 1,
+   "effort_sessions": 0.6,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_bench",
+   "name": "Bench (shogi / endai): plank bench with legs, 2 lengths",
+   "what": "The low wide plank bench outside tea houses and shops, by farmhouse doors, under mile-mound trees: rest and a loot surface.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "a low board bench in front of a Yoshiwara shop, c.1680 [k06]; benches at tea stands [OUTDOOR_LIST §2 U, S063]; endai general in the Edo period [O17]",
+   "refs": [
+    {
+     "id": "k06_moronobu_ageyamachi",
+     "shows": "low plank platform-bench in front of a shop with goods on it, c.1680",
+     "period_image": true
+    },
+    {
+     "id": "c18_hiroshige_mariko",
+     "shows": "roadside tea-house benches (c.1833)",
+     "period_image": true
+    },
+    {
+     "id": "x36_hiroshige_ishibe",
+     "shows": "tea-house benches under the pent (c.1833)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "endai_m": {
+     "value": "1.60-1.82 long x 0.45-0.60 wide x 0.42-0.45 high",
+     "source": "O17 (about 1.60 x 0.45 x 0.45)"
+    },
+    "long_m": {
+     "value": "2.73 (1.5 ken) x 0.75 x 0.42, 3 leg frames (tea-stand platform bench)",
+     "assumed": true,
+     "reason": "k06 shows a deeper platform bench; assumed"
+    },
+    "boards": {
+     "value": "2-3 boards 0.03 thick on two leg frames with a stretcher",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "boards, legs",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "mat cover (variant)",
+     "material": "jp_m_straw_mushiro",
+     "palette_id": "thatch_new"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; seat top = loot surface (Roadway face)"
+   ],
+   "variants": [
+    {
+     "id": "_1ken",
+     "differs_by": "endai 1.82"
+    },
+    {
+     "id": "_long",
+     "differs_by": "deep tea-stand bench 2.73"
+    },
+    {
+     "id": "_mat",
+     "differs_by": "with a straw mat thrown over"
+    },
+    {
+     "id": "_ab_tipped",
+     "differs_by": "ABANDONED: tipped on its side"
+    },
+    {
+     "id": "_ab_broken",
+     "differs_by": "ABANDONED: one leg frame collapsed, seat sloping to the ground"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0",
+   "banned_tells_to_watch": [
+    "bright red felt covers: any cloth cover has rotted in the dead world; one faded rag at most",
+    "back rests"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Grey boards cupped and split, a straw mat rotted on top; one in four tipped or collapsed at one end.",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "mountain village",
+     "fishing village",
+     "post town",
+     "intermediate stop",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "mining town",
+     "river-crossing town",
+     "hot-spring town",
+     "highway"
+    ],
+    "flavour": [
+     "salt village"
+    ]
+   },
+   "setting_kit_families": [
+    "Bench (shōgi / endai)"
+   ],
+   "placement_rule": "In front of tea houses, shops and inns under the pent, along the wall; by farmhouse doors; under a tree at mile mounds and passes. 1-3 per front.",
+   "wave": 1,
+   "effort_sessions": 0.3,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_shopfront",
+   "name": "Shop-front kit: noren, mizuhiki-noren, sudare, hanging and standing signboards, shape signs",
+   "what": "The dressing that makes a street read as a shopping street: split door curtains, the shallow eave curtain, rolled blinds, signboards and 3D shape signs.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "split noren with crests along a shop eave, c.1680 [k06]; short noren at a Yoshiwara house, c.1680 [k05]; rolled sudare tied up at eaves, 1740 [k09]; bookseller front and signboard 1690 [x33]; shape signs (katachi-kanban) [OUTDOOR_LIST §2 U]",
+   "refs": [
+    {
+     "id": "k06_moronobu_ageyamachi",
+     "shows": "mizuhiki/split noren with crests along the eave, c.1680",
+     "period_image": true
+    },
+    {
+     "id": "k05_moronobu_street_1680",
+     "shows": "short noren at a doorway, c.1680",
+     "period_image": true
+    },
+    {
+     "id": "k09_masanobu_ishiyama_1740",
+     "shows": "rolled sudare tied up under the eaves, 1740",
+     "period_image": true
+    },
+    {
+     "id": "x33_jinrin_bookseller_1690",
+     "shows": "shop front and signboard, 1690",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "noren_m": {
+     "value": "3 panels x 0.34 = 1.02 wide per door; long 1.60, standard 1.13, half 0.56",
+     "source": "O19 (modern trade sizes on the old kujira shaku; panel width 1 haba)"
+    },
+    "mizuhiki_m": {
+     "value": "0.30-0.40 deep, full front width, unsplit",
+     "source": "O19"
+    },
+    "sudare_m": {
+     "value": "0.91 or 1.82 wide x 0.9-1.8 long, rolled d 0.10-0.12 when up",
+     "assumed": true,
+     "reason": "on the half-ken grid; assumed"
+    },
+    "kake_kanban_m": {
+     "value": "0.9-1.5 long x 0.25-0.35 x 0.04, hung under the eave",
+     "assumed": true,
+     "reason": "assumed from prints"
+    },
+    "oki_kanban_m": {
+     "value": "0.45 x 1.2 high on feet",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "shape_signs": {
+     "value": "6: giant brush 1.2, geta 0.6, tabi 0.7, medicine gourd 0.6, umbrella 1.0, fan 0.8",
+     "assumed": true,
+     "reason": "OUTDOOR_LIST §7.13 picks; sizes assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "noren",
+     "material": "jp_m_textile_noren",
+     "palette_id": "aizome_kon"
+    },
+    {
+     "surface": "mizuhiki / plain noren",
+     "material": "jp_m_textile_kinari",
+     "palette_id": "kinari_cloth"
+    },
+    {
+     "surface": "noren pole",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "sudare",
+     "material": "jp_m_reed_yoshizu",
+     "palette_id": "sudare_reed"
+    },
+    {
+     "surface": "signboards",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "sign text",
+     "material": "jp_m_decal_sumi_text",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "shape signs",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    }
+   ],
+   "connectors": [
+    "head: noren poles hook on the door-head (2.00) of jp_p_open_* parts; mizuhiki on the pent eave line",
+    "as proxies in the furnished shop variant p3d (decision 8)"
+   ],
+   "variants": [
+    {
+     "id": "_noren_long",
+     "differs_by": "long noren, 3 panels, shop mark"
+    },
+    {
+     "id": "_noren_half",
+     "differs_by": "half noren (eating houses)"
+    },
+    {
+     "id": "_mizuhiki",
+     "differs_by": "eave curtain, 1 or 2 ken"
+    },
+    {
+     "id": "_sudare_up",
+     "differs_by": "sudare rolled up"
+    },
+    {
+     "id": "_sudare_down",
+     "differs_by": "sudare down"
+    },
+    {
+     "id": "_kanban_hang",
+     "differs_by": "hanging signboard"
+    },
+    {
+     "id": "_kanban_stand",
+     "differs_by": "standing signboard"
+    },
+    {
+     "id": "_shape_x6",
+     "differs_by": "six shape signs (brush, geta, tabi, gourd, umbrella, fan)"
+    },
+    {
+     "id": "_ab_noren_torn",
+     "differs_by": "ABANDONED (default for noren): faded to grey-blue, one panel torn off, hem shredded"
+    },
+    {
+     "id": "_ab_fallen",
+     "differs_by": "ABANDONED: pole dropped, noren in a heap on the threshold; signboard hanging from one cord"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 per piece; noren as 3 slightly bent quads per panel, two-sided",
+   "banned_tells_to_watch": [
+    "big sun-curtain noren on dry-goods fronts (19th c.)",
+    "beckoning cat (c.1850s)",
+    "shop names in modern type"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Cloth goes first: noren faded from indigo to grey-blue and shredded, some fallen with their poles; sudare slumped and holed; signboards hanging askew from one cord, text bleached.",
+   "settings": {
+    "core": [
+     "post town",
+     "intermediate stop",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "river-crossing town",
+     "hot-spring town"
+    ],
+    "flavour": []
+   },
+   "setting_kit_families": [
+    "Shop front kit (noren, kanban, shape signs, sudare)"
+   ],
+   "placement_rule": "Noren only on open shop and eating-house doors (not on houses or kura); one sign type per shop; shape signs only on the matching trade (KEEP_TRADES dressing sets).",
+   "wave": 1,
+   "effort_sessions": 1.0,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_lantern_sign",
+   "name": "Shop lanterns and sign lamps: hanging chochin, box lamp (kake-, oki-, tsuji-andon)",
+   "what": "One hanging paper-lantern mesh with swapped paper and text (shop, inn, gate, festival), and one framed box lamp at three heights: hung, standing, on a crossroads post.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "hanging lanterns with crests and a standing andon in an Okumura Masanobu uki-e, c.1748 [x31]; kake-andon as shop signs; tsuji-andon before ward guard posts [O25]; bow and box lanterns 17th c. on [OUTDOOR_LIST §2 U]",
+   "refs": [
+    {
+     "id": "x31_masanobu_ryogoku_1748",
+     "shows": "hanging chochin with crests and a standing andon, c.1748",
+     "period_image": true
+    },
+    {
+     "id": "x30_shinagawa_1726",
+     "shows": "standing paper andon on a Shinagawa tea-house floor, 1726",
+     "period_image": true
+    },
+    {
+     "id": "c18_hiroshige_mariko",
+     "shows": "tea-house sign lamp context (c.1833)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "chochin_m": {
+     "value": "oblong d 0.30 x 0.55 (shop), d 0.45 x 0.80 (inn, gate), top and bottom rings of wood",
+     "assumed": true,
+     "reason": "read off x31 against figures; assumed"
+    },
+    "kake_andon_m": {
+     "value": "box 0.30 x 0.15 x 0.45, bracket from the wall at 1.9-2.2",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "oki_andon_m": {
+     "value": "0.35 x 0.35 x 0.9-1.0 on legs",
+     "source": "O25 (Enshu andon about 0.81 high; street sign lamps a little taller, assumed)"
+    },
+    "tsuji_andon_m": {
+     "value": "box 0.40 x 0.40 x 0.60 on a 2.0 m post with a small roof",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "lantern paper",
+     "material": "jp_m_paper_chochin",
+     "palette_id": "washi_shoji"
+    },
+    {
+     "surface": "text and crests",
+     "material": "jp_m_decal_sumi_text",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "rings, frames, posts",
+     "material": "jp_m_wood_street_dark",
+     "palette_id": "timber_street_dark"
+    },
+    {
+     "surface": "roof (tsuji)",
+     "material": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver"
+    },
+    {
+     "surface": "hook",
+     "material": "jp_m_metal_iron",
+     "palette_id": "iron_black"
+    }
+   ],
+   "connectors": [
+    "chochin: hangs from an eave memory point or a gate beam; kake-andon: bracket on a post connector at 2.0",
+    "as proxies in shop/inn variants (decision 8); tsuji-andon as a map object"
+   ],
+   "variants": [
+    {
+     "id": "_chochin_shop",
+     "differs_by": "shop lantern with shop name"
+    },
+    {
+     "id": "_chochin_inn",
+     "differs_by": "inn lantern with name and association badge"
+    },
+    {
+     "id": "_chochin_gate",
+     "differs_by": "large ward-gate lantern"
+    },
+    {
+     "id": "_kake",
+     "differs_by": "hanging box sign lamp"
+    },
+    {
+     "id": "_oki",
+     "differs_by": "standing sign lamp"
+    },
+    {
+     "id": "_tsuji",
+     "differs_by": "crossroads lamp on a post"
+    },
+    {
+     "id": "_ab_torn",
+     "differs_by": "ABANDONED (default): paper split and holed, frame showing, faded text"
+    },
+    {
+     "id": "_ab_fallen",
+     "differs_by": "ABANDONED: lantern on the ground, crushed; oki-andon tipped"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 (chochin as a 12-sided lathe; ribs in texture)",
+   "banned_tells_to_watch": [
+    "glass",
+    "giant red gate lantern (1795)",
+    "Akiba lanterns along the Tokaido (mostly 19th c.)",
+    "electric glow"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Paper rots in a year: lanterns hang as split, holed husks with the bamboo ribs showing; some on the ground; box lamps with the paper panels gone, frames intact. No light anywhere.",
+   "settings": {
+    "core": [
+     "post town",
+     "intermediate stop",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "river-crossing town",
+     "hot-spring town"
+    ],
+    "flavour": [
+     "rice village",
+     "highway"
+    ]
+   },
+   "setting_kit_families": [
+    "Shop and inn lanterns / sign lamps (kake-andon)",
+    "Crossroads lamp (tsuji-andon)",
+    "Ward gate (kido, BL) + gate lantern",
+    "Festival layer (nobori, lanterns, mikoshi, stages)"
+   ],
+   "placement_rule": "One chochin or kake-andon per shop or inn front at the entrance; oki-andon only at eating houses and inns; tsuji-andon at crossings and ward gates.",
+   "wave": 1,
+   "effort_sessions": 0.6,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_stall",
+   "name": "Stall family: reed-screen stall, board booth (kake-mise), roofed street stall (yatai)",
+   "what": "Temporary stalls from one set of poles, reed panels, board counters and mat roofs: tea stands, market booths and the night yatai.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "priority": "P1",
+   "period_evidence": "reed-screen tea stands and stalls on the riverbank in an uki-e of c.1748 [x31]; yatai 6 shaku wide x 3 shaku deep, no wheels [O18, a late (1837-53) text]; reed-screen stall and kake-mise [OUTDOOR_LIST §2 U Festivals]",
+   "refs": [
+    {
+     "id": "x31_masanobu_ryogoku_1748",
+     "shows": "reed-screened stalls along the riverbank, c.1748 (background)",
+     "period_image": true
+    },
+    {
+     "id": "x36_hiroshige_ishibe",
+     "shows": "roadside stands with reed screens (c.1833)",
+     "period_image": true
+    },
+    {
+     "id": "c18_hiroshige_mariko",
+     "shows": "tea-stand context (c.1833)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "yatai_m": {
+     "value": "1.82 wide x 0.91 deep, roof to 2.2, counter 0.85",
+     "source": "O18 (6 x 3 shaku; late source, used for size only)"
+    },
+    "reed_stall_m": {
+     "value": "1 ken x 1 ken (1.82 x 1.82) poles, reed panels 0.91 x 1.8, board counter 0.8 high",
+     "assumed": true,
+     "reason": "on the ken grid; assumed"
+    },
+    "kake_mise_m": {
+     "value": "1.5 ken x 1 ken plank booth, mat roof at 2.1-2.4",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "pole_d_m": {
+     "value": "0.06-0.08 (bamboo or thin log)",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "poles",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "reed screens",
+     "material": "jp_m_reed_yoshizu",
+     "palette_id": "sudare_reed"
+    },
+    {
+     "surface": "counters, yatai body",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "mat roof",
+     "material": "jp_m_straw_mushiro",
+     "palette_id": "thatch_new"
+    },
+    {
+     "surface": "lashings",
+     "material": "jp_m_straw_rope",
+     "palette_id": "straw_aged"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; counter top = loot surface; parts snap on a 0.91 grid so stalls join into market rows"
+   ],
+   "variants": [
+    {
+     "id": "_reed",
+     "differs_by": "reed-screen stall with counter"
+    },
+    {
+     "id": "_booth",
+     "differs_by": "plank booth (kake-mise)"
+    },
+    {
+     "id": "_yatai",
+     "differs_by": "roofed yatai, no wheels"
+    },
+    {
+     "id": "_row3",
+     "differs_by": "three reed stalls joined (market row)"
+    },
+    {
+     "id": "_ab_collapsed",
+     "differs_by": "ABANDONED: roof mat fallen in, one pole snapped, screens flattened"
+    },
+    {
+     "id": "_ab_frame",
+     "differs_by": "ABANDONED: bare pole frame, screens gone (the hai-chaya ruin state)"
+    }
+   ],
+   "lod_budget": "medium site object <=1,500 faces LOD0 for the yatai; reed stall <=600",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Temporary structures collapse first: mats fallen in, screens flattened or blown away, frames leaning; yatai stand but with rotted counters.",
+   "settings": {
+    "core": [
+     "fishing village",
+     "post town",
+     "intermediate stop",
+     "great city",
+     "temple town",
+     "marginal settlement"
+    ],
+    "flavour": [
+     "castle town",
+     "jinya town",
+     "port town",
+     "river-crossing town",
+     "hot-spring town"
+    ]
+   },
+   "setting_kit_families": [
+    "Stall family (yoshizu stall, yatai, kake-mise)",
+    "Reed screens (yoshizu) at stands",
+    "Reed fence / yoshizu screens",
+    "Periodic market set"
+   ],
+   "placement_rule": "At bridge ends, riverbanks, temple approaches and post-town edges; in rows of 3-8 on market days; yatai at street corners. Never in front of a permanent shop door.",
+   "wave": 1,
+   "effort_sessions": 0.7,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_nobori",
+   "name": "Banner pole (nobori): cloth banner on a bamboo pole with a crossbar, shop and shrine",
+   "what": "The tall narrow banner on a bamboo pole: shops, shrine approaches and festivals; a leftover of the autumn festival in the dead world.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P2",
+   "period_evidence": "shop and shrine banners on bamboo poles with a sideways crossbar [OUTDOOR_LIST §2 U / R §14, S206]; carp streamers are a period trap (KEEP_OUTDOOR)",
+   "refs": [
+    {
+     "id": "k39_nobori_hiko",
+     "shows": "row of shrine nobori (photo)",
+     "period_image": false
+    },
+    {
+     "id": "x36_hiroshige_ishibe",
+     "shows": "roadside context (c.1833)",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "banner_m": {
+     "value": "0.45 x 3.0-4.5",
+     "assumed": true,
+     "reason": "shop banners about 1.5 shaku wide; assumed"
+    },
+    "pole_m": {
+     "value": "bamboo 5.0-7.0, crossbar 0.5 at the top",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "socket": {
+     "value": "pole in a stone socket pair (nobori-tate ishi) or lashed to a post",
+     "source": "OUTDOOR_LIST §2 W §5"
+    }
+   },
+   "materials": [
+    {
+     "surface": "banner",
+     "material": "jp_m_textile_kinari",
+     "palette_id": "kinari_cloth"
+    },
+    {
+     "surface": "text",
+     "material": "jp_m_decal_sumi_text",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "indigo banner (variant)",
+     "material": "jp_m_textile_noren",
+     "palette_id": "aizome_kon"
+    },
+    {
+     "surface": "pole",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "socket stones",
+     "material": "jp_m_stone_carved",
+     "palette_id": "stone_lantern"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain in a socket stone or against a post"
+   ],
+   "variants": [
+    {
+     "id": "_shop",
+     "differs_by": "shop banner"
+    },
+    {
+     "id": "_shrine",
+     "differs_by": "shrine banner, pair"
+    },
+    {
+     "id": "_socket_stones",
+     "differs_by": "socket stones only (banner taken down)"
+    },
+    {
+     "id": "_ab_tattered",
+     "differs_by": "ABANDONED (default): banner shredded to a strip, pole leaning"
+    },
+    {
+     "id": "_ab_down",
+     "differs_by": "ABANDONED: pole fallen across the approach"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0; cloth two-sided",
+   "banned_tells_to_watch": [
+    "carp streamers (koinobori)",
+    "printed synthetic banners"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Left up after the autumn festival: shredded to strips, poles leaning in their sockets, some fallen across the approach.",
+   "settings": {
+    "core": [
+     "great city",
+     "temple town"
+    ],
+    "flavour": [
+     "rice village",
+     "post town",
+     "castle town",
+     "jinya town",
+     "port town"
+    ]
+   },
+   "setting_kit_families": [
+    "Festival layer (nobori, lanterns, mikoshi, stages)",
+    "Banner-pole socket stones"
+   ],
+   "placement_rule": "Pairs at shrine approaches and ward entrances; singly at shop fronts; rows along a sando only at the hero shrine.",
+   "wave": 1,
+   "effort_sessions": 0.3,
+   "research_level": "filler"
+  },
+  {
+   "id": "jp_s_torii_wood",
+   "name": "Wooden torii (ki-no-torii): shinmei and myojin forms, plain or vermilion",
+   "what": "The unpainted wooden gate at a village shrine approach; the vermilion myojin form for Inari and Hachiman; a miniature for yard shrines.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P2",
+   "period_evidence": "unpainted shinmei or myojin wooden torii at village shrines [OUTDOOR_LIST §2 R §10]; vermilion torii at Inari and Hachiman [U]; wooden torii at Hida (photo) [k27]",
+   "refs": [
+    {
+     "id": "k27_hida_torii",
+     "shows": "unpainted wooden torii (photo)",
+     "period_image": false
+    },
+    {
+     "id": "c10_inari_torii",
+     "shows": "shu vermilion and sumi black on torii",
+     "period_image": false
+    },
+    {
+     "id": "k02_bunken_ezu_p12",
+     "shows": "roadside shrine torii marks on the 1690 Tokaido map",
+     "period_image": true
+    }
+   ],
+   "dimensions": {
+    "village_m": {
+     "value": "post span 1.8-2.7 (1-1.5 ken), height 2.7-3.6, post d 0.20-0.25",
+     "source": "O11, O12 (stone torii of the same village class: 1.82 span x 2.71 h; 2.5 x 2.8)"
+    },
+    "mini_m": {
+     "value": "span 0.6, height 0.9 (yard shrine)",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "kasagi_overhang_m": {
+     "value": "0.35-0.50 past each post",
+     "assumed": true,
+     "reason": "assumed from proportion drawings"
+    },
+    "grid": {
+     "value": "span in half-ken steps so the sando kit lines up",
+     "assumed": true,
+     "reason": "PLAYBOOK rule 9"
+    }
+   },
+   "materials": [
+    {
+     "surface": "posts, beams",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "vermilion (variant)",
+     "material": "jp_m_paint_shu",
+     "palette_id": "shu_vermilion"
+    },
+    {
+     "surface": "kasagi top black (vermilion variant)",
+     "material": "jp_m_wood_kuro",
+     "palette_id": "kuro_board"
+    },
+    {
+     "surface": "plaque",
+     "material": "jp_m_decal_sumi_text",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "moss",
+     "material": "jp_m_decal_moss",
+     "palette_id": "moss_on_stone"
+    },
+    {
+     "surface": "post footing stones",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain, posts on footing stones; memory points on the tie-beam for jp_s_shimenawa"
+   ],
+   "variants": [
+    {
+     "id": "_shinmei",
+     "differs_by": "straight lintel, no overhanging tie-beam (plain wood)"
+    },
+    {
+     "id": "_myojin",
+     "differs_by": "upswept kasagi, tie-beam with centre strut"
+    },
+    {
+     "id": "_myojin_shu",
+     "differs_by": "vermilion myojin with black kasagi (Inari, Hachiman; restricted colour)"
+    },
+    {
+     "id": "_mini",
+     "differs_by": "yard-shrine miniature"
+    },
+    {
+     "id": "_ab_leaning",
+     "differs_by": "ABANDONED: vermilion peeled to grey wood, one post rotted at the foot and leaning, kasagi sagging"
+    }
+   ],
+   "lod_budget": "medium site object <=1,500 faces LOD0 (decision 9); kasagi curve and silhouette in every LOD",
+   "banned_tells_to_watch": [
+    "dense senbon torii tunnels (mostly later)",
+    "three-legged torii (1831)",
+    "modern bright paint"
+   ],
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "abandoned_state": "Wood torii weather fast: vermilion peeled in patches, the plain ones silver-grey with moss on the kasagi; one in five leans on a rotted post.",
+   "settings": {
+    "core": [
+     "rice village",
+     "new-field village",
+     "fishing village",
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "port town",
+     "hot-spring town"
+    ],
+    "flavour": [
+     "mountain village",
+     "temple town",
+     "marginal settlement",
+     "wild mountain"
+    ]
+   },
+   "setting_kit_families": [
+    "Wooden torii",
+    "Vermilion torii (Inari)",
+    "Yard shrine + mini torii + offering stand",
+    "Numbered mountain-path torii / lone forest torii"
+   ],
+   "placement_rule": "At the start of a shrine approach, square to the path; vermilion only at Inari and Hachiman shrines; mini torii only before a yard shrine.",
+   "wave": 2,
+   "effort_sessions": 0.7,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_torii_stone",
+   "name": "Stone torii (ishi-torii): granite myojin form with donor inscription",
+   "what": "The granite torii donated by villagers or pilgrim groups, usually myojin form with names and a date on a post.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P2",
+   "period_evidence": "Okazaki myojin stone torii: 2.71 m high, 1.815 m span, granite, one-piece kasagi [O11]; Kawataka Sumiyoshi: span 2.5, height 2.8 [O12]; Motoki stone torii (Heian, 3.51 m) still standing [O13]; Toshogu stone torii repaired Kyoho 19 (1734) [O15]",
+   "refs": [
+    {
+     "id": "k40_motoki_torii",
+     "shows": "Motoki stone torii, Yamagata: Heian myojin form still standing (photo)",
+     "period_image": false
+    },
+    {
+     "id": "c09_himeji",
+     "shows": "granite colour context",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "small_m": {
+     "value": "span 1.82, height 2.71",
+     "source": "O11"
+    },
+    "medium_m": {
+     "value": "span 2.5, height 2.8 (posts nearly as thick as the span suggests: squat)",
+     "source": "O12"
+    },
+    "large_m": {
+     "value": "span 2.7-3.6, height 3.5-4.5 (town shrines)",
+     "source": "O13 (3.51 m high)"
+    },
+    "post_d_m": {
+     "value": "0.30-0.40, slight batter inward",
+     "assumed": true,
+     "reason": "assumed from k22"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "weathered stone (old)",
+     "material": "jp_m_stone_carved",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "donor text",
+     "material": "jp_m_decal_carved_text",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "moss and lichen",
+     "material": "jp_m_decal_moss",
+     "palette_id": "moss_on_stone"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; tie-beam memory points for jp_s_shimenawa"
+   ],
+   "variants": [
+    {
+     "id": "_s",
+     "differs_by": "span 1.82 (village)"
+    },
+    {
+     "id": "_m",
+     "differs_by": "span 2.5"
+    },
+    {
+     "id": "_l",
+     "differs_by": "span 3.6 (town)"
+    },
+    {
+     "id": "_ab_broken",
+     "differs_by": "ABANDONED (rare): kasagi fallen in two pieces beside the posts (quake)"
+    }
+   ],
+   "lod_budget": "medium site object <=1,500 faces LOD0",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "banned_tells_to_watch": [
+    "shrine-name stone pillars and donor stone fences (mostly Meiji; use names on the torii post instead)"
+   ],
+   "region": "all",
+   "abandoned_state": "Unchanged but for lichen streaks under the kasagi and moss on its top; one broken by a quake as a landmark oddity.",
+   "settings": {
+    "core": [
+     "castle town",
+     "great city",
+     "temple town"
+    ],
+    "flavour": [
+     "rice village",
+     "fishing village",
+     "post town",
+     "wild coast"
+    ]
+   },
+   "setting_kit_families": [
+    "Stone torii",
+    "Sea torii"
+   ],
+   "placement_rule": "At town shrine approaches and at the first torii of a sando; a village shrine gets either stone or wood, not both.",
+   "wave": 2,
+   "effort_sessions": 0.6,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_stone_lantern",
+   "name": "Stone lantern (ishi-doro): Kasuga, square standing and small placed types, 3 heights",
+   "what": "The donated stone lantern flanking shrine and temple approaches, in pairs or rows; also the courtyard-garden lantern and the tall always-lit lantern.",
+   "importance": "standard",
+   "tiers": [
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P2",
+   "period_evidence": "Kasuga-type lanterns flanking approaches, commoner donation in the Edo period [OUTDOOR_LIST §2 R §10, S100]; Kasuga proportions (10 shaku): hoju+ukebana 2.0, kasa 1.3, hibukuro 1.7, chudai 1.0, sao 3.6, kiso 0.5 [O10]; always-lit lantern type in by 1625 (Miya) [§3.3]",
+   "refs": [
+    {
+     "id": "c22_kasuga_lanterns",
+     "shows": "Kasuga lanterns: weathered granite and moss",
+     "period_image": false
+    },
+    {
+     "id": "k23_kasuga_lanterns",
+     "shows": "row of Kasuga Taisha stone lanterns (photo)",
+     "period_image": false
+    },
+    {
+     "id": "k16_morse_toro_tokio",
+     "shows": "stone lantern in Tokyo (Morse 1885)",
+     "period_image": false
+    },
+    {
+     "id": "k17_morse_toro_utsunomiya",
+     "shows": "stone lantern in Utsunomiya (Morse 1885)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "kasuga_proportion": {
+     "value": "of total height: hoju 0.20, kasa 0.13, hibukuro 0.17, chudai 0.10, sao 0.36, kiso 0.05",
+     "source": "O10"
+    },
+    "heights_m": {
+     "value": "1.8 (6 shaku), 2.4 (8 shaku), 3.0 (10 shaku)",
+     "assumed": true,
+     "reason": "standard mason sizes by the shaku; the 3 heights of OUTDOOR_LIST §7.7"
+    },
+    "square_m": {
+     "value": "square standing lantern 1.8-2.4, square fire box",
+     "assumed": true,
+     "reason": "OUTDOOR_LIST §2 U (assumed common Edo form)"
+    },
+    "oki_m": {
+     "value": "placed lantern 0.6-0.9 on a stone",
+     "assumed": true,
+     "reason": "assumed"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_carved",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "donor text and date",
+     "material": "jp_m_decal_carved_text",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "moss and lichen",
+     "material": "jp_m_decal_moss",
+     "palette_id": "moss_on_stone"
+    },
+    {
+     "surface": "fire-box paper screen (rare)",
+     "material": "jp_m_paper_shoji",
+     "palette_id": "washi_shoji"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; pairs mirrored across the approach centreline"
+   ],
+   "variants": [
+    {
+     "id": "_kasuga_18",
+     "differs_by": "Kasuga 1.8"
+    },
+    {
+     "id": "_kasuga_24",
+     "differs_by": "Kasuga 2.4"
+    },
+    {
+     "id": "_kasuga_30",
+     "differs_by": "Kasuga 3.0"
+    },
+    {
+     "id": "_square_24",
+     "differs_by": "square standing 2.4"
+    },
+    {
+     "id": "_oki",
+     "differs_by": "small placed lantern (courtyard)"
+    },
+    {
+     "id": "_joyato",
+     "differs_by": "tall always-lit lantern on a 2-step base, 4.0 (jōyatō; not the very tall 19th-c. towers)"
+    },
+    {
+     "id": "_ab_toppled",
+     "differs_by": "ABANDONED: hoju and kasa fallen beside the post (quake), the most common stone-lantern ruin"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 (1.8), <=600 (3.0 and joyato)",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "banned_tells_to_watch": [
+    "very tall stone night-lamp towers (19th c.)",
+    "Konpira lantern boom (later)",
+    "lit lanterns"
+   ],
+   "region": "all",
+   "abandoned_state": "Stone lanterns shed their top parts in quakes: 1 in 6 has its hoju or kasa on the ground beside it; the rest are dark, lichen-streaked and mossy on the roof.",
+   "settings": {
+    "core": [
+     "rice village",
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "hot-spring town"
+    ],
+    "flavour": [
+     "mountain village",
+     "fishing village",
+     "highway"
+    ]
+   },
+   "setting_kit_families": [
+    "Stone lantern pair / approach lanterns",
+    "Always-lit lantern (jōyatō)",
+    "Courtyard garden kit (lantern, basin, stones)"
+   ],
+   "placement_rule": "In mirrored pairs at the torii and the hall steps; rows of 4-20 on town approaches (landmark only); single oki-doro in courtyard gardens.",
+   "wave": 2,
+   "effort_sessions": 0.8,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_stone_steps",
+   "name": "Stone steps (ishidan): straight flight modules, landing, side stones; rough and dressed",
+   "what": "Modular stone flights for shrine hills, temple approaches, stepped lanes and pass pitches: terrain-matched segments with a Roadway ramp.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "priority": "P2",
+   "period_evidence": "rough or dressed stone flights on pass pitches, shrine hills and stepped lanes [OUTDOOR_LIST §2 W §2, S060]; Hakone paving 1680 [PLAYBOOK §1]",
+   "refs": [
+    {
+     "id": "k38_shrine_steps",
+     "shows": "stone steps in a shrine precinct (photo)",
+     "period_image": false
+    },
+    {
+     "id": "k40_motoki_torii",
+     "shows": "torii on a rural approach: ground and step context",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "rise_m": {
+     "value": "0.15-0.18",
+     "assumed": true,
+     "reason": "comfortable for players and infected; matches shrine stairs"
+    },
+    "tread_m": {
+     "value": "0.30-0.36",
+     "assumed": true,
+     "reason": "rise/tread 0.18/0.30 = 31 deg, under the 38 deg walk limit (PLAYBOOK T9)"
+    },
+    "width_m": {
+     "value": "0.91, 1.82, 2.73 (half, 1, 1.5 ken)",
+     "assumed": true,
+     "reason": "grid (rule 9)"
+    },
+    "module": {
+     "value": "flights of 3 and 6 steps, landing 1.82 deep, side cheek stones",
+     "assumed": true,
+     "reason": "assumed; chains up any slope"
+    }
+   },
+   "materials": [
+    {
+     "surface": "dressed steps",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "rough steps",
+     "material": "jp_m_stone_field",
+     "palette_id": "stone_granite"
+    },
+    {
+     "surface": "moss in joints",
+     "material": "jp_m_decal_moss",
+     "palette_id": "moss_on_stone"
+    },
+    {
+     "surface": "leaf litter on treads",
+     "material": "jp_m_ground_leaf_litter",
+     "palette_id": "leaf_litter_autumn"
+    }
+   ],
+   "connectors": [
+    "stair_foot / stair_head connectors like the building stair parts (PLAYBOOK §10.2); Roadway ramp <=38 deg"
+   ],
+   "variants": [
+    {
+     "id": "_dressed_3",
+     "differs_by": "dressed, 3 steps"
+    },
+    {
+     "id": "_dressed_6",
+     "differs_by": "dressed, 6 steps"
+    },
+    {
+     "id": "_rough_3",
+     "differs_by": "rough field stones, 3 steps"
+    },
+    {
+     "id": "_landing",
+     "differs_by": "landing slab"
+    },
+    {
+     "id": "_cheek",
+     "differs_by": "side cheek stones"
+    },
+    {
+     "id": "_ab_heaved",
+     "differs_by": "ABANDONED: treads tilted by roots, one step missing, leaves drifted"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 per module",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8"
+   ],
+   "open_questions": [
+    "C7 applies: stairs <=38 deg and Roadway continuous across module joins (walkability)."
+   ],
+   "region": "all",
+   "status_overlay": "commoner",
+   "abandoned_state": "Treads tilted by roots and frost, leaves drifted on every step, moss in the joints, grass up the sides.",
+   "settings": {
+    "core": [
+     "rice village",
+     "fishing village",
+     "castle town",
+     "temple town",
+     "mining town",
+     "hot-spring town",
+     "wild mountain"
+    ],
+    "flavour": [
+     "mountain village",
+     "post town",
+     "port town",
+     "highway"
+    ]
+   },
+   "setting_kit_families": [
+    "Stone steps",
+    "Switchbacks / log steps / cross drains",
+    "Shrine approach (sandō)"
+   ],
+   "placement_rule": "Only where the terrain rises more than 0.5 m between an approach and its hall or between lane levels; seated into the terrain, never floating.",
+   "wave": 2,
+   "effort_sessions": 0.6,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_grave_stones",
+   "name": "Graveyard stones: the 1730 mix (board-shaped, boat-halo, round-headed, square pillar, gorinto, hokyointo)",
+   "what": "The gravestone family that dresses temple, village and roadside graveyards in the 1730 proportions, sharing shapes with the stele family.",
+   "importance": "standard",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P2",
+   "period_evidence": "board-shaped stones (itabi-gata) peak 1660s-90s and decline in the Kyoho era (1720s); round-headed stones from Kyoho on; pointed pillars appear Kyoho, peak c.1800 [O05]; boat-halo figure stones from the late Kan-ei era, large until Kyoho [O06]; no family-name stones (Meiji) [OUTDOOR_LIST §6]",
+   "refs": [
+    {
+     "id": "c24_jizo_cemetery",
+     "shows": "Jizo and gravestones, weathered stone",
+     "period_image": false
+    },
+    {
+     "id": "k25_gorinto",
+     "shows": "gorinto five-ring stupa (photo)",
+     "period_image": false
+    },
+    {
+     "id": "k26_gorinto_gamou",
+     "shows": "large gorinto grave (photo)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "board_shaped_m": {
+     "value": "0.6-0.9 high x 0.30 x 0.15, pointed-arch top, on 1-2 bases",
+     "assumed": true,
+     "reason": "O05 gives the dating, not sizes; sizes assumed from surveyed examples"
+    },
+    "boat_halo_m": {
+     "value": "0.5-0.9 high, figure in relief",
+     "source": "O06 (form, dating); size assumed"
+    },
+    "round_headed_m": {
+     "value": "0.6-0.9 high x 0.30 x 0.20 (kushigata)",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "square_pillar_m": {
+     "value": "0.6-0.9 shaft + 2-3 bases 0.15 each",
+     "assumed": true,
+     "reason": "rising, rare in 1730 (OUTDOOR_LIST §3.3)"
+    },
+    "gorinto_m": {
+     "value": "0.6 (commoner) to 2.0 (samurai)",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "mix_1730": {
+     "value": "board 35 %, boat-halo 30 %, round-headed 20 %, square pillar 5 %, gorinto / hokyointo 10 %",
+     "source": "O05, O06, OUTDOOR_LIST §3.3 (reading)"
+    }
+   },
+   "materials": [
+    {
+     "surface": "stone",
+     "material": "jp_m_stone_carved",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "carved names and dates",
+     "material": "jp_m_decal_carved_text",
+     "palette_id": "stone_lantern"
+    },
+    {
+     "surface": "moss and lichen",
+     "material": "jp_m_decal_moss",
+     "palette_id": "moss_on_stone"
+    },
+    {
+     "surface": "base stones",
+     "material": "jp_m_stone_cut",
+     "palette_id": "stone_granite"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain; stones on a 0.9 x 0.9 plot grid in rows, paths 0.9"
+   ],
+   "variants": [
+    {
+     "id": "_board",
+     "differs_by": "board-shaped (itabi-gata)"
+    },
+    {
+     "id": "_boat_halo",
+     "differs_by": "boat-halo with Jizo or Amida relief"
+    },
+    {
+     "id": "_round",
+     "differs_by": "round-headed (kushigata)"
+    },
+    {
+     "id": "_pillar",
+     "differs_by": "square pillar on bases (rare)"
+    },
+    {
+     "id": "_gorinto_s",
+     "differs_by": "gorinto 0.6"
+    },
+    {
+     "id": "_gorinto_l",
+     "differs_by": "gorinto 2.0"
+    },
+    {
+     "id": "_hokyointo",
+     "differs_by": "hokyointo 1.5 (samurai / priest)"
+    },
+    {
+     "id": "_ab_leaning",
+     "differs_by": "ABANDONED: leaning, sunk, a gorinto with its top rings fallen"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 per stone",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8",
+    "C9"
+   ],
+   "banned_tells_to_watch": [
+    "\"X family grave\" inscriptions (Meiji)",
+    "polished black granite",
+    "dense square-pillar rows (a later look)"
+   ],
+   "region": "all",
+   "abandoned_state": "Graves are the one place that looks almost as before: lichen and moss heavier, some stones leaning, gorinto top rings fallen; weeds between plots.",
+   "settings": {
+    "core": [
+     "rice village",
+     "mountain village",
+     "fishing village",
+     "salt village",
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "mining town",
+     "marginal settlement",
+     "highway"
+    ],
+    "flavour": [
+     "river-crossing town",
+     "wild mountain"
+    ]
+   },
+   "setting_kit_families": [
+    "Graveyard kit (stones, sotoba, buckets, flower tubes, incense)",
+    "Gorintō / hōkyōin-tō",
+    "Traveller's grave / horse grave"
+   ],
+   "placement_rule": "Behind or beside temples on slopes, in rows facing the path; family graves at field edges in the Kanto (2-6 stones); single traveller graves by roads.",
+   "wave": 2,
+   "effort_sessions": 0.8,
+   "research_level": "standard"
+  },
+  {
+   "id": "jp_s_grave_wood",
+   "name": "Graveyard wood set: sotoba slats and rack, flower tubes, incense stand, bucket rack",
+   "what": "The wooden and small furniture of a graveyard: tall notched memorial slats behind stones, their rack, bamboo flower tubes, stone incense stands and the bucket-and-ladle rack.",
+   "importance": "filler",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "status_overlay": "religious",
+   "priority": "P2",
+   "period_evidence": "sotoba slats behind graves and in racks [OUTDOOR_LIST §2 R §11, S102]; bucket and ladle rack, flower tubes, incense stands [S197-S199]; itatoba 0.6-1.8 m, about 1 cm thick [O16]",
+   "refs": [
+    {
+     "id": "c24_jizo_cemetery",
+     "shows": "graveyard context",
+     "period_image": false
+    },
+    {
+     "id": "k30_rokujizo",
+     "shows": "six-Jizo row at a graveyard edge (photo)",
+     "period_image": false
+    }
+   ],
+   "dimensions": {
+    "sotoba_m": {
+     "value": "1.05 x 0.075 x 0.009 (3.5 shaku); range 0.6-1.8",
+     "source": "O16 (modern practice; form unchanged)"
+    },
+    "rack_m": {
+     "value": "1.82 long x 1.0 high rail frame",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "flower_tube_m": {
+     "value": "bamboo d 0.06 x 0.30, in pairs",
+     "assumed": true,
+     "reason": "assumed"
+    },
+    "bucket_rack_m": {
+     "value": "0.91 x 0.3 shelf on posts, 1.0 high, 4-6 teoke",
+     "assumed": true,
+     "reason": "reuses jp_s_oke _teoke"
+    }
+   },
+   "materials": [
+    {
+     "surface": "sotoba",
+     "material": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered"
+    },
+    {
+     "surface": "sotoba text",
+     "material": "jp_m_decal_sumi_text",
+     "palette_id": "sumi_black"
+    },
+    {
+     "surface": "flower tubes",
+     "material": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered"
+    },
+    {
+     "surface": "incense stand",
+     "material": "jp_m_stone_carved",
+     "palette_id": "stone_lantern"
+    }
+   ],
+   "connectors": [
+    "proxy_base on terrain behind or before jp_s_grave_stones"
+   ],
+   "variants": [
+    {
+     "id": "_sotoba_x3",
+     "differs_by": "3 slats behind a stone"
+    },
+    {
+     "id": "_rack",
+     "differs_by": "slat rack with 6-12 slats"
+    },
+    {
+     "id": "_tubes",
+     "differs_by": "flower tube pair with dead shikimi"
+    },
+    {
+     "id": "_incense",
+     "differs_by": "stone incense stand"
+    },
+    {
+     "id": "_bucket_rack",
+     "differs_by": "bucket and ladle rack"
+    },
+    {
+     "id": "_ab_fallen",
+     "differs_by": "ABANDONED (default): slats grey, split, half fallen; tubes empty"
+    }
+   ],
+   "lod_budget": "small prop <=300 faces LOD0 per piece",
+   "checks": [
+    "C1",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C8"
+   ],
+   "region": "all",
+   "abandoned_state": "Slats grey, split and fallen across the stones, their ink gone; flower tubes empty or holding dead black stems; rack leaning.",
+   "settings": {
+    "core": [
+     "rice village",
+     "mountain village",
+     "fishing village",
+     "salt village",
+     "post town",
+     "castle town",
+     "jinya town",
+     "great city",
+     "temple town",
+     "port town",
+     "mining town",
+     "marginal settlement"
+    ],
+    "flavour": []
+   },
+   "setting_kit_families": [
+    "Graveyard kit (stones, sotoba, buckets, flower tubes, incense)"
+   ],
+   "placement_rule": "Slats behind about 1 grave in 3; one rack and one bucket rack per graveyard by its water point.",
+   "wave": 2,
+   "effort_sessions": 0.4,
+   "research_level": "filler"
+  }
+ ]
+}
