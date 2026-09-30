@@ -1,0 +1,146 @@
+{
+ "building": "Land_JP_Farmhouse_Kanto_Irimoya_DomaR",
+ "p3d": "\\JP\\buildings\\farmhouse\\jp_farmhouse_kanto_irimoya_domar.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/rural.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.0600000000000005,
+    5.39,
+    -9.04,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "doma: entry, kamado spot on the end wall",
+   "enclosed": true,
+   "rect_model": [
+    -6.31,
+    -0.98,
+    -4.49,
+    4.49
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -5.87,
+      0.91
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "hiroma",
+   "tag": "daidokoro",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.53,
+    9.04,
+    -9.04,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin4"
+   ],
+   "note": "hiroma with the irori, open to the doma over the agari-kamachi",
+   "enclosed": true,
+   "rect_model": [
+    -0.84,
+    2.67,
+    -4.49,
+    4.49
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "hiroma",
+     "rect": [
+      0.455,
+      1.365,
+      -0.683,
+      0.683
+     ],
+     "floor_y": 0.5,
+     "pit": "irori",
+     "hook": [
+      0.91,
+      4.64,
+      0.0
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    }
+   ]
+  },
+  {
+   "name": "dei",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    12.68,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4"
+   ],
+   "note": "dei (best room)",
+   "enclosed": true,
+   "rect_model": [
+    2.79,
+    6.31,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "nando",
+   "tag": "sleeping",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    12.68,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "nando",
+   "enclosed": true,
+   "rect_model": [
+    2.79,
+    6.31,
+    -4.49,
+    -0.06
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 24,
+ "loot_by_room": {
+  "doma": 10,
+  "hiroma": 6,
+  "dei": 4,
+  "nando": 4
+ }
+}

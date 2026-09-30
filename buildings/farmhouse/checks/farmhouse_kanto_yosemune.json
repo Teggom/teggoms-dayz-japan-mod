@@ -1,0 +1,402 @@
+{
+ "building": "Land_JP_Farmhouse_Kanto_Yosemune",
+ "key": "farmhouse_kanto_yosemune",
+ "date": "2026-09-30",
+ "budget": "large",
+ "faces": "8706/3943/1316",
+ "door_clear_m": [
+  1.46,
+  1.06,
+  1.06,
+  1.06
+ ],
+ "checks_n": 77,
+ "failures": 0,
+ "checks": [
+  {
+   "check": "C5 LOD set (vanilla house set)",
+   "ok": true,
+   "detail": "Resolution 1 8706, Resolution 2 3943, Resolution 3 1316, Geometry 3809, Memory 0, Roadway 13, View Geometry 3744, Fire Geometry 3768"
+  },
+  {
+   "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+   "ok": true,
+   "detail": "R1 8706, R2 3943, R3 1316"
+  },
+  {
+   "check": "Geometry properties + mass",
+   "ok": true,
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 80000 kg"
+  },
+  {
+   "check": "C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "388 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "377 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "381 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry penetration rvmats",
+   "ok": true,
+   "detail": "dirt, fabric_thin, granite, hay, wood"
+  },
+  {
+   "check": "C2 library materials only",
+   "ok": true,
+   "detail": "every path under JP\\common\\materials\\ (on disk) or vanilla penetration / roadway"
+  },
+  {
+   "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
+   "ok": true,
+   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 41 soseki under the posts"
+  },
+  {
+   "check": "C3 grid snap (post nodes on the 0.455 grid)",
+   "ok": true,
+   "detail": "54 posts"
+  },
+  {
+   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Front door (ooto, doma) (single): bones doors1"
+  },
+  {
+   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.50 m without touching other geometry; open clear 1.46 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Back door (doma) (katabiki): bones doors2"
+  },
+  {
+   "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin3 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Hiroma -> nando (katabiki): bones doors3"
+  },
+  {
+   "check": "C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin4 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Hiroma -> dei (katabiki): bones doors4"
+  },
+  {
+   "check": "C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin5 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Dei window (front) (window_slide): bones doors5"
+  },
+  {
+   "check": "C7 DoorsTwin5 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin6 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Doma window (front) (window_slide): bones doors6"
+  },
+  {
+   "check": "C7 DoorsTwin6 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin7 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Hiroma window (back) (window_slide): bones doors7"
+  },
+  {
+   "check": "C7 DoorsTwin7 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin8 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Nando window (back, push-up shutter) (tsukiage): bones doors8"
+  },
+  {
+   "check": "C7 DoorsTwin8 window sweep",
+   "ok": true,
+   "detail": "tsukiage moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin9 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Nando window (end, push-up shutter) (tsukiage): bones doors9"
+  },
+  {
+   "check": "C7 DoorsTwin9 window sweep",
+   "ok": true,
+   "detail": "tsukiage moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin10 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Doma window (end) (window_slide): bones doors10"
+  },
+  {
+   "check": "C7 DoorsTwin10 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 Roadway sits on Geometry (+-3 cm)",
+   "ok": true,
+   "detail": "208/208 samples"
+  },
+  {
+   "check": "C7 walkable floors have Roadway at floor height",
+   "ok": true,
+   "detail": "875/875 samples over doma, hiroma, dei, nando"
+  },
+  {
+   "check": "C7 head room >= 2.10 over every floor",
+   "ok": true,
+   "detail": "lowest 2.42 m"
+  },
+  {
+   "check": "Loot points on Roadway floors, ranges clear of walls, every room",
+   "ok": true,
+   "detail": "24 points (doma 10, hiroma 6, dei 4, nando 4)"
+  },
+  {
+   "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
+   "ok": true,
+   "detail": "24 points, max diff 4.3e-07 m"
+  },
+  {
+   "check": "Placement inside the test yard, clear of the reserved spots",
+   "ok": true,
+   "detail": "not placed on the island (shipped in the PBO only)"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Front door (ooto, doma): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.78 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Front door (ooto, doma): leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.41 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Back door (doma): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Back door (doma): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Hiroma -> nando: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Hiroma -> nando: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Hiroma -> dei: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.34 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Hiroma -> dei: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.64 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Dei window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Dei window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C10 DoorsTwin6 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Doma window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin6 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Doma window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C10 DoorsTwin7 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Hiroma window (back): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin7 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Hiroma window (back): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C10 DoorsTwin8 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Nando window (back, push-up shutter): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.41 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+  },
+  {
+   "check": "C10 DoorsTwin8 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Nando window (back, push-up shutter): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.64 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.03 m"
+  },
+  {
+   "check": "C10 DoorsTwin9 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Nando window (end, push-up shutter): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.41 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+  },
+  {
+   "check": "C10 DoorsTwin9 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Nando window (end, push-up shutter): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.64 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.03 m"
+  },
+  {
+   "check": "C10 DoorsTwin10 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Doma window (end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin10 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Doma window (end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Front door (ooto, doma): 18918 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Back door (doma): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Hiroma -> nando: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin4 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Hiroma -> dei: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin5 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Dei window (front): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin6 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Doma window (front): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin7 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Hiroma window (back): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin8 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Nando window (back, push-up shutter): 16696 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin9 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Nando window (end, push-up shutter): 16702 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin10 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Doma window (end): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C18 DoorsTwin1 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Front door (ooto, doma): doors1 u -2.87 closed -> -4.37 open, doorway -4.49..-2.79"
+  },
+  {
+   "check": "C18 DoorsTwin2 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Back door (doma): doors2 u 2.59 closed -> 1.49 open, doorway 1.37..2.67"
+  },
+  {
+   "check": "C18 DoorsTwin3 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Hiroma -> nando: doors3 u 2.59 closed -> 1.49 open, doorway 1.37..2.67"
+  },
+  {
+   "check": "C11 envelope leak: rooms see outside only through doors / windows",
+   "ok": true,
+   "detail": "doma 11520 rays, 0 out through doors/windows, 0 LEAKS; hiroma 9600 rays, 0 out through doors/windows, 0 LEAKS; dei 11520 rays, 0 out through doors/windows, 0 LEAKS; nando 11520 rays, 0 out through doors/windows, 0 LEAKS"
+  },
+  {
+   "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+   "ok": true,
+   "detail": "0 roof bodies clear"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed, fascia at every eave",
+   "ok": true,
+   "detail": "no kawara on this building (board / thatch roofs): nothing to seat"
+  },
+  {
+   "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+   "ok": true,
+   "detail": "no exterior earth face looks into a room"
+  },
+  {
+   "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+   "ok": true,
+   "detail": "11041 columns over 2.5 m compared in each LOD"
+  },
+  {
+   "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+   "ok": true,
+   "detail": "21 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+  },
+  {
+   "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+   "ok": true,
+   "detail": "far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+  },
+  {
+   "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
+   "ok": true,
+   "detail": "ODOL v55, 993286 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+  }
+ ]
+}
