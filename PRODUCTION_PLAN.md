@@ -243,5 +243,6 @@
   - Island: test street at z 1080 north of the machiya (Kamigata + Edo rows north side; post-town houses + 2 inns south).
   - **Open:** the grand inn's storey source (Ohashiya 1716) was cited from memory: verify before it ships to a map.
     No navmesh. Sheets esearch/production/contact_sheets/c1_*.jpg.
+- 2026-09-30: **C2 launched** (rural shells + hamlet; the grand-inn storey source check folded in, per Stephen).
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.

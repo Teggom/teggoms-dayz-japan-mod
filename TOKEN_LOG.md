@@ -25,6 +25,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 15:44 (local) | F1 | the 8 G4 fixes + the well's real cause (class=house) + Roadway on sturdy furniture; everything rebuilt, all checks | **573k** (256 tool calls) | 43 min | **29%** (5-hour 25%): F1 alone = ~2% weekly |
 | 2026-09-30 16:11 (local) | C1 (baseline) | launched: Phase C wave 1 town shells (60 townhouse units + post-town house + inn, test rows on the island, well diag removal), time log TIMELOG_C1.md | - | - | before: **29%** (5-hour 26%) |
 | 2026-09-30 17:25 (local) | C1 | town shells: 69 townhouse units + 8 post-town houses + 4 inns = 81 shells, 4,717 checks, test street on the island | **532k** (194 tool calls) | 74 min | **31%** (5-hour 40%): C1 alone = ~2% weekly, ~14% of a 5-hour window |
+| 2026-09-30 17:28 (local) | C2 (baseline) | launched: rural template + ~18-25 rural shells + the grand-inn storey source check + a hamlet on the island, time log TIMELOG_C2.md | - | - | before: **31%** (5-hour 42%, resets ~18:40) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
