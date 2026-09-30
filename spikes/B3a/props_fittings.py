@@ -49,12 +49,27 @@ def kamidana():
     P.add(W(-0.15, 0.15, by + 0.03, by + 0.27, 0.06, 0.22, vis=(1, 2)))
     P.add(W(-0.07, 0.07, by + 0.05, by + 0.24, 0.219, 0.225, vis=(1,)))                 # closed door leaf
     ry = by + 0.27
-    roof = prism([(-0.20, 0.0), (0.20, 0.0), (0.0, 0.13)], "z", 0.02, 0.28, WOOD, vis=(1, 2))
+    # F1 (G4 walk): shinmei style, entered on the eave side (hira-iri): the ridge runs PARALLEL to the front (x), so
+    # the viewer sees the front roof slope with the door under its eave and the gables at the ends. Before, the prism
+    # was extruded front-to-back and showed its gable to the room. Eaves overhang 4.5 cm front and back (the back eave
+    # stays 1.5 cm off the wall), the gables 5 cm; ridge billet along x, three katsuogi across it, crossed chigi at
+    # both gable ends.
+    zc, rise, e0, e1 = 0.14, 0.10, 0.015, 0.265
+    roof = prism([(0.0, e0), (0.0, e1), (rise, zc)], "x", -0.20, 0.20, WOOD, vis=(1, 2))
     P.add(xf(roof, t=(0.0, ry, 0.0)))
-    P.add(W(-0.21, 0.21, ry + 0.12, ry + 0.15, 0.02, 0.28, vis=(1,)))
+    P.add(W(-0.21, 0.21, ry + rise - 0.012, ry + rise + 0.018, zc - 0.016, zc + 0.016, vis=(1,)))   # ridge billet
+    for kx in (-0.11, 0.0, 0.11):                                                             # katsuogi
+        P.add(W(kx - 0.011, kx + 0.011, ry + rise + 0.018, ry + rise + 0.038, zc - 0.045, zc + 0.045, vis=(1,)))
+    ang = math.degrees(math.atan2(zc - e0, rise))
+    L = math.hypot(zc - e0, rise) + 0.055
+    for sx in (-1, 1):                                                                        # chigi
+        gx = sx * 0.203
+        for k, (a, z0) in enumerate(((ang, e0), (-ang, e1))):
+            b = W(-0.004, 0.004, 0.0, L, -0.011, 0.011, vis=(1,))
+            P.add(xf(b, rx=a, t=(gx + sx * 0.008 * k, ry, z0)))
     # offering vases (heishi) and a water cup, pale stoneware; a paper charm (ofuda) leaning on the box
     for vx in (-0.34, 0.34):
-        js, _ = bits.jar(0.07, 0.13, PALE, n=8, lid=False, vis=(1,))
+        js, _ = bits.jar(0.07, 0.13, PALE, n=6, lid=False, vis=(1,))    # F1: 6 sides (pays for the new roof)
         add_all(P, fkit.xfs(js[:2], t=(vx, y1, 0.15)))
     P.add(disc(0.035, y1, y1 + 0.04, PALE, n=8, vis=(1,), cx=0.25, cz=0.08))
     charm = box(-0.04, 0.04, 0.0, 0.20, -0.004, 0.004, PAPER, vis=(1,))

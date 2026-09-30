@@ -76,10 +76,11 @@ def zukue(kind="choba", state="intact"):
         add_all(P, parts)
         add_all(P, xfs(ledger(), ry=-8.0, t=(-0.22, ZH, 0.02)))
         add_all(P, xfs(inkbox(), ry=4.0, t=(0.28, ZH, -0.08)))
-        P.add(col(-ZW / 2, ZW / 2, ZH - 0.03, ZH, -ZD / 2, ZD / 2))
+        top_c = P.add(col(-ZW / 2, ZW / 2, ZH - 0.03, ZH, -ZD / 2, ZD / 2))
         for sx in (-1, 1):
             x = sx * (ZW / 2 - 0.04)
             P.add(col(x - 0.03, x + 0.03, 0.0, ZH - 0.03, -ZD / 2, ZD / 2))
+        fkit.road_tops(P, [top_c], "boards")      # F1: a low desk top (vanilla desks / tables have a Roadway)
         P.loot_rect("top", ZH, -0.05, 0.40, -0.15, 0.15, rng=0.25, points=[(0.12, ZH, 0.08)])
     else:
         # on its side (top to the back), the ledger open and scattered, ink box upset with an ink stain
@@ -185,8 +186,9 @@ def misedana(width=1.82, state="intact"):
         cols.append(box(x0, x1, 0.0, RISE * (i + 1), zf - TREAD, zf, WOOD))
     if state == "intact":
         add_all(P, parts)
-        for c in cols:
-            P.add(fkit.col_solid(c))
+        cc = [fkit.col_solid(c) for c in cols]
+        add_all(P, cc)
+        fkit.road_tops(P, cc, "boards")           # F1: the three steps are walkable (vanilla tables / benches)
         per = 2 if width > 1.2 else 1
         for i in range(3):
             y = RISE * (i + 1)
@@ -200,7 +202,9 @@ def misedana(width=1.82, state="intact"):
         add_all(P, tp)
         c = xf(xf(box(x0, x1, 0.0, MS_H, -MS_D / 2, MS_D / 2, WOOD), rx=90.0, pivot=(0.0, 0.0, MS_D / 2)), ry=6.0)
         lo = min(v[1] for v in c.verts)
-        P.add(fkit.col_solid(xf(c, t=(0.0, -lo, 0.0))))
+        cc = fkit.col_solid(xf(c, t=(0.0, -lo, 0.0)))
+        P.add(cc)
+        fkit.road_tops(P, [cc], "boards")         # F1: the stand lying on its face: its back is a flat top
     P.dim("w", width, width, tol=0.005)
     P.dim("d", MS_D, MS_D, tol=0.005)
     P.dim("h", MS_H, MS_H, tol=0.005)

@@ -107,7 +107,8 @@ def yoroibitsu(kind):
         top = h - 0.06
     out.append(W(-w / 2, w / 2, 0.0, top, -d / 2, d / 2, mat, vis=(3,)))
     P.adds(wear_all(out, wr))
-    P.add(col(-w / 2, w / 2, 0.0, top, -d / 2, d / 2, mat))
+    import fkit                                          # F1: a sturdy chest a player may stand on (vanilla practice)
+    fkit.road_tops(P, [P.add(col(-w / 2, w / 2, 0.0, top, -d / 2, d / 2, mat))], "boards")
     P.dim("w", 0.50, w, tol=0.005)
     P.dim("h", 0.55, h, tol=0.01)
     P.notes.append("armour chest (yoroi-bitsu), upper tier marker, the crest on its front (life atlas); loot on the "

@@ -63,9 +63,9 @@ SHOTS = [
     ]),
     ("7", "7 Cloth over a rim: into the chest onto the cloth inside, tight to the front face", [
         ("nagamochi_open", [("B3a", "storage/jp_f_nagamochi_open.p3d", {})],
-         {"cam": [1.1, 1.35, 1.25], "look": [0.2, 0.42, 0.15], "lens": 35}),
+         {"cam": [0.05, 1.75, 0.42], "look": [0.28, 0.14, 0.22], "lens": 32}),
         ("tansu_ransacked", [("B3a", "storage/jp_f_tansu_ransacked.p3d", {})],
-         {"cam": [0.2, 1.35, 1.35], "look": [-0.25, 0.68, 0.4], "lens": 40}),
+         {"cam": [0.05, 1.5, 1.05], "look": [-0.26, 0.62, 0.38], "lens": 40}),
         ("kori_open", [("B3a", "storage/jp_f_kori_open.p3d", {})],
          {"cam": [0.35, 0.95, 0.95], "look": [0.0, 0.18, 0.1], "lens": 40}),
     ]),

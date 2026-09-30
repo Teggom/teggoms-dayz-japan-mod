@@ -1,3 +1,133 @@
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\bedding D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\bedding D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\furniture\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\furniture\bedding\jp_f_futon_laid.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_futon_laid.p3d
+<model = "P:\JP\furniture\bedding\jp_f_futon_laid.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_futon_laid_dragged.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_futon_laid_dragged.p3d
+<model = "P:\JP\furniture\bedding\jp_f_futon_laid_dragged.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_futon_stack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_futon_stack.p3d
+<model = "P:\JP\furniture\bedding\jp_f_futon_stack.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_futon_stack_slumped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_futon_stack_slumped.p3d
+<model = "P:\JP\furniture\bedding\jp_f_futon_stack_slumped.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_mushiro.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_mushiro.p3d
+<model = "P:\JP\furniture\bedding\jp_f_mushiro.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_mushiro_pile.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_mushiro_pile.p3d
+<model = "P:\JP\furniture\bedding\jp_f_mushiro_pile.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_mushiro_pile_spread.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_mushiro_pile_spread.p3d
+<model = "P:\JP\furniture\bedding\jp_f_mushiro_pile_spread.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_mushiro_rolled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_mushiro_rolled.p3d
+<model = "P:\JP\furniture\bedding\jp_f_mushiro_rolled.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_mushiro_rolled_loose.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_mushiro_rolled_loose.p3d
+<model = "P:\JP\furniture\bedding\jp_f_mushiro_rolled_loose.p3d">
+</model>
+Convert model P:\JP\furniture\bedding\jp_f_mushiro_torn.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\bedding\jp_f_mushiro_torn.p3d
+<model = "P:\JP\furniture\bedding\jp_f_mushiro_torn.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_futon_laid.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_futon_laid_dragged.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_futon_stack.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_futon_stack_slumped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_mushiro.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_mushiro_pile.p3d: 0.02,-0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_mushiro_pile_spread.p3d: 0.05,0.16
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_mushiro_rolled.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_mushiro_rolled_loose.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\bedding\jp_f_mushiro_torn.p3d: 0.18,0.07
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\debris D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\debris *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\debris D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\debris *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\furniture\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\furniture\debris\jp_f_debris_leaves.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\debris\jp_f_debris_leaves.p3d
+<model = "P:\JP\furniture\debris\jp_f_debris_leaves.p3d">
+</model>
+Convert model P:\JP\furniture\debris\jp_f_debris_paper.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\debris\jp_f_debris_paper.p3d
+<model = "P:\JP\furniture\debris\jp_f_debris_paper.p3d">
+</model>
+Convert model P:\JP\furniture\debris\jp_f_debris_shards.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\debris\jp_f_debris_shards.p3d
+<model = "P:\JP\furniture\debris\jp_f_debris_shards.p3d">
+</model>
+Convert model P:\JP\furniture\debris\jp_f_debris_straw.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\debris\jp_f_debris_straw.p3d
+<model = "P:\JP\furniture\debris\jp_f_debris_straw.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\debris\jp_f_debris_leaves.p3d: 0.04,-0.09
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\debris\jp_f_debris_paper.p3d: -0.08,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\debris\jp_f_debris_shards.p3d: 0.05,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\debris\jp_f_debris_straw.p3d: -0.08,-0.00
+
 C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\fittings D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\fittings *.p3d
 
 BINARIZE rev.163709
@@ -42,4 +172,542 @@ No entry '.skyTextureR'.
 Trying to access error value.
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\fittings\jp_f_kamidana_plain.p3d: 0.00,0.15
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\fittings\jp_f_nagashi_wood.p3d: 0.00,0.00
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\heat_light D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\heat_light D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\furniture\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\furniture\heat_light\jp_f_andon_ariake.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_andon_ariake.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_andon_ariake.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_andon_ariake_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_andon_ariake_tipped.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_andon_ariake_tipped.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_andon_kaku.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_andon_kaku.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_andon_kaku.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_andon_kaku_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_andon_kaku_tipped.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_andon_kaku_tipped.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_hibachi_box.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_hibachi_box.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_hibachi_box.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_hibachi_box_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_hibachi_box_tipped.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_hibachi_box_tipped.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_hibachi_round.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_hibachi_round.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_hibachi_round.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_hibachi_round_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_hibachi_round_tipped.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_hibachi_round_tipped.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_tabakobon.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_tabakobon.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_tabakobon.p3d">
+</model>
+Convert model P:\JP\furniture\heat_light\jp_f_tabakobon_spilled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\heat_light\jp_f_tabakobon_spilled.p3d
+<model = "P:\JP\furniture\heat_light\jp_f_tabakobon_spilled.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_andon_ariake.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_andon_ariake_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_andon_kaku.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_andon_kaku_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_hibachi_box.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_hibachi_box_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_hibachi_round.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_hibachi_round_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_tabakobon.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\heat_light\jp_f_tabakobon_spilled.p3d: 0.00,0.00
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\kitchen D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\kitchen D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\furniture\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\furniture\kitchen\jp_f_firewood_bundle.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_firewood_bundle.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_firewood_bundle.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_firewood_bundle_loose.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_firewood_bundle_loose.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_firewood_bundle_loose.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_firewood_low.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_firewood_low.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_firewood_low.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_firewood_stack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_firewood_stack.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_firewood_stack.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_l.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_l.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_l.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_l_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_l_open.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_l_open.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_m.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_m.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_m.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_m_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_m_broken.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_m_broken.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_m_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_m_open.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_m_open.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_m_pale.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_m_pale.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_m_pale.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_s.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_s.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_s_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_s_open.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_s_open.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jar_s_pale.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jar_s_pale.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jar_s_pale.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jizai_kagi.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jizai_kagi.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jizai_kagi.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jizai_kagi_abandoned.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jizai_kagi_abandoned.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jizai_kagi_abandoned.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jizai_kagi_plain.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jizai_kagi_plain.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jizai_kagi_plain.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_jizai_kagi_plain_abandoned.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_jizai_kagi_plain_abandoned.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_jizai_kagi_plain_abandoned.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_kama.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_kama.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_kama.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_kama_lid.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_kama_lid.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_kama_lid.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_kama_nabe.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_kama_nabe.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_kama_nabe.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_kama_nabe_rusted.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_kama_nabe_rusted.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_kama_nabe_rusted.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_kama_nolid.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_kama_nolid.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_kama_nolid.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_mizugame.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_mizugame.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_mizugame.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_mizugame_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_mizugame_broken.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_mizugame_broken.p3d">
+UV mapping too varied on jp\common\materials\ceramic\jp_m_ceramic_stoneware_dark_w2_co.paa, stage 0: texel size used 0.0019417, max 0.0069113, min 0.00186937
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_mizugame_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_mizugame_open.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_mizugame_open.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_oke_bucket.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_oke_bucket.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_oke_bucket.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_oke_pickle.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_oke_pickle.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_oke_pickle.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_oke_pickle_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_oke_pickle_open.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_oke_pickle_open.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_oke_tarai.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_oke_tarai.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_oke_tarai.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_oke_tarai_dry.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_oke_tarai_dry.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_oke_tarai_dry.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_oke_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_oke_tipped.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_oke_tipped.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_091_1.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_091_1.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_091_1.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_091_1_sag.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_091_1_sag.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_091_1_sag.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_091_3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_091_3.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_091_3.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_091_3_sag.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_091_3_sag.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_091_3_sag.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_136_1.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_136_1.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_136_1.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_136_1_sag.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_136_1_sag.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_136_1_sag.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_136_3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_136_3.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_136_3.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_136_3_sag.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_136_3_sag.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_136_3_sag.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_182_1.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_182_1.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_182_1.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_182_1_sag.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_182_1_sag.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_182_1_sag.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_182_3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_182_3.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_182_3.p3d">
+</model>
+Convert model P:\JP\furniture\kitchen\jp_f_tana_182_3_sag.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_tana_182_3_sag.p3d
+<model = "P:\JP\furniture\kitchen\jp_f_tana_182_3_sag.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_firewood_bundle.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_firewood_bundle_loose.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_firewood_low.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_firewood_stack.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_l.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_l_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_m.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_m_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_m_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_m_pale.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_s.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_s_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jar_s_pale.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jizai_kagi.p3d: -0.02,0.02
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jizai_kagi_abandoned.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jizai_kagi_plain.p3d: 0.00,0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_jizai_kagi_plain_abandoned.p3d: 0.02,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_kama.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_kama_lid.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_kama_nabe.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_kama_nabe_rusted.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_kama_nolid.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_mizugame.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_mizugame_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_mizugame_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_oke_bucket.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_oke_pickle.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_oke_pickle_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_oke_tarai.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_oke_tarai_dry.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_oke_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_091_1.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_091_1_sag.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_091_3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_091_3_sag.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_136_1.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_136_1_sag.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_136_3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_136_3_sag.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_182_1.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_182_1_sag.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_182_3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\kitchen\jp_f_tana_182_3_sag.p3d: 0.00,0.00
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\shop D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\shop D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\furniture\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\furniture\shop\jp_f_choba_goshi_2.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_choba_goshi_2.p3d
+<model = "P:\JP\furniture\shop\jp_f_choba_goshi_2.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_choba_goshi_2_knocked.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_choba_goshi_2_knocked.p3d
+<model = "P:\JP\furniture\shop\jp_f_choba_goshi_2_knocked.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_choba_goshi_3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_choba_goshi_3.p3d
+<model = "P:\JP\furniture\shop\jp_f_choba_goshi_3.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_choba_goshi_3_knocked.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_choba_goshi_3_knocked.p3d
+<model = "P:\JP\furniture\shop\jp_f_choba_goshi_3_knocked.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_goods_general_cloth.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_goods_general_cloth.p3d
+<model = "P:\JP\furniture\shop\jp_f_goods_general_cloth.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_goods_general_cloth_swept.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_goods_general_cloth_swept.p3d
+<model = "P:\JP\furniture\shop\jp_f_goods_general_cloth_swept.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_goods_general_paper.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_goods_general_paper.p3d
+<model = "P:\JP\furniture\shop\jp_f_goods_general_paper.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_goods_general_paper_swept.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_goods_general_paper_swept.p3d
+<model = "P:\JP\furniture\shop\jp_f_goods_general_paper_swept.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_misedana_1ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_misedana_1ken.p3d
+<model = "P:\JP\furniture\shop\jp_f_misedana_1ken.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_misedana_1ken_toppled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_misedana_1ken_toppled.p3d
+<model = "P:\JP\furniture\shop\jp_f_misedana_1ken_toppled.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_misedana_half.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_misedana_half.p3d
+<model = "P:\JP\furniture\shop\jp_f_misedana_half.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_misedana_half_toppled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_misedana_half_toppled.p3d
+<model = "P:\JP\furniture\shop\jp_f_misedana_half_toppled.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_zukue_choba.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_zukue_choba.p3d
+<model = "P:\JP\furniture\shop\jp_f_zukue_choba.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_zukue_choba_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_zukue_choba_tipped.p3d
+<model = "P:\JP\furniture\shop\jp_f_zukue_choba_tipped.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_zukue_plain.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_zukue_plain.p3d
+<model = "P:\JP\furniture\shop\jp_f_zukue_plain.p3d">
+</model>
+Convert model P:\JP\furniture\shop\jp_f_zukue_plain_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_zukue_plain_tipped.p3d
+<model = "P:\JP\furniture\shop\jp_f_zukue_plain_tipped.p3d">
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000949524, max 0.00195445, min 0.000873458
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_choba_goshi_2.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_choba_goshi_2_knocked.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_choba_goshi_3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_choba_goshi_3_knocked.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_goods_general_cloth.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_goods_general_cloth_swept.p3d: 0.05,0.29
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_goods_general_paper.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_goods_general_paper_swept.p3d: -0.02,0.45
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_misedana_1ken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_misedana_1ken_toppled.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_misedana_half.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_misedana_half_toppled.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_zukue_choba.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_zukue_choba_tipped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_zukue_plain.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\shop\jp_f_zukue_plain_tipped.p3d: 0.00,0.00
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\storage D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\storage D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\furniture\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\furniture\storage\jp_f_box_l.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_box_l.p3d
+<model = "P:\JP\furniture\storage\jp_f_box_l.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_box_m.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_box_m.p3d
+<model = "P:\JP\furniture\storage\jp_f_box_m.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_box_m_lacquer.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_box_m_lacquer.p3d
+<model = "P:\JP\furniture\storage\jp_f_box_m_lacquer.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_box_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_box_open.p3d
+<model = "P:\JP\furniture\storage\jp_f_box_open.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_box_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_box_s.p3d
+<model = "P:\JP\furniture\storage\jp_f_box_s.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_box_stack3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_box_stack3.p3d
+<model = "P:\JP\furniture\storage\jp_f_box_stack3.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_box_stack3_toppled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_box_stack3_toppled.p3d
+<model = "P:\JP\furniture\storage\jp_f_box_stack3_toppled.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_box_s_lacquer.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_box_s_lacquer.p3d
+<model = "P:\JP\furniture\storage\jp_f_box_s_lacquer.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_kori.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_kori.p3d
+<model = "P:\JP\furniture\storage\jp_f_kori.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_kori_2.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_kori_2.p3d
+<model = "P:\JP\furniture\storage\jp_f_kori_2.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_kori_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_kori_open.p3d
+<model = "P:\JP\furniture\storage\jp_f_kori_open.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_nagamochi.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_nagamochi.p3d
+<model = "P:\JP\furniture\storage\jp_f_nagamochi.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_nagamochi_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_nagamochi_open.p3d
+<model = "P:\JP\furniture\storage\jp_f_nagamochi_open.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_rack_1ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_rack_1ken.p3d
+<model = "P:\JP\furniture\storage\jp_f_rack_1ken.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_rack_1ken_collapsed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_rack_1ken_collapsed.p3d
+<model = "P:\JP\furniture\storage\jp_f_rack_1ken_collapsed.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_rack_half.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_rack_half.p3d
+<model = "P:\JP\furniture\storage\jp_f_rack_half.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_rack_half_collapsed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_rack_half_collapsed.p3d
+<model = "P:\JP\furniture\storage\jp_f_rack_half_collapsed.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tansu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tansu.p3d
+<model = "P:\JP\furniture\storage\jp_f_tansu.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tansu_ransacked.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tansu_ransacked.p3d
+<model = "P:\JP\furniture\storage\jp_f_tansu_ransacked.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tansu_single.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tansu_single.p3d
+<model = "P:\JP\furniture\storage\jp_f_tansu_single.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tansu_single_ransacked.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tansu_single_ransacked.p3d
+<model = "P:\JP\furniture\storage\jp_f_tansu_single_ransacked.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tawara.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tawara.p3d
+<model = "P:\JP\furniture\storage\jp_f_tawara.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tawara_burst.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tawara_burst.p3d
+<model = "P:\JP\furniture\storage\jp_f_tawara_burst.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tawara_kamasu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tawara_kamasu.p3d
+<model = "P:\JP\furniture\storage\jp_f_tawara_kamasu.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tawara_kamasu_burst.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tawara_kamasu_burst.p3d
+<model = "P:\JP\furniture\storage\jp_f_tawara_kamasu_burst.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tawara_kamasu_stack3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tawara_kamasu_stack3.p3d
+<model = "P:\JP\furniture\storage\jp_f_tawara_kamasu_stack3.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tawara_stack6.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tawara_stack6.p3d
+<model = "P:\JP\furniture\storage\jp_f_tawara_stack6.p3d">
+</model>
+Convert model P:\JP\furniture\storage\jp_f_tawara_stack6_burst.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\storage\jp_f_tawara_stack6_burst.p3d
+<model = "P:\JP\furniture\storage\jp_f_tawara_stack6_burst.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_box_l.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_box_m.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_box_m_lacquer.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_box_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_box_s.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_box_stack3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_box_stack3_toppled.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_box_s_lacquer.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_kori.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_kori_2.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_kori_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_nagamochi.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_nagamochi_open.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_rack_1ken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_rack_1ken_collapsed.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_rack_half.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_rack_half_collapsed.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tansu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tansu_ransacked.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tansu_single.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tansu_single_ransacked.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tawara.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tawara_burst.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tawara_kamasu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tawara_kamasu_burst.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tawara_kamasu_stack3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tawara_stack6.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\storage\jp_f_tawara_stack6_burst.p3d: 0.00,0.00
 

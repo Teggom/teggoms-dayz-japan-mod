@@ -29,6 +29,7 @@
     "Resolution 2": 30,
     "Resolution 3": 6,
     "Geometry": 12,
+    "Roadway": 1,
     "View Geometry": 12,
     "Fire Geometry": 12
    },
@@ -51,7 +52,7 @@
     0.225,
     0.125
    ],
-   "roadway": false,
+   "roadway": true,
    "mass_kg": 5.0,
    "well": false,
    "text_cells": [],

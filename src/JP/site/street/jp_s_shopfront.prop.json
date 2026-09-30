@@ -81,8 +81,8 @@
    "wall_gap": 0.0,
    "budget": "small",
    "faces": {
-    "Resolution 1": 39,
-    "Resolution 2": 13
+    "Resolution 1": 65,
+    "Resolution 2": 29
    },
    "bbox": [
     -0.62,
@@ -90,7 +90,7 @@
     0.38,
     2.02,
     0.0,
-    0.112
+    0.129
    ],
    "collision": [],
    "footprint_xz": null,
@@ -130,8 +130,8 @@
    "wall_gap": 0.0,
    "budget": "small",
    "faces": {
-    "Resolution 1": 39,
-    "Resolution 2": 13
+    "Resolution 1": 65,
+    "Resolution 2": 29
    },
    "bbox": [
     -0.62,
@@ -139,7 +139,7 @@
     1.42,
     2.02,
     0.0,
-    0.112
+    0.129
    ],
    "collision": [],
    "footprint_xz": null,
@@ -690,8 +690,8 @@
    "wall_gap": 0.0,
    "budget": "small",
    "faces": {
-    "Resolution 1": 41,
-    "Resolution 2": 13
+    "Resolution 1": 81,
+    "Resolution 2": 45
    },
    "bbox": [
     -0.62,

@@ -66,6 +66,7 @@
     "Resolution 1": 72,
     "Resolution 2": 18,
     "Geometry": 18,
+    "Roadway": 1,
     "View Geometry": 18,
     "Fire Geometry": 18
    },
@@ -85,7 +86,7 @@
     0.2
    ],
    "loot_floor_clearance_m": 0.4,
-   "roadway": false,
+   "roadway": true,
    "mass_kg": 8.0,
    "loot_surfaces": [
     {
@@ -192,6 +193,7 @@
     "Resolution 1": 60,
     "Resolution 2": 18,
     "Geometry": 18,
+    "Roadway": 1,
     "View Geometry": 18,
     "Fire Geometry": 18
    },
@@ -211,7 +213,7 @@
     0.2
    ],
    "loot_floor_clearance_m": 0.4,
-   "roadway": false,
+   "roadway": true,
    "mass_kg": 8.0,
    "loot_surfaces": [
     {

@@ -32,6 +32,12 @@ class CfgVehicles
 		displayName="Rice pot, lid off, rusted";
 		model="\JP\furniture\kitchen\jp_f_kama_nolid.p3d";
 	};
+	class StaticObj_JP_F_Kama_Lid: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice pot lid, knocked off onto the floor";
+		model="\JP\furniture\kitchen\jp_f_kama_lid.p3d";
+	};
 	class StaticObj_JP_F_Kama_Nabe: HouseNoDestruct
 	{
 		scope=1;

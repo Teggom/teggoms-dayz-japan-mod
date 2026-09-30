@@ -123,19 +123,19 @@
    "anchor": "floor",
    "budget": "small",
    "faces": {
-    "Resolution 1": 254,
-    "Resolution 2": 68,
+    "Resolution 1": 206,
+    "Resolution 2": 32,
     "Geometry": 14,
     "View Geometry": 14,
     "Fire Geometry": 14
    },
    "bbox": [
     -0.246,
-    0.369,
+    0.246,
     0.0,
-    0.431,
+    0.28,
     -0.252,
-    0.628
+    0.252
    ],
    "collision": true,
    "footprint_xz": [
@@ -168,6 +168,46 @@
     "seat_y 0.168: the flange underside; place the proxy at kamado rim top - 0.168 (rim hole d 0.44)"
    ],
    "seat_y": 0.168
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_kama_lid.p3d",
+   "class": "StaticObj_JP_F_Kama_Lid",
+   "variant": "kama",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Rice pot lid, knocked off onto the floor",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 48,
+    "Resolution 2": 36
+   },
+   "bbox": [
+    -0.222,
+    0.222,
+    0.0,
+    0.065,
+    -0.222,
+    0.222
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "lid_d",
+     "expected": 0.46,
+     "measured": 0.46,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the kama's wooden lid (0.46 x 0.065) lying on the floor, cleats up; visual only (small item); pair it with jp_f_kama_nolid seated in a kamado"
+   ]
   },
   {
    "p3d": "\\JP\\furniture\\kitchen\\jp_f_kama_nabe.p3d",

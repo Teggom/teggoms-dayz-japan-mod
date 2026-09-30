@@ -221,9 +221,16 @@ def footprint(it):
     return out
 
 
+WALK_ON_H = 0.30        # a prop with a Roadway no taller than this is a walk-on slab (laid futon, straw bed, gutter slab)
+
+
 def blocks(it):
-    """Does the prop block walking (collision, not a walk-on slab like the laid futon)?"""
-    return it["info"]["geo"] and not it["info"]["roadway"]
+    """Does the prop block walking (collision, not a walk-on slab like the laid futon)? F1 (2026-09-30): sturdy
+    furniture now carries a Roadway too (the goods stand, chests, bale stacks, desks: players climb them), so a Roadway
+    alone no longer means 'walk-on': only a low one (top <= WALK_ON_H, sidecar bbox y1) does."""
+    if not it["info"]["geo"]:
+        return False
+    return not (it["info"]["roadway"] and it["info"]["bbox"][3] <= WALK_ON_H)
 
 
 def aabb(poly):

@@ -338,6 +338,8 @@ def stool(kind):
     ss, lo3, cs = stool_parts(wear="_w2" if ab else None)
     if kind == "std":
         add_all(P, ss + lo3 + cs)
+        import fkit                                     # F1: a player may stand on the stool seat (vanilla benches)
+        fkit.road_tops(P, cs[:1], "boards_ext")
     elif kind == "ab_tipped":
         vs, cs = K.lkit.place_group(ss + lo3, cs, [dict(rz=90.0)])
         add_all(P, vs + cs)

@@ -10967,6 +10967,7 @@
     "Resolution 2": 30,
     "Resolution 3": 6,
     "Geometry": 12,
+    "Roadway": 1,
     "View Geometry": 12,
     "Fire Geometry": 12
    },
@@ -10981,6 +10982,7 @@
       "Resolution 1",
       "Resolution 2",
       "Resolution 3",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -11014,6 +11016,7 @@
        "Resolution 2": 30,
        "Resolution 3": 6,
        "Geometry": 12,
+       "Roadway": 1,
        "View Geometry": 12,
        "Fire Geometry": 12
       },
@@ -11094,6 +11097,14 @@
      "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
      "pass": true,
      "detail": []
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 1
+     }
     },
     {
      "id": "C19",
@@ -16006,6 +16017,18 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
+  },
+  "BIN": {
+   "pass": true,
+   "detail": {
+    "missing": [],
+    "warning_lines": [],
+    "exit": 0
+   }
+  },
+  "PBO": {
+   "pass": true,
+   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_site.pbo"
   }
  },
  "summary": {

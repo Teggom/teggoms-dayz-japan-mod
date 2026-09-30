@@ -50,6 +50,16 @@ def kama_lid(wear=None):
 
 
 def kama(state="intact"):
+    if state == "lid":
+        # F1 (G4 walk): the knocked-off lid as its own small prop, lying on the doma floor beside the kamado (placed by
+        # the decorator). Before, jp_f_kama_nolid carried it leaning on the pot's belly at the POT's base height, so
+        # with the pot seated in the kamado rim (0.63 m up) the lid hung in the air.
+        P = FPart("kama", budget="small", mass=1.0, flat=True)
+        add_all(P, kama_lid(wear="_w2"))
+        P.dim("lid_d", 0.46, 0.46, tol=0.01)
+        P.notes.append("the kama's wooden lid (0.46 x 0.065) lying on the floor, cleats up; visual only (small item); "
+                       "pair it with jp_f_kama_nolid seated in a kamado")
+        return P
     P = FPart("kama", budget="small", mass=9.0)
     rust = "_w2" if state != "intact" else None
     add_all(P, kama_body(rust, crust=state != "intact"))
@@ -58,9 +68,7 @@ def kama(state="intact"):
         top = 0.28 + 0.065
         P.add(cyl_col(0.23, 0.0, 0.32, n=8, mat=IRON))
     else:
-        # lid knocked off: on the floor, leaning on the pot's belly
-        lid = xfs(kama_lid(wear="_w2"), rx=-70.0, t=(0.0, 0.0, 0.0))
-        add_all(P, fkit.rest(xfs(lid, ry=20.0, t=(0.14, 0.0, 0.52))))
+        # lid off (F1: the lid is the separate prop jp_f_kama_lid, so a seated pot has nothing floating beside it)
         P.add(cyl_col(0.23, 0.0, 0.28, n=8, mat=IRON))
     P.dim("body_d", 0.42, 0.424, tol=0.01)
     P.dim("flange_d", 0.50, 0.504, tol=0.02)
@@ -640,6 +648,7 @@ PROPS = [
     {"id": "jp_f_kama", "cat": CAT, "notes": ["kama seats in a kamado rim by its flange: see seat_y"], "models": [
         M("jp_f_kama", "kama", "intact", "Rice pot (kama) with lid", lambda: kama("intact")),
         M("jp_f_kama_nolid", "kama", "abandoned", "Rice pot, lid off, rusted", lambda: kama("nolid")),
+        M("jp_f_kama_lid", "kama", "abandoned", "Rice pot lid, knocked off onto the floor", lambda: kama("lid")),
         M("jp_f_kama_nabe", "nabe", "intact", "Small pot (nabe) with bail", lambda: nabe("intact")),
         M("jp_f_kama_nabe_rusted", "nabe", "abandoned", "Small pot, rusted, burnt crust", lambda: nabe("rusted")),
     ]},

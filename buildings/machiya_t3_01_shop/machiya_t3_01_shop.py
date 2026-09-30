@@ -77,6 +77,10 @@ def furnish(rooms, floors):
          why="rice pot seated in the kamado's first mouth"))
     P(it("jp_f_kama_nolid", "kitchen", KAMA_X, -2.05, 90, y=RIM_TOP - KAMA_SEAT_Y, seat=KAMADO_SEAT,
          why="second pot, lid off and rusted (disorder)"))
+    # F1 (G4 walk): its lid is now its own small prop, lying on the doma at the kamado's end (it used to float 0.63 m
+    # up beside the seated pot); visual only, not counted against the room's props
+    P(it("jp_f_kama_lid", "kitchen", -2.62, -1.80, 25, count=False,
+         why="the second pot's lid, knocked off onto the doma"))
     P(it("jp_f_nagashi_wood", "kitchen", -1.22, -0.975, 180, why="wooden sink against the omoya back wall"))
     P(it("jp_f_mizugame", "kitchen", -0.40, -1.29, 0, why="water jar beside the sink"))
     sh = P(it("jp_f_tana_136_1", "kitchen", -1.22, -0.975, 180, y=0.05 + 0.50, why="shelf over the sink (board 1.45, "

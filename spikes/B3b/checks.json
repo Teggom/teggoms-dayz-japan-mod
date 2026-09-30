@@ -3496,7 +3496,7 @@
    "pass": true,
    "faces": {
     "Resolution 1": 66,
-    "Resolution 2": 40,
+    "Resolution 2": 50,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -3542,7 +3542,7 @@
      "detail": {
       "faces": {
        "Resolution 1": 66,
-       "Resolution 2": 40,
+       "Resolution 2": 50,
        "Geometry": 12,
        "View Geometry": 12,
        "Fire Geometry": 12
@@ -3849,8 +3849,8 @@
    "variant": "forked",
    "pass": true,
    "faces": {
-    "Resolution 1": 120,
-    "Resolution 2": 42,
+    "Resolution 1": 172,
+    "Resolution 2": 54,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -3875,8 +3875,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w0.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w1.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_kinari_w2.rvmat",
-       "JP\\common\\materials\\textile\\jp_m_textile_noren_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
@@ -3897,8 +3898,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 120,
-       "Resolution 2": 42,
+       "Resolution 1": 172,
+       "Resolution 2": 54,
        "Geometry": 12,
        "View Geometry": 12,
        "Fire Geometry": 12
@@ -3986,8 +3987,9 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_textile_kinari_w2": true,
-      "jp_m_textile_noren_w1": true
+      "jp_m_textile_cotton_indigo_w0": true,
+      "jp_m_textile_cotton_indigo_w1": true,
+      "jp_m_textile_kinari_w2": true
      }
     },
     {
@@ -4008,6 +4010,30 @@
        "pass": true
       },
       {
+       "material": "jp_m_textile_cotton_indigo_w0",
+       "mean_srgb": [
+        51.8,
+        59.8,
+        63.7
+       ],
+       "palette": "aizome_kon",
+       "dE76": 1.0,
+       "tolerance": 6,
+       "pass": true
+      },
+      {
+       "material": "jp_m_textile_cotton_indigo_w1",
+       "mean_srgb": [
+        58.5,
+        66.5,
+        70.6
+       ],
+       "palette": "aizome_kon",
+       "dE76": 2.0,
+       "tolerance": 6,
+       "pass": true
+      },
+      {
        "material": "jp_m_textile_kinari_w2",
        "mean_srgb": [
         167.0,
@@ -4017,19 +4043,6 @@
        "palette": "kinari_cloth",
        "dE76": 10.8,
        "tolerance": 12,
-       "pass": true,
-       "masked": true
-      },
-      {
-       "material": "jp_m_textile_noren_w1",
-       "mean_srgb": [
-        61.6,
-        68.8,
-        71.4
-       ],
-       "palette": "aizome_kon",
-       "dE76": 3.2,
-       "tolerance": 6,
        "pass": true,
        "masked": true
       },
@@ -4659,7 +4672,7 @@
    "pass": true,
    "faces": {
     "Resolution 1": 80,
-    "Resolution 2": 40,
+    "Resolution 2": 50,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -4707,7 +4720,7 @@
      "detail": {
       "faces": {
        "Resolution 1": 80,
-       "Resolution 2": 40,
+       "Resolution 2": 50,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
@@ -8887,8 +8900,8 @@
    "variant": "curb_tub",
    "pass": true,
    "faces": {
-    "Resolution 1": 399,
-    "Resolution 2": 71,
+    "Resolution 1": 401,
+    "Resolution 2": 69,
     "Resolution 3": 30,
     "Geometry": 42,
     "View Geometry": 42,
@@ -8941,8 +8954,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 399,
-       "Resolution 2": 71,
+       "Resolution 1": 401,
+       "Resolution 2": 69,
        "Resolution 3": 30,
        "Geometry": 42,
        "View Geometry": 42,
@@ -9789,8 +9802,8 @@
    "variant": "roofed",
    "pass": true,
    "faces": {
-    "Resolution 1": 507,
-    "Resolution 2": 95,
+    "Resolution 1": 509,
+    "Resolution 2": 93,
     "Resolution 3": 42,
     "Geometry": 48,
     "View Geometry": 48,
@@ -9844,8 +9857,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 507,
-       "Resolution 2": 95,
+       "Resolution 1": 509,
+       "Resolution 2": 93,
        "Resolution 3": 42,
        "Geometry": 48,
        "View Geometry": 48,
@@ -10105,8 +10118,8 @@
    "variant": "lid",
    "pass": true,
    "faces": {
-    "Resolution 1": 178,
-    "Resolution 2": 74,
+    "Resolution 1": 180,
+    "Resolution 2": 72,
     "Resolution 3": 24,
     "Geometry": 24,
     "View Geometry": 24,
@@ -10160,8 +10173,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 178,
-       "Resolution 2": 74,
+       "Resolution 1": 180,
+       "Resolution 2": 72,
        "Resolution 3": 24,
        "Geometry": 24,
        "View Geometry": 24,
@@ -10391,8 +10404,8 @@
    "variant": "curb_tub",
    "pass": true,
    "faces": {
-    "Resolution 1": 333,
-    "Resolution 2": 71,
+    "Resolution 1": 335,
+    "Resolution 2": 69,
     "Resolution 3": 30,
     "Geometry": 42,
     "View Geometry": 42,
@@ -10447,8 +10460,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 333,
-       "Resolution 2": 71,
+       "Resolution 1": 335,
+       "Resolution 2": 69,
        "Resolution 3": 30,
        "Geometry": 42,
        "View Geometry": 42,
@@ -10710,8 +10723,8 @@
    "variant": "well",
    "pass": true,
    "faces": {
-    "Resolution 1": 293,
-    "Resolution 2": 97,
+    "Resolution 1": 313,
+    "Resolution 2": 95,
     "Resolution 3": 74,
     "Geometry": 66,
     "View Geometry": 66,
@@ -10765,8 +10778,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 293,
-       "Resolution 2": 97,
+       "Resolution 1": 313,
+       "Resolution 2": 95,
        "Resolution 3": 74,
        "Geometry": 66,
        "View Geometry": 66,
@@ -11003,7 +11016,7 @@
    "variant": "field",
    "pass": true,
    "faces": {
-    "Resolution 1": 337,
+    "Resolution 1": 355,
     "Resolution 2": 72,
     "Resolution 3": 62,
     "Geometry": 42,
@@ -11058,7 +11071,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 337,
+       "Resolution 1": 355,
        "Resolution 2": 72,
        "Resolution 3": 62,
        "Geometry": 42,
@@ -11298,8 +11311,8 @@
    "variant": "well",
    "pass": true,
    "faces": {
-    "Resolution 1": 306,
-    "Resolution 2": 97,
+    "Resolution 1": 326,
+    "Resolution 2": 95,
     "Resolution 3": 74,
     "Geometry": 66,
     "View Geometry": 66,
@@ -11355,8 +11368,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 306,
-       "Resolution 2": 97,
+       "Resolution 1": 326,
+       "Resolution 2": 95,
        "Resolution 3": 74,
        "Geometry": 66,
        "View Geometry": 66,
@@ -17062,8 +17075,8 @@
    "variant": "noren_long",
    "pass": true,
    "faces": {
-    "Resolution 1": 39,
-    "Resolution 2": 13
+    "Resolution 1": 65,
+    "Resolution 2": 29
    },
    "checks": [
     {
@@ -17103,8 +17116,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 39,
-       "Resolution 2": 13
+       "Resolution 1": 65,
+       "Resolution 2": 29
       },
       "extra": []
      }
@@ -17213,8 +17226,8 @@
    "variant": "noren_half",
    "pass": true,
    "faces": {
-    "Resolution 1": 39,
-    "Resolution 2": 13
+    "Resolution 1": 65,
+    "Resolution 2": 29
    },
    "checks": [
     {
@@ -17254,8 +17267,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 39,
-       "Resolution 2": 13
+       "Resolution 1": 65,
+       "Resolution 2": 29
       },
       "extra": []
      }
@@ -19018,8 +19031,8 @@
    "variant": "noren",
    "pass": true,
    "faces": {
-    "Resolution 1": 41,
-    "Resolution 2": 13
+    "Resolution 1": 81,
+    "Resolution 2": 45
    },
    "checks": [
     {
@@ -19059,8 +19072,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 41,
-       "Resolution 2": 13
+       "Resolution 1": 81,
+       "Resolution 2": 45
       },
       "extra": []
      }
@@ -22536,8 +22549,8 @@
    "variant": "yatai",
    "pass": true,
    "faces": {
-    "Resolution 1": 126,
-    "Resolution 2": 71,
+    "Resolution 1": 160,
+    "Resolution 2": 97,
     "Resolution 3": 42,
     "Geometry": 30,
     "Roadway": 1,
@@ -22590,8 +22603,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 126,
-       "Resolution 2": 71,
+       "Resolution 1": 160,
+       "Resolution 2": 97,
        "Resolution 3": 42,
        "Geometry": 30,
        "Roadway": 1,
@@ -26453,10 +26466,6 @@
     "warning_lines": [],
     "exit": 0
    }
-  },
-  "PBO": {
-   "pass": true,
-   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_site.pbo"
   }
  },
  "summary": {

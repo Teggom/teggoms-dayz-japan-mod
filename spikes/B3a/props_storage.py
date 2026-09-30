@@ -82,7 +82,7 @@ def nagamochi(state="shut"):
     P.add(W(x0, x1, 0.0, NH if state == "shut" else yt, z0, z1, vis=(3,)))
     if state == "shut":
         add_all(P, xfs(naga_lid(), t=(0.0, yt, 0.0)))
-        P.add(col(x0, x1, 0.0, NH, z0, z1))
+        fkit.road_tops(P, [P.add(col(x0, x1, 0.0, NH, z0, z1))], "boards")    # F1: stand on the lid
         P.loot_rect("lid", NH, x0 + 0.1, x1 - 0.1, z0 + 0.1, z1 - 0.1, rng=0.3,
                     points=[(-0.42, NH, 0.0), (0.42, NH, 0.0)])
     else:
@@ -91,15 +91,20 @@ def nagamochi(state="shut"):
         add_all(P, xfs(lid, t=(0.0, yt, 0.0)))
         P.add(W(x0, x1, yt, yt + 0.73, z0 - 0.06, z0 - 0.01, vis=(3,)))
         P.add(col(x0 - 0.01, x1 + 0.01, yt, yt + 0.72, z0 - 0.07, z0 - 0.01))
-        P.add(col(x0, x1, 0.0, NB, z0, z1))
+        bottom = P.add(col(x0, x1, 0.0, NB, z0, z1))
         P.add(col(x0, x1, NB, yt, z1 - NT, z1))
         P.add(col(x0, x1, NB, yt, z0, z0 + NT))
         P.add(col(x0, x0 + NT, NB, yt, z0 + NT, z1 - NT))
         P.add(col(x1 - NT, x1, NB, yt, z0 + NT, z1 - NT))
+        # F1: a player who climbs in stands on the inner floor (the rims are 2.5 cm: no Roadway there)
+        P.road([(x0 + NT, NB, z0 + NT), (x1 - NT, NB, z0 + NT), (x1 - NT, NB, z1 - NT), (x0 + NT, NB, z1 - NT)],
+               "boards")
         # cloth inside and spilling out
         P.add(xf(bits.cloth_patch(-0.45, -0.05, 0.50, 0.45, 8.0, INDIGO, h=0.06, vis=(1,)), t=(0.0, NB, 0.0)))
-        P.add(xf(bits.cloth_patch(0.05, 0.02, 0.40, 0.40, -6.0, KINARI, h=0.04, vis=(1,)), t=(0.0, NB, 0.0)))
-        P.add(tansu.cloth_drape(0.05, 0.40, z1, yt, 0.45))
+        # F1: the pale cloth lies against the front wall (x 0.08-0.48, z -0.12-0.30), the garment rises from it up the
+        # inside of the front board, over the rim and down the outside, clear of the lock plate (x +-0.07)
+        P.add(xf(bits.cloth_patch(0.28, 0.09, 0.40, 0.42, -4.0, KINARI, h=0.04, vis=(1,)), t=(0.0, NB, 0.0)))
+        P.add(tansu.cloth_drape(0.12, 0.44, z1, yt, 0.45, ft=NT, land_y=NB + 0.04))
         add_all(P, tansu.garment(0.30, z1 + 0.30, -20.0))
         P.loot_rect("inside", NB, 0.3, x1 - NT - 0.05, z0 + 0.1, z1 - 0.1, rng=0.25, kind="floor",
                     points=[(0.55, NB, 0.0)])
@@ -165,7 +170,7 @@ def kori(state="1"):
         add_all(P, ss)
         # the lid lying upside down beside it, a garment hanging over the base's front edge
         add_all(P, rest(xfs(lid, rz=180.0, ry=-12.0, t=(0.66, 0.0, 0.05))))
-        P.add(tansu.cloth_drape(-0.15, 0.12, KD / 2 - 0.01, 0.27, 0.22))
+        P.add(tansu.cloth_drape(-0.15, 0.12, KD / 2 - 0.01, 0.27, 0.22, ft=0.012, land_y=0.062))   # F1: onto the cloth
         P.add(bits.cloth_patch(0.0, 0.0, 0.50, 0.30, 0.0, KINARI, h=0.05, vis=(1,)))
         P.solids[-1] = xf(P.solids[-1], t=(0.0, 0.012, 0.0))
         P.add(col(-KW / 2, KW / 2, 0.0, 0.27, -KD / 2, KD / 2))
@@ -234,8 +239,9 @@ def hako_model(size="m", state="intact", mat=WOOD):
         ss, _ = hako(size, mat, cord=(mat == LACQUER or size == "s"), k=2 if size == "m" else 0)
         add_all(P, ss)
         P.add(W(-w / 2, w / 2, 0.0, h, -d / 2, d / 2, mat, vis=(2,)))
-        P.add(col(-w / 2, w / 2, 0.0, h, -d / 2, d / 2, mat))
+        cb = P.add(col(-w / 2, w / 2, 0.0, h, -d / 2, d / 2, mat))
         if size == "l":
+            fkit.road_tops(P, [cb], "boards")      # F1: the big lidded box is sturdy enough to stand on
             P.loot_rect("lid", h, -w / 2 + 0.05, w / 2 - 0.05, -d / 2 + 0.05, d / 2 - 0.05, rng=0.2,
                         points=[(0.0, h, 0.0)])
     else:   # open: lid off leaning on the side, contents spilled
@@ -259,6 +265,7 @@ def hako_model(size="m", state="intact", mat=WOOD):
 def hako_stack(state="intact"):
     P = FPart("box_stack", budget="small", mass=9.3)
     y = 0.0
+    stack_cols = []
     sizes = ("l", "m", "s")
     yaws = (0.0, 5.0, -8.0)
     offs = ((0.0, 0.0), (-0.04, 0.02), (0.05, -0.01))
@@ -275,9 +282,10 @@ def hako_stack(state="intact"):
         ss, _ = hako(sz, cord=(sz == "s"), k=i * 2)
         add_all(P, xfs(ss, ry=yaws[i], t=(offs[i][0], y, offs[i][1])))
         P.add(xf(W(-w / 2, w / 2, 0.0, h, -d / 2, d / 2, vis=(2,)), ry=yaws[i], t=(offs[i][0], y, offs[i][1])))
-        P.add(fkit.col_solid(xf(box(-w / 2, w / 2, 0.0, h, -d / 2, d / 2, WOOD), ry=yaws[i],
-                                t=(offs[i][0], y, offs[i][1]))))
+        stack_cols.append(P.add(fkit.col_solid(xf(box(-w / 2, w / 2, 0.0, h, -d / 2, d / 2, WOOD), ry=yaws[i],
+                                                  t=(offs[i][0], y, offs[i][1])))))
         y += h
+    fkit.road_tops(P, stack_cols, "boards")        # F1: the top of the stack (covered lids skipped)
     top = y
     if state == "intact":
         P.loot_rect("stack_top", top, -0.1, 0.1, -0.06, 0.06, rng=0.2, points=[(0.05, top, -0.01)])
@@ -325,7 +333,7 @@ def tawara(state="1"):
             P.add(stain(4, -0.40, 0.10, 0.45, sx=1.3, wear="_w2"))
         add_all(P, ss)
         P.add(fkit.lcyl("x", 0.2, 0.0, 0.2, -0.375, 0.375, TAWARA, n=6, vis=(2,)))
-        P.add(tawara_col())
+        fkit.road_tops(P, [P.add(tawara_col())], "tatami")     # F1: the bale's top facet (straw: carpet sound)
         yt = 0.2 + 0.2 * math.cos(math.pi / 10)
         P.loot_rect("top", yt, -0.25, 0.25, -0.05, 0.05, rng=0.25, points=[(0.12, yt, 0.0)])
         P.dim("d", 0.40, 0.40, tol=0.02)
@@ -334,13 +342,15 @@ def tawara(state="1"):
         # pyramid of six, bales along z (end lids to the front): 3 + 2 + 1
         dy = 0.2 * math.sqrt(3)
         spots = [(-0.40, 0.0), (0.0, 0.0), (0.40, 0.0), (-0.20, dy), (0.20, dy), (0.0, 2 * dy)]
+        bale_cols = []
         for i, (x, y) in enumerate(spots):
             burst = state == "stack6_burst" and i == 5
             ss = tawara_bale(n=6, segs="lo", bands=1, wear="_w2" if burst else None)
             if burst:
                 ss = [ss[0]]
             add_all(P, xfs(ss, ry=90.0, t=(x, y, 0.0)))
-            P.add(tawara_col(x, y, 0.0, 90.0, n=8))
+            bale_cols.append(P.add(tawara_col(x, y, 0.0, 90.0, n=8)))
+        fkit.road_tops(P, bale_cols, "tatami")     # F1: the exposed top facets of the pyramid
         P.add(W(-0.6, 0.6, 0.0, 0.4, -0.375, 0.375, TAWARA, vis=(2,)))
         P.add(W(-0.4, 0.4, 0.4, 0.4 + dy, -0.375, 0.375, TAWARA, vis=(2,)))
         P.add(W(-0.2, 0.2, 0.4 + dy, 0.4 + 2 * dy, -0.375, 0.375, TAWARA, vis=(2,)))
@@ -368,9 +378,12 @@ def kamasu_bag(wear=None, sag=0.0, vis=(1,)):
 def kamasu(state="1"):
     P = FPart("kamasu", budget="small", mass=30.0 if state != "stack3" else 90.0)
     if state == "stack3":
+        bag_cols = []
         for i, (dx, dz, yaw) in enumerate(((0.0, 0.0, 0.0), (0.03, -0.02, 7.0), (-0.02, 0.02, -5.0))):
             add_all(P, xfs(kamasu_bag(), ry=yaw, t=(dx, i * 0.14, dz)))
-            P.add(fkit.col_solid(xf(box(-0.29, 0.29, 0.0, 0.14, -0.19, 0.19, MUSHIRO), ry=yaw, t=(dx, i * 0.14, dz))))
+            bag_cols.append(P.add(fkit.col_solid(xf(box(-0.29, 0.29, 0.0, 0.14, -0.19, 0.19, MUSHIRO), ry=yaw,
+                                                    t=(dx, i * 0.14, dz)))))
+        fkit.road_tops(P, bag_cols, "tatami")      # F1: the top bag
         P.add(W(-0.3, 0.3, 0.0, 0.43, -0.2, 0.2, MUSHIRO, vis=(2,)))
         top = 2 * 0.14 + 0.15
         P.loot_rect("top", top, -0.1, 0.1, -0.06, 0.06, rng=0.25, points=[(-0.02, top, 0.02)])

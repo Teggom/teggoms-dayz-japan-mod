@@ -597,6 +597,7 @@ Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory requir
 Warning: Terrain grid 0.5 will be too slow, should use 3.1
 Convert model P:\JP\furniture\wall\jp_f_bangasa_hung.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_bangasa_hung.p3d
 <model = "P:\JP\furniture\wall\jp_f_bangasa_hung.p3d">
+TexMaterial loading race detected for jp\common\materials\straw\jp_m_straw_rope_w1.rvmat
 </model>
 Convert model P:\JP\furniture\wall\jp_f_bangasa_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_bangasa_leaning.p3d
 <model = "P:\JP\furniture\wall\jp_f_bangasa_leaning.p3d">
@@ -894,6 +895,7 @@ Convert model P:\JP\furniture\work\jp_f_usu_ishiusu.p3d -> D:\DayZ-Server_AI-202
 </model>
 Convert model P:\JP\furniture\work\jp_f_usu_ishiusu_off.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu_ishiusu_off.p3d
 <model = "P:\JP\furniture\work\jp_f_usu_ishiusu_off.p3d">
+TexMaterial loading race detected for jp\common\materials\stone\jp_m_stone_cut_w2.rvmat
 </model>
 Convert model P:\JP\furniture\work\jp_f_usu_mallet.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu_mallet.p3d
 <model = "P:\JP\furniture\work\jp_f_usu_mallet.p3d">

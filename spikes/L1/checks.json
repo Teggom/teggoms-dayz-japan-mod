@@ -12918,6 +12918,7 @@
     "Resolution 1": 170,
     "Resolution 2": 18,
     "Geometry": 14,
+    "Roadway": 3,
     "View Geometry": 14,
     "Fire Geometry": 14
    },
@@ -12931,6 +12932,7 @@
       "Geometry",
       "Resolution 1",
       "Resolution 2",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -12962,6 +12964,7 @@
        "Resolution 1": 170,
        "Resolution 2": 18,
        "Geometry": 14,
+       "Roadway": 3,
        "View Geometry": 14,
        "Fire Geometry": 14
       },
@@ -13054,6 +13057,14 @@
      ]
     },
     {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 3
+     }
+    },
+    {
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
@@ -13117,6 +13128,7 @@
     "Resolution 1": 161,
     "Resolution 2": 18,
     "Geometry": 14,
+    "Roadway": 3,
     "View Geometry": 14,
     "Fire Geometry": 14
    },
@@ -13130,6 +13142,7 @@
       "Geometry",
       "Resolution 1",
       "Resolution 2",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -13161,6 +13174,7 @@
        "Resolution 1": 161,
        "Resolution 2": 18,
        "Geometry": 14,
+       "Roadway": 3,
        "View Geometry": 14,
        "Fire Geometry": 14
       },
@@ -13253,6 +13267,14 @@
      ]
     },
     {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 3
+     }
+    },
+    {
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
@@ -13317,6 +13339,7 @@
     "Resolution 2": 78,
     "Resolution 3": 6,
     "Geometry": 48,
+    "Roadway": 9,
     "View Geometry": 48,
     "Fire Geometry": 48
    },
@@ -13331,6 +13354,7 @@
       "Resolution 1",
       "Resolution 2",
       "Resolution 3",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -13366,6 +13390,7 @@
        "Resolution 2": 78,
        "Resolution 3": 6,
        "Geometry": 48,
+       "Roadway": 9,
        "View Geometry": 48,
        "Fire Geometry": 48
       },
@@ -13476,6 +13501,14 @@
        "ok": true
       }
      ]
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 9
+     }
     },
     {
      "id": "C19",
@@ -13782,6 +13815,7 @@
     "Resolution 2": 78,
     "Resolution 3": 6,
     "Geometry": 48,
+    "Roadway": 6,
     "View Geometry": 48,
     "Fire Geometry": 48
    },
@@ -13796,6 +13830,7 @@
       "Resolution 1",
       "Resolution 2",
       "Resolution 3",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -13833,6 +13868,7 @@
        "Resolution 2": 78,
        "Resolution 3": 6,
        "Geometry": 48,
+       "Roadway": 6,
        "View Geometry": 48,
        "Fire Geometry": 48
       },
@@ -13923,6 +13959,14 @@
        "ok": true
       }
      ]
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 6
+     }
     },
     {
      "id": "C19",
@@ -28513,6 +28557,7 @@
     "Resolution 2": 12,
     "Resolution 3": 6,
     "Geometry": 6,
+    "Roadway": 1,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
@@ -28527,6 +28572,7 @@
       "Resolution 1",
       "Resolution 2",
       "Resolution 3",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -28561,6 +28607,7 @@
        "Resolution 2": 12,
        "Resolution 3": 6,
        "Geometry": 6,
+       "Roadway": 1,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
@@ -28651,6 +28698,14 @@
        "ok": true
       }
      ]
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 1
+     }
     },
     {
      "id": "C19",
@@ -28741,6 +28796,7 @@
     "Resolution 2": 12,
     "Resolution 3": 6,
     "Geometry": 6,
+    "Roadway": 1,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
@@ -28755,6 +28811,7 @@
       "Resolution 1",
       "Resolution 2",
       "Resolution 3",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -28789,6 +28846,7 @@
        "Resolution 2": 12,
        "Resolution 3": 6,
        "Geometry": 6,
+       "Roadway": 1,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
@@ -28879,6 +28937,14 @@
        "ok": true
       }
      ]
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 1
+     }
     },
     {
      "id": "C19",
@@ -28971,6 +29037,7 @@
     "Resolution 2": 12,
     "Resolution 3": 6,
     "Geometry": 6,
+    "Roadway": 1,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
@@ -28985,6 +29052,7 @@
       "Resolution 1",
       "Resolution 2",
       "Resolution 3",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -29019,6 +29087,7 @@
        "Resolution 2": 12,
        "Resolution 3": 6,
        "Geometry": 6,
+       "Roadway": 1,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
@@ -29098,6 +29167,14 @@
      "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
      "pass": true,
      "detail": []
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 1
+     }
     },
     {
      "id": "C19",
@@ -31640,6 +31717,6 @@
  "summary": {
   "models": 185,
   "pass": 185,
-  "classes_in_config": 297
+  "classes_in_config": 298
  }
 }

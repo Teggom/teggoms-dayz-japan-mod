@@ -331,6 +331,43 @@ def board(x0, x1, y0, y1, z0, z1, k=0, mat=WOOD, vis=(1, 2), normals=((0, 0, 1),
     return s
 
 
+def road_tops(P, cols, surf="boards", others=None, min_area=0.004):
+    """F1 (G4 walk: 'the goods stand can't be walked on, glitches when you clip on top'): a Roadway on the flat
+    up-facing faces of the given collision components, as vanilla gives tables, desks, benches, beds, shelves and
+    carts one (their Roadway LOD). A top face whose centre is inside another collision component (a bale under the
+    next bale, a box under the next box) is skipped. surf = a core.ROADWAY key ('boards' = wood_planks_int, 'boards_ext',
+    'tatami' = textile_carpet_int for straw and cloth). Returns how many faces it added."""
+    others = list(others if others is not None else cols)
+    k = 0
+    for c in cols:
+        c.finalize()
+        for fi, f in enumerate(c.faces):
+            if c.fn[fi][1] < 0.999:
+                continue
+            pts = [c.verts[i] for i in f]
+            n = core.newell(pts)
+            if 0.5 * core.length(n) < min_area:
+                continue
+            cen = tuple(sum(p[q] for p in pts) / len(pts) for q in range(3))
+            probe = (cen[0], cen[1] + 0.02, cen[2])
+            covered = False
+            for o in others:
+                if o is c:
+                    continue
+                b = o.bbox()
+                if b[0] < probe[0] < b[1] and b[2] < probe[1] < b[3] and b[4] < probe[2] < b[5]:
+                    covered = True
+                    break
+            if covered:
+                continue
+            # MLOD roadway faces: counter-clockwise seen from above
+            if n[1] < 0:
+                pts = pts[::-1]
+            P.road(pts, surf)
+            k += 1
+    return k
+
+
 def pts_ring(r, n, y, phase=0.0, cx=0.0, cz=0.0):
     return [(cx + r * math.cos(phase + 2 * math.pi * k / n), y, cz + r * math.sin(phase + 2 * math.pi * k / n))
             for k in range(n)]

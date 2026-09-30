@@ -222,21 +222,47 @@ def dropped_drawer(name, face_z):
     return placed, hexa, cen, (tx, tz, wdt, dep, top), inner
 
 
-def cloth_drape(x0, x1, zf, y_top, drop, mat=INDIGO, wear="_w2"):
-    """A garment hanging over a pulled drawer's front board (zf = its outer face, y_top = its top): a double-sided
-    strip from inside the drawer, over the board, down in front (visual only)."""
-    prof = [(y_top + 0.006, zf - 0.13), (y_top + 0.008, zf - FT / 2), (y_top - 0.03, zf + 0.010),
-            (y_top - drop, zf + 0.022)]
-    quads, normals = [], []
+def cloth_drape(x0, x1, zf, y_top, drop, mat=INDIGO, wear="_w2", ft=FT, land_y=None, land_len=0.13, out_gap=0.004,
+                bump=None):
+    """A garment hanging over a board (a pulled drawer's front, a chest's or trunk's front wall): zf = the board's
+    OUTER face, y_top = its top, ft = its thickness. A double-sided strip (visual only) that lies on what is inside
+    (land_y: the inner floor, or the cloth on it, for land_len back from the board), rises up the inner face, goes over
+    the top and hangs down the outer face `out_gap` off it. bump = (y_lo, y_hi, dz): where hardware (a ring pull) stands
+    proud of the outer face, the cloth bellies out over it by dz between y_lo and y_hi.
+
+    F1 (G4 walk, 'floating cloth on the open long chest'): the old strip started 0.13 m inside at the board's TOP height
+    and ran level over the open chest (nothing under it), and hung 1.0-2.2 cm off the outer face."""
+    g = 0.004                                            # cloth thickness clearance off every surface
+    zi = zf - ft
+    prof = []                                            # (y, z) from the inside end to the outside hem
+    if land_y is not None:
+        prof += [(land_y + g, zi - land_len), (land_y + g, zi - 0.035), (land_y + 0.025, zi - g - 0.004)]
+    else:
+        prof += [(y_top - 0.10, zi - g)]
+    prof += [(y_top - 0.02, zi - g), (y_top + g, zi + 0.003), (y_top + g, zf - 0.003), (y_top - 0.02, zf + out_gap)]
+    bot = y_top - drop
+    if bump:
+        lo, hi, dz = bump
+        prof += [(hi + 0.01, zf + out_gap), (hi - 0.01, zf + out_gap + dz), (max(lo, bot + 0.01), zf + out_gap + dz),
+                 (bot, zf + out_gap + dz + 0.003)]
+    else:
+        prof += [(bot, zf + out_gap + 0.004)]
+    t = core.mat_info(mat)["tile"]
+    w = [0.0]
+    for i in range(1, len(prof)):
+        w.append(w[-1] + math.hypot(prof[i][0] - prof[i - 1][0], prof[i][1] - prof[i - 1][1]))
+    quads, normals, uvs = [], [], []
     for i in range(len(prof) - 1):
         (ya, za), (yb, zb) = prof[i], prof[i + 1]
         q = [(x0, ya, za), (x1, ya, za), (x1, yb, zb), (x0, yb, zb)]
         n = core.norm((0.0, zb - za, -(yb - ya)))
         if n[1] + n[2] < 0:
             n = core.mul(n, -1.0)
+        uv = [(x0 / t, w[i] / t), (x1 / t, w[i] / t), (x1 / t, w[i + 1] / t), (x0 / t, w[i + 1] / t)]
         quads += [q, q[::-1]]
         normals += [n, core.mul(n, -1.0)]
-    s = sheet(quads, mat, normals, vis=(1, 2))
+        uvs += [uv, uv[::-1]]
+    s = sheet(quads, mat, normals, vis=(1, 2), uvs=uvs)
     s.wear = wear
     return s
 
@@ -289,6 +315,8 @@ def model(state="shut", single=False):
     for s in body + moved:
         P.add(s.transformed(0.0, (0.0, dy, 0.0)) if dy else s)
     top = H_ + dy
+    # F1 (G4 walk): the carcass top is a Roadway (a sturdy 1.0 / 0.5 m chest you can climb, as vanilla desks)
+    P.road([(X0, top, Z0), (X1, top, Z0), (X1, top, Z1), (X0, top, Z1)], "boards")
     P.loot_rect("top", top, X0 + 0.05, X1 - 0.05, Z0 + 0.05, Z1 - 0.05, rng=0.2,
                 points=[(-0.25, top, 0.0), (0.25, top, 0.0)])
     if state == "ransacked":
@@ -304,7 +332,13 @@ def model(state="shut", single=False):
         hang = max(((n, a) for n, a in ransack.items() if a != "floor"), key=lambda t: t[1])
         x0, x1, y0, y1 = OPEN[hang[0]]
         zf = Z1 - REC + hang[1]
-        P.add(cloth_drape(x0 + 0.10, x0 + 0.34, zf, y1 - GAP + dy, min(0.20, y0 + dy - 0.03)))
+        # F1: into the drawer onto its bottom board, tight over the front, bellied over the ring pull under it
+        yc = (y0 + y1) / 2 + 0.012 + dy
+        pulls = [(x0 + x1) / 2 + px for px in PULLS[hang[0]]]
+        over = any(x0 + 0.10 - 0.035 < px < x0 + 0.34 + 0.035 for px in pulls)
+        P.add(cloth_drape(x0 + 0.10, x0 + 0.34, zf, y1 - GAP + dy, min(0.20, y0 + dy - 0.03),
+                          land_y=y0 + GAP + DB + dy, land_len=min(0.13, hang[1] - 0.06),
+                          bump=(yc - 0.06, yc + 0.035, 0.012) if over else None))
         for s in garment(X1 + 0.16, tz + dep * 0.6, 25.0):
             P.add(s)
         P.notes.append("dropped drawer inside the %.2f m front zone; clothes are visual only" % FRONT_ZONE)

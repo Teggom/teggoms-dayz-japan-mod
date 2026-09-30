@@ -64,6 +64,7 @@
     "Resolution 1": 180,
     "Resolution 2": 10,
     "Geometry": 14,
+    "Roadway": 1,
     "View Geometry": 14,
     "Fire Geometry": 14
    },
@@ -83,7 +84,7 @@
     0.185
    ],
    "loot_floor_clearance_m": 0.4,
-   "roadway": false,
+   "roadway": true,
    "mass_kg": 60.0,
    "loot_surfaces": [
     {
@@ -137,6 +138,7 @@
     "Resolution 1": 189,
     "Resolution 2": 23,
     "Geometry": 14,
+    "Roadway": 1,
     "View Geometry": 14,
     "Fire Geometry": 14
    },
@@ -156,7 +158,7 @@
     0.185
    ],
    "loot_floor_clearance_m": 0.4,
-   "roadway": false,
+   "roadway": true,
    "mass_kg": 60.0,
    "loot_surfaces": [
     {
@@ -210,6 +212,7 @@
     "Resolution 1": 288,
     "Resolution 2": 18,
     "Geometry": 84,
+    "Roadway": 6,
     "View Geometry": 84,
     "Fire Geometry": 84
    },
@@ -229,7 +232,7 @@
     0.375
    ],
    "loot_floor_clearance_m": 0.4,
-   "roadway": false,
+   "roadway": true,
    "mass_kg": 360.0,
    "loot_surfaces": [
     {
@@ -278,6 +281,7 @@
     "Resolution 1": 286,
     "Resolution 2": 31,
     "Geometry": 84,
+    "Roadway": 6,
     "View Geometry": 84,
     "Fire Geometry": 84
    },
@@ -297,7 +301,7 @@
     0.375
    ],
    "loot_floor_clearance_m": 0.4,
-   "roadway": false,
+   "roadway": true,
    "mass_kg": 360.0,
    "loot_surfaces": [
     {
@@ -412,6 +416,7 @@
     "Resolution 1": 99,
     "Resolution 2": 6,
     "Geometry": 18,
+    "Roadway": 1,
     "View Geometry": 18,
     "Fire Geometry": 18
    },
@@ -431,7 +436,7 @@
     0.235
    ],
    "loot_floor_clearance_m": 0.4,
-   "roadway": false,
+   "roadway": true,
    "mass_kg": 90.0,
    "loot_surfaces": [
     {

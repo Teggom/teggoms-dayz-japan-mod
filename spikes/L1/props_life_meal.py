@@ -335,7 +335,10 @@ def taru(kind):
         P.adds(cask(0.0, 0.0, komo=komo, text_cell="taru_morohaku" if komo else None, staved=kind == "staved",
                     wear="_w2" if kind == "staved" else None))
         top = h + (0.03 if komo else -0.02)
-        P.add(cyl_col(0.225, 0.0, top, n=8))
+        cc = P.add(cyl_col(0.225, 0.0, top, n=8))
+        if kind != "staved":                            # F1: stand on a whole cask (not the staved-in one)
+            import fkit
+            fkit.road_tops(P, [cc], "boards" if not komo else "tatami")
         if kind != "staved":
             P.loot_rect("top", top, -0.12, 0.12, -0.12, 0.12, rng=0.15, points=[(0.0, top, 0.0)])
         else:
@@ -357,7 +360,8 @@ def taru(kind):
             P.adds(cask(x, 0.0, rh, komo=komo, text_cell="taru_morohaku" if komo else None, n=10,
                         wear="_w2" if ab else None))
             top = rh + h + (0.03 if komo else -0.02)
-            P.add(cyl_col(0.225, rh, top, n=8, cx=x))
+            import fkit                                 # F1: the cask tops on the rack are walkable
+            fkit.road_tops(P, [P.add(cyl_col(0.225, rh, top, n=8, cx=x))], "boards" if not komo else "tatami")
             if not (ab and i == 0):
                 P.loot_rect("top%d" % i, top, x - 0.12, x + 0.12, -0.12, 0.12, rng=0.15, points=[(x, top, 0.0)])
         P.add(col(-0.91, 0.91, 0.0, rh, -0.30, 0.30))
