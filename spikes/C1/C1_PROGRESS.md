@@ -43,9 +43,20 @@ Brief: bare town shells (no furniture): all 60 townhouse units + cheap extras, t
 - Ordinary hatago and every townhouse / post-town house: one storey + the sealed low zushi-nikai (G0-4, G1-5).
 - Grand inn (Land_JP_Hatago_Grand, one per tier-3 town, G0-5): a full upper storey with guest rooms. Sources:
   research/buildings/B_TRADE_INDUSTRY.md section 8 (post-town inn: "two storeys, lattice front, rooms upstairs",
-  source KA); the surviving Ohashiya hatago at Akasaka-juku on the Tokaido (Toyokawa), whose main house is
-  traditionally dated 1716 and has its guest rooms upstairs (cited from memory, no web lookup in this run: verify
-  before quoting). Hiroshige (1830s) is not used as dating evidence (PLAYBOOK section 1).
+  source KA, undated). Hiroshige (1830s) is not used as dating evidence (PLAYBOOK section 1).
+- **Ohashiya source checked (agent C2, 2026-09-30; replaces C1's from-memory line):** the Ohashiya (former hatago
+  Koiya) at Akasaka-juku is a two-storey timber building (kirizuma, sangawara; 1st floor 145.54 m2, 2nd floor 86.53
+  m2; Toyokawa city tangible cultural property, designated 1977-03-01). The 1716 (Shotoku 6) date is only a
+  tradition (tourism pages: "tsutaerare"). Both official records date it LATER: Toyokawa city "built after the
+  Akasaka-juku great fire of Bunka 6 (1809)", and Cultural Heritage Online (Agency for Cultural Affairs) "founded in
+  the late Edo period, after the fire of Bunka 6 (1809)". Sources: https://www.city.toyokawa.lg.jp/soshiki/
+  kyoikuiinkai/shogaigakushu/2/5/3/1/ohasiya.html ; https://online.bunka.go.jp/heritages/detail/427872 . So the
+  Ohashiya is NOT evidence for 1730. Other dated survivors met in the lookups are also later (Futagawa-juku hatago
+  Seimei-ya, 1817, two storeys, guest rooms upstairs: https://futagawa-honjin.jp/facilities/hatagoya/). No dated
+  pre-1730 evidence for a two-storey Tokaido hatago was found in this short check (local research + 5 web reads).
+  **Verdict: the grand inn's full upper storey is UNPROVEN for 1730 (the standing G0-5 allowance, one per tier-3 town,
+  is Stephen's call, not a sourced fact).** The model is unchanged; for Stephen to decide (keep under G0-5, or look
+  for an earlier source such as the 1690 Tokaido Bunken Ezu, Moronobu, or Kaempfer's inn descriptions).
 - Detached post-town houses use the 'townhouse' face budget (same template and per-ken detail as the units);
   5-ken inns and the grand inn are 'large' (townhouse.budget_class).
 - Upper-storey gable windows of the grand inn are worked from inside only (C10 reach_sides 'far'): nobody stands
