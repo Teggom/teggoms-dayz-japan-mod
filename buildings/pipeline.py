@@ -6,6 +6,13 @@ r"""pipeline.py - the multi-building build (B0 step 0b; replaces the machiya's o
   key ...         the buildings to (re)build (buildings/registry.py keys); default = every shipped building
   --all           every registered building, shipped or not
   --combine-only  rebuild nothing; regenerate the shared outputs from the stored records
+  --family NAME   C1: every registered building whose dir (family folder) is NAME, e.g. townhouse
+  --jobs N        C1: run the checks in N parallel processes (after combine / binarize / pack)
+  --verify-only   C1: rebuild the model in memory + out/ and run its checks; stage nothing, combine nothing
+
+Families (C1, 2026-09-30): a registry entry with "dir" + "params" + "name" + "class" is one member of a family of
+shells built by one recipe module in buildings/<dir>/ (model(name=..., **params) -> (M, floors, rooms)); its record,
+rooms and checks go to buildings/<dir>/records|rooms|checks/<key>.json, its MLOD to buildings/<dir>/out/.
 
 Per building (buildings/<key>/):
   1. model() -> MLOD (every LOD, Geometry properties + mass) -> out/<name>.p3d; shipped ones are staged to
@@ -75,7 +82,14 @@ def copy_retry(src, dst, tries=5):
 
 
 def bdir(b):
-    return os.path.join(HERE, b["key"])
+    return os.path.join(HERE, b.get("dir", b["key"]))
+
+
+def side_path(b, kind):
+    """rooms.json / checks.json / record.json of a building; a family member (C1) keeps one per key in a subfolder."""
+    if "dir" in b:
+        return os.path.join(bdir(b), {"record": "records"}.get(kind, kind), b["key"] + ".json")
+    return os.path.join(bdir(b), kind + ".json")
 
 
 def load_module(b):
@@ -90,7 +104,7 @@ def model_path(b, name):
 
 
 def record_path(b):
-    return os.path.join(bdir(b), "record.json")
+    return side_path(b, "record")
 
 
 # ------------------------------------------------------------------------------------------------ config fragments
@@ -210,11 +224,16 @@ def cfgconvert(path):
 
 
 # ------------------------------------------------------------------------------------------------ per building
-def build_model(b):
-    """Recipe -> MLOD in out/ (and staged into src when shipped), rooms.json, record.json. Returns a build dict."""
+def build_model(b, stage=True):
+    """Recipe -> MLOD in out/ (and staged into src when shipped), rooms.json, record.json. Returns a build dict.
+    stage=False (--verify-only): out/ only; nothing staged into src, no record / rooms written."""
     mod = load_module(b)
-    name, cls = mod.NAME, mod.CLASS
-    M, floors, rooms = mod.model()
+    if "params" in b:                               # C1: a family member (one recipe, many shells)
+        name, cls = b["name"], b["class"]
+        M, floors, rooms = mod.model(name=name, **b["params"])
+    else:
+        name, cls = mod.NAME, mod.CLASS
+        M, floors, rooms = mod.model()
     lods = M.lods(geo_props=GEO_PROPS, mass=b["mass"])
     # B4 decorator: a furnished building exposes proxies() (furniture / dressing as proxies in the vanilla LODs),
     # loot_points(floors) (floor + raised points) and site() (yard objects as separate map objects, model frame)
@@ -236,11 +255,13 @@ def build_model(b):
                 p["tag"] = f["tag"]
                 pts.append(p)
     site = mod.site() if hasattr(mod, "site") else []
-    wb(os.path.join(bdir(b), "rooms.json"), json.dumps({
+    rooms_doc = json.dumps({
         "building": cls, "p3d": model_path(b, name), "frame": getattr(mod, "FRAME_NOTE", "model: origin = footprint "
                                                                        "centre at grade, +z = street front"),
         "rooms": rooms, "loot_points": len(pts),
-        "loot_by_room": {r["name"]: sum(1 for p in pts if p["floor"] == r["name"]) for r in rooms}}, indent=1))
+        "loot_by_room": {r["name"]: sum(1 for p in pts if p["floor"] == r["name"]) for r in rooms}}, indent=1)
+    if stage:
+        wb(side_path(b, "rooms"), rooms_doc)
     rec = {"key": b["key"], "class": cls, "name": name, "model": model_path(b, name), "model_dir": b["model_dir"],
            "doors": [getattr(d, "label", "door") for d in M.doors], "faces": faces, "loot_points": len(pts),
            "config_class": config_class(b, cls, name, M.doors), "skeleton": skeleton_fragment(name, M.doors),
@@ -254,7 +275,10 @@ def build_model(b):
         # yard / street objects in the building's model frame: {p3d, x, z, yaw, y}; combine() turns them into C.csv
         # rows for every placement of the building (baked into the terrain like the building)
         rec["site"] = site
-    if b["ship"]:
+    if "params" in b:
+        rec["params"] = b["params"]
+        rec["bbox"] = [round(v, 3) for v in M.bbox()]
+    if b["ship"] and stage:
         mdir = os.path.join(SRC, b["model_dir"])
         os.makedirs(mdir, exist_ok=True)
         copy_retry(mp, os.path.join(mdir, name + ".p3d"))
@@ -413,14 +437,17 @@ def generic_verify(bd):
     rec("C7 walkable floors have Roadway at floor height", not miss, "%d/%d samples" % (n - miss, n))
     BC.run_g3(M, L, floors, rec)
     nf = sum(1 for r in res if not r["ok"])
-    wb(os.path.join(bdir(b), "checks.json"), json.dumps({"building": bd["rec"]["class"], "faces": "%d/%d/%d" % got,
-                                                          "checks": res}, indent=1))
+    wb(side_path(b, "checks"), json.dumps({"building": bd["rec"]["class"], "faces": "%d/%d/%d" % got,
+                                           "checks": res}, indent=1))
     print("RESULT %s: %s (%d checks, %d failures)" % (b["key"], "PASS" if not nf else "FAIL", len(res), nf))
     return nf == 0
 
 
 def run_verify(bd):
     b = bd["b"]
+    if b.get("verify") == "shellcheck":             # C1: the machiya-standard checks for any template shell
+        import shellcheck
+        return shellcheck.run(bd)
     if b.get("verify"):
         d = bdir(b)
         if d not in sys.path:
@@ -436,26 +463,106 @@ def run_verify(bd):
 
 
 # ------------------------------------------------------------------------------------------------ main
+def binarize_dir(mdir, names, logdir):
+    """C1: one binarize.exe run over a whole model folder (every p3d in it was just rebuilt as MLOD), then each ODOL
+    replaces its MLOD copy in src. Returns the names that came out as ODOL."""
+    out = os.path.join(TEMP, "binarized_" + mdir)
+    shutil.rmtree(out, ignore_errors=True)
+    os.makedirs(out)
+    cmd = [BINARIZE, "-always", "-addon=P:\\JP\\buildings", "-binpath=P:\\bin", "P:\\JP\\buildings\\" + mdir, out,
+           "*.p3d"]
+    r = subprocess.run(cmd, cwd="P:\\", capture_output=True, text=True, errors="replace")
+    os.makedirs(logdir, exist_ok=True)
+    wb(os.path.join(logdir, "binarize_%s.log" % mdir), " ".join(cmd) + "\n\n" + r.stdout + "\n" + r.stderr)
+    found = {}
+    for root_, _, files in os.walk(out):
+        for f in files:
+            if f.lower().endswith(".p3d"):
+                found[f[:-4]] = os.path.join(root_, f)
+    done = []
+    for n in names:
+        f = found.get(n)
+        if f and open(f, "rb").read(4) == b"ODOL":
+            copy_retry(f, os.path.join(SRC, mdir, n + ".p3d"))
+            done.append(n)
+    bad = [l for l in (r.stdout + r.stderr).splitlines() if re.search(r"error|warning|cannot|not loaded", l, re.I)]
+    print("binarize %s: %d/%d ODOL, %d warning/error lines" % (mdir, len(done), len(names), len(bad)))
+    return done
+
+
+def verify_parallel(keys, jobs):
+    """C1: the checks of many buildings in `jobs` worker processes (pipeline.py --verify-only k1 k2 ...)."""
+    import time
+    groups = [keys[i::jobs] for i in range(jobs) if keys[i::jobs]]
+    logdir = os.path.join(TEMP, "verify_logs")
+    os.makedirs(logdir, exist_ok=True)
+    procs = []
+    for i, g in enumerate(groups):
+        lf = open(os.path.join(logdir, "verify_%02d.log" % i), "wb")
+        procs.append((subprocess.Popen([sys.executable, os.path.abspath(__file__), "--verify-only"] + g, stdout=lf,
+                                       stderr=subprocess.STDOUT, cwd=DEV), lf, g))
+    ok = True
+    t0 = time.time()
+    for p, lf, g in procs:
+        rc = p.wait()
+        lf.close()
+        ok = ok and rc == 0
+    print("verify: %d buildings in %d processes, %.0f s, %s (logs %s)" % (len(keys), len(groups), time.time() - t0,
+                                                                      "all pass" if ok else "FAILURES", logdir))
+    return ok
+
+
 def main(argv):
     flags = {a for a in argv if a.startswith("--")}
-    keys = [a for a in argv if not a.startswith("--")]
+    jobs = 1
+    fam = None
+    keys = []
+    it = iter(argv)
+    for a in it:
+        if a == "--jobs":
+            jobs = int(next(it))
+        elif a == "--family":
+            fam = next(it)
+        elif not a.startswith("--"):
+            keys.append(a)
     if "--combine-only" in flags:
         return 0 if combine() else 1
+    if fam:
+        keys += [b["key"] for b in registry.BUILDINGS if b.get("dir") == fam]
     if keys:
         todo = [registry.get(k) for k in keys]
     else:
         todo = [b for b in registry.BUILDINGS if b["ship"] or "--all" in flags]
+    if "--verify-only" in flags:
+        ok = True
+        for b in todo:
+            ok = run_verify(build_model(b, stage=False)) and ok
+        return 0 if ok else 1
     built = [build_model(b) for b in todo]
     ok = combine() if any(bd["b"]["ship"] for bd in built) else True
     shipped = [bd for bd in built if bd["b"]["ship"]]
     if shipped and "--no-binarize" not in flags:
+        # C1: a model folder whose p3ds were ALL rebuilt now (all MLOD in src) is binarized in one run
+        bydir = {}
         for bd in shipped:
-            ok = binarize(bd["b"], bd["rec"]["name"]) and ok
+            bydir.setdefault(bd["b"]["model_dir"], []).append(bd)
+        for mdir, bds in sorted(bydir.items()):
+            names = [bd["rec"]["name"] for bd in bds]
+            infolder = sorted(f[:-4] for f in os.listdir(os.path.join(SRC, mdir)) if f.lower().endswith(".p3d"))
+            if len(bds) > 1 and sorted(names) == infolder:
+                done = binarize_dir(mdir, names, os.path.join(bdir(bds[0]["b"]), "out"))
+                ok = len(done) == len(names) and ok
+            else:
+                for bd in bds:
+                    ok = binarize(bd["b"], bd["rec"]["name"]) and ok
     if shipped and "--no-pack" not in flags:
         ok = pack() and ok
     if "--no-verify" not in flags:
-        for bd in built:
-            ok = run_verify(bd) and ok
+        if jobs > 1 and len(built) > 1:
+            ok = verify_parallel([bd["b"]["key"] for bd in built], jobs) and ok
+        else:
+            for bd in built:
+                ok = run_verify(bd) and ok
     return 0 if ok else 1
 
 

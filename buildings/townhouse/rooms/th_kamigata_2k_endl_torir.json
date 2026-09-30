@@ -1,0 +1,108 @@
+{
+ "building": "Land_JP_Townhouse_Kamigata_2ken_EndL_ToriR",
+ "p3d": "\\JP\\buildings\\townhouse\\jp_townhouse_kamigata_2k_endl_torir.p3d",
+ "frame": "model: origin = lot centre at grade, +z = street front; lot width = neighbour spacing (rooms.json 'lot_width' via the record's params); built by parts/kit/jpparts/templates/townhouse.py",
+ "rooms": [
+  {
+   "name": "toriniwa",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    1.76,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2",
+    "DoorsTwin3"
+   ],
+   "note": "entry passage, 1 ken, full omoya depth",
+   "rect_model": [
+    -1.728,
+    -0.028,
+    -1.76,
+    3.58
+   ],
+   "lot_width": 3.704
+  },
+  {
+   "name": "mise",
+   "tag": "shop:general",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    1.8800000000000001,
+    3.58,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "shop room",
+   "rect_model": [
+    0.092,
+    1.792,
+    0.97,
+    3.58
+   ],
+   "lot_width": 3.704
+  },
+  {
+   "name": "oku",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    1.8800000000000001,
+    3.58,
+    -5.4,
+    -2.79
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "back room",
+   "rect_model": [
+    0.092,
+    1.792,
+    -1.76,
+    0.85
+   ],
+   "lot_width": 3.704
+  },
+  {
+   "name": "kitchen",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -7.220000000000001,
+    -5.52
+   ],
+   "doors": [
+    "DoorsTwin4"
+   ],
+   "note": "hashiri kitchen (no kamado yet: B3a/B4)",
+   "rect_model": [
+    -1.728,
+    1.792,
+    -3.58,
+    -1.88
+   ],
+   "lot_width": 3.704
+  }
+ ],
+ "loot_points": 6,
+ "loot_by_room": {
+  "toriniwa": 2,
+  "mise": 1,
+  "oku": 1,
+  "kitchen": 2
+ }
+}

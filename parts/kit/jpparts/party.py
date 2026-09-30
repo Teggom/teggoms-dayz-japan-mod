@@ -21,7 +21,7 @@ grade). Part samples use the same numbers (the Kamigata unit section: eave 4.63,
 """
 import math
 
-from .core import Part, box, prism, hexa, KEN, HALF, POST, KETA_H, add, sub, mul, norm, cross
+from .core import Part, box, prism, hexa, KEN, HALF, POST, KETA_H, add, sub, mul, norm, cross, dot
 from .shapes import oriented_box, frame_of, clean_poly
 from . import walls, frame, roofs as R, kawara as K, roofparts, leanto
 from .assemble import Builder
@@ -278,7 +278,26 @@ def corner_pent(part, proj, t, y_wall, kind, posts=False):
     for x in part.solids[n0:]:
         if x.tag in ("sheathing", "kawara_fascia", "pent_purlin") and 3 in x.vis:
             x.vis = set(x.vis) - {3}
+    # C1 (2026-09-30): the kawara fascia is the outer eave line of the corner square, so Resolution 3 keeps its top and
+    # outer face as an open strip (C15 found the far LOD 10 cm short of the close eave there; 2 faces a slope)
+    from .core import Solid
+    for x, sl in [(x, sl) for x in part.solids[n0:] if x.tag == "kawara_fascia" for sl in (st, sd)
+                  if abs(dot(x.center, (sl.inw[0], 0.0, sl.inw[1])) - dot(_eave_ref(sl), (sl.inw[0], 0.0, sl.inw[1])))
+                  < 0.2]:
+        x.finalize()
+        out = (-sl.inw[0], 0.0, -sl.inw[1])
+        keep = [fi for fi in range(len(x.faces)) if x.fn[fi][1] > 0.7 or dot(x.fn[fi], out) > 0.7]
+        if keep:
+            vs = [x.verts[i] for fi in keep for i in x.faces[fi]]
+            part.add(Solid(vs, [[4 * k + j for j in range(len(x.faces[fi]))] for k, fi in enumerate(keep)], x.mats,
+                           vis=(3,), normals=[x.fn[fi] for fi in keep], tag="kawara_fascia_far", grain="long"))
     return st, sd
+
+
+def _eave_ref(sl):
+    """A point on a slope's eave line (y 0), for matching a fascia to its slope."""
+    ex, ez = sl.eave_point(sum(sl.u_range()) / 2)
+    return (ex, 0.0, ez)
 
 
 # ------------------------------------------------------------------------------------------------ template hooks
@@ -328,7 +347,7 @@ def hook_seam_cap(B, ctx):
     lv = ctx["levels"]
     seam_main(ctx["roof_part"], x_s, ctx["DO"], lv["eave"], ctx["pitch"], R.EAVE_OV[ctx["covering"]], ctx["covering"],
               ctx["roof_info"]["ridge"], ctx["courses"])
-    if ctx["region"] == "edo":
+    if ctx["region"] == "edo" or not ctx.get("udatsu", True):      # C1: any region without udatsu (Tokaido rows)
         kind, proj, pt = ctx["pent"]
         fam = {"tile": "sangawara", "gable": "sangawara", "board": "itabuki"}[kind]
         p = Part("pent_front", "", "")

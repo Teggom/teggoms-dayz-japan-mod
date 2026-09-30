@@ -87,7 +87,13 @@ REGION = {
                  "upper": "mushiko", "courses": 5},
     "edo": {"covering": "sangawara", "pent": "board", "gable_pent": "board", "geya": "itabuki", "udatsu": False,
             "upper": "nuriya", "courses": 3},
+    # C1 (2026-09-30): the Tokaido post-town house (DW10, home side) and the inn (TR05): a plain town house of the
+    # highway towns, no udatsu, board pent, board lean-to; the upper front plastered (nuriya) or boarded
+    "tokaido": {"covering": "sangawara", "pent": "board", "gable_pent": "board", "geya": "itabuki", "udatsu": False,
+                "upper": "nuriya", "courses": 3},
 }
+# C1: upper = 'full' (the grand inn, G1 A1 ruling 3 / G0-5): a walkable upper storey, keta this far above its floor
+FULL_UPPER_H = 2.55
 PENT_CFG = {"tile": (0.91, 0.40), "board": (0.91, 0.275), "gable": (0.45, 0.40)}      # projection, pitch
 
 
@@ -100,23 +106,55 @@ def budget_class(frontage=3, region="kamigata", position="end", **_):
     end and corner units may run over the townhouse budget (worst 10,468 faces), so they are 'large'."""
     if region == "kamigata" and frontage == 4 and position in ("end", "corner"):
         return "large"
+    if frontage >= 5 or _.get("upper") == "full":
+        return "large"              # C1: the inns (5-ken hatago, the two-storey grand inn)
     return "townhouse"
 
 
 def build(frontage=3, region="kamigata", position="end", free="right", tori="left", covering=None, geya_ken=1,
-          shopfront="_degoshi", hooks=None, name=None):
-    """Build one unit. Returns (H, info): H in the kit frame (lot from info['lot'][0] to info['lot'][1] along x),
+          shopfront="_degoshi", hooks=None, name=None, upper=None, pent=None, stable=None, split=False):
+    """C1 (2026-09-30) additions, all off by default (the 60 unit combinations build exactly as before):
+      position 'detached'  both gables free (the post-town house and the inns: the machiya pattern, no party side)
+      frontage 5           the inns
+      upper                override the region's upper front: 'mushiko' | 'nuriya' | 'board' (itabari boards) |
+                           'full' (a walkable upper storey: the grand inn, one per tier-3 town, G0-5 / G1 A1 ruling 3;
+                           detached, frontage 5): upper floor with a stair (jp_p_stair _box) up from the oku, a front and
+                           back room upstairs, sliding shoji windows on the street, amado windows on the gables
+      pent                 override the street pent: 'tile' | 'board'
+      stable               a jp_p_frame_stall variant ('_umaya') in the kitchen doma, needs geya_ken 2 (DW10 stable)
+      split                the oku split into two rooms by a partition with a single door (the inn's guest rooms)
+
+    Build one unit. Returns (H, info): H in the kit frame (lot from info['lot'][0] to info['lot'][1] along x),
     info = {lot, lot_width, W, DO, DG, party, free, corner (street-view sides), kit_sides, rooms, floors, posts,
     placeholders (sides street-view), params}."""
-    if frontage not in (2, 3, 4):
-        raise ValueError("frontage %r: 2, 3 or 4 ken" % frontage)
+    if frontage not in (2, 3, 4, 5):
+        raise ValueError("frontage %r: 2, 3, 4 or 5 ken" % frontage)
     if region not in REGION:
-        raise ValueError("region %r: kamigata or edo" % region)
-    if position not in ("end", "middle", "corner"):
-        raise ValueError("position %r: end, middle or corner" % position)
+        raise ValueError("region %r: kamigata, edo or tokaido" % region)
+    if position not in ("end", "middle", "corner", "detached"):
+        raise ValueError("position %r: end, middle, corner or detached" % position)
     if geya_ken not in (1, 2):
         raise ValueError("geya_ken %r: 1 or 2" % geya_ken)
-    rg = REGION[region]
+    rg = dict(REGION[region])
+    if upper:
+        if upper not in ("mushiko", "nuriya", "board", "full"):
+            raise ValueError("upper %r: mushiko, nuriya, board or full" % upper)
+        rg["upper"] = upper
+    if pent:
+        if pent not in ("tile", "board"):
+            raise ValueError("pent %r: tile or board" % pent)
+        rg["pent"] = pent
+    full = rg["upper"] == "full"
+    if full and (position != "detached" or frontage < 5 or rg["udatsu"]):
+        raise ValueError("upper 'full' (the grand inn): detached, frontage 5, no udatsu")
+    if stable and geya_ken != 2:
+        raise ValueError("stable: needs geya_ken 2 (the stall stands in the kitchen doma)")
+    if split and frontage < 5:
+        raise ValueError("split: frontage 5 (the inn)")
+    # C1: the section's upper levels (a full upper storey raises the keta, eave and gable tie)
+    keta_o = LOFT + FULL_UPPER_H if full else KETA_O
+    eave_o = keta_o + 0.18 if full else EAVE_O
+    gtie = eave_o - 0.21 if full else GTIE
     fam = covering or rg["covering"]
     if fam not in ("sangawara", "itabuki", "kakigara"):
         raise ValueError("covering %r: sangawara, itabuki or kakigara" % fam)
@@ -130,8 +168,12 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         raise ValueError("free / tori: 'left' or 'right' (seen from the street)")
     xfree, xtori = SV[free], SV[tori]              # street view -> kit x side ('left' = low x)
     # canonical frame: toriniwa on the low-x side. The free side in that frame:
-    cfree = None if position == "middle" else (xfree if xtori == "left" else _other(xfree))
-    party = {"left", "right"} - ({cfree} if cfree else set())
+    if position == "detached":                  # C1: both gables free
+        cfree, frees = None, {"left", "right"}
+    else:
+        cfree = None if position == "middle" else (xfree if xtori == "left" else _other(xfree))
+        frees = {cfree} if cfree else set()
+    party = {"left", "right"} - frees
     corner = cfree if position == "corner" else None
     T_MAIN = R.PITCH[fam]
 
@@ -183,10 +225,10 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
              "corner": corner, "region": region, "covering": fam, "geya_covering": gfam, "gov": gov,
              "frames": {"front": F_FRONT, "back": F_BACK_O, "left": F_LEFT_O, "right": F_RIGHT_O,
                         "geya_back": F_BACK_G, "geya_left": F_LEFT_G, "geya_right": F_RIGHT_G},
-             "levels": {"doma": DOMA, "sill": SILL, "floor": FLOOR, "ceil": CEIL, "loft": LOFT, "keta": KETA_O,
-                        "eave": EAVE_O, "gable_tie": GTIE, "pent": PENT_Y, "geya_eave": GEYA_EAVE},
+             "levels": {"doma": DOMA, "sill": SILL, "floor": FLOOR, "ceil": CEIL, "loft": LOFT, "keta": keta_o,
+                        "eave": eave_o, "gable_tie": gtie, "pent": PENT_Y, "geya_eave": GEYA_EAVE},
              "pitch": T_MAIN, "lot_pad": LOT_PAD, "party_gap": PARTY_GAP, "courses": rg["courses"],
-             "pent": (rg["pent"],) + pent_cfg, "geya": geya_cfg}
+             "pent": (rg["pent"],) + pent_cfg, "geya": geya_cfg, "udatsu": bool(rg["udatsu"])}
         if "side" in kw:
             c["owner"] = kw["side"] == useam
             c["udatsu_here"] = bool(rg["udatsu"]) and kw["side"] == useam and kw["side"] in party
@@ -203,10 +245,11 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
     frame.dodai(s, -0.06, KEN + HALF + 0.06, z=0.0, y_top=DOMA)
     H.merge(s)
     B.dodai_stones(F_FRONT, KEN + HALF + 0.10, W, 11, SILL)
-    B.posts_on(F_FRONT, [0.0, KEN, KEN + HALF], DOMA, KETA_O)
-    B.posts_on(F_FRONT, [k * KEN for k in range(2, frontage + 1)], SILL, KETA_O)
+    B.posts_on(F_FRONT, [0.0, KEN, KEN + HALF], DOMA, keta_o)
+    B.posts_on(F_FRONT, [k * KEN for k in range(2, frontage + 1)], SILL, keta_o)
     B.wall(F_FRONT, "front_b1", "shinkabe", 0.0, KEN, DOMA, CEIL, openings_=[(A_, B_, DOMA, DOMA + 2.0)])
     B.place_door(itado_twin, F_FRONT, 0.0, DOMA, label="Entrance (street)")
+    dn = {"entrance": "DoorsTwin%d" % len(H.doors)}                # C1: door names for rooms.json
     B.wall(F_FRONT, "front_b2a", "shinkabe", KEN, KEN + HALF, DOMA, CEIL, grime=[(KEN + A_, KEN + HALF - A_, None)])
     B.wall(F_FRONT, "front_b2b", "shinkabe", KEN + HALF, 2 * KEN, SILL, CEIL,
            openings_=[(KEN + HALF + A_, 2 * KEN - A_, SILL + 0.45, SILL + 2.0)],
@@ -224,11 +267,23 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         B.wall(F_FRONT, "front_up_b1", "okabe", 0.0, KEN, LOFT, KETA_O, finish="shikkui", thick=0.15)
         for k in range(1, frontage):
             B.put(openings.part_mushiko("_oval"), F_FRONT, k * KEN, LOFT, what="jp_p_open_mushiko_oval")
+    elif rg["upper"] == "board":
+        # C1: the boarded upper front (itabari) of the post-town house: vertical boards on the posts
+        B.wall(F_FRONT, "front_up", "board_vertical", 0.0, W, LOFT, KETA_O, mat="wood_street_dark")
+    elif full:
+        # C1: the grand inn's upper storey front: plastered between the posts, a sliding shoji window behind a fine
+        # lattice every other ken (its panel parks over the next half-ken inside)
+        up_wins = [k * KEN for k in range(1, frontage, 2)]           # 2 windows on a 5-ken front (face budget)
+        B.posts_on(F_FRONT, [a + HALF for a in up_wins], LOFT, keta_o)
+        B.wall(F_FRONT, "front_up", "shinkabe", 0.0, W, LOFT, keta_o, finish="shikkui", head=False,
+               openings_=[(a + A_, a + HALF - POST / 2, LOFT + 0.45, LOFT + 2.0) for a in up_wins])
+        for a in up_wins:
+            windows.append(("upper street window", F_FRONT, a, LOFT, False, openings.part_window_slide("_shoji")))
     else:
         # Edo nuriya: the upper street front plastered all over (okabe), no mushiko
         B.wall(F_FRONT, "front_up", "okabe", 0.0, W, LOFT, KETA_O, finish="shikkui", thick=0.15)
     s = B.P("keta_front")
-    frame.keta(s, -keta_ext("left"), W + keta_ext("right"), z=0.0, y_top=EAVE_O)
+    frame.keta(s, -keta_ext("left"), W + keta_ext("right"), z=0.0, y_top=eave_o)
     H.merge(s)
     # street pent: to the lot line on a party side (meets the neighbour's), to the wall line at a corner (the corner
     # square is roof_corner's), 0.09 inside an udatsu'd free gable (machiya)
@@ -254,8 +309,9 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         xs = []
         if useam in party:
             xs.append(-LOT_PAD if useam == "left" else W + LOT_PAD)
-        if cfree and cfree != corner:
-            xs.append(0.0 if cfree == "left" else W)
+        for fs in sorted(frees):
+            if fs != corner:
+                xs.append(0.0 if fs == "left" else W)
         for x in xs:
             u = walls.udatsu_placed(x, PENT_Y, KETA_O, name="udatsu_%s" % ("L" if x <= 0 else "R"))
             H.merge(u)
@@ -279,14 +335,14 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         elif side == "left":
             # the toriniwa gable (machiya left gable): board wall to door height, clay above, Ioka side pent
             B.dodai_stones(fr, 0.0, DO, seed, SILL)
-            B.posts_on(fr, [KEN, 2 * KEN], SILL, GTIE)
+            B.posts_on(fr, [KEN, 2 * KEN], SILL, gtie)
             B.wall(fr, "left_boards", "board_vertical", 0.0, DO, SILL, SILL + 2.0, mat="wood_street_dark",
                    grime=[(0.0, DO, POST / 2 + 0.015)])
             B.wall(fr, "left_kokabe", "shinkabe", 0.0, DO, SILL + 2.0, CEIL, head=False)
         else:
             # the rooms gable (machiya right gable): koshiita, clay, a window into the oku
             B.dodai_stones(fr, 0.0, DO, seed, SILL)
-            B.posts_on(fr, [KEN, KEN + HALF, 2 * KEN, DO], SILL, GTIE)
+            B.posts_on(fr, [KEN, KEN + HALF, 2 * KEN, DO], SILL, gtie)
             s = B.P("right_lower")
             s.add(box(A_, DO - A_, SILL, FLOOR, -0.0375, 0.0375, "wall_nakanuri", vis=(1, 2, 3), geo=True, view=True,
                       fire=True, tag="infill"))
@@ -295,12 +351,14 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
                 walls.koshiita(s, a + A_, b - A_, 0.90, 0.0375, y0=SILL)
             B.put(s, fr, what="walls.koshiita h090 on the rooms gable")
             for (a, b) in rbays:
-                win = [(a + A_, b - A_, FLOOR + 0.75, FLOOR + 2.0)] if a == 2 * KEN else []
+                # C1: the grand inn's oku (the stair hall) has no gable window (face budget: its upper rooms do)
+                win = [(a + A_, b - A_, FLOOR + 0.75, FLOOR + 2.0)] if a == 2 * KEN and not full else []
                 B.wall(fr, "right_%d" % int(a * 100), "shinkabe", a, b, FLOOR, CEIL, openings_=win)
             s = B.P("right_grime")
             trim.grime_band(s, A_, DO - A_, 0.0375 + 0.015, y0=SILL)
             B.put(s, fr)
-            windows.append(("oku window", fr, DO, FLOOR, True, openings.part_amado_window("_twin")))
+            if not full:
+                windows.append(("oku window", fr, DO, FLOOR, True, openings.part_amado_window("_twin")))
         # the side pent: the Ioka gable pent on a free toriniwa gable; the wrapped street pent on a corner side
         if side == corner:
             kind = rg["pent"]
@@ -309,7 +367,7 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
             # local x runs back -> front on the left frame, front -> back on the right one; stop at the street wall
             roofparts.pent(s, 0.0, DO, PENT_Y, p_, t_, kind)
             B.put(s, fr, what="roofparts.pent %s wrapped along the side street (%s)" % (kind, side))
-        elif side == cfree == "left":
+        elif side == "left" and side in frees:
             kind = rg["gable_pent"]
             p_, t_ = PENT_CFG[kind]
             s = B.P("pent_gable")
@@ -323,9 +381,20 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         s.add(box(-0.06, DO + 0.06, CEIL, LOFT, -POST / 2, POST / 2, "wood_weathered", vis=(1, 2, 3), geo=True,
                   view=True, fire=True, tag="floor_beam"))
         B.put(s, fr)
-        B.wall(fr, side + "_upper", "shinkabe", 0.0, DO, LOFT, GTIE, finish="shikkui", head=False)
+        if full:
+            # C1 grand inn: the upper storey's gable wall; one amado window per gable (face budget): the left gable
+            # lights the back room (its local x runs back -> front), the right gable the front room (front -> back)
+            ups = (0.0,)
+            # (inner nodes only: the corners get their full-height posts from the front / back walls)
+            B.posts_on(fr, [a + d for a in ups for d in (0.0, KEN) if 1e-6 < a + d < DO - 1e-6], LOFT, gtie)
+            B.wall(fr, side + "_upper", "shinkabe", 0.0, DO, LOFT, gtie, finish="shikkui", head=False,
+                   openings_=[(a + A_, a + B_, LOFT + 0.70, LOFT + 2.0) for a in ups])
+            for a in ups:
+                windows.append(("upper gable window", fr, a, LOFT, False, openings.part_amado_window("_twin")))
+        else:
+            B.wall(fr, side + "_upper", "shinkabe", 0.0, DO, LOFT, gtie, finish="shikkui", head=False)
         g = B.P(side + "_gable")
-        walls.gable(g, DO, T_MAIN, EAVE_O, "_tile" if fam == "sangawara" else "_board")
+        walls.gable(g, DO, T_MAIN, eave_o, "_tile" if fam == "sangawara" else "_board")
         B.put(g, fr, what="walls.gable (%s)%s" % (side, " PLACEHOLDER for the party wall" if side in party else ""))
     if corner:
         if hk["roof_corner"]:
@@ -335,7 +404,7 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
                                 % street(corner))
 
     # ================================================================== OMOYA BACK WALL z = ZB (local x = W - x)
-    B.posts_on(F_BACK_O, [k * KEN for k in range(frontage + 1)], DOMA, KETA_O)
+    B.posts_on(F_BACK_O, [k * KEN for k in range(frontage + 1)], DOMA, keta_o)
     B.interior = True
     s = B.P("back_o_sill")
     s.add(box(-0.06, W - KEN + 0.06, DOMA, SILL, -POST / 2, POST / 2, "wood_weathered", vis=(1, 2, 3), geo=True,
@@ -343,8 +412,15 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
     s.add(box(A_, W - KEN - A_, SILL, FLOOR, -0.0375, 0.0375, "wall_nakanuri_int", vis=(1, 2, 3), geo=True, view=True,
               fire=True, tag="infill"))
     B.put(s, F_BACK_O)
-    B.wall(F_BACK_O, "back_o_rooms", "shinkabe", 0.0, W - KEN, FLOOR, CEIL,
-           head_clip=(-1.0, W - KEN - POST / 2 - 0.12))
+    if split:
+        # C1: the split partition's single door also abuts the back wall: its head rail stops short of both door lines
+        xs_l = W - (XT + 2 * KEN)
+        B.wall(F_BACK_O, "back_o_rooms", "shinkabe", 0.0, xs_l, FLOOR, CEIL, head_clip=(-1.0, xs_l - POST / 2 - 0.12))
+        B.wall(F_BACK_O, "back_o_rooms2", "shinkabe", xs_l, W - KEN, FLOOR, CEIL,
+               head_clip=(xs_l + POST / 2 + 0.12, W - KEN - POST / 2 - 0.12))
+    else:
+        B.wall(F_BACK_O, "back_o_rooms", "shinkabe", 0.0, W - KEN, FLOOR, CEIL,
+               head_clip=(-1.0, W - KEN - POST / 2 - 0.12))
     s = B.P("back_o_passage")               # the open toriniwa passage into the kitchen, head beam at door height
     s.add(box(W - KEN + A_, W - A_, DOMA + 2.0, DOMA + 2.0 + walls.HEAD_T, -POST / 2, POST / 2, "wood_weathered",
               vis=(1, 2, 3), geo=True, view=True, fire=True, tag="head_rail"))
@@ -356,9 +432,9 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
     s.add(box(-0.06, W + 0.06, CEIL, LOFT, -POST / 2, POST / 2, "wood_weathered", vis=(1, 2, 3), geo=True, view=True,
               fire=True, tag="floor_beam"))
     B.put(s, F_BACK_O)
-    B.wall(F_BACK_O, "back_o_upper", "shinkabe", 0.0, W, LOFT, KETA_O, finish="shikkui", head=False)
+    B.wall(F_BACK_O, "back_o_upper", "shinkabe", 0.0, W, LOFT, keta_o, finish="shikkui", head=False)
     s = B.P("keta_back")
-    frame.keta(s, -keta_ext("left"), W + keta_ext("right"), z=ZB, y_top=EAVE_O)
+    frame.keta(s, -keta_ext("left"), W + keta_ext("right"), z=ZB, y_top=eave_o)
     H.merge(s)
 
     # ================================================================== ROOM EDGE x = 1 ken (toriniwa side)
@@ -373,6 +449,7 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         B.wall(F_TORI, "tori_door_%s" % room, "shinkabe", a, a + KEN, FLOOR, CEIL,
                openings_=[(a + A_, a + B_, FLOOR, FLOOR + 2.0)])
         B.place_door(shoji_single, F_TORI, a, FLOOR, label="Toriniwa -> %s" % room)
+        dn["tori_" + room] = "DoorsTwin%d" % len(H.doors)
         st = B.P("step_%s" % room)
         found.step(st, oc, "natural", drop=FLOOR - DOMA, width=1.04)
         B.put(st, F_TORI, a, FLOOR, what="jp_p_found_step_natural at the %s" % room)
@@ -385,13 +462,17 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
 
     # ================================================================== MISE / OKU PARTITION z = -1.5 ken
     wr = W - XT
+    XS = XT + 2 * KEN                                            # C1 split: the oku / oku 2 partition line
     if wr >= 2 * KEN - 1e-6:
         a = XT + round((wr - KEN) / 2 / HALF) * HALF            # hikiwake pair, half-ken park bays both sides
+        if split:
+            a = XT + HALF                                        # C1: clear of the split partition's end post
         B.posts_on(F_MID, [a, a + KEN], FLOOR, CEIL)
         segs = [(XT, a), (a + KEN, W)]
         B.wall(F_MID, "mid_door", "shinkabe", a, a + KEN, FLOOR, CEIL, openings_=[(a + A_, a + KEN - A_, FLOOR,
                                                                                      FLOOR + 2.0)])
         B.place_door(shoji_hikiwake, F_MID, a, FLOOR, label="Mise <-> oku")
+        dn["mid"] = "DoorsTwin%d" % len(H.doors)
         mid_door = True
     else:
         segs = [(XT, W)]                                         # 2-ken unit: both rooms open off the toriniwa only
@@ -401,14 +482,63 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
             B.wall(F_MID, "mid_%d" % int(s0 * 100), "shinkabe", s0, s1, FLOOR, CEIL,
                    head_clip=(KEN + POST / 2 + 0.12, 99.0) if abs(s0 - XT) < 1e-6 else None)
 
+    if split:
+        # C1 (the inn): the oku split in two guest rooms, a single shoji door + a half-ken park bay (local x runs
+        # from the back wall to the mise / oku partition)
+        F_SPLIT = (90.0, (XS, 0.0, ZB))
+        B.posts_on(F_SPLIT, [0.0, KEN, KEN + HALF], FLOOR, CEIL)
+        B.wall(F_SPLIT, "split_door", "shinkabe", 0.0, KEN, FLOOR, CEIL, openings_=[(A_, B_, FLOOR, FLOOR + 2.0)])
+        B.place_door(shoji_single, F_SPLIT, 0.0, FLOOR, label="Oku <-> oku 2")
+        dn["split"] = "DoorsTwin%d" % len(H.doors)
+        B.wall(F_SPLIT, "split_park", "shinkabe", KEN, KEN + HALF, FLOOR, CEIL)
+    well = None
+    stair_info = None
+    if full:
+        # C1 grand inn: the upper storey. The stair (jp_p_stair _box, the kaidan-dansu look of inns and shops) climbs
+        # from the oku along the omoya back wall towards the rooms gable; the upper floor is walkable with the
+        # stairwell cut into it (rim + guard rail, stair.well_fn); a partition with a hikiwake pair splits the storey
+        # into a front and a back room
+        from .. import stair as ST
+        rise = LOFT - FLOOR
+        stp = Part("stair_inn", "", "")
+        SS = ST.stair(stp, 1.20, rise, "box")
+        run = SS["run"]
+        x_foot, oz = XT + 1.20, ZB + POST / 2
+        if x_foot + run + 0.90 > W - POST / 2:
+            raise ValueError("full upper: no landing room past the stair head (frontage %d)" % frontage)
+        B.merge(stp.transformed(180.0, (x_foot, FLOOR, oz), mirror=True))      # flight +x, width towards +z
+        log.append("jp_p_stair _box in the oku, foot x=%.2f, run %.2f, rise %.2f" % (x_foot, run, rise))
+        wx0, wx1, wz0, wz1 = ST.well_rect(run, 1.20, rise)
+        well = (x_foot + wx0, x_foot + wx1, ZB, oz - wz0)
+        stair_info = {"foot": (x_foot, oz), "run": run, "width": 1.20, "y_low": FLOOR, "y_up": LOFT, "well": well}
+        floors_obst.append(("oku", FL.floor_rect(x_foot - 0.05, x_foot + run + 0.05, ZB, oz + 1.20 + 0.06)))
+        floors_obst.append(("nikai_back", FL.floor_rect(well[0] - 0.10, well[1] + 0.10, ZB, well[3] + 0.10)))
+        au = round((W - KEN) / 2 / HALF) * HALF
+        B.posts_on(F_MID, [au, au + KEN], LOFT, LOFT + 2.35)
+        B.wall(F_MID, "up_mid_door", "shinkabe", au, au + KEN, LOFT, LOFT + 2.35,
+               openings_=[(au + A_, au + KEN - A_, LOFT, LOFT + 2.0)])
+        B.place_door(shoji_hikiwake, F_MID, au, LOFT, label="Upstairs front <-> back")
+        dn["up_mid"] = "DoorsTwin%d" % len(H.doors)
+        for (s0, s1) in ((0.0, au), (au + KEN, W)):
+            B.wall(F_MID, "up_mid_%d" % int(s0 * 100), "shinkabe", s0, s1, LOFT, LOFT + 2.35)
+        H.merge(FL.loft("loft", 0.0, W, ZB, 0.0, CEIL, LOFT, walkable=True,
+                        holes=[{"rect": well, "kind": "stair", "open": "x1", "wall": "z0"}], hole_fn=ST.well_fn()))
+
     # ================================================================== LOFT (sealed, G0-4) + FLOORS
-    H.merge(FL.loft("loft", 0.0, W, ZB, 0.0, CEIL, LOFT))
+    if not full:
+        H.merge(FL.loft("loft", 0.0, W, ZB, 0.0, CEIL, LOFT))
     B.merge(FL.doma("doma_tori", 0.0, XT, ZB, 0.0, road=(POST / 2, XT - POST / 2, ZB - POST / 2, -POST / 2), y=DOMA))
     B.merge(FL.doma("doma_kitchen", 0.0, W, ZG, ZB, road=(POST / 2, W - POST / 2, ZG + POST / 2, ZB - POST / 2),
                     y=DOMA))
     B.merge(FL.tatami("tatami_mise", XT + POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2, top=FLOOR, base=DOMA))
-    B.merge(FL.tatami("tatami_oku", XT + POST / 2, W - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2, top=FLOOR,
-                      base=DOMA))
+    if split:
+        B.merge(FL.tatami("tatami_oku", XT + POST / 2, XS - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2, top=FLOOR,
+                          base=DOMA))
+        B.merge(FL.tatami("tatami_oku2", XS + POST / 2, W - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2, top=FLOOR,
+                          base=DOMA))
+    else:
+        B.merge(FL.tatami("tatami_oku", XT + POST / 2, W - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2, top=FLOOR,
+                          base=DOMA))
     B.interior = False
 
     # ================================================================== GEYA (rear lean-to kitchen)
@@ -424,6 +554,7 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
     B.wall(F_BACK_G, "back_g_door", "shinkabe", W - KEN, W, DOMA, KETA_G, openings_=[(W - KEN + A_, W - A_, DOMA,
                                                                                     DOMA + 2.0)])
     B.place_door(itado_single, F_BACK_G, W, DOMA, mirror=True, label="Kitchen back door (yard)")
+    dn["back"] = "DoorsTwin%d" % len(H.doors)
     B.wall(F_BACK_G, "back_g_park", "shinkabe", W - KEN - HALF, W - KEN, DOMA, KETA_G,
            grime=[(W - KEN - HALF + A_, W - KEN - A_, None)])
     nodes = sorted({k * KEN for k in range(frontage) if k * KEN < W - KEN - HALF - 1e-6} | {W - KEN - HALF})
@@ -449,18 +580,33 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         else:
             B.dodai_stones(fr, 0.0, DG, 51 if side == "left" else 61, SILL)
             B.sloped_wall(fr, "geya_%s" % side, gnodes, SILL, yt, head_y=SILL + 2.0, koshiita_h=0.90, grime=True)
-    g, sl_g = leanto.roof("roof_geya", 0.0, W, ZB - POST / 2, ZG, GEYA_EAVE, gfam, gov=ggov, flash_top=KETA_O - 0.02,
+    g, sl_g = leanto.roof("roof_geya", 0.0, W, ZB - POST / 2, ZG, GEYA_EAVE, gfam, gov=ggov,
+                          flash_top=None if full else KETA_O - 0.02,
                           verges=(not plain[0], not plain[1]), keta_ext=(keta_ext("left"), keta_ext("right")))
     H.merge(g)
     log.append("leanto.roof %s over the kitchen" % gfam)
+    if stable:
+        # C1 (DW10 stable variant): the stall (jp_p_frame_stall) in the kitchen doma against the back wall, at the far
+        # end from the passage and the back door; the building's own walls close its back and one side
+        from .. import stall as SL
+        wst, dst = SL.VARIANTS[stable][0] * KEN, SL.VARIANTS[stable][1] * KEN
+        x0s = W - POST / 2 - 0.06 - wst
+        B.interior = True
+        B.merge(SL.part_stall(stable).transformed(0.0, (x0s, DOMA, ZG + dst)))
+        B.interior = False
+        floors_obst.append(("kitchen", FL.floor_rect(x0s - 0.10, W, ZG, ZG + dst + 0.12)))
+        log.append("jp_p_frame_stall %s in the kitchen doma, x %.2f..%.2f" % (stable, x0s, x0s + wst))
 
     # ================================================================== WINDOWS (animated like doors, after them)
     for (label, fr, dx, dy, mirror, part) in windows:
-        B.place_door(part, fr, dx, dy, mirror=mirror, label=label.capitalize())
+        d_ = B.place_door(part, fr, dx, dy, mirror=mirror, label=label.capitalize())
+        if label == "upper gable window":
+            d_.reach_sides = ("far",)       # C1: an upper-storey window is worked from inside (no ground reach)
+        dn.setdefault("windows", []).append("DoorsTwin%d" % len(H.doors))
 
     # ================================================================== MAIN ROOF + party roof ends
     s = B.P("roof_main")
-    sls, rinfo = R.roof(s, W, DO, "kirizuma", fam, eave_y=EAVE_O, courses=rg["courses"], eave_style="plain", gov=gov,
+    sls, rinfo = R.roof(s, W, DO, "kirizuma", fam, eave_y=eave_o, courses=rg["courses"], eave_style="plain", gov=gov,
                         plain_ends=plain)
     for side in sorted(party):
         if hk["party_roof_end"]:
@@ -486,19 +632,34 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
     B.lod_policy()
 
     # ================================================================== rooms and floors (canonical kit frame)
-    tori_doors = ["DoorsTwin1", "DoorsTwin2", "DoorsTwin3"]
+    tori_doors = [dn["entrance"], dn["tori_oku"], dn["tori_mise"]]
+    mid_ = [dn["mid"]] if mid_door else []
     rooms.append({"name": "toriniwa", "tag": "doma", "floor": "earth", "level_m": DOMA,
                   "rect_kit": FL.floor_rect(POST / 2, XT - POST / 2, ZB + POST / 2, -POST / 2), "doors": tori_doors,
                   "note": "entry passage, 1 ken, full omoya depth"})
     rooms.append({"name": "mise", "tag": "shop:general", "floor": "tatami", "level_m": FLOOR,
                   "rect_kit": FL.floor_rect(XT + POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2),
-                  "doors": ["DoorsTwin3"] + (["DoorsTwin4"] if mid_door else []), "note": "shop room"})
+                  "doors": [dn["tori_mise"]] + mid_, "note": "shop room"})
     rooms.append({"name": "oku", "tag": "zashiki", "floor": "tatami", "level_m": FLOOR,
-                  "rect_kit": FL.floor_rect(XT + POST / 2, W - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2),
-                  "doors": ["DoorsTwin2"] + (["DoorsTwin4"] if mid_door else []), "note": "back room"})
+                  "rect_kit": FL.floor_rect(XT + POST / 2, (XS if split else W) - POST / 2, ZB + POST / 2,
+                                            -DO / 2 - POST / 2),
+                  "doors": [dn["tori_oku"]] + mid_ + ([dn["split"]] if split else []),
+                  "note": "back room" + (" (the stair up)" if full else "")})
+    if split:
+        rooms.append({"name": "oku2", "tag": "zashiki", "floor": "tatami", "level_m": FLOOR,
+                      "rect_kit": FL.floor_rect(XS + POST / 2, W - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2),
+                      "doors": [dn["split"]], "note": "second back room"})
     rooms.append({"name": "kitchen", "tag": "doma", "floor": "earth", "level_m": DOMA,
                   "rect_kit": FL.floor_rect(POST / 2, W - POST / 2, ZG + POST / 2, ZB - POST / 2),
-                  "doors": ["DoorsTwin%d" % (5 if mid_door else 4)], "note": "hashiri kitchen (no kamado yet: B3a/B4)"})
+                  "doors": [dn["back"]], "note": "hashiri kitchen (no kamado yet: B3a/B4)" +
+                  (" with a stall (%s)" % stable if stable else "")})
+    if full:
+        rooms.append({"name": "nikai_front", "tag": "zashiki", "floor": "boards", "level_m": LOFT,
+                      "rect_kit": FL.floor_rect(POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2),
+                      "doors": [dn["up_mid"]], "note": "upstairs front room (street windows)"})
+        rooms.append({"name": "nikai_back", "tag": "zashiki", "floor": "boards", "level_m": LOFT,
+                      "rect_kit": FL.floor_rect(POST / 2, W - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2),
+                      "doors": [dn["up_mid"]], "note": "upstairs back room (the stairwell)"})
     fls = [{"name": r["name"], "tag": r["tag"], "rect": tuple(r["rect_kit"]), "y": r["level_m"],
             "obstacles": [rc for (n_, rc) in floors_obst if n_ == r["name"]]} for r in rooms]
     info = {"lot": lot, "lot_width": lot[1] - lot[0], "W": W, "DO": DO, "DG": DG, "party": sorted(party),
@@ -507,6 +668,11 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
                                                           (x == W and "right" in party)],
             "params": {"frontage": frontage, "region": region, "position": position, "free": free, "tori": tori,
                        "covering": fam, "geya_ken": geya_ken, "shopfront": shopfront}}
+    if upper or pent or stable or split or position == "detached":      # C1 additions (absent = the 60 as before)
+        info["params"].update(upper=rg["upper"], pent=rg["pent"], stable=stable, split=split)
+        info["levels"] = {"keta": keta_o, "eave": eave_o, "gable_tie": gtie, "loft": LOFT, "floor": FLOOR}
+        info["stairwell"] = well
+        info["stair"] = stair_info          # canonical kit frame (flight +x from the foot, width +z from the wall)
     if xtori == "right":
         H, info = _mirror(H, info)
     info["kit_sides"] = {"party": info["party"], "free": info["free"], "corner": info["corner"]}

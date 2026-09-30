@@ -113,6 +113,8 @@ def wall_run(part, kind, x0, x1, y0=0.0, y1=WALL_H, openings=(), finish="nakanur
                         part.add(box(xb - 0.018, xb + 0.018, s0, s1, zf + 0.015, zf + 0.033, m, vis=(1,), tag="batten"))
                 part.add(box(r0, r1, s0, s1, zf + 0.0, zf + 0.015, m, vis=(3,), tag="board_lod"))
             for yy in (y0 + 0.9, y0 + 1.8):
+                if yy + 0.105 > y1 - 0.07:
+                    continue            # C1: a low board wall (the 1.3 m upper front) has no rail above its top rail
                 if any(a0 < b and a1 > a and b0 < yy + 0.1 and b1 > yy for a0, a1, b0, b1 in openings):
                     continue
                 part.add(box(a, b, yy, yy + 0.105, zf - 0.03, zf, m, vis=(1,), tag="rail"))

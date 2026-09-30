@@ -1,16 +1,16 @@
 {
  "building": "Land_JP_Townhouse_Unit_Test",
- "faces": "7912/2765/953",
+ "faces": "7904/2765/953",
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 7912, Resolution 2 2765, Resolution 3 953, Geometry 1173, Memory 0, Roadway 17, View Geometry 1169, Fire Geometry 1163"
+   "detail": "Resolution 1 7904, Resolution 2 2765, Resolution 3 953, Geometry 1173, Memory 0, Roadway 17, View Geometry 1169, Fire Geometry 1163"
   },
   {
    "check": "C5 face budget (townhouse: 9000 / 3450 / 1200)",
    "ok": true,
-   "detail": "R1 7912, R2 2765, R3 953"
+   "detail": "R1 7904, R2 2765, R3 953"
   },
   {
    "check": "C7 Geometry closed + convex",

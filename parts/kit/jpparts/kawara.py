@@ -216,8 +216,10 @@ def verge(part, F, u_edge, r0, r1, side, drop=0.07, width=0.13, vis=(1, 2), tag=
                    TILE, vis=vis, uv=uvs, normals=nrm, tag=tag))
     if 3 not in vis:
         # G3 fix: a stable silhouette - the verge as one strip in the far LOD (PLAYBOOK §15 T7)
+        # C1 (2026-09-30): the strip spans exactly the tiles' section (lo - drop .. lo, i.e. -0.025 .. 0.045 off the
+        # slope), so its eave end does not stand out past the close tiles' end (C15 saw a 5 mm lip there)
         c = F.P(u_edge - side * width / 2, (r0 + r1) / 2, 0.01)
-        part.add(oriented_box(c, F.up, F.n, F.u, (r1 - r0) / 2, 0.045, width / 2, TILE, vis=(3,), tag=tag + "_far"))
+        part.add(oriented_box(c, F.up, F.n, F.u, (r1 - r0) / 2, 0.035, width / 2, TILE, vis=(3,), tag=tag + "_far"))
     return k
 
 

@@ -306,8 +306,9 @@ def fib_dirs(n):
     return np.stack([np.cos(th) * np.sin(phi), np.cos(phi), np.sin(th) * np.sin(phi)], -1)
 
 
-def cast(T, O, D, tmax=60.0, chunk=24):
-    """Nearest hit distance per ray (inf = escapes) against triangles T (N,3,3), two-sided (Moller-Trumbore)."""
+def _cast_brute(T, O, D, tmax=60.0, chunk=24):
+    """Nearest hit distance per ray (inf = escapes) against triangles T (N,3,3), two-sided (Moller-Trumbore). The
+    original (pre-C1) all-pairs version; cast() below gives the same nearest hits faster."""
     import numpy as np
     v0 = T[:, 0]
     e1 = T[:, 1] - v0
@@ -328,6 +329,50 @@ def cast(T, O, D, tmax=60.0, chunk=24):
         hit = ok & (uu >= -1e-9) & (vv >= -1e-9) & (uu + vv <= 1 + 1e-9) & (tt > 1e-4) & (tt < tmax)
         tt = np.where(hit, tt, np.inf)
         out[s:s + chunk] = tt.min(1)
+    return out
+
+
+CAST_STAGES = (1.5, 4.0, 12.0)      # C1 (2026-09-30): search radii tried before the full tmax
+
+
+def cast(T, O, D, tmax=60.0, chunk=24):
+    """Nearest hit distance per ray (inf = escapes) against triangles T (N,3,3), two-sided (Moller-Trumbore).
+    C1 (2026-09-30) speed-up, same answer as _cast_brute: the rays are cast in stages of growing length r
+    (CAST_STAGES, then tmax); in each stage a chunk of rays is tested only against the triangles whose box overlaps the
+    box of the chunk's segments [o, o + r d]. A triangle hit at t < r lies inside that box, so a hit found in a stage is
+    the true nearest hit; rays with no hit shorter than r go on to the next stage."""
+    import numpy as np
+    O = np.asarray(O, float)
+    D = np.asarray(D, float)
+    out = np.full(len(O), np.inf)
+    if len(O) == 0 or len(T) == 0:
+        return out
+    tmin_, tmax_ = T.min(1), T.max(1)
+    todo = np.arange(len(O))
+    radii = [r for r in CAST_STAGES if r < tmax] + [tmax]
+    for r in radii:
+        if not len(todo):
+            break
+        big = max(chunk, 96)
+        left = []
+        for s in range(0, len(todo), big):
+            idx = todo[s:s + big]
+            o, dv = O[idx], D[idx]
+            e = o + dv * r
+            lo = np.minimum(o, e).min(0) - 1e-6
+            hi = np.maximum(o, e).max(0) + 1e-6
+            m = np.all(tmax_ >= lo, 1) & np.all(tmin_ <= hi, 1)
+            if not m.any():
+                t = np.full(len(idx), np.inf)
+            else:
+                t = _cast_brute(T[m], o, dv, tmax=min(r, tmax) if r < tmax else tmax, chunk=chunk)
+            if r < tmax:
+                got = np.isfinite(t)
+                out[idx[got]] = t[got]
+                left.append(idx[~got])
+            else:
+                out[idx] = t
+        todo = np.concatenate(left) if left else np.arange(0)
     return out
 
 

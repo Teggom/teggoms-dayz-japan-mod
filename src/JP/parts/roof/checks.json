@@ -287,7 +287,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 46, Resolution 2 46, Resolution 3 18, Geometry 6, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 38, Resolution 2 38, Resolution 3 18, Geometry 6, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -342,7 +342,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 46, Resolution 2 46, Resolution 3 12, Geometry 6, View Geometry 6, Fire Geometry 6"
+     "detail": "Resolution 1 38, Resolution 2 38, Resolution 3 12, Geometry 6, View Geometry 6, Fire Geometry 6"
     },
     {
      "check": "C2 library only",
@@ -2087,7 +2087,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 415, Resolution 2 106, Resolution 3 31, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+     "detail": "Resolution 1 407, Resolution 2 106, Resolution 3 31, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
     },
     {
      "check": "C2 library only",
@@ -2157,7 +2157,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 171, Resolution 2 60, Resolution 3 24, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+     "detail": "Resolution 1 163, Resolution 2 60, Resolution 3 24, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
     },
     {
      "check": "C2 library only",
@@ -2217,7 +2217,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 424, Resolution 2 165, Resolution 3 24, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+     "detail": "Resolution 1 416, Resolution 2 165, Resolution 3 24, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
     },
     {
      "check": "C2 library only",
@@ -2277,7 +2277,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 289, Resolution 2 125, Resolution 3 42, Geometry 30, Roadway 1, View Geometry 30, Fire Geometry 30"
+     "detail": "Resolution 1 281, Resolution 2 125, Resolution 3 42, Geometry 30, Roadway 1, View Geometry 30, Fire Geometry 30"
     },
     {
      "check": "C2 library only",
@@ -2323,6 +2323,71 @@
      "check": "C4 soffit_min_m",
      "ok": true,
      "detail": "expected >=2.20, measured 2.2"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_hisashi_gable",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 295, Resolution 2 106, Resolution 3 31, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "pottery, wood"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "75/75 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "16/16 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 projection_m",
+     "ok": true,
+     "detail": "expected 0.45, measured 0.45"
+    },
+    {
+     "check": "C4 pitch_sun",
+     "ok": true,
+     "detail": "expected 4, measured 4.0"
+    },
+    {
+     "check": "C4 soffit_min_m",
+     "ok": true,
+     "detail": "expected >=2.20, measured 2.72"
     },
     {
      "check": "C3 grid snap",
@@ -2687,7 +2752,7 @@
     {
      "check": "C5 LODs",
      "ok": true,
-     "detail": "Resolution 1 219, Resolution 2 127, Resolution 3 43, Geometry 30, Roadway 2, View Geometry 30, Fire Geometry 30"
+     "detail": "Resolution 1 219, Resolution 2 127, Resolution 3 47, Geometry 30, Roadway 2, View Geometry 30, Fire Geometry 30"
     },
     {
      "check": "C2 library only",
@@ -2898,71 +2963,6 @@
      "check": "C3 grid snap",
      "ok": true,
      "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
-    }
-   ]
-  },
-  {
-   "id": "jp_p_roof_hisashi_gable",
-   "checks": [
-    {
-     "check": "C5 LODs",
-     "ok": true,
-     "detail": "Resolution 1 303, Resolution 2 106, Resolution 3 31, Geometry 42, Roadway 1, View Geometry 42, Fire Geometry 42"
-    },
-    {
-     "check": "C2 library only",
-     "ok": true,
-     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
-    },
-    {
-     "check": "C7 Geometry closed+convex",
-     "ok": true,
-     "detail": "7 components, all closed and convex"
-    },
-    {
-     "check": "C7 View Geometry closed+convex",
-     "ok": true,
-     "detail": "7 components, all closed and convex"
-    },
-    {
-     "check": "C7 Fire Geometry closed+convex",
-     "ok": true,
-     "detail": "7 components, all closed and convex"
-    },
-    {
-     "check": "C7 Fire penetration mats",
-     "ok": true,
-     "detail": "pottery, wood"
-    },
-    {
-     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
-     "ok": true,
-     "detail": "75/75 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
-    },
-    {
-     "check": "C7 Roadway on Geometry",
-     "ok": true,
-     "detail": "16/16 samples on a Geometry top (+-3 cm)"
-    },
-    {
-     "check": "C4 projection_m",
-     "ok": true,
-     "detail": "expected 0.45, measured 0.45"
-    },
-    {
-     "check": "C4 pitch_sun",
-     "ok": true,
-     "detail": "expected 4, measured 4.0"
-    },
-    {
-     "check": "C4 soffit_min_m",
-     "ok": true,
-     "detail": "expected >=2.20, measured 2.72"
-    },
-    {
-     "check": "C3 grid snap",
-     "ok": true,
-     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
   }

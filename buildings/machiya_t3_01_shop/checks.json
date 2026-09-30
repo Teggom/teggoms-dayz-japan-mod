@@ -1,7 +1,7 @@
 {
  "building": "Land_JP_Machiya_T3_01_Shop",
  "date": "2026-09-30",
- "faces": "11917/4261/1570",
+ "faces": "11909/4261/1570",
  "door_clear_m": [
   1.46,
   1.06,
@@ -16,12 +16,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11917, Resolution 2 4261, Resolution 3 1570, Geometry 1668, Memory 0, Roadway 21, View Geometry 1664, Fire Geometry 1646"
+   "detail": "Resolution 1 11909, Resolution 2 4261, Resolution 3 1570, Geometry 1668, Memory 0, Roadway 21, View Geometry 1664, Fire Geometry 1646"
   },
   {
    "check": "C5 face budget (large / landmark: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 11917, R2 4261, R3 1570"
+   "detail": "R1 11909, R2 4261, R3 1570"
   },
   {
    "check": "Geometry properties + mass",
@@ -401,7 +401,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 998548 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 997913 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   },
   {
    "check": "D1 props per room 5-7: toriniwa",

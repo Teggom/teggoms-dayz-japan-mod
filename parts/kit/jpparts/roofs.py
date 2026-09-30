@@ -182,6 +182,11 @@ def rafters(part, sl, spacing=0.303, sec=(0.045, 0.06), round_=False, only_eave=
     k = math.ceil(u0 / spacing)
     while k * spacing < u1:
         u = k * spacing
+        if u - sec[0] / 2 < u0 - 1e-9 or u + sec[0] / 2 > u1 + 1e-9:
+            # C1 (2026-09-30): a rafter on the slope's end line would stick half out past the covering (C15 saw it
+            # from above on pent ends at x 0): keep every rafter inside the slope
+            k += 1
+            continue
         dmax = sl.depth_at(u)
         if dmax > max(0.2, d_start + 0.05):
             ex, ez = sl.eave_point(u)

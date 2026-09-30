@@ -467,9 +467,12 @@ def pent(part, x0, x1, y_wall, proj, t, kind, posts=False, bracket_step=HALF, fl
             part.add(box(x - 0.06, x + 0.06, 0.0, ye - 0.10, ov - 0.20, ov - 0.08, "wood_weathered", vis=(1, 2, 3),
                          geo=True, view=True, fire=True, tag="pent_post"))
         else:
-            part.add(box(x - 0.03, x + 0.03, ye - 0.19, ye - 0.10, 0.06, ov - 0.10, "wood_weathered", vis=(1, 2),
+            # C1 (2026-09-30): a bracket on the run's end line is kept under the covering (it stuck 3 cm out past the
+            # pent's end, seen from above by C15)
+            xb = min(max(x, x0 + 0.03), x1 - 0.03)
+            part.add(box(xb - 0.03, xb + 0.03, ye - 0.19, ye - 0.10, 0.06, ov - 0.10, "wood_weathered", vis=(1, 2),
                          geo=True, view=True, fire=True, tag="udegi"))
-            part.add(prism([(ye - 0.19, 0.06), (ye - 0.45, 0.06), (ye - 0.19, 0.32)], "x", x - 0.025, x + 0.025,
+            part.add(prism([(ye - 0.19, 0.06), (ye - 0.45, 0.06), (ye - 0.19, 0.32)], "x", xb - 0.025, xb + 0.025,
                            "wood_weathered", vis=(1,), tag="bracket_brace"))
         x += bracket_step
     return sl, y_e
