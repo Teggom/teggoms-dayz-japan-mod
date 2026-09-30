@@ -212,5 +212,16 @@
   forks, floating kama lid, kamidana roof turned, floating chest cloth, no Roadway on the goods stand) + the well gives
   no actions. Lead's investigation: causes found for 7; the well matches vanilla on paper. **F1** launched: fix all 8,
   add a temporary well diagnostic, re-check. Then a short re-walk closes G4.
+- 2026-09-30: **F1 DONE** (opus-high, 573k tokens / 43 min). Commits fcd7dd7, 3d3c46d, f47e6bb; spikes/F1/F1_PROGRESS.md,
+  before/after spikes/F1/f1_fixes.jpg. All 8 causes confirmed and fixed (noren real-scale UVs; vessel() fill disc
+  phase-matched and sealed for every vessel incl. well water; hung T-kimono; forks across the pole; new prop
+  jp_f_kama_lid on the doma; kamidana ridge parallel to the front; cloth_drape into the chest; Roadway via
+  kit.road_tops on sturdy furniture, and decor.blocks treats a Roadway as walk-on only if the top is <= 0.30 m).
+  - **The well:** the well p3ds lacked the Geometry named property class=house (vanilla has it, plus
+    map=waterpump), so the WRP object never bound to its Land_ script class. Added to all 8 wells. TEMPORARY
+    diagnostic WELL_DIAG in spikes/B3b/build.py prints [JPWell] <class> at <pos> IsWell=1: remove after the
+    re-walk (steps in F1_PROGRESS.md).
+  - Checks: B3a 113, L1 185, B3b 129, L2 81, TXT 66, shell 78, furnished 137, toilet 19, combos 60, all pass.
+  - **Next: Stephen's ~10 min re-walk (TEST_CHECKLIST.md) closes G4.**
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
