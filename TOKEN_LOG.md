@@ -14,6 +14,23 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 09:10 (local, -04:00) | B3a (baseline) | launched: 24 interior props, one agent, per-model time log in TIMELOG_B3a.md | - | - | before: **19%** (5-hour 1%) |
 | 2026-09-30 09:52 (local) | B3a | 24 interior props = 110 models (24 new, 36 variants, 50 abandoned), jp_furniture.pbo | **498k** (160 tool calls) | 42 min | **21%** (5-hour 10%): B3a alone = ~2% weekly, ~9% of a 5-hour window |
 | 2026-09-30 10:08 (local) | B3b (baseline) | launched: all 20 W1 outdoor items (122 models), one agent, time log in TIMELOG_B3b.md | - | - | before: **21%** (5-hour 10%) |
+| 2026-09-30 10:48 (local) | B3b | 20 outdoor items = 129 models (20 new, 80 variants, 29 abandoned), jp_site.pbo + well script, 1 material | **519k** (147 tool calls) | 40 min | **22%** (5-hour 19%): B3b alone = ~1% weekly, ~9% of a 5-hour window |
+
+## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
+
+| Stretch | What | Models | Minutes | 5-hour % |
+|---|---|---|---|---|
+| 10:09-10:17 | setup: reading + building the site pipeline on B3a's kit | - | 8.5 | 10 -> 13 |
+| 10:17-10:28 | round wood: tubs, fire tub, firewood, bench, laundry pole, tenbin, handcart (7 items) | 42 | 11 | 13 -> 15 |
+| 10:28-10:31 | wells: pulley (+ roofed), lever (2 items) | 9 | 3 | 15 |
+| 10:31-10:36 | stone: jizo (+ bib material), stele family, jizo hut (3 items) | 19 | 5 | 15 -> 16 |
+| 10:36-10:43 | street: gutter, shop front, lanterns/signs, nobori, stall, notice board (6 items) | 47 | 7 | 16 -> 18 |
+| 10:43-10:45 | straw: stacks, shimenawa (2 items) | 12 | 2.5 | 18 |
+| 10:45-10:48 | PBO pack + contact sheets | - | 2.5 | 18 -> 19 |
+
+Compared with B3a: about the same tokens (519k vs 498k) and time (40 vs 42 min) for a few more models; setup took
+longer (8.5 vs 3 min) because it read both build lists and B3a's pipeline, but the first group was no slower.
+Once the pipeline exists, a group of 2-7 items takes 2-11 minutes, roughly 1% of a 5-hour window per few items.
 
 ## B3a time log, summarised (TIMELOG_B3a.md)
 

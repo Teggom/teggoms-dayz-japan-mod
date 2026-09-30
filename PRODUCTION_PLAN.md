@@ -164,5 +164,17 @@
   Commits 564eec5, 940d634, 4409d95, e80c005, 64a5b3b. Untested in game.
   - Gaps: no rice/grain material (spills use paper), kori wicker looks pale grey in bamboo_weave, firewood redder
     than ref i22. Refs i31/i35/i38 are saved HTML error pages.
+- 2026-09-30: **B3b DONE** (opus-high, 519k tokens / 40 min). 20 outdoor items = 129 models (20 new, 80 variants,
+  29 abandoned; 7 over the list: 6 separate shape signs, handcart `_ab_wreck`, shop-front `_ab_kanban_askew`); all
+  checks pass, max 828 faces. `@Japan/addons/jp_site.pbo` (JP_Site, 121 `StaticObj_JP_S_*` + 8 `Land_JP_S_Well_*`).
+  Wells copy vanilla's pump well (HouseNoDestruct + script class `extends Well`, in
+  `src/JP/site/scripts/4_World/JP_Site/jp_site_wells.c`); all pulley variants incl. `_roofed` are wells, the lever
+  well's `_field` sweep isn't. Material added: `jp_m_textile_bib_red` (palette `bib_red_faded`). Pipeline
+  `spikes/B3b/`, progress `src/JP/site/B3b_PROGRESS.md`, sheets `research/outdoor_kit/contact_sheets/b3b_*.jpg`.
+  Commits aeb23e9 .. c5a7dbe. Untested in game.
+  - **In-game checks:** crouch at a well curb: drink, wash hands, fill a bottle.
+  - Open: gutter pieces need a terrain ditch cut (terrain/placement work); notice boards reuse crops of the one edict
+    text in the atlas; rice stooks and rope tassels render thin.
+  - **Phase B next: B4 pilot** (furnish machiya_t3_01 + dress its yard + the mise-floor board strip), then gate G4.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
