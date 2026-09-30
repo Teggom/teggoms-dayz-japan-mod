@@ -1,0 +1,362 @@
+{
+ "id": "jp_s_hasa",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [
+  "AUTUMN: rice drying racks, sheaves hung astride the rails (soft cover: View Geometry on the sheaves, Geometry only on stakes, posts and rails)",
+  "place along field edges and in the threshing yard, rails roughly east-west"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_hasa_low.p3d",
+   "class": "StaticObj_JP_S_Hasa_Low",
+   "variant": "low",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rice drying rack on crossed stakes, hung with sheaves",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 242,
+    "Resolution 2": 78,
+    "Resolution 3": 24,
+    "Geometry": 120,
+    "View Geometry": 172,
+    "Fire Geometry": 120
+   },
+   "bbox": [
+    -1.92,
+    1.92,
+    -0.361,
+    1.511,
+    -0.511,
+    0.511
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.855,
+    -0.511,
+    1.855,
+    0.511
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "span",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "rail_h",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "one-rail rack on crossed stakes, 2 ken; sheaves hung astride the rail (soft cover: View only)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_hasa_low.p3d",
+   "mount": "field",
+   "mount_note": "in a field or at a field edge (paddy stubble): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_hasa_tiers.p3d",
+   "class": "StaticObj_JP_S_Hasa_Tiers",
+   "variant": "tiers",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Tiered rice drying rack, three rails of sheaves",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 561,
+    "Resolution 2": 75,
+    "Resolution 3": 24,
+    "Geometry": 90,
+    "View Geometry": 228,
+    "Fire Geometry": 90
+   },
+   "bbox": [
+    -1.95,
+    1.95,
+    -0.35,
+    2.35,
+    -0.114,
+    0.264
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.95,
+    -0.05,
+    1.95,
+    0.095
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "span",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "top_rail",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tiered rack (hasa-gi): three posts, three bamboo rails lashed on the front; wet-field regions"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_hasa_tiers.p3d",
+   "mount": "field",
+   "mount_note": "in a field or at a field edge (paddy stubble): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_hasa_empty.p3d",
+   "class": "StaticObj_JP_S_Hasa_Empty",
+   "variant": "tiers",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Tiered rice drying rack, empty",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 204,
+    "Resolution 2": 57,
+    "Resolution 3": 6,
+    "Geometry": 90,
+    "View Geometry": 90,
+    "Fire Geometry": 90
+   },
+   "bbox": [
+    -2.174,
+    2.888,
+    -0.35,
+    2.35,
+    -0.884,
+    1.537
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.95,
+    -0.05,
+    1.95,
+    0.095
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "span",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "top_rail",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tiered rack (hasa-gi): three posts, three bamboo rails lashed on the front; wet-field regions"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_hasa_empty.p3d",
+   "mount": "field",
+   "mount_note": "in a field or at a field edge (paddy stubble): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_hasa_ab_sagged.p3d",
+   "class": "StaticObj_JP_S_Hasa_Ab_Sagged",
+   "variant": "low",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Rice drying rack, one stake pair leaning, rail sagged, sheaves grey and fallen",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 255,
+    "Resolution 2": 78,
+    "Resolution 3": 24,
+    "Geometry": 120,
+    "View Geometry": 162,
+    "Fire Geometry": 120
+   },
+   "bbox": [
+    -2.581,
+    2.644,
+    -0.361,
+    1.511,
+    -0.66,
+    2.046
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.855,
+    -0.511,
+    1.855,
+    0.511
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "span",
+     "expected": 3.64,
+     "measured": 3.64,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "rail_h",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "one-rail rack on crossed stakes, 2 ken; sheaves hung astride the rail (soft cover: View only)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_hasa_ab_sagged.p3d",
+   "mount": "field",
+   "mount_note": "in a field or at a field edge (paddy stubble): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_hasa_ab_collapsed.p3d",
+   "class": "StaticObj_JP_S_Hasa_Ab_Collapsed",
+   "variant": "low",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Rice drying rack blown down, sheaves in heaps",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 157,
+    "Resolution 2": 64,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -2.715,
+    2.817,
+    0.0,
+    0.35,
+    -0.99,
+    1.966
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.741,
+    -0.596,
+    1.802,
+    0.996
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "span",
+     "expected": 3.64,
+     "measured": 3.8,
+     "tol": 0.3,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_hasa_ab_collapsed.p3d",
+   "mount": "field",
+   "mount_note": "in a field or at a field edge (paddy stubble): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#51",
+ "refs_local": [
+  "k34_straw_rice"
+ ]
+}

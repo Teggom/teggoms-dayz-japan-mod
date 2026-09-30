@@ -1,0 +1,186 @@
+{
+ "id": "jp_s_tsukimi",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [
+  "AUTUMN: the jugoya moon offering on a veranda edge: plain offering stand, 14 white dango, pampas grass in a stoneware jar, two persimmons (era: LIFE_LAYER_ERA.md #53)",
+  "visual only; stands on the veranda boards (base centre on the boards)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_tsukimi_stand.p3d",
+   "class": "StaticObj_JP_S_Tsukimi_Stand",
+   "variant": "stand",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Moon-viewing offering: dango on a stand, pampas grass",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 483,
+    "Resolution 2": 33
+   },
+   "bbox": [
+    -0.288,
+    0.512,
+    0.0,
+    1.187,
+    -0.224,
+    0.203
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stand_h",
+     "expected": 0.19,
+     "measured": 0.19,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "dango",
+     "expected": 14,
+     "measured": 14.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_tsukimi_stand.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_tsukimi_ab_dried.p3d",
+   "class": "StaticObj_JP_S_Tsukimi_Ab_Dried",
+   "variant": "stand",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Moon-viewing offering, dango mouldy and pecked, grass snapped",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 346,
+    "Resolution 2": 33
+   },
+   "bbox": [
+    -0.31,
+    0.531,
+    0.0,
+    1.187,
+    -0.28,
+    0.475
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stand_h",
+     "expected": 0.19,
+     "measured": 0.19,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "dango",
+     "expected": 8,
+     "measured": 8.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_tsukimi_ab_dried.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_tsukimi_ab_tipped.p3d",
+   "class": "StaticObj_JP_S_Tsukimi_Ab_Tipped",
+   "variant": "stand",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Moon-viewing stand knocked over, dango scattered",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 345,
+    "Resolution 2": 33
+   },
+   "bbox": [
+    -0.335,
+    1.486,
+    0.0,
+    0.689,
+    -0.231,
+    0.707
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stand_h",
+     "expected": 0.19,
+     "measured": 0.19,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "dango",
+     "expected": 8,
+     "measured": 8.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_tsukimi_ab_tipped.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#53",
+ "refs_local": []
+}

@@ -1,0 +1,3234 @@
+{
+ "models": {
+  "jp_s_hasa_low": {
+   "prop": "jp_s_hasa",
+   "cat": "yard_life",
+   "state": "intact",
+   "variant": "low",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 242,
+    "Resolution 2": 78,
+    "Resolution 3": 24,
+    "Geometry": 120,
+    "View Geometry": 172,
+    "Fire Geometry": 120
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 242,
+       "Resolution 2": 78,
+       "Resolution 3": 24,
+       "Geometry": 120,
+       "View Geometry": 172,
+       "Fire Geometry": 120
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "span",
+       "expected": 3.64,
+       "measured": 3.64,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "rail_h",
+       "expected": 1.2,
+       "measured": 1.2,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.3615,
+      "geo_min_y": -0.3615,
+      "bury": 0.37,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 5,
+      "problems": {},
+      "mass": 60.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 8
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_straw_stack_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_stack_w1",
+       "mean_srgb": [
+        107.0,
+        92.5,
+        71.2
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_hasa_tiers": {
+   "prop": "jp_s_hasa",
+   "cat": "yard_life",
+   "state": "intact",
+   "variant": "tiers",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 561,
+    "Resolution 2": 75,
+    "Resolution 3": 24,
+    "Geometry": 90,
+    "View Geometry": 228,
+    "Fire Geometry": 90
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 561,
+       "Resolution 2": 75,
+       "Resolution 3": 24,
+       "Geometry": 90,
+       "View Geometry": 228,
+       "Fire Geometry": 90
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "span",
+       "expected": 3.64,
+       "measured": 3.64,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "top_rail",
+       "expected": 2.0,
+       "measured": 2.0,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.35,
+      "geo_min_y": -0.35,
+      "bury": 0.37,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 15,
+      "problems": {},
+      "mass": 60.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 21
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 15
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_straw_rope_w1": true,
+      "jp_m_straw_stack_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_stack_w1",
+       "mean_srgb": [
+        107.0,
+        92.5,
+        71.2
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_hasa_empty": {
+   "prop": "jp_s_hasa",
+   "cat": "yard_life",
+   "state": "intact",
+   "variant": "tiers",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 204,
+    "Resolution 2": 57,
+    "Resolution 3": 6,
+    "Geometry": 90,
+    "View Geometry": 90,
+    "Fire Geometry": 90
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 204,
+       "Resolution 2": 57,
+       "Resolution 3": 6,
+       "Geometry": 90,
+       "View Geometry": 90,
+       "Fire Geometry": 90
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "span",
+       "expected": 3.64,
+       "measured": 3.64,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "top_rail",
+       "expected": 2.0,
+       "measured": 2.0,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.35,
+      "geo_min_y": -0.35,
+      "bury": 0.37,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 15,
+      "problems": {},
+      "mass": 60.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 15
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 15
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_rope_w1": true,
+      "jp_m_straw_stack_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_stack_w2",
+       "mean_srgb": [
+        79.3,
+        66.9,
+        51.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 7.7,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_hasa_ab_sagged": {
+   "prop": "jp_s_hasa",
+   "cat": "yard_life",
+   "state": "abandoned",
+   "variant": "low",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 255,
+    "Resolution 2": 78,
+    "Resolution 3": 24,
+    "Geometry": 120,
+    "View Geometry": 162,
+    "Fire Geometry": 120
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 255,
+       "Resolution 2": 78,
+       "Resolution 3": 24,
+       "Geometry": 120,
+       "View Geometry": 162,
+       "Fire Geometry": 120
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "span",
+       "expected": 3.64,
+       "measured": 3.64,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "rail_h",
+       "expected": 1.2,
+       "measured": 1.2,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.3615,
+      "geo_min_y": -0.3615,
+      "bury": 0.37,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 5,
+      "problems": {},
+      "mass": 60.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 7
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 5
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_stack_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w2",
+       "mean_srgb": [
+        145.1,
+        133.5,
+        122.8
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 9.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_stack_w2",
+       "mean_srgb": [
+        79.3,
+        66.9,
+        51.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 7.7,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_hasa_ab_collapsed": {
+   "prop": "jp_s_hasa",
+   "cat": "yard_life",
+   "state": "abandoned",
+   "variant": "low",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 157,
+    "Resolution 2": 64,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 157,
+       "Resolution 2": 64,
+       "Resolution 3": 6,
+       "Geometry": 18,
+       "View Geometry": 18,
+       "Fire Geometry": 18
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "span",
+       "expected": 3.64,
+       "measured": 3.8,
+       "tol": 0.3,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 0.0,
+      "geo_min_y": 0.005,
+      "bury": 0.02,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 3,
+      "problems": {},
+      "mass": 60.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 3
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_stack_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w2",
+       "mean_srgb": [
+        145.1,
+        133.5,
+        122.8
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 9.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_stack_w2",
+       "mean_srgb": [
+        79.3,
+        66.9,
+        51.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 7.7,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_kaki_curtain_1ken": {
+   "prop": "jp_s_kaki_curtain",
+   "cat": "yard_life",
+   "state": "intact",
+   "variant": "1ken",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 477,
+    "Resolution 2": 57
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Resolution 1",
+      "Resolution 2"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 477,
+       "Resolution 2": 57
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "strings",
+       "expected": 6,
+       "measured": 6.0,
+       "tol": 0,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "drop",
+       "expected": 1.0,
+       "measured": 0.98,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'wall': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 1.245,
+      "geo_min_y": null,
+      "bury": 0.02,
+      "hung": true,
+      "res1_min_z (wall plane z=0)": 0.0,
+      "wall_gap": 0.0
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_food_hoshigaki_w1": true,
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_food_hoshigaki_w1",
+       "mean_srgb": [
+        128.0,
+        70.0,
+        42.0
+       ],
+       "palette": "hoshigaki",
+       "dE76": 0.0,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_street_dark_w1",
+       "mean_srgb": [
+        86.5,
+        58.2,
+        44.1
+       ],
+       "palette": "timber_street_dark",
+       "dE76": 1.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_kaki_curtain_half": {
+   "prop": "jp_s_kaki_curtain",
+   "cat": "yard_life",
+   "state": "intact",
+   "variant": "half",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 254,
+    "Resolution 2": 39
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Resolution 1",
+      "Resolution 2"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 254,
+       "Resolution 2": 39
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "strings",
+       "expected": 3,
+       "measured": 3.0,
+       "tol": 0,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "drop",
+       "expected": 1.0,
+       "measured": 0.98,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'wall': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 1.245,
+      "geo_min_y": null,
+      "bury": 0.02,
+      "hung": true,
+      "res1_min_z (wall plane z=0)": 0.0,
+      "wall_gap": 0.0
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_food_hoshigaki_w1": true,
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_food_hoshigaki_w1",
+       "mean_srgb": [
+        128.0,
+        70.0,
+        42.0
+       ],
+       "palette": "hoshigaki",
+       "dE76": 0.0,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_street_dark_w1",
+       "mean_srgb": [
+        86.5,
+        58.2,
+        44.1
+       ],
+       "palette": "timber_street_dark",
+       "dE76": 1.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_kaki_curtain_ab_fallen": {
+   "prop": "jp_s_kaki_curtain",
+   "cat": "yard_life",
+   "state": "abandoned",
+   "variant": "1ken",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 433,
+    "Resolution 2": 27
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Resolution 1",
+      "Resolution 2"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
+       "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 433,
+       "Resolution 2": 27
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "strings",
+       "expected": 6,
+       "measured": 6.0,
+       "tol": 0,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'wall': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.0098,
+      "geo_min_y": null,
+      "bury": 0.02,
+      "hung": true,
+      "res1_min_z (wall plane z=0)": 0.0,
+      "wall_gap": 0.0
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_food_hoshigaki_w2": true,
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_rope_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w2",
+       "mean_srgb": [
+        145.1,
+        133.5,
+        122.8
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 9.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_food_hoshigaki_w2",
+       "mean_srgb": [
+        114.0,
+        62.3,
+        38.2
+       ],
+       "palette": "hoshigaki",
+       "dE76": 5.4,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_street_dark_w2",
+       "mean_srgb": [
+        90.5,
+        66.3,
+        53.7
+       ],
+       "palette": "timber_street_dark",
+       "dE76": 4.9,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_tsukimi_stand": {
+   "prop": "jp_s_tsukimi",
+   "cat": "yard_life",
+   "state": "intact",
+   "variant": "stand",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 483,
+    "Resolution 2": 33
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Resolution 1",
+      "Resolution 2"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w1.rvmat",
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
+       "JP\\common\\materials\\food\\jp_m_food_hoshigaki_w1.rvmat",
+       "JP\\common\\materials\\food\\jp_m_food_rice_w1.rvmat",
+       "JP\\common\\materials\\paper\\jp_m_paper_shoji_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 483,
+       "Resolution 2": 33
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "stand_h",
+       "expected": 0.19,
+       "measured": 0.19,
+       "tol": 0.02,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "dango",
+       "expected": 14,
+       "measured": 14.0,
+       "tol": 0,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 0.0,
+      "geo_min_y": null,
+      "bury": 0.02,
+      "hung": false
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_food_hoshigaki_w1": true,
+      "jp_m_food_rice_w1": true,
+      "jp_m_straw_stack_w1": true,
+      "jp_m_textile_cotton_plain_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_ceramic_stoneware_dark_w1",
+       "mean_srgb": [
+        76.4,
+        54.2,
+        40.1
+       ],
+       "palette": "stoneware_dark",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ceramic_stoneware_dark_w2",
+       "mean_srgb": [
+        81.3,
+        58.7,
+        44.4
+       ],
+       "palette": "stoneware_dark",
+       "dE76": 3.0,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_food_hoshigaki_w1",
+       "mean_srgb": [
+        128.0,
+        70.0,
+        42.0
+       ],
+       "palette": "hoshigaki",
+       "dE76": 0.0,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_food_rice_w1",
+       "mean_srgb": [
+        199.0,
+        187.6,
+        158.3
+       ],
+       "palette": "rice_grain",
+       "dE76": 3.6,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_paper_shoji_w1",
+       "mean_srgb": [
+        195.3,
+        186.4,
+        164.7
+       ],
+       "palette": "washi_shoji",
+       "dE76": 5.8,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_stack_w1",
+       "mean_srgb": [
+        107.0,
+        92.5,
+        71.2
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_textile_cotton_plain_w1",
+       "mean_srgb": [
+        172.8,
+        162.0,
+        136.2
+       ],
+       "palette": "kinari_cloth",
+       "dE76": 7.6,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_tsukimi_ab_dried": {
+   "prop": "jp_s_tsukimi",
+   "cat": "yard_life",
+   "state": "abandoned",
+   "variant": "stand",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 346,
+    "Resolution 2": 33
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Resolution 1",
+      "Resolution 2"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
+       "JP\\common\\materials\\food\\jp_m_food_rice_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\paper\\jp_m_paper_shoji_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 346,
+       "Resolution 2": 33
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "stand_h",
+       "expected": 0.19,
+       "measured": 0.19,
+       "tol": 0.02,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "dango",
+       "expected": 8,
+       "measured": 8.0,
+       "tol": 0,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 0.0,
+      "geo_min_y": null,
+      "bury": 0.02,
+      "hung": false
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_food_rice_w2": true,
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_stack_w2": true,
+      "jp_m_textile_cotton_plain_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_ceramic_stoneware_dark_w2",
+       "mean_srgb": [
+        81.3,
+        58.7,
+        44.4
+       ],
+       "palette": "stoneware_dark",
+       "dE76": 3.0,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_food_rice_w2",
+       "mean_srgb": [
+        188.7,
+        173.3,
+        139.7
+       ],
+       "palette": "rice_grain",
+       "dE76": 9.5,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_paper_shoji_w2",
+       "mean_srgb": [
+        191.4,
+        180.6,
+        157.6
+       ],
+       "palette": "washi_shoji",
+       "dE76": 7.8,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_stack_w2",
+       "mean_srgb": [
+        79.3,
+        66.9,
+        51.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 7.7,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_textile_cotton_plain_w2",
+       "mean_srgb": [
+        168.9,
+        156.3,
+        129.3
+       ],
+       "palette": "kinari_cloth",
+       "dE76": 9.9,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_tsukimi_ab_tipped": {
+   "prop": "jp_s_tsukimi",
+   "cat": "yard_life",
+   "state": "abandoned",
+   "variant": "stand",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 345,
+    "Resolution 2": 33
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Resolution 1",
+      "Resolution 2"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
+       "JP\\common\\materials\\food\\jp_m_food_rice_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 345,
+       "Resolution 2": 33
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "stand_h",
+       "expected": 0.19,
+       "measured": 0.19,
+       "tol": 0.02,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "dango",
+       "expected": 8,
+       "measured": 8.0,
+       "tol": 0,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 0.0,
+      "geo_min_y": null,
+      "bury": 0.02,
+      "hung": false
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_food_rice_w2": true,
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_stack_w2": true,
+      "jp_m_textile_cotton_plain_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_ceramic_stoneware_dark_w2",
+       "mean_srgb": [
+        81.3,
+        58.7,
+        44.4
+       ],
+       "palette": "stoneware_dark",
+       "dE76": 3.0,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_food_rice_w2",
+       "mean_srgb": [
+        188.7,
+        173.3,
+        139.7
+       ],
+       "palette": "rice_grain",
+       "dE76": 9.5,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_stack_w2",
+       "mean_srgb": [
+        79.3,
+        66.9,
+        51.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 7.7,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_textile_cotton_plain_w2",
+       "mean_srgb": [
+        168.9,
+        156.3,
+        129.3
+       ],
+       "palette": "kinari_cloth",
+       "dE76": 9.9,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_scarecrow_kasa": {
+   "prop": "jp_s_scarecrow",
+   "cat": "yard_life",
+   "state": "intact",
+   "variant": "kasa",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 151,
+    "Resolution 2": 51,
+    "Resolution 3": 12,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w2.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 151,
+       "Resolution 2": 51,
+       "Resolution 3": 12,
+       "Geometry": 20,
+       "View Geometry": 20,
+       "Fire Geometry": 20
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "height",
+       "expected": 1.75,
+       "measured": 1.71,
+       "tol": 0.1,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.35,
+      "geo_min_y": -0.35,
+      "bury": 0.35,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 12.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_straw_stack_w1": true,
+      "jp_m_straw_tawara_w1": true,
+      "jp_m_textile_cotton_indigo_w2": true,
+      "jp_m_textile_cotton_plain_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_mushiro_w1",
+       "mean_srgb": [
+        155.3,
+        135.3,
+        94.0
+       ],
+       "palette": "thatch_new",
+       "dE76": 8.5,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_stack_w1",
+       "mean_srgb": [
+        107.0,
+        92.5,
+        71.2
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_tawara_w1",
+       "mean_srgb": [
+        149.1,
+        130.2,
+        92.7
+       ],
+       "palette": "thatch_new",
+       "dE76": 11.4,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_textile_cotton_indigo_w2",
+       "mean_srgb": [
+        62.7,
+        69.9,
+        72.5
+       ],
+       "palette": "aizome_kon",
+       "dE76": 3.6,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_textile_cotton_plain_w1",
+       "mean_srgb": [
+        172.8,
+        162.0,
+        136.2
+       ],
+       "palette": "kinari_cloth",
+       "dE76": 7.6,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_scarecrow_naruko": {
+   "prop": "jp_s_scarecrow",
+   "cat": "yard_life",
+   "state": "intact",
+   "variant": "naruko",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 262,
+    "Resolution 2": 24,
+    "Resolution 3": 12,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 262,
+       "Resolution 2": 24,
+       "Resolution 3": 12,
+       "Geometry": 12,
+       "View Geometry": 12,
+       "Fire Geometry": 12
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "span",
+       "expected": 4.0,
+       "measured": 4.0,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.35,
+      "geo_min_y": -0.35,
+      "bury": 0.35,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 12.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_straw_rope_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w1",
+       "mean_srgb": [
+        169.0,
+        157.0,
+        146.0
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_scarecrow_ab_leaning": {
+   "prop": "jp_s_scarecrow",
+   "cat": "yard_life",
+   "state": "abandoned",
+   "variant": "kasa",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 154,
+    "Resolution 2": 51,
+    "Resolution 3": 12,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_tawara_w2.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w2.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 154,
+       "Resolution 2": 51,
+       "Resolution 3": 12,
+       "Geometry": 20,
+       "View Geometry": 20,
+       "Fire Geometry": 20
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "lean_deg",
+       "expected": 24.0,
+       "measured": 24.0,
+       "tol": 0,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.3313,
+      "geo_min_y": -0.334,
+      "bury": 0.35,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 12.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": [
+       "Component01",
+       "Component02"
+      ]
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_stack_w2": true,
+      "jp_m_straw_tawara_w2": true,
+      "jp_m_textile_cotton_indigo_w2": true,
+      "jp_m_textile_cotton_plain_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w2",
+       "mean_srgb": [
+        145.1,
+        133.5,
+        122.8
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 9.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_mushiro_w2",
+       "mean_srgb": [
+        149.3,
+        127.0,
+        85.0
+       ],
+       "palette": "thatch_new",
+       "dE76": 10.3,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_stack_w2",
+       "mean_srgb": [
+        79.3,
+        66.9,
+        51.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 7.7,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_tawara_w2",
+       "mean_srgb": [
+        144.6,
+        125.1,
+        84.3
+       ],
+       "palette": "thatch_new",
+       "dE76": 11.7,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_textile_cotton_indigo_w2",
+       "mean_srgb": [
+        62.7,
+        69.9,
+        72.5
+       ],
+       "palette": "aizome_kon",
+       "dE76": 3.6,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_textile_cotton_plain_w2",
+       "mean_srgb": [
+        168.9,
+        156.3,
+        129.3
+       ],
+       "palette": "kinari_cloth",
+       "dE76": 9.9,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_scarecrow_ab_down": {
+   "prop": "jp_s_scarecrow",
+   "cat": "yard_life",
+   "state": "abandoned",
+   "variant": "kasa",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 154,
+    "Resolution 2": 51,
+    "Resolution 3": 12,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_mushiro_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_tawara_w2.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w2.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 154,
+       "Resolution 2": 51,
+       "Resolution 3": 12,
+       "Geometry": 20,
+       "View Geometry": 20,
+       "Fire Geometry": 20
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "length",
+       "expected": 1.93,
+       "measured": 1.62,
+       "tol": 0.35,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 0.0,
+      "geo_min_y": 0.0,
+      "bury": 0.02,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 12.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_straw_stack_w2": true,
+      "jp_m_straw_tawara_w2": true,
+      "jp_m_textile_cotton_indigo_w2": true,
+      "jp_m_textile_cotton_plain_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_bamboo_weathered_w2",
+       "mean_srgb": [
+        145.1,
+        133.5,
+        122.8
+       ],
+       "palette": "bamboo_weathered",
+       "dE76": 9.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_mushiro_w2",
+       "mean_srgb": [
+        149.3,
+        127.0,
+        85.0
+       ],
+       "palette": "thatch_new",
+       "dE76": 10.3,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_stack_w2",
+       "mean_srgb": [
+        79.3,
+        66.9,
+        51.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 7.7,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_tawara_w2",
+       "mean_srgb": [
+        144.6,
+        125.1,
+        84.3
+       ],
+       "palette": "thatch_new",
+       "dE76": 11.7,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_textile_cotton_indigo_w2",
+       "mean_srgb": [
+        62.7,
+        69.9,
+        72.5
+       ],
+       "palette": "aizome_kon",
+       "dE76": 3.6,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_textile_cotton_plain_w2",
+       "mean_srgb": [
+        168.9,
+        156.3,
+        129.3
+       ],
+       "palette": "kinari_cloth",
+       "dE76": 9.9,
+       "tolerance": 12,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  }
+ },
+ "global": {
+  "CFG": {
+   "pass": true,
+   "detail": [
+    "CfgConvert config.cpp: OK ",
+    "CfgConvert model.cfg: OK "
+   ]
+  }
+ },
+ "summary": {
+  "models": 15,
+  "pass": 15,
+  "classes_in_config": 144
+ }
+}

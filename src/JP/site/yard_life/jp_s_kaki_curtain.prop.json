@@ -1,0 +1,187 @@
+{
+ "id": "jp_s_kaki_curtain",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [
+  "AUTUMN: persimmon curtain (kaki-sudare) under the eaves: the outdoor version of L1's #8",
+  "visual only; brackets touch the facade at hang_y"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_kaki_curtain_1ken.p3d",
+   "class": "StaticObj_JP_S_Kaki_Curtain_1ken",
+   "variant": "1ken",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Persimmon curtain under the eaves, six strings",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 477,
+    "Resolution 2": 57
+   },
+   "bbox": [
+    -0.81,
+    0.81,
+    1.24,
+    2.417,
+    0.0,
+    0.382
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "strings",
+     "expected": 6,
+     "measured": 6.0,
+     "tol": 0,
+     "source": "build_list"
+    },
+    {
+     "name": "drop",
+     "expected": 1.0,
+     "measured": 0.98,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.4,
+   "proxy": "eaves piece: facade z = 0, y = 0 at the wall foot, brackets at hang_y (move y to the real eave)",
+   "master": "spikes/L2/out/yard_life/jp_s_kaki_curtain_1ken.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_kaki_curtain_half.p3d",
+   "class": "StaticObj_JP_S_Kaki_Curtain_Half",
+   "variant": "half",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Persimmon curtain, three strings",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 254,
+    "Resolution 2": 39
+   },
+   "bbox": [
+    -0.42,
+    0.42,
+    1.24,
+    2.417,
+    0.0,
+    0.382
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "strings",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0,
+     "source": "build_list"
+    },
+    {
+     "name": "drop",
+     "expected": 1.0,
+     "measured": 0.98,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.4,
+   "proxy": "eaves piece: facade z = 0, y = 0 at the wall foot, brackets at hang_y (move y to the real eave)",
+   "master": "spikes/L2/out/yard_life/jp_s_kaki_curtain_half.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_kaki_curtain_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Kaki_Curtain_Ab_Fallen",
+   "variant": "1ken",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Persimmon curtain fallen, fruit black on the ground",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 433,
+    "Resolution 2": 27
+   },
+   "bbox": [
+    -0.856,
+    0.803,
+    -0.01,
+    2.417,
+    0.0,
+    1.207
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "strings",
+     "expected": 6,
+     "measured": 6.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "hang_y": 2.4,
+   "proxy": "eaves piece: facade z = 0, y = 0 at the wall foot, brackets at hang_y (move y to the real eave)",
+   "master": "spikes/L2/out/yard_life/jp_s_kaki_curtain_ab_fallen.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#52",
+ "refs_local": [
+  "k35_firewood_hoshigaki"
+ ]
+}

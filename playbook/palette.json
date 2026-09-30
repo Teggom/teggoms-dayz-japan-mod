@@ -1898,6 +1898,27 @@
    "method": "assumed",
    "tolerance_dE76": 12,
    "hex": "#62704A"
+  },
+  {
+   "id": "foliage_green",
+   "name": "Foliage of potted plants and weeds, autumn green (dull)",
+   "material": "pine needles, azalea and chrysanthemum leaves, weeds",
+   "group": "plant",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "potted plants and weeds (jp_m_plant_foliage); dead foliage is its _w2",
+   "note": "Added 2026-09-30 by L2. Assumed: a dull, dark autumn green between moss_on_stone and kaya_moegi, darker than either (evergreen needles, leathery azalea leaves). Judge in game.",
+   "srgb": [
+    72,
+    86,
+    56
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "hex": "#485638"
   }
  ]
 }

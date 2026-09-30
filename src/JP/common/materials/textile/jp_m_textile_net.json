@@ -1,0 +1,70 @@
+{
+ "id": "jp_m_textile_net",
+ "family": "textile",
+ "palette_id": "cha_koge",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "knotted diamond mesh, 3.5 cm meshes, lines diagonal to u and v",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "tannin-brown hemp net",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_net_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_net_w0.rvmat",
+   "target_srgb": [
+    113.2,
+    81.0,
+    51.2
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.219
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "sun and salt greyed in patches",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_net_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_net_w1.rvmat",
+   "target_srgb": [
+    106.0,
+    77.0,
+    50.0
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.219
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "grey, broken meshes",
+   "co": "JP\\common\\materials\\textile\\jp_m_textile_net_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_net_w2.rvmat",
+   "target_srgb": [
+    112.0,
+    87.8,
+    65.5
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.218
+  }
+ },
+ "used_by": [
+  "jp_s_fishnet"
+ ],
+ "used_on": "Fishing nets drying on poles",
+ "sources": [
+  {
+   "procedural": "make_l2_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_l2_materials.py (agent L2, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/LIFE_LAYER.md (L2, the outdoor life layer)",
+ "alpha": "cut",
+ "render": "_ca alpha = holes / tears / gaps; renderFlags AlphaTest32 (vanilla ghillie / fur pattern). RGB continues under the holes.",
+ "note": "Fishing net (tannin-dyed hemp). Two-sided geometry; one sheet per net panel. Floats are geometry (wood / gourd, never glass)."
+}

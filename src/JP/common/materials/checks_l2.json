@@ -1,0 +1,113 @@
+{
+ "check": "C1 palette (tools/matcheck), L2 materials",
+ "palette_entries_added": [],
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_foliage_w0_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    75.0,
+    94.3,
+    59.4
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 4.58,
+   "dE_to_entry": 4.58,
+   "tol": 12.0,
+   "spread_p75": 14.2,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     73.9,
+     94.0,
+     59.3
+    ],
+    "dE": 4.62,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_foliage_w1_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    72.1,
+    86.1,
+    55.8
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 0.16,
+   "dE_to_entry": 0.16,
+   "tol": 12.0,
+   "spread_p75": 12.2,
+   "observed_spread": null,
+   "masked_frac": 0.185,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_foliage_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     72.9,
+     85.4,
+     56.4
+    ],
+    "dE": 0.84,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_foliage_w2_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    91.1,
+    90.7,
+    49.6
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 9.85,
+   "dE_to_entry": 9.85,
+   "tol": 12.0,
+   "spread_p75": 13.8,
+   "observed_spread": null,
+   "masked_frac": 0.461,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_foliage_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "mask excludes 46 %"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     93.6,
+     90.1,
+     49.8
+    ],
+    "dE": 10.71,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  }
+ ]
+}
