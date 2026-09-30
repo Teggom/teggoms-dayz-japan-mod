@@ -735,3 +735,356 @@ PROPS.append({"id": "jp_s_charcoal_bales", "cat": CAT, "ll": "#57", "mount": "ya
                   M("jp_s_charcoal_bales_ab_burst", "stack", "abandoned", "Charcoal bale fallen and burst, charcoal "
                     "spilled", lambda: charcoal_bales("ab_burst")),
               ]})
+
+
+# ================================================================================================ 58 potted plants
+def pot(c, r=0.10, h=0.16, mat=DARKC, soil=True, wear=None, dead_soil=False):
+    """An unglazed-looking stoneware pot, flared, soil (or leaf-litter crust) 3 cm below the rim."""
+    out = [lathe([(r * 0.7, 0.0), (r, h), (r + 0.006, h), (r - 0.008, h), (r * 0.95 - 0.008, h - 0.03), (0.0, h - 0.03)],
+                 8, mat, vis=(1,), wear=wear)]
+    out.append(lathe([(r * 0.7, 0.0), (r, h), (0.0, h)], 5, mat, vis=(2,), smooth=False, wear=wear))
+    if soil:
+        out.append(disc(r * 0.93 - 0.008, h - 0.03, h - 0.028, LEAF if dead_soil else EARTH, n=7, vis=(1,),
+                        wear="_w2" if dead_soil else "_w1"))
+    return [xf(s, t=c) for s in out]
+
+
+def pine(c, wear=None, seed=1):
+    """A small potted pine: an S-bent trunk and three needle pads."""
+    r = random.Random(seed)
+    x, y, z = c
+    pts = [(x, y, z), (x + 0.05, y + 0.12, z), (x - 0.03, y + 0.24, z + 0.02), (x + 0.04, y + 0.34, z)]
+    out = rope_path(pts, 0.018, DARK, n=5, vis=(1,))
+    for k, (dx, dy) in enumerate(((0.10, 0.14), (-0.10, 0.25), (0.02, 0.36))):
+        out += K.bush((x + dx, y + dy, z + r.uniform(-0.03, 0.03)), 0.10 - 0.015 * k, 0.07, kind="needle", wear=wear,
+                      n=2, seed=seed + k)
+    return out
+
+
+def kiku(c, wear=None, flowers=True, seed=1):
+    """Chrysanthemums: stems, a leafy clump, cream flower heads (kinari cotton discs) when in bloom."""
+    r = random.Random(seed)
+    x, y, z = c
+    out = K.bush((x, y, z), 0.11, 0.24, kind="leaf", wear=wear, n=3, seed=seed)
+    for k in range(4):
+        a = 2 * math.pi * k / 4 + r.uniform(-0.4, 0.4)
+        top = (x + 0.06 * math.cos(a), y + 0.34 + r.uniform(-0.04, 0.04), z + 0.06 * math.sin(a))
+        out.append(pole((x, y, z), top, 0.004, "bamboo_weathered", n=3, vis=(1,), wear="_w2" if wear == "_w2" else None))
+        if flowers:
+            out.append(xf(lathe([(0.0, 0.0), (0.035, 0.008), (0.03, 0.02), (0.0, 0.025)], 6, PLAIN, vis=(1,)),
+                          t=top))
+    return out
+
+
+def potted(kind):
+    ab = kind.startswith("ab")
+    dead = "_w2" if ab else None
+    P = SPart("potted", budget="box", res3=True, mass=25.0, wear="_w2" if ab else "_w1")
+    if kind == "pair":
+        P.flat = True
+        P.need = ()
+        P.res3 = False
+        add_all(P, pot((0.0, 0.0, 0.0), r=0.14, h=0.20, mat=WOOD))
+        add_all(P, pine((0.0, 0.17, 0.0), seed=3))
+        add_all(P, pot((0.36, 0.0, 0.08)))
+        add_all(P, K.bush((0.36, 0.13, 0.08), 0.14, 0.20, kind="leaf", n=3, seed=5, wear="_w1"))
+        P.dim("pots", 2, 2, tol=0)
+        return P
+    # the stand: two sloped side boards and three steps (0.25 / 0.50 / 0.75), 1.2 m wide
+    stand = []
+    side = [(0.0, 0.34), (0.27, 0.34), (0.77, -0.34), (0.0, -0.34)]
+    for sx in (-1, 1):
+        stand.append(prism(side, "x", sx * 0.60 - 0.015, sx * 0.60 + 0.015, WOOD, vis=(1, 2)))
+    for k, (y, z0, z1) in enumerate(((0.25, 0.12, 0.34), (0.50, -0.11, 0.11), (0.75, -0.34, -0.12))):
+        stand.append(W(-0.585, 0.585, y - 0.025, y, z0, z1, WOOD, vis=(1, 2)))
+    lod3 = [W(-0.6, 0.6, 0.0, 0.75, -0.34, 0.34, WOOD, vis=(3,))]
+    hull = [col(-0.60, 0.60, 0.0, 0.25, 0.12, 0.34), col(-0.60, 0.60, 0.0, 0.50, -0.11, 0.11),
+            col(-0.60, 0.60, 0.0, 0.75, -0.34, -0.12)]
+    pots, plants = [], []
+    spots = [(-0.30, 0.25, 0.23, "kiku"), (0.25, 0.25, 0.23, "kiku"), (-0.2, 0.50, 0.0, "azalea"),
+             (0.3, 0.50, 0.0, "weeds"), (0.0, 0.75, -0.23, "pine")]
+    for i, (x, y, z, what) in enumerate(spots):
+        wear = "_w2" if (ab and what != "pine") else ("_w1" if what == "pine" or not ab else None)
+        if kind == "ab_dead" and i == 1:
+            continue                     # this one fell: see below
+        pots += pot((x, y, z), dead_soil=ab)
+        if what == "kiku":
+            plants += kiku((x, y + 0.13, z), wear=dead or "_w1", flowers=not ab, seed=10 + i)
+        elif what == "azalea":
+            plants += K.bush((x, y + 0.13, z), 0.13, 0.22, kind="leaf", n=3, seed=20 + i, wear=dead or "_w1")
+        elif what == "weeds":
+            plants += K.bush((x, y + 0.13, z), 0.08, 0.16, kind="needle", n=2, seed=30 + i, wear="_w2")
+        else:
+            plants += pine((x, y + 0.13, z), wear="_w1", seed=40 + i)
+    if kind == "ab_dead":
+        # the fallen pot: shards and a soil clod with the dead chrysanthemum, in front of the stand
+        add_all(P, K.lkit.shards(581, 0.35, 0.55, 0.18, 7, mat=DARKC, wear="_w2"))
+        P.add(K.mound(582, 0.30, 0.52, 0.10, 0.06, EARTH, wear="_w2", vis=(1,)))
+        add_all(P, rest(xfs(kiku((0.0, 0.0, 0.0), wear="_w2", flowers=False, seed=11), rz=80.0, t=(0.30, 0.06, 0.52)),
+                        0.0))
+    everything = stand + pots + plants
+    if kind == "ab_fallen":
+        # the stand tipped forward onto its face, pots spilled in front
+        tip = dict(rx=78.0, pivot=(0.0, 0.0, 0.34))
+        everything = xfs(stand, **tip)
+        hull = xfs(hull, **tip)
+        lod3 = xfs(lod3, **tip)
+        r = random.Random(583)
+        for k in range(4):
+            px, pz = -0.45 + 0.3 * k, 1.05 + r.uniform(-0.1, 0.25)
+            pp = pot((0.0, 0.0, 0.0), wear="_w2", dead_soil=True)
+            everything += rest(xfs(pp, rx=90.0 if k % 2 else 0.0, ry=r.uniform(0, 360), t=(px, 0.0, pz)), 0.0)
+            everything.append(K.mound(584 + k, px + 0.1, pz + 0.12, 0.12, 0.05, EARTH, wear="_w2", vis=(1,)))
+        everything += rest(xfs(pine((0.0, 0.0, 0.0), wear="_w1", seed=45), rz=75.0, t=(0.5, 0.0, 1.3)), 0.0)
+        P.add(litter(585, 0.0, 1.1, 0.7, sx=1.5))
+    add_all(P, everything + lod3 + hull)
+    if kind == "ab_fallen":
+        ground(P)
+    P.dim("stand_w", 1.20, 1.20, tol=0.01)
+    P.dim("top_step", 0.75, 0.75, tol=0.01)
+    return P
+
+
+PROPS.append({"id": "jp_s_potted", "cat": CAT, "ll": "#58", "mount": "yard", "tiers": [2, 3],
+              "notes": ["potted plants on a stepped stand: pine, azalea, chrysanthemums (in bloom = cream heads), weeds; "
+                        "no morning glories (era: LIFE_LAYER_ERA.md #58). Stand = Geometry (one hull); pots visual",
+                        "as left: unwatered, the chrysanthemums and azalea dead (jp_m_plant_foliage _w2), the pine green"],
+              "models": [
+                  M("jp_s_potted_stand", "stand", "intact", "Potted plants on a stepped stand", lambda: potted("stand")),
+                  M("jp_s_potted_pair", "pair", "intact", "A potted pine in a tub and an azalea",
+                    lambda: potted("pair"), mount="street"),
+                  M("jp_s_potted_ab_dead", "stand", "abandoned", "Potted plants dead on their stand, one pot broken",
+                    lambda: potted("ab_dead")),
+                  M("jp_s_potted_ab_fallen", "stand", "abandoned", "Plant stand tipped over, pots spilled",
+                    lambda: potted("ab_fallen")),
+              ]})
+
+
+# ================================================================================================ 59 bird cage
+def cage(wear=None, door_open=False, torn=False):
+    """A square bamboo songbird cage (uguisu-kago) 0.30 x 0.24 x 0.32: tray, paper-covered top, corner posts, thin
+    bars, a small door on the front, a feeder cup inside. Built with its base centre at the origin."""
+    w, d, h = 0.30, 0.24, 0.32
+    out = [W(-w / 2, w / 2, 0.0, 0.03, -d / 2, d / 2, WOOD, vis=(1, 2)),
+           W(-w / 2, w / 2, h - 0.02, h, -d / 2, d / 2, PAPER, vis=(1, 2))]
+    out[-1].wear = "_w2" if torn else "_w1"
+    for sx in (-1, 1):
+        for sz in (-1, 1):
+            out.append(W(sx * w / 2 - 0.008 * (sx > 0), sx * w / 2 + 0.008 * (sx < 0), 0.03, h - 0.02,
+                         sz * d / 2 - 0.008 * (sz > 0), sz * d / 2 + 0.008 * (sz < 0), BAMBOO, vis=(1,)))
+    for k in range(1, 6):
+        x = -w / 2 + w * k / 6
+        for sz in (-1, 1):
+            if door_open and sz == 1 and abs(x) < 0.06:
+                continue
+            out.append(pole((x, 0.03, sz * (d / 2 - 0.004)), (x, h - 0.02, sz * (d / 2 - 0.004)), 0.0025, BAMBOO, n=3,
+                            vis=(1,)))
+    for k in range(1, 5):
+        z = -d / 2 + d * k / 5
+        for sx in (-1, 1):
+            out.append(pole((sx * (w / 2 - 0.004), 0.03, z), (sx * (w / 2 - 0.004), h - 0.02, z), 0.0025, BAMBOO, n=3,
+                            vis=(1,)))
+    door = W(-0.05, 0.05, 0.05, 0.16, d / 2 + 0.002, d / 2 + 0.008, BAMBOO, vis=(1,))
+    out.append(xf(door, rx=-100.0, pivot=(0.0, 0.05, d / 2)) if door_open else door)
+    cup = lathe([(0.02, 0.0), (0.025, 0.03), (0.0, 0.03)], 6, DARKC, vis=(1,))
+    out.append(xf(cup, rz=80.0, t=(0.06, 0.055, 0.02)) if door_open else xf(cup, t=(0.07, 0.03, 0.02)))
+    out.append(W(-w / 2, w / 2, 0.03, h - 0.02, -d / 2, d / 2, BAMBOO, vis=(2,)))
+    return K.wear_all(out, wear)
+
+
+def bird_cage(kind):
+    ab = kind.startswith("ab")
+    P = SPart("bird_cage", budget="small", mass=1.0, anchor="wall" if not ab else "floor", wall_gap=0.0, flat=True,
+              wear="_w2" if ab else "_w1")
+    if not ab:
+        P.hung = True
+        add_all(P, brackets((0.0,), z=0.36))
+        top = EAVE_Y - 0.30
+        P.add(cord((0.0, EAVE_Y, 0.33), (0.0, top + 0.32, 0.33), 0.004))
+        add_all(P, xfs(cage(door_open=kind == "open"), t=(0.0, top, 0.33)))
+        P.extra["hang_y"] = EAVE_Y
+        P.dim("cage_h", 0.32, 0.32, tol=0.01)
+        P.dim("bottom_y", 2.10, top, tol=0.05)
+    else:   # ab_fallen: the cord rotted, the cage fell and lies skewed on its side, paper torn
+        c = cage(wear="_w2", door_open=True, torn=True)
+        c = xfs(c, rz=90.0, rx=12.0)
+        add_all(P, rest(c, 0.0))
+        P.add(litter(591, 0.0, 0.1, 0.35))
+        P.dim("cage_h", 0.32, 0.32, tol=0.01)
+    P.notes.append("empty songbird cage (bush warbler, BUILDING_LIST 824): the bird is gone; visual only")
+    return P
+
+
+PROPS.append({"id": "jp_s_bird_cage", "cat": CAT, "ll": "#59", "mount": "eaves", "tiers": [2, 3],
+              "models": [
+                  M("jp_s_bird_cage_hung", "hung", "intact", "Empty bird cage hung under the eaves",
+                    lambda: bird_cage("hung")),
+                  M("jp_s_bird_cage_open", "hung", "abandoned", "Empty bird cage, door open, feeder tipped",
+                    lambda: bird_cage("open")),
+                  M("jp_s_bird_cage_ab_fallen", "hung", "abandoned", "Bird cage fallen, paper torn",
+                    lambda: bird_cage("ab_fallen"), mount="yard"),
+              ]})
+
+
+# ================================================================================================ 60 bamboo pipe (kakei)
+def trough_wood(x0, x1, z0, z1, h, t=0.04, wear=None, fill=None, broken=False):
+    """A plank trough on the ground: bottom + 4 sides, leaf / silt fill (open vessel: leaves, never water)."""
+    out = [W(x0, x1, 0.0, t, z0, z1, WOOD, vis=(1, 2)),
+           W(x0, x0 + t, t, h, z0, z1, WOOD, vis=(1, 2)), W(x1 - t, x1, t, h, z0, z1, WOOD, vis=(1, 2)),
+           W(x0 + t, x1 - t, t, h, z0, z0 + t, WOOD, vis=(1, 2))]
+    front = W(x0 + t, x1 - t, t, h, z1 - t, z1, WOOD, vis=(1, 2))
+    if broken:
+        front = xf(front, rx=80.0, pivot=(0.0, 0.0, z1))
+        front = rest([front], 0.0)[0]
+    out.append(front)
+    if fill is not None:
+        out.append(leaves(601, (x0 + x1) / 2, (z0 + z1) / 2, 0.9 * min(x1 - x0, z1 - z0) / 2, fill, wear="_w2",
+                          sx=(x1 - x0) / (z1 - z0)))
+    return K.wear_all(out, wear)
+
+
+def kakei(kind):
+    ab = kind.startswith("ab")
+    wear = "_w2" if ab else None
+    P = SPart("kakei", budget="small", mass=40.0, bury=0.37, wear="_w2" if ab else "_w1")
+    for x, H, lean in ((-1.6, 1.0, 0.0), (-0.5, 0.82, -22.0 if ab else 0.0)):
+        ss, c = stake_pair(x, H, lean, wear=wear)
+        ss = [s for s in ss if 3 not in s.vis]
+        add_all(P, ss)
+        P.add(c)
+    if kind in ("trough", "stone"):
+        P.add(pole((-2.6, 1.14, 0.0), (0.45, 0.66, 0.0), 0.04, BAMBOO, n=6, vis=(1, 2)))
+        if kind == "trough":
+            add_all(P, trough_wood(0.25, 1.35, -0.18, 0.18, 0.34, fill=0.26))
+            P.add(col(0.25, 1.35, 0.0, 0.34, -0.18, 0.18))
+            P.dim("trough_l", 1.10, 1.10, tol=0.01)
+        else:
+            basin = lathe([(0.26, 0.0), (0.32, 0.18), (0.30, 0.40), (0.24, 0.42), (0.20, 0.30), (0.0, 0.30)], 9, FIELD,
+                          vis=(1,))
+            add_all(P, [xf(basin, t=(0.75, 0.0, 0.0)),
+                        xf(lathe([(0.26, 0.0), (0.32, 0.2), (0.26, 0.42), (0.0, 0.42)], 6, FIELD, vis=(2,),
+                                 smooth=False), t=(0.75, 0.0, 0.0)),
+                        leaves(602, 0.75, 0.0, 0.19, 0.305, wear="_w2"),
+                        K.moss_top(603, 0.75, 0.0, 0.10, 0.42, sx=2.2)])
+            P.add(cyl_col(0.31, 0.0, 0.42, n=8, cx=0.75))
+            P.dim("basin_d", 0.64, 0.64, tol=0.02)
+        P.dim("pipe_l", 3.08, math.hypot(3.05, 0.48), tol=0.05)
+    else:   # ab_broken: the pipe split and fallen in two, the trough dry, its front board off
+        P.add(pole((-2.4, 0.04, 0.35), (-1.0, 0.04, 0.55), 0.04, BAMBOO, n=6, vis=(1, 2), wear="_w2"))
+        P.add(pole((-0.9, 0.9, 0.0), (0.2, 0.04, 0.45), 0.04, BAMBOO, n=6, vis=(1, 2), wear="_w2"))
+        add_all(P, trough_wood(0.25, 1.35, -0.18, 0.18, 0.34, fill=0.08, wear="_w2", broken=True))
+        P.add(col(0.25, 1.35, 0.0, 0.34, -0.18, 0.14))
+        P.add(litter(604, 0.5, 0.4, 0.8, sx=1.6))
+        P.dim("trough_l", 1.10, 1.10, tol=0.01)
+    P.notes.append("rural water without a well: a bamboo pipe (kakei) on crossed stakes into a trough or basin "
+                   "(BUILDING_LIST 1850, 2420); dead world: leaves and silt, no running water")
+    return P
+
+
+PROPS.append({"id": "jp_s_kakei", "cat": CAT, "ll": "#60", "mount": "yard", "tiers": [1, 2],
+              "models": [
+                  M("jp_s_kakei_trough", "trough", "intact", "Bamboo water pipe into a wooden trough",
+                    lambda: kakei("trough")),
+                  M("jp_s_kakei_stone", "stone", "intact", "Bamboo water pipe into a stone basin",
+                    lambda: kakei("stone")),
+                  M("jp_s_kakei_ab_broken", "trough", "abandoned", "Bamboo pipe fallen, trough dry and broken",
+                    lambda: kakei("ab_broken")),
+              ]})
+
+
+# ================================================================================================ 61 stable yard
+def pack_saddle(wear=None):
+    """Nigura: two straw cushions over a horse's back and two wooden arches joined by side bars (0.9 x 0.6)."""
+    out = []
+    for sz in (-1, 1):
+        cu = K.lkit.pillow(0.75, 0.22, 0.10, TAWARA, nx=3, nz=2, wear=wear, vis=(1,))
+        out.append(xf(cu, rx=sz * 62.0, t=(0.0, -0.02, sz * 0.10)))
+    for x in (-0.28, 0.28):
+        for sz in (-1, 1):
+            out.append(beam((x, 0.02, sz * 0.24), (x, 0.20, sz * 0.03), 0.05, 0.035, WOOD, vis=(1,)))
+        out.append(W(x - 0.025, x + 0.025, 0.18, 0.24, -0.05, 0.05, WOOD, vis=(1,)))
+    for sz in (-1, 1):
+        out.append(beam((-0.36, 0.10, sz * 0.15), (0.36, 0.10, sz * 0.15), 0.04, 0.03, WOOD, vis=(1,)))
+    out.append(prism([(-0.02, -0.26), (0.24, 0.0), (-0.02, 0.26)], "x", -0.38, 0.38, TAWARA, vis=(2,)))
+    return K.wear_all(out, wear)
+
+
+def sawhorse(L=1.2, H=0.90, wear=None):
+    out = [W(-L / 2, L / 2, H - 0.08, H, -0.04, 0.04, WOOD, vis=(1, 2))]
+    for x in (-L / 2 + 0.1, L / 2 - 0.1):
+        for sz in (-1, 1):
+            out.append(beam((x, 0.0, sz * 0.30), (x, H - 0.08, sz * 0.02), 0.05, 0.05, WOOD, vis=(1, 2)))
+    return K.wear_all(out, wear)
+
+
+def stable_yard(kind):
+    ab = kind.startswith("ab")
+    wear = "_w2" if ab else None
+    P = SPart("stable_yard", budget="box", res3=True, mass=80.0, bury=0.40, wear="_w2" if ab else "_w1")
+    if kind == "tie_post":
+        P.add(W(-0.07, 0.07, -0.40, 1.30, -0.07, 0.07, WOOD, vis=(1, 2)))
+        P.add(W(-0.07, 0.07, -0.40, 1.30, -0.07, 0.07, WOOD, vis=(3,)))
+        ring = K.lkit.coil(0.0, 0.0, 0.05, 0.008, IRON, n=8, m=3)
+        P.add(xf(ring, t=(0.0, 1.05, 0.07)))
+        add_all(P, rope_path([(0.0, 1.02, 0.12), (0.03, 0.75, 0.16), (0.12, 0.30, 0.20), (0.25, 0.02, 0.35),
+                              (0.55, 0.02, 0.40)], 0.008, ROPE, n=4, wear="_w2"))
+        P.add(col(-0.07, 0.07, -0.40, 1.30, -0.07, 0.07))
+        # a wooden trough on legs beside it
+        tr = trough_wood(0.35, 1.55, -0.20, 0.20, 0.30, fill=0.20)
+        tr = xfs(tr, t=(0.0, 0.35, 0.0))
+        add_all(P, tr)
+        for x in (0.42, 1.48):
+            for sz in (-1, 1):
+                P.add(W(x - 0.03, x + 0.03, 0.0, 0.35, sz * 0.15 - 0.03, sz * 0.15 + 0.03, WOOD, vis=(1, 2)))
+        P.add(W(0.35, 1.55, 0.0, 0.65, -0.2, 0.2, WOOD, vis=(3,)))
+        P.add(col(0.35, 1.55, 0.35, 0.65, -0.20, 0.20))
+        for x in (0.42, 1.48):
+            P.add(col(x - 0.03, x + 0.03, 0.0, 0.345, -0.18, 0.18))
+        P.dim("post_h", 1.30, 1.30, tol=0.01)
+    elif kind in ("saddle_rack", "ab_saddle_fallen"):
+        P.bury = 0.02
+        rk = sawhorse(wear=wear)
+        add_all(P, rk)
+        P.add(W(-0.6, 0.6, 0.0, 0.9, -0.3, 0.3, WOOD, vis=(3,)))
+        if kind == "saddle_rack":
+            sd = xfs(pack_saddle(), t=(0.0, 0.92, 0.0))
+            add_all(P, sd)
+            P.add(hull3([v for s in rk + sd for v in s.verts if 1 in s.vis], WOOD))
+        else:
+            P.add(hull3([v for s in rk for v in s.verts], WOOD))
+            sd = xfs(pack_saddle(wear="_w2"), rz=100.0, ry=25.0)
+            sd = rest(xfs(sd, t=(0.95, 0.0, 0.45)), 0.0)
+            add_all(P, sd)
+            add_all(P, rope_path([(0.6, 0.02, 0.1), (0.4, 0.02, 0.6), (0.1, 0.02, 0.7)], 0.008, ROPE, n=4, wear="_w2"))
+            P.add(litter(611, 0.5, 0.4, 0.7, sx=1.5))
+        P.dim("rack_h", 0.90, 0.90, tol=0.01)
+    else:   # trough_stone: a long cut-stone water trough, leaves and silt inside
+        P.bury = 0.05
+        t = 0.08
+        parts = [W(-0.70, 0.70, -0.05, t, -0.22, 0.22, CUT, vis=(1, 2)),
+                 W(-0.70, -0.70 + t, t, 0.40, -0.22, 0.22, CUT, vis=(1, 2)),
+                 W(0.70 - t, 0.70, t, 0.40, -0.22, 0.22, CUT, vis=(1, 2)),
+                 W(-0.70 + t, 0.70 - t, t, 0.40, -0.22, -0.22 + t, CUT, vis=(1, 2)),
+                 W(-0.70 + t, 0.70 - t, t, 0.40, 0.22 - t, 0.22, CUT, vis=(1, 2))]
+        add_all(P, parts)
+        P.add(leaves(612, 0.0, 0.0, 0.14, 0.30, wear="_w2", sx=4.0))
+        P.add(K.moss_top(613, -0.55, 0.0, 0.10, 0.40, sx=1.0))
+        P.add(W(-0.7, 0.7, -0.05, 0.40, -0.22, 0.22, CUT, vis=(3,)))
+        P.add(col(-0.70, 0.70, -0.05, 0.40, -0.22, 0.22, CUT))
+        P.dim("trough_l", 1.40, 1.40, tol=0.01)
+    P.notes.append("stable yard: tie post with an iron ring, feed trough, pack saddle (nigura) on a rack, stone "
+                   "trough (BUILDING_LIST 550, 971, 2466)")
+    return P
+
+
+PROPS.append({"id": "jp_s_stable_yard", "cat": CAT, "ll": "#61", "mount": "yard", "tiers": [1, 2],
+              "models": [
+                  M("jp_s_stable_yard_tie_post", "tie_post", "intact", "Horse tie post and a feed trough",
+                    lambda: stable_yard("tie_post")),
+                  M("jp_s_stable_yard_saddle_rack", "saddle_rack", "intact", "Pack saddle on a rack",
+                    lambda: stable_yard("saddle_rack")),
+                  M("jp_s_stable_yard_trough_stone", "trough_stone", "intact", "Stone water trough, leaves inside",
+                    lambda: stable_yard("trough_stone"), mount="street"),
+                  M("jp_s_stable_yard_ab_saddle_fallen", "saddle_rack", "abandoned", "Pack saddle fallen off its rack",
+                    lambda: stable_yard("ab_saddle_fallen")),
+              ]})

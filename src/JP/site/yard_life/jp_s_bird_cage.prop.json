@@ -1,0 +1,184 @@
+{
+ "id": "jp_s_bird_cage",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_bird_cage_hung.p3d",
+   "class": "StaticObj_JP_S_Bird_Cage_Hung",
+   "variant": "hung",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Empty bird cage hung under the eaves",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 155,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.15,
+    0.15,
+    2.1,
+    2.42,
+    0.0,
+    0.458
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "cage_h",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bottom_y",
+     "expected": 2.1,
+     "measured": 2.1,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "empty songbird cage (bush warbler, BUILDING_LIST 824): the bird is gone; visual only"
+   ],
+   "hang_y": 2.4,
+   "master": "spikes/L2/out/yard_life/jp_s_bird_cage_hung.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_bird_cage_open.p3d",
+   "class": "StaticObj_JP_S_Bird_Cage_Open",
+   "variant": "hung",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Empty bird cage, door open, feeder tipped",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 140,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.15,
+    0.15,
+    2.1,
+    2.42,
+    0.0,
+    0.45
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "cage_h",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "bottom_y",
+     "expected": 2.1,
+     "measured": 2.1,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "empty songbird cage (bush warbler, BUILDING_LIST 824): the bird is gone; visual only"
+   ],
+   "hang_y": 2.4,
+   "master": "spikes/L2/out/yard_life/jp_s_bird_cage_open.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_bird_cage_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Bird_Cage_Ab_Fallen",
+   "variant": "hung",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Bird cage fallen, paper torn",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 132,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.383,
+    0.359,
+    0.0,
+    0.3,
+    -0.251,
+    0.463
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "cage_h",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "empty songbird cage (bush warbler, BUILDING_LIST 824): the bird is gone; visual only"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_bird_cage_ab_fallen.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#59",
+ "refs_local": []
+}

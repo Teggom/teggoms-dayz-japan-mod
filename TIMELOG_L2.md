@@ -35,3 +35,18 @@
 2026-09-30 14:23:14 | #26 | jp_s_charcoal_bales_row2 | variant (batch) | 5h 7% wk 26%
 2026-09-30 14:23:14 | #27 | jp_s_charcoal_bales_ab_burst | abandoned (batch) | 5h 7% wk 26%
 2026-09-30 14:23:14 | GROUP START | #58 potted plants, #59 bird cage, #60 bamboo pipe + trough, #61 stable yard | - | 5h 7% wk 26%
+2026-09-30 14:26:06 | #28 | jp_s_potted_stand | new model (batch) | 5h 8% wk 26%
+2026-09-30 14:26:06 | #29 | jp_s_potted_pair | variant (batch) | 5h 8% wk 26%
+2026-09-30 14:26:06 | #30 | jp_s_potted_ab_dead | abandoned (batch) | 5h 8% wk 26%
+2026-09-30 14:26:06 | #31 | jp_s_potted_ab_fallen | abandoned (batch) | 5h 8% wk 26%
+2026-09-30 14:26:06 | #32 | jp_s_bird_cage_hung | new model (batch) | 5h 8% wk 26%
+2026-09-30 14:26:06 | #33 | jp_s_bird_cage_open | abandoned (batch) | 5h 8% wk 26%
+2026-09-30 14:26:06 | #34 | jp_s_bird_cage_ab_fallen | abandoned (batch) | 5h 8% wk 26%
+2026-09-30 14:26:06 | #35 | jp_s_kakei_trough | new model (batch) | 5h 8% wk 26%
+2026-09-30 14:26:07 | #36 | jp_s_kakei_stone | variant (batch) | 5h 8% wk 26%
+2026-09-30 14:26:07 | #37 | jp_s_kakei_ab_broken | abandoned (batch) | 5h 8% wk 26%
+2026-09-30 14:26:07 | #38 | jp_s_stable_yard_tie_post | new model (batch) | 5h 8% wk 26%
+2026-09-30 14:26:07 | #39 | jp_s_stable_yard_saddle_rack | variant (batch) | 5h 8% wk 26%
+2026-09-30 14:26:07 | #40 | jp_s_stable_yard_trough_stone | variant (batch) | 5h 8% wk 26%
+2026-09-30 14:26:07 | #41 | jp_s_stable_yard_ab_saddle_fallen | abandoned (batch) | 5h 8% wk 26%
+2026-09-30 14:26:07 | GROUP START | #63 travel gear, #64 palanquin, #65 tenbin spill, #70 bench dressing, #73 stool, #74 footwear | - | 5h 8% wk 26%

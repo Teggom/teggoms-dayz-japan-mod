@@ -1,0 +1,272 @@
+{
+ "id": "jp_s_potted",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [
+  "potted plants on a stepped stand: pine, azalea, chrysanthemums (in bloom = cream heads), weeds; no morning glories (era: LIFE_LAYER_ERA.md #58). Stand = Geometry (one hull); pots visual",
+  "as left: unwatered, the chrysanthemums and azalea dead (jp_m_plant_foliage _w2), the pine green"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_potted_stand.p3d",
+   "class": "StaticObj_JP_S_Potted_Stand",
+   "variant": "stand",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Potted plants on a stepped stand",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 594,
+    "Resolution 2": 80,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.615,
+    0.615,
+    0.0,
+    1.31,
+    -0.343,
+    0.37
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -0.34,
+    0.6,
+    0.34
+   ],
+   "roadway": false,
+   "mass_kg": 25.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stand_w",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "top_step",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_potted_stand.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_potted_pair.p3d",
+   "class": "StaticObj_JP_S_Potted_Pair",
+   "variant": "pair",
+   "state": "intact",
+   "abandoned": false,
+   "display": "A potted pine in a tub and an azalea",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 175,
+    "Resolution 2": 20
+   },
+   "bbox": [
+    -0.207,
+    0.5,
+    0.0,
+    0.6,
+    -0.14,
+    0.217
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pots",
+     "expected": 2,
+     "measured": 2.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_potted_pair.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_potted_ab_dead.p3d",
+   "class": "StaticObj_JP_S_Potted_Ab_Dead",
+   "variant": "stand",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Potted plants dead on their stand, one pot broken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 441,
+    "Resolution 2": 70,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.615,
+    0.615,
+    0.0,
+    1.31,
+    -0.343,
+    0.758
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -0.34,
+    0.6,
+    0.34
+   ],
+   "roadway": false,
+   "mass_kg": 25.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stand_w",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "top_step",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_potted_ab_dead.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_potted_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Potted_Ab_Fallen",
+   "variant": "stand",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Plant stand tipped over, pots spilled",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 378,
+    "Resolution 2": 70,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -1.168,
+    1.047,
+    0.0,
+    0.825,
+    0.199,
+    1.904
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    0.199,
+    0.6,
+    0.978
+   ],
+   "roadway": false,
+   "mass_kg": 25.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stand_w",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "top_step",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/yard_life/jp_s_potted_ab_fallen.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#58",
+ "refs_local": []
+}

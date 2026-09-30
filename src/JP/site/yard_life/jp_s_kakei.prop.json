@@ -1,0 +1,218 @@
+{
+ "id": "jp_s_kakei",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_kakei_trough.p3d",
+   "class": "StaticObj_JP_S_Kakei_Trough",
+   "variant": "trough",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Bamboo water pipe into a wooden trough",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 80,
+    "Resolution 2": 76,
+    "Geometry": 74,
+    "View Geometry": 74,
+    "Fire Geometry": 74
+   },
+   "bbox": [
+    -2.606,
+    1.35,
+    -0.364,
+    1.313,
+    -0.511,
+    0.511
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.635,
+    -0.511,
+    1.35,
+    0.511
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "trough_l",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "pipe_l",
+     "expected": 3.08,
+     "measured": 3.0875,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rural water without a well: a bamboo pipe (kakei) on crossed stakes into a trough or basin (BUILDING_LIST 1850, 2420); dead world: leaves and silt, no running water"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_kakei_trough.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_kakei_stone.p3d",
+   "class": "StaticObj_JP_S_Kakei_Stone",
+   "variant": "stone",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Bamboo water pipe into a stone basin",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 98,
+    "Resolution 2": 64,
+    "Geometry": 82,
+    "View Geometry": 82,
+    "Fire Geometry": 82
+   },
+   "bbox": [
+    -2.606,
+    1.051,
+    -0.364,
+    1.313,
+    -0.511,
+    0.511
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.635,
+    -0.511,
+    1.036,
+    0.511
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "basin_d",
+     "expected": 0.64,
+     "measured": 0.64,
+     "tol": 0.02,
+     "source": "build_list"
+    },
+    {
+     "name": "pipe_l",
+     "expected": 3.08,
+     "measured": 3.0875,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rural water without a well: a bamboo pipe (kakei) on crossed stakes into a trough or basin (BUILDING_LIST 1850, 2420); dead world: leaves and silt, no running water"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_kakei_stone.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_kakei_ab_broken.p3d",
+   "class": "StaticObj_JP_S_Kakei_Ab_Broken",
+   "variant": "trough",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Bamboo pipe fallen, trough dry and broken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 93,
+    "Resolution 2": 86,
+    "Geometry": 74,
+    "View Geometry": 74,
+    "Fire Geometry": 74
+   },
+   "bbox": [
+    -2.405,
+    1.546,
+    -0.363,
+    1.313,
+    -0.511,
+    1.086
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.635,
+    -0.511,
+    1.35,
+    0.511
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "trough_l",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rural water without a well: a bamboo pipe (kakei) on crossed stakes into a trough or basin (BUILDING_LIST 1850, 2420); dead world: leaves and silt, no running water"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_kakei_ab_broken.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#60",
+ "refs_local": []
+}

@@ -1,0 +1,269 @@
+{
+ "id": "jp_s_stable_yard",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "yard_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_stable_yard_tie_post.p3d",
+   "class": "StaticObj_JP_S_Stable_Yard_Tie_Post",
+   "variant": "tie_post",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Horse tie post and a feed trough",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 112,
+    "Resolution 2": 60,
+    "Resolution 3": 12,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.07,
+    1.55,
+    -0.4,
+    1.3,
+    -0.2,
+    0.406
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.07,
+    -0.2,
+    1.55,
+    0.2
+   ],
+   "roadway": false,
+   "mass_kg": 80.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 1.3,
+     "measured": 1.3,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "stable yard: tie post with an iron ring, feed trough, pack saddle (nigura) on a rack, stone trough (BUILDING_LIST 550, 971, 2466)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_stable_yard_tie_post.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_stable_yard_saddle_rack.p3d",
+   "class": "StaticObj_JP_S_Stable_Yard_Saddle_Rack",
+   "variant": "saddle_rack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Pack saddle on a rack",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 112,
+    "Resolution 2": 35,
+    "Resolution 3": 6,
+    "Geometry": 33,
+    "View Geometry": 33,
+    "Fire Geometry": 33
+   },
+   "bbox": [
+    -0.6,
+    0.6,
+    -0.008,
+    1.16,
+    -0.324,
+    0.324
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -0.324,
+    0.6,
+    0.324
+   ],
+   "roadway": false,
+   "mass_kg": 80.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "rack_h",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "stable yard: tie post with an iron ring, feed trough, pack saddle (nigura) on a rack, stone trough (BUILDING_LIST 550, 971, 2466)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_stable_yard_saddle_rack.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_stable_yard_trough_stone.p3d",
+   "class": "StaticObj_JP_S_Stable_Yard_Trough_Stone",
+   "variant": "trough_stone",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone water trough, leaves inside",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 38,
+    "Resolution 2": 30,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.7,
+    0.7,
+    -0.05,
+    0.403,
+    -0.22,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.7,
+    -0.22,
+    0.7,
+    0.22
+   ],
+   "roadway": false,
+   "mass_kg": 80.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "trough_l",
+     "expected": 1.4,
+     "measured": 1.4,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "stable yard: tie post with an iron ring, feed trough, pack saddle (nigura) on a rack, stone trough (BUILDING_LIST 550, 971, 2466)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_stable_yard_trough_stone.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\yard_life\\jp_s_stable_yard_ab_saddle_fallen.p3d",
+   "class": "StaticObj_JP_S_Stable_Yard_Ab_Saddle_Fallen",
+   "variant": "saddle_rack",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Pack saddle fallen off its rack",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 127,
+    "Resolution 2": 35,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.6,
+    1.554,
+    -0.008,
+    0.9,
+    -0.324,
+    0.982
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -0.324,
+    0.6,
+    0.324
+   ],
+   "roadway": false,
+   "mass_kg": 80.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "rack_h",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "stable yard: tie post with an iron ring, feed trough, pack saddle (nigura) on a rack, stone trough (BUILDING_LIST 550, 971, 2466)"
+   ],
+   "master": "spikes/L2/out/yard_life/jp_s_stable_yard_ab_saddle_fallen.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#61",
+ "refs_local": []
+}
