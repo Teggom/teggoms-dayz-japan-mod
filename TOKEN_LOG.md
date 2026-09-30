@@ -13,6 +13,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 ~04:48 UTC | B2 | wave-1 parts: koyagumi, party wall/roof end/corner/seam cap, stall, stair, half-door, floor pit + sunoko (10 parts) | **715k** (176 tool calls) | 72 min | **19%** (5-hour 9%). Only parts 2-8 ran after the 18% baseline |
 | 2026-09-30 09:10 (local, -04:00) | B3a (baseline) | launched: 24 interior props, one agent, per-model time log in TIMELOG_B3a.md | - | - | before: **19%** (5-hour 1%) |
 | 2026-09-30 09:52 (local) | B3a | 24 interior props = 110 models (24 new, 36 variants, 50 abandoned), jp_furniture.pbo | **498k** (160 tool calls) | 42 min | **21%** (5-hour 10%): B3a alone = ~2% weekly, ~9% of a 5-hour window |
+| 2026-09-30 10:08 (local) | B3b (baseline) | launched: all 20 W1 outdoor items (122 models), one agent, time log in TIMELOG_B3b.md | - | - | before: **21%** (5-hour 10%) |
 
 ## B3a time log, summarised (TIMELOG_B3a.md)
 
