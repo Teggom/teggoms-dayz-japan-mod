@@ -244,5 +244,16 @@
   - **Open:** the grand inn's storey source (Ohashiya 1716) was cited from memory: verify before it ships to a map.
     No navmesh. Sheets esearch/production/contact_sheets/c1_*.jpg.
 - 2026-09-30: **C2 launched** (rural shells + hamlet; the grand-inn storey source check folded in, per Stephen).
+- 2026-09-30: **C2 DONE** (opus-high, 658k tokens / 63 min). Commits 6541883 .. 02e984a; spikes/C2/C2_PROGRESS.md.
+  - 21 rural shells, 1,050 checks, 0 failures: Kanto farmhouse 4, Kinai farmhouse 4 (all with the ox stall; yamato-mune
+    takahe on one), hut east 4, hut west 5, shed/barn 4. Template jpparts/templates/rural.py (kanto, kinai, hut_east,
+    hut_west, shed); each shell lists its fittings for C3 (irori pit + hook point, kamado spot, stall).
+  - Budgets: farmhouses (large) worst 11,422 / 4,268 / 1,494; huts + sheds (standard) worst 5,371 / 1,425 / 509.
+  - Hamlet on the island: west yard x 930-970, z 999-1048 (2 farmhouses, 3 huts, 2 sheds). jp_buildings.pbo 64.6 MB.
+  - Not built: Kinai kabata pit (needs running water); Kanto kabuto form (post-1730).
+  - **For Stephen: (1) Grand inn:** the Ohashiya is two-storey but dates after the 1809 fire (Toyokawa city, Cultural
+    Heritage Online); 1716 is tradition only; no dated two-storey Tokaido inn before 1730 found. Model unchanged.
+    **(2) G1-6 conflict:** a skirt pent can't sit under a full thatch eave at the kit's wall height, so Kanto walls went
+    up 0.42 m with no pent (Kinai lower roofs are the pents). Judge the look at the wave-1 walk.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.

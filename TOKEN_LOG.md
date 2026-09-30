@@ -26,6 +26,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 16:11 (local) | C1 (baseline) | launched: Phase C wave 1 town shells (60 townhouse units + post-town house + inn, test rows on the island, well diag removal), time log TIMELOG_C1.md | - | - | before: **29%** (5-hour 26%) |
 | 2026-09-30 17:25 (local) | C1 | town shells: 69 townhouse units + 8 post-town houses + 4 inns = 81 shells, 4,717 checks, test street on the island | **532k** (194 tool calls) | 74 min | **31%** (5-hour 40%): C1 alone = ~2% weekly, ~14% of a 5-hour window |
 | 2026-09-30 17:28 (local) | C2 (baseline) | launched: rural template + ~18-25 rural shells + the grand-inn storey source check + a hamlet on the island, time log TIMELOG_C2.md | - | - | before: **31%** (5-hour 42%, resets ~18:40) |
+| 2026-09-30 18:31 (local) | C2 | rural template + 21 rural shells (1,050 checks), grand-inn source check, hamlet on the island | **658k** (257 tool calls) | 63 min | **33%** (5-hour 56%): C2 alone = ~2% weekly, ~14% of a 5-hour window |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
@@ -128,3 +129,22 @@ B0 409k, B1 453k, B2 715k, B3a 498k, B3b 519k, B4 576k, L1 654k, L2 581k = **abo
 
 81 shells in 74 minutes, for about the same tokens as 24 props: once the template can express a building,
 its variants are nearly free.
+
+## C2 time log, summarised (TIMELOG_C2.md, one stretch per family as asked)
+
+| Stretch | What | Shells | Minutes | 5-hour % |
+|---|---|---|---|---|
+| 17:28-17:37 | setup (reading) | - | 9 | 42 -> 44 |
+| 17:37-18:03 | the rural template (5 kinds) + 5 test shells | - | 26 | 44 -> 50 |
+| 18:03-18:05 | DW06 Kanto farmhouse | 4 | 1.5 | 50 |
+| 18:05-18:08 | DW07 Kinai farmhouse with ox | 4 | 3 | 50 |
+| 18:08-18:08 | DW01 hut east | 4 | 0.5 | 50 |
+| 18:08-18:12 | DW30 hut west | 5 | 3.5 | 50 -> 51 |
+| 18:12-18:15 | DW24 shed / barn | 4 | 2.5 | 51 |
+| 18:15-18:16 | grand inn storey source check | - | 1.5 | 51 -> 52 |
+| 18:17-18:21 | hamlet placement + world/mission rebuild | 7 placed | 4 | 52 |
+| 18:21-18:29 | re-runs after shared-code changes | - | 8.5 | 52 -> 55 |
+| 18:29-18:31 | render sheets | - | 1 | 55 -> 56 |
+
+The template was the cost (26 min, ~6% of the 5-hour window); after it, whole building families took 0.5-3.5
+minutes each. Same lesson as C1: build the template once, the variants are nearly free.
