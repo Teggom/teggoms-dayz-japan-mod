@@ -228,5 +228,10 @@
   - TODO: remove the WELL_DIAG diagnostic (F1_PROGRESS.md steps) when no server is running; the test server was
     still up at the time (never stop it; do it on the next pack).
   - Next: Phase C wave 1 (proposal to Stephen; nothing launched without his yes).
+- 2026-09-30: **Phase C wave 1 agreed** (Stephen): C1 = town shells, ALL 60 townhouse units + post-town house (~6-8) +
+  inn (~3-4), bare, with test rows on the island; C2 = rural shells (~18-25: Kanto + Kinai farmhouses, huts east +
+  west, shed) + a farmhouse template + a hamlet on the island; C3 = kura + furnished versions of every wave-1 type
+  (decorator + life layer) + street/yard dressing + ONE bundled walk. Sequential, opus-high, time-logged.
+  **C1 launched** (also removes the WELL_DIAG diagnostic).
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
