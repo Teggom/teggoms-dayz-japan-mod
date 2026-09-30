@@ -32,3 +32,7 @@
 2026-09-30 19:39:45 | GROUP DONE | hamlet dressing | 26 free objects (rice racks, stooks, scarecrow + clappers, persimmon + daikon poles, kakei, lever well, stable yard, charcoal, tools, Jizo + Koshin), kura in the hamlet; 0 problems | C3 | hamlet | 5h 16% wk 35%
 2026-09-30 19:40:18 | GROUP START | re-runs (machiya, shop, toilet, combos, C1 81, C2 21) | C3 | reruns | 5h 16% wk 35%
 2026-09-30 19:49:31 | GROUP DONE | re-runs | 105 buildings 6001 checks 0 failures: machiya 78/78, shop 137/137, toilet 19/19, C1 81 shells (townhouse 69/posttown 8/hatago 4), C2 21 shells, combos 60/60; prop suites not re-run (no shared prop / decor code changed) | C3 | reruns | 5h 16% wk 35%
+2026-09-30 19:49:38 | GROUP START | sheets (kura, rooms, plans, street, hamlet) | C3 | sheets | 5h 16% wk 35%
+2026-09-30 19:51:20 | SHEETS DONE | C3 | c3_kura, c3_rooms (57 room views), c3_plans (17 loot plans), c3_street, c3_hamlet | 5h 19% wk 35%
+2026-09-30 19:51:20 | GROUP DONE | sheets | 5 sheets in research/production/contact_sheets/c3_*.jpg, all looked at | C3 | sheets | 5h 19% wk 35%
+2026-09-30 19:51:20 | GROUP START | checklist (the bundled wave-1 walk) | C3 | checklist | 5h 19% wk 35%
