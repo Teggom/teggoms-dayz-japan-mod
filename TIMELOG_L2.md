@@ -79,3 +79,16 @@
 2026-09-30 14:30:54 | #67 | jp_s_boat_upturned | abandoned (batch) | 5h 9% wk 27%
 2026-09-30 14:30:54 | #68 | jp_s_boat_ab_rotten | abandoned (batch) | 5h 9% wk 27%
 2026-09-30 14:30:54 | GROUP START | #68 fire watch gear, #69 sandals for sale, #71 shop shutters, #72 fallen lantern | - | 5h 9% wk 27%
+2026-09-30 14:33:04 | #69 | jp_s_fire_watch_rack | new model (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #70 | jp_s_fire_watch_ladder_tower | variant (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #71 | jp_s_fire_watch_ab_fallen | abandoned (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #72 | jp_s_sandals_sale_eave | new model (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #73 | jp_s_sandals_sale_stand | variant (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #74 | jp_s_sandals_sale_ab_fallen | abandoned (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #75 | jp_s_amado_half_open | new model (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #76 | jp_s_amado_leaning | abandoned (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #77 | jp_s_amado_fallen | abandoned (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #78 | jp_s_amado_ab_broken | abandoned (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #79 | jp_s_lantern_fallen_chochin | abandoned (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #80 | jp_s_lantern_fallen_andon | abandoned (batch) | 5h 10% wk 27%
+2026-09-30 14:33:04 | #81 | jp_s_lantern_fallen_crushed | abandoned (batch) | 5h 10% wk 27%

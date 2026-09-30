@@ -642,3 +642,291 @@ PROPS.append({"id": "jp_s_boat", "cat": CAT, "ll": "#67", "mount": "shore", "tie
                   M("jp_s_boat_ab_rotten", "plank", "abandoned", "Small boat rotting on the bank, side planks gone",
                     lambda: boat("ab_rotten")),
               ]})
+
+
+# ================================================================================================ 68 fire watch gear
+import props_street as PS         # noqa: E402  B3b (read-only): chochin(), box_lamp()
+
+EAVE_Y = 2.40
+
+
+def fire_hook(L=2.2, wear=None):
+    """Tobiguchi: a long oak pole with an iron hook head (the fireman's tool), built lying along +x."""
+    out = [pole((-L / 2, 0.0, 0.0), (L / 2, 0.0, 0.0), 0.02, WOOD, n=5, vis=(1, 2))]
+    out.append(box(L / 2 - 0.02, L / 2 + 0.06, -0.02, 0.02, -0.012, 0.012, IRON, vis=(1,)))
+    out.append(xf(prism([(0.0, 0.0), (0.02, 0.0), (0.02, -0.13), (-0.01, -0.10)], "z", -0.006, 0.006, IRON, vis=(1,)),
+                  t=(L / 2 + 0.04, 0.0, 0.0)))
+    return K.wear_all(out, wear)
+
+
+def buckets(wear=None, n=3):
+    out = []
+    for k in range(n):
+        b = LW.fire_bucket(wear=wear, mark="oke_hinoyojin" if k % 2 == 0 else "mark_marudai")
+        K.face_text(b, mirror_u=False)        # L1-style text (u already mirrored): face it out
+        out += xfs(b, t=(-0.32 + 0.32 * k, 0.0, 0.0))
+    return out
+
+
+def fire_watch(kind):
+    ab = kind.startswith("ab")
+    wear = "_w2" if ab else None
+    P = SPart("fire_watch", budget="box", res3=True, mass=60.0, bury=0.40, wear="_w2" if ab else "_w1")
+    if kind in ("rack", "ab_fallen"):
+        for x in (-0.65, 0.65):
+            P.add(W(x - 0.05, x + 0.05, -0.40, 2.40, -0.05, 0.05, WOOD, vis=(1, 2)))
+            P.add(col(x - 0.05, x + 0.05, -0.40, 2.40, -0.05, 0.05))
+        roof = W(-0.85, 0.85, 2.40, 2.44, -0.30, 0.30, WOOD, vis=(1, 2))
+        if ab:
+            roof = xf(roof, rz=-14.0, pivot=(-0.7, 2.42, 0.0))
+        P.add(roof)
+        for y in (0.55, 1.95):
+            P.add(W(-0.60, 0.60, y - 0.04, y, -0.05, 0.05, WOOD, vis=(1, 2)))
+            P.add(col(-0.595, 0.595, y - 0.04, y, -0.05, 0.05))
+        P.add(W(-0.60, 0.60, 0.55, 0.58, 0.05, 0.30, WOOD, vis=(1, 2)))          # bucket shelf
+        P.add(col(-0.595, 0.595, 0.55, 0.58, 0.055, 0.30))
+        for x in (-0.4, 0.4):                                                   # pegs for the hook
+            P.add(beam((x, 1.95, 0.05), (x, 1.99, 0.16), 0.025, 0.025, WOOD, vis=(1,)))
+        if kind == "rack":
+            add_all(P, xfs(buckets(), t=(0.0, 0.58, 0.17)))
+            add_all(P, xfs(fire_hook(), t=(0.0, 2.00, 0.13)))
+            ls, lc, _ = ladder_parts_h(2.3)
+            add_all(P, xfs(ls, t=(0.0, 0.0, -0.10)))
+            P.add(xf(lc[0], t=(0.0, 0.0, -0.10)))
+        else:
+            add_all(P, xfs(buckets(wear="_w2", n=1), t=(0.32, 0.58, 0.17)))
+            r = random.Random(681)
+            for k in range(2):
+                b = LW.fire_bucket(wear="_w2", mark="oke_hinoyojin")
+                K.face_text(b, mirror_u=False)
+                b = rest(xfs(b, rx=90.0, ry=r.uniform(0, 360)), 0.0)
+                add_all(P, xfs(b, t=(-0.6 + 0.9 * k, 0.0, 0.8 + 0.3 * k)))
+            add_all(P, xfs(fire_hook(wear="_w2"), ry=20.0, t=(0.1, 0.02, 1.3)))
+            ls, lc, _ = ladder_parts_h(2.3, wear="_w2")
+            vs, cs = K.lkit.place_group(ls, lc, [dict(rx=90.0), dict(ry=70.0, t=(1.6, 0.0, 0.4))])
+            add_all(P, vs + cs)
+            P.add(litter(682, 0.3, 0.8, 1.0, sx=1.5))
+        P.add(W(-0.7, 0.7, -0.4, 2.44, -0.3, 0.3, WOOD, vis=(3,)))
+        P.dim("rack_w", 1.40, 1.40, tol=0.01)
+        P.dim("buckets", 3, 3, tol=0)
+        P.notes.append("fire gear at a street corner: buckets marked 'fire, take care' (火之用心), a fire hook "
+                       "(tobiguchi), a ladder, under a board roof (Kyoho town firemen; BUILDING_LIST 390, 5.9)")
+    else:   # ladder_tower: the fire-watch ladder with its alarm bell (hinomi-hashigo, Kyoho), about 6 m
+        P.budget = "medium"
+        P.bury = 0.52
+        ls, lc, _ = ladder_parts_h(6.3, y0=-0.5)
+        add_all(P, ls + lc)
+        for sx in (-1, 1):                    # two raking braces
+            P.add(pole((sx * 1.4, -0.5, -1.2), (sx * 0.2, 4.8, -0.03), 0.045, WOOD, n=6, vis=(1, 2)))
+        P.add(col_solid(beam((-1.4, -0.5, -1.2), (-0.28, 4.4, -0.08), 0.08, 0.08, WOOD)))
+        P.add(col_solid(beam((1.4, -0.5, -1.2), (0.28, 4.4, -0.08), 0.08, 0.08, WOOD)))
+        P.add(W(-0.40, 0.40, 5.80, 5.84, -0.35, 0.35, WOOD, vis=(1, 2)))       # the little roof over the bell
+        for sx in (-1, 1):
+            P.add(W(sx * 0.21 - 0.025, sx * 0.21 + 0.025, 5.5, 5.80, -0.02, 0.02, WOOD, vis=(1,)))
+        bell = lathe([(0.0, 0.0), (0.13, 0.0), (0.11, 0.08), (0.09, 0.26), (0.05, 0.30), (0.0, 0.31)], 10, IRON,
+                     vis=(1, 2))
+        P.add(xf(bell, t=(0.0, 5.33, 0.0)))
+        P.add(cord((0.0, 5.64, 0.0), (0.0, 5.80, 0.0), 0.008))
+        P.add(pole((0.10, 5.30, 0.05), (0.32, 5.05, 0.10), 0.012, WOOD, n=4, vis=(1,)))   # the striker, hung
+        P.add(W(-0.25, 0.25, -0.5, 5.84, -0.05, 0.05, WOOD, vis=(3,)))
+        P.dim("height", 6.3, 5.84 + 0.5, tol=0.1)
+        P.notes.append("fire-watch ladder with an alarm bell (Kyoho fire rules, PLAYBOOK 1 / T12); not climbable")
+    return P
+
+
+def ladder_parts_h(L, wear=None, y0=0.0):
+    """A wooden ladder standing on y0 (the B3b-style rails and rungs; one Geometry slab)."""
+    out = []
+    for sx in (-1, 1):
+        out.append(W(sx * 0.21 - 0.03, sx * 0.21 + 0.03, y0, y0 + L, -0.02, 0.02, WOOD, vis=(1, 2)))
+    n = int(L / 0.30)
+    for k in range(1, n + 1):
+        y = y0 + 0.30 * k - 0.05
+        out.append(pole((-0.21, y, 0.0), (0.21, y, 0.0), 0.016, WOOD, n=5, vis=(1,)))
+    cols = [col(-0.25, 0.25, y0, y0 + L, -0.03, 0.03)]
+    return K.wear_all(out, wear), cols, n
+
+
+PROPS.append({"id": "jp_s_fire_watch", "cat": CAT, "ll": "#68", "mount": "street", "tiers": [2, 3],
+              "models": [
+                  M("jp_s_fire_watch_rack", "rack", "intact", "Fire gear rack: buckets, fire hook, ladder",
+                    lambda: fire_watch("rack")),
+                  M("jp_s_fire_watch_ladder_tower", "tower", "intact", "Fire-watch ladder with an alarm bell",
+                    lambda: fire_watch("ladder_tower")),
+                  M("jp_s_fire_watch_ab_fallen", "rack", "abandoned", "Fire gear rack, ladder and buckets fallen",
+                    lambda: fire_watch("ab_fallen")),
+              ]})
+
+
+# ================================================================================================ 69 sandals for sale
+def sandals_sale(kind):
+    ab = kind.startswith("ab")
+    P = SPart("sandals_sale", budget="box", mass=6.0, wear="_w2" if ab else "_w1")
+    if kind == "eave":
+        P.anchor, P.wall_gap, P.flat, P.need = "wall", 0.0, True, ()
+        P.hung = True
+        Z, py = 0.34, EAVE_Y - 0.25
+        add_all(P, [beam((x, EAVE_Y, 0.0), (x, EAVE_Y, Z + 0.04), 0.035, 0.035, DARK, vis=(1, 2)) for x in (-0.7, 0.7)])
+        P.add(pole((-0.85, py, Z), (0.85, py, Z), 0.016, BAMBOO, n=5, vis=(1, 2)))
+        for x in (-0.7, 0.7):
+            P.add(cord((x, EAVE_Y, Z), (x, py + 0.016, Z), 0.005))
+        for k in range(5):
+            x = -0.56 + 0.28 * k
+            add_all(P, LW.sandal_bunch(x, py - 0.016, Z, n=3, seed=690 + k))
+        P.add(W(-0.7, 0.7, py - 0.55, py, Z - 0.03, Z + 0.03, MUSHIRO, vis=(2,)))
+        P.extra["hang_y"] = EAVE_Y
+        P.dim("bunches", 5, 5, tol=0)
+    elif kind == "stand":
+        for x in (-0.75, 0.75):
+            P.add(W(x - 0.035, x + 0.035, 0.0, 1.75, -0.035, 0.035, WOOD, vis=(1, 2)))
+            P.add(col(x - 0.035, x + 0.035, 0.0, 1.75, -0.035, 0.035))
+            P.add(W(x - 0.035, x + 0.035, 0.0, 0.06, -0.25, 0.25, WOOD, vis=(1, 2)))
+            P.add(col(x - 0.035, x + 0.035, 0.0, 0.06, -0.25, -0.04))
+            P.add(col(x - 0.035, x + 0.035, 0.0, 0.06, 0.04, 0.25))
+        P.add(pole((-0.85, 1.70, 0.0), (0.85, 1.70, 0.0), 0.02, BAMBOO, n=5, vis=(1, 2)))
+        for k in range(4):
+            add_all(P, LW.sandal_bunch(-0.45 + 0.3 * k, 1.68, 0.02, n=3, seed=695 + k))
+        P.add(W(-0.6, 0.6, 1.1, 1.68, -0.03, 0.03, MUSHIRO, vis=(2,)))
+        P.dim("bunches", 4, 4, tol=0)
+    else:   # ab_fallen: the rack blown over, the sandals rotting in the leaves
+        P.flat, P.need = True, ()
+        P.add(pole((-0.85, 0.02, 0.1), (0.85, 0.02, 0.4), 0.02, BAMBOO, n=5, vis=(1, 2), wear="_w2"))
+        r = random.Random(698)
+        for k in range(6):
+            s = LW.waraji(wear="_w2", loops=k % 2 == 0)
+            add_all(P, xfs(s, ry=r.uniform(0, 360), t=(r.uniform(-0.8, 0.8), 0.0, r.uniform(0.3, 1.0))))
+        bb = LW.sandal_bunch(0.0, 0.0, 0.0, n=3, seed=699, wear="_w2")
+        add_all(P, rest(xfs(bb, rx=-90.0, t=(0.3, 0.0, 0.6)), 0.0))
+        P.add(litter(699, 0.0, 0.6, 0.8, sx=1.5))
+        P.add(W(-0.8, 0.8, 0.0, 0.03, 0.1, 1.0, MUSHIRO, vis=(2,)))
+        P.dim("pieces", 7, 7, tol=0)
+    P.notes.append("straw sandals (waraji) hung for sale outside a tea house (BUILDING_LIST 5: 24 entries)")
+    return P
+
+
+PROPS.append({"id": "jp_s_sandals_sale", "cat": CAT, "ll": "#69", "mount": "street", "tiers": [1, 2],
+              "models": [
+                  M("jp_s_sandals_sale_eave", "eave", "intact", "Straw sandals hung for sale under the eaves",
+                    lambda: sandals_sale("eave"), mount="eaves"),
+                  M("jp_s_sandals_sale_stand", "stand", "intact", "Straw sandals for sale on a rack",
+                    lambda: sandals_sale("stand")),
+                  M("jp_s_sandals_sale_ab_fallen", "stand", "abandoned", "Sandal rack blown over, sandals rotting",
+                    lambda: sandals_sale("ab_fallen")),
+              ]})
+
+
+# ================================================================================================ 71 shop shutters (amado)
+def amado_panel(wear=None, split=False):
+    """One rain shutter 0.91 x 1.75 x 0.03: vertical boards in a frame with three cross battens (built standing on
+    the origin, face +z)."""
+    w, h, t = 0.90, 1.75, 0.03
+    out = [W(-w / 2, w / 2, 0.0, h, -t / 2, t / 2, DARK, vis=(1, 2))]
+    for y in (0.06, h / 2, h - 0.06):
+        out.append(W(-w / 2 + 0.03, w / 2 - 0.03, y - 0.03, y + 0.03, t / 2, t / 2 + 0.012, DARK, vis=(1,)))
+    for sx in (-1, 1):
+        out.append(W(sx * w / 2 - 0.035 * (sx > 0), sx * w / 2 + 0.035 * (sx < 0), 0.0, h, t / 2, t / 2 + 0.012, DARK,
+                     vis=(1,)))
+    if split:
+        out = [s for s in out]
+    return K.wear_all(out, wear)
+
+
+def amado(kind):
+    ab = kind.startswith("ab")
+    P = SPart("amado", budget="small", mass=15.0, anchor="wall", wall_gap=0.0, wear="_w2" if ab else "_w1")
+    rails = [W(-0.95, 0.95, 0.0, 0.05, 0.0, 0.10, DARK, vis=(1, 2)),
+             W(-0.95, 0.95, 1.80, 1.86, 0.0, 0.10, DARK, vis=(1, 2))]
+    if kind == "half_open":
+        add_all(P, rails)
+        P.add(col(-0.95, 0.95, 0.0, 0.05, 0.0, 0.10, DARK))
+        for x, z in ((-0.455, 0.03), (-0.30, 0.07)):
+            add_all(P, xfs(amado_panel(), t=(x, 0.05, z)))
+            P.add(col(x - 0.45, x + 0.45, 0.05, 1.80, z - 0.015, z + 0.015, DARK))
+        P.dim("run", 1.82, 1.90, tol=0.1)
+        P.notes.append("a 1-ken shutter run half open: two amado slid together to the left; the right half open")
+    elif kind == "leaning":
+        vs, cs = lean_to_wall_s(amado_panel(), 1.75, 12.0, cols=[col(-0.45, 0.45, 0.0, 1.75, -0.015, 0.027, DARK)])
+        add_all(P, vs + cs)
+        P.dim("panel_h", 1.75, 1.75, tol=0.01)
+    else:
+        P.anchor = "floor"
+        if kind == "fallen":
+            pn = xfs(amado_panel(wear="_w2"), rx=-90.0, t=(0.0, 0.015, 1.9))
+            add_all(P, pn)
+            P.add(col(-0.45, 0.45, 0.0, 0.042, 0.15, 1.9, DARK))
+            P.add(litter(711, 0.0, 1.0, 0.9, sx=1.2, sz=1.4))
+        else:   # ab_broken: the fallen shutter snapped across, the two halves askew
+            pn = amado_panel(wear="_w2")
+            lo = [s for s in pn if s.bbox()[3] <= 0.9]
+            hi = [s for s in pn if s.bbox()[2] >= 0.85]
+            mid = [s for s in pn if s not in lo and s not in hi]
+            lo = xfs([xf(s) for s in lo] + [W(-0.45, 0.45, 0.0, 0.87, -0.015, 0.015, DARK, vis=(1, 2))], rx=-90.0,
+                     t=(0.0, 0.015, 0.0))
+            hi = xfs([W(-0.45, 0.45, 0.88, 1.75, -0.015, 0.015, DARK, vis=(1, 2))] +
+                     [s for s in pn if s.bbox()[2] >= 0.85], rx=-90.0, ry=18.0, t=(0.15, 0.03, 0.1))
+            add_all(P, K.wear_all(lo + hi, "_w2"))
+            P.add(col(-0.45, 0.45, 0.0, 0.03, 0.0, 0.87, DARK))
+            P.add(litter(712, 0.0, 0.9, 0.9, sx=1.2, sz=1.4))
+        ground(P)
+        P.dim("panel_w", 0.90, 0.90, tol=0.01)
+    return P
+
+
+def lean_to_wall_s(ss, L, theta, top_z=0.028, cols=()):
+    a = math.radians(theta)
+    d = top_z + L * math.sin(a)
+    vs = xfs(ss, rx=-theta, t=(0.0, 0.0, d))
+    cs = xfs(list(cols), rx=-theta, t=(0.0, 0.0, d))
+    lo = min(v[1] for s in vs for v in s.verts)
+    return xfs(vs, t=(0.0, -lo, 0.0)), xfs(cs, t=(0.0, -lo, 0.0))
+
+
+PROPS.append({"id": "jp_s_amado", "cat": CAT, "ll": "#71", "mount": "street", "tiers": [2, 3],
+              "notes": ["shop rain shutters (amado, BUILDING_LIST 776); wall pieces: the facade is z = 0"],
+              "models": [
+                  M("jp_s_amado_half_open", "run", "intact", "Shop shutters half open (two slid together)",
+                    lambda: amado("half_open")),
+                  M("jp_s_amado_leaning", "panel", "abandoned", "A shop shutter leaned against the front",
+                    lambda: amado("leaning")),
+                  M("jp_s_amado_fallen", "panel", "abandoned", "A shop shutter fallen flat in the street",
+                    lambda: amado("fallen")),
+                  M("jp_s_amado_ab_broken", "panel", "abandoned", "A fallen shop shutter snapped in two",
+                    lambda: amado("ab_broken")),
+              ]})
+
+
+# ================================================================================================ 72 fallen lantern
+def lantern_fallen(kind):
+    P = SPart("lantern_fallen", budget="small", mass=1.0, flat=True, wear="_w2")
+    if kind == "chochin":
+        ch = PS.chochin(0.17, 0.55, "chochin_honcho", wear="_w2", text_wear="_w1")
+        K.face_text(ch, mirror_u=True)        # B3b-style text: face it out and read it right
+        ch = rest(xfs(ch, rz=88.0, ry=-25.0), 0.0)
+        add_all(P, ch)
+        P.dim("lantern_h", 0.55, 0.55, tol=0.01)
+    elif kind == "andon":
+        lamp = PS.box_lamp(0.30, 0.15, 0.45, "kanban_oyasumidokoro", wear="_w2", text_wear="_w1")
+        K.face_text(lamp, mirror_u=True)
+        lamp = rest(xfs(lamp, rx=-88.0), 0.0)            # fallen on its back, the text up
+        add_all(P, lamp)
+        P.dim("lamp_h", 0.45, 0.45, tol=0.01)
+    else:   # crushed: a crest lantern trodden flat against the gutter edge (L1's crest lantern)
+        ch = LW.chochin(0.15, 0.48, "crest_igeta", wear="_w2", text_wear="_w2", both=False)
+        K.face_text(ch, mirror_u=False)
+        ch = rest(xfs(ch, rz=90.0, ry=40.0), 0.0)
+        add_all(P, ch)
+        P.dim("lantern_h", 0.48, 0.48, tol=0.01)
+    P.add(litter(720 + len(kind), 0.0, 0.0, 0.5))
+    P.notes.append("a paper lantern fallen in the street (G1 A3 answer 1: kept, weathered); never emissive")
+    return P
+
+
+PROPS.append({"id": "jp_s_lantern_fallen", "cat": CAT, "ll": "#72", "mount": "street", "tiers": [2, 3],
+              "models": [
+                  M("jp_s_lantern_fallen_chochin", "chochin", "abandoned", "A torn paper lantern fallen in the street",
+                    lambda: lantern_fallen("chochin")),
+                  M("jp_s_lantern_fallen_andon", "andon", "abandoned", "A box lamp fallen on its back",
+                    lambda: lantern_fallen("andon")),
+                  M("jp_s_lantern_fallen_crushed", "crest", "abandoned", "A crest lantern trodden flat",
+                    lambda: lantern_fallen("crushed")),
+              ]})

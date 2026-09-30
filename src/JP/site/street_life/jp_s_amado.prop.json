@@ -1,0 +1,261 @@
+{
+ "id": "jp_s_amado",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "street_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [
+  "shop rain shutters (amado, BUILDING_LIST 776); wall pieces: the facade is z = 0"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_amado_half_open.p3d",
+   "class": "StaticObj_JP_S_Amado_Half_Open",
+   "variant": "run",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shop shutters half open (two slid together)",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 84,
+    "Resolution 2": 24,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.95,
+    0.95,
+    0.0,
+    1.86,
+    0.0,
+    0.1
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.95,
+    0.0,
+    0.95,
+    0.1
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "run",
+     "expected": 1.82,
+     "measured": 1.9,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a 1-ken shutter run half open: two amado slid together to the left; the right half open"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_amado_half_open.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_amado_leaning.p3d",
+   "class": "StaticObj_JP_S_Amado_Leaning",
+   "variant": "panel",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "A shop shutter leaned against the front",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 36,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.45,
+    0.45,
+    0.0,
+    1.72,
+    0.013,
+    0.418
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.45,
+    0.013,
+    0.45,
+    0.418
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "panel_h",
+     "expected": 1.75,
+     "measured": 1.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/street_life/jp_s_amado_leaning.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_amado_fallen.p3d",
+   "class": "StaticObj_JP_S_Amado_Fallen",
+   "variant": "panel",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "A shop shutter fallen flat in the street",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 39,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.983,
+    1.141,
+    0.0,
+    0.042,
+    -0.529,
+    2.313
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.45,
+    0.15,
+    0.45,
+    1.9
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "panel_w",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/street_life/jp_s_amado_fallen.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_amado_ab_broken.p3d",
+   "class": "StaticObj_JP_S_Amado_Ab_Broken",
+   "variant": "panel",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "A fallen shop shutter snapped in two",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 27,
+    "Resolution 2": 12,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.022,
+    1.119,
+    0.0,
+    0.057,
+    -1.703,
+    2.215
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.45,
+    0.0,
+    0.45,
+    0.87
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "panel_w",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/L2/out/street_life/jp_s_amado_ab_broken.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#71",
+ "refs_local": []
+}

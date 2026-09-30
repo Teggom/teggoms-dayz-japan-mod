@@ -1,0 +1,226 @@
+{
+ "id": "jp_s_fire_watch",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "street_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_fire_watch_rack.p3d",
+   "class": "StaticObj_JP_S_Fire_Watch_Rack",
+   "variant": "rack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fire gear rack: buckets, fire hook, ladder",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 363,
+    "Resolution 2": 93,
+    "Resolution 3": 6,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "bbox": [
+    -1.1,
+    1.16,
+    -0.4,
+    2.44,
+    -0.3,
+    0.305
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.7,
+    -0.13,
+    0.7,
+    0.3
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:mark_marudai",
+    "decal_sumi_text:oke_hinoyojin"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "rack_w",
+     "expected": 1.4,
+     "measured": 1.4,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "buckets",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "fire gear at a street corner: buckets marked 'fire, take care' (火之用心), a fire hook (tobiguchi), a ladder, under a board roof (Kyoho town firemen; BUILDING_LIST 390, 5.9)"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_fire_watch_rack.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_fire_watch_ladder_tower.p3d",
+   "class": "StaticObj_JP_S_Fire_Watch_Ladder_Tower",
+   "variant": "tower",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fire-watch ladder with an alarm bell",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 300,
+    "Resolution 2": 88,
+    "Resolution 3": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -1.443,
+    1.443,
+    -0.514,
+    5.84,
+    -1.243,
+    0.35
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.455,
+    -1.255,
+    1.455,
+    0.03
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 6.3,
+     "measured": 6.34,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "fire-watch ladder with an alarm bell (Kyoho fire rules, PLAYBOOK 1 / T12); not climbable"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_fire_watch_ladder_tower.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_fire_watch_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Fire_Watch_Ab_Fallen",
+   "variant": "rack",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Fire gear rack, ladder and buckets fallen",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 366,
+    "Resolution 2": 93,
+    "Resolution 3": 6,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "bbox": [
+    -1.507,
+    1.811,
+    -0.4,
+    2.476,
+    -0.3,
+    1.858
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.7,
+    -0.05,
+    1.686,
+    1.422
+   ],
+   "roadway": false,
+   "mass_kg": 60.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:oke_hinoyojin"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "rack_w",
+     "expected": 1.4,
+     "measured": 1.4,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "buckets",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "fire gear at a street corner: buckets marked 'fire, take care' (火之用心), a fire hook (tobiguchi), a ladder, under a board roof (Kyoho town firemen; BUILDING_LIST 390, 5.9)"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_fire_watch_ab_fallen.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#68",
+ "refs_local": []
+}

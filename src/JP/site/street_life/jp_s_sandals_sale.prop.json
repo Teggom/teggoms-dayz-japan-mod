@@ -1,0 +1,181 @@
+{
+ "id": "jp_s_sandals_sale",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "street_life",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_sandals_sale_eave.p3d",
+   "class": "StaticObj_JP_S_Sandals_Sale_Eave",
+   "variant": "eave",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw sandals hung for sale under the eaves",
+   "anchor": "wall",
+   "wall_gap": 0.0,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 356,
+    "Resolution 2": 27
+   },
+   "bbox": [
+    -0.85,
+    0.85,
+    1.6,
+    2.417,
+    0.0,
+    0.388
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bunches",
+     "expected": 5,
+     "measured": 5.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "straw sandals (waraji) hung for sale outside a tea house (BUILDING_LIST 5: 24 entries)"
+   ],
+   "hang_y": 2.4,
+   "master": "spikes/L2/out/street_life/jp_s_sandals_sale_eave.p3d",
+   "mount": "eaves",
+   "mount_note": "under the eaves of a house or shop: the facade is z = 0, y = 0 at the wall foot, hangs from hang_y (move y to the real eave / beam), or stands on the veranda edge",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_sandals_sale_stand.p3d",
+   "class": "StaticObj_JP_S_Sandals_Sale_Stand",
+   "variant": "stand",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw sandals for sale on a rack",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 293,
+    "Resolution 2": 39,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "bbox": [
+    -0.85,
+    0.85,
+    0.0,
+    1.75,
+    -0.25,
+    0.25
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.785,
+    -0.25,
+    0.785,
+    0.25
+   ],
+   "roadway": false,
+   "mass_kg": 6.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "bunches",
+     "expected": 4,
+     "measured": 4.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "straw sandals (waraji) hung for sale outside a tea house (BUILDING_LIST 5: 24 entries)"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_sandals_sale_stand.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    1,
+    2
+   ]
+  },
+  {
+   "p3d": "\\JP\\site\\street_life\\jp_s_sandals_sale_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Sandals_Sale_Ab_Fallen",
+   "variant": "stand",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Sandal rack blown over, sandals rotting",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 149,
+    "Resolution 2": 15
+   },
+   "bbox": [
+    -1.08,
+    1.126,
+    0.0,
+    0.057,
+    -0.288,
+    1.36
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "pieces",
+     "expected": 7,
+     "measured": 7.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "straw sandals (waraji) hung for sale outside a tea house (BUILDING_LIST 5: 24 entries)"
+   ],
+   "master": "spikes/L2/out/street_life/jp_s_sandals_sale_ab_fallen.p3d",
+   "mount": "street",
+   "mount_note": "in a town street or at a shop front: base centre on the ground (wall pieces: the facade is z = 0)",
+   "tiers": [
+    1,
+    2
+   ]
+  }
+ ],
+ "made_by": "spikes/L2/build_l2.py (agent L2, 2026-09-30) on spikes/B3b/build.py",
+ "life_layer": "#69",
+ "refs_local": []
+}
