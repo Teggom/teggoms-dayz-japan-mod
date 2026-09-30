@@ -336,7 +336,7 @@ torii, stone steps, graveyard stones, graveyard wood set. They are "build with t
 
 | Palette ID | sRGB | Method | Why | Sample |
 |---|---|---|---|---|
-| straw_aged | [150, 131, 98] | assumed (sample pending: k34_straw_rice not downloaded yet; rerun fetch_refs.py then this script) | Straw rope, stacks and bundles one season old: lighter and warmer than roof thatch_weathered (70,60,58), greyer than thatch_new (176,150,98, assumed). Sampled from an October photo of rice straw (PD, k34) once it is downloaded. | none yet (assumed) |
+| straw_aged | [97, 83, 62] | sampled | Straw rope, stacks and bundles one season old: lighter and warmer than roof thatch_weathered (70,60,58), greyer than thatch_new (176,150,98, assumed). Sampled from an October photo of rice straw (PD, k34) once it is downloaded. | k34_straw_rice box [0.3, 0.35, 0.7, 0.75] (mid 70 % luminance) -> [97, 83, 62] |
 | leaf_litter_autumn | [96, 70, 46] | assumed | Mean of mixed wet autumn leaf litter; needs a licensed sample (an ambientCG CC0 leaf scan will do) before the material ships. | none yet (assumed) |
 
 ## Checks the builder must run
