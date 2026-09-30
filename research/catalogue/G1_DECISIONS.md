@@ -35,6 +35,9 @@ Binding for Phase B agents. The build lists are:
    - ashigaru rows (kumi-yashiki): one storey
    
    Ordinary houses keep the G1-5 cap.
+   - **Grand inn (Stephen, 2026-09-30): two storeys KEPT** as a deliberate exception although no dated pre-1730
+     two-storey Tokaido inn was found (the Ohashiya dates after 1809). Two-storey buildings are rare (government
+     buildings, watch towers, temples, theatres), so the one grand inn per tier-3 town stands out on purpose.
 4. **The 3-ken main-roof span rule is URBAN-ONLY:** YES. Farmhouses carry their aisles (geya) under one sweeping thatch
    roof.
 

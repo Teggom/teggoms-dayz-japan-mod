@@ -27,6 +27,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 17:25 (local) | C1 | town shells: 69 townhouse units + 8 post-town houses + 4 inns = 81 shells, 4,717 checks, test street on the island | **532k** (194 tool calls) | 74 min | **31%** (5-hour 40%): C1 alone = ~2% weekly, ~14% of a 5-hour window |
 | 2026-09-30 17:28 (local) | C2 (baseline) | launched: rural template + ~18-25 rural shells + the grand-inn storey source check + a hamlet on the island, time log TIMELOG_C2.md | - | - | before: **31%** (5-hour 42%, resets ~18:40) |
 | 2026-09-30 18:31 (local) | C2 | rural template + 21 rural shells (1,050 checks), grand-inn source check, hamlet on the island | **658k** (257 tool calls) | 63 min | **33%** (5-hour 56%): C2 alone = ~2% weekly, ~14% of a 5-hour window |
+| 2026-09-30 18:41 (local) | C3 (baseline) | launched: kura + furnished variants of every wave-1 type + street/hamlet dressing + the bundled walk, time log TIMELOG_C3.md | - | - | before: **33%** (5-hour 0%, fresh window) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

@@ -255,5 +255,7 @@
     Heritage Online); 1716 is tradition only; no dated two-storey Tokaido inn before 1730 found. Model unchanged.
     **(2) G1-6 conflict:** a skirt pent can't sit under a full thatch eave at the kit's wall height, so Kanto walls went
     up 0.42 m with no pent (Kinai lower roofs are the pents). Judge the look at the wave-1 walk.
+- 2026-09-30: Stephen: **grand inn keeps two storeys** (deliberate exception, G1_DECISIONS A1-3); the Kanto farmhouse look
+  is checked on the wave-1 walk. **C3 launched.**
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
