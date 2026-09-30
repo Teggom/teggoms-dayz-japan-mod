@@ -16,6 +16,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 10:08 (local) | B3b (baseline) | launched: all 20 W1 outdoor items (122 models), one agent, time log in TIMELOG_B3b.md | - | - | before: **21%** (5-hour 10%) |
 | 2026-09-30 10:48 (local) | B3b | 20 outdoor items = 129 models (20 new, 80 variants, 29 abandoned), jp_site.pbo + well script, 1 material | **519k** (147 tool calls) | 40 min | **22%** (5-hour 19%): B3b alone = ~1% weekly, ~9% of a 5-hour window |
 | 2026-09-30 11:33 (local) | B4 (baseline) | launched: furnish + dress the machiya pilot, G4 checklist, time log in TIMELOG_B4.md | - | - | before: **22%** (5-hour 19%) |
+| 2026-09-30 12:43 (local) | B4 | furnished machiya pilot: 32 room props + 5 shop-front proxies, 43 loot pts, 17 yard/street objects, toilet, decorator kit, G4 checklist | **576k** (225 tool calls) | 69 min | **24%** (5-hour 33%): B4 alone = ~2% weekly, ~14% of a 5-hour window |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
@@ -51,3 +52,17 @@ the whole group at once. So the real unit of time is the group, not the model:
 Lesson: after the first group (pipeline + learning), each later group of ~5 props took 3-12 minutes. Variants and
 abandoned states cost almost nothing on top: they come out of the same script run as their prop.
 The agent notes the usage tool sometimes returned a stale reading, so the % steps are approximate.
+
+## B4 time log, summarised (TIMELOG_B4.md)
+
+| Stretch | What | Minutes | 5-hour % |
+|---|---|---|---|
+| 11:34-11:44 | setup (reading) | 9.5 | 19 -> 22 |
+| 11:44-11:45 | proxy convention (binarize test) | 1 | 22 |
+| 11:45-11:54 | mise floor board strip + kamidana/nagashi props | 9 | 22 -> 23 |
+| 11:54-12:27 | the decorator (placement, loot, 59 new checks), all 5 rooms, loot, yard + street | 33 | 23 -> 29 |
+| 12:27-12:40 | build, binarize, pack, test-island world + mission rebuild, renders | 13 | 29 -> 32 |
+| 12:40-12:43 | G4 checklist + progress | 2.5 | 32 -> 33 |
+
+The decorator was the big stretch: it's the new shared code every later furnished building uses. The rooms
+themselves came out of it in the same run (all five ROOM DONE lines share one timestamp).

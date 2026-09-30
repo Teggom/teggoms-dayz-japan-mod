@@ -176,5 +176,17 @@
   - Open: gutter pieces need a terrain ditch cut (terrain/placement work); notice boards reuse crops of the one edict
     text in the atlas; rice stooks and rope tassels render thin.
   - **Phase B next: B4 pilot** (furnish machiya_t3_01 + dress its yard + the mise-floor board strip), then gate G4.
+- 2026-09-30: **B4 DONE** (opus-high, 576k tokens / 69 min). Commits be762bc, dd18e5f; `buildings/machiya_t3_01/B4_PROGRESS.md`.
+  - The furnished house is its own p3d `Land_JP_Machiya_T3_01_Shop` on the machiya's spot (the bare shell stays in the
+    PBO, unplaced). 32 room props (5-7 a room) as proxies in the vanilla LODs (Q5) + 5 shop-front proxies; 43 loot
+    points (12 floor, 31 raised), none above 1.40 m. New kit: `jpparts/decor.py` + `proxies.py`.
+  - Mise floor: 0.455 board strip. The machiya now uses B1's floor materials (judge the doma colour at G4).
+  - Checks: shell 78/78, furnished 137/137 (78 + 59 decorator checks), toilet 19/19, townhouse combos 60/60.
+  - Yard + street: 17 map objects incl. the pulley well; B2's toilet shipped as `Land_JP_Toilet_T1_01`. Test island
+    world + mission rebuilt; a WaterBottle added to the item grid for the well test.
+  - Not done: navmesh (GUI step); no sandal prop (life layer covers it); the machiya's old render sheet.
+  - **Gate G4 = Stephen's walk: TEST_CHECKLIST.md (~15 min).**
+- 2026-09-30: **Life layer approved as drafted** (research/interior/LIFE_LAYER.md, 74 items). Order: L1 = interior 50
+  (one agent), then L2 = outdoor 24. Built into B4's decorator catalogue so they're placeable at once.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
