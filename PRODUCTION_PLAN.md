@@ -441,3 +441,9 @@
   detail props deserve more faces; they're what make the world pop.** VPP admin tools added to the Japan test launchers
   (@CF;@VPPAdminTools;@Japan; permissions copied from ServerProfile). **FX1 launched** (geometry/placement fixes 1-6).
   Next: FX2 statues/detail pass (needs reference images: Stephen's call), FX3 = the queued wood-texture job + moss variety.
+- 2026-10-01: **FX1 DONE** (cce4930, 984b072, 4771e25). tobira pulls on their own leaf + gate hinge straps (handlecheck 24 -> 0 of 40);
+  offering boxes beside the stair foot, sourceless litter removed; hung props hang from real members (hangcheck 16 -> 0); six
+  front-only verandas got railing returns (a wrap-round veranda pushes U1 to 12,428 > 12,000: Stephen's call); torii scaled up,
+  rope on the nuki front with half the sag: lowest shide 2.35-2.64 m, nuki clear 2.49-2.94 m; woodpiles have tied end stakes.
+  verify_all --full 193 / 11,822; verify_oprw 4125/4125. Pitfall: build_w2f.py's folder binarize crashed on an existing ODOL
+  (FX1 binarized its six props singly).
