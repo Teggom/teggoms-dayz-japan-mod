@@ -350,3 +350,8 @@
   layer, Pompompurin (~40 min).
 - 2026-09-30: Stephen stopped the Pompompurin agent (didn't like the renders): NOT in game, files left in fun\pompompurin\.
   **SH1 launched** (showcase without Pompompurin; 9 stops).
+- 2026-10-01: **SH1 DONE** (opus-high, 575k / 42 min). Commits ca6e2f3, 9703bc0, 487261f. Shrine x 1024 z 1099-1198 + hill stair
+  x 1042 z 1228-1263 + Inari stair x 1058 (149 objects); graveyard x 990-1013 z 1108-1130 (148); gallery = 3 open sheds at
+  x 1072/1080/1088 z 1036 (L1-L74); demo shops D1-D6 on the street (3 swapped, 3 inserted). verify_oprw PASS 4076/4076;
+  build_mission.py fixed (CE positions snap to the nearest building of the class). Maps sh1_map_{shrine,graveyard,gallery,
+  street}.jpg + ID table spikes/SH1/SHOWCASE_MAP.md. **Walk: TEST_CHECKLIST.md, ~44 min, 14 verdicts.**

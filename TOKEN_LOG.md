@@ -41,6 +41,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 ~23:40 (local) | G1 | gorinto seating fix (truncated sphere, flat seats, stack seated) | **157k** (60 tool calls) | 8 min | |
 | 2026-09-30 23:46 (local) | P1 (Pompompurin, fun) | STOPPED by Stephen (didn't like the renders); not in game | n/a (killed) | ~40 min | |
 | 2026-09-30 23:46 (local) | SH1 (baseline) | launched: test-island showcase (shrine, graveyard, demo shops, life-layer gallery) + the 10-stop walk, time log TIMELOG_SH1.md | - | - | before: **43%** (5-hour 0%, fresh window) |
+| 2026-10-01 ~00:28 (local) | SH1 | test-island showcase: shrine 149 objects, graveyard 148, 6 demo shops on the street, life-layer gallery (74), labelled maps, 44-min walk | **575k** (191 tool calls) | 42 min | |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
