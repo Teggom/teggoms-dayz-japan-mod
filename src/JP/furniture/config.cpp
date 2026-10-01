@@ -1883,4 +1883,1138 @@ class CfgVehicles
 		displayName="A fusuma leaf, the paper torn open";
 		model="\JP\furniture\tier\jp_f_fallen_leaf_fusuma_torn.p3d";
 	};
+	// jp_f_sg_aramono (shopgoods)
+	class StaticObj_JP_F_Sg_Aramono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: brooms, tubs, sieves";
+		model="\JP\furniture\shopgoods\jp_f_sg_aramono.p3d";
+	};
+	class StaticObj_JP_F_Sg_Aramono_Swept: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: brooms knocked down";
+		model="\JP\furniture\shopgoods\jp_f_sg_aramono_swept.p3d";
+	};
+	// jp_f_sg_bolts (shopgoods)
+	class StaticObj_JP_F_Sg_Bolts: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: cloth bolts, 3-2-1";
+		model="\JP\furniture\shopgoods\jp_f_sg_bolts.p3d";
+	};
+	class StaticObj_JP_F_Sg_Bolts_Swept: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: bolts rolled off";
+		model="\JP\furniture\shopgoods\jp_f_sg_bolts_swept.p3d";
+	};
+	// jp_f_sg_folded (shopgoods)
+	class StaticObj_JP_F_Sg_Folded: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: folded garments";
+		model="\JP\furniture\shopgoods\jp_f_sg_folded.p3d";
+	};
+	class StaticObj_JP_F_Sg_Folded_Tumbled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: garment piles tumbled";
+		model="\JP\furniture\shopgoods\jp_f_sg_folded_tumbled.p3d";
+	};
+	// jp_f_sg_ironware (shopgoods)
+	class StaticObj_JP_F_Sg_Ironware: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: pots, nail boxes, padlocks, a knife";
+		model="\JP\furniture\shopgoods\jp_f_sg_ironware.p3d";
+	};
+	class StaticObj_JP_F_Sg_Ironware_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: pot over, nails strewn";
+		model="\JP\furniture\shopgoods\jp_f_sg_ironware_spilled.p3d";
+	};
+	// jp_f_sg_porcelain (shopgoods)
+	class StaticObj_JP_F_Sg_Porcelain: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: blue-and-white bowls and dishes";
+		model="\JP\furniture\shopgoods\jp_f_sg_porcelain.p3d";
+	};
+	class StaticObj_JP_F_Sg_Porcelain_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: bowls knocked down, shards";
+		model="\JP\furniture\shopgoods\jp_f_sg_porcelain_broken.p3d";
+	};
+	// jp_f_sg_lacquer (shopgoods)
+	class StaticObj_JP_F_Sg_Lacquer: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: black and red lacquer bowls, trays";
+		model="\JP\furniture\shopgoods\jp_f_sg_lacquer.p3d";
+	};
+	class StaticObj_JP_F_Sg_Lacquer_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: lacquer bowls scattered";
+		model="\JP\furniture\shopgoods\jp_f_sg_lacquer_scattered.p3d";
+	};
+	// jp_f_bolt_shelf (shopfit)
+	class StaticObj_JP_F_Bolt_Shelf: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cloth-bolt shelf (cubbies)";
+		model="\JP\furniture\shopfit\jp_f_bolt_shelf.p3d";
+	};
+	class StaticObj_JP_F_Bolt_Shelf_Pulled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cloth-bolt shelf, bolts pulled out";
+		model="\JP\furniture\shopfit\jp_f_bolt_shelf_pulled.p3d";
+	};
+	// jp_f_furugi_rack (shopfit)
+	class StaticObj_JP_F_Furugi_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Old-clothes rack, four robes";
+		model="\JP\furniture\shopfit\jp_f_furugi_rack.p3d";
+	};
+	class StaticObj_JP_F_Furugi_Rack_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Old-clothes rack, pole down, robes heaped";
+		model="\JP\furniture\shopfit\jp_f_furugi_rack_down.p3d";
+	};
+	// jp_f_kanamono_wall (shopfit)
+	class StaticObj_JP_F_Kanamono_Wall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ironmonger's tool board";
+		model="\JP\furniture\shopfit\jp_f_kanamono_wall.p3d";
+	};
+	class StaticObj_JP_F_Kanamono_Wall_Taken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ironmonger's board, half taken";
+		model="\JP\furniture\shopfit\jp_f_kanamono_wall_taken.p3d";
+	};
+	// jp_f_ware_crate (shopfit)
+	class StaticObj_JP_F_Ware_Crate: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Crate of wares in straw";
+		model="\JP\furniture\shopfit\jp_f_ware_crate.p3d";
+	};
+	class StaticObj_JP_F_Ware_Crate_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Crate tipped, straw and shards";
+		model="\JP\furniture\shopfit\jp_f_ware_crate_tipped.p3d";
+	};
+	// jp_f_kanban_aramono (shopsign)
+	class StaticObj_JP_F_Kanban_Aramono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: general goods (aramono)";
+		model="\JP\furniture\shopsign\jp_f_kanban_aramono.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Aramono_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (general goods (aramono)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_aramono_askew.p3d";
+	};
+	// jp_f_kanban_gofuku (shopsign)
+	class StaticObj_JP_F_Kanban_Gofuku: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: silk draper (gofuku)";
+		model="\JP\furniture\shopsign\jp_f_kanban_gofuku.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Gofuku_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (silk draper (gofuku)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_gofuku_askew.p3d";
+	};
+	// jp_f_kanban_futomono (shopsign)
+	class StaticObj_JP_F_Kanban_Futomono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: cotton cloth (futomono)";
+		model="\JP\furniture\shopsign\jp_f_kanban_futomono.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Futomono_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (cotton cloth (futomono)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_futomono_askew.p3d";
+	};
+	// jp_f_kanban_furugi (shopsign)
+	class StaticObj_JP_F_Kanban_Furugi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: old clothes (furugi)";
+		model="\JP\furniture\shopsign\jp_f_kanban_furugi.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Furugi_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (old clothes (furugi)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_furugi_askew.p3d";
+	};
+	// jp_f_kanban_kanamono (shopsign)
+	class StaticObj_JP_F_Kanban_Kanamono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: ironmonger (kanamono)";
+		model="\JP\furniture\shopsign\jp_f_kanban_kanamono.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Kanamono_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (ironmonger (kanamono)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_kanamono_askew.p3d";
+	};
+	// jp_f_kanban_setomono (shopsign)
+	class StaticObj_JP_F_Kanban_Setomono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: ceramics (setomono)";
+		model="\JP\furniture\shopsign\jp_f_kanban_setomono.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Setomono_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (ceramics (setomono)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_setomono_askew.p3d";
+	};
+	// jp_f_kanban_nurimono (shopsign)
+	class StaticObj_JP_F_Kanban_Nurimono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: lacquerware (nurimono)";
+		model="\JP\furniture\shopsign\jp_f_kanban_nurimono.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Nurimono_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (lacquerware (nurimono)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_nurimono_askew.p3d";
+	};
+	// jp_f_sg_brushes (shopgoods)
+	class StaticObj_JP_F_Sg_Brushes: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: brush rack, ink sticks, paper";
+		model="\JP\furniture\shopgoods\jp_f_sg_brushes.p3d";
+	};
+	class StaticObj_JP_F_Sg_Brushes_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: brush rack down, brushes scattered, ink";
+		model="\JP\furniture\shopgoods\jp_f_sg_brushes_scattered.p3d";
+	};
+	// jp_f_sg_oil (shopgoods)
+	class StaticObj_JP_F_Sg_Oil: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: oil jugs, funnel, ladle";
+		model="\JP\furniture\shopgoods\jp_f_sg_oil.p3d";
+	};
+	class StaticObj_JP_F_Sg_Oil_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: oil jug over, stain";
+		model="\JP\furniture\shopgoods\jp_f_sg_oil_spilled.p3d";
+	};
+	// jp_f_sg_candles (shopgoods)
+	class StaticObj_JP_F_Sg_Candles: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: candles by size, bundles, a box";
+		model="\JP\furniture\shopgoods\jp_f_sg_candles.p3d";
+	};
+	class StaticObj_JP_F_Sg_Candles_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: candles scattered";
+		model="\JP\furniture\shopgoods\jp_f_sg_candles_scattered.p3d";
+	};
+	// jp_f_sg_tobacco (shopgoods)
+	class StaticObj_JP_F_Sg_Tobacco: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: tobacco packets, pipes, leaf";
+		model="\JP\furniture\shopgoods\jp_f_sg_tobacco.p3d";
+	};
+	class StaticObj_JP_F_Sg_Tobacco_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: packets scattered, leaf";
+		model="\JP\furniture\shopgoods\jp_f_sg_tobacco_scattered.p3d";
+	};
+	// jp_f_sg_travel (shopgoods)
+	class StaticObj_JP_F_Sg_Travel: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: straw sandals, sedge hats";
+		model="\JP\furniture\shopgoods\jp_f_sg_travel.p3d";
+	};
+	class StaticObj_JP_F_Sg_Travel_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: sandals and a hat scattered";
+		model="\JP\furniture\shopgoods\jp_f_sg_travel_scattered.p3d";
+	};
+	// jp_f_sg_odawara (shopgoods)
+	class StaticObj_JP_F_Sg_Odawara: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: Odawara lanterns";
+		model="\JP\furniture\shopgoods\jp_f_sg_odawara.p3d";
+	};
+	class StaticObj_JP_F_Sg_Odawara_Crushed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: lanterns crushed";
+		model="\JP\furniture\shopgoods\jp_f_sg_odawara_crushed.p3d";
+	};
+	// jp_f_tobacco_cutter (shopfit)
+	class StaticObj_JP_F_Tobacco_Cutter: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tobacco-cutting bench with clamp and knife";
+		model="\JP\furniture\shopfit\jp_f_tobacco_cutter.p3d";
+	};
+	class StaticObj_JP_F_Tobacco_Cutter_Bare: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tobacco-cutting bench, knife gone, leaf scattered";
+		model="\JP\furniture\shopfit\jp_f_tobacco_cutter_bare.p3d";
+	};
+	// jp_f_print_line (shopfit)
+	class StaticObj_JP_F_Print_Line_Otsue: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Otsu-e pictures on a cord";
+		model="\JP\furniture\shopfit\jp_f_print_line_otsue.p3d";
+	};
+	class StaticObj_JP_F_Print_Line_Otsue_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Otsu-e on a cord, one gone, one hanging";
+		model="\JP\furniture\shopfit\jp_f_print_line_otsue_torn.p3d";
+	};
+	class StaticObj_JP_F_Print_Line_Books: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Printed pages on a cord";
+		model="\JP\furniture\shopfit\jp_f_print_line_books.p3d";
+	};
+	class StaticObj_JP_F_Print_Line_Books_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Printed pages on a cord, torn";
+		model="\JP\furniture\shopfit\jp_f_print_line_books_torn.p3d";
+	};
+	class StaticObj_JP_F_Print_Line_Fans: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fans and a landscape on a cord";
+		model="\JP\furniture\shopfit\jp_f_print_line_fans.p3d";
+	};
+	class StaticObj_JP_F_Print_Line_Fans_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fans on a cord, one gone";
+		model="\JP\furniture\shopfit\jp_f_print_line_fans_torn.p3d";
+	};
+	// jp_f_kanban_shape_pipe (shopsign)
+	class StaticObj_JP_F_Kanban_Shape_Pipe: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: giant tobacco pipe";
+		model="\JP\furniture\shopsign\jp_f_kanban_shape_pipe.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Shape_Pipe_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: giant pipe hanging askew";
+		model="\JP\furniture\shopsign\jp_f_kanban_shape_pipe_askew.p3d";
+	};
+	// jp_f_kanban_hitsuboku (shopsign)
+	class StaticObj_JP_F_Kanban_Hitsuboku: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: brushes and ink (hitsuboku)";
+		model="\JP\furniture\shopsign\jp_f_kanban_hitsuboku.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Hitsuboku_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (brushes and ink (hitsuboku)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_hitsuboku_askew.p3d";
+	};
+	// jp_f_kanban_abura (shopsign)
+	class StaticObj_JP_F_Kanban_Abura: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: lamp oil (abura)";
+		model="\JP\furniture\shopsign\jp_f_kanban_abura.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Abura_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (lamp oil (abura)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_abura_askew.p3d";
+	};
+	// jp_f_kanban_rousoku (shopsign)
+	class StaticObj_JP_F_Kanban_Rousoku: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: candles (rousoku)";
+		model="\JP\furniture\shopsign\jp_f_kanban_rousoku.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Rousoku_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (candles (rousoku)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_rousoku_askew.p3d";
+	};
+	// jp_f_kanban_sumimaki (shopsign)
+	class StaticObj_JP_F_Kanban_Sumimaki: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: charcoal and firewood (sumi, maki)";
+		model="\JP\furniture\shopsign\jp_f_kanban_sumimaki.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Sumimaki_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (charcoal and firewood (sumi, maki)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_sumimaki_askew.p3d";
+	};
+	// jp_f_kanban_tabako (shopsign)
+	class StaticObj_JP_F_Kanban_Tabako: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: tobacco (tabako)";
+		model="\JP\furniture\shopsign\jp_f_kanban_tabako.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Tabako_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (tobacco (tabako)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_tabako_askew.p3d";
+	};
+	// jp_f_kanban_tabidogu (shopsign)
+	class StaticObj_JP_F_Kanban_Tabidogu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: travel goods (tabi-dogu)";
+		model="\JP\furniture\shopsign\jp_f_kanban_tabidogu.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Tabidogu_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (travel goods (tabi-dogu)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_tabidogu_askew.p3d";
+	};
+	// jp_f_kanban_otsue (shopsign)
+	class StaticObj_JP_F_Kanban_Otsue: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: Otsu pictures (Otsu-e)";
+		model="\JP\furniture\shopsign\jp_f_kanban_otsue.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Otsue_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (Otsu pictures (Otsu-e)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_otsue_askew.p3d";
+	};
+	// jp_f_rice_bin (shopfit)
+	class StaticObj_JP_F_Rice_Bin: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice bin (kome-bitsu), lid half off";
+		model="\JP\furniture\shopfit\jp_f_rice_bin.p3d";
+	};
+	class StaticObj_JP_F_Rice_Bin_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rice bin, lids off, rice spilled";
+		model="\JP\furniture\shopfit\jp_f_rice_bin_spilled.p3d";
+	};
+	// jp_f_fish_tub (shopfit)
+	class StaticObj_JP_F_Fish_Tub: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fish tub with salt fish";
+		model="\JP\furniture\shopfit\jp_f_fish_tub.p3d";
+	};
+	class StaticObj_JP_F_Fish_Tub_Empty: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fish tub, empty and stained";
+		model="\JP\furniture\shopfit\jp_f_fish_tub_empty.p3d";
+	};
+	// jp_f_fish_board (shopfit)
+	class StaticObj_JP_F_Fish_Board: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fishmonger's cutting board with knife and fish";
+		model="\JP\furniture\shopfit\jp_f_fish_board.p3d";
+	};
+	class StaticObj_JP_F_Fish_Board_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cutting board on its side, knife on the floor";
+		model="\JP\furniture\shopfit\jp_f_fish_board_tipped.p3d";
+	};
+	// jp_f_veg_basket (shopfit)
+	class StaticObj_JP_F_Veg_Basket: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Basket of autumn vegetables";
+		model="\JP\furniture\shopfit\jp_f_veg_basket.p3d";
+	};
+	class StaticObj_JP_F_Veg_Basket_Rotted: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Basket, vegetables rotted";
+		model="\JP\furniture\shopfit\jp_f_veg_basket_rotted.p3d";
+	};
+	// jp_f_tofu_tank (shopfit)
+	class StaticObj_JP_F_Tofu_Tank: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tofu tank with blocks under water";
+		model="\JP\furniture\shopfit\jp_f_tofu_tank.p3d";
+	};
+	class StaticObj_JP_F_Tofu_Tank_Dry: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tofu tank, dry and stained";
+		model="\JP\furniture\shopfit\jp_f_tofu_tank_dry.p3d";
+	};
+	// jp_f_tofu_press (shopfit)
+	class StaticObj_JP_F_Tofu_Press: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tofu forming box with press stones";
+		model="\JP\furniture\shopfit\jp_f_tofu_press.p3d";
+	};
+	class StaticObj_JP_F_Tofu_Press_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tofu box tipped, stones off";
+		model="\JP\furniture\shopfit\jp_f_tofu_press_tipped.p3d";
+	};
+	// jp_f_soba_board (shopfit)
+	class StaticObj_JP_F_Soba_Board: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Soba board, pins, knife, kneading bowl";
+		model="\JP\furniture\shopfit\jp_f_soba_board.p3d";
+	};
+	class StaticObj_JP_F_Soba_Board_Upset: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Soba board, bowl upturned, pins rolled off";
+		model="\JP\furniture\shopfit\jp_f_soba_board_upset.p3d";
+	};
+	// jp_f_sg_sweets (shopgoods)
+	class StaticObj_JP_F_Sg_Sweets: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: mochi, dango, a tiered box";
+		model="\JP\furniture\shopgoods\jp_f_sg_sweets.p3d";
+	};
+	class StaticObj_JP_F_Sg_Sweets_Mouldy: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: trays emptied, mould";
+		model="\JP\furniture\shopgoods\jp_f_sg_sweets_mouldy.p3d";
+	};
+	// jp_f_konro (shopfit)
+	class StaticObj_JP_F_Konro_Grill: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clay grill with dango skewers";
+		model="\JP\furniture\shopfit\jp_f_konro_grill.p3d";
+	};
+	class StaticObj_JP_F_Konro_Grill_Cold: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clay grill, cold, skewers on the floor";
+		model="\JP\furniture\shopfit\jp_f_konro_grill_cold.p3d";
+	};
+	class StaticObj_JP_F_Konro_Nabe3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Long clay stove with three simmering pots";
+		model="\JP\furniture\shopfit\jp_f_konro_nabe3.p3d";
+	};
+	class StaticObj_JP_F_Konro_Nabe3_Cold: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Long clay stove, cold, a pot tipped off";
+		model="\JP\furniture\shopfit\jp_f_konro_nabe3_cold.p3d";
+	};
+	// jp_f_kanban_kome (shopsign)
+	class StaticObj_JP_F_Kanban_Kome: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: rice (kome)";
+		model="\JP\furniture\shopsign\jp_f_kanban_kome.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Kome_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (rice (kome)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_kome_askew.p3d";
+	};
+	// jp_f_kanban_sakana (shopsign)
+	class StaticObj_JP_F_Kanban_Sakana: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: fish (sakana)";
+		model="\JP\furniture\shopsign\jp_f_kanban_sakana.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Sakana_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (fish (sakana)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_sakana_askew.p3d";
+	};
+	// jp_f_kanban_aomono (shopsign)
+	class StaticObj_JP_F_Kanban_Aomono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: greens (aomono)";
+		model="\JP\furniture\shopsign\jp_f_kanban_aomono.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Aomono_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (greens (aomono)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_aomono_askew.p3d";
+	};
+	// jp_f_kanban_tofu (shopsign)
+	class StaticObj_JP_F_Kanban_Tofu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: tofu";
+		model="\JP\furniture\shopsign\jp_f_kanban_tofu.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Tofu_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (tofu), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_tofu_askew.p3d";
+	};
+	// jp_f_kanban_soba (shopsign)
+	class StaticObj_JP_F_Kanban_Soba: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: soba (o-soba-kiri)";
+		model="\JP\furniture\shopsign\jp_f_kanban_soba.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Soba_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (soba (o-soba-kiri)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_soba_askew.p3d";
+	};
+	// jp_f_kanban_mochi (shopsign)
+	class StaticObj_JP_F_Kanban_Mochi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: famous rice cakes (meibutsu mochi)";
+		model="\JP\furniture\shopsign\jp_f_kanban_mochi.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Mochi_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (famous rice cakes (meibutsu mochi)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_mochi_askew.p3d";
+	};
+	// jp_f_kanban_okashi (shopsign)
+	class StaticObj_JP_F_Kanban_Okashi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: confectioner (o-kashi-dokoro)";
+		model="\JP\furniture\shopsign\jp_f_kanban_okashi.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Okashi_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (confectioner (o-kashi-dokoro)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_okashi_askew.p3d";
+	};
+	// jp_f_sugidama (shopsign)
+	class StaticObj_JP_F_Sugidama: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sugidama (cedar ball), green: new sake";
+		model="\JP\furniture\shopsign\jp_f_sugidama.p3d";
+	};
+	class StaticObj_JP_F_Sugidama_Brown: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sugidama, browned a season";
+		model="\JP\furniture\shopsign\jp_f_sugidama_brown.p3d";
+	};
+	class StaticObj_JP_F_Sugidama_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sugidama fallen at the facade foot";
+		model="\JP\furniture\shopsign\jp_f_sugidama_fallen.p3d";
+	};
+	// jp_f_yakudansu (shopfit)
+	class StaticObj_JP_F_Yakudansu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Medicine drawer cabinet (hyakumi-dansu)";
+		model="\JP\furniture\shopfit\jp_f_yakudansu.p3d";
+	};
+	class StaticObj_JP_F_Yakudansu_Ransacked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Medicine cabinet, drawers pulled out";
+		model="\JP\furniture\shopfit\jp_f_yakudansu_ransacked.p3d";
+	};
+	// jp_f_yagen (shopfit)
+	class StaticObj_JP_F_Yagen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Drug chopper (yagen)";
+		model="\JP\furniture\shopfit\jp_f_yagen.p3d";
+	};
+	class StaticObj_JP_F_Yagen_Apart: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Drug chopper, the wheel off";
+		model="\JP\furniture\shopfit\jp_f_yagen_apart.p3d";
+	};
+	// jp_f_sg_medicine (shopgoods)
+	class StaticObj_JP_F_Sg_Medicine: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: remedy packets, medicine jars";
+		model="\JP\furniture\shopgoods\jp_f_sg_medicine.p3d";
+	};
+	class StaticObj_JP_F_Sg_Medicine_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: packets spilled";
+		model="\JP\furniture\shopgoods\jp_f_sg_medicine_spilled.p3d";
+	};
+	// jp_f_pawn_board (shopfit)
+	class StaticObj_JP_F_Pawn_Board: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pawn-ticket board";
+		model="\JP\furniture\shopfit\jp_f_pawn_board.p3d";
+	};
+	class StaticObj_JP_F_Pawn_Board_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pawn-ticket board, half torn off";
+		model="\JP\furniture\shopfit\jp_f_pawn_board_torn.p3d";
+	};
+	// jp_f_sg_pawn (shopgoods)
+	class StaticObj_JP_F_Sg_Pawn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: pawned bundles with tags";
+		model="\JP\furniture\shopgoods\jp_f_sg_pawn.p3d";
+	};
+	class StaticObj_JP_F_Sg_Pawn_Undone: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: pawn bundles undone";
+		model="\JP\furniture\shopgoods\jp_f_sg_pawn_undone.p3d";
+	};
+	// jp_f_sg_coins (shopgoods)
+	class StaticObj_JP_F_Sg_Coins: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: coin strings, silver, a box";
+		model="\JP\furniture\shopgoods\jp_f_sg_coins.p3d";
+	};
+	class StaticObj_JP_F_Sg_Coins_Emptied: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: coin tray emptied";
+		model="\JP\furniture\shopgoods\jp_f_sg_coins_emptied.p3d";
+	};
+	// jp_f_senryobako (shopfit)
+	class StaticObj_JP_F_Senryobako: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Strong money chest (senryo-bako)";
+		model="\JP\furniture\shopfit\jp_f_senryobako.p3d";
+	};
+	class StaticObj_JP_F_Senryobako_Forced: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Strong money chest, forced and empty";
+		model="\JP\furniture\shopfit\jp_f_senryobako_forced.p3d";
+	};
+	// jp_f_kanban_shape_fundo (shopsign)
+	class StaticObj_JP_F_Kanban_Shape_Fundo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: balance weight (fundo), moneychanger";
+		model="\JP\furniture\shopsign\jp_f_kanban_shape_fundo.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Shape_Fundo_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shape sign: fundo hanging askew";
+		model="\JP\furniture\shopsign\jp_f_kanban_shape_fundo_askew.p3d";
+	};
+	// jp_f_sg_books (shopgoods)
+	class StaticObj_JP_F_Sg_Books: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: stacked books with title slips";
+		model="\JP\furniture\shopgoods\jp_f_sg_books.p3d";
+	};
+	class StaticObj_JP_F_Sg_Books_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: books scattered";
+		model="\JP\furniture\shopgoods\jp_f_sg_books_scattered.p3d";
+	};
+	// jp_f_menu_board (shopfit)
+	class StaticObj_JP_F_Menu_Board: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Menu strips (nishime, beans, dengaku, sake)";
+		model="\JP\furniture\shopfit\jp_f_menu_board.p3d";
+	};
+	class StaticObj_JP_F_Menu_Board_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Menu strips, one down, faded";
+		model="\JP\furniture\shopfit\jp_f_menu_board_down.p3d";
+	};
+	// jp_f_kanban_miki (shopsign)
+	class StaticObj_JP_F_Kanban_Miki: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: sake (o-miki)";
+		model="\JP\furniture\shopsign\jp_f_kanban_miki.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Miki_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (sake (o-miki)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_miki_askew.p3d";
+	};
+	// jp_f_kanban_niuri (shopsign)
+	class StaticObj_JP_F_Kanban_Niuri: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: cooked food (niuri)";
+		model="\JP\furniture\shopsign\jp_f_kanban_niuri.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Niuri_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (cooked food (niuri)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_niuri_askew.p3d";
+	};
+	// jp_f_kanban_yakushu (shopsign)
+	class StaticObj_JP_F_Kanban_Yakushu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: medicines (yakushu)";
+		model="\JP\furniture\shopsign\jp_f_kanban_yakushu.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Yakushu_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (medicines (yakushu)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_yakushu_askew.p3d";
+	};
+	// jp_f_kanban_shichi (shopsign)
+	class StaticObj_JP_F_Kanban_Shichi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: pawnbroker (shichi)";
+		model="\JP\furniture\shopsign\jp_f_kanban_shichi.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Shichi_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (pawnbroker (shichi)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_shichi_askew.p3d";
+	};
+	// jp_f_kanban_ryogae (shopsign)
+	class StaticObj_JP_F_Kanban_Ryogae: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: moneychanger (ryogae)";
+		model="\JP\furniture\shopsign\jp_f_kanban_ryogae.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Ryogae_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (moneychanger (ryogae)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_ryogae_askew.p3d";
+	};
+	// jp_f_kanban_shorin (shopsign)
+	class StaticObj_JP_F_Kanban_Shorin: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: bookshop (shorin)";
+		model="\JP\furniture\shopsign\jp_f_kanban_shorin.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Shorin_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (bookshop (shorin)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_shorin_askew.p3d";
+	};
+	// jp_f_sg_pouches (shopgoods)
+	class StaticObj_JP_F_Sg_Pouches: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: pouches, tobacco cases, setta";
+		model="\JP\furniture\shopgoods\jp_f_sg_pouches.p3d";
+	};
+	class StaticObj_JP_F_Sg_Pouches_Swept: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: pouches swept off";
+		model="\JP\furniture\shopgoods\jp_f_sg_pouches_swept.p3d";
+	};
+	// jp_f_hides (shopfit)
+	class StaticObj_JP_F_Hides: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rolled hides";
+		model="\JP\furniture\shopfit\jp_f_hides.p3d";
+	};
+	class StaticObj_JP_F_Hides_Unrolled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hide unrolled, mouldy";
+		model="\JP\furniture\shopfit\jp_f_hides_unrolled.p3d";
+	};
+	// jp_f_sg_yarn (shopgoods)
+	class StaticObj_JP_F_Sg_Yarn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: skeins and bobbins";
+		model="\JP\furniture\shopgoods\jp_f_sg_yarn.p3d";
+	};
+	class StaticObj_JP_F_Sg_Yarn_Tangled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: yarn tangled";
+		model="\JP\furniture\shopgoods\jp_f_sg_yarn_tangled.p3d";
+	};
+	// jp_f_tailor_board (shopfit)
+	class StaticObj_JP_F_Tailor_Board: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tailor's cutting board, rule, shears";
+		model="\JP\furniture\shopfit\jp_f_tailor_board.p3d";
+	};
+	class StaticObj_JP_F_Tailor_Board_Cut: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tailor's board, the cloth cut and dropped";
+		model="\JP\furniture\shopfit\jp_f_tailor_board_cut.p3d";
+	};
+	// jp_f_paint_mat (shopfit)
+	class StaticObj_JP_F_Paint_Mat: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Painter's felt mat, pigments, brushes";
+		model="\JP\furniture\shopfit\jp_f_paint_mat.p3d";
+	};
+	class StaticObj_JP_F_Paint_Mat_Upset: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Painter's mat, dishes upset";
+		model="\JP\furniture\shopfit\jp_f_paint_mat_upset.p3d";
+	};
+	// jp_f_urushiburo (shopfit)
+	class StaticObj_JP_F_Urushiburo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lacquer drying cupboard (urushi-buro)";
+		model="\JP\furniture\shopfit\jp_f_urushiburo.p3d";
+	};
+	class StaticObj_JP_F_Urushiburo_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lacquer cupboard, a leaf off, wares fallen";
+		model="\JP\furniture\shopfit\jp_f_urushiburo_open.p3d";
+	};
+	// jp_f_sg_combs (shopgoods)
+	class StaticObj_JP_F_Sg_Combs: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: boxwood combs, blanks";
+		model="\JP\furniture\shopgoods\jp_f_sg_combs.p3d";
+	};
+	class StaticObj_JP_F_Sg_Combs_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: combs scattered";
+		model="\JP\furniture\shopgoods\jp_f_sg_combs_scattered.p3d";
+	};
+	// jp_f_doll_tiers (shopfit)
+	class StaticObj_JP_F_Doll_Tiers: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Doll display tiers with Kyoho-bina";
+		model="\JP\furniture\shopfit\jp_f_doll_tiers.p3d";
+	};
+	class StaticObj_JP_F_Doll_Tiers_Toppled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Doll tiers toppled, dolls face down";
+		model="\JP\furniture\shopfit\jp_f_doll_tiers_toppled.p3d";
+	};
+	// jp_f_sg_dolls (shopgoods)
+	class StaticObj_JP_F_Sg_Dolls: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: small gosho dolls";
+		model="\JP\furniture\shopgoods\jp_f_sg_dolls.p3d";
+	};
+	class StaticObj_JP_F_Sg_Dolls_Knocked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: dolls knocked over";
+		model="\JP\furniture\shopgoods\jp_f_sg_dolls_knocked.p3d";
+	};
+	// jp_f_sg_butsugu (shopgoods)
+	class StaticObj_JP_F_Sg_Butsugu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: rosaries, incense, a small image";
+		model="\JP\furniture\shopgoods\jp_f_sg_butsugu.p3d";
+	};
+	class StaticObj_JP_F_Sg_Butsugu_Swept: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Goods: rosary and incense scattered";
+		model="\JP\furniture\shopgoods\jp_f_sg_butsugu_swept.p3d";
+	};
+	// jp_f_kanban_fukuromono (shopsign)
+	class StaticObj_JP_F_Kanban_Fukuromono: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: pouches and bags (fukuromono)";
+		model="\JP\furniture\shopsign\jp_f_kanban_fukuromono.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Fukuromono_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (pouches and bags (fukuromono)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_fukuromono_askew.p3d";
+	};
+	// jp_f_kanban_momen (shopsign)
+	class StaticObj_JP_F_Kanban_Momen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: cotton cloth (momen)";
+		model="\JP\furniture\shopsign\jp_f_kanban_momen.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Momen_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (cotton cloth (momen)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_momen_askew.p3d";
+	};
+	// jp_f_kanban_shitate (shopsign)
+	class StaticObj_JP_F_Kanban_Shitate: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: tailoring (shitate-mono)";
+		model="\JP\furniture\shopsign\jp_f_kanban_shitate.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Shitate_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (tailoring (shitate-mono)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_shitate_askew.p3d";
+	};
+	// jp_f_kanban_edokoro (shopsign)
+	class StaticObj_JP_F_Kanban_Edokoro: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: painter (e-dokoro)";
+		model="\JP\furniture\shopsign\jp_f_kanban_edokoro.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Edokoro_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (painter (e-dokoro)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_edokoro_askew.p3d";
+	};
+	// jp_f_kanban_nushi (shopsign)
+	class StaticObj_JP_F_Kanban_Nushi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: lacquerer (nushi)";
+		model="\JP\furniture\shopsign\jp_f_kanban_nushi.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Nushi_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (lacquerer (nushi)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_nushi_askew.p3d";
+	};
+	// jp_f_kanban_kushi (shopsign)
+	class StaticObj_JP_F_Kanban_Kushi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: combs (kushi)";
+		model="\JP\furniture\shopsign\jp_f_kanban_kushi.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Kushi_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (combs (kushi)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_kushi_askew.p3d";
+	};
+	// jp_f_kanban_ningyo (shopsign)
+	class StaticObj_JP_F_Kanban_Ningyo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: dolls (ningyo)";
+		model="\JP\furniture\shopsign\jp_f_kanban_ningyo.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Ningyo_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (dolls (ningyo)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_ningyo_askew.p3d";
+	};
+	// jp_f_kanban_butsugu (shopsign)
+	class StaticObj_JP_F_Kanban_Butsugu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard: Buddhist goods (butsugu)";
+		model="\JP\furniture\shopsign\jp_f_kanban_butsugu.p3d";
+	};
+	class StaticObj_JP_F_Kanban_Butsugu_Askew: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hanging signboard (Buddhist goods (butsugu)), one cord gone, faded";
+		model="\JP\furniture\shopsign\jp_f_kanban_butsugu_askew.p3d";
+	};
 };

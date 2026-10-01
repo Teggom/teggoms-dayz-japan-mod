@@ -1,0 +1,110 @@
+{
+ "building": "Land_JP_Townhouse_Kamigata_3ken_EndR_ToriL_Mochiya",
+ "p3d": "\\JP\\buildings\\furnished\\jp_s1_th_kamigata_3k_endr_mochiya.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "toriniwa",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    3.7,
+    5.4,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2",
+    "DoorsTwin3"
+   ],
+   "note": "entry passage, 1 ken, full omoya depth",
+   "rect_model": [
+    0.938,
+    2.638,
+    -1.76,
+    3.58
+   ],
+   "lot_width": 5.524
+  },
+  {
+   "name": "mise",
+   "tag": "shop:general",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.05999999999999961,
+    3.58,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin4"
+   ],
+   "note": "shop room",
+   "rect_model": [
+    -2.702,
+    0.818,
+    0.97,
+    3.58
+   ],
+   "lot_width": 5.524
+  },
+  {
+   "name": "oku",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.05999999999999961,
+    3.58,
+    -5.4,
+    -2.79
+   ],
+   "doors": [
+    "DoorsTwin2",
+    "DoorsTwin4"
+   ],
+   "note": "back room",
+   "rect_model": [
+    -2.702,
+    0.818,
+    -1.76,
+    0.85
+   ],
+   "lot_width": 5.524
+  },
+  {
+   "name": "kitchen",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.05999999999999961,
+    5.4,
+    -7.220000000000001,
+    -5.52
+   ],
+   "doors": [
+    "DoorsTwin5"
+   ],
+   "note": "hashiri kitchen (no kamado yet: B3a/B4)",
+   "rect_model": [
+    -2.702,
+    2.638,
+    -3.58,
+    -1.88
+   ],
+   "lot_width": 5.524
+  }
+ ],
+ "loot_points": 28,
+ "loot_by_room": {
+  "toriniwa": 3,
+  "mise": 12,
+  "oku": 6,
+  "kitchen": 7
+ }
+}

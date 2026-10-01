@@ -435,5 +435,15 @@ def get(key):
 S1_SHOPS = [
     _furn("s1_th_edo_3k_middle_kanamono", "th_edo_3k_middle_toril", "shop_kanamono_3k_ab1", "Kanamono",
           "shop set: ironmonger"),
+    _furn("s1_th_kamigata_2k_middle_tabako", "th_kamigata_2k_middle_torir", "shop_tabako_2k_ab0", "Tabako",
+          "shop set: tobacco"),
+    _furn("s1_th_kamigata_3k_endr_mochiya", "th_kamigata_3k_endr_toril", "shop_mochiya_3k_ab0", "Mochiya",
+          "shop set: sweets and rice cakes"),
+    _furn("s1_th_edo_3k_endl_kusuri", "th_edo_3k_endl_toril", "shop_kusuri_3k_ab2", "Kusuri",
+          "shop set: apothecary (heavier abandoned state)"),
+    _furn("s1_th_edo_2k_middle_board_shitate", "th_edo_2k_middle_torir_board", "shop_shitate_2k_ab1", "Shitate",
+          "shop set: tailor"),
+    _furn("s1_th_kamigata_3k_middle_kyo_ningyo", "th_kamigata_3k_middle_toril_kyo", "shop_ningyo_3k_ab1", "Ningyo",
+          "shop set: dolls"),
 ]
 BUILDINGS += S1_SHOPS

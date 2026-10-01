@@ -1,0 +1,568 @@
+{
+ "building": "Land_JP_Townhouse_Kamigata_3ken_EndR_ToriL_Mochiya",
+ "key": "s1_th_kamigata_3k_endr_mochiya",
+ "date": "2026-09-30",
+ "budget": "townhouse",
+ "faces": "7692/2817/1042",
+ "door_clear_m": [
+  1.46,
+  1.06,
+  1.06,
+  1.24,
+  1.06
+ ],
+ "checks_n": 110,
+ "failures": 0,
+ "checks": [
+  {
+   "check": "C5 LOD set (vanilla house set)",
+   "ok": true,
+   "detail": "Resolution 1 7692, Resolution 2 2817, Resolution 3 1042, Geometry 1221, Memory 0, Roadway 18, View Geometry 1217, Fire Geometry 1211"
+  },
+  {
+   "check": "C5 face budget (townhouse: 9000 / 3450 / 1200)",
+   "ok": true,
+   "detail": "R1 7692, R2 2817, R3 1042"
+  },
+  {
+   "check": "Geometry properties + mass",
+   "ok": true,
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 40000 kg"
+  },
+  {
+   "check": "C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "204 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "203 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "202 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry penetration rvmats",
+   "ok": true,
+   "detail": "dirt, fabric_thin, granite, pottery, wood"
+  },
+  {
+   "check": "C2 library materials only",
+   "ok": true,
+   "detail": "every path under JP\\common\\materials\\ (on disk) or vanilla penetration / roadway"
+  },
+  {
+   "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
+   "ok": true,
+   "detail": "glass paths 0; 1972 corrugated kawara field faces in LOD0; 26 individual dodai stones"
+  },
+  {
+   "check": "C3 grid snap (post nodes on the 0.455 grid)",
+   "ok": true,
+   "detail": "25 posts"
+  },
+  {
+   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Entrance (street) (hikichigai): bones doors1+doors2"
+  },
+  {
+   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.50/0.66 m without touching other geometry; open clear 1.46 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Toriniwa -> oku (katabiki): bones doors3"
+  },
+  {
+   "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin3 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Toriniwa -> mise (katabiki): bones doors4"
+  },
+  {
+   "check": "C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin4 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Mise <-> oku (hikiwake): bones doors5+doors6"
+  },
+  {
+   "check": "C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 0.66/0.66 m without touching other geometry; open clear 1.24 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin5 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kitchen back door (yard) (katabiki): bones doors7"
+  },
+  {
+   "check": "C7 DoorsTwin5 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin6 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Street window (window_slide): bones doors8"
+  },
+  {
+   "check": "C7 DoorsTwin6 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin7 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Oku window (hikichigai): bones doors9+doors10"
+  },
+  {
+   "check": "C7 DoorsTwin7 window sweep",
+   "ok": true,
+   "detail": "hikichigai moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 open passage clear >= 1.00 + head >= 2.00",
+   "ok": true,
+   "detail": "clear 1.15 m, head 2.00 m"
+  },
+  {
+   "check": "C7 Roadway sits on Geometry (+-3 cm)",
+   "ok": true,
+   "detail": "288/288 samples"
+  },
+  {
+   "check": "C7 walkable floors have Roadway at floor height",
+   "ok": true,
+   "detail": "771/771 samples over toriniwa, mise, oku, kitchen"
+  },
+  {
+   "check": "C7 head room >= 2.10 over every floor",
+   "ok": true,
+   "detail": "lowest 2.50 m"
+  },
+  {
+   "check": "Loot points on Roadway floors, ranges clear of walls, every room",
+   "ok": true,
+   "detail": "28 points (toriniwa 3, mise 12, oku 6, kitchen 7)"
+  },
+  {
+   "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
+   "ok": true,
+   "detail": "28 points, max diff 4.3e-07 m"
+  },
+  {
+   "check": "Placement inside the test yard, clear of the reserved spots",
+   "ok": true,
+   "detail": "not placed on the island (shipped in the PBO only)"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Toriniwa -> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.35 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Toriniwa -> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.37 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.35 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.37 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin6 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m"
+  },
+  {
+   "check": "C10 DoorsTwin6 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
+  },
+  {
+   "check": "C10 DoorsTwin7 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Oku window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
+  },
+  {
+   "check": "C10 DoorsTwin7 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Oku window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.01 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.20 m"
+  },
+  {
+   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Entrance (street): 53910 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Toriniwa -> oku: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Toriniwa -> mise: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin4 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Mise <-> oku: 54342 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin5 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kitchen back door (yard): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin6 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Street window: 17094 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin7 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Oku window: 53904 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C18 DoorsTwin1 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Entrance (street): doors1 u -2.56 closed -> -1.06 open, doorway -2.64..-0.94; doors2 u -1.71 closed -> -1.06 open, doorway -2.64..-0.94"
+  },
+  {
+   "check": "C18 DoorsTwin5 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kitchen back door (yard): doors7 u 2.56 closed -> 1.46 open, doorway 1.34..2.64"
+  },
+  {
+   "check": "C11 envelope leak: rooms see outside only through doors / windows",
+   "ok": true,
+   "detail": "toriniwa 9600 rays, 0 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; oku 8640 rays, 0 out through doors/windows, 0 LEAKS; kitchen 8640 rays, 0 out through doors/windows, 0 LEAKS"
+  },
+  {
+   "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+   "ok": true,
+   "detail": "4 roof bodies clear"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed, fascia at every eave",
+   "ok": true,
+   "detail": "2630/2630 field points within reach of the bed; 4 eave tile sets, 4 fascia boards"
+  },
+  {
+   "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+   "ok": true,
+   "detail": "no exterior earth face looks into a room"
+  },
+  {
+   "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+   "ok": true,
+   "detail": "3827 columns over 2.5 m compared in each LOD"
+  },
+  {
+   "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+   "ok": true,
+   "detail": "17 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+  },
+  {
+   "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+   "ok": true,
+   "detail": "far-field faces R1/R2/R3 0/181/4; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+  },
+  {
+   "check": "D1 props per room 5-7: toriniwa",
+   "ok": true,
+   "detail": "5 props: jp_f_tana_091_1, jp_f_debris_leaves, jp_f_debris_straw, jp_f_ofuda_akiba, jp_f_oke_bucket, jp_f_oke_bucket"
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: toriniwa",
+   "ok": true,
+   "detail": "0.43 of 9.08 m2 = 4.7 % (collision footprints)"
+  },
+  {
+   "check": "D3 at least one raised loot surface: toriniwa",
+   "ok": true,
+   "detail": "1 raised points on jp_f_tana_091_1"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: toriniwa",
+   "ok": true,
+   "detail": "DoorsTwin1, DoorsTwin2, DoorsTwin3, passage toriniwa <-> kitchen, centre joined by a 1.00 m band (861 free cells)"
+  },
+  {
+   "check": "D1 props per room 5-7: mise",
+   "ok": true,
+   "detail": "5 props: jp_f_zukue_choba, jp_f_choba_set_desk, jp_f_choba_set_zenibako, jp_f_tana_091_3, jp_f_seiro_stack, jp_f_misedana_1ken, jp_f_sg_sweets, jp_f_sg_sweets, jp_f_sg_sweets, jp_f_jar_s, jp_f_enza_zabuton, jp_f_kamidana_plain, jp_f_koyomi"
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: mise",
+   "ok": true,
+   "detail": "1.87 of 9.19 m2 = 20.4 % (collision footprints)"
+  },
+  {
+   "check": "D3 at least one raised loot surface: mise",
+   "ok": true,
+   "detail": "10 raised points on jp_f_choba_set_zenibako, jp_f_misedana_1ken, jp_f_tana_091_3, jp_f_zukue_choba"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: mise",
+   "ok": true,
+   "detail": "DoorsTwin3, DoorsTwin4, centre joined by a 1.00 m band (929 free cells)"
+  },
+  {
+   "check": "D1 props per room 5-7: oku",
+   "ok": true,
+   "detail": "6 props: jp_f_futon_laid, jp_f_tansu, jp_f_andon_kaku, jp_f_hibachi_round, jp_f_butsudan_lacquer, jp_f_enza_zabuton, jp_f_tea_dobin, jp_f_kaya_bundle"
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: oku",
+   "ok": true,
+   "detail": "0.84 of 9.19 m2 = 9.1 % (collision footprints)"
+  },
+  {
+   "check": "D3 at least one raised loot surface: oku",
+   "ok": true,
+   "detail": "4 raised points on jp_f_futon_laid, jp_f_tansu"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: oku",
+   "ok": true,
+   "detail": "DoorsTwin2, DoorsTwin4, centre joined by a 1.00 m band (898 free cells)"
+  },
+  {
+   "check": "D1 props per room 5-7: kitchen",
+   "ok": true,
+   "detail": "7 props: jp_f_kama, jp_f_seiro_kama2, jp_f_nagashi_wood, jp_f_tana_136_1, jp_f_mizugame, jp_f_firewood_stack, jp_f_oke_pickle, jp_f_hiuchi_box, jp_f_utensil_board"
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: kitchen",
+   "ok": true,
+   "detail": "2.01 of 9.08 m2 = 22.1 % (collision footprints)"
+  },
+  {
+   "check": "D3 at least one raised loot surface: kitchen",
+   "ok": true,
+   "detail": "6 raised points on jp_f_firewood_stack, jp_f_mizugame, jp_f_nagashi_wood, jp_f_oke_pickle, jp_f_tana_136_1"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: kitchen",
+   "ok": true,
+   "detail": "DoorsTwin5, passage toriniwa <-> kitchen, centre joined by a 1.00 m band (297 free cells)"
+  },
+  {
+   "check": "D5 DoorsTwin1: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Entrance (street): clear"
+  },
+  {
+   "check": "D6 DoorsTwin1 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Entrance (street): leaves slide 1.50/0.66 m without touching other geometry; open clear 1.46 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin1 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m"
+  },
+  {
+   "check": "D7 DoorsTwin1 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
+  },
+  {
+   "check": "D5 DoorsTwin2: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Toriniwa -> oku: clear"
+  },
+  {
+   "check": "D6 DoorsTwin2 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Toriniwa -> oku: leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin2 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Toriniwa -> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.35 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m"
+  },
+  {
+   "check": "D7 DoorsTwin2 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Toriniwa -> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.37 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
+  },
+  {
+   "check": "D5 DoorsTwin3: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Toriniwa -> mise: clear"
+  },
+  {
+   "check": "D6 DoorsTwin3 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Toriniwa -> mise: leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin3 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.35 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m"
+  },
+  {
+   "check": "D7 DoorsTwin3 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.37 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
+  },
+  {
+   "check": "D5 DoorsTwin4: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Mise <-> oku: clear"
+  },
+  {
+   "check": "D6 DoorsTwin4 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Mise <-> oku: leaves slide 0.66/0.66 m without touching other geometry; open clear 1.24 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin4 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
+  },
+  {
+   "check": "D7 DoorsTwin4 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m"
+  },
+  {
+   "check": "D5 DoorsTwin5: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Kitchen back door (yard): clear"
+  },
+  {
+   "check": "D6 DoorsTwin5 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Kitchen back door (yard): leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin5 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "D7 DoorsTwin5 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "D7 DoorsTwin6 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m"
+  },
+  {
+   "check": "D7 DoorsTwin6 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
+  },
+  {
+   "check": "D7 DoorsTwin7 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Oku window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
+  },
+  {
+   "check": "D7 DoorsTwin7 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Oku window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.01 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.20 m"
+  },
+  {
+   "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
+   "ok": true,
+   "detail": "23 collision props checked against 194 building components"
+  },
+  {
+   "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
+   "ok": true,
+   "detail": "42 props pairwise"
+  },
+  {
+   "check": "D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall",
+   "ok": true,
+   "detail": "39 props"
+  },
+  {
+   "check": "D15 surface items rest on their host's surface (+-2 cm, inside its rect)",
+   "ok": true,
+   "detail": "7 items"
+  },
+  {
+   "check": "D16 hanging items keep 2.00 m head room (or hang over a hearth / corner / furniture / doorway)",
+   "ok": true,
+   "detail": "1 items"
+  },
+  {
+   "check": "D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry",
+   "ok": true,
+   "detail": "28 points (7 floor, 21 raised)"
+  },
+  {
+   "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
+   "ok": true,
+   "detail": "99 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
+  },
+  {
+   "check": "D13 yard / street objects inside the test pad",
+   "ok": true,
+   "detail": "3 objects"
+  },
+  {
+   "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
+   "ok": true,
+   "detail": "ODOL v55, 688906 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+  }
+ ]
+}

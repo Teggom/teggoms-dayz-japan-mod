@@ -205,10 +205,10 @@ def sg_pawn(state="intact"):
 
 def coin_string(x, z, L=0.18, y0=0.0, ry=0.0, wear=None):
     """A string of copper coins (zeni-sashi): coins as a segmented roll on a straw cord, knotted at the ends."""
-    out = [fkit.lcyl("x", 0.012, y0 + 0.012, 0.0, -L / 2, L / 2, IRON, n=6, vis=(1,))]
+    out = [fkit.lcyl("x", y0 + 0.012, 0.0, 0.012, -L / 2, L / 2, IRON, n=6, vis=(1,))]
     for k in range(5):
         xx = -L / 2 + L * (k + 0.5) / 5
-        out.append(fkit.lcyl("x", 0.0125, y0 + 0.012, 0.0, xx - 0.002, xx + 0.002, ROPE, n=6, vis=(1,)))
+        out.append(fkit.lcyl("x", y0 + 0.012, 0.0, 0.0135, xx - 0.004, xx + 0.004, ROPE, n=6, vis=(1,)))
     return [xf(s, ry=ry, t=(x, 0.0, z)) for s in wear_all(out, wear)]
 
 
@@ -220,7 +220,7 @@ def sg_coins(state="intact"):
         for k in range(3):
             P.adds(coin_string(-0.08, -0.05 + 0.05 * k, y0=0.006, ry=3.0 * k))
         for k in range(4):
-            P.add(xf(fkit.lcyl("x", 0.008, 0.008, 0.0, -0.02, 0.02, PALE, n=5, vis=(1,)), ry=30.0 * k,
+            P.add(xf(fkit.lcyl("x", 0.008, 0.0, 0.008, -0.02, 0.02, PALE, n=5, vis=(1,)), ry=30.0 * k,
                      t=(0.13 + 0.03 * (k % 2), 0.0, -0.04 + 0.03 * k)))
         P.add(W(0.17, 0.27, 0.0, 0.05, -0.04, 0.05, LACQ, vis=(1,)))
     else:
