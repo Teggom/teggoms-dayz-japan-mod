@@ -58,6 +58,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~16:26 (local) | W2F (baseline) | launched: wave-2 specialty props, furnished variants, shrine precinct / temple / civic placement, ~30-35 min walk | - | - | |
 | 2026-10-01 ~17:20 (local) | W2F | 49 specialty props, 24 furnished wave-2 variants, shrine precinct / village shrine / 2 temples / civic placed, ~32 min walk | **675k** (215 tool calls) | 53 min | weekly **61%** after |
 | 2026-10-01 ~18:30 (local) | FX1 | wave-2 walk fixes 1-6 (door pulls, offering box, hung props, veranda returns, torii clearance, woodpile stakes) + handlecheck / hangcheck | **598k** (268 tool calls) | 55 min | |
+| 2026-10-01 ~18:45 (local) | FX2 (baseline) | launched: statues from CC0 museum refs, komainu + kitsune pairs, lantern pairs, detail props, torii rope sag, U1 wrap veranda | - | - | before: **~63%** |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
