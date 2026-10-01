@@ -2165,8 +2165,8 @@
    "variant": "stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 650,
-    "Resolution 2": 278,
+    "Resolution 1": 686,
+    "Resolution 2": 308,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -2190,10 +2190,13 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
      }
@@ -2210,8 +2213,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 650,
-       "Resolution 2": 278,
+       "Resolution 1": 686,
+       "Resolution 2": 308,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
@@ -2236,7 +2239,7 @@
       {
        "name": "height",
        "expected": 0.6,
-       "measured": 0.6341,
+       "measured": 0.6304,
        "tol": 0.06,
        "source": "build_list",
        "ok": true
@@ -2248,7 +2251,7 @@
      "name": "anchor 'floor': base / wall / hook plane within 0-2 cm",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.0,
+      "res1_min_y": -0.0003,
       "geo_min_y": 0.0
      }
     },
@@ -2295,11 +2298,11 @@
       {
        "surface": "top",
        "point": [
-        0.0546,
-        0.6682,
+        0.0472,
+        0.6619,
         0.0272
        ],
-       "hit_y": 0.6682,
+       "hit_y": 0.6619,
        "ok": true
       }
      ]
@@ -2309,7 +2312,9 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_straw_rope_w2": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_endgrain_w1": true,
       "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
@@ -2320,6 +2325,18 @@
      "pass": true,
      "detail": [
       {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        86.9,
+        73.3,
+        52.7
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.1,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
         153.9,
@@ -2329,6 +2346,18 @@
        "palette": "firewood_end",
        "dE76": 2.8,
        "tolerance": 8,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_endgrain_w1",
+       "mean_srgb": [
+        103.8,
+        74.8,
+        66.1
+       ],
+       "palette": "timber_weathered",
+       "dE76": 4.9,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -2366,6 +2395,18 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
       }
      ]
     }
@@ -2378,8 +2419,8 @@
    "variant": "stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 356,
-    "Resolution 2": 146,
+    "Resolution 1": 384,
+    "Resolution 2": 171,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -2404,10 +2445,13 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
      }
@@ -2424,8 +2468,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 356,
-       "Resolution 2": 146,
+       "Resolution 1": 384,
+       "Resolution 2": 171,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
@@ -2454,7 +2498,7 @@
      "name": "anchor 'floor': base / wall / hook plane within 0-2 cm",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.0,
+      "res1_min_y": -0.0003,
       "geo_min_y": 0.0
      }
     },
@@ -2505,7 +2549,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w1": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_endgrain_w1": true,
       "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
@@ -2528,6 +2574,18 @@
        "pass": true
       },
       {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        86.9,
+        73.3,
+        52.7
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.1,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
         153.9,
@@ -2537,6 +2595,18 @@
        "palette": "firewood_end",
        "dE76": 2.8,
        "tolerance": 8,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_endgrain_w1",
+       "mean_srgb": [
+        103.8,
+        74.8,
+        66.1
+       ],
+       "palette": "timber_weathered",
+       "dE76": 4.9,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -2573,6 +2643,18 @@
        "palette": "timber_sooted",
        "dE76": 1.5,
        "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
        "pass": true
       }
      ]

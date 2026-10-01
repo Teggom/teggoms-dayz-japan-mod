@@ -317,14 +317,19 @@ def _vboards_z(x, z0, z1, y0, y1, rng, mat):
 
 # ------------------------------------------------------------------------------------------------ whole en
 def en_wrap(part, W, D, depth=DEPTH, drop=1.0, style="plain", sides=("front", "left", "right"), stair=None,
-            waki=True, mat=MAT, waki_top=2.05):
+            waki=True, mat=MAT, waki_top=2.05, returns=False, ret_z=None, side_len=None):
     """The en round a W x D hall (front wall line z 0, x 0..W; back wall line z -D): front en over x -depth..W+depth
     (with both corner squares), side en from the front corner back to the rear wall line, kumi-koran on every open
     edge with crossed corners ('plain') or corner posts ('giboshi'), the stair gap and kizahashi at the front (stair =
-    x centre), wakishoji at the rear ends of the side en. Returns dict(stair=..., rails=[...])."""
+    x centre), wakishoji at the rear ends of the side en. returns=True (FX1, 2026-10-01; Stephen on U1: 'the sides
+    of the main patio area are just cut off'): where the front en has no side en, the koran turns the corner at the
+    deck end and runs back to the wall (a return, sode-koran) instead of stopping in the air. Returns dict(stair=...,
+    rails=[...]). side_len (FX1): the side en run back only this far from the front wall line (to a bay line) and
+    end there in the wakishoji, as on many halls (default: to the rear wall line, -D)."""
     zr = depth - EDGE_IN - JIF[1] / 2                          # rail centreline (front)
     out = {"rails": []}
     have_l, have_r = "left" in sides, "right" in sides
+    Ds = D if side_len is None else side_len                    # how far back the side en run
     fx0 = -depth if have_l else 0.0
     fx1 = W + depth if have_r else W
     if "front" in sides:
@@ -335,24 +340,39 @@ def en_wrap(part, W, D, depth=DEPTH, drop=1.0, style="plain", sides=("front", "l
             continue
         sg = -1.0 if side == "left" else 1.0
         xa, xb = sorted((sg * POST / 2 + (W if sg > 0 else 0.0), sg * depth + (W if sg > 0 else 0.0)))
-        en_deck(part, xa, xb, -D, POST / 2 if "front" in sides else 0.0, drop, along="x",
+        en_deck(part, xa, xb, -Ds, POST / 2 if "front" in sides else 0.0, drop, along="x",
                 edge="x0" if sg < 0 else "x1", mat=mat)
     corner = "cross" if style == "plain" else "post"
     xl, xr_ = -zr, W + zr                                      # side rail centrelines
     end_back = "stop" if waki else "open"
+    ret_l = returns and "front" in sides and not have_l
+    ret_r = returns and "front" in sides and not have_r
+    if ret_l:                                                  # the return's centreline, inset like the front rail's
+        xl = fx0 + (depth - zr)
+    if ret_r:
+        xr_ = fx1 - (depth - zr)
     if "front" in sides:
-        ends_l = corner if have_l else "stop"
-        ends_r = corner if have_r else "stop"
+        ends_l = corner if (have_l or ret_l) else "stop"
+        ends_r = corner if (have_r or ret_r) else "stop"
         if stair is not None:
             K = kizahashi(part, stair, depth, drop, style=style, mat=mat)
             out["stair"] = K
             gl, gr = K["xa"], K["xb"]
-            out["rails"].append(rail(part, (xl if have_l else fx0, zr), (gl, zr), style, (ends_l, "post")))
-            out["rails"].append(rail(part, (gr, zr), (xr_ if have_r else fx1, zr), style, ("post", ends_r)))
+            out["rails"].append(rail(part, (xl if (have_l or ret_l) else fx0, zr), (gl, zr), style, (ends_l, "post")))
+            out["rails"].append(rail(part, (gr, zr), (xr_ if (have_r or ret_r) else fx1, zr), style, ("post", ends_r)))
         else:
-            out["rails"].append(rail(part, (xl if have_l else fx0, zr), (xr_ if have_r else fx1, zr), style,
-                                     (ends_l, ends_r)))
-    zb = -D + 0.08 if waki else -D                              # the side rail stops at the screen
+            out["rails"].append(rail(part, (xl if (have_l or ret_l) else fx0, zr), (xr_ if (have_r or ret_r) else fx1,
+                                                                                     zr), style, (ends_l, ends_r)))
+        # the returns: from the front corner back to the wall face (ret_z: the face of a big corner column)
+        zw = POST / 2 if ret_z is None else ret_z
+        for on, xc in ((ret_l, xl), (ret_r, xr_)):
+            if not on:
+                continue
+            if style == "plain":
+                out["rails"].append(rail(part, (xc, zr), (xc, zw), style, ("cross", "stop"), lift=0.015))
+            else:
+                out["rails"].append(rail(part, (xc, zr - 0.052), (xc, zw), style, ("open", "stop")))
+    zb = -Ds + 0.08 if waki else -Ds                            # the side rail stops at the screen
     for side, xc in (("left", xl), ("right", xr_)):
         if side not in sides:
             continue
@@ -364,7 +384,7 @@ def en_wrap(part, W, D, depth=DEPTH, drop=1.0, style="plain", sides=("front", "l
             # the corner post belongs to the front run: the side run starts at its face
             out["rails"].append(rail(part, (xc, zr - 0.052), (xc, zb), style, ("open", end_back)))
         if waki:
-            _waki_x(part, 0.0 if side == "left" else W, -1.0 if side == "left" else 1.0, depth, -D + 0.05,
+            _waki_x(part, 0.0 if side == "left" else W, -1.0 if side == "left" else 1.0, depth, -Ds + 0.05,
                     waki_top, mat)
     return out
 

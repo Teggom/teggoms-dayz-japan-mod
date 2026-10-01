@@ -272,18 +272,21 @@ def lift_portals(S, drop, n0=0):
     S.portals[n0:] = [(n, (b[0], b[1], b[2] + drop, b[3] + drop, b[4], b[5])) for n, b in S.portals[n0:]]
 
 
-def en_rooms(S, W, D, drop, sides, depth=KR.DEPTH, z0=0.12):
+def en_rooms(S, W, D, drop, sides, depth=KR.DEPTH, z0=0.12, returns=False, side_len=None):
     """The en as an open floor (loot on it; C11 skips it). z0: where the front en's floor starts (a town hall's
-    shitomido hang in front of its round columns)."""
+    shitomido hang in front of its round columns). returns: the front en ends in koran returns (FX1): keep clear of
+    them."""
     rects = []
     if "front" in sides:
-        x0 = -depth + 0.15 if ("left" in sides) else 0.10
-        x1 = W + depth - 0.15 if ("right" in sides) else W - 0.10
+        e = 0.27 if returns else 0.10
+        x0 = -depth + 0.15 if ("left" in sides) else e
+        x1 = W + depth - 0.15 if ("right" in sides) else W - e
         rects.append(("en", (x0, x1, z0, depth - 0.18)))
     for sd, sg in (("left", -1), ("right", 1)):
         if sd in sides:
             xa, xb = (-depth + 0.15, -0.12) if sg < 0 else (W + 0.12, W + depth - 0.15)
-            rects.append(("en_" + sd, (xa, xb, -D + 0.25, 0.10 if "front" not in sides else 0.0)))
+            rects.append(("en_" + sd, (xa, xb, -(D if side_len is None else side_len) + 0.25,
+                                       0.10 if "front" not in sides else 0.0)))
     for nm, rc in rects:
         S.room(nm, "veranda", "boards", drop, rc, [], "the en (veranda) round the hall: open, railed", enclosed=False)
 
@@ -307,7 +310,8 @@ def haiden(name=None, grade="village", cover="hiwada", wear="_w1"):
     n0 = len(S.portals)
     for k in (0, 2):
         front_bay(S, k * KEN, KEN, "lattice", "")
-    en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False)
+    en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False,
+                    returns=True)  # FX1: koran returns at the en ends
     rp = Part("roof", "", "")
     sls, info = R.roof(rp, W, D, "kirizuma", "itabuki", eave_y=EAVE_Y)
     (x0, yr, zr), (x1, _, _) = info["ridge"]
@@ -322,7 +326,7 @@ def haiden(name=None, grade="village", cover="hiwada", wear="_w1"):
     lift_portals(S, drop, n0)
     S.room("haiden", "worship", "boards", drop, (POST / 2, W - POST / 2, -D + POST / 2, -POST / 2), [S.dn["front"]],
            "worship floor: offering box + bell rope in front of the middle bay, drum, ema on the walls")
-    en_rooms(S, W, D, drop, ("front",))
+    en_rooms(S, W, D, drop, ("front",), returns=True)
     stair_obstacle(S, "en", en["stair"])
     fit(S, "saisen_bako", "en", centre=(W / 2, 0.45), size=(1.20, 0.50), yaw=0.0, y=drop,
         note="offering box (saisen-bako) on the en in front of the doors")
@@ -460,7 +464,8 @@ def do(name=None, size=3, roof="tile", grade="village", wear="_w1"):
         S.door(TB.part_tobira("_lattice_in"), F0, KEN, 0.0, "Hall doors right (lattice, open in)", "front2")
     en = None
     if not thatch:
-        en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False)
+        en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False,
+                        returns=True)  # FX1: koran returns at the en ends
     rp = Part("roof", "", "")
     if thatch:
         sls, info = NG._hogyo_thatch(rp, W)
@@ -479,7 +484,7 @@ def do(name=None, size=3, roof="tile", grade="village", wear="_w1"):
     S.room("hall", "worship", "boards", drop, (POST / 2, W - POST / 2, -D + POST / 2, -POST / 2), doors,
            "one-room hall: the statue on an altar shelf at the back; also the village meeting place")
     if en:
-        en_rooms(S, W, D, drop, ("front",))
+        en_rooms(S, W, D, drop, ("front",), returns=True)
         stair_obstacle(S, "en", en["stair"])
     fit(S, "altar", "hall", rect=(W / 2 - 0.9, W / 2 + 0.9, -D + A_ + 0.02, -D + A_ + 0.80), y=drop,
         note="altar shelf / dais (shumidan) with the statue (Jizo / Kannon / Yakushi / Koshin / Enma), incense burner, "
@@ -506,7 +511,8 @@ def _honden_shinmei(name, wear):
     STL.platform(S.H, W, D, drop, "honden")
     hall_box(S, W, D, [0.0, KEN], front=[(0.0, KEN)])
     front_bay(S, 0.0, KEN, "shut_board", "")
-    en = KR.en_wrap(S.H, W, D, drop=drop, style="giboshi", sides=("front",), stair=W / 2, waki=False)
+    en = KR.en_wrap(S.H, W, D, drop=drop, style="giboshi", sides=("front",), stair=W / 2, waki=False,
+                    returns=True)  # FX1: koran returns at the en ends
     rp = Part("roof", "", "")
     sls, info = R.roof(rp, W, D, "kirizuma", "itabuki", eave_y=EAVE_Y, gov=0.55)
     (x0, yr, zr), (x1, _, _) = info["ridge"]
@@ -531,7 +537,7 @@ def _honden_shinmei(name, wear):
             s.center = (s.center[0], s.center[1] - drop, s.center[2])
     S.H.merge(mp)
     _lift(S, drop)
-    en_rooms(S, W, D, drop, ("front",))
+    en_rooms(S, W, D, drop, ("front",), returns=True)
     stair_obstacle(S, "en", en["stair"])
     fit(S, "sanctum", None, rect=(A_, W - A_, -D + A_, -A_), y=drop, obstacle=False,
         note="the sealed sanctum (shintai in a zushi, mirror, gohei): seen through the doors only")
@@ -821,7 +827,8 @@ def _do_town(name, wear):
     n0 = len(S.portals)
     dn = town_walls(S, W, D, n, n, c, ytop, front=["shitomi", "tobira_sankara_in", "shitomi"])
     S.dn["front"] = dn[1]
-    en = KR.en_wrap(S.H, W, D, drop=drop, style="giboshi", sides=("front",), stair=W / 2, waki=False)
+    en = KR.en_wrap(S.H, W, D, drop=drop, style="giboshi", sides=("front",), stair=W / 2, waki=False,
+                    returns=True, ret_z=c / 2 + 0.01)  # FX1: koran returns to the corner columns
     rp = Part("roof", "", "")
     # corner lift 0.12 (default 0.30): the far LODs of a 6.8 m hogyo cannot follow a stronger sweep (C15)
     sls, info = SO.roof(rp, W, D, "yosemune", "copper", bear_y=K["bear_y"], g_out=K["g_out"], ov=K["g_out"] + 1.40,
@@ -839,7 +846,7 @@ def _do_town(name, wear):
     lift_portals(S, drop, n0)
     S.room("hall", "worship", "boards", drop, (c / 2 + 0.03, W - c / 2 - 0.03, -D + c / 2 + 0.03, -c / 2 - 0.03),
            [S.dn["front"]], "one-room hall: the statue on its dais at the back; also the ward's meeting hall")
-    en_rooms(S, W, D, drop, ("front",), z0=0.32)
+    en_rooms(S, W, D, drop, ("front",), z0=0.32, returns=True)
     stair_obstacle(S, "en", en["stair"])
     fit(S, "altar", "hall", rect=(W / 2 - 1.2, W / 2 + 1.2, -D + c / 2 + 0.03, -D + c / 2 + 1.10), y=drop,
         note="Sumeru dais (shumidan) with the statue in its zushi, the three altar pieces, bowl gong, sutra desk")
@@ -895,7 +902,8 @@ def hondo(name=None, grade="village", form="degumi", wear="_w1"):
     B.interior = True
     B.merge(cp)
     B.interior = False
-    en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False)
+    en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False,
+                    returns=True)  # FX1: koran returns at the en ends
     rp = Part("roof", "", "")
     sls, info = R.roof(rp, W, D, "irimoya", "sangawara", eave_y=EAVE_Y)
     far_r2_in_r3(rp, ("kawara_field_far",))      # C15: the 4-ken irimoya's R3 field misses the gable foot by 0.30
@@ -913,7 +921,7 @@ def hondo(name=None, grade="village", form="degumi", wear="_w1"):
     S.room("hall", "worship", "boards", drop, (POST / 2, W - POST / 2, -D + POST / 2, -POST / 2),
            [S.dn["front"], S.dn["front2"], S.dn["side"]],
            "gejin (worship floor) in front, naijin (inner sanctum) at the back: the dais spot")
-    en_rooms(S, W, D, drop, ("front",))
+    en_rooms(S, W, D, drop, ("front",), returns=True)
     stair_obstacle(S, "en", en["stair"])
     fit(S, "altar", "hall", rect=(KEN, 3 * KEN, -D + A_ + 0.03, -D + A_ + 1.30), y=drop,
         note="naijin: the Sumeru dais (shumidan) with the honzon in its zushi, canopy over it, the three altar pieces, "
@@ -934,7 +942,8 @@ def _hondo_town(name, form, wear):
     """Town hondo: 3 x 3 bays of 2.275 on a boarded raised floor (+0.75), degumi (or mitesaki) bracket sets with
     kaerumata, board walls + a board ceiling, curved irimoya hongawara, the en on three sides with giboshi koran,
     wakishoji, kizahashi, a hongawara-style kohai fitted under the curved eave; sankarado in the middle bay, hinged
-    shitomido beside, a board side door."""
+    shitomido beside, a board side door. FX1: the en is front-only with koran returns (the three-side en the first
+    line names is over the face budget)."""
     n, bay = 3, TOWN_BAY
     W = D = n * bay
     drop, col_h = 0.75, 3.2
@@ -947,7 +956,10 @@ def _hondo_town(name, form, wear):
     n0 = len(S.portals)
     dn = town_walls(S, W, D, n, n, c, ytop, front=["shitomi", "tobira_sankara_in", "shitomi"])
     S.dn["front"] = dn[1]
-    en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False)
+    en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False,
+                    returns=True)  # FX1: koran returns at the en ends (was cut off). A mawari-en (three sides, even
+    # one bay deep to a wakishoji: koran.en_wrap side_len) is the fuller form but takes R1 to 12,428 / R3 1,638, over
+    # the 'large' budget (12,000 / 1,600); the returns keep it at 11,586 / 1,590
     rp = Part("roof", "", "")
     sls, info = SO.roof(rp, W, D, "irimoya", "hongawara", bear_y=K["bear_y"], g_out=K["g_out"],
                         ov=K["g_out"] + (1.30 if form == "mitesaki" else 1.35), spacing=0.30)
@@ -967,7 +979,7 @@ def _hondo_town(name, form, wear):
     lift_portals(S, drop, n0)
     S.room("hall", "worship", "boards", drop, (c / 2 + 0.03, W - c / 2 - 0.03, -D + c / 2 + 0.03, -c / 2 - 0.03),
            [S.dn["front"]], "gejin in front, naijin at the back: the dais spot")
-    en_rooms(S, W, D, drop, ("front",), z0=0.32)
+    en_rooms(S, W, D, drop, ("front",), z0=0.32, returns=True)
     stair_obstacle(S, "en", en["stair"])
     fit(S, "altar", "hall", rect=(bay, 2 * bay, -D + c / 2 + 0.03, -D + c / 2 + 1.40), y=drop,
         note="naijin: Sumeru dais (shumidan) with the honzon in its zushi, canopy (tengai), keman, banners, the "

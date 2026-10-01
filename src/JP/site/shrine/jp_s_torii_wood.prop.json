@@ -78,12 +78,12 @@
     "Fire Geometry": 40
    },
    "bbox": [
-    -1.27,
-    1.27,
+    -1.715,
+    1.715,
     -0.14,
-    2.725,
-    -0.21,
-    0.196
+    3.679,
+    -0.284,
+    0.264
    ],
    "collision": [
     "geo",
@@ -91,10 +91,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.27,
-    -0.13,
-    1.27,
-    0.13
+    -1.715,
+    -0.176,
+    1.715,
+    0.176
    ],
    "roadway": false,
    "mass_kg": 600.0,
@@ -104,37 +104,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.4570000000000003,
+     "measured": 2.457,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.6855,
+     "measured": 3.6855,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.2,
-     "measured": 0.2,
+     "expected": 0.27,
+     "measured": 0.27,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.36,
-     "measured": 0.36,
+     "expected": 0.486,
+     "measured": 0.486,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.06,
-   "rope_z": 0.085,
-   "rope_span": 1.62,
+   "rope_y": 2.927,
+   "rope_z": 0.09,
+   "rope_span": 2.187,
+   "scale": 1.35,
    "rope": "none",
    "moss": false,
    "shu": false,
@@ -152,7 +153,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 994,
+    "Resolution 1": 989,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -160,12 +161,12 @@
     "Fire Geometry": 40
    },
    "bbox": [
-    -1.27,
-    1.27,
+    -1.715,
+    1.715,
     -0.14,
-    2.725,
-    -0.21,
-    0.196
+    3.679,
+    -0.284,
+    0.264
    ],
    "collision": [
     "geo",
@@ -173,10 +174,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.27,
-    -0.13,
-    1.27,
-    0.13
+    -1.715,
+    -0.176,
+    1.715,
+    0.176
    ],
    "roadway": false,
    "mass_kg": 600.0,
@@ -186,37 +187,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.4570000000000003,
+     "measured": 2.457,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.6855,
+     "measured": 3.6855,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.2,
-     "measured": 0.2,
+     "expected": 0.27,
+     "measured": 0.27,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.36,
-     "measured": 0.36,
+     "expected": 0.486,
+     "measured": 0.486,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.06,
-   "rope_z": 0.085,
-   "rope_span": 1.62,
+   "rope_y": 2.927,
+   "rope_z": 0.09,
+   "rope_span": 2.187,
+   "scale": 1.35,
    "rope": "rope",
    "moss": false,
    "shu": false,
@@ -234,7 +236,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 975,
+    "Resolution 1": 970,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -242,12 +244,12 @@
     "Fire Geometry": 40
    },
    "bbox": [
-    -1.27,
-    1.27,
+    -1.715,
+    1.715,
     -0.14,
-    2.725,
-    -0.21,
-    0.196
+    3.679,
+    -0.284,
+    0.264
    ],
    "collision": [
     "geo",
@@ -255,10 +257,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.27,
-    -0.13,
-    1.27,
-    0.13
+    -1.715,
+    -0.176,
+    1.715,
+    0.176
    ],
    "roadway": false,
    "mass_kg": 600.0,
@@ -268,37 +270,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.4570000000000003,
+     "measured": 2.457,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.6855,
+     "measured": 3.6855,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.2,
-     "measured": 0.2,
+     "expected": 0.27,
+     "measured": 0.27,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.36,
-     "measured": 0.36,
+     "expected": 0.486,
+     "measured": 0.486,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.06,
-   "rope_z": 0.085,
-   "rope_span": 1.62,
+   "rope_y": 2.927,
+   "rope_z": 0.09,
+   "rope_span": 2.187,
+   "scale": 1.35,
    "rope": "rope+shide",
    "moss": false,
    "shu": false,
@@ -324,12 +327,12 @@
     "Fire Geometry": 40
    },
    "bbox": [
-    -1.27,
-    1.27,
+    -1.715,
+    1.715,
     -0.14,
-    2.734,
-    -0.236,
-    0.196
+    3.691,
+    -0.319,
+    0.264
    ],
    "collision": [
     "geo",
@@ -337,10 +340,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.27,
-    -0.13,
-    1.27,
-    0.13
+    -1.715,
+    -0.176,
+    1.715,
+    0.176
    ],
    "roadway": false,
    "mass_kg": 600.0,
@@ -350,37 +353,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.4570000000000003,
+     "measured": 2.457,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.6855,
+     "measured": 3.6855,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.2,
-     "measured": 0.2,
+     "expected": 0.27,
+     "measured": 0.27,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.36,
-     "measured": 0.36,
+     "expected": 0.486,
+     "measured": 0.486,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.06,
-   "rope_z": 0.085,
-   "rope_span": 1.62,
+   "rope_y": 2.927,
+   "rope_z": 0.09,
+   "rope_span": 2.187,
+   "scale": 1.35,
    "rope": "none",
    "moss": true,
    "shu": false,
@@ -398,7 +402,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1012,
+    "Resolution 1": 1007,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -406,12 +410,12 @@
     "Fire Geometry": 40
    },
    "bbox": [
-    -1.27,
-    1.27,
+    -1.715,
+    1.715,
     -0.14,
-    2.734,
-    -0.236,
-    0.196
+    3.691,
+    -0.319,
+    0.264
    ],
    "collision": [
     "geo",
@@ -419,10 +423,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.27,
-    -0.13,
-    1.27,
-    0.13
+    -1.715,
+    -0.176,
+    1.715,
+    0.176
    ],
    "roadway": false,
    "mass_kg": 600.0,
@@ -432,37 +436,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.4570000000000003,
+     "measured": 2.457,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.6855,
+     "measured": 3.6855,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.2,
-     "measured": 0.2,
+     "expected": 0.27,
+     "measured": 0.27,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.36,
-     "measured": 0.36,
+     "expected": 0.486,
+     "measured": 0.486,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.06,
-   "rope_z": 0.085,
-   "rope_span": 1.62,
+   "rope_y": 2.927,
+   "rope_z": 0.09,
+   "rope_span": 2.187,
+   "scale": 1.35,
    "rope": "rope",
    "moss": true,
    "shu": false,
@@ -480,7 +485,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 993,
+    "Resolution 1": 988,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -488,12 +493,12 @@
     "Fire Geometry": 40
    },
    "bbox": [
-    -1.27,
-    1.27,
+    -1.715,
+    1.715,
     -0.14,
-    2.734,
-    -0.236,
-    0.196
+    3.691,
+    -0.319,
+    0.264
    ],
    "collision": [
     "geo",
@@ -501,10 +506,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.27,
-    -0.13,
-    1.27,
-    0.13
+    -1.715,
+    -0.176,
+    1.715,
+    0.176
    ],
    "roadway": false,
    "mass_kg": 600.0,
@@ -514,37 +519,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.4570000000000003,
+     "measured": 2.457,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.6855,
+     "measured": 3.6855,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.2,
-     "measured": 0.2,
+     "expected": 0.27,
+     "measured": 0.27,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.36,
-     "measured": 0.36,
+     "expected": 0.486,
+     "measured": 0.486,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.06,
-   "rope_z": 0.085,
-   "rope_span": 1.62,
+   "rope_y": 2.927,
+   "rope_z": 0.09,
+   "rope_span": 2.187,
+   "scale": 1.35,
    "rope": "rope+shide",
    "moss": true,
    "shu": false,
@@ -570,12 +576,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.856,
-    1.856,
+    -2.171,
+    2.171,
     -0.14,
-    3.59,
-    -0.237,
-    0.22
+    4.2,
+    -0.277,
+    0.258
    ],
    "collision": [
     "geo",
@@ -583,10 +589,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.845,
-    -0.13,
-    1.845,
-    0.13
+    -2.159,
+    -0.152,
+    2.159,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -598,37 +604,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "none",
    "moss": false,
    "shu": false,
@@ -646,7 +653,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1231,
+    "Resolution 1": 1236,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -654,12 +661,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.856,
-    1.856,
+    -2.171,
+    2.171,
     -0.14,
-    3.59,
-    -0.237,
-    0.22
+    4.2,
+    -0.277,
+    0.258
    ],
    "collision": [
     "geo",
@@ -667,10 +674,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.845,
-    -0.13,
-    1.845,
-    0.13
+    -2.159,
+    -0.152,
+    2.159,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -682,37 +689,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "rope",
    "moss": false,
    "shu": false,
@@ -730,7 +738,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1193,
+    "Resolution 1": 1198,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -738,12 +746,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.856,
-    1.856,
+    -2.171,
+    2.171,
     -0.14,
-    3.59,
-    -0.237,
-    0.22
+    4.2,
+    -0.277,
+    0.258
    ],
    "collision": [
     "geo",
@@ -751,10 +759,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.845,
-    -0.13,
-    1.845,
-    0.13
+    -2.159,
+    -0.152,
+    2.159,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -766,37 +774,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "rope+shide",
    "moss": false,
    "shu": false,
@@ -822,12 +831,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.856,
-    1.856,
+    -2.171,
+    2.171,
     -0.14,
-    3.594,
-    -0.253,
-    0.22
+    4.205,
+    -0.296,
+    0.258
    ],
    "collision": [
     "geo",
@@ -835,10 +844,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.845,
-    -0.13,
-    1.845,
-    0.13
+    -2.159,
+    -0.152,
+    2.159,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -848,37 +857,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "none",
    "moss": true,
    "shu": false,
@@ -896,7 +906,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1251,
+    "Resolution 1": 1256,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -904,12 +914,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.856,
-    1.856,
+    -2.171,
+    2.171,
     -0.14,
-    3.594,
-    -0.253,
-    0.22
+    4.205,
+    -0.296,
+    0.258
    ],
    "collision": [
     "geo",
@@ -917,10 +927,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.845,
-    -0.13,
-    1.845,
-    0.13
+    -2.159,
+    -0.152,
+    2.159,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -930,37 +940,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "rope",
    "moss": true,
    "shu": false,
@@ -978,7 +989,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1213,
+    "Resolution 1": 1218,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -986,12 +997,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.856,
-    1.856,
+    -2.171,
+    2.171,
     -0.14,
-    3.594,
-    -0.253,
-    0.22
+    4.205,
+    -0.296,
+    0.258
    ],
    "collision": [
     "geo",
@@ -999,10 +1010,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.845,
-    -0.13,
-    1.845,
-    0.13
+    -2.159,
+    -0.152,
+    2.159,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -1012,37 +1023,38 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "rope+shide",
    "moss": true,
    "shu": false,
@@ -1068,12 +1080,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.856,
-    1.856,
+    -2.171,
+    2.171,
     -0.14,
-    3.59,
-    -0.237,
-    0.22
+    4.2,
+    -0.277,
+    0.258
    ],
    "collision": [
     "geo",
@@ -1081,10 +1093,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.845,
-    -0.13,
-    1.845,
-    0.13
+    -2.159,
+    -0.152,
+    2.159,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -1096,29 +1108,29 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
@@ -1126,9 +1138,10 @@
    "notes": [
     "vermilion: ONLY at Inari and Hachiman shrines (restricted colour, BUILD_LIST)"
    ],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "none",
    "moss": false,
    "shu": true,
@@ -1146,7 +1159,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1221,
+    "Resolution 1": 1226,
     "Resolution 2": 202,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -1154,12 +1167,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.856,
-    1.856,
+    -2.171,
+    2.171,
     -0.14,
-    3.59,
-    -0.237,
-    0.22
+    4.2,
+    -0.277,
+    0.258
    ],
    "collision": [
     "geo",
@@ -1167,10 +1180,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.845,
-    -0.13,
-    1.845,
-    0.13
+    -2.159,
+    -0.152,
+    2.159,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -1182,29 +1195,29 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
@@ -1212,9 +1225,10 @@
    "notes": [
     "vermilion: ONLY at Inari and Hachiman shrines (restricted colour, BUILD_LIST)"
    ],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "rope+shide",
    "moss": false,
    "shu": true,
@@ -1296,6 +1310,7 @@
    "rope_y": 0.573,
    "rope_z": 0.029,
    "rope_span": 0.536,
+   "scale": 1.0,
    "rope": "none",
    "moss": false,
    "shu": false,
@@ -1379,6 +1394,7 @@
    "rope_y": 0.573,
    "rope_z": 0.029,
    "rope_span": 0.536,
+   "scale": 1.0,
    "rope": "none",
    "moss": false,
    "shu": true,
@@ -1460,6 +1476,7 @@
    "rope_y": 0.573,
    "rope_z": 0.029,
    "rope_span": 0.536,
+   "scale": 1.0,
    "rope": "rope+shide",
    "moss": false,
    "shu": false,
@@ -1477,7 +1494,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1349,
+    "Resolution 1": 1389,
     "Resolution 2": 182,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -1485,12 +1502,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.612,
-    2.223,
+    -1.886,
+    2.601,
     -0.14,
-    3.594,
-    -0.325,
-    1.544
+    4.205,
+    -0.381,
+    1.806
    ],
    "collision": [
     "geo",
@@ -1498,10 +1515,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.502,
-    -0.13,
-    2.222,
-    0.13
+    -1.757,
+    -0.152,
+    2.6,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -1511,29 +1528,29 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
@@ -1541,9 +1558,10 @@
    "notes": [
     "abandoned: racked 6.0 deg on a rotted post foot; feet stay on the ground"
    ],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "rope",
    "moss": true,
    "shu": false,
@@ -1561,7 +1579,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1357,
+    "Resolution 1": 1397,
     "Resolution 2": 210,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -1569,12 +1587,12 @@
     "Fire Geometry": 58
    },
    "bbox": [
-    -1.612,
-    2.216,
+    -1.886,
+    2.593,
     -0.14,
-    3.59,
-    -0.325,
-    1.544
+    4.2,
+    -0.381,
+    1.806
    ],
    "collision": [
     "geo",
@@ -1582,10 +1600,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.502,
-    -0.13,
-    2.222,
-    0.13
+    -1.757,
+    -0.152,
+    2.6,
+    0.152
    ],
    "roadway": false,
    "mass_kg": 1100.0,
@@ -1597,29 +1615,29 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.1940999999999997,
+     "measured": 3.1941,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 3.45,
-     "measured": 3.45,
+     "expected": 4.0365,
+     "measured": 4.0365,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.24,
-     "measured": 0.24,
+     "expected": 0.2808,
+     "measured": 0.2808,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.48,
-     "measured": 0.48,
+     "expected": 0.5616,
+     "measured": 0.5616,
      "tol": 0.001,
      "source": "build_list"
     }
@@ -1628,9 +1646,10 @@
     "abandoned: racked 6.0 deg on a rotted post foot; feet stay on the ground",
     "vermilion: ONLY at Inari and Hachiman shrines (restricted colour, BUILD_LIST)"
    ],
-   "rope_y": 2.46,
-   "rope_z": 0.095,
-   "rope_span": 2.394,
+   "rope_y": 3.022,
+   "rope_z": 0.1,
+   "rope_span": 2.801,
+   "scale": 1.17,
    "rope": "rope+shide",
    "moss": false,
    "shu": true,
@@ -1648,7 +1667,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1358,
+    "Resolution 1": 1408,
     "Resolution 2": 139,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -1656,12 +1675,12 @@
     "Fire Geometry": 40
    },
    "bbox": [
-    -1.13,
-    1.433,
+    -1.525,
+    1.934,
     -0.14,
-    2.759,
-    -0.325,
-    1.544
+    3.724,
+    -0.439,
+    2.084
    ],
    "collision": [
     "geo",
@@ -1669,10 +1688,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.114,
-    -0.13,
-    1.437,
-    0.13
+    -1.504,
+    -0.176,
+    1.94,
+    0.176
    ],
    "roadway": false,
    "mass_kg": 600.0,
@@ -1682,29 +1701,29 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.4570000000000003,
+     "measured": 2.457,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.73,
-     "measured": 2.73,
+     "expected": 3.6855,
+     "measured": 3.6855,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.2,
-     "measured": 0.2,
+     "expected": 0.27,
+     "measured": 0.27,
      "tol": 0.001,
      "source": "build_list"
     },
     {
      "name": "kasagi_overhang",
-     "expected": 0.36,
-     "measured": 0.36,
+     "expected": 0.486,
+     "measured": 0.486,
      "tol": 0.001,
      "source": "build_list"
     }
@@ -1712,9 +1731,10 @@
    "notes": [
     "abandoned: racked 3.5 deg on a rotted post foot; feet stay on the ground"
    ],
-   "rope_y": 2.06,
-   "rope_z": 0.085,
-   "rope_span": 1.62,
+   "rope_y": 2.927,
+   "rope_z": 0.09,
+   "rope_span": 2.187,
+   "scale": 1.35,
    "rope": "rope",
    "moss": true,
    "shu": false,

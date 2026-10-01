@@ -27,14 +27,14 @@
    "anchor": "hang",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 342,
+    "Resolution 1": 354,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
    },
    "bbox": [
-    -1.53,
+    -1.38,
     0.302,
     -1.15,
     0.0,
@@ -43,7 +43,7 @@
    ],
    "collision": true,
    "footprint_xz": [
-    -1.53,
+    -1.38,
     -0.259,
     0.259,
     0.259
@@ -86,14 +86,14 @@
    "anchor": "hang",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 342,
+    "Resolution 1": 354,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
    },
    "bbox": [
-    -1.61,
+    -1.46,
     0.381,
     -1.4,
     0.0,
@@ -102,7 +102,7 @@
    ],
    "collision": true,
    "footprint_xz": [
-    -1.61,
+    -1.46,
     -0.333,
     0.333,
     0.333

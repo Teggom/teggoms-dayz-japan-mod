@@ -27,19 +27,19 @@
    "anchor": "floor",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 141,
+    "Resolution 1": 138,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.877,
-    0.792,
+    -0.76,
+    0.76,
     0.0,
-    0.552,
-    -0.449,
-    0.555
+    0.55,
+    -0.287,
+    0.287
    ],
    "collision": true,
    "footprint_xz": [
@@ -85,19 +85,19 @@
    "anchor": "floor",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 141,
+    "Resolution 1": 138,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.702,
-    0.633,
+    -0.61,
+    0.61,
     0.0,
-    0.502,
-    -0.359,
-    0.444
+    0.5,
+    -0.262,
+    0.262
    ],
    "collision": true,
    "footprint_xz": [
@@ -143,19 +143,19 @@
    "anchor": "floor",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 141,
+    "Resolution 1": 138,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.585,
-    0.528,
+    -0.51,
+    0.51,
     0.0,
-    0.452,
-    -0.3,
-    0.37
+    0.45,
+    -0.237,
+    0.237
    ],
    "collision": true,
    "footprint_xz": [

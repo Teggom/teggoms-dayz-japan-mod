@@ -1186,8 +1186,8 @@
    "variant": "wall_1ken_h120",
    "pass": true,
    "faces": {
-    "Resolution 1": 1274,
-    "Resolution 2": 498,
+    "Resolution 1": 1273,
+    "Resolution 2": 508,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -1212,10 +1212,13 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
      }
@@ -1235,8 +1238,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1274,
-       "Resolution 2": 498,
+       "Resolution 1": 1273,
+       "Resolution 2": 508,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
@@ -1260,7 +1263,7 @@
       {
        "name": "height",
        "expected": 1.2,
-       "measured": 1.212,
+       "measured": 1.2171,
        "tol": 0.06,
        "source": "build_list",
        "ok": true
@@ -1280,7 +1283,7 @@
      "name": "anchor 'wall': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.0,
+      "res1_min_y": -0.0004,
       "geo_min_y": 0.0,
       "bury": 0.02,
       "hung": false,
@@ -1335,7 +1338,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w1": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_endgrain_w1": true,
       "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
@@ -1359,6 +1364,19 @@
        "masked": true
       },
       {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
         153.8,
@@ -1368,6 +1386,19 @@
        "palette": "firewood_end",
        "dE76": 2.8,
        "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_endgrain_w1",
+       "mean_srgb": [
+        103.9,
+        74.9,
+        66.2
+       ],
+       "palette": "timber_weathered",
+       "dE76": 4.9,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1407,6 +1438,18 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
       }
      ]
     },
@@ -1425,8 +1468,8 @@
    "variant": "wall_1ken_h180",
    "pass": true,
    "faces": {
-    "Resolution 1": 1283,
-    "Resolution 2": 499,
+    "Resolution 1": 1300,
+    "Resolution 2": 525,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -1451,10 +1494,13 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
      }
@@ -1474,8 +1520,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1283,
-       "Resolution 2": 499,
+       "Resolution 1": 1300,
+       "Resolution 2": 525,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
@@ -1499,7 +1545,7 @@
       {
        "name": "height",
        "expected": 1.8,
-       "measured": 1.8013,
+       "measured": 1.8115,
        "tol": 0.06,
        "source": "build_list",
        "ok": true
@@ -1519,7 +1565,7 @@
      "name": "anchor 'wall': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.0,
+      "res1_min_y": -0.0004,
       "geo_min_y": 0.0,
       "bury": 0.02,
       "hung": false,
@@ -1574,7 +1620,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w1": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_endgrain_w1": true,
       "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
@@ -1598,6 +1646,19 @@
        "masked": true
       },
       {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
         153.8,
@@ -1607,6 +1668,19 @@
        "palette": "firewood_end",
        "dE76": 2.8,
        "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_endgrain_w1",
+       "mean_srgb": [
+        103.9,
+        74.9,
+        66.2
+       ],
+       "palette": "timber_weathered",
+       "dE76": 4.9,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1646,6 +1720,18 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
       }
      ]
     },
@@ -1664,8 +1750,8 @@
    "variant": "half",
    "pass": true,
    "faces": {
-    "Resolution 1": 738,
-    "Resolution 2": 295,
+    "Resolution 1": 655,
+    "Resolution 2": 279,
     "Geometry": 24,
     "View Geometry": 24,
     "Fire Geometry": 24
@@ -1690,10 +1776,13 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
      }
@@ -1713,8 +1802,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 738,
-       "Resolution 2": 295,
+       "Resolution 1": 655,
+       "Resolution 2": 279,
        "Geometry": 24,
        "View Geometry": 24,
        "Fire Geometry": 24
@@ -1738,7 +1827,7 @@
       {
        "name": "height",
        "expected": 1.2,
-       "measured": 1.2292,
+       "measured": 1.2235,
        "tol": 0.06,
        "source": "build_list",
        "ok": true
@@ -1758,7 +1847,7 @@
      "name": "anchor 'wall': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.0,
+      "res1_min_y": -0.0005,
       "geo_min_y": 0.0,
       "bury": 0.02,
       "hung": false,
@@ -1813,7 +1902,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w1": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_endgrain_w1": true,
       "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
@@ -1837,6 +1928,19 @@
        "masked": true
       },
       {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
         153.8,
@@ -1846,6 +1950,19 @@
        "palette": "firewood_end",
        "dE76": 2.8,
        "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_endgrain_w1",
+       "mean_srgb": [
+        103.9,
+        74.9,
+        66.2
+       ],
+       "palette": "timber_weathered",
+       "dE76": 4.9,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1885,6 +2002,18 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
       }
      ]
     },
@@ -1903,8 +2032,8 @@
    "variant": "free_posts",
    "pass": true,
    "faces": {
-    "Resolution 1": 1242,
-    "Resolution 2": 534,
+    "Resolution 1": 1182,
+    "Resolution 2": 516,
     "Geometry": 18,
     "View Geometry": 18,
     "Fire Geometry": 18
@@ -1928,7 +2057,9 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
@@ -1952,8 +2083,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1242,
-       "Resolution 2": 534,
+       "Resolution 1": 1182,
+       "Resolution 2": 516,
        "Geometry": 18,
        "View Geometry": 18,
        "Fire Geometry": 18
@@ -1977,7 +2108,7 @@
       {
        "name": "height",
        "expected": 1.2,
-       "measured": 1.199,
+       "measured": 1.1966,
        "tol": 0.05,
        "source": "build_list",
        "ok": true
@@ -1997,7 +2128,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": -0.08,
+      "res1_min_y": -0.0005,
       "geo_min_y": 0.0,
       "bury": 0.08,
       "hung": false
@@ -2049,7 +2180,9 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_straw_rope_w2": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_endgrain_w1": true,
       "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
@@ -2060,6 +2193,19 @@
      "pass": true,
      "detail": [
       {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
         153.8,
@@ -2069,6 +2215,19 @@
        "palette": "firewood_end",
        "dE76": 2.8,
        "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_endgrain_w1",
+       "mean_srgb": [
+        103.9,
+        74.9,
+        66.2
+       ],
+       "palette": "timber_weathered",
+       "dE76": 4.9,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -2368,7 +2527,7 @@
    "variant": "wall_1ken_h120",
    "pass": true,
    "faces": {
-    "Resolution 1": 1377,
+    "Resolution 1": 1312,
     "Resolution 2": 500,
     "Geometry": 24,
     "View Geometry": 24,
@@ -2394,9 +2553,12 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
       ],
       "bad": []
      }
@@ -2416,7 +2578,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1377,
+       "Resolution 1": 1312,
        "Resolution 2": 500,
        "Geometry": 24,
        "View Geometry": 24,
@@ -2441,7 +2603,7 @@
       {
        "name": "height",
        "expected": 1.2,
-       "measured": 1.2178,
+       "measured": 1.204,
        "tol": 0.06,
        "source": "build_list",
        "ok": true
@@ -2462,7 +2624,7 @@
      "pass": true,
      "detail": {
       "res1_min_y": 0.0,
-      "geo_min_y": 0.0,
+      "geo_min_y": 0.0096,
       "bury": 0.02,
       "hung": false,
       "res1_min_z (wall plane z=0)": 0.05,
@@ -2516,7 +2678,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_wood_endgrain_firewood_w2": true,
+      "jp_m_wood_endgrain_w2": true,
       "jp_m_wood_firewood_w2": true
      }
     },
@@ -2539,6 +2703,19 @@
        "masked": true
       },
       {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_wood_endgrain_firewood_w2",
        "mean_srgb": [
         148.0,
@@ -2548,6 +2725,19 @@
        "palette": "firewood_end",
        "dE76": 5.0,
        "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_endgrain_w2",
+       "mean_srgb": [
+        89.6,
+        64.5,
+        56.1
+       ],
+       "palette": "timber_weathered",
+       "dE76": 9.8,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -2575,6 +2765,19 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
       }
      ]
     },
@@ -27373,32 +27576,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.4570000000000003,
+       "measured": 2.457,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.6855,
+       "measured": 3.6855,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.2,
-       "measured": 0.2,
+       "expected": 0.27,
+       "measured": 0.27,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.36,
-       "measured": 0.36,
+       "expected": 0.486,
+       "measured": 0.486,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -27510,7 +27713,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 994,
+    "Resolution 1": 989,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -27559,7 +27762,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 994,
+       "Resolution 1": 989,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -27576,32 +27779,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.4570000000000003,
+       "measured": 2.457,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.6855,
+       "measured": 3.6855,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.2,
-       "measured": 0.2,
+       "expected": 0.27,
+       "measured": 0.27,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.36,
-       "measured": 0.36,
+       "expected": 0.486,
+       "measured": 0.486,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -27728,7 +27931,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 975,
+    "Resolution 1": 970,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -27778,7 +27981,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 975,
+       "Resolution 1": 970,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -27795,32 +27998,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.4570000000000003,
+       "measured": 2.457,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.6855,
+       "measured": 3.6855,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.2,
-       "measured": 0.2,
+       "expected": 0.27,
+       "measured": 0.27,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.36,
-       "measured": 0.36,
+       "expected": 0.486,
+       "measured": 0.486,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -28027,32 +28230,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.4570000000000003,
+       "measured": 2.457,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.6855,
+       "measured": 3.6855,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.2,
-       "measured": 0.2,
+       "expected": 0.27,
+       "measured": 0.27,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.36,
-       "measured": 0.36,
+       "expected": 0.486,
+       "measured": 0.486,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -28193,7 +28396,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 1012,
+    "Resolution 1": 1007,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -28244,7 +28447,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1012,
+       "Resolution 1": 1007,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -28261,32 +28464,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.4570000000000003,
+       "measured": 2.457,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.6855,
+       "measured": 3.6855,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.2,
-       "measured": 0.2,
+       "expected": 0.27,
+       "measured": 0.27,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.36,
-       "measured": 0.36,
+       "expected": 0.486,
+       "measured": 0.486,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -28441,7 +28644,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 993,
+    "Resolution 1": 988,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -28493,7 +28696,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 993,
+       "Resolution 1": 988,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -28510,32 +28713,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.4570000000000003,
+       "measured": 2.457,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.6855,
+       "measured": 3.6855,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.2,
-       "measured": 0.2,
+       "expected": 0.27,
+       "measured": 0.27,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.36,
-       "measured": 0.36,
+       "expected": 0.486,
+       "measured": 0.486,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -28769,32 +28972,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -28827,7 +29030,7 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0091,
+      "worst_m": 0.0083,
       "pair": [
        "Component01",
        "Component05"
@@ -28923,7 +29126,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1231,
+    "Resolution 1": 1236,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -28973,7 +29176,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1231,
+       "Resolution 1": 1236,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -28990,32 +29193,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -29048,7 +29251,7 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0091,
+      "worst_m": 0.0083,
       "pair": [
        "Component01",
        "Component05"
@@ -29158,7 +29361,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1193,
+    "Resolution 1": 1198,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29209,7 +29412,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1193,
+       "Resolution 1": 1198,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -29226,32 +29429,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -29284,7 +29487,7 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0091,
+      "worst_m": 0.0083,
       "pair": [
        "Component01",
        "Component05"
@@ -29474,32 +29677,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -29532,7 +29735,7 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0091,
+      "worst_m": 0.0083,
       "pair": [
        "Component01",
        "Component05"
@@ -29643,7 +29846,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1251,
+    "Resolution 1": 1256,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29694,7 +29897,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1251,
+       "Resolution 1": 1256,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -29711,32 +29914,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -29769,7 +29972,7 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0091,
+      "worst_m": 0.0083,
       "pair": [
        "Component01",
        "Component05"
@@ -29894,7 +30097,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1213,
+    "Resolution 1": 1218,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29946,7 +30149,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1213,
+       "Resolution 1": 1218,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -29963,32 +30166,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -30021,7 +30224,7 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0091,
+      "worst_m": 0.0083,
       "pair": [
        "Component01",
        "Component05"
@@ -30227,32 +30430,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -30285,7 +30488,7 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0091,
+      "worst_m": 0.0083,
       "pair": [
        "Component01",
        "Component05"
@@ -30407,7 +30610,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1221,
+    "Resolution 1": 1226,
     "Resolution 2": 202,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -30460,7 +30663,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1221,
+       "Resolution 1": 1226,
        "Resolution 2": 202,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -30477,32 +30680,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -30535,7 +30738,7 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0091,
+      "worst_m": 0.0083,
       "pair": [
        "Component01",
        "Component05"
@@ -31327,7 +31530,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1349,
+    "Resolution 1": 1389,
     "Resolution 2": 182,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -31379,7 +31582,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1349,
+       "Resolution 1": 1389,
        "Resolution 2": 182,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -31396,32 +31599,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -31454,10 +31657,10 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.009,
+      "worst_m": 0.0082,
       "pair": [
-       "Component02",
-       "Component06"
+       "Component01",
+       "Component05"
       ]
      }
     },
@@ -31593,7 +31796,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1357,
+    "Resolution 1": 1397,
     "Resolution 2": 210,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -31646,7 +31849,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1357,
+       "Resolution 1": 1397,
        "Resolution 2": 210,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -31663,32 +31866,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.1940999999999997,
+       "measured": 3.1941,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 3.45,
-       "measured": 3.45,
+       "expected": 4.0365,
+       "measured": 4.0365,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.24,
-       "measured": 0.24,
+       "expected": 0.2808,
+       "measured": 0.2808,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.48,
-       "measured": 0.48,
+       "expected": 0.5616,
+       "measured": 0.5616,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -31721,10 +31924,10 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.009,
+      "worst_m": 0.0082,
       "pair": [
-       "Component02",
-       "Component06"
+       "Component01",
+       "Component05"
       ]
      }
     },
@@ -31873,7 +32076,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 1358,
+    "Resolution 1": 1408,
     "Resolution 2": 139,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -31925,7 +32128,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1358,
+       "Resolution 1": 1408,
        "Resolution 2": 139,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -31942,32 +32145,32 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.4570000000000003,
+       "measured": 2.457,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.73,
-       "measured": 2.73,
+       "expected": 3.6855,
+       "measured": 3.6855,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.2,
-       "measured": 0.2,
+       "expected": 0.27,
+       "measured": 0.27,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "kasagi_overhang",
-       "expected": 0.36,
-       "measured": 0.36,
+       "expected": 0.486,
+       "measured": 0.486,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -32202,24 +32405,24 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.7664,
+       "measured": 2.7664,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.71,
-       "measured": 2.71,
+       "expected": 4.1192,
+       "measured": 4.1192,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.32,
-       "measured": 0.32,
+       "expected": 0.4864,
+       "measured": 0.4864,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -32415,24 +32618,24 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.7664,
+       "measured": 2.7664,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.71,
-       "measured": 2.71,
+       "expected": 4.1192,
+       "measured": 4.1192,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.32,
-       "measured": 0.32,
+       "expected": 0.4864,
+       "measured": 0.4864,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -32643,24 +32846,24 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.7664,
+       "measured": 2.7664,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.71,
-       "measured": 2.71,
+       "expected": 4.1192,
+       "measured": 4.1192,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.32,
-       "measured": 0.32,
+       "expected": 0.4864,
+       "measured": 0.4864,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -32883,24 +33086,24 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.7664,
+       "measured": 2.7664,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.71,
-       "measured": 2.71,
+       "expected": 4.1192,
+       "measured": 4.1192,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.32,
-       "measured": 0.32,
+       "expected": 0.4864,
+       "measured": 0.4864,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -33112,24 +33315,24 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 1.82,
-       "measured": 1.82,
+       "expected": 2.7664,
+       "measured": 2.7664,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.71,
-       "measured": 2.71,
+       "expected": 4.1192,
+       "measured": 4.1192,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.32,
-       "measured": 0.32,
+       "expected": 0.4864,
+       "measured": 0.4864,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -33365,24 +33568,24 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.5,
-       "measured": 2.5,
+       "expected": 3.625,
+       "measured": 3.625,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.8,
-       "measured": 2.8,
+       "expected": 4.06,
+       "measured": 4.06,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.4,
-       "measured": 0.4,
+       "expected": 0.58,
+       "measured": 0.58,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -33511,7 +33714,7 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 1158,
+    "Resolution 1": 1161,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -33562,7 +33765,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1158,
+       "Resolution 1": 1161,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -33579,24 +33782,24 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.5,
-       "measured": 2.5,
+       "expected": 3.625,
+       "measured": 3.625,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.8,
-       "measured": 2.8,
+       "expected": 4.06,
+       "measured": 4.06,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.4,
-       "measured": 0.4,
+       "expected": 0.58,
+       "measured": 0.58,
        "tol": 0.001,
        "source": "build_list",
        "ok": true
@@ -33964,7 +34167,7 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 1199,
+    "Resolution 1": 1195,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -34015,7 +34218,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1199,
+       "Resolution 1": 1195,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -34271,24 +34474,24 @@
      "detail": [
       {
        "name": "post_span",
-       "expected": 2.5,
-       "measured": 2.5,
+       "expected": 3.625,
+       "measured": 3.625,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "height",
-       "expected": 2.8,
-       "measured": 2.8,
+       "expected": 4.06,
+       "measured": 4.06,
        "tol": 0.01,
        "source": "build_list",
        "ok": true
       },
       {
        "name": "post_d",
-       "expected": 0.4,
-       "measured": 0.4,
+       "expected": 0.58,
+       "measured": 0.58,
        "tol": 0.001,
        "source": "build_list",
        "ok": true

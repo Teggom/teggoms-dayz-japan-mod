@@ -65,19 +65,19 @@
    "anchor": "floor",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 650,
-    "Resolution 2": 278,
+    "Resolution 1": 686,
+    "Resolution 2": 308,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.455,
-    0.455,
-    0.0,
-    0.668,
+    -0.46,
+    0.459,
+    -0.0,
+    0.68,
     -0.226,
-    0.231
+    0.232
    ],
    "collision": true,
    "footprint_xz": [
@@ -93,7 +93,7 @@
     {
      "name": "top",
      "kind": "shelf",
-     "y": 0.6682,
+     "y": 0.6619,
      "rect": [
       -0.35,
       -0.15,
@@ -103,8 +103,8 @@
      "range": 0.2,
      "points": [
       [
-       0.0546,
-       0.6682,
+       0.0472,
+       0.6619,
        0.0272
       ]
      ]
@@ -121,13 +121,13 @@
     {
      "name": "height",
      "expected": 0.6,
-     "measured": 0.6341,
+     "measured": 0.6304,
      "tol": 0.06,
      "source": "build_list"
     }
    ],
    "notes": [
-    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, both ends staggered; 650 faces"
+    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, both ends staggered; 628 faces"
    ]
   },
   {
@@ -140,8 +140,8 @@
    "anchor": "floor",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 356,
-    "Resolution 2": 146,
+    "Resolution 1": 384,
+    "Resolution 2": 171,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -149,8 +149,8 @@
    "bbox": [
     -0.501,
     0.552,
-    0.0,
-    0.292,
+    -0.0,
+    0.34,
     -0.226,
     0.758
    ],
@@ -175,8 +175,8 @@
     }
    ],
    "notes": [
-    "half used: top at 0.29 m",
-    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, both ends staggered; 307 faces"
+    "half used: top at 0.28 m",
+    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, both ends staggered; 277 faces"
    ]
   },
   {

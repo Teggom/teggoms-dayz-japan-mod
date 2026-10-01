@@ -7,7 +7,7 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 141,
+    "Resolution 1": 138,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
@@ -32,7 +32,6 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
@@ -51,7 +50,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 141,
+       "Resolution 1": 138,
        "Resolution 2": 42,
        "Geometry": 6,
        "View Geometry": 6,
@@ -138,27 +137,13 @@
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
-     "detail": {
-      "jp_m_decal_litter_w2": true
-     }
+     "detail": {}
     },
     {
      "id": "C1",
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
-      {
-       "material": "jp_m_decal_litter_w2",
-       "mean_srgb": [
-        108.2,
-        78.5,
-        56.1
-       ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 3.6,
-       "tolerance": 14,
-       "pass": true
-      },
       {
        "material": "jp_m_metal_iron_w1",
        "mean_srgb": [
@@ -194,7 +179,7 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 141,
+    "Resolution 1": 138,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
@@ -219,7 +204,6 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
@@ -238,7 +222,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 141,
+       "Resolution 1": 138,
        "Resolution 2": 42,
        "Geometry": 6,
        "View Geometry": 6,
@@ -325,27 +309,13 @@
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
-     "detail": {
-      "jp_m_decal_litter_w2": true
-     }
+     "detail": {}
     },
     {
      "id": "C1",
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
-      {
-       "material": "jp_m_decal_litter_w2",
-       "mean_srgb": [
-        108.2,
-        78.5,
-        56.1
-       ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 3.6,
-       "tolerance": 14,
-       "pass": true
-      },
       {
        "material": "jp_m_metal_iron_w1",
        "mean_srgb": [
@@ -381,7 +351,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 141,
+    "Resolution 1": 138,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
@@ -406,7 +376,6 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
@@ -426,7 +395,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 141,
+       "Resolution 1": 138,
        "Resolution 2": 42,
        "Geometry": 6,
        "View Geometry": 6,
@@ -513,27 +482,13 @@
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
-     "detail": {
-      "jp_m_decal_litter_w2": true
-     }
+     "detail": {}
     },
     {
      "id": "C1",
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
-      {
-       "material": "jp_m_decal_litter_w2",
-       "mean_srgb": [
-        108.2,
-        78.5,
-        56.1
-       ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 3.6,
-       "tolerance": 14,
-       "pass": true
-      },
       {
        "material": "jp_m_metal_iron_w2",
        "mean_srgb": [
@@ -5288,7 +5243,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 342,
+    "Resolution 1": 354,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
@@ -5334,7 +5289,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 342,
+       "Resolution 1": 354,
        "Resolution 2": 30,
        "Geometry": 20,
        "View Geometry": 20,
@@ -5502,7 +5457,7 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 342,
+    "Resolution 1": 354,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
@@ -5548,7 +5503,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 342,
+       "Resolution 1": 354,
        "Resolution 2": 30,
        "Geometry": 20,
        "View Geometry": 20,
@@ -7575,7 +7530,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 46,
+    "Resolution 1": 42,
     "Resolution 2": 6,
     "Geometry": 6,
     "View Geometry": 6,
@@ -7600,7 +7555,6 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
@@ -7618,7 +7572,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 46,
+       "Resolution 1": 42,
        "Resolution 2": 6,
        "Geometry": 6,
        "View Geometry": 6,
@@ -7699,7 +7653,7 @@
         0.1,
         -0.275
        ],
-       "hit_y": 0.102,
+       "hit_y": 0.1,
        "ok": true
       },
       {
@@ -7709,7 +7663,7 @@
         0.1,
         0.275
        ],
-       "hit_y": 0.102,
+       "hit_y": 0.1,
        "ok": true
       }
      ]
@@ -7718,27 +7672,13 @@
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
-     "detail": {
-      "jp_m_decal_litter_w2": true
-     }
+     "detail": {}
     },
     {
      "id": "C1",
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
-      {
-       "material": "jp_m_decal_litter_w2",
-       "mean_srgb": [
-        108.2,
-        78.5,
-        56.1
-       ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 3.6,
-       "tolerance": 14,
-       "pass": true
-      },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
@@ -9110,7 +9050,7 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 832,
+    "Resolution 1": 816,
     "Resolution 2": 24,
     "Geometry": 11,
     "Roadway": 2,
@@ -9138,7 +9078,6 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat"
       ],
       "bad": []
@@ -9156,7 +9095,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 832,
+       "Resolution 1": 816,
        "Resolution 2": 24,
        "Geometry": 11,
        "Roadway": 2,
@@ -9253,8 +9192,7 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_ground_earth_bare_w1": true,
-      "jp_m_ground_leaf_litter_w2": true
+      "jp_m_ground_earth_bare_w1": true
      }
     },
     {
@@ -9271,18 +9209,6 @@
        ],
        "palette": "earth_bare",
        "dE76": 0.0,
-       "tolerance": 14,
-       "pass": true
-      },
-      {
-       "material": "jp_m_ground_leaf_litter_w2",
-       "mean_srgb": [
-        81.8,
-        54.7,
-        41.2
-       ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 12.4,
        "tolerance": 14,
        "pass": true
       },
@@ -9309,7 +9235,7 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 856,
+    "Resolution 1": 840,
     "Resolution 2": 24,
     "Geometry": 11,
     "Roadway": 2,
@@ -9337,7 +9263,6 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat"
       ],
       "bad": []
@@ -9355,7 +9280,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 856,
+       "Resolution 1": 840,
        "Resolution 2": 24,
        "Geometry": 11,
        "Roadway": 2,
@@ -9452,8 +9377,7 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_ground_earth_bare_w1": true,
-      "jp_m_ground_leaf_litter_w2": true
+      "jp_m_ground_earth_bare_w1": true
      }
     },
     {
@@ -9470,18 +9394,6 @@
        ],
        "palette": "earth_bare",
        "dE76": 0.0,
-       "tolerance": 14,
-       "pass": true
-      },
-      {
-       "material": "jp_m_ground_leaf_litter_w2",
-       "mean_srgb": [
-        81.8,
-        54.7,
-        41.2
-       ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 12.4,
        "tolerance": 14,
        "pass": true
       },
@@ -9511,11 +9423,18 @@
    ]
   },
   "BIN": {
-   "pass": true,
+   "pass": false,
    "detail": {
-    "missing": [],
+    "missing": [
+     "jp_f_saisen_bako_l",
+     "jp_f_saisen_bako_m",
+     "jp_f_saisen_bako_s",
+     "jp_f_terrace_l",
+     "jp_f_terrace_m",
+     "jp_f_mizubune"
+    ],
     "warning_lines": [],
-    "exit": 0
+    "exit": 3221225477
    }
   },
   "PBO": {

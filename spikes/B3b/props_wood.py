@@ -382,13 +382,14 @@ def firewood(kind):
         P = SPart("firewood_stack", budget="medium", mass=500.0)
         hf = lambda x: Hh   # noqa: E731
         z0, z1 = -D / 2, D / 2
-        ss, info = WP.woodpile(-L / 2, L / 2, hf, z0, z1, seed=11, max_faces=1250, back=True, loose_top=0,
+        # FX1 (2026-10-01): two stakes at each end (front + back corner, tied), not one post in the middle of each end
+        st, px0, px1 = WP.end_stakes(-L / 2 - 0.09, L / 2 + 0.09, z0, z1, Hh, Hh, r=0.04, seed=12)
+        ss, info = WP.woodpile(px0, px1, hf, z0, z1, seed=11, max_faces=1250 - 60, back=True, loose_top=0,
                                over=0.0)
-        add_all(P, ss)
+        add_all(P, ss + st)
         for sx in (-1, 1):
-            P.add(pole((sx * (L / 2 + 0.05), -0.08, 0.0), (sx * (L / 2 + 0.05), Hh + 0.12, 0.0), 0.04, WOOD, n=5,
-                       vis=(1, 2)))
-            P.add(col(sx * (L / 2 + 0.05) - 0.04, sx * (L / 2 + 0.05) + 0.04, 0.0, Hh + 0.12, -0.04, 0.04))
+            xs_ = sx * (L / 2 + 0.05)
+            P.add(col(xs_ - 0.04, xs_ + 0.04, 0.0, Hh + 0.12, z0, z1))
         top = info["top_y"]
         cap = W(-L / 2 - 0.12, L / 2 + 0.12, top + 0.005, top + 0.035, -0.25, 0.25, WOOD, vis=(1, 2))
         P.add(xf(cap, rz=1.0, pivot=(0.0, top, 0.0)))         # the cap board rests on the highest billets
@@ -420,9 +421,13 @@ def firewood(kind):
         H = 1.80 if kind == "wall_1ken_h180" else 1.20
         hf = lambda x: H   # noqa: E731
         loose = 1 if H > 1.5 else 2
-    ss, info = WP.woodpile(-L / 2, L / 2, hf, z0, z1, seed=len(kind) * 7, max_faces=1300, wear=wear,
+    # FX1 (2026-10-01, Stephen: 'nothing supports them'): two stakes at each free end, tied across it; the collapsed
+    # stack's right-hand stakes lean out (why it fell). The footprint (and the 5 cm wall gap) stay.
+    st, px0, px1 = WP.end_stakes(-L / 2, L / 2, z0, z1, hf(-L / 2 + 0.01), hf(L / 2 - 0.01), wear=wear,
+                                 seed=len(kind) * 5, fallen=1 if kind == "ab_collapsed" else None)
+    ss, info = WP.woodpile(px0, px1, hf, z0, z1, seed=len(kind) * 7, max_faces=1300 - 60, wear=wear,
                            loose_top=loose)
-    add_all(P, ss)
+    add_all(P, ss + st)
     sky = info["sky"]                     # (Res 2 = one end-grain quad per billet + a stepped block: woodpile)
     steps = 1 if kind.startswith("wall") else 4
     dx = L / steps

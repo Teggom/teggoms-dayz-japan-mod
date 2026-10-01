@@ -24,10 +24,30 @@ ROPE_NONE, ROPE_ONLY, ROPE_SHIDE = 0, 1, 2
 WOOD_FORMS = {
     # S post spacing, H total height, r post radius, lean (inward batter over the height), kasagi overhang past a post,
     # rise (sori of the kasagi ends), nuki top y, nuki h x d, nuki projection past the posts
-    "shinmei": dict(S=1.82, H=2.73, r=0.10, lean=0.0, over=0.36, rise=0.0, nuki_y=2.24, nuki=(0.11, 0.07), proj=0.0),
-    "myojin": dict(S=2.73, H=3.45, r=0.12, lean=0.06, over=0.48, rise=0.14, nuki_y=2.68, nuki=(0.15, 0.09), proj=0.30),
+    # k (FX1, 2026-10-01; Stephen: 'the ones with rope seem small, he'll hit his head on the rope'): the whole torii is
+    # built at the proportions above and scaled uniformly by k (proportions kept), so a standing player clears the
+    # lowest shide / tassel tip by >= 2.30 m (spikes/FX1/ropeclear.py, also where placed on a slope or a
+    # stair): shinmei 1.82 x 2.73 -> 2.46 x 3.69, myojin 2.73 x 3.45 -> 3.19 x 4.04
+    "shinmei": dict(S=1.82, H=2.73, r=0.10, lean=0.0, over=0.36, rise=0.0, nuki_y=2.24, nuki=(0.11, 0.07), proj=0.0,
+                    k=1.35),
+    "myojin": dict(S=2.73, H=3.45, r=0.12, lean=0.06, over=0.48, rise=0.14, nuki_y=2.68, nuki=(0.15, 0.09), proj=0.30,
+                   k=1.17),
     "mini": dict(S=0.60, H=0.90, r=0.032, lean=0.0, over=0.12, rise=0.04, nuki_y=0.66, nuki=(0.045, 0.028), proj=0.07),
 }
+
+
+def _scale(ss, k):
+    """FX1: scale solids uniformly about the origin (the post-foot centre); world-mapped uvs are recomputed at the new
+    size (same texel density), explicit uv lists (text decals) are kept."""
+    if abs(k - 1.0) < 1e-9:
+        return ss
+    for q in ss:
+        # below the ground line only x / z scale: the burial depth stays (C6a bury limit)
+        q.verts = [(v[0] * k, v[1] * k if v[1] > 0.0 else v[1], v[2] * k) for v in q.verts]
+        q.center = (q.center[0] * k, q.center[1] * k if q.center[1] > 0.0 else q.center[1], q.center[2] * k)
+        if not isinstance(q.uv, list):
+            q.fm = q.fuv = q.fn = None
+    return ss
 
 
 def footing(x, seed, r, wear=None, mat=FIELD, vis=(1, 2)):
@@ -138,16 +158,17 @@ def torii_wood(form, rope=ROPE_NONE, moss=False, shu=False, ab=None, plaque=None
     cols.append(col(-xp + r * 0.95, xp - r * 0.95, ny0, ny1, -nd / 2, nd / 2))
     if F["proj"] > 0:
         for sx in (-1, 1):
-            a, b = sorted((sx * (xp + r * 1.0), sx * xe))
+            a, b = sorted((sx * (xp + r * 1.0 + 0.002), sx * xe))   # FX1: +2 mm, the scaled overlap stays < 1 cm
             cols.append(col(a, b, ny0, ny1, -nd / 2, nd / 2))
     cols.append(col(-L / 2, L / 2, max(ytop_post.values()) + 0.001, kmax, -0.13 if not mini else -0.04,
                     0.13 if not mini else 0.04))
-    # ---- straw rope on the tie-beam
-    rope_y = ny0 - 0.03 - (0.04 if not mini else 0.012)
-    rope_z = nd / 2 + (0.05 if not mini else 0.015)
+    # ---- straw rope on the tie-beam. FX1: hung across the FRONT of the nuki (centre 0.35 of its height up, was 7 cm
+    # under it) and half the sag (was 0.10 per 1.82 m of span): 15-20 cm more head room before the scale
     rr_ = 0.045 if form == "myojin" else (0.035 if form == "shinmei" else 0.012)
+    rope_y = (ny0 + nh * 0.35) if not mini else ny0 - 0.03 - 0.012
+    rope_z = (nd / 2 + rr_ * 0.9) if not mini else nd / 2 + 0.015
     if rope and not ab:
-        solids += K.torii_rope(-xp + r, xp - r, rope_y, rope_z, r=rr_, drop=0.10 * S / 1.82 if not mini else 0.03,
+        solids += K.torii_rope(-xp + r, xp - r, rope_y, rope_z, r=rr_, drop=0.05 * S / 1.82 if not mini else 0.03,
                                with_shide=rope == ROPE_SHIDE, wear="_w2", seed=len(form) * 3 + rope,
                                n_tassel=None if not mini else 3)
         for sx in (-1, 1):
@@ -199,12 +220,18 @@ def torii_wood(form, rope=ROPE_NONE, moss=False, shu=False, ab=None, plaque=None
         P.add(litter(21, 0.3, 0.6, 0.9, sx=1.4))
         P.notes.append("abandoned: racked %.1f deg on a rotted post foot; feet stay on the ground" %
                        math.degrees(math.atan(k)))
-    # ---- dims and anchors
-    P.dim("post_span", S, S, tol=0.005)
-    P.dim("height", H, kmax if form == "shinmei" else H + F["rise"] * 0.0, tol=0.01 if form != "shinmei" else 0.005)
-    P.dim("post_d", 2 * r, 2 * r, tol=0.001)
-    P.dim("kasagi_overhang", F["over"], F["over"], tol=0.001)
-    P.extra.update({"rope_y": round(rope_y, 3), "rope_z": round(rope_z, 3), "rope_span": round(2 * (xp - r), 3),
+    # ---- FX1: the uniform scale (proportions kept), then dims and anchors at the built size
+    kk_ = F.get("k", 1.0)
+    P.solids = _scale(P.solids, kk_)
+    for q in P.solids:
+        q.finalize()
+    P.dim("post_span", S * kk_, S * kk_, tol=0.005)
+    P.dim("height", H * kk_, (kmax if form == "shinmei" else H + F["rise"] * 0.0) * kk_,
+          tol=0.01 if form != "shinmei" else 0.005)
+    P.dim("post_d", 2 * r * kk_, 2 * r * kk_, tol=0.001)
+    P.dim("kasagi_overhang", F["over"] * kk_, F["over"] * kk_, tol=0.001)
+    P.extra.update({"rope_y": round(rope_y * kk_, 3), "rope_z": round(rope_z * kk_, 3),
+                    "rope_span": round(2 * (xp - r) * kk_, 3), "scale": kk_,
                     "rope": ["none", "rope", "rope+shide"][rope], "moss": moss, "shu": shu})
     if shu:
         P.notes.append("vermilion: ONLY at Inari and Hachiman shrines (restricted colour, BUILD_LIST)")
@@ -213,10 +240,11 @@ def torii_wood(form, rope=ROPE_NONE, moss=False, shu=False, ab=None, plaque=None
 
 # ================================================================================================ stone torii
 STONE_FORMS = {
+    # k: FX1 uniform scale (see WOOD_FORMS): s 1.82 x 2.71 -> 2.77 x 4.12, m 2.50 x 2.80 -> 3.63 x 4.06; l unchanged
     "s": dict(S=1.82, H=2.71, r=0.16, over=0.40, rise=0.10, nuki_y=2.06, nuki=(0.17, 0.13), proj=0.22,
-              text="hono_tenna2_muraju"),
+              text="hono_tenna2_muraju", k=1.52),
     "m": dict(S=2.50, H=2.80, r=0.20, over=0.42, rise=0.11, nuki_y=2.12, nuki=(0.19, 0.15), proj=0.24,
-              text="hono_genroku10"),
+              text="hono_genroku10", k=1.45),
     "l": dict(S=3.60, H=4.20, r=0.25, over=0.60, rise=0.16, nuki_y=3.20, nuki=(0.26, 0.20), proj=0.34,
               text="hono_genroku10"),
 }
@@ -300,11 +328,12 @@ def torii_stone(size, rope=ROPE_NONE, moss=False, ab=None):
             solids.append(moss_top(36 + sx, sx * S / 2, -r * 0.6, r * 1.2, 0.221, wear="_w2", sx=1.2, sz=0.6))
     else:
         solids.append(K.moss_strip(kas_top, kd * 0.5, seed=37, wear="_w0", frac=(0.3, 0.55)))
-    rope_y = ny0 - 0.05
-    rope_z = nd / 2 + 0.06
+    # FX1: the rope across the front of the nuki (was 5 cm under it), half the sag
     rr_ = 0.05 if size != "l" else 0.07
+    rope_y = ny0 + nh * 0.35
+    rope_z = nd / 2 + rr_ * 0.9
     if rope and not ab:
-        solids += K.torii_rope(-xp + r, xp - r, rope_y, rope_z, r=rr_, drop=0.10 * S / 1.82,
+        solids += K.torii_rope(-xp + r, xp - r, rope_y, rope_z, r=rr_, drop=0.05 * S / 1.82,
                                with_shide=rope == ROPE_SHIDE, wear="_w2", seed=40 + rope)
         for sx in (-1, 1):
             ring = xf(lathe([(r + rr_ * 0.7, rope_y - rr_), (r + rr_ * 0.7, rope_y + rr_)], 8, ROPE, vis=(1,)),
@@ -340,12 +369,15 @@ def torii_stone(size, rope=ROPE_NONE, moss=False, ab=None):
         P.notes.append("abandoned (rare, a landmark oddity): kasagi fallen in two pieces in front of the posts")
     else:
         cols += [kcol, scol]
+    kk_ = F.get("k", 1.0)
+    _scale(solids + cols, kk_)                       # FX1: before the lichen uvs are laid (same texel density)
     K.aged_stone(solids, 9100 + int(H * 100) + rope * 7 + (3 if moss else 0))   # FP1: no repeating lichen dots
     add_all(P, solids + cols)
-    P.dim("post_span", S, S, tol=0.005)
-    P.dim("height", H, H, tol=0.01)
-    P.dim("post_d", 2 * r, 2 * r, tol=0.001)
-    P.extra.update({"rope_y": round(rope_y, 3), "rope_z": round(rope_z, 3), "rope_span": round(2 * (xp - r), 3),
+    P.dim("post_span", S * kk_, S * kk_, tol=0.005)
+    P.dim("height", H * kk_, H * kk_, tol=0.01)
+    P.dim("post_d", 2 * r * kk_, 2 * r * kk_, tol=0.001)
+    P.extra.update({"rope_y": round(rope_y * kk_, 3), "rope_z": round(rope_z * kk_, 3),
+                    "rope_span": round(2 * (xp - r) * kk_, 3), "scale": kk_,
                     "rope": ["none", "rope", "rope+shide"][rope], "moss": moss,
                     "donor_text": F["text"]})
     return P

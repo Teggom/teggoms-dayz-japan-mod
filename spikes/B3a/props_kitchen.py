@@ -522,9 +522,11 @@ def firewood(kind="stack", state="intact"):
     if kind == "stack":
         import woodpile as WPL
         Hs = 0.60 if state == "intact" else 0.26
-        ss, info = WPL.woodpile(-0.455, 0.455, lambda x: Hs, -0.20, 0.20, seed=3, max_faces=880, back=True,
+        # FX1 (2026-10-01, Stephen: 'nothing supports them'): two tied stakes at each end, inside the 0.91 footprint
+        st, px0, px1 = WPL.end_stakes(-0.455, 0.455, -0.20, 0.20, Hs, Hs, r=0.025, seed=4)
+        ss, info = WPL.woodpile(px0, px1, lambda x: Hs, -0.20, 0.20, seed=3, max_faces=880 - 50, back=True,
                                 loose_top=1 if state == "intact" else 0, cells=[0.10 + 0.005 * k for k in range(12)])
-        add_all(P, ss)
+        add_all(P, ss + st)
         ty = info["top_y"]
         P.add(col(-0.455, 0.455, 0.0, min(Hs, ty) - 0.02, -0.18, 0.18, FIREWOOD))
         if state == "intact":

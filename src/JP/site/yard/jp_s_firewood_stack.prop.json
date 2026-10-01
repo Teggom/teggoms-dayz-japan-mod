@@ -68,8 +68,8 @@
    "wall_gap": 0.05,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1274,
-    "Resolution 2": 498,
+    "Resolution 1": 1273,
+    "Resolution 2": 508,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -77,8 +77,8 @@
    "bbox": [
     -1.042,
     1.088,
-    0.0,
-    1.29,
+    -0.0,
+    1.306,
     0.05,
     0.778
    ],
@@ -109,7 +109,7 @@
     {
      "name": "height",
      "expected": 1.2,
-     "measured": 1.212,
+     "measured": 1.2171,
      "tol": 0.06,
      "source": "build_list"
     },
@@ -122,7 +122,7 @@
     }
    ],
    "notes": [
-    "FP2 woodpile: split billets ~12 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1270 faces"
+    "FP2 woodpile: split billets ~12 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1211 faces"
    ]
   },
   {
@@ -136,8 +136,8 @@
    "wall_gap": 0.05,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1283,
-    "Resolution 2": 499,
+    "Resolution 1": 1300,
+    "Resolution 2": 525,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -145,8 +145,8 @@
    "bbox": [
     -1.042,
     1.088,
-    0.0,
-    1.886,
+    -0.0,
+    1.906,
     0.05,
     0.778
    ],
@@ -177,7 +177,7 @@
     {
      "name": "height",
      "expected": 1.8,
-     "measured": 1.8013,
+     "measured": 1.8115,
      "tol": 0.06,
      "source": "build_list"
     },
@@ -190,7 +190,7 @@
     }
    ],
    "notes": [
-    "FP2 woodpile: split billets ~14 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1279 faces"
+    "FP2 woodpile: split billets ~14 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1238 faces"
    ]
   },
   {
@@ -204,8 +204,8 @@
    "wall_gap": 0.05,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 738,
-    "Resolution 2": 295,
+    "Resolution 1": 655,
+    "Resolution 2": 279,
     "Geometry": 24,
     "View Geometry": 24,
     "Fire Geometry": 24
@@ -213,8 +213,8 @@
    "bbox": [
     -1.042,
     1.088,
-    0.0,
-    1.229,
+    -0.0,
+    1.306,
     0.05,
     0.778
    ],
@@ -245,7 +245,7 @@
     {
      "name": "height",
      "expected": 1.2,
-     "measured": 1.2292,
+     "measured": 1.2235,
      "tol": 0.06,
      "source": "build_list"
     },
@@ -258,7 +258,7 @@
     }
    ],
    "notes": [
-    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 734 faces"
+    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 593 faces"
    ]
   },
   {
@@ -272,8 +272,8 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1242,
-    "Resolution 2": 534,
+    "Resolution 1": 1182,
+    "Resolution 2": 516,
     "Geometry": 18,
     "View Geometry": 18,
     "Fire Geometry": 18
@@ -281,8 +281,8 @@
    "bbox": [
     -1.03,
     1.03,
-    -0.08,
-    1.32,
+    -0.0,
+    1.284,
     -0.25,
     0.25
    ],
@@ -313,7 +313,7 @@
     {
      "name": "height",
      "expected": 1.2,
-     "measured": 1.199,
+     "measured": 1.1966,
      "tol": 0.05,
      "source": "build_list"
     },
@@ -326,7 +326,7 @@
     }
    ],
    "notes": [
-    "FP2 woodpile, both ends showing: 1218 faces, billets ~14 cm"
+    "FP2 woodpile, both ends showing: 1118 faces, billets ~14 cm"
    ]
   },
   {
@@ -401,17 +401,17 @@
    "wall_gap": 0.05,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1377,
+    "Resolution 1": 1312,
     "Resolution 2": 500,
     "Geometry": 24,
     "View Geometry": 24,
     "Fire Geometry": 24
    },
    "bbox": [
-    -0.91,
+    -0.914,
     1.223,
     0.0,
-    1.249,
+    1.285,
     0.05,
     1.348
    ],
@@ -442,7 +442,7 @@
     {
      "name": "height",
      "expected": 1.2,
-     "measured": 1.2178,
+     "measured": 1.204,
      "tol": 0.06,
      "source": "build_list"
     },
@@ -455,7 +455,7 @@
     }
    ],
    "notes": [
-    "FP2 woodpile: split billets ~11 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1293 faces"
+    "FP2 woodpile: split billets ~11 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1179 faces"
    ]
   }
  ]

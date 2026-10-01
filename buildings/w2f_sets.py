@@ -117,6 +117,226 @@ def stair_foot_z(c, room):
     return z1 + c.y(room) / math.tan(math.radians(37.0)) + 0.30
 
 
+def box_beside_stair(c, name, why, side=1.0, gap=0.12):
+    """FX1 (2026-10-01, Stephen: 'the box blocks the stairs into the shrine'): the offering box stands on the ground
+    at the foot of the front kizahashi, BESIDE it (long side along the hall front, its inner end `gap` clear of the
+    stair stringer, the kohai post and its stone), so the stair mouth and a straight path to it stay clear (the stair
+    is 1.10 m between its rails, D4). Was: centred 0.5 m in front of the stair foot (P1: on the terrace top between
+    the terrace flight and the hall stair, 1.5 m wide across a 1.1 m stair)."""
+    from jpparts import decor as DC
+    bb = DC.catalog()[name]["bbox"]
+    w, d, h = bb[1] - bb[0], bb[5] - bb[4], bb[3] - bb[2]
+    x0, x1, z0, z1 = c.R("en")
+    ramps = [q.bbox() for q in c.M.solids if q.tag == "stair_ramp" and q.bbox()[4] >= z1 - 0.10]
+    ramp = min(ramps, key=lambda b: abs((b[0] + b[1]) / 2)) if ramps else None
+    if ramp is None:
+        raise KeyError("%s: no front stair ramp found" % c.key)
+    zf = ramp[5]
+    zc = zf + 0.05 - d / 2
+    xi = max(abs(ramp[0]), abs(ramp[1])) + 0.08 + gap          # stringers 3 + 5.5 cm outside the ramp
+    for _ in range(20):
+        hit = None
+        for q in c.M.solids:
+            if not (q.geo or 1 in q.vis):
+                continue
+            b = q.bbox()
+            if b[2] > h + 0.05 or b[3] < -0.30:
+                continue
+            if b[5] < zc - d / 2 - 0.05 or b[4] > zc + d / 2 + 0.05:
+                continue
+            lo, hi = (b[0], b[1]) if side > 0 else (-b[1], -b[0])
+            if hi < xi - 0.001 or lo > xi + w + 0.05:
+                continue
+            hit = hi if hit is None else max(hit, hi)
+        if hit is None:
+            break
+        xi = hit + gap
+    xc = side * (xi + w / 2)
+    return c.site(name, xc, zc, 0.0, why=why + " (FX1: beside the stair foot, %.2f m clear of it)" % (xi - abs(ramp[1])))
+
+
+# ------------------------------------------------------------------------------------------------ FX1: real hangers
+_ATT = {}
+
+
+def attach_points(name):
+    """A hung prop's attachment points (its Resolution-1 vertices within 1 cm of its top, clustered 5 cm), local."""
+    if name in _ATT:
+        return _ATT[name]
+    from jpparts import decor as DC, mlod
+    lods = mlod.read_mlod(DC.catalog()[name]["master"])
+    l = next(q for q in lods if mlod.lod_name(q.resolution) == "Resolution 1")
+    used = set(v[0] for f in l.faces for v in f[0])
+    pts = [l.points[i] for i in used]
+    top = max(p[1] for p in pts)
+    cl = []
+    for p in (q for q in pts if q[1] >= top - 0.01):
+        for c_ in cl:
+            if math.hypot(p[0] - c_[0][0], p[2] - c_[0][2]) < 0.05:
+                c_.append(p)
+                break
+        else:
+            cl.append([p])
+    _ATT[name] = [(sum(q[0] for q in c_) / len(c_), top, sum(q[2] for q in c_) / len(c_)) for c_ in cl]
+    return _ATT[name]
+
+
+def _tris(c):
+    out = []
+    for q in c.M.solids:
+        if 1 not in q.vis:
+            continue
+        for f in q.faces:
+            p = [q.verts[i] for i in f]
+            for k in range(1, len(p) - 1):
+                out.append((p[0], p[k], p[k + 1], q.tag or q.mats if isinstance(q.mats, str) else q.tag))
+    return out
+
+
+def up_hit(T, x, y, z):
+    """Height of the first visual face straight above (x, y, z), None if none."""
+    best, tag = None, None
+    for a, b, d, tg in T:
+        den = (b[2] - d[2]) * (a[0] - d[0]) + (d[0] - b[0]) * (a[2] - d[2])
+        if abs(den) < 1e-12:
+            continue
+        l1 = ((b[2] - d[2]) * (x - d[0]) + (d[0] - b[0]) * (z - d[2])) / den
+        l2 = ((d[2] - a[2]) * (x - d[0]) + (a[0] - d[0]) * (z - d[2])) / den
+        l3 = 1 - l1 - l2
+        if min(l1, l2, l3) < -1e-6:
+            continue
+        yy = l1 * a[1] + l2 * b[1] + l3 * d[1]
+        if yy >= y - 1e-6 and (best is None or yy < best):
+            best, tag = yy, tg
+    return best, tag
+
+
+MEMBERS = ("beam", "bari", "nuki", "keta", "ryo", "kakegi", "tsunagi", "moya", "rafter", "taruki", "tenjo", "kamoi",
+           "nageshi", "hari", "purlin", "joist", "neda", "sao", "ceiling", "bell")
+
+
+def is_member(tag):
+    """A face a hung thing may be tied to: a beam, tie, purlin, rafter or ceiling (not roof sheathing or covering)."""
+    t = (tag or "").lower()
+    return any(k in t for k in MEMBERS)
+
+
+def _world(pt, x, z, yaw):
+    a = math.radians(yaw)
+    return (x + pt[0] * math.cos(a) + pt[2] * math.sin(a), pt[1], z - pt[0] * math.sin(a) + pt[2] * math.cos(a))
+
+
+def seat_hang(c, name, x, z, y_guess, yaw=0.0, search=0.35, lo=-0.30, hi=0.45, yaws=None, T=None):
+    """(x, y, z, yaw) where EVERY attachment point of the hung prop meets the underside of one real member (within
+    3 cm of each other), searched round (x, z) (nearest first) for y in y_guess + [lo, hi]; None if there is none."""
+    T = T if T is not None else _tris(c)
+    att = attach_points(name)
+    reach = search + max(math.hypot(p[0], p[2]) for p in att) + 0.05
+    T = [t for t in T if max(v[1] for v in t[:3]) >= y_guess + lo and
+         min(v[0] for v in t[:3]) <= x + reach and max(v[0] for v in t[:3]) >= x - reach and
+         min(v[2] for v in t[:3]) <= z + reach and max(v[2] for v in t[:3]) >= z - reach]
+    cand = []
+    n = int(round(search / 0.05))
+    for i in range(-n, n + 1):
+        for j in range(-n, n + 1):
+            d = math.hypot(i, j) * 0.05
+            if d <= search + 1e-9:
+                cand.append((d, x + i * 0.05, z + j * 0.05))
+    cand.sort()
+    for d, cx, cz in cand:
+        for yw in (yaws or (yaw,)):
+            ys, tags = [], []
+            for p in att:
+                w = _world(p, cx, cz, yw)
+                hit, tg = up_hit(T, w[0], y_guess + lo, w[2])
+                if hit is None or not is_member(tg):
+                    break
+                ys.append(hit - p[1])
+                tags.append(tg)
+            if len(ys) != len(att):
+                continue
+            if max(ys) - min(ys) > 0.03 or not (y_guess + lo <= min(ys) <= y_guess + hi):
+                continue
+            c.extra.setdefault("fx1_hangs", []).append({"prop": name, "x": round(cx, 3), "y": round(min(ys), 3),
+                                                        "z": round(cz, 3), "yaw": yw, "members": sorted(set(tags))})
+            return cx, min(ys), cz, yw
+    return None
+
+
+def tsunagi_bar(c, z, why, floor_y=None):
+    """A hanging bar (kake-gi) framed between the kohai's two tie beams (tsunagi) at depth z: its top 4 cm into their
+    underside line, 8 x 10 cm. Returns (bar underside y, z) or None if the hall has no tie beams or the bar would come
+    lower than 2.10 m over floor_y (head room on the en)."""
+    from jpparts.core import box
+    ts = [q for q in c.M.solids if q.tag == "tsunagi"]
+    if len(ts) < 2:
+        return None
+    L = min(ts, key=lambda q: q.bbox()[0])
+    R = max(ts, key=lambda q: q.bbox()[1])
+
+    def under(q, zz):
+        a, b = q.verts[0], q.verts[2]                      # the underside at the wall end / at the kohai post
+        t = (zz - a[2]) / (b[2] - a[2]) if b[2] != a[2] else 0.0
+        return a[1] + t * (b[1] - a[1])
+    bL, bR = L.bbox(), R.bbox()
+    z = min(max(z, max(bL[4], bR[4]) + 0.25), min(bL[5], bR[5]) - 0.25)
+    top = min(under(L, z), under(R, z)) + 0.04
+    if floor_y is not None and top - 0.10 < floor_y + 2.10:
+        return None
+    c.M.add(box(bL[1], bR[0], top - 0.10, top, z - 0.04, z + 0.04, "wood_weathered", vis=(1, 2), tag="kakegi",
+                grain="long"))
+    c.extra.setdefault("fx1_bars", []).append({"kind": "between the kohai tie beams", "z": round(z, 3),
+                                               "y": round(top - 0.10, 3), "why": why})
+    return top - 0.10, z
+
+
+def rafter_bar(c, x, z, why, floor_y=None, reach=0.40):
+    """No tie beams (the low village halls): a hanging bar nailed across the underside of the eave rafters (taruki)
+    over the en at depth z, spanning the rafters within `reach` of x; 6 x 6 cm. Returns (underside y, z) or None."""
+    from jpparts.core import box
+    rs = []
+    for q in c.M.solids:
+        if q.tag not in ("rafter", "taruki") or 1 not in q.vis:
+            continue
+        b = q.bbox()
+        if b[4] <= z - 0.05 and b[5] >= z + 0.05 and b[1] >= x - reach and b[0] <= x + reach:
+            T = [(q.verts[f[0]], q.verts[f[k]], q.verts[f[k + 1]], "rafter") for f in q.faces
+                 for k in range(1, len(f) - 1)]
+            y, _ = up_hit(T, (b[0] + b[1]) / 2, b[2] - 0.01, z)
+            if y is not None:
+                rs.append((b, y))
+    if len(rs) < 2:
+        return None
+    top = min(y for _, y in rs) + 0.005
+    x0 = min(b[0] for b, _ in rs)
+    x1 = max(b[1] for b, _ in rs)
+    if floor_y is not None and top - 0.06 < floor_y + 2.10:
+        return None
+    c.M.add(box(x0, x1, top - 0.06, top, z - 0.03, z + 0.03, "wood_weathered", vis=(1, 2), tag="kakegi",
+                grain="long"))
+    c.extra.setdefault("fx1_bars", []).append({"kind": "under %d rafters" % len(rs), "z": round(z, 3),
+                                               "y": round(top - 0.06, 3), "why": why})
+    return top - 0.06, z
+
+
+def hang_real(c, room, name, x, z, y_guess, yaw=0.0, over=None, why="", bar=False, **kw):
+    """FX1 (2026-10-01, Stephen: 'the bell / gong floats', 'the rope hanging the log floats'): hang a prop only from a
+    real member. First the nearest spot within ~0.35 m where every attachment point meets one beam's underside; else
+    (bar=True, halls with kohai tie beams) a hanging bar framed between the tie beams; else it fails loudly."""
+    got = None
+    if bar:                     # halls with kohai tie beams: the period hanging bar between them, over the en;
+        fy = c.y(room)          # without them (the low village halls) a bar across the eave rafters
+        r = tsunagi_bar(c, z, "hanger for " + name, fy) or rafter_bar(c, x, z, "hanger for " + name, fy)
+        if r is not None:
+            got = seat_hang(c, name, x, r[1], r[0], yaw, search=0.05, lo=-0.02, hi=0.02)
+    if got is None:
+        got = seat_hang(c, name, x, z, y_guess, yaw, **kw)
+    if got is None:
+        raise ValueError("%s: nothing real to hang %s from near (%.2f, %.2f, %.2f)" % (c.key, name, x, y_guess, z))
+    hx, hy, hz, hyaw = got
+    return c.hang(room, name, hx, hz, hy, yaw=hyaw, over=over, why=why)
+
+
 # ================================================================================================ SHINTO
 def shrine_haiden_town(c):
     """Town haiden (Hachimangu): the worship floor with the big drum, the offering table under the god shelf, the
@@ -134,13 +354,13 @@ def shrine_haiden_town(c):
     onw(c, "haiden", "xmin", 0.40, "jp_f_ema_rail", why="votive boards on the side wall")
     onw(c, "haiden", "xmax", 1.10, "jp_f_ema_rail", why="votive boards on the side wall")
     f = fit1(c, "en", "suzu")
-    c.hang("en", "jp_f_suzu_rope_faded", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE,
-           why="the bell and its pull rope from the kohai beam")
+    hang_real(c, "en", "jp_f_suzu_rope_faded", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, bar=True,
+              why="the bell and its pull rope from the kohai beam")
     sparse(c, "en", "the veranda before the worship bay")
     sparse(c, "en_left", "side veranda")
     sparse(c, "en_right", "side veranda")
     c.front("jp_f_gaku_hachimangu", 0.0, 2.43, 3.04, why="the shrine name board over the worship bay")
-    c.site("jp_f_saisen_bako_l", 0.0, stair_foot_z(c, "en") + 0.50, 0.0, why="the offering box at the foot of the steps")
+    box_beside_stair(c, "jp_f_saisen_bako_l", why="the offering box at the foot of the steps")
 
 
 def shrine_haiden_village(c):
@@ -153,10 +373,10 @@ def shrine_haiden_village(c):
     onw(c, "haiden", "zmin", 0.0, "jp_f_kamidana_plain", why="offering shelf, undisturbed")
     onw(c, "haiden", "xmin", 0.60, "jp_f_ema_rail", why="votive boards")
     f = fit1(c, "en", "suzu")
-    c.hang("en", "jp_f_suzu_rope_faded", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE,
-           why="the bell and its rope")
+    hang_real(c, "en", "jp_f_suzu_rope_faded", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, bar=True,
+              why="the bell and its rope")
     sparse(c, "en", "the veranda before the doors")
-    c.site("jp_f_saisen_bako_m", 0.0, stair_foot_z(c, "en") + 0.50, 0.0, why="the offering box at the foot of the steps")
+    box_beside_stair(c, "jp_f_saisen_bako_m", why="the offering box at the foot of the steps")
 
 
 def _sanctum(c, n, w):
@@ -243,7 +463,7 @@ def _hall_props(c, room, dais, desk=True, zen=False):
         c.free(room, "jp_f_sutra_desk", s["centre"][0], s["centre"][1], 0.0, why="the sutra desk with bowl gong")
     hy = ceil_y(c, 0.0, (z0 + z1) / 2, c.y(room))
     if hy:
-        c.hang(room, "jp_f_tengai", 0.0, (z0 + z1) / 2 + 0.10, hy, over="furniture (the altar)",
+        hang_real(c, room, "jp_f_tengai", 0.0, (z0 + z1) / 2 + 0.10, hy, over="furniture (the altar)",
                why="the canopy over the image")
     return d
 
@@ -253,10 +473,10 @@ def temple_hondo_village(c):
     _hall_props(c, "hall", "jp_f_dais_amida")
     wallp(c, "hall", "xmin", -0.40, "jp_f_nagamochi", why="the chest of ritual vestments")
     c.free("hall", "jp_f_enza_stack3", -2.70, 2.40, 15.0, why="cushions for the congregation")
-    f = fit1(c, "en", "saisen_bako")
-    c.free("en", "jp_f_saisen_bako_m", f["centre"][0], f["centre"][1], 0.0, why="the donation box on the en")
+    box_beside_stair(c, "jp_f_saisen_bako_m", why="the donation box (FX1: was on the en, across both doors)")
     f = fit1(c, "en", "gong")
-    c.hang("en", "jp_f_waniguchi", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, why="the gong and rope")
+    hang_real(c, "en", "jp_f_waniguchi", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, bar=True,
+              why="the gong and rope")
     sparse(c, "en", "the veranda before the hall")
 
 
@@ -267,9 +487,13 @@ def temple_hondo_town(c):
     c.free("hall", "jp_f_odaiko", -2.55, -2.55, 45.0, why="the hall drum")
     wallp(c, "hall", "xmax", 0.60, "jp_f_nagamochi", why="the chest of vestments")
     f = fit1(c, "en", "gong")
-    c.hang("en", "jp_f_waniguchi", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, why="the gong and rope")
+    hang_real(c, "en", "jp_f_waniguchi", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, bar=True,
+              why="the gong and rope")
     sparse(c, "en", "the veranda before the hall")
-    c.site("jp_f_saisen_bako_l", 0.0, stair_foot_z(c, "en") + 0.50, 0.0, why="the donation box at the foot of the steps")
+    for r in ("en_left", "en_right"):           # FX1: the town hondo's en now wraps round both sides (mawari-en)
+        if r in c.room:
+            sparse(c, r, "side veranda")
+    box_beside_stair(c, "jp_f_saisen_bako_l", why="the donation box at the foot of the steps")
 
 
 def temple_do(c, image, room_w):
@@ -282,13 +506,11 @@ def temple_do(c, image, room_w):
     c.free("hall", "jp_f_hibachi_box", room_w / 2 - 0.60, 0.40, 0.0, why="a brazier (the hall is also the meeting place)")
     c.free("hall", "jp_f_enza_stack3", -(room_w / 2 - 0.55), -1.00 if room_w < 4 else 0.80, 10.0, why="cushions")
     c.free("hall", "jp_f_andon_kaku", room_w / 2 - 0.45, -0.80, 0.0, why="a standing lamp, unlit")
-    if room_w < 4:
-        f = fit1(c, "en", "saisen_bako")
-        c.free("en", "jp_f_saisen_bako_s", f["centre"][0], f["centre"][1], 0.0, why="the donation box")
-    else:                            # one front door: the en is too shallow before it, the box goes to the stair foot
-        c.site("jp_f_saisen_bako_s", 0.0, stair_foot_z(c, "en") + 0.50, 0.0, why="the donation box at the stair foot")
+    box_beside_stair(c, "jp_f_saisen_bako_s", why="the donation box (FX1: on the ground beside the stair foot in both "
+                     "hall sizes; the 2-ken hall had it on the en, across the doors)")
     f = fit1(c, "en", "gong")
-    c.hang("en", "jp_f_waniguchi", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, why="the gong and rope")
+    hang_real(c, "en", "jp_f_waniguchi", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, bar=True,
+              why="the gong and rope")
     sparse(c, "en", "the veranda before the hall")
 
 
@@ -314,16 +536,19 @@ def temple_kuri(c, zen=False):
     c.free("doma", "jp_f_oke_pickle", -2.40, 0.90, 0.0, why="a pickle tub")
     c.passage(("doma",), -1.50, 2.70, "kamachi step doma <-> daidokoro")
     if zen:
-        c.hang("doma", "jp_f_gyoban", -3.76, 3.20, 3.0 if not ceil_y(c, -3.76, 3.2, 0.05) else
-               min(3.0, ceil_y(c, -3.76, 3.2, 0.05)), over="by the entrance (Zen signal board)",
-               why="the wooden fish board that calls the meals")
-        c.hang("doma", "jp_f_umpan", -2.10, 3.30, 3.0 if not ceil_y(c, -2.10, 3.3, 0.05) else
-               min(3.0, ceil_y(c, -2.10, 3.3, 0.05)), over="by the entrance (Zen signal gong)", why="the cloud gong")
+        hang_real(c, "doma", "jp_f_gyoban", -3.76, 3.20, 3.0 if not ceil_y(c, -3.76, 3.2, 0.05) else
+                  min(3.0, ceil_y(c, -3.76, 3.2, 0.05)), over="by the entrance (Zen signal board)", search=0.6,
+                  yaws=(0.0, 90.0), why="the wooden fish board that calls the meals")
+        hang_real(c, "doma", "jp_f_umpan", -2.10, 3.30, 3.0 if not ceil_y(c, -2.10, 3.3, 0.05) else
+                  min(3.0, ceil_y(c, -2.10, 3.3, 0.05)), over="by the entrance (Zen signal gong)", search=0.6,
+                  yaws=(0.0, 90.0), why="the cloud gong")
     # daidokoro
     f = fit1(c, "daidokoro", "irori")
     hx, hy, hz = f["hook"]
-    c.hang("daidokoro", "jp_f_jizai_kagi", hx, hz, hy, over="hearth", why="the pot hook over the irori")
-    c.hang("daidokoro", "jp_f_hoshigaki_5", hx, hz + 0.95, hy, over="hearth", why="persimmons drying over the smoke")
+    hang_real(c, "daidokoro", "jp_f_jizai_kagi", hx, hz, hy, over="hearth", search=0.25,
+              why="the pot hook over the irori")
+    hang_real(c, "daidokoro", "jp_f_hoshigaki_5", hx, hz + 0.95, hy, over="hearth", search=0.7, yaws=(0.0, 90.0),
+              hi=0.8, why="persimmons drying over the smoke")
     t = wallp(c, "daidokoro", "xmax", 1.67, "jp_f_tana_182_3", why="the meal-tray shelves")
     c.surf(t, "jp_f_tableware_hakozen_stack", surface="board_1", why="the stacked box trays")
     d = wallp(c, "daidokoro", "zmax", 3.60, "jp_f_zukue_choba", why="the temple's account desk")
@@ -354,8 +579,9 @@ def temple_shoro(c):
     room = "platform" if "platform" in c.room else "upper"
     f = fit1(c, room, "bell")
     name = "jp_f_bonsho_s" if room == "platform" else "jp_f_bonsho_l"
-    c.hang(room, name, f["centre"][0], f["centre"][1], f["y"], yaw=0.0 if room == "platform" else 90.0,
-           over="the bell (walk round it)", why="the temple bell and its striker log")
+    # FX1: the striker log runs UNDER the bell beam (yaw 90 in both towers), its two ropes tied to the beam
+    hang_real(c, room, name, f["centre"][0], f["centre"][1], f["y"], yaw=90.0, search=0.05, lo=-0.02, hi=0.02,
+              over="the bell (walk round it)", why="the temple bell and its striker log")
     sparse(c, room, "the bell platform")
 
 
@@ -464,8 +690,8 @@ def swordsmith(c):
     c.free("forge", "jp_f_mizubune", q["centre"][0], q["centre"][1], 0.0, why="the long quench trough, dry")
     c.free("forge", "jp_f_charcoal_bale", 3.00, -2.25, 90.0, why="pine charcoal")
     s = fit1(c, "forge", "shimenawa")
-    c.hang("forge", "jp_f_shimenawa_hang", s["centre"][0], s["centre"][1], s["y"], over="hearth",
-           why="the sacred rope over the forge")
+    hang_real(c, "forge", "jp_f_shimenawa_hang", s["centre"][0], s["centre"][1], s["y"], over="hearth", search=0.8,
+              yaws=(0.0, 90.0, 180.0, 270.0), hi=0.8, why="the sacred rope over the forge")
     onw(c, "forge", "zmin", -2.40, "jp_f_kamidana_plain", why="the god shelf of the forge, undisturbed")
     # work room
     ct = fit1(c, "work", "clay_trough")

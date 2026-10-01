@@ -69,12 +69,12 @@
     "Fire Geometry": 86
    },
    "bbox": [
-    -1.324,
-    1.324,
+    -2.012,
+    2.012,
     -0.102,
-    2.81,
-    -0.28,
-    0.28
+    4.271,
+    -0.426,
+    0.426
    ],
    "collision": [
     "geo",
@@ -82,10 +82,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.31,
-    -0.251,
-    1.31,
-    0.251
+    -1.991,
+    -0.382,
+    1.991,
+    0.382
    ],
    "roadway": false,
    "mass_kg": 3500.0,
@@ -97,30 +97,31 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.7664,
+     "measured": 2.7664,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.71,
-     "measured": 2.71,
+     "expected": 4.1192,
+     "measured": 4.1192,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.32,
-     "measured": 0.32,
+     "expected": 0.4864,
+     "measured": 0.4864,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 1.84,
-   "rope_z": 0.125,
-   "rope_span": 1.442,
+   "rope_y": 2.963,
+   "rope_z": 0.167,
+   "rope_span": 2.192,
+   "scale": 1.52,
    "rope": "none",
    "moss": false,
    "donor_text": "hono_tenna2_muraju",
@@ -146,12 +147,12 @@
     "Fire Geometry": 86
    },
    "bbox": [
-    -1.324,
-    1.324,
+    -2.012,
+    2.012,
     -0.102,
-    2.81,
-    -0.28,
-    0.28
+    4.271,
+    -0.426,
+    0.426
    ],
    "collision": [
     "geo",
@@ -159,10 +160,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.31,
-    -0.251,
-    1.31,
-    0.251
+    -1.991,
+    -0.382,
+    1.991,
+    0.382
    ],
    "roadway": false,
    "mass_kg": 3500.0,
@@ -174,30 +175,31 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.7664,
+     "measured": 2.7664,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.71,
-     "measured": 2.71,
+     "expected": 4.1192,
+     "measured": 4.1192,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.32,
-     "measured": 0.32,
+     "expected": 0.4864,
+     "measured": 0.4864,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 1.84,
-   "rope_z": 0.125,
-   "rope_span": 1.442,
+   "rope_y": 2.963,
+   "rope_z": 0.167,
+   "rope_span": 2.192,
+   "scale": 1.52,
    "rope": "rope",
    "moss": false,
    "donor_text": "hono_tenna2_muraju",
@@ -223,12 +225,12 @@
     "Fire Geometry": 86
    },
    "bbox": [
-    -1.324,
-    1.324,
+    -2.012,
+    2.012,
     -0.102,
-    2.81,
-    -0.28,
-    0.28
+    4.271,
+    -0.426,
+    0.426
    ],
    "collision": [
     "geo",
@@ -236,10 +238,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.31,
-    -0.251,
-    1.31,
-    0.251
+    -1.991,
+    -0.382,
+    1.991,
+    0.382
    ],
    "roadway": false,
    "mass_kg": 3500.0,
@@ -251,30 +253,31 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.7664,
+     "measured": 2.7664,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.71,
-     "measured": 2.71,
+     "expected": 4.1192,
+     "measured": 4.1192,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.32,
-     "measured": 0.32,
+     "expected": 0.4864,
+     "measured": 0.4864,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 1.84,
-   "rope_z": 0.125,
-   "rope_span": 1.442,
+   "rope_y": 2.963,
+   "rope_z": 0.167,
+   "rope_span": 2.192,
+   "scale": 1.52,
    "rope": "rope+shide",
    "moss": false,
    "donor_text": "hono_tenna2_muraju",
@@ -300,12 +303,12 @@
     "Fire Geometry": 86
    },
    "bbox": [
-    -1.324,
-    1.324,
+    -2.012,
+    2.012,
     -0.102,
-    2.814,
-    -0.28,
-    0.28
+    4.277,
+    -0.426,
+    0.426
    ],
    "collision": [
     "geo",
@@ -313,10 +316,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.31,
-    -0.251,
-    1.31,
-    0.251
+    -1.991,
+    -0.382,
+    1.991,
+    0.382
    ],
    "roadway": false,
    "mass_kg": 3500.0,
@@ -328,30 +331,31 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.7664,
+     "measured": 2.7664,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.71,
-     "measured": 2.71,
+     "expected": 4.1192,
+     "measured": 4.1192,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.32,
-     "measured": 0.32,
+     "expected": 0.4864,
+     "measured": 0.4864,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 1.84,
-   "rope_z": 0.125,
-   "rope_span": 1.442,
+   "rope_y": 2.963,
+   "rope_z": 0.167,
+   "rope_span": 2.192,
+   "scale": 1.52,
    "rope": "none",
    "moss": true,
    "donor_text": "hono_tenna2_muraju",
@@ -377,12 +381,12 @@
     "Fire Geometry": 86
    },
    "bbox": [
-    -1.324,
-    1.324,
+    -2.012,
+    2.012,
     -0.102,
-    2.814,
-    -0.28,
-    0.28
+    4.277,
+    -0.426,
+    0.426
    ],
    "collision": [
     "geo",
@@ -390,10 +394,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.31,
-    -0.251,
-    1.31,
-    0.251
+    -1.991,
+    -0.382,
+    1.991,
+    0.382
    ],
    "roadway": false,
    "mass_kg": 3500.0,
@@ -405,30 +409,31 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 1.82,
-     "measured": 1.82,
+     "expected": 2.7664,
+     "measured": 2.7664,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.71,
-     "measured": 2.71,
+     "expected": 4.1192,
+     "measured": 4.1192,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.32,
-     "measured": 0.32,
+     "expected": 0.4864,
+     "measured": 0.4864,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 1.84,
-   "rope_z": 0.125,
-   "rope_span": 1.442,
+   "rope_y": 2.963,
+   "rope_z": 0.167,
+   "rope_span": 2.192,
+   "scale": 1.52,
    "rope": "rope+shide",
    "moss": true,
    "donor_text": "hono_tenna2_muraju",
@@ -454,12 +459,12 @@
     "Fire Geometry": 86
    },
    "bbox": [
-    -1.685,
-    1.685,
+    -2.443,
+    2.443,
     -0.103,
-    2.91,
-    -0.35,
-    0.35
+    4.219,
+    -0.508,
+    0.508
    ],
    "collision": [
     "geo",
@@ -467,10 +472,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.67,
-    -0.314,
-    1.67,
-    0.314
+    -2.421,
+    -0.455,
+    2.421,
+    0.455
    ],
    "roadway": false,
    "mass_kg": 5000.0,
@@ -482,30 +487,31 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.5,
-     "measured": 2.5,
+     "expected": 3.625,
+     "measured": 3.625,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.8,
-     "measured": 2.8,
+     "expected": 4.06,
+     "measured": 4.06,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.4,
-     "measured": 0.4,
+     "expected": 0.58,
+     "measured": 0.58,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 1.88,
-   "rope_z": 0.135,
-   "rope_span": 2.039,
+   "rope_y": 2.895,
+   "rope_z": 0.174,
+   "rope_span": 2.956,
+   "scale": 1.45,
    "rope": "none",
    "moss": false,
    "donor_text": "hono_genroku10",
@@ -523,7 +529,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1158,
+    "Resolution 1": 1161,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -531,12 +537,12 @@
     "Fire Geometry": 86
    },
    "bbox": [
-    -1.685,
-    1.685,
+    -2.443,
+    2.443,
     -0.103,
-    2.91,
-    -0.35,
-    0.35
+    4.219,
+    -0.508,
+    0.508
    ],
    "collision": [
     "geo",
@@ -544,10 +550,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.67,
-    -0.314,
-    1.67,
-    0.314
+    -2.421,
+    -0.455,
+    2.421,
+    0.455
    ],
    "roadway": false,
    "mass_kg": 5000.0,
@@ -559,30 +565,31 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.5,
-     "measured": 2.5,
+     "expected": 3.625,
+     "measured": 3.625,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.8,
-     "measured": 2.8,
+     "expected": 4.06,
+     "measured": 4.06,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.4,
-     "measured": 0.4,
+     "expected": 0.58,
+     "measured": 0.58,
      "tol": 0.001,
      "source": "build_list"
     }
    ],
    "notes": [],
-   "rope_y": 1.88,
-   "rope_z": 0.135,
-   "rope_span": 2.039,
+   "rope_y": 2.895,
+   "rope_z": 0.174,
+   "rope_span": 2.956,
+   "scale": 1.45,
    "rope": "rope+shide",
    "moss": false,
    "donor_text": "hono_genroku10",
@@ -657,9 +664,10 @@
     }
    ],
    "notes": [],
-   "rope_y": 2.89,
-   "rope_z": 0.16,
+   "rope_y": 3.031,
+   "rope_z": 0.163,
    "rope_span": 3.01,
+   "scale": 1.0,
    "rope": "none",
    "moss": false,
    "donor_text": "hono_genroku10",
@@ -677,7 +685,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1199,
+    "Resolution 1": 1195,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -734,9 +742,10 @@
     }
    ],
    "notes": [],
-   "rope_y": 2.89,
-   "rope_z": 0.16,
+   "rope_y": 3.031,
+   "rope_z": 0.163,
    "rope_span": 3.01,
+   "scale": 1.0,
    "rope": "rope+shide",
    "moss": false,
    "donor_text": "hono_genroku10",
@@ -762,12 +771,12 @@
     "Fire Geometry": 86
    },
    "bbox": [
-    -1.891,
-    1.839,
+    -2.742,
+    2.666,
     -0.103,
-    2.422,
-    -0.35,
-    2.36
+    3.512,
+    -0.508,
+    3.423
    ],
    "collision": [
     "geo",
@@ -775,10 +784,10 @@
     "fire"
    ],
    "footprint_xz": [
-    -1.903,
-    -0.314,
-    1.846,
-    1.856
+    -2.76,
+    -0.455,
+    2.677,
+    2.692
    ],
    "roadway": false,
    "mass_kg": 5000.0,
@@ -790,22 +799,22 @@
    "dims": [
     {
      "name": "post_span",
-     "expected": 2.5,
-     "measured": 2.5,
+     "expected": 3.625,
+     "measured": 3.625,
      "tol": 0.005,
      "source": "build_list"
     },
     {
      "name": "height",
-     "expected": 2.8,
-     "measured": 2.8,
+     "expected": 4.06,
+     "measured": 4.06,
      "tol": 0.01,
      "source": "build_list"
     },
     {
      "name": "post_d",
-     "expected": 0.4,
-     "measured": 0.4,
+     "expected": 0.58,
+     "measured": 0.58,
      "tol": 0.001,
      "source": "build_list"
     }
@@ -813,9 +822,10 @@
    "notes": [
     "abandoned (rare, a landmark oddity): kasagi fallen in two pieces in front of the posts"
    ],
-   "rope_y": 1.88,
-   "rope_z": 0.135,
-   "rope_span": 2.039,
+   "rope_y": 2.895,
+   "rope_z": 0.174,
+   "rope_span": 2.956,
+   "scale": 1.45,
    "rope": "none",
    "moss": false,
    "donor_text": "hono_genroku10",

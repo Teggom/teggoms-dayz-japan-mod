@@ -38,7 +38,7 @@ BEAM_D = 0.18            # tie beam depth
 POST_TOP = 2.95          # main posts' top (the kasagi sits on it)
 
 
-def _leaf_solids(x0, x1, y0, y1, z0, z1, variant, rng, astragal=0):
+def _leaf_solids(x0, x1, y0, y1, z0, z1, variant, rng, astragal=0, hinge=None):
     """Visual + collision solids of one leaf (closed, in gate-local coordinates). variant '_lattice': board base up to
     0.90 + vertical bars above (tategoshi), see-through by design (door kind 'lattice'); '_board': battened boards."""
     fm = "wood_street_dark"
@@ -73,10 +73,13 @@ def _leaf_solids(x0, x1, y0, y1, z0, z1, variant, rng, astragal=0):
         out.append(box(x0 + st, x1 - st, y0 + 0.10, y1 - 0.09, zm0, zm1, fm, vis=(2, 3), tag="gate_board_lod"))
         for yy in (y0 + 0.45, (y0 + y1) / 2, y1 - 0.50):
             out.append(box(x0 + st, x1 - st, yy - 0.05, yy + 0.05, z0 - 0.004, z0, fm, vis=(1, 2), tag="gate_batten"))
-    # iron hinge straps on the hinge side, on the ward face
-    xh = x0 if astragal >= 0 else x1
+    # iron hinge straps on the hinge side, on the ward face. FX1 (2026-10-01): the hinge edge is passed in; it used
+    # to follow `astragal`, which is 0 on the RIGHT leaf, so that leaf's straps sat at its free (meeting) edge
+    if hinge is None:
+        hinge = "l" if astragal >= 0 else "r"
+    xh = x0 if hinge == "l" else x1
     for yy in (y0 + 0.30, y1 - 0.40):
-        a, b = (xh, xh + 0.40) if astragal >= 0 else (xh - 0.40, xh)
+        a, b = (xh, xh + 0.40) if hinge == "l" else (xh - 0.40, xh)
         out.append(box(a, b, yy, yy + 0.05, z0 - 0.006, z0, "metal_iron", vis=(1,), tag="hinge"))
     if astragal:
         # the meeting-stile astragal (C17): a strip on the street face of the LEFT leaf, over the gap
@@ -106,7 +109,8 @@ def gate_leaves(variant, span, post=POST_K, y0=LEAF_Y0, height=LEAF_H, swing_deg
     ang = math.radians(swing_deg)
     for (l0, l1, sg) in specs:
         bone = "doors%d" % (len(anims) + 1)
-        for s in _leaf_solids(l0, l1, y0, yt, zb, zf, variant, rng, astragal=(+1 if sg > 0 else 0)):
+        for s in _leaf_solids(l0, l1, y0, yt, zb, zf, variant, rng, astragal=(+1 if sg > 0 else 0),
+                              hinge=("l" if sg > 0 else "r")):
             s.door = bone
             s.sel = twin
             p.add(s)

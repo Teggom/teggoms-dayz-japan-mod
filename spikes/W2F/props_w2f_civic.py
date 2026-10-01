@@ -123,7 +123,7 @@ def mizubune(L=1.40, w=0.40, h=0.45):
            W(-w / 2 + t, w / 2 - t, 0.06, h, L / 2 - t, L / 2, WEATH, vis=(1,))]
     for sz in (-1, 1):
         out.append(W(-w / 2 - 0.03, w / 2 + 0.03, 0.0, 0.06, sz * L * 0.35 - 0.04, sz * L * 0.35 + 0.04, WEATH, vis=(1,)))
-    out.append(stain(312, 0.0, 0.0, 0.18, y=0.102, sx=0.9, sz=3.0, mat=LITTER, wear="_w2"))
+    # FX1 (2026-10-01): no leaf litter in the trough (it stands indoors, in a forge room without any)
     P.adds(out)
     P.add(W(-w / 2, w / 2, 0.0, h, -L / 2, L / 2, WEATH, vis=(2,)))
     P.add(col(-w / 2, w / 2, 0.0, h, -L / 2, L / 2, WEATH))

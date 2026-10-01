@@ -118,15 +118,34 @@ def tobira(part, x0=0.0, bay=KEN, style="board", swing="out", height=DOOR_H, mat
         la, lb = (xa + 0.003, mid - 0.002) if side < 0 else (mid + 0.002, xb - 0.003)
         sol = _leaf(la, lb, y0, y1, z0, z1, style, rng, mat, out)
         hx = xa if side < 0 else xb
-        # strap fittings + ring pull on the swing face (board / sankarado)
+        # strap fittings on the swing face (board doors; FX1: not on the sankarado, whose panels are recessed and
+        # would leave the straps floating 12 mm off them)
         zf0, zf1 = sorted((zh, zh + out * 0.006))
-        if style != "lattice":
+        if style == "board":
             for yy in (y0 + 0.25, y1 - 0.32):
                 ea = la if side < 0 else lb - 0.38
                 sol.append(box(ea, ea + 0.38, yy, yy + 0.06, zf0, zf1, METAL, vis=(1,), tag="hasso"))
+        # FX1 (2026-10-01, Stephen: 'the right door takes the left door's handle'): the pull sits ON its own leaf,
+        # inboard of the free (meeting) edge (it was 0.12 m past it, on the other leaf, while moving with this one).
+        # A ring pull (kan) on BOTH faces: the outer one is the period fitting, the inner one closes the leaf from
+        # inside. Board: below the middle batten; sankarado: on the middle rail (solid, not a recessed panel);
+        # lattice: on a small board (hikite-ita) set in beside the stile, so the pull is not over a gap.
         free = lb if side < 0 else la
-        rx = free - side * 0.12
-        sol.append(box(rx - 0.035, rx + 0.035, 0.96, 1.04, zf0, zf1, METAL, vis=(1,), tag="ring_pull"))
+        inward = side                                   # from the free (meeting) edge towards the hinge: -x on the left leaf
+        faces = [(z0, -1.0), (z1, 1.0)]
+        if style == "lattice":
+            fw = 0.065
+            p0, p1 = sorted((free + inward * (fw - 0.001), free + inward * (fw + 0.14)))
+            sol.append(box(p0, p1, 0.90, 1.06, z0 + 0.003, z1 - 0.003, mat, vis=(1,), tag="hikite_ita"))
+            rx, ry0, ry1 = free + inward * (fw + 0.07), 0.94, 1.02
+            faces = [(z0 + 0.003, -1.0), (z1 - 0.003, 1.0)]
+        elif style == "board":
+            rx, ry0, ry1 = free + inward * 0.10, 0.89, 0.97
+        else:
+            rx, ry0, ry1 = free + inward * 0.12, y0 + 1.05 + 0.004, y0 + 1.05 + 0.071
+        for zf, sg in faces:
+            q0, q1 = sorted((zf - sg * 0.001, zf + sg * 0.006))
+            sol.append(box(rx - 0.035, rx + 0.035, ry0, ry1, q0, q1, METAL, vis=(1,), tag="ring_pull"))
         if side < 0:
             # meeting batten on the left leaf's swing face, overlapping the right leaf by 3 cm
             zb0, zb1 = sorted((zh, zh + out * 0.016))

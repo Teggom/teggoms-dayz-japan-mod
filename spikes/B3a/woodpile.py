@@ -19,7 +19,9 @@ import math
 import random
 
 import fkit
-from fkit import core, sheet, box, xf, FIREWOOD, FIREEND, SOOT_WOOD
+from fkit import core, sheet, box, xf, FIREWOOD, FIREEND, SOOT_WOOD, LOGWOOD, ENDGRAIN
+
+ROPE = "straw_rope"
 
 TILE = 2.0          # jp_m_wood_firewood: 2 m world tile; u 0-0.5 bark, 0.5-1 split wood
 
@@ -279,6 +281,36 @@ def woodpile(x0, x1, hfun, z_back, z_front, seed=1, max_faces=1200, back=False, 
         if k == 0:
             loot = (xc, hi + dy, zc)            # the split face up: flat
     return out, {"cell": cell, "faces": faces, "sky": sky, "top_y": max(sky), "tops": tops, "loot": loot}
+
+
+def end_stakes(x0, x1, z_back, z_front, h0, h1, wear=None, r=0.032, seed=9, lean_out=(0.0, 0.0), fallen=None):
+    """FX1 (2026-10-01, Stephen: 'woodpiles look much better, but nothing supports them: perfectly stacked squares
+    would fall without side support'): the period end support of a maki pile: at each free end two stakes (kui) driven
+    in at the front and back corners, upright against the end billets, their tops ~8 cm over the pile, tied across the
+    end with a straw rope. The stakes stand INSIDE x0..x1 (the footprint and the wall gap stay); the pile is built
+    between the returned px0..px1. h0 / h1: the pile height at the x0 / x1 end. fallen: None | 0 | 1 = that end's
+    stakes lean out 18 deg (a collapsed pile). Returns (solids, px0, px1)."""
+    rr = random.Random(seed)
+    out = []
+    zs = [z_front - 0.05, z_back + 0.05]
+    for end, (xe, he, sg) in enumerate(((x0 + r + 0.004, h0, -1.0), (x1 - r - 0.004, h1, 1.0))):
+        lean = 18.0 if fallen == end else lean_out[end]
+        top = he + 0.08 + rr.uniform(-0.02, 0.03)
+        for zc in zs:
+            st = fkit.lcyl("y", xe, zc, r * rr.uniform(0.9, 1.1), 0.0, top, LOGWOOD, n=6, vis=(1, 2),
+                           caps=ENDGRAIN)
+            st = xf(st, rz=-sg * (lean + rr.uniform(0.0, 1.0)), pivot=(xe, 0.0, zc))      # never into the pile
+            if wear:
+                st.wear = wear
+            out.append(st)
+        # the straw tie across the end, from the front stake to the back one (on the stakes' outer side)
+        if fallen != end:
+            yt = he * 0.66
+            dx = math.tan(math.radians(lean)) * yt
+            tie = fkit.lcyl("z", xe + sg * (dx + r * 0.9), yt, 0.011, min(zs) - r, max(zs) + r, ROPE, n=5, vis=(1,))
+            tie.wear = "_w2"
+            out.append(tie)
+    return out, x0 + 2 * r + 0.012, x1 - 2 * r - 0.012
 
 
 def coarse_front(x0, x1, hfun, z_front, z_back, wear=None, cell=0.30, back=False, core_mat=SOOT_WOOD, seed=5):

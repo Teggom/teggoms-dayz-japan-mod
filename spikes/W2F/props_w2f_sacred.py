@@ -74,7 +74,8 @@ def saisen_bako(w, d, h, wear="_w1"):
                            z0 if sz > 0 else z0 + 0.08, IRON, vis=(1,)))
     wear_all(out, wear)
     P.adds(out)
-    P.add(stain(301, 0.0, 0.0, w * 0.35, y=h + 0.002, sx=1.6, mat=LITTER, wear="_w2"))
+    # FX1 (2026-10-01, Stephen: 'the leaves on the offering box are weirdly draped on it; nowhere else nearby has
+    # leaves'): no litter decal on the box (litter goes only where its surroundings have it)
     P.add(lod_box([s for s in out if 1 in s.vis], WEATH, vis=(2,)))
     P.add(col(-w / 2, w / 2, 0.0, h, -d / 2, d / 2, WEATH))
     P.dim("w", w, w, tol=0.005)
@@ -605,11 +606,15 @@ def bonsho(H=0.95, D=0.56):
     for sx in (-1, 1):
         out.append(xf(lathe([(0.0, 0.0), (0.07, 0.0), (0.06, 0.02), (0.0, 0.025)], 8, BRONZE, vis=(1,)),
                       rz=-90.0 * sx, t=(sx * R * 0.99, ys, 0.0)))
-    # the striker log (shumoku) on two ropes, at the -x seat
-    lx0, lx1 = -(R + 0.12), -(R + 1.25)
+    # the striker log (shumoku) on two ropes, at the -x seat. FX1 (2026-10-01, Stephen: 'the rope hanging the log
+    # floats in mid air, attached to nothing'): the log runs UNDER the bell beam (the shoro dressings hang the bell at
+    # yaw 90, beam along the log), so both ropes rise straight to the beam's underside (y 0, as the hook) and end in
+    # an iron eye driven into it; the log is 1.0 m so the outer rope stays under the beam (beam half-length >= 1.36)
+    lx0, lx1 = -(R + 0.10), -(R + 1.10)
     out.append(pole((lx0, ys, 0.0), (lx1, ys, 0.0), 0.075, WEATH, n=8, vis=(1,), caps="wood_endgrain"))
-    for x in (lx0 - 0.15, lx1 + 0.15):
-        out.append(cord((x, ys + 0.075, 0.0), (x, 0.0, 0.0), 0.008))
+    for x in (lx0 - 0.12, lx1 + 0.18):
+        out.append(cord((x, ys + 0.075, 0.0), (x, -0.035, 0.0), 0.008))
+        out.append(box(x - 0.012, x + 0.012, -0.035, 0.0, -0.012, 0.012, IRON, vis=(1,)))       # the eye
     wear_all(out, "_w1")
     P.adds(out)
     P.add(lathe([(0.0, y0), (R, y0 - 0.08), (R, y0 - H), (0.0, y0 - H)], 8, BRONZE, vis=(2,), smooth=False))
@@ -818,9 +823,9 @@ def terrace(W_=12.0, D=11.0, H=1.10):
                         (x - 0.12, 0.0, D / 2 - 0.30), (x - 0.12, 0.30, zf + 0.05), (x + 0.12, 0.30, zf + 0.05),
                         (x + 0.12, H + 0.25, D / 2 - 0.30), (x - 0.12, H + 0.25, D / 2 - 0.30)], CUTSTONE, vis=(1, 2))
         out.append(c_)
-    for i in range(4):                                                   # a few leaf drifts on the top
-        out.append(skit.leaves(400 + i, r.uniform(-W_ / 2 + 1, W_ / 2 - 1), r.uniform(-D / 2 + 1, D / 2 - 1),
-                               r.uniform(0.4, 0.9), H + 0.003, wear="_w2"))
+    # FX1 (2026-10-01): no leaf drifts on the top (the precinct has no leaf litter around it; see the offering box)
+    for i in range(4):
+        r.uniform(-W_ / 2 + 1, W_ / 2 - 1), r.uniform(-D / 2 + 1, D / 2 - 1), r.uniform(0.4, 0.9)   # keep the rng
     P.adds(out)
     P.add(W(-W_ / 2, W_ / 2, 0.0, H, -D / 2, D / 2, CUTSTONE, vis=(2,)))
     P.add(core.hexa([(-sw / 2, 0.0, zf), (sw / 2, 0.0, zf), (sw / 2, 0.0, D / 2), (-sw / 2, 0.0, D / 2),
