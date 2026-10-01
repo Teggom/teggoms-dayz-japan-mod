@@ -112,6 +112,13 @@ BONJI_HOKYO = [((0.0, 0.0, 1.0), "bonji_hum"), ((1.0, 0.0, 0.0), "bonji_trah"), 
                ((-1.0, 0.0, 0.0), "bonji_ah")]
 
 
+# G1 (2026-09-30): the water sphere (suirin) is a truncated sphere: cut faces SUI_CUT of the diameter, SUI_N sides.
+SUI_CUT = 0.62
+SUI_N = 12
+# ring order bottom up, for the seat check (seat_dims)
+RINGS = ("chirin", "suirin", "karin", "furin", "kurin")
+
+
 def bonji_facet(p0, p1, n, t, h, cell, wear):
     """A bonji on the front (+z) facet of a lathe of n sides whose facets are centred on the axes (fkit.lathe's
     default phase, or phase = pi/4 for n = 4): centred at fraction t along the profile segment p0 -> p1 ((r, y)),
@@ -132,14 +139,22 @@ def gorinto(s=1.0, wear=None, drop=(), res3=False, bonji=False):
     v["chirin"] = [W(-a / 2, a / 2, -0.04 * s, 0.15 * s, -a / 2, a / 2, CARVED, vis=(1, 2) if not res3 else (1, 2, 3))]
     c["chirin"] = col(-a / 2, a / 2, 0.0, 0.15 * s, -a / 2, a / 2, CARVED)
     y = 0.15 * s
-    r = 0.095 * s
-    sp = [(0.0, y), (r * 0.55, y), (r, y + r * 0.6), (r * 0.95, y + r * 1.3), (r * 0.5, y + r * 1.85), (0.0, y + 1.9 * r)]
-    v["suirin"] = [lathe(sp, 8, CARVED, vis=(1,)), lathe([sp[0], (r, y + r * 0.9), sp[-1]], 6, CARVED, vis=(2,),
-                                                         smooth=False)]
-    c["suirin"] = cyl_col(r * 0.92, y, y + 1.9 * r, n=6, mat=CARVED)
-    y += 1.9 * r
+    # G1 (2026-09-30): the water sphere is a sphere with its top and bottom CUT FLAT (cut faces 0.62 of the diameter),
+    # so the cube below and the roof above sit squarely on a broad face (the old profile narrowed to a near-point top:
+    # the roof read as floating). 12 sides + smooth normals read round; the equator band (+-20 deg) is one straight
+    # facet so the bonji lies flat on it.
+    r = 0.105 * s                                         # sphere radius
+    ph_c = math.acos(SUI_CUT)                             # latitude of the cut faces
+    hs = r * math.sin(ph_c)                               # half-height
+    ym = y + hs
+    sp = [(0.0, y)] + [(r * math.cos(math.radians(d)), ym + r * math.sin(math.radians(d)))
+                       for d in (-math.degrees(ph_c), -36.0, -20.0, 20.0, 36.0, math.degrees(ph_c))] + [(0.0, y + 2 * hs)]
+    v["suirin"] = [lathe(sp, SUI_N, CARVED, vis=(1,)),
+                   lathe([sp[0], sp[1], (r * 0.97, ym), sp[-2], sp[-1]], 8, CARVED, vis=(2,), smooth=False)]
+    c["suirin"] = cyl_col(r * 0.92, y, y + 2 * hs, n=6, mat=CARVED)
+    y += 2 * hs
     R = 0.115 * s
-    kp = [(0.0, y), (R * 0.95, y), (R * 1.04, y + 0.022 * s), (R * 0.95, y + 0.035 * s), (R * 0.35, y + 0.10 * s),
+    kp = [(0.0, y), (R * 0.95, y), (R * 1.04, y + 0.022 * s), (R * 0.95, y + 0.035 * s), (R * 0.38, y + 0.10 * s),
           (0.0, y + 0.10 * s)]
     v["karin"] = [lathe(kp, 4, CARVED, vis=(1,), phase=SQ, smooth=False),
                   lathe([kp[0], kp[2], kp[-2], kp[-1]], 4, CARVED, vis=(2,), phase=SQ, smooth=False)]
@@ -160,19 +175,83 @@ def gorinto(s=1.0, wear=None, drop=(), res3=False, bonji=False):
         # lower face; sky: the jewel's upper face (sizes fit each facet: W2_ERA G16)
         v["chirin"].append(K.carved((0.0, 0.075 * s, a / 2), X, Y, 0.115 * s, BONJI_RING["chirin"], wear=wear,
                                     mat=GTEXT))
-        v["suirin"].append(bonji_facet(sp[2], sp[3], 8, 0.5, 0.75 * r, BONJI_RING["suirin"], wear))
+        v["suirin"].append(bonji_facet(sp[3], sp[4], SUI_N, 0.5, 0.62 * r, BONJI_RING["suirin"], wear))
         v["karin"].append(bonji_facet(kp[3], kp[4], 4, 0.40, 0.06 * s, BONJI_RING["karin"], wear))
         v["furin"].append(bonji_facet(fp[1], fp[2], 8, 0.55, 0.030 * s, BONJI_RING["furin"], wear))
         v["kurin"].append(bonji_facet(jp[2], jp[3], 8, 0.45, 0.032 * s, BONJI_RING["kurin"], wear))
     if res3:
-        v["suirin"].append(lathe([sp[0], (r, y - 0.35 * s), sp[-1]], 4, CARVED, vis=(3,), smooth=False))
+        v["suirin"].append(lathe([sp[0], sp[1], (r, ym), sp[-2], sp[-1]], 4, CARVED, vis=(3,), smooth=False))
         v["karin"].append(lathe([kp[0], kp[1], kp[-1]], 4, CARVED, vis=(3,), phase=SQ, smooth=False))
-        v["kurin"].append(lathe([(0.0, 0.40 * s), (fr, 0.40 * s), (0.0, y)], 4, CARVED, vis=(3,), smooth=False))
+        v["kurin"].append(lathe([fp[0], (fr, fp[0][1]), (0.0, y)], 4, CARVED, vis=(3,), smooth=False))
     if wear:
         for ss in v.values():
             for q in ss:
                 q.wear = wear
     return v, c, y
+
+
+def _hull(pts):
+    pts = sorted(set((round(x, 6), round(z, 6)) for x, z in pts))
+    if len(pts) < 3:
+        return pts
+    cr = lambda o, a, b: (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])   # noqa: E731
+    lo, hi = [], []
+    for p in pts:
+        while len(lo) >= 2 and cr(lo[-2], lo[-1], p) <= 0:
+            lo.pop()
+        lo.append(p)
+    for p in reversed(pts):
+        while len(hi) >= 2 and cr(hi[-2], hi[-1], p) <= 0:
+            hi.pop()
+        hi.append(p)
+    return lo[:-1] + hi[:-1]                     # counter-clockwise
+
+
+def _area(poly):
+    return abs(sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(poly, poly[1:] + poly[:1]))) / 2 if len(poly) > 2 else 0.0
+
+
+def _clip(subj, clip):
+    """Sutherland-Hodgman: subj clipped by the convex CCW polygon clip."""
+    out = subj
+    for a, b in zip(clip, clip[1:] + clip[:1]):
+        inside = lambda p: (b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0]) >= -1e-12   # noqa: E731
+        src, out = out, []
+        for p, q in zip(src, src[1:] + src[:1]):
+            if inside(q):
+                if not inside(p):
+                    out.append(_cut(p, q, a, b))
+                out.append(q)
+            elif inside(p):
+                out.append(_cut(p, q, a, b))
+        if not out:
+            break
+    return out
+
+
+def _cut(p, q, a, b):
+    d1 = (q[0] - p[0], q[1] - p[1])
+    d2 = (b[0] - a[0], b[1] - a[1])
+    den = d1[0] * d2[1] - d1[1] * d2[0]
+    t = ((a[0] - p[0]) * d2[1] - (a[1] - p[1]) * d2[0]) / den if den else 0.0
+    return (p[0] + d1[0] * t, p[1] + d1[1] * t)
+
+
+def seat_dims(P, v, eps=0.0015):
+    """G1 seat check: every ring sits flush on the one below. For each stacked pair (Res 1 solids v[ring][0]): the
+    vertical gap between the lower ring's top and the upper ring's underside (0 +- 5 mm), and the contact = sqrt(area
+    of the overlap of the lower top face and the upper underside / area of the underside), i.e. the contact radius as a
+    fraction of the underside's (>= 0.5: a broad seat; the old point-topped sphere gave ~0)."""
+    ks = [k for k in RINGS if k in v]
+    for lo_k, up_k in zip(ks, ks[1:]):
+        L, U = v[lo_k][0].verts, v[up_k][0].verts
+        ytop, ybot = max(p[1] for p in L), min(p[1] for p in U)
+        seat = _hull([(p[0], p[2]) for p in L if p[1] >= ytop - eps])
+        under = _hull([(p[0], p[2]) for p in U if p[1] <= ybot + eps])
+        au = _area(under)
+        rel = math.sqrt(_area(_clip(seat, under)) / au) if au > 0 and len(seat) > 2 else 0.0
+        P.dim("seat_%s_%s_gap" % (lo_k, up_k), 0.0, ybot - ytop, tol=0.005, source="G1 seat check")
+        P.dim("seat_%s_%s_contact" % (lo_k, up_k), 0.75, min(rel, 1.0), tol=0.25, source="G1 seat check")
 
 
 def lay(ss, rx=0.0, ry=0.0, rz=0.0, at=(0.0, 0.0), lift=0.0):
@@ -333,7 +412,7 @@ def grave(kind):
         P.notes.append("rare in 1730 (about 5 % of stones); never in uniform rows (W2_ERA G4)")
     # ---------------------------------------------------------------- gorinto
     elif kind in ("gorinto_s", "gorinto_l", "gorinto_stack", "ab_gorinto_fallen"):
-        s = {"gorinto_s": 1.0, "gorinto_l": (2.0 - 0.36) / 0.58, "gorinto_stack": 1.0, "ab_gorinto_fallen": 1.15}[kind]
+        s = {"gorinto_s": 1.0, "gorinto_l": (2.0 - 0.36) / 0.565, "gorinto_stack": 1.0, "ab_gorinto_fallen": 1.15}[kind]
         y0 = 0.0
         if kind == "gorinto_l":
             # a two-course platform (kidan) under the large stupa
@@ -343,12 +422,14 @@ def grave(kind):
         # M2: every ring carries its seed syllable on the front; on the fallen stupa the toppled rings keep theirs
         v, c, hgt = gorinto(s, wear=wear, res3=(kind == "gorinto_l"), bonji=True)
         if kind == "gorinto_stack":
-            # re-stacked from two stupas: the roof and jewel from a bigger one, the crescent missing, rings askew
+            # re-stacked from two stupas: the roof and jewel from a bigger one, the crescent missing. G1: the big roof
+            # sits FLAT on the sphere's cut top, only a few degrees of yaw and a centimetre off-centre (reassembled by
+            # later hands, not about to fall); was +-20 deg on the old point-topped sphere
             v2, c2, _ = gorinto(1.25, wear="_w2", bonji=True)
-            for k in ("karin", "kurin"):
+            for k, yaw in (("karin", 5.0), ("kurin", -4.0)):
                 shift = v["karin"][0].bbox()[2] - v2["karin"][0].bbox()[2]
-                v[k] = xfs(v2[k], ry=rr.uniform(-20, 20), t=(0.012, shift if k == "karin" else 0.0, -0.01))
-                c[k] = xf(c2[k], t=(0.012, shift if k == "karin" else 0.0, -0.01))
+                v[k] = xfs(v2[k], ry=yaw, t=(0.012, shift if k == "karin" else 0.0, -0.01))
+                c[k] = xf(c2[k], ry=yaw, t=(0.012, shift if k == "karin" else 0.0, -0.01))
             # drop the crescent: the jewel sits straight on the roof
             jlo = v["kurin"][0].bbox()[2]
             rtop = v["karin"][0].bbox()[3]
@@ -364,6 +445,7 @@ def grave(kind):
                 vis += [q for q in g if q.vis]
                 cols += [q for q in g if not q.vis]
             vis.append(litter(23, 0.1, 0.3, 0.5))
+        seat_dims(P, v)                      # G1: every ring still standing sits flush on the one below
         for k in v:
             vis += xfs(v[k], t=(0.0, y0, 0.0))
             cols.append(xf(c[k], t=(0.0, y0, 0.0)))

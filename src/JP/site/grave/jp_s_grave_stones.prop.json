@@ -669,8 +669,8 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 144,
-    "Resolution 2": 46,
+    "Resolution 1": 188,
+    "Resolution 2": 66,
     "Geometry": 42,
     "View Geometry": 42,
     "Fire Geometry": 42
@@ -679,7 +679,7 @@
     -0.12,
     0.12,
     -0.04,
-    0.581,
+    0.565,
     -0.122,
     0.103
    ],
@@ -707,9 +707,65 @@
    "loot_surfaces": [],
    "dims": [
     {
+     "name": "seat_chirin_suirin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_chirin_suirin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_suirin_karin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_suirin_karin_contact",
+     "expected": 0.75,
+     "measured": 0.7298,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_karin_furin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_karin_furin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_furin_kurin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_furin_kurin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
      "name": "total_h",
      "expected": 0.6,
-     "measured": 0.5805,
+     "measured": 0.5648,
      "tol": 0.05,
      "source": "build_list"
     }
@@ -737,9 +793,9 @@
    "wall_gap": null,
    "budget": "box",
    "faces": {
-    "Resolution 1": 156,
-    "Resolution 2": 58,
-    "Resolution 3": 30,
+    "Resolution 1": 200,
+    "Resolution 2": 78,
+    "Resolution 3": 38,
     "Geometry": 54,
     "View Geometry": 54,
     "Fire Geometry": 54
@@ -748,7 +804,7 @@
     -0.6,
     0.6,
     -0.05,
-    2.001,
+    1.999,
     -0.602,
     0.6
    ],
@@ -775,6 +831,62 @@
    ],
    "loot_surfaces": [],
    "dims": [
+    {
+     "name": "seat_chirin_suirin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_chirin_suirin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_suirin_karin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_suirin_karin_contact",
+     "expected": 0.75,
+     "measured": 0.7298,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_karin_furin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_karin_furin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_furin_kurin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_furin_kurin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
     {
      "name": "total_h",
      "expected": 2.0,
@@ -806,19 +918,19 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 107,
-    "Resolution 2": 38,
+    "Resolution 1": 151,
+    "Resolution 2": 58,
     "Geometry": 32,
     "View Geometry": 32,
     "Fire Geometry": 32
    },
    "bbox": [
-    -0.122,
-    0.146,
+    -0.12,
+    0.127,
     -0.04,
-    0.577,
-    -0.146,
-    0.124
+    0.561,
+    -0.127,
+    0.111
    ],
    "collision": [
     "geo",
@@ -827,8 +939,8 @@
    ],
    "footprint_xz": [
     -0.1,
-    -0.11,
-    0.112,
+    -0.118,
+    0.12,
     0.1
    ],
    "roadway": false,
@@ -843,9 +955,51 @@
    "loot_surfaces": [],
    "dims": [
     {
+     "name": "seat_chirin_suirin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_chirin_suirin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_suirin_karin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_suirin_karin_contact",
+     "expected": 0.75,
+     "measured": 0.5838,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_karin_kurin_gap",
+     "expected": 0.0,
+     "measured": -0.004,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_karin_kurin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
      "name": "total_h",
      "expected": 0.6,
-     "measured": 0.5805,
+     "measured": 0.5648,
      "tol": 0.05,
      "source": "build_list"
     }
@@ -874,8 +1028,8 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 171,
-    "Resolution 2": 68,
+    "Resolution 1": 259,
+    "Resolution 2": 108,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -884,7 +1038,7 @@
     -0.811,
     0.797,
     -0.015,
-    0.286,
+    0.294,
     -0.582,
     0.557
    ],
@@ -894,7 +1048,7 @@
     "fire"
    ],
    "footprint_xz": [
-    -0.349,
+    -0.356,
     -0.216,
     0.406,
     0.248
@@ -908,7 +1062,7 @@
     {
      "name": "heap_h",
      "expected": 0.4,
-     "measured": 0.2864,
+     "measured": 0.2938,
      "tol": 0.12,
      "source": "build_list"
     }
@@ -1498,8 +1652,8 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 144,
-    "Resolution 2": 46,
+    "Resolution 1": 188,
+    "Resolution 2": 66,
     "Geometry": 42,
     "View Geometry": 42,
     "Fire Geometry": 42
@@ -1508,7 +1662,7 @@
     -0.429,
     0.696,
     -0.046,
-    0.38,
+    0.362,
     -0.176,
     0.787
    ],
@@ -1536,9 +1690,23 @@
    "loot_surfaces": [],
    "dims": [
     {
+     "name": "seat_chirin_suirin_gap",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "G1 seat check"
+    },
+    {
+     "name": "seat_chirin_suirin_contact",
+     "expected": 0.75,
+     "measured": 1.0,
+     "tol": 0.25,
+     "source": "G1 seat check"
+    },
+    {
      "name": "total_h",
      "expected": 0.69,
-     "measured": 0.6676,
+     "measured": 0.6495,
      "tol": 0.05,
      "source": "build_list"
     }
