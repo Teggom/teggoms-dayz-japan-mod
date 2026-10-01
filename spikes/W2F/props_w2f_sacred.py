@@ -752,3 +752,100 @@ PROPS = [
     {"id": "jp_f_ofuda_stack", "cat": CAT, "mount": "surface", "models": [
         M("jp_f_ofuda_stack", "std", "intact", "Talisman stacks, amulets, print block", ofuda_stack)]},
 ]
+
+
+# ================================================================================================ stone terrace
+def terrace(W_=12.0, D=11.0, H=1.10):
+    """A stone-faced hall terrace (ishidan / kidan) for a hall on a slope: cut-stone retaining faces front and sides,
+    a packed-earth top with a Roadway, a dressed stone flight down the middle of the front (rise 0.16, tread 0.303,
+    cheek stones). Origin = the centre of the platform at its FOOT (y 0 = the bottom of the front face); the back
+    is meant to sink into the rising ground. The hall stands on the top (y = H)."""
+    import skit
+    P = LPart("terrace", budget="medium", mass=50000.0, anchor="floor")
+    RISE, TREAD = 0.16, 0.91 / 3
+    n = int(math.ceil(H / RISE))
+    rise = H / n
+    run = n * TREAD
+    sw = 2.40
+    r = rng("terrace%.1f" % W_)
+    out = []
+    ch = 0.55                                                            # course height
+    k = int(math.ceil(H / ch))
+    for side in ("front", "left", "right"):
+        L = W_ if side == "front" else D
+        m = max(2, int(round(L / 0.95)))
+        for c_ in range(k):
+            y0, y1 = c_ * H / k, (c_ + 1) * H / k
+            off = 0.5 if c_ % 2 else 0.0
+            edges = [0.0] + [min(L, (i + off) * L / m) for i in range(1, m + 1)]
+            edges = sorted(set(edges))
+            for a, b in zip(edges[:-1], edges[1:]):
+                if b - a < 0.15:
+                    continue
+                if side == "front":
+                    x0, x1 = -W_ / 2 + a + 0.003, -W_ / 2 + b - 0.003
+                    if x1 > -sw / 2 - 0.25 and x0 < sw / 2 + 0.25:          # the flight's mouth
+                        if x0 < -sw / 2 - 0.25:
+                            x1 = -sw / 2 - 0.25
+                        elif x1 > sw / 2 + 0.25:
+                            x0 = sw / 2 + 0.25
+                        else:
+                            continue
+                    bb = W(x0, x1, y0 + 0.003, y1, D / 2 - 0.35, D / 2, CUTSTONE, vis=(1,), uvoff=(r.random(), r.random()))
+                else:
+                    sx = -1 if side == "left" else 1
+                    z0, z1 = -D / 2 + a + 0.003, -D / 2 + b - 0.003
+                    x0, x1 = sorted((sx * W_ / 2, sx * (W_ / 2 - 0.35)))
+                    bb = W(x0, x1, y0 + 0.003, y1, z0, z1, CUTSTONE, vis=(1,), uvoff=(r.random(), r.random()))
+                out.append(bb)
+    out.append(W(-W_ / 2 + 0.30, W_ / 2 - 0.30, H - 0.06, H, -D / 2, D / 2 - 0.30, "ground_earth_bare", vis=(1,)))
+    out.append(W(-W_ / 2, W_ / 2, H - 0.06, H + 0.002, D / 2 - 0.36, D / 2, CUTSTONE, vis=(1,)))       # coping
+    out.append(W(-W_ / 2, -W_ / 2 + 0.36, H - 0.06, H + 0.002, -D / 2, D / 2 - 0.36, CUTSTONE, vis=(1,)))
+    out.append(W(W_ / 2 - 0.36, W_ / 2, H - 0.06, H + 0.002, -D / 2, D / 2 - 0.36, CUTSTONE, vis=(1,)))
+    # the flight: dressed treads from the foot (z = D/2 + run) up to the coping (z = D/2), hidden ramp + Roadway
+    zf = D / 2 + run
+    for i in range(1, n + 1):
+        za, zb = zf - (i - 1) * TREAD, zf - i * TREAD
+        top = i * rise
+        for j in range(3):
+            x0 = -sw / 2 + sw * j / 3 + (0.002 if j else 0.0)
+            x1 = -sw / 2 + sw * (j + 1) / 3 - (0.002 if j < 2 else 0.0)
+            out.append(W(x0, x1, max(0.0, top - rise - 0.10), top, zb - (0.06 if i < n else 0.0), za, CUTSTONE,
+                         vis=(1,), uvoff=(r.random(), r.random())))
+    for sx in (-1, 1):                                                   # cheek stones
+        x = sx * (sw / 2 + 0.12)
+        c_ = core.hexa([(x - 0.12, 0.0, zf + 0.05), (x + 0.12, 0.0, zf + 0.05), (x + 0.12, 0.0, D / 2 - 0.30),
+                        (x - 0.12, 0.0, D / 2 - 0.30), (x - 0.12, 0.30, zf + 0.05), (x + 0.12, 0.30, zf + 0.05),
+                        (x + 0.12, H + 0.25, D / 2 - 0.30), (x - 0.12, H + 0.25, D / 2 - 0.30)], CUTSTONE, vis=(1, 2))
+        out.append(c_)
+    for i in range(4):                                                   # a few leaf drifts on the top
+        out.append(skit.leaves(400 + i, r.uniform(-W_ / 2 + 1, W_ / 2 - 1), r.uniform(-D / 2 + 1, D / 2 - 1),
+                               r.uniform(0.4, 0.9), H + 0.003, wear="_w2"))
+    P.adds(out)
+    P.add(W(-W_ / 2, W_ / 2, 0.0, H, -D / 2, D / 2, CUTSTONE, vis=(2,)))
+    P.add(core.hexa([(-sw / 2, 0.0, zf), (sw / 2, 0.0, zf), (sw / 2, 0.0, D / 2), (-sw / 2, 0.0, D / 2),
+                     (-sw / 2, 0.0, zf), (sw / 2, 0.0, zf), (sw / 2, H, D / 2), (-sw / 2, H, D / 2)], CUTSTONE,
+                    vis=(2,)) if False else W(-sw / 2, sw / 2, 0.0, H * 0.5, D / 2, zf, CUTSTONE, vis=(2,)))
+    cols = [col(-W_ / 2, W_ / 2, 0.0, H, -D / 2, D / 2, CUTSTONE)]
+    wedge = core.Solid([(-sw / 2, 0.0, zf), (sw / 2, 0.0, zf), (sw / 2, 0.0, D / 2), (-sw / 2, 0.0, D / 2),
+                        (-sw / 2, H, D / 2), (sw / 2, H, D / 2)],
+                       [[0, 1, 2, 3], [3, 2, 5, 4], [0, 4, 5, 1], [0, 3, 4], [1, 5, 2]], CUTSTONE, vis=(), geo=True,
+                       view=True, fire=True)
+    cols.append(wedge)
+    P.adds(cols)
+    P.road([(-W_ / 2, H, D / 2), (W_ / 2, H, D / 2), (W_ / 2, H, -D / 2), (-W_ / 2, H, -D / 2)], "gravel")
+    P.road([(-sw / 2, 0.0, zf), (sw / 2, 0.0, zf), (sw / 2, H, D / 2), (-sw / 2, H, D / 2)], "stone_ext")
+    P.dim("W", W_, W_, tol=0.005)
+    P.dim("H", H, H, tol=0.005)
+    P.extra["terrace"] = {"W": W_, "D": D, "H": H, "flight_run": round(run, 3)}
+    P.notes.append("stone hall terrace %.1f x %.1f, %.2f m at the front (its back sinks into the slope); the flight "
+                   "down the front middle runs %.2f m out from the front face" % (W_, D, H, run))
+    return P
+
+
+PROPS.append({"id": "jp_f_terrace", "cat": CAT, "mount": "floor", "models": [
+    M("jp_f_terrace_l", "l", "intact", "Stone hall terrace 12 x 11 x 1.35 with its front flight",
+      lambda: terrace(12.0, 11.0, 1.35)),
+    M("jp_f_terrace_m", "m", "intact", "Stone hall terrace 10 x 7.4 x 1.8 with its front flight",
+      lambda: terrace(10.0, 7.4, 1.80)),
+]})

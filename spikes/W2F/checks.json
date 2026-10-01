@@ -9102,6 +9102,404 @@
      ]
     }
    ]
+  },
+  "jp_f_terrace_l": {
+   "prop": "jp_f_terrace",
+   "cat": "sacred",
+   "state": "intact",
+   "variant": "l",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 832,
+    "Resolution 2": 24,
+    "Geometry": 11,
+    "Roadway": 2,
+    "View Geometry": 11,
+    "Fire Geometry": 11
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Roadway",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 832,
+       "Resolution 2": 24,
+       "Geometry": 11,
+       "Roadway": 2,
+       "View Geometry": 11,
+       "Fire Geometry": 11
+      },
+      "extra": [],
+      "budget": 1500
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "W",
+       "expected": 12.0,
+       "measured": 12.0,
+       "tol": 0.005,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "H",
+       "expected": 1.35,
+       "measured": 1.35,
+       "tol": 0.005,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base / wall / hook plane within 0-2 cm",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 0.0,
+      "geo_min_y": 0.0
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 50000.0
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 2
+     }
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_earth_bare_w1": true,
+      "jp_m_ground_leaf_litter_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_ground_earth_bare_w1",
+       "mean_srgb": [
+        148.0,
+        130.0,
+        108.0
+       ],
+       "palette": "earth_bare",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_cut_w1",
+       "mean_srgb": [
+        160.3,
+        137.4,
+        107.5
+       ],
+       "palette": "stone_granite",
+       "dE76": 1.0,
+       "tolerance": 9,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  "jp_f_terrace_m": {
+   "prop": "jp_f_terrace",
+   "cat": "sacred",
+   "state": "intact",
+   "variant": "m",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 856,
+    "Resolution 2": 24,
+    "Geometry": 11,
+    "Roadway": 2,
+    "View Geometry": 11,
+    "Fire Geometry": 11
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Roadway",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 856,
+       "Resolution 2": 24,
+       "Geometry": 11,
+       "Roadway": 2,
+       "View Geometry": 11,
+       "Fire Geometry": 11
+      },
+      "extra": [],
+      "budget": 1500
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "W",
+       "expected": 10.0,
+       "measured": 10.0,
+       "tol": 0.005,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "H",
+       "expected": 1.8,
+       "measured": 1.8,
+       "tol": 0.005,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base / wall / hook plane within 0-2 cm",
+     "pass": true,
+     "detail": {
+      "res1_min_y": 0.0,
+      "geo_min_y": 0.0
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 2,
+      "problems": {},
+      "mass": 50000.0
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 2
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 2
+     }
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_ground_earth_bare_w1": true,
+      "jp_m_ground_leaf_litter_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_ground_earth_bare_w1",
+       "mean_srgb": [
+        148.0,
+        130.0,
+        108.0
+       ],
+       "palette": "earth_bare",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_cut_w1",
+       "mean_srgb": [
+        160.3,
+        137.4,
+        107.5
+       ],
+       "palette": "stone_granite",
+       "dE76": 1.0,
+       "tolerance": 9,
+       "pass": true
+      }
+     ]
+    }
+   ]
   }
  },
  "global": {
@@ -9126,9 +9524,9 @@
   }
  },
  "summary": {
-  "models": 47,
-  "pass": 47,
-  "w2f_registered": 47,
-  "classes_in_config": 520
+  "models": 49,
+  "pass": 49,
+  "w2f_registered": 49,
+  "classes_in_config": 522
  }
 }

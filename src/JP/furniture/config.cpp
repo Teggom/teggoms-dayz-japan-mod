@@ -3206,6 +3206,19 @@ class CfgVehicles
 		displayName="Talisman stacks, amulets, print block";
 		model="\JP\furniture\sacred\jp_f_ofuda_stack.p3d";
 	};
+	// jp_f_terrace (sacred)
+	class StaticObj_JP_F_Terrace_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone hall terrace 12 x 11 x 1.35 with its front flight";
+		model="\JP\furniture\sacred\jp_f_terrace_l.p3d";
+	};
+	class StaticObj_JP_F_Terrace_M: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone hall terrace 10 x 7.4 x 1.8 with its front flight";
+		model="\JP\furniture\sacred\jp_f_terrace_m.p3d";
+	};
 	// jp_f_forge (civicfit)
 	class StaticObj_JP_F_Forge: HouseNoDestruct
 	{

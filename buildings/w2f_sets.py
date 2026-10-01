@@ -140,7 +140,7 @@ def shrine_haiden_town(c):
     sparse(c, "en_left", "side veranda")
     sparse(c, "en_right", "side veranda")
     c.front("jp_f_gaku_hachimangu", 0.0, 2.43, 3.04, why="the shrine name board over the worship bay")
-    c.site("jp_f_saisen_bako_l", 0.0, stair_foot_z(c, "en") + 0.90, 0.0, why="the offering box at the foot of the steps")
+    c.site("jp_f_saisen_bako_l", 0.0, stair_foot_z(c, "en") + 0.50, 0.0, why="the offering box at the foot of the steps")
 
 
 def shrine_haiden_village(c):
@@ -156,7 +156,7 @@ def shrine_haiden_village(c):
     c.hang("en", "jp_f_suzu_rope_faded", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE,
            why="the bell and its rope")
     sparse(c, "en", "the veranda before the doors")
-    c.site("jp_f_saisen_bako_m", 0.0, stair_foot_z(c, "en") + 0.90, 0.0, why="the offering box at the foot of the steps")
+    c.site("jp_f_saisen_bako_m", 0.0, stair_foot_z(c, "en") + 0.50, 0.0, why="the offering box at the foot of the steps")
 
 
 def _sanctum(c, n, w):
@@ -269,7 +269,7 @@ def temple_hondo_town(c):
     f = fit1(c, "en", "gong")
     c.hang("en", "jp_f_waniguchi", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, why="the gong and rope")
     sparse(c, "en", "the veranda before the hall")
-    c.site("jp_f_saisen_bako_l", 0.0, stair_foot_z(c, "en") + 0.90, 0.0, why="the donation box at the foot of the steps")
+    c.site("jp_f_saisen_bako_l", 0.0, stair_foot_z(c, "en") + 0.50, 0.0, why="the donation box at the foot of the steps")
 
 
 def temple_do(c, image, room_w):
@@ -286,7 +286,7 @@ def temple_do(c, image, room_w):
         f = fit1(c, "en", "saisen_bako")
         c.free("en", "jp_f_saisen_bako_s", f["centre"][0], f["centre"][1], 0.0, why="the donation box")
     else:                            # one front door: the en is too shallow before it, the box goes to the stair foot
-        c.site("jp_f_saisen_bako_s", 0.0, stair_foot_z(c, "en") + 0.90, 0.0, why="the donation box at the stair foot")
+        c.site("jp_f_saisen_bako_s", 0.0, stair_foot_z(c, "en") + 0.50, 0.0, why="the donation box at the stair foot")
     f = fit1(c, "en", "gong")
     c.hang("en", "jp_f_waniguchi", f["centre"][0], f["centre"][1], f["y"], over=ROPE_NOTE, why="the gong and rope")
     sparse(c, "en", "the veranda before the hall")
