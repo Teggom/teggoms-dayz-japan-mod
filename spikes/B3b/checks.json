@@ -41115,12 +41115,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        61.2,
-        58.9,
-        52.4
+        62.2,
+        59.8,
+        53.2
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 4.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41316,12 +41316,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        61.2,
-        58.9,
-        52.4
+        62.2,
+        59.8,
+        53.2
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 4.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41519,12 +41519,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w2",
        "mean_srgb": [
-        56.7,
-        54.4,
-        47.9
+        57.6,
+        55.2,
+        48.6
        ],
        "palette": "stone_lantern",
-       "dE76": 7.0,
+       "dE76": 6.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41733,12 +41733,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        61.2,
-        58.9,
-        52.4
+        62.2,
+        59.8,
+        53.2
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 4.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41934,12 +41934,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        61.2,
-        58.9,
-        52.4
+        62.2,
+        59.8,
+        53.2
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 4.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42128,12 +42128,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        61.2,
-        58.9,
-        52.4
+        62.2,
+        59.8,
+        53.2
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 4.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42534,12 +42534,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        61.2,
-        58.9,
-        52.4
+        62.2,
+        59.8,
+        53.2
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 4.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42762,12 +42762,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        61.2,
-        58.9,
-        52.4
+        62.2,
+        59.8,
+        53.2
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 4.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42826,7 +42826,7 @@
    "variant": "gorinto_s",
    "pass": true,
    "faces": {
-    "Resolution 1": 139,
+    "Resolution 1": 144,
     "Resolution 2": 46,
     "Geometry": 42,
     "View Geometry": 42,
@@ -42851,6 +42851,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
@@ -42873,7 +42874,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 139,
+       "Resolution 1": 144,
        "Resolution 2": 46,
        "Geometry": 42,
        "View Geometry": 42,
@@ -42954,6 +42955,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w1": true
@@ -42964,6 +42966,19 @@
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_decal_carved_text_grave_w1",
+       "mean_srgb": [
+        62.2,
+        59.8,
+        53.2
+       ],
+       "palette": "stone_lantern",
+       "dE76": 4.6,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
       {
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
@@ -43006,7 +43021,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "name": "text decals face out of their host and read left to right in game (5 faces)",
      "pass": true,
      "detail": []
     }
@@ -43019,7 +43034,7 @@
    "variant": "gorinto_l",
    "pass": true,
    "faces": {
-    "Resolution 1": 151,
+    "Resolution 1": 156,
     "Resolution 2": 58,
     "Resolution 3": 30,
     "Geometry": 54,
@@ -43046,6 +43061,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
@@ -43068,7 +43084,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 151,
+       "Resolution 1": 156,
        "Resolution 2": 58,
        "Resolution 3": 30,
        "Geometry": 54,
@@ -43150,6 +43166,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w1": true
@@ -43160,6 +43177,19 @@
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_decal_carved_text_grave_w1",
+       "mean_srgb": [
+        62.2,
+        59.8,
+        53.2
+       ],
+       "palette": "stone_lantern",
+       "dE76": 4.6,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
       {
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
@@ -43202,7 +43232,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "name": "text decals face out of their host and read left to right in game (5 faces)",
      "pass": true,
      "detail": []
     }
@@ -43215,7 +43245,7 @@
    "variant": "gorinto_stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 103,
+    "Resolution 1": 107,
     "Resolution 2": 38,
     "Geometry": 32,
     "View Geometry": 32,
@@ -43240,6 +43270,8 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
@@ -43263,7 +43295,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 103,
+       "Resolution 1": 107,
        "Resolution 2": 38,
        "Geometry": 32,
        "View Geometry": 32,
@@ -43344,6 +43376,8 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_decal_carved_text_grave_w1": true,
+      "jp_m_decal_carved_text_grave_w2": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w1": true,
@@ -43355,6 +43389,32 @@
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_decal_carved_text_grave_w1",
+       "mean_srgb": [
+        62.2,
+        59.8,
+        53.2
+       ],
+       "palette": "stone_lantern",
+       "dE76": 4.6,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_carved_text_grave_w2",
+       "mean_srgb": [
+        57.6,
+        55.2,
+        48.6
+       ],
+       "palette": "stone_lantern",
+       "dE76": 6.6,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
       {
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
@@ -43410,7 +43470,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "name": "text decals face out of their host and read left to right in game (4 faces)",
      "pass": true,
      "detail": []
     }
@@ -43632,7 +43692,7 @@
    "variant": "hokyointo",
    "pass": true,
    "faces": {
-    "Resolution 1": 256,
+    "Resolution 1": 260,
     "Resolution 2": 54,
     "Resolution 3": 17,
     "Geometry": 34,
@@ -43659,6 +43719,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
@@ -43681,7 +43742,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 256,
+       "Resolution 1": 260,
        "Resolution 2": 54,
        "Resolution 3": 17,
        "Geometry": 34,
@@ -43763,6 +43824,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w1": true
@@ -43773,6 +43835,19 @@
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_decal_carved_text_grave_w1",
+       "mean_srgb": [
+        62.2,
+        59.8,
+        53.2
+       ],
+       "palette": "stone_lantern",
+       "dE76": 4.6,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
       {
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
@@ -43815,7 +43890,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "name": "text decals face out of their host and read left to right in game (4 faces)",
      "pass": true,
      "detail": []
     }
@@ -44792,12 +44867,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w2",
        "mean_srgb": [
-        56.7,
-        54.4,
-        47.9
+        57.6,
+        55.2,
+        48.6
        ],
        "palette": "stone_lantern",
-       "dE76": 7.0,
+       "dE76": 6.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45229,12 +45304,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w2",
        "mean_srgb": [
-        56.7,
-        54.4,
-        47.9
+        57.6,
+        55.2,
+        48.6
        ],
        "palette": "stone_lantern",
-       "dE76": 7.0,
+       "dE76": 6.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45442,12 +45517,12 @@
       {
        "material": "jp_m_decal_carved_text_grave_w2",
        "mean_srgb": [
-        56.7,
-        54.4,
-        47.9
+        57.6,
+        55.2,
+        48.6
        ],
        "palette": "stone_lantern",
-       "dE76": 7.0,
+       "dE76": 6.6,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45508,7 +45583,7 @@
    "variant": "gorinto_fallen",
    "pass": true,
    "faces": {
-    "Resolution 1": 139,
+    "Resolution 1": 144,
     "Resolution 2": 46,
     "Geometry": 42,
     "View Geometry": 42,
@@ -45534,6 +45609,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
       ],
@@ -45555,7 +45631,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 139,
+       "Resolution 1": 144,
        "Resolution 2": 46,
        "Geometry": 42,
        "View Geometry": 42,
@@ -45637,6 +45713,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
+      "jp_m_decal_carved_text_grave_w2": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w2": true
      }
@@ -45656,6 +45733,19 @@
        "palette": "grime_splash",
        "dE76": 2.4,
        "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_carved_text_grave_w2",
+       "mean_srgb": [
+        57.6,
+        55.2,
+        48.6
+       ],
+       "palette": "stone_lantern",
+       "dE76": 6.6,
+       "tolerance": 9,
        "pass": true,
        "masked": true
       },
@@ -45689,7 +45779,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "name": "text decals face out of their host and read left to right in game (5 faces)",
      "pass": true,
      "detail": []
     }
@@ -45702,7 +45792,7 @@
    "variant": "hokyointo_broken",
    "pass": true,
    "faces": {
-    "Resolution 1": 259,
+    "Resolution 1": 263,
     "Resolution 2": 54,
     "Resolution 3": 17,
     "Geometry": 34,
@@ -45730,6 +45820,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
       ],
@@ -45751,7 +45842,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 259,
+       "Resolution 1": 263,
        "Resolution 2": 54,
        "Resolution 3": 17,
        "Geometry": 34,
@@ -45834,6 +45925,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
+      "jp_m_decal_carved_text_grave_w2": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w2": true
      }
@@ -45853,6 +45945,19 @@
        "palette": "grime_splash",
        "dE76": 2.4,
        "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_decal_carved_text_grave_w2",
+       "mean_srgb": [
+        57.6,
+        55.2,
+        48.6
+       ],
+       "palette": "stone_lantern",
+       "dE76": 6.6,
+       "tolerance": 9,
        "pass": true,
        "masked": true
       },
@@ -45886,7 +45991,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "name": "text decals face out of their host and read left to right in game (4 faces)",
      "pass": true,
      "detail": []
     }

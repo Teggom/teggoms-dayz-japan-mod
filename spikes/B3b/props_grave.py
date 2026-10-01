@@ -102,9 +102,31 @@ def nijo(w, y, z, wear=None):
     return out
 
 
-def gorinto(s=1.0, wear=None, drop=(), res3=False):
+# M2 (2026-09-30): Siddham seed syllables (bonji) from the new cells of jp_m_decal_carved_text_grave; verdicts and
+# basis in research/outdoor_kit/W2_ERA.md G16-G19. Gorinto front, top to bottom: kha / ha / ra / va / a.
+BONJI_RING = {"kurin": "bonji_kha", "furin": "bonji_ha", "karin": "bonji_ra", "suirin": "bonji_va",
+              "chirin": "bonji_a"}
+# Hokyointo body: the four Diamond-Realm Buddhas, front (+z) = east, then clockwise seen from above: south = +x (the
+# viewer's left in game, see skit.face_text), west = back, north = -x.
+BONJI_HOKYO = [((0.0, 0.0, 1.0), "bonji_hum"), ((1.0, 0.0, 0.0), "bonji_trah"), ((0.0, 0.0, -1.0), "bonji_hrih"),
+               ((-1.0, 0.0, 0.0), "bonji_ah")]
+
+
+def bonji_facet(p0, p1, n, t, h, cell, wear):
+    """A bonji on the front (+z) facet of a lathe of n sides whose facets are centred on the axes (fkit.lathe's
+    default phase, or phase = pi/4 for n = 4): centred at fraction t along the profile segment p0 -> p1 ((r, y)),
+    laid in the facet plane (distance r * cos(pi / n)), the cell's up along the segment."""
+    c = math.cos(math.pi / n)
+    (r0, y0), (r1, y1) = p0, p1
+    up = core.norm((0.0, y1 - y0, (r1 - r0) * c))
+    ctr = (0.0, y0 + (y1 - y0) * t, (r0 + (r1 - r0) * t) * c)
+    return K.carved(ctr, X, up, h, cell, wear=wear, mat=GTEXT)
+
+
+def gorinto(s=1.0, wear=None, drop=(), res3=False, bonji=False):
     """Five-ring stupa of total ~0.6 * s: chirin (cube), suirin (sphere), karin (roof), furin (crescent / bowl),
-    kurin (jewel). Returns ({ring: [solids]}, {ring: col}, heights)."""
+    kurin (jewel). Returns ({ring: [solids]}, {ring: col}, heights). bonji (M2): each ring carries its seed syllable
+    on the front (+z), appended after the ring's solids (so [0] stays the ring itself)."""
     v, c, y = {}, {}, 0.0
     a = 0.20 * s
     v["chirin"] = [W(-a / 2, a / 2, -0.04 * s, 0.15 * s, -a / 2, a / 2, CARVED, vis=(1, 2) if not res3 else (1, 2, 3))]
@@ -133,6 +155,15 @@ def gorinto(s=1.0, wear=None, drop=(), res3=False):
     v["kurin"] = [lathe(jp, 8, CARVED, vis=(1,)), lathe([jp[0], jp[2], jp[-1]], 4, CARVED, vis=(2,), smooth=False)]
     c["kurin"] = cyl_col(jr * 0.9, y, y + 0.095 * s, n=6, mat=CARVED)
     y += 0.10 * s
+    if bonji:
+        # earth: the cube's front face; water: the sphere's widest facet band; fire: the roof slope; wind: the bowl's
+        # lower face; sky: the jewel's upper face (sizes fit each facet: W2_ERA G16)
+        v["chirin"].append(K.carved((0.0, 0.075 * s, a / 2), X, Y, 0.115 * s, BONJI_RING["chirin"], wear=wear,
+                                    mat=GTEXT))
+        v["suirin"].append(bonji_facet(sp[2], sp[3], 8, 0.5, 0.75 * r, BONJI_RING["suirin"], wear))
+        v["karin"].append(bonji_facet(kp[3], kp[4], 4, 0.40, 0.06 * s, BONJI_RING["karin"], wear))
+        v["furin"].append(bonji_facet(fp[1], fp[2], 8, 0.55, 0.030 * s, BONJI_RING["furin"], wear))
+        v["kurin"].append(bonji_facet(jp[2], jp[3], 8, 0.45, 0.032 * s, BONJI_RING["kurin"], wear))
     if res3:
         v["suirin"].append(lathe([sp[0], (r, y - 0.35 * s), sp[-1]], 4, CARVED, vis=(3,), smooth=False))
         v["karin"].append(lathe([kp[0], kp[1], kp[-1]], 4, CARVED, vis=(3,), phase=SQ, smooth=False))
@@ -309,10 +340,11 @@ def grave(kind):
             bv, bc, y0 = base_stack([(1.20, 1.20, 0.20), (0.92, 0.92, 0.16)], wear=wear)
             vis += bv
             cols += bc
-        v, c, hgt = gorinto(s, wear=wear, res3=(kind == "gorinto_l"))
+        # M2: every ring carries its seed syllable on the front; on the fallen stupa the toppled rings keep theirs
+        v, c, hgt = gorinto(s, wear=wear, res3=(kind == "gorinto_l"), bonji=True)
         if kind == "gorinto_stack":
             # re-stacked from two stupas: the roof and jewel from a bigger one, the crescent missing, rings askew
-            v2, c2, _ = gorinto(1.25, wear="_w2")
+            v2, c2, _ = gorinto(1.25, wear="_w2", bonji=True)
             for k in ("karin", "kurin"):
                 shift = v["karin"][0].bbox()[2] - v2["karin"][0].bbox()[2]
                 v[k] = xfs(v2[k], ry=rr.uniform(-20, 20), t=(0.012, shift if k == "karin" else 0.0, -0.01))
@@ -373,13 +405,18 @@ def grave(kind):
         bv, bc, y0 = base_stack([(0.62, 0.62, 0.16), (0.48, 0.48, 0.18)], wear=wear)
         vis += bv
         cols += bc
-        # body (toshin) with four recessed panels (seed-syllable niches; the syllables need atlas cells we lack)
+        # body (toshin) with four panels, each carrying one seed syllable (M2: the four Diamond-Realm Buddhas,
+        # BONJI_HOKYO; W2_ERA G18)
         a = 0.32
         vis.append(W(-a / 2, a / 2, y0, y0 + 0.30, -a / 2, a / 2, CARVED, vis=(1, 2, 3)))
         cols.append(col(-a / 2, a / 2, y0, y0 + 0.30, -a / 2, a / 2, CARVED))
         for ang in (0.0, 90.0, 180.0, 270.0):
             vis.append(xf(W(-0.10, 0.10, y0 + 0.06, y0 + 0.24, a / 2 - 0.004, a / 2 + 0.003, CARVED, vis=(1,)),
                           ry=ang))
+        for d_, cell_ in BONJI_HOKYO:
+            pf = a / 2 + 0.003                       # the panel face
+            tx.append(K.carved((d_[0] * pf, y0 + 0.15, d_[2] * pf), (d_[2], 0.0, -d_[0]), Y, 0.175, cell_, wear=wear,
+                               mat=GTEXT))
         y = y0 + 0.30
         # the roof: two steps under, the eave slab, five steps over, corner horns
         steps_ = [(0.36, 0.035), (0.42, 0.035), (0.56, 0.07), (0.44, 0.035), (0.36, 0.035), (0.28, 0.035),
@@ -500,7 +537,8 @@ def grave(kind):
     add_all(P, ss)
     lo = min(v[1] for s in P.solids if s.vis for v in s.verts)
     P.bury = max(P.bury, -lo + 0.001)
-    P.extra.update({"plot_grid_m": 0.9, "inscription": sorted({getattr(s, "cell", "") for s in tx}) or None})
+    P.extra.update({"plot_grid_m": 0.9, "inscription": sorted({s.cell for s in vis + tx if getattr(s, "cell", None)})
+                    or None})      # M2: the gorinto's bonji ride in vis (with their rings), not tx
     return P
 
 
@@ -810,7 +848,11 @@ PROPS = [
                "irregular rows: 0.9 m plot grid jittered +-0.15 m and +-12 deg, mixed heights, gaps",
                "inscriptions (M1): a posthumous name and date per stone from jp_m_decal_carved_text_grave (1670-1729: "
                "-shinji / -shinnyo, -zenjomon / -zenjoni, -doji, shaku-, kigen / enjaku prefixes) + B1's two; no "
-               "family-name stones (Meiji); gorinto / hokyointo stay blank (no Siddham font for the seed syllables)", "abandoned share: about 1 stone in 4 leaning / sunk / broken"],
+               "family-name stones (Meiji)",
+               "seed syllables (M2, W2_ERA G16-G18): gorinto rings kha / ha / ra / va / a on the front (small, large, "
+               "re-stacked, fallen; the fragment heap blank); hokyointo body hum (front, east) / trah (+x, south) / "
+               "hrih (back, west) / ah (-x, north); Noto Sans Siddham (SIL OFL 1.1)",
+               "abandoned share: about 1 stone in 4 leaning / sunk / broken"],
      "models": [
          G("board", "Board-shaped gravestone (itabi) on a base, name and date"),
          G("board_s", "Small board-shaped gravestone set in the ground, name only"),

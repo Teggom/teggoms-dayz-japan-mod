@@ -21,7 +21,8 @@ B1's make_one = textures, PAAs, rvmats, sidecar, C1 matcheck on the PNG and the 
                                 New palette `wicker_aged`, sampled from the CC0 scan bamboo_wall (no kori photo here).
 - jp_m_wood_firewood            Split firewood sides (split faces + grey bark). New palette `firewood_split` (i22).
 - jp_m_wood_endgrain_firewood   Firewood log ends (B1's endgrain recipe). New palette `firewood_end` (i22).
-NOT made: Sanskrit seed syllables (bonji) - no Siddham-capable font on this machine (spikes/M1/font_scan.py).
+Bonji (M2, 2026-09-30): 9 Siddham seed-syllable cells added to jp_m_decal_carved_text_grave (see BONJI below);
+re-make it alone with `--only jp_m_decal_carved_text_grave` (with --only, checks_m1.json keeps the other ids' results).
 Samples and boxes: spikes/M1/sample.py -> spikes/M1/samples.json. C1 results: src/JP/common/materials/checks_m1.json.
 Never starts or stops the server or any GUI program.
 """
@@ -404,6 +405,43 @@ SUMI_GRAVE = [
 ]
 GRAVE_CROPS = {"NAME": [0.26, 0.0, 0.74, 1.0], "DATE_R": [0.70, 0.0, 1.0, 1.0], "DATE_L": [0.0, 0.0, 0.30, 1.0]}
 
+# M2 (2026-09-30): Sanskrit seed syllables (bonji / shuji) in the free corner of the carved grave atlas (x 340-1020,
+# y 680-952): two rows of five 136 px square cells. Verdicts and basis: research/outdoor_kit/W2_ERA.md G16-G19.
+# The masks are Noto Sans Siddham (SIL OFL 1.1, Noto Project Authors) shaped by Chromium (HarfBuzz) through
+# spikes/M2/render_bonji.html + bonji_server.py (Pillow here has no raqm, so it can't form TRAH / HRIH): white-on-black
+# PNGs in research/materials/bonji_masks/, each fitted into its cell with a 14 px margin.
+BONJI_DIR = os.path.join(HERE, "bonji_masks")
+BX, BY, BC, BPAD = 340, 680, 136, 14
+BONJI = [
+    ("bonji_kha", "\U0001158F", "gorinto sky ring (kurin, the jewel): KHA (kya)"),
+    ("bonji_ha", "\U000115AE", "gorinto wind ring (furin, the crescent): HA"),
+    ("bonji_ra", "\U000115A8", "gorinto fire ring (karin, the roof): RA"),
+    ("bonji_va", "\U000115AA", "gorinto water ring (suirin, the sphere): VA (ba)"),
+    ("bonji_a", "\U00011580", "gorinto earth ring (chirin, the cube): A"),
+    ("bonji_hum", "\U000115AE\U000115B3\U000115BD", "hokyointo body, east (front): HUM, Akshobhya"),
+    ("bonji_trah", "\U0001159D\U000115BF\U000115A8\U000115AF\U000115BE",
+     "hokyointo body, south: TRAH, Ratnasambhava"),
+    ("bonji_hrih", "\U000115AE\U000115BF\U000115A8\U000115B1\U000115BE", "hokyointo body, west: HRIH, Amitabha"),
+    ("bonji_ah", "\U00011580\U000115BE", "hokyointo body, north: AH, Amoghasiddhi"),
+]
+
+
+def _bonji(im, uv, S, sc):
+    """Paste the bonji masks into their cells (max with what is there) and add the cells to uv."""
+    from PIL import ImageChops
+    for i, (name, txt, use) in enumerate(BONJI):
+        x0, y0 = BX + (i % 5) * BC, BY + (i // 5) * BC
+        uv[name] = {"uv": [round(x0 / S, 4), round(y0 / S, 4), round((x0 + BC) / S, 4), round((y0 + BC) / S, 4)],
+                    "for": use, "text": txt, "font": "Noto Sans Siddham (SIL OFL 1.1)"}
+        g = Image.open(os.path.join(BONJI_DIR, name + ".png")).convert("L")
+        box = (BC - 2 * BPAD) * sc
+        k = box / max(g.size)
+        g = g.resize((max(1, round(g.width * k)), max(1, round(g.height * k))), Image.LANCZOS)
+        px = int((x0 + BC / 2) * sc - g.width / 2)
+        py = int((y0 + BC / 2) * sc - g.height / 2)
+        reg = (px, py, px + g.width, py + g.height)
+        im.paste(ImageChops.lighter(im.crop(reg), g), reg[:2])
+
 
 def _cells(kind):
     """[(name, (x0, y0, x1, y1), use, cols)]: 6 cells a row, CW x CH px; the couple stone takes two slots."""
@@ -441,6 +479,8 @@ def grave_layout(kind, S=1024, sc=2):
             xc = x0 + xf_ * (x1 - x0)
             assert top + len(t) * 1.06 * s <= y1 + 1, (name, t)
             B._col(d, xc * sc, top * sc, t, s, sc, kana_hentai=False)
+    if kind == "carved_grave":
+        _bonji(im, uv, S, sc)
     a = B._arr(im.resize((S, S), Image.LANCZOS).convert("RGB"))[..., 0]
     return a, uv
 
@@ -538,8 +578,10 @@ def table():
              srcs=["rock_surface"], where="outdoor", atlas_kind="carved_grave",
              note="Posthumous names (kaimyo) and death dates for gravestones: 13 cells, 14 names (one couple stone), "
                   "dates Kanbun 10 (1670) to Kyoho 14 (1729). Commoner forms only: -shinji / -shinnyo, -zenjomon / "
-                  "-zenjoni, -doji / -donyo, Shin-sect shaku-; no family names (Meiji). Fonts: SIL OFL 1.1, Yuji "
-                  "Project Authors."),
+                  "-zenjoni, -doji / -donyo, Shin-sect shaku-; no family names (Meiji). M2 (2026-09-30): + 9 square "
+                  "Siddham seed-syllable cells bonji_* (gorinto kha / ha / ra / va / a; hokyointo hum / trah / hrih "
+                  "/ ah; W2_ERA G16-G19). Fonts: SIL OFL 1.1, Yuji Project Authors; Noto Sans Siddham, SIL OFL 1.1, "
+                  "Noto Project Authors."),
          {"_w0": "crisp cut", "_w1": "softened, grime in the cuts", "_w2": "lichen over half the text"},
          ["jp_s_grave_stones"], "Carved posthumous names for gravestones"),
         (B.M("jp_m_decal_sumi_text_grave", "paint", "sumi_black", 1.0, 1024, decal_sumi_text_grave, (0.05, 10), None,
@@ -630,14 +672,24 @@ def main(argv):
         sc["requested_by"] = "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)"
         if m["atlas"]:
             sc["fonts"] = ["research/fonts/yujisyuku/YujiSyuku-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)"]
+            if mid == "jp_m_decal_carved_text_grave":      # M2: the bonji cells
+                sc["fonts"].append("research/fonts/notosanssiddham/NotoSansSiddham-Regular.ttf (SIL OFL 1.1, Noto "
+                                   "Project Authors), shaped by Chromium via spikes/M2/render_bonji.html -> "
+                                   "research/materials/bonji_masks/")
             sc["text_sources"] = "spikes/M1/M1_PROGRESS.md 'Text': kaimyo forms, ranks and era dates, each checked"
+            if mid == "jp_m_decal_carved_text_grave":
+                sc["text_sources"] += "; bonji: research/outdoor_kit/W2_ERA.md G16-G19 (agent M2)"
         B.wb(sp, json.dumps(sc, indent=1, ensure_ascii=False))
         for r in res:
             print("  %-4s %-40s mean (%d,%d,%d) dE %.1f/%g  paa dE %.1f" % (
                 r["verdict"], os.path.basename(r["file"]), *r["mean_srgb"], r["dE"], r["tol"], r["shipped_paa"]["dE"]))
             ok = ok and r["verdict"] != "FAIL" and r["shipped_paa"]["verdict"] != "FAIL"
         allres += res
-    B.wb(os.path.join(B.LIB, "checks_m1.json"), json.dumps({"check": "C1 palette (tools/matcheck), M1 materials",
+    cp = os.path.join(B.LIB, "checks_m1.json")
+    if only and os.path.exists(cp):          # M2: --only re-makes keep the other materials' results
+        old = json.load(open(cp, encoding="utf-8")).get("results", [])
+        allres = [r for r in old if not any(os.path.basename(r["file"]).startswith(i + "_w") for i in only)] + allres
+    B.wb(cp, json.dumps({"check": "C1 palette (tools/matcheck), M1 materials",
                                                            "palette_entries_added": added, "results": allres},
                                                           indent=1))
     if "--no-pack" not in argv:

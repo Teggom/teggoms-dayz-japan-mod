@@ -64,7 +64,8 @@
  "notes": [
   "1730 mix for the placement agent (W2_ERA): board 30 %, boat-halo 25 %, round 12 %, field stones / mounds 15 %, child Jizo 5 %, square pillar 5 %, gorinto / hokyointo 8 %",
   "irregular rows: 0.9 m plot grid jittered +-0.15 m and +-12 deg, mixed heights, gaps",
-  "inscriptions (M1): a posthumous name and date per stone from jp_m_decal_carved_text_grave (1670-1729: -shinji / -shinnyo, -zenjomon / -zenjoni, -doji, shaku-, kigen / enjaku prefixes) + B1's two; no family-name stones (Meiji); gorinto / hokyointo stay blank (no Siddham font for the seed syllables)",
+  "inscriptions (M1): a posthumous name and date per stone from jp_m_decal_carved_text_grave (1670-1729: -shinji / -shinnyo, -zenjomon / -zenjoni, -doji, shaku-, kigen / enjaku prefixes) + B1's two; no family-name stones (Meiji)",
+  "seed syllables (M2, W2_ERA G16-G18): gorinto rings kha / ha / ra / va / a on the front (small, large, re-stacked, fallen; the fragment heap blank); hokyointo body hum (front, east) / trah (+x, south) / hrih (back, west) / ah (-x, north); Noto Sans Siddham (SIL OFL 1.1)",
   "abandoned share: about 1 stone in 4 leaning / sunk / broken"
  ],
  "models": [
@@ -668,7 +669,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 139,
+    "Resolution 1": 144,
     "Resolution 2": 46,
     "Geometry": 42,
     "View Geometry": 42,
@@ -680,7 +681,7 @@
     -0.04,
     0.581,
     -0.122,
-    0.1
+    0.103
    ],
    "collision": [
     "geo",
@@ -696,7 +697,13 @@
    "roadway": false,
    "mass_kg": 200.0,
    "well": false,
-   "text_cells": [],
+   "text_cells": [
+    "decal_carved_text_grave:bonji_a",
+    "decal_carved_text_grave:bonji_ha",
+    "decal_carved_text_grave:bonji_kha",
+    "decal_carved_text_grave:bonji_ra",
+    "decal_carved_text_grave:bonji_va"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -709,7 +716,13 @@
    ],
    "notes": [],
    "plot_grid_m": 0.9,
-   "inscription": null,
+   "inscription": [
+    "decal_carved_text_grave:bonji_a",
+    "decal_carved_text_grave:bonji_ha",
+    "decal_carved_text_grave:bonji_kha",
+    "decal_carved_text_grave:bonji_ra",
+    "decal_carved_text_grave:bonji_va"
+   ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_gorinto_s.p3d"
   },
@@ -724,7 +737,7 @@
    "wall_gap": null,
    "budget": "box",
    "faces": {
-    "Resolution 1": 151,
+    "Resolution 1": 156,
     "Resolution 2": 58,
     "Resolution 3": 30,
     "Geometry": 54,
@@ -753,7 +766,13 @@
    "roadway": false,
    "mass_kg": 200.0,
    "well": false,
-   "text_cells": [],
+   "text_cells": [
+    "decal_carved_text_grave:bonji_a",
+    "decal_carved_text_grave:bonji_ha",
+    "decal_carved_text_grave:bonji_kha",
+    "decal_carved_text_grave:bonji_ra",
+    "decal_carved_text_grave:bonji_va"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -766,7 +785,13 @@
    ],
    "notes": [],
    "plot_grid_m": 0.9,
-   "inscription": null,
+   "inscription": [
+    "decal_carved_text_grave:bonji_a",
+    "decal_carved_text_grave:bonji_ha",
+    "decal_carved_text_grave:bonji_kha",
+    "decal_carved_text_grave:bonji_ra",
+    "decal_carved_text_grave:bonji_va"
+   ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_gorinto_l.p3d"
   },
@@ -781,7 +806,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 103,
+    "Resolution 1": 107,
     "Resolution 2": 38,
     "Geometry": 32,
     "View Geometry": 32,
@@ -809,7 +834,12 @@
    "roadway": false,
    "mass_kg": 200.0,
    "well": false,
-   "text_cells": [],
+   "text_cells": [
+    "decal_carved_text_grave:bonji_a",
+    "decal_carved_text_grave:bonji_kha",
+    "decal_carved_text_grave:bonji_ra",
+    "decal_carved_text_grave:bonji_va"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -824,7 +854,12 @@
     "re-stacked by later hands from two stupas: roof and jewel too big, crescent missing"
    ],
    "plot_grid_m": 0.9,
-   "inscription": null,
+   "inscription": [
+    "decal_carved_text_grave:bonji_a",
+    "decal_carved_text_grave:bonji_kha",
+    "decal_carved_text_grave:bonji_ra",
+    "decal_carved_text_grave:bonji_va"
+   ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_gorinto_stack.p3d"
   },
@@ -897,7 +932,7 @@
    "wall_gap": null,
    "budget": "box",
    "faces": {
-    "Resolution 1": 256,
+    "Resolution 1": 260,
     "Resolution 2": 54,
     "Resolution 3": 17,
     "Geometry": 34,
@@ -926,7 +961,12 @@
    "roadway": false,
    "mass_kg": 200.0,
    "well": false,
-   "text_cells": [],
+   "text_cells": [
+    "decal_carved_text_grave:bonji_ah",
+    "decal_carved_text_grave:bonji_hrih",
+    "decal_carved_text_grave:bonji_hum",
+    "decal_carved_text_grave:bonji_trah"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -939,7 +979,12 @@
    ],
    "notes": [],
    "plot_grid_m": 0.9,
-   "inscription": null,
+   "inscription": [
+    "decal_carved_text_grave:bonji_ah",
+    "decal_carved_text_grave:bonji_hrih",
+    "decal_carved_text_grave:bonji_hum",
+    "decal_carved_text_grave:bonji_trah"
+   ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_hokyointo.p3d"
   },
@@ -1453,7 +1498,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 139,
+    "Resolution 1": 144,
     "Resolution 2": 46,
     "Geometry": 42,
     "View Geometry": 42,
@@ -1473,15 +1518,21 @@
     "fire"
    ],
    "footprint_xz": [
-    -0.322,
+    -0.323,
     -0.115,
-    0.453,
-    0.541
+    0.454,
+    0.539
    ],
    "roadway": false,
    "mass_kg": 200.0,
    "well": false,
-   "text_cells": [],
+   "text_cells": [
+    "decal_carved_text_grave:bonji_a",
+    "decal_carved_text_grave:bonji_ha",
+    "decal_carved_text_grave:bonji_kha",
+    "decal_carved_text_grave:bonji_ra",
+    "decal_carved_text_grave:bonji_va"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -1494,7 +1545,13 @@
    ],
    "notes": [],
    "plot_grid_m": 0.9,
-   "inscription": null,
+   "inscription": [
+    "decal_carved_text_grave:bonji_a",
+    "decal_carved_text_grave:bonji_ha",
+    "decal_carved_text_grave:bonji_kha",
+    "decal_carved_text_grave:bonji_ra",
+    "decal_carved_text_grave:bonji_va"
+   ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_gorinto_fallen.p3d"
   },
@@ -1509,7 +1566,7 @@
    "wall_gap": null,
    "budget": "box",
    "faces": {
-    "Resolution 1": 259,
+    "Resolution 1": 263,
     "Resolution 2": 54,
     "Resolution 3": 17,
     "Geometry": 34,
@@ -1538,7 +1595,12 @@
    "roadway": false,
    "mass_kg": 200.0,
    "well": false,
-   "text_cells": [],
+   "text_cells": [
+    "decal_carved_text_grave:bonji_ah",
+    "decal_carved_text_grave:bonji_hrih",
+    "decal_carved_text_grave:bonji_hum",
+    "decal_carved_text_grave:bonji_trah"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -1551,7 +1613,12 @@
    ],
    "notes": [],
    "plot_grid_m": 0.9,
-   "inscription": null,
+   "inscription": [
+    "decal_carved_text_grave:bonji_ah",
+    "decal_carved_text_grave:bonji_hrih",
+    "decal_carved_text_grave:bonji_hum",
+    "decal_carved_text_grave:bonji_trah"
+   ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_hokyointo_broken.p3d"
   }

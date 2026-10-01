@@ -423,111 +423,6 @@
    }
   },
   {
-   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w0_co.png",
-   "palette_id": "stone_lantern",
-   "wear": "",
-   "mean_srgb": [
-    80.0,
-    76.9,
-    68.8
-   ],
-   "target_srgb": [
-    73,
-    70,
-    62
-   ],
-   "dE": 3.0,
-   "dE_to_entry": 3.0,
-   "tol": 9.0,
-   "spread_p75": 3.1,
-   "observed_spread": 8.8,
-   "masked_frac": 0.0,
-   "mask": null,
-   "verdict": "PASS",
-   "warnings": [],
-   "shipped_paa": {
-    "mean_srgb": [
-     80.0,
-     77.0,
-     68.8
-    ],
-    "dE": 3.01,
-    "verdict": "PASS",
-    "warnings": [],
-    "masked": false
-   }
-  },
-  {
-   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w1_co.png",
-   "palette_id": "stone_lantern",
-   "wear": "",
-   "mean_srgb": [
-    73.0,
-    70.0,
-    62.0
-   ],
-   "target_srgb": [
-    73,
-    70,
-    62
-   ],
-   "dE": 0.0,
-   "dE_to_entry": 0.0,
-   "tol": 9.0,
-   "spread_p75": 2.8,
-   "observed_spread": 8.8,
-   "masked_frac": 0.026,
-   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w1_mask.png",
-   "verdict": "PASS",
-   "warnings": [],
-   "shipped_paa": {
-    "mean_srgb": [
-     73.0,
-     70.1,
-     62.2
-    ],
-    "dE": 0.09,
-    "verdict": "PASS",
-    "warnings": [],
-    "masked": true
-   }
-  },
-  {
-   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w2_co.png",
-   "palette_id": "stone_lantern",
-   "wear": "",
-   "mean_srgb": [
-    66.1,
-    63.2,
-    55.3
-   ],
-   "target_srgb": [
-    73,
-    70,
-    62
-   ],
-   "dE": 3.0,
-   "dE_to_entry": 3.0,
-   "tol": 9.0,
-   "spread_p75": 2.7,
-   "observed_spread": 8.8,
-   "masked_frac": 0.033,
-   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w2_mask.png",
-   "verdict": "PASS",
-   "warnings": [],
-   "shipped_paa": {
-    "mean_srgb": [
-     66.1,
-     63.2,
-     55.2
-    ],
-    "dE": 2.99,
-    "verdict": "PASS",
-    "warnings": [],
-    "masked": true
-   }
-  },
-  {
    "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_sumi_text_grave_w0_co.png",
    "palette_id": "sumi_black",
    "wear": "",
@@ -948,6 +843,111 @@
      62.8
     ],
     "dE": 4.9,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w0_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    80.0,
+    77.0,
+    68.8
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 9.0,
+   "spread_p75": 3.4,
+   "observed_spread": 8.8,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     80.0,
+     77.0,
+     68.8
+    ],
+    "dE": 3.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w1_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    73.0,
+    70.0,
+    62.0
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 9.0,
+   "spread_p75": 3.0,
+   "observed_spread": 8.8,
+   "masked_frac": 0.03,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     73.0,
+     70.1,
+     62.2
+    ],
+    "dE": 0.07,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w2_co.png",
+   "palette_id": "stone_lantern",
+   "wear": "",
+   "mean_srgb": [
+    66.1,
+    63.2,
+    55.3
+   ],
+   "target_srgb": [
+    73,
+    70,
+    62
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 9.0,
+   "spread_p75": 2.8,
+   "observed_spread": 8.8,
+   "masked_frac": 0.048,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_carved_text_grave_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     66.1,
+     63.2,
+     55.2
+    ],
+    "dE": 2.99,
     "verdict": "PASS",
     "warnings": [],
     "masked": true

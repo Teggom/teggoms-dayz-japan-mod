@@ -84,3 +84,11 @@ was taken from them. `leaf_litter_autumn` comes from the CC0 Poly Haven scan dry
   Tsunashima farmhouse (Kentaro Ohno, CC BY 2.0); k31 Toei Uzumasa (PD); c03 Tsumago-juku (CC0); i22 Kamado
   (CC0). Licences as listed in `research/outdoor_kit/refs_index.json`, `research/interior/refs_index.json`,
   `playbook/refs_index.json`.
+
+## M2 (2026-09-30): Sanskrit seed syllables (bonji) on the grave atlas
+- **Font: Noto Sans Siddham**, Copyright the Noto Project Authors, **SIL Open Font License 1.1**
+  (`research/fonts/notosanssiddham/NotoSansSiddham-Regular.ttf`, licence text `OFL.txt` beside it; google/fonts
+  `ofl/notosanssiddham`, fetched 2026-09-30 with Stephen's OK). The 9 `bonji_*` cells of
+  `jp_m_decal_carved_text_grave` are rendered from it (shaped by Chromium's HarfBuzz via `spikes/M2/render_bonji.html`;
+  masks in `research/materials/bonji_masks/`). OFL allows text rendered from the font in textures; the font itself is
+  not shipped. Syllable choices: `research/outdoor_kit/W2_ERA.md` G16-G19.

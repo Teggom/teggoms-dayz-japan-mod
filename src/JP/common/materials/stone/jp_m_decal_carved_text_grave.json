@@ -23,7 +23,7 @@
     68.8
    ],
    "masked_frac": 0.0,
-   "alpha_cover": 0.097
+   "alpha_cover": 0.129
   },
   "_w1": {
    "name": "normal",
@@ -35,8 +35,8 @@
     70.0,
     62.0
    ],
-   "masked_frac": 0.026,
-   "alpha_cover": 0.097
+   "masked_frac": 0.03,
+   "alpha_cover": 0.129
   },
   "_w2": {
    "name": "heavy",
@@ -48,8 +48,8 @@
     63.2,
     55.3
    ],
-   "masked_frac": 0.033,
-   "alpha_cover": 0.11
+   "masked_frac": 0.048,
+   "alpha_cover": 0.145
   }
  },
  "used_by": [
@@ -75,7 +75,7 @@
  "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)",
  "alpha": "decal",
  "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
- "note": "Posthumous names (kaimyo) and death dates for gravestones: 13 cells, 14 names (one couple stone), dates Kanbun 10 (1670) to Kyoho 14 (1729). Commoner forms only: -shinji / -shinnyo, -zenjomon / -zenjoni, -doji / -donyo, Shin-sect shaku-; no family names (Meiji). Fonts: SIL OFL 1.1, Yuji Project Authors.",
+ "note": "Posthumous names (kaimyo) and death dates for gravestones: 13 cells, 14 names (one couple stone), dates Kanbun 10 (1670) to Kyoho 14 (1729). Commoner forms only: -shinji / -shinnyo, -zenjomon / -zenjoni, -doji / -donyo, Shin-sect shaku-; no family names (Meiji). M2 (2026-09-30): + 9 square Siddham seed-syllable cells bonji_* (gorinto kha / ha / ra / va / a; hokyointo hum / trah / hrih / ah; W2_ERA G16-G19). Fonts: SIL OFL 1.1, Yuji Project Authors; Noto Sans Siddham, SIL OFL 1.1, Noto Project Authors.",
  "cells": {
   "kaimyo_joshin_shinji_genroku8": {
    "uv": [
@@ -446,10 +446,110 @@
    ],
    "for": "a married couple on one stone: husband Genroku 11 (1698), wife Kyoho 7 (1722); use the whole cell on a wide stone",
    "text": "元禄十一年戊寅八月 / 道清信士 / 妙清信女 / 享保七年壬寅三月"
+  },
+  "bonji_kha": {
+   "uv": [
+    0.332,
+    0.6641,
+    0.4648,
+    0.7969
+   ],
+   "for": "gorinto sky ring (kurin, the jewel): KHA (kya)",
+   "text": "𑖏",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
+  },
+  "bonji_ha": {
+   "uv": [
+    0.4648,
+    0.6641,
+    0.5977,
+    0.7969
+   ],
+   "for": "gorinto wind ring (furin, the crescent): HA",
+   "text": "𑖮",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
+  },
+  "bonji_ra": {
+   "uv": [
+    0.5977,
+    0.6641,
+    0.7305,
+    0.7969
+   ],
+   "for": "gorinto fire ring (karin, the roof): RA",
+   "text": "𑖨",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
+  },
+  "bonji_va": {
+   "uv": [
+    0.7305,
+    0.6641,
+    0.8633,
+    0.7969
+   ],
+   "for": "gorinto water ring (suirin, the sphere): VA (ba)",
+   "text": "𑖪",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
+  },
+  "bonji_a": {
+   "uv": [
+    0.8633,
+    0.6641,
+    0.9961,
+    0.7969
+   ],
+   "for": "gorinto earth ring (chirin, the cube): A",
+   "text": "𑖀",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
+  },
+  "bonji_hum": {
+   "uv": [
+    0.332,
+    0.7969,
+    0.4648,
+    0.9297
+   ],
+   "for": "hokyointo body, east (front): HUM, Akshobhya",
+   "text": "𑖮𑖳𑖽",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
+  },
+  "bonji_trah": {
+   "uv": [
+    0.4648,
+    0.7969,
+    0.5977,
+    0.9297
+   ],
+   "for": "hokyointo body, south: TRAH, Ratnasambhava",
+   "text": "𑖝𑖿𑖨𑖯𑖾",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
+  },
+  "bonji_hrih": {
+   "uv": [
+    0.5977,
+    0.7969,
+    0.7305,
+    0.9297
+   ],
+   "for": "hokyointo body, west: HRIH, Amitabha",
+   "text": "𑖮𑖿𑖨𑖱𑖾",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
+  },
+  "bonji_ah": {
+   "uv": [
+    0.7305,
+    0.7969,
+    0.8633,
+    0.9297
+   ],
+   "for": "hokyointo body, north: AH, Amoghasiddhi",
+   "text": "𑖀𑖾",
+   "font": "Noto Sans Siddham (SIL OFL 1.1)"
   }
  },
  "fonts": [
-  "research/fonts/yujisyuku/YujiSyuku-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)"
+  "research/fonts/yujisyuku/YujiSyuku-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)",
+  "research/fonts/notosanssiddham/NotoSansSiddham-Regular.ttf (SIL OFL 1.1, Noto Project Authors), shaped by Chromium via spikes/M2/render_bonji.html -> research/materials/bonji_masks/"
  ],
- "text_sources": "spikes/M1/M1_PROGRESS.md 'Text': kaimyo forms, ranks and era dates, each checked"
+ "text_sources": "spikes/M1/M1_PROGRESS.md 'Text': kaimyo forms, ranks and era dates, each checked; bonji: research/outdoor_kit/W2_ERA.md G16-G19 (agent M2)"
 }

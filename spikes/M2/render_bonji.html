@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>M2 bonji render</title>
+<style>
+@font-face { font-family: "Sid"; src: url("/font.ttf") format("truetype"); }
+body { background: #222; color: #ddd; font: 14px sans-serif; margin: 8px; }
+.cell { display: inline-block; margin: 4px; text-align: center; vertical-align: top; }
+canvas { background: #000; display: block; }
+#log { white-space: pre; font: 12px monospace; }
+</style></head>
+<body>
+<div id="grid"></div>
+<div id="log"></div>
+<script>
+// M2 (2026-09-30): Siddham seed syllables, composed per W2_ERA.md G16-G18.
+const S = {
+  bonji_kha:  ["\u{1158F}", "KHA (kya) sky / kurin"],
+  bonji_ha:   ["\u{115AE}", "HA wind / furin"],
+  bonji_ra:   ["\u{115A8}", "RA fire / karin"],
+  bonji_va:   ["\u{115AA}", "VA (ba) water / suirin"],
+  bonji_a:    ["\u{11580}", "A earth / chirin"],
+  bonji_hum:  ["\u{115AE}\u{115B3}\u{115BD}", "HUM east Akshobhya"],
+  bonji_trah: ["\u{1159D}\u{115BF}\u{115A8}\u{115AF}\u{115BE}", "TRAH south Ratnasambhava"],
+  bonji_hrih: ["\u{115AE}\u{115BF}\u{115A8}\u{115B1}\u{115BE}", "HRIH west Amitabha"],
+  bonji_ah:   ["\u{11580}\u{115BE}", "AH north Amoghasiddhi"],
+};
+const log = (t) => { document.getElementById("log").textContent += t + "\n"; };
+
+async function run() {
+  await document.fonts.load('400px "Sid"', "\u{11580}");
+  log("font loaded: " + document.fonts.check('400px "Sid"', "\u{11580}"));
+  const N = 1200, FS = 520;
+  for (const [name, [txt, label]] of Object.entries(S)) {
+    const c = document.createElement("canvas");
+    c.width = N; c.height = N;
+    const g = c.getContext("2d");
+    g.fillStyle = "#000"; g.fillRect(0, 0, N, N);
+    g.fillStyle = "#fff"; g.font = FS + 'px "Sid"';
+    g.textAlign = "center"; g.textBaseline = "middle";
+    g.fillText(txt, N / 2, N / 2);
+    const d = g.getImageData(0, 0, N, N).data;
+    let x0 = N, y0 = N, x1 = -1, y1 = -1;
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      if (d[(y * N + x) * 4] > 8) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+    }
+    const m = 6, w = x1 - x0 + 1 + 2 * m, h = y1 - y0 + 1 + 2 * m;
+    const o = document.createElement("canvas");
+    o.width = w; o.height = h;
+    o.getContext("2d").drawImage(c, x0 - m, y0 - m, w, h, 0, 0, w, h);
+    const blob = await new Promise((r) => o.toBlob(r, "image/png"));
+    const res = await fetch("/save/" + name + ".png", { method: "POST", body: blob });
+    log(name + " ink " + w + "x" + h + " touches edge: " + (x0 < 2 || y0 < 2 || x1 > N - 3 || y1 > N - 3) +
+        " save " + res.status);
+    const div = document.createElement("div");
+    div.className = "cell";
+    const p = document.createElement("canvas");
+    const sc = 200 / Math.max(w, h);
+    p.width = Math.round(w * sc); p.height = Math.round(h * sc);
+    p.getContext("2d").drawImage(o, 0, 0, p.width, p.height);
+    div.appendChild(p);
+    div.appendChild(document.createTextNode(label));
+    document.getElementById("grid").appendChild(div);
+  }
+  log("DONE");
+}
+run();
+</script>
+</body></html>
