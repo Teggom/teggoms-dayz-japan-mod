@@ -348,3 +348,5 @@
   stones + bohyo), swap a few street units for S1's demo shops, a life-layer gallery row (all 74), then ONE walk checklist
   with 10 stops: street, hamlet, kura, machiya shop + yard, M1 materials (spot checks), shrine, graveyard, shops, life
   layer, Pompompurin (~40 min).
+- 2026-09-30: Stephen stopped the Pompompurin agent (didn't like the renders): NOT in game, files left in fun\pompompurin\.
+  **SH1 launched** (showcase without Pompompurin; 9 stops).

@@ -39,6 +39,8 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 ~22:10 (local) | M1 | missing materials, accuracy first: bare earth, new + silver-grey wood, brown heri, 14 kaimyo + 6 grave-post ink cells, wicker + firewood; props rebuilt, 4 PBOs (bonji blocked: no Siddham font) | **501k** (245 tool calls) | 44 min | **41%** (5-hour 62%) after W2 + S1 + A4 + W3 + M1 |
 | 2026-09-30 ~23:16 (local) | M2 | Siddham bonji on the gorinto (KHA HA RA VA A) and hokyointo (HUM TRAH HRIH AH): 9 atlas cells, 6 models | **239k** (131 tool calls) | 14 min | ran alongside the Pompompurin agent |
 | 2026-09-30 ~23:40 (local) | G1 | gorinto seating fix (truncated sphere, flat seats, stack seated) | **157k** (60 tool calls) | 8 min | |
+| 2026-09-30 23:46 (local) | P1 (Pompompurin, fun) | STOPPED by Stephen (didn't like the renders); not in game | n/a (killed) | ~40 min | |
+| 2026-09-30 23:46 (local) | SH1 (baseline) | launched: test-island showcase (shrine, graveyard, demo shops, life-layer gallery) + the 10-stop walk, time log TIMELOG_SH1.md | - | - | before: **43%** (5-hour 0%, fresh window) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
