@@ -499,10 +499,57 @@ def sotoba(h=1.05, w=0.075, t=0.012, notched=True, wear="_w2", text=True, vis=(1
     return out
 
 
+def bohyo_mound(seed, r=0.50, h=0.11, sz=1.4, sunk=False, wear="_w1", litter_r=0.22):
+    """W3: the earth mound under a grave post (leaf-litter material, as W2). sunk: the coffin has collapsed, so the
+    rim stands higher than the middle. Returns visual solids (mound + a litter patch on its top)."""
+    if sunk:
+        prof = [(0.0, -0.03), (r, -0.03), (r * 0.84, h), (r * 0.5, h * 0.55), (0.0, h * 0.25)]
+        ytop = h * 0.25
+    else:
+        prof = [(0.0, -0.03), (r, -0.03), (r * 0.8, h * 0.45), (r * 0.4, h * 0.91), (0.0, h)]
+        ytop = h
+    m = lathe(prof, 8, LEAF, vis=(1, 2))
+    m.verts = [(v[0], v[1], v[2] * sz) for v in m.verts]
+    m.fm = None
+    m.fn = None
+    m.vn = None
+    m.finalize()
+    m.wear = wear
+    lt = xf(litter(seed, 0.0, 0.0, litter_r, sx=0.9, sz=1.3), t=(0.0, ytop, 0.0))
+    return [lt, m]
+
+
+def bohyo_post(a, h, z0, mat=WOOD, wear="_w1", tip=0.06, text=True, th=None, crop=None, ink="_w2", cap=False):
+    """W3: a square grave post standing at z0 (its foot 0.20 in the ground), pointed top (tip > 0), flat top
+    (tip = 0) or a small two-board gabled cap (cap=True: the kasa-toba form, W2_ERA W5); nenbutsu in ink on the front
+    (+z), whole or cropped. Returns (visual solids, collision box)."""
+    y1 = h - tip
+    out = [W(-a / 2, a / 2, -0.20, y1, z0 - a / 2, z0 + a / 2, mat, vis=(1, 2))]
+    if tip > 0:
+        out.append(core.Solid([(-a / 2, y1, z0 - a / 2), (a / 2, y1, z0 - a / 2), (a / 2, y1, z0 + a / 2),
+                               (-a / 2, y1, z0 + a / 2), (0.0, h, z0)], [[0, 1, 2, 3], [0, 1, 4], [1, 2, 4], [2, 3, 4],
+                                                                         [3, 0, 4]], mat, vis=(1,)))
+    if cap:
+        e, t, rise = a / 2 + 0.05, 0.018, 0.075
+        L = a + 0.10
+        for sz_ in (1, -1):
+            # one board: ridge (y1 + rise, z0) down to the eave (y1 - 0.01, z0 + sz_ * e), 1.8 cm thick
+            poly = [(y1 + rise, z0), (y1 - 0.01, z0 + sz_ * e), (y1 - 0.01 + t, z0 + sz_ * e), (y1 + rise + t, z0)]
+            out.append(prism(poly, "x", -L / 2, L / 2, mat, vis=(1, 2)))
+    for s in out:
+        s.wear = wear
+    if text:
+        th = th or min(0.40, (y1 - 0.12) * 0.62)
+        yc = y1 - 0.06 - th / 2
+        out.append(K.inked((0.0, yc, z0 + a / 2), X, Y, th, "sotoba_namuamida", wear=ink, width=a * 0.78, crop=crop))
+    top = y1 + (0.075 + 0.018 if cap else 0.0)
+    return out, col(-a / 2, a / 2, 0.0, top, z0 - a / 2, z0 + a / 2, mat)
+
+
 def grave_wood(kind):
     rr = random.Random(core.hash_str("gw" + kind))
     ab = kind.startswith("ab")
-    flat = kind in ("sotoba_x3", "ab_fallen")
+    flat = kind in ("sotoba_x3", "ab_fallen", "ab_bohyo_rotted")
     P = SPart("grave_wood", budget="small", mass=40.0, bury=0.16, flat=flat)
     P.wear = "_w2"
     vis, cols = [], []
@@ -623,6 +670,76 @@ def grave_wood(kind):
         vis += K.pebbles(12, 0.05, 0.05, 0.3, n=3)
         P.dim("post_h", 0.86, 0.86, tol=0.001)
         P.notes.append("the poor grave: an earth mound with a wooden post (any fresh grave before its stone)")
+    # ---- W3 (2026-09-30): bohyo variety (W2_ERA W4 / W5): sizes, wood ages, lean, split, rotted away
+    elif kind in ("bohyo_new", "bohyo_s", "bohyo_roof", "ab_bohyo_lean", "ab_bohyo_split", "ab_bohyo_rotted"):
+        spec = {  # a, h, z0, wood, wear, tip, text crop (None = whole), tilt rx / rz, sink, mound (r, h, sz, sunk)
+            "bohyo_new": (0.105, 1.15, -0.70, WOOD, "_w0", 0.07, None, -1.0, 0.5, 0.0, (0.55, 0.17, 1.4, False)),
+            "bohyo_s": (0.06, 0.52, -0.40, WOOD, "_w2", 0.04, (0.0, 0.0, 1.0, 0.5), -3.0, -5.0, 0.0,
+                        (0.32, 0.08, 1.35, False)),
+            "bohyo_roof": (0.10, 1.00, -0.62, WOOD, "_w1", 0.0, None, -2.0, 2.0, 0.0, (0.50, 0.11, 1.4, False)),
+            "ab_bohyo_lean": (0.09, 0.85, -0.60, WOOD, "_w2", 0.06, (0.0, 0.5, 1.0, 1.0), 9.0, -17.0, 0.05,
+                              (0.48, 0.07, 1.4, False)),
+        }
+        if kind in spec:
+            a, h, z0, mat, wr, tip, crop, rx, rz, sink, (mr, mh, msz, sunk) = spec[kind]
+            vis += bohyo_mound(13 + len(kind), mr, mh, msz, sunk, wear="_w0" if wr == "_w0" else "_w1")
+            th = None
+            if crop:
+                th = min(0.40, (h - tip - 0.12) * 0.62) * (crop[3] - crop[1]) * (1.6 if kind == "bohyo_s" else 1.0)
+            post, pc = bohyo_post(a, h, z0, mat, wr, tip, th=th, crop=crop, cap=(kind == "bohyo_roof"),
+                                  ink="_w1" if wr == "_w0" else "_w2")
+            g = K.tilt(post + [pc], rx=rx, rz=rz, pivot=(0.0, 0.0, z0), sink=sink)
+            vis += [q for q in g if q.vis]
+            cols += [q for q in g if not q.vis]
+            if kind != "bohyo_new":
+                vis += K.pebbles(len(kind), 0.05, z0 * 0.1, 0.25, n=3)
+            P.dim("post_h", h, h, tol=0.001)
+            P.notes.append({"bohyo_new": "a fresh grave: new wood, fresh ink, a high new mound",
+                            "bohyo_s": "a small post (a child's or a very poor grave), silver-grey, half the nenbutsu "
+                                       "left",
+                            "bohyo_roof": "the kasa-toba form: a small two-board gabled cap keeps rain off the ink "
+                                          "(uncommon, about 1 post in 8; W2_ERA W5)",
+                            "ab_bohyo_lean": "grey post leaning hard back and aside, the mound slumped, ink half "
+                                             "gone"}[kind])
+        elif kind == "ab_bohyo_split":
+            # black and rotting; the top 40 cm split in two halves that splay apart; the pointed tip is gone
+            a, z0 = 0.10, -0.60
+            vis += bohyo_mound(31, 0.48, 0.08, 1.4, False, wear="_w2")
+            post = [W(-a / 2, a / 2, -0.20, 0.40, z0 - a / 2, z0 + a / 2, SOOT, vis=(1, 2))]
+            for sx, ang, top in ((-1, 4.0, 0.80), (1, -6.5, 0.71)):
+                half = W(min(0, sx) * a / 2 + (0.004 if sx > 0 else 0), max(0, sx) * a / 2 - (0.004 if sx < 0 else 0),
+                         0.40, top, z0 - a / 2, z0 + a / 2, SOOT, vis=(1, 2))
+                post.append(xf(half, rz=ang, pivot=(sx * 0.004, 0.40, z0)))
+            for s in post:
+                s.wear = "_w2"
+            pc = col(-a / 2, a / 2, 0.0, 0.78, z0 - a / 2, z0 + a / 2, SOOT)
+            g = K.tilt(post + [pc], rx=-4.0, rz=3.0, pivot=(0.0, 0.0, z0))
+            vis += [q for q in g if q.vis]
+            cols += [q for q in g if not q.vis]
+            vis += K.pebbles(41, 0.05, 0.0, 0.25, n=3)
+            P.dim("post_h", 0.80, 0.80, tol=0.001)
+            P.notes.append("black, rotting post split down its top half; ink long gone")
+        else:  # ab_bohyo_rotted
+            # a sunken mound; the post rotted off at the ground: a black stump, its broken top lying on the mound
+            a, z0 = 0.09, -0.60
+            vis += bohyo_mound(57, 0.50, 0.09, 1.4, True, wear="_w2", litter_r=0.28)
+            st = [W(-a / 2, a / 2, -0.20, 0.10, z0 - a / 2, z0 + a / 2, SOOT, vis=(1, 2))]
+            for (x0, x1, z_0, z_1, hh) in ((-a / 2, -0.01, z0 - a / 2, z0 + 0.01, 0.17), (0.0, a / 2, z0 - a / 2, z0,
+                                                                                         0.14),
+                                           (-0.02, a / 2, z0 + 0.005, z0 + a / 2, 0.12)):
+                st.append(W(x0, x1, 0.10, hh, z_0, z_1, SOOT, vis=(1,)))
+            frag = [W(-a / 2, a / 2, 0.0, 0.42, -a / 2, a / 2, SOOT, vis=(1, 2)),
+                    core.Solid([(-a / 2, 0.42, -a / 2), (a / 2, 0.42, -a / 2), (a / 2, 0.42, a / 2), (-a / 2, 0.42, a / 2),
+                                (0.0, 0.48, 0.0)], [[0, 1, 2, 3], [0, 1, 4], [1, 2, 4], [2, 3, 4], [3, 0, 4]], SOOT,
+                               vis=(1,))]
+            for s in st + frag:
+                s.wear = "_w2"
+            vis += K.tilt(st, rx=-3.0, rz=5.0, pivot=(0.0, 0.0, z0))
+            vis += lay(frag, rx=-90.0, ry=-28.0, at=(0.10, -0.15), lift=0.012)
+            vis.append(leaves(61, 0.0, 0.05, 0.20, 0.03, wear="_w2"))
+            P.dim("stump_h", 0.17, 0.17, tol=0.001)
+            P.notes.append("the post rotted away: a stump and its fallen top on a sunken mound (walk-over, no "
+                           "collision)")
     else:
         raise KeyError(kind)
     add_all(P, vis + cols)
@@ -677,7 +794,9 @@ PROPS = [
      ]},
     {"id": "jp_s_grave_wood", "cat": "grave", "mount": "graveyard", "per_row": 7,
      "notes": ["slats behind about 1 grave in 3; one rack and one bucket rack per graveyard by its water point",
-               "_bohyo (wooden post on an earth mound) = the poor grave / a fresh grave (W2_ERA W3)"],
+               "_bohyo (wooden post on an earth mound) = the poor grave / a fresh grave (W2_ERA W3)",
+               "bohyo mix (W3, W2_ERA W4/W5): grey _bohyo / _bohyo_s commonest, _bohyo_new for fresh graves, "
+               "_bohyo_roof about 1 in 8, abandoned lean / split / rotted about 1 in 3"],
      "models": [
          GW("sotoba_x3", "Three sotoba slats behind a stone"),
          GW("rack", "Sotoba rack with leaning slats"),
@@ -685,6 +804,12 @@ PROPS = [
          GW("incense", "Stone incense stand with ash"),
          GW("bucket_rack", "Bucket and ladle rack (teoke-kake)"),
          GW("bohyo", "Wooden grave post on an earth mound"),
+         GW("bohyo_new", "Fresh wooden grave post, tall, on a new high mound"),
+         GW("bohyo_s", "Small silver-grey grave post (child or very poor grave)"),
+         GW("bohyo_roof", "Wooden grave post with a small gabled cap (kasa-toba)"),
          GW("ab_fallen", "Sotoba slats fallen and split, flower tube knocked over", AB),
+         GW("ab_bohyo_lean", "Grey grave post leaning hard, mound slumped", AB),
+         GW("ab_bohyo_split", "Black rotting grave post, top split apart", AB),
+         GW("ab_bohyo_rotted", "Sunken grave mound, post rotted to a stump", AB),
      ]},
 ]

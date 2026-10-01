@@ -49,7 +49,8 @@
  "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
  "notes": [
   "slats behind about 1 grave in 3; one rack and one bucket rack per graveyard by its water point",
-  "_bohyo (wooden post on an earth mound) = the poor grave / a fresh grave (W2_ERA W3)"
+  "_bohyo (wooden post on an earth mound) = the poor grave / a fresh grave (W2_ERA W3)",
+  "bohyo mix (W3, W2_ERA W4/W5): grey _bohyo / _bohyo_s commonest, _bohyo_new for fresh graves, _bohyo_roof about 1 in 8, abandoned lean / split / rotted about 1 in 3"
  ],
  "models": [
   {
@@ -386,6 +387,180 @@
    "master": "spikes/B3b/out/grave/jp_s_grave_wood_bohyo.p3d"
   },
   {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_bohyo_new.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Bohyo_New",
+   "variant": "bohyo_new",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fresh wooden grave post, tall, on a new high mound",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 47,
+    "Resolution 2": 38,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.508,
+    0.508,
+    -0.201,
+    1.15,
+    -0.771,
+    0.711
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.062,
+    -0.771,
+    0.053,
+    -0.648
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:sotoba_namuamida"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 1.15,
+     "measured": 1.15,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a fresh grave: new wood, fresh ink, a high new mound"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_bohyo_new.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_bohyo_s.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Bohyo_S",
+   "variant": "bohyo_s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small silver-grey grave post (child or very poor grave)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 103,
+    "Resolution 2": 38,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.296,
+    0.296,
+    -0.203,
+    0.517,
+    -0.455,
+    0.399
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.03,
+    -0.455,
+    0.072,
+    -0.37
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:sotoba_namuamida"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 0.52,
+     "measured": 0.52,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a small post (a child's or a very poor grave), silver-grey, half the nenbutsu left"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_bohyo_s.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_bohyo_roof.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Bohyo_Roof",
+   "variant": "bohyo_roof",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden grave post with a small gabled cap (kasa-toba)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 112,
+    "Resolution 2": 50,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.462,
+    0.462,
+    -0.203,
+    1.095,
+    -0.755,
+    0.647
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.088,
+    -0.708,
+    0.05,
+    -0.57
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:sotoba_namuamida"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the kasa-toba form: a small two-board gabled cap keeps rain off the ink (uncommon, about 1 post in 8; W2_ERA W5)"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_bohyo_roof.p3d"
+  },
+  {
    "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_ab_fallen.p3d",
    "class": "StaticObj_JP_S_Grave_Wood_Ab_Fallen",
    "variant": "fallen",
@@ -428,6 +603,164 @@
    "notes": [],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_wood_ab_fallen.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_lean.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Lean",
+   "variant": "bohyo_lean",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Grey grave post leaning hard, mound slumped",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 38,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.443,
+    0.443,
+    -0.259,
+    0.753,
+    -0.676,
+    0.621
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.045,
+    -0.644,
+    0.273,
+    -0.432
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:sotoba_namuamida"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 0.85,
+     "measured": 0.85,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "grey post leaning hard back and aside, the mound slumped, ink half gone"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_ab_bohyo_lean.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_split.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Split",
+   "variant": "bohyo_split",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Black rotting grave post, top split apart",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 110,
+    "Resolution 2": 50,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.443,
+    0.443,
+    -0.205,
+    0.798,
+    -0.706,
+    0.621
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.091,
+    -0.704,
+    0.05,
+    -0.55
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "black, rotting post split down its top half; ink long gone"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_ab_bohyo_split.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_rotted.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Rotted",
+   "variant": "bohyo_rotted",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Sunken grave mound, post rotted to a stump",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 74,
+    "Resolution 2": 44
+   },
+   "bbox": [
+    -0.462,
+    0.462,
+    -0.205,
+    0.169,
+    -0.654,
+    0.647
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stump_h",
+     "expected": 0.17,
+     "measured": 0.17,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the post rotted away: a stump and its fallen top on a sunken mound (walk-over, no collision)"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_ab_bohyo_rotted.p3d"
   }
  ]
 }

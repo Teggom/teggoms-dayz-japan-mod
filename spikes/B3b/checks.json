@@ -47183,6 +47183,1222 @@
      "detail": []
     }
    ]
+  },
+  "jp_s_grave_wood_bohyo_new": {
+   "prop": "jp_s_grave_wood",
+   "cat": "grave",
+   "state": "intact",
+   "variant": "bohyo_new",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 47,
+    "Resolution 2": 38,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w0.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w0.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 47,
+       "Resolution 2": 38,
+       "Geometry": 6,
+       "View Geometry": 6,
+       "Fire Geometry": 6
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "post_h",
+       "expected": 1.15,
+       "measured": 1.15,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.2013,
+      "geo_min_y": -0.0014,
+      "bury": 0.2023362843675515,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 1,
+      "problems": {},
+      "mass": 40.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w0": true,
+      "jp_m_decal_sumi_text_w1": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w0",
+       "mean_srgb": [
+        126.4,
+        80.3,
+        52.3
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 6.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_sumi_text_w1",
+       "mean_srgb": [
+        74.4,
+        66.7,
+        60.4
+       ],
+       "palette": "sumi_black",
+       "dE76": 9.0,
+       "tolerance": 10,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w0",
+       "mean_srgb": [
+        125.7,
+        86.0,
+        72.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 3.7,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_grave_wood_bohyo_s": {
+   "prop": "jp_s_grave_wood",
+   "cat": "grave",
+   "state": "intact",
+   "variant": "bohyo_s",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 103,
+    "Resolution 2": 38,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 103,
+       "Resolution 2": 38,
+       "Geometry": 6,
+       "View Geometry": 6,
+       "Fire Geometry": 6
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "post_h",
+       "expected": 0.52,
+       "measured": 0.52,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.2031,
+      "geo_min_y": -0.0042,
+      "bury": 0.20414466592235986,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 1,
+      "problems": {},
+      "mass": 40.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_decal_sumi_text_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_sumi_text_w2",
+       "mean_srgb": [
+        NaN,
+        NaN,
+        NaN
+       ],
+       "palette": "sumi_black",
+       "dE76": NaN,
+       "tolerance": 10,
+       "pass": false
+      },
+      {
+       "material": "jp_m_stone_river_w2",
+       "mean_srgb": [
+        68.4,
+        65.4,
+        57.5
+       ],
+       "palette": "stone_lantern",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_grave_wood_bohyo_roof": {
+   "prop": "jp_s_grave_wood",
+   "cat": "grave",
+   "state": "intact",
+   "variant": "bohyo_roof",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 112,
+    "Resolution 2": 50,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 112,
+       "Resolution 2": 50,
+       "Geometry": 6,
+       "View Geometry": 6,
+       "Fire Geometry": 6
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "post_h",
+       "expected": 1.0,
+       "measured": 1.0,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.2032,
+      "geo_min_y": -0.0035,
+      "bury": 0.20424529170471065,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 1,
+      "problems": {},
+      "mass": 40.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_decal_sumi_text_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_sumi_text_w2",
+       "mean_srgb": [
+        NaN,
+        NaN,
+        NaN
+       ],
+       "palette": "sumi_black",
+       "dE76": NaN,
+       "tolerance": 10,
+       "pass": false
+      },
+      {
+       "material": "jp_m_stone_river_w2",
+       "mean_srgb": [
+        68.4,
+        65.4,
+        57.5
+       ],
+       "palette": "stone_lantern",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
+       "tolerance": 14,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_grave_wood_ab_bohyo_lean": {
+   "prop": "jp_s_grave_wood",
+   "cat": "grave",
+   "state": "abandoned",
+   "variant": "bohyo_lean",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 38,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 104,
+       "Resolution 2": 38,
+       "Geometry": 6,
+       "View Geometry": 6,
+       "Fire Geometry": 6
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "post_h",
+       "expected": 0.85,
+       "measured": 0.85,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.2588,
+      "geo_min_y": -0.0699,
+      "bury": 0.2597948942477497,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 1,
+      "problems": {},
+      "mass": 40.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_decal_sumi_text_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w1",
+       "mean_srgb": [
+        112.0,
+        76.0,
+        52.0
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_sumi_text_w2",
+       "mean_srgb": [
+        NaN,
+        NaN,
+        NaN
+       ],
+       "palette": "sumi_black",
+       "dE76": NaN,
+       "tolerance": 10,
+       "pass": false
+      },
+      {
+       "material": "jp_m_stone_river_w2",
+       "mean_srgb": [
+        68.4,
+        65.4,
+        57.5
+       ],
+       "palette": "stone_lantern",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_grave_wood_ab_bohyo_split": {
+   "prop": "jp_s_grave_wood",
+   "cat": "grave",
+   "state": "abandoned",
+   "variant": "bohyo_split",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 110,
+    "Resolution 2": 50,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 110,
+       "Resolution 2": 50,
+       "Geometry": 6,
+       "View Geometry": 6,
+       "Fire Geometry": 6
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "post_h",
+       "expected": 0.8,
+       "measured": 0.8,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.2053,
+      "geo_min_y": -0.0061,
+      "bury": 0.2063392262379793,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 1,
+      "problems": {},
+      "mass": 40.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 1
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_stone_river_w2",
+       "mean_srgb": [
+        68.4,
+        65.4,
+        57.5
+       ],
+       "palette": "stone_lantern",
+       "dE76": 2.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w2",
+       "mean_srgb": [
+        33.0,
+        25.0,
+        18.8
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.5,
+       "tolerance": 12,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_grave_wood_ab_bohyo_rotted": {
+   "prop": "jp_s_grave_wood",
+   "cat": "grave",
+   "state": "abandoned",
+   "variant": "bohyo_rotted",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 74,
+    "Resolution 2": 44
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Resolution 1",
+      "Resolution 2"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2) + budget small R1<=300 R2<=300, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 74,
+       "Resolution 2": 44
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "stump_h",
+       "expected": 0.17,
+       "measured": 0.17,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.2052,
+      "geo_min_y": null,
+      "bury": 0.20623405409550644,
+      "hung": false
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_leaf_litter_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_litter_w2",
+       "mean_srgb": [
+        97.8,
+        83.4,
+        65.5
+       ],
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w2",
+       "mean_srgb": [
+        33.0,
+        25.0,
+        18.8
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.5,
+       "tolerance": 12,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
   }
  },
  "global": {
@@ -47207,7 +48423,7 @@
   }
  },
  "summary": {
-  "models": 220,
-  "pass": 220
+  "models": 226,
+  "pass": 226
  }
 }

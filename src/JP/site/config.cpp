@@ -1389,11 +1389,47 @@ class CfgVehicles
 		displayName="Wooden grave post on an earth mound";
 		model="\JP\site\grave\jp_s_grave_wood_bohyo.p3d";
 	};
+	class StaticObj_JP_S_Grave_Wood_Bohyo_New: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fresh wooden grave post, tall, on a new high mound";
+		model="\JP\site\grave\jp_s_grave_wood_bohyo_new.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Bohyo_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small silver-grey grave post (child or very poor grave)";
+		model="\JP\site\grave\jp_s_grave_wood_bohyo_s.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Bohyo_Roof: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden grave post with a small gabled cap (kasa-toba)";
+		model="\JP\site\grave\jp_s_grave_wood_bohyo_roof.p3d";
+	};
 	class StaticObj_JP_S_Grave_Wood_Ab_Fallen: HouseNoDestruct
 	{
 		scope=1;
 		displayName="Sotoba slats fallen and split, flower tube knocked over";
 		model="\JP\site\grave\jp_s_grave_wood_ab_fallen.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Lean: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Grey grave post leaning hard, mound slumped";
+		model="\JP\site\grave\jp_s_grave_wood_ab_bohyo_lean.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Split: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Black rotting grave post, top split apart";
+		model="\JP\site\grave\jp_s_grave_wood_ab_bohyo_split.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Rotted: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sunken grave mound, post rotted to a stump";
+		model="\JP\site\grave\jp_s_grave_wood_ab_bohyo_rotted.p3d";
 	};
 	// jp_s_hasa (yard_life)
 	class StaticObj_JP_S_Hasa_Low: HouseNoDestruct

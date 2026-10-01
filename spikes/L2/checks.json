@@ -16017,11 +16017,23 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
+  },
+  "BIN": {
+   "pass": true,
+   "detail": {
+    "missing": [],
+    "warning_lines": [],
+    "exit": 0
+   }
+  },
+  "PBO": {
+   "pass": true,
+   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_site.pbo"
   }
  },
  "summary": {
   "models": 81,
   "pass": 81,
-  "classes_in_config": 301
+  "classes_in_config": 307
  }
 }

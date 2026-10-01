@@ -64,3 +64,13 @@ collision strip) and `w2_closeups.jpg` (8 close-up renders, `spikes/W2/look.py`)
 
 ## Not done / open
 - Nothing tested in game; no test-island placement (brief).
+
+## W3 addendum (2026-09-30): more wooden grave posts
+Agent W3 (time log `TIMELOG_W3.md`). 6 bohyo variants in `jp_s_grave_wood` (props_grave.py: `bohyo_mound`, `bohyo_post`):
+`_bohyo_new` (tall 1.15, new wood _w0, fresh ink, high mound), `_bohyo_s` (0.52, silver _w2, half the nenbutsu),
+`_bohyo_roof` (two-board gabled cap, kasa-toba: era IN, uncommon, W2_ERA W5), `_ab_bohyo_lean`, `_ab_bohyo_split`
+(black rotting wood_sooted, top split apart), `_ab_bohyo_rotted` (sunken mound, stump + fallen top, no collision).
+Res 1 faces 47-112. Checks 226/226 (B3b + W2), L2 81/81, TXT 0 failing; jp_site.pbo **307 classes**.
+Close-up: `research/outdoor_kit/contact_sheets/w3_bohyo_closeup.jpg`; row in `w2_grave.jpg`.
+Missing materials (S1 owns, not added): a pale new-wood and a true silver-grey weathered wood (the wood_weathered
+wears are all warm brown), and posthumous names in ink (sumi atlas has only the nenbutsu for graves).
