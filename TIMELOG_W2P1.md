@@ -15,3 +15,5 @@
 2026-10-01 13:08:26 | GROUP DONE | 7 site_hokora: 8 micro-shrines (4 stone, 4 wood incl. saya shed), 0 failures; gate/genkan left (W2C has gates.py) | hokora | 5h 10% wk 54%
 2026-10-01 13:18:21 | ASSEMBLIES DONE | honden 26/26, haiden 25/25, temple_hall 32/32 (run_g3 C10-C22 incl. C20 after zfight.resolve, KR1-KR6, binarize ODOL) | asm | 5h 15% wk 55%
 2026-10-01 13:18:21 | SHEETS DONE | parts/contact_sheets/w2p1_{koran,tobira,roofs,found_open,hokora,asm}.jpg | sheets | 5h 15% wk 55%
+2026-10-01 13:19:02 | PUSHED | df69a85 66462c5 023702e fc6c66b on origin/master (fc6c66b swept in W2C's staged files, see W2P1_PROGRESS.md) | git | 5h 15% wk 55%
+2026-10-01 13:19:02 | END | W2P1 | phaseC-wave2 | 5h 15% wk 55%

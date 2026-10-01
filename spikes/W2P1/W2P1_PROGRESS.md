@@ -29,3 +29,11 @@ parts/kit/render_w2p1.py -> parts/contact_sheets/w2p1_*.jpg
 
 ## Commits
 - df69a85 koran; 66462c5 tobira + roofs + ornaments; (next) stilts/kidan/shitomi/hokora; final: assemblies + sheets
+- 023702e stilts/kidan/shitomi/hokora; fc6c66b assemblies + sheets + notes
+
+## Incident (for the lead / W2C)
+fc6c66b also swept in W2C's files that W2C had already `git add`ed in the shared index (buildings/{guardhut,kido,
+smithy,teahouse}/*, buildings/registry.py, buildings/shellcheck.py, buildings/civickit.py, parts/kit/jpparts/gates.py,
+templates/civic.py, src/JP/buildings/*, spikes/W2C/*, test/ce/C_mapgroupproto.xml, .gitignore, TIMELOG_W2C.md, the
+w2c sheet). Pushed; not reverted (no history rewrite allowed; reverting would drop W2C's work from HEAD). Content is
+exactly what W2C staged. Later W2P1 commits use `git commit --only <paths>`.
