@@ -1,6 +1,6 @@
 {
  "building": "Land_JP_Townhouse_Kamigata_2ken_Middle_ToriR",
- "p3d": "\\JP\\buildings\\townhouse\\jp_townhouse_kamigata_2k_middle_torir.p3d",
+ "p3d": "\\JP\\buildings\\townhouse\\jp_townhouse_kamigata_2ken_middle_torir.p3d",
  "frame": "model: origin = lot centre at grade, +z = street front; lot width = neighbour spacing (rooms.json 'lot_width' via the record's params); built by parts/kit/jpparts/templates/townhouse.py",
  "rooms": [
   {

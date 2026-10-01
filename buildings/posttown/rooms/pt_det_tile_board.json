@@ -1,6 +1,6 @@
 {
  "building": "Land_JP_PostTownHouse_Det_TileBoard",
- "p3d": "\\JP\\buildings\\posttown\\jp_posttown_det_tile_board.p3d",
+ "p3d": "\\JP\\buildings\\posttown\\jp_posttownhouse_det_tileboard.p3d",
  "frame": "model: origin = lot centre at grade, +z = street front; lot width = neighbour spacing (rooms.json 'lot_width' via the record's params); built by parts/kit/jpparts/templates/townhouse.py",
  "rooms": [
   {

@@ -1788,7 +1788,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, EndL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_endl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_endl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -2228,7 +2228,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, EndL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_endl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_endl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -2742,7 +2742,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, EndR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_endr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_endr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -3256,7 +3256,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, EndR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_endr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_endr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -3696,7 +3696,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, Middle, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_middle_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_middle_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -4136,7 +4136,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, Middle, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_middle_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_middle_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -4576,7 +4576,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, CornerL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_cornerl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_cornerl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -5016,7 +5016,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, CornerL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_cornerl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_cornerl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -5530,7 +5530,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, CornerR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_cornerr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_cornerr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -6044,7 +6044,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, CornerR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2k_cornerr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_2ken_cornerr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -6484,7 +6484,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, EndL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_endl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_endl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -6924,7 +6924,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, EndL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_endl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_endl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -7438,7 +7438,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, EndR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_endr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_endr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -7952,7 +7952,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, EndR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_endr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_endr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -8392,7 +8392,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, Middle, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_middle_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_middle_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -8832,7 +8832,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, Middle, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_middle_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_middle_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -9272,7 +9272,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, CornerL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_cornerl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_cornerl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -9712,7 +9712,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, CornerL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_cornerl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_cornerl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -10226,7 +10226,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, CornerR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_cornerr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_cornerr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -10740,7 +10740,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, CornerR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_cornerr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_cornerr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -11180,7 +11180,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, EndL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_endl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_endl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -11694,7 +11694,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, EndL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_endl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_endl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -12282,7 +12282,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, EndR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_endr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_endr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -12870,7 +12870,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, EndR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_endr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_endr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -13384,7 +13384,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, Middle, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_middle_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_middle_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -13898,7 +13898,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, Middle, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_middle_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_middle_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -14412,7 +14412,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, CornerL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_cornerl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_cornerl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -14926,7 +14926,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, CornerL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_cornerl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_cornerl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -15514,7 +15514,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, CornerR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_cornerr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_cornerr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -16102,7 +16102,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, CornerR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_cornerr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_cornerr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -16616,7 +16616,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, EndL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_endl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_endl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -17130,7 +17130,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, EndL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_endl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_endl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -17718,7 +17718,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, EndR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_endr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_endr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -18306,7 +18306,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, EndR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_endr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_endr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -18820,7 +18820,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, Middle, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_middle_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_middle_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -19334,7 +19334,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, Middle, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_middle_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_middle_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -19848,7 +19848,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, CornerL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_cornerl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_cornerl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -20362,7 +20362,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, CornerL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_cornerl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_cornerl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -20950,7 +20950,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, CornerR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_cornerr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_cornerr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -21538,7 +21538,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, CornerR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_cornerr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_cornerr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -22052,7 +22052,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, EndL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_endl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_endl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -22566,7 +22566,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, EndL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_endl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_endl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -23154,7 +23154,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, EndR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_endr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_endr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -23742,7 +23742,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, EndR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_endr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_endr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -24256,7 +24256,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, Middle, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_middle_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_middle_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -24770,7 +24770,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, Middle, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_middle_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_middle_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -25284,7 +25284,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, CornerL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_cornerl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_cornerl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -25798,7 +25798,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, CornerL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_cornerl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_cornerl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -26386,7 +26386,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, CornerR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_cornerr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_cornerr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -26974,7 +26974,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 4 ken, CornerR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4k_cornerr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_4ken_cornerr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -27488,7 +27488,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, EndL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_endl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_endl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -28002,7 +28002,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, EndL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_endl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_endl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -28590,7 +28590,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, EndR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_endr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_endr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -29178,7 +29178,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, EndR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_endr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_endr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -29692,7 +29692,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, Middle, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_middle_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_middle_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -30206,7 +30206,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, Middle, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_middle_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_middle_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -30720,7 +30720,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, CornerL, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_cornerl_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_cornerl_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -31234,7 +31234,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, CornerL, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_cornerl_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_cornerl_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -31822,7 +31822,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, CornerR, toriniwa left)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_cornerr_toril.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_cornerr_toril.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -32410,7 +32410,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, CornerR, toriniwa right)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_cornerr_torir.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_cornerr_torir.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -32924,7 +32924,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, Middle, toriniwa left, board)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_middle_toril_board.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_middle_toril_board.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -33364,7 +33364,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, Middle, toriniwa right, board)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_2k_middle_torir_board.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_2ken_middle_torir_board.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -33804,7 +33804,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, Middle, toriniwa left, board)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_middle_toril_board.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_middle_toril_board.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -34318,7 +34318,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, Middle, toriniwa right, board)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_middle_torir_board.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_middle_torir_board.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -34832,7 +34832,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, Middle, toriniwa left, board)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_middle_toril_board.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_middle_toril_board.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -35346,7 +35346,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 4 ken, Middle, toriniwa right, board)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_4k_middle_torir_board.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_4ken_middle_torir_board.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -35860,7 +35860,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, Middle, toriniwa left, kakigara)";
-		model="\JP\buildings\townhouse\jp_townhouse_edo_3k_middle_toril_kakigara.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_edo_3ken_middle_toril_kakigara.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -36374,7 +36374,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, Middle, toriniwa left, kyo)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_middle_toril_kyo.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_middle_toril_kyo.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -36888,7 +36888,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, Middle, toriniwa right, komeya)";
-		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3k_middle_torir_komeya.p3d";
+		model="\JP\buildings\townhouse\jp_townhouse_kamigata_3ken_middle_torir_komeya.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -37402,7 +37402,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house (Tokaido, detached, tile roof, plastered front)";
-		model="\JP\buildings\posttown\jp_posttown_det_tile_nuriya.p3d";
+		model="\JP\buildings\posttown\jp_posttownhouse_det_tilenuriya.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -37990,7 +37990,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house (Tokaido, detached, tile roof, board front)";
-		model="\JP\buildings\posttown\jp_posttown_det_tile_board.p3d";
+		model="\JP\buildings\posttown\jp_posttownhouse_det_tileboard.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -38578,7 +38578,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house (Tokaido, detached, board roof, plastered front)";
-		model="\JP\buildings\posttown\jp_posttown_det_board_nuriya.p3d";
+		model="\JP\buildings\posttown\jp_posttownhouse_det_boardnuriya.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -39166,7 +39166,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house (Tokaido, detached, board roof, board front)";
-		model="\JP\buildings\posttown\jp_posttown_det_board_board.p3d";
+		model="\JP\buildings\posttown\jp_posttownhouse_det_boardboard.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -39754,7 +39754,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house with stable (Tokaido, detached, tile roof)";
-		model="\JP\buildings\posttown\jp_posttown_det_stable_tile.p3d";
+		model="\JP\buildings\posttown\jp_posttownhouse_det_stable_tile.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -40342,7 +40342,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house with stable (Tokaido, detached, board roof)";
-		model="\JP\buildings\posttown\jp_posttown_det_stable_board.p3d";
+		model="\JP\buildings\posttown\jp_posttownhouse_det_stable_board.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -40930,7 +40930,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house, row end (Tokaido, free gable left)";
-		model="\JP\buildings\posttown\jp_posttown_row_endl.p3d";
+		model="\JP\buildings\posttown\jp_posttownhouse_row_endl.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -41444,7 +41444,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house, row middle (Tokaido)";
-		model="\JP\buildings\posttown\jp_posttown_row_middle.p3d";
+		model="\JP\buildings\posttown\jp_posttownhouse_row_middle.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -54574,7 +54574,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, Middle, toriniwa left), furnished: rice dealer";
-		model="\JP\buildings\furnished\jp_f_th_kamigata_3k_middle_komeya.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_kamigata_3ken_middle_toril_komeya.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -55088,7 +55088,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, Middle, toriniwa right), furnished: paper and sundries shop";
-		model="\JP\buildings\furnished\jp_f_th_kamigata_2k_middle_kamiya.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_kamigata_2ken_middle_torir_kamiya.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -55528,7 +55528,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, Middle, toriniwa right), furnished: cloth dealer";
-		model="\JP\buildings\furnished\jp_f_th_edo_2k_middle_gofuku.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_edo_2ken_middle_torir_gofuku.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -55968,7 +55968,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, CornerR, toriniwa left), furnished: sake shop";
-		model="\JP\buildings\furnished\jp_f_th_edo_3k_cornerr_sakaya.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_edo_3ken_cornerr_toril_sakaya.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -56556,7 +56556,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Post-town house (Tokaido, detached, tile roof, plastered front), furnished: home";
-		model="\JP\buildings\furnished\jp_f_pt_det_tile_nuriya_home.p3d";
+		model="\JP\buildings\furnished\jp_posttownhouse_det_tilenuriya_home.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -57144,7 +57144,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Inn (hatago), tile roof, plastered front, furnished";
-		model="\JP\buildings\furnished\jp_f_inn_std_tile.p3d";
+		model="\JP\buildings\furnished\jp_hatago_std_tile_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -57806,7 +57806,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Grand inn (hatago), two storeys, furnished (upstairs guest rooms)";
-		model="\JP\buildings\furnished\jp_f_inn_grand.p3d";
+		model="\JP\buildings\furnished\jp_hatago_grand_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -58690,7 +58690,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Kanto farmhouse with inside stable (hipped thatch), furnished";
-		model="\JP\buildings\furnished\jp_f_farmhouse_kanto.p3d";
+		model="\JP\buildings\furnished\jp_farmhouse_kanto_yosemune_umaya_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -59500,7 +59500,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Kinai farmhouse with ox (yamato-mune: thatch gable, takahe, tiled lower roofs), furnished";
-		model="\JP\buildings\furnished\jp_f_farmhouse_kinai.p3d";
+		model="\JP\buildings\furnished\jp_farmhouse_kinai_kirizuma_tile_takahe_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -60384,7 +60384,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Poor hut, east type (large, board floor), furnished (T1)";
-		model="\JP\buildings\furnished\jp_f_hut_east_l_board.p3d";
+		model="\JP\buildings\furnished\jp_hut_east_l_board_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -60676,7 +60676,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Poor hut, west type (thatch gable, lean-to left, board floor), furnished (T1)";
-		model="\JP\buildings\furnished\jp_f_hut_west_thatch_leanl.p3d";
+		model="\JP\buildings\furnished\jp_hut_west_thatch_leanl_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -60894,7 +60894,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Shed, walled (stone-weighted boards) with a woodshed lean-to, furnished (storage)";
-		model="\JP\buildings\furnished\jp_f_shed_walled_woodshed.p3d";
+		model="\JP\buildings\furnished\jp_shed_walled_ishioki_woodshed_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -61038,7 +61038,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Kura (plastered storehouse, namako lower walls), furnished (storage)";
-		model="\JP\buildings\furnished\jp_f_kura_namako.p3d";
+		model="\JP\buildings\furnished\jp_kura_namako_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -61182,7 +61182,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Kura (plastered storehouse, black boarded lower walls, hinged plaster door leaves), furnished (storage)";
-		model="\JP\buildings\furnished\jp_f_kura_kuro_hinged.p3d";
+		model="\JP\buildings\furnished\jp_kura_kuro_hinged_furnished.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -61474,7 +61474,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, Middle, toriniwa left), shop set: ironmonger";
-		model="\JP\buildings\furnished\jp_s1_th_edo_3k_middle_kanamono.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_edo_3ken_middle_toril_kanamono.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -61988,7 +61988,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 2 ken, Middle, toriniwa right), shop set: tobacco";
-		model="\JP\buildings\furnished\jp_s1_th_kamigata_2k_middle_tabako.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_kamigata_2ken_middle_torir_tabako.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -62428,7 +62428,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, EndR, toriniwa left), shop set: sweets and rice cakes";
-		model="\JP\buildings\furnished\jp_s1_th_kamigata_3k_endr_mochiya.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_kamigata_3ken_endr_toril_mochiya.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -63016,7 +63016,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 3 ken, EndL, toriniwa left), shop set: apothecary (heavier abandoned state)";
-		model="\JP\buildings\furnished\jp_s1_th_edo_3k_endl_kusuri.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_edo_3ken_endl_toril_kusuri.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -63530,7 +63530,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Edo, 2 ken, Middle, toriniwa right, board), shop set: tailor";
-		model="\JP\buildings\furnished\jp_s1_th_edo_2k_middle_board_shitate.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_edo_2ken_middle_torir_board_shitate.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -63970,7 +63970,7 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="Townhouse (Kamigata, 3 ken, Middle, toriniwa left, kyo), shop set: dolls";
-		model="\JP\buildings\furnished\jp_s1_th_kamigata_3k_middle_kyo_ningyo.p3d";
+		model="\JP\buildings\furnished\jp_townhouse_kamigata_3ken_middle_toril_kyo_ningyo.p3d";
 		class Doors
 		{
 			class DoorsTwin1

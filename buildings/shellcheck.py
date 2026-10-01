@@ -86,6 +86,10 @@ def run(bd):
     rec("Geometry properties + mass", pr.get("class") == "house" and pr.get("map") == "house" and
         pr.get("damage") == "no" and pr.get("autocenter") == "0" and sum(geo.mass or [0]) > 1000,
         "%s, mass %.0f kg" % (pr, sum(geo.mass or [0])))
+    import bindcheck              # FB1: the engine binds a WRP object only via Land_<p3d stem> + Geometry class=house
+    bprobs = bindcheck.check(cls, bd["rec"]["model"], b["model_dir"], name)
+    rec("B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)", not bprobs,
+        "%s -> %s.p3d" % (cls, name) if not bprobs else "; ".join(bprobs))
     for lname in ("Geometry", "View Geometry", "Fire Geometry"):
         l = L[lname]
         comps = [s for s in l.selections if s.startswith("Component")]

@@ -478,3 +478,17 @@ for _k, _ps in SH1_GALLERY.items():
     get(_k)["placements"] = [{"pos": _p, "yaw": 180.0,
                               "where": "test island: SH1 life-layer gallery (east yard), open front facing south"}
                              for _p in _ps]
+
+
+# ------------------------------------------------------------------------------------------------ FB1 binding names
+# FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
+# Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_
+# kamigata_2k_..., jp_f_farmhouse_kanto, jp_s1_th_...), so 97 of 128 classes never bound in game: no doors, no loot
+# (Stephen's showcase walk; "house, config class missing" in both logs). The class names stay (CE groups, mission
+# files, maps, checklists use them); every family member's p3d is now named after its class: name = class minus
+# "Land_", lower case. "recipe_name" keeps the old name for the recipe's model(name=...) so the geometry is unchanged.
+# buildings/bindcheck.py fails the build if a shipped class and its p3d stem ever differ again.
+for _b in BUILDINGS:
+    if "params" in _b:
+        _b["recipe_name"] = _b["name"]
+        _b["name"] = _b["class"][len("Land_"):].lower()

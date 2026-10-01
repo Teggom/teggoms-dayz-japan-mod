@@ -13,6 +13,11 @@
    "detail": "R1 1325, R2 779, R3 333"
   },
   {
+   "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
+   "ok": true,
+   "detail": "Land_JP_Toilet_T1_01 -> jp_toilet_t1_01.p3d"
+  },
+  {
    "check": "C7 Geometry closed + convex",
    "ok": true,
    "detail": "54 components, 0 bad, 0 faces outside components"

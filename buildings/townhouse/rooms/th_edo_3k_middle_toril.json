@@ -1,6 +1,6 @@
 {
  "building": "Land_JP_Townhouse_Edo_3ken_Middle_ToriL",
- "p3d": "\\JP\\buildings\\townhouse\\jp_townhouse_edo_3k_middle_toril.p3d",
+ "p3d": "\\JP\\buildings\\townhouse\\jp_townhouse_edo_3ken_middle_toril.p3d",
  "frame": "model: origin = lot centre at grade, +z = street front; lot width = neighbour spacing (rooms.json 'lot_width' via the record's params); built by parts/kit/jpparts/templates/townhouse.py",
  "rooms": [
   {

@@ -11,7 +11,7 @@
   1.24,
   1.06
  ],
- "checks_n": 103,
+ "checks_n": 104,
  "failures": 0,
  "checks": [
   {
@@ -28,6 +28,11 @@
    "check": "Geometry properties + mass",
    "ok": true,
    "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 40000 kg"
+  },
+  {
+   "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
+   "ok": true,
+   "detail": "Land_JP_Townhouse_Kamigata_3ken_Middle_ToriL_Kyo_Ningyo -> jp_townhouse_kamigata_3ken_middle_toril_kyo_ningyo.p3d"
   },
   {
    "check": "C7 Geometry closed + convex",
@@ -125,7 +130,7 @@
    "detail": "window_slide moves closed -> open without touching other geometry"
   },
   {
-   "check": "C7 open passage clear >= 1.00 + head >= 2.00",
+   "check": "C7 open doorway (mushiro, no leaf) clear >= 1.00 + head >= 2.00",
    "ok": true,
    "detail": "clear 1.15 m, head 2.00 m"
   },
@@ -157,7 +162,7 @@
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
    "ok": true,
-   "detail": "not placed on the island (shipped in the PBO only)"
+   "detail": "1 placement(s): x 981.7-987.5 z 1083.0-1092.3"
   },
   {
    "check": "C10 DoorsTwin1 reachable from both sides (open)",
@@ -527,7 +532,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 608302 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 607818 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

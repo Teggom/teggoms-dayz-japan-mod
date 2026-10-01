@@ -7,7 +7,7 @@
  "door_clear_m": [
   1.46
  ],
- "checks_n": 61,
+ "checks_n": 62,
  "failures": 0,
  "checks": [
   {
@@ -24,6 +24,11 @@
    "check": "Geometry properties + mass",
    "ok": true,
    "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 20000 kg"
+  },
+  {
+   "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
+   "ok": true,
+   "detail": "Land_JP_Hut_East_L_Board_Furnished -> jp_hut_east_l_board_furnished.p3d"
   },
   {
    "check": "C7 Geometry closed + convex",
@@ -313,7 +318,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 459100 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 459140 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

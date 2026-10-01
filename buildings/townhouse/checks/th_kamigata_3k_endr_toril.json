@@ -11,7 +11,7 @@
   1.24,
   1.06
  ],
- "checks_n": 62,
+ "checks_n": 63,
  "failures": 0,
  "checks": [
   {
@@ -28,6 +28,11 @@
    "check": "Geometry properties + mass",
    "ok": true,
    "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 40000 kg"
+  },
+  {
+   "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
+   "ok": true,
+   "detail": "Land_JP_Townhouse_Kamigata_3ken_EndR_ToriL -> jp_townhouse_kamigata_3ken_endr_toril.p3d"
   },
   {
    "check": "C7 Geometry closed + convex",
@@ -322,7 +327,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 654722 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 654686 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

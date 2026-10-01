@@ -23,7 +23,9 @@ Per building (buildings/<key>/):
      DamageZones per door), its model.cfg skeleton + model (one bone per leaf, both leaves of a twin door driven by
      source DoorsTwinN), its loot group (points from the Roadway floors); rooms.json (room tags for the decorator)
 Then, from the records of EVERY shipped building (so building N never erases building N-1):
-  3. src/JP/buildings/config.cpp and src/JP/buildings/<model_dir>/model.cfg -> CfgConvert syntax check
+  3. src/JP/buildings/config.cpp and src/JP/buildings/<model_dir>/model.cfg -> CfgConvert syntax check; bindcheck.py
+     (FB1): every shipped class == Land_<p3d stem> and its p3d has Geometry class=house, else the build FAILS
+     (a family member's p3d is named after its class: registry "name" = class minus Land_, lower case)
   4. binarize.exe (cwd P:\) the rebuilt shipped p3ds -> ODOL replaces the MLOD copy in src (the MLOD stays in out/)
   5. pack src/JP/buildings (minus model.cfg) -> ..\@Japan\addons\jp_buildings.pbo, prefix JP\buildings
   6. drop-ins: test/placements/C.csv, test/ce/C_mapgroupproto.xml, test/ce/C_mapgrouppos.xml
@@ -232,7 +234,8 @@ def build_model(b, stage=True):
     mod = load_module(b)
     if "params" in b:                               # C1: a family member (one recipe, many shells)
         name, cls = b["name"], b["class"]
-        M, floors, rooms = mod.model(name=name, **b["params"])
+        # FB1: the p3d is named after the class (registry "name"); the recipe keeps its old name (geometry unchanged)
+        M, floors, rooms = mod.model(name=b.get("recipe_name", name), **b["params"])
     else:
         name, cls = mod.NAME, mod.CLASS
         M, floors, rooms = mod.model()
@@ -371,7 +374,16 @@ def combine():
     wb(CE_POS, "\n".join(pos) + "\n")
     print("combined %d shipped building(s): config.cpp, model.cfg, C.csv (%d placements), C_mapgroupproto.xml, "
           "C_mapgrouppos.xml" % (len(recs), len(rows) - 1))
-    return ok
+    # FB1 (2026-10-01): every shipped class must bind in the engine (buildings/bindcheck.py): class == Land_<p3d stem>
+    # and the Geometry property class=house. A failure fails the build.
+    import bindcheck
+    bad = bindcheck.check_records(recs)
+    for c, ps in sorted(bad.items()):
+        for p in ps:
+            print("  BINDCHECK FAIL %s: %s" % (c, p))
+    print("  bindcheck: %d of %d shipped classes bind (class == Land_<p3d stem>, Geometry class=house)"
+          % (len(recs) - len(bad), len(recs)))
+    return ok and not bad
 
 
 # ------------------------------------------------------------------------------------------------ generic checks
@@ -395,6 +407,12 @@ def generic_verify(bd):
     got = (faces.get("Resolution 1", 0), faces.get("Resolution 2", 0), faces.get("Resolution 3", 0))
     rec("C5 face budget (%s: %d / %d / %d)" % ((b["budget"],) + bud), all(g <= m for g, m in zip(got, bud)),
         "R1 %d, R2 %d, R3 %d" % got)
+    if b["ship"]:
+        import bindcheck          # FB1: the engine binds a WRP object only via Land_<p3d stem> + Geometry class=house
+        r_ = bd["rec"]
+        bprobs = bindcheck.check(r_["class"], r_["model"], r_["model_dir"], r_["name"])
+        rec("B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)", not bprobs,
+            "%s -> %s.p3d" % (r_["class"], r_["name"]) if not bprobs else "; ".join(bprobs))
     for lname in ("Geometry", "View Geometry", "Fire Geometry"):
         l = L[lname]
         comps = [s for s in l.selections if s.startswith("Component")]
