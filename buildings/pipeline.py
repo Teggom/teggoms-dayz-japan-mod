@@ -2,6 +2,8 @@
 r"""pipeline.py - the multi-building build (B0 step 0b; replaces the machiya's one-building build.py).
 
   python buildings/pipeline.py [key ...] [--all] [--no-binarize] [--no-pack] [--no-verify] [--combine-only]
+                               [--family NAME] [--jobs N] [--verify-only]
+  python buildings/pipeline.py --help     (prints this and builds nothing; unknown options also build nothing)
 
   key ...         the buildings to (re)build (buildings/registry.py keys); default = every shipped building
   --all           every registered building, shipped or not
@@ -512,7 +514,20 @@ def verify_parallel(keys, jobs):
     return ok
 
 
+KNOWN_FLAGS = {"--all", "--no-binarize", "--no-pack", "--no-verify", "--combine-only", "--family", "--jobs",
+               "--verify-only"}
+
+
 def main(argv):
+    # 2026-09-30: --help used to fall through to "build every shipped building" (agent M1 tripped on it): help and
+    # unknown flags now stop before anything is built
+    if any(a in ("-h", "--help", "/?") for a in argv):
+        print(__doc__)
+        return 0
+    bad = [a for a in argv if a.startswith("-") and a not in KNOWN_FLAGS]
+    if bad:
+        print("pipeline.py: unknown option(s) %s - nothing built. Run with --help for usage." % " ".join(bad))
+        return 2
     flags = {a for a in argv if a.startswith("--")}
     jobs = 1
     fam = None

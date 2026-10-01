@@ -335,4 +335,5 @@
   - **Bonji NOT done:** no Siddham font on the machine. Needs Stephen's OK to download **Noto Sans Siddham** (SIL OFL 1.1,
     google/fonts ofl/notosanssiddham).
   - **Pitfall:** python buildings/pipeline.py --help STARTS A FULL REBUILD (no argparse help). M1 hit it, stopped it and
-    restored 69 townhouse masters. Fix the CLI before the next agent trips on it.
+    restored 69 townhouse masters. **FIXED 2026-09-30 (lead):** --help / -h prints the usage and builds nothing; unknown
+    options build nothing (exit 2).
