@@ -355,3 +355,10 @@
   x 1072/1080/1088 z 1036 (L1-L74); demo shops D1-D6 on the street (3 swapped, 3 inserted). verify_oprw PASS 4076/4076;
   build_mission.py fixed (CE positions snap to the nearest building of the class). Maps sh1_map_{shrine,graveyard,gallery,
   street}.jpg + ID table spikes/SH1/SHOWCASE_MAP.md. **Walk: TEST_CHECKLIST.md, ~44 min, 14 verdicts.**
+- 2026-10-01: **Stephen's showcase walk.** Street + graveyard + most torii good. Findings: ZERO doors open anywhere; lead found
+  only 31 of 128 building classes match Land_<p3d stem> (town units say 2ken vs file 2k; furnished + demo shops differ
+  entirely) -> unbound objects (no doors, no loot). Props: broom, rice sheaves, bonsai/pots, sword rack, torii rope need
+  higher fidelity; tawara end caps missing; fallen lantern side + clear decal; loom/wheel float; leaf decals are blobs;
+  stone torii texture too regular; two-tone pot; lever well rock/rope; notice board floating; fire-watch ladder not
+  climbable; wants collapsed torii. Buildings: Kinai 'thick thing under roof', kura doors/shutters thick + too white, a
+  roofless street house, tools off the wall, top hill-stair torii too low. **FP1 (props) + FB1 (buildings) launched.**
