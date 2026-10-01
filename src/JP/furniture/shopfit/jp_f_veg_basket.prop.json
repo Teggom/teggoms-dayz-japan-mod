@@ -1,0 +1,128 @@
+{
+ "id": "jp_f_veg_basket",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_veg_basket.p3d",
+   "class": "StaticObj_JP_F_Veg_Basket",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Basket of autumn vegetables",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 251,
+    "Resolution 2": 51,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.275,
+    0.258,
+    0.0,
+    0.485,
+    -0.271,
+    0.271
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.254,
+    -0.254,
+    0.254,
+    0.254
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 12.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "greengrocer's autumn stock (BTI 724-725); rots by the abandoned state"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_veg_basket.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_veg_basket_rotted.p3d",
+   "class": "StaticObj_JP_F_Veg_Basket_Rotted",
+   "variant": "std",
+   "state": "rotted",
+   "abandoned": true,
+   "display": "Basket, vegetables rotted",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 62,
+    "Resolution 2": 51,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.275,
+    0.346,
+    0.0,
+    0.4,
+    -0.271,
+    0.483
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.254,
+    -0.254,
+    0.254,
+    0.254
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 12.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "greengrocer's autumn stock (BTI 724-725); rots by the abandoned state"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_veg_basket_rotted.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "yaoya"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 724-725)"
+}

@@ -1,0 +1,96 @@
+{
+ "id": "jp_f_sg_tobacco",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopgoods",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopgoods\\jp_f_sg_tobacco.p3d",
+   "class": "StaticObj_JP_F_Sg_Tobacco",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Goods: tobacco packets, pipes, leaf",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 155,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.233,
+    0.299,
+    0.0,
+    0.067,
+    -0.08,
+    0.115
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only (mount surface: a stand step, shelf board or the floor); loot lies around it"
+   ],
+   "master": "spikes/S1/out/shopgoods/jp_f_sg_tobacco.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopgoods\\jp_f_sg_tobacco_scattered.p3d",
+   "class": "StaticObj_JP_F_Sg_Tobacco_Scattered",
+   "variant": "std",
+   "state": "scattered",
+   "abandoned": true,
+   "display": "Goods: packets scattered, leaf",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 60,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.205,
+    0.218,
+    0.0,
+    0.022,
+    -0.111,
+    0.158
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only (mount surface: a stand step, shelf board or the floor); loot lies around it"
+   ],
+   "master": "spikes/S1/out/shopgoods/jp_f_sg_tobacco_scattered.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "tabako"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 936-938)"
+}

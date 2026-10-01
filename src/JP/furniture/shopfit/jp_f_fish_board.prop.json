@@ -1,0 +1,145 @@
+{
+ "id": "jp_f_fish_board",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_fish_board.p3d",
+   "class": "StaticObj_JP_F_Fish_Board",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fishmonger's cutting board with knife and fish",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 38,
+    "Resolution 2": 24,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.45,
+    0.45,
+    0.0,
+    0.36,
+    -0.175,
+    0.175
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.45,
+    -0.175,
+    0.45,
+    0.175
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 10.0,
+   "loot_surfaces": [
+    {
+     "name": "board",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      -0.02,
+      -0.14,
+      0.4,
+      0.14
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.2,
+       0.3,
+       0.08
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/S1/out/shopfit/jp_f_fish_board.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_fish_board_tipped.p3d",
+   "class": "StaticObj_JP_F_Fish_Board_Tipped",
+   "variant": "std",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Cutting board on its side, knife on the floor",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 27,
+    "Resolution 2": 24,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.414,
+    0.495,
+    0.0,
+    0.35,
+    -0.374,
+    0.709
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.443,
+    -0.374,
+    0.495,
+    0.078
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 10.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/S1/out/shopfit/jp_f_fish_board_tipped.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "sakana"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 715 (manaita, deba))"
+}

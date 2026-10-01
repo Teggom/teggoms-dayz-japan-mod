@@ -1,0 +1,168 @@
+{
+ "id": "jp_f_rice_bin",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_rice_bin.p3d",
+   "class": "StaticObj_JP_F_Rice_Bin",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Rice bin (kome-bitsu), lid half off",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 81,
+    "Resolution 2": 51,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.385,
+    0.445,
+    0.0,
+    0.68,
+    -0.26,
+    0.26
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.375,
+    -0.25,
+    0.375,
+    0.25
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.62,
+     "rect": [
+      -0.35,
+      -0.22,
+      -0.02,
+      0.1
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.1,
+       0.62,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the rice dealer's bin (BTI 713-714); loot on the closed lid half / in the bin when abandoned"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_rice_bin.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_rice_bin_spilled.p3d",
+   "class": "StaticObj_JP_F_Rice_Bin_Spilled",
+   "variant": "std",
+   "state": "spilled",
+   "abandoned": true,
+   "display": "Rice bin, lids off, rice spilled",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 56,
+    "Resolution 2": 36,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.538,
+    0.464,
+    0.0,
+    0.6,
+    -0.26,
+    0.835
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.375,
+    -0.25,
+    0.375,
+    0.25
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 30.0,
+   "loot_surfaces": [
+    {
+     "name": "rice",
+     "kind": "shelf",
+     "y": 0.21,
+     "rect": [
+      -0.3,
+      -0.18,
+      0.3,
+      0.18
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.21,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the rice dealer's bin (BTI 713-714); loot on the closed lid half / in the bin when abandoned"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_rice_bin_spilled.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "komeya"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 713-714)"
+}
