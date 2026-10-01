@@ -282,5 +282,13 @@
     mossy stone lanterns, graveyard stones at 2-3x variety (era-checked). Owns the site pipeline + jp_site.pbo; NO materials.
   - **S1**: the 22 KEEP_TRADES shop dressing sets (spec SHOP_SETS.md, props, set definitions, a few demo shops). Owns the
     furniture pipeline + jp_furniture.pbo + ALL material work. decor.py shared: additive edits only.
+- 2026-09-30: **W2 DONE** (opus-high, 529k / 35 min). 91 models: wooden torii 20 + stone torii 10 (no rope / rope /
+  rope + shide; mossy rural ones; vermilion Inari/Hachiman only), lanterns 13 (5 mossy), steps 13 (Roadway chain OK),
+  basin 4, gravestones 24 (1730 forms only; square pillars rare ~5%), grave wood 7. Era: esearch/outdoor_kit/W2_ERA.md.
+  jp_site.pbo 301 classes; decor mounts shrine / graveyard / slope. Commits 6d1c6ce, d402bb3, e2d17d5, c5c8528.
+  Gaps (S1 owns materials): more posthumous-name cells, Sanskrit syllables for gorinto / hokyointo (built blank), an
+  outdoor bare-earth material. Not placed on the island.
+- 2026-09-30: **A4 audit DONE** (opus-medium, 138k / 9 min): esearch/AUDIT_MISSING.md. Top item: the built sakura are
+  Somei-yoshino in bloom (banned, 1840s+): remake as yamazakura / edohigan in autumn leaf. Stephen to pick from it.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
