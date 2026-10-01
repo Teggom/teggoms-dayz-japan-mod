@@ -343,3 +343,8 @@
 - 2026-09-30: **G1 DONE** (gorinto seating, Stephen spotted the floating roof): suirin now a sphere cut flat top + bottom at 0.62 of
   the diameter, 12 sides, bonji on the middle band; every ring seats flush (new seat check: sphere->roof 0 -> 0.73);
   gorinto_stack's 1.25x roof sits flat, 5 deg yaw. Heights s 0.565 / fallen 0.650 / l 2.00 m. Commits cec274a, 4d4e860.
+- 2026-09-30: **Agreed with Stephen: ONE showcase agent after the Pompompurin agent (P1, fun\pompompurin) finishes:** convert +
+  place Pompompurin life size (own jp_fun.pbo), a shrine (W2 torii / lanterns / steps / basin) + a graveyard (W2/W3/M1/M2/G1
+  stones + bohyo), swap a few street units for S1's demo shops, a life-layer gallery row (all 74), then ONE walk checklist
+  with 10 stops: street, hamlet, kura, machiya shop + yard, M1 materials (spot checks), shrine, graveyard, shops, life
+  layer, Pompompurin (~40 min).
