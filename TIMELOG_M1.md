@@ -14,3 +14,4 @@
 2026-09-30 22:07:28 | PROPS REBUILT | M1 | site grave 19 + firewood 6 (B3b 226/226, TXT 94 files 0 fail, C7 PASS, L2 81/81, 307 classes); furniture kori 3 + firewood 4 (B3a 113/113, L1 185/185, S1 175/175, 473 classes); farmhouses 8 + furnished 2 brown heri (10/10 verify pass); machiya 78 + shop 137 pass | 5h 61% wk 41%
 2026-09-30 22:07:28 | PBO PACKED | M1 | jp_common 239.6 MB, jp_site 307 classes, jp_furniture 473, jp_buildings 129 files; commits 1a74138, ec3df93 | 5h 61% wk 41%
 2026-09-30 22:08:38 | SHEETS DONE | M1 | research/materials/contact_sheets/m1_1_materials.jpg, m1_2_props.jpg, m1_3_text.jpg | 5h 62% wk 41%
+2026-09-30 22:09:15 | END | M1 | items 1-5, 7, 8 done; 6 bonji not done (needs Noto Sans Siddham); commits 1a74138 ec3df93 b6cd2dd + this log | 5h 62% wk 41%
