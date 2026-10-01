@@ -502,3 +502,34 @@ trade("mochiya", "Sweets and rice cakes (mochi-ya / dango-ya)",
       front=["jp_f_kanban_mochi", "jp_f_kanban_okashi"], door=["jp_s_shopfront_noren_half"],
       street=["jp_s_bench_1ken"], tori=("jp_f_usu_mallet", "jp_f_oke_bucket"),
       era="KEPT: BTI 630-639 (sakura-mochi 1717)")
+
+# Drink and services (S1 group 4)
+trade("sakaya", "Sake shop (saka-ya)",
+      strip=["jp_f_taru_rack3", "jp_f_taru_komo"], stock="jp_f_tana_091_3", stock_top=["jp_f_tokkuri_large"],
+      corner="jp_f_taru_cask", floor=["jp_f_masu_set"], front=["jp_f_kanban_miki"],
+      door=["jp_s_shopfront_noren_long", "jp_f_sugidama"], tori=("jp_f_taru_komo", "jp_f_taru_cask"),
+      era="KEPT: BTI 575-579 (casks, masu, flasks; the sugidama)")
+trade("nimeuri", "Cooked-food and sake house (nimeuri-ya)",
+      strip=["jp_f_konro_nabe3", "jp_f_taru_cask"], stock="jp_f_tana_091_3", stock_top=["jp_f_tableware_bowls"],
+      choba="desk", corner="jp_f_taru_cask", floor=["jp_f_meal_left_two"], wall="jp_f_menu_board",
+      door=["jp_s_shopfront_noren_half"], front=["jp_f_kanban_niuri"], street=["jp_s_bench_1ken"],
+      tori=("jp_f_taru_komo", "jp_f_oke_bucket"), era="KEPT: BTI 659-661 (early 18th c.); no oden in broth")
+trade("kusuri", "Apothecary and doctor (kusuri-ya / isha)",
+      steps=("jp_f_sg_medicine", "jp_f_sg_medicine", "jp_f_sg_medicine"), strip=["stand", "jp_f_yagen"],
+      stock="jp_f_yakudansu", corner="jp_f_jar_m_pale",
+      front=["jp_f_kanban_yakushu", "jp_s_shopfront_shape_gourd"], tori=("jp_f_box_m", "jp_f_jar_s"),
+      era="KEPT: BTI 806-820 (Toyama medicine c.1690); no Dutch-learning medicine (1770s)")
+trade("shichiya", "Pawnbroker (shichi-ya)",
+      steps=("jp_f_sg_pawn", "jp_f_sg_pawn", "jp_f_sg_coins"), strip=["stand", "jp_f_senryobako"],
+      stock="jp_f_tana_091_3", stock_top=["jp_f_sg_pawn"], wall="jp_f_pawn_board", front=["jp_f_kanban_shichi"],
+      tori=("jp_f_box_m", "jp_f_kori"), kura=True, era="KEPT: BTI 831-833 (the kura is essential: place one behind)")
+trade("ryogae", "Moneychanger (ryogae-ya)",
+      steps=("jp_f_sg_coins", "jp_f_sg_coins", "jp_f_sg_coins"), strip=["stand", "jp_f_senryobako"],
+      stock="jp_f_tana_091_3", stock_top=["jp_f_choba_set_tenbin"], corner="jp_f_box_s_lacquer",
+      front=["jp_f_kanban_ryogae", "jp_f_kanban_shape_fundo"], tori=("jp_f_box_m", "jp_f_jar_m"), kura=True,
+      era="KEPT: BTI 826-830; sign: fundo outline (BTI says coin-shaped), flagged")
+trade("honya", "Publisher and bookshop (hanmoto / shomotsu-ya)",
+      steps=("jp_f_sg_books", "jp_f_sg_books", "jp_f_sg_books"), strip=["stand", "jp_f_box_m"],
+      stock="jp_f_tana_091_3", stock_top=["jp_f_sg_books"], wall="jp_f_print_line_books", floor=["jp_f_sg_books"],
+      front=["jp_f_kanban_shorin"], tori=("jp_f_box_m", "jp_f_debris_paper"),
+      era="KEPT: BTI 500-512; ink-only prints (benizuri-e 1744, nishiki-e 1765 later)")

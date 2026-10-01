@@ -5,3 +5,6 @@
 2026-09-30 20:42:33 | GROUP START | aramono, draper, furugi, kanamono, setomono | S1 | g1 | 5h 30% wk 37%
 2026-09-30 20:53:24 | GROUP DONE | aramono, draper, furugi, kanamono, setomono | 34 models (10 props + 7 signs), 34/34 checks; demo kanamono 103/103 | S1 | g1 | 5h 36% wk 38%
 2026-09-30 20:53:24 | GROUP START | kamiya, abura, sumiya, tabako, tabidogu | S1 | g2 | 5h 36% wk 38%
+2026-09-30 21:15:37 | GROUP DONE | kamiya, abura, sumiya, tabako, tabidogu | 36 models (9 props + 8 signs, 1 shape sign), all pass; sets 30/30 | S1 | g2 | 5h 44% wk 39%
+2026-09-30 21:15:37 | GROUP DONE | komeya, sakana, yaoya, tofu, soba, mochiya | 34 models (9 props + 7 signs), all pass; sets 36/36 (96/96 incl. g1-g2) | S1 | g3 | 5h 44% wk 39%
+2026-09-30 21:15:37 | GROUP START | sakaya, nimeuri, kusuri, shichiya, ryogae, honya | S1 | g4 | 5h 44% wk 39%

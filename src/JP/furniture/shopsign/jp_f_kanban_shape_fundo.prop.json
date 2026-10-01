@@ -1,0 +1,114 @@
+{
+ "id": "jp_f_kanban_shape_fundo",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopsign",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopsign\\jp_f_kanban_shape_fundo.p3d",
+   "class": "StaticObj_JP_F_Kanban_Shape_Fundo",
+   "variant": "fundo",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shape sign: balance weight (fundo), moneychanger",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 72,
+    "Resolution 2": 60
+   },
+   "bbox": [
+    -0.04,
+    0.04,
+    1.968,
+    2.78,
+    0.0,
+    0.58
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.66,
+     "measured": 0.66,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "BTI 830 says 'a coin-shaped kanban'; the fundo (balance-weight) outline is used (general), flagged in SHOP_SETS.md"
+   ],
+   "hang_y": 2.77,
+   "master": "spikes/S1/out/shopsign/jp_f_kanban_shape_fundo.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopsign\\jp_f_kanban_shape_fundo_askew.p3d",
+   "class": "StaticObj_JP_F_Kanban_Shape_Fundo_Askew",
+   "variant": "fundo",
+   "state": "askew",
+   "abandoned": true,
+   "display": "Shape sign: fundo hanging askew",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 72,
+    "Resolution 2": 60
+   },
+   "bbox": [
+    -0.04,
+    0.13,
+    1.964,
+    2.78,
+    0.0,
+    0.636
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.66,
+     "measured": 0.66,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "BTI 830 says 'a coin-shaped kanban'; the fundo (balance-weight) outline is used (general), flagged in SHOP_SETS.md"
+   ],
+   "hang_y": 2.77,
+   "master": "spikes/S1/out/shopsign/jp_f_kanban_shape_fundo_askew.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "ryogae"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 830 ('coin-shaped kanban'); fundo outline (general), flagged)"
+}
