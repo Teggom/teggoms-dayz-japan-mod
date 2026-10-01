@@ -67,8 +67,10 @@ checks, no rebuild): checks identical to HEAD except the ODOL byte count (binari
   (no build-order dependence: needed for a per-building cache).
 - zfight (`spikes/V1/eq_zfight.py`, all 169): coplanar() records identical (same order); resolve() moves exactly the
   same solids (every vertex identical).
-- Ray level (`spikes/V1/eq_rays.py`): C11 escaped-ray sets, C17 slit lists + the rays themselves (bitwise), C15 column
-  heights (bitwise): see below.
+- Ray level (`spikes/V1/eq_rays.py` via run_eq.py, all 169, logs `_rays_*.log`): C11 escaped-ray sets identical
+  (5,351,040 rays), C17 slit lists identical and the rays themselves bitwise identical (23,295,796 rays), C15 column
+  heights bitwise identical (10,955,235 columns). Time in these three: C11 2,174 -> 165 s, C17 1,117 -> 236 s, C15
+  590 -> 54 s (sum over the 169, one process each).
 - **One intentional difference vs HEAD (3 buildings: s1_th_edo_2k_middle_board_shitate, s1_th_edo_3k_endl_kusuri,
   s1_th_kamigata_3k_middle_kyo_ningyo): a check NAME.** furnishkit forwarded the base shell's PASSAGE_LABEL with the
   previous furnished building's label as the fallback, so a town-house-based furnished variant got the hut's label
@@ -88,4 +90,14 @@ checks, no rebuild): checks identical to HEAD except the ODOL byte count (binari
 
 ## Status / next
 - [x] profile  - [x] ray engines  - [x] zfight  - [x] cache wiring  - [x] equivalence (checks files, zfight)
-- [ ] ray-level equivalence all 169 (running)  - [x] timings  - [x] docs (B0_PROGRESS, README 2b)  - [ ] commit + push
+- [x] ray-level equivalence all 169  - [x] timings  - [x] docs (B0_PROGRESS, README 2b)  - [x] commit + push (8e1eccc)
+
+## Notes for later agents
+- Kit code edits invalidate exactly the buildings whose import closure holds the file; a new or changed material
+  sidecar (core's library listing) invalidates every building. A rebuild + binarize changes the ODOL bytes, so the
+  rebuilt buildings re-check (as they should).
+- A new module-level cache of FILE data in the kit must be listed in checkcache.LAZY_CACHES (else a building whose
+  reads were served from the cache would miss those files as dependencies).
+- shellcheck imports machiya_t3_01/verify.py (helpers), which imports the machiya recipe: editing
+  machiya_t3_01.py re-checks every building (honest import dependency).
+- Remaining per-building cost (new): zfight.resolve in model generation 1.1-2.1 s, C17 1.3-3.3 s, C11 0.8-2.3 s.
