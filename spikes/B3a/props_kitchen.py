@@ -10,7 +10,7 @@ import fkit
 import bits
 from fkit import (core, box, prism, ngon, sheet, lathe, xf, xfs, flat_poly, W, col, cyl_col, board, FPart,
                   WOOD, IRON, DARK, PALE, HOOP, SOOT_BAMBOO, SOOT_WOOD, RIVER, LOGWOOD, ENDGRAIN, TAWARA, ASH,
-                  LITTER)
+                  LITTER, FIREWOOD, FIREEND)
 from bits import disc, jag_rim, shards, stain, rope_ring
 
 CAT = "kitchen"
@@ -518,7 +518,7 @@ def stack(length=0.91, depth=0.40, height=0.60, log_d=(0.09, 0.13), seed=1, rows
 def firewood(kind="stack", state="intact"):
     P = FPart("firewood", budget="small", mass=35.0 if kind == "stack" else 12.0)
     if kind == "stack":
-        ss, tops, ty, cb = stack(rows_keep=3 if state != "intact" else None, seed=3)
+        ss, tops, ty, cb = stack(rows_keep=3 if state != "intact" else None, seed=3, mats=(FIREWOOD, FIREEND))
         add_all(P, ss)
         P.add(cb)
         # the highest log near the middle carries the loot point: a flat facet
@@ -541,7 +541,7 @@ def firewood(kind="stack", state="intact"):
         else:
             rng = random.Random(8)
             for i in range(4):
-                s, _ = split_log(rng, 0.0, 0.05, 0.05, -0.21, 0.21, full=True)
+                s, _ = split_log(rng, 0.0, 0.05, 0.05, -0.21, 0.21, mats=(FIREWOOD, FIREEND), full=True)
                 s = xf(s, ry=rng.uniform(60, 120), t=(rng.uniform(-0.4, 0.4), 0.0, 0.45 + rng.uniform(-0.1, 0.15)))
                 P.add(s)
             ground_to_floor(P)
@@ -556,13 +556,13 @@ def firewood(kind="stack", state="intact"):
         loose = state != "intact"
         for bi, (bx, by, bz) in enumerate(spots):
             broken = loose and bi == 1
-            ss = bundle(rng, broken=broken)
+            ss = bundle(rng, broken=broken, mats=(FIREWOOD, FIREEND))
             add_all(P, xfs(ss, t=(bx, 0.0, bz)))
             if not broken:
                 P.add(xf(fkit.col_solid(fkit.lcyl("z", 0.0, 0.17, 0.17, -0.45, 0.45, LOGWOOD, n=7)), t=(bx, 0.0, bz)))
         if loose:
             for i in range(9):
-                st = box(-0.012, 0.012, 0.0, 0.02, -0.40, 0.40, LOGWOOD, vis=(1,))
+                st = box(-0.012, 0.012, 0.0, 0.02, -0.40, 0.40, FIREWOOD, vis=(1,))
                 P.add(xf(st, ry=rng.uniform(-50, 50), t=(0.25 + rng.uniform(-0.15, 0.35), 0.0,
                                                          rng.uniform(-0.3, 0.45))))
             P.add(fkit.col_solid(box(0.05, 0.40, 0.0, 0.10, -0.42, 0.42, LOGWOOD)))

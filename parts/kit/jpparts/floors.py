@@ -122,6 +122,10 @@ MATS_DOMA = {"top": "wall_arakabe", "body": "stone_cut"}
 # stand-ins every building used before B1 (unchanged, so old recipes build exactly what they built)
 MATS_TATAMI_B1 = {"facing": "floor_tatami", "heri": "floor_tatami_heri", "base": "wood_sooted", "lod": "floor_tatami",
                   "fit": True}
+# M1 (2026-09-30): the plain brown (cha) heri, A2's second commoner colour (BUILD_LIST "Heri colour": black default,
+# brown as the second tint); used for the T2 farmhouse best rooms (rural dei / zashiki)
+MATS_TATAMI_CHA = {"facing": "floor_tatami", "heri": "floor_tatami_heri_cha", "base": "wood_sooted", "lod": "floor_tatami",
+                   "fit": True}
 MATS_BOARDS_B1 = {"board": "floor_boards_int", "base": "wood_sooted", "lod": "floor_boards_int", "slab": True}
 MATS_DOMA_T3 = {"top": "ground_doma_tataki", "body": "stone_cut"}
 MATS_DOMA_EARTH = {"top": "ground_doma_earth", "body": "stone_cut"}

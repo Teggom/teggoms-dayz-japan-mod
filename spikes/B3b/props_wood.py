@@ -8,7 +8,7 @@ import skit
 from skit import (core, box, sheet, lathe, xf, xfs, flat_poly, W, col, col_solid, cyl_col, lcyl, rest, SPart, pole,
                   beam, rope_path, sag, grid_sheet, text_on, leaves, litter, add_all, ground, rng, hull3, disc,
                   jag_rim, spoked_wheel, wheel_lod, WOOD, DARK, BAMBOO, IRON, CUT, FIELD, RIVER, ROPE, TAWARA,
-                  MUSHIRO, PAPER, NOREN, KINARI, ENDG, LEAF, SUMI, BENGARA)
+                  MUSHIRO, PAPER, NOREN, KINARI, ENDG, LEAF, SUMI, BENGARA, FIREWOOD, FIREEND)
 import props_kitchen as K     # B3a (read-only): bundle(), split_log()
 import props_storage as S     # B3a (read-only): tawara_bale()
 
@@ -316,7 +316,7 @@ def _billet(rr, cx, cy, w, h, z, facing, wear=None, vis=(1,)):
     uv = [(0.5 + 0.45 * x * (1 if facing > 0 else -1), 0.5 - 0.45 * y) for x, y in pts]
     if facing < 0:
         q, uv = q[::-1], uv[::-1]
-    s = sheet([q], ENDG, (0.0, 0.0, float(facing)), vis=vis, uvs=[uv])
+    s = sheet([q], FIREEND, (0.0, 0.0, float(facing)), vis=vis, uvs=[uv])   # M1: firewood ends (i22)
     s.finalize()
     if wear:
         s.wear = wear
@@ -350,7 +350,8 @@ def stack_core(x0, x1, hfun, z0, z1, steps=8, wear=None, vis=(1,), both=False):
     for i in range(steps):
         a, b = x0 + i * dx, x0 + (i + 1) * dx
         hh = min(hfun(a + 0.01), hfun(b - 0.01))
-        s = box(a, b, 0.0, hh, z0, z1, {"front": SOOT, "back": SOOT if both else WOOD, "default": WOOD}, vis=vis)
+        s = box(a, b, 0.0, hh, z0, z1, {"front": SOOT, "back": SOOT if both else FIREWOOD, "default": FIREWOOD},
+                vis=vis)
         s.wear = "_w2" if wear is None else wear
         out.append(s)
     return out
@@ -362,7 +363,7 @@ def firewood(kind):
     D = 0.33                                        # billet length = stack depth (1.1 shaku)
     if kind == "bundle":
         P = SPart("firewood_stack", budget="small", mass=15.0, anchor="wall", wall_gap=0.05)
-        ss = K.bundle(random.Random(5), d=0.40, L=1.05, mats=(WOOD, ENDG), band=ROPE, core_mat=SOOT)
+        ss = K.bundle(random.Random(5), d=0.40, L=1.05, mats=(FIREWOOD, FIREEND), band=ROPE, core_mat=SOOT)
         c = col_solid(lcyl("z", 0.0, 0.20, 0.19, -0.52, 0.52, WOOD, n=7))
         ss = xfs(ss + [c], rx=-110.0)
         lo_y = min(v[1] for s in ss for v in s.verts)
@@ -388,7 +389,7 @@ def firewood(kind):
             P.add(col(sx * (L / 2 + 0.05) - 0.04, sx * (L / 2 + 0.05) + 0.04, 0.0, Hh + 0.12, -0.04, 0.04))
         cap = W(-L / 2 - 0.12, L / 2 + 0.12, Hh + 0.005, Hh + 0.035, -0.25, 0.25, WOOD, vis=(1, 2))
         P.add(xf(cap, rz=2.0, pivot=(0.0, Hh, 0.0)))
-        P.add(W(-L / 2, L / 2, 0.0, Hh, z0, z1, {"front": SOOT, "back": SOOT, "default": WOOD}, vis=(2,)))
+        P.add(W(-L / 2, L / 2, 0.0, Hh, z0, z1, {"front": SOOT, "back": SOOT, "default": FIREWOOD}, vis=(2,)))
         add_all(P, stack_caps(-L / 2, L / 2, hf, z1 + 0.012, +1, cell=0.30, seed=6, vis=(2,)))
         add_all(P, stack_caps(-L / 2, L / 2, hf, z0 - 0.012, -1, cell=0.30, seed=7, vis=(2,)))
         P.add(col(-L / 2, L / 2, 0.0, Hh, z0, z1))
@@ -423,14 +424,14 @@ def firewood(kind):
     for i in range(steps):
         a, b = -L / 2 + i * dx, -L / 2 + (i + 1) * dx
         hh = min(hf(a + 0.01), hf(b - 0.01))
-        s = box(a, b, 0.0, hh, z0, z1, {"front": SOOT, "default": WOOD}, vis=(2,))
+        s = box(a, b, 0.0, hh, z0, z1, {"front": SOOT, "default": FIREWOOD}, vis=(2,))
         s.wear = "_w2"
         P.add(s)
         P.add(col(a, b, 0.0, hh - 0.02, z0 + 0.01, z1 - 0.01))
     if kind == "ab_collapsed":
         rr = random.Random(8)
         for i in range(9):
-            s, _ = K.split_log(rr, 0.0, 0.05, 0.05, -0.16, 0.16, mats=(WOOD, ENDG), full=True, wear="_w2")
+            s, _ = K.split_log(rr, 0.0, 0.05, 0.05, -0.16, 0.16, mats=(FIREWOOD, FIREEND), full=True, wear="_w2")
             s = xf(s, ry=rr.uniform(-60, 60), t=(0.45 + rr.uniform(-0.25, 0.45), 0.0, z1 + 0.25 + rr.uniform(0, 0.45)))
             P.add(s)
         P.add(litter(9, 0.4, z1 + 0.35, 0.6, sx=1.4))

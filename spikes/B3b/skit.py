@@ -51,6 +51,13 @@ MOSS = "decal_moss"
 LITTER = "decal_litter"
 SUMI = "decal_sumi_text"
 CTEXT = "decal_carved_text"
+GTEXT = "decal_carved_text_grave"   # M1 (2026-09-30): posthumous names for gravestones (make_m1_materials.py)
+GSUMI = "decal_sumi_text_grave"     # M1: posthumous names in ink for wooden grave posts
+EARTH = "ground_earth_bare"         # M1: bare outdoor earth (grave mounds)
+NEWWOOD = "wood_new"                # M1: pale new wood
+SILVER = "wood_silver"              # M1: silver-grey weathered wood
+FIREWOOD = "wood_firewood"          # M1: split firewood sides (ref i22)
+FIREEND = "wood_endgrain_firewood"  # M1: firewood log ends (ref i22)
 BENGARA = "wood_bengara"
 BIB = "textile_bib_red"          # added by B3b through B1's pipeline (research/materials/make_b3b_materials.py)
 
@@ -271,7 +278,7 @@ def text_on(center, right, up, h, mat, cellname, wear=None, off=0.003, normal=No
 # built the same way) (a) face INTO their host surface (outward = -(right x up)): invisible in game from the front,
 # and (b) run the texture u along 'right', which a viewer outside sees as his LEFT: mirrored. face_text() turns such
 # solids round and, when asked, mirrors u within the solid's own cell range. text_ok() = text_on() already fixed.
-TEXT_MATS = ("decal_sumi_text", "decal_carved_text", "decal_sumi_text_life")
+TEXT_MATS = ("decal_sumi_text", "decal_carved_text", "decal_sumi_text_life", GTEXT, GSUMI)
 
 
 def is_text(s):

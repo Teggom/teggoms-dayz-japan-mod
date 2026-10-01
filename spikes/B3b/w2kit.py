@@ -266,14 +266,15 @@ def tilt(ss, rx=0.0, rz=0.0, ry=0.0, pivot=(0.0, 0.0, 0.0), sink=0.0):
 
 
 # ------------------------------------------------------------------------------------------------ text
-def carved(center, right, up, h, cellname, wear="_w1", crop=None, width=None, off=0.003, vis=(1,)):
-    """Carved text from B1's atlas (jp_m_decal_carved_text); faced and un-mirrored by build.py (skit.face_text)."""
-    return text_on(center, right, up, h, CTEXT, cellname, wear=wear, off=off, vis=vis, width=width, crop=crop)
+def carved(center, right, up, h, cellname, wear="_w1", crop=None, width=None, off=0.003, vis=(1,), mat=CTEXT):
+    """Carved text from B1's atlas (jp_m_decal_carved_text; M1: mat=GTEXT for the grave names atlas); faced and
+    un-mirrored by build.py (skit.face_text)."""
+    return text_on(center, right, up, h, mat, cellname, wear=wear, off=off, vis=vis, width=width, crop=crop)
 
 
-def inked(center, right, up, h, cellname, wear="_w2", crop=None, width=None, off=0.003, vis=(1,)):
-    """Brush text from B1's sumi atlas (plaques, sotoba)."""
-    return text_on(center, right, up, h, SUMI, cellname, wear=wear, off=off, vis=vis, width=width, crop=crop)
+def inked(center, right, up, h, cellname, wear="_w2", crop=None, width=None, off=0.003, vis=(1,), mat=SUMI):
+    """Brush text from B1's sumi atlas (plaques, sotoba; M1: mat=GSUMI for the grave-post names atlas)."""
+    return text_on(center, right, up, h, mat, cellname, wear=wear, off=off, vis=vis, width=width, crop=crop)
 
 
 # ------------------------------------------------------------------------------------------------ rope

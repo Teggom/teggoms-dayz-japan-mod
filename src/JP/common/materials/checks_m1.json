@@ -862,25 +862,25 @@
     130,
     67
    ],
-   "dE": 3.6,
-   "dE_to_entry": 3.6,
+   "dE": 3.61,
+   "dE_to_entry": 3.61,
    "tol": 8.0,
-   "spread_p75": 5.7,
+   "spread_p75": 15.3,
    "observed_spread": 5.9,
-   "masked_frac": 0.32,
-   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w0_mask.png",
+   "masked_frac": 0.0,
+   "mask": null,
    "verdict": "PASS",
    "warnings": [],
    "shipped_paa": {
     "mean_srgb": [
-     169.0,
+     168.9,
      137.6,
-     70.7
+     70.4
     ],
-    "dE": 3.5,
+    "dE": 3.6,
     "verdict": "PASS",
     "warnings": [],
-    "masked": true
+    "masked": false
    }
   },
   {
@@ -900,19 +900,19 @@
    "dE": 2.83,
    "dE_to_entry": 2.83,
    "tol": 8.0,
-   "spread_p75": 5.3,
+   "spread_p75": 12.8,
    "observed_spread": 5.9,
-   "masked_frac": 0.325,
+   "masked_frac": 0.005,
    "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w1_mask.png",
    "verdict": "PASS",
    "warnings": [],
    "shipped_paa": {
     "mean_srgb": [
-     153.8,
-     124.9,
-     65.9
+     153.9,
+     125.0,
+     66.0
     ],
-    "dE": 2.81,
+    "dE": 2.82,
     "verdict": "PASS",
     "warnings": [],
     "masked": true
@@ -935,19 +935,19 @@
    "dE": 5.0,
    "dE_to_entry": 5.0,
    "tol": 8.0,
-   "spread_p75": 5.2,
+   "spread_p75": 11.5,
    "observed_spread": 5.9,
-   "masked_frac": 0.336,
+   "masked_frac": 0.016,
    "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w2_mask.png",
    "verdict": "PASS",
    "warnings": [],
    "shipped_paa": {
     "mean_srgb": [
      148.0,
-     119.9,
-     63.3
+     120.0,
+     62.8
     ],
-    "dE": 5.1,
+    "dE": 4.9,
     "verdict": "PASS",
     "warnings": [],
     "masked": true

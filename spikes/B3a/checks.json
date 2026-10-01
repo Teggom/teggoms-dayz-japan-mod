@@ -2190,9 +2190,9 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -2308,7 +2308,8 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true
      }
     },
     {
@@ -2317,14 +2318,26 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.8,
-        74.8,
-        66.1
+        153.5,
+        124.7,
+        65.9
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
+       "palette": "firewood_end",
+       "dE76": 2.9,
+       "tolerance": 8,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
        "tolerance": 14,
        "pass": true
       },
@@ -2338,18 +2351,6 @@
        "palette": "timber_sooted",
        "dE76": 1.5,
        "tolerance": 12,
-       "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w1",
-       "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
-       ],
-       "palette": "timber_weathered",
-       "dE76": 2.6,
-       "tolerance": 14,
        "pass": true
       }
      ]
@@ -2389,9 +2390,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -2500,7 +2501,8 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w1": true,
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true
      }
     },
     {
@@ -2521,14 +2523,26 @@
        "pass": true
       },
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.8,
-        74.8,
-        66.1
+        153.5,
+        124.7,
+        65.9
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
+       "palette": "firewood_end",
+       "dE76": 2.9,
+       "tolerance": 8,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
        "tolerance": 14,
        "pass": true
       },
@@ -2542,18 +2556,6 @@
        "palette": "timber_sooted",
        "dE76": 1.5,
        "tolerance": 12,
-       "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w1",
-       "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
-       ],
-       "palette": "timber_weathered",
-       "dE76": 2.6,
-       "tolerance": 14,
        "pass": true
       }
      ]
@@ -2593,9 +2595,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -2701,7 +2703,8 @@
      "pass": true,
      "detail": {
       "jp_m_straw_tawara_w1": true,
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true
      }
     },
     {
@@ -2722,14 +2725,26 @@
        "pass": true
       },
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.8,
-        74.8,
-        66.1
+        153.5,
+        124.7,
+        65.9
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
+       "palette": "firewood_end",
+       "dE76": 2.9,
+       "tolerance": 8,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
        "tolerance": 14,
        "pass": true
       },
@@ -2743,18 +2758,6 @@
        "palette": "timber_sooted",
        "dE76": 1.5,
        "tolerance": 12,
-       "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w1",
-       "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
-       ],
-       "palette": "timber_weathered",
-       "dE76": 2.6,
-       "tolerance": 14,
        "pass": true
       }
      ]
@@ -2794,9 +2797,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -2902,7 +2905,8 @@
      "pass": true,
      "detail": {
       "jp_m_straw_tawara_w1": true,
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true
      }
     },
     {
@@ -2923,14 +2927,26 @@
        "pass": true
       },
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.8,
-        74.8,
-        66.1
+        153.5,
+        124.7,
+        65.9
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
+       "palette": "firewood_end",
+       "dE76": 2.9,
+       "tolerance": 8,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
        "tolerance": 14,
        "pass": true
       },
@@ -2944,18 +2960,6 @@
        "palette": "timber_sooted",
        "dE76": 1.5,
        "tolerance": 12,
-       "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w1",
-       "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
-       ],
-       "palette": "timber_weathered",
-       "dE76": 2.6,
-       "tolerance": 14,
        "pass": true
       }
      ]
@@ -10112,7 +10116,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
-       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w1.rvmat",
+       "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat"
       ],
       "bad": []
@@ -10229,7 +10233,7 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_bamboo_weave_w1": true,
+      "jp_m_wicker_aged_w1": true,
       "jp_m_straw_rope_w1": true
      }
     },
@@ -10251,15 +10255,15 @@
        "pass": true
       },
       {
-       "material": "jp_m_bamboo_weave_w1",
+       "material": "jp_m_wicker_aged_w1",
        "mean_srgb": [
-        163.6,
-        151.7,
-        140.8
+        137.0,
+        110.0,
+        86.0
        ],
-       "palette": "bamboo_weathered",
-       "dE76": 2.0,
-       "tolerance": 14,
+       "palette": "wicker_aged",
+       "dE76": 0.0,
+       "tolerance": 12,
        "pass": true
       },
       {
@@ -10311,7 +10315,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
-       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w1.rvmat",
+       "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat"
       ],
       "bad": []
@@ -10428,7 +10432,7 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_bamboo_weave_w1": true,
+      "jp_m_wicker_aged_w1": true,
       "jp_m_straw_rope_w1": true
      }
     },
@@ -10450,15 +10454,15 @@
        "pass": true
       },
       {
-       "material": "jp_m_bamboo_weave_w1",
+       "material": "jp_m_wicker_aged_w1",
        "mean_srgb": [
-        163.6,
-        151.7,
-        140.8
+        137.0,
+        110.0,
+        86.0
        ],
-       "palette": "bamboo_weathered",
-       "dE76": 2.0,
-       "tolerance": 14,
+       "palette": "wicker_aged",
+       "dE76": 0.0,
+       "tolerance": 12,
        "pass": true
       },
       {
@@ -10510,8 +10514,8 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
-       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w1.rvmat",
-       "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w2.rvmat",
+       "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w1.rvmat",
+       "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w2.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w2.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w2.rvmat"
       ],
@@ -10629,8 +10633,8 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_bamboo_weave_w1": true,
-      "jp_m_bamboo_weave_w2": true,
+      "jp_m_wicker_aged_w1": true,
+      "jp_m_wicker_aged_w2": true,
       "jp_m_textile_cotton_indigo_w2": true,
       "jp_m_textile_cotton_plain_w2": true
      }
@@ -10653,27 +10657,27 @@
        "pass": true
       },
       {
-       "material": "jp_m_bamboo_weave_w1",
+       "material": "jp_m_wicker_aged_w1",
        "mean_srgb": [
-        163.6,
-        151.7,
-        140.8
+        137.0,
+        110.0,
+        86.0
        ],
-       "palette": "bamboo_weathered",
-       "dE76": 2.0,
-       "tolerance": 14,
+       "palette": "wicker_aged",
+       "dE76": 0.0,
+       "tolerance": 12,
        "pass": true
       },
       {
-       "material": "jp_m_bamboo_weave_w2",
+       "material": "jp_m_wicker_aged_w2",
        "mean_srgb": [
-        149.1,
-        137.5,
-        126.9
+        119.6,
+        95.8,
+        75.8
        ],
-       "palette": "bamboo_weathered",
-       "dE76": 7.4,
-       "tolerance": 14,
+       "palette": "wicker_aged",
+       "dE76": 6.4,
+       "tolerance": 12,
        "pass": true
       },
       {

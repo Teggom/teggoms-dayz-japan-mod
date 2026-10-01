@@ -79,11 +79,29 @@ Convert model P:\JP\site\grave\jp_s_grave_stones_round.p3d -> D:\DayZ-Server_AI-
 Convert model P:\JP\site\grave\jp_s_grave_stones_round_s_plain.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_round_s_plain.p3d
 <model = "P:\JP\site\grave\jp_s_grave_stones_round_s_plain.p3d">
 </model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_ab_bohyo_lean.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_ab_bohyo_lean.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_ab_bohyo_lean.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_ab_bohyo_rotted.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_ab_bohyo_rotted.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_ab_bohyo_rotted.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_ab_bohyo_split.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_ab_bohyo_split.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_ab_bohyo_split.p3d">
+</model>
 Convert model P:\JP\site\grave\jp_s_grave_wood_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_ab_fallen.p3d
 <model = "P:\JP\site\grave\jp_s_grave_wood_ab_fallen.p3d">
 </model>
 Convert model P:\JP\site\grave\jp_s_grave_wood_bohyo.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_bohyo.p3d
 <model = "P:\JP\site\grave\jp_s_grave_wood_bohyo.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_bohyo_new.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_bohyo_new.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_bohyo_new.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_bohyo_roof.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_bohyo_roof.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_bohyo_roof.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_bohyo_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_bohyo_s.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_bohyo_s.p3d">
 </model>
 Convert model P:\JP\site\grave\jp_s_grave_wood_bucket_rack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_bucket_rack.p3d
 <model = "P:\JP\site\grave\jp_s_grave_wood_bucket_rack.p3d">
@@ -151,8 +169,14 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_pillar.p3d:
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_pillar_pointed.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_round.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_round_s_plain.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_ab_bohyo_lean.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_ab_bohyo_rotted.p3d: 0.00,-0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_ab_bohyo_split.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_ab_fallen.p3d: 0.02,0.47
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_bohyo.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_bohyo_new.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_bohyo_roof.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_bohyo_s.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_bucket_rack.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_incense.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_rack.p3d: 0.00,0.00
@@ -922,7 +946,7 @@ Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory requir
 Warning: Terrain grid 0.5 will be too slow, should use 3.1
 Convert model P:\JP\site\yard\jp_s_firewood_stack_ab_collapsed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_ab_collapsed.p3d
 <model = "P:\JP\site\yard\jp_s_firewood_stack_ab_collapsed.p3d">
-UV mapping too varied on jp\common\materials\wood\jp_m_wood_endgrain_w2_co.paa, stage 0: texel size used 0.000907971, max 0.00195346, min 0.000178513
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_endgrain_firewood_w2_co.paa, stage 0: texel size used 0.000907971, max 0.00195346, min 0.000178513
 </model>
 Convert model P:\JP\site\yard\jp_s_firewood_stack_bundle.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_firewood_stack_bundle.p3d
 <model = "P:\JP\site\yard\jp_s_firewood_stack_bundle.p3d">

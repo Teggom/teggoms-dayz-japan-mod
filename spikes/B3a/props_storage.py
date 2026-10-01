@@ -10,7 +10,7 @@ import fkit
 import bits
 import tansu
 from fkit import (core, box, prism, ngon, sheet, lathe, xf, xfs, flat_poly, W, col, cyl_col, board, FPart, rest,
-                  WOOD, IRON, DARK, PALE, TAWARA, MUSHIRO, PAPER, INDIGO, KINARI, LACQUER, WEAVE, LITTER)
+                  WOOD, IRON, DARK, PALE, TAWARA, MUSHIRO, PAPER, INDIGO, KINARI, LACQUER, WEAVE, LITTER, WICKER)
 from bits import disc, shards, stain, rope_ring, mound, pillow
 
 CAT = "storage"
@@ -124,16 +124,16 @@ KW, KD, KH = 0.60, 0.40, 0.30
 def kori_parts(lid_on=True, wear=None, lod2=True):
     """Wicker trunk: a woven base 0.58 x 0.38 x 0.27 (open box), a lid 0.60 x 0.40 x 0.12 over it, cord ties."""
     w, d, h, t = KW - 0.02, KD - 0.02, 0.27, 0.012
-    out = [W(-w / 2, w / 2, 0.0, t, -d / 2, d / 2, WEAVE, vis=(1,)),
-           W(-w / 2, w / 2, 0.0, h, d / 2 - t, d / 2, WEAVE, vis=(1,)),
-           W(-w / 2, w / 2, 0.0, h, -d / 2, -d / 2 + t, WEAVE, vis=(1,)),
-           W(-w / 2, -w / 2 + t, 0.0, h, -d / 2 + t, d / 2 - t, WEAVE, vis=(1,)),
-           W(w / 2 - t, w / 2, 0.0, h, -d / 2 + t, d / 2 - t, WEAVE, vis=(1,))]
-    lid = [W(-KW / 2, KW / 2, KH - 0.012, KH, -KD / 2, KD / 2, WEAVE, vis=(1,)),
-           W(-KW / 2, KW / 2, KH - 0.12, KH, KD / 2 - 0.01, KD / 2, WEAVE, vis=(1,)),
-           W(-KW / 2, KW / 2, KH - 0.12, KH, -KD / 2, -KD / 2 + 0.01, WEAVE, vis=(1,)),
-           W(-KW / 2, -KW / 2 + 0.01, KH - 0.12, KH, -KD / 2 + 0.01, KD / 2 - 0.01, WEAVE, vis=(1,)),
-           W(KW / 2 - 0.01, KW / 2, KH - 0.12, KH, -KD / 2 + 0.01, KD / 2 - 0.01, WEAVE, vis=(1,))]
+    out = [W(-w / 2, w / 2, 0.0, t, -d / 2, d / 2, WICKER, vis=(1,)),
+           W(-w / 2, w / 2, 0.0, h, d / 2 - t, d / 2, WICKER, vis=(1,)),
+           W(-w / 2, w / 2, 0.0, h, -d / 2, -d / 2 + t, WICKER, vis=(1,)),
+           W(-w / 2, -w / 2 + t, 0.0, h, -d / 2 + t, d / 2 - t, WICKER, vis=(1,)),
+           W(w / 2 - t, w / 2, 0.0, h, -d / 2 + t, d / 2 - t, WICKER, vis=(1,))]
+    lid = [W(-KW / 2, KW / 2, KH - 0.012, KH, -KD / 2, KD / 2, WICKER, vis=(1,)),
+           W(-KW / 2, KW / 2, KH - 0.12, KH, KD / 2 - 0.01, KD / 2, WICKER, vis=(1,)),
+           W(-KW / 2, KW / 2, KH - 0.12, KH, -KD / 2, -KD / 2 + 0.01, WICKER, vis=(1,)),
+           W(-KW / 2, -KW / 2 + 0.01, KH - 0.12, KH, -KD / 2 + 0.01, KD / 2 - 0.01, WICKER, vis=(1,)),
+           W(KW / 2 - 0.01, KW / 2, KH - 0.12, KH, -KD / 2 + 0.01, KD / 2 - 0.01, WICKER, vis=(1,))]
     # rim bindings (darker bamboo edge strips) on the lid
     lid.append(W(-KW / 2 - 0.003, KW / 2 + 0.003, KH - 0.125, KH - 0.105, -KD / 2 - 0.003, KD / 2 + 0.003,
                  fkit.HOOP, vis=(1,)))
@@ -143,7 +143,7 @@ def kori_parts(lid_on=True, wear=None, lod2=True):
         cords.append(W(x - 0.008, x + 0.008, 0.0, KH + 0.006, KD / 2, KD / 2 + 0.006, ROPE, vis=(1,)))
     res = out + ((lid + cords) if lid_on else [])
     if lod2:
-        res.append(W(-KW / 2, KW / 2, 0.0, KH if lid_on else h, -KD / 2, KD / 2, WEAVE, vis=(2,)))
+        res.append(W(-KW / 2, KW / 2, 0.0, KH if lid_on else h, -KD / 2, KD / 2, WICKER, vis=(2,)))
     for s in res:
         if wear:
             s.wear = wear
@@ -163,7 +163,7 @@ def kori(state="1"):
         top, _ = kori_parts()
         add_all(P, xfs(top, ry=6.0, t=(0.02, KH, -0.01)))
         P.add(col(-KW / 2, KW / 2, 0.0, KH, -KD / 2, KD / 2))
-        P.add(fkit.col_solid(xf(box(-KW / 2, KW / 2, 0.0, KH, -KD / 2, KD / 2, WEAVE), ry=6.0, t=(0.02, KH, -0.01))))
+        P.add(fkit.col_solid(xf(box(-KW / 2, KW / 2, 0.0, KH, -KD / 2, KD / 2, WICKER), ry=6.0, t=(0.02, KH, -0.01))))
         P.loot_rect("lid", 2 * KH, -0.2, 0.2, -0.12, 0.12, rng=0.2, points=[(0.02, 2 * KH, -0.01)])
     else:
         ss, lid = kori_parts(lid_on=False, wear="_w2")

@@ -523,7 +523,8 @@ def kanto(name=None, form="yosemune", ridge="bamboo", stable=False, doma="left",
     pit = _irori(S, "hiroma", 3.0 * KEN, -D / 2, False, FLOOR, K["levels"])
     B.merge(FL.boards("hiroma", XR + A_, XD - 0.06, -D + A_, -A_, FLOOR, holes=[pit + ("pit",)],
                       hole_fn=PI.pit_fn("irori"), mats=BOARDS_ROUGH))
-    B.merge(FL.tatami("dei", A_, XR - A_, ZS + A_, -A_, top=FLOOR, base=0.0, mats=FL.MATS_TATAMI_B1))
+    # M1 (2026-09-30): brown (cha) heri in the T2 farmhouse best room (A2 BUILD_LIST "Heri colour")
+    B.merge(FL.tatami("dei", A_, XR - A_, ZS + A_, -A_, top=FLOOR, base=0.0, mats=FL.MATS_TATAMI_CHA))
     B.merge(FL.boards("nando", A_, XR - A_, -D + A_, ZS - A_, FLOOR, mats=BOARDS_ROUGH))
     B.interior = False
     F_K = (-90.0, (XD, 0.0, 0.0))                            # kamachi: local x = -z, local +z -> +x (the doma)
@@ -670,7 +671,8 @@ def kinai(name=None, form="kirizuma", lower="tile", takahe=False, doma="right", 
     B.merge(FL.boards("daidokoro", XN + 0.06, XM - A_, -D + A_, ZS - A_, FLOOR, holes=[pit + ("pit",)],
                       hole_fn=PI.pit_fn("irori"), mats=BOARDS_ROUGH))
     B.merge(FL.boards("mise", XN + 0.06, XM - A_, ZS + A_, -A_, FLOOR, mats=BOARDS_ROUGH))
-    B.merge(FL.tatami("zashiki", XM + A_, W - A_, ZS + A_, -A_, top=FLOOR, base=0.0, mats=FL.MATS_TATAMI_B1))
+    # M1 (2026-09-30): brown (cha) heri in the T2 farmhouse best room (A2 BUILD_LIST "Heri colour")
+    B.merge(FL.tatami("zashiki", XM + A_, W - A_, ZS + A_, -A_, top=FLOOR, base=0.0, mats=FL.MATS_TATAMI_CHA))
     B.merge(FL.boards("nando", XM + A_, W - A_, -D + A_, ZS - A_, FLOOR, mats=BOARDS_ROUGH))
     B.interior = False
     F_K = (90.0, (XN, 0.0, -D))                  # kamachi x = XN: lx = z + D, local +z -> -x (the niwa)

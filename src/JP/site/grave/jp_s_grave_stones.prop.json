@@ -64,7 +64,7 @@
  "notes": [
   "1730 mix for the placement agent (W2_ERA): board 30 %, boat-halo 25 %, round 12 %, field stones / mounds 15 %, child Jizo 5 %, square pillar 5 %, gorinto / hokyointo 8 %",
   "irregular rows: 0.9 m plot grid jittered +-0.15 m and +-12 deg, mixed heights, gaps",
-  "inscriptions: two posthumous names (1705, 1724) from the carved-text atlas, cropped for variety; no family-name stones (Meiji)",
+  "inscriptions (M1): a posthumous name and date per stone from jp_m_decal_carved_text_grave (1670-1729: -shinji / -shinnyo, -zenjomon / -zenjoni, -doji, shaku-, kigen / enjaku prefixes) + B1's two; no family-name stones (Meiji); gorinto / hokyointo stay blank (no Siddham font for the seed syllables)",
   "abandoned share: about 1 stone in 4 leaning / sunk / broken"
  ],
  "models": [
@@ -108,7 +108,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_joshin_shinji_genroku8"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -130,7 +130,7 @@
    "notes": [],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_joshin_shinji_genroku8"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_board.p3d"
@@ -175,7 +175,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_shakuni_myoshin"
+    "decal_carved_text_grave:kaimyo_myotei_shinnyo_hoei4"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -197,7 +197,7 @@
    "notes": [],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_shakuni_myoshin"
+    "decal_carved_text_grave:kaimyo_myotei_shinnyo_hoei4"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_board_s.p3d"
@@ -242,7 +242,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_shakuni_myoshin"
+    "decal_carved_text_grave:kaimyo_myoju_zenjoni_kanbun10"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -264,7 +264,7 @@
    "notes": [],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_shakuni_myoshin"
+    "decal_carved_text_grave:kaimyo_myoju_zenjoni_kanbun10"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_board_tall_moss.p3d"
@@ -309,7 +309,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_kigen_dokaku_shinji_genroku11"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -331,7 +331,7 @@
    "notes": [],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_kigen_dokaku_shinji_genroku11"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_boat_halo.p3d"
@@ -342,12 +342,12 @@
    "variant": "boat_halo_child",
    "state": "intact",
    "abandoned": false,
-   "display": "Small boat-halo stone (a child's grave), no inscription",
+   "display": "Small boat-halo stone (a child's grave), the child's name",
    "anchor": "floor",
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 164,
+    "Resolution 1": 165,
     "Resolution 2": 17,
     "Geometry": 17,
     "View Geometry": 17,
@@ -375,7 +375,9 @@
    "roadway": false,
    "mass_kg": 200.0,
    "well": false,
-   "text_cells": [],
+   "text_cells": [
+    "decal_carved_text_grave:kaimyo_shunko_doji_kyoho5"
+   ],
    "loot_surfaces": [],
    "dims": [
     {
@@ -395,7 +397,9 @@
    ],
    "notes": [],
    "plot_grid_m": 0.9,
-   "inscription": null,
+   "inscription": [
+    "decal_carved_text_grave:kaimyo_shunko_doji_kyoho5"
+   ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_boat_halo_child.p3d"
   },
@@ -439,7 +443,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_ryozen_shinji_kyoho14"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -454,7 +458,7 @@
    "notes": [],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_ryozen_shinji_kyoho14"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_round.p3d"
@@ -555,7 +559,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_hozan_zenjomon_shotoku1"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -579,7 +583,7 @@
    ],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_hozan_zenjomon_shotoku1"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_pillar.p3d"
@@ -624,7 +628,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_chisei_shinnyo_kyoho10"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -648,7 +652,7 @@
    ],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_chisei_shinnyo_kyoho10"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_pillar_pointed.p3d"
@@ -1068,7 +1072,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 135,
+    "Resolution 1": 139,
     "Resolution 2": 59,
     "Geometry": 27,
     "View Geometry": 27,
@@ -1108,7 +1112,7 @@
     }
    ],
    "notes": [
-    "the mound is turned earth under leaves; no collision on it (walk over)"
+    "the mound is bare earth (M1: jp_m_ground_earth_bare) with a little litter; no collision on it (walk over)"
    ],
    "plot_grid_m": 0.9,
    "inscription": null,
@@ -1211,7 +1215,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_soen_zenjomon_enpo6"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -1235,7 +1239,7 @@
    ],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_doshin_shinji"
+    "decal_carved_text_grave:kaimyo_soen_zenjomon_enpo6"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_leaning.p3d"
@@ -1347,7 +1351,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_shakuni_myoshin"
+    "decal_carved_text_grave:kaimyo_enjaku_myosho_shinnyo_kyoho12"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -1371,7 +1375,7 @@
    ],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_shakuni_myoshin"
+    "decal_carved_text_grave:kaimyo_enjaku_myosho_shinnyo_kyoho12"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_boat_halo_sunk.p3d"
@@ -1416,7 +1420,7 @@
    "mass_kg": 200.0,
    "well": false,
    "text_cells": [
-    "decal_carved_text:grave_shakuni_myoshin"
+    "decal_carved_text_grave:kaimyo_shaku_ryonen_kyoho8"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -1433,7 +1437,7 @@
    ],
    "plot_grid_m": 0.9,
    "inscription": [
-    "decal_carved_text:grave_shakuni_myoshin"
+    "decal_carved_text_grave:kaimyo_shaku_ryonen_kyoho8"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_round_lean.p3d"

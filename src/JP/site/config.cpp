@@ -1235,7 +1235,7 @@ class CfgVehicles
 	class StaticObj_JP_S_Grave_Stones_Boat_Halo_Child: HouseNoDestruct
 	{
 		scope=1;
-		displayName="Small boat-halo stone (a child's grave), no inscription";
+		displayName="Small boat-halo stone (a child's grave), the child's name";
 		model="\JP\site\grave\jp_s_grave_stones_boat_halo_child.p3d";
 	};
 	class StaticObj_JP_S_Grave_Stones_Round: HouseNoDestruct

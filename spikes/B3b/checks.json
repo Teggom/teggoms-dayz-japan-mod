@@ -1212,9 +1212,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -1334,7 +1334,8 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w1": true,
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w2": true
      }
     },
     {
@@ -1356,14 +1357,27 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.9,
-        74.9,
-        66.2
+        153.8,
+        125.0,
+        66.0
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
+       "palette": "firewood_end",
+       "dE76": 2.8,
+       "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w2",
+       "mean_srgb": [
+        95.3,
+        83.1,
+        55.9
+       ],
+       "palette": "firewood_split",
+       "dE76": 5.1,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -1379,19 +1393,6 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w2",
-       "mean_srgb": [
-        97.0,
-        71.4,
-        62.9
-       ],
-       "palette": "timber_weathered",
-       "dE76": 7.3,
-       "tolerance": 14,
-       "pass": true,
-       "masked": true
       }
      ]
     },
@@ -1436,9 +1437,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -1558,7 +1559,8 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w1": true,
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w2": true
      }
     },
     {
@@ -1580,14 +1582,27 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.9,
-        74.9,
-        66.2
+        153.8,
+        125.0,
+        66.0
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
+       "palette": "firewood_end",
+       "dE76": 2.8,
+       "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w2",
+       "mean_srgb": [
+        95.3,
+        83.1,
+        55.9
+       ],
+       "palette": "firewood_split",
+       "dE76": 5.1,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -1603,19 +1618,6 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w2",
-       "mean_srgb": [
-        97.0,
-        71.4,
-        62.9
-       ],
-       "palette": "timber_weathered",
-       "dE76": 7.3,
-       "tolerance": 14,
-       "pass": true,
-       "masked": true
       }
      ]
     },
@@ -1660,9 +1662,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -1782,7 +1784,8 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w1": true,
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w2": true
      }
     },
     {
@@ -1804,14 +1807,27 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.9,
-        74.9,
-        66.2
+        153.8,
+        125.0,
+        66.0
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
+       "palette": "firewood_end",
+       "dE76": 2.8,
+       "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w2",
+       "mean_srgb": [
+        95.3,
+        83.1,
+        55.9
+       ],
+       "palette": "firewood_split",
+       "dE76": 5.1,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -1827,19 +1843,6 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w2",
-       "mean_srgb": [
-        97.0,
-        71.4,
-        62.9
-       ],
-       "palette": "timber_weathered",
-       "dE76": 7.3,
-       "tolerance": 14,
-       "pass": true,
-       "masked": true
       }
      ]
     },
@@ -1883,11 +1886,12 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
      }
@@ -2004,7 +2008,9 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true,
+      "jp_m_wood_firewood_w2": true
      }
     },
     {
@@ -2013,14 +2019,39 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.9,
-        74.9,
-        66.2
+        153.8,
+        125.0,
+        66.0
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
+       "palette": "firewood_end",
+       "dE76": 2.8,
+       "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w2",
+       "mean_srgb": [
+        95.3,
+        83.1,
+        55.9
+       ],
+       "palette": "firewood_split",
+       "dE76": 5.1,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -2060,19 +2091,6 @@
        "dE76": 2.6,
        "tolerance": 14,
        "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w2",
-       "mean_srgb": [
-        97.0,
-        71.4,
-        62.9
-       ],
-       "palette": "timber_weathered",
-       "dE76": 7.3,
-       "tolerance": 14,
-       "pass": true,
-       "masked": true
       }
      ]
     },
@@ -2118,9 +2136,9 @@
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -2233,7 +2251,8 @@
      "detail": {
       "jp_m_decal_litter_w2": true,
       "jp_m_straw_rope_w1": true,
-      "jp_m_wood_endgrain_w1": true
+      "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true
      }
     },
     {
@@ -2267,17 +2286,29 @@
        "pass": true
       },
       {
-       "material": "jp_m_wood_endgrain_w1",
+       "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        103.9,
-        74.9,
-        66.2
+        153.8,
+        125.0,
+        66.0
        ],
-       "palette": "timber_weathered",
-       "dE76": 4.9,
-       "tolerance": 14,
+       "palette": "firewood_end",
+       "dE76": 2.8,
+       "tolerance": 8,
        "pass": true,
        "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
       },
       {
        "material": "jp_m_wood_sooted_w2",
@@ -2289,18 +2320,6 @@
        "palette": "timber_sooted",
        "dE76": 1.5,
        "tolerance": 12,
-       "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w1",
-       "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
-       ],
-       "palette": "timber_weathered",
-       "dE76": 2.6,
-       "tolerance": 14,
        "pass": true
       }
      ]
@@ -2346,9 +2365,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
      }
@@ -2468,7 +2487,8 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_wood_endgrain_w2": true
+      "jp_m_wood_endgrain_firewood_w2": true,
+      "jp_m_wood_firewood_w2": true
      }
     },
     {
@@ -2490,14 +2510,27 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_endgrain_w2",
+       "material": "jp_m_wood_endgrain_firewood_w2",
        "mean_srgb": [
-        89.6,
-        64.5,
-        56.1
+        148.0,
+        120.0,
+        63.1
        ],
-       "palette": "timber_weathered",
-       "dE76": 9.8,
+       "palette": "firewood_end",
+       "dE76": 5.0,
+       "tolerance": 8,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w2",
+       "mean_srgb": [
+        95.3,
+        83.1,
+        55.9
+       ],
+       "palette": "firewood_split",
+       "dE76": 5.1,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -2513,19 +2546,6 @@
        "dE76": 1.5,
        "tolerance": 12,
        "pass": true
-      },
-      {
-       "material": "jp_m_wood_weathered_w2",
-       "mean_srgb": [
-        97.0,
-        71.4,
-        62.9
-       ],
-       "palette": "timber_weathered",
-       "dE76": 7.3,
-       "tolerance": 14,
-       "pass": true,
-       "masked": true
       }
      ]
     },
@@ -40971,7 +40991,7 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
@@ -41082,7 +41102,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_stone_carved_w1": true
      }
@@ -41093,14 +41113,14 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_decal_carved_text_w1",
+       "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        60.5,
-        58.2,
-        51.9
+        61.2,
+        58.9,
+        52.4
        ],
        "palette": "stone_lantern",
-       "dE76": 5.3,
+       "dE76": 5.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41172,7 +41192,7 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
@@ -41283,7 +41303,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_stone_carved_w1": true
      }
@@ -41294,14 +41314,14 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_decal_carved_text_w1",
+       "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        60.5,
-        58.2,
-        51.9
+        61.2,
+        58.9,
+        52.4
        ],
        "palette": "stone_lantern",
-       "dE76": 5.3,
+       "dE76": 5.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41373,7 +41393,7 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
@@ -41485,7 +41505,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_decal_carved_text_w2": true,
+      "jp_m_decal_carved_text_grave_w2": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w2": true
@@ -41497,14 +41517,14 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_decal_carved_text_w2",
+       "material": "jp_m_decal_carved_text_grave_w2",
        "mean_srgb": [
-        55.9,
-        53.7,
-        47.4
+        56.7,
+        54.4,
+        47.9
        ],
        "palette": "stone_lantern",
-       "dE76": 7.3,
+       "dE76": 7.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41589,7 +41609,7 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
@@ -41700,7 +41720,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_stone_carved_w1": true
      }
@@ -41711,14 +41731,14 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_decal_carved_text_w1",
+       "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        60.5,
-        58.2,
-        51.9
+        61.2,
+        58.9,
+        52.4
        ],
        "palette": "stone_lantern",
-       "dE76": 5.3,
+       "dE76": 5.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41765,7 +41785,7 @@
    "variant": "boat_halo_child",
    "pass": true,
    "faces": {
-    "Resolution 1": 164,
+    "Resolution 1": 165,
     "Resolution 2": 17,
     "Geometry": 17,
     "View Geometry": 17,
@@ -41790,6 +41810,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
@@ -41811,7 +41832,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 164,
+       "Resolution 1": 165,
        "Resolution 2": 17,
        "Geometry": 17,
        "View Geometry": 17,
@@ -41900,6 +41921,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_stone_carved_w1": true
      }
@@ -41909,6 +41931,19 @@
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_decal_carved_text_grave_w1",
+       "mean_srgb": [
+        61.2,
+        58.9,
+        52.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
       {
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
@@ -41938,7 +41973,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "name": "text decals face out of their host and read left to right in game (1 faces)",
      "pass": true,
      "detail": []
     }
@@ -41976,7 +42011,7 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat"
@@ -42080,7 +42115,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_stone_carved_w1": true
      }
@@ -42091,14 +42126,14 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_decal_carved_text_w1",
+       "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        60.5,
-        58.2,
-        51.9
+        61.2,
+        58.9,
+        52.4
        ],
        "palette": "stone_lantern",
-       "dE76": 5.3,
+       "dE76": 5.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42361,7 +42396,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat"
@@ -42474,7 +42509,7 @@
      "pass": true,
      "detail": {
       "jp_m_ground_leaf_litter_w2": true,
-      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_stone_carved_w1": true
      }
@@ -42497,14 +42532,14 @@
        "pass": true
       },
       {
-       "material": "jp_m_decal_carved_text_w1",
+       "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        60.5,
-        58.2,
-        51.9
+        61.2,
+        58.9,
+        52.4
        ],
        "palette": "stone_lantern",
-       "dE76": 5.3,
+       "dE76": 5.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42589,7 +42624,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat"
@@ -42702,7 +42737,7 @@
      "pass": true,
      "detail": {
       "jp_m_ground_leaf_litter_w2": true,
-      "jp_m_decal_carved_text_w1": true,
+      "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_stone_carved_w1": true
      }
@@ -42725,14 +42760,14 @@
        "pass": true
       },
       {
-       "material": "jp_m_decal_carved_text_w1",
+       "material": "jp_m_decal_carved_text_grave_w1",
        "mean_srgb": [
-        60.5,
-        58.2,
-        51.9
+        61.2,
+        58.9,
+        52.4
        ],
        "palette": "stone_lantern",
-       "dE76": 5.3,
+       "dE76": 5.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -44178,7 +44213,7 @@
    "variant": "field_mound",
    "pass": true,
    "faces": {
-    "Resolution 1": 135,
+    "Resolution 1": 139,
     "Resolution 2": 59,
     "Geometry": 27,
     "View Geometry": 27,
@@ -44203,7 +44238,8 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_field_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat"
       ],
@@ -44225,7 +44261,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 135,
+       "Resolution 1": 139,
        "Resolution 2": 59,
        "Geometry": 27,
        "View Geometry": 27,
@@ -44306,7 +44342,8 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_ground_leaf_litter_w1": true
+      "jp_m_decal_litter_w2": true,
+      "jp_m_ground_earth_bare_w1": true
      }
     },
     {
@@ -44315,13 +44352,26 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_ground_leaf_litter_w1",
+       "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        112.0,
-        76.0,
-        52.0
+        97.8,
+        83.4,
+        65.5
        ],
-       "palette": "leaf_litter_autumn",
+       "palette": "grime_splash",
+       "dE76": 2.4,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_earth_bare_w1",
+       "mean_srgb": [
+        148.0,
+        130.0,
+        108.0
+       ],
+       "palette": "earth_bare",
        "dE76": 0.0,
        "tolerance": 14,
        "pass": true
@@ -44601,7 +44651,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
       ],
@@ -44716,7 +44766,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_decal_carved_text_w2": true,
+      "jp_m_decal_carved_text_grave_w2": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w2": true
      }
@@ -44740,14 +44790,14 @@
        "masked": true
       },
       {
-       "material": "jp_m_decal_carved_text_w2",
+       "material": "jp_m_decal_carved_text_grave_w2",
        "mean_srgb": [
-        55.9,
-        53.7,
-        47.4
+        56.7,
+        54.4,
+        47.9
        ],
        "palette": "stone_lantern",
-       "dE76": 7.3,
+       "dE76": 7.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45038,7 +45088,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
       ],
@@ -45153,7 +45203,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_decal_carved_text_w2": true,
+      "jp_m_decal_carved_text_grave_w2": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w2": true
      }
@@ -45177,14 +45227,14 @@
        "masked": true
       },
       {
-       "material": "jp_m_decal_carved_text_w2",
+       "material": "jp_m_decal_carved_text_grave_w2",
        "mean_srgb": [
-        55.9,
-        53.7,
-        47.4
+        56.7,
+        54.4,
+        47.9
        ],
        "palette": "stone_lantern",
-       "dE76": 7.3,
+       "dE76": 7.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45258,7 +45308,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_cut_w2.rvmat"
@@ -45366,7 +45416,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_decal_carved_text_w2": true,
+      "jp_m_decal_carved_text_grave_w2": true,
       "jp_m_decal_moss_w2": true,
       "jp_m_stone_carved_w2": true
      }
@@ -45390,14 +45440,14 @@
        "masked": true
       },
       {
-       "material": "jp_m_decal_carved_text_w2",
+       "material": "jp_m_decal_carved_text_grave_w2",
        "mean_srgb": [
-        55.9,
-        53.7,
-        47.4
+        56.7,
+        54.4,
+        47.9
        ],
        "palette": "stone_lantern",
-       "dE76": 7.3,
+       "dE76": 7.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -46809,7 +46859,7 @@
    "variant": "bohyo",
    "pass": true,
    "faces": {
-    "Resolution 1": 104,
+    "Resolution 1": 105,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -46835,10 +46885,10 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
-       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_silver_w1.rvmat"
       ],
       "bad": []
      }
@@ -46858,7 +46908,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 104,
+       "Resolution 1": 105,
        "Resolution 2": 38,
        "Geometry": 6,
        "View Geometry": 6,
@@ -46940,8 +46990,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_ground_leaf_litter_w1": true,
-      "jp_m_decal_sumi_text_w2": true
+      "jp_m_ground_earth_bare_w1": true,
+      "jp_m_decal_sumi_text_grave_w2": true,
+      "jp_m_wood_silver_w1": true
      }
     },
     {
@@ -46963,19 +47014,19 @@
        "masked": true
       },
       {
-       "material": "jp_m_ground_leaf_litter_w1",
+       "material": "jp_m_ground_earth_bare_w1",
        "mean_srgb": [
-        112.0,
-        76.0,
-        52.0
+        148.0,
+        130.0,
+        108.0
        ],
-       "palette": "leaf_litter_autumn",
+       "palette": "earth_bare",
        "dE76": 0.0,
        "tolerance": 14,
        "pass": true
       },
       {
-       "material": "jp_m_decal_sumi_text_w2",
+       "material": "jp_m_decal_sumi_text_grave_w2",
        "mean_srgb": [
         NaN,
         NaN,
@@ -47000,14 +47051,14 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_weathered_w2",
+       "material": "jp_m_wood_silver_w1",
        "mean_srgb": [
-        97.0,
-        71.4,
-        62.9
+        115.7,
+        114.5,
+        109.2
        ],
-       "palette": "timber_weathered",
-       "dE76": 7.3,
+       "palette": "wood_silver_grey",
+       "dE76": 4.2,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -47016,7 +47067,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "name": "text decals face out of their host and read left to right in game (2 faces)",
      "pass": true,
      "detail": []
     }
@@ -47191,7 +47242,7 @@
    "variant": "bohyo_new",
    "pass": true,
    "faces": {
-    "Resolution 1": 47,
+    "Resolution 1": 48,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -47217,9 +47268,9 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w0.rvmat",
-       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w0.rvmat"
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w0.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_grave_w0.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_new_w0.rvmat"
       ],
       "bad": []
      }
@@ -47239,7 +47290,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 47,
+       "Resolution 1": 48,
        "Resolution 2": 38,
        "Geometry": 6,
        "View Geometry": 6,
@@ -47321,8 +47372,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_ground_leaf_litter_w0": true,
-      "jp_m_decal_sumi_text_w1": true
+      "jp_m_ground_earth_bare_w0": true,
+      "jp_m_decal_sumi_text_grave_w0": true,
+      "jp_m_wood_new_w0": true
      }
     },
     {
@@ -47344,46 +47396,46 @@
        "masked": true
       },
       {
-       "material": "jp_m_ground_leaf_litter_w0",
+       "material": "jp_m_ground_earth_bare_w0",
        "mean_srgb": [
-        126.4,
-        80.3,
-        52.3
+        127.0,
+        106.7,
+        82.7
        ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 6.4,
+       "palette": "earth_bare",
+       "dE76": 9.3,
        "tolerance": 14,
        "pass": true
       },
       {
-       "material": "jp_m_decal_sumi_text_w1",
+       "material": "jp_m_decal_sumi_text_grave_w0",
        "mean_srgb": [
-        74.4,
-        66.7,
-        60.4
+        48.7,
+        48.7,
+        48.7
        ],
        "palette": "sumi_black",
-       "dE76": 9.0,
+       "dE76": 1.5,
        "tolerance": 10,
        "pass": true
       },
       {
-       "material": "jp_m_wood_weathered_w0",
+       "material": "jp_m_wood_new_w0",
        "mean_srgb": [
-        125.7,
-        86.0,
-        72.9
+        176.9,
+        151.3,
+        135.9
        ],
-       "palette": "timber_weathered",
-       "dE76": 3.7,
-       "tolerance": 14,
+       "palette": "wood_new_cut",
+       "dE76": 2.2,
+       "tolerance": 11,
        "pass": true
       }
      ]
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "name": "text decals face out of their host and read left to right in game (2 faces)",
      "pass": true,
      "detail": []
     }
@@ -47396,7 +47448,7 @@
    "variant": "bohyo_s",
    "pass": true,
    "faces": {
-    "Resolution 1": 103,
+    "Resolution 1": 104,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -47422,10 +47474,10 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
-       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_silver_w1.rvmat"
       ],
       "bad": []
      }
@@ -47445,7 +47497,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 103,
+       "Resolution 1": 104,
        "Resolution 2": 38,
        "Geometry": 6,
        "View Geometry": 6,
@@ -47527,8 +47579,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_ground_leaf_litter_w1": true,
-      "jp_m_decal_sumi_text_w2": true
+      "jp_m_ground_earth_bare_w1": true,
+      "jp_m_decal_sumi_text_grave_w2": true,
+      "jp_m_wood_silver_w1": true
      }
     },
     {
@@ -47550,19 +47603,19 @@
        "masked": true
       },
       {
-       "material": "jp_m_ground_leaf_litter_w1",
+       "material": "jp_m_ground_earth_bare_w1",
        "mean_srgb": [
-        112.0,
-        76.0,
-        52.0
+        148.0,
+        130.0,
+        108.0
        ],
-       "palette": "leaf_litter_autumn",
+       "palette": "earth_bare",
        "dE76": 0.0,
        "tolerance": 14,
        "pass": true
       },
       {
-       "material": "jp_m_decal_sumi_text_w2",
+       "material": "jp_m_decal_sumi_text_grave_w2",
        "mean_srgb": [
         NaN,
         NaN,
@@ -47587,14 +47640,14 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_weathered_w2",
+       "material": "jp_m_wood_silver_w1",
        "mean_srgb": [
-        97.0,
-        71.4,
-        62.9
+        115.7,
+        114.5,
+        109.2
        ],
-       "palette": "timber_weathered",
-       "dE76": 7.3,
+       "palette": "wood_silver_grey",
+       "dE76": 4.2,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -47603,7 +47656,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "name": "text decals face out of their host and read left to right in game (2 faces)",
      "pass": true,
      "detail": []
     }
@@ -47616,7 +47669,7 @@
    "variant": "bohyo_roof",
    "pass": true,
    "faces": {
-    "Resolution 1": 112,
+    "Resolution 1": 113,
     "Resolution 2": 50,
     "Geometry": 6,
     "View Geometry": 6,
@@ -47642,10 +47695,10 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
-       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w0.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_silver_w0.rvmat"
       ],
       "bad": []
      }
@@ -47665,7 +47718,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 112,
+       "Resolution 1": 113,
        "Resolution 2": 50,
        "Geometry": 6,
        "View Geometry": 6,
@@ -47747,8 +47800,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_ground_leaf_litter_w1": true,
-      "jp_m_decal_sumi_text_w2": true
+      "jp_m_ground_earth_bare_w0": true,
+      "jp_m_decal_sumi_text_grave_w1": true,
+      "jp_m_wood_silver_w0": true
      }
     },
     {
@@ -47770,28 +47824,28 @@
        "masked": true
       },
       {
-       "material": "jp_m_ground_leaf_litter_w1",
+       "material": "jp_m_ground_earth_bare_w0",
        "mean_srgb": [
-        112.0,
-        76.0,
-        52.0
+        127.0,
+        106.7,
+        82.7
        ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 0.0,
+       "palette": "earth_bare",
+       "dE76": 9.3,
        "tolerance": 14,
        "pass": true
       },
       {
-       "material": "jp_m_decal_sumi_text_w2",
+       "material": "jp_m_decal_sumi_text_grave_w1",
        "mean_srgb": [
-        NaN,
-        NaN,
-        NaN
+        75.6,
+        67.8,
+        61.4
        ],
        "palette": "sumi_black",
-       "dE76": NaN,
+       "dE76": 9.4,
        "tolerance": 10,
-       "pass": false
+       "pass": true
       },
       {
        "material": "jp_m_stone_river_w2",
@@ -47807,14 +47861,14 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_weathered_w1",
+       "material": "jp_m_wood_silver_w0",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        131.1,
+        130.1,
+        125.1
        ],
-       "palette": "timber_weathered",
-       "dE76": 2.6,
+       "palette": "wood_silver_grey",
+       "dE76": 2.0,
        "tolerance": 14,
        "pass": true
       }
@@ -47822,7 +47876,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "name": "text decals face out of their host and read left to right in game (2 faces)",
      "pass": true,
      "detail": []
     }
@@ -47835,7 +47889,7 @@
    "variant": "bohyo_lean",
    "pass": true,
    "faces": {
-    "Resolution 1": 104,
+    "Resolution 1": 105,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -47861,10 +47915,10 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
-       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+       "JP\\common\\materials\\wood\\jp_m_wood_silver_w2.rvmat"
       ],
       "bad": []
      }
@@ -47884,7 +47938,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 104,
+       "Resolution 1": 105,
        "Resolution 2": 38,
        "Geometry": 6,
        "View Geometry": 6,
@@ -47966,8 +48020,9 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_ground_leaf_litter_w1": true,
-      "jp_m_decal_sumi_text_w2": true
+      "jp_m_ground_earth_bare_w1": true,
+      "jp_m_decal_sumi_text_grave_w2": true,
+      "jp_m_wood_silver_w2": true
      }
     },
     {
@@ -47989,19 +48044,19 @@
        "masked": true
       },
       {
-       "material": "jp_m_ground_leaf_litter_w1",
+       "material": "jp_m_ground_earth_bare_w1",
        "mean_srgb": [
-        112.0,
-        76.0,
-        52.0
+        148.0,
+        130.0,
+        108.0
        ],
-       "palette": "leaf_litter_autumn",
+       "palette": "earth_bare",
        "dE76": 0.0,
        "tolerance": 14,
        "pass": true
       },
       {
-       "material": "jp_m_decal_sumi_text_w2",
+       "material": "jp_m_decal_sumi_text_grave_w2",
        "mean_srgb": [
         NaN,
         NaN,
@@ -48026,14 +48081,14 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_weathered_w2",
+       "material": "jp_m_wood_silver_w2",
        "mean_srgb": [
-        97.0,
-        71.4,
-        62.9
+        105.3,
+        103.8,
+        98.1
        ],
-       "palette": "timber_weathered",
-       "dE76": 7.3,
+       "palette": "wood_silver_grey",
+       "dE76": 8.5,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -48042,7 +48097,7 @@
     },
     {
      "id": "TXT",
-     "name": "text decals face out of their host and read left to right in game (1 faces)",
+     "name": "text decals face out of their host and read left to right in game (2 faces)",
      "pass": true,
      "detail": []
     }
@@ -48081,7 +48136,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_river_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
@@ -48185,7 +48240,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
-      "jp_m_ground_leaf_litter_w2": true
+      "jp_m_ground_earth_bare_w2": true
      }
     },
     {
@@ -48207,16 +48262,17 @@
        "masked": true
       },
       {
-       "material": "jp_m_ground_leaf_litter_w2",
+       "material": "jp_m_ground_earth_bare_w2",
        "mean_srgb": [
-        81.8,
-        54.7,
-        41.2
+        132.2,
+        118.0,
+        99.1
        ],
-       "palette": "leaf_litter_autumn",
-       "dE76": 12.4,
+       "palette": "earth_bare",
+       "dE76": 5.5,
        "tolerance": 14,
-       "pass": true
+       "pass": true,
+       "masked": true
       },
       {
        "material": "jp_m_stone_river_w2",
@@ -48280,6 +48336,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
@@ -48345,6 +48402,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
+      "jp_m_ground_earth_bare_w2": true,
       "jp_m_ground_leaf_litter_w2": true
      }
     },
@@ -48363,6 +48421,19 @@
        "palette": "grime_splash",
        "dE76": 2.4,
        "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_ground_earth_bare_w2",
+       "mean_srgb": [
+        132.2,
+        118.0,
+        99.1
+       ],
+       "palette": "earth_bare",
+       "dE76": 5.5,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -48416,10 +48487,6 @@
     "warning_lines": [],
     "exit": 0
    }
-  },
-  "PBO": {
-   "pass": true,
-   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_site.pbo"
   }
  },
  "summary": {

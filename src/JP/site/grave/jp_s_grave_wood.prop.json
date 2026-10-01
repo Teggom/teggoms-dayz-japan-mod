@@ -339,7 +339,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 104,
+    "Resolution 1": 105,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -368,7 +368,7 @@
    "mass_kg": 40.0,
    "well": false,
    "text_cells": [
-    "decal_sumi_text:sotoba_namuamida"
+    "decal_sumi_text_grave:bohyo_chiko_shinnyo_kyoho12"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -397,7 +397,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 47,
+    "Resolution 1": 48,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -426,7 +426,7 @@
    "mass_kg": 40.0,
    "well": false,
    "text_cells": [
-    "decal_sumi_text:sotoba_namuamida"
+    "decal_sumi_text_grave:bohyo_jonen_shinji_kyoho15"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -455,7 +455,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 103,
+    "Resolution 1": 104,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -484,7 +484,7 @@
    "mass_kg": 40.0,
    "well": false,
    "text_cells": [
-    "decal_sumi_text:sotoba_namuamida"
+    "decal_sumi_text_grave:bohyo_shungaku_doji_kyoho14"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -497,7 +497,7 @@
     }
    ],
    "notes": [
-    "a small post (a child's or a very poor grave), silver-grey, half the nenbutsu left"
+    "a small post (a child's grave), silver-grey, the child's name faded"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_wood_bohyo_s.p3d"
@@ -513,7 +513,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 112,
+    "Resolution 1": 113,
     "Resolution 2": 50,
     "Geometry": 6,
     "View Geometry": 6,
@@ -542,7 +542,7 @@
    "mass_kg": 40.0,
    "well": false,
    "text_cells": [
-    "decal_sumi_text:sotoba_namuamida"
+    "decal_sumi_text_grave:bohyo_soshin_shinji_kyoho13"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -615,7 +615,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 104,
+    "Resolution 1": 105,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -644,7 +644,7 @@
    "mass_kg": 40.0,
    "well": false,
    "text_cells": [
-    "decal_sumi_text:sotoba_namuamida"
+    "decal_sumi_text_grave:bohyo_dosen_zenjomon_kyoho9"
    ],
    "loot_surfaces": [],
    "dims": [
@@ -657,7 +657,7 @@
     }
    ],
    "notes": [
-    "grey post leaning hard back and aside, the mound slumped, ink half gone"
+    "grey post leaning hard back and aside, the mound slumped, the name a ghost"
    ],
    "mount": "graveyard",
    "master": "spikes/B3b/out/grave/jp_s_grave_wood_ab_bohyo_lean.p3d"

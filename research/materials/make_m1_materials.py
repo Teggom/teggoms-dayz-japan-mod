@@ -338,7 +338,7 @@ def wood_endgrain_firewood(lv, S):
     co = B.base(t, val)
     co = MT.mix(co, (110, 100, 80), bark * 0.6)
     h = -late * 0.8
-    mask = bark > 0.5
+    mask = B.Z(S)                                                 # the bark ring is part of the look: counted in the mean
     if lv >= 1:
         rg = np.random.default_rng(7603 + lv)
         im = Image.new("L", (S, S), 0)

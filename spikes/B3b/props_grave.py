@@ -16,7 +16,8 @@ import random
 
 import skit
 from skit import (core, box, prism, lathe, xf, xfs, flat_poly, W, col, col_solid, cyl_col, SPart, pole, beam, add_all,
-                  leaves, litter, moss_top, moss_face, CARVED, CUT, FIELD, RIVER, BAMBOO, WOOD, MOSS, LEAF, CTEXT, SUMI)
+                  leaves, litter, moss_top, moss_face, CARVED, CUT, FIELD, RIVER, BAMBOO, WOOD, MOSS, LEAF, CTEXT, SUMI,
+                  GTEXT, GSUMI, EARTH, NEWWOOD, SILVER)
 from props_wood import M, teoke
 import props_stone as PS
 import w2kit as K
@@ -28,6 +29,25 @@ DATE_R = (0.74, 0.0, 1.0, 1.0)        # crop: the right-hand (year) column
 DATE_L = (0.0, 0.0, 0.26, 1.0)        # crop: the left-hand (month-day / cyclical year) column
 MEN = "grave_doshin_shinji"           # Kyoho 9 (1724), a man
 WOMAN = "grave_shakuni_myoshin"       # Hoei 2 (1705), a woman (Shin sect)
+# M1 (2026-09-30): the grave-names atlas jp_m_decal_carved_text_grave (13 cells, 14 kaimyo, 1670-1729; forms and dates
+# in spikes/M1/M1_PROGRESS.md "Text"). Its three-column cells keep the columns at fixed fractions:
+GNAME = (0.26, 0.0, 0.74, 1.0)        # the kaimyo column
+GDATE_R = (0.70, 0.0, 1.0, 1.0)       # the era-year column
+# kind -> (atlas material, cell, crop): every inscribed stone its own person; older forms on older stone types
+KAIMYO = {
+    "board": (GTEXT, "kaimyo_joshin_shinji_genroku8", None),
+    "board_s": (GTEXT, "kaimyo_myotei_shinnyo_hoei4", GNAME),
+    "board_tall_moss": (GTEXT, "kaimyo_myoju_zenjoni_kanbun10", None),
+    "ab_leaning": (GTEXT, "kaimyo_soen_zenjomon_enpo6", None),
+    "ab_board_broken": (CTEXT, WOMAN, (0.0, 0.42, 1.0, 1.0)),
+    "boat_halo": (GTEXT, "kaimyo_kigen_dokaku_shinji_genroku11", GNAME),
+    "boat_halo_child": (GTEXT, "kaimyo_shunko_doji_kyoho5", GNAME),
+    "ab_boat_halo_sunk": (GTEXT, "kaimyo_enjaku_myosho_shinnyo_kyoho12", GNAME),
+    "round": (GTEXT, "kaimyo_ryozen_shinji_kyoho14", None),
+    "ab_round_lean": (GTEXT, "kaimyo_shaku_ryonen_kyoho8", None),
+    "pillar": (GTEXT, "kaimyo_hozan_zenjomon_shotoku1", None),
+    "pillar_pointed": (GTEXT, "kaimyo_chisei_shinnyo_kyoho10", None),
+}
 
 
 # ================================================================================================ parts
@@ -147,13 +167,14 @@ def grave(kind):
     top = 0.0
     # ---------------------------------------------------------------- board-shaped (itabi)
     if kind in ("board", "board_s", "board_tall_moss", "ab_leaning", "ab_board_broken"):
-        w, h, t, bases, cell, crop = {
-            "board": (0.30, 0.62, 0.14, [(0.48, 0.32, 0.13)], MEN, None),
-            "board_s": (0.24, 0.48, 0.12, [], WOMAN, NAME),
-            "board_tall_moss": (0.32, 0.80, 0.15, [(0.56, 0.36, 0.12), (0.44, 0.28, 0.10)], WOMAN, None),
-            "ab_leaning": (0.30, 0.64, 0.14, [(0.48, 0.32, 0.13)], MEN, None),
-            "ab_board_broken": (0.30, 0.66, 0.14, [(0.48, 0.32, 0.13)], WOMAN, (0.0, 0.42, 1.0, 1.0)),
+        w, h, t, bases = {
+            "board": (0.30, 0.62, 0.14, [(0.48, 0.32, 0.13)]),
+            "board_s": (0.24, 0.48, 0.12, []),
+            "board_tall_moss": (0.32, 0.80, 0.15, [(0.56, 0.36, 0.12), (0.44, 0.28, 0.10)]),
+            "ab_leaning": (0.30, 0.64, 0.14, [(0.48, 0.32, 0.13)]),
+            "ab_board_broken": (0.30, 0.66, 0.14, [(0.48, 0.32, 0.13)]),
         }[kind]
+        tmat, cell, crop = KAIMYO[kind]
         bv, bc, y0 = base_stack(bases, wear=wear)
         vis += bv
         cols += bc
@@ -173,7 +194,7 @@ def grave(kind):
             vis += nijo(w, y0 + h - w * 0.42 - 0.07, t / 2, wear=wear)
         th = min(0.42, (hh - w * 0.42 - 0.08)) if kind != "ab_board_broken" else 0.26
         tc = y0 + (hh - w * 0.42 - 0.08) / 2 + 0.02 if kind != "ab_board_broken" else y0 + 0.18
-        tx.append(K.carved((0.0, tc, t / 2), X, Y, th, cell, wear=wear, crop=crop))
+        tx.append(K.carved((0.0, tc, t / 2), X, Y, th, cell, wear=wear, crop=crop, mat=tmat))
         top = y0 + hh
         if kind == "ab_board_broken":
             # the snapped-off gable lies face-up in front of the stone
@@ -212,9 +233,11 @@ def grave(kind):
         fg = PS.jizo_figure(fig, relief=True, vis_3=(), vis_lo=())
         fg = [PS.scale_z(s, 0.55) for s in fg]
         vis += xfs(fg, t=(-0.035 * (kind != "boat_halo_child"), y0 + 0.06, t / 2 - 0.01))
+        tmat, cell, crop = KAIMYO[kind]
         if kind != "boat_halo_child":
-            tx.append(K.carved((w * 0.30, y0 + h * 0.45, t / 2), X, Y, h * 0.44, MEN if kind == "boat_halo" else WOMAN,
-                               wear=wear, crop=NAME))
+            tx.append(K.carved((w * 0.30, y0 + h * 0.45, t / 2), X, Y, h * 0.44, cell, wear=wear, crop=crop, mat=tmat))
+        else:   # M1: later boat-halo stones are mostly children's graves: the child's name beside the Jizo
+            tx.append(K.carved((w * 0.31, y0 + h * 0.42, t / 2), X, Y, h * 0.40, cell, wear=wear, crop=crop, mat=tmat))
         if kind == "ab_boat_halo_sunk":
             lean = (11.0, -4.0, 0.14)
             vis.append(moss_face((0.0, y0 + h * 0.75, t / 2 + 0.03), X, Y, w * 0.7, h * 0.3, seed=7, wear="_w2",
@@ -224,11 +247,12 @@ def grave(kind):
         P.dim("figure_h", fig, fig, tol=0.002)
     # ---------------------------------------------------------------- round-headed (kushigata)
     elif kind in ("round", "round_s_plain", "ab_round_lean"):
-        w, h, t, bases, cell = {
-            "round": (0.30, 0.70, 0.20, [(0.46, 0.36, 0.14)], MEN),
-            "round_s_plain": (0.26, 0.50, 0.16, [], None),
-            "ab_round_lean": (0.30, 0.72, 0.19, [(0.46, 0.36, 0.14)], WOMAN),
+        w, h, t, bases = {
+            "round": (0.30, 0.70, 0.20, [(0.46, 0.36, 0.14)]),
+            "round_s_plain": (0.26, 0.50, 0.16, []),
+            "ab_round_lean": (0.30, 0.72, 0.19, [(0.46, 0.36, 0.14)]),
         }[kind]
+        tmat, cell, _ = KAIMYO.get(kind, (None, None, None))
         bv, bc, y0 = base_stack(bases, wear=wear, mat=CUT)
         vis += bv
         cols += bc
@@ -238,7 +262,8 @@ def grave(kind):
         vis.append(slab(pr, t, y0, wear=wear))
         cols.append(col_solid(slab(pr, t, max(0.0, y0))))
         if cell:
-            tx.append(K.carved((0.0, y0 + (h - w / 2) * 0.55, t / 2), X, Y, min(0.42, h - w / 2 - 0.06), cell, wear=wear))
+            tx.append(K.carved((0.0, y0 + (h - w / 2) * 0.55, t / 2), X, Y, min(0.42, h - w / 2 - 0.06), cell, wear=wear,
+                               mat=tmat))
         if kind == "ab_round_lean":
             lean = (-4.0, -12.0, 0.08)
         top = y0 + h
@@ -258,8 +283,10 @@ def grave(kind):
                          vis=(1, 2))
         vis.append(pyr)
         cols.append(col(-a / 2, a / 2, y0, y0 + h, -a / 2, a / 2, CARVED))
-        tx.append(K.carved((0.0, y0 + h * 0.52, a / 2), X, Y, h * 0.80, MEN, wear=wear, crop=NAME))
-        tx.append(K.carved((a / 2, y0 + h * 0.55, 0.0), (0.0, 0.0, -1.0), Y, h * 0.62, MEN, wear=wear, crop=DATE_R))
+        tmat, cell, _ = KAIMYO[kind]
+        tx.append(K.carved((0.0, y0 + h * 0.52, a / 2), X, Y, h * 0.80, cell, wear=wear, crop=GNAME, mat=tmat))
+        tx.append(K.carved((a / 2, y0 + h * 0.55, 0.0), (0.0, 0.0, -1.0), Y, h * 0.62, cell, wear=wear, crop=GDATE_R,
+                           mat=tmat))
         # the water hollow (mizubachi) cut in the front of the upper base, leaves in it
         bw = bases[-1][0]
         yb = y0
@@ -426,7 +453,7 @@ def grave(kind):
             top = 0.45
         elif kind == "field_mound":
             # a low earth mound with a field stone at its head (the commonest poor grave)
-            m = lathe([(0.0, -0.03), (0.58, -0.03), (0.45, 0.06), (0.22, 0.12), (0.0, 0.13)], 8, LEAF, vis=(1, 2),
+            m = lathe([(0.0, -0.03), (0.58, -0.03), (0.45, 0.06), (0.22, 0.12), (0.0, 0.13)], 8, EARTH, vis=(1, 2),
                       smooth=True)
             m = xf(m, t=(0.0, 0.0, 0.0))
             m.verts = [(v[0], v[1], v[2] * 1.5) for v in m.verts]
@@ -441,7 +468,10 @@ def grave(kind):
             cols.append(col_solid(st, FIELD))
             vis += K.pebbles(43, 0.0, 0.1, 0.35, n=4)
             top = 0.32
-            P.notes.append("the mound is turned earth under leaves; no collision on it (walk over)")
+            lt = xf(litter(45, 0.0, 0.05, 0.30, sx=0.9, sz=1.3), t=(0.0, 0.12, 0.0))
+            vis.append(lt)
+            P.notes.append("the mound is bare earth (M1: jp_m_ground_earth_bare) with a little litter; no collision on "
+                           "it (walk over)")
         else:
             for i, (x, hh, rz_) in enumerate(((-0.18, 0.34, -3.0), (0.16, 0.26, 9.0))):
                 st = core.stone(rr, x, 0.0, 0.22, 0.15, hh + 0.05, hh, FIELD if i == 0 else RIVER, bury=0.06, n=7,
@@ -500,15 +530,16 @@ def sotoba(h=1.05, w=0.075, t=0.012, notched=True, wear="_w2", text=True, vis=(1
 
 
 def bohyo_mound(seed, r=0.50, h=0.11, sz=1.4, sunk=False, wear="_w1", litter_r=0.22):
-    """W3: the earth mound under a grave post (leaf-litter material, as W2). sunk: the coffin has collapsed, so the
-    rim stands higher than the middle. Returns visual solids (mound + a litter patch on its top)."""
+    """W3: the earth mound under a grave post (M1: bare earth, jp_m_ground_earth_bare; _w0 = fresh moist clods). sunk:
+    the coffin has collapsed, so the rim stands higher than the middle. Returns visual solids (mound + a litter patch
+    on its top)."""
     if sunk:
         prof = [(0.0, -0.03), (r, -0.03), (r * 0.84, h), (r * 0.5, h * 0.55), (0.0, h * 0.25)]
         ytop = h * 0.25
     else:
         prof = [(0.0, -0.03), (r, -0.03), (r * 0.8, h * 0.45), (r * 0.4, h * 0.91), (0.0, h)]
         ytop = h
-    m = lathe(prof, 8, LEAF, vis=(1, 2))
+    m = lathe(prof, 8, EARTH, vis=(1, 2))
     m.verts = [(v[0], v[1], v[2] * sz) for v in m.verts]
     m.fm = None
     m.fn = None
@@ -519,7 +550,8 @@ def bohyo_mound(seed, r=0.50, h=0.11, sz=1.4, sunk=False, wear="_w1", litter_r=0
     return [lt, m]
 
 
-def bohyo_post(a, h, z0, mat=WOOD, wear="_w1", tip=0.06, text=True, th=None, crop=None, ink="_w2", cap=False):
+def bohyo_post(a, h, z0, mat=WOOD, wear="_w1", tip=0.06, text=True, th=None, crop=None, ink="_w2", cap=False,
+               cell=None):
     """W3: a square grave post standing at z0 (its foot 0.20 in the ground), pointed top (tip > 0), flat top
     (tip = 0) or a small two-board gabled cap (cap=True: the kasa-toba form, W2_ERA W5); nenbutsu in ink on the front
     (+z), whole or cropped. Returns (visual solids, collision box)."""
@@ -538,7 +570,19 @@ def bohyo_post(a, h, z0, mat=WOOD, wear="_w1", tip=0.06, text=True, th=None, cro
             out.append(prism(poly, "x", -L / 2, L / 2, mat, vis=(1, 2)))
     for s in out:
         s.wear = wear
-    if text:
+    if text and cell:
+        # M1: a posthumous name in ink (jp_m_decal_sumi_text_grave): the kaimyo column on the front, the era year on
+        # the right-hand side face (as on the square-pillar stones), each at the cell's own aspect (no squeezing)
+        cw, ch = skit.cell_size(GSUMI, cell)
+        nw = cw * (GNAME[2] - GNAME[0])
+        th = th or min(0.42, (y1 - 0.12) * 0.70, a * 0.85 * ch / nw)
+        yc = y1 - 0.05 - th / 2
+        out.append(K.inked((0.0, yc, z0 + a / 2), X, Y, th, cell, wear=ink, crop=GNAME, mat=GSUMI))
+        dw = cw * (GDATE_R[2] - GDATE_R[0])
+        dh = min(th, a * 0.85 * ch / dw)
+        out.append(K.inked((a / 2, y1 - 0.05 - dh / 2, z0), (0.0, 0.0, -1.0), Y, dh, cell, wear=ink, crop=GDATE_R,
+                           mat=GSUMI))
+    elif text:
         th = th or min(0.40, (y1 - 0.12) * 0.62)
         yc = y1 - 0.06 - th / 2
         out.append(K.inked((0.0, yc, z0 + a / 2), X, Y, th, "sotoba_namuamida", wear=ink, width=a * 0.78, crop=crop))
@@ -646,7 +690,7 @@ def grave_wood(kind):
         vis.append(litter(9, 0.0, 0.3, 0.6, sx=1.4))
         P.dim("sotoba_h", 1.05, 1.05, tol=0.001)
     elif kind == "bohyo":
-        m = lathe([(0.0, -0.03), (0.50, -0.03), (0.40, 0.05), (0.20, 0.10), (0.0, 0.11)], 8, LEAF, vis=(1, 2))
+        m = lathe([(0.0, -0.03), (0.50, -0.03), (0.40, 0.05), (0.20, 0.10), (0.0, 0.11)], 8, EARTH, vis=(1, 2))
         m.verts = [(v[0], v[1], v[2] * 1.4) for v in m.verts]
         m.fm = None
         m.fn = None
@@ -658,12 +702,8 @@ def grave_wood(kind):
         vis.append(m)
         a = 0.09
         z0 = -0.62
-        post = [W(-a / 2, a / 2, -0.20, 0.80, z0 - a / 2, z0 + a / 2, WOOD, vis=(1, 2)),
-                core.Solid([(-a / 2, 0.80, z0 - a / 2), (a / 2, 0.80, z0 - a / 2), (a / 2, 0.80, z0 + a / 2),
-                            (-a / 2, 0.80, z0 + a / 2), (0.0, 0.86, z0)], [[0, 1, 2, 3], [0, 1, 4], [1, 2, 4], [2, 3, 4],
-                                                                          [3, 0, 4]], WOOD, vis=(1,))]
-        post.append(K.inked((0.0, 0.48, z0 + a / 2), X, Y, 0.40, "sotoba_namuamida", wear="_w2", width=0.07))
-        pc = col(-a / 2, a / 2, 0.0, 0.80, z0 - a / 2, z0 + a / 2, WOOD)
+        # M1: a silver-grey post (a few years old) with a faded posthumous name and its year
+        post, pc = bohyo_post(a, 0.86, z0, SILVER, "_w1", 0.06, ink="_w2", cell="bohyo_chiko_shinnyo_kyoho12")
         g = K.tilt(post + [pc], rx=-5.0, rz=4.0, pivot=(0.0, 0.0, z0))
         vis += [q for q in g if q.vis]
         cols += [q for q in g if not q.vis]
@@ -672,14 +712,19 @@ def grave_wood(kind):
         P.notes.append("the poor grave: an earth mound with a wooden post (any fresh grave before its stone)")
     # ---- W3 (2026-09-30): bohyo variety (W2_ERA W4 / W5): sizes, wood ages, lean, split, rotted away
     elif kind in ("bohyo_new", "bohyo_s", "bohyo_roof", "ab_bohyo_lean", "ab_bohyo_split", "ab_bohyo_rotted"):
+        # M1: the new post in pale NEW wood with crisp ink, older ones silver-grey (jp_m_wood_silver) with fading ink;
+        # each carries a posthumous name (jp_m_decal_sumi_text_grave): name on the front, year on the side
         spec = {  # a, h, z0, wood, wear, tip, text crop (None = whole), tilt rx / rz, sink, mound (r, h, sz, sunk)
-            "bohyo_new": (0.105, 1.15, -0.70, WOOD, "_w0", 0.07, None, -1.0, 0.5, 0.0, (0.55, 0.17, 1.4, False)),
-            "bohyo_s": (0.06, 0.52, -0.40, WOOD, "_w2", 0.04, (0.0, 0.0, 1.0, 0.5), -3.0, -5.0, 0.0,
+            "bohyo_new": (0.105, 1.15, -0.70, NEWWOOD, "_w0", 0.07, None, -1.0, 0.5, 0.0, (0.55, 0.17, 1.4, False)),
+            "bohyo_s": (0.06, 0.52, -0.40, SILVER, "_w1", 0.04, None, -3.0, -5.0, 0.0,
                         (0.32, 0.08, 1.35, False)),
-            "bohyo_roof": (0.10, 1.00, -0.62, WOOD, "_w1", 0.0, None, -2.0, 2.0, 0.0, (0.50, 0.11, 1.4, False)),
-            "ab_bohyo_lean": (0.09, 0.85, -0.60, WOOD, "_w2", 0.06, (0.0, 0.5, 1.0, 1.0), 9.0, -17.0, 0.05,
+            "bohyo_roof": (0.10, 1.00, -0.62, SILVER, "_w0", 0.0, None, -2.0, 2.0, 0.0, (0.50, 0.11, 1.4, False)),
+            "ab_bohyo_lean": (0.09, 0.85, -0.60, SILVER, "_w2", 0.06, None, 9.0, -17.0, 0.05,
                               (0.48, 0.07, 1.4, False)),
         }
+        names = {"bohyo_new": ("bohyo_jonen_shinji_kyoho15", "_w0"), "bohyo_s": ("bohyo_shungaku_doji_kyoho14", "_w2"),
+                 "bohyo_roof": ("bohyo_soshin_shinji_kyoho13", "_w1"),
+                 "ab_bohyo_lean": ("bohyo_dosen_zenjomon_kyoho9", "_w2")}
         if kind in spec:
             a, h, z0, mat, wr, tip, crop, rx, rz, sink, (mr, mh, msz, sunk) = spec[kind]
             vis += bohyo_mound(13 + len(kind), mr, mh, msz, sunk, wear="_w0" if wr == "_w0" else "_w1")
@@ -687,7 +732,7 @@ def grave_wood(kind):
             if crop:
                 th = min(0.40, (h - tip - 0.12) * 0.62) * (crop[3] - crop[1]) * (1.6 if kind == "bohyo_s" else 1.0)
             post, pc = bohyo_post(a, h, z0, mat, wr, tip, th=th, crop=crop, cap=(kind == "bohyo_roof"),
-                                  ink="_w1" if wr == "_w0" else "_w2")
+                                  ink=names[kind][1], cell=names[kind][0])
             g = K.tilt(post + [pc], rx=rx, rz=rz, pivot=(0.0, 0.0, z0), sink=sink)
             vis += [q for q in g if q.vis]
             cols += [q for q in g if not q.vis]
@@ -695,12 +740,11 @@ def grave_wood(kind):
                 vis += K.pebbles(len(kind), 0.05, z0 * 0.1, 0.25, n=3)
             P.dim("post_h", h, h, tol=0.001)
             P.notes.append({"bohyo_new": "a fresh grave: new wood, fresh ink, a high new mound",
-                            "bohyo_s": "a small post (a child's or a very poor grave), silver-grey, half the nenbutsu "
-                                       "left",
+                            "bohyo_s": "a small post (a child's grave), silver-grey, the child's name faded",
                             "bohyo_roof": "the kasa-toba form: a small two-board gabled cap keeps rain off the ink "
                                           "(uncommon, about 1 post in 8; W2_ERA W5)",
-                            "ab_bohyo_lean": "grey post leaning hard back and aside, the mound slumped, ink half "
-                                             "gone"}[kind])
+                            "ab_bohyo_lean": "grey post leaning hard back and aside, the mound slumped, the name "
+                                             "a ghost"}[kind])
         elif kind == "ab_bohyo_split":
             # black and rotting; the top 40 cm split in two halves that splay apart; the pointed tip is gone
             a, z0 = 0.10, -0.60
@@ -764,14 +808,15 @@ PROPS = [
      "notes": ["1730 mix for the placement agent (W2_ERA): board 30 %, boat-halo 25 %, round 12 %, field stones / "
                "mounds 15 %, child Jizo 5 %, square pillar 5 %, gorinto / hokyointo 8 %",
                "irregular rows: 0.9 m plot grid jittered +-0.15 m and +-12 deg, mixed heights, gaps",
-               "inscriptions: two posthumous names (1705, 1724) from the carved-text atlas, cropped for variety; no "
-               "family-name stones (Meiji)", "abandoned share: about 1 stone in 4 leaning / sunk / broken"],
+               "inscriptions (M1): a posthumous name and date per stone from jp_m_decal_carved_text_grave (1670-1729: "
+               "-shinji / -shinnyo, -zenjomon / -zenjoni, -doji, shaku-, kigen / enjaku prefixes) + B1's two; no "
+               "family-name stones (Meiji); gorinto / hokyointo stay blank (no Siddham font for the seed syllables)", "abandoned share: about 1 stone in 4 leaning / sunk / broken"],
      "models": [
          G("board", "Board-shaped gravestone (itabi) on a base, name and date"),
          G("board_s", "Small board-shaped gravestone set in the ground, name only"),
          G("board_tall_moss", "Tall board-shaped gravestone on two bases, mossy"),
          G("boat_halo", "Boat-halo gravestone with a Jizo in relief"),
-         G("boat_halo_child", "Small boat-halo stone (a child's grave), no inscription"),
+         G("boat_halo_child", "Small boat-halo stone (a child's grave), the child's name"),
          G("round", "Round-headed gravestone (kushigata) on a base"),
          G("round_s_plain", "Small round-headed stone, plain"),
          G("pillar", "Square-pillar gravestone on three bases (rare in 1730)"),

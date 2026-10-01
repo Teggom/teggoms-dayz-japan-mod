@@ -48,6 +48,9 @@ INDIGO = "textile_cotton_indigo"
 KINARI = "textile_cotton_plain"
 LACQUER = "lacquer_black"
 WEAVE = "bamboo_weave"
+WICKER = "wicker_aged"            # M1 (2026-09-30): warm kori wicker (bamboo_weave stays for grey bamboo)
+FIREWOOD = "wood_firewood"        # M1: split firewood sides, sampled from ref i22
+FIREEND = "wood_endgrain_firewood"  # M1: firewood log ends, ref i22
 LITTER = "decal_litter"
 
 DUSTY = {WOOD, LACQUER, DARK, PALE}   # up faces of these take the dusty wear
