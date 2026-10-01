@@ -13,9 +13,9 @@ Agent W2 (opus-high), 2026-09-30. Time log: `japan_dev/TIMELOG_W2.md` (logger `s
 | jp_s_torii_stone (shrine) | 10 | 1 / 8 / 1 | 398 (medium) |
 | jp_s_stone_lantern (shrine) | 13 | 1 / 10 / 2 | 339 box, 289 small |
 | jp_s_chozubachi (shrine) | 4 | 1 / 2 / 1 | 116 |
-| jp_s_stone_steps (shrine) | 13 | 1 / 10 / 2 | 255 |
+| jp_s_stone_steps (shrine) | 13 | 1 / 10 / 2 | 208 |
 | jp_s_grave_stones (grave) | 24 | 1 / 17 / 6 | 259 |
-| jp_s_grave_wood (grave) | 7 | 1 / 5 / 1 | ~260 |
+| jp_s_grave_wood (grave) | 7 | 1 / 5 / 1 | 228 |
 
 ### Stephen's additions
 - **Torii:** every rural form with no rope / rope / rope + 4-step zigzag shide; mossy variants (moss on the kasagi,
@@ -31,6 +31,17 @@ Agent W2 (opus-high), 2026-09-30. Time log: `japan_dev/TIMELOG_W2.md` (logger `s
 - **Steps:** C7 check on the written Roadway: ramp 27.8 deg (rise 0.16, tread 0.303), the foot edge (z 0, y 0) and head
   edge (z -run, y rise) span the full width on every flight and landing, so modules chained by their connectors
   (sidecar `connectors`) give one continuous Roadway; treads at most one riser above the ramp.
+
+## Final checks (after the last change)
+- B3b + W2 220/220 (`spikes/L2/check_b3b.py`, sandboxed: pass and faces unchanged vs checks.json); L2 81/81.
+- TXT (`spikes/L2/textface.py spikes/B3b/out spikes/L2/out`): 89 text models, 0 failing (W2 45 of them).
+- C7 chain (`spikes/W2/chain_check.py`): 4 chains of flights + landings in all three widths, every join continuous,
+  ramps 27.8 deg.
+- binarize 220/220 + 81/81 ODOL, 0 warnings; CfgConvert OK; jp_site.pbo 301 classes.
+
+## Sheets
+`research/outdoor_kit/contact_sheets/w2_torii.jpg`, `w2_shrine.jpg`, `w2_grave.jpg` (refs beside every model + LOD /
+collision strip) and `w2_closeups.jpg` (8 close-up renders, `spikes/W2/look.py`).
 
 ## Pipeline (built INTO B3b's)
 - `spikes/B3b/build.py`: MODULES += props_torii, props_shrine, props_grave; every model now also gets L2's TXT check;

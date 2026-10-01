@@ -17,3 +17,5 @@
 2026-09-30 20:55:22 | GROUP DONE | grave stones | 24 models (1 new, 17 variants, 6 abandoned), checks 24/24 incl TXT | W2 | max R1 259 small / 259 box | 5h 37% wk 38%
 2026-09-30 20:55:22 | GROUP START | grave wood | W2 | late entry: same module props_grave.py, began ~20:52 | 5h 37% wk 38%
 2026-09-30 20:55:23 | GROUP DONE | grave wood | 7 models (1 new, 5 variants, 1 abandoned), checks 7/7 incl TXT | W2 | max R1 ~260 | 5h 37% wk 38%
+2026-09-30 21:00:13 | PBO PACKED | W2 | late entry: packed ~20:57 (build.py --pack, then build_l2.py --pack): jp_site.pbo 301 classes | 5h 40% wk 38%
+2026-09-30 21:00:13 | SHEETS DONE | W2 | contact_sheets/w2_torii, w2_shrine, w2_grave, w2_closeups | 5h 40% wk 38%
