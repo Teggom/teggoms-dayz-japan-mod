@@ -1,0 +1,130 @@
+{
+ "id": "jp_p_site_hokora_stone_yosemune",
+ "part": "jp_p_site_hokora",
+ "variant": "_stone_yosemune",
+ "group": "site",
+ "p3d": "JP\\parts\\site\\jp_p_site_hokora_stone_yosemune.p3d",
+ "build_list": {
+  "entry": "jp_p_site_hokora",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "stone shrine with a hipped roof stone and a jewel knob",
+ "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+ "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.37,
+  0.37,
+  -0.06,
+  1.073,
+  -0.3,
+  0.3
+ ],
+ "dims": [
+  {
+   "name": "height_m",
+   "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+   "measured": 1.073,
+   "tol": 0.01,
+   "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_carved_aged",
+   "id": "jp_m_stone_carved_aged",
+   "palette_id": "stone_lantern",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 124,
+  "Resolution 2": 106,
+  "Resolution 3": 76,
+  "Geometry": 76,
+  "View Geometry": 76,
+  "Fire Geometry": 76
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 124, Resolution 2 106, Resolution 3 76, Geometry 76, View Geometry 76, Fire Geometry 76"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "granite"
+  },
+  {
+   "check": "C4 height_m",
+   "ok": true,
+   "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 1.073"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

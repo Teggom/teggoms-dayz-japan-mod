@@ -1,0 +1,365 @@
+{
+ "checks": "C2 C3 C4 C5 C7 (parts/kit/jpparts/checks.py)",
+ "parts": [
+  {
+   "id": "jp_p_site_hokora_stone_kirizuma",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 102, Resolution 2 84, Resolution 3 84, Geometry 78, View Geometry 78, Fire Geometry 78"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 0.993"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_site_hokora_stone_yosemune",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 124, Resolution 2 106, Resolution 3 76, Geometry 76, View Geometry 76, Fire Geometry 76"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 1.073"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_site_hokora_stone_nagare",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 102, Resolution 2 84, Resolution 3 84, Geometry 78, View Geometry 78, Fire Geometry 78"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 1.013"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_site_hokora_stone_niche",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 106, Resolution 2 100, Resolution 3 88, Geometry 88, View Geometry 88, Fire Geometry 88"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 1.03"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_site_hokora_wood_nagare",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 262, Resolution 2 220, Resolution 3 80, Geometry 46, View Geometry 46, Fire Geometry 46"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite, wood"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 1.27"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_site_hokora_wood_shinmei",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 328, Resolution 2 286, Resolution 3 118, Geometry 46, View Geometry 46, Fire Geometry 46"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite, wood"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 1.38"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_site_hokora_wood_inari",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 262, Resolution 2 220, Resolution 3 80, Geometry 46, View Geometry 46, Fire Geometry 46"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "5 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite, wood"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 1.27"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_site_hokora_wood_saya",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 487, Resolution 2 445, Resolution 3 134, Geometry 82, View Geometry 82, Fire Geometry 82"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "11 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite, wood"
+    },
+    {
+     "check": "C4 height_m",
+     "ok": true,
+     "detail": "expected 0.7-1.5 (hokora) / 2.6 (saya), measured 2.445"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  }
+ ]
+}

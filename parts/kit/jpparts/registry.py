@@ -49,6 +49,12 @@ tobira.register(reg)
 from . import nagare, ornament
 nagare.register(reg)
 ornament.register(reg)
+from . import stilts
+stilts.register(reg)
+from . import shitomi
+shitomi.register(reg)
+from . import hokora
+hokora.register(reg)
 try:
     from . import trim
     trim.register(reg)

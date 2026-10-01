@@ -1,0 +1,223 @@
+{
+ "id": "jp_p_open_shitomi_grid_hinged",
+ "part": "jp_p_open_shitomi_grid",
+ "variant": "_hinged",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_shitomi_grid_hinged.p3d",
+ "build_list": {
+  "entry": "jp_p_open_shitomi_grid",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "worship / temple hall bay: grid shitomido, the upper leaf a top-hinged rotation window (out and up 90 deg; engine-untested), the lower leaf fixed",
+ "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor; +z = out; leaves on the posts' outer faces",
+ "recipe": "shitomi.shitomi(part, x0, bay, variant)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.04,
+  1.78,
+  0.0,
+  2.13,
+  -0.055,
+  0.125
+ ],
+ "dims": [
+  {
+   "name": "upper_leaf_m",
+   "expected": "1.10-1.20",
+   "measured": 1.14,
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "grid_pitch_m",
+   "expected": "0.10-0.13 (A)",
+   "measured": 0.115,
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ],
+   "note": "kamoi; the wall's head rail continues past it"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 240,
+  "Resolution 2": 24,
+  "Resolution 3": 24,
+  "Geometry": 24,
+  "Memory": 0,
+  "View Geometry": 18,
+  "Fire Geometry": 24
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [
+  {
+   "source": "DoorsTwin1",
+   "kind": "plank",
+   "display": "window",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "rotation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.5708,
+     "unit": "rad"
+    }
+   ],
+   "anim_period": 1.6,
+   "init_opened": 0.0,
+   "sound": "doorWoodSlide",
+   "clear_width_m": null,
+   "engine_tested": false,
+   "note": "hall shitomido: upper grid leaf top-hinged (rotation 90 deg)"
+  }
+ ],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 240, Resolution 2 24, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 24"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "rotation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep (window / hinged)",
+   "ok": true,
+   "detail": "moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.71 m; far: leaf hit first from 5/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
+  },
+  {
+   "check": "C4 upper_leaf_m",
+   "ok": true,
+   "detail": "expected 1.10-1.20, measured 1.14"
+  },
+  {
+   "check": "C4 grid_pitch_m",
+   "ok": true,
+   "detail": "expected 0.10-0.13 (A), measured 0.115"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

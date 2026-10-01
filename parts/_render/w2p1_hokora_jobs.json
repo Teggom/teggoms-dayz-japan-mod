@@ -1,0 +1,179 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\w2p1_hokora",
+ "res": [
+  960,
+  720
+ ],
+ "jobs": [
+  [
+   "site_hokora_stone_kirizuma",
+   "Stone shrine: gable roof stone, carved double doors, two base stones",
+   {
+    "build": "part:jp_p_site_hokora_stone_kirizuma",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.0,
+     0.5,
+     0.0
+    ],
+    "dist": 4.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "human": [
+     1.0,
+     0.6,
+     0.0
+    ]
+   }
+  ],
+  [
+   "site_hokora_stone_yosemune",
+   "Stone shrine with a hipped roof stone and a jewel knob",
+   {
+    "build": "part:jp_p_site_hokora_stone_yosemune",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.0,
+     0.5,
+     0.0
+    ],
+    "dist": 4.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "site_hokora_stone_nagare",
+   "Stone shrine, nagare roof stone (front runs out)",
+   {
+    "build": "part:jp_p_site_hokora_stone_nagare",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.0,
+     0.5,
+     0.0
+    ],
+    "dist": 4.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "site_hokora_stone_niche",
+   "Tall kami stone with an offering niche and a roof slab",
+   {
+    "build": "part:jp_p_site_hokora_stone_niche",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.0,
+     0.5,
+     0.0
+    ],
+    "dist": 4.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "site_hokora_wood_nagare",
+   "Wooden hokora, miniature nagare-zukuri, 2 katsuogi, stone base",
+   {
+    "build": "part:jp_p_site_hokora_wood_nagare",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.0,
+     0.7,
+     0.0
+    ],
+    "dist": 4.5,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "site_hokora_wood_shinmei",
+   "Wooden hokora, shinmei form: chigi + 3 katsuogi",
+   {
+    "build": "part:jp_p_site_hokora_wood_shinmei",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.0,
+     0.7,
+     0.0
+    ],
+    "dist": 4.5,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "site_hokora_wood_inari",
+   "Inari hokora painted shu (fox pair + torii are props)",
+   {
+    "build": "part:jp_p_site_hokora_wood_inari",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.0,
+     0.7,
+     0.0
+    ],
+    "dist": 4.5,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "site_hokora_wood_saya",
+   "Wooden hokora inside a shelter shed (saya-do)",
+   {
+    "build": "part:jp_p_site_hokora_wood_saya",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.0,
+     1.2,
+     0.0
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "human": [
+     1.6,
+     1.0,
+     0.0
+    ]
+   }
+  ]
+ ]
+}

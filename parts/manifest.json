@@ -26646,6 +26646,2174 @@
    "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
   },
   {
+   "id": "jp_p_found_stilts_honden",
+   "part": "jp_p_found_stilts",
+   "variant": "_honden",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_found_stilts_honden.p3d",
+   "build_list": {
+    "entry": "jp_p_found_stilts",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "issha honden floor (1 x 1 ken) +1.00 on underfloor posts on stones, sleepers, two rows of underfloor nuki, open beneath (yukashita); the en (koran) runs on from its edges",
+   "dims": [
+    {
+     "name": "floor_above_grade_m",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -1.82
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -1.82
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 380,
+    "Resolution 2": 332,
+    "Resolution 3": 54,
+    "Geometry": 12,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "body x 0..W, z 0 (front wall line) .. -D; y 0 = floor top; grade -1.00",
+   "recipe": "stilts.platform(part, W, D, drop, kind)"
+  },
+  {
+   "id": "jp_p_found_stilts_hall",
+   "part": "jp_p_found_stilts",
+   "variant": "_hall",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_found_stilts_hall.p3d",
+   "build_list": {
+    "entry": "jp_p_found_stilts",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "village haiden / hall floor (3 x 2 ken) +0.60 with a boarded skirt (vent gaps) between the perimeter posts",
+   "dims": [
+    {
+     "name": "floor_above_grade_m",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -3.64
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -0.6,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1515,
+    "Resolution 2": 1422,
+    "Resolution 3": 150,
+    "Geometry": 12,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "body x 0..W, z 0 (front wall line) .. -D; y 0 = floor top; grade -0.60",
+   "recipe": "stilts.platform(part, W, D, drop, kind)"
+  },
+  {
+   "id": "jp_p_found_stilts_ratguard",
+   "part": "jp_p_found_stilts",
+   "variant": "_ratguard",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_found_stilts_ratguard.p3d",
+   "build_list": {
+    "entry": "jp_p_found_stilts",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "store / treasure house on posts (+1.20) with rat guards (nezumi-gaeshi) round every post",
+   "dims": [
+    {
+     "name": "floor_above_grade_m",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -2.73
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -2.73
+     ],
+     "note": "body corner node (the shell's wall post stands on the floor here)"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.2,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1046,
+    "Resolution 2": 950,
+    "Resolution 3": 90,
+    "Geometry": 12,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "body x 0..W, z 0 (front wall line) .. -D; y 0 = floor top; grade -1.20",
+   "recipe": "stilts.platform(part, W, D, drop, kind)"
+  },
+  {
+   "id": "jp_p_found_kidan_shoro",
+   "part": "jp_p_found_kidan",
+   "variant": "_shoro",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_found_kidan_shoro.p3d",
+   "build_list": {
+    "entry": "jp_p_found_kidan",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "bell-tower platform (shoro, 1.5 x 1.5 ken) 0.60 high: kerb stones, facing slabs, base course, earth top, a stone flight with cheek stones",
+   "dims": [
+    {
+     "name": "flight_front_ramp_deg",
+     "expected": "<=34",
+     "measured": 33.4,
+     "tol": 0.0,
+     "source": "found.step rule (<=34)",
+     "ok": true
+    },
+    {
+     "name": "height_m",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      0.0
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -2.73
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      2.73,
+      0.0,
+      -2.73
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "stair_head",
+     "pos": [
+      0.91,
+      0.0,
+      0.0
+     ],
+     "note": "top of the flight (front edge)"
+    },
+    {
+     "type": "stair_foot",
+     "pos": [
+      0.91,
+      -0.6,
+      0.91
+     ],
+     "note": "foot at grade"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -0.6,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "ground_earth_bare",
+     "id": "jp_m_ground_earth_bare",
+     "palette_id": "earth_bare",
+     "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 702,
+    "Resolution 2": 702,
+    "Resolution 3": 23,
+    "Geometry": 11,
+    "Roadway": 2,
+    "View Geometry": 11,
+    "Fire Geometry": 11
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "platform x 0..W, z 0 (front edge) .. -D; y 0 = top; grade -0.60",
+   "recipe": "stilts.kidan(part, W, D, h, steps)"
+  },
+  {
+   "id": "jp_p_found_kidan_hall",
+   "part": "jp_p_found_kidan",
+   "variant": "_hall",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_found_kidan_hall.p3d",
+   "build_list": {
+    "entry": "jp_p_found_kidan",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "hall platform (3 x 2.5 ken) 0.45 high, a 1-ken stone flight at the front",
+   "dims": [
+    {
+     "name": "flight_front_ramp_deg",
+     "expected": "<=34",
+     "measured": 26.31,
+     "tol": 0.0,
+     "source": "found.step rule (<=34)",
+     "ok": true
+    },
+    {
+     "name": "height_m",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -4.55
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -4.55
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "stair_head",
+     "pos": [
+      2.275,
+      0.0,
+      0.0
+     ],
+     "note": "top of the flight (front edge)"
+    },
+    {
+     "type": "stair_foot",
+     "pos": [
+      2.275,
+      -0.45,
+      0.91
+     ],
+     "note": "foot at grade"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -0.45,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "ground_earth_bare",
+     "id": "jp_m_ground_earth_bare",
+     "palette_id": "earth_bare",
+     "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1230,
+    "Resolution 2": 1230,
+    "Resolution 3": 23,
+    "Geometry": 11,
+    "Roadway": 2,
+    "View Geometry": 11,
+    "Fire Geometry": 11
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "platform x 0..W, z 0 (front edge) .. -D; y 0 = top; grade -0.45",
+   "recipe": "stilts.kidan(part, W, D, h, steps)"
+  },
+  {
+   "id": "jp_p_found_kidan_low",
+   "part": "jp_p_found_kidan",
+   "variant": "_low",
+   "group": "found",
+   "p3d": "JP\\parts\\found\\jp_p_found_kidan_low.p3d",
+   "build_list": {
+    "entry": "jp_p_found_kidan",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "low platform (0.30) for a small do or a notice board, flights front and back",
+   "dims": [
+    {
+     "name": "flight_front_ramp_deg",
+     "expected": "<=34",
+     "measured": 33.4,
+     "tol": 0.0,
+     "source": "found.step rule (<=34)",
+     "ok": true
+    },
+    {
+     "name": "flight_back_ramp_deg",
+     "expected": "<=34",
+     "measured": 33.4,
+     "tol": 0.0,
+     "source": "found.step rule (<=34)",
+     "ok": true
+    },
+    {
+     "name": "height_m",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -2.73
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -2.73
+     ],
+     "note": "platform corner"
+    },
+    {
+     "type": "stair_head",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "top of the flight (front edge)"
+    },
+    {
+     "type": "stair_foot",
+     "pos": [
+      1.82,
+      -0.3,
+      0.455
+     ],
+     "note": "foot at grade"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -0.3,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "ground_earth_bare",
+     "id": "jp_m_ground_earth_bare",
+     "palette_id": "earth_bare",
+     "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 802,
+    "Resolution 2": 802,
+    "Resolution 3": 40,
+    "Geometry": 16,
+    "Roadway": 3,
+    "View Geometry": 16,
+    "Fire Geometry": 16
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "platform x 0..W, z 0 (front edge) .. -D; y 0 = top; grade -0.30",
+   "recipe": "stilts.kidan(part, W, D, h, steps)"
+  },
+  {
+   "id": "jp_p_open_shitomi_grid_hinged",
+   "part": "jp_p_open_shitomi_grid",
+   "variant": "_hinged",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_shitomi_grid_hinged.p3d",
+   "build_list": {
+    "entry": "jp_p_open_shitomi_grid",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "worship / temple hall bay: grid shitomido, the upper leaf a top-hinged rotation window (out and up 90 deg; engine-untested), the lower leaf fixed",
+   "dims": [
+    {
+     "name": "upper_leaf_m",
+     "expected": "1.10-1.20",
+     "measured": 1.14,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "grid_pitch_m",
+     "expected": "0.10-0.13 (A)",
+     "measured": 0.115,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 240,
+    "Resolution 2": 24,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "window",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "rotation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      }
+     ],
+     "anim_period": 1.6,
+     "init_opened": 0.0,
+     "sound": "doorWoodSlide",
+     "clear_width_m": null,
+     "engine_tested": false,
+     "note": "hall shitomido: upper grid leaf top-hinged (rotation 90 deg)"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor; +z = out; leaves on the posts' outer faces",
+   "recipe": "shitomi.shitomi(part, x0, bay, variant)"
+  },
+  {
+   "id": "jp_p_open_shitomi_grid_closed",
+   "part": "jp_p_open_shitomi_grid",
+   "variant": "_closed",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_shitomi_grid_closed.p3d",
+   "build_list": {
+    "entry": "jp_p_open_shitomi_grid",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "grid shitomido closed, both leaves down (static)",
+   "dims": [
+    {
+     "name": "upper_leaf_m",
+     "expected": "1.10-1.20",
+     "measured": 1.14,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "grid_pitch_m",
+     "expected": "0.10-0.13 (A)",
+     "measured": 0.115,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 240,
+    "Resolution 2": 24,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor; +z = out; leaves on the posts' outer faces",
+   "recipe": "shitomi.shitomi(part, x0, bay, variant)"
+  },
+  {
+   "id": "jp_p_open_shitomi_grid_open",
+   "part": "jp_p_open_shitomi_grid",
+   "variant": "_open",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_shitomi_grid_open.p3d",
+   "build_list": {
+    "entry": "jp_p_open_shitomi_grid",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "grid shitomido open: upper leaf hooked up level on iron hooks, lower leaf removed: an open bay (static)",
+   "dims": [
+    {
+     "name": "upper_leaf_m",
+     "expected": "1.10-1.20",
+     "measured": 1.14,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "grid_pitch_m",
+     "expected": "0.10-0.13 (A)",
+     "measured": 0.115,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "open_bay_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.7,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (the bay is open)",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 150,
+    "Resolution 2": 18,
+    "Resolution 3": 18,
+    "Geometry": 18,
+    "View Geometry": 12,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor; +z = out; leaves on the posts' outer faces",
+   "recipe": "shitomi.shitomi(part, x0, bay, variant)"
+  },
+  {
+   "id": "jp_p_open_shitomi_grid_fixed",
+   "part": "jp_p_open_shitomi_grid",
+   "variant": "_fixed",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_shitomi_grid_fixed.p3d",
+   "build_list": {
+    "entry": "jp_p_open_shitomi_grid",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "fixed see-through lattice front (koshi) over a board base for worship-hall side bays (players can see in, not pass)",
+   "dims": [],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 108,
+    "Resolution 2": 24,
+    "Resolution 3": 30,
+    "Geometry": 24,
+    "View Geometry": 12,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor; +z = out; leaves on the posts' outer faces",
+   "recipe": "shitomi.shitomi(part, x0, bay, variant)"
+  },
+  {
+   "id": "jp_p_site_hokora_stone_kirizuma",
+   "part": "jp_p_site_hokora",
+   "variant": "_stone_kirizuma",
+   "group": "site",
+   "p3d": "JP\\parts\\site\\jp_p_site_hokora_stone_kirizuma.p3d",
+   "build_list": {
+    "entry": "jp_p_site_hokora",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "stone shrine (sekishi): gable roof stone, body with carved double doors, two base stones",
+   "dims": [
+    {
+     "name": "height_m",
+     "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+     "measured": 0.993,
+     "tol": 0.01,
+     "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_carved_aged",
+     "id": "jp_m_stone_carved_aged",
+     "palette_id": "stone_lantern",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 102,
+    "Resolution 2": 84,
+    "Resolution 3": 84,
+    "Geometry": 78,
+    "View Geometry": 78,
+    "Fire Geometry": 78
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+   "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)"
+  },
+  {
+   "id": "jp_p_site_hokora_stone_yosemune",
+   "part": "jp_p_site_hokora",
+   "variant": "_stone_yosemune",
+   "group": "site",
+   "p3d": "JP\\parts\\site\\jp_p_site_hokora_stone_yosemune.p3d",
+   "build_list": {
+    "entry": "jp_p_site_hokora",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "stone shrine with a hipped roof stone and a jewel knob",
+   "dims": [
+    {
+     "name": "height_m",
+     "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+     "measured": 1.073,
+     "tol": 0.01,
+     "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_carved_aged",
+     "id": "jp_m_stone_carved_aged",
+     "palette_id": "stone_lantern",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 124,
+    "Resolution 2": 106,
+    "Resolution 3": 76,
+    "Geometry": 76,
+    "View Geometry": 76,
+    "Fire Geometry": 76
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+   "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)"
+  },
+  {
+   "id": "jp_p_site_hokora_stone_nagare",
+   "part": "jp_p_site_hokora",
+   "variant": "_stone_nagare",
+   "group": "site",
+   "p3d": "JP\\parts\\site\\jp_p_site_hokora_stone_nagare.p3d",
+   "build_list": {
+    "entry": "jp_p_site_hokora",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "stone shrine whose roof stone runs out at the front (nagare form)",
+   "dims": [
+    {
+     "name": "height_m",
+     "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+     "measured": 1.013,
+     "tol": 0.01,
+     "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_carved_aged",
+     "id": "jp_m_stone_carved_aged",
+     "palette_id": "stone_lantern",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 102,
+    "Resolution 2": 84,
+    "Resolution 3": 84,
+    "Geometry": 78,
+    "View Geometry": 78,
+    "Fire Geometry": 78
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+   "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)"
+  },
+  {
+   "id": "jp_p_site_hokora_stone_niche",
+   "part": "jp_p_site_hokora",
+   "variant": "_stone_niche",
+   "group": "site",
+   "p3d": "JP\\parts\\site\\jp_p_site_hokora_stone_niche.p3d",
+   "build_list": {
+    "entry": "jp_p_site_hokora",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "tall stone with an offering niche and a flat roof slab (roadside / summit kami stone)",
+   "dims": [
+    {
+     "name": "height_m",
+     "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+     "measured": 1.03,
+     "tol": 0.01,
+     "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_carved_aged",
+     "id": "jp_m_stone_carved_aged",
+     "palette_id": "stone_lantern",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 106,
+    "Resolution 2": 100,
+    "Resolution 3": 88,
+    "Geometry": 88,
+    "View Geometry": 88,
+    "Fire Geometry": 88
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+   "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)"
+  },
+  {
+   "id": "jp_p_site_hokora_wood_nagare",
+   "part": "jp_p_site_hokora",
+   "variant": "_wood_nagare",
+   "group": "site",
+   "p3d": "JP\\parts\\site\\jp_p_site_hokora_wood_nagare.p3d",
+   "build_list": {
+    "entry": "jp_p_site_hokora",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "wooden hokora: miniature nagare-zukuri (front slope runs out), kokera roof, doors with iron fittings, 2 katsuogi, on a stone base",
+   "dims": [
+    {
+     "name": "height_m",
+     "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+     "measured": 1.27,
+     "tol": 0.01,
+     "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_carved_aged",
+     "id": "jp_m_stone_carved_aged",
+     "palette_id": "stone_lantern",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 262,
+    "Resolution 2": 220,
+    "Resolution 3": 80,
+    "Geometry": 46,
+    "View Geometry": 46,
+    "Fire Geometry": 46
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+   "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)"
+  },
+  {
+   "id": "jp_p_site_hokora_wood_shinmei",
+   "part": "jp_p_site_hokora",
+   "variant": "_wood_shinmei",
+   "group": "site",
+   "p3d": "JP\\parts\\site\\jp_p_site_hokora_wood_shinmei.p3d",
+   "build_list": {
+    "entry": "jp_p_site_hokora",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "wooden hokora in shinmei form: steep straight gable, chigi + 3 katsuogi, on short legs",
+   "dims": [
+    {
+     "name": "height_m",
+     "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+     "measured": 1.38,
+     "tol": 0.01,
+     "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_carved_aged",
+     "id": "jp_m_stone_carved_aged",
+     "palette_id": "stone_lantern",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 328,
+    "Resolution 2": 286,
+    "Resolution 3": 118,
+    "Geometry": 46,
+    "View Geometry": 46,
+    "Fire Geometry": 46
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+   "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)"
+  },
+  {
+   "id": "jp_p_site_hokora_wood_inari",
+   "part": "jp_p_site_hokora",
+   "variant": "_wood_inari",
+   "group": "site",
+   "p3d": "JP\\parts\\site\\jp_p_site_hokora_wood_inari.p3d",
+   "build_list": {
+    "entry": "jp_p_site_hokora",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "alley / yard Inari hokora painted shu (nagare form); fox pair and torii are props",
+   "dims": [
+    {
+     "name": "height_m",
+     "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+     "measured": 1.27,
+     "tol": 0.01,
+     "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "paint_shu",
+     "id": "jp_m_paint_shu",
+     "palette_id": "shu_vermilion",
+     "rvmat": "JP\\common\\materials\\paint\\jp_m_paint_shu<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_carved_aged",
+     "id": "jp_m_stone_carved_aged",
+     "palette_id": "stone_lantern",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 262,
+    "Resolution 2": 220,
+    "Resolution 3": 80,
+    "Geometry": 46,
+    "View Geometry": 46,
+    "Fire Geometry": 46
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+   "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)"
+  },
+  {
+   "id": "jp_p_site_hokora_wood_saya",
+   "part": "jp_p_site_hokora",
+   "variant": "_wood_saya",
+   "group": "site",
+   "p3d": "JP\\parts\\site\\jp_p_site_hokora_wood_saya.p3d",
+   "build_list": {
+    "entry": "jp_p_site_hokora",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "a wooden nagare hokora inside a shelter shed (saya-do): four posts, board gable roof, back boarded",
+   "dims": [
+    {
+     "name": "height_m",
+     "expected": "0.7-1.5 (hokora) / 2.6 (saya)",
+     "measured": 2.445,
+     "tol": 0.01,
+     "source": "BUILDING_LIST hokora 0.3-1 m on a base",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_carved_aged",
+     "id": "jp_m_stone_carved_aged",
+     "palette_id": "stone_lantern",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 487,
+    "Resolution 2": 445,
+    "Resolution 3": 134,
+    "Geometry": 82,
+    "View Geometry": 82,
+    "Fire Geometry": 82
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "x centred, +z = front (doors), y 0 = grade; a site object with no interior (D9)",
+   "recipe": "hokora.stone_hokora(part, kind) / wood_hokora(part, kind) / saya(part)"
+  },
+  {
    "id": "jp_p_trim_grime_wall",
    "part": "jp_p_trim_grime",
    "variant": "_wall",

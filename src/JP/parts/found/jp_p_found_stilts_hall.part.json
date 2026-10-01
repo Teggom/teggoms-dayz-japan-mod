@@ -1,0 +1,204 @@
+{
+ "id": "jp_p_found_stilts_hall",
+ "part": "jp_p_found_stilts",
+ "variant": "_hall",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_found_stilts_hall.p3d",
+ "build_list": {
+  "entry": "jp_p_found_stilts",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "village haiden / hall floor (3 x 2 ken) +0.60 with a boarded skirt (vent gaps) between the perimeter posts",
+ "datum": "body x 0..W, z 0 (front wall line) .. -D; y 0 = floor top; grade -0.60",
+ "recipe": "stilts.platform(part, W, D, drop, kind)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.139,
+  5.611,
+  -0.71,
+  0.0,
+  -3.779,
+  0.133
+ ],
+ "dims": [
+  {
+   "name": "floor_above_grade_m",
+   "expected": 0.6,
+   "measured": 0.6,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "body corner node (the shell's wall post stands on the floor here)"
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    0.0
+   ],
+   "note": "body corner node (the shell's wall post stands on the floor here)"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -3.64
+   ],
+   "note": "body corner node (the shell's wall post stands on the floor here)"
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    -3.64
+   ],
+   "note": "body corner node (the shell's wall post stands on the floor here)"
+  },
+  {
+   "type": "floor",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -0.6,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 1515,
+  "Resolution 2": 1422,
+  "Resolution 3": 150,
+  "Geometry": 12,
+  "Roadway": 1,
+  "View Geometry": 6,
+  "Fire Geometry": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 1515, Resolution 2 1422, Resolution 3 150, Geometry 12, Roadway 1, View Geometry 6, Fire Geometry 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 floor_above_grade_m",
+   "ok": true,
+   "detail": "expected 0.6, measured 0.6"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

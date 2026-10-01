@@ -1,0 +1,193 @@
+{
+ "id": "jp_p_open_shitomi_grid_open",
+ "part": "jp_p_open_shitomi_grid",
+ "variant": "_open",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_shitomi_grid_open.p3d",
+ "build_list": {
+  "entry": "jp_p_open_shitomi_grid",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "grid shitomido open: upper leaf hooked up level on iron hooks, lower leaf removed: an open bay (static)",
+ "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor; +z = out; leaves on the posts' outer faces",
+ "recipe": "shitomi.shitomi(part, x0, bay, variant)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.04,
+  1.78,
+  0.0,
+  2.494,
+  -0.055,
+  1.244
+ ],
+ "dims": [
+  {
+   "name": "upper_leaf_m",
+   "expected": "1.10-1.20",
+   "measured": 1.14,
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "grid_pitch_m",
+   "expected": "0.10-0.13 (A)",
+   "measured": 0.115,
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  },
+  {
+   "name": "open_bay_clear_m",
+   "expected": ">=1.00",
+   "measured": 1.7,
+   "tol": 0.01,
+   "source": "PLAYBOOK D1 (the bay is open)",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ],
+   "note": "kamoi; the wall's head rail continues past it"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 150,
+  "Resolution 2": 18,
+  "Resolution 3": 18,
+  "Geometry": 18,
+  "View Geometry": 12,
+  "Fire Geometry": 18
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 150, Resolution 2 18, Resolution 3 18, Geometry 18, View Geometry 12, Fire Geometry 18"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 upper_leaf_m",
+   "ok": true,
+   "detail": "expected 1.10-1.20, measured 1.14"
+  },
+  {
+   "check": "C4 grid_pitch_m",
+   "ok": true,
+   "detail": "expected 0.10-0.13 (A), measured 0.115"
+  },
+  {
+   "check": "C4 open_bay_clear_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.7"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

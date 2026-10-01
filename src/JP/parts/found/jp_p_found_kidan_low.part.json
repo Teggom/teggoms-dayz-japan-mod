@@ -1,0 +1,228 @@
+{
+ "id": "jp_p_found_kidan_low",
+ "part": "jp_p_found_kidan",
+ "variant": "_low",
+ "group": "found",
+ "p3d": "JP\\parts\\found\\jp_p_found_kidan_low.p3d",
+ "build_list": {
+  "entry": "jp_p_found_kidan",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "low platform (0.30) for a small do or a notice board, flights front and back",
+ "datum": "platform x 0..W, z 0 (front edge) .. -D; y 0 = top; grade -0.30",
+ "recipe": "stilts.kidan(part, W, D, h, steps)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.04,
+  3.68,
+  -0.36,
+  0.04,
+  -3.241,
+  0.511
+ ],
+ "dims": [
+  {
+   "name": "flight_front_ramp_deg",
+   "expected": "<=34",
+   "measured": 33.4,
+   "tol": 0.0,
+   "source": "found.step rule (<=34)",
+   "ok": true
+  },
+  {
+   "name": "flight_back_ramp_deg",
+   "expected": "<=34",
+   "measured": 33.4,
+   "tol": 0.0,
+   "source": "found.step rule (<=34)",
+   "ok": true
+  },
+  {
+   "name": "height_m",
+   "expected": 0.3,
+   "measured": 0.3,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "platform corner"
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    0.0
+   ],
+   "note": "platform corner"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -2.73
+   ],
+   "note": "platform corner"
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    -2.73
+   ],
+   "note": "platform corner"
+  },
+  {
+   "type": "stair_head",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "note": "top of the flight (front edge)"
+  },
+  {
+   "type": "stair_foot",
+   "pos": [
+    1.82,
+    -0.3,
+    0.455
+   ],
+   "note": "foot at grade"
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -0.3,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "ground_earth_bare",
+   "id": "jp_m_ground_earth_bare",
+   "palette_id": "earth_bare",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 802,
+  "Resolution 2": 802,
+  "Resolution 3": 40,
+  "Geometry": 16,
+  "Roadway": 3,
+  "View Geometry": 16,
+  "Fire Geometry": 16
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 802, Resolution 2 802, Resolution 3 40, Geometry 16, Roadway 3, View Geometry 16, Fire Geometry 16"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "granite"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "48/48 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 flight_front_ramp_deg",
+   "ok": true,
+   "detail": "expected <=34, measured 33.4"
+  },
+  {
+   "check": "C4 flight_back_ramp_deg",
+   "ok": true,
+   "detail": "expected <=34, measured 33.4"
+  },
+  {
+   "check": "C4 height_m",
+   "ok": true,
+   "detail": "expected 0.3, measured 0.3"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

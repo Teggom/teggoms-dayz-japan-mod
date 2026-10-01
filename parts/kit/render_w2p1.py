@@ -95,6 +95,46 @@ SHEETS = {
           target=(0.0, 0.45, 0.0), dist=3.0, move=0.0),
         P("jp_p_roof_ornament_hoju_kawara", "Hoju finial in tile", target=(0.0, 0.45, 0.0), dist=3.0, move=0.0),
     ]),
+    "w2p1_found_open": ("W2P1 raised floors (stilts), stone platforms (kidan), hall shitomido / lattice fronts", [
+        P("jp_p_found_stilts_honden", "Honden floor +1.00 on underfloor posts on stones, sleepers, two rows of "
+          "underfloor nuki, open beneath (yukashita)", target=(0.9, 0.5, -0.9), dist=7.0, human=[3.0, 0.8, 0.0]),
+        P("jp_p_found_stilts_hall", "Haiden / hall floor +0.60 with a boarded skirt (vent gaps)",
+          target=(2.7, 0.3, -1.8), dist=11.0, move=0.6),
+        P("jp_p_found_stilts_ratguard", "Store on posts +1.20 with rat guards (nezumi-gaeshi)",
+          target=(1.8, 0.6, -1.4), dist=9.0, move=1.2),
+        P("jp_p_found_kidan_shoro", "Bell-tower platform 0.60: kerb stones, facing slabs, base course, earth top, "
+          "stone flight (33 deg ramp) with cheek stones", target=(1.4, 0.3, -1.0), dist=8.0, move=0.6,
+          human=[3.6, 1.4, 0.0]),
+        P("jp_p_found_kidan_hall", "Hall platform 0.45, a 1-ken stone flight", target=(2.7, 0.2, -2.0), dist=11.0,
+          move=0.45),
+        P("jp_p_found_kidan_low", "Low platform 0.30, flights front and back", target=(1.8, 0.1, -1.4), dist=8.0,
+          move=0.30),
+        P("jp_p_open_shitomi_grid_hinged", "Hall shitomido: grid on a backing board; the upper leaf a top-hinged "
+          "rotation window (shown open), the lower fixed", target=(0.9, 1.1, 0.4), move=0.0, open_=1.0, dist=7.0),
+        P("jp_p_open_shitomi_grid_closed", "Shitomido closed", target=(0.9, 1.0, 0.1), move=0.0, dist=6.0),
+        P("jp_p_open_shitomi_grid_open", "Shitomido open: upper leaf hooked up level, lower leaf removed (open bay)",
+          target=(0.9, 1.2, 0.5), move=0.0, dist=7.0, human=[2.6, 1.0, 0.0]),
+        P("jp_p_open_shitomi_grid_fixed", "Fixed see-through lattice front over a board base (hall side bays)",
+          target=(0.9, 1.0, 0.0), move=0.0, dist=6.0),
+    ]),
+    "w2p1_hokora": ("W2P1 jp_p_site_hokora: 4 stone + 4 wood micro-shrines (site objects, no interior)", [
+        P("jp_p_site_hokora_stone_kirizuma", "Stone shrine: gable roof stone, carved double doors, two base stones",
+          target=(0.0, 0.5, 0.0), dist=4.0, move=0.0, human=[1.0, 0.6, 0.0]),
+        P("jp_p_site_hokora_stone_yosemune", "Stone shrine with a hipped roof stone and a jewel knob",
+          target=(0.0, 0.5, 0.0), dist=4.0, move=0.0),
+        P("jp_p_site_hokora_stone_nagare", "Stone shrine, nagare roof stone (front runs out)", target=(0.0, 0.5, 0.0),
+          dist=4.0, move=0.0),
+        P("jp_p_site_hokora_stone_niche", "Tall kami stone with an offering niche and a roof slab",
+          target=(0.0, 0.5, 0.0), dist=4.0, move=0.0),
+        P("jp_p_site_hokora_wood_nagare", "Wooden hokora, miniature nagare-zukuri, 2 katsuogi, stone base",
+          target=(0.0, 0.7, 0.0), dist=4.5, move=0.0),
+        P("jp_p_site_hokora_wood_shinmei", "Wooden hokora, shinmei form: chigi + 3 katsuogi", target=(0.0, 0.7, 0.0),
+          dist=4.5, move=0.0),
+        P("jp_p_site_hokora_wood_inari", "Inari hokora painted shu (fox pair + torii are props)",
+          target=(0.0, 0.7, 0.0), dist=4.5, move=0.0),
+        P("jp_p_site_hokora_wood_saya", "Wooden hokora inside a shelter shed (saya-do)", target=(0.0, 1.2, 0.0),
+          dist=7.0, move=0.0, human=[1.6, 1.0, 0.0]),
+    ]),
 }
 
 
