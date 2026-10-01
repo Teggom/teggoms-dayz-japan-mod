@@ -34,3 +34,10 @@ research/production/contact_sheets/w2c_family.jpg. Time log `japan_dev/TIMELOG_W
 - tea houses: kamado (the kettle hearth), bench spots (inside the bench shed / under the bench roofs)
 - guard huts: brazier, counter / watch hatch under the end shutter, lantern post, tool rack; M: fire ladder on the ridge
 - kido: the ward-name lantern under the tie beam (+ the hut's spots, prefixed hut_)
+
+## Commits
+- fc6c66b: the whole W2C build (156 files: template, gates.py, recipe, registry, shellcheck, 16 shells' src ODOLs +
+  model.cfgs, records / rooms / checks, config.cpp, C_mapgroupproto.xml, spikes/W2C, the sheet, the time log). It
+  carries W2P1's message: W2C had staged its paths and W2P1's commit ran in the shared index at that moment. The
+  file list is W2C's staged set (156 files); W2P1 may need to commit its own work separately. Pushed to origin/master.
+- the follow-up commit with this note, the PUSHED / END time-log lines (committed with explicit paths only).
