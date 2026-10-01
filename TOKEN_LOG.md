@@ -46,6 +46,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~10:56 (local) | FP1 | 15 prop findings (broom, sheaves, bonsai/pots, sword rack, ropes, charcoal-bale ends, lantern, loom, leaf shapes, stone texture, straw stack, lever well, notice board, climbable fire-watch ladder) + 5 collapsed torii + 4 materials | **764k** (347 tool calls) | 69 min | ran alongside FB1 |
 | 2026-10-01 ~11:00 (local) | FB1 | doors: 97 of 128 building files renamed to match their classes + bindcheck.py; Kinai gable, kura doors/shutters + aged plaster, tools re-seated, hill torii raised, collapsed torii placed, world rebuilt, 15-min re-check | **532k** (282 tool calls) | 74 min | ran alongside FP1 |
 | 2026-10-01 11:14 (local) | FP2 + FB2 (baseline, CONCURRENT) | re-check fixes: FP2 = firewood piles, mochi mortar, rope 2.5x segments; FB2 = z-fighting check + fixes, Kinai gable, partition head beams, two-storey divider/gaps, world rebuild | - | - | before: **49%** (5-hour 39%) |
+| 2026-10-01 ~11:55 (local) | FP2 | firewood piles remade (woodpile.py + redrawn end grain), usu/kine seated, rope 2.5x (ropekit.py) | **466k** (201 tool calls) | 41 min | ran alongside FB2 |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
