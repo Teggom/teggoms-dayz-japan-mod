@@ -385,3 +385,8 @@
   wall 0.26 m above the thatch + tile cap; still shallower thatch + no lower kitchen roof: Stephen's call); partitions end at
   head beams (C21) + an 8 cm loft slit closed in every town house / inn / machiya; grand inn divider to the roof + missing
   posts (C22)). 128/128 buildings, 8,574 checks; machiya now 81, furnished 140. **Re-check: TEST_CHECKLIST.md (~10 min).**
+- 2026-10-01: **Phase C wave 2 launched** (Stephen: shrine/temple village grade AND town grade now). Order: W2P1 (village
+  shrine/temple parts: koran + kizahashi, tobira, nagare, chigi/katsuogi/hoju, stilts, shitomi) + W2P2 (curved sori roof +
+  kumimono brackets; registers in the parts manifest after W2P1) + W2C (civic shells: tea house x3 sizes, smithy +
+  swordsmith, guard hut, ward gate kido) in parallel -> then W2S (shrine + temple shells, village + town grades) -> then
+  W2F (furnish + place: a hall on the showcase shrine site, a village temple, civic by the street) + one walk.
