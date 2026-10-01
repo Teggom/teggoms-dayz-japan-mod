@@ -14,3 +14,5 @@
 2026-10-01 13:26:34 | GROUP DONE | hooks | nagare hook tested with W2P1 nagare.nagare(curve=sori.nagare): checks clean | 5h 17% wk 55%
 2026-10-01 13:27:15 | ASSEMBLIES DONE | W2P2 | hall/hall_kokera/hondo/shoro 23/23 each incl. binarize ODOL | 5h 17% wk 55%
 2026-10-01 13:28:11 | SHEETS DONE | W2P2 | parts/contact_sheets/w2p2_{1_sori,2_kumimono,3_assemblies}.jpg | 5h 18% wk 55%
+2026-10-01 13:29:03 | PUSHED | git | b98e43f 68661cb 5fd37b0 on origin/master | 5h 19% wk 56%
+2026-10-01 13:29:03 | END | W2P2 | curved roof + kumimono done | 5h 19% wk 56%
