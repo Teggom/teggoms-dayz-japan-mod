@@ -1,0 +1,96 @@
+{
+ "id": "jp_f_sg_combs",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopgoods",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopgoods\\jp_f_sg_combs.p3d",
+   "class": "StaticObj_JP_F_Sg_Combs",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Goods: boxwood combs, blanks",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 172,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.27,
+    0.24,
+    0.0,
+    0.05,
+    -0.08,
+    0.08
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only (mount surface: a stand step, shelf board or the floor); loot lies around it"
+   ],
+   "master": "spikes/S1/out/shopgoods/jp_f_sg_combs.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopgoods\\jp_f_sg_combs_scattered.p3d",
+   "class": "StaticObj_JP_F_Sg_Combs_Scattered",
+   "variant": "std",
+   "state": "scattered",
+   "abandoned": true,
+   "display": "Goods: combs scattered",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 91,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.278,
+    0.219,
+    0.0,
+    0.012,
+    -0.13,
+    0.165
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only (mount surface: a stand step, shelf board or the floor); loot lies around it"
+   ],
+   "master": "spikes/S1/out/shopgoods/jp_f_sg_combs_scattered.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "kushiya"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 248-250)"
+}

@@ -1,0 +1,96 @@
+{
+ "id": "jp_f_sg_dolls",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopgoods",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopgoods\\jp_f_sg_dolls.p3d",
+   "class": "StaticObj_JP_F_Sg_Dolls",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Goods: small gosho dolls",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 190,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.255,
+    0.26,
+    0.0,
+    0.11,
+    -0.06,
+    0.06
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only (mount surface: a stand step, shelf board or the floor); loot lies around it"
+   ],
+   "master": "spikes/S1/out/shopgoods/jp_f_sg_dolls.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopgoods\\jp_f_sg_dolls_knocked.p3d",
+   "class": "StaticObj_JP_F_Sg_Dolls_Knocked",
+   "variant": "std",
+   "state": "knocked",
+   "abandoned": true,
+   "display": "Goods: dolls knocked over",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 166,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.204,
+    0.26,
+    0.0,
+    0.08,
+    -0.06,
+    0.161
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [],
+   "notes": [
+    "dressing only (mount surface: a stand step, shelf board or the floor); loot lies around it"
+   ],
+   "master": "spikes/S1/out/shopgoods/jp_f_sg_dolls_knocked.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "ningyo"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 526-528)"
+}

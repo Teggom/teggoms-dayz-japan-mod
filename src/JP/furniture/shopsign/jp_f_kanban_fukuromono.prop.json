@@ -1,0 +1,114 @@
+{
+ "id": "jp_f_kanban_fukuromono",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopsign",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopsign\\jp_f_kanban_fukuromono.p3d",
+   "class": "StaticObj_JP_F_Kanban_Fukuromono",
+   "variant": "fukuromono",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Hanging signboard: pouches and bags (fukuromono)",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 42,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.04,
+    0.04,
+    1.72,
+    2.78,
+    0.0,
+    0.58
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "board_h",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hanging signboard on a bracket under the eave (front proxy, facade plane z = 0); text both faces"
+   ],
+   "hang_y": 2.77,
+   "master": "spikes/S1/out/shopsign/jp_f_kanban_fukuromono.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopsign\\jp_f_kanban_fukuromono_askew.p3d",
+   "class": "StaticObj_JP_F_Kanban_Fukuromono_Askew",
+   "variant": "fukuromono",
+   "state": "askew",
+   "abandoned": true,
+   "display": "Hanging signboard (pouches and bags (fukuromono)), one cord gone, faded",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 37,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.041,
+    0.144,
+    1.703,
+    2.78,
+    0.0,
+    0.808
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "board_h",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "hanging signboard on a bracket under the eave (front proxy, facade plane z = 0); text both faces"
+   ],
+   "hang_y": 2.77,
+   "master": "spikes/S1/out/shopsign/jp_f_kanban_fukuromono_askew.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "fukuromono"
+ ],
+ "era": "shop kanban: the standard shop-front kit (B_TRADE_INDUSTRY 41)"
+}

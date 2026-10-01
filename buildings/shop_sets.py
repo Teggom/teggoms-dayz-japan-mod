@@ -533,3 +533,41 @@ trade("honya", "Publisher and bookshop (hanmoto / shomotsu-ya)",
       stock="jp_f_tana_091_3", stock_top=["jp_f_sg_books"], wall="jp_f_print_line_books", floor=["jp_f_sg_books"],
       front=["jp_f_kanban_shorin"], tori=("jp_f_box_m", "jp_f_debris_paper"),
       era="KEPT: BTI 500-512; ink-only prints (benizuri-e 1744, nishiki-e 1765 later)")
+
+# Crafts that fit a townhouse (S1 groups 5-6): the craftsman works at the front for the light (the strip), the goods
+# beside him
+trade("fukuromono", "Leather goods: pouches, tobacco cases, setta (fukuromono-ya / setta-ya)",
+      steps=("jp_f_sg_pouches", "jp_f_sg_pouches", "jp_f_sg_pouches"), strip=["stand", "jp_f_hides"],
+      stock="jp_f_tana_091_3", stock_top=["jp_f_sg_pouches"],
+      front=["jp_f_kanban_fukuromono", "jp_s_shopfront_shape_geta"], tori=("jp_f_box_m", "jp_f_box_s"),
+      era="KEPT: BTI 187-198")
+trade("hataori", "Weaving (hata-ya)",
+      strip=["jp_f_izaribata", "jp_f_itoguruma_thread"], stock="jp_f_bolt_shelf", floor=["jp_f_sg_yarn"],
+      front=["jp_f_kanban_momen"], tori=("jp_f_basket_back", "jp_f_box_s"),
+      era="KEPT: BTI 327-329 (ground loom; the Nishijin drawloom needs a tall doma: the loom house)")
+trade("shitate", "Sewing (shitate-ya)",
+      strip=["jp_f_tailor_board"], stock="jp_f_tana_091_3", stock_top=["jp_f_sewing_box"], corner="jp_f_kori",
+      floor=["jp_f_sg_folded", "jp_f_sewing_work"], front=["jp_f_kanban_shitate"], tori=("jp_f_kori", "jp_f_box_m"),
+      era="KEPT: BTI 358-360")
+trade("eshi", "Painting (machi-eshi)",
+      strip=["jp_f_paint_mat"], stock="jp_f_tana_091_3", stock_top=["jp_f_writing_box"], choba="desk",
+      wall="jp_f_print_line_fans", corner="jp_f_box_s_lacquer",
+      front=["jp_f_kanban_edokoro", "jp_s_shopfront_shape_fan"], tori=("jp_f_box_m", "jp_f_jar_s"),
+      era="KEPT: BTI 482-485")
+trade("nushi", "Lacquer (nushi)",
+      steps=("jp_f_sg_lacquer", "jp_f_sg_lacquer", "jp_f_sg_lacquer"), strip=["stand", "jp_f_zukue_plain"],
+      stock="jp_f_urushiburo", corner="jp_f_jar_s", front=["jp_f_kanban_nushi"], tori=("jp_f_box_m", "jp_f_jar_s"),
+      era="KEPT: BTI 475-478 (the drying cupboard is its tell)")
+trade("kushiya", "Combs (kushi-ya)",
+      steps=("jp_f_sg_combs", "jp_f_sg_combs", "jp_f_sg_combs"), strip=["stand", "jp_f_zukue_plain"],
+      stock="jp_f_tana_091_3", stock_top=["jp_f_sg_combs"], front=["jp_f_kanban_kushi"],
+      tori=("jp_f_box_m", "jp_f_box_s"), era="KEPT: BTI 248-250 (boxwood)")
+trade("ningyo", "Dolls (ningyo-ya)",
+      strip=["jp_f_doll_tiers", "jp_f_box_s_lacquer"], stock="jp_f_tana_091_3", stock_top=["jp_f_sg_dolls"],
+      floor=["jp_f_toys_doll"], front=["jp_f_kanban_ningyo"], tori=("jp_f_box_m", "jp_f_box_s"),
+      era="KEPT: BTI 526-528 (Kyoho-bina 1716-36); no daruma, no Ichimatsu doll")
+trade("butsugu", "Temple-street crafts: images, rosaries, incense, candles (butsugu-ya)",
+      steps=("jp_f_sg_butsugu", "jp_f_sg_candles", "jp_f_sg_butsugu"), strip=["stand", "jp_f_box_m"],
+      stock="jp_f_tana_091_3", stock_top=["jp_f_butsu_set_simple"],
+      front=["jp_f_kanban_butsugu", "jp_f_kanban_rousoku"], tori=("jp_f_box_m", "jp_f_jar_s"),
+      era="KEPT: BTI 533-542")

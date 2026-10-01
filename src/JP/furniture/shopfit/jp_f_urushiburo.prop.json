@@ -1,0 +1,172 @@
+{
+ "id": "jp_f_urushiburo",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_urushiburo.p3d",
+   "class": "StaticObj_JP_F_Urushiburo",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Lacquer drying cupboard (urushi-buro)",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 342,
+    "Resolution 2": 42,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    0.0,
+    1.4,
+    -0.25,
+    0.25
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    -0.25,
+    0.455,
+    0.25
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 45.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 1.4,
+     "rect": [
+      -0.405,
+      -0.2,
+      0.405,
+      0.2
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       1.4,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 1.4,
+     "measured": 1.4,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the dust-free drying cupboard (BTI 476; KEEP_TRADES 14 'its tell'); loot on the top (1.40)"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_urushiburo.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_urushiburo_open.p3d",
+   "class": "StaticObj_JP_F_Urushiburo_Open",
+   "variant": "std",
+   "state": "open",
+   "abandoned": true,
+   "display": "Lacquer cupboard, a leaf off, wares fallen",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 486,
+    "Resolution 2": 42,
+    "Resolution 3": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.533,
+    0.455,
+    0.0,
+    1.4,
+    -0.25,
+    0.529
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    -0.25,
+    0.455,
+    0.25
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 45.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 1.4,
+     "rect": [
+      -0.405,
+      -0.2,
+      0.405,
+      0.2
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       1.4,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 1.4,
+     "measured": 1.4,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the dust-free drying cupboard (BTI 476; KEEP_TRADES 14 'its tell'); loot on the top (1.40)"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_urushiburo_open.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "nushi"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 475-478)"
+}
