@@ -171,8 +171,8 @@ def kohai_frame(part, xs, zp, t, eave_y, drop, plane_dy=0.0, beam_d=0.20, tie_d=
         part.add(box(min(xe, xe + sg * 0.06), max(xe, xe + sg * 0.06), yb0 + 0.03, yb1 - 0.03, zp - 0.05, zp + 0.05,
                      mat, vis=(1,), tag="kibana"))
     for x in xs:
-        part.add(KR.stone(rng, x, zp, 0.34, 0.34, 0.14, -drop + 0.08, "stone_cut", bury=0.06, flat_top=0.92, n=8,
-                          vis=(1, 2, 3), tag="kohai_stone"))
+        part.add(KR.stone(rng, x, zp, 0.34, 0.34, 0.14, -drop + 0.08, "stone_cut", bury=0.06, flat_top=0.92, n=6,
+                          vis=(1, 2), tag="kohai_stone"))
         n = 8
         r = 0.075 / math.cos(math.pi / n)
         part.add(tube((x, -drop + 0.08, zp), (x, yb0, zp), r, mat, n=n, vis=(1, 2, 3), geo=True, view=True, fire=True,

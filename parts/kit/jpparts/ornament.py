@@ -65,7 +65,7 @@ def katsuogi(part, x0, x1, y, zr, n=3, r=0.07, length=0.80, mat=MAT, inset=0.35,
         for sg in (-1, 1):
             a = (x, yc, zr + sg * (length / 2 - 0.05))
             b = (x, yc, zr + sg * length / 2)
-            part.add(tube(a, b, r, mat, n=8, r1=r * 0.82, vis=(1, 2), tag="katsuogi_end"))
+            part.add(tube(a, b, r, mat, n=8, r1=r * 0.82, vis=(1,), tag="katsuogi_end"))
     return yc + r
 
 

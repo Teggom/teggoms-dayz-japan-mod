@@ -55,6 +55,54 @@ def placement_boxes(b, M):
     return out
 
 
+def door_world_rot(d, gcomps):
+    """W2C (2026-10-01): MV.door_world for a PASSABLE door whose leaves rotate (the kido's hinged gate pair; the
+    machiya's door_world shifts leaves along their axis, right only for sliding ones). The sweep is sampled along the
+    real rotation (checks.sweep_hits); the clear width and head are measured on the closed leaves' line with the leaves
+    turned fully open (raycheck.open_state), from the floor under the action point (action y - act_h)."""
+    from jpparts import raycheck as RC
+    bones = [a["bone"] for a in d.anims]
+    hits = C.sweep_hits(d, gcomps)
+    leaves = [c for c in gcomps if c["door"] in bones]
+    if not leaves:
+        return False, "no Geometry leaf", None
+    lb = [c["bbox"] for c in leaves]
+    bb = [min(b[0] for b in lb), max(b[1] for b in lb), min(b[4] for b in lb), max(b[5] for b in lb)]
+    along_x = bb[1] - bb[0] >= bb[3] - bb[2]
+    wall = (bb[2] + bb[3]) / 2 if along_x else (bb[0] + bb[1]) / 2
+    obst = RC.open_state(gcomps, [d], 1.0)
+    ax = d.action
+    y0 = ax[1] - getattr(d, "act_h", 1.0)
+
+    def col(s):
+        if along_x:
+            return (s - 0.004, s + 0.004, y0 + 0.05, y0 + 1.95, wall - 0.35, wall + 0.35)
+        return (wall - 0.35, wall + 0.35, y0 + 0.05, y0 + 1.95, s - 0.004, s + 0.004)
+
+    def free(s):
+        return not any(C.comp_box_intersect(c, col(s), 0.0) for c in obst)
+    c0 = ax[0] if along_x else ax[2]
+    if not free(c0):
+        return False, "doorway centre blocked with the leaves open (sweep hits %s)" % hits[:3], None
+    lo = hi = c0
+    while free(lo - 0.01) and lo > c0 - 4:
+        lo -= 0.01
+    while free(hi + 0.01) and hi < c0 + 4:
+        hi += 0.01
+    head = 99.0
+    for c in obst:
+        b = c["bbox"]
+        inside = (b[0] < hi and b[1] > lo and b[4] < wall + 0.3 and b[5] > wall - 0.3) if along_x else \
+            (b[4] < hi and b[5] > lo and b[0] < wall + 0.3 and b[1] > wall - 0.3)
+        if inside and b[2] > y0 + 0.5:
+            head = min(head, b[2] - y0)
+    clear = hi - lo
+    ok = not hits and clear >= 1.0 - 1e-6 and head >= 2.0 - 0.005
+    return ok, "leaves turn %s deg %s; open clear %.2f m, head %.2f m" % (
+        "/".join("%.0f" % math.degrees(a["amount"]) for a in d.anims),
+        "without touching other geometry" if not hits else "HITS %s" % hits[:3], clear, head), clear
+
+
 def run(bd):
     b, M, floors, pts, mod = bd["b"], bd["M"], bd["floors"], bd["pts"], bd["mod"]
     name, cls = bd["rec"]["name"], bd["rec"]["class"]
@@ -195,7 +243,10 @@ def run(bd):
                 from jpparts import raycheck as RC
                 sh = [od for od in M.doors if od is not d and not getattr(od, "passable", True)]
                 gc = RC.open_state(gcomps, sh, 1.0) if sh else gcomps
-            ok, msg, clear = MV.door_world(d, gc)
+            if any(a["type"] == "rotation" for a in d.anims):
+                ok, msg, clear = door_world_rot(d, gc)        # W2C: hinged gate leaves (MV.door_world slides them)
+            else:
+                ok, msg, clear = MV.door_world(d, gc)
             clears.append(clear or 0.0)
             rec("C7 DoorsTwin%d sweep + clear (>= 1.00, D1) + head (D2)" % k, ok, msg)
         else:

@@ -51,10 +51,11 @@ def platform(part, W, D, drop=1.0, kind="honden", step=HALF, mat=MAT, floor=True
             if not edge and kind != "ratguard" and (round(x / KEN, 3) % 1 or round(z / KEN, 3) % 1):
                 continue                                # inner posts on the ken grid only (fewer faces)
             sz = 0.105
-            part.add(stone(rng, x, z, 0.26, 0.24, 0.12, -drop + 0.07, "stone_field", bury=0.06, vis=(1, 2),
+            part.add(stone(rng, x, z, 0.26, 0.24, 0.12, -drop + 0.07, "stone_field", bury=0.06, n=6, vis=(1,),
                            tag="tsuka_stone"))
+            corner = x in (xs[0], xs[-1]) and z in (zs[0], zs[-1])
             part.add(box(x - sz / 2, x + sz / 2, -drop + 0.07, ob0, z - sz / 2, z + sz / 2, mat,
-                         vis=(1, 2, 3) if edge else (1, 2), tag="yukazuka", grain="long"))
+                         vis=(1, 2, 3) if corner else ((1, 2) if edge else (1,)), tag="yukazuka", grain="long"))
             posts.append((x, z))
             if kind == "ratguard":
                 yg = ob0 - 0.10
@@ -80,7 +81,7 @@ def platform(part, W, D, drop=1.0, kind="honden", step=HALF, mat=MAT, floor=True
                 z = zf if side == "front" else -D - zf
                 bs = board_run(0.0, W, -drop + 0.03, ob1, min(z, z + (0.015 if side == "front" else -0.015)),
                                max(z, z + (0.015 if side == "front" else -0.015)), rng, 0.18, 0.26, mat, gap=0.012,
-                               vis=(1, 2), tag="skirt_board")
+                               vis=(1,), tag="skirt_board")
             else:
                 x = -zf if side == "left" else W + zf
                 bs = []
@@ -89,12 +90,12 @@ def platform(part, W, D, drop=1.0, kind="honden", step=HALF, mat=MAT, floor=True
                     ze = min(0.0, zz + rng.uniform(0.18, 0.26))
                     bs.append(box(min(x, x + (-0.015 if side == "left" else 0.015)),
                                   max(x, x + (-0.015 if side == "left" else 0.015)), -drop + 0.03, ob1, zz + 0.006,
-                                  ze - 0.006, mat, vis=(1, 2), tag="skirt_board", uvoff=(rng.random(), rng.random())))
+                                  ze - 0.006, mat, vis=(1,), tag="skirt_board", uvoff=(rng.random(), rng.random())))
                     zz = ze
             part.extend(bs)
         for (a, b, c, d) in ((0.0, W, zf, zf + 0.015), (0.0, W, -D - zf - 0.015, -D - zf),
                              (-zf - 0.015, -zf, -D, 0.0), (W + zf, W + zf + 0.015, -D, 0.0)):
-            part.add(box(a, b, -drop + 0.03, ob1, c, d, mat, vis=(3,), tag="skirt_lod"))
+            part.add(box(a, b, -drop + 0.03, ob1, c, d, mat, vis=(2, 3), tag="skirt_lod"))
     elif kind in ("honden", "ratguard"):
         # open beneath: no void board (the period look); the far LOD keeps the corner posts (vis 3 above)
         pass

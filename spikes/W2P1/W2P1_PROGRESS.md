@@ -16,7 +16,16 @@ Assemblies: parts/kit/w2p1_assembly.py (village haiden + honden on stilts; small
 parts/kit/render_w2p1.py -> parts/contact_sheets/w2p1_*.jpg
 
 ## Status
-- [ ] 1 koran  - [ ] 2 tobira  - [ ] 3 nagare  - [ ] 4 ornament  - [ ] 5 stilts  - [ ] 6 shitomi  - [ ] 7 extras
-- [ ] assemblies  - [ ] sheets  - [ ] pushed
+- [x] 1 koran  - [x] 2 tobira  - [x] 3 nagare (+kohai, hogyo)  - [x] 4 ornament  - [x] 5 stilts (+kidan)
+- [x] 6 shitomi  - [x] 7 hokora (gate / genkan NOT built: W2C gates.py is the base)
+- [x] assemblies (honden 26/26, haiden 25/25, temple_hall 32/32, ODOL)  - [x] sheets  - [x] pushed
+
+## How to rerun
+- parts: `python parts/kit/build_parts.py --only jp_p_porch_koran,jp_p_open_tobira,jp_p_roof_nagare,jp_p_roof_kohai,`
+  `jp_p_roof_forms_hogyo,jp_p_roof_ornament,jp_p_found_stilts,jp_p_found_kidan,jp_p_open_shitomi_grid,jp_p_site_hokora`
+- extra part checks incl. C20 after resolve: `python spikes/W2P1/ptest.py <module>`
+- assemblies: `python parts/kit/w2p1_assembly.py` (writes parts/w2p1_assembly_checks.json, binarizes)
+- sheets: `python parts/kit/render_w2p1.py w2p1_koran|w2p1_tobira|w2p1_roofs|w2p1_found_open|w2p1_hokora|w2p1_asm`
 
 ## Commits
+- df69a85 koran; 66462c5 tobira + roofs + ornaments; (next) stilts/kidan/shitomi/hokora; final: assemblies + sheets

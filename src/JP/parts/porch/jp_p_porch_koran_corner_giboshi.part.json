@@ -27,7 +27,7 @@
   -1.11,
   1.155,
   -0.0,
-  1.392
+  1.397
  ],
  "dims": [
   {
@@ -113,9 +113,9 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 265,
-  "Resolution 2": 219,
-  "Resolution 3": 76,
+  "Resolution 1": 252,
+  "Resolution 2": 110,
+  "Resolution 3": 54,
   "Geometry": 36,
   "Roadway": 2,
   "View Geometry": 12,
@@ -138,7 +138,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 265, Resolution 2 219, Resolution 3 76, Geometry 36, Roadway 2, View Geometry 12, Fire Geometry 12"
+   "detail": "Resolution 1 252, Resolution 2 110, Resolution 3 54, Geometry 36, Roadway 2, View Geometry 12, Fire Geometry 12"
   },
   {
    "check": "C2 library only",

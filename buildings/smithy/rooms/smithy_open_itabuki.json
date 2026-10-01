@@ -1,0 +1,117 @@
+{
+ "building": "Land_JP_Smithy_Open_Itabuki",
+ "p3d": "\\JP\\buildings\\smithy\\jp_smithy_open_itabuki.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/civic.py; 'fittings' = fixed-prop spots for the furnisher (kamado, forge, bellows, anvil, quench tub, benches, fire ladder, shimenawa)",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "workshop:smithy",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -3.58,
+    -0.15
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "smithy floor: forge corner (left back), open front, the walled bay with the shutter",
+   "enclosed": false,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -1.76,
+    1.67
+   ],
+   "fittings": [
+    {
+     "kind": "forge",
+     "room": "doma",
+     "note": "hodo: the clay forge hearth against the back wall (specialty prop), under the smoke vent",
+     "centre": [
+      -1.78,
+      -1.07
+     ],
+     "size": [
+      1.1,
+      0.9
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "bellows",
+     "room": "doma",
+     "note": "fuigo: box bellows (push-pull) against the end wall, nozzle into the forge's side (specialty prop)",
+     "centre": [
+      -2.41,
+      -1.02
+     ],
+     "size": [
+      0.45,
+      1.1
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "anvil",
+     "room": "doma",
+     "note": "kanatoko set in a stump in front of the fire; the smith sits / kneels on the bellows side",
+     "centre": [
+      -1.78,
+      -0.02
+     ],
+     "size": [
+      0.5,
+      0.5
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "quench_tub",
+     "room": "doma",
+     "note": "mizu-oke quench tub beside the forge",
+     "centre": [
+      -0.93,
+      -0.92
+     ],
+     "size": [
+      0.6,
+      0.6
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "charcoal_bin",
+     "room": "doma",
+     "note": "pine charcoal bin / bales on the back wall (the back door stays clear)",
+     "centre": [
+      1.51,
+      -1.37
+     ],
+     "size": [
+      0.9,
+      0.55
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "tool_wall",
+     "room": "doma",
+     "note": "finished hoes, sickles and tongs hung on the front wall's inside (wall-hung props)",
+     "rect": [
+      1.06,
+      2.58,
+      1.62,
+      1.74
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 3,
+ "loot_by_room": {
+  "doma": 3
+ }
+}

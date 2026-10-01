@@ -1,0 +1,53 @@
+{
+ "building": "Land_JP_Kido_Board_Roofed",
+ "p3d": "\\JP\\buildings\\kido\\jp_kido_board_roofed.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/civic.py; 'fittings' = fixed-prop spots for the furnisher (kamado, forge, bellows, anvil, quench tub, benches, fire ladder, shimenawa)",
+ "rooms": [
+  {
+   "name": "gate",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.1,
+    6.2700000000000005,
+    -1.4,
+    1.2
+   ],
+   "doors": [
+    "DoorsTwin2",
+    "DoorsTwin1"
+   ],
+   "note": "the passage through the kido (street outside +z, the ward inside -z)",
+   "enclosed": false,
+   "rect_model": [
+    -3.085,
+    3.085,
+    -1.4,
+    1.2
+   ],
+   "fittings": [
+    {
+     "kind": "lantern",
+     "room": null,
+     "note": "the ward-name lantern hung under the tie beam (site prop)",
+     "centre": [
+      -1.82,
+      0.0
+     ],
+     "size": [
+      0.3,
+      0.3
+     ],
+     "yaw": 0.0,
+     "y": 2.3,
+     "outside": true
+    }
+   ]
+  }
+ ],
+ "loot_points": 3,
+ "loot_by_room": {
+  "gate": 3
+ }
+}

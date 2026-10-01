@@ -136,9 +136,9 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 226,
-  "Resolution 2": 142,
-  "Resolution 3": 136,
+  "Resolution 1": 210,
+  "Resolution 2": 126,
+  "Resolution 3": 76,
   "Geometry": 52,
   "Roadway": 1,
   "View Geometry": 52,
@@ -161,7 +161,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 226, Resolution 2 142, Resolution 3 136, Geometry 52, Roadway 1, View Geometry 52, Fire Geometry 52"
+   "detail": "Resolution 1 210, Resolution 2 126, Resolution 3 76, Geometry 52, Roadway 1, View Geometry 52, Fire Geometry 52"
   },
   {
    "check": "C2 library only",

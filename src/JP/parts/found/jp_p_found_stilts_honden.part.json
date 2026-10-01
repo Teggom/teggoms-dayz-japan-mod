@@ -23,12 +23,12 @@
  "deviation": null,
  "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
  "bbox_m": [
-  -0.145,
-  1.962,
+  -0.133,
+  1.958,
   -1.11,
   0.0,
-  -1.944,
-  0.126
+  -1.948,
+  0.104
  ],
  "dims": [
   {
@@ -132,9 +132,9 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 380,
-  "Resolution 2": 332,
-  "Resolution 3": 54,
+  "Resolution 1": 296,
+  "Resolution 2": 72,
+  "Resolution 3": 30,
   "Geometry": 12,
   "Roadway": 1,
   "View Geometry": 6,
@@ -157,7 +157,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 380, Resolution 2 332, Resolution 3 54, Geometry 12, Roadway 1, View Geometry 6, Fire Geometry 6"
+   "detail": "Resolution 1 296, Resolution 2 72, Resolution 3 30, Geometry 12, Roadway 1, View Geometry 6, Fire Geometry 6"
   },
   {
    "check": "C2 library only",

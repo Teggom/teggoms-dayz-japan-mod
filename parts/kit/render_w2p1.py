@@ -135,6 +135,31 @@ SHEETS = {
         P("jp_p_site_hokora_wood_saya", "Wooden hokora inside a shelter shed (saya-do)", target=(0.0, 1.2, 0.0),
           dist=7.0, move=0.0, human=[1.6, 1.0, 0.0]),
     ]),
+    "w2p1_asm": ("W2P1 offline assemblies (proofs, not shipped): village honden + haiden, small temple hall", [
+        ("honden_3q", "Village honden (issha) on stilts +1.00: giboshi koran round three sides, wakishoji at the rear, "
+         "kizahashi, board doors, nagare roof (kokera) on two kohai posts, okichigi (soto) + 3 katsuogi",
+         {"build": "x:w2p1_assembly.honden", "view": "3q", "persp": 30, "target": [0.9, 2.2, 0.2], "dist": 15,
+          "human": [4.2, 2.6, 0.0]}),
+        ("honden_front", "Honden from the front, doors open: the stair rises under the long front slope; kohai beam "
+         "2.42 m over the stair foot, tie beams >= 2.2 m over the en",
+         {"build": "x:w2p1_assembly.honden", "view": "front", "persp": 30, "target": [0.9, 2.0, 0.0], "dist": 13,
+          "open": 1.0}),
+        ("honden_side", "Honden side: the en on posts, the wakishoji closing the side en, the yukashita open beneath",
+         {"build": "x:w2p1_assembly.honden", "view": "3q_left", "persp": 30, "target": [0.9, 2.0, -0.6], "dist": 14}),
+        ("haiden_3q", "Village haiden 3 x 2 ken (+0.60, boarded skirt): latticed doors in the middle bay, fixed "
+         "lattice fronts beside, front en with plain koran + kizahashi, kokera kirizuma roof with oni-ita, kokera "
+         "kohai over the stair bay", {"build": "x:w2p1_assembly.haiden", "view": "3q", "persp": 30,
+                                      "target": [2.7, 2.0, 0.0], "dist": 19, "human": [7.0, 1.6, 0.0]}),
+        ("haiden_in", "Inside the haiden through the open lattice doors (fixed lattice bays left and right)",
+         {"build": "x:w2p1_assembly.haiden", "interior": {"cam": [2.73, 2.25, -3.0], "look": [2.73, 1.6, 2.0],
+                                                           "lens": 16}, "open": 1.0}),
+        ("temple_3q", "Small temple hall 3 x 3 ken: hogyo sangawara roof, tile hoju, sankarado in the middle bay, "
+         "hinged grid shitomido beside (upper leaves shown open), shinkabe walls, tiled kohai, plain koran + kizahashi",
+         {"build": "x:w2p1_assembly.temple_hall", "view": "3q", "persp": 30, "target": [2.7, 2.6, -1.5], "dist": 21,
+          "open": 1.0, "human": [7.6, 1.6, 0.0]}),
+        ("temple_front", "Temple hall front, closed", {"build": "x:w2p1_assembly.temple_hall", "view": "front",
+                                                        "persp": 30, "target": [2.7, 2.4, 0.0], "dist": 18}),
+    ]),
 }
 
 

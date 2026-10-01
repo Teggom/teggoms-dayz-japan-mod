@@ -41,4 +41,52 @@ brackets are where a reviewer can check each term; no page was fetched). The bin
 - SH2 haiden: was blocked only by kōran: unblocked. SH3 honden: nagare + kōran + tobira (+ stilts, ornament): unblocked.
 - SH1 micro-shrines: hokora (4 stone + 4 wood). SH5 temizuya / SH6 office: buildable before this run.
 - BU1 small hall: hōgyō + hōju + tobira + kōran. BU2 village hondō: kōran + tobira (+ shitomi). BU6 bell tower: kidan.
-- Not made here: curved roofs and bracket sets (W2P2); see the end of this file for anything else left.
+- Not made here: curved roofs and bracket sets (W2P2); see "Left for later" below.
+
+## What was built (48 variants, all in parts/manifest.json; 0 part-check failures)
+| Part | Variants | Module |
+|---|---|---|
+| `jp_p_porch_koran` | _plain, _giboshi, _corner_plain, _corner_giboshi, _kizahashi, _kizahashi_plain, _wakishoji | koran.py (+ en_wrap / en_deck / rail / kizahashi / wakishoji generators) |
+| `jp_p_open_tobira` | _board_out, _board_in, _lattice_out, _lattice_in, _sankara_in, _board_ajar (static) | tobira.py |
+| `jp_p_roof_nagare` | _1ken, _3ken, _1ken_tile | nagare.py (nagare(curve=...) hook) |
+| `jp_p_roof_kohai` | _board, _tile | nagare.py (kohai(curve=...) hook) |
+| `jp_p_roof_forms_hogyo` | _board_2ken, _tile_3ken, _thatch_2ken | nagare.py |
+| `jp_p_roof_ornament` | _chigi_soto, _chigi_uchi, _katsuogi_2/_3/_5, _oniita, _oni_hall, _hoju_bronze, _hoju_kawara | ornament.py |
+| `jp_p_found_stilts` | _honden, _hall, _ratguard | stilts.py |
+| `jp_p_found_kidan` | _shoro, _hall, _low | stilts.py |
+| `jp_p_open_shitomi_grid` | _hinged, _closed, _open, _fixed | shitomi.py |
+| `jp_p_site_hokora` | _stone_kirizuma, _stone_yosemune, _stone_nagare, _stone_niche, _wood_nagare, _wood_shinmei, _wood_inari, _wood_saya | hokora.py |
+
+Wear: every part takes the per-instance wear (_w0 / _w1 / _w2, Part.wear / wear_by_mat) like the rest of the kit;
+samples are written at _w1. `_board_ajar` is the dead-world state of the doors.
+
+## Choices worth knowing (found while building)
+- **Kohai roofs run at 0.8 x the hall's pitch** and their plane passes 3 cm under the hall's rafter plane at the main
+  eave edge, so the canopy tucks under the main roof without a C12 poke (a parallel plane needed a 0.23 m drop for
+  tile and left no head room).
+- **Tie beams** (straight stand-ins for the curved ebi-koryo) run parallel to the rafters; a kohai frame leaves them
+  out when the head room at the en's rail line would drop under 2.00 m (the tiled kohai does).
+- **Okichigi keep their own angle (50 deg)** and rest on the ridge cap, never on the slopes (a chigi at the 24 deg
+  kokera pitch read flat).
+- **Hogyo**: the four yosemune triangles need full_ridge = False or cover_boards draws ridge courses along the hips.
+- **C20 on the parts**: the new parts have no coplanar pairs of their own; the generator pieces they reuse
+  (board_ridge battens, noshi / onigawara, eave_stack / sheathing, tile_bed / verge) carry the same raw pairs as every
+  roof in the kit, which zfight.resolve fixes at build time; the assemblies prove 0 after resolve.
+
+## Offline assemblies (parts/kit/w2p1_assembly.py; parts/w2p1_assembly_checks.json)
+- honden: 26/26 (3,225 / 1,350 / 602 faces, standard), haiden: 25/25 (4,404 / 1,620 / 724, standard), temple_hall:
+  32/32 (7,523 / 1,688 / 1,037, large: the tile hogyo roof alone is ~3,600). All three binarize to ODOL.
+- Checks: C2, C5 (+ budget), C7, buildcheck.run_g3 (C10, C11, C12, C13, C14, C15, C16, C17, C19, C20, C21, C22),
+  KR1 ramp 36.2 / 33.4 deg, KR2 1.10 clear, KR3 Roadway continuous floor -> en -> stair -> grade, KR4 >= 2.19 m over the
+  stair, KR5 >= 2.21 m over the en, KR6 koran collision.
+
+## Left for later (for W2S / the lead)
+- **Budget class for shrine / temple halls:** a tiled hall is over the standard 6,000 (the hogyo tile roof ~3,600):
+  the assembly uses 'large'. W2S should register halls as 'large' or trim.
+- **Small gate (yakui-mon / munamon) and the kuri genkan** were not built: W2C's `jpparts/gates.py` (kido leaves +
+  head / roof) is the base for the gate family; the genkan (audit #8) is still open.
+- **Bell tower (shoro):** kidan_shoro is the platform; the four-post frame + roof are shell work (bell + striker are
+  props).
+- Village honden often stand inside a sheltering hall (saya-do / oi-ya): a W2S shell built from the haiden recipe
+  around the honden.
+- Rotation doors and shutters (tobira, shitomi) are engine-untested: put one of each in the next walk.

@@ -2885,3 +2885,238 @@
 						<point pos="-3.160000 0.600000 -1.030000" range="0.150000" height="0.375000" />
 				</container>
 		</group>
+		<group name="Land_JP_Teahouse_Bench_Thatch">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.258571 0.050000 0.097143" range="0.854654" height="2.000000" />
+						<point pos="-0.517143 0.050000 -1.068571" range="0.591429" height="1.478571" />
+				</container>
+		</group>
+		<group name="Land_JP_Teahouse_Bench_Itabuki">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.232857 0.050000 0.097143" range="0.838059" height="2.000000" />
+						<point pos="2.002857 0.050000 0.874286" range="0.759390" height="1.898476" />
+						<point pos="-0.525714 0.050000 -1.068571" range="0.591429" height="1.478571" />
+						<point pos="2.002857 0.050000 -0.874286" range="0.759390" height="1.898476" />
+				</container>
+		</group>
+		<group name="Land_JP_Teahouse_Shop_Thatch">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.388571 0.050000 1.011786" range="0.877500" height="2.000000" />
+						<point pos="-0.777143 0.050000 0.431071" range="0.698215" height="1.745538" />
+						<point pos="0.000000 0.400000 -1.825000" range="0.645000" height="1.612500" />
+				</container>
+		</group>
+		<group name="Land_JP_Teahouse_Shop_Itabuki">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.388214 0.050000 1.011786" range="0.877500" height="2.000000" />
+						<point pos="2.613214 0.050000 1.786071" range="0.776786" height="1.941964" />
+						<point pos="-0.883214 0.050000 0.624643" range="0.776786" height="1.941964" />
+						<point pos="1.341786 0.050000 0.043929" range="0.378214" height="0.945536" />
+						<point pos="0.000000 0.400000 -1.825000" range="0.645000" height="1.612500" />
+				</container>
+		</group>
+		<group name="Land_JP_Teahouse_Pass_Ishioki">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 3.600000" range="0.600000" height="1.500000" />
+						<point pos="0.388214 0.050000 1.011786" range="0.877500" height="2.000000" />
+						<point pos="2.613214 0.050000 1.786071" range="0.776786" height="1.941964" />
+						<point pos="-0.883214 0.050000 0.624643" range="0.776786" height="1.941964" />
+						<point pos="1.341786 0.050000 0.043929" range="0.378214" height="0.945536" />
+						<point pos="0.000000 0.400000 -1.825000" range="0.645000" height="1.612500" />
+				</container>
+		</group>
+		<group name="Land_JP_Teahouse_Tateba_Thatch">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.162143 0.050000 2.831786" range="0.877500" height="2.000000" />
+						<point pos="1.135000 0.050000 3.025357" range="0.877500" height="2.000000" />
+						<point pos="-1.459286 0.050000 2.251071" range="0.877500" height="2.000000" />
+						<point pos="2.107857 0.050000 2.057500" range="0.434469" height="1.086173" />
+						<point pos="1.365000 0.450000 -0.692500" range="1.105000" height="2.000000" />
+						<point pos="1.365000 0.450000 -2.957500" range="1.105000" height="2.000000" />
+						<point pos="-1.365000 0.450000 -0.685000" range="1.105000" height="2.000000" />
+						<point pos="-1.365000 0.450000 -2.955000" range="1.105000" height="2.000000" />
+				</container>
+		</group>
+		<group name="Land_JP_Teahouse_Tateba_Itabuki">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.254643 0.050000 2.831786" range="0.877500" height="2.000000" />
+						<point pos="1.088929 0.050000 3.025357" range="0.877500" height="2.000000" />
+						<point pos="-1.598214 0.050000 2.057500" range="0.877500" height="2.000000" />
+						<point pos="1.984643 0.050000 2.057500" range="0.400848" height="1.002121" />
+						<point pos="1.365000 0.450000 -0.692500" range="1.105000" height="2.000000" />
+						<point pos="1.365000 0.450000 -2.957500" range="1.105000" height="2.000000" />
+						<point pos="-1.365000 0.450000 -0.685000" range="1.105000" height="2.000000" />
+						<point pos="-1.365000 0.450000 -2.955000" range="1.105000" height="2.000000" />
+				</container>
+		</group>
+		<group name="Land_JP_Smithy_Open_Itabuki">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="0.612500 0.050000 0.162143" range="0.857500" height="2.000000" />
+						<point pos="-0.138929 0.050000 -1.135000" range="0.857500" height="2.000000" />
+						<point pos="0.988214 0.050000 -1.783571" range="0.581786" height="1.454464" />
+				</container>
+		</group>
+		<group name="Land_JP_Smithy_Open_Sangawara">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="0.612500 0.050000 0.162143" range="0.857500" height="2.000000" />
+						<point pos="-0.138929 0.050000 -1.135000" range="0.857500" height="2.000000" />
+						<point pos="0.988214 0.050000 -1.783571" range="0.581786" height="1.454464" />
+				</container>
+		</group>
+		<group name="Land_JP_Swordsmith_Sangawara">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="1.365000 0.050000 1.211429" range="1.046916" height="2.000000" />
+						<point pos="1.365000 0.050000 -0.302857" range="1.105000" height="2.000000" />
+						<point pos="1.365000 0.050000 -2.120000" range="1.105000" height="2.000000" />
+						<point pos="-1.365000 0.050000 2.120000" range="1.105000" height="2.000000" />
+						<point pos="-0.589286 0.050000 0.302857" range="0.390714" height="0.976786" />
+						<point pos="-1.365000 0.050000 -3.028571" range="0.451429" height="1.128571" />
+				</container>
+		</group>
+		<group name="Land_JP_Guardhut_S_Itabuki">
+				<usage name="Town" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 0.714286" range="0.490389" height="1.225973" />
+						<point pos="0.257143 0.400000 -0.910000" range="0.300000" height="0.750000" />
+				</container>
+		</group>
+		<group name="Land_JP_Guardhut_S_Sangawara">
+				<usage name="Town" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 0.714286" range="0.490389" height="1.225973" />
+						<point pos="0.257143 0.400000 -0.910000" range="0.300000" height="0.750000" />
+				</container>
+		</group>
+		<group name="Land_JP_Guardhut_M_Itabuki">
+				<usage name="Town" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="0.000000 0.050000 1.169286" range="0.490389" height="1.225973" />
+						<point pos="0.258571 0.400000 -0.910000" range="0.665000" height="1.662500" />
+				</container>
+		</group>
+		<group name="Land_JP_Kido_Lattice">
+				<usage name="Town" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.871429 0.050000 1.790000" range="0.428571" height="1.071429" />
+						<point pos="-0.871429 0.050000 -0.255714" range="0.428571" height="1.071429" />
+						<point pos="-0.871429 0.050000 -1.790000" range="0.428571" height="1.071429" />
+				</container>
+		</group>
+		<group name="Land_JP_Kido_Board_Roofed">
+				<usage name="Town" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.871429 0.050000 1.790000" range="0.428571" height="1.071429" />
+						<point pos="-0.871429 0.050000 -0.255714" range="0.428571" height="1.071429" />
+						<point pos="-0.871429 0.050000 -1.790000" range="0.428571" height="1.071429" />
+				</container>
+		</group>
+		<group name="Land_JP_Kido_Lattice_Bantaya">
+				<usage name="Town" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="clothes" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.871429 0.050000 1.790000" range="0.428571" height="1.071429" />
+						<point pos="-0.871429 0.050000 -0.255714" range="0.428571" height="1.071429" />
+						<point pos="-0.871429 0.050000 -1.790000" range="0.428571" height="1.071429" />
+						<point pos="-3.899286 0.050000 -5.005000" range="0.490389" height="1.225973" />
+						<point pos="-2.275000 0.400000 -4.747857" range="0.300000" height="0.750000" />
+				</container>
+		</group>

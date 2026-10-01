@@ -1,0 +1,156 @@
+{
+ "building": "Land_JP_Kido_Lattice_Bantaya",
+ "p3d": "\\JP\\buildings\\kido\\jp_kido_lattice_bantaya.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/civic.py; 'fittings' = fixed-prop spots for the furnisher (kamado, forge, bellows, anvil, quench tub, benches, fire ladder, shimenawa)",
+ "rooms": [
+  {
+   "name": "gate",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.1,
+    6.2700000000000005,
+    -1.4,
+    1.2
+   ],
+   "doors": [
+    "DoorsTwin2",
+    "DoorsTwin1"
+   ],
+   "note": "the passage through the kido (street outside +z, the ward inside -z)",
+   "enclosed": false,
+   "rect_model": [
+    -3.085,
+    3.085,
+    -1.4,
+    1.2
+   ],
+   "fittings": [
+    {
+     "kind": "lantern",
+     "room": null,
+     "note": "the ward-name lantern hung under the tie beam (site prop)",
+     "centre": [
+      -1.82,
+      0.0
+     ],
+     "size": [
+      0.3,
+      0.3
+     ],
+     "yaw": 0.0,
+     "y": 2.3,
+     "outside": true
+    },
+    {
+     "kind": "lantern_post",
+     "room": null,
+     "note": "the ward-name lantern / notice by the door, outside (site prop)",
+     "centre": [
+      3.395,
+      -4.1
+     ],
+     "size": [
+      0.2,
+      0.2
+     ],
+     "yaw": 90.0,
+     "outside": true
+    }
+   ]
+  },
+  {
+   "name": "hut_doma",
+   "tag": "guard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    7.34,
+    9.040000000000001,
+    -4.49,
+    -2.8
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "earth floor by the door: the tool rack, a bench",
+   "enclosed": true,
+   "rect_model": [
+    4.155,
+    5.855,
+    -4.49,
+    -2.8
+   ],
+   "fittings": [
+    {
+     "kind": "tool_rack",
+     "room": "hut_doma",
+     "note": "the capture tools / staff / fire hook rack on the doma end wall (wall-hung props)",
+     "rect": [
+      4.495,
+      5.615,
+      -4.47,
+      -4.37
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hut_floor",
+   "tag": "guard",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    7.340000000000001,
+    9.040000000000001,
+    -2.6849999999999996,
+    -1.8649999999999998
+   ],
+   "doors": [],
+   "note": "raised platform: the watchmen's seat / sleeping place behind the counter shutter, open to the doma",
+   "enclosed": true,
+   "rect_model": [
+    4.155,
+    5.855,
+    -2.685,
+    -1.865
+   ],
+   "fittings": [
+    {
+     "kind": "brazier",
+     "room": "hut_floor",
+     "note": "hibachi / brazier with the kettle on the platform (the night watch)",
+     "centre": [
+      5.465,
+      -2.27
+     ],
+     "size": [
+      0.42,
+      0.42
+     ],
+     "yaw": 90.0,
+     "y": 0.4
+    },
+    {
+     "kind": "counter",
+     "room": "hut_floor",
+     "note": "under the end shutter: the kido-ban's sundries counter (sandals, candles, sweets), a watch hatch for the others (a toll box for the bridge / ferry / border guard)",
+     "rect": [
+      5.005,
+      5.915,
+      -2.27,
+      -1.88
+     ],
+     "y": 0.4
+    }
+   ]
+  }
+ ],
+ "loot_points": 5,
+ "loot_by_room": {
+  "gate": 3,
+  "hut_doma": 1,
+  "hut_floor": 1
+ }
+}

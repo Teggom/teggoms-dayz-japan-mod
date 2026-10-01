@@ -57,11 +57,11 @@ def giboshi(part, x, z, y, r=0.062, mat=METAL, vis=(1, 2)):
     Returns the top height."""
     n = 8
     base = ngon(x, z, r, n, math.pi / n)
-    part.add(rings((base, [(y, 1.0), (y + 0.035, 1.0)]), mat, vis=vis, tag="giboshi_neck"))
+    part.add(rings((base, [(y, 1.0), (y + 0.035, 1.0)]), mat, vis=(1,), tag="giboshi_neck"))
     part.add(rings((base, [(y + 0.035, 0.80), (y + 0.075, 1.12), (y + 0.115, 1.02), (y + 0.155, 0.66),
-                           (y + 0.185, 0.16)]), mat, vis=vis, tag="giboshi"))
+                           (y + 0.185, 0.16)]), mat, vis=(1,), tag="giboshi"))
     part.add(tube((x, y + 0.183, z), (x, y + 0.235, z), 0.012, mat, n=6, r1=0.002, vis=(1,), tag="giboshi_tip"))
-    part.add(rings((ngon(x, z, r * 1.05, n, math.pi / n), [(y, 1.0), (y + 0.235, 1.0)]), mat, vis=(3,),
+    part.add(rings((ngon(x, z, r * 1.05, n, math.pi / n), [(y, 1.0), (y + 0.235, 1.0)]), mat, vis=(2,),
                    tag="giboshi_lod"))
     return y + 0.235
 
@@ -71,8 +71,11 @@ def end_post(part, x, z, y0, h, style, mat=MAT, size=0.10, tag="oyabashira"):
     small cap board (plain)."""
     n = 8
     r = size / 2 / math.cos(math.pi / n)
-    part.add(rings((ngon(x, z, r, n, math.pi / n), [(y0, 1.0), (y0 + h, 1.0)]), mat, vis=(1, 2, 3), tag=tag,
+    part.add(rings((ngon(x, z, r, n, math.pi / n), [(y0, 1.0), (y0 + h, 1.0)]), mat, vis=(1, 2), tag=tag,
                    grain="long"))
+    # far LOD: one box up to the cap / finial top (T7b: the outline stays)
+    top = y0 + h + (0.235 if style == "giboshi" else 0.03)
+    part.add(box(x - size / 2, x + size / 2, y0, top, z - size / 2, z + size / 2, mat, vis=(3,), tag=tag + "_lod"))
     if style == "giboshi":
         return giboshi(part, x, z, y0 + h, r=r * 1.04)
     part.add(box(x - size / 2 - 0.012, x + size / 2 + 0.012, y0 + h, y0 + h + 0.03, z - size / 2 - 0.012,
@@ -94,10 +97,10 @@ def en_deck(part, x0, x1, z0, z1, drop=1.0, along="z", edge="z1", posts=True, ma
     if road:
         part.road([(x0, 0.0, z0), (x1, 0.0, z0), (x1, 0.0, z1), (x0, 0.0, z1)], "boards_ext")
     if along == "z":
-        part.extend(board_run(x0, x1, -0.032, 0.0, z0, z1, rng, 0.17, 0.25, mat, vis=(1, 2), tag="en_board", gap=0.004))
+        part.extend(board_run(x0, x1, -0.032, 0.0, z0, z1, rng, 0.17, 0.25, mat, vis=(1,), tag="en_board", gap=0.004))
     else:
         part.extend(_boards_x(x0, x1, z0, z1, rng, mat))
-    part.add(box(x0, x1, -0.032, -0.004, z0, z1, mat, vis=(3,), tag="en_lod"))
+    part.add(box(x0, x1, -0.032, -0.004, z0, z1, mat, vis=(2, 3), tag="en_lod"))
     # edge beam (en-katsura) under the open edge, 1 cm in from it; posts on stones every half ken
     if edge in ("z0", "z1"):
         ze = z1 if edge == "z1" else z0
@@ -113,7 +116,7 @@ def en_deck(part, x0, x1, z0, z1, drop=1.0, along="z", edge="z1", posts=True, ma
         line = [(xe - sg * 0.07, z) for z in _stations(z0, z1, step, post_from)]
     if posts:
         for (px, pz) in line:
-            part.add(stone(rng, px, pz, 0.24, 0.22, 0.12, -drop + 0.07, "stone_field", bury=0.06, vis=(1, 2),
+            part.add(stone(rng, px, pz, 0.24, 0.22, 0.12, -drop + 0.07, "stone_field", bury=0.06, n=6, vis=(1,),
                            tag="en_stone"))
             part.add(box(px - 0.048, px + 0.048, -drop + 0.07, -0.19, pz - 0.048, pz + 0.048, mat, vis=(1, 2),
                          tag="en_tsuka", grain="long"))
@@ -137,7 +140,7 @@ def _boards_x(x0, x1, z0, z1, rng, mat):
         e = min(z1, z + rng.uniform(0.17, 0.25))
         if z1 - e < 0.08:
             e = z1
-        out.append(box(x0, x1, -0.032, 0.0, z + 0.002, e - 0.002, mat, vis=(1, 2), tag="en_board",
+        out.append(box(x0, x1, -0.032, 0.0, z + 0.002, e - 0.002, mat, vis=(1,), tag="en_board",
                        uvoff=(rng.random(), rng.random())))
         z = e
     return out
@@ -245,11 +248,11 @@ def kizahashi(part, xc, z_edge, drop=1.0, clear=STAIR_W, style="giboshi", mat=MA
     for k in range(1, n):
         top = -drop + k * rh
         za, zb = zf - k * g - 0.025, zf - (k - 1) * g
-        part.add(box(s0 + 0.055, s1 - 0.055, top - th, top, za, zb, mat, vis=(1, 2), tag="stair_tread", grain="long",
+        part.add(box(s0 + 0.055, s1 - 0.055, top - th, top, za, zb, mat, vis=(1,), tag="stair_tread", grain="long",
                      uvoff=(rng.random(), rng.random())))
         for xx in (s0 - 0.008, s1):
             part.add(box(xx, xx + 0.008, top - th, top, za + 0.05, zb - 0.05, mat, vis=(1,), tag="tenon"))
-    part.add(prism([(0.0, z_edge), (-drop, zf), (-drop, z_edge)], "x", s0 + 0.055, s1 - 0.055, mat, vis=(3,),
+    part.add(prism([(0.0, z_edge), (-drop, zf), (-drop, z_edge)], "x", s0 + 0.055, s1 - 0.055, mat, vis=(2, 3),
                    tag="stair_lod"))
     # stair koran: sloped hirageta + hokogi from the en gap posts (at z_edge) to the foot posts (zf - 0.10)
     zp = zf - 0.10

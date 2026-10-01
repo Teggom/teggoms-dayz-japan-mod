@@ -480,6 +480,81 @@ for _k, _ps in SH1_GALLERY.items():
                              for _p in _ps]
 
 
+# ------------------------------------------------------------------------------------------------ W2C civic shells
+# Phase C wave 2 (agent W2C, 2026-10-01): bare civic / roadside shells from parts/kit/jpparts/templates/civic.py
+# (buildings/civickit.py builds them, buildings/shellcheck.py checks them; research notes spikes/W2C/W2C_NOTES.md).
+# Not placed on the island (a later agent furnishes and places them): shipped in jp_buildings.pbo only.
+from jpparts.templates import civic as _cv  # noqa: E402
+
+_LOOT_ROAD = {"usage": ["Village", "Town"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+_LOOT_SMITH = {"usage": ["Village", "Town"], "categories": ["tools", "containers"], "tags": ["floor"]}
+_LOOT_GUARD = {"usage": ["Town", "Village"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+
+
+def _civic(key, dir_, cls, display, params, loot, mass):
+    return {"key": key, "dir": dir_, "module": "civic_shells", "class": cls, "name": "jp_" + key, "display": display,
+            "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
+            "placements": [], "verify": "shellcheck", "budget": _cv.budget_class(**params), "ship": True}
+
+
+W2C_TEAHOUSES = [
+    # TR01 roadside tea house, 3 sizes (bench shed / open shop / tateba with rooms) x roof (thatch / boards /
+    # stone-weighted boards); the battari bench on the shop fronts; the pass tea house (toge-jaya) as a size
+    _civic("teahouse_bench_thatch", "teahouse", "Land_JP_Teahouse_Bench_Thatch",
+           "Roadside tea house: bench shed (kake-jaya, thatch)", {"kind": "teahouse", "size": "bench", "roof": "thatch"},
+           _LOOT_ROAD, 8000.0),
+    _civic("teahouse_bench_itabuki", "teahouse", "Land_JP_Teahouse_Bench_Itabuki",
+           "Roadside tea house: bench shed with the bench roof (kake-jaya, boards)",
+           {"kind": "teahouse", "size": "bench", "roof": "itabuki"}, _LOOT_ROAD, 8000.0),
+    _civic("teahouse_shop_thatch", "teahouse", "Land_JP_Teahouse_Shop_Thatch",
+           "Roadside tea house: open shop (chamise, thatch)", {"kind": "teahouse", "size": "shop", "roof": "thatch"},
+           _LOOT_ROAD, 15000.0),
+    _civic("teahouse_shop_itabuki", "teahouse", "Land_JP_Teahouse_Shop_Itabuki",
+           "Roadside tea house: open shop with the bench roof (chamise, boards)",
+           {"kind": "teahouse", "size": "shop", "roof": "itabuki"}, _LOOT_ROAD, 15000.0),
+    _civic("teahouse_pass_ishioki", "teahouse", "Land_JP_Teahouse_Pass_Ishioki",
+           "Mountain-pass tea house (toge-jaya, stone-weighted boards, woodshed lean-to)",
+           {"kind": "teahouse", "size": "pass", "roof": "ishioki"}, _LOOT_ROAD, 15000.0),
+    _civic("teahouse_tateba_thatch", "teahouse", "Land_JP_Teahouse_Tateba_Thatch",
+           "Rest-stop tea house with rooms (tateba-jaya, hipped thatch)",
+           {"kind": "teahouse", "size": "tateba", "roof": "thatch"}, _LOOT_ROAD, 40000.0),
+    _civic("teahouse_tateba_itabuki", "teahouse", "Land_JP_Teahouse_Tateba_Itabuki",
+           "Rest-stop tea house with rooms (tateba-jaya, boards, bench roof)",
+           {"kind": "teahouse", "size": "tateba", "roof": "itabuki"}, _LOOT_ROAD, 40000.0),
+]
+W2C_SMITHIES = [
+    # TR11 smithy (open front, koyagumi, smoke vent) x roof; the swordsmith with the darkened forge room
+    _civic("smithy_open_itabuki", "smithy", "Land_JP_Smithy_Open_Itabuki", "Smithy (kaji-ya, open front, boards)",
+           {"kind": "smithy", "form": "open", "roof": "itabuki"}, _LOOT_SMITH, 20000.0),
+    _civic("smithy_open_sangawara", "smithy", "Land_JP_Smithy_Open_Sangawara", "Smithy (kaji-ya, open front, tiled)",
+           {"kind": "smithy", "form": "open", "roof": "sangawara"}, _LOOT_SMITH, 25000.0),
+    _civic("swordsmith_sangawara", "smithy", "Land_JP_Swordsmith_Sangawara",
+           "Swordsmith (katana-kaji): work room + darkened forge room, tiled",
+           {"kind": "smithy", "form": "sword", "roof": "sangawara"}, _LOOT_SMITH, 40000.0),
+]
+W2C_GUARDHUTS = [
+    # GV1 guard hut (kido-ban, jishin-ban, tsuji-ban, bridge / ferry / border / water guard: the props decide)
+    _civic("guardhut_s_itabuki", "guardhut", "Land_JP_Guardhut_S_Itabuki", "Guard hut (6 x 9 shaku, boards)",
+           {"kind": "guardhut", "size": "s", "roof": "itabuki"}, _LOOT_GUARD, 5000.0),
+    _civic("guardhut_s_sangawara", "guardhut", "Land_JP_Guardhut_S_Sangawara", "Guard hut (6 x 9 shaku, tiled)",
+           {"kind": "guardhut", "size": "s", "roof": "sangawara"}, _LOOT_GUARD, 6000.0),
+    _civic("guardhut_m_itabuki", "guardhut", "Land_JP_Guardhut_M_Itabuki",
+           "Guard hut, larger (self-watch post / jishin-ban, boards)", {"kind": "guardhut", "size": "m",
+                                                                          "roof": "itabuki"}, _LOOT_GUARD, 8000.0),
+]
+W2C_KIDO = [
+    # GV7 ward gate (kido): leaves (lattice / boards) x head (kasagi / small board roof) x the kido-ban hut
+    _civic("kido_lattice", "kido", "Land_JP_Kido_Lattice", "Ward gate (kido, lattice leaves)",
+           {"kind": "kido", "leaves": "lattice"}, _LOOT_GUARD, 6000.0),
+    _civic("kido_board_roofed", "kido", "Land_JP_Kido_Board_Roofed", "Ward gate (kido, board leaves, small roof)",
+           {"kind": "kido", "leaves": "board", "roofed": True}, _LOOT_GUARD, 7000.0),
+    _civic("kido_lattice_bantaya", "kido", "Land_JP_Kido_Lattice_Bantaya",
+           "Ward gate (kido, lattice leaves) with the gatekeeper's hut (kido-ban)",
+           {"kind": "kido", "leaves": "lattice", "hut": "right"}, _LOOT_GUARD, 11000.0),
+]
+BUILDINGS += W2C_TEAHOUSES + W2C_SMITHIES + W2C_GUARDHUTS + W2C_KIDO
+
+
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
 # Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_
