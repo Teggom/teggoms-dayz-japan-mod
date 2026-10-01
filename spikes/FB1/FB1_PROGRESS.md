@@ -33,8 +33,16 @@ FP1 runs at the same time (props + materials); its log is TIMELOG_FP1.md.
 - [x] **G** S70 (stair head) and S63 (stair foot) medium stone torii (nuki 1.93 over the base, 1.66 / 1.81 m clear) ->
   large stone torii (2.60 / 2.79 m clear; spikes/FB1/toriiclear.py); S74 basin moved 0.5 m east to clear it.
   The 11 small sub-shrine torii (S40-S50, before their huts, not on a path) stay low (1.75-2.06 m).
-- [ ] **H** waits for FP1's END: collapsed torii, ladder / well placement, world + mission rebuild.
-- [ ] checks, checklist, commits
+- [x] **H** after FP1's END (10:54): its 5 collapsed torii placed (spikes/SH1/shrine.py S100-S104, on the flattest
+  ground at the hill foot, relief <= 0.5 m; the wooden ones sink 0.2-0.3 m on the uphill side), maps re-rendered.
+  Ladder (now Land_JP_S_Fire_Watch_Ladder_Tower, same p3d) and lever well (same p3d) need no placement change;
+  spikes/FB1/sitebind.py: the 9 jp_site Land_ classes bind. build_world 4090 objects, build_mission (the 30 CE
+  building groups now snap to their wrp objects), verify_oprw PASS 4081/4081.
+- [x] checks: 128/128 buildings pass (8,190 checks; machiya 78, furnished machiya 137, toilet 20), bindcheck 128/128,
+  combos 60/60; toriiclear (stair line >= 2.2 m), leancheck (leaning props touch their wall or the posts in front of
+  it; wall-hung pieces + eave items listed but not judged). jp_buildings.pbo repacked = src.
+- [x] TEST_CHECKLIST.md rewritten (~15 min re-check: doors first, then FP1's + FB1's findings with IDs).
+- Commits: a138258 (A), e6da064 (C/D/F/G), d0d3d30 (re-checks), + the H / checklist commit.
 
 ## Found, not fixed (outside the brief)
 - Wall-hung life-layer items in the gallery sheds (pegs, calendar, shelves) hang 6.5 cm off the board wall: decor's

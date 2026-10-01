@@ -15,3 +15,10 @@
 2026-10-01 10:22:55 | GROUP DONE | G low hill-stair torii | cause: S70 is the medium stone torii, nuki 1.93 m over its base -> 1.66 m clear on the slope (S63 1.81); result: S70 + S63 -> large stone torii (2.60 / 2.79 m clear, spikes/FB1/toriiclear.py), basin S74 moved 0.5 m clear | 5h 22% wk 47%
 2026-10-01 10:24:03 | WAITED FOR FP1 | start | H needs FP1's END (collapsed torii, ladder, well) | 5h 22% wk 47%
 2026-10-01 10:35:11 | CHECKS DONE | FB1 | 128/128 buildings pass (8,190 checks: machiya 78, furnished machiya 137, toilet 20, all family shellchecks), bindcheck 128/128, combos 60/60 (H world checks follow) | 5h 28% wk 47%
+2026-10-01 10:56:43 | WAITED FOR FP1 | end | FP1 END 10:54; collapsed torii S100-S104 placed (shrine.py), ladder/well need no placement change | 5h 34% wk 48%
+2026-10-01 10:58:32 | ISLAND BUILT | FB1 | build_world 4090 objects (545 placements), build_mission (30 CE groups now snap to their wrp buildings), verify_oprw PASS 4081/4081; maps re-rendered (S100-S104) | 5h 35% wk 48%
+2026-10-01 10:59:20 | GROUP START | E roofless street house | from ~09:55, alongside A (logged late) | 5h 38% wk 49%
+2026-10-01 10:59:20 | GROUP DONE | E roofless street house | NOT reproduced: likely D5 (Edo 2ken board-roof tailor, middle of the 5 Edo units right of S01); roof present + front-facing in R1/R2/R3 (sky census, culled renders from street/torii/above); pale silver kokera 0.17 m below tiled neighbours may read as sky; left to Stephen's re-check with a screenshot, no change made | 5h 38% wk 49%
+2026-10-01 10:59:20 | GROUP START | H collapsed torii + world | 10:55 after FP1 END | 5h 38% wk 49%
+2026-10-01 10:59:20 | GROUP DONE | H collapsed torii + world | S100-S104 placed (shrine.py, flattest hill-foot ground), ladder + well same p3ds (no change, 9 site Land_ classes bind), world + mission rebuilt, verify_oprw PASS 4081/4081 | 5h 38% wk 49%
+2026-10-01 10:59:20 | CHECKLIST DONE | FB1 | TEST_CHECKLIST.md ~15 min re-check (doors first, FP1 1-15 + FB1 C-G with IDs) | 5h 38% wk 49%

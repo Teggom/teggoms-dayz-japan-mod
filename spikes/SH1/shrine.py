@@ -234,4 +234,12 @@ def layout():
     add("S83", "jp_s_torii_wood_mini_shu", INARI_X, itop + 1.0, 180, "Inari: mini vermilion torii before the shrine", grp="over:stairI")
     add("S84", "jp_s_jizo_hut_stone_roof", INARI_X, itop + 2.2, 180, "Inari: stone-roofed hut (stand-in for the Inari shrine)")
     add("S85", "jp_s_chozubachi_ab_dry", INARI_X - 2.4, itop - 0.6, 180, "Inari: a basin cracked and dry (abandoned)")
+    # --- FB1 (2026-10-01): FP1's collapsed torii (jp_site, mount 'shrine'; origin between the post feet, +z = the
+    # approach side the wreck fell towards; the typhoon one lies behind its post line), on the flattest ground at the foot of the
+    # hill (terrain relief <= 0.5 m over the wreck), off every path: the dead world's shrine has lost a few gates
+    add("S100", "jp_s_torii_fallen_stone_quake", 1052.0, 1172.0, 270, "collapsed stone torii (the 1707 quake), behind the sub-shrine row")
+    add("S101", "jp_s_torii_fallen_stone_quake_old", 1003.0, 1150.0, 180, "collapsed stone torii, mossy and sunk (a long-ago collapse), north of the graveyard")
+    add("S102", "jp_s_torii_fallen_myojin_typhoon", 1008.0, 1178.0, 135, "wooden myojin torii blown over by a typhoon, west of the approach")
+    add("S103", "jp_s_torii_fallen_shinmei_rot", 1056.0, 1188.0, 200, "wooden shinmei torii fallen with its feet rotted, in the trees east of the hall site")
+    add("S104", "jp_s_torii_fallen_shu_snapped", 1066.0, 1190.0, 170, "Inari: a vermilion torii snapped at the posts, below the Inari path")
     return O, {"oku": (mods, worst), "inari": (imods, iworst)}

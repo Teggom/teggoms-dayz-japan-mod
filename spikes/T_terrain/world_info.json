@@ -155,7 +155,7 @@
   {
    "p3d": "JP\\site\\yard\\jp_s_tenbin_leaning.p3d",
    "pos": [
-    1027.85,
+    1027.785,
     25.0,
     1041.7
    ],
@@ -235,9 +235,9 @@
   {
    "p3d": "JP\\site\\roadside\\jp_s_shimenawa_len_1ken.p3d",
    "pos": [
-    1026.4,
+    1026.4000638067723,
     27.16999994277954,
-    1053.2
+    1053.2005806460977
    ],
    "yaw": 180.0,
    "src": "placement:C.csv"
@@ -253,7 +253,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_kamigata_3k_endl_toril.p3d",
+   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_kamigata_3ken_endl_toril.p3d",
    "pos": [
     979.002,
     25.0,
@@ -263,7 +263,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\posttown\\jp_posttown_row_endl.p3d",
+   "p3d": "JP\\buildings\\posttown\\jp_posttownhouse_row_endl.p3d",
    "pos": [
     1002.81,
     25.0,
@@ -273,7 +273,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\posttown\\jp_posttown_row_middle.p3d",
+   "p3d": "JP\\buildings\\posttown\\jp_posttownhouse_row_middle.p3d",
    "pos": [
     997.254,
     25.0,
@@ -333,7 +333,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_th_kamigata_3k_middle_komeya.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_kamigata_3ken_middle_toril_komeya.p3d",
    "pos": [
     997.682,
     25.0,
@@ -386,14 +386,14 @@
    "p3d": "JP\\site\\yard\\jp_s_firewood_stack_bundle.p3d",
    "pos": [
     999.482,
-    25.000001907348633,
-    1091.44
+    25.0,
+    1091.323
    ],
    "yaw": 0.0,
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_th_kamigata_2k_middle_kamiya.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_kamigata_2ken_middle_torir_kamiya.p3d",
    "pos": [
     993.004,
     25.0,
@@ -433,7 +433,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_th_edo_2k_middle_gofuku.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_edo_2ken_middle_torir_gofuku.p3d",
    "pos": [
     1054.592,
     25.000001907348633,
@@ -473,7 +473,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_th_edo_3k_cornerr_sakaya.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_edo_3ken_cornerr_toril_sakaya.p3d",
    "pos": [
     1059.238,
     25.0,
@@ -533,7 +533,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_pt_det_tile_nuriya_home.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_posttownhouse_det_tilenuriya_home.p3d",
    "pos": [
     988.73,
     25.0,
@@ -603,7 +603,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_inn_std_tile.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_hatago_std_tile_furnished.p3d",
    "pos": [
     1013.122,
     24.999998092651367,
@@ -687,13 +687,13 @@
    "pos": [
     1010.392,
     25.0,
-    1066.45
+    1066.715
    ],
    "yaw": 180.0,
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_inn_grand.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_hatago_grand_furnished.p3d",
    "pos": [
     1026.222,
     25.0,
@@ -777,13 +777,13 @@
    "pos": [
     1023.492,
     25.0,
-    1066.45
+    1066.715
    ],
    "yaw": 180.0,
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_farmhouse_kanto.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_farmhouse_kanto_yosemune_umaya_furnished.p3d",
    "pos": [
     942.0,
     25.0,
@@ -807,7 +807,7 @@
    "pos": [
     936.3050000011921,
     25.83991378545761,
-    1023.6616350501776
+    1024.1686350501775
    ],
    "yaw": 180.0,
    "src": "placement:C.csv"
@@ -816,14 +816,14 @@
    "p3d": "JP\\site\\yard_life\\jp_s_charcoal_bales_stack.p3d",
    "pos": [
     943.2,
-    25.0,
-    1034.1
+    24.999998092651367,
+    1033.555
    ],
    "yaw": 0.0,
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_farmhouse_kinai.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_farmhouse_kinai_kirizuma_tile_takahe_furnished.p3d",
    "pos": [
     963.5,
     25.0,
@@ -847,13 +847,13 @@
    "pos": [
     965.3195000171661,
     25.778528094291687,
-    1023.6616350501776
+    1024.0786350501776
    ],
    "yaw": 180.0,
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_hut_east_l_board.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_hut_east_l_board_furnished.p3d",
    "pos": [
     962.5,
     25.0,
@@ -863,7 +863,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_hut_west_thatch_leanl.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_hut_west_thatch_leanl_furnished.p3d",
    "pos": [
     947.0,
     25.0,
@@ -873,7 +873,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_shed_walled_woodshed.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_shed_walled_ishioki_woodshed_furnished.p3d",
    "pos": [
     962.0,
     25.0,
@@ -883,7 +883,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_kura_namako.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_kura_namako_furnished.p3d",
    "pos": [
     1000.0,
     25.0,
@@ -893,7 +893,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_f_kura_kuro_hinged.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_kura_kuro_hinged_furnished.p3d",
    "pos": [
     975.0,
     25.0,
@@ -903,7 +903,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_s1_th_edo_3k_middle_kanamono.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_edo_3ken_middle_toril_kanamono.p3d",
    "pos": [
     1046.146,
     25.0,
@@ -933,7 +933,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_s1_th_kamigata_2k_middle_tabako.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_kamigata_2ken_middle_torir_tabako.p3d",
    "pos": [
     989.236,
     25.0,
@@ -953,7 +953,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_s1_th_kamigata_3k_endr_mochiya.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_kamigata_3ken_endr_toril_mochiya.p3d",
    "pos": [
     1003.238,
     25.0,
@@ -993,7 +993,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_s1_th_edo_3k_endl_kusuri.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_edo_3ken_endl_toril_kusuri.p3d",
    "pos": [
     1040.59,
     25.0,
@@ -1023,7 +1023,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_s1_th_edo_2k_middle_board_shitate.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_edo_2ken_middle_torir_board_shitate.p3d",
    "pos": [
     1050.824,
     25.0,
@@ -1043,7 +1043,7 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\furnished\\jp_s1_th_kamigata_3k_middle_kyo_ningyo.p3d",
+   "p3d": "JP\\buildings\\furnished\\jp_townhouse_kamigata_3ken_middle_toril_kyo_ningyo.p3d",
    "pos": [
     984.558,
     25.0,
@@ -1196,8 +1196,8 @@
    "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_ab_scattered.p3d",
    "pos": [
     985.8705702424049,
-    25.029999999329448,
-    1080.0590733408928
+    25.034526389092207,
+    1080.0352335691452
    ],
    "yaw": 0.0,
    "src": "placement:C3.csv"
@@ -1275,9 +1275,9 @@
   {
    "p3d": "JP\\site\\yard_life\\jp_s_potted_pair.p3d",
    "pos": [
-    984.7465613245964,
-    25.30000001192093,
-    1076.2382526218892
+    984.708772277832,
+    25.32074999809265,
+    1076.216222961247
    ],
    "yaw": 0.0,
    "src": "placement:C3.csv"
@@ -1405,8 +1405,8 @@
   {
    "p3d": "JP\\site\\yard\\jp_s_straw_stack_stook.p3d",
    "pos": [
-    927.8,
-    25.574026107788086,
+    927.8001089274883,
+    25.566579282283783,
     1016.5
    ],
    "yaw": 0.0,
@@ -1415,9 +1415,9 @@
   {
    "p3d": "JP\\site\\yard\\jp_s_straw_stack_stook.p3d",
    "pos": [
-    928.9,
-    25.574026107788086,
-    1018.4
+    928.900094333972,
+    25.566579282283783,
+    1018.3999455362558
    ],
    "yaw": 30.0,
    "src": "placement:C3.csv"
@@ -1425,9 +1425,9 @@
   {
    "p3d": "JP\\site\\yard\\jp_s_straw_stack_stook.p3d",
    "pos": [
-    927.6,
-    25.574026107788086,
-    1020.3
+    927.6000372553951,
+    25.566579282283783,
+    1020.2998976416429
    ],
    "yaw": 70.0,
    "src": "placement:C3.csv"
@@ -1566,8 +1566,8 @@
    "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_broom.p3d",
    "pos": [
     947.5266097784042,
-    25.076929926872253,
-    1008.3942988932133
+    25.07999999821186,
+    1008.4094199955464
    ],
    "yaw": 0.0,
    "src": "placement:C3.csv"
@@ -2045,9 +2045,9 @@
   {
    "p3d": "JP\\site\\roadside\\jp_s_shimenawa_wrap_d06.p3d",
    "pos": [
-    1033.33,
-    29.736465158462526,
-    1198.1650296849011
+    1033.3262010383605,
+    29.663404407501222,
+    1198.1843877089022
    ],
    "yaw": 0.0,
    "src": "placement:SH1.csv"
@@ -2383,10 +2383,10 @@
    "src": "placement:SH1.csv"
   },
   {
-   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_m_rope_shide.p3d",
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_l_rope_shide.p3d",
    "pos": [
     1042.0,
-    33.67242770385742,
+    33.64642770385742,
     1226.0
    ],
    "yaw": 180.0,
@@ -2933,10 +2933,10 @@
    "src": "placement:SH1.csv"
   },
   {
-   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_m.p3d",
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_l.p3d",
    "pos": [
     1042.0,
-    46.697003662109374,
+    46.635003662109376,
     1263.96
    ],
    "yaw": 180.0,
@@ -2975,8 +2975,8 @@
   {
    "p3d": "JP\\site\\shrine\\jp_s_chozubachi_natural.p3d",
    "pos": [
-    1044.6,
-    46.37890435791016,
+    1045.1,
+    46.36186791992188,
     1263.36
    ],
    "yaw": 180.0,
@@ -3200,6 +3200,56 @@
     1239.63
    ],
    "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_fallen_stone_quake.p3d",
+   "pos": [
+    1052.0,
+    26.40752084350586,
+    1172.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_fallen_stone_quake_old.p3d",
+   "pos": [
+    1003.0,
+    25.483046325683596,
+    1150.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_fallen_myojin_typhoon.p3d",
+   "pos": [
+    1008.0,
+    26.564689529418946,
+    1178.0
+   ],
+   "yaw": 135.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_fallen_shinmei_rot.p3d",
+   "pos": [
+    1056.0,
+    27.121513473510742,
+    1188.0
+   ],
+   "yaw": 200.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_fallen_shu_snapped.p3d",
+   "pos": [
+    1066.0,
+    27.29401547241211,
+    1190.0
+   ],
+   "yaw": 170.0,
    "src": "placement:SH1.csv"
   },
   {
@@ -4616,8 +4666,8 @@
    "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_ab_scattered.p3d",
    "pos": [
     1000.070570242405,
-    25.029999999329448,
-    1120.8590733408928
+    25.034526389092207,
+    1120.8352335691452
    ],
    "yaw": 0.0,
    "src": "placement:SH1.csv"
@@ -4625,9 +4675,9 @@
   {
    "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_ab_scattered.p3d",
    "pos": [
-    994.6233046741216,
-    25.030722014710307,
-    1126.773424431976
+    994.6009026165292,
+    25.035248404473066,
+    1126.7652707498262
    ],
    "yaw": 70.0,
    "src": "placement:SH1.csv"
@@ -4655,9 +4705,9 @@
   {
    "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_ab_scattered.p3d",
    "pos": [
-    1004.9825527876366,
-    25.04291210870445,
-    1129.2573311880599
+    1004.9944726735104,
+    25.04743849846721,
+    1129.2779770360137
    ],
    "yaw": 210.0,
    "src": "placement:SH1.csv"
@@ -5255,7 +5305,7 @@
   {
    "p3d": "JP\\site\\yard_life\\jp_s_charcoal_bales_stack.p3d",
    "pos": [
-    1069.205,
+    1069.256,
     25.0,
     1037.0
    ],
@@ -5396,8 +5446,8 @@
    "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_broom.p3d",
    "pos": [
     1080.2733902215957,
-    25.076929926872253,
-    1024.8057011067867
+    25.07999999821186,
+    1024.7905800044537
    ],
    "yaw": 180.0,
    "src": "placement:SH1.csv"

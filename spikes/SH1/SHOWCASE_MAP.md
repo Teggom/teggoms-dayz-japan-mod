@@ -179,6 +179,11 @@ Regenerate: `python spikes/SH1/layout_sh1.py` then `python spikes/SH1/showcase_m
 | S83 | `StaticObj_JP_S_Torii_Wood_Mini_Shu` | 1058.00 | 1241.23 | 180 | -0.03 | Inari: mini vermilion torii before the shrine |
 | S84 | `StaticObj_JP_S_Jizo_Hut_Stone_Roof` | 1058.00 | 1242.43 | 180 | -0.15 | Inari: stone-roofed hut (stand-in for the Inari shrine) |
 | S85 | `StaticObj_JP_S_Chozubachi_Ab_Dry` | 1055.60 | 1239.63 | 180 | -0.30 | Inari: a basin cracked and dry (abandoned) |
+| S100 | `StaticObj_JP_S_Torii_Fallen_Stone_Quake` | 1052.00 | 1172.00 | 270 | -0.12 | collapsed stone torii (the 1707 quake), behind the sub-shrine row |
+| S101 | `StaticObj_JP_S_Torii_Fallen_Stone_Quake_Old` | 1003.00 | 1150.00 | 180 | -0.14 | collapsed stone torii, mossy and sunk (a long-ago collapse), north of the graveyard |
+| S102 | `StaticObj_JP_S_Torii_Fallen_Myojin_Typhoon` | 1008.00 | 1178.00 | 135 | -0.21 | wooden myojin torii blown over by a typhoon, west of the approach |
+| S103 | `StaticObj_JP_S_Torii_Fallen_Shinmei_Rot` | 1056.00 | 1188.00 | 200 | -0.29 | wooden shinmei torii fallen with its feet rotted, in the trees east of the hall site |
+| S104 | `StaticObj_JP_S_Torii_Fallen_Shu_Snapped` | 1066.00 | 1190.00 | 170 | -0.28 | Inari: a vermilion torii snapped at the posts, below the Inari path |
 
 ## Graveyard (map sh1_map_graveyard.jpg; G<row>-<col>, row 1 = south / front, col 1 = west; s/t/i = slats / flower tubes / incense of that grave)
 
@@ -405,7 +410,7 @@ Regenerate: `python spikes/SH1/layout_sh1.py` then `python spikes/SH1/showcase_m
 | L72 | `StaticObj_JP_S_Lantern_Fallen_Chochin` | 1073.40 | 1030.00 | 160 | -0.00 | ground strip: A torn paper lantern fallen in the street |
 | L73 | `StaticObj_JP_S_Stool_Std` | 1075.50 | 1030.30 | 200 | -0.00 | ground strip: A wooden stool knocked over |
 | L53 | `StaticObj_JP_S_Tsukimi_Stand` | 1081.00 | 1030.60 | 180 | -0.00 | ground strip: Autumn: moon-viewing stand: pampas grass in a vase, a dango offering |
-| L58 | `StaticObj_JP_S_Potted_Stand` | 1083.20 | 1030.30 | 180 | -0.00 | ground strip: Potted plants on a stand |
+| L58 | `StaticObj_JP_S_Potted_Stand` | 1083.20 | 1030.30 | 180 | 0.00 | ground strip: Potted plants on a stand |
 | L61 | `StaticObj_JP_S_Stable_Yard_Tie_Post` | 1085.90 | 1030.20 | 180 | -0.00 | ground strip: Stable yard: tie post, trough, pack saddle on a rack |
 | L62 | `StaticObj_JP_S_Scarecrow_Kasa` | 1089.00 | 1030.00 | 180 | 0.00 | ground strip: Scarecrow (kakashi) |
 | L68 | `StaticObj_JP_S_Fire_Watch_Rack` | 1092.40 | 1030.40 | 180 | 0.00 | ground strip: Fire watch gear on a street corner: buckets, fire hook, ladder rack |
