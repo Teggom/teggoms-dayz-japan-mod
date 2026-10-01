@@ -1,0 +1,145 @@
+{
+ "id": "jp_f_ware_crate",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_ware_crate.p3d",
+   "class": "StaticObj_JP_F_Ware_Crate",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Crate of wares in straw",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 114,
+    "Resolution 2": 36,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.3,
+    0.3,
+    0.0,
+    0.439,
+    -0.225,
+    0.367
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.3,
+    -0.225,
+    0.3,
+    0.225
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 15.0,
+   "loot_surfaces": [
+    {
+     "name": "straw",
+     "kind": "shelf",
+     "y": 0.36,
+     "rect": [
+      -0.2,
+      -0.15,
+      0.2,
+      0.1
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.08,
+       0.36,
+       0.08
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/S1/out/shopfit/jp_f_ware_crate.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_ware_crate_tipped.p3d",
+   "class": "StaticObj_JP_F_Ware_Crate_Tipped",
+   "variant": "std",
+   "state": "tipped",
+   "abandoned": true,
+   "display": "Crate tipped, straw and shards",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 94,
+    "Resolution 2": 30,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.29,
+    0.393,
+    0.0,
+    0.45,
+    -0.464,
+    0.778
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.29,
+    -0.464,
+    0.393,
+    0.078
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 15.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "master": "spikes/S1/out/shopfit/jp_f_ware_crate_tipped.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "setomono"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 916 (a packing corner with straw))"
+}

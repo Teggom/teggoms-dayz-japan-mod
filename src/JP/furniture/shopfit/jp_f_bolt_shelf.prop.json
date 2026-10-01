@@ -1,0 +1,299 @@
+{
+ "id": "jp_f_bolt_shelf",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_bolt_shelf.p3d",
+   "class": "StaticObj_JP_F_Bolt_Shelf",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Cloth-bolt shelf (cubbies)",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 360,
+    "Resolution 2": 42,
+    "Resolution 3": 6,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "bbox": [
+    -0.455,
+    0.455,
+    0.0,
+    1.5,
+    -0.225,
+    0.225
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    -0.225,
+    0.455,
+    0.225
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 40.0,
+   "loot_surfaces": [
+    {
+     "name": "cubby_0_1",
+     "kind": "shelf",
+     "y": 0.03,
+     "rect": [
+      0.03,
+      -0.165,
+      0.403,
+      0.185
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.2165,
+       0.03,
+       0.03
+      ]
+     ]
+    },
+    {
+     "name": "cubby_1_0",
+     "kind": "shelf",
+     "y": 0.5,
+     "rect": [
+      -0.403,
+      -0.165,
+      -0.03,
+      0.185
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.2165,
+       0.5,
+       0.03
+      ]
+     ]
+    },
+    {
+     "name": "cubby_2_1",
+     "kind": "shelf",
+     "y": 0.98,
+     "rect": [
+      0.03,
+      -0.165,
+      0.403,
+      0.185
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.2165,
+       0.98,
+       0.03
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "against the party wall (back at z = -0.225); loot on the empty cubbies' boards (<= 1.40)"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_bolt_shelf.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_bolt_shelf_pulled.p3d",
+   "class": "StaticObj_JP_F_Bolt_Shelf_Pulled",
+   "variant": "std",
+   "state": "pulled",
+   "abandoned": true,
+   "display": "Cloth-bolt shelf, bolts pulled out",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 246,
+    "Resolution 2": 42,
+    "Resolution 3": 6,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "bbox": [
+    -0.455,
+    0.571,
+    0.0,
+    1.5,
+    -0.225,
+    0.961
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.455,
+    -0.225,
+    0.455,
+    0.225
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 40.0,
+   "loot_surfaces": [
+    {
+     "name": "cubby_0_0",
+     "kind": "shelf",
+     "y": 0.03,
+     "rect": [
+      -0.403,
+      -0.165,
+      -0.03,
+      0.185
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.2165,
+       0.03,
+       0.03
+      ]
+     ]
+    },
+    {
+     "name": "cubby_0_1",
+     "kind": "shelf",
+     "y": 0.03,
+     "rect": [
+      0.03,
+      -0.165,
+      0.403,
+      0.185
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.2165,
+       0.03,
+       0.03
+      ]
+     ]
+    },
+    {
+     "name": "cubby_1_0",
+     "kind": "shelf",
+     "y": 0.5,
+     "rect": [
+      -0.403,
+      -0.165,
+      -0.03,
+      0.185
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.2165,
+       0.5,
+       0.03
+      ]
+     ]
+    },
+    {
+     "name": "cubby_1_1",
+     "kind": "shelf",
+     "y": 0.5,
+     "rect": [
+      0.03,
+      -0.165,
+      0.403,
+      0.185
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.2165,
+       0.5,
+       0.03
+      ]
+     ]
+    },
+    {
+     "name": "cubby_2_0",
+     "kind": "shelf",
+     "y": 0.98,
+     "rect": [
+      -0.403,
+      -0.165,
+      -0.03,
+      0.185
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       -0.2165,
+       0.98,
+       0.03
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "against the party wall (back at z = -0.225); loot on the empty cubbies' boards (<= 1.40)"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_bolt_shelf_pulled.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "draper",
+  "hataori"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 919-923)"
+}

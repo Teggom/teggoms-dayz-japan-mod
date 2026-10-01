@@ -1,0 +1,130 @@
+{
+ "id": "jp_f_furugi_rack",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "shopfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_furugi_rack.p3d",
+   "class": "StaticObj_JP_F_Furugi_Rack",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Old-clothes rack, four robes",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 114,
+    "Resolution 2": 78,
+    "Resolution 3": 6,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -0.6,
+    0.6,
+    0.0,
+    1.7,
+    -0.22,
+    0.22
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.57,
+    -0.22,
+    0.57,
+    0.22
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 12.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "garments hung by the sleeves (BTI 924-925); no loot (the robes are dressing)"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_furugi_rack.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\shopfit\\jp_f_furugi_rack_down.p3d",
+   "class": "StaticObj_JP_F_Furugi_Rack_Down",
+   "variant": "std",
+   "state": "down",
+   "abandoned": true,
+   "display": "Old-clothes rack, pole down, robes heaped",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 78,
+    "Resolution 2": 42,
+    "Resolution 3": 6,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.6,
+    0.6,
+    0.0,
+    1.7,
+    -0.28,
+    0.67
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.57,
+    -0.22,
+    0.57,
+    0.22
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 12.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "garments hung by the sleeves (BTI 924-925); no loot (the robes are dressing)"
+   ],
+   "master": "spikes/S1/out/shopfit/jp_f_furugi_rack_down.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/S1/build_s1.py (agent S1, 2026-09-30) on spikes/B3a/build.py",
+ "trades": [
+  "furugi"
+ ],
+ "era": "KEPT (research/interior/SHOP_SETS.md: BTI 924-925)"
+}

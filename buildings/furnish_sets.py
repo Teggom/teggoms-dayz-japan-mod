@@ -580,3 +580,8 @@ SETS = {
     "shed_barn": {"tier": 1, "fn": shed_barn},
     "kura_storage": {"tier": 2, "fn": kura_storage},
 }
+
+# S1 (2026-09-30): the KEEP_TRADES shop sets (buildings/shop_sets.py): shop_<trade>_<3k|2k>_ab<0-2>
+import shop_sets as _shop  # noqa: E402
+
+SETS.update(_shop.sets())

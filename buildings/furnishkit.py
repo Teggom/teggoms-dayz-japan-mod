@@ -161,7 +161,10 @@ def model(name=None, base=None, dress=None, **kw):
     import furnish_sets
     b = registry.get(base)
     bm = _base_module(b)
-    M, floors, rooms = bm.model(name=name, **b["params"])
+    spec = furnish_sets.SETS[dress]
+    params = dict(b["params"])
+    params.update(spec.get("shell", {}))      # S1: a dressing may ask the shell for an option (the shop board strip)
+    M, floors, rooms = bm.model(name=name, **params)
     POSTS[:] = list(getattr(bm, "POSTS", []))
     PASSAGES[:] = list(getattr(bm, "PASSAGES", []))
     PORTALS[:] = list(getattr(bm, "PORTALS", []))
@@ -172,7 +175,6 @@ def model(name=None, base=None, dress=None, **kw):
     globals()["PASSAGE_LABEL"] = getattr(bm, "PASSAGE_LABEL", PASSAGE_LABEL)
     BASE.clear()
     BASE.update(key=base, cls=b["class"])
-    spec = furnish_sets.SETS[dress]
     ctx = Ctx(M, floors, rooms, INFO, base, spec["tier"])
     spec["fn"](ctx)
     D = ctx.D

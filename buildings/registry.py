@@ -426,3 +426,14 @@ def get(key):
         if b["key"] == key:
             return b
     raise KeyError("no building %r in buildings/registry.py (have: %s)" % (key, ", ".join(b["key"] for b in BUILDINGS)))
+
+
+# ------------------------------------------------------------------------------------------------ S1 shop-set demos
+# The KEEP_TRADES shop sets (buildings/shop_sets.py, research/interior/SHOP_SETS.md): one demo shop per 4-5 trades,
+# each a furnished variant (furnishkit) whose shell takes the board display strip (townhouse option mise_floor _455).
+# Not placed on the island (S1 brief): ship = the class exists in jp_buildings.pbo, placements empty.
+S1_SHOPS = [
+    _furn("s1_th_edo_3k_middle_kanamono", "th_edo_3k_middle_toril", "shop_kanamono_3k_ab1", "Kanamono",
+          "shop set: ironmonger"),
+]
+BUILDINGS += S1_SHOPS

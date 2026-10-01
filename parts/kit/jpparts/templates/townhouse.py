@@ -112,7 +112,8 @@ def budget_class(frontage=3, region="kamigata", position="end", **_):
 
 
 def build(frontage=3, region="kamigata", position="end", free="right", tori="left", covering=None, geya_ken=1,
-          shopfront="_degoshi", hooks=None, name=None, upper=None, pent=None, stable=None, split=False):
+          shopfront="_degoshi", hooks=None, name=None, upper=None, pent=None, stable=None, split=False,
+          mise_floor=None):
     """C1 (2026-09-30) additions, all off by default (the 60 unit combinations build exactly as before):
       position 'detached'  both gables free (the post-town house and the inns: the machiya pattern, no party side)
       frontage 5           the inns
@@ -123,6 +124,10 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
       pent                 override the street pent: 'tile' | 'board'
       stable               a jp_p_frame_stall variant ('_umaya') in the kitchen doma, needs geya_ken 2 (DW10 stable)
       split                the oku split into two rooms by a partition with a single door (the inn's guest rooms)
+    S1 (2026-09-30), off by default:
+      mise_floor           '_455' | '_910': the shop room gets the board display strip (jp_p_fit_mise_floor,
+                           floors.mise) along its street edge instead of the front tatami row (G1 A2: shop display =
+                           board strip + stepped stands); used by the shop-set variants (buildings/shop_sets.py)
 
     Build one unit. Returns (H, info): H in the kit frame (lot from info['lot'][0] to info['lot'][1] along x),
     info = {lot, lot_width, W, DO, DG, party, free, corner (street-view sides), kit_sides, rooms, floors, posts,
@@ -530,7 +535,14 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
     B.merge(FL.doma("doma_tori", 0.0, XT, ZB, 0.0, road=(POST / 2, XT - POST / 2, ZB - POST / 2, -POST / 2), y=DOMA))
     B.merge(FL.doma("doma_kitchen", 0.0, W, ZG, ZB, road=(POST / 2, W - POST / 2, ZG + POST / 2, ZB - POST / 2),
                     y=DOMA))
-    B.merge(FL.tatami("tatami_mise", XT + POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2, top=FLOOR, base=DOMA))
+    if mise_floor:                  # S1: board display strip along the street edge, tatami behind (floors.mise)
+        B.merge(FL.mise("mise_floor", XT + POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2, top=FLOOR,
+                        base=DOMA, variant=mise_floor, street="+z"))
+        log.append("floors.mise %s (jp_p_fit_mise_floor): board strip along the street edge of the shop room"
+                   % mise_floor)
+    else:
+        B.merge(FL.tatami("tatami_mise", XT + POST / 2, W - POST / 2, -DO / 2 + POST / 2, -POST / 2, top=FLOOR,
+                          base=DOMA))
     if split:
         B.merge(FL.tatami("tatami_oku", XT + POST / 2, XS - POST / 2, ZB + POST / 2, -DO / 2 - POST / 2, top=FLOOR,
                           base=DOMA))
@@ -673,6 +685,8 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         info["levels"] = {"keta": keta_o, "eave": eave_o, "gable_tie": gtie, "loft": LOFT, "floor": FLOOR}
         info["stairwell"] = well
         info["stair"] = stair_info          # canonical kit frame (flight +x from the foot, width +z from the wall)
+    if mise_floor:                          # S1 addition (absent = every shell as before)
+        info["params"]["mise_floor"] = mise_floor
     if xtori == "right":
         H, info = _mirror(H, info)
     info["kit_sides"] = {"party": info["party"], "free": info["free"], "corner": info["corner"]}
