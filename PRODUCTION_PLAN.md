@@ -414,5 +414,5 @@
 - 2026-10-01: **QUEUED (Stephen: yes) right after W2S, BEFORE W2F: faster checks.** (1) cache: a fingerprint of each building's
   inputs (recipe source, the kit modules it imports, params) stored with its last passing result; unchanged = skipped, so a
   kit change only re-checks the buildings that use the changed module; (2) make the slow checks smarter (spatial grid for the
-  C20 face-pair test, adaptive ray counts for C11, profile the hotspots). Keep a 'full' flag that ignores the cache.
+  C20 face-pair test, adaptive ray counts for C11, profile the hotspots). Keep a 'full' flag that ignores the cache. Max 4 parallel processes, normal priority (Stephen).
   Why: verify_all re-checked all 169 buildings x 60-90 checks from scratch, 10 processes, ~20+ min, growing linearly.

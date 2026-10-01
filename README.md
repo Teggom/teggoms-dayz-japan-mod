@@ -110,9 +110,8 @@ Stephen then does one bundled check from `TEST_CHECKLIST.md`.
 
    Never modify `pokemon_dev/`, other server files, other agents' paths, or `tools/common/`. Read anything.
 2b. **Stephen uses this PC while you work** (2026-10-01: 10 parallel verify processes made it crawl). Parallel jobs
-   (`--jobs`, verify_all, batch binarize, renders): **at most 4 processes**, started at **below-normal priority**
-   (Python: `os.nice` doesn't exist on Windows; use `psutil` or start them with `start /belownormal` /
-   `subprocess.Popen(..., creationflags=0x4000)` = BELOW_NORMAL_PRIORITY_CLASS).
+   (`--jobs`, verify_all, batch binarize, renders): **at most 4 processes**. Normal priority is fine (Stephen,
+   2026-10-01); no need to lower it.
 3. **Git: commit AND push your own work** (Stephen, 2026-10-01). The repo's remote is `origin` =
    https://github.com/Teggom/teggoms-dayz-japan-mod.git (private, Stephen's), branch `master`.
    - Commit at every checkpoint, ONLY your own paths: `git commit --only <paths> -m "..."` (or `git commit <paths>
