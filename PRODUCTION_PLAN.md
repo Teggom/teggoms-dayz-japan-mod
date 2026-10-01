@@ -434,3 +434,10 @@
   Not done: navmesh; blank temple name boards (no atlas cell); Nichiren / Shinshu sect swaps.
   - **PITFALL (growing):** furniture config is assembled by several builders; a B3a / L1 / S1 rebuild drops W2F's classes (re-run
     spikes/W2F/build_w2f.py --pack), like B3b dropping L2's. TODO: one config assembler per PBO that merges every builder's classes.
+- 2026-10-01: **Stephen's wave-2 walk** (notes: test/feedback/2026-10-01_wave2/NOTES.md). Curved roofs + most of P good. Findings:
+  tobira handles on the wrong leaf (P1, t1); offering box litter + blocks the stairs; masks (P5) low-res; Buddha / Jizo statues
+  are blobs (need picture references + care; Jizo staff top see-through); shoro striker rope + U1 bell floating; U1 veranda sides
+  cut off; rope torii feel too short; woodpiles need side support; torii pole + moss textures repeat. **Policy (Stephen): small
+  detail props deserve more faces; they're what make the world pop.** VPP admin tools added to the Japan test launchers
+  (@CF;@VPPAdminTools;@Japan; permissions copied from ServerProfile). **FX1 launched** (geometry/placement fixes 1-6).
+  Next: FX2 statues/detail pass (needs reference images: Stephen's call), FX3 = the queued wood-texture job + moss variety.
