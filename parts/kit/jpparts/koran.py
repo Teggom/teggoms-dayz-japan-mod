@@ -31,7 +31,9 @@ STAIR_ANGLE = 37.8     # max walk ramp (D4); the run rounds UP to the 0.455 grid
 JIF = (0.07, 0.08)     # jifuku height, depth
 EDGE_IN = 0.015        # jifuku outer face inside the deck edge (no coplanar faces, C20)
 MAT = "wood_weathered"
-METAL = "metal_iron"   # stand-in for bronze (no bronze / copper-patina material; parts/W2P1_NOTES.md)
+from .core import LIBRARY as _LIB  # noqa: E402
+# W2S (2026-10-01): patinated bronze now exists (jp_m_metal_bronze); iron stays the fallback
+METAL = "metal_bronze" if "metal_bronze" in _LIB else "metal_iron"
 
 
 # ------------------------------------------------------------------------------------------------ helpers

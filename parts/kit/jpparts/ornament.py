@@ -19,7 +19,9 @@ from .shapes import tube
 from . import kawara as K
 
 MAT = "wood_weathered"
-METAL = "metal_iron"            # stand-in for bronze (parts/W2P1_NOTES.md: missing material)
+from .core import LIBRARY as _LIB  # noqa: E402
+# W2S (2026-10-01): patinated bronze now exists (jp_m_metal_bronze); iron stays the fallback
+METAL = "metal_bronze" if "metal_bronze" in _LIB else "metal_iron"
 
 
 def chigi(part, x, apex_y, zr, t=None, cut="soto", w=0.20, th=0.06, angle=50.0, foot=0.16, foot_y=0.04, up=0.55,

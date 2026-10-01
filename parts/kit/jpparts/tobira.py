@@ -27,7 +27,9 @@ LEAF_T = 0.045
 SILL_H = 0.03
 SWING = 90.0
 MAT = "wood_weathered"
-METAL = "metal_iron"            # stand-in for bronze fittings (parts/W2P1_NOTES.md: missing material)
+from .core import LIBRARY as _LIB  # noqa: E402
+# W2S (2026-10-01): patinated bronze now exists (jp_m_metal_bronze); iron stays the fallback
+METAL = "metal_bronze" if "metal_bronze" in _LIB else "metal_iron"
 
 
 def _leaf(x0, x1, y0, y1, z0, z1, style, rng, mat, outer):

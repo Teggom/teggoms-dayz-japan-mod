@@ -1,0 +1,71 @@
+{
+ "id": "jp_m_metal_bronze",
+ "family": "metal",
+ "palette_id": "bronze_patina",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 512,
+ "px_per_m": 1024.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "none; cast surface, patina in the hollows",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\castiron.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "dark, even brown-black (kept indoors / dry)",
+   "co": "JP\\common\\materials\\metal\\jp_m_metal_bronze_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_bronze_w0.rvmat",
+   "target_srgb": [
+    68.6,
+    60.9,
+    47.2
+   ],
+   "masked_frac": 0.03
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "outdoor: green in the hollows",
+   "co": "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
+   "target_srgb": [
+    78.0,
+    70.0,
+    56.0
+   ],
+   "masked_frac": 0.061
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "green runs, pale bloom",
+   "co": "JP\\common\\materials\\metal\\jp_m_metal_bronze_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_bronze_w2.rvmat",
+   "target_srgb": [
+    77.8,
+    79.0,
+    65.7
+   ],
+   "masked_frac": 0.253
+  }
+ },
+ "used_by": [
+  "jp_p_porch_koran",
+  "jp_p_roof_ornament",
+  "jp_p_open_tobira",
+  "jp_p_open_shitomi_grid"
+ ],
+ "used_on": "Bronze fittings and bells",
+ "sources": [
+  {
+   "procedural": "make_w2s_materials.py (on make_b1_materials.make_one)"
+  },
+  {
+   "palette": "assumed (general knowledge)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_w2s_materials.py (agent W2S, 2026-10-01), through B1's make_one",
+ "requested_by": "parts/W2P1_NOTES.md + parts/W2P2_NOTES.md 'Missing materials' (W2S brief)",
+ "note": "Patinated cast bronze: temple bells (W2F prop), giboshi caps (jp_p_porch_koran), hoju finials (jp_p_roof_ornament), honden door fittings (jp_p_open_tobira) and shitomi hooks. Replaces the metal_iron stand-in there (W2P1 note). Matte finish: an old patina does not mirror."
+}

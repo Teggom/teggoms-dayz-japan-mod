@@ -1,0 +1,325 @@
+{
+ "check": "C1 palette (tools/matcheck), W2S materials",
+ "palette_entries_added": [
+  "roof_hiwada",
+  "roof_copper_patina",
+  "bronze_patina"
+ ],
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_hiwada_w0_co.png",
+   "palette_id": "roof_hiwada",
+   "wear": "",
+   "mean_srgb": [
+    132.0,
+    96.5,
+    80.9
+   ],
+   "target_srgb": [
+    104,
+    83,
+    74
+   ],
+   "dE": 10.49,
+   "dE_to_entry": 10.49,
+   "tol": 16.0,
+   "spread_p75": 7.0,
+   "observed_spread": 6.2,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     132.0,
+     96.5,
+     80.9
+    ],
+    "dE": 10.49,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_hiwada_w1_co.png",
+   "palette_id": "roof_hiwada",
+   "wear": "",
+   "mean_srgb": [
+    104.0,
+    83.0,
+    74.0
+   ],
+   "target_srgb": [
+    104,
+    83,
+    74
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 16.0,
+   "spread_p75": 5.9,
+   "observed_spread": 6.2,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     104.0,
+     83.0,
+     74.0
+    ],
+    "dE": 0.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_hiwada_w2_co.png",
+   "palette_id": "roof_hiwada",
+   "wear": "",
+   "mean_srgb": [
+    84.6,
+    73.2,
+    70.2
+   ],
+   "target_srgb": [
+    104,
+    83,
+    74
+   ],
+   "dE": 7.68,
+   "dE_to_entry": 7.68,
+   "tol": 16.0,
+   "spread_p75": 5.0,
+   "observed_spread": 6.2,
+   "masked_frac": 0.114,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_hiwada_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     84.6,
+     73.3,
+     70.2
+    ],
+    "dE": 7.68,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_copper_w0_co.png",
+   "palette_id": "roof_copper_patina",
+   "wear": "",
+   "mean_srgb": [
+    103.0,
+    130.1,
+    104.3
+   ],
+   "target_srgb": [
+    96,
+    140,
+    122
+   ],
+   "dE": 7.81,
+   "dE_to_entry": 7.81,
+   "tol": 18.0,
+   "spread_p75": 4.3,
+   "observed_spread": 0.0,
+   "masked_frac": 0.128,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_copper_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     103.1,
+     130.1,
+     103.9
+    ],
+    "dE": 7.98,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_copper_w1_co.png",
+   "palette_id": "roof_copper_patina",
+   "wear": "",
+   "mean_srgb": [
+    96.0,
+    140.0,
+    122.0
+   ],
+   "target_srgb": [
+    96,
+    140,
+    122
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 18.0,
+   "spread_p75": 4.3,
+   "observed_spread": 0.0,
+   "masked_frac": 0.035,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_copper_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     96.0,
+     140.0,
+     121.9
+    ],
+    "dE": 0.05,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_copper_w2_co.png",
+   "palette_id": "roof_copper_patina",
+   "wear": "",
+   "mean_srgb": [
+    98.9,
+    151.5,
+    135.6
+   ],
+   "target_srgb": [
+    96,
+    140,
+    122
+   ],
+   "dE": 4.9,
+   "dE_to_entry": 4.9,
+   "tol": 18.0,
+   "spread_p75": 4.5,
+   "observed_spread": 0.0,
+   "masked_frac": 0.256,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_roof_copper_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     98.9,
+     151.5,
+     135.6
+    ],
+    "dE": 4.88,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_metal_bronze_w0_co.png",
+   "palette_id": "bronze_patina",
+   "wear": "",
+   "mean_srgb": [
+    68.6,
+    60.9,
+    47.2
+   ],
+   "target_srgb": [
+    78,
+    70,
+    56
+   ],
+   "dE": 4.0,
+   "dE_to_entry": 4.0,
+   "tol": 16.0,
+   "spread_p75": 2.4,
+   "observed_spread": 0.0,
+   "masked_frac": 0.03,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_metal_bronze_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     68.7,
+     61.0,
+     46.8
+    ],
+    "dE": 4.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_metal_bronze_w1_co.png",
+   "palette_id": "bronze_patina",
+   "wear": "",
+   "mean_srgb": [
+    78.0,
+    70.0,
+    56.0
+   ],
+   "target_srgb": [
+    78,
+    70,
+    56
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 16.0,
+   "spread_p75": 2.3,
+   "observed_spread": 0.0,
+   "masked_frac": 0.061,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_metal_bronze_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     78.0,
+     70.1,
+     55.8
+    ],
+    "dE": 0.15,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_metal_bronze_w2_co.png",
+   "palette_id": "bronze_patina",
+   "wear": "",
+   "mean_srgb": [
+    77.8,
+    79.0,
+    65.7
+   ],
+   "target_srgb": [
+    78,
+    70,
+    56
+   ],
+   "dE": 5.38,
+   "dE_to_entry": 5.38,
+   "tol": 16.0,
+   "spread_p75": 2.6,
+   "observed_spread": 0.0,
+   "masked_frac": 0.253,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_metal_bronze_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     77.6,
+     79.1,
+     65.6
+    ],
+    "dE": 5.48,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  }
+ ]
+}

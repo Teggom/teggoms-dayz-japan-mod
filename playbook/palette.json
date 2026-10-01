@@ -2474,6 +2474,101 @@
    "method": "assumed",
    "tolerance_dE76": 14,
    "hex": "#C4A068"
+  },
+  {
+   "id": "roof_hiwada",
+   "name": "Cypress-bark roofing (hiwada-buki), weathered",
+   "material": "hinoki bark strips laid in very fine overlapping courses, nailed with bamboo pegs: shrine honden and haiden, high-rank temple halls",
+   "group": "roof",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "shrine / temple hall roofs (jp_m_roof_hiwada; jp_p_roof_sori hiwada)",
+   "note": "Added 2026-10-01 by W2S (research/materials/make_w2s_materials.py; spikes/W2S/W2S_NOTES.md 'Materials'). DERIVED, not a roof photo (none on this machine, no web in the run): the hue and saturation of the sunlit cedar / cypress trunks in k38_shrine_steps (Kashima shrine approach; boxes x 0.70-0.80 y 0.10-0.60 -> 166,133,119 and x 0.86-0.95 y 0.05-0.45 -> 158,125,112; the playbook box method), i.e. the bark itself, kept at its ratios (g/r 0.80, b/r 0.71) and set to r = 104 for a LAID roof: thousands of 1-2 cm course shadows and weathering make hiwada roofs read dark red-brown (general knowledge). Rejected: the left trunk of k38 (sky-washed, 209,189,180). Upgrade from a sunlit photo of a hiwada roof (Izumo, Kitano, Kibitsu) when one is saved locally.",
+   "srgb": [
+    104,
+    83,
+    74
+   ],
+   "method": "derived",
+   "tolerance_dE76": 16,
+   "observed_spread_dE76": 6.2,
+   "samples": [
+    {
+     "ref": "k38_shrine_steps",
+     "box": [
+      0.7,
+      0.1,
+      0.8,
+      0.6
+     ],
+     "value": [
+      166,
+      133,
+      119
+     ]
+    },
+    {
+     "ref": "k38_shrine_steps",
+     "box": [
+      0.86,
+      0.05,
+      0.95,
+      0.45
+     ],
+     "value": [
+      158,
+      125,
+      112
+     ]
+    }
+   ],
+   "hex": "#68534A"
+  },
+  {
+   "id": "roof_copper_patina",
+   "name": "Aged copper roofing, green patina (rokusho)",
+   "material": "copper sheet roofing (dobuki: flat-lock sheets with batten seams) after decades of weather",
+   "group": "roof",
+   "tiers": [
+    3
+   ],
+   "use": "the richest halls, castle keeps (jp_m_roof_copper; jp_p_roof_sori copper)",
+   "note": "Added 2026-10-01 by W2S (research/materials/make_w2s_materials.py; spikes/W2S/W2S_NOTES.md 'Materials'). ASSUMED (general knowledge: the matte blue-green of old Japanese copper roofs, Nikko / Edo castle-grade work). The one copper roof on this machine (k38_shrine_steps, the hall behind the trees, box x 0.48-0.53 y 0.53-0.56 -> 61,70,68 in shade, and a sky-lit sheen 200+ on its upper half) shows reflection, not the patina colour: rejected. Upgrade from a diffuse-lit photo of a temple copper roof.",
+   "srgb": [
+    96,
+    140,
+    122
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 18,
+   "observed_spread_dE76": 0.0,
+   "samples": [],
+   "hex": "#608C7A"
+  },
+  {
+   "id": "bronze_patina",
+   "name": "Patinated cast bronze (temple bell, finials, fittings)",
+   "material": "cast bronze after years outdoors: dark brown-black, verdigris (green-blue) in the hollows and runs",
+   "group": "fitting",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "temple bells, giboshi caps, hoju finials, honden door fittings (jp_m_metal_bronze)",
+   "note": "Added 2026-10-01 by W2S (research/materials/make_w2s_materials.py; spikes/W2S/W2S_NOTES.md 'Materials'). ASSUMED (general knowledge of old temple bells and railing caps: brown-black body, green in the recesses). No local photo of an old bronze bell or giboshi.",
+   "srgb": [
+    78,
+    70,
+    56
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 16,
+   "observed_spread_dE76": 0.0,
+   "samples": [],
+   "hex": "#4E4638"
   }
  ]
 }

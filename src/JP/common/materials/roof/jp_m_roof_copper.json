@@ -1,0 +1,69 @@
+{
+ "id": "jp_m_roof_copper",
+ "family": "roof",
+ "palette_id": "roof_copper_patina",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "down-slope (v): flat-lock sheets 0.25 x 0.50 m, staggered",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\metalplate.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\metal_thin_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "younger patina: brown copper flecks through the green",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_copper_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_copper_w0.rvmat",
+   "target_srgb": [
+    103.0,
+    130.1,
+    104.3
+   ],
+   "masked_frac": 0.128
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "full green patina, pale rain runs",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_copper_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_copper_w1.rvmat",
+   "target_srgb": [
+    96.0,
+    140.0,
+    122.0
+   ],
+   "masked_frac": 0.035
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "old: chalky pale-green bloom, black run stains",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_copper_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_copper_w2.rvmat",
+   "target_srgb": [
+    98.9,
+    151.5,
+    135.6
+   ],
+   "masked_frac": 0.256
+  }
+ },
+ "used_by": [
+  "jp_p_roof_sori (copper)",
+  "W2S temple / shrine shells"
+ ],
+ "used_on": "Copper roofs, green patina",
+ "sources": [
+  {
+   "procedural": "make_w2s_materials.py (on make_b1_materials.make_one)"
+  },
+  {
+   "palette": "assumed (general knowledge)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_w2s_materials.py (agent W2S, 2026-10-01), through B1's make_one",
+ "requested_by": "parts/W2P1_NOTES.md + parts/W2P2_NOTES.md 'Missing materials' (W2S brief)",
+ "note": "Aged copper roofing with green patina (dobuki): the richest halls and castle-grade roofs (KEEP_CIVIC: Nagoya / Edo copper keeps). 2 m tile; geometry carries the batten seams (jp_p_roof_sori copper, every 0.45 m), the texture the sheet laps. Replaces W2P2's roof_kureita stand-in."
+}

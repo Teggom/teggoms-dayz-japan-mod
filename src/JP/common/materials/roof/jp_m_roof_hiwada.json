@@ -1,0 +1,69 @@
+{
+ "id": "jp_m_roof_hiwada",
+ "family": "roof",
+ "palette_id": "roof_hiwada",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 1024,
+ "px_per_m": 1024.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "down-slope (v): fine courses 1.6 cm across v, bark fibres along v",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\wood_planks_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh: red-brown bark, crisp course lines",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_hiwada_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_hiwada_w0.rvmat",
+   "target_srgb": [
+    132.0,
+    96.5,
+    80.9
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "weathered: dark red-brown, rain streaks",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_hiwada_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_hiwada_w1.rvmat",
+   "target_srgb": [
+    104.0,
+    83.0,
+    74.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "old: grey-brown, lichen, a few lifted strips",
+   "co": "JP\\common\\materials\\roof\\jp_m_roof_hiwada_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_hiwada_w2.rvmat",
+   "target_srgb": [
+    84.6,
+    73.2,
+    70.2
+   ],
+   "masked_frac": 0.114
+  }
+ },
+ "used_by": [
+  "jp_p_roof_sori (hiwada)",
+  "W2S shrine shells"
+ ],
+ "used_on": "Cypress-bark shrine and temple roofs",
+ "sources": [
+  {
+   "procedural": "make_w2s_materials.py (on make_b1_materials.make_one)"
+  },
+  {
+   "palette_samples": "data/research_okit/refs/k38_shrine_steps.jpg (hiwada hue only)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_w2s_materials.py (agent W2S, 2026-10-01), through B1's make_one",
+ "requested_by": "parts/W2P1_NOTES.md + parts/W2P2_NOTES.md 'Missing materials' (W2S brief)",
+ "note": "Cypress-bark roof (hiwada-buki): shrine honden / haiden and high-rank temple halls. 1 m tile; the courses run across v like jp_m_roof_kokera's (v down the slope). Replaces the roof_kureita stand-in of jp_p_roof_sori hiwada (W2P2) and the straight shrine roofs' hiwada option (W2S)."
+}

@@ -21,7 +21,9 @@ from .openings import open_bar
 
 A = POST / 2
 MAT = "wood_weathered"
-METAL = "metal_iron"
+from .core import LIBRARY as _LIB  # noqa: E402
+# W2S (2026-10-01): patinated bronze now exists (jp_m_metal_bronze); iron stays the fallback
+METAL = "metal_bronze" if "metal_bronze" in _LIB else "metal_iron"
 SPLIT = 0.86            # upper / lower leaf joint over the floor
 SILL = 0.04
 PITCH = 0.115           # grid pitch (A: ~4 sun squares)
