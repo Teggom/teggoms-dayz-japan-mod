@@ -311,3 +311,15 @@
   Somei-yoshino in bloom (banned, 1840s+): remake as yamazakura / edohigan in autumn leaf. Stephen to pick from it.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
+
+- 2026-09-30: **S1 DONE** (opus-high, 759k / 86 min). Commits 6971798 .. 1f07f64. KEEP_TRADES §A lists 28 trades (header says 22):
+  all 28 have a set; the 3 star sets are written as recombinations only. Spec + as-built API: research/interior/SHOP_SETS.md.
+  - 84 new props / 175 models (goods clusters, fittings, 35 hanging signs, sugidama green / brown / fallen); jp_furniture.pbo
+    473 classes. Materials added: shop text atlas, red lacquer, sometsuke porcelain, tanned leather, tofu (palette
+    lacquer_shu + porcelain_sometsuke are guesses).
+  - Set API uildings/shop_sets.py: pply_mise(c, trade, ab), ront(), sets() -> 168 shop_<trade>_<3k|2k>_ab<0-2>;
+    the townhouse template has a mise_floor (board strip) option, off by default. 6 demo shops registered, not placed.
+  - Era calls: prints ink only (colour 1744+), Kyoho-bina in, no daruma / Banko / oden, tobacco hand-cut; flagged: Odawara
+    lantern founding date, the moneychanger's fundo-shaped sign vs the research's 'coin-shaped'.
+  - Not done: whole-house dressing fits only 3-ken toriniwa-left and 2-ken toriniwa-right units (4-ken + 2-ken ends need
+    layouts). Sheets research/interior/contact_sheets/s1_sets_1..5.jpg.
