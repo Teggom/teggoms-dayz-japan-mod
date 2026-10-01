@@ -90,12 +90,12 @@ def door_world_rot(d, gcomps):
     while free(hi + 0.01) and hi < c0 + 4:
         hi += 0.01
     # W2S (2026-10-01): the head is the lowest Geometry underside over the doorway, found by vertical rays on the
-    # doorway (5 stations across the clear width x the wall line and 0.25 m either side); W2C's bounding-box test
-    # counted a sloped step canopy (kohai) in front of a shrine door at its outer eave height
+    # doorway (5 stations across the clear width x every 5 cm from 0.30 m before to 0.30 m behind the leaves' line);
+    # W2C's bounding-box test counted a sloped step canopy (kohai) in front of a shrine door at its outer eave height
     head = 99.0
     for i in range(1, 6):
         s = lo + (hi - lo) * i / 6
-        for dz in (-0.25, 0.0, 0.25):
+        for dz in [k * 0.05 for k in range(-6, 7)]:
             xq, zq = (s, wall + dz) if along_x else (wall + dz, s)
             ab = MV.geo_bottom_above(obst, xq, y0 + 0.5, zq)
             if ab is not None:

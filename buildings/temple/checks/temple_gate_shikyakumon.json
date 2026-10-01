@@ -73,7 +73,7 @@
   {
    "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 2.44 m, head 4.40 m"
+   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 2.44 m, head 2.57 m"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",

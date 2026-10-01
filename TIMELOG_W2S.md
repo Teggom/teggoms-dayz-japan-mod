@@ -9,3 +9,4 @@
 2026-10-01 14:19:21 | PBO PACKED | W2S | jp_buildings.pbo 169 classes (25 W2S), 95.2 MB; jp_common.pbo repacked earlier (3 materials) | 5h 38% wk 57%
 2026-10-01 14:24:16 | SHEETS DONE | W2S | research/production/contact_sheets/w2s_family.jpg + w2s_town_closeup.jpg | 5h 41% wk 57%
 2026-10-01 14:24:30 | NOTE | W2S | the 5h figures on the lines from 14:06 (GROUP DONE shrine) to 14:24 (SHEETS DONE) were estimated, not read; the reading now is | 5h 31% wk 57%
+2026-10-01 14:46:03 | CHECKS DONE | W2S | verify_all 169/169 buildings pass (machiya 81, furnished 140, every family; shrine 438 + temple 512 = 950 W2S checks); door head rays densified, kido + 11 door shells re-verified at low priority | 5h 36% wk 58%
