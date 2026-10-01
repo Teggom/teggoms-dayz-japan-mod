@@ -22,3 +22,4 @@
 2026-10-01 10:59:20 | GROUP START | H collapsed torii + world | 10:55 after FP1 END | 5h 38% wk 49%
 2026-10-01 10:59:20 | GROUP DONE | H collapsed torii + world | S100-S104 placed (shrine.py, flattest hill-foot ground), ladder + well same p3ds (no change, 9 site Land_ classes bind), world + mission rebuilt, verify_oprw PASS 4081/4081 | 5h 38% wk 49%
 2026-10-01 10:59:20 | CHECKLIST DONE | FB1 | TEST_CHECKLIST.md ~15 min re-check (doors first, FP1 1-15 + FB1 C-G with IDs) | 5h 38% wk 49%
+2026-10-01 10:59:40 | END | FB1 | session | 5h 38% wk 49%
