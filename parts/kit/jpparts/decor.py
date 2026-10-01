@@ -157,7 +157,11 @@ def on_surface(name, host, surface=None, dx=0.0, dz=0.0, yaw=0.0, why="", count=
 # L2 (2026-09-30): the outdoor life layer (src/JP/site/yard_life, street_life) carries a sidecar mount: yard | street |
 # eaves | road | shore | field (and 'surface' for the bench dressing, placed with on_surface on a B3b bench). They are
 # separate map objects (D.place_site), not proxies; B3b's own site props keep their anchor-derived mounts.
-OUTDOOR_MOUNTS = ("yard", "street", "eaves", "road", "shore", "field")
+# W2 (2026-09-30): the wave-2 outdoor kit (src/JP/site/shrine, grave) adds three mounts, placed with on_site():
+#   shrine     torii, stone lanterns, basins on a shrine / temple approach (yard-shrine mini torii: 'yard')
+#   graveyard  gravestones and the graveyard wood set (temple, village and field-edge graves)
+#   slope      stone step modules seated into a rise; chain them foot-to-head (sidecar 'connectors', check C7)
+OUTDOOR_MOUNTS = ("yard", "street", "eaves", "road", "shore", "field", "shrine", "graveyard", "slope")
 
 
 def on_site(name, x, z, yaw=0.0, setting=None, y=None, why=""):
