@@ -36,6 +36,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 ~21:19 (local) | W3 | 6 wooden grave post (bohyo) variants, jp_site.pbo 307 classes | **163k** (65 tool calls) | 7 min | ran alongside S1 |
 | 2026-09-30 ~21:27 (local) | M1 (baseline) | launched: the missing materials, accuracy first (bare earth, new + silver-grey wood, brown heri, kaimyo + bonji + bohyo ink text, wicker + firewood tweaks), waits for S1 before touching the pipeline | - | - | before: **39%** (5-hour 46%) |
 | 2026-09-30 21:52 (local) | S1 | 28 shop sets (KEEP said 22, listed 28): spec SHOP_SETS.md, 84 new props / 175 models, 5 materials, set API (168 sets pass), 6 demo shops; jp_furniture.pbo 473 classes | **759k** (251 tool calls) | 86 min | ran alongside W2, A4, W3, M1 |
+| 2026-09-30 ~22:10 (local) | M1 | missing materials, accuracy first: bare earth, new + silver-grey wood, brown heri, 14 kaimyo + 6 grave-post ink cells, wicker + firewood; props rebuilt, 4 PBOs (bonji blocked: no Siddham font) | **501k** (245 tool calls) | 44 min | **41%** (5-hour 62%) after W2 + S1 + A4 + W3 + M1 |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

@@ -323,3 +323,16 @@
     lantern founding date, the moneychanger's fundo-shaped sign vs the research's 'coin-shaped'.
   - Not done: whole-house dressing fits only 3-ken toriniwa-left and 2-ken toriniwa-right units (4-ken + 2-ken ends need
     layouts). Sheets research/interior/contact_sheets/s1_sets_1..5.jpg.
+
+- 2026-09-30: **M1 DONE** (opus-high, 501k / 44 min). Commits 1a74138, ec3df93, b6cd2dd, fad881f; spikes/M1/M1_PROGRESS.md.
+  - New: jp_m_ground_earth_bare (148,130,108; k41/k37/k27), jp_m_wood_new (172,146,129; i04), jp_m_wood_silver`n    (126,125,120; k31/c03), jp_m_floor_tatami_heri_cha (palette cha_koge, no local brown-heri photo), carved kaimyo atlas
+    jp_m_decal_carved_text_grave (14 names, 1670-1729, era/sign checked by arithmetic; rank usage from general knowledge),
+    grave-post ink jp_m_decal_sumi_text_grave (6 cells 1724-1730), jp_m_wicker_aged (proxy: no kori photo),
+    jp_m_wood_firewood + _endgrain_firewood (i22).
+  - Applied: gravestones carry kaimyo, grave mounds bare earth, bohyo new/silver + ink, kori wicker, firewood (site +
+    furniture), brown heri in the Kanto dei / Kinai zashiki (8 farmhouses + 2 furnished). All re-runs pass; jp_buildings
+    verified by the lead: 128/128 models ODOL, tree clean.
+  - **Bonji NOT done:** no Siddham font on the machine. Needs Stephen's OK to download **Noto Sans Siddham** (SIL OFL 1.1,
+    google/fonts ofl/notosanssiddham).
+  - **Pitfall:** python buildings/pipeline.py --help STARTS A FULL REBUILD (no argparse help). M1 hit it, stopped it and
+    restored 69 townhouse masters. Fix the CLI before the next agent trips on it.
