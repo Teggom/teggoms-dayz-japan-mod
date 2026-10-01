@@ -422,3 +422,7 @@
   Town (hakama); Gate Yakuimon / Shikyakumon. Not built: kasuga honden, wari-haiden, mitesaki hondo (17.6k faces), sanmon, pagoda,
   sutra store. Materials: jp_m_roof_hiwada, jp_m_roof_copper, jp_m_metal_bronze. Town shoro 6,371 / 2,435 / 1,267 (registered large;
   **tower class = Stephen's call, still open**). Prop spots listed for W2F. .gitignore now covers buildings/*/out/ + renders/.
+- 2026-10-01: **V1 DONE** (394k / 98 min; commits 8e1eccc, 7dc1921, 14e6ba2). Rays were 86% of check time. Full verify of 169:
+  935 s -> 193 s (4 jobs); nothing changed: 3 s; sori.py changed: 29 s (exactly the 25 shrines/temples). uildings/checkcache.py;
+  python buildings/verify_all.py [--jobs N<=4] [--full] [--family X] [keys]; pipeline --full. Old vs new checks.json byte-identical
+  (10,262 checks). Fixed a furnishkit passage-label carry-over bug. **W2F launched.**
