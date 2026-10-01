@@ -6,8 +6,9 @@ Frames (B3a fkit.py; the sidecar 'anchor'):
   'floor'  base centre on the supporting surface (floor, stand step, shelf board)
   'wall'   origin on the floor / ground below; the wall or FACADE face is z = 0, the prop at +z; heights built in
   'hang'   origin at the beam underside, the prop hangs down (-y)
-Text: DayZ model space is left-handed. stext() lays a decal on a plane given (right, up) as the READER sees it; the
-quad faces out along right x up (component formula) and +u runs to the reader's right (the L2 TXT check,
+Text: DayZ model space is left-handed. stext(center, right, up, ...) lays a decal that faces out along right x up
+(component formula; e.g. right = +x, up = +y faces +z) with +u running to the reader's right as seen from that
+side (the L2 TXT check,
 spikes/L2/textface.py, verifies every model).
 """
 import math
@@ -175,9 +176,13 @@ def kanban_parts(cell, mat_text=SHOP, wear=None, text_wear=None, board_mat=WOOD,
     th = KB_H * 0.86
     tw = min(KB_W * 0.86, th * asp)
     th = tw / asp
-    for sx in (-1, 1):            # +x face read with the facade on the reader's left... both faces: right = -/+z
+    for sx in (-1, 1):            # both faces carry the text (read from either way along the street)
+        # a gofun-white painted face panel (the ink reads on it; a bare dark board would swallow it)
+        x0, x1 = (KB_T / 2, KB_T / 2 + 0.0015) if sx > 0 else (-KB_T / 2 - 0.0015, -KB_T / 2)
+        brd.append(W(x0, x1, top - KB_H + 0.03, top - 0.03, zc - KB_W / 2 + 0.02, zc + KB_W / 2 - 0.02, FUSUMA,
+                     vis=(1,)))
         right = (0.0, 0.0, -1.0) if sx > 0 else (0.0, 0.0, 1.0)
-        brd.append(stext((sx * KB_T / 2, top - KB_H / 2, zc), right, (0.0, 1.0, 0.0), th, cell, mat_text,
+        brd.append(stext((sx * (KB_T / 2 + 0.0015), top - KB_H / 2, zc), right, (0.0, 1.0, 0.0), th, cell, mat_text,
                          wear=text_wear or wear, width=tw))
     wear_all(out, wear)
     wear_all([s for s in brd if not getattr(s, "_text_faced", False)], wear)

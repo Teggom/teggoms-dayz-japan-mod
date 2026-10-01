@@ -8,3 +8,10 @@
 2026-09-30 21:15:37 | GROUP DONE | kamiya, abura, sumiya, tabako, tabidogu | 36 models (9 props + 8 signs, 1 shape sign), all pass; sets 30/30 | S1 | g2 | 5h 44% wk 39%
 2026-09-30 21:15:37 | GROUP DONE | komeya, sakana, yaoya, tofu, soba, mochiya | 34 models (9 props + 7 signs), all pass; sets 36/36 (96/96 incl. g1-g2) | S1 | g3 | 5h 44% wk 39%
 2026-09-30 21:15:37 | GROUP START | sakaya, nimeuri, kusuri, shichiya, ryogae, honya | S1 | g4 | 5h 44% wk 39%
+2026-09-30 21:20:13 | GROUP DONE | sakaya, nimeuri, kusuri, shichiya, ryogae, honya | 35 models (11 props + 6 signs + sugidama x3), all pass; sets 36/36 | S1 | g4 | 5h 45% wk 39%
+2026-09-30 21:20:13 | GROUP START | fukuromono, hataori, shitate, eshi, nushi, kushiya, ningyo, butsugu | S1 | g5-6 | 5h 45% wk 39%
+2026-09-30 21:25:52 | GROUP DONE | fukuromono, hataori, shitate, eshi | 20 models (5 props + 4 signs... with g6 below), all pass; sets 24/24 | S1 | g5 | 5h 46% wk 39%
+2026-09-30 21:25:52 | GROUP DONE | nushi, kushiya, ningyo, butsugu | 18 models (5 props + 4 signs), all pass; sets 24/24 (all 28 trades 168/168) | S1 | g6 | 5h 46% wk 39%
+2026-09-30 21:29:43 | DEMO SHOPS DONE | S1 | 6 demo shops (one per group): kanamono 103, tabako 94, mochiya 110, kusuri ab2 103, shitate 94, ningyo 103 - all pass | 5h 49% wk 39%
+2026-09-30 21:29:43 | PBO PACKED | S1 | jp_furniture 473 classes (175 S1 ODOL, 0 warnings), jp_buildings 78.2 MB, jp_common 207.3 MB; commit 433d86f | 5h 49% wk 39%
+2026-09-30 21:39:01 | SHEETS DONE | S1 | research/interior/contact_sheets/s1_sets_1..5.jpg (28 sets: room / cut / front / ref) + s1_props_{goods,fit,sign}*.jpg (175 models) | 5h 52% wk 40%

@@ -280,11 +280,14 @@ def shape_fundo(state="intact"):
     for dy in (0.17, -0.17):
         body.append(fkit.lcyl("x", yc + dy, zc, 0.16, -KB_T / 2, KB_T / 2, LACQ, n=10, vis=(1, 2)))
     body.append(W(-KB_T / 2, KB_T / 2, yc - 0.10, yc + 0.10, zc - 0.10, zc + 0.10, LACQ, vis=(1, 2)))
+    for sx in (-1, 1):                                    # the white-painted lettering panel on both faces
+        x0, x1 = (KB_T / 2, KB_T / 2 + 0.0015) if sx > 0 else (-KB_T / 2 - 0.0015, -KB_T / 2)
+        body.append(W(x0, x1, yc - 0.22, yc + 0.22, zc - 0.11, zc + 0.11, "paper_fusuma", vis=(1,)))
     for dz in (-0.09, 0.09):
         body.append(cord((0.0, ARM_Y, zc + dz), (0.0, yc + 0.30, zc + dz), 0.004))
     for sx in (-1, 1):
         right = (0.0, 0.0, -1.0) if sx > 0 else (0.0, 0.0, 1.0)
-        body.append(stext((sx * KB_T / 2, yc, zc), right, (0.0, 1.0, 0.0), 0.40, "kanban_ryogae",
+        body.append(stext((sx * (KB_T / 2 + 0.0015), yc, zc), right, (0.0, 1.0, 0.0), 0.40, "kanban_ryogae",
                           wear="_w2" if ab else None, off=0.003, width=0.19))
     if ab:
         body = [xf(s, rx=-18.0, rz=10.0, pivot=(0.0, ARM_Y - 0.10, zc + 0.09)) for s in body]
@@ -336,7 +339,7 @@ def menu_board(state="intact"):
     items = [("menu_nishime", SHOP), ("menu_nimame", SHOP), ("menu_dengaku", SHOP), ("kanban_miki", SUMI)]
     for k, (cell, mat) in enumerate(items):
         x = 0.21 - 0.14 * k
-        strip = [board(x - 0.04, x + 0.04, 1.47, 1.89, 0.005, 0.017, k=k, vis=(1,)),
+        strip = [W(x - 0.04, x + 0.04, 1.47, 1.89, 0.005, 0.017, PAPER, vis=(1,)),          # paper menu strips
                  stext((x, 1.68, 0.017), (1.0, 0.0, 0.0), (0.0, 1.0, 0.0), 0.36, cell, mat=mat,
                        wear="_w2" if ab else None, off=0.0012, width=0.065)]
         if ab and k == 1:

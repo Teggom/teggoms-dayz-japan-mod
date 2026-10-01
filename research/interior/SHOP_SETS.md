@@ -111,8 +111,8 @@ L1: floor = base centre; wall = facade / wall plane z = 0, heights built in; sur
 | Prop | Kinds / states | Size (m) | Materials | Mount | Loot |
 |---|---|---|---|---|---|
 | `jp_f_sg` goods clusters | aramono, bolts, folded, ironware, porcelain, lacquer, brushes, oil, candles, tobacco, travel, odawara, sweets, medicine, pawn, coins, books, pouches, yarn, combs, dolls, butsugu; each + `_ab` | <= 0.55 x 0.18 (a 0.20 tread), <= 0.25 high | the goods' own (cloth, paper, iron, ceramics, lacquer, straw, wood, leather, food) | surface | none (dressing) |
-| `jp_f_bolt_shelf` | std, _ab | 1.82 x 0.45 x 1.50, 4 x 3 cubbies | wood_interior, cottons | floor | shelf boards <= 1.40 |
-| `jp_f_furugi_rack` | std, _ab | 1.82 x 0.45 x 1.70 | bamboo, cottons | floor | none |
+| `jp_f_bolt_shelf` | std, _ab | 0.91 x 0.45 x 1.50, 2 x 3 cubbies (half ken: fits the party wall of a 3-ken shop) | wood_interior, cottons | floor | shelf boards <= 1.40 |
+| `jp_f_furugi_rack` | std, _ab | 1.20 x 0.45 x 1.70, robes draped over the pole | bamboo, cottons | floor | none |
 | `jp_f_kanamono_wall` | std, _ab | 1.20 x 0.10 board at 0.8-1.7 | wood, iron | wall | none |
 | `jp_f_ware_crate` | std, _ab | 0.60 x 0.45 x 0.40 | wood, straw, ceramics | floor | top |
 | `jp_f_tobacco_cutter` | std, _ab | 0.80 x 0.35 x 0.32 | wood, iron, straw | floor | top |
@@ -129,14 +129,14 @@ L1: floor = base centre; wall = facade / wall plane z = 0, heights built in; sur
 | `jp_f_pawn_board` | std, _ab | 0.90 x 0.03, 0.9-1.6 up | wood, paper, ink | wall | none |
 | `jp_f_senryobako` | std, _ab | 0.60 x 0.42 x 0.40 | wood, iron | floor | lid |
 | `jp_f_print_line` | books, otsue, fans; each _ab | 1.40 x 0.40 (a cord between two pegs) | paper, ink, cord | wall | none |
-| `jp_f_menu_board` | std, _ab | 0.80 x 0.45 strips | wood, ink | wall | none |
+| `jp_f_menu_board` | std, _ab | 0.60 rail, four 0.08 x 0.42 paper strips | wood, paper, ink | wall | none |
 | `jp_f_hides` | std, _ab | 0.70 x 0.40 x 0.30 | leather, rope | floor | top |
 | `jp_f_tailor_board` | std, _ab | 1.20 x 0.45 x 0.20 | wood, cottons, iron | floor | board top |
 | `jp_f_paint_mat` | std, _ab | 1.20 x 0.80 felt, dishes | red felt (bib red), paper, ceramics | floor (visual, Res 1) | none |
 | `jp_f_urushiburo` | std, _ab | 0.91 x 0.50 x 1.40 | wood, lacquer | floor | top shelf inside <= 1.0 |
 | `jp_f_doll_tiers` | std, _ab | 0.91 x 0.60 x 0.55, 3 tiers | wood, red cloth, gofun, cloth | floor | the tiers |
 | `jp_f_sugidama` | green, brown, fallen | d 0.45 ball on a 0.3 cord | foliage (green = _w0, brown = _w2), rope | wall (front, eave) | none |
-| `jp_f_kanban_<trade>` | hang, _askew per trade | 0.30 x 0.90 board on an L bracket, text both faces | wood, shop atlas | wall (front) | none |
+| `jp_f_kanban_<trade>` | hang, _askew per trade | 0.30 x 0.90 board on an L bracket, a gofun-white panel and the text on both faces | wood, gofun paper, shop atlas | wall (front) | none |
 | `jp_f_kanban_shape_pipe`, `_fundo` | std, _askew | pipe 1.2 long; fundō 0.6 | wood, lacquer, iron | wall (front) | none |
 
 ## 4. Materials (S1, add only; `research/materials/make_s1_materials.py`)
@@ -154,3 +154,43 @@ No beckoning cat (maneki-neko, 19th c.), no daruma (c.1780s), no Banko ware (c.1
 (1744+), no tempura stall, no kabayaki shop, no shōchū, no hanafuda, no sencha kyūsu (1738+), no tetsubin, no kendama,
 no glass anything, no painted (e-)candles, no oden. Shop names on lanterns only from the existing life atlas (伊勢屋,
 大和屋).
+
+## 6. As built (S1, 2026-09-30)
+
+**Props:** 175 models in `jp_furniture.pbo` (`StaticObj_JP_F_*`), categories `shopgoods` (22 goods kinds x 2),
+`shopfit` (27 fittings x 2 states), `shopsign` (35 kanban x intact / askew, 2 shape signs x 2, sugidama x 3):
+84 new, 3 variants, 88 abandoned states.
+Sidecars in `src/JP/furniture/shop*/` carry `master` and `mount` for the decorator. Every model passes B3a's checks
+plus L2's TXT check (spikes/S1/checks.json). Pipeline: `spikes/S1/build_s1.py`.
+
+**The set definitions: `buildings/shop_sets.py`.**
+- `TRADES[key]`: one declarative spec per trade (`trade(key, title, steps=, strip=, stock=, stock_top=, choba=,
+  corner=, floor=, wall=, beam=, front=, door=, street=, tori=, kura=, era=)`), 28 keys: aramono, draper, furugi,
+  kanamono, setomono, kamiya, abura, sumiya, tabako, tabidogu, komeya, sakana, yaoya, tofu, soba, mochiya, sakaya,
+  nimeuri, kusuri, shichiya, ryogae, honya, fukuromono, hataori, shitate, eshi, nushi, kushiya, ningyo, butsugu.
+- `apply_mise(c, key, ab, tier)`: furnishes the mise of ANY townhouse unit through a furnishkit Ctx, from the room's
+  own geometry (rect, toriniwa side, the shell's doors): choba on the party wall (back), stock on the party wall
+  (street end), the strip from the party side (stand with three goods clusters, or the trade's floor display),
+  corner, flat floor pieces, kamidana / calendar / the trade's wall piece, beam goods. It keeps decor's rules as it
+  places (cover under 22 %, 5-7 counted props, door zones, the band to the centre). `ab` 0-2 picks each prop's
+  abandoned twin (same prop, variant and mount) by level.
+- `front(c, key, ab)`: the facade proxies (kanban / shape sign at the shop end, noren / sugidama at the entrance) and
+  the street objects.
+- `dress(key, ab, kind)` / `sets()`: whole-house dressings for `furnish_sets.SETS`
+  (`shop_<trade>_<3k|2k>_ab<0-2>`, 168 entries): the mise set + C3's toriniwa / oku / kitchen for a 3-ken unit with
+  the toriniwa left or a 2-ken unit with the toriniwa right + front + gutters. Each asks the shell for the board strip
+  (`shell: {"mise_floor": "_455"}`, the new townhouse template option, off by default).
+- A furnished variant in the registry: `_furn(key, base, "shop_<trade>_<kind>_ab<n>", suffix, display)`.
+
+**Checks:** `spikes/S1/setcheck.py` builds every set on the two reference shells at every level through the
+pipeline's verify-only path (shell checks + decor D1-D16): 168/168 pass (spikes/S1/setcheck.json).
+
+**Demo shops** (registry `S1_SHOPS`, shipped in jp_buildings.pbo, not placed): Land_JP_Townhouse_Edo_3ken_Middle_
+ToriL_Kanamono (ab 1), _Kamigata_2ken_Middle_ToriR_Tabako (ab 0), _Kamigata_3ken_EndR_ToriL_Mochiya (ab 0),
+_Edo_3ken_EndL_ToriL_Kusuri (ab 2), _Edo_2ken_Middle_ToriR_Board_Shitate (ab 1), _Kamigata_3ken_Middle_ToriL_Kyo_
+Ningyo (ab 1).
+
+**Limits:** the whole-house dressing (toriniwa / oku / kitchen) is C3's 3-ken ToriL and 2-ken ToriR kit; other
+frontages (4-ken) and mirrored units need their own house dressing (the mise set itself is generic). End units of a
+2-ken row move the oku and kitchen doors (the 2-ken end-L tobacco trial failed D5 / D6 with the middle-unit
+dressing).
