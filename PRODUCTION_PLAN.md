@@ -267,5 +267,10 @@
     buildings. Re-runs: 105 buildings, 6,001 checks, 0 failures; combos 60/60.
   - Not done: navmesh (zombies won't path inside); townhouse shops keep a tatami front room (no board strip: shell change).
   - **Next: Stephen's bundled wave-1 walk (TEST_CHECKLIST.md, ~28 min, 9 verdicts).**
+- 2026-09-30: Stephen is away from the PC (walk pending). Walk-independent work launched CONCURRENTLY:
+  - **W2**: the 7 W2 outdoor items + Stephen's additions: torii with/without shimenawa and shide, mossy rural torii,
+    mossy stone lanterns, graveyard stones at 2-3x variety (era-checked). Owns the site pipeline + jp_site.pbo; NO materials.
+  - **S1**: the 22 KEEP_TRADES shop dressing sets (spec SHOP_SETS.md, props, set definitions, a few demo shops). Owns the
+    furniture pipeline + jp_furniture.pbo + ALL material work. decor.py shared: additive edits only.
 - 2026-09-29: Waterways G1 accepted (10 decisions; research/catalogue/G1_DECISIONS.md). Map sketch: Numazu castle
   dropped, Kanō + Minakuchi castle towns added.
