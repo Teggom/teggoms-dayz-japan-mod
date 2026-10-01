@@ -14,3 +14,7 @@
 2026-10-01 17:00:31 | GROUP START | W2F | placement | 5h 58% wk 61%
 2026-10-01 17:05:46 | GROUP START | W2F | world build | 5h 60% wk 61%
 2026-10-01 17:08:15 | ISLAND BUILT | W2F | world + mission rebuilt, verify_oprw PASS 4123/4123 | 5h 61% wk 61%
+2026-10-01 17:09:26 | GROUP START | W2F | sheets (rooms, plans, areas, maps) | 5h 62% wk 61%
+2026-10-01 17:13:07 | GROUP DONE | W2F | sheets + maps + checklist | 5h 63% wk 61%
+2026-10-01 17:13:07 | GROUP START | W2F | checks verify_all --full | 5h 63% wk 61%
+2026-10-01 17:17:55 | GROUP DONE | W2F | verify_all --full 193 bld 11820 checks 0 fail; bindcheck 193/193 | 5h 62% wk 61%

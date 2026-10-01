@@ -423,3 +423,78 @@ Regenerate: `python spikes/SH1/layout_sh1.py` then `python spikes/SH1/showcase_m
 | L67 | `StaticObj_JP_S_Boat_Up` | 1072.50 | 1020.40 | 90 | 0.00 | ground strip: Small boat pulled up on a bank |
 | LH4 | `StaticObj_JP_S_Bench_1ken` | 1078.20 | 1030.50 | 180 | 0.00 | a bench on the ground strip (host): jp_s_bench_1ken |
 | L70 | `StaticObj_JP_S_Bench_Dress_Tea` | 1077.85 | 1030.50 | 180 | 0.43 | on the LH4 bench seat: Tea-house bench dressing: a tea cup, a tobacco tray, a folded cloth |
+
+<!-- W2F BEGIN -->
+
+## W2F wave 2: furnished shrine, temples and civic buildings (agent W2F, 2026-10-01)
+
+Regenerate: `python spikes/W2F/layout_w2f.py` then `python spikes/W2F/map_md.py`. Buildings are the furnished variants (`buildings/w2f_sets.py`); `.sN` = a site object that belongs to that building; `t` = the stone terrace under it. y_off is over the ground at the object.
+
+### Town shrine precinct (map w2f_map_precinct.jpg): the SH1 hall site + west of the approach
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| P1t | `StaticObj_JP_F_Terrace_L` | 1024.00 | 1191.10 | 180 | -0.73 | stone terrace under P1 (1.4 m at the front) |
+| P1 | `Land_JP_Shrine_Haiden_Town_Hiwada_Furnished` | 1024.00 | 1192.00 | 180 | 0.54 | town haiden (Hachimangu): drum, offerings, bell rope, name board |
+| P1.s1 | `jp_f_saisen_bako_l.p3d` | 1024.00 | 1186.74 | 180 | 1.00 | the offering box at the foot of the steps |
+| P2t | `StaticObj_JP_F_Terrace_M` | 1024.00 | 1205.71 | 180 | -1.11 | stone terrace under P2 (1.8 m at the front) |
+| P2 | `Land_JP_Shrine_Honden_Nagare_Town_Furnished` | 1024.00 | 1207.00 | 180 | 0.48 | town honden (nagare sangen-sha, curved bark roof), sanctum sealed |
+| P3 | `Land_JP_Shrine_Temizuya_Town_Furnished` | 1014.00 | 1147.00 | 90 | -0.07 | temizuya: basin + ladles |
+| P4 | `Land_JP_Shrine_Shamusho_Sangawara_Furnished` | 1011.00 | 1165.00 | 90 | -0.12 | shamusho: amulet counter, talisman desk |
+| P5 | `Land_JP_Shrine_Kagura_Town_Furnished` | 1011.50 | 1188.50 | 90 | -0.23 | kagura stage: drums, masks |
+
+### Village shrine north of the C2 hamlet (map w2f_map_village.jpg)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| V1 | `Land_JP_Shrine_Haiden_Village_Furnished` | 945.00 | 1070.00 | 180 | 0.00 | village haiden: drum, offerings, bell rope |
+| V1.s1 | `jp_f_saisen_bako_m.p3d` | 945.00 | 1065.40 | 180 | 0.00 | the offering box at the foot of the steps |
+| V2 | `Land_JP_Shrine_Honden_Nagare_Village_Chigi_Furnished` | 945.00 | 1078.50 | 180 | 0.00 | village honden (nagare, chigi + katsuogi), sanctum sealed |
+| V3 | `StaticObj_JP_S_Torii_Wood_Shinmei_Rope_Shide` | 945.00 | 1061.00 | 180 | -0.00 | village shrine torii (shinmei, rope + streamers) |
+| V4 | `StaticObj_JP_S_Stone_Lantern_Oki_Moss` | 942.60 | 1063.20 | 90 | 0.00 | village shrine lantern (west) |
+| V5 | `StaticObj_JP_S_Stone_Lantern_Oki_Moss` | 947.40 | 1063.20 | 270 | -0.00 | village shrine lantern (east) |
+
+### Village temple, Jodo, west of the graveyard (map w2f_map_village.jpg)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| T1 | `Land_JP_Temple_Hondo_Village_Jodo` | 972.00 | 1123.50 | 180 | -0.00 | village hondo (Jodo): Amida, sutra desk |
+| T2 | `Land_JP_Temple_Kuri_Village_Furnished` | 955.00 | 1122.00 | 180 | 0.00 | village kuri: kamado row, irori, guest room |
+| T3 | `Land_JP_Temple_Shoro_Village_Bell` | 984.00 | 1112.00 | 180 | 0.00 | village bell tower with its bell |
+| T4 | `Land_JP_Temple_Gate_Yakuimon_Furnished` | 972.00 | 1104.50 | 180 | 0.00 | village temple gate (yakui-mon) |
+| T5 | `Land_JP_Temple_Do_2_Board_Jizo` | 962.00 | 1109.50 | 90 | 0.00 | Jizo hall |
+| T6 | `StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss` | 969.00 | 1109.50 | 90 | 0.00 | temple lantern (west of the walk) |
+| T7 | `StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss` | 975.00 | 1109.50 | 270 | -0.00 | temple lantern (east of the walk) |
+| T8 | `StaticObj_JP_S_Stone_Jizo_Bib` | 958.40 | 1106.80 | 90 | -0.19 | a stone Jizo with its bib by the Jizo hall |
+
+### Town temple, Zen, east of the street end (map w2f_map_east.jpg)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| U1 | `Land_JP_Temple_Hondo_Town_Zen` | 1100.00 | 1112.00 | 180 | 0.00 | town hondo (Zen): Shaka, big mokugyo, drum |
+| U1.s1 | `jp_f_saisen_bako_l.p3d` | 1100.00 | 1105.61 | 180 | 0.00 | the donation box at the foot of the steps |
+| U2 | `Land_JP_Temple_Kuri_Town_Zen` | 1114.50 | 1111.00 | 180 | 0.00 | town kuri (Zen): fish board, cloud gong |
+| U3 | `Land_JP_Temple_Shoro_Town_Bell` | 1085.50 | 1118.50 | 90 | 0.00 | town bell tower (hakama), the bell upstairs |
+| U4 | `Land_JP_Temple_Gate_Shikyakumon_Furnished` | 1100.00 | 1097.50 | 180 | 0.00 | town temple gate (shikyaku-mon) |
+| U5 | `Land_JP_Temple_Do_3_Tile_Kannon` | 1083.00 | 1104.00 | 90 | 0.00 | Kannon hall |
+| U5.s1 | `jp_f_saisen_bako_s.p3d` | 1088.51 | 1104.00 | 90 | 0.00 | the donation box at the stair foot |
+| U6 | `StaticObj_JP_S_Stone_Lantern_Kasuga_24` | 1097.00 | 1102.50 | 90 | -0.00 | temple lantern (west) |
+| U7 | `StaticObj_JP_S_Stone_Lantern_Kasuga_24` | 1103.00 | 1102.50 | 270 | 0.00 | temple lantern (east) |
+| U8 | `StaticObj_JP_S_Chozubachi_Small` | 1094.00 | 1103.00 | 90 | 0.00 | temple water basin |
+
+### Civic set at both street ends (maps w2f_map_east.jpg = K1-K4, w2f_map_village.jpg = K5-K7)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| K1 | `Land_JP_Kido_Lattice_Bantaya_Furnished` | 1069.00 | 1080.00 | 90 | 0.00 | ward gate (kido) across the street's east end + the keeper's hut (hinged gate leaves) |
+| K1.s1 | `jp_s_lantern_sign_tsuji.p3d` | 1066.60 | 1076.70 | 180 | 0.00 | the ward lantern beside the keeper's hut |
+| K2 | `Land_JP_Teahouse_Shop_Thatch_Furnished` | 1075.50 | 1086.80 | 180 | 0.00 | tea house (chamise, thatch) at the street end |
+| K3 | `Land_JP_Teahouse_Bench_Itabuki_Furnished` | 1074.50 | 1073.00 | 0 | 0.00 | bench tea house across the road |
+| K4 | `Land_JP_Teahouse_Tateba_Itabuki_Furnished` | 1091.00 | 1086.50 | 180 | 0.00 | rest-stop tea house with rooms (tateba) |
+| K5 | `Land_JP_Smithy_Open_Itabuki_Furnished` | 969.50 | 1086.00 | 180 | 0.00 | village smithy (cold forge, bellows, anvil) |
+| K5.s1 | `jp_s_charcoal_bales_stack.p3d` | 968.00 | 1088.40 | 0 | 0.00 | charcoal bales against the back wall outside |
+| K6 | `Land_JP_Swordsmith_Sangawara_Furnished` | 967.00 | 1072.00 | 0 | 0.00 | swordsmith (forge room + work room) |
+| K7 | `Land_JP_Guardhut_M_Itabuki_Jishinban` | 977.50 | 1072.50 | 0 | 0.00 | jishin-ban guard house with the ridge fire ladder |
+| K7.s1 | `jp_s_lantern_sign_tsuji.p3d` | 976.03 | 1074.87 | 0 | 0.00 | the ward lantern |
+
+<!-- W2F END -->
