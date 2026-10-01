@@ -146,3 +146,40 @@ would NOT pass.
 - `jp_m_roof_copper` (palette `roof_copper_patina`): aged green copper (rokusho) roof. ASSUMED (GK); the only local
   copper roof (k38, far background) is sky-lit sheen and was rejected as a sample.
 - `jp_m_metal_bronze` (palette `bronze_patina`): patinated bronze (bells, giboshi caps, hoju, door fittings). ASSUMED (GK).
+
+## Choices made while building (game / budget / check driven)
+- **Village kagura stage roof = kirizuma** (straight board gable + board gables), not irimoya: roofs.roof's straight
+  board irimoya leaves its hips uncovered (no hip rolls; seen in the render). Small village kagura-den with gable roofs
+  are common (GK). The town stage keeps the curved irimoya.
+- **Thatched do (2 x 2) has no en:** the thatch eave (45 deg, 2.88 m keta) hangs to ~1.9 m over a 1.365 m en (C7 head
+  room 2.10). It gets a lattice door with a cut step and a fixed lattice front, as rural Kannon / Koshin halls often do.
+- **Town halls hang their shitomido in front of the round columns** (column centre to centre, the board wall behind the
+  fixed lower leaf): a top-hinged leaf between 0.25 m columns would swing through them, and between them leaves a slit
+  at the jambs (C17). Doors (tobira) sit between the column faces.
+- **Town hondo:** degumi (not mitesaki: 17.6k faces), the en on the FRONT only, plain koran, a copper-clad kohai (a tiled
+  kohai tucked under a curved eave loses its clay bed, C13; copper kohai on tiled halls are period, GK), ridge 7
+  courses, rafters at 0.30. 11,510 faces (large 12,000).
+- **Shinmei honden:** front en only (the munamochi-bashira stand beside the gable walls under the verge); okichigi +
+  5 katsuogi (soto: the Ise convention for a male kami).
+- **Town nagare honden:** walls / keta / gables 6 cm lower than the straight kit's (the curved front slope dips under
+  the straight gable pitch, C12).
+- **Bell towers:** the bell beam's underside is 2.20 m over the deck / platform (C7 head room); the town tower's outside
+  stair keeps its real treads and rails in every LOD (a 3.4 m flight's far slab sags 0.18 m, C15).
+- **Far LODs of small curved roofs** (temizuya, gate, the shoro village roof): the far field is lifted 4 cm (R2) or
+  Resolution 3 uses Resolution 2's finer field; corner lift 0.08-0.12 m on the small / square curved roofs (the default
+  0.30 cannot be followed by the far LODs within C15's 0.10 m).
+- **Boarded-skirt platforms** show the skirt as one slab and hide the posts / stones behind it (budget, ~1,600 faces on a
+  town hall); the en's own stones stay (C8).
+- **Sealed honden:** static closed tobira (no door action); the en carries the loot; the sanctum is a fitting spot.
+
+## Prop spots for the furnisher (rooms json 'fittings', model frame; + 'bell_hook' memory point)
+- haiden: saisen_bako (en), suzu (bell rope, hung over the box), drum, kamidana (back wall), gaku (town, over the door)
+- honden: sanctum (behind the closed doors), offering_table (en)
+- temizuya: basin (the W2 jp_s_basin_* site prop)
+- shamusho: amulet_counter (behind the push-up shutter), desk, kamidana
+- kagura: drum (musicians' corner), masks (back wall)
+- do: altar (dais at the back wall), saisen_bako, gong (waniguchi)
+- hondo: altar (naijin dais: shumidan, zushi, canopy, altar pieces), sutra_desk, saisen_bako, gong
+- kuri: kamado_row + two kamado spots, irori pit + hook point, zen_trays (office corner)
+- shoro: bell (bonsho on bell_hook; the striker log on ropes)
+- gate: gaku (name board)

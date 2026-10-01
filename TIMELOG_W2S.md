@@ -7,3 +7,5 @@
 2026-10-01 14:09:15 | GROUP START | BU1-BU6 + BU5 temple (12 shells) | do x4, hondo x2, kuri x2, shoro x2, gate x2: first pipeline run, fixing | 5h 33% wk 57%
 2026-10-01 14:17:12 | GROUP DONE | BU1-BU6 + BU5 temple (12 shells) | do x4, hondo x2, kuri x2, shoro x2, gate x2: all checks pass per shell | 5h 37% wk 57%
 2026-10-01 14:19:21 | PBO PACKED | W2S | jp_buildings.pbo 169 classes (25 W2S), 95.2 MB; jp_common.pbo repacked earlier (3 materials) | 5h 38% wk 57%
+2026-10-01 14:24:16 | SHEETS DONE | W2S | research/production/contact_sheets/w2s_family.jpg + w2s_town_closeup.jpg | 5h 41% wk 57%
+2026-10-01 14:24:30 | NOTE | W2S | the 5h figures on the lines from 14:06 (GROUP DONE shrine) to 14:24 (SHEETS DONE) were estimated, not read; the reading now is | 5h 31% wk 57%

@@ -42,6 +42,34 @@ def family_jobs():
     return jobs
 
 
+CLOSE = [
+    # (key, caption, cam (model frame x, y, z), look, lens)
+    ("shrine_haiden_town_hiwada", "Town haiden (hiwada): the eave corner from below: hira-mitsudo sets on the round "
+     "columns, kentozuka, two-tier rafters, kayaoi along the swept eave, the thick layered koba edge",
+     (-0.5, 1.6, 10.5), (4.2, 3.9, 2.4), 26),
+    ("shrine_haiden_town_copper", "Town haiden (copper): the front en with giboshi koran, kizahashi, the kohai on its "
+     "posts under the curved eave, the lattice tobira and the hinged shitomido hung in front of the columns",
+     (4.5, 2.2, 9.0), (0.0, 1.9, 1.8), 30),
+    ("temple_hondo_town", "Town hondo: degumi sets (one projecting step, the gangyo outside the column line) and the "
+     "curved hongawara eave with tomoe ends, from below the corner", (-0.5, 1.6, 12.0), (4.6, 4.3, 3.4), 26),
+    ("temple_hondo_town", "Town hondo, 3/4 front: the sori curve and corner lift of the irimoya, the 7-course ridge "
+     "with onigawara, the copper-clad kohai", (11.5, 5.0, 14.0), (0.0, 3.6, 0.5), 28),
+    ("temple_do_town", "Town do: curved copper hogyo with the bronze hoju, oto-hijiki (daito + arm) on the columns",
+     (9.5, 9.0, 11.5), (0.0, 4.6, 0.0), 30),
+    ("temple_shoro_town", "Town shoro: the hakama skirt, the deck koran, degumi corner sets, the bell beam (bell_hook) "
+     "and the outside stair", (6.0, 5.5, 7.5), (0.0, 4.6, -0.2), 26),
+    ("shrine_kagura_town", "Town kagura stage: funa-hijiki on round columns, curved kokera irimoya, the stair at the "
+     "side (performers' way)", (-7.0, 3.0, 6.5), (0.0, 2.2, 0.0), 28),
+    ("temple_gate_shikyakumon", "Town shikyaku-mon: oto-hijiki on the six columns, curved kirizuma hongawara, the "
+     "board leaves", (4.0, 1.6, 5.5), (0.0, 2.8, 0.0), 24),
+]
+
+
+def closeup_jobs():
+    return [("cu_%d_%s" % (i, k), cap, {"key": k, "view": "3q", "cam": cam, "look": look, "lens": lens,
+                                         "res": [800, 600]}) for i, (k, cap, cam, look, lens) in enumerate(CLOSE)]
+
+
 def key_part(v):
     import sacredkit as civickit
     if "key" in v:
@@ -200,6 +228,13 @@ def main(argv):
         jobs = [("tr_%s_%s" % (nm, vw), nm, dict({"kind": _opt(argv, "--kind"), "params": json.loads(_opt(argv, "--params", "{}")),
                                                  "view": vw, "fit": 1.0, "res": [800, 600]}, **extra)) for vw in views]
         run_jobs(jobs, min(jobs_n, len(jobs)))
+        return 0
+    if "closeup" in argv:
+        if "--compose" not in argv:
+            run_jobs(closeup_jobs(), jobs_n)
+        compose("town_closeup", closeup_jobs(), "W2S: town-grade halls up close (roof curve, bracket sets, veranda)",
+                "Model-frame cameras (spikes/W2S/render_w2s.py CLOSE). Engine-untested: rotation doors / shutters, "
+                "the outside bell stair.", 4, 480, 360, 52, 70)
         return 0
     if "--compose" not in argv:
         run_jobs(family_jobs(), jobs_n)
