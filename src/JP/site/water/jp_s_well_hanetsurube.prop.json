@@ -73,7 +73,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 313,
+    "Resolution 1": 337,
     "Resolution 2": 95,
     "Resolution 3": 74,
     "Geometry": 66,
@@ -81,7 +81,7 @@
     "Fire Geometry": 66
    },
    "bbox": [
-    -3.594,
+    -3.662,
     3.357,
     -0.3,
     4.563,
@@ -94,7 +94,7 @@
     "fire"
    ],
    "footprint_xz": [
-    -3.587,
+    -3.662,
     -0.575,
     3.357,
     0.7
@@ -108,7 +108,7 @@
     {
      "name": "bucket_pole",
      "expected": 3.8,
-     "measured": 3.8779,
+     "measured": 3.4479,
      "tol": 0.7,
      "source": "build_list"
     },
@@ -148,7 +148,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 355,
+    "Resolution 1": 379,
     "Resolution 2": 72,
     "Resolution 3": 62,
     "Geometry": 42,
@@ -156,7 +156,7 @@
     "Fire Geometry": 42
    },
    "bbox": [
-    -3.594,
+    -3.662,
     2.864,
     -0.3,
     4.563,
@@ -169,7 +169,7 @@
     "fire"
    ],
    "footprint_xz": [
-    -3.587,
+    -3.662,
     -0.164,
     1.753,
     0.206
@@ -183,7 +183,7 @@
     {
      "name": "bucket_pole",
      "expected": 3.8,
-     "measured": 3.9279,
+     "measured": 3.7779,
      "tol": 0.7,
      "source": "build_list"
     },
@@ -223,7 +223,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 326,
+    "Resolution 1": 350,
     "Resolution 2": 95,
     "Resolution 3": 74,
     "Geometry": 66,
@@ -231,7 +231,7 @@
     "Fire Geometry": 66
    },
    "bbox": [
-    -3.326,
+    -3.383,
     2.798,
     -0.3,
     5.356,
@@ -244,7 +244,7 @@
     "fire"
    ],
    "footprint_xz": [
-    -3.316,
+    -3.383,
     -0.575,
     2.798,
     0.7

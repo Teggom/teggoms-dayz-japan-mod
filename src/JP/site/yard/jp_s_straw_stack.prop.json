@@ -167,15 +167,15 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 144,
+    "Resolution 1": 256,
     "Resolution 2": 18,
     "View Geometry": 10
    },
    "bbox": [
-    -0.349,
-    0.352,
-    -0.011,
-    1.159,
+    -0.362,
+    0.362,
+    -0.015,
+    1.148,
     -0.38,
     0.38
    ],
@@ -332,7 +332,7 @@
    "wall_gap": null,
    "budget": "small",
    "faces": {
-    "Resolution 1": 105,
+    "Resolution 1": 115,
     "Resolution 2": 27,
     "View Geometry": 14
    },

@@ -47,7 +47,8 @@ CFGCONVERT = B3A.CFGCONVERT
 CHECKS = os.path.join(HERE, "checks.json")
 W2_CATS = {"shrine", "grave"}                          # W2 (2026-09-30): the wave-2 folders
 MODULES = ["props_wood", "props_wells", "props_stone", "props_street", "props_straw",
-           "props_torii", "props_shrine", "props_grave"]       # W2 (2026-09-30): the 7 wave-2 items
+           "props_torii", "props_shrine", "props_grave",       # W2 (2026-09-30): the 7 wave-2 items
+           "props_torii_fallen"]                               # FP1 (2026-10-01): collapsed torii
 BL = {e["id"]: e for e in json.load(open(os.path.join(DEV, "research", "outdoor_kit", "build_list.json"),
                                          encoding="utf-8"))["entries"]}
 SCRIPT_DIR = "scripts\\4_World\\JP_Site"
@@ -75,7 +76,9 @@ def class_name(m):
     StaticObj_Misc_*: non-interactive map objects)."""
     parts = m["p3d"].split("_")[2:]
     body = "_".join(p[:1].upper() + p[1:] for p in parts)
-    return ("Land_JP_S_" if m.get("well") else "StaticObj_JP_S_") + body
+    # FP1 (2026-10-01): a model flagged land=True (the climbable fire-watch ladder) is a Land_ class too, so the
+    # .wrp-baked object binds to it as a Building (its Geometry carries class=house, set by the builder)
+    return ("Land_JP_S_" if (m.get("well") or m.get("land")) else "StaticObj_JP_S_") + body
 
 
 def registry():
@@ -158,13 +161,15 @@ def check_model(P, mp, spec):
     for k, nm in (("geo", "Geometry"), ("view", "View Geometry"), ("fire", "Fire Geometry")):
         if k in P.need:
             need.append(nm)
+    if getattr(P, "keep_memory", False):                 # FP1: a climbable ladder carries its Memory points
+        need.append("Memory")
     extra = [n for n in L if n not in need and n != "Roadway"]
     b0, b1, b2 = skit.BUDGET[P.budget]
     f1, f2, f3 = faces.get("Resolution 1", 0), faces.get("Resolution 2", 0), faces.get("Resolution 3", 0)
     steps = f2 < f1 and f2 <= b1
     if P.res3:
         steps = steps and f3 < f2 and f3 <= b2
-    ok = all(n in L for n in need) and not extra and 0 < f1 <= b0 and steps and ("Memory" not in L) \
+    ok = all(n in L for n in need) and not extra and 0 < f1 <= b0 and steps and (("Memory" not in L) or getattr(P, "keep_memory", False)) \
         and (("Roadway" in L) == bool(P.roadway))
     add("C5", "LOD set (%s) + budget %s R1<=%d R2<=%d%s, LODs step down" % ("+".join(
         n.replace("Resolution ", "R").replace(" Geometry", "G") for n in need), P.budget, b0, b1,

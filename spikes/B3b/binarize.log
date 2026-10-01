@@ -27,7 +27,6 @@ Convert model P:\JP\site\grave\jp_s_grave_stones_ab_round_lean.p3d -> D:\DayZ-Se
 </model>
 Convert model P:\JP\site\grave\jp_s_grave_stones_board.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_board.p3d
 <model = "P:\JP\site\grave\jp_s_grave_stones_board.p3d">
-TexMaterial loading race detected for jp\common\materials\stone\jp_m_stone_carved_w1.rvmat
 </model>
 Convert model P:\JP\site\grave\jp_s_grave_stones_board_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_board_s.p3d
 <model = "P:\JP\site\grave\jp_s_grave_stones_board_s.p3d">
@@ -219,21 +218,27 @@ Convert model P:\JP\site\roadside\jp_s_kosatsu_std.p3d -> D:\DayZ-Server_AI-2026
 </model>
 Convert model P:\JP\site\roadside\jp_s_shimenawa_ab_tattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_shimenawa_ab_tattered.p3d
 <model = "P:\JP\site\roadside\jp_s_shimenawa_ab_tattered.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00179194, max 0.00390625, min 0.00119863
 </model>
 Convert model P:\JP\site\roadside\jp_s_shimenawa_len_1ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_shimenawa_len_1ken.p3d
 <model = "P:\JP\site\roadside\jp_s_shimenawa_len_1ken.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00180994, max 0.00390625, min 0.00119869
 </model>
 Convert model P:\JP\site\roadside\jp_s_shimenawa_len_2ken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_shimenawa_len_2ken.p3d
 <model = "P:\JP\site\roadside\jp_s_shimenawa_len_2ken.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00180637, max 0.00390625, min 0.00154092
 </model>
 Convert model P:\JP\site\roadside\jp_s_shimenawa_wrap_d06.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_shimenawa_wrap_d06.p3d
 <model = "P:\JP\site\roadside\jp_s_shimenawa_wrap_d06.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00187955, max 0.00390625, min 0.00102742
 </model>
 Convert model P:\JP\site\roadside\jp_s_shimenawa_wrap_d10.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_shimenawa_wrap_d10.p3d
 <model = "P:\JP\site\roadside\jp_s_shimenawa_wrap_d10.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00187659, max 0.00390625, min 0.00164353
 </model>
 Convert model P:\JP\site\roadside\jp_s_shimenawa_wrap_d16.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_shimenawa_wrap_d16.p3d
 <model = "P:\JP\site\roadside\jp_s_shimenawa_wrap_d16.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00188012, max 0.00390625, min 0.00173241
 </model>
 Convert model P:\JP\site\roadside\jp_s_stele_ab_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside\jp_s_stele_ab_tipped.p3d
 <model = "P:\JP\site\roadside\jp_s_stele_ab_tipped.p3d">
@@ -316,11 +321,11 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_forest.p3d: 0
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_large.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_std.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_ab_tattered.p3d: -0.24,0.34
-DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_len_1ken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_len_1ken.p3d: -0.00,-0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_len_2ken.p3d: 0.00,0.00
-DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_wrap_d06.p3d: 0.00,0.05
-DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_wrap_d10.p3d: 0.00,0.06
-DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_wrap_d16.p3d: 0.00,0.07
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_wrap_d06.p3d: -0.00,0.06
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_wrap_d10.p3d: -0.01,0.06
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_wrap_d16.p3d: 0.01,0.08
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_ab_tipped.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_arched.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stele_group3.p3d: 0.00,0.00
@@ -436,6 +441,21 @@ Convert model P:\JP\site\shrine\jp_s_stone_steps_rough_3.p3d -> D:\DayZ-Server_A
 Convert model P:\JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_rough_3_narrow.p3d
 <model = "P:\JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d">
 </model>
+Convert model P:\JP\site\shrine\jp_s_torii_fallen_myojin_typhoon.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_fallen_myojin_typhoon.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_fallen_myojin_typhoon.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_fallen_shinmei_rot.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_fallen_shinmei_rot.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_fallen_shinmei_rot.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_fallen_shu_snapped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_fallen_shu_snapped.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_fallen_shu_snapped.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_fallen_stone_quake.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_fallen_stone_quake.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_fallen_stone_quake.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_fallen_stone_quake_old.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_fallen_stone_quake_old.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_fallen_stone_quake_old.p3d">
+</model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_ab_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_ab_broken.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_ab_broken.p3d">
 </model>
@@ -444,12 +464,16 @@ Convert model P:\JP\site\shrine\jp_s_torii_stone_l.p3d -> D:\DayZ-Server_AI-2026
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_l_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00191014, max 0.00390625, min 0.00178027
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.0018584, max 0.00390625, min 0.00184724
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_m.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_m.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_m.p3d">
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_m_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_m_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_m_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192836, max 0.00390625, min 0.00177675
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185882, max 0.00390625, min 0.00184681
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_s.p3d">
@@ -459,27 +483,41 @@ Convert model P:\JP\site\shrine\jp_s_torii_stone_s_moss.p3d -> D:\DayZ-Server_AI
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192824, max 0.00390625, min 0.00177877
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00186151, max 0.00390625, min 0.00184384
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_s_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_rope.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_s_rope.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192825, max 0.00390625, min 0.00177846
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00186154, max 0.00390625, min 0.0018439
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_s_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_s_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192822, max 0.00390625, min 0.00177848
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00186155, max 0.00390625, min 0.00184388
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_ab_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_ab_leaning.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_ab_leaning.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00179053, max 0.00390625, min 0.00154064
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185413, max 0.00390625, min 0.00180791
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_ab_leaning_shu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_ab_leaning_shu.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_ab_leaning_shu.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00179087, max 0.00390625, min 0.00154086
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185413, max 0.00390625, min 0.00180791
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_ab_rotted.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_ab_rotted.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_ab_rotted.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00179424, max 0.00390625, min 0.00119806
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185468, max 0.00390625, min 0.00180968
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_mini.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_mini.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_mini.p3d">
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_mini_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_mini_rope.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_mini_rope.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192826, max 0.00390625, min 0.00184804
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185768, max 0.00390625, min 0.00184794
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_mini_shu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_mini_shu.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_mini_shu.p3d">
@@ -492,21 +530,31 @@ Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_moss.p3d -> D:\DayZ-Serve
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_moss_rope.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192807, max 0.00390625, min 0.00154115
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185726, max 0.00390625, min 0.00184861
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00181755, max 0.00390625, min 0.00154115
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185726, max 0.00390625, min 0.00184861
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_rope.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_rope.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192791, max 0.00390625, min 0.00154113
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185726, max 0.00390625, min 0.00184861
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00181696, max 0.00390625, min 0.00154113
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185726, max 0.00390625, min 0.00184861
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_shu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_shu.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_shu.p3d">
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00181696, max 0.00390625, min 0.00154113
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185726, max 0.00390625, min 0.00184861
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei.p3d">
@@ -516,15 +564,23 @@ Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss.p3d -> D:\DayZ-Serv
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192798, max 0.00390625, min 0.00119779
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185781, max 0.00390625, min 0.001848
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192798, max 0.00390625, min 0.00119779
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185781, max 0.00390625, min 0.001848
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_rope.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_rope.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192809, max 0.00390625, min 0.00119882
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185781, max 0.00390625, min 0.001848
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00192788, max 0.00390625, min 0.00119882
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185781, max 0.00390625, min 0.001848
 </model>
 
 FileServer MaxCacheSize = 23987 MB
@@ -583,6 +639,11 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_landing.p3d
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_landing_wide.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_rough_3.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_fallen_myojin_typhoon.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_fallen_shinmei_rot.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_fallen_shu_snapped.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_fallen_stone_quake.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_fallen_stone_quake_old.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_ab_broken.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_l.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_l_rope_shide.p3d: 0.00,0.00
@@ -1029,6 +1090,8 @@ Convert model P:\JP\site\yard\jp_s_oke_teoke.p3d -> D:\DayZ-Server_AI-20260907-M
 </model>
 Convert model P:\JP\site\yard\jp_s_straw_stack_ab_slumped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_straw_stack_ab_slumped.p3d
 <model = "P:\JP\site\yard\jp_s_straw_stack_ab_slumped.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_stack_w2_co.paa, stage 0: texel size used 0.00518796, max 0.0148632, min 0.00390625
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_stack_w2_co.paa, stage 0: texel size used 0.00504963, max 0.0138107, min 0.00390625
 </model>
 Convert model P:\JP\site\yard\jp_s_straw_stack_bundle.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_straw_stack_bundle.p3d
 <model = "P:\JP\site\yard\jp_s_straw_stack_bundle.p3d">
@@ -1038,6 +1101,7 @@ Convert model P:\JP\site\yard\jp_s_straw_stack_nio_cone.p3d -> D:\DayZ-Server_AI
 </model>
 Convert model P:\JP\site\yard\jp_s_straw_stack_nio_cyl.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_straw_stack_nio_cyl.p3d
 <model = "P:\JP\site\yard\jp_s_straw_stack_nio_cyl.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_stack_w1_co.paa, stage 0: texel size used 0.0060756, max 0.0179538, min 0.00390625
 </model>
 Convert model P:\JP\site\yard\jp_s_straw_stack_stook.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_straw_stack_stook.p3d
 <model = "P:\JP\site\yard\jp_s_straw_stack_stook.p3d">

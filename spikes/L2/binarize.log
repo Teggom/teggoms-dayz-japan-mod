@@ -284,18 +284,38 @@ Convert model P:\JP\site\yard_life\jp_s_leaf_pile_small.p3d -> D:\DayZ-Server_AI
 </model>
 Convert model P:\JP\site\yard_life\jp_s_potted_ab_dead.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_potted_ab_dead.p3d
 <model = "P:\JP\site\yard_life\jp_s_potted_ab_dead.p3d">
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_weathered_w2_co.paa, stage 0: texel size used 0.000443791, max 0.000976563, min 0.0001574
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w2_co.paa, stage 0: texel size used 0.00045095, max 0.000976563, min 0.000130493
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w2_co.paa, stage 0: texel size used 0.000426755, max 0.000976563, min 0.000299217
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w2_co.paa, stage 0: texel size used 0.00044351, max 0.000976563, min 0.000307908
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w2_co.paa, stage 0: texel size used 0.000444009, max 0.000976563, min 0.000308121
 </model>
 Convert model P:\JP\site\yard_life\jp_s_potted_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_potted_ab_fallen.p3d
 <model = "P:\JP\site\yard_life\jp_s_potted_ab_fallen.p3d">
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w2_co.paa, stage 0: texel size used 0.00045073, max 0.000976563, min 0.000130485
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w2_co.paa, stage 0: texel size used 0.000426731, max 0.000976563, min 0.000299049
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w2_co.paa, stage 0: texel size used 0.000443554, max 0.000976563, min 0.000307882
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w2_co.paa, stage 0: texel size used 0.000444054, max 0.000976563, min 0.000308119
 </model>
 Convert model P:\JP\site\yard_life\jp_s_potted_pair.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_potted_pair.p3d
 <model = "P:\JP\site\yard_life\jp_s_potted_pair.p3d">
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w1_co.paa, stage 0: texel size used 0.000448984, max 0.000976563, min 0.000142927
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w1_co.paa, stage 0: texel size used 0.000426753, max 0.000976563, min 0.000299148
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w1_co.paa, stage 0: texel size used 0.000418707, max 0.000976563, min 0.000302276
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w1_co.paa, stage 0: texel size used 0.000444147, max 0.000976563, min 0.000308171
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_weathered_w1_co.paa, stage 0: texel size used 0.000448601, max 0.000976563, min 0.00016572
 </model>
 Convert model P:\JP\site\yard_life\jp_s_potted_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_potted_stand.p3d
 <model = "P:\JP\site\yard_life\jp_s_potted_stand.p3d">
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_weathered_w1_co.paa, stage 0: texel size used 0.000443791, max 0.000976563, min 0.0001574
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w1_co.paa, stage 0: texel size used 0.00045095, max 0.000976563, min 0.000130493
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w1_co.paa, stage 0: texel size used 0.000426755, max 0.000976563, min 0.000299217
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w1_co.paa, stage 0: texel size used 0.00044351, max 0.000976563, min 0.000307908
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_sooted_w1_co.paa, stage 0: texel size used 0.000444009, max 0.000976563, min 0.000308121
 </model>
 Convert model P:\JP\site\yard_life\jp_s_scarecrow_ab_down.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_scarecrow_ab_down.p3d
 <model = "P:\JP\site\yard_life\jp_s_scarecrow_ab_down.p3d">
+TexMaterial loading race detected for jp\common\materials\straw\jp_m_straw_mushiro_w2.rvmat
 </model>
 Convert model P:\JP\site\yard_life\jp_s_scarecrow_ab_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L2\_build\binarized\yard_life\jp_s_scarecrow_ab_leaning.p3d
 <model = "P:\JP\site\yard_life\jp_s_scarecrow_ab_leaning.p3d">
@@ -377,12 +397,12 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_kaki_curtain_half.p3
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_ladder_ab_fallen.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_ladder_bamboo.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_ladder_lean.p3d: 0.00,0.00
-DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d: -0.13,-0.14
-DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_leaf_pile_broom.p3d: 0.03,0.19
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d: -0.13,-0.16
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_leaf_pile_broom.p3d: 0.03,0.21
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_leaf_pile_small.p3d: 0.03,0.04
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_ab_dead.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_ab_fallen.p3d: 0.00,0.00
-DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_pair.p3d: 0.15,0.04
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_pair.p3d: 0.11,0.02
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_potted_stand.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_scarecrow_ab_down.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\yard_life\jp_s_scarecrow_ab_leaning.p3d: 0.00,0.00

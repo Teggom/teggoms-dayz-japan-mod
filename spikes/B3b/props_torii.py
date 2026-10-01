@@ -187,7 +187,14 @@ def torii_wood(form, rope=ROPE_NONE, moss=False, shu=False, ab=None, plaque=None
                     (-xp + r + 0.25, rope_y - 1.3, rope_z + 0.08), (-xp + r + 0.38, 0.35, rope_z + 0.15),
                     (-xp + r + 0.75, 0.03, rope_z + 0.35)]
             hang = [(x + k * y, y, z) for x, y, z in hang]
-            for s in skit.rope_path(hang, rr_, ROPE, n=6, wear="_w2"):
+            # FP1 (2026-10-01): twisted straw strands, frayed where it snapped; the short stub left tied at the other
+            # post frays too, a few loose straws on the ground under it
+            for s in K.twisted_rope(hang, rr_, seed=77, wear="_w2", fray1=True):
+                P.add(s)
+            stub = [(xp - r, rope_y, rope_z), (xp - r - 0.10, rope_y - 0.06, rope_z + 0.01),
+                    (xp - r - 0.14, rope_y - 0.20, rope_z + 0.02)]
+            stub = [(x + k * y, y, z) for x, y, z in stub]
+            for s in K.twisted_rope(stub, rr_, seed=78, wear="_w2", fray1=True, lod2=False):
                 P.add(s)
         P.add(litter(21, 0.3, 0.6, 0.9, sx=1.4))
         P.notes.append("abandoned: racked %.1f deg on a rotted post foot; feet stay on the ground" %
@@ -333,6 +340,7 @@ def torii_stone(size, rope=ROPE_NONE, moss=False, ab=None):
         P.notes.append("abandoned (rare, a landmark oddity): kasagi fallen in two pieces in front of the posts")
     else:
         cols += [kcol, scol]
+    K.aged_stone(solids, 9100 + int(H * 100) + rope * 7 + (3 if moss else 0))   # FP1: no repeating lichen dots
     add_all(P, solids + cols)
     P.dim("post_span", S, S, tol=0.005)
     P.dim("height", H, H, tol=0.01)

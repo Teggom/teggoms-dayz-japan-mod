@@ -82,6 +82,8 @@ class SPart(FPart):
         props = {"autocenter": "0"}
         props.update(self.geo_props or {})
         out = core.Part.lods(self, props, self.mass)
+        if getattr(self, "keep_memory", False):           # FP1: the climbable ladder's memory points
+            return out
         return [l for l in out if not mlod.same_res(l.resolution, mlod.LOD_MEMORY)]
 
 

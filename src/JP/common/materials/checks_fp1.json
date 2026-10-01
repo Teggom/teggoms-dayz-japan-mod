@@ -429,6 +429,220 @@
     "warnings": [],
     "masked": true
    }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_earthenware_w0_co.png",
+   "palette_id": "earthenware_unglazed",
+   "wear": "",
+   "mean_srgb": [
+    139.3,
+    102.9,
+    78.7
+   ],
+   "target_srgb": [
+    134,
+    98,
+    74
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 12.0,
+   "spread_p75": 3.7,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     139.4,
+     103.0,
+     78.7
+    ],
+    "dE": 2.02,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_earthenware_w1_co.png",
+   "palette_id": "earthenware_unglazed",
+   "wear": "",
+   "mean_srgb": [
+    134.0,
+    98.0,
+    74.0
+   ],
+   "target_srgb": [
+    134,
+    98,
+    74
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 12.0,
+   "spread_p75": 3.7,
+   "observed_spread": null,
+   "masked_frac": 0.199,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_earthenware_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     133.9,
+     98.1,
+     74.2
+    ],
+    "dE": 0.12,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_earthenware_w2_co.png",
+   "palette_id": "earthenware_unglazed",
+   "wear": "",
+   "mean_srgb": [
+    119.5,
+    89.7,
+    69.6
+   ],
+   "target_srgb": [
+    134,
+    98,
+    74
+   ],
+   "dE": 5.39,
+   "dE_to_entry": 5.39,
+   "tol": 12.0,
+   "spread_p75": 3.8,
+   "observed_spread": null,
+   "masked_frac": 0.331,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ceramic_earthenware_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     119.4,
+     89.8,
+     69.8
+    ],
+    "dE": 5.46,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_kiku_w0_co.png",
+   "palette_id": "kiku_flower",
+   "wear": "",
+   "mean_srgb": [
+    204.6,
+    168.0,
+    111.6
+   ],
+   "target_srgb": [
+    196,
+    160,
+    104
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 14.0,
+   "spread_p75": 54.7,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "busy (spread 54.7 vs 14.0)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     204.6,
+     168.0,
+     111.8
+    ],
+    "dE": 2.99,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_kiku_w1_co.png",
+   "palette_id": "kiku_flower",
+   "wear": "",
+   "mean_srgb": [
+    196.0,
+    160.0,
+    104.0
+   ],
+   "target_srgb": [
+    196,
+    160,
+    104
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 14.0,
+   "spread_p75": 40.5,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "busy (spread 40.5 vs 14.0)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     195.9,
+     160.1,
+     104.1
+    ],
+    "dE": 0.1,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_kiku_w2_co.png",
+   "palette_id": "kiku_flower",
+   "wear": "",
+   "mean_srgb": [
+    165.5,
+    141.2,
+    98.6
+   ],
+   "target_srgb": [
+    196,
+    160,
+    104
+   ],
+   "dE": 11.7,
+   "dE_to_entry": 11.7,
+   "tol": 14.0,
+   "spread_p75": 11.1,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     165.4,
+     141.2,
+     98.5
+    ],
+    "dE": 11.68,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
   }
  ]
 }

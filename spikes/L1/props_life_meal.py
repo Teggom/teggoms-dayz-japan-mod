@@ -492,13 +492,15 @@ def charcoal_bits(cx, cz, y, r, n, seed, mat=SOOTW, wear="_w2"):
 
 def sumi_bale(cx, cz, y=0.0, R=0.17, h=0.62, open_top=True, wear=None):
     """Charcoal bale (sumi-dawara): an upright straw cylinder, roped, the top open on the charcoal."""
-    out = [lathe([(R * 0.9, 0.0), (R, 0.08), (R, h - 0.06), (R * 0.85, h), (R * 0.8, h), (R * 0.8, h - 0.03),
+    # FP1 (2026-10-01, Stephen: "hay barrels" see-through): the profile now starts on the axis, so the bottom end is
+    # closed too (it began at 0.9 R: a bale lying on its side showed an open end and was see-through)
+    out = [lathe([(0.0, 0.0), (R * 0.9, 0.0), (R, 0.08), (R, h - 0.06), (R * 0.85, h), (R * 0.8, h), (R * 0.8, h - 0.03),
                   (0.0, h - 0.03)], 8, TAWARA, vis=(1,), wear=wear)]
     for yy in (0.12, h * 0.5, h - 0.12):
         out.append(lkit.rope_ring(R, yy, 0.02, ROPE, 8, vis=(1,)))
     if open_top:
         out += charcoal_bits(0.0, 0.0, h - 0.035, R * 0.6, 6, int(cx * 100 + 7))
-    out.append(lathe([(R, 0.0), (R, h), (0.0, h)], 5, TAWARA, vis=(2,), smooth=False))
+    out.append(lathe([(0.0, 0.0), (R, 0.0), (R, h), (0.0, h)], 5, TAWARA, vis=(2,), smooth=False))   # FP1: closed
     return xfs(out, t=(cx, y, cz))
 
 

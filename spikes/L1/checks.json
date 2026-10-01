@@ -5081,8 +5081,8 @@
    "variant": "crest",
    "pass": true,
    "faces": {
-    "Resolution 1": 126,
-    "Resolution 2": 12
+    "Resolution 1": 230,
+    "Resolution 2": 24
    },
    "checks": [
     {
@@ -5120,8 +5120,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 126,
-       "Resolution 2": 12
+       "Resolution 1": 230,
+       "Resolution 2": 24
       },
       "extra": [],
       "budget": 300
@@ -5175,13 +5175,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -15206,8 +15206,8 @@
    "variant": "bale",
    "pass": true,
    "faces": {
-    "Resolution 1": 156,
-    "Resolution 2": 10,
+    "Resolution 1": 164,
+    "Resolution 2": 15,
     "Geometry": 10,
     "View Geometry": 10,
     "Fire Geometry": 10
@@ -15250,8 +15250,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 156,
-       "Resolution 2": 10,
+       "Resolution 1": 164,
+       "Resolution 2": 15,
        "Geometry": 10,
        "View Geometry": 10,
        "Fire Geometry": 10
@@ -15397,8 +15397,8 @@
    "variant": "bales3",
    "pass": true,
    "faces": {
-    "Resolution 1": 396,
-    "Resolution 2": 30,
+    "Resolution 1": 420,
+    "Resolution 2": 45,
     "Geometry": 30,
     "View Geometry": 30,
     "Fire Geometry": 30
@@ -15441,8 +15441,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 396,
-       "Resolution 2": 30,
+       "Resolution 1": 420,
+       "Resolution 2": 45,
        "Geometry": 30,
        "View Geometry": 30,
        "Fire Geometry": 30
@@ -15747,8 +15747,8 @@
    "variant": "bale",
    "pass": true,
    "faces": {
-    "Resolution 1": 244,
-    "Resolution 2": 10,
+    "Resolution 1": 252,
+    "Resolution 2": 15,
     "Geometry": 10,
     "View Geometry": 10,
     "Fire Geometry": 10
@@ -15793,8 +15793,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 244,
-       "Resolution 2": 10,
+       "Resolution 1": 252,
+       "Resolution 2": 15,
        "Geometry": 10,
        "View Geometry": 10,
        "Fire Geometry": 10
@@ -23396,8 +23396,8 @@
    "variant": "cloth",
    "pass": true,
    "faces": {
-    "Resolution 1": 104,
-    "Resolution 2": 74,
+    "Resolution 1": 154,
+    "Resolution 2": 98,
     "Resolution 3": 6,
     "Geometry": 6,
     "View Geometry": 6,
@@ -23443,8 +23443,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 104,
-       "Resolution 2": 74,
+       "Resolution 1": 154,
+       "Resolution 2": 98,
        "Resolution 3": 6,
        "Geometry": 6,
        "View Geometry": 6,
@@ -23592,8 +23592,8 @@
    "variant": "bare",
    "pass": true,
    "faces": {
-    "Resolution 1": 86,
-    "Resolution 2": 74,
+    "Resolution 1": 136,
+    "Resolution 2": 98,
     "Resolution 3": 6,
     "Geometry": 6,
     "View Geometry": 6,
@@ -23638,8 +23638,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 86,
-       "Resolution 2": 74,
+       "Resolution 1": 136,
+       "Resolution 2": 98,
        "Resolution 3": 6,
        "Geometry": 6,
        "View Geometry": 6,
@@ -23774,8 +23774,8 @@
    "variant": "cloth",
    "pass": true,
    "faces": {
-    "Resolution 1": 91,
-    "Resolution 2": 68,
+    "Resolution 1": 121,
+    "Resolution 2": 92,
     "Resolution 3": 6,
     "Geometry": 6,
     "View Geometry": 6,
@@ -23822,8 +23822,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 91,
-       "Resolution 2": 68,
+       "Resolution 1": 121,
+       "Resolution 2": 92,
        "Resolution 3": 6,
        "Geometry": 6,
        "View Geometry": 6,
@@ -23928,13 +23928,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -27925,8 +27925,8 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 126,
-    "Resolution 2": 24,
+    "Resolution 1": 932,
+    "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -27953,7 +27953,9 @@
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
-       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w1.rvmat"
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w1.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_kuro_w1.rvmat"
       ],
       "bad": []
      }
@@ -27966,18 +27968,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 126,
-       "Resolution 2": 24,
+       "Resolution 1": 932,
+       "Resolution 2": 38,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -27987,8 +27989,8 @@
      "detail": [
       {
        "name": "h",
-       "expected": 0.45,
-       "measured": 0.45,
+       "expected": 0.48,
+       "measured": 0.48,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
@@ -28050,7 +28052,8 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_textile_cotton_indigo_w1": true
+      "jp_m_textile_cotton_indigo_w1": true,
+      "jp_m_textile_cotton_plain_w1": true
      }
     },
     {
@@ -28105,6 +28108,30 @@
        "dE76": 2.0,
        "tolerance": 6,
        "pass": true
+      },
+      {
+       "material": "jp_m_textile_cotton_plain_w1",
+       "mean_srgb": [
+        172.8,
+        162.0,
+        136.2
+       ],
+       "palette": "kinari_cloth",
+       "dE76": 7.6,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_kuro_w1",
+       "mean_srgb": [
+        26.0,
+        29.9,
+        33.1
+       ],
+       "palette": "kuro_board",
+       "dE76": 3.5,
+       "tolerance": 6,
+       "pass": true
       }
      ]
     }
@@ -28117,7 +28144,7 @@
    "variant": "wall",
    "pass": true,
    "faces": {
-    "Resolution 1": 120,
+    "Resolution 1": 912,
     "Resolution 2": 18
    },
    "checks": [
@@ -28139,7 +28166,9 @@
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
-       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w1.rvmat"
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w1.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_kuro_w1.rvmat"
       ],
       "bad": []
      }
@@ -28152,15 +28181,15 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 120,
+       "Resolution 1": 912,
        "Resolution 2": 18
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -28198,7 +28227,8 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_textile_cotton_indigo_w1": true
+      "jp_m_textile_cotton_indigo_w1": true,
+      "jp_m_textile_cotton_plain_w1": true
      }
     },
     {
@@ -28253,6 +28283,30 @@
        "dE76": 2.0,
        "tolerance": 6,
        "pass": true
+      },
+      {
+       "material": "jp_m_textile_cotton_plain_w1",
+       "mean_srgb": [
+        172.8,
+        162.0,
+        136.2
+       ],
+       "palette": "kinari_cloth",
+       "dE76": 7.6,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_kuro_w1",
+       "mean_srgb": [
+        26.0,
+        29.9,
+        33.1
+       ],
+       "palette": "kuro_board",
+       "dE76": 3.5,
+       "tolerance": 6,
+       "pass": true
       }
      ]
     }
@@ -28265,8 +28319,8 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 69,
-    "Resolution 2": 24,
+    "Resolution 1": 139,
+    "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -28304,18 +28358,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 69,
-       "Resolution 2": 24,
+       "Resolution 1": 139,
+       "Resolution 2": 38,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -28325,8 +28379,8 @@
      "detail": [
       {
        "name": "h",
-       "expected": 0.45,
-       "measured": 0.45,
+       "expected": 0.48,
+       "measured": 0.48,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
@@ -28399,13 +28453,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -28431,7 +28485,7 @@
    "variant": "wall",
    "pass": true,
    "faces": {
-    "Resolution 1": 63,
+    "Resolution 1": 119,
     "Resolution 2": 18
    },
    "checks": [
@@ -28464,15 +28518,15 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 63,
+       "Resolution 1": 119,
        "Resolution 2": 18
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -28521,13 +28575,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -31708,10 +31762,6 @@
     "warning_lines": [],
     "exit": 0
    }
-  },
-  "PBO": {
-   "pass": true,
-   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_furniture.pbo"
   }
  },
  "summary": {

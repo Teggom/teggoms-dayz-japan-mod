@@ -1431,6 +1431,37 @@ class CfgVehicles
 		displayName="Sunken grave mound, post rotted to a stump";
 		model="\JP\site\grave\jp_s_grave_wood_ab_bohyo_rotted.p3d";
 	};
+	// jp_s_torii_fallen (shrine)
+	class StaticObj_JP_S_Torii_Fallen_Shinmei_Rot: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden shinmei torii rotted at the feet and fallen";
+		model="\JP\site\shrine\jp_s_torii_fallen_shinmei_rot.p3d";
+	};
+	class StaticObj_JP_S_Torii_Fallen_Myojin_Typhoon: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden myojin torii blown over by a typhoon";
+		model="\JP\site\shrine\jp_s_torii_fallen_myojin_typhoon.p3d";
+	};
+	class StaticObj_JP_S_Torii_Fallen_Shu_Snapped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Vermilion torii, one post snapped, the kasagi fallen and broken (Inari / Hachiman only)";
+		model="\JP\site\shrine\jp_s_torii_fallen_shu_snapped.p3d";
+	};
+	class StaticObj_JP_S_Torii_Fallen_Stone_Quake: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii thrown down by an earthquake";
+		model="\JP\site\shrine\jp_s_torii_fallen_stone_quake.p3d";
+	};
+	class StaticObj_JP_S_Torii_Fallen_Stone_Quake_Old: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii fallen in an old earthquake, mossy and leaf-covered";
+		model="\JP\site\shrine\jp_s_torii_fallen_stone_quake_old.p3d";
+	};
 	// jp_s_hasa (yard_life)
 	class StaticObj_JP_S_Hasa_Low: HouseNoDestruct
 	{
@@ -1866,7 +1897,7 @@ class CfgVehicles
 		displayName="Fire gear rack: buckets, fire hook, ladder";
 		model="\JP\site\street_life\jp_s_fire_watch_rack.p3d";
 	};
-	class StaticObj_JP_S_Fire_Watch_Ladder_Tower: HouseNoDestruct
+	class Land_JP_S_Fire_Watch_Ladder_Tower: HouseNoDestruct
 	{
 		scope=1;
 		displayName="Fire-watch ladder with an alarm bell";

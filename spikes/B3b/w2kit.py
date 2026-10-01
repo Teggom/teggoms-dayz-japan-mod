@@ -279,33 +279,28 @@ def inked(center, right, up, h, cellname, wear="_w2", crop=None, width=None, off
 
 # ------------------------------------------------------------------------------------------------ rope
 def torii_rope(x0, x1, y, z, r=0.04, drop=0.10, with_shide=True, wear="_w2", seed=1, n_tassel=None):
-    """A straw rope (shimenawa) hung between (x0, y, z) and (x1, y, z), sagging `drop`: two twisted strands, straw
-    tassels (shibe) between, paper shide (4-step zigzag, props_straw.shide) if with_shide. Visual only."""
+    """A straw rope (shimenawa) hung between (x0, y, z) and (x1, y, z), sagging `drop`: FP1 (2026-10-01) twisted
+    straw strands (twisted_rope), straw tassels (shibe, tassel()) between, paper shide (4-step zigzag,
+    props_straw.shide) if with_shide. Visual only."""
     rr = random.Random(seed)
     a, b = (x0, y, z), (x1, y, z)
     pts = sag(a, b, drop, 8)
-    out = rope_path(pts, r, ROPE, n=6, wear=wear)
-    out += rope_path([core.add(p, (0.0, 0.012, 0.010)) for p in pts], r * 0.55, ROPE, n=4, wear=wear)
+    out = twisted_rope(pts, r, seed=seed, wear=wear)
     L = abs(x1 - x0)
     nt = n_tassel or max(2, int(L / 0.45))
     for i in range(nt):
         t = (i + 0.5) / nt
         xx = x0 + (x1 - x0) * t
-        yy = y - drop * 4 * t * (1 - t) - r
+        yy = y - drop * 4 * t * (1 - t) - r * 0.8
         if with_shide and i % 2 == 1:
             out.append(shide((xx, yy, z + 0.01), s=0.24 + rr.uniform(-0.04, 0.03), wear=wear))
         else:
             ln = 0.18 + rr.uniform(-0.04, 0.05)
-            out.append(pole((xx, yy, z), (xx + rr.uniform(-0.02, 0.02), yy - ln, z + 0.01), 0.022, ROPE, n=4, vis=(1,),
-                            r1=0.010, wear=wear))
-    lo = core.sheet([[(x0, y + r, z), (x1, y + r, z), (x1, y - drop - r, z), (x0, y - drop - r, z)]], ROPE,
-                    (0.0, 0.0, 1.0), vis=(2,))
-    lo2 = core.sheet([[(x1, y + r, z), (x0, y + r, z), (x0, y - drop - r, z), (x1, y - drop - r, z)]], ROPE,
-                     (0.0, 0.0, -1.0), vis=(2,))
-    for s in (lo, lo2):
-        s.finalize()
-        s.wear = wear
-    out += [lo, lo2]
+            if r < 0.02:                                         # a mini torii's cord: one thin tuft
+                out.append(pole((xx, yy, z), (xx + rr.uniform(-0.02, 0.02), yy - ln, z + 0.01), 0.012, ROPE, n=4,
+                                vis=(1,), r1=0.005, wear=wear))
+            else:
+                out += tassel((xx, yy, z), ln, seed * 31 + i, wear=wear)
     return out
 
 
@@ -325,4 +320,188 @@ def pebbles(seed, cx, cz, r0, n=5, mat=RIVER, vis=(1,), size=0.05):
         s = size * rr.uniform(0.6, 1.3)
         out.append(core.stone(rr, cx + d * math.cos(a), cz + d * math.sin(a), s * 1.3, s, s * 0.7, s * 0.55, mat,
                               bury=0.01, n=5, vis=vis))
+    return out
+
+
+# ------------------------------------------------------------------------------------------------ FP1: aged stone
+AGED = "stone_carved_aged"
+
+
+def aged_stone(solids, seed, frm=(CARVED,), to=AGED, scale=0.5):
+    """FP1 (2026-10-01, Stephen: the stone torii's lichen dots repeat in a pattern). Every visual face in `frm`
+    (stone_carved, a 1 m tile of round lichen dots) moves to jp_m_stone_carved_aged (a 2 m tile of irregular lichen
+    rosettes): its world-scale uv is scaled by `scale` (1 m -> 2 m tile, same texel density), then each piece (solid)
+    gets its own random turn and shift, so neighbouring pieces never show the same patch. Text decals are untouched.
+    Lists are replaced, not edited in place (xf() copies share them)."""
+    rg = random.Random(seed)
+    for s in solids:
+        if not s.vis:
+            continue
+        s.finalize()
+        if not any(m in frm for m in s.fm):
+            continue
+        a = rg.uniform(0.0, 2 * math.pi)
+        c, sn = math.cos(a), math.sin(a)
+        ou, ov = rg.uniform(0.0, 1.0), rg.uniform(0.0, 1.0)
+        fm, fuv = list(s.fm), [list(f) for f in s.fuv]
+        for fi, m in enumerate(fm):
+            if m in frm:
+                fm[fi] = to
+                fuv[fi] = [((u * c - v * sn) * scale + ou, (u * sn + v * c) * scale + ov) for u, v in fuv[fi]]
+        s.fm, s.fuv = fm, fuv
+    return solids
+
+
+# ------------------------------------------------------------------------------------------------ FP1: twisted rope
+def _catmull(pts, step):
+    """Resample a polyline as a Catmull-Rom curve with points about `step` apart (keeps the end points)."""
+    P = [core.add(pts[0], core.sub(pts[0], pts[1]))] + list(pts) + [core.add(pts[-1], core.sub(pts[-1], pts[-2]))]
+    out = [tuple(pts[0])]
+    for i in range(1, len(P) - 2):
+        p0, p1, p2, p3 = P[i - 1], P[i], P[i + 1], P[i + 2]
+        n = max(1, int(math.ceil(core.length(core.sub(p2, p1)) / step)))
+        for k in range(1, n + 1):
+            t = k / n
+            t2, t3 = t * t, t * t * t
+            out.append(tuple(0.5 * ((2 * p1[c]) + (-p0[c] + p2[c]) * t + (2 * p0[c] - 5 * p1[c] + 4 * p2[c] - p3[c]) * t2
+                                    + (-p0[c] + 3 * p1[c] - 3 * p2[c] + p3[c]) * t3) for c in range(3)))
+    return out
+
+
+def _frames(path):
+    """Tangents and parallel-transported normals along a path."""
+    T = []
+    for i in range(len(path)):
+        a, b = path[max(0, i - 1)], path[min(len(path) - 1, i + 1)]
+        T.append(core.norm(core.sub(b, a)))
+    ref = (0.0, 1.0, 0.0) if abs(T[0][1]) < 0.9 else (1.0, 0.0, 0.0)
+    N = [core.norm(core.cross(core.cross(T[0], ref), T[0]))]
+    for i in range(1, len(path)):
+        n = core.sub(N[-1], core.mul(T[i], core.dot(N[-1], T[i])))
+        N.append(core.norm(n) if core.length(n) > 1e-6 else N[-1])
+    B = [core.norm(core.cross(T[i], N[i])) for i in range(len(path))]
+    return T, N, B
+
+
+def _tube(centres, T, radius, sides, mat, vis, wear, phase=0.0, tile=0.5, cap0=True, cap1=True, taper=None):
+    """A tube through `centres` (frames from T): one sheet solid with smooth normals; capped ends."""
+    _, N, B = _frames(centres) if len(centres) > 2 else (T, None, None)
+    if N is None:
+        ref = (0.0, 1.0, 0.0) if abs(T[0][1]) < 0.9 else (1.0, 0.0, 0.0)
+        N = [core.norm(core.cross(core.cross(t, ref), t)) for t in T]
+        B = [core.norm(core.cross(t, n)) for t, n in zip(T, N)]
+    rings, dirs, vacc = [], [], [0.0]
+    for i, c in enumerate(centres):
+        if i:
+            vacc.append(vacc[-1] + core.length(core.sub(c, centres[i - 1])))
+        rr = radius * (taper(i / max(1, len(centres) - 1)) if taper else 1.0)
+        ring, dr = [], []
+        for k in range(sides):
+            a = phase + 2 * math.pi * k / sides
+            d = core.add(core.mul(N[i], math.cos(a)), core.mul(B[i], math.sin(a)))
+            ring.append(core.add(c, core.mul(d, rr)))
+            dr.append(d)
+        rings.append(ring)
+        dirs.append(dr)
+    quads, normals, uvs, vn = [], [], [], []
+    circ = 2 * math.pi * radius / tile
+    for i in range(len(rings) - 1):
+        for k in range(sides):
+            k2 = (k + 1) % sides
+            q = [rings[i][k], rings[i][k2], rings[i + 1][k2], rings[i + 1][k]]
+            quads.append(q)
+            normals.append(core.norm(core.add(core.add(dirs[i][k], dirs[i][k2]), core.add(dirs[i + 1][k], dirs[i + 1][k2]))))
+            uvs.append([(circ * k / sides, vacc[i] / tile), (circ * (k + 1) / sides, vacc[i] / tile),
+                        (circ * (k + 1) / sides, vacc[i + 1] / tile), (circ * k / sides, vacc[i + 1] / tile)])
+            vn.append([dirs[i][k], dirs[i][k2], dirs[i + 1][k2], dirs[i + 1][k]])
+    for end, on in ((0, cap0), (len(rings) - 1, cap1)):
+        if not on or len(rings[end]) < 3:
+            continue
+        tn = core.mul(T[end], -1.0 if end == 0 else 1.0)
+        c = centres[end]
+        for k in range(sides):
+            q = [c, rings[end][k], rings[end][(k + 1) % sides]]
+            quads.append(q)
+            normals.append(tn)
+            uvs.append([(0.5, 0.5), (0.5 + 0.1 * math.cos(2 * math.pi * k / sides), 0.5),
+                        (0.5, 0.5 + 0.1 * math.sin(2 * math.pi * k / sides))])
+            vn.append([tn, tn, tn])
+    s = core.sheet(quads, mat, normals, vis=vis, uvs=uvs)
+    s.finalize()
+    s.vn = vn
+    if wear:
+        s.wear = wear
+    return s
+
+
+def straw_fray(p, d, r, seed, n=7, length=(0.06, 0.16), wear="_w2", spread=0.55, vis=(1,)):
+    """A frayed rope end at p, pointing along d: loose straws splaying out in a cone."""
+    rg = random.Random(seed)
+    d = core.norm(d)
+    ref = (0.0, 1.0, 0.0) if abs(d[1]) < 0.9 else (1.0, 0.0, 0.0)
+    a1 = core.norm(core.cross(d, ref))
+    a2 = core.norm(core.cross(d, a1))
+    out = []
+    for _ in range(n):
+        th = rg.uniform(0, 2 * math.pi)
+        sp = rg.uniform(0.15, spread)
+        o = core.add(core.mul(a1, math.cos(th) * r * 0.6), core.mul(a2, math.sin(th) * r * 0.6))
+        dirn = core.norm(core.add(d, core.add(core.mul(a1, math.cos(th) * sp), core.mul(a2, math.sin(th) * sp))))
+        dirn = core.norm(core.add(dirn, (0.0, -0.25 * rg.random(), 0.0)))        # straws droop
+        L = rg.uniform(*length)
+        p0 = core.add(p, o)
+        p1 = core.add(p0, core.mul(dirn, L))
+        p1 = (p1[0], max(p1[1], 0.004), p1[2])                                # never into the ground
+        out.append(pole(p0, p1, max(0.004, r * 0.14), ROPE, n=3, vis=vis, r1=0.0015, wear=wear))
+    return out
+
+
+def twisted_rope(pts, r, seed=1, strands=2, sides=None, wear="_w2", vis=(1,), fray0=False, fray1=False, lod2=True,
+                 pitch=None):
+    """FP1 (2026-10-01, Stephen: the torii's snapped rope 'needs fidelity'): a straw shimenawa as `strands` twisted
+    straw strands (left-laid, hidari-nai, as a shimenawa is) along a smooth curve through pts, each strand a round tube
+    whose tile runs along the straw; frayed straw ends where the rope ends free (fray0 / fray1). LOD 2: one plain
+    4-sided tube. Visual only."""
+    pitch = pitch or max(0.15, 8.0 * r)
+    if r < 0.02:                                         # a cord (mini torii): one plain strand
+        strands, sides = 1, 4
+    elif sides is None:
+        sides = 4 if r >= 0.05 else 3
+    path = _catmull(pts, pitch / 4.0)
+    T, N, B = _frames(path)
+    sacc = [0.0]
+    for i in range(1, len(path)):
+        sacc.append(sacc[-1] + core.length(core.sub(path[i], path[i - 1])))
+    off = r * {1: 0.0, 2: 0.42, 3: 0.48}[strands]
+    rs = r * {1: 1.0, 2: 0.62, 3: 0.52}[strands]
+    out = []
+    for k in range(strands):
+        cs = []
+        for i, c in enumerate(path):
+            th = 2 * math.pi * k / strands - 2 * math.pi * sacc[i] / pitch      # left-laid
+            d = core.add(core.mul(N[i], math.cos(th)), core.mul(B[i], math.sin(th)))
+            cs.append(core.add(c, core.mul(d, off)))
+        out.append(_tube(cs, T, rs, sides, ROPE, vis, wear, phase=0.3 * k))
+    rg = random.Random(seed)
+    if fray0:
+        out += straw_fray(path[0], core.mul(T[0], -1.0), r, rg.randint(0, 9999), wear=wear, vis=vis)
+    if fray1:
+        out += straw_fray(path[-1], T[-1], r, rg.randint(0, 9999), wear=wear, vis=vis)
+    if lod2:
+        coarse = _catmull(pts, max(0.25, pitch))
+        T2, _, _ = _frames(coarse)
+        out.append(_tube(coarse, T2, r, 4, ROPE, (2,), wear))
+    return out
+
+
+def tassel(p, length, seed, wear="_w2", vis=(1,)):
+    """A straw tassel (shibe) hanging from p: three tapered straw bundles fanning slightly, tied at the top."""
+    rg = random.Random(seed)
+    out = []
+    for k in range(3):
+        a = 2 * math.pi * k / 3 + rg.uniform(-0.3, 0.3)
+        q = (p[0] + 0.035 * math.cos(a) + rg.uniform(-0.01, 0.01), p[1] - length * rg.uniform(0.85, 1.05),
+             p[2] + 0.035 * math.sin(a))
+        out.append(pole(p, q, 0.016, ROPE, n=4, vis=vis, r1=0.004, wear=wear))
+    out.append(pole((p[0], p[1] + 0.012, p[2]), (p[0], p[1] - 0.03, p[2]), 0.019, ROPE, n=5, vis=vis, wear=wear))
     return out

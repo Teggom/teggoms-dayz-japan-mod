@@ -25,28 +25,28 @@
    "abandoned": false,
    "display": "Sword rack with a pair of swords",
    "anchor": "floor",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 126,
-    "Resolution 2": 24,
+    "Resolution 1": 932,
+    "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
     -0.501,
-    0.5,
+    0.501,
     0.0,
-    0.46,
-    -0.11,
-    0.11
+    0.48,
+    -0.12,
+    0.122
    ],
    "collision": true,
    "footprint_xz": [
-    -0.25,
-    -0.11,
-    0.25,
-    0.11
+    -0.28,
+    -0.12,
+    0.28,
+    0.12
    ],
    "loot_floor_clearance_m": 0.4,
    "roadway": false,
@@ -55,8 +55,8 @@
    "dims": [
     {
      "name": "h",
-     "expected": 0.45,
-     "measured": 0.45,
+     "expected": 0.48,
+     "measured": 0.48,
      "tol": 0.005,
      "source": "build_list"
     }
@@ -79,18 +79,18 @@
    "abandoned": false,
    "display": "Wall sword rack with a pair of swords",
    "anchor": "wall",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 120,
+    "Resolution 1": 912,
     "Resolution 2": 18
    },
    "bbox": [
-    -0.551,
-    0.5,
-    1.25,
-    1.558,
+    -0.5,
+    0.681,
+    1.23,
+    1.57,
     0.0,
-    0.11
+    0.122
    ],
    "collision": false,
    "footprint_xz": null,
@@ -125,10 +125,10 @@
    "abandoned": true,
    "display": "Sword rack, the swords taken",
    "anchor": "floor",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 69,
-    "Resolution 2": 24,
+    "Resolution 1": 139,
+    "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -137,16 +137,16 @@
     -0.5,
     0.5,
     0.0,
-    0.46,
-    -0.16,
+    0.48,
+    -0.176,
     0.543
    ],
    "collision": true,
    "footprint_xz": [
-    -0.267,
-    -0.16,
-    0.267,
-    0.16
+    -0.299,
+    -0.176,
+    0.299,
+    0.176
    ],
    "loot_floor_clearance_m": 0.4,
    "roadway": false,
@@ -155,8 +155,8 @@
    "dims": [
     {
      "name": "h",
-     "expected": 0.45,
-     "measured": 0.45,
+     "expected": 0.48,
+     "measured": 0.48,
      "tol": 0.005,
      "source": "build_list"
     }
@@ -179,16 +179,16 @@
    "abandoned": true,
    "display": "Wall sword rack, the swords taken",
    "anchor": "wall",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 63,
+    "Resolution 1": 119,
     "Resolution 2": 18
    },
    "bbox": [
     -0.5,
     0.5,
     0.003,
-    1.55,
+    1.57,
     0.0,
     0.559
    ],

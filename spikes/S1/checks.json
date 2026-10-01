@@ -7,8 +7,8 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 250,
-    "Resolution 2": 24
+    "Resolution 1": 284,
+    "Resolution 2": 6
    },
    "checks": [
     {
@@ -30,6 +30,8 @@
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weave_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_kuro_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
@@ -47,8 +49,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 250,
-       "Resolution 2": 24
+       "Resolution 1": 284,
+       "Resolution 2": 6
       },
       "extra": [],
       "budget": 300
@@ -82,7 +84,8 @@
      "detail": {
       "jp_m_bamboo_weave_w1": true,
       "jp_m_straw_rope_w1": true,
-      "jp_m_straw_stack_w1": true
+      "jp_m_straw_stack_w1": true,
+      "jp_m_straw_tawara_w1": true
      }
     },
     {
@@ -139,6 +142,30 @@
        "pass": true
       },
       {
+       "material": "jp_m_straw_tawara_w1",
+       "mean_srgb": [
+        149.1,
+        130.2,
+        92.7
+       ],
+       "palette": "thatch_new",
+       "dE76": 11.4,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_kuro_w1",
+       "mean_srgb": [
+        26.0,
+        29.9,
+        33.1
+       ],
+       "palette": "kuro_board",
+       "dE76": 3.5,
+       "tolerance": 6,
+       "pass": true
+      },
+      {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
         111.2,
@@ -161,8 +188,8 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 146,
-    "Resolution 2": 24
+    "Resolution 1": 180,
+    "Resolution 2": 6
    },
    "checks": [
     {
@@ -186,7 +213,10 @@
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
-       "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_tawara_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_kuro_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_kuro_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
       ],
       "bad": []
@@ -204,8 +234,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 146,
-       "Resolution 2": 24
+       "Resolution 1": 180,
+       "Resolution 2": 6
       },
       "extra": [],
       "budget": 300
@@ -241,7 +271,8 @@
       "jp_m_straw_rope_w1": true,
       "jp_m_straw_rope_w2": true,
       "jp_m_straw_stack_w1": true,
-      "jp_m_straw_stack_w2": true
+      "jp_m_straw_tawara_w1": true,
+      "jp_m_straw_tawara_w2": true
      }
     },
     {
@@ -322,15 +353,51 @@
        "pass": true
       },
       {
-       "material": "jp_m_straw_stack_w2",
+       "material": "jp_m_straw_tawara_w1",
        "mean_srgb": [
-        79.2,
-        67.2,
-        51.9
+        149.1,
+        130.2,
+        92.7
        ],
-       "palette": "straw_aged",
-       "dE76": 7.6,
-       "tolerance": 14,
+       "palette": "thatch_new",
+       "dE76": 11.4,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_tawara_w2",
+       "mean_srgb": [
+        141.7,
+        122.4,
+        82.5
+       ],
+       "palette": "thatch_new",
+       "dE76": 12.8,
+       "tolerance": 12,
+       "pass": false
+      },
+      {
+       "material": "jp_m_wood_kuro_w1",
+       "mean_srgb": [
+        26.0,
+        29.9,
+        33.1
+       ],
+       "palette": "kuro_board",
+       "dE76": 3.5,
+       "tolerance": 6,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_kuro_w2",
+       "mean_srgb": [
+        27.5,
+        31.3,
+        34.2
+       ],
+       "palette": "kuro_board",
+       "dE76": 4.2,
+       "tolerance": 6,
        "pass": true
       },
       {
@@ -6253,13 +6320,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -6569,13 +6636,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       }
      ]
@@ -8129,13 +8196,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -12922,13 +12989,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -13319,13 +13386,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -13770,13 +13837,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       }
      ]
@@ -14170,13 +14237,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -15053,13 +15120,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -15409,13 +15476,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -26873,13 +26940,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -31705,18 +31772,6 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
-  },
-  "BIN": {
-   "pass": true,
-   "detail": {
-    "missing": [],
-    "warning_lines": [],
-    "exit": 0
-   }
-  },
-  "PBO": {
-   "pass": true,
-   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_furniture.pbo"
   }
  },
  "summary": {

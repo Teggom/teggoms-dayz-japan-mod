@@ -55,6 +55,18 @@ ENTRIES = [
                  {"ref": "c25_tsuijibei", "box": [0.67, 0.18, 0.71, 0.21], "select": "mid 70 % luminance"},
                  {"ref": "c25_tsuijibei", "box": [0.61, 0.50, 0.66, 0.54], "select": "mid 70 % luminance"},
                  {"ref": "c03_tsumago_street", "box": [0.79, 0.33, 0.86, 0.45], "select": "mid 70 % luminance"}]},
+    {"id": "earthenware_unglazed", "name": "Unglazed earthenware (suyaki flower pots), dull red-brown",
+     "material": "low-fired unglazed clay pots (ueki-bachi)", "group": "ceramic", "tiers": [1, 2, 3],
+     "use": "jp_m_ceramic_earthenware: flower pots and bonsai pots (LIFE_LAYER_ERA #58: unglazed pots only)",
+     "note": "Added 2026-10-01 by FP1. Assumed (general knowledge, no local photo of an Edo flower pot): a dull "
+             "red-brown low-fired body, darker than roof-tile clay, lighter than stoneware_dark. Judge in game.",
+     "srgb": [134, 98, 74], "method": "assumed", "tolerance_dE76": 12},
+    {"id": "kiku_flower", "name": "Chrysanthemum flower heads (white, yellow, rust), mean of the atlas",
+     "material": "kiku petals", "group": "plant", "tiers": [2, 3],
+     "use": "jp_m_plant_kiku: the potted chrysanthemums (Kyoho kiku fashion, LIFE_LAYER_ERA #58)",
+     "note": "Added 2026-10-01 by FP1. Assumed: three classic Edo kiku colours (white, yellow, rust-red) side by "
+             "side in u; the entry is their mean. Judge in game.",
+     "srgb": [196, 160, 104], "method": "assumed", "tolerance_dE76": 14},
 ]
 
 
@@ -304,6 +316,57 @@ def stone_carved_aged(lv, S):
     return B.R(np.clip(co, 0, 1), pn, rough, mask, t, 0.2, 0.3)
 
 
+# ================================================================================================ pots and flowers
+def ceramic_earthenware(lv, S):
+    """Unglazed low-fired clay (suyaki): matte red-brown body, fine throwing rings round the pot (along u), fire
+    clouding (darker smoke patches), grit; _w1 dusty with lime bloom, _w2 green-black damp at the foot and chipped."""
+    MT, T = B.MT, B.T
+    t = [T("earthenware_unglazed", 2), T("earthenware_unglazed"), T("earthenware_unglazed", -4, -2, -3)][lv]
+    yy, xx = B.grid(S)
+    ridge = np.sin(2 * math.pi * (yy * 40 / S + 0.15 * MT.fbm(S, 2.0, 1, 1, 7401)))
+    co = B.base(t, 1 + 0.07 * MT.fbm(S, 2.4, 1, 1, 7402) + 0.03 * ridge)
+    smoke = np.clip(MT.fbm(S, 2.6, 1, 1, 7403) - 0.6, 0, 1)
+    co = MT.mix(co, (74, 58, 50), smoke * 0.55)
+    grit = MT.spots(S, 160, 3, 0.5, 1.2, 25, 7404)
+    co = MT.mix(co, (196, 176, 150), grit * 0.4)
+    h = ridge * 0.6 + grit * 0.4
+    mask = B.Z(S)
+    if lv >= 1:                                                   # lime bloom / dust
+        bloom = np.clip(MT.fbm(S, 2.2, 1, 3, 7405) - 0.5, 0, 1)
+        co = MT.mix(co, (176, 166, 150), bloom * [0, 0.35, 0.45][lv])
+        mask |= bloom > 0.4
+    if lv == 2:                                                   # damp algae at the foot (v = 0 at the rim), chips
+        foot = np.clip((yy / S - 0.6) / 0.4, 0, 1) * np.clip(0.6 + 0.5 * MT.fbm(S, 2.0, 1, 1, 7406), 0, 1)
+        co = MT.mix(co, (52, 62, 44), foot * 0.6)
+        chips = B.polys(S, 6, 7407, 3, 8, 6) > 0.5
+        co = MT.mix(co, (170, 130, 100), chips.astype(f32))
+        mask |= (foot > 0.3) | chips
+    return B.R(np.clip(co, 0, 1), MT.h2n(h.astype(f32), 1.0), 0.9, mask, t, 0.05, 0.1)
+
+
+def plant_kiku(lv, S):
+    """Chrysanthemum heads, three colour columns in u (0-1/3 white, 1/3-2/3 yellow, 2/3-1 rust): v = 0 the flower
+    centre, v = 1 the petal tips; narrow ray petals along v with dark gaps, a green-yellow disc at v < 0.12. _w1 a
+    little faded, _w2 withered brown (dead, as left)."""
+    MT, T = B.MT, B.T
+    t = [T("kiku_flower", 3), T("kiku_flower"), T("kiku_flower", -8, -3, -8)][lv]
+    yy, xx = B.grid(S)
+    u, v = xx / S, yy / S
+    cols = [np.array(c, f32) / 255 for c in ((226, 220, 200), (214, 172, 60), (150, 62, 40))]
+    band = np.clip((u * 3).astype(int), 0, 2)
+    base_c = np.stack([cols[0], cols[1], cols[2]])[band]
+    petals = 0.5 + 0.5 * np.cos(2 * math.pi * (u * 3 * 14 + 0.25 * MT.fbm(S, 2.0, 1, 1, 7501)))
+    co = base_c * (0.70 + 0.30 * petals)[..., None] * (0.85 + 0.15 * v)[..., None]
+    disc = np.clip((0.14 - v) / 0.05, 0, 1)
+    co = MT.mix(co, (150, 140, 60), disc * 0.9)
+    if lv >= 1:
+        co = MT.mix(co, MT.grey(co, 1.0), np.full((S, S), [0, 0.12, 0.6][lv], f32))
+    if lv == 2:
+        co = MT.mix(co, (104, 78, 52), np.full((S, S), 0.55, f32))
+    h = petals * 0.8 + disc * 0.5
+    return B.R(np.clip(co, 0, 1), MT.h2n(h.astype(f32), 1.0), 0.85, B.Z(S), t, 0.05, 0.1)
+
+
 def table():
     lit = dict(B.BYID["jp_m_decal_litter"])
     lit.update({"maker": decal_litter, "pid": "leaf_litter_autumn",
@@ -331,6 +394,18 @@ def table():
          {"_w0": "pale lichen here and there", "_w1": "lichen rosettes, rain darkening",
           "_w2": "heavy lichen and moss"},
          ["jp_s_torii_stone", "jp_s_stone_lantern"], "Stone torii and lanterns, weathered"),
+        (B.M("jp_m_ceramic_earthenware", "ceramic", "earthenware_unglazed", 0.5, 256, ceramic_earthenware, (0.05, 10),
+             "pottery", None, "throwing rings round the pot (u), v = 0 at the rim", uv=B.WORLD + "; u round the pot",
+             where="outdoor", note="Unglazed suyaki flower and bonsai pots (FP1 2026-10-01; era: no glazed trays)."),
+         {"_w0": "clean red-brown", "_w1": "dusty, lime bloom", "_w2": "damp and green at the foot, chipped"},
+         ["jp_s_potted"], "Unglazed flower pots"),
+        (B.M("jp_m_plant_kiku", "plant", "kiku_flower", 0.5, 256, plant_kiku, (0.05, 10), "cloth", None,
+             "ray petals along v (centre v = 0 -> tips v = 1), three colour columns in u",
+             uv="ATLAS: u 0-1/3 white, 1/3-2/3 yellow, 2/3-1 rust; map a flower head's faces into one column, "
+                "v from the centre (0) out to the petal tips (1)", where="outdoor",
+             note="Potted chrysanthemum heads (FP1 2026-10-01)."),
+         {"_w0": "fresh", "_w1": "a little faded", "_w2": "withered brown (dead)"},
+         ["jp_s_potted"], "Chrysanthemum flower heads"),
     ]
 
 

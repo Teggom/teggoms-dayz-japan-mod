@@ -102,9 +102,18 @@ def loom(kind):
         out.append(W(L / 2 - 0.10, L / 2 - 0.04, 0.0, 0.95, z - 0.03, z + 0.03, WEATH, vis=(1, 2)))       # back post
         out.append(beam((-0.30, 0.02, z), (L / 2 - 0.08, 0.80, z), 0.04, 0.04, WEATH))                     # brace
     out.append(pole((L / 2 - 0.07, 0.85, -Wd / 2 - 0.04), (L / 2 - 0.07, 0.85, Wd / 2 + 0.04), 0.035, WEATH, n=6))
-    out.append(pole((-0.45, 0.35, -Wd / 2 + 0.02), (-0.45, 0.35, Wd / 2 - 0.02), 0.03, WEATH, n=6))  # breast beam
+    # FP1 (2026-10-01, Stephen: "the loom floats"): the breast beam, heddle rod, reed and the back of the seat board
+    # hung in the air with nothing under them. Now: the breast beam lies in two notched front uprights on the floor
+    # rails (where it is set down when nobody weaves); two lever arms (mane-gi) run forward from the back posts and
+    # carry the heddle rod and the reed on cords; the seat board has a back leg too.
+    for sz in (-1, 1):
+        z = sz * Wd / 2
+        out.append(W(-0.47, -0.43, 0.04, 0.32, z - 0.02, z + 0.02, WEATH, vis=(1, 2)))                # beam upright
+        out.append(beam((L / 2 - 0.07, 0.93, sz * 0.27), (0.12, 0.97, sz * 0.27), 0.035, 0.035, WEATH))  # lever arm
+    out.append(pole((-0.45, 0.35, -Wd / 2 - 0.03), (-0.45, 0.35, Wd / 2 + 0.03), 0.03, WEATH, n=6))  # breast beam
     out.append(W(-L / 2, -L / 2 + 0.30, 0.10, 0.13, -0.25, 0.25, WEATH, vis=(1, 2)))               # the seat board
     out.append(W(-L / 2 + 0.02, -L / 2 + 0.06, 0.0, 0.10, -0.22, 0.22, WEATH, vis=(1,)))
+    out.append(W(-L / 2 + 0.24, -L / 2 + 0.28, 0.0, 0.10, -0.22, 0.22, WEATH, vis=(1,)))           # FP1: back leg
     wf, wb = (-0.43, 0.36), (L / 2 - 0.07, 0.86)                                                   # warp ends (x, y)
     if kind in ("cloth", "bare"):
         def warp(u, v):
@@ -112,6 +121,10 @@ def loom(kind):
         out.append(grid_sheet(warp, 3, 1, KINARI, vis=(1,), wear="_w1"))
         out.append(W(0.05, 0.08, 0.40, 0.75, -0.27, 0.27, BAMBOO, vis=(1,)))        # reed frame
         out.append(pole((0.25, 0.70, -0.27), (0.25, 0.70, 0.27), 0.012, BAMBOO, n=4))   # heddle rod
+        for sz in (-1, 1):                                                         # FP1: hung from the lever arms
+            z = sz * 0.27
+            out.append(pole((0.25, 0.70, z), (0.25, 0.955, z), 0.003, KINARI, n=3, vis=(1,)))
+            out.append(pole((0.065, 0.75, z), (0.065, 0.945, z), 0.003, KINARI, n=3, vis=(1,)))
         if kind == "cloth":
             out.append(xf(lkit.lcyl("z", 0.0, 0.0, 0.05, -0.24, 0.24, INDIGO, n=8, vis=(1,)), t=(-0.45, 0.35, 0.0)))
             def cloth(u, v):

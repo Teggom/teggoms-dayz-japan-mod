@@ -1,0 +1,321 @@
+{
+ "id": "jp_s_torii_fallen",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "shrine",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "FP1 (2026-10-01): fully collapsed torii for ruined shrines, one or two per type; vermilion only at Inari / Hachiman like the standing ones",
+  "each lying piece has its own convex collision"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_fallen_shinmei_rot.p3d",
+   "class": "StaticObj_JP_S_Torii_Fallen_Shinmei_Rot",
+   "variant": "shinmei",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Wooden shinmei torii rotted at the feet and fallen",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 284,
+    "Resolution 2": 107,
+    "Resolution 3": 47,
+    "Geometry": 62,
+    "View Geometry": 62,
+    "Fire Geometry": 62
+   },
+   "bbox": [
+    -2.041,
+    2.366,
+    -0.14,
+    0.564,
+    -0.522,
+    3.218
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.506,
+    -0.088,
+    2.359,
+    3.218
+   ],
+   "roadway": false,
+   "mass_kg": 900.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wooden shinmei torii rotted through at the feet (moss, leaves): one stump, the rest down"
+   ],
+   "cause": "rot",
+   "form": "shinmei",
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_fallen_shinmei_rot.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_fallen_myojin_typhoon.p3d",
+   "class": "StaticObj_JP_S_Torii_Fallen_Myojin_Typhoon",
+   "variant": "myojin",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Wooden myojin torii blown over by a typhoon",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 433,
+    "Resolution 2": 158,
+    "Resolution 3": 78,
+    "Geometry": 80,
+    "View Geometry": 80,
+    "Fire Geometry": 80
+   },
+   "bbox": [
+    -2.589,
+    2.832,
+    -0.14,
+    0.429,
+    -4.402,
+    0.956
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.842,
+    -4.474,
+    2.832,
+    0.105
+   ],
+   "roadway": false,
+   "mass_kg": 900.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "wooden myojin torii blown over backwards by a typhoon: posts snapped at the rotted feet"
+   ],
+   "cause": "typhoon",
+   "form": "myojin",
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_fallen_myojin_typhoon.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_fallen_shu_snapped.p3d",
+   "class": "StaticObj_JP_S_Torii_Fallen_Shu_Snapped",
+   "variant": "myojin",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Vermilion torii, one post snapped, the kasagi fallen and broken (Inari / Hachiman only)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 394,
+    "Resolution 2": 167,
+    "Resolution 3": 59,
+    "Geometry": 60,
+    "View Geometry": 60,
+    "Fire Geometry": 60
+   },
+   "bbox": [
+    -3.641,
+    2.601,
+    -0.14,
+    3.172,
+    -1.027,
+    2.92
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -3.636,
+    -1.027,
+    2.601,
+    2.914
+   ],
+   "roadway": false,
+   "mass_kg": 900.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "vermilion myojin torii, paint peeled; one post snapped at 1.2 m, the kasagi slid down to the ground (Inari / Hachiman only, as the standing vermilion torii)"
+   ],
+   "cause": "shu_snapped",
+   "form": "myojin",
+   "shu": true,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_fallen_shu_snapped.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_fallen_stone_quake.p3d",
+   "class": "StaticObj_JP_S_Torii_Fallen_Stone_Quake",
+   "variant": "m",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Stone torii thrown down by an earthquake",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 383,
+    "Resolution 2": 152,
+    "Resolution 3": 128,
+    "Geometry": 128,
+    "View Geometry": 128,
+    "Fire Geometry": 128
+   },
+   "bbox": [
+    -3.006,
+    3.203,
+    -0.08,
+    0.987,
+    -0.581,
+    3.191
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -3.004,
+    -0.572,
+    3.196,
+    3.204
+   ],
+   "roadway": false,
+   "mass_kg": 5000.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "stone torii thrown down by an earthquake: posts broken into drums, the kasagi in three, the dome bases in place"
+   ],
+   "cause": "earthquake (Genroku 1703 / Hoei 1707)",
+   "old": false,
+   "size": "m",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_fallen_stone_quake.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_fallen_stone_quake_old.p3d",
+   "class": "StaticObj_JP_S_Torii_Fallen_Stone_Quake_Old",
+   "variant": "s",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Stone torii fallen in an old earthquake, mossy and leaf-covered",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 426,
+    "Resolution 2": 152,
+    "Resolution 3": 128,
+    "Geometry": 128,
+    "View Geometry": 128,
+    "Fire Geometry": 128
+   },
+   "bbox": [
+    -3.043,
+    2.91,
+    -0.08,
+    0.989,
+    -0.546,
+    3.647
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -2.652,
+    -0.539,
+    2.827,
+    3.12
+   ],
+   "roadway": false,
+   "mass_kg": 3500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "stone torii thrown down by an earthquake: posts broken into drums, the kasagi in three, the dome bases in place; decades ago: moss, leaf drifts, pieces sunk"
+   ],
+   "cause": "earthquake (Genroku 1703 / Hoei 1707)",
+   "old": true,
+   "size": "s",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_fallen_stone_quake_old.p3d"
+  }
+ ]
+}

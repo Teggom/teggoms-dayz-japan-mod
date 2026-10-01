@@ -28,11 +28,11 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 242,
+    "Resolution 1": 520,
     "Resolution 2": 78,
     "Resolution 3": 24,
     "Geometry": 120,
-    "View Geometry": 172,
+    "View Geometry": 144,
     "Fire Geometry": 120
    },
    "bbox": [
@@ -97,11 +97,11 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 561,
+    "Resolution 1": 1263,
     "Resolution 2": 75,
     "Resolution 3": 24,
     "Geometry": 90,
-    "View Geometry": 228,
+    "View Geometry": 126,
     "Fire Geometry": 90
    },
    "bbox": [
@@ -109,8 +109,8 @@
     1.95,
     -0.35,
     2.35,
-    -0.114,
-    0.264
+    -0.172,
+    0.321
    ],
    "collision": [
     "geo",
@@ -166,7 +166,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 204,
+    "Resolution 1": 402,
     "Resolution 2": 57,
     "Resolution 3": 6,
     "Geometry": 90,
@@ -235,11 +235,11 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 255,
+    "Resolution 1": 587,
     "Resolution 2": 78,
     "Resolution 3": 24,
     "Geometry": 120,
-    "View Geometry": 162,
+    "View Geometry": 144,
     "Fire Geometry": 120
    },
    "bbox": [
@@ -304,7 +304,7 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 157,
+    "Resolution 1": 355,
     "Resolution 2": 64,
     "Resolution 3": 6,
     "Geometry": 18,
@@ -315,7 +315,7 @@
     -2.715,
     2.817,
     0.0,
-    0.35,
+    0.279,
     -0.99,
     1.966
    ],

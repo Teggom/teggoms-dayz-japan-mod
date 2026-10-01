@@ -781,8 +781,14 @@ def kosatsu(kind):
         for sx in (-1, 1):
             P.add(W(sx * 0.6 - 0.05, sx * 0.6 + 0.05, -0.05, 2.25, -0.05, 0.05, WOOD, vis=(1, 2)))
             P.add(col(sx * 0.6 - 0.05, sx * 0.6 + 0.05, 0.0, 2.25, -0.05, 0.05))
-        P.add(W(-0.55, 0.55, 1.30, 1.80, 0.05, 0.08, WOOD, vis=(1, 2, 3)))
-        P.add(col(-0.55, 0.55, 1.30, 1.80, 0.05, 0.08, DARK))
+        # FP1 (2026-10-01, Stephen: boards float, the roof touches nothing): the board spans the posts and is nailed
+        # to their fronts; a ridge beam sits on the post tops right under the roof apex
+        P.add(W(-0.64, 0.64, 1.30, 1.80, 0.05, 0.08, WOOD, vis=(1, 2, 3)))
+        P.add(col(-0.64, 0.64, 1.30, 1.80, 0.05, 0.08, DARK))
+        for sx in (-1, 1):
+            P.add(W(sx * 0.6 - 0.012, sx * 0.6 + 0.012, 1.40, 1.70, 0.08, 0.086, IRON, vis=(1,)))   # nail plates
+        P.add(W(-0.72, 0.72, 2.20, 2.315, -0.05, 0.05, WOOD, vis=(1, 2)))
+        P.add(col(-0.72, 0.72, 2.255, 2.29, -0.05, 0.05))
         P.add(text_on((0.0, 1.55, 0.08), X, Y, 0.42, SUMI, "kosatsu_chuko_1711", wear="_w2", crop=(0.0, 0.0, 1.0, 1.0)))
         rs, rc = gable_roof(1.55, 0.75, 2.10, 2.35, wear=wear)
         add_all(P, rs + rc)
@@ -810,34 +816,63 @@ def kosatsu(kind):
         P.add(col_solid(beam((x, y0 + 0.02, -0.8), (x, EV - 0.65, -0.12), 0.07, 0.07, WOOD)))
     P.add(W(-Fw / 2 - 0.3, Fw / 2 + 0.3, EV - 0.15, EV, -0.08, 0.08, WOOD, vis=(1, 2, 3)))
     P.add(W(-Fw / 2, Fw / 2, y0 + 0.95, y0 + 1.05, -0.06, 0.06, WOOD, vis=(1, 2)))
-    rs, rc = gable_roof(Fw + 1.0, 1.9, EV, RG, wear=wear)
+    RL, RD = Fw + 1.0, 1.9
+    rs, rc = gable_roof(RL, RD, EV, RG, wear=wear)
     add_all(P, rs + rc)
+    # FP1 (2026-10-01, Stephen: 'the little roof isn't connected to anything'): the roof boards now lie on rafters
+    # (taruki) running from a ridge beam (munagi) down to the eaves; the ridge beam stands on three struts (tsuka) on
+    # the top beam; two eave purlins under the rafters, each carried by a brace (hozue) from every post.
+    def under(z):                                     # the roof's underside height at z
+        return RG + (EV - RG) * abs(z) / (RD / 2)
+    P.add(W(-RL / 2 + 0.05, RL / 2 - 0.05, RG - 0.13, RG - 0.002, -0.06, 0.06, WOOD, vis=(1, 2)))
+    for x in (-Fw / 2, 0.0, Fw / 2):
+        P.add(W(x - 0.05, x + 0.05, EV, RG - 0.13, -0.05, 0.05, WOOD, vis=(1, 2)))
+    P.add(col(-RL / 2 + 0.05, RL / 2 - 0.05, EV + 0.01, RG - 0.07, -0.06, 0.06))
+    nr = 7 if Fw < 4 else 9
+    for i in range(nr):
+        x = -RL / 2 + 0.12 + (RL - 0.24) * i / (nr - 1)
+        for sz in (-1, 1):
+            zt = sz * (RD / 2 - 0.02)
+            P.add(beam((x, RG - 0.03, 0.0), (x, under(zt) - 0.03, zt), 0.045, 0.055, WOOD, vis=(1,),
+                       up=(0.0, 1.0, 0.0)))
+    zp = RD / 2 - 0.25
+    for sz in (-1, 1):
+        yp = under(zp) - 0.06 - 0.05
+        P.add(W(-RL / 2 + 0.08, RL / 2 - 0.08, yp - 0.05, yp + 0.05, sz * zp - 0.05, sz * zp + 0.05, WOOD, vis=(1, 2)))
+        for x in (-Fw / 2, Fw / 2):
+            P.add(beam((x, EV - 0.70, sz * 0.09), (x, yp - 0.05, sz * (zp - 0.03)), 0.06, 0.06, WOOD, vis=(1, 2)))
     # the boards: 2 rows under the roof, each 1.0 x 0.42, text = the 1711 Shotoku edict (crops of the atlas cell)
     nb = 5 if Fw < 4 else 7
     rows = [(y0 + 2.20, (nb + 1) // 2), (y0 + 1.62, nb // 2)]
     bw, bh = 1.0, 0.44
+    # FP1: two rails (yokogi) per row nailed across the post fronts (z 0.09-0.13); the boards hang on them (z 0.13+)
+    BZ = 0.035                                        # the boards' offset forward vs. before (they floated at 0.10)
+    for yc, n in rows:
+        for yr in (yc + 0.13, yc - 0.13):
+            P.add(W(-Fw / 2 - 0.09, Fw / 2 + 0.09, yr - 0.035, yr + 0.035, 0.09, 0.13, WOOD, vis=(1, 2)))
     fallen = (1, 3) if ab else ()
     k = 0
     for yc, n in rows:
         for i in range(n):
             xc = (i - (n - 1) / 2) * (bw + 0.08)
             crop = [(0.0, 0.0, 1.0, 1.0), (0.0, 0.0, 0.55, 1.0), (0.45, 0.0, 1.0, 1.0), (0.2, 0.0, 0.8, 1.0)][k % 4]
-            board = [W(xc - bw / 2, xc + bw / 2, yc - bh / 2, yc + bh / 2, 0.10, 0.13, WOOD, vis=(1, 2)),
-                     text_on((xc, yc, 0.13), X, Y, bh * 0.92, SUMI, "kosatsu_chuko_1711", wear="_w2" if ab else "_w1",
+            board = [W(xc - bw / 2, xc + bw / 2, yc - bh / 2, yc + bh / 2, 0.10 + BZ, 0.13 + BZ, WOOD, vis=(1, 2)),
+                     text_on((xc, yc, 0.13 + BZ), X, Y, bh * 0.92, SUMI, "kosatsu_chuko_1711", wear="_w2" if ab else "_w1",
                              width=bw * 0.94, crop=crop),
-                     W(xc - bw / 2 - 0.02, xc + bw / 2 + 0.02, yc + bh / 2, yc + bh / 2 + 0.03, 0.08, 0.15, DARK, vis=(1,))]
+                     W(xc - bw / 2 - 0.02, xc + bw / 2 + 0.02, yc + bh / 2, yc + bh / 2 + 0.03, 0.08 + BZ, 0.15 + BZ, DARK,
+                       vis=(1,))]
             if k in fallen:
                 # fallen from its pegs and split, lying on the base in front
                 board = board[:2]
-                board = xfs(board, rx=-90.0, pivot=(xc, yc - bh / 2, 0.13))
-                board = xfs(board, t=(0.2 * (k - 2), y0 - (yc - bh / 2) + 0.001 - 0.10 + 0.13, 0.55 + 0.1 * k))
+                board = xfs(board, rx=-90.0, pivot=(xc, yc - bh / 2, 0.13 + BZ))
+                board = xfs(board, t=(0.2 * (k - 2), y0 - (yc - bh / 2) + 0.001 - 0.10 + 0.13, 0.55 + 0.1 * k - BZ))
                 board = xfs(board, ry=8.0 * (k - 2), pivot=(xc, y0, 0.8))
                 for s in board:
                     s.wear = "_w2"
             add_all(P, board)
             k += 1
-    P.add(W(-Fw / 2, Fw / 2, y0 + 1.30, y0 + 2.50, 0.1, 0.13, DARK, vis=(3,)))
-    P.add(col(-Fw / 2, Fw / 2, y0 + 1.30, y0 + 2.46, 0.1, 0.13, DARK))
+    P.add(W(-Fw / 2, Fw / 2, y0 + 1.30, y0 + 2.50, 0.09, 0.13 + BZ, DARK, vis=(3,)))
+    P.add(col(-Fw / 2, Fw / 2, y0 + 1.30, y0 + 2.46, 0.09, 0.13 + BZ, DARK))
     # bamboo fence in front, on the base, 1.0 high, 0.9 out
     fz = 0.85
     gaps = {3, 4, 9} if ab else set()

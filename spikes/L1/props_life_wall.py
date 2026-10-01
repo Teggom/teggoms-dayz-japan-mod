@@ -516,7 +516,7 @@ def chochin_model(state="crest"):
         P = LPart("chochin", budget="small", mass=0.3, anchor="floor", flat=True)
         ss = chochin(R, H * 0.7, cell, wear="_w2", text_wear="_w2")
         ss = xfs(ss, rx=90.0, ry=35.0)
-        P.adds(rest(ss, 0.0))
+        P.adds(lkit.inner_side(rest(ss, 0.0), (CHOCHIN, "wood_street_dark")))   # FP1: inside of the paper drawn
         P.add(stain(104, 0.05, 0.10, 0.25, sx=1.4))
         P.dim("d", 0.30, 2 * R, tol=0.005)
         P.notes.append("a lantern fallen from its hook, crushed (floor)")

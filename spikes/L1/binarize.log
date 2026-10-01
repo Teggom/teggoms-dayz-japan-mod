@@ -484,12 +484,17 @@ Convert model P:\JP\furniture\tier\jp_f_fallen_leaf_shoji_broken.p3d -> D:\DayZ-
 </model>
 Convert model P:\JP\furniture\tier\jp_f_katanakake_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_stand.p3d
 <model = "P:\JP\furniture\tier\jp_f_katanakake_stand.p3d">
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_kuro_w1_co.paa, stage 0: texel size used 0.000976563, max 0.00195499, min 0.000234489
+UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_indigo_w1_co.paa, stage 0: texel size used 0.000725384, max 0.00390625, min 0.000494079
 </model>
 Convert model P:\JP\furniture\tier\jp_f_katanakake_stand_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_stand_empty.p3d
 <model = "P:\JP\furniture\tier\jp_f_katanakake_stand_empty.p3d">
 </model>
 Convert model P:\JP\furniture\tier\jp_f_katanakake_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_wall.p3d
 <model = "P:\JP\furniture\tier\jp_f_katanakake_wall.p3d">
+UV mapping too varied on jp\common\materials\paint\jp_m_lacquer_black_w1_co.paa, stage 0: texel size used 0.00195305, max 0.00390625, min 0.00119429
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_kuro_w1_co.paa, stage 0: texel size used 0.000976563, max 0.00195546, min 0.000234415
+UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_indigo_w1_co.paa, stage 0: texel size used 0.000725565, max 0.00390625, min 0.000493968
 </model>
 Convert model P:\JP\furniture\tier\jp_f_katanakake_wall_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_wall_empty.p3d
 <model = "P:\JP\furniture\tier\jp_f_katanakake_wall_empty.p3d">
@@ -569,7 +574,7 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_fallen_leaf_shoji.p3
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_fallen_leaf_shoji_broken.p3d: 0.19,-0.01
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_stand.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_stand_empty.p3d: 0.00,0.00
-DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_wall.p3d: -0.03,0.05
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_wall.p3d: 0.09,0.06
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_katanakake_wall_empty.p3d: 0.00,0.28
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_manger_cutter.p3d: -0.02,0.13
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\tier\jp_f_manger_straw.p3d: -0.02,0.02
@@ -597,7 +602,6 @@ Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory requir
 Warning: Terrain grid 0.5 will be too slow, should use 3.1
 Convert model P:\JP\furniture\wall\jp_f_bangasa_hung.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_bangasa_hung.p3d
 <model = "P:\JP\furniture\wall\jp_f_bangasa_hung.p3d">
-TexMaterial loading race detected for jp\common\materials\straw\jp_m_straw_rope_w1.rvmat
 </model>
 Convert model P:\JP\furniture\wall\jp_f_bangasa_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_bangasa_leaning.p3d
 <model = "P:\JP\furniture\wall\jp_f_bangasa_leaning.p3d">
@@ -895,7 +899,6 @@ Convert model P:\JP\furniture\work\jp_f_usu_ishiusu.p3d -> D:\DayZ-Server_AI-202
 </model>
 Convert model P:\JP\furniture\work\jp_f_usu_ishiusu_off.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu_ishiusu_off.p3d
 <model = "P:\JP\furniture\work\jp_f_usu_ishiusu_off.p3d">
-TexMaterial loading race detected for jp\common\materials\stone\jp_m_stone_cut_w2.rvmat
 </model>
 Convert model P:\JP\furniture\work\jp_f_usu_mallet.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_usu_mallet.p3d
 <model = "P:\JP\furniture\work\jp_f_usu_mallet.p3d">

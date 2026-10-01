@@ -29,11 +29,10 @@ def ring_tub(cx, cz, r, h, y0=0.0, wear=None, n=8):
 
 
 def broom(x0, x1, z, y0=0.0, wear=None):
-    """A straw broom lying along x: bamboo handle, a flat tied head of straw."""
-    hx = x0 + (x1 - x0) * 0.6
-    return wear_all([pole((x0, y0 + 0.012, z), (hx, y0 + 0.012, z), 0.011, BAMBOO, n=5),
-                     W(hx, x1, y0, y0 + 0.024, z - 0.035, z + 0.035, STACK, vis=(1,)),
-                     W(hx - 0.005, hx + 0.03, y0 - 0.0, y0 + 0.028, z - 0.03, z + 0.03, ROPE, vis=(1,))], wear)
+    """A sorghum-straw broom (zashiki-boki) lying along x: bamboo handle, a flat fan head sewn with three cord rows,
+    the end cut square (FP1 remake 2026-10-01, spikes/B3b/fp1kit.zashiki_boki; was a box on a stick)."""
+    import fp1kit
+    return fp1kit.zashiki_boki(x0, x1, z, y0=y0, wear=wear, seed=int(abs(z) * 1000) + 3)
 
 
 # ================================================================================================ goods

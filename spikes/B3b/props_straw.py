@@ -26,6 +26,22 @@ def view_cone(r, y0, y1, n=8):
     return c
 
 
+def stack_uv(s, ytop, span, top_ny=0.85):
+    """FP1 (2026-10-01, Stephen's 'two-tone pot': the slumped stack's texture bands did not match). jp_m_straw_stack's
+    texture is painted for v = 0 at the TOP of a stack (the grey weathered band at the top, browner below), but a lathe
+    runs v up from the profile start in 1 m tiles, so the grey top band landed at the foot and again 1 m up. Remap:
+    v = (ytop - y) / span in ONE pass down the whole stack (stalks run along v; no repeat), u around unchanged; nearly
+    flat up faces (a cut or slumped top) take a planar map from the weathered top band of the texture."""
+    s.finalize()
+    for fi in range(len(s.faces)):
+        pts = s.face_points(fi)
+        if s.fn[fi][1] > top_ny:
+            s.fuv[fi] = [(p[0] * 0.8, 0.03 + 0.20 * (0.5 + 0.5 * max(-1.0, min(1.0, p[2])))) for p in pts]
+        else:
+            s.fuv[fi] = [(uv[0], max(0.0, (ytop - p[1]) / span)) for uv, p in zip(s.fuv[fi], pts)]
+    return s
+
+
 def nio(kind):
     """kind 'cyl' (Kinai), 'cone' (Kanto), 'slumped' (abandoned: cap blown off, sheared, grey-black top)."""
     ab = kind == "slumped"
@@ -41,9 +57,10 @@ def nio(kind):
         s = lathe(body + cap[1:] if cap else body, 12, STACK, vis=(1,), wear=wear)
         if not ab:
             jag_rim(s, H1 + 0.06, 0.08, 3)
-        out.append(s)
-        out.append(lathe([(0.0, 0.0), (R, 0.0), (R, H1), (0.0, H2 if not ab else H1)], 6, STACK, vis=(2,), wear=wear,
-                         smooth=False))
+        ytop = H2 if not ab else H1 + 0.05
+        out.append(stack_uv(s, ytop, ytop))
+        out.append(stack_uv(lathe([(0.0, 0.0), (R, 0.0), (R, H1), (0.0, H2 if not ab else H1)], 6, STACK, vis=(2,),
+                                  wear=wear, smooth=False), ytop, ytop))
         if not ab:
             out.append(pole((0.0, H2 - 0.2, 0.0), (0.02, H2 + 0.30, 0.0), 0.04, WOOD, n=5, vis=(1, 2)))
             for y in (H1 + 0.18, H1 + 0.40):
@@ -55,7 +72,9 @@ def nio(kind):
             # sheared: the upper third slid to one side; loose straw on the ground; the pole leaning
             out = [xf(s, rz=-6.0, pivot=(R, 0.0, 0.0)) if i == 0 else s for i, s in enumerate(out)]
             out.append(pole((0.0, H1 - 0.3, 0.0), (0.4, H1 + 0.45, 0.1), 0.04, WOOD, n=5, vis=(1, 2), wear="_w2"))
-            cp = lathe([(R * 1.0, 0.0), (R * 0.5, 0.25), (0.0, 0.30)], 10, STACK, vis=(1,), wear="_w2")
+            # FP1: the blown-off cap is closed underneath (it lies tilted, its underside showed open)
+            cp = stack_uv(lathe([(0.0, 0.0), (R * 1.0, 0.0), (R * 0.5, 0.25), (0.0, 0.30)], 10, STACK, vis=(1,),
+                                wear="_w2"), 0.30, 0.60)
             out.append(xf(cp, rz=12.0, t=(R + 1.0, 0.20, 0.4)))
             out.append(litter(3, R + 0.6, 0.0, 1.0, sx=1.3))
             top = H1 + 0.45
@@ -66,8 +85,9 @@ def nio(kind):
         prof = [(0.0, 0.0), (R * 0.9, 0.0), (R, 0.25), (R * 0.95, 0.9), (R * 0.72, 1.6), (R * 0.40, 2.2), (0.10, H - 0.08),
                 (0.0, H)]
         s = lathe(prof, 12, STACK, vis=(1,), wear=wear)
-        out.append(s)
-        out.append(lathe([(0.0, 0.0), (R, 0.0), (R * 0.9, 1.0), (0.0, H)], 6, STACK, vis=(2,), wear=wear, smooth=False))
+        out.append(stack_uv(s, H, H))
+        out.append(stack_uv(lathe([(0.0, 0.0), (R, 0.0), (R * 0.9, 1.0), (0.0, H)], 6, STACK, vis=(2,), wear=wear,
+                                  smooth=False), H, H))
         out.append(pole((0.0, H - 0.2, 0.0), (0.0, H + 0.3, 0.0), 0.04, WOOD, n=5, vis=(1, 2)))
         for y in (1.9, 2.3):
             rr = R * (0.40 + (0.72 - 0.40) * (2.2 - y) / 0.6) + 0.01 if y < 2.2 else 0.28
@@ -80,11 +100,10 @@ def nio(kind):
 
 
 def sheaf(rr, base, top, r=0.07):
-    """One rice sheaf: a tapered straw bundle, heads up (a little fuller at the top), tied at 1/3."""
-    out = [pole(base, top, r * 0.8, STACK, n=5, vis=(1,), r1=r * 1.15)]
-    m = core.add(base, core.mul(core.sub(top, base), 0.35))
-    out.append(pole(core.add(m, (0.0, -0.02, 0.0)), core.add(m, (0.0, 0.02, 0.0)), r * 0.95, "straw_rope", n=5, vis=(1,)))
-    return out
+    """One rice sheaf standing in a stook: butt on the ground, ears up and spread, tied a third up (FP1 2026-10-01:
+    the round tapered bundle of spikes/B3b/fp1kit.standing_sheaf; the stooks read thin before)."""
+    import fp1kit
+    return fp1kit.standing_sheaf(base, top, rr)
 
 
 def straw_stack(kind):
@@ -163,7 +182,8 @@ def shide(p, s=0.26, wear="_w1", rr=None, yaw=0.0):
 def shimenawa(kind):
     ab = kind.startswith("ab")
     wear = "_w2" if ab else "_w1"
-    P = SPart("shimenawa", budget="small", mass=3.0, flat=True)
+    # FP1 (2026-10-01): the twisted-strand rope with tassels: a 2-ken length and the trunk wraps are box-class (600)
+    P = SPart("shimenawa", budget="small" if kind == "len_1ken" else "box", mass=3.0, flat=True)
     P.hung = True
     rr = random.Random(len(kind))
     if kind.startswith("len") or ab:
@@ -177,8 +197,8 @@ def shimenawa(kind):
             # one end dropped: the rope hangs from the left anchor down to the ground, frayed
             pts = [a, (-L / 2 + 0.25, Y - 0.45, 0.02), (-L / 2 + 0.40, Y - 1.2, 0.05), (-L / 2 + 0.55, 0.9, 0.1),
                    (-L / 2 + 0.75, 0.25, 0.2), (-L / 2 + 1.2, 0.03, 0.35)]
-        add_all(P, rope_twist(pts, r, n=6, wear=wear))
-        add_all(P, rope_twist([core.add(p, (0.0, 0.01, 0.012)) for p in pts], r * 0.55, n=4, wear=wear))
+        import w2kit as K2          # FP1 (2026-10-01): twisted straw strands, frayed free ends (lazy: w2kit imports us)
+        add_all(P, K2.twisted_rope(pts, r, seed=len(kind) + 11, wear=wear, fray1=ab, lod2=False))
         if not ab:
             # straw tassels (the hanging tufts) and shide between them
             ns = int(L / 0.5)
@@ -188,8 +208,7 @@ def shimenawa(kind):
                 q = pts[min(len(pts) - 1, int(t * (len(pts) - 1)) + 1)]
                 c = core.add(p, core.mul(core.sub(q, p), t * (len(pts) - 1) - int(t * (len(pts) - 1))))
                 if i % 2 == 0:
-                    P.add(pole(core.add(c, (0.0, -r, 0.0)), core.add(c, (0.0, -r - 0.22, 0.0)), 0.025, "straw_rope", n=4,
-                               vis=(1,), r1=0.012, wear=wear))
+                    add_all(P, K2.tassel(core.add(c, (0.0, -r * 0.8, 0.0)), 0.22, 50 + i, wear=wear))
                 else:
                     P.add(shide(core.add(c, (0.0, -r, 0.01)), wear="_w2"))
         else:
@@ -211,9 +230,11 @@ def shimenawa(kind):
         n = 14
         ring = [(R * math.cos(2 * math.pi * k / n), Y + 0.03 * math.sin(3 * 2 * math.pi * k / n), R * math.sin(2 * math.pi * k / n))
                 for k in range(n + 1)]
-        add_all(P, rope_twist(ring, r, n=6))
+        import w2kit as K2          # FP1 (2026-10-01): twisted straw strands, frayed hanging ends
+        add_all(P, K2.twisted_rope(ring, r, seed=int(D * 10), wear="_w1", lod2=False))
         # the knot and hanging ends at the front, shide round the tree
-        add_all(P, rope_twist([(0.0, Y, R + r), (0.05, Y - 0.35, R + r + 0.03), (0.02, Y - 0.6, R + r + 0.05)], r * 0.6, n=5))
+        add_all(P, K2.twisted_rope([(0.0, Y, R + r), (0.05, Y - 0.35, R + r + 0.03), (0.02, Y - 0.6, R + r + 0.05)],
+                                   r * 0.6, seed=int(D * 10) + 1, wear="_w1", fray1=True, lod2=False))
         ns = 6 if D < 1.5 else 8
         for i in range(ns):
             a = 2 * math.pi * (i + 0.5) / ns

@@ -13,6 +13,8 @@ from l2kit import (core, box, prism, lathe, xf, xfs, flat_poly, W, col, col_soli
                    FIELD, CUT, MUSHIRO, TAWARA, ROPE, STACK, PAPER, KINARI, PLAIN, INDIGO, LEAF, EARTH, SUMI, LIFE,
                    RICE, KAKI, FOLI, SOOTW)
 import props_life_wall as LW      # L1 (read-only): kasa()
+import fp1kit as FK               # FP1 (2026-10-01): brooms, rice sheaves (spikes/B3b/fp1kit.py)
+import fp1plants as FP            # FP1: pots, potted pine, azalea, chrysanthemums (spikes/B3b/fp1plants.py)
 
 CAT = "yard_life"
 PROPS = []
@@ -21,6 +23,25 @@ PROPS = []
 def view_hull(ss, mat=STACK):
     """Soft cover: one View-only convex component round the given solids (sight stops, bullets pass)."""
     return hull3([v for s in ss for v in s.verts], mat, geo=False, view=True, fire=False)
+
+
+def view_boxes(ss, n=4, mat=STACK):
+    """FP1: soft cover for a row of hung sheaves: n View-only boxes along x round the sheaves' extent (a hull of the
+    many round bundles is not reliably closed); sight stops, bullets pass."""
+    if not ss:
+        return []
+    xs = sorted(set(round(v[0], 3) for s in ss for v in s.verts))
+    x0, x1 = xs[0], xs[-1]
+    out = []
+    for k in range(n):
+        a, b = x0 + (x1 - x0) * k / n, x0 + (x1 - x0) * (k + 1) / n
+        vs = [v for s in ss for v in s.verts if a - 0.05 <= v[0] <= b + 0.05]
+        if not vs:
+            continue
+        ys, zs = [v[1] for v in vs], [v[2] for v in vs]
+        out.append(box(a + 0.01, b - 0.01, min(ys) + 0.02, max(ys) - 0.02, min(zs) + 0.02, max(zs) - 0.02, mat, vis=(),
+                       geo=False, view=True, fire=False))
+    return out
 
 
 # ================================================================================================ 51 hasa-kake
@@ -35,15 +56,22 @@ def sheaf(x0, x1, y, d, half=0.17, wear=None, vis=(1,)):
     return s
 
 
-def sheaf_row(x0, x1, yfun, seed, wear=None, seg=0.23, drop=(0.52, 0.72), skip=()):
+def sheaf_row(x0, x1, yfun, seed, wear=None, seg=0.23, drop=(0.52, 0.72), skip=(), z=0.0, r_pole=0.022,
+              avoid=()):
+    """FP1 remake (2026-10-01, Stephen: the sheaves read as brown slabs clipping the rack): one rice sheaf every
+    `seg` m, split and hung astride the rail at (yfun(x), z): tied neck and cut ends riding on top of the rail, two
+    bundles hanging down either side, ears down, golden and spread (spikes/B3b/fp1kit.hung_sheaf). `avoid`: x of
+    posts / stake crotches to keep clear (0.09 m)."""
     r = random.Random(seed)
     out = []
     n = max(1, int(round((x1 - x0) / seg)))
     for i in range(n):
         if i in skip:
             continue
-        a, b = x0 + (x1 - x0) * i / n + 0.006, x0 + (x1 - x0) * (i + 1) / n - 0.006
-        out.append(sheaf(a, b, yfun((a + b) / 2), r.uniform(*drop), half=r.uniform(0.15, 0.19), wear=wear))
+        x = x0 + (x1 - x0) * (i + 0.5) / n + r.uniform(-0.02, 0.02)
+        if any(abs(x - a) < 0.09 for a in avoid):
+            continue
+        out += FK.hung_sheaf(x, yfun(x), z, r_pole, r.uniform(*drop), r, wear=wear)
     return out
 
 
@@ -92,18 +120,18 @@ def hasa(kind):
                     t = min(1.0, max(0.0, (x - xa) / (xb - xa)))
                     return ya + (yb - ya) * t
             return H
-        shv = sheaf_row(-1.9, 1.9, yat, 51, wear=wear, skip=(4, 5, 11) if ab else ())
+        shv = sheaf_row(-1.9, 1.9, yat, 51, wear=wear, skip=(4, 5, 11) if ab else (), avoid=[m[0] for m in mids],
+                        drop=(0.50, 0.66))
         if ab:        # the fallen sheaves lie in the stubble below
             r = random.Random(5)
             for k in range(4):
-                s = sheaf(-0.12, 0.12, 0.0, 0.6, wear="_w2")
-                shv.append(rest([xf(s, rx=90.0 + r.uniform(-12, 12), ry=r.uniform(-40, 40),
-                                    t=(r.uniform(-1.4, 1.4), 0.17, r.uniform(0.5, 1.0)))], 0.0)[0])
+                s = FK.standing_sheaf((0.0, 0.0, 0.0), (0.0, 0.62, 0.0), r, wear="_w2")
+                shv += rest(xfs(s, rx=90.0 + r.uniform(-12, 12), ry=r.uniform(-40, 40),
+                                t=(r.uniform(-1.4, 1.4), 0.0, r.uniform(0.5, 1.0))), 0.0)
             add_all(P, [litter(8, 0.0, 0.7, 1.4, sx=2.0)])
         add_all(P, shv)
         hang = [s for s in shv if s.bbox()[2] > 0.3]
-        for k in range(0, len(hang), 8):
-            P.add(view_hull(hang[k:k + 8]))
+        add_all(P, view_boxes(hang, 4))
         P.add(prism([(H + 0.05, -0.04), (H + 0.05, 0.04), (H - 0.62, 0.16), (H - 0.62, -0.16)], "x", -1.9, 1.9,
                     STACK, vis=(2,)))
         P.solids[-1].wear = wear
@@ -125,19 +153,20 @@ def hasa(kind):
             for x in (-1.82, 0.0, 1.82):         # rope lashings
                 P.add(box(x - 0.03, x + 0.03, y - 0.03, y + 0.03, 0.05, 0.10, ROPE, vis=(1,)))
             if kind == "tiers":
-                shv = sheaf_row(-1.9, 1.9, lambda x, y=y: y, 60 + k, seg=0.26)
-                shv = xfs(shv, t=(0.0, 0.0, 0.075))
+                shv = sheaf_row(-1.9, 1.9, lambda x, y=y: y, 60 + k, seg=0.27, z=0.075, r_pole=0.02,
+                                avoid=(-1.82, 0.0, 1.82), drop=(0.42, 0.48))
                 add_all(P, shv)
-                P.add(view_hull(shv[: len(shv) // 2]))
-                P.add(view_hull(shv[len(shv) // 2:]))
+                add_all(P, view_boxes(shv, 2))
                 P.add(xf(prism([(y + 0.05, -0.04), (y + 0.05, 0.04), (y - 0.5, 0.15), (y - 0.5, -0.15)], "x", -1.9, 1.9,
                                STACK, vis=(2,)), t=(0.0, 0.0, 0.075)))
                 P.add(box(-1.9, 1.9, y - 0.5, y + 0.05, -0.05, 0.2, STACK, vis=(3,)))
             else:
                 r = random.Random(70 + k)
-                for i in range(3):
+                for i in range(3):                       # a few thin grey wisps left on the empty rails
                     x = r.uniform(-1.6, 1.6)
-                    P.add(xf(sheaf(x - 0.04, x + 0.04, y, 0.25, half=0.05, wear="_w2"), t=(0.0, 0.0, 0.075)))
+                    if min(abs(x - a) for a in (-1.82, 0.0, 1.82)) < 0.1:
+                        x += 0.2
+                    add_all(P, FK.hung_sheaf(x, y, 0.075, 0.02, 0.25, r, wear="_w2"))
         if kind == "empty":
             P.add(litter(9, 0.3, 0.3, 1.2, sx=2.2))
         P.dim("span", 3.64, 3.64, tol=0.01)
@@ -152,9 +181,9 @@ def hasa(kind):
             P.add(col_solid(xf(beam((0.0, 0.035, -0.8), (0.0, 0.035, 0.8), 0.06, 0.06, WOOD), ry=a, t=(x, 0.0, 0.2))))
         P.add(pole((-1.9, 0.09, -0.35), (1.9, 0.09, -0.15), 0.022, BAMBOO, n=5, vis=(1, 2), wear="_w2"))
         for k in range(9):
-            s = sheaf(-0.12, 0.12, 0.0, r.uniform(0.5, 0.65), wear="_w2")
-            P.add(rest([xf(s, rx=90.0 + r.uniform(-15, 15), ry=r.uniform(-60, 60),
-                           t=(r.uniform(-1.7, 1.7), 0.17, r.uniform(-0.2, 0.9)))], 0.0)[0])
+            s = FK.standing_sheaf((0.0, 0.0, 0.0), (0.0, r.uniform(0.55, 0.65), 0.0), r, wear="_w2")
+            add_all(P, rest(xfs(s, rx=90.0 + r.uniform(-15, 15), ry=r.uniform(-60, 60),
+                                t=(r.uniform(-1.7, 1.7), 0.0, r.uniform(-0.2, 0.9))), 0.0))
         P.add(K.mound(82, 0.4, 0.5, 0.6, 0.25, STACK, sx=1.6, wear="_w2", vis=(1, 2)))
         P.add(K.mound(83, -1.0, 0.1, 0.5, 0.2, STACK, sx=1.3, wear="_w2", vis=(1, 2)))
         P.add(litter(84, 0.0, 0.3, 1.6, sx=1.6))
@@ -578,18 +607,22 @@ PROPS.append({"id": "jp_s_farm_tools", "cat": CAT, "ll": "#54", "mount": "yard",
 
 
 # ================================================================================================ 55 broom + leaf pile
-def broom(wear=None):
-    """Take-boki: a 1.3 m bamboo handle, a flat fan of bamboo twigs tied at its foot (built lying along +z)."""
-    out = [pole((0.0, 0.03, -0.75), (0.0, 0.03, 0.40), 0.014, BAMBOO, n=5, vis=(1, 2))]
-    fan = [(-0.04, 0.35), (0.04, 0.35), (0.22, 0.95), (0.10, 1.02), (-0.10, 1.02), (-0.22, 0.95)]
-    out.append(prism(fan, "y", 0.005, 0.05, BAMBOO, vis=(1,)))
-    out.append(xf(K.lkit.rope_ring(0.03, 0.0, 0.03, ROPE, 5), rx=90.0, t=(0.0, 0.03, 0.37)))
+def broom(wear=None, seed=1):
+    """Take-boki (FP1 remake, 2026-10-01, Stephen: the broom 'looks like shit' - it was a flat plank fan): a 1.45 m
+    bamboo handle with nodes, a bundle of bamboo branchlets bound twice round its foot, the twigs (each with a side
+    branchlet) fanning flat to ~0.46 m; lying along +z, handle butt at z -0.75 (spikes/B3b/fp1kit.take_boki)."""
+    ss = FK.lying_boki(seed=seed, wear=wear)
+    zmin = min(v[2] for s in ss for v in s.verts)
+    out = xfs(ss, t=(0.0, 0.0, -0.75 - zmin))
+    out.append(pole((0.0, 0.03, -0.75), (0.0, 0.03, 0.70), 0.014, BAMBOO, n=4, vis=(2,)))        # LOD 2: handle
+    out.append(prism([(-0.05, 0.70), (0.05, 0.70), (0.23, 1.0), (-0.23, 1.0)], "y", 0.0, 0.04, BAMBOO, vis=(2,)))
     return K.wear_all(out, wear)
 
 
 def leaf_pile(kind):
     ab = kind.startswith("ab")
-    P = SPart("leaf_pile", budget="small", mass=1.0, flat=True, wear="_w2" if ab else "_w1")
+    # FP1: with the remade broom (~230 faces) the pile + broom models are box class (<= 600)
+    P = SPart("leaf_pile", budget="small" if kind == "small" else "box", mass=1.0, flat=True, wear="_w2" if ab else "_w1")
     if kind in ("broom", "small"):
         P.add(K.mound(551, 0.0, 0.0, 0.45, 0.16, LEAF, sx=1.3, wear="_w1", vis=(1, 2)))
         P.add(K.mound(552, 0.28, -0.1, 0.28, 0.10, LEAF, sx=1.1, wear="_w2", vis=(1,)))
@@ -777,20 +810,25 @@ def kiku(c, wear=None, flowers=True, seed=1):
 
 
 def potted(kind):
+    """FP1 remake (2026-10-01, Stephen: 'redo completely'): unglazed earthenware pots with a rolled rim and foot, a
+    potted pine with an S-curved tapering trunk, surface roots, alternate branches and needle pads, a satsuki azalea
+    (leaf mound on three stems), chrysanthemums (stems tied to a stake, leaves, one colour of flower head per pot);
+    builders in spikes/B3b/fp1plants.py. The stand is kept (Stephen). Era: LIFE_LAYER_ERA.md #58."""
     ab = kind.startswith("ab")
     dead = "_w2" if ab else None
-    P = SPart("potted", budget="box", res3=True, mass=25.0, wear="_w2" if ab else "_w1")
+    P = SPart("potted", budget="medium", res3=True, mass=25.0, wear="_w2" if ab else "_w1")
     if kind == "pair":
         P.flat = True
         P.need = ()
         P.res3 = False
-        add_all(P, pot((0.0, 0.0, 0.0), r=0.14, h=0.20, mat=WOOD))
-        add_all(P, pine((0.0, 0.17, 0.0), seed=3))
-        add_all(P, pot((0.36, 0.0, 0.08)))
-        add_all(P, K.bush((0.36, 0.13, 0.08), 0.14, 0.20, kind="leaf", n=3, seed=5, wear="_w1"))
+        P.budget = "box"
+        add_all(P, pot((0.0, 0.0, 0.0), r=0.14, h=0.20, mat=WOOD, dead_soil=True))  # the cut-down tub
+        add_all(P, FP.pine_bonsai((0.0, 0.17, 0.0), size=1.15, seed=3))
+        add_all(P, FP.earthen_pot((0.36, 0.0, 0.08), r=0.10, h=0.16))
+        add_all(P, FP.azalea((0.36, 0.128, 0.08), size=1.0, seed=5))
         P.dim("pots", 2, 2, tol=0)
         return P
-    # the stand: two sloped side boards and three steps (0.25 / 0.50 / 0.75), 1.2 m wide
+    # the stand: two sloped side boards and three steps (0.25 / 0.50 / 0.75), 1.2 m wide, each step 0.22 deep
     stand = []
     side = [(0.0, 0.34), (0.27, 0.34), (0.77, -0.34), (0.0, -0.34)]
     for sx in (-1, 1):
@@ -801,27 +839,31 @@ def potted(kind):
     hull = [col(-0.60, 0.60, 0.0, 0.25, 0.12, 0.34), col(-0.60, 0.60, 0.0, 0.50, -0.11, 0.11),
             col(-0.60, 0.60, 0.0, 0.75, -0.34, -0.12)]
     pots, plants = [], []
+    R, H = 0.088, 0.15                                    # flower pots fit the 0.22 m steps (rim d 0.20)
     spots = [(-0.30, 0.25, 0.23, "kiku"), (0.25, 0.25, 0.23, "kiku"), (-0.2, 0.50, 0.0, "azalea"),
              (0.3, 0.50, 0.0, "weeds"), (0.0, 0.75, -0.23, "pine")]
     for i, (x, y, z, what) in enumerate(spots):
-        wear = "_w2" if (ab and what != "pine") else ("_w1" if what == "pine" or not ab else None)
         if kind == "ab_dead" and i == 1:
             continue                     # this one fell: see below
-        pots += pot((x, y, z), dead_soil=ab)
+        if what == "pine":
+            pots += FP.earthen_pot((x, y, z), r=0.095, h=0.085, shallow=True, wear=dead,
+                                   soil_mat=LEAF, soil_wear="_w2" if ab else "_w1")
+            plants += FP.pine_bonsai((x, y + 0.063, z), size=1.05, seed=40 + i, foliage_wear="_w1")
+            continue
+        pots += FP.earthen_pot((x, y, z), r=R, h=H, wear=dead, soil_mat=LEAF, soil_wear="_w2" if ab else "_w1")
+        ys = y + H - 0.032
         if what == "kiku":
-            plants += kiku((x, y + 0.13, z), wear=dead or "_w1", flowers=not ab, seed=10 + i)
+            plants += FP.kiku((x, ys, z), size=0.95, seed=10 + i, wear=dead, flowers=not ab, band=i % 3)
         elif what == "azalea":
-            plants += K.bush((x, y + 0.13, z), 0.13, 0.22, kind="leaf", n=3, seed=20 + i, wear=dead or "_w1")
-        elif what == "weeds":
-            plants += K.bush((x, y + 0.13, z), 0.08, 0.16, kind="needle", n=2, seed=30 + i, wear="_w2")
+            plants += FP.azalea((x, ys, z), size=0.95, seed=20 + i, half_dead=ab)
         else:
-            plants += pine((x, y + 0.13, z), wear="_w1", seed=40 + i)
+            plants += K.bush((x, ys, z), 0.07, 0.14, kind="needle", n=2, seed=30 + i, wear="_w2")
     if kind == "ab_dead":
         # the fallen pot: shards and a soil clod with the dead chrysanthemum, in front of the stand
-        add_all(P, K.lkit.shards(581, 0.35, 0.55, 0.18, 7, mat=DARKC, wear="_w2"))
+        add_all(P, K.lkit.shards(581, 0.35, 0.55, 0.18, 7, mat=FP.EARTHEN, wear="_w2"))
         P.add(K.mound(582, 0.30, 0.52, 0.10, 0.06, EARTH, wear="_w2", vis=(1,)))
-        add_all(P, rest(xfs(kiku((0.0, 0.0, 0.0), wear="_w2", flowers=False, seed=11), rz=80.0, t=(0.30, 0.06, 0.52)),
-                        0.0))
+        add_all(P, rest(xfs(FP.kiku((0.0, 0.0, 0.0), wear="_w2", flowers=False, seed=11, band=1), rz=80.0,
+                            t=(0.30, 0.06, 0.52)), 0.0))
     everything = stand + pots + plants
     if kind == "ab_fallen":
         # the stand tipped forward onto its face, pots spilled in front
@@ -832,10 +874,10 @@ def potted(kind):
         r = random.Random(583)
         for k in range(4):
             px, pz = -0.45 + 0.3 * k, 1.05 + r.uniform(-0.1, 0.25)
-            pp = pot((0.0, 0.0, 0.0), wear="_w2", dead_soil=True)
+            pp = FP.earthen_pot((0.0, 0.0, 0.0), r=R, h=H, wear="_w2", soil_mat=LEAF, soil_wear="_w2")
             everything += rest(xfs(pp, rx=90.0 if k % 2 else 0.0, ry=r.uniform(0, 360), t=(px, 0.0, pz)), 0.0)
             everything.append(K.mound(584 + k, px + 0.1, pz + 0.12, 0.12, 0.05, EARTH, wear="_w2", vis=(1,)))
-        everything += rest(xfs(pine((0.0, 0.0, 0.0), wear="_w1", seed=45), rz=75.0, t=(0.5, 0.0, 1.3)), 0.0)
+        everything += rest(xfs(FP.pine_bonsai((0.0, 0.0, 0.0), size=1.05, seed=45), rz=75.0, t=(0.5, 0.0, 1.3)), 0.0)
         P.add(litter(585, 0.0, 1.1, 0.7, sx=1.5))
     add_all(P, everything + lod3 + hull)
     if kind == "ab_fallen":

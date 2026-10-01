@@ -284,14 +284,21 @@ def hanetsurube(kind):
     sw = pole(wend, tip, 0.06, WOOD, n=6, vis=(1, 2, 3), r1=0.04, wear=wear)
     P.add(sw)
     P.add(col_solid(beam(wend, tip, 0.09, 0.09, WOOD)))
-    # counterweight: a river stone lashed under the weight end
-    st = core.stone(random.Random(5), wend[0] + 0.25, 0.0, 0.42, 0.36, 0.34, wend[1] - 0.02, RIVER, bury=0.0, n=8,
-                    vis=(1, 2, 3))
+    # counterweight: a river stone in a rope sling HANGING well below the weight end (FP1 2026-10-01, Stephen: the
+    # rock must hang lower; real hanetsurube hang the stone on a short rope or lash it to the very end, so at rest
+    # the weight end is low and the bucket end high): sling 0.75 m, the stone's bottom ~0.55 m off the ground
+    drop = 0.75 if kind != "ab_down" else 0.45
+    sx = wend[0] + 0.12
+    stop = wend[1] - drop                                       # top of the stone
+    st = core.stone(random.Random(5), sx, 0.0, 0.42, 0.36, 0.34, stop, RIVER, bury=0.0, n=8, vis=(1, 2, 3))
     P.add(st)
     P.add(col_solid(st, RIVER))
-    add_all(P, rope_path([(wend[0] + 0.25, wend[1] + 0.04, -0.05), (wend[0] + 0.1, wend[1] - 0.25, -0.2),
-                          (wend[0] + 0.4, wend[1] - 0.3, 0.2), (wend[0] + 0.25, wend[1] + 0.04, 0.05)], 0.012,
-                         wear=wear or "_w1"))
+    hang_at = (wend[0] + 0.12, wend[1] + 0.05, 0.0)
+    for sz in (-1, 1):                                          # two sling ropes from the pole end to the lashing
+        add_all(P, rope_path([hang_at, (sx + 0.02 * sz, stop + 0.02, sz * 0.14)], 0.012, wear=wear or "_w1"))
+    add_all(P, rope_path([(sx - 0.19, stop - 0.10, -0.12), (sx, stop + 0.03, -0.15), (sx + 0.19, stop - 0.10, -0.12),
+                          (sx + 0.17, stop - 0.12, 0.13), (sx, stop + 0.03, 0.15), (sx - 0.19, stop - 0.10, -0.12)],
+                         0.012, wear=wear or "_w1"))            # the lashing round the stone
     cx = tip[0]
     ctype = None
     if kind in ("well", "ab_down"):
@@ -312,8 +319,9 @@ def hanetsurube(kind):
                              n=6, vis=(1,)))
         P.add(litter(14, cx, 0.3, 0.9, sx=1.4))
     if kind != "ab_down":
-        # the bamboo bucket pole hangs from the tip into the shaft, the bucket just above the curb / pit
-        bot_y = (CURB_H - 0.35) if kind == "well" else 0.30
+        # the bamboo bucket pole hangs from the tip; at rest the bucket hangs clear ABOVE the curb rim (FP1 2026-10-01:
+        # it sat down in the shaft; the counterweight holds it up) / a little higher over the pit
+        bot_y = (CURB_H + 0.08) if kind == "well" else 0.45
         P.add(pole(tip, (cx, bot_y + 0.30, 0.0), 0.022, BAMBOO, n=5, vis=(1, 2, 3), wear=wear))
         add_all(P, xfs(well_bucket(wear=wear), t=(cx, bot_y, 0.0)))
         if kind != "well":

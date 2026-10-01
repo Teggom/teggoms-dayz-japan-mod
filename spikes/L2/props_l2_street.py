@@ -715,25 +715,77 @@ def fire_watch(kind):
         P.notes.append("fire gear at a street corner: buckets marked 'fire, take care' (火之用心), a fire hook "
                        "(tobiguchi), a ladder, under a board roof (Kyoho town firemen; BUILDING_LIST 390, 5.9)")
     else:   # ladder_tower: the fire-watch ladder with its alarm bell (hinomi-hashigo, Kyoho), about 6 m
+        # FP1 (2026-10-01, Stephen: 'I can't climb it'): CLIMBABLE the vanilla way (read from
+        # P:\DZ\structures\industrial\farms\farm_watertower_small.p3d + scripts ActionEnterLadder): a View Geometry
+        # component named 'ladder1'; Memory points ladder1 (the climb line: bottom 0.54 over the ground, top 0.675 over
+        # the exit floor), ladder1_con / _bottom_front / _top_front (enter points), ladder1_con_dir / ladder1_dir (the
+        # side to stand on: in front at the foot, on the platform at the top); Geometry named properties class=house
+        # (so the .wrp object binds to its Land_ class as a Building) and laddertype=wood (the wooden climbing sound);
+        # the config class is Land_JP_S_Fire_Watch_Ladder_Tower (Land_ + the p3d name, B3b build.py 'land').
+        # The climb face is +z; at the top the player steps off backwards onto a small lookout deck (railed, Roadway),
+        # carried by the two raking braces and a third back leg; the bell hangs over the deck (moved out of the climb).
         P.budget = "medium"
         P.bury = 0.52
+        P.keep_memory = True
+        P.geo_props = {"class": "house", "laddertype": "wood"}
+        PY = 4.90                                               # the lookout deck (top of the boards)
         ls, lc, _ = ladder_parts_h(6.3, y0=-0.5)
-        add_all(P, ls + lc)
-        for sx in (-1, 1):                    # two raking braces
-            P.add(pole((sx * 1.4, -0.5, -1.2), (sx * 0.2, 4.8, -0.03), 0.045, WOOD, n=6, vis=(1, 2)))
-        P.add(col_solid(beam((-1.4, -0.5, -1.2), (-0.28, 4.4, -0.08), 0.08, 0.08, WOOD)))
-        P.add(col_solid(beam((1.4, -0.5, -1.2), (0.28, 4.4, -0.08), 0.08, 0.08, WOOD)))
-        P.add(W(-0.40, 0.40, 5.80, 5.84, -0.35, 0.35, WOOD, vis=(1, 2)))       # the little roof over the bell
+        # no rungs above the deck (the player steps off over the top: only the two rails rise on as handholds)
+        add_all(P, [q for q in ls if not (q.bbox()[2] > PY + 0.01 and q.bbox()[1] - q.bbox()[0] > 0.3)])
+        lcol = col(-0.25, 0.25, -0.5, PY - 0.03, -0.03, 0.03)   # the ladder's collision ends at the deck; its View
+        lcol.view = False                                       # component is 'ladder1' alone (the camera must hit it)
+        P.add(lcol)
         for sx in (-1, 1):
-            P.add(W(sx * 0.21 - 0.025, sx * 0.21 + 0.025, 5.5, 5.80, -0.02, 0.02, WOOD, vis=(1,)))
+            c = col(sx * 0.21 - 0.03, sx * 0.21 + 0.03, PY - 0.03, 5.80, -0.02, 0.02)
+            c.view = False
+            P.add(c)
+        vt = col(-0.25, 0.25, 0.04, PY + 0.60, -0.04, 0.05)     # View-only component 'ladder1' (the climb target)
+        vt.geo, vt.fire, vt.sel = False, None, "ladder1"
+        P.add(vt)
+        for sx in (-1, 1):                    # two raking braces (now meeting the deck's front bearers)
+            P.add(pole((sx * 1.4, -0.5, -1.2), (sx * 0.30, PY - 0.06, -0.06), 0.045, WOOD, n=6, vis=(1, 2)))
+        P.add(col_solid(beam((-1.4, -0.5, -1.2), (-0.32, PY - 0.5, -0.10), 0.08, 0.08, WOOD)))
+        P.add(col_solid(beam((1.4, -0.5, -1.2), (0.32, PY - 0.5, -0.10), 0.08, 0.08, WOOD)))
+        P.add(pole((0.0, -0.5, -2.1), (0.0, PY - 0.06, -0.80), 0.05, WOOD, n=6, vis=(1, 2)))         # the back leg
+        P.add(col_solid(beam((0.0, -0.5, -2.1), (0.0, PY - 0.5, -0.86), 0.09, 0.09, WOOD)))
+        # the deck: two bearers from the ladder rails back to a cross beam on the back leg, boards on top
+        for sx in (-1, 1):
+            P.add(W(sx * 0.40 - 0.04, sx * 0.40 + 0.04, PY - 0.12, PY - 0.03, -0.84, 0.0, WOOD, vis=(1, 2)))
+        P.add(W(-0.46, 0.46, PY - 0.12, PY - 0.03, -0.86, -0.76, WOOD, vis=(1, 2)))
+        for k in range(5):
+            z0 = -0.84 + 0.168 * k
+            P.add(W(-0.46, 0.46, PY - 0.03, PY, z0 + 0.004, z0 + 0.164, WOOD, vis=(1, 2)))
+        P.add(col(-0.46, 0.46, PY - 0.12, PY, -0.86, -0.03))
+        P.road([(-0.46, PY, -0.86), (0.46, PY, -0.86), (0.46, PY, -0.03), (-0.46, PY, -0.03)], "boards_ext")
+        # railing round the back and the sides (0.9 m), posts at the back corners carry the roof
+        for sx in (-1, 1):
+            P.add(W(sx * 0.44 - 0.03, sx * 0.44 + 0.03, PY, PY + 1.10, -0.86, -0.80, WOOD, vis=(1, 2)))
+            P.add(col(sx * 0.44 - 0.03, sx * 0.44 + 0.03, PY, PY + 1.10, -0.86, -0.80))
+            P.add(W(sx * 0.44 - 0.02, sx * 0.44 + 0.02, PY + 0.86, PY + 0.92, -0.86, -0.04, WOOD, vis=(1, 2)))
+            P.add(col(sx * 0.44 - 0.02, sx * 0.44 + 0.02, PY + 0.10, PY + 0.92, -0.80, -0.06))
+        P.add(W(-0.47, 0.47, PY + 0.86, PY + 0.92, -0.86, -0.80, WOOD, vis=(1, 2)))
+        P.add(col(-0.41, 0.41, PY + 0.10, PY + 0.92, -0.86, -0.80))
+        P.add(W(-0.55, 0.55, PY + 1.10, PY + 1.14, -0.95, 0.12, WOOD, vis=(1, 2)))       # the little roof
         bell = lathe([(0.0, 0.0), (0.13, 0.0), (0.11, 0.08), (0.09, 0.26), (0.05, 0.30), (0.0, 0.31)], 10, IRON,
                      vis=(1, 2))
-        P.add(xf(bell, t=(0.0, 5.33, 0.0)))
-        P.add(cord((0.0, 5.64, 0.0), (0.0, 5.80, 0.0), 0.008))
-        P.add(pole((0.10, 5.30, 0.05), (0.32, 5.05, 0.10), 0.012, WOOD, n=4, vis=(1,)))   # the striker, hung
+        P.add(xf(bell, t=(0.0, PY + 0.45, -0.55)))
+        P.add(cord((0.0, PY + 0.76, -0.55), (0.0, PY + 1.10, -0.55), 0.008))
+        P.add(pole((0.30, PY + 0.70, -0.82), (0.36, PY + 0.40, -0.80), 0.012, WOOD, n=4, vis=(1,)))   # the striker
         P.add(W(-0.25, 0.25, -0.5, 5.84, -0.05, 0.05, WOOD, vis=(3,)))
+        P.add(W(-0.46, 0.46, PY - 0.12, PY + 1.14, -0.86, -0.03, WOOD, vis=(3,)))
+        # memory points (vanilla names and roles, see above)
+        P.memory = {
+            "ladder1": [(0.0, PY + 0.675, 0.03), (0.0, 0.54, 0.03)],
+            "ladder1_con": [(0.0, PY, 0.0), (0.0, 0.0, 0.10)],
+            "ladder1_con_dir": [(0.0, PY, -0.45), (0.0, 0.0, 0.55)],
+            "ladder1_dir": [(0.0, 0.0, 0.55)],
+            "ladder1_bottom_front": [(0.0, 0.0, 0.10)],
+            "ladder1_top_front": [(0.0, PY, 0.0)],
+        }
         P.dim("height", 6.3, 5.84 + 0.5, tol=0.1)
-        P.notes.append("fire-watch ladder with an alarm bell (Kyoho fire rules, PLAYBOOK 1 / T12); not climbable")
+        P.dim("deck_y", 4.90, PY, tol=0.001)
+        P.notes.append("fire-watch ladder with an alarm bell (Kyoho fire rules, PLAYBOOK 1 / T12); CLIMBABLE (FP1): "
+                       "climb the +z face, step off onto the railed lookout deck at 4.90 m; Land_ class (class=house)")
     return P
 
 
@@ -755,7 +807,7 @@ PROPS.append({"id": "jp_s_fire_watch", "cat": CAT, "ll": "#68", "mount": "street
                   M("jp_s_fire_watch_rack", "rack", "intact", "Fire gear rack: buckets, fire hook, ladder",
                     lambda: fire_watch("rack")),
                   M("jp_s_fire_watch_ladder_tower", "tower", "intact", "Fire-watch ladder with an alarm bell",
-                    lambda: fire_watch("ladder_tower")),
+                    lambda: fire_watch("ladder_tower"), land=True),
                   M("jp_s_fire_watch_ab_fallen", "rack", "abandoned", "Fire gear rack, ladder and buckets fallen",
                     lambda: fire_watch("ab_fallen")),
               ]})
@@ -906,7 +958,7 @@ def lantern_fallen(kind):
         ch = PS.chochin(0.17, 0.55, "chochin_honcho", wear="_w2", text_wear="_w1")
         K.face_text(ch, mirror_u=True)        # B3b-style text: face it out and read it right
         ch = rest(xfs(ch, rz=88.0, ry=-25.0), 0.0)
-        add_all(P, ch)
+        add_all(P, K.lkit.inner_side(ch, (CHOCHIN, DARK)))   # FP1: the open top showed no inside (see-through)
         P.dim("lantern_h", 0.55, 0.55, tol=0.01)
     elif kind == "andon":
         lamp = PS.box_lamp(0.30, 0.15, 0.45, "kanban_oyasumidokoro", wear="_w2", text_wear="_w1")
@@ -918,7 +970,7 @@ def lantern_fallen(kind):
         ch = LW.chochin(0.15, 0.48, "crest_igeta", wear="_w2", text_wear="_w2", both=False)
         K.face_text(ch, mirror_u=False)
         ch = rest(xfs(ch, rz=90.0, ry=40.0), 0.0)
-        add_all(P, ch)
+        add_all(P, K.lkit.inner_side(ch, (CHOCHIN, DARK)))   # FP1: inside of the paper drawn too
         P.dim("lantern_h", 0.48, 0.48, tol=0.01)
     P.add(litter(720 + len(kind), 0.0, 0.0, 0.5))
     P.notes.append("a paper lantern fallen in the street (G1 A3 answer 1: kept, weathered); never emissive")

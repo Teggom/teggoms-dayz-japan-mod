@@ -231,3 +231,24 @@ def place_group(vis_ss, col_ss, ops, floor=0.0):
         lc = min(v[1] for v in q.verts)
         out_c.append(xf(q, t=(0.0, floor - lc, 0.0)))
     return [xf(q, t=t) for q in vis_ss], out_c
+
+
+def inner_side(ss, mats):
+    """FP1 (2026-10-01, Stephen: the fallen lantern 'has one side with no texture'): the game draws single-sided
+    faces, so a paper shell that is open at one end (a chochin's top) shows nothing of its inside: you look through
+    it. Returns ss plus a back-facing copy of every visual sheet solid whose material is in `mats` (same faces, the
+    outward normals and smooth normals reversed), so the inside of the paper is drawn too."""
+    import copy as _copy
+    out = list(ss)
+    for s in ss:
+        s.finalize()
+        if s.normals is None or not s.vis or s.fm[0] not in mats:
+            continue
+        n = _copy.copy(s)
+        n.fn = [core.mul(q, -1.0) for q in s.fn]
+        n.normals = n.fn
+        if getattr(s, "vn", None) is not None:
+            n.vn = [[core.mul(q, -1.0) for q in f] for f in s.vn]
+        n.faces = [list(f) for f in s.faces]
+        out.append(n)
+    return out

@@ -280,6 +280,7 @@ def lantern(kind, T=1.8, moss=False, ab=None, text=True):
                        " + ".join(drop))
     for g in groups.values():
         vis += g
+    K.aged_stone(vis + fall, 9200 + int(T * 100) + len(kind) + (5 if moss else 0))   # FP1: no repeating lichen dots
     add_all(P, vis + tx + mo + fall + cols)
     P.dim("height", T, max(v[1] for s in vis if 1 in s.vis for v in s.verts) if not ab else T, tol=0.03)
     if kind == "kasuga":

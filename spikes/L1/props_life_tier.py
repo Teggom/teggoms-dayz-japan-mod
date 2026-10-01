@@ -17,56 +17,66 @@ CAT = "tier"
 
 
 # ================================================================================================ 45 sword rack
+# FP1 remake (2026-10-01, Stephen: "just squares"): curved swords in full mounts (scabbard with horn cap, mouth band,
+# cord knob and wound sageo; round tsuba between washers; the hilt's crossed cord diamonds over white rayskin, collar,
+# pommel cap, menuki) on a stand with shaped uprights and arms that curl up to cradle the scabbards
+# (spikes/L1/fp1sword.py). Display: edge up, hilt to the viewer's left (+x), the katana below, the wakizashi above.
+import fp1sword as FS  # noqa: E402
+
+
 def sword(L=1.00, wear=None):
-    """A sword in its scabbard, lying along +x: lacquered scabbard, iron guard, a hilt wrapped in indigo cord."""
-    hilt = 0.26 if L > 0.8 else 0.20
-    out = [box(0.0, L - hilt, -0.016, 0.016, -0.011, 0.011, LACQ, vis=(1,)),
-           lathe([(0.0, -0.004), (0.04, -0.004), (0.04, 0.004), (0.0, 0.004)], 6, IRON, vis=(1,)),
-           box(L - hilt + 0.008, L, -0.015, 0.015, -0.012, 0.012, INDIGO, vis=(1,))]
-    out[1] = xf(out[1], rz=90.0, t=(L - hilt + 0.004, 0.0, 0.0))
-    out[0] = xf(out[0], rz=2.0)
-    return wear_all(out, wear)
+    return FS.sword(L, sori=0.018 if L > 0.8 else 0.012, wear=wear)
+
+
+def _rest_y(arm_top, L, sori, xs):
+    """Centre-line y of a sword (local x from its scabbard end) so it rests on arms at local x positions xs."""
+    h = 0.029
+    cys = [sori * 4 * (x / L) * (1 - x / L) for x in xs]
+    return arm_top + h / 2 - sum(cys) / len(cys)
 
 
 def katanakake(kind):
     wall = kind.startswith("wall")
     empty = kind.endswith("empty")
     wr = "_w2" if empty else None
+    th = 0.022
     if wall:
-        P = LPart("katanakake", budget="small", mass=4.0, anchor="wall", flat=True)
+        P = LPart("katanakake", budget="furniture", mass=4.0, anchor="wall", flat=True)
         y = 1.45
-        for sx in (-1, 1):                              # two lacquered brackets with two notched arms each
-            x = sx * 0.30
-            P.add(W(x - 0.03, x + 0.03, y - 0.20, y + 0.10, 0.0, 0.02, LACQ, vis=(1, 2)))
+        xb = 0.20
+        for sx in (-1, 1):                              # two lacquered wall plates, each with two curled arms
+            x = sx * xb
+            P.add(W(x - 0.03, x + 0.03, y - 0.22, y + 0.12, 0.0, 0.018, LACQ, vis=(1, 2)))
             for yy in (y - 0.12, y + 0.02):
-                P.add(W(x - 0.02, x + 0.02, yy, yy + 0.03, 0.02, 0.11, LACQ, vis=(1,)))
-                P.add(W(x - 0.02, x + 0.02, yy + 0.03, yy + 0.05, 0.09, 0.11, LACQ, vis=(1,)))
+                P.add(FS.arm(x, yy, zf=0.11, th=th, w=0.036))
         if not empty:
-            P.adds(xfs(sword(1.00), t=(-0.55, y + 0.066, 0.065)))
-            P.adds(xfs(sword(0.65), t=(-0.33, y - 0.074, 0.065)))
+            # katana on the lower arms (cradles at local x 0.12 / 0.52), wakizashi above (0.03 / 0.43)
+            P.adds(xfs(sword(1.00), t=(-xb - 0.12, _rest_y(y - 0.12 + th / 2, 1.00, 0.018, (0.12, 0.52)), 0.085)))
+            P.adds(xfs(sword(0.65), t=(-xb - 0.03, _rest_y(y + 0.02 + th / 2, 0.65, 0.012, (0.03, 0.43)), 0.085)))
         else:
             P.add(stain(451, 0.0, 0.30, 0.25, sx=1.5))
         P.dim("y", 1.45, y, tol=0.005)
     else:
-        P = LPart("katanakake", budget="small", mass=5.0, anchor="floor")
-        h = 0.45
-        P.add(W(-0.25, 0.25, 0.0, 0.03, -0.11, 0.11, LACQ, vis=(1, 2)))
+        P = LPart("katanakake", budget="furniture", mass=5.0, anchor="floor")
+        h = 0.48
+        base = prism([(-0.28, 0.0), (0.28, 0.0), (0.26, 0.028), (-0.26, 0.028)], "z", -0.12, 0.12, LACQ, vis=(1, 2))
+        P.add(base)
         for sx in (-1, 1):
             x = sx * 0.18
-            P.add(W(x - 0.025, x + 0.025, 0.03, h, -0.03, 0.03, LACQ, vis=(1, 2)))
-            for yy in (0.22, 0.36):
-                P.add(W(x - 0.022, x + 0.022, yy, yy + 0.025, -0.03, 0.10, LACQ, vis=(1,)))
-                P.add(W(x - 0.022, x + 0.022, yy + 0.025, yy + 0.045, 0.08, 0.10, LACQ, vis=(1,)))
+            P.add(FS.upright(x, h))
+            for yy in (0.20, 0.34):
+                P.add(FS.arm(x, yy, zf=0.11, th=th, w=0.036))
         if not empty:
-            P.adds(xfs(sword(1.00), t=(-0.50, 0.40, 0.055)))
-            P.adds(xfs(sword(0.65), t=(-0.30, 0.26, 0.055)))
+            # katana on the lower arms (cradles at local x 0.32 / 0.68), wakizashi above (0.07 / 0.43)
+            P.adds(xfs(sword(1.00), t=(-0.50, _rest_y(0.20 + th / 2, 1.00, 0.018, (0.32, 0.68)), 0.085)))
+            P.adds(xfs(sword(0.65), t=(-0.25, _rest_y(0.34 + th / 2, 0.65, 0.012, (0.07, 0.43)), 0.085)))
         else:                                           # the swords taken; the rack knocked askew
             P.solids = xfs(P.solids, ry=12.0)
             P.add(stain(452, 0.1, 0.25, 0.25, sx=1.5))
-        P.add(col(-0.25, 0.25, 0.0, h, -0.11, 0.11, LACQ) if not empty else
-              lkit.fkit.col_solid(xf(box(-0.25, 0.25, 0.0, h, -0.11, 0.11, LACQ), ry=12.0)))
-        P.dim("h", 0.45, h, tol=0.005)
-    P.add(box(-0.5, 0.5, 0.0 if not wall else 1.25, 0.46 if not wall else 1.55, 0.0, 0.10, LACQ, vis=(2,)))
+        P.add(col(-0.28, 0.28, 0.0, h, -0.12, 0.12, LACQ) if not empty else
+              lkit.fkit.col_solid(xf(box(-0.28, 0.28, 0.0, h, -0.12, 0.12, LACQ), ry=12.0)))
+        P.dim("h", 0.48, h, tol=0.005)
+    P.add(box(-0.5, 0.5, 0.0 if not wall else 1.25, 0.48 if not wall else 1.57, 0.0, 0.11, LACQ, vis=(2,)))
     for s in P.solids:
         if wr and not getattr(s, "wear", None):
             s.wear = wr

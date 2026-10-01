@@ -7,11 +7,11 @@
    "variant": "low",
    "pass": true,
    "faces": {
-    "Resolution 1": 242,
+    "Resolution 1": 520,
     "Resolution 2": 78,
     "Resolution 3": 24,
     "Geometry": 120,
-    "View Geometry": 172,
+    "View Geometry": 144,
     "Fire Geometry": 120
    },
    "checks": [
@@ -35,6 +35,8 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w0.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
@@ -56,11 +58,11 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 242,
+       "Resolution 1": 520,
        "Resolution 2": 78,
        "Resolution 3": 24,
        "Geometry": 120,
-       "View Geometry": 172,
+       "View Geometry": 144,
        "Fire Geometry": 120
       },
       "extra": []
@@ -124,7 +126,7 @@
      "name": "View Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 8
+      "components": 9
      }
     },
     {
@@ -146,6 +148,8 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_straw_rope_w1": true,
+      "jp_m_straw_stack_w0": true,
       "jp_m_straw_stack_w1": true
      }
     },
@@ -165,6 +169,30 @@
        "dE76": 0.0,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_straw_rope_w1",
+       "mean_srgb": [
+        104.5,
+        90.1,
+        68.9
+       ],
+       "palette": "straw_aged",
+       "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_stack_w0",
+       "mean_srgb": [
+        176.0,
+        150.0,
+        98.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 31.8,
+       "tolerance": 14,
+       "pass": false
       },
       {
        "material": "jp_m_straw_stack_w1",
@@ -207,11 +235,11 @@
    "variant": "tiers",
    "pass": true,
    "faces": {
-    "Resolution 1": 561,
+    "Resolution 1": 1263,
     "Resolution 2": 75,
     "Resolution 3": 24,
     "Geometry": 90,
-    "View Geometry": 228,
+    "View Geometry": 126,
     "Fire Geometry": 90
    },
    "checks": [
@@ -236,6 +264,7 @@
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_stack_w0.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_stack_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
@@ -257,11 +286,11 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 561,
+       "Resolution 1": 1263,
        "Resolution 2": 75,
        "Resolution 3": 24,
        "Geometry": 90,
-       "View Geometry": 228,
+       "View Geometry": 126,
        "Fire Geometry": 90
       },
       "extra": []
@@ -348,6 +377,7 @@
      "pass": true,
      "detail": {
       "jp_m_straw_rope_w1": true,
+      "jp_m_straw_stack_w0": true,
       "jp_m_straw_stack_w1": true
      }
     },
@@ -379,6 +409,18 @@
        "dE76": 3.0,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_straw_stack_w0",
+       "mean_srgb": [
+        176.0,
+        150.0,
+        98.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 31.8,
+       "tolerance": 14,
+       "pass": false
       },
       {
        "material": "jp_m_straw_stack_w1",
@@ -421,7 +463,7 @@
    "variant": "tiers",
    "pass": true,
    "faces": {
-    "Resolution 1": 204,
+    "Resolution 1": 402,
     "Resolution 2": 57,
     "Resolution 3": 6,
     "Geometry": 90,
@@ -451,6 +493,7 @@
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
@@ -472,7 +515,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 204,
+       "Resolution 1": 402,
        "Resolution 2": 57,
        "Resolution 3": 6,
        "Geometry": 90,
@@ -564,6 +607,7 @@
      "detail": {
       "jp_m_decal_litter_w2": true,
       "jp_m_straw_rope_w1": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_straw_stack_w2": true
      }
     },
@@ -587,13 +631,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -608,6 +652,19 @@
        "dE76": 3.0,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
       },
       {
        "material": "jp_m_straw_stack_w2",
@@ -651,11 +708,11 @@
    "variant": "low",
    "pass": true,
    "faces": {
-    "Resolution 1": 255,
+    "Resolution 1": 587,
     "Resolution 2": 78,
     "Resolution 3": 24,
     "Geometry": 120,
-    "View Geometry": 162,
+    "View Geometry": 144,
     "Fire Geometry": 120
    },
    "checks": [
@@ -680,6 +737,7 @@
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
       ],
@@ -701,11 +759,11 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 255,
+       "Resolution 1": 587,
        "Resolution 2": 78,
        "Resolution 3": 24,
        "Geometry": 120,
-       "View Geometry": 162,
+       "View Geometry": 144,
        "Fire Geometry": 120
       },
       "extra": []
@@ -769,7 +827,7 @@
      "name": "View Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 7
+      "components": 9
      }
     },
     {
@@ -792,6 +850,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_straw_stack_w2": true
      }
     },
@@ -816,13 +875,26 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -869,7 +941,7 @@
    "variant": "low",
    "pass": true,
    "faces": {
-    "Resolution 1": 157,
+    "Resolution 1": 355,
     "Resolution 2": 64,
     "Resolution 3": 6,
     "Geometry": 18,
@@ -898,6 +970,7 @@
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_stack_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
       ],
@@ -919,7 +992,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 157,
+       "Resolution 1": 355,
        "Resolution 2": 64,
        "Resolution 3": 6,
        "Geometry": 18,
@@ -1002,6 +1075,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_litter_w2": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_straw_stack_w2": true
      }
     },
@@ -1026,13 +1100,26 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1548,13 +1635,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1962,13 +2049,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -2176,13 +2263,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -2849,13 +2936,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -3118,13 +3205,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -3688,13 +3775,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -3754,8 +3841,8 @@
    "variant": "broom",
    "pass": true,
    "faces": {
-    "Resolution 1": 65,
-    "Resolution 2": 23
+    "Resolution 1": 343,
+    "Resolution 2": 26
    },
    "checks": [
     {
@@ -3777,7 +3864,8 @@
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
-       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat"
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
      }
@@ -3793,12 +3881,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 65,
-       "Resolution 2": 23
+       "Resolution 1": 343,
+       "Resolution 2": 26
       },
       "extra": []
      }
@@ -3823,7 +3911,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": -0.0061,
+      "res1_min_y": 0.0,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": false
@@ -3866,13 +3954,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -3909,6 +3997,18 @@
        ],
        "palette": "straw_aged",
        "dE76": 3.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w1",
+       "mean_srgb": [
+        111.2,
+        80.2,
+        71.3
+       ],
+       "palette": "timber_weathered",
+       "dE76": 2.6,
        "tolerance": 14,
        "pass": true
       }
@@ -4026,13 +4126,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -4077,8 +4177,8 @@
    "variant": "broom",
    "pass": true,
    "faces": {
-    "Resolution 1": 85,
-    "Resolution 2": 23
+    "Resolution 1": 363,
+    "Resolution 2": 26
    },
    "checks": [
     {
@@ -4099,7 +4199,8 @@
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
-       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat"
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
       ],
       "bad": []
      }
@@ -4115,12 +4216,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 85,
-       "Resolution 2": 23
+       "Resolution 1": 363,
+       "Resolution 2": 26
       },
       "extra": []
      }
@@ -4145,7 +4246,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": -0.0061,
+      "res1_min_y": 0.0,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": false
@@ -4188,13 +4289,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -4219,6 +4320,19 @@
        ],
        "palette": "straw_aged",
        "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.4,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -4735,13 +4849,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -4775,8 +4889,8 @@
    "variant": "stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 480,
-    "Resolution 2": 40,
+    "Resolution 1": 512,
+    "Resolution 2": 60,
     "Geometry": 56,
     "View Geometry": 56,
     "Fire Geometry": 56
@@ -4821,8 +4935,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 480,
-       "Resolution 2": 40,
+       "Resolution 1": 512,
+       "Resolution 2": 60,
        "Geometry": 56,
        "View Geometry": 56,
        "Fire Geometry": 56
@@ -4954,8 +5068,8 @@
    "variant": "row2",
    "pass": true,
    "faces": {
-    "Resolution 1": 276,
-    "Resolution 2": 20,
+    "Resolution 1": 292,
+    "Resolution 2": 30,
     "Geometry": 28,
     "View Geometry": 28,
     "Fire Geometry": 28
@@ -5001,8 +5115,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 276,
-       "Resolution 2": 20,
+       "Resolution 1": 292,
+       "Resolution 2": 30,
        "Geometry": 28,
        "View Geometry": 28,
        "Fire Geometry": 28
@@ -5146,8 +5260,8 @@
    "variant": "stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 390,
-    "Resolution 2": 20,
+    "Resolution 1": 406,
+    "Resolution 2": 30,
     "Geometry": 28,
     "View Geometry": 28,
     "Fire Geometry": 28
@@ -5194,8 +5308,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 390,
-       "Resolution 2": 20,
+       "Resolution 1": 406,
+       "Resolution 2": 30,
        "Geometry": 28,
        "View Geometry": 28,
        "Fire Geometry": 28
@@ -5290,13 +5404,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -5355,8 +5469,8 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 594,
-    "Resolution 2": 80,
+    "Resolution 1": 1120,
+    "Resolution 2": 120,
     "Resolution 3": 6,
     "Geometry": 18,
     "View Geometry": 18,
@@ -5383,13 +5497,13 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
-       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w1.rvmat",
-       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w1.rvmat",
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
        "JP\\common\\materials\\plant\\jp_m_plant_foliage_w1.rvmat",
        "JP\\common\\materials\\plant\\jp_m_plant_foliage_w2.rvmat",
-       "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w1.rvmat",
+       "JP\\common\\materials\\plant\\jp_m_plant_kiku_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
@@ -5406,12 +5520,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 594,
-       "Resolution 2": 80,
+       "Resolution 1": 1120,
+       "Resolution 2": 120,
        "Resolution 3": 6,
        "Geometry": 18,
        "View Geometry": 18,
@@ -5500,10 +5614,12 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_ground_doma_earth_w1": true,
+      "jp_m_ceramic_earthenware_w1": true,
+      "jp_m_ground_leaf_litter_w1": true,
       "jp_m_plant_foliage_w1": true,
       "jp_m_plant_foliage_w2": true,
-      "jp_m_textile_cotton_plain_w1": true
+      "jp_m_plant_kiku_w1": true,
+      "jp_m_straw_rope_w1": true
      }
     },
     {
@@ -5524,43 +5640,29 @@
        "pass": true
       },
       {
-       "material": "jp_m_ceramic_stoneware_dark_w1",
+       "material": "jp_m_ceramic_earthenware_w1",
        "mean_srgb": [
-        76.4,
-        54.2,
-        40.1
+        134.0,
+        98.0,
+        74.0
        ],
-       "palette": "stoneware_dark",
-       "dE76": 1.0,
+       "palette": "earthenware_unglazed",
+       "dE76": 0.0,
        "tolerance": 12,
        "pass": true,
        "masked": true
       },
       {
-       "material": "jp_m_ceramic_stoneware_dark_w2",
+       "material": "jp_m_ground_leaf_litter_w1",
        "mean_srgb": [
-        81.3,
-        58.7,
-        44.4
+        112.0,
+        76.0,
+        52.0
        ],
-       "palette": "stoneware_dark",
-       "dE76": 3.0,
-       "tolerance": 12,
-       "pass": true,
-       "masked": true
-      },
-      {
-       "material": "jp_m_ground_doma_earth_w1",
-       "mean_srgb": [
-        137.0,
-        132.0,
-        128.0
-       ],
-       "palette": "doma_earth",
+       "palette": "leaf_litter_autumn",
        "dE76": 0.0,
        "tolerance": 14,
-       "pass": true,
-       "masked": true
+       "pass": true
       },
       {
        "material": "jp_m_plant_foliage_w1",
@@ -5589,29 +5691,40 @@
        "masked": true
       },
       {
-       "material": "jp_m_textile_cotton_plain_w1",
+       "material": "jp_m_plant_kiku_w1",
        "mean_srgb": [
-        172.8,
-        162.0,
-        136.2
+        196.0,
+        160.0,
+        104.0
        ],
-       "palette": "kinari_cloth",
-       "dE76": 7.6,
-       "tolerance": 12,
+       "palette": "kiku_flower",
+       "dE76": 0.0,
+       "tolerance": 14,
        "pass": true
       },
       {
-       "material": "jp_m_wood_street_dark_w1",
+       "material": "jp_m_straw_rope_w1",
        "mean_srgb": [
-        86.5,
-        58.2,
-        44.1
+        104.5,
+        90.1,
+        68.9
        ],
-       "palette": "timber_street_dark",
-       "dE76": 1.0,
+       "palette": "straw_aged",
+       "dE76": 3.0,
        "tolerance": 14,
-       "pass": true,
-       "masked": true
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w1",
+       "mean_srgb": [
+        33.9,
+        26.0,
+        19.9
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.0,
+       "tolerance": 12,
+       "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
@@ -5642,8 +5755,8 @@
    "variant": "pair",
    "pass": true,
    "faces": {
-    "Resolution 1": 175,
-    "Resolution 2": 20
+    "Resolution 1": 582,
+    "Resolution 2": 28
    },
    "checks": [
     {
@@ -5661,11 +5774,11 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w1.rvmat",
-       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
-       "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w1.rvmat",
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
+       "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\plant\\jp_m_plant_foliage_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
       "bad": []
@@ -5686,8 +5799,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 175,
-       "Resolution 2": 20
+       "Resolution 1": 582,
+       "Resolution 2": 28
       },
       "extra": []
      }
@@ -5729,7 +5842,9 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
-      "jp_m_ground_doma_earth_w1": true,
+      "jp_m_ceramic_earthenware_w1": true,
+      "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_ground_leaf_litter_w2": true,
       "jp_m_plant_foliage_w1": true
      }
     },
@@ -5739,43 +5854,41 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_ceramic_stoneware_dark_w1",
+       "material": "jp_m_ceramic_earthenware_w1",
        "mean_srgb": [
-        76.4,
-        54.2,
-        40.1
+        134.0,
+        98.0,
+        74.0
        ],
-       "palette": "stoneware_dark",
-       "dE76": 1.0,
+       "palette": "earthenware_unglazed",
+       "dE76": 0.0,
        "tolerance": 12,
        "pass": true,
        "masked": true
       },
       {
-       "material": "jp_m_ceramic_stoneware_dark_w2",
+       "material": "jp_m_ground_leaf_litter_w1",
        "mean_srgb": [
-        81.3,
-        58.7,
-        44.4
+        112.0,
+        76.0,
+        52.0
        ],
-       "palette": "stoneware_dark",
-       "dE76": 3.0,
-       "tolerance": 12,
-       "pass": true,
-       "masked": true
-      },
-      {
-       "material": "jp_m_ground_doma_earth_w1",
-       "mean_srgb": [
-        137.0,
-        132.0,
-        128.0
-       ],
-       "palette": "doma_earth",
+       "palette": "leaf_litter_autumn",
        "dE76": 0.0,
        "tolerance": 14,
-       "pass": true,
-       "masked": true
+       "pass": true
+      },
+      {
+       "material": "jp_m_ground_leaf_litter_w2",
+       "mean_srgb": [
+        81.8,
+        54.7,
+        41.2
+       ],
+       "palette": "leaf_litter_autumn",
+       "dE76": 12.4,
+       "tolerance": 14,
+       "pass": true
       },
       {
        "material": "jp_m_plant_foliage_w1",
@@ -5791,17 +5904,16 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_street_dark_w1",
+       "material": "jp_m_wood_sooted_w1",
        "mean_srgb": [
-        86.5,
-        58.2,
-        44.1
+        33.9,
+        26.0,
+        19.9
        ],
-       "palette": "timber_street_dark",
+       "palette": "timber_sooted",
        "dE76": 1.0,
-       "tolerance": 14,
-       "pass": true,
-       "masked": true
+       "tolerance": 12,
+       "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
@@ -5832,8 +5944,8 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 441,
-    "Resolution 2": 70,
+    "Resolution 1": 1108,
+    "Resolution 2": 102,
     "Resolution 3": 6,
     "Geometry": 18,
     "View Geometry": 18,
@@ -5860,12 +5972,14 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w2.rvmat",
-       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\plant\\jp_m_plant_foliage_w1.rvmat",
        "JP\\common\\materials\\plant\\jp_m_plant_foliage_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat",
+       "JP\\common\\materials\\plant\\jp_m_plant_kiku_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
       ],
       "bad": []
@@ -5882,12 +5996,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 441,
-       "Resolution 2": 70,
+       "Resolution 1": 1108,
+       "Resolution 2": 102,
        "Resolution 3": 6,
        "Geometry": 18,
        "View Geometry": 18,
@@ -5976,10 +6090,13 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_ceramic_earthenware_w2": true,
       "jp_m_ground_doma_earth_w2": true,
       "jp_m_ground_leaf_litter_w2": true,
       "jp_m_plant_foliage_w1": true,
-      "jp_m_plant_foliage_w2": true
+      "jp_m_plant_foliage_w2": true,
+      "jp_m_plant_kiku_w2": true,
+      "jp_m_straw_rope_w2": true
      }
     },
     {
@@ -6001,14 +6118,14 @@
        "masked": true
       },
       {
-       "material": "jp_m_ceramic_stoneware_dark_w2",
+       "material": "jp_m_ceramic_earthenware_w2",
        "mean_srgb": [
-        81.3,
-        58.7,
-        44.4
+        119.5,
+        89.7,
+        69.6
        ],
-       "palette": "stoneware_dark",
-       "dE76": 3.0,
+       "palette": "earthenware_unglazed",
+       "dE76": 5.4,
        "tolerance": 12,
        "pass": true,
        "masked": true
@@ -6065,17 +6182,41 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_street_dark_w2",
+       "material": "jp_m_plant_kiku_w2",
        "mean_srgb": [
-        90.5,
-        66.3,
-        53.7
+        165.5,
+        141.2,
+        98.6
        ],
-       "palette": "timber_street_dark",
-       "dE76": 4.9,
+       "palette": "kiku_flower",
+       "dE76": 11.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
        "tolerance": 14,
        "pass": true,
        "masked": true
+      },
+      {
+       "material": "jp_m_wood_sooted_w2",
+       "mean_srgb": [
+        33.0,
+        25.0,
+        18.8
+       ],
+       "palette": "timber_sooted",
+       "dE76": 1.5,
+       "tolerance": 12,
+       "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
@@ -6107,8 +6248,8 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 378,
-    "Resolution 2": 70,
+    "Resolution 1": 651,
+    "Resolution 2": 102,
     "Resolution 3": 6,
     "Geometry": 18,
     "View Geometry": 18,
@@ -6134,12 +6275,12 @@
      "pass": true,
      "detail": {
       "materials": [
-       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_doma_earth_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\plant\\jp_m_plant_foliage_w1.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
       ],
       "bad": []
@@ -6156,12 +6297,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 378,
-       "Resolution 2": 70,
+       "Resolution 1": 651,
+       "Resolution 2": 102,
        "Resolution 3": 6,
        "Geometry": 18,
        "View Geometry": 18,
@@ -6250,6 +6391,7 @@
      "name": "matte library rvmats have the black env map (iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_ceramic_earthenware_w2": true,
       "jp_m_decal_litter_w2": true,
       "jp_m_ground_doma_earth_w2": true,
       "jp_m_ground_leaf_litter_w2": true,
@@ -6262,14 +6404,14 @@
      "pass": true,
      "detail": [
       {
-       "material": "jp_m_ceramic_stoneware_dark_w2",
+       "material": "jp_m_ceramic_earthenware_w2",
        "mean_srgb": [
-        81.3,
-        58.7,
-        44.4
+        119.5,
+        89.7,
+        69.6
        ],
-       "palette": "stoneware_dark",
-       "dE76": 3.0,
+       "palette": "earthenware_unglazed",
+       "dE76": 5.4,
        "tolerance": 12,
        "pass": true,
        "masked": true
@@ -6277,13 +6419,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -6326,17 +6468,16 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_street_dark_w2",
+       "material": "jp_m_wood_sooted_w2",
        "mean_srgb": [
-        90.5,
-        66.3,
-        53.7
+        33.0,
+        25.0,
+        18.8
        ],
-       "palette": "timber_street_dark",
-       "dE76": 4.9,
-       "tolerance": 14,
-       "pass": true,
-       "masked": true
+       "palette": "timber_sooted",
+       "dE76": 1.5,
+       "tolerance": 12,
+       "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
@@ -6911,13 +7052,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -7336,7 +7477,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -7540,13 +7681,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -8135,7 +8276,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -8317,13 +8458,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -8791,13 +8932,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -9297,13 +9438,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -9538,13 +9679,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -9761,13 +9902,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -10007,13 +10148,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -10242,13 +10383,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -11295,13 +11436,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -11484,13 +11625,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -11782,13 +11923,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -12773,13 +12914,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -13179,13 +13320,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -13391,13 +13532,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -13583,13 +13724,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -13876,12 +14017,14 @@
    "variant": "tower",
    "pass": true,
    "faces": {
-    "Resolution 1": 300,
-    "Resolution 2": 88,
-    "Resolution 3": 6,
-    "Geometry": 18,
-    "View Geometry": 18,
-    "Fire Geometry": 18
+    "Resolution 1": 349,
+    "Resolution 2": 176,
+    "Resolution 3": 12,
+    "Geometry": 72,
+    "Memory": 0,
+    "Roadway": 1,
+    "View Geometry": 60,
+    "Fire Geometry": 72
    },
    "checks": [
     {
@@ -13891,9 +14034,11 @@
      "detail": [
       "Fire Geometry",
       "Geometry",
+      "Memory",
       "Resolution 1",
       "Resolution 2",
       "Resolution 3",
+      "Roadway",
       "View Geometry"
      ]
     },
@@ -13921,16 +14066,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG+Memory) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 300,
-       "Resolution 2": 88,
-       "Resolution 3": 6,
-       "Geometry": 18,
-       "View Geometry": 18,
-       "Fire Geometry": 18
+       "Resolution 1": 349,
+       "Resolution 2": 176,
+       "Resolution 3": 12,
+       "Geometry": 72,
+       "Memory": 0,
+       "Roadway": 1,
+       "View Geometry": 60,
+       "Fire Geometry": 72
       },
       "extra": []
      }
@@ -13947,6 +14094,14 @@
        "tol": 0.1,
        "source": "build_list",
        "ok": true
+      },
+      {
+       "name": "deck_y",
+       "expected": 4.9,
+       "measured": 4.9,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
       }
      ]
     },
@@ -13955,8 +14110,8 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": -0.5136,
-      "geo_min_y": -0.5123,
+      "res1_min_y": -0.5128,
+      "geo_min_y": -0.512,
       "bury": 0.52,
       "hung": false
      }
@@ -13966,7 +14121,7 @@
      "name": "Geometry: closed convex components, mass, autocenter=0",
      "pass": true,
      "detail": {
-      "components": 3,
+      "components": 12,
       "problems": {},
       "mass": 60.0
      }
@@ -13976,11 +14131,8 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0052,
-      "pair": [
-       "Component01",
-       "Component02"
-      ]
+      "worst_m": 0.0,
+      "pair": null
      }
     },
     {
@@ -13988,7 +14140,7 @@
      "name": "View Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 3
+      "components": 10
      }
     },
     {
@@ -13996,7 +14148,7 @@
      "name": "Fire Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 3
+      "components": 12
      }
     },
     {
@@ -14004,6 +14156,14 @@
      "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
      "pass": true,
      "detail": []
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 1
+     }
     },
     {
      "id": "C19",
@@ -14240,13 +14400,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -14790,13 +14950,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -15309,13 +15469,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -15487,13 +15647,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -15527,8 +15687,8 @@
    "variant": "chochin",
    "pass": true,
    "faces": {
-    "Resolution 1": 117,
-    "Resolution 2": 12
+    "Resolution 1": 221,
+    "Resolution 2": 24
    },
    "checks": [
     {
@@ -15569,8 +15729,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 117,
-       "Resolution 2": 12
+       "Resolution 1": 221,
+       "Resolution 2": 24
       },
       "extra": []
      }
@@ -15625,13 +15785,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -15788,13 +15948,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -15853,8 +16013,8 @@
    "variant": "crest",
    "pass": true,
    "faces": {
-    "Resolution 1": 117,
-    "Resolution 2": 12
+    "Resolution 1": 221,
+    "Resolution 2": 24
    },
    "checks": [
     {
@@ -15895,8 +16055,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 117,
-       "Resolution 2": 12
+       "Resolution 1": 221,
+       "Resolution 2": 24
       },
       "extra": []
      }
@@ -15951,13 +16111,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -16017,23 +16177,11 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
-  },
-  "BIN": {
-   "pass": true,
-   "detail": {
-    "missing": [],
-    "warning_lines": [],
-    "exit": 0
-   }
-  },
-  "PBO": {
-   "pass": true,
-   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_site.pbo"
   }
  },
  "summary": {
   "models": 81,
   "pass": 81,
-  "classes_in_config": 307
+  "classes_in_config": 312
  }
 }

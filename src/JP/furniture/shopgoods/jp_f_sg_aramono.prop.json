@@ -27,15 +27,15 @@
    "anchor": "floor",
    "budget": "small",
    "faces": {
-    "Resolution 1": 250,
-    "Resolution 2": 24
+    "Resolution 1": 284,
+    "Resolution 2": 6
    },
    "bbox": [
     -0.27,
-    0.27,
+    0.319,
     0.0,
     0.082,
-    -0.12,
+    -0.142,
     0.13
    ],
    "collision": false,
@@ -62,16 +62,16 @@
    "anchor": "floor",
    "budget": "small",
    "faces": {
-    "Resolution 1": 146,
-    "Resolution 2": 24
+    "Resolution 1": 180,
+    "Resolution 2": 6
    },
    "bbox": [
     -0.294,
-    0.309,
+    0.346,
     0.0,
     0.134,
-    -0.249,
-    0.246
+    -0.283,
+    0.265
    ],
    "collision": false,
    "footprint_xz": null,

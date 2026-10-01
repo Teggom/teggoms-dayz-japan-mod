@@ -2433,6 +2433,47 @@
     }
    ],
    "hex": "#A2A39F"
+  },
+  {
+   "id": "earthenware_unglazed",
+   "name": "Unglazed earthenware (suyaki flower pots), dull red-brown",
+   "material": "low-fired unglazed clay pots (ueki-bachi)",
+   "group": "ceramic",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "jp_m_ceramic_earthenware: flower pots and bonsai pots (LIFE_LAYER_ERA #58: unglazed pots only)",
+   "note": "Added 2026-10-01 by FP1. Assumed (general knowledge, no local photo of an Edo flower pot): a dull red-brown low-fired body, darker than roof-tile clay, lighter than stoneware_dark. Judge in game.",
+   "srgb": [
+    134,
+    98,
+    74
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "hex": "#86624A"
+  },
+  {
+   "id": "kiku_flower",
+   "name": "Chrysanthemum flower heads (white, yellow, rust), mean of the atlas",
+   "material": "kiku petals",
+   "group": "plant",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "jp_m_plant_kiku: the potted chrysanthemums (Kyoho kiku fashion, LIFE_LAYER_ERA #58)",
+   "note": "Added 2026-10-01 by FP1. Assumed: three classic Edo kiku colours (white, yellow, rust-red) side by side in u; the entry is their mean. Judge in game.",
+   "srgb": [
+    196,
+    160,
+    104
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 14,
+   "hex": "#C4A068"
   }
  ]
 }

@@ -23,18 +23,18 @@
    "display": "Raked leaf pile with a bamboo broom",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "box",
    "faces": {
-    "Resolution 1": 65,
-    "Resolution 2": 23
+    "Resolution 1": 343,
+    "Resolution 2": 26
    },
    "bbox": [
     -1.289,
     1.342,
-    -0.006,
+    0.0,
     0.16,
     -0.962,
-    1.351
+    1.381
    ],
    "collision": [],
    "footprint_xz": null,
@@ -123,17 +123,17 @@
    "display": "Leaf pile spread by the wind, broom fallen",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "box",
    "faces": {
-    "Resolution 1": 85,
-    "Resolution 2": 23
+    "Resolution 1": 363,
+    "Resolution 2": 26
    },
    "bbox": [
     -2.013,
     1.754,
-    -0.006,
-    0.066,
-    -1.733,
+    0.0,
+    0.069,
+    -1.781,
     1.451
    ],
    "collision": [],
