@@ -1,0 +1,11 @@
+# TIMELOG W2P2 (curved roof jp_p_roof_sori + kumimono brackets)
+
+2026-10-01 12:35:35 | START | W2P2 | sori roof + kumimono | 5h 60% wk 52%
+2026-10-01 12:41:40 | SETUP DONE | W2P2 | kit read: roofs/kawara/core/checks | 5h 65% wk 52%
+2026-10-01 12:42:35 | RESEARCH DONE | W2P2 | parts/W2P2_NOTES.md (GK, no web) | 5h 65% wk 52%
+2026-10-01 12:54:25 | GROUP START | sori | jpparts/sori.py | 5h 65% wk 52%
+2026-10-01 13:05:46 | GROUP DONE | sori | 4 forms x 4 coverings, irimoya hongawara R1 6041 | 5h 9% wk 54%
+2026-10-01 13:05:46 | GROUP START | kumimono | jpparts/kumimono.py | 5h 9% wk 54%
+2026-10-01 13:19:59 | WAITED FOR W2P1 (start) | W2P2 | no wait needed: built offline meanwhile | 5h 15% wk 55%
+2026-10-01 13:19:59 | WAITED FOR W2P1 (end) | W2P2 | W2P1 END 13:19:02 seen | 5h 15% wk 55%
+2026-10-01 13:25:24 | GROUP DONE | kumimono | 5 forms + corner sets + kaerumata/kentozuka; storey.hakama/deck | 5h 17% wk 55%

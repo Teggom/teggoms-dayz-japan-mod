@@ -1,0 +1,766 @@
+{
+ "w2p2_hall": {
+  "faces": {
+   "Resolution 1": 8174,
+   "Resolution 2": 2675,
+   "Resolution 3": 1131,
+   "Geometry": 1013,
+   "Memory": 0,
+   "Roadway": 136,
+   "View Geometry": 1008,
+   "Fire Geometry": 1008
+  },
+  "kumimono": {
+   "form": "degumi",
+   "c": 0.25,
+   "g_out": 0.2625,
+   "bear_y": 3.9275,
+   "keta_y": 4.022,
+   "col_top": 3.1,
+   "top_wall": 3.7725,
+   "t_j": 0.36,
+   "steps": 1
+  },
+  "zfight_resolved": [
+   "zfight.resolve pass: 67 visible pairs, 56 solids moved",
+   "zfight.resolve pass: 30 visible pairs, 22 solids moved"
+  ],
+  "roof": {
+   "form": "irimoya",
+   "covering": "hongawara",
+   "W": 6.824999999999999,
+   "D": 4.55,
+   "ov": 1.6125,
+   "g_out": 0.2625,
+   "bear_y": 3.9275,
+   "t0": 0.42,
+   "t1": 0.8,
+   "p": 1.6,
+   "L": 0.3,
+   "Ls": 2.8000000000000003,
+   "tiers": 2,
+   "spacing": 0.26,
+   "t_j": 0.36,
+   "t_h": 0.27999999999999997,
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ],
+   "missing_materials": [
+    "roof_hiwada",
+    "roof_copper"
+   ],
+   "eave_y": 4.015424077942071,
+   "zr": -2.275,
+   "gov": [
+    0.0,
+    0.0
+   ],
+   "front_ext": 0.0,
+   "curved_rafters": false,
+   "ridge": [
+    [
+     1.1375,
+     6.256347154865148,
+     -2.275
+    ],
+    [
+     5.687499999999999,
+     6.256347154865148,
+     -2.275
+    ]
+   ],
+   "ridge_top_y": 6.581,
+   "curve_depth_m": 0.192,
+   "y_ridge": 6.216,
+   "corner_lift_m": 0.3
+  },
+  "checks": [
+   {
+    "check": "C5 LODs (vanilla house set)",
+    "ok": true,
+    "detail": "Resolution 1 8174, Resolution 2 2675, Resolution 3 1131, Geometry 1013, Memory 0, Roadway 136, View Geometry 1008, Fire Geometry 1008"
+   },
+   {
+    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+    "ok": true,
+    "detail": "8174 / 2675 / 1131"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "153 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "152 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "152 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "C7 walkable floors have Roadway at floor height",
+    "ok": true,
+    "detail": "81/81 samples"
+   },
+   {
+    "check": "C7 Roadway on Geometry (+-3 cm)",
+    "ok": true,
+    "detail": "1930/1930 samples on a Geometry top"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": "open-sided by design (not checked): hall"
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "132 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "160/160 field points within reach of the bed; 4 eave tile sets, 80 fascia boards"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "5612 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "9 library rvmats in the visual LODs, 3 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/192/104; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+    "ok": true,
+    "detail": "0 visible same-facing pairs; 2461 touching (opposite-facing: backface-culled) and 560 covered / drawn-identically pairs not judged"
+   },
+   {
+    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+    "ok": true,
+    "detail": "every interior wall top closed"
+   },
+   {
+    "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+    "ok": true,
+    "detail": "every interior wall panel end closed"
+   },
+   {
+    "check": "S1 hips shared: the front / back and side surfaces meet on every hip (<= 5 mm)",
+    "ok": true,
+    "detail": "44 hip samples, worst 0.0000 m"
+   },
+   {
+    "check": "S2 covering base >= 5 cm over the rafter tops everywhere (eave stack, hidden roof)",
+    "ok": true,
+    "detail": "smallest gap 0.220 m"
+   },
+   {
+    "check": "S3 brackets, columns, walls stay under the rafters (<= 3 cm)",
+    "ok": true,
+    "detail": "3900 vertices under the roof"
+   },
+   {
+    "check": "S4 base rafters bear on the gangyo and the wall keta (<= 1 cm)",
+    "ok": true,
+    "detail": "worst 0.0000 m (gangyo top 3.928, keta top 4.022, g_out 0.263)"
+   }
+  ]
+ },
+ "w2p2_hall_kokera": {
+  "faces": {
+   "Resolution 1": 5564,
+   "Resolution 2": 1822,
+   "Resolution 3": 808,
+   "Geometry": 717,
+   "Memory": 0,
+   "Roadway": 96,
+   "View Geometry": 712,
+   "Fire Geometry": 712
+  },
+  "kumimono": {
+   "form": "mitsudo",
+   "c": 0.25,
+   "g_out": 0.0,
+   "bear_y": 3.685,
+   "keta_y": 3.685,
+   "col_top": 3.1,
+   "top_wall": 3.53,
+   "t_j": 0.34,
+   "steps": 0
+  },
+  "zfight_resolved": [
+   "zfight.resolve pass: 38 visible pairs, 28 solids moved"
+  ],
+  "roof": {
+   "form": "irimoya",
+   "covering": "kokera",
+   "W": 6.824999999999999,
+   "D": 4.55,
+   "ov": 1.45,
+   "g_out": 0.0,
+   "bear_y": 3.685,
+   "t0": 0.4,
+   "t1": 0.9,
+   "p": 1.6,
+   "L": 0.3,
+   "Ls": 3.0,
+   "tiers": 2,
+   "spacing": 0.26,
+   "t_j": 0.34,
+   "t_h": 0.26,
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ],
+   "missing_materials": [
+    "roof_hiwada",
+    "roof_copper"
+   ],
+   "eave_y": 3.839334225154331,
+   "zr": -2.275,
+   "gov": [
+    0.0,
+    0.0
+   ],
+   "front_ext": 0.0,
+   "curved_rafters": false,
+   "ridge": [
+    [
+     1.1375,
+     6.050680379000486,
+     -2.275
+    ],
+    [
+     5.687499999999999,
+     6.050680379000486,
+     -2.275
+    ]
+   ],
+   "ridge_top_y": 6.411,
+   "curve_depth_m": 0.243,
+   "y_ridge": 6.046,
+   "corner_lift_m": 0.3
+  },
+  "checks": [
+   {
+    "check": "C5 LODs (vanilla house set)",
+    "ok": true,
+    "detail": "Resolution 1 5564, Resolution 2 1822, Resolution 3 808, Geometry 717, Memory 0, Roadway 96, View Geometry 712, Fire Geometry 712"
+   },
+   {
+    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+    "ok": true,
+    "detail": "5564 / 1822 / 808"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "105 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "104 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "104 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "C7 walkable floors have Roadway at floor height",
+    "ok": true,
+    "detail": "81/81 samples"
+   },
+   {
+    "check": "C7 Roadway on Geometry (+-3 cm)",
+    "ok": true,
+    "detail": "1322/1322 samples on a Geometry top"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": "open-sided by design (not checked): hall"
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "84 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "no kawara on this building (board / thatch roofs): nothing to seat"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "5171 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "5 library rvmats in the visual LODs, 0 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+    "ok": true,
+    "detail": "0 visible same-facing pairs; 1774 touching (opposite-facing: backface-culled) and 450 covered / drawn-identically pairs not judged"
+   },
+   {
+    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+    "ok": true,
+    "detail": "every interior wall top closed"
+   },
+   {
+    "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+    "ok": true,
+    "detail": "every interior wall panel end closed"
+   },
+   {
+    "check": "S1 hips shared: the front / back and side surfaces meet on every hip (<= 5 mm)",
+    "ok": true,
+    "detail": "44 hip samples, worst 0.0000 m"
+   },
+   {
+    "check": "S2 covering base >= 5 cm over the rafter tops everywhere (eave stack, hidden roof)",
+    "ok": true,
+    "detail": "smallest gap 0.300 m"
+   },
+   {
+    "check": "S3 brackets, columns, walls stay under the rafters (<= 3 cm)",
+    "ok": true,
+    "detail": "2484 vertices under the roof"
+   },
+   {
+    "check": "S4 base rafters bear on the gangyo and the wall keta (<= 1 cm)",
+    "ok": true,
+    "detail": "worst 0.0000 m (gangyo top 3.685, keta top 3.685, g_out 0.000)"
+   }
+  ]
+ },
+ "w2p2_hondo": {
+  "faces": {
+   "Resolution 1": 11259,
+   "Resolution 2": 3023,
+   "Resolution 3": 1183,
+   "Geometry": 893,
+   "Memory": 0,
+   "Roadway": 124,
+   "View Geometry": 888,
+   "Fire Geometry": 888
+  },
+  "kumimono": {
+   "form": "mitesaki",
+   "c": 0.27,
+   "g_out": 0.8505,
+   "bear_y": 4.8774,
+   "keta_y": 5.1836,
+   "col_top": 3.3000000000000003,
+   "top_wall": 4.5501,
+   "t_j": 0.36,
+   "steps": 3
+  },
+  "zfight_resolved": [
+   "zfight.resolve pass: 59 visible pairs, 37 solids moved",
+   "zfight.resolve pass: 17 visible pairs, 13 solids moved",
+   "zfight.resolve pass: 2 visible pairs, 1 solids moved"
+  ],
+  "roof": {
+   "form": "irimoya",
+   "covering": "hongawara",
+   "W": 6.824999999999999,
+   "D": 6.824999999999999,
+   "ov": 2.1505,
+   "g_out": 0.8505,
+   "bear_y": 4.8774,
+   "t0": 0.42,
+   "t1": 0.8,
+   "p": 1.6,
+   "L": 0.3,
+   "Ls": 3.3377999999999997,
+   "tiers": 2,
+   "spacing": 0.26,
+   "t_j": 0.36,
+   "t_h": 0.27999999999999997,
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ],
+   "missing_materials": [
+    "roof_hiwada",
+    "roof_copper"
+   ],
+   "eave_y": 5.0014008779420704,
+   "zr": -3.4124999999999996,
+   "gov": [
+    0.0,
+    0.0
+   ],
+   "front_ext": 0.0,
+   "curved_rafters": false,
+   "ridge": [
+    [
+     1.7062499999999998,
+     8.190914724095917,
+     -3.4124999999999996
+    ],
+    [
+     5.1187499999999995,
+     8.190914724095917,
+     -3.4124999999999996
+    ]
+   ],
+   "ridge_top_y": 8.516,
+   "curve_depth_m": 0.275,
+   "y_ridge": 8.151,
+   "corner_lift_m": 0.3
+  },
+  "checks": [
+   {
+    "check": "C5 LODs (vanilla house set)",
+    "ok": true,
+    "detail": "Resolution 1 11259, Resolution 2 3023, Resolution 3 1183, Geometry 893, Memory 0, Roadway 124, View Geometry 888, Fire Geometry 888"
+   },
+   {
+    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+    "ok": true,
+    "detail": "11259 / 3023 / 1183"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "129 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "128 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "128 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "C7 walkable floors have Roadway at floor height",
+    "ok": true,
+    "detail": "81/81 samples"
+   },
+   {
+    "check": "C7 Roadway on Geometry (+-3 cm)",
+    "ok": true,
+    "detail": "1641/1641 samples on a Geometry top"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": "open-sided by design (not checked): hall"
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "104 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "348/348 field points within reach of the bed; 4 eave tile sets, 64 fascia boards"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "8838 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "10 library rvmats in the visual LODs, 3 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/244/96; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+    "ok": true,
+    "detail": "0 visible same-facing pairs; 2511 touching (opposite-facing: backface-culled) and 564 covered / drawn-identically pairs not judged"
+   },
+   {
+    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+    "ok": true,
+    "detail": "every interior wall top closed"
+   },
+   {
+    "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+    "ok": true,
+    "detail": "every interior wall panel end closed"
+   },
+   {
+    "check": "S1 hips shared: the front / back and side surfaces meet on every hip (<= 5 mm)",
+    "ok": true,
+    "detail": "44 hip samples, worst 0.0000 m"
+   },
+   {
+    "check": "S2 covering base >= 5 cm over the rafter tops everywhere (eave stack, hidden roof)",
+    "ok": true,
+    "detail": "smallest gap 0.220 m"
+   },
+   {
+    "check": "S3 brackets, columns, walls stay under the rafters (<= 3 cm)",
+    "ok": true,
+    "detail": "7608 vertices under the roof"
+   },
+   {
+    "check": "S4 base rafters bear on the gangyo and the wall keta (<= 1 cm)",
+    "ok": true,
+    "detail": "worst 0.0000 m (gangyo top 4.877, keta top 5.184, g_out 0.851)"
+   }
+  ]
+ },
+ "w2p2_shoro": {
+  "faces": {
+   "Resolution 1": 5807,
+   "Resolution 2": 2135,
+   "Resolution 3": 1047,
+   "Geometry": 687,
+   "Memory": 0,
+   "Roadway": 104,
+   "View Geometry": 658,
+   "Fire Geometry": 658
+  },
+  "kumimono": {
+   "form": "degumi",
+   "c": 0.26,
+   "g_out": 0.273,
+   "bear_y": 6.2106,
+   "keta_y": 6.3089,
+   "col_top": 5.35,
+   "top_wall": 6.0494,
+   "t_j": 0.36,
+   "steps": 1
+  },
+  "zfight_resolved": [
+   "zfight.resolve pass: 47 visible pairs, 38 solids moved",
+   "zfight.resolve pass: 18 visible pairs, 18 solids moved"
+  ],
+  "roof": {
+   "form": "irimoya",
+   "covering": "hongawara",
+   "W": 2.73,
+   "D": 2.73,
+   "ov": 1.573,
+   "g_out": 0.273,
+   "bear_y": 6.2106,
+   "t0": 0.42,
+   "t1": 0.8,
+   "p": 1.6,
+   "L": 0.3,
+   "Ls": 2.6999999999999997,
+   "tiers": 2,
+   "spacing": 0.26,
+   "t_j": 0.36,
+   "t_h": 0.27999999999999997,
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ],
+   "missing_materials": [
+    "roof_hiwada",
+    "roof_copper"
+   ],
+   "eave_y": 6.315196877942071,
+   "zr": -1.365,
+   "gov": [
+    0.0,
+    0.0
+   ],
+   "front_ext": 0.0,
+   "curved_rafters": false,
+   "ridge": [
+    [
+     0.6825,
+     8.018556877942071,
+     -1.365
+    ],
+    [
+     2.0475,
+     8.018556877942071,
+     -1.365
+    ]
+   ],
+   "ridge_top_y": 8.294,
+   "curve_depth_m": 0.145,
+   "y_ridge": 7.979,
+   "corner_lift_m": 0.3
+  },
+  "checks": [
+   {
+    "check": "C5 LODs (vanilla house set)",
+    "ok": true,
+    "detail": "Resolution 1 5807, Resolution 2 2135, Resolution 3 1047, Geometry 687, Memory 0, Roadway 104, View Geometry 658, Fire Geometry 658"
+   },
+   {
+    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+    "ok": true,
+    "detail": "5807 / 2135 / 1047"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "108 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "103 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "103 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "C7 walkable floors have Roadway at floor height",
+    "ok": true,
+    "detail": "77/77 samples"
+   },
+   {
+    "check": "C7 Roadway on Geometry (+-3 cm)",
+    "ok": true,
+    "detail": "1428/1428 samples on a Geometry top"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": "open-sided by design (not checked): upper"
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "92 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "108/108 field points within reach of the bed; 4 eave tile sets, 64 fascia boards"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "2503 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "9 library rvmats in the visual LODs, 3 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/144/68; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+    "ok": true,
+    "detail": "0 visible same-facing pairs; 1964 touching (opposite-facing: backface-culled) and 513 covered / drawn-identically pairs not judged"
+   },
+   {
+    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+    "ok": true,
+    "detail": "every interior wall top closed"
+   },
+   {
+    "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+    "ok": true,
+    "detail": "every interior wall panel end closed"
+   },
+   {
+    "check": "S1 hips shared: the front / back and side surfaces meet on every hip (<= 5 mm)",
+    "ok": true,
+    "detail": "44 hip samples, worst 0.0000 m"
+   },
+   {
+    "check": "S2 covering base >= 5 cm over the rafter tops everywhere (eave stack, hidden roof)",
+    "ok": true,
+    "detail": "smallest gap 0.220 m"
+   },
+   {
+    "check": "S3 brackets, columns, walls stay under the rafters (<= 3 cm)",
+    "ok": true,
+    "detail": "2372 vertices under the roof"
+   },
+   {
+    "check": "S4 base rafters bear on the gangyo and the wall keta (<= 1 cm)",
+    "ok": true,
+    "detail": "worst 0.0000 m (gangyo top 6.211, keta top 6.309, g_out 0.273)"
+   }
+  ]
+ }
+}
