@@ -9,3 +9,5 @@
 2026-10-01 16:01:51 | EQUIVALENCE DONE | V1 | checks files old vs new 169/169 byte-identical; solo vs batched 169/169; zfight 169/169 (ray-level run still going) | 5h 44% wk 59%
 2026-10-01 16:03:04 | PUSHED | V1 | 8e1eccc | 5h 45% wk 59%
 2026-10-01 16:24:22 | EQUIVALENCE DONE | V1 | ray level 169/169 identical (C11 escape sets, C17 rays bitwise + slits, C15 bitwise) | 5h 47% wk 59%
+2026-10-01 16:24:28 | PUSHED | V1 | 7dc1921 | 5h 47% wk 59%
+2026-10-01 16:24:29 | END | V1 | done (note: the 16:03 PUSHED line's 5h value 45 was estimated; actual was 44) | 5h 47% wk 59%
