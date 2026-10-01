@@ -3,7 +3,7 @@
  "key": "th_kamigata_4k_cornerr_torir",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "10145/3391/1125",
+ "faces": "10151/3397/1125",
  "door_clear_m": [
   1.46,
   1.06,
@@ -11,18 +11,18 @@
   1.24,
   1.06
  ],
- "checks_n": 58,
+ "checks_n": 61,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 10145, Resolution 2 3391, Resolution 3 1125, Geometry 1335, Memory 0, Roadway 19, View Geometry 1349, Fire Geometry 1325"
+   "detail": "Resolution 1 10151, Resolution 2 3397, Resolution 3 1125, Geometry 1341, Memory 0, Roadway 19, View Geometry 1355, Fire Geometry 1331"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 10145, R2 3391, R3 1125"
+   "detail": "R1 10151, R2 3397, R3 1125"
   },
   {
    "check": "Geometry properties + mass",
@@ -37,17 +37,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "223 components, 0 bad, 0 faces outside components"
+   "detail": "224 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "225 components, 0 bad, 0 faces outside components"
+   "detail": "226 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "221 components, 0 bad, 0 faces outside components"
+   "detail": "222 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -197,22 +197,22 @@
   {
    "check": "C10 DoorsTwin4 reachable from both sides (open)",
    "ok": true,
-   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.75 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
+   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.87 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.43 m"
   },
   {
    "check": "C10 DoorsTwin4 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m"
+   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
   },
   {
    "check": "C10 DoorsTwin5 reachable from both sides (open)",
    "ok": true,
-   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.05 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m"
+   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
   },
   {
    "check": "C10 DoorsTwin5 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.63 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.63 m"
+   "detail": "Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.27 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.40 m"
   },
   {
    "check": "C10 DoorsTwin6 reachable from its leaf side (open)",
@@ -262,12 +262,12 @@
   {
    "check": "C18 DoorsTwin5 pulls on the stub edge (in the doorway when open)",
    "ok": true,
-   "detail": "Kitchen back door (yard): doors7 u 3.53 closed -> 2.43 open, doorway 2.31..3.61"
+   "detail": "Kitchen back door (yard): doors7 u -3.53 closed -> -2.43 open, doorway -3.61..-2.31"
   },
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "toriniwa 9600 rays, 1 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; oku 11520 rays, 0 out through doors/windows, 0 LEAKS; kitchen 11520 rays, 0 out through doors/windows, 0 LEAKS"
+   "detail": "toriniwa 9600 rays, 0 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; oku 11520 rays, 0 out through doors/windows, 0 LEAKS; kitchen 11520 rays, 0 out through doors/windows, 0 LEAKS"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -300,9 +300,24 @@
    "detail": "far-field faces R1/R2/R3 0/291/11; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   },
   {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 3079 touching (opposite-facing: backface-culled) and 378 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 795693 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 797717 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

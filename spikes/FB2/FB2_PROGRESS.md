@@ -13,12 +13,21 @@ Screenshots (test/feedback/2026-10-01_recheck/) read as:
   doma | threshold, dodai | threshold.
 - doorway bottoms: tatami / floor_board / floor_lod | track, dodai | threshold (every family).
 
-## Status
-- [ ] 1 z-fighting: check + resolver written, verifying all 128 (see below)
-- [ ] 2 takahe
-- [ ] 3 partitions
-- [ ] 4 two-storey divider + gaps
-- [ ] 5 world / mission / checks / checklist (after FP2 END)
+## Status: DONE (built, packed, island rebuilt; untested in game)
+- [x] 1 z-fighting: C20 + zfight.resolve; 102,726 visible same-facing pairs before -> 0 in all 128 buildings
+- [x] 2 takahe: verdict below; rebuilt as the plastered gable wall
+- [x] 3 partitions: C21; every partition ends at a beam / closes up (0 open wall tops)
+- [x] 4 grand inn divider closed to the roof + missing posts (C22: 0 free wall ends)
+- [x] 5 after FP2's END (11:54): full pipeline (128 built, binarized, jp_buildings.pbo 78.4 MB, 128/128 pass, 8,574
+  checks, bindcheck 128/128), combos 60/60, build_world (4,090 objects, placecheck verdicts identical to FB1's),
+  build_mission (128 CE groups, the 30 placed groups snap exactly), verify_oprw PASS 4081/4081, TEST_CHECKLIST.md
+  (~10 min). leancheck: the remaining gaps are the gallery wall-hung items (FB1's open note) and site props against
+  exterior walls whose Geometry FB2 did not change (the resolver keeps collision as built).
+
+## Checks added (all in jpparts/buildcheck.run_g3, so every building runs them)
+- C20 no z-fighting (zfight.py), C21 partitions end at a beam or a ceiling (parttop.top_ends), C22 interior wall ends
+  meet a post or a wall (parttop.free_ends). C15 now ignores sub-1 cm slivers (5 jittered rays per column).
+- Machiya 78 -> 81 checks, furnished machiya 137 -> 140, all pass.
 
 ## 1. Z-fighting
 - `parts/kit/jpparts/zfight.py`: `coplanar(M)` finds face pairs of DIFFERENT solids in Resolution 1-3 that lie in one
@@ -39,7 +48,9 @@ Screenshots (test/feedback/2026-10-01_recheck/) read as:
 - BEFORE (visible same-facing pairs / touching pairs / hidden): farmhouse 4,223 / 30,678 / 2,100; furnished 14,655 /
   48,117 / 7,738; hatago 5,264; hut 1,977; kura 405; machiya 1,068; machiya shop 1,068; posttown 8,665; shed 1,186;
   toilet 265; townhouse 63,950. Total 102,726 visible same-facing pairs.
-- Machiya after: 0 visible, 79/79 (78 + C20).
+- AFTER (full pipeline, resolve on): 0 visible same-facing pairs in every building (C20 passes 128/128). The touching
+  (opposite-facing) and covered pairs are left as they are (not visible).
+- Machiya and furnished machiya MLODs change by these few-mm moves + the mid-partition loft beam.
 
 ## 2. The Kinai takahe gable (A_kinai_gable_white_band) - verdict for Stephen's "is that how it looked?"
 **Verdict: no, not as built.** A real yamato-mune (takahe-zukuri) gable has no white band laid along the roof edge of

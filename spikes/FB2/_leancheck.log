@@ -1,0 +1,36 @@
+GAP   machiya_t3_01_shop site            jp_s_tenbin_leaning            (1027.79, 1041.70) gap 0.100 m to machiya_t3_01_shop
+GAP   machiya_t3_01_shop site            jp_s_firewood_stack_wall_1ken_h120 (1027.84, 1047.50) gap 0.212 m to machiya_t3_01_shop
+GAP   f_th_kamigata_3k_middle_komeya site jp_s_firewood_stack_bundle     (999.48, 1091.32) gap 0.034 m to f_th_kamigata_3k_middle_komeya
+GAP   f_pt_det_tile_nuriya_home site     jp_s_sandals_sale_eave         (987.13, 1076.26) gap 0.210 m to f_pt_det_tile_nuriya_home
+GAP   f_inn_std_tile site                jp_s_sandals_sale_eave         (1011.92, 1076.25) gap 0.200 m to f_inn_std_tile
+GAP   f_inn_std_tile site                jp_s_firewood_stack_wall_1ken_h120 (1010.39, 1066.72) gap 0.175 m to f_inn_std_tile
+GAP   f_inn_grand site                   jp_s_shopfront_kanban_stand    (1022.62, 1076.75) gap 0.950 m to f_inn_grand
+GAP   f_inn_grand site                   jp_s_firewood_stack_wall_1ken_h120 (1023.49, 1066.72) gap 0.175 m to f_inn_grand
+GAP   f_farmhouse_kanto site             jp_s_kaki_curtain_1ken         (943.00, 1024.34) gap 0.072 m to f_farmhouse_kanto
+OK    f_farmhouse_kanto site             jp_s_farm_tools_lean           (936.40, 1024.41) gap 0.006 m to f_farmhouse_kanto
+OK    f_farmhouse_kanto site             jp_s_charcoal_bales_stack      (943.20, 1033.56) gap 0.011 m to f_farmhouse_kanto
+OK    f_farmhouse_kinai site             jp_s_kaki_curtain_half         (962.30, 1024.28) gap 0.020 m to f_farmhouse_kinai
+OK    f_farmhouse_kinai site             jp_s_farm_tools_pair           (965.30, 1024.32) gap 0.006 m to f_farmhouse_kinai
+FAR   C3.csv                             jp_s_charcoal_bales_ab_burst   (967.60, 1041.80) nothing behind it within 1.5 m
+FAR   C3.csv                             jp_s_farm_tools_ab_fallen      (939.80, 1008.00) nothing behind it within 1.5 m
+GAP   SH1.csv                            jp_f_mino_pegs                 (1073.92, 1037.76) gap 0.065 m to shed_open_board
+OK    SH1.csv                            jp_f_tool_wall                 (1072.54, 1037.76) gap 0.005 m to shed_open_board
+OK    SH1.csv                            jp_f_utensil_board             (1071.33, 1037.76) gap 0.005 m to shed_open_board
+GAP   SH1.csv                            jp_f_rope_pegs_2               (1070.45, 1037.76) gap 0.065 m to shed_open_board
+GAP   SH1.csv                            jp_f_sandals_hung_wall         (1069.73, 1037.76) gap 0.065 m to shed_open_board
+GAP   SH1.csv                            jp_f_fire_gear                 (1074.66, 1036.60) gap 0.065 m to shed_open_board
+GAP   SH1.csv                            jp_f_koyomi                    (1074.66, 1035.15) gap 0.065 m to shed_open_board
+GAP   SH1.csv                            jp_f_yumi_rack_wall            (1069.34, 1036.55) gap 0.065 m to shed_open_board
+GAP   SH1.csv                            jp_f_bangasa_hung              (1069.34, 1034.95) gap 0.066 m to shed_open_board
+OK    SH1.csv                            jp_f_ofuda_single              (1072.91, 1034.11) gap 0.010 m to shed_open_board
+GAP   SH1.csv                            jp_f_tana_182_3                (1079.00, 1037.76) gap 0.065 m to shed_open_board
+GAP   SH1.csv                            jp_f_tana_182_3                (1081.00, 1037.76) gap 0.065 m to shed_open_board
+GAP   SH1.csv                            jp_f_tana_136_1                (1082.66, 1036.55) gap 0.065 m to shed_open_board
+FAR   SH1.csv                            jp_s_kaki_curtain_1ken         (1089.82, 1034.11) nothing behind it within 1.5 m
+FAR   SH1.csv                            jp_s_sandals_sale_eave         (1088.00, 1034.11) nothing behind it within 1.5 m
+FAR   SH1.csv                            jp_s_bird_cage_hung            (1086.18, 1034.11) nothing behind it within 1.5 m
+OK    SH1.csv                            jp_s_ladder_lean               (1069.20, 1035.40) gap 0.003 m to shed_open_board
+OK    SH1.csv                            jp_s_charcoal_bales_stack      (1069.26, 1037.00) gap 0.005 m to shed_open_board
+OK    SH1.csv                            jp_s_farm_tools_lean           (1090.80, 1036.90) gap 0.000 m to shed_open_board
+OK    SH1.csv                            jp_s_amado_half_open           (1090.80, 1035.10) gap 0.000 m to shed_open_board
+leancheck: 35 wall-anchored objects, 19 with a gap > 0.03 m

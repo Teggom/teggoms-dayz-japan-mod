@@ -3,25 +3,25 @@
  "key": "th_kamigata_2k_endl_toril",
  "date": "2026-09-30",
  "budget": "townhouse",
- "faces": "5959/2311/922",
+ "faces": "5965/2317/922",
  "door_clear_m": [
   1.46,
   1.06,
   1.06,
   1.06
  ],
- "checks_n": 53,
+ "checks_n": 56,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 5959, Resolution 2 2311, Resolution 3 922, Geometry 981, Memory 0, Roadway 16, View Geometry 965, Fire Geometry 971"
+   "detail": "Resolution 1 5965, Resolution 2 2317, Resolution 3 922, Geometry 987, Memory 0, Roadway 16, View Geometry 971, Fire Geometry 977"
   },
   {
    "check": "C5 face budget (townhouse: 9000 / 3450 / 1200)",
    "ok": true,
-   "detail": "R1 5959, R2 2311, R3 922"
+   "detail": "R1 5965, R2 2317, R3 922"
   },
   {
    "check": "Geometry properties + mass",
@@ -36,17 +36,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "164 components, 0 bad, 0 faces outside components"
+   "detail": "165 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "161 components, 0 bad, 0 faces outside components"
+   "detail": "162 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "162 components, 0 bad, 0 faces outside components"
+   "detail": "163 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -261,7 +261,7 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "2816 columns over 2.5 m compared in each LOD"
+   "detail": "2813 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
@@ -274,9 +274,24 @@
    "detail": "far-field faces R1/R2/R3 0/166/5; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   },
   {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 1857 touching (opposite-facing: backface-culled) and 389 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 555824 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 557298 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

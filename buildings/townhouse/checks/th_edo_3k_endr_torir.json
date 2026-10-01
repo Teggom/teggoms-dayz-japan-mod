@@ -3,7 +3,7 @@
  "key": "th_edo_3k_endr_torir",
  "date": "2026-09-30",
  "budget": "townhouse",
- "faces": "6264/2068/847",
+ "faces": "6270/2074/847",
  "door_clear_m": [
   1.46,
   1.06,
@@ -11,18 +11,18 @@
   1.24,
   1.06
  ],
- "checks_n": 58,
+ "checks_n": 61,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 6264, Resolution 2 2068, Resolution 3 847, Geometry 1161, Memory 0, Roadway 17, View Geometry 1121, Fire Geometry 1151"
+   "detail": "Resolution 1 6270, Resolution 2 2074, Resolution 3 847, Geometry 1167, Memory 0, Roadway 17, View Geometry 1127, Fire Geometry 1157"
   },
   {
    "check": "C5 face budget (townhouse: 9000 / 3450 / 1200)",
    "ok": true,
-   "detail": "R1 6264, R2 2068, R3 847"
+   "detail": "R1 6270, R2 2074, R3 847"
   },
   {
    "check": "Geometry properties + mass",
@@ -37,17 +37,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "194 components, 0 bad, 0 faces outside components"
+   "detail": "195 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "187 components, 0 bad, 0 faces outside components"
+   "detail": "188 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "192 components, 0 bad, 0 faces outside components"
+   "detail": "193 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -267,7 +267,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "toriniwa 9600 rays, 1 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; oku 11520 rays, 0 out through doors/windows, 0 LEAKS; kitchen 11520 rays, 0 out through doors/windows, 0 LEAKS"
+   "detail": "toriniwa 9600 rays, 0 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; oku 11520 rays, 0 out through doors/windows, 0 LEAKS; kitchen 11520 rays, 0 out through doors/windows, 0 LEAKS"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -300,9 +300,24 @@
    "detail": "far-field faces R1/R2/R3 0/92/2; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   },
   {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 2030 touching (opposite-facing: backface-culled) and 280 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 558785 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 561203 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

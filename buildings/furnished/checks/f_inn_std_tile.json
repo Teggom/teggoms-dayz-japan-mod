@@ -3,7 +3,7 @@
  "key": "f_inn_std_tile",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "10498/3188/1397",
+ "faces": "10516/3206/1397",
  "door_clear_m": [
   1.46,
   1.06,
@@ -12,18 +12,18 @@
   1.06,
   1.06
  ],
- "checks_n": 124,
+ "checks_n": 127,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 10498, Resolution 2 3188, Resolution 3 1397, Geometry 1584, Memory 0, Roadway 19, View Geometry 1538, Fire Geometry 1574"
+   "detail": "Resolution 1 10516, Resolution 2 3206, Resolution 3 1397, Geometry 1602, Memory 0, Roadway 19, View Geometry 1556, Fire Geometry 1592"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 10498, R2 3188, R3 1397"
+   "detail": "R1 10516, R2 3206, R3 1397"
   },
   {
    "check": "Geometry properties + mass",
@@ -38,17 +38,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "265 components, 0 bad, 0 faces outside components"
+   "detail": "268 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "257 components, 0 bad, 0 faces outside components"
+   "detail": "260 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "263 components, 0 bad, 0 faces outside components"
+   "detail": "266 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -68,7 +68,7 @@
   {
    "check": "C3 grid snap (post nodes on the 0.455 grid)",
    "ok": true,
-   "detail": "34 posts"
+   "detail": "36 posts"
   },
   {
    "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
@@ -351,6 +351,21 @@
    "detail": "far-field faces R1/R2/R3 0/152/2; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   },
   {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 3720 touching (opposite-facing: backface-culled) and 402 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
    "check": "D1 props per room 5-7: toriniwa",
    "ok": true,
    "detail": "5 props: jp_f_tana_091_1, jp_f_oke_bucket, jp_f_debris_straw, jp_f_debris_leaves, jp_f_basket_back, jp_f_sandals_hung_wall"
@@ -593,7 +608,7 @@
   {
    "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
    "ok": true,
-   "detail": "30 collision props checked against 254 building components"
+   "detail": "30 collision props checked against 257 building components"
   },
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
@@ -633,7 +648,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 870672 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 873961 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

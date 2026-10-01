@@ -3,7 +3,7 @@
  "key": "th_edo_3k_endr_toril",
  "date": "2026-09-30",
  "budget": "townhouse",
- "faces": "6182/2138/925",
+ "faces": "6188/2144/925",
  "door_clear_m": [
   1.46,
   1.06,
@@ -11,18 +11,18 @@
   1.24,
   1.06
  ],
- "checks_n": 63,
+ "checks_n": 66,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 6182, Resolution 2 2138, Resolution 3 925, Geometry 1179, Memory 0, Roadway 16, View Geometry 1139, Fire Geometry 1169"
+   "detail": "Resolution 1 6188, Resolution 2 2144, Resolution 3 925, Geometry 1185, Memory 0, Roadway 16, View Geometry 1145, Fire Geometry 1175"
   },
   {
    "check": "C5 face budget (townhouse: 9000 / 3450 / 1200)",
    "ok": true,
-   "detail": "R1 6182, R2 2138, R3 925"
+   "detail": "R1 6188, R2 2144, R3 925"
   },
   {
    "check": "Geometry properties + mass",
@@ -37,17 +37,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "197 components, 0 bad, 0 faces outside components"
+   "detail": "198 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "190 components, 0 bad, 0 faces outside components"
+   "detail": "191 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "195 components, 0 bad, 0 faces outside components"
+   "detail": "196 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -187,12 +187,12 @@
   {
    "check": "C10 DoorsTwin2 reachable from both sides (open)",
    "ok": true,
-   "detail": "Toriniwa -> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.01 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
+   "detail": "Toriniwa -> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.35 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m"
   },
   {
    "check": "C10 DoorsTwin2 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Toriniwa -> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.62 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.32 m"
+   "detail": "Toriniwa -> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.37 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.08 m"
   },
   {
    "check": "C10 DoorsTwin3 reachable from both sides (open)",
@@ -207,12 +207,12 @@
   {
    "check": "C10 DoorsTwin4 reachable from both sides (open)",
    "ok": true,
-   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.43 m"
+   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m"
   },
   {
    "check": "C10 DoorsTwin4 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.58 m"
+   "detail": "Mise <-> oku: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m"
   },
   {
    "check": "C10 DoorsTwin5 reachable from both sides (open)",
@@ -325,9 +325,24 @@
    "detail": "far-field faces R1/R2/R3 0/92/2; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   },
   {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 2199 touching (opposite-facing: backface-culled) and 337 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 563260 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 565175 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

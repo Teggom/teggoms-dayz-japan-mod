@@ -3,7 +3,7 @@
  "key": "farmhouse_kinai_irimoya_board",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "9784/4036/1480",
+ "faces": "9790/4042/1480",
  "door_clear_m": [
   1.46,
   1.06,
@@ -11,18 +11,18 @@
   1.06,
   1.24
  ],
- "checks_n": 83,
+ "checks_n": 86,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 9784, Resolution 2 4036, Resolution 3 1480, Geometry 3196, Memory 0, Roadway 18, View Geometry 3116, Fire Geometry 3146"
+   "detail": "Resolution 1 9790, Resolution 2 4042, Resolution 3 1480, Geometry 3202, Memory 0, Roadway 18, View Geometry 3122, Fire Geometry 3152"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 9784, R2 4036, R3 1480"
+   "detail": "R1 9790, R2 4042, R3 1480"
   },
   {
    "check": "Geometry properties + mass",
@@ -37,17 +37,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "398 components, 0 bad, 0 faces outside components"
+   "detail": "399 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "384 components, 0 bad, 0 faces outside components"
+   "detail": "385 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "389 components, 0 bad, 0 faces outside components"
+   "detail": "390 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -425,9 +425,24 @@
    "detail": "far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   },
   {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 3482 touching (opposite-facing: backface-culled) and 178 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1008974 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1010779 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

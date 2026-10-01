@@ -3,7 +3,7 @@
  "key": "farmhouse_kinai_kirizuma_tile_takahe",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "11036/4466/1536",
+ "faces": "11042/4472/1536",
  "door_clear_m": [
   1.46,
   1.06,
@@ -11,18 +11,18 @@
   1.06,
   1.24
  ],
- "checks_n": 83,
+ "checks_n": 86,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11036, Resolution 2 4466, Resolution 3 1536, Geometry 3350, Memory 0, Roadway 18, View Geometry 3268, Fire Geometry 3298"
+   "detail": "Resolution 1 11042, Resolution 2 4472, Resolution 3 1536, Geometry 3356, Memory 0, Roadway 18, View Geometry 3274, Fire Geometry 3304"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 11036, R2 4466, R3 1536"
+   "detail": "R1 11042, R2 4472, R3 1536"
   },
   {
    "check": "Geometry properties + mass",
@@ -37,17 +37,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "428 components, 0 bad, 0 faces outside components"
+   "detail": "429 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "414 components, 0 bad, 0 faces outside components"
+   "detail": "415 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "419 components, 0 bad, 0 faces outside components"
+   "detail": "420 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -392,7 +392,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "niwa 9600 rays, 0 out through doors/windows, 0 LEAKS; mise 11520 rays, 1 out through doors/windows, 0 LEAKS; daidokoro 9600 rays, 1 out through doors/windows, 0 LEAKS; zashiki 11520 rays, 0 out through doors/windows, 0 LEAKS; nando 11520 rays, 0 out through doors/windows, 0 LEAKS"
+   "detail": "niwa 9600 rays, 0 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; daidokoro 9600 rays, 0 out through doors/windows, 0 LEAKS; zashiki 11520 rays, 0 out through doors/windows, 0 LEAKS; nando 11520 rays, 0 out through doors/windows, 0 LEAKS"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -412,12 +412,12 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "8913 columns over 2.5 m compared in each LOD"
+   "detail": "8843 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "26 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "27 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -425,9 +425,24 @@
    "detail": "far-field faces R1/R2/R3 0/196/2; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
   },
   {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 3694 touching (opposite-facing: backface-culled) and 313 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1092288 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1097578 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

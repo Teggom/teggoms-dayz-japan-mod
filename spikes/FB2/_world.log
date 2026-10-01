@@ -1,0 +1,1395 @@
+terrain: 512x512 at 4.0 m, heights -29.3 .. 177.1 m, DEM vertical scale 0.47, land 1.50 km2
+yard: 2601 vertices, min 25.0000 max 25.0000 (must be exactly 25.0)
+road: 9 pieces, 188 m, height 25.0 -> 40.1 m, max grade 13.0%, deepest cut 8.7 m
+canal: coast at x=1556 on z=900, cut from (1616, 900) to (1446, 903), floor -2.5 m
+pond: centre (800, 905) r=16 m, water level 25.10 m
+placements: 545 rows in test/placements/*.csv
+  placed JP\buildings\machiya\jp_machiya_t3_01_shop.p3d from C.csv at (1024.0, 25.00, 1045.0) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1026.7, 25.00, 1038.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1024.9, 25.00, 1038.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1023.1, 25.00, 1038.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1021.3, 25.00, 1038.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_bench_ab_tipped.p3d from C.csv at (1024.5, 25.00, 1039.9) yaw 0, centre from odol
+  placed JP\site\water\jp_s_fire_tub_open.p3d from C.csv at (1019.5, 25.00, 1039.4) yaw 180, centre from odol
+  placed JP\site\street\jp_s_nobori_ab_tattered.p3d from C.csv at (1020.6, 25.00, 1038.0) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_handcart_load_bales.p3d from C.csv at (1023.0, 25.00, 1035.2) yaw 250, centre from odol
+  placed JP\site\yard\jp_s_tenbin_leaning.p3d from C.csv at (1027.8, 25.00, 1041.7) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_box.p3d from C.csv at (1029.3, 25.00, 1038.4) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_firewood_stack_wall_1ken_h120.p3d from C.csv at (1027.8, 25.00, 1047.5) yaw 90, centre from odol
+  placed JP\site\yard\jp_s_oke_tarai.p3d from C.csv at (1025.4, 25.00, 1050.4) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_oke_teoke.p3d from C.csv at (1024.7, 25.00, 1050.2) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_oke_ab_tipped.p3d from C.csv at (1024.3, 25.00, 1051.0) yaw 220, centre from odol
+  placed JP\site\water\jp_s_well_tsurube_curb_stone.p3d from C.csv at (1026.4, 25.00, 1053.3) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_laundry_pole_load_cloth.p3d from C.csv at (1022.0, 25.00, 1052.3) yaw 180, centre from odol
+  placed JP\site\roadside\jp_s_shimenawa_len_1ken.p3d from C.csv at (1026.4, 24.86, 1053.2) yaw 180, centre from odol
+  placed JP\buildings\toilet\jp_toilet_t1_01.p3d from C.csv at (1021.7, 25.00, 1056.2) yaw 180, centre from odol
+  placed JP\buildings\townhouse\jp_townhouse_kamigata_3ken_endl_toril.p3d from C.csv at (979.0, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\buildings\posttown\jp_posttownhouse_row_endl.p3d from C.csv at (1002.8, 25.00, 1072.4) yaw 0, centre from odol
+  placed JP\buildings\posttown\jp_posttownhouse_row_middle.p3d from C.csv at (997.3, 25.00, 1072.4) yaw 0, centre from odol
+  placed JP\buildings\hut\jp_hut_east_s_earth_mushiro.p3d from C.csv at (933.5, 25.00, 1003.0) yaw 0, centre from odol
+  placed JP\buildings\shed\jp_shed_open_board.p3d from C.csv at (1072.0, 25.00, 1036.0) yaw 180, centre from odol
+  placed JP\buildings\shed\jp_shed_open_board.p3d from C.csv at (1080.0, 25.00, 1036.0) yaw 180, centre from odol
+  placed JP\buildings\shed\jp_shed_open_board.p3d from C.csv at (1088.0, 25.00, 1036.0) yaw 180, centre from odol
+  placed JP\buildings\shed\jp_shed_open_thatch.p3d from C.csv at (941.0, 25.00, 1045.5) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_kamigata_3ken_middle_toril_komeya.p3d from C.csv at (997.7, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (995.7, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (999.5, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (997.7, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_oke_tarai.p3d from C.csv at (996.1, 25.00, 1092.4) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_firewood_stack_bundle.p3d from C.csv at (999.5, 25.00, 1091.3) yaw 0, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_kamigata_2ken_middle_torir_kamiya.p3d from C.csv at (993.0, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (994.0, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (992.1, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_oke_ab_tipped.p3d from C.csv at (992.4, 25.00, 1092.5) yaw 210, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_edo_2ken_middle_torir_gofuku.p3d from C.csv at (1054.6, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1055.6, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1053.7, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\yard\jp_s_oke_tarai.p3d from C.csv at (1053.9, 25.00, 1092.6) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_edo_3ken_cornerr_toril_sakaya.p3d from C.csv at (1059.2, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1057.3, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1061.1, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1059.2, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\water\jp_s_fire_tub_open.p3d from C.csv at (1063.8, 25.00, 1084.2) yaw 270, centre from odol
+  placed JP\site\yard\jp_s_oke_taru_lid.p3d from C.csv at (1057.7, 25.00, 1092.2) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_posttownhouse_det_tilenuriya_home.p3d from C.csv at (988.7, 25.00, 1072.4) yaw 0, centre from odol
+  placed JP\site\street_life\jp_s_sandals_sale_eave.p3d from C.csv at (987.1, 25.45, 1076.3) yaw 0, centre from odol
+  placed JP\site\street\jp_s_bench_1ken.p3d from C.csv at (987.4, 25.00, 1077.0) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (990.7, 25.00, 1077.8) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (986.9, 25.00, 1077.8) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (988.7, 25.00, 1077.8) yaw 0, centre from odol
+  placed JP\site\yard\jp_s_oke_tarai.p3d from C.csv at (990.3, 25.00, 1067.6) yaw 0, centre from odol
+  placed JP\buildings\furnished\jp_hatago_std_tile_furnished.p3d from C.csv at (1013.1, 25.00, 1071.5) yaw 0, centre from odol
+  placed JP\site\street_life\jp_s_sandals_sale_eave.p3d from C.csv at (1011.9, 25.45, 1076.2) yaw 0, centre from odol
+  placed JP\site\street\jp_s_bench_long.p3d from C.csv at (1010.4, 25.00, 1076.9) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1016.9, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1009.5, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1011.3, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1013.1, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1014.9, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\yard\jp_s_firewood_stack_wall_1ken_h120.p3d from C.csv at (1010.4, 25.00, 1066.7) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_hatago_grand_furnished.p3d from C.csv at (1026.2, 25.00, 1071.5) yaw 0, centre from odol
+  placed JP\site\street\jp_s_shopfront_kanban_stand.p3d from C.csv at (1022.6, 25.00, 1076.8) yaw 0, centre from odol
+  placed JP\site\street\jp_s_bench_ab_tipped.p3d from C.csv at (1024.4, 25.00, 1076.8) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1030.0, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1022.6, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1024.4, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1026.2, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1028.0, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\yard\jp_s_firewood_stack_wall_1ken_h120.p3d from C.csv at (1023.5, 25.00, 1066.7) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_farmhouse_kanto_yosemune_umaya_furnished.p3d from C.csv at (942.0, 25.00, 1029.0) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_kaki_curtain_1ken.p3d from C.csv at (943.0, 25.70, 1024.3) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_farm_tools_lean.p3d from C.csv at (936.4, 25.00, 1024.4) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_charcoal_bales_stack.p3d from C.csv at (943.2, 25.00, 1033.6) yaw 0, centre from odol
+  placed JP\buildings\furnished\jp_farmhouse_kinai_kirizuma_tile_takahe_furnished.p3d from C.csv at (963.5, 25.00, 1028.0) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_kaki_curtain_half.p3d from C.csv at (962.3, 25.55, 1024.3) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_farm_tools_pair.p3d from C.csv at (965.3, 25.00, 1024.3) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_hut_east_l_board_furnished.p3d from C.csv at (962.5, 25.00, 1002.5) yaw 0, centre from odol
+  placed JP\buildings\furnished\jp_hut_west_thatch_leanl_furnished.p3d from C.csv at (947.0, 25.00, 1003.0) yaw 0, centre from odol
+  placed JP\buildings\furnished\jp_shed_walled_ishioki_woodshed_furnished.p3d from C.csv at (962.0, 25.00, 1045.5) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_kura_namako_furnished.p3d from C.csv at (1000.0, 25.00, 1097.5) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_kura_kuro_hinged_furnished.p3d from C.csv at (975.0, 25.00, 1041.0) yaw 270, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_edo_3ken_middle_toril_kanamono.p3d from C.csv at (1046.1, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1044.2, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1047.1, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_kamigata_2ken_middle_torir_tabako.p3d from C.csv at (989.2, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (990.3, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_kamigata_3ken_endr_toril_mochiya.p3d from C.csv at (1003.2, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_bench_1ken.p3d from C.csv at (1004.5, 25.00, 1083.0) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1001.3, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1004.2, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_edo_3ken_endl_toril_kusuri.p3d from C.csv at (1040.6, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1038.6, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (1041.5, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_edo_2ken_middle_torir_board_shitate.p3d from C.csv at (1050.8, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (1051.9, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\buildings\furnished\jp_townhouse_kamigata_3ken_middle_toril_kyo_ningyo.p3d from C.csv at (984.6, 25.00, 1087.6) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_slab.p3d from C.csv at (982.6, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C.csv at (985.5, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_kago_ab_tipped.p3d from C3.csv at (1016.0, 25.00, 1079.6) yaw 75, centre from odol
+  placed JP\site\street_life\jp_s_travel_gear_hat_stick.p3d from C3.csv at (1011.2, 25.00, 1080.4) yaw 20, centre from odol
+  placed JP\site\street_life\jp_s_travel_gear_ab_burst.p3d from C3.csv at (1021.5, 25.00, 1080.9) yaw 200, centre from odol
+  placed JP\site\street_life\jp_s_footwear_ab_scattered.p3d from C3.csv at (1026.0, 25.00, 1078.9) yaw 30, centre from odol
+  placed JP\site\street_life\jp_s_tenbin_spill_veg.p3d from C3.csv at (999.8, 25.00, 1079.8) yaw 105, centre from odol
+  placed JP\site\street_life\jp_s_tenbin_spill_fish.p3d from C3.csv at (1051.8, 25.00, 1080.0) yaw 250, centre from odol
+  placed JP\site\street_life\jp_s_lantern_fallen_chochin.p3d from C3.csv at (1006.3, 25.00, 1080.6) yaw 40, centre from odol
+  placed JP\site\street_life\jp_s_lantern_fallen_crushed.p3d from C3.csv at (1047.2, 25.00, 1079.4) yaw 160, centre from odol
+  placed JP\site\street_life\jp_s_amado_fallen.p3d from C3.csv at (993.2, 25.00, 1081.0) yaw 95, centre from odol
+  placed JP\site\street_life\jp_s_stool_ab_tipped.p3d from C3.csv at (1030.6, 25.00, 1079.3) yaw 60, centre from odol
+  placed JP\site\yard\jp_s_handcart_ab_broken.p3d from C3.csv at (1038.5, 25.00, 1080.4) yaw 80, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_small.p3d from C3.csv at (1057.0, 25.00, 1080.3) yaw 10, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d from C3.csv at (986.0, 25.00, 1080.2) yaw 0, centre from odol
+  placed JP\site\street_life\jp_s_fire_watch_ladder_tower.p3d from C3.csv at (1033.0, 25.00, 1086.8) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_fire_watch_rack.p3d from C3.csv at (1028.5, 25.00, 1085.2) yaw 180, centre from odol
+  placed JP\site\roadside\jp_s_kosatsu_std.p3d from C3.csv at (1017.5, 25.00, 1087.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_lantern_sign_tsuji.p3d from C3.csv at (1035.9, 25.00, 1082.9) yaw 180, centre from odol
+  placed JP\site\water\jp_s_fire_tub_full.p3d from C3.csv at (1008.9, 25.00, 1083.2) yaw 0, centre from odol
+  placed JP\site\water\jp_s_fire_tub_ab_scattered.p3d from C3.csv at (1036.1, 25.00, 1089.8) yaw 0, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_bib.p3d from C3.csv at (1011.2, 25.00, 1085.0) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_potted_pair.p3d from C3.csv at (984.6, 25.00, 1076.2) yaw 0, centre from odol
+  placed JP\site\street\jp_s_nobori_ab_tattered.p3d from C3.csv at (1008.0, 25.00, 1077.0) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C3.csv at (978.0, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C3.csv at (979.9, 25.00, 1082.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C3.csv at (996.3, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C3.csv at (998.2, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C3.csv at (1001.9, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\street\jp_s_gutter_board_1ken.p3d from C3.csv at (1003.8, 25.00, 1077.7) yaw 0, centre from odol
+  placed JP\site\yard_life\jp_s_hasa_tiers.p3d from C3.csv at (974.0, 25.00, 1012.0) yaw 90, centre from odol
+  placed JP\site\yard_life\jp_s_hasa_ab_sagged.p3d from C3.csv at (974.0, 25.00, 1019.0) yaw 90, centre from odol
+  placed JP\site\yard_life\jp_s_hasa_low.p3d from C3.csv at (929.0, 25.00, 1011.5) yaw 90, centre from odol
+  placed JP\site\yard\jp_s_straw_stack_nio_cone.p3d from C3.csv at (955.0, 25.00, 1016.0) yaw 0, centre from odol
+  placed JP\site\yard\jp_s_straw_stack_nio_cyl.p3d from C3.csv at (930.5, 25.00, 1036.5) yaw 0, centre from odol
+  placed JP\site\yard\jp_s_straw_stack_stook.p3d from C3.csv at (927.8, 25.00, 1016.5) yaw 0, centre from odol
+  placed JP\site\yard\jp_s_straw_stack_stook.p3d from C3.csv at (928.9, 25.00, 1018.4) yaw 30, centre from odol
+  placed JP\site\yard\jp_s_straw_stack_stook.p3d from C3.csv at (927.6, 25.00, 1020.3) yaw 70, centre from odol
+  placed JP\site\yard\jp_s_straw_stack_ab_slumped.p3d from C3.csv at (970.5, 25.00, 1036.5) yaw 0, centre from odol
+  placed JP\site\yard\jp_s_straw_stack_tawara_stack.p3d from C3.csv at (951.0, 25.00, 1047.5) yaw 0, centre from odol
+  placed JP\site\yard_life\jp_s_scarecrow_kasa.p3d from C3.csv at (977.5, 25.00, 1004.0) yaw 300, centre from odol
+  placed JP\site\yard_life\jp_s_scarecrow_naruko.p3d from C3.csv at (927.8, 25.00, 1005.5) yaw 90, centre from odol
+  placed JP\site\yard\jp_s_laundry_pole_load_kaki.p3d from C3.csv at (952.6, 25.00, 1022.3) yaw 90, centre from odol
+  placed JP\site\yard\jp_s_laundry_pole_load_daikon.p3d from C3.csv at (955.6, 25.00, 1008.0) yaw 0, centre from odol
+  placed JP\site\yard_life\jp_s_kakei_trough.p3d from C3.csv at (953.2, 25.00, 1036.0) yaw 90, centre from odol
+  placed JP\site\water\jp_s_well_hanetsurube_well.p3d from C3.csv at (955.0, 25.00, 1001.0) yaw 0, centre from odol
+  placed JP\site\yard_life\jp_s_stable_yard_tie_post.p3d from C3.csv at (931.0, 25.00, 1021.5) yaw 90, centre from odol
+  placed JP\site\yard_life\jp_s_stable_yard_saddle_rack.p3d from C3.csv at (929.4, 25.00, 1026.0) yaw 90, centre from odol
+  placed JP\site\yard_life\jp_s_stable_yard_trough_stone.p3d from C3.csv at (930.8, 25.00, 1018.5) yaw 90, centre from odol
+  placed JP\site\yard_life\jp_s_charcoal_bales_ab_burst.p3d from C3.csv at (967.6, 25.00, 1041.8) yaw 0, centre from odol
+  placed JP\site\yard_life\jp_s_farm_tools_ab_fallen.p3d from C3.csv at (939.8, 25.00, 1008.0) yaw 20, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_broom.p3d from C3.csv at (947.5, 25.00, 1008.2) yaw 0, centre from odol
+  placed JP\site\yard_life\jp_s_ladder_ab_fallen.p3d from C3.csv at (968.4, 25.00, 1008.6) yaw 60, centre from odol
+  placed JP\site\yard\jp_s_oke_ab_staves.p3d from C3.csv at (944.8, 25.00, 1009.5) yaw 0, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_offer.p3d from C3.csv at (978.3, 25.00, 1029.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_stele_koshin.p3d from C3.csv at (978.3, 25.00, 1031.0) yaw 270, centre from odol
+  placed JP\plants\tree\jp_sakura_01.p3d from F.csv at (985.0, 24.95, 1010.0) yaw 20, centre from odol
+  placed JP\plants\tree\jp_sakura_02.p3d from F.csv at (1063.0, 24.95, 1010.0) yaw 200, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1098.3, 24.95, 958.9) yaw 5, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1089.6, 24.95, 965.6) yaw 348, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1100.7, 24.95, 981.0) yaw 58, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1088.2, 24.95, 975.2) yaw 349, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1106.0, 24.95, 969.4) yaw 274, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1095.9, 24.95, 991.1) yaw 136, centre from odol
+  placed JP\plants\bamboo\jp_bamboo_clump_01.p3d from F.csv at (1106.3, 24.95, 987.3) yaw 328, centre from odol
+  placed JP\common\swatch\jp_swatch_wall.p3d from M.csv at (957.5, 25.00, 1100.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_l.p3d from SH1.csv at (1024.0, 25.00, 1099.5) yaw 180, centre from odol
+  placed JP\site\street\jp_s_nobori_shrine.p3d from SH1.csv at (1018.8, 25.00, 1103.0) yaw 180, centre from odol
+  placed JP\site\street\jp_s_nobori_shrine.p3d from SH1.csv at (1029.2, 25.00, 1103.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_18.p3d from SH1.csv at (1021.0, 25.00, 1122.0) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_18.p3d from SH1.csv at (1027.0, 25.00, 1122.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_stele_group3.p3d from SH1.csv at (1016.6, 25.00, 1125.0) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stele_koshin.p3d from SH1.csv at (1017.2, 25.02, 1127.6) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stele_relief_panel.p3d from SH1.csv at (1017.1, 25.03, 1129.2) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stele_arched.p3d from SH1.csv at (1017.0, 25.05, 1130.7) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stele_round.p3d from SH1.csv at (1015.6, 25.02, 1128.6) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stele_pillar.p3d from SH1.csv at (1015.4, 25.01, 1126.9) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stele_ab_tipped.p3d from SH1.csv at (1015.0, 25.05, 1131.6) yaw 60, centre from odol
+  placed JP\site\roadside\jp_s_stele_natural_slab.p3d from SH1.csv at (1015.1, 25.00, 1123.4) yaw 100, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d from SH1.csv at (1024.0, 25.16, 1136.5) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_chozubachi_large.p3d from SH1.csv at (1019.0, 25.26, 1140.5) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_24.p3d from SH1.csv at (1021.0, 25.36, 1143.5) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_24.p3d from SH1.csv at (1027.0, 25.36, 1143.5) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_square_24.p3d from SH1.csv at (1021.0, 25.59, 1149.5) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_square_24.p3d from SH1.csv at (1027.0, 25.59, 1149.5) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_24_moss.p3d from SH1.csv at (1021.0, 25.82, 1155.5) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_24_moss.p3d from SH1.csv at (1027.0, 25.82, 1155.5) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d from SH1.csv at (1024.0, 26.07, 1161.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_square_24_moss.p3d from SH1.csv at (1021.0, 26.27, 1166.0) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_square_24_moss.p3d from SH1.csv at (1027.0, 26.27, 1166.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_18_moss.p3d from SH1.csv at (1021.0, 26.51, 1172.0) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d from SH1.csv at (1027.0, 26.47, 1172.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_30.p3d from SH1.csv at (1020.8, 26.74, 1178.0) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_30.p3d from SH1.csv at (1027.2, 26.74, 1178.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_joyato.p3d from SH1.csv at (1019.0, 27.01, 1183.0) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_joyato.p3d from SH1.csv at (1029.0, 27.01, 1183.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_oki.p3d from SH1.csv at (1021.8, 27.15, 1184.6) yaw 90, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_oki_moss.p3d from SH1.csv at (1026.2, 27.14, 1184.6) yaw 270, centre from odol
+  placed dz\plants\tree\t_fagussylvatica_3f.p3d from SH1.csv at (1033.0, 28.39, 1198.0) yaw 0, centre from odol
+  placed JP\site\roadside\jp_s_shimenawa_wrap_d06.p3d from SH1.csv at (1033.3, 28.40, 1198.1) yaw 0, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_shinmei.p3d from SH1.csv at (1036.0, 25.39, 1145.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d from SH1.csv at (1038.2, 25.41, 1145.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_shinmei_rope.p3d from SH1.csv at (1036.2, 25.53, 1149.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_stele_natural_slab.p3d from SH1.csv at (1037.8, 25.57, 1149.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d from SH1.csv at (1035.8, 25.69, 1153.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d from SH1.csv at (1038.0, 25.72, 1153.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_s.p3d from SH1.csv at (1036.0, 25.86, 1157.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_stele_round.p3d from SH1.csv at (1037.6, 25.90, 1157.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_s_rope.p3d from SH1.csv at (1036.2, 26.03, 1161.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d from SH1.csv at (1038.5, 26.06, 1161.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_s_rope_shide.p3d from SH1.csv at (1035.8, 26.20, 1165.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_stele_natural_slab.p3d from SH1.csv at (1037.4, 26.24, 1165.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_shinmei_moss.p3d from SH1.csv at (1036.0, 26.37, 1169.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d from SH1.csv at (1038.2, 26.39, 1169.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d from SH1.csv at (1036.2, 26.52, 1173.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_stele_arched.p3d from SH1.csv at (1037.8, 26.56, 1173.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d from SH1.csv at (1035.8, 26.67, 1177.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d from SH1.csv at (1038.0, 26.70, 1177.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_s_moss.p3d from SH1.csv at (1036.0, 26.86, 1181.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_stele_natural_slab.p3d from SH1.csv at (1037.6, 26.91, 1181.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d from SH1.csv at (1036.2, 27.10, 1185.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d from SH1.csv at (1038.5, 27.15, 1185.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_ab_rotted.p3d from SH1.csv at (1035.8, 27.40, 1189.0) yaw 270, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_ab_open.p3d from SH1.csv at (1038.0, 27.43, 1189.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_mini.p3d from SH1.csv at (1037.2, 25.42, 1145.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_mini_rope.p3d from SH1.csv at (1036.7, 26.07, 1161.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_30_moss.p3d from SH1.csv at (1030.8, 29.42, 1206.1) yaw 116, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_ab_toppled.p3d from SH1.csv at (1036.0, 28.84, 1203.6) yaw 331, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_18_moss.p3d from SH1.csv at (1034.3, 30.71, 1213.3) yaw 116, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_kasuga_18_moss.p3d from SH1.csv at (1038.7, 30.28, 1211.2) yaw 296, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_square_24_moss.p3d from SH1.csv at (1037.6, 32.08, 1220.1) yaw 116, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_square_24_moss.p3d from SH1.csv at (1042.0, 31.59, 1217.9) yaw 296, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_ab_leaning.p3d from SH1.csv at (1047.0, 29.09, 1205.5) yaw 195, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d from SH1.csv at (1042.0, 33.65, 1226.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3_wide.p3d from SH1.csv at (1042.0, 34.11, 1227.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_cheek_3.p3d from SH1.csv at (1043.5, 34.11, 1227.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_cheek_3.p3d from SH1.csv at (1040.5, 34.12, 1227.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing_wide.p3d from SH1.csv at (1042.0, 34.59, 1228.5) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3_wide.p3d from SH1.csv at (1042.0, 34.60, 1229.3) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_cheek_3.p3d from SH1.csv at (1043.5, 34.59, 1229.3) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_cheek_3.p3d from SH1.csv at (1040.5, 34.60, 1229.3) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing_wide.p3d from SH1.csv at (1042.0, 35.08, 1230.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3.p3d from SH1.csv at (1042.0, 35.07, 1231.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 35.55, 1231.9) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3.p3d from SH1.csv at (1042.0, 35.56, 1232.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 36.04, 1233.5) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3.p3d from SH1.csv at (1042.0, 36.03, 1234.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 36.51, 1235.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3.p3d from SH1.csv at (1042.0, 36.52, 1235.8) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 36.99, 1236.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3.p3d from SH1.csv at (1042.0, 36.99, 1237.3) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 37.48, 1238.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3.p3d from SH1.csv at (1042.0, 37.48, 1238.8) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 37.96, 1239.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3.p3d from SH1.csv at (1042.0, 37.96, 1240.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 38.43, 1241.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3.p3d from SH1.csv at (1042.0, 38.44, 1241.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 38.91, 1242.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3.p3d from SH1.csv at (1042.0, 38.92, 1243.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 39.39, 1244.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3.p3d from SH1.csv at (1042.0, 39.40, 1244.5) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 39.88, 1245.4) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3.p3d from SH1.csv at (1042.0, 39.87, 1245.8) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 40.36, 1246.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_ab_heaved_rough.p3d from SH1.csv at (1042.0, 40.35, 1247.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 40.83, 1248.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3.p3d from SH1.csv at (1042.0, 40.84, 1248.4) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 41.31, 1249.3) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3.p3d from SH1.csv at (1042.0, 41.32, 1249.8) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 41.80, 1250.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_ab_heaved.p3d from SH1.csv at (1042.0, 41.80, 1251.3) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 42.75, 1253.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_ab_heaved_rough.p3d from SH1.csv at (1042.0, 42.76, 1253.5) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 43.24, 1254.4) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_ab_heaved.p3d from SH1.csv at (1042.0, 43.24, 1254.9) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 44.19, 1256.8) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3.p3d from SH1.csv at (1042.0, 44.20, 1257.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 44.68, 1258.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_6.p3d from SH1.csv at (1042.0, 44.67, 1258.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_cheek_6.p3d from SH1.csv at (1043.0, 44.64, 1258.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_cheek_6.p3d from SH1.csv at (1041.0, 44.71, 1258.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1042.0, 45.64, 1260.4) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_6_wide.p3d from SH1.csv at (1042.0, 45.63, 1260.9) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_myojin.p3d from SH1.csv at (1042.0, 35.91, 1233.8) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_myojin_rope.p3d from SH1.csv at (1042.0, 37.33, 1238.5) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_myojin_rope_shide.p3d from SH1.csv at (1042.0, 39.23, 1244.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_myojin_moss.p3d from SH1.csv at (1042.0, 41.63, 1251.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_myojin_moss_rope.p3d from SH1.csv at (1042.0, 43.04, 1254.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_stone_l.p3d from SH1.csv at (1042.0, 46.64, 1264.0) yaw 180, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d from SH1.csv at (1042.0, 47.94, 1267.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_oki_moss.p3d from SH1.csv at (1040.4, 47.46, 1265.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_lantern_oki_moss.p3d from SH1.csv at (1043.6, 47.32, 1265.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_chozubachi_natural.p3d from SH1.csv at (1045.1, 46.36, 1263.4) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d from SH1.csv at (1058.0, 33.62, 1226.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d from SH1.csv at (1058.0, 33.93, 1227.3) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1058.0, 34.41, 1228.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3_narrow.p3d from SH1.csv at (1058.0, 34.41, 1229.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1058.0, 34.89, 1230.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d from SH1.csv at (1058.0, 34.89, 1230.8) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1058.0, 35.37, 1231.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3_narrow.p3d from SH1.csv at (1058.0, 35.37, 1232.5) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1058.0, 35.85, 1233.4) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d from SH1.csv at (1058.0, 35.85, 1234.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1058.0, 36.33, 1235.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3_narrow.p3d from SH1.csv at (1058.0, 36.33, 1235.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1058.0, 36.81, 1236.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d from SH1.csv at (1058.0, 36.81, 1237.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1058.0, 37.29, 1238.1) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_dressed_3_narrow.p3d from SH1.csv at (1058.0, 37.29, 1238.8) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_stone_steps_landing.p3d from SH1.csv at (1058.0, 37.77, 1239.7) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_myojin_shu.p3d from SH1.csv at (1058.0, 36.15, 1235.2) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_ab_leaning_shu.p3d from SH1.csv at (1062.5, 30.27, 1213.0) yaw 165, centre from odol
+  placed JP\site\shrine\jp_s_torii_wood_mini_shu.p3d from SH1.csv at (1058.0, 38.09, 1241.2) yaw 180, centre from odol
+  placed JP\site\roadside\jp_s_jizo_hut_stone_roof.p3d from SH1.csv at (1058.0, 38.35, 1242.4) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_chozubachi_ab_dry.p3d from SH1.csv at (1055.6, 37.35, 1239.6) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_fallen_stone_quake.p3d from SH1.csv at (1052.0, 26.41, 1172.0) yaw 270, centre from odol
+  placed JP\site\shrine\jp_s_torii_fallen_stone_quake_old.p3d from SH1.csv at (1003.0, 25.48, 1150.0) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_torii_fallen_myojin_typhoon.p3d from SH1.csv at (1008.0, 26.56, 1178.0) yaw 135, centre from odol
+  placed JP\site\shrine\jp_s_torii_fallen_shinmei_rot.p3d from SH1.csv at (1056.0, 27.12, 1188.0) yaw 200, centre from odol
+  placed JP\site\shrine\jp_s_torii_fallen_shu_snapped.p3d from SH1.csv at (1066.0, 27.29, 1190.0) yaw 170, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bohyo_new.p3d from SH1.csv at (990.9, 25.00, 1109.4) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bohyo.p3d from SH1.csv at (992.1, 25.00, 1109.2) yaw 185, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field_mound.p3d from SH1.csv at (994.3, 25.00, 1109.4) yaw 186, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bohyo_s.p3d from SH1.csv at (995.5, 25.00, 1109.4) yaw 171, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_round_s_plain.p3d from SH1.csv at (996.9, 25.00, 1109.8) yaw 170, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_ab_bohyo_rotted.p3d from SH1.csv at (998.0, 25.00, 1109.2) yaw 174, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_round.p3d from SH1.csv at (999.0, 25.00, 1109.9) yaw 190, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (999.0, 25.00, 1110.2) yaw 186, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_round.p3d from SH1.csv at (1001.5, 25.00, 1109.8) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo_child.p3d from SH1.csv at (1002.5, 25.00, 1109.9) yaw 183, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (1002.5, 25.00, 1109.6) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_round.p3d from SH1.csv at (1004.9, 25.00, 1109.9) yaw 170, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1004.9, 25.00, 1110.2) yaw 177, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bohyo_roof.p3d from SH1.csv at (1006.1, 25.00, 1109.3) yaw 188, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1007.0, 25.00, 1109.9) yaw 177, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_round_s_plain.p3d from SH1.csv at (1008.4, 25.00, 1110.0) yaw 172, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field.p3d from SH1.csv at (991.0, 25.00, 1112.6) yaw 192, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field_pair.p3d from SH1.csv at (992.2, 25.00, 1112.7) yaw 182, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bohyo_s.p3d from SH1.csv at (993.4, 25.00, 1112.1) yaw 176, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_ab_bohyo_lean.p3d from SH1.csv at (994.6, 25.00, 1112.0) yaw 176, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (996.9, 25.00, 1112.6) yaw 190, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field_mound.p3d from SH1.csv at (998.0, 25.00, 1112.0) yaw 184, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (999.1, 25.00, 1112.7) yaw 179, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (999.1, 25.00, 1112.4) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1001.5, 25.00, 1112.6) yaw 173, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_round.p3d from SH1.csv at (1002.6, 25.00, 1112.6) yaw 175, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1002.6, 25.00, 1112.9) yaw 173, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_ab_round_lean.p3d from SH1.csv at (1003.8, 25.00, 1112.6) yaw 185, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_s.p3d from SH1.csv at (1004.8, 25.00, 1112.7) yaw 181, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (1004.8, 25.00, 1112.4) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_incense.p3d from SH1.csv at (1004.8, 25.00, 1112.1) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bohyo.p3d from SH1.csv at (1006.1, 25.00, 1111.9) yaw 185, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1008.2, 25.00, 1112.7) yaw 182, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1008.2, 25.00, 1113.0) yaw 182, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (1008.2, 25.00, 1112.3) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_incense.p3d from SH1.csv at (1008.2, 25.00, 1112.0) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_jizo_child.p3d from SH1.csv at (1009.6, 25.00, 1112.6) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field.p3d from SH1.csv at (991.1, 25.00, 1115.1) yaw 185, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (993.2, 25.00, 1115.1) yaw 169, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (994.4, 25.00, 1115.1) yaw 190, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (994.4, 25.00, 1115.4) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_s.p3d from SH1.csv at (995.6, 25.00, 1115.2) yaw 174, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bohyo.p3d from SH1.csv at (996.6, 25.00, 1114.5) yaw 184, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field_pair.p3d from SH1.csv at (997.8, 25.00, 1115.0) yaw 172, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_ab_bohyo_split.p3d from SH1.csv at (998.9, 25.00, 1114.5) yaw 194, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_jizo_child.p3d from SH1.csv at (1001.4, 25.00, 1115.0) yaw 179, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo_child.p3d from SH1.csv at (1002.4, 25.00, 1115.2) yaw 184, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_jizo_child.p3d from SH1.csv at (1003.7, 25.00, 1115.1) yaw 189, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo_child.p3d from SH1.csv at (1004.8, 25.00, 1115.2) yaw 182, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1004.7, 25.00, 1115.5) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (1007.2, 25.00, 1115.1) yaw 168, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_round_s_plain.p3d from SH1.csv at (1008.2, 25.00, 1115.1) yaw 168, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1009.3, 25.00, 1115.2) yaw 188, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1009.3, 25.00, 1115.5) yaw 176, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (991.1, 25.00, 1117.8) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (992.3, 25.00, 1117.7) yaw 183, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_ab_leaning.p3d from SH1.csv at (993.3, 25.00, 1117.7) yaw 193, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (994.5, 25.00, 1117.7) yaw 171, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (994.5, 25.00, 1118.0) yaw 176, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (994.5, 25.00, 1117.4) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_incense.p3d from SH1.csv at (994.5, 25.00, 1117.1) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field.p3d from SH1.csv at (996.8, 25.00, 1117.8) yaw 174, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (997.8, 25.00, 1117.7) yaw 191, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_s.p3d from SH1.csv at (999.0, 25.00, 1117.8) yaw 188, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (998.9, 25.00, 1118.1) yaw 174, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (1001.4, 25.00, 1117.6) yaw 184, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1002.5, 25.00, 1117.8) yaw 187, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1003.8, 25.00, 1117.6) yaw 189, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_jizo_child.p3d from SH1.csv at (1006.0, 25.00, 1117.7) yaw 173, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_s.p3d from SH1.csv at (1007.1, 25.00, 1117.7) yaw 177, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_ab_boat_halo_sunk.p3d from SH1.csv at (1008.3, 25.00, 1117.8) yaw 162, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field_mound.p3d from SH1.csv at (1009.5, 25.00, 1117.0) yaw 173, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d from SH1.csv at (991.1, 25.00, 1120.4) yaw 178, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (992.3, 25.00, 1120.4) yaw 174, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (992.3, 25.00, 1120.7) yaw 177, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (992.3, 25.00, 1120.0) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_incense.p3d from SH1.csv at (992.3, 25.00, 1119.7) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (993.3, 25.00, 1120.4) yaw 183, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (993.3, 25.00, 1120.7) yaw 183, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_pillar_pointed.p3d from SH1.csv at (994.6, 25.00, 1120.5) yaw 178, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (996.9, 25.00, 1120.4) yaw 190, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_ab_bohyo_rotted.p3d from SH1.csv at (997.8, 25.00, 1119.8) yaw 187, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (999.0, 25.00, 1120.4) yaw 189, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (1001.4, 25.00, 1120.4) yaw 182, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1001.4, 25.00, 1120.7) yaw 174, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_ab_board_broken.p3d from SH1.csv at (1002.6, 25.00, 1120.5) yaw 190, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1003.6, 25.00, 1120.5) yaw 173, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1003.6, 25.00, 1120.8) yaw 175, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field.p3d from SH1.csv at (1004.7, 25.00, 1120.4) yaw 185, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (1006.1, 25.00, 1120.4) yaw 185, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1008.3, 25.00, 1120.4) yaw 177, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (1008.3, 25.00, 1120.1) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_incense.p3d from SH1.csv at (1008.3, 25.00, 1119.8) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_s.p3d from SH1.csv at (1009.6, 25.00, 1120.4) yaw 192, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (990.9, 25.00, 1123.0) yaw 192, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (992.0, 25.00, 1123.1) yaw 175, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_gorinto_s.p3d from SH1.csv at (993.4, 25.00, 1123.0) yaw 191, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d from SH1.csv at (995.5, 25.00, 1123.1) yaw 172, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_pillar.p3d from SH1.csv at (996.7, 25.00, 1123.1) yaw 186, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (997.9, 25.00, 1123.1) yaw 172, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (997.9, 25.00, 1123.4) yaw 186, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field_pair.p3d from SH1.csv at (999.1, 25.00, 1123.2) yaw 190, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d from SH1.csv at (1001.5, 25.00, 1123.1) yaw 181, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1002.5, 25.00, 1123.0) yaw 186, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1002.4, 25.00, 1123.3) yaw 179, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_ab_leaning.p3d from SH1.csv at (1003.7, 25.00, 1123.1) yaw 171, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (1004.9, 25.00, 1123.1) yaw 185, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (1004.9, 25.00, 1122.7) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_incense.p3d from SH1.csv at (1004.9, 25.00, 1122.4) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_gorinto_stack.p3d from SH1.csv at (1007.1, 25.00, 1123.1) yaw 184, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_ab_boat_halo_sunk.p3d from SH1.csv at (1008.3, 25.00, 1123.1) yaw 175, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bohyo_s.p3d from SH1.csv at (1009.4, 25.00, 1122.4) yaw 186, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_gorinto_heap.p3d from SH1.csv at (991.0, 25.00, 1125.7) yaw 179, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_gorinto_s.p3d from SH1.csv at (993.3, 25.01, 1125.7) yaw 188, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d from SH1.csv at (994.5, 25.01, 1125.7) yaw 178, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_ab_gorinto_fallen.p3d from SH1.csv at (995.7, 25.00, 1125.7) yaw 173, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_pillar.p3d from SH1.csv at (996.7, 25.01, 1125.7) yaw 176, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (996.7, 25.01, 1125.2) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_hokyointo.p3d from SH1.csv at (998.0, 25.01, 1125.6) yaw 187, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (1001.2, 25.01, 1125.6) yaw 181, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_gorinto_l.p3d from SH1.csv at (1003.2, 25.00, 1125.6) yaw 192, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_ab_hokyointo_broken.p3d from SH1.csv at (1004.8, 25.00, 1125.7) yaw 166, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_boat_halo.p3d from SH1.csv at (1006.0, 25.01, 1125.7) yaw 188, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d from SH1.csv at (1006.0, 25.01, 1126.0) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (1006.0, 25.01, 1125.3) yaw 180, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_field.p3d from SH1.csv at (1007.1, 25.01, 1125.5) yaw 186, centre from odol
+  placed JP\site\grave\jp_s_grave_stones_board.p3d from SH1.csv at (1009.6, 25.01, 1125.7) yaw 168, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_tubes.p3d from SH1.csv at (1009.6, 25.01, 1125.4) yaw 180, centre from odol
+  placed JP\site\shrine\jp_s_chozubachi_small.p3d from SH1.csv at (1012.0, 25.00, 1112.0) yaw 90, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_bucket_rack.p3d from SH1.csv at (1012.2, 25.00, 1109.9) yaw 90, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_rack.p3d from SH1.csv at (1011.9, 25.00, 1114.4) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_m.p3d from SH1.csv at (1012.0, 25.00, 1117.0) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_bib.p3d from SH1.csv at (1012.0, 25.00, 1117.7) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_m.p3d from SH1.csv at (1012.0, 25.00, 1118.4) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_halo.p3d from SH1.csv at (1012.0, 25.00, 1119.2) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_bib.p3d from SH1.csv at (1012.0, 25.00, 1119.9) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_m.p3d from SH1.csv at (1012.0, 25.00, 1120.6) yaw 90, centre from odol
+  placed JP\site\roadside\jp_s_stone_jizo_ab_tipped.p3d from SH1.csv at (1013.2, 25.00, 1121.9) yaw 30, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_ab_fallen.p3d from SH1.csv at (996.4, 25.00, 1113.9) yaw 30, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_ab_fallen.p3d from SH1.csv at (1005.8, 25.00, 1119.0) yaw 200, centre from odol
+  placed JP\site\grave\jp_s_grave_wood_ab_fallen.p3d from SH1.csv at (993.0, 25.00, 1124.2) yaw 110, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d from SH1.csv at (1000.2, 25.00, 1121.0) yaw 0, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d from SH1.csv at (994.8, 25.00, 1126.7) yaw 70, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_small.p3d from SH1.csv at (1000.3, 25.00, 1114.6) yaw 20, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_small.p3d from SH1.csv at (1006.6, 25.00, 1124.1) yaw 150, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_ab_scattered.p3d from SH1.csv at (1004.8, 25.01, 1129.2) yaw 210, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_small.p3d from SH1.csv at (990.0, 25.00, 1118.6) yaw 300, centre from odol
+  placed dz\plants\tree\t_quercusrobur_2f.p3d from SH1.csv at (987.3, 24.98, 1129.6) yaw 40, centre from odol
+  placed JP\furniture\wall\jp_f_mino_pegs.p3d from SH1.csv at (1073.9, 25.05, 1037.8) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_tool_wall.p3d from SH1.csv at (1072.5, 25.05, 1037.8) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_utensil_board.p3d from SH1.csv at (1071.3, 25.05, 1037.8) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_rope_pegs_2.p3d from SH1.csv at (1070.5, 25.05, 1037.8) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_sandals_hung_wall.p3d from SH1.csv at (1069.7, 25.05, 1037.8) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_fire_gear.p3d from SH1.csv at (1074.7, 25.05, 1036.6) yaw 270, centre from odol
+  placed JP\furniture\wall\jp_f_koyomi.p3d from SH1.csv at (1074.7, 25.05, 1035.2) yaw 270, centre from odol
+  placed JP\furniture\tier\jp_f_yumi_rack_wall.p3d from SH1.csv at (1069.3, 25.05, 1036.5) yaw 90, centre from odol
+  placed JP\furniture\wall\jp_f_bangasa_hung.p3d from SH1.csv at (1069.3, 25.05, 1035.0) yaw 90, centre from odol
+  placed JP\furniture\wall\jp_f_ofuda_single.p3d from SH1.csv at (1072.9, 25.05, 1034.1) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_kaya_draped.p3d from SH1.csv at (1073.8, 27.52, 1034.2) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_hoshigaki_3.p3d from SH1.csv at (1070.7, 27.52, 1034.2) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_drying_daikon.p3d from SH1.csv at (1069.8, 27.52, 1034.2) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_noren_inner_2.p3d from SH1.csv at (1072.0, 27.52, 1034.2) yaw 180, centre from odol
+  placed JP\furniture\meal\jp_f_taru_cask.p3d from SH1.csv at (1073.9, 25.05, 1036.8) yaw 180, centre from odol
+  placed JP\furniture\meal\jp_f_charcoal_bale.p3d from SH1.csv at (1073.0, 25.05, 1036.8) yaw 180, centre from odol
+  placed JP\furniture\meal\jp_f_seiro_kama2.p3d from SH1.csv at (1071.8, 25.05, 1036.7) yaw 180, centre from odol
+  placed JP\furniture\meal\jp_f_meal_left_zen.p3d from SH1.csv at (1070.7, 25.05, 1036.3) yaw 180, centre from odol
+  placed JP\furniture\living\jp_f_enza.p3d from SH1.csv at (1071.8, 25.05, 1035.5) yaw 195, centre from odol
+  placed JP\furniture\kitchen\jp_f_tana_182_3.p3d from SH1.csv at (1079.0, 25.05, 1037.8) yaw 180, centre from odol
+  placed JP\furniture\kitchen\jp_f_tana_182_3.p3d from SH1.csv at (1081.0, 25.05, 1037.8) yaw 180, centre from odol
+  placed JP\furniture\kitchen\jp_f_tana_136_1.p3d from SH1.csv at (1082.7, 25.05, 1036.5) yaw 270, centre from odol
+  placed JP\furniture\religious\jp_f_butsu_set_full.p3d from SH1.csv at (1079.5, 26.35, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\religious\jp_f_kamidana_set_offerings.p3d from SH1.csv at (1079.0, 26.35, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\meal\jp_f_tokkuri_pair.p3d from SH1.csv at (1078.4, 26.35, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\work\jp_f_choba_set_desk.p3d from SH1.csv at (1079.5, 25.95, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\work\jp_f_masu_set.p3d from SH1.csv at (1078.8, 25.95, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\meal\jp_f_hiuchi_box.p3d from SH1.csv at (1078.4, 25.95, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\tier\jp_f_tea_matcha.p3d from SH1.csv at (1081.5, 26.35, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\work\jp_f_writing_box.p3d from SH1.csv at (1081.0, 26.35, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\meal\jp_f_basket_zaru.p3d from SH1.csv at (1080.4, 26.35, 1037.6) yaw 180, centre from odol
+  placed JP\furniture\meal\jp_f_tableware_hakozen_stack.p3d from SH1.csv at (1082.5, 25.95, 1036.1) yaw 270, centre from odol
+  placed JP\furniture\meal\jp_f_suribachi_bowl.p3d from SH1.csv at (1082.5, 25.95, 1036.6) yaw 270, centre from odol
+  placed JP\furniture\living\jp_f_sewing_box.p3d from SH1.csv at (1082.5, 25.95, 1037.0) yaw 270, centre from odol
+  placed JP\furniture\religious\jp_f_butsudan_lacquer.p3d from SH1.csv at (1077.7, 25.05, 1037.1) yaw 90, centre from odol
+  placed JP\furniture\living\jp_f_byobu_makura.p3d from SH1.csv at (1078.5, 25.05, 1035.0) yaw 180, centre from odol
+  placed JP\furniture\living\jp_f_clothes_kimono.p3d from SH1.csv at (1080.2, 25.05, 1035.5) yaw 190, centre from odol
+  placed JP\furniture\living\jp_f_goban_go.p3d from SH1.csv at (1081.8, 25.05, 1035.0) yaw 180, centre from odol
+  placed JP\furniture\living\jp_f_toys_koma.p3d from SH1.csv at (1079.0, 25.05, 1036.2) yaw 210, centre from odol
+  placed JP\furniture\living\jp_f_mirror_stand.p3d from SH1.csv at (1081.5, 25.05, 1036.2) yaw 180, centre from odol
+  placed JP\furniture\living\jp_f_shokudai_tall.p3d from SH1.csv at (1077.7, 25.05, 1035.7) yaw 180, centre from odol
+  placed JP\furniture\living\jp_f_straw_bed_pile.p3d from SH1.csv at (1079.7, 25.05, 1036.8) yaw 180, centre from odol
+  placed JP\furniture\wall\jp_f_chochin_crest.p3d from SH1.csv at (1080.0, 27.52, 1034.2) yaw 180, centre from odol
+  placed JP\furniture\living\jp_f_iko_robe.p3d from SH1.csv at (1086.4, 25.05, 1037.5) yaw 180, centre from odol
+  placed JP\furniture\work\jp_f_izaribata.p3d from SH1.csv at (1089.5, 25.05, 1037.2) yaw 180, centre from odol
+  placed JP\furniture\work\jp_f_itoguruma.p3d from SH1.csv at (1088.0, 25.05, 1037.3) yaw 180, centre from odol
+  placed JP\furniture\work\jp_f_straw_work_sandal.p3d from SH1.csv at (1086.2, 25.05, 1036.0) yaw 180, centre from odol
+  placed JP\furniture\work\jp_f_mi.p3d from SH1.csv at (1087.7, 25.05, 1036.2) yaw 180, centre from odol
+  placed JP\furniture\work\jp_f_usu.p3d from SH1.csv at (1089.9, 25.05, 1035.8) yaw 180, centre from odol
+  placed JP\furniture\tier\jp_f_katanakake_stand.p3d from SH1.csv at (1088.8, 25.05, 1034.8) yaw 180, centre from odol
+  placed JP\furniture\tier\jp_f_yoroibitsu.p3d from SH1.csv at (1087.5, 25.05, 1034.9) yaw 180, centre from odol
+  placed JP\furniture\tier\jp_f_manger_trough.p3d from SH1.csv at (1086.0, 25.05, 1035.0) yaw 270, centre from odol
+  placed JP\furniture\tier\jp_f_fallen_leaf_shoji.p3d from SH1.csv at (1089.0, 25.05, 1035.8) yaw 260, centre from odol
+  placed JP\site\yard_life\jp_s_kaki_curtain_1ken.p3d from SH1.csv at (1089.8, 25.52, 1034.1) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_sandals_sale_eave.p3d from SH1.csv at (1088.0, 25.52, 1034.1) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_bird_cage_hung.p3d from SH1.csv at (1086.2, 25.52, 1034.1) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_ladder_lean.p3d from SH1.csv at (1069.2, 25.00, 1035.4) yaw 270, centre from odol
+  placed JP\site\yard_life\jp_s_charcoal_bales_stack.p3d from SH1.csv at (1069.3, 25.00, 1037.0) yaw 270, centre from odol
+  placed JP\site\yard_life\jp_s_farm_tools_lean.p3d from SH1.csv at (1090.8, 25.00, 1036.9) yaw 90, centre from odol
+  placed JP\site\street_life\jp_s_amado_half_open.p3d from SH1.csv at (1090.8, 25.00, 1035.1) yaw 90, centre from odol
+  placed JP\site\street_life\jp_s_travel_gear_set.p3d from SH1.csv at (1068.6, 25.00, 1030.0) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_footwear_pairs.p3d from SH1.csv at (1071.0, 25.00, 1030.3) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_lantern_fallen_chochin.p3d from SH1.csv at (1073.4, 25.00, 1030.0) yaw 160, centre from odol
+  placed JP\site\street_life\jp_s_stool_std.p3d from SH1.csv at (1075.5, 25.00, 1030.3) yaw 200, centre from odol
+  placed JP\site\yard_life\jp_s_tsukimi_stand.p3d from SH1.csv at (1081.0, 25.00, 1030.6) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_potted_stand.p3d from SH1.csv at (1083.2, 25.00, 1030.3) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_stable_yard_tie_post.p3d from SH1.csv at (1085.9, 25.00, 1030.2) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_scarecrow_kasa.p3d from SH1.csv at (1089.0, 25.00, 1030.0) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_fire_watch_rack.p3d from SH1.csv at (1092.4, 25.00, 1030.4) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_hasa_low.p3d from SH1.csv at (1069.4, 25.00, 1025.4) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_kakei_trough.p3d from SH1.csv at (1075.0, 25.00, 1025.4) yaw 180, centre from odol
+  placed JP\site\yard_life\jp_s_leaf_pile_broom.p3d from SH1.csv at (1080.3, 25.00, 1025.0) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_tenbin_spill_boxes.p3d from SH1.csv at (1085.0, 25.00, 1025.2) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_kago_down.p3d from SH1.csv at (1089.8, 25.00, 1025.0) yaw 90, centre from odol
+  placed JP\site\street_life\jp_s_fishnet_poles.p3d from SH1.csv at (1095.6, 25.00, 1023.5) yaw 90, centre from odol
+  placed JP\site\street_life\jp_s_boat_up.p3d from SH1.csv at (1072.5, 25.00, 1020.4) yaw 90, centre from odol
+  placed JP\site\street\jp_s_bench_1ken.p3d from SH1.csv at (1078.2, 25.00, 1030.5) yaw 180, centre from odol
+  placed JP\site\street_life\jp_s_bench_dress_tea.p3d from SH1.csv at (1077.8, 25.43, 1030.5) yaw 180, centre from odol
+objects: 4090 total - trees 3010 (+344 coastal pines), bushes 144, rocks 36, road pieces 9, house 1, pond 1, placements 545
+surfaces: cp_grass 12.1%, cp_grass_tall 6.5%, cp_broadleaf_sparse1 8.9%, cp_rock 4.0%, cp_gravel 67.5%, cp_dirt 1.1%
+route B: TB input set in D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\data\T_terrain\route_b (4090 objects, 321 templates)
+  tile 000_000: cp_gravel, cp_grass
+  tile 001_000: cp_gravel, cp_rock, cp_grass, cp_broadleaf_sparse1, cp_grass_tall
+  tile 002_000: cp_gravel, cp_rock, cp_broadleaf_sparse1, cp_grass, cp_grass_tall
+  tile 003_000: cp_gravel, cp_grass, cp_rock, cp_grass_tall, cp_broadleaf_sparse1
+  tile 004_000: cp_gravel
+  tile 000_001: cp_gravel, cp_grass, cp_grass_tall, cp_broadleaf_sparse1, cp_rock
+  tile 001_001: cp_broadleaf_sparse1, cp_rock, cp_grass, cp_grass_tall, cp_dirt, cp_gravel
+  tile 002_001: cp_broadleaf_sparse1, cp_grass_tall, cp_grass, cp_rock, cp_dirt
+  tile 003_001: cp_gravel, cp_broadleaf_sparse1, cp_grass_tall, cp_grass, cp_rock
+  tile 004_001: cp_gravel
+  tile 000_002: cp_gravel, cp_grass, cp_grass_tall, cp_broadleaf_sparse1
+  tile 001_002: cp_grass, cp_grass_tall, cp_dirt, cp_gravel, cp_broadleaf_sparse1
+  tile 002_002: cp_grass, cp_grass_tall, cp_dirt, cp_gravel, cp_broadleaf_sparse1, cp_rock
+  tile 003_002: cp_gravel, cp_grass_tall, cp_grass, cp_broadleaf_sparse1, cp_rock
+  tile 004_002: cp_gravel
+  tile 000_003: cp_gravel
+  tile 001_003: cp_gravel, cp_grass, cp_grass_tall, cp_broadleaf_sparse1
+  tile 002_003: cp_gravel, cp_grass, cp_grass_tall
+  tile 003_003: cp_gravel
+  tile 004_003: cp_gravel
+  tile 000_004: cp_gravel
+  tile 001_004: cp_gravel
+  tile 002_004: cp_gravel
+  tile 003_004: cp_gravel
+  tile 004_004: cp_gravel
+layers: 5 x 5 tiles of 512 px (1 m/px, 16 px overlap)
+8WVR: D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\src\JP\worlds\testisland\world\japantestisland.wrp (1471682 bytes, 26 materials, 4090 objects + dummy) - read back OK
+CfgConvert -bin config.cpp: exit 0 
+binarize pond: exit 0, 0.5 s, ODOL=True
+binarize world: exit 0, 0.8 s, log data/T_terrain/binarize_world.log
+  binarize: Note: 'CAWorld' is declared, but definition was not found. Creating empty class (source: P:\JP\worlds\testisland\config.cpp)
+  binarize: Note: 'ChernarusPlus' is declared, but definition was not found. Creating empty class (source: P:\JP\worlds\testisland\config.cpp)
+  binarize: 12:14:36.645 ENTITY    (W): dz\structures\residential\houses\house_1w01.p3d: house, config class missing
+  binarize: 12:14:36.655 ENTITY    (W): jp\buildings\machiya\jp_machiya_t3_01_shop.p3d: house, config class missing
+  binarize: 12:14:36.665 ENTITY    (W): jp\site\water\jp_s_well_tsurube_curb_stone.p3d: house, config class missing
+  binarize: 12:14:36.670 ENTITY    (W): jp\buildings\toilet\jp_toilet_t1_01.p3d: house, config class missing
+  binarize: 12:14:36.670 ENTITY    (W): jp\buildings\townhouse\jp_townhouse_kamigata_3ken_endl_toril.p3d: house, config class missing
+  binarize: 12:14:36.675 ENTITY    (W): jp\buildings\posttown\jp_posttownhouse_row_endl.p3d: house, config class missing
+  binarize: 12:14:36.675 ENTITY    (W): jp\buildings\posttown\jp_posttownhouse_row_middle.p3d: house, config class missing
+  binarize: 12:14:36.675 ENTITY    (W): jp\buildings\hut\jp_hut_east_s_earth_mushiro.p3d: house, config class missing
+  binarize: 12:14:36.675 ENTITY    (W): jp\buildings\shed\jp_shed_open_board.p3d: house, config class missing
+  binarize: 12:14:36.675 ENTITY    (W): jp\buildings\shed\jp_shed_open_board.p3d: house, config class missing
+  binarize: 12:14:36.675 ENTITY    (W): jp\buildings\shed\jp_shed_open_board.p3d: house, config class missing
+  binarize: 12:14:36.684 ENTITY    (W): jp\buildings\shed\jp_shed_open_thatch.p3d: house, config class missing
+  binarize: 12:14:36.685 ENTITY    (W): jp\buildings\furnished\jp_townhouse_kamigata_3ken_middle_toril_komeya.p3d: house, config class missing
+  binarize: 12:14:36.688 ENTITY    (W): jp\buildings\furnished\jp_townhouse_kamigata_2ken_middle_torir_kamiya.p3d: house, config class missing
+  binarize: 12:14:36.693 ENTITY    (W): jp\buildings\furnished\jp_townhouse_edo_2ken_middle_torir_gofuku.p3d: house, config class missing
+  binarize: 12:14:36.693 ENTITY    (W): jp\buildings\furnished\jp_townhouse_edo_3ken_cornerr_toril_sakaya.p3d: house, config class missing
+  binarize: 12:14:36.698 ENTITY    (W): jp\buildings\furnished\jp_posttownhouse_det_tilenuriya_home.p3d: house, config class missing
+  binarize: 12:14:36.703 ENTITY    (W): jp\buildings\furnished\jp_hatago_std_tile_furnished.p3d: house, config class missing
+  binarize: 12:14:36.710 ENTITY    (W): jp\buildings\furnished\jp_hatago_grand_furnished.p3d: house, config class missing
+  binarize: 12:14:36.715 ENTITY    (W): jp\buildings\furnished\jp_farmhouse_kanto_yosemune_umaya_furnished.p3d: house, config class missing
+  binarize: 12:14:36.725 ENTITY    (W): jp\buildings\furnished\jp_farmhouse_kinai_kirizuma_tile_takahe_furnished.p3d: house, config class missing
+  binarize: 12:14:36.730 ENTITY    (W): jp\buildings\furnished\jp_hut_east_l_board_furnished.p3d: house, config class missing
+  binarize: 12:14:36.730 ENTITY    (W): jp\buildings\furnished\jp_hut_west_thatch_leanl_furnished.p3d: house, config class missing
+  binarize: 12:14:36.735 ENTITY    (W): jp\buildings\furnished\jp_shed_walled_ishioki_woodshed_furnished.p3d: house, config class missing
+  binarize: 12:14:36.735 ENTITY    (W): jp\buildings\furnished\jp_kura_namako_furnished.p3d: house, config class missing
+  binarize: 12:14:36.735 ENTITY    (W): jp\buildings\furnished\jp_kura_kuro_hinged_furnished.p3d: house, config class missing
+  binarize: 12:14:36.740 ENTITY    (W): jp\buildings\furnished\jp_townhouse_edo_3ken_middle_toril_kanamono.p3d: house, config class missing
+  binarize: 12:14:36.745 ENTITY    (W): jp\buildings\furnished\jp_townhouse_kamigata_2ken_middle_torir_tabako.p3d: house, config class missing
+  binarize config lookups that fell back to defaults: 39 distinct (see log)
+OPRW: OPRW v29 tag 0FNE appId 0, land (128, 128), terrain (512, 512), cell 16.0, 321 models, 25 rvmats, 1518883 bytes
+OPRW object records: 4579 (non-road objects in the 8WVR: 4081)
+navmesh: packed D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\src\JP\worlds\testisland\navmesh\japantestisland.nm (1273872 bytes) - regenerate it after any terrain/object change
+texHeaders.bin: 9973 bytes
+packed 97 files -> D:\DayZ-Server_AI-20260907-MultiMap\@Japan\addons\jp_worlds_testisland.pbo (prefix=JP\worlds\testisland, 7313215 bytes)
+done in 13 s
+placecheck island  (2026-10-01 12:14)
+objects 4105 (checked 450, from cache 3655); load 10.00 s, check 0.18 s
+
+category   objects      ok    FAIL skipped
+building        98      72      26       0
+hanging         32       2      30       0
+plant         3511    3490      21       0
+prop           319      78     241       0
+road             9       4       5       0
+rock           129      70      59       0
+skip             7       0       0       7
+
+FAILURES (382) - every one with its fix in failures.csv
+  by model:  model                            category  problem          n   median      max
+             jp_s_gutter_board_1ken.p3d       prop      sunk/buried     29    0.230    0.230
+             jp_s_stone_steps_landing.p3d     rock      floats          27    0.000    0.037
+             jp_s_grave_stones_boat_halo.p3d  prop      sunk/buried     18    0.050    0.052
+             jp_s_grave_wood_sotoba_x3.p3d    prop      sunk/buried     16    0.153    0.153
+             jp_s_gutter_slab.p3d             prop      sunk/buried     14    0.340    0.340
+             jp_s_grave_stones_board.p3d      prop      sunk/buried     14    0.050    0.052
+             jp_s_grave_wood_tubes.p3d        prop      sunk/buried     11    0.050    0.050
+             b_crataeguslaevigata_2s.p3d      plant     floats          10    0.076    0.175
+             jp_s_jizo_hut_stone_roof.p3d     rock      floats           8    0.005    0.009
+             b_sambucusnigra_2s.p3d           plant     floats           6    0.070    0.146
+             jp_s_grave_wood_incense.p3d      prop      sunk/buried      6    0.040    0.040
+             jp_s_grave_stones_field.p3d      prop      sunk/buried      5    0.141    0.142
+             jp_s_grave_stones_board_s.p3d    prop      sunk/buried      5    0.100    0.100
+             grav_25.p3d                      road      road             4    0.133    0.214
+             jp_s_leaf_pile_small.p3d         building  floats           4    0.050    0.050
+             jp_s_stele_natural_slab.p3d      prop      sunk/buried      4    0.144    0.157
+             jp_s_stone_lantern_square_24_mos hanging   floats           4    0.000    0.000
+             jp_s_grave_stones_round.p3d      prop      sunk/buried      4    0.050    0.050
+             jp_s_grave_stones_jizo_child.p3d prop      sunk/buried      4    0.050    0.050
+             jp_s_grave_stones_board_tall_mos prop      sunk/buried      4    0.050    0.052
+             b_rosacanina_2s.p3d              plant     floats           3    0.051    0.064
+             jp_s_sandals_sale_eave.p3d       prop      floats           3    2.242    2.312
+             jp_s_leaf_pile_ab_scattered.p3d  building  floats           3    0.050    0.050
+             jp_s_stone_jizo_bib.p3d          rock      floats           3    0.135    0.135
+             jp_s_stone_lantern_kasuga_18_mos hanging   floats           3    0.000    0.000
+             jp_s_stone_lantern_oki_moss.p3d  hanging   floats           3    0.000    0.000
+             jp_s_grave_wood_bohyo.p3d        prop      sunk/buried      3    0.206    0.206
+             jp_s_grave_stones_field_mound.p3 prop      sunk/buried      3    0.100    0.100
+             jp_s_grave_wood_bohyo_s.p3d      prop      sunk/buried      3    0.203    0.203
+             jp_s_grave_stones_round_s_plain. prop      sunk/buried      3    0.080    0.080
+             jp_s_grave_stones_boat_halo_chil prop      sunk/buried      3    0.060    0.060
+             jp_s_grave_stones_field_pair.p3d prop      sunk/buried      3    0.122    0.122
+             jp_s_stone_jizo_m.p3d            rock      floats           3    0.135    0.135
+             jp_s_grave_wood_ab_fallen.p3d    prop      sunk/buried      3    0.145    0.146
+             jp_s_kaki_curtain_1ken.p3d       prop      floats           2    1.945    1.945
+             jp_s_lantern_fallen_chochin.p3d  hanging   floats           2    0.000    0.000
+             jp_s_scarecrow_kasa.p3d          prop      sunk/buried      2    0.350    0.350
+             jp_s_stable_yard_tie_post.p3d    prop      sunk/buried      2    0.400    0.400
+             jp_s_leaf_pile_broom.p3d         building  floats           2    0.050    0.050
+             jp_s_stele_koshin.p3d            prop      sunk/buried      2    0.062    0.062
+             jp_s_torii_stone_l.p3d           rock      floats           2    0.507    0.507
+             jp_s_stone_lantern_kasuga_18.p3d hanging   floats           2    0.000    0.000
+             jp_s_stele_arched.p3d            prop      sunk/buried      2    0.070    0.070
+             jp_s_stele_round.p3d             prop      sunk/buried      2    0.104    0.104
+             jp_s_torii_stone_l_rope_shide.p3 rock      floats           2    0.501    0.501
+             jp_s_stone_lantern_kasuga_24.p3d hanging   floats           2    0.000    0.000
+             jp_s_stone_lantern_square_24.p3d hanging   floats           2    0.000    0.000
+             jp_s_stone_lantern_kasuga_24_mos hanging   floats           2    0.000    0.000
+             jp_s_stone_lantern_kasuga_30.p3d hanging   floats           2    0.000    0.000
+             jp_s_stone_lantern_joyato.p3d    hanging   floats           2    0.000    0.000
+             jp_s_stone_steps_landing_wide.p3 rock      floats           2    0.000    0.000
+             jp_s_grave_wood_ab_bohyo_rotted. prop      sunk/buried      2    0.205    0.205
+             jp_s_grave_stones_ab_leaning.p3d prop      sunk/buried      2    0.175    0.175
+             jp_s_grave_stones_ab_boat_halo_s prop      sunk/buried      2    0.237    0.237
+             jp_s_grave_stones_gorinto_s.p3d  prop      sunk/buried      2    0.042    0.042
+             jp_s_grave_stones_pillar.p3d     prop      sunk/buried      2    0.054    0.054
+             jp_f_tana_182_3.p3d              prop      floats           2    0.650    0.650
+             grav_6konec.p3d                  road      road             1    0.119    0.119
+             b_sambucusnigra_1s.p3d           plant     floats           1    0.027    0.027
+             t_quercusrobur_2s.p3d            plant     sunk/buried      1    1.317    1.317
+             rock_apart2.p3d                  rock      floats           1    0.020    0.020
+             jp_s_handcart_load_bales.p3d     building  floats           1    0.044    0.044
+             jp_s_jizo_hut_box.p3d            prop      sunk/buried      1    0.110    0.110
+             jp_s_shimenawa_len_1ken.p3d      prop      floats           1    1.945    1.945
+             jp_s_kaki_curtain_half.p3d       prop      floats           1    1.795    1.795
+             jp_s_kago_ab_tipped.p3d          building  floats           1    0.044    0.044
+             jp_s_travel_gear_ab_burst.p3d    building  floats           1    0.045    0.045
+             jp_s_tenbin_spill_veg.p3d        building  floats           1    0.050    0.050
+             jp_s_tenbin_spill_fish.p3d       building  floats           1    0.050    0.050
+             jp_s_lantern_fallen_crushed.p3d  hanging   floats           1    0.000    0.000
+             jp_s_amado_fallen.p3d            building  floats           1    0.042    0.042
+             jp_s_handcart_ab_broken.p3d      building  floats           1    0.049    0.049
+             jp_s_lantern_sign_tsuji.p3d      hanging   floats           1    0.000    0.000
+             jp_s_straw_stack_ab_slumped.p3d  building  floats           1    0.052    0.052
+             jp_s_stable_yard_trough_stone.p3 prop      sunk/buried      1    0.050    0.050
+             jp_s_ladder_ab_fallen.p3d        building  floats           1    0.049    0.049
+             jp_s_stone_jizo_offer.p3d        rock      floats           1    0.135    0.135
+             jp_s_stele_group3.p3d            prop      sunk/buried      1    0.128    0.128
+             jp_s_stele_relief_panel.p3d      prop      sunk/buried      1    0.058    0.058
+             jp_s_stele_pillar.p3d            prop      sunk/buried      1    0.252    0.252
+             jp_s_stele_ab_tipped.p3d         prop      sunk/buried      1    0.337    0.337
+             jp_s_chozubachi_large.p3d        prop      sunk/buried      1    0.108    0.108
+             jp_s_stone_lantern_ab_hoju_moss. hanging   floats           1    0.000    0.000
+             jp_s_stone_lantern_oki.p3d       hanging   floats           1    0.000    0.000
+             jp_s_shimenawa_wrap_d06.p3d      prop      floats           1    0.733    0.733
+             jp_s_torii_stone_s.p3d           rock      floats           1    0.210    0.210
+             jp_s_torii_stone_s_rope.p3d      rock      floats           1    0.210    0.210
+             jp_s_torii_stone_s_rope_shide.p3 rock      floats           1    0.209    0.209
+             jp_s_torii_stone_s_moss.p3d      rock      floats           1    0.216    0.216
+             jp_s_torii_stone_s_moss_rope_shi rock      floats           1    0.213    0.213
+             jp_s_jizo_hut_ab_open.p3d        prop      sunk/buried      1    0.240    0.240
+             jp_s_torii_wood_mini.p3d         prop      sunk/buried      1    0.069    0.069
+             jp_s_torii_wood_mini_rope.p3d    prop      sunk/buried      1    0.073    0.073
+             jp_s_stone_lantern_kasuga_30_mos hanging   floats           1    0.000    0.000
+             jp_s_stone_lantern_ab_toppled.p3 hanging   floats           1    0.000    0.000
+             jp_s_torii_wood_ab_leaning.p3d   building  sunk/buried      1    0.419    0.419
+             jp_s_stone_steps_dressed_6_wide. rock      floats           1    0.000    0.000
+             jp_s_chozubachi_natural.p3d      prop      sunk/buried      1    0.389    0.389
+             jp_s_torii_wood_ab_leaning_shu.p building  sunk/buried      1    0.490    0.490
+             jp_s_torii_wood_mini_shu.p3d     prop      sunk/buried      1    0.083    0.083
+             jp_s_chozubachi_ab_dry.p3d       prop      sunk/buried      1    0.482    0.482
+             jp_s_torii_fallen_stone_quake.p3 rock      floats           1    0.000    0.000
+             jp_s_torii_fallen_stone_quake_ol rock      floats           1    0.003    0.003
+             jp_s_torii_fallen_myojin_typhoon building  sunk/buried      1    0.415    0.415
+             jp_s_torii_fallen_shinmei_rot.p3 building  sunk/buried      1    0.332    0.332
+             jp_s_torii_fallen_shu_snapped.p3 building  sunk/buried      1    0.336    0.336
+             jp_s_grave_wood_bohyo_new.p3d    prop      sunk/buried      1    0.201    0.201
+             jp_s_grave_wood_bohyo_roof.p3d   prop      sunk/buried      1    0.203    0.203
+             jp_s_grave_wood_ab_bohyo_lean.p3 prop      sunk/buried      1    0.259    0.259
+             jp_s_grave_stones_ab_round_lean. prop      sunk/buried      1    0.189    0.189
+             jp_s_grave_wood_ab_bohyo_split.p prop      sunk/buried      1    0.205    0.205
+             jp_s_grave_stones_pillar_pointed prop      sunk/buried      1    0.050    0.050
+             jp_s_grave_stones_ab_board_broke prop      sunk/buried      1    0.050    0.050
+             jp_s_grave_stones_gorinto_stack. prop      sunk/buried      1    0.040    0.040
+             jp_s_grave_stones_ab_gorinto_fal prop      sunk/buried      1    0.051    0.051
+             jp_s_grave_stones_hokyointo.p3d  prop      sunk/buried      1    0.054    0.054
+             jp_s_grave_stones_gorinto_l.p3d  prop      sunk/buried      1    0.056    0.056
+             jp_s_grave_stones_ab_hokyointo_b prop      sunk/buried      1    0.057    0.057
+             jp_s_chozubachi_small.p3d        prop      sunk/buried      1    0.090    0.090
+             jp_s_grave_wood_bucket_rack.p3d  prop      sunk/buried      1    0.150    0.150
+             jp_s_grave_wood_rack.p3d         prop      sunk/buried      1    0.200    0.200
+             jp_s_stone_jizo_halo.p3d         rock      floats           1    0.121    0.121
+             jp_s_stone_jizo_ab_tipped.p3d    rock      floats           1    0.003    0.003
+             jp_f_mino_pegs.p3d               prop      floats           1    0.533    0.533
+             jp_f_tool_wall.p3d               prop      floats           1    0.940    0.940
+             jp_f_utensil_board.p3d           prop      floats           1    1.082    1.082
+             jp_f_rope_pegs_2.p3d             prop      floats           1    1.158    1.158
+             jp_f_sandals_hung_wall.p3d       prop      floats           1    1.358    1.358
+             jp_f_fire_gear.p3d               prop      floats           1    1.260    1.260
+             jp_f_koyomi.p3d                  prop      floats           1    1.376    1.376
+             jp_f_yumi_rack_wall.p3d          prop      floats           1    0.600    0.600
+             jp_f_bangasa_hung.p3d            prop      floats           1    0.740    0.740
+             jp_f_ofuda_single.p3d            prop      floats           1    1.640    1.640
+             jp_f_kaya_draped.p3d             prop      floats           1    1.970    1.970
+             jp_f_hoshigaki_3.p3d             prop      floats           1    1.524    1.524
+             jp_f_drying_daikon.p3d           prop      floats           1    2.083    2.083
+             jp_f_tana_136_1.p3d              prop      floats           1    0.650    0.650
+             jp_f_butsu_set_full.p3d          prop      floats           1    1.300    1.300
+             jp_f_kamidana_set_offerings.p3d  prop      floats           1    1.300    1.300
+             jp_f_tokkuri_pair.p3d            prop      floats           1    1.300    1.300
+             jp_f_choba_set_desk.p3d          prop      floats           1    0.900    0.900
+             jp_f_masu_set.p3d                prop      floats           1    0.900    0.900
+             jp_f_hiuchi_box.p3d              prop      floats           1    0.900    0.900
+             jp_f_tea_matcha.p3d              prop      floats           1    1.299    1.299
+             jp_f_writing_box.p3d             prop      floats           1    1.351    1.351
+             jp_f_basket_zaru.p3d             prop      floats           1    1.299    1.299
+             jp_f_tableware_hakozen_stack.p3d prop      floats           1    0.950    0.950
+             jp_f_suribachi_bowl.p3d          prop      floats           1    0.900    0.900
+             jp_f_sewing_box.p3d              prop      floats           1    0.900    0.900
+             jp_s_bird_cage_hung.p3d          prop      sunk/buried      1    0.456    0.456
+             jp_s_tenbin_spill_boxes.p3d      building  floats           1    0.050    0.050
+             jp_s_boat_up.p3d                 building  floats           1    0.050    0.050
+             jp_s_bench_dress_tea.p3d         prop      floats           1    0.430    0.430
+             jp_efftest_medium_tansu_ransacke building  floats           1    0.035    0.035
+  worst 40:
+  jp_s_sandals_sale_eave.p3d prop      (1088.00, 27.529, 1033.92) floats 2.312 m, side right (W), fix dy -2.309
+  jp_s_sandals_sale_eave.p3d prop      (987.13, 27.459, 1076.45) floats 2.242 m, side right (E), fix dy -2.239
+  jp_s_sandals_sale_eave.p3d prop      (1011.92, 27.459, 1076.44) floats 2.242 m, side right (E), fix dy -2.239
+  jp_f_drying_daikon.p3d     prop      (1069.85, 27.301, 1034.18) floats 2.083 m, side left (E), fix dy -2.083
+  jp_f_kaya_draped.p3d       prop      (1073.82, 27.245, 1034.18) floats 1.970 m, side left (E), fix dy -1.970
+  jp_s_shimenawa_len_1ken.p3 prop      (1026.40, 27.170, 1053.20) floats 1.945 m, side centre, fix dy -1.945
+  jp_s_kaki_curtain_1ken.p3d prop      (943.00, 27.529, 1024.15) floats 1.945 m, side left (E), fix dy -1.945
+  jp_s_kaki_curtain_half.p3d prop      (962.30, 27.379, 1024.09) floats 1.795 m, side front-left (SE), fix dy -1.795
+  jp_s_kaki_curtain_1ken.p3d prop      (1089.82, 27.349, 1033.92) floats 1.765 m, side left (E), fix dy -1.765
+  jp_f_ofuda_single.p3d      prop      (1072.91, 26.750, 1034.11) floats 1.640 m, side centre, fix dy -1.640
+  jp_f_hoshigaki_3.p3d       prop      (1070.65, 27.022, 1034.18) floats 1.524 m, side left (E), fix dy -1.524
+  jp_f_koyomi.p3d            prop      (1074.66, 26.600, 1035.15) floats 1.376 m, side left (S), fix dy -1.376
+  jp_f_sandals_hung_wall.p3d prop      (1069.74, 26.570, 1037.69) floats 1.358 m, side right (W), fix dy -1.356
+  jp_f_writing_box.p3d       prop      (1080.79, 26.377, 1037.61) floats 1.351 m, side back (N), fix dy -1.326 pitch -0.0 roll -0.0
+  t_quercusrobur_2s.p3d      plant     (1310.81, 87.129, 1604.60) buried: terrain 1.317 m above its ground line, side back (SE), fix dy +1.317
+  jp_f_butsu_set_full.p3d    prop      (1079.53, 26.485, 1037.58) floats 1.300 m, side left (E), fix dy -1.300
+  jp_f_kamidana_set_offering prop      (1078.95, 26.485, 1037.61) floats 1.300 m, side left (E), fix dy -1.300
+  jp_f_tokkuri_pair.p3d      prop      (1078.42, 26.440, 1037.61) floats 1.300 m, side back-left (NE), fix dy -1.300
+  jp_f_tea_matcha.p3d        prop      (1081.55, 26.408, 1037.61) floats 1.299 m, side back-left (NE), fix dy -1.299
+  jp_f_basket_zaru.p3d       prop      (1080.40, 26.391, 1037.61) floats 1.299 m, side left (E), fix dy -1.299
+  jp_f_fire_gear.p3d         prop      (1074.51, 26.715, 1036.66) floats 1.260 m, side right (N), fix dy -1.260
+  jp_f_rope_pegs_2.p3d       prop      (1070.44, 26.450, 1037.68) floats 1.158 m, side right (W), fix dy -1.156
+  jp_f_utensil_board.p3d     prop      (1071.33, 26.365, 1037.70) floats 1.082 m, side left (E), fix dy -1.081
+  jp_f_tableware_hakozen_sta prop      (1082.52, 26.250, 1036.13) floats 0.950 m, side back-right (NE), fix dy -0.925
+  jp_f_tool_wall.p3d         prop      (1072.54, 26.365, 1037.69) floats 0.940 m, side right (W), fix dy -0.940
+  jp_f_choba_set_desk.p3d    prop      (1079.46, 25.989, 1037.57) floats 0.900 m, side left (E), fix dy -0.900
+  jp_f_masu_set.p3d          prop      (1078.71, 25.991, 1037.56) floats 0.900 m, side left (E), fix dy -0.900
+  jp_f_hiuchi_box.p3d        prop      (1078.38, 25.998, 1037.61) floats 0.900 m, side back-left (NE), fix dy -0.900
+  jp_f_suribachi_bowl.p3d    prop      (1082.52, 26.123, 1036.60) floats 0.900 m, side left (S), fix dy -0.900
+  jp_f_sewing_box.p3d        prop      (1082.51, 26.135, 1037.00) floats 0.900 m, side back-left (SE), fix dy -0.900
+  jp_f_bangasa_hung.p3d      prop      (1069.40, 26.365, 1034.95) floats 0.740 m, side centre, fix dy -0.740
+  jp_s_shimenawa_wrap_d06.p3 prop      (1033.33, 29.665, 1198.18) floats 0.733 m, side front (N), fix dy -0.732
+  jp_f_tana_182_3.p3d        prop      (1079.00, 25.050, 1037.76) floats 0.650 m, side left (E), fix dy -0.650
+  jp_f_tana_182_3.p3d        prop      (1081.00, 25.050, 1037.76) floats 0.650 m, side left (E), fix dy -0.650
+  jp_f_tana_136_1.p3d        prop      (1082.66, 25.050, 1036.55) floats 0.650 m, side left (S), fix dy -0.650
+  jp_f_yumi_rack_wall.p3d    prop      (1069.39, 26.270, 1036.55) floats 0.600 m, side right (S), fix dy -0.600
+  jp_f_mino_pegs.p3d         prop      (1073.95, 26.133, 1037.66) floats 0.533 m, side right (W), fix dy -0.531
+  jp_s_torii_stone_l.p3d     rock      (1024.00, 25.000, 1099.50) base not sunk: highest contact point +0.507 m vs soil (needs <= -0.05), side left (E), fix dy -0.557
+  jp_s_torii_stone_l_rope_sh rock      (1024.00, 25.158, 1136.50) base not sunk: highest contact point +0.501 m vs soil (needs <= -0.05), side left (E), fix dy -0.551
+  jp_s_torii_wood_ab_leaning building  (1062.50, 30.275, 1213.00) terrain 0.490 m above its ground line, side right (W), fix dy +0.190
+
+DROP-IN OBJECTS (test/placements + test/spawns), pass or fail. gap = bottom - support at the worst contact
+point (+ floats, - sunk); bc_y = the model's boundingCenter.y (the spawner-origin caveat in the docstring).
+  jp_machiya_t3_01_shop.p3d      building  test\placements\C.csv:2    (1024.00, 25.000, 1045.00) highest -0.119 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:3    (1026.73, 25.000, 1038.80) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:4    (1024.91, 25.000, 1038.80) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:5    (1023.09, 25.000, 1038.80) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:6    (1021.27, 25.000, 1038.80) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_bench_ab_tipped.p3d       prop      test\placements\C.csv:7    (1024.45, 25.000, 1039.90) highest +0.004 lowest +0.003 bc_y 0.000 -> ok
+  jp_s_fire_tub_open.p3d         skip      test\placements\C.csv:8    (1019.45, 25.000, 1039.40) highest +nan lowest +nan bc_y 0.000 -> not checked
+  jp_s_nobori_ab_tattered.p3d    building  test\placements\C.csv:9    (1020.60, 25.000, 1038.00) highest -0.101 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_handcart_load_bales.p3d   building  test\placements\C.csv:10   (1023.00, 25.000, 1035.20) highest +0.044 lowest +0.003 embed 0.000 bc_y 0.000 -> floats 0.044 m
+  jp_s_tenbin_leaning.p3d        prop      test\placements\C.csv:11   (1027.79, 25.000, 1041.70) highest +0.005 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_jizo_hut_box.p3d          prop      test\placements\C.csv:12   (1029.30, 25.000, 1038.40) highest -0.110 lowest -0.110 bc_y 0.000 -> sunk 0.110 m
+  jp_s_firewood_stack_wall_1ken_ prop      test\placements\C.csv:13   (1027.84, 25.000, 1047.50) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_oke_tarai.p3d             prop      test\placements\C.csv:14   (1025.40, 25.000, 1050.40) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_oke_teoke.p3d             prop      test\placements\C.csv:15   (1024.70, 25.000, 1050.20) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_oke_ab_tipped.p3d         prop      test\placements\C.csv:16   (1024.35, 25.000, 1050.95) highest +0.004 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_well_tsurube_curb_stone.p skip      test\placements\C.csv:17   (1026.40, 25.000, 1053.30) highest +nan lowest +nan bc_y 0.000 -> not checked
+  jp_s_laundry_pole_load_cloth.p building  test\placements\C.csv:18   (1022.00, 25.000, 1052.30) highest -0.080 lowest -0.080 embed 0.000 bc_y 0.000 -> ok
+  jp_s_shimenawa_len_1ken.p3d    prop      test\placements\C.csv:19   (1026.40, 27.170, 1053.20) highest +1.945 lowest +1.945 bc_y 2.310 -> floats 1.945 m
+  jp_toilet_t1_01.p3d            building  test\placements\C.csv:20   (1021.70, 25.000, 1056.20) highest -0.550 lowest -0.580 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_kamigata_3ken_end building  test\placements\C.csv:21   (979.00, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_posttownhouse_row_endl.p3d  building  test\placements\C.csv:22   (1002.81, 25.000, 1072.36) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_posttownhouse_row_middle.p3 building  test\placements\C.csv:23   (997.25, 25.000, 1072.36) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_hut_east_s_earth_mushiro.p3 building  test\placements\C.csv:24   (933.50, 25.000, 1003.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_shed_open_board.p3d         building  test\placements\C.csv:25   (1072.00, 25.000, 1036.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_shed_open_board.p3d         building  test\placements\C.csv:26   (1080.00, 25.000, 1036.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_shed_open_board.p3d         building  test\placements\C.csv:27   (1088.00, 25.000, 1036.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_shed_open_thatch.p3d        building  test\placements\C.csv:28   (941.00, 25.000, 1045.50) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_kamigata_3ken_mid building  test\placements\C.csv:29   (997.68, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:30   (995.74, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:31   (999.50, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:32   (997.68, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_oke_tarai.p3d             prop      test\placements\C.csv:33   (996.08, 25.000, 1092.39) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_firewood_stack_bundle.p3d prop      test\placements\C.csv:34   (999.48, 25.000, 1091.32) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_townhouse_kamigata_2ken_mid building  test\placements\C.csv:35   (993.00, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:36   (994.03, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:37   (992.09, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_oke_ab_tipped.p3d         prop      test\placements\C.csv:38   (992.40, 25.000, 1092.54) highest +0.004 lowest +0.000 bc_y 0.000 -> ok
+  jp_townhouse_edo_2ken_middle_t building  test\placements\C.csv:39   (1054.59, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:40   (1055.62, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:41   (1053.68, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_oke_tarai.p3d             prop      test\placements\C.csv:42   (1053.89, 25.000, 1092.59) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_townhouse_edo_3ken_cornerr_ building  test\placements\C.csv:43   (1059.24, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:44   (1057.33, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:45   (1061.06, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:46   (1059.24, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_fire_tub_open.p3d         skip      test\placements\C.csv:47   (1063.79, 25.000, 1084.24) highest +nan lowest +nan bc_y 0.000 -> not checked
+  jp_s_oke_taru_lid.p3d          prop      test\placements\C.csv:48   (1057.74, 25.000, 1092.24) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_posttownhouse_det_tilenuriy building  test\placements\C.csv:49   (988.73, 25.000, 1072.36) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_sandals_sale_eave.p3d     prop      test\placements\C.csv:50   (987.13, 27.459, 1076.45) highest +2.242 lowest +2.237 bc_y 2.009 -> floats 2.242 m
+  jp_s_bench_1ken.p3d            prop      test\placements\C.csv:51   (987.43, 25.000, 1076.96) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:52   (990.67, 25.000, 1077.76) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:53   (986.91, 25.000, 1077.76) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:54   (988.73, 25.000, 1077.76) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_oke_tarai.p3d             prop      test\placements\C.csv:55   (990.33, 25.000, 1067.61) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_hatago_std_tile_furnished.p building  test\placements\C.csv:56   (1013.12, 25.000, 1071.45) highest -0.119 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_sandals_sale_eave.p3d     prop      test\placements\C.csv:57   (1011.92, 27.459, 1076.44) highest +2.242 lowest +2.237 bc_y 2.009 -> floats 2.242 m
+  jp_s_bench_long.p3d            prop      test\placements\C.csv:58   (1010.42, 25.000, 1076.90) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:59   (1016.88, 25.000, 1077.65) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:60   (1009.48, 25.000, 1077.65) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:61   (1011.30, 25.000, 1077.65) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:62   (1013.12, 25.000, 1077.65) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:63   (1014.94, 25.000, 1077.65) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_firewood_stack_wall_1ken_ prop      test\placements\C.csv:64   (1010.39, 25.000, 1066.71) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_hatago_grand_furnished.p3d  building  test\placements\C.csv:65   (1026.22, 25.000, 1071.45) highest -0.119 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_shopfront_kanban_stand.p3 prop      test\placements\C.csv:66   (1022.62, 25.000, 1076.75) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_bench_ab_tipped.p3d       prop      test\placements\C.csv:67   (1024.42, 25.000, 1076.85) highest +0.004 lowest +0.003 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:68   (1029.98, 25.000, 1077.65) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:69   (1022.58, 25.000, 1077.65) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:70   (1024.40, 25.000, 1077.65) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:71   (1026.22, 25.000, 1077.65) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:72   (1028.04, 25.000, 1077.65) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_firewood_stack_wall_1ken_ prop      test\placements\C.csv:73   (1023.49, 25.000, 1066.71) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_farmhouse_kanto_yosemune_um building  test\placements\C.csv:74   (942.00, 25.000, 1029.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_s_kaki_curtain_1ken.p3d     prop      test\placements\C.csv:75   (943.00, 27.529, 1024.15) highest +1.945 lowest +1.945 bc_y 1.829 -> floats 1.945 m
+  jp_s_farm_tools_lean.p3d       prop      test\placements\C.csv:76   (936.31, 25.840, 1024.17) highest +0.004 lowest -0.000 bc_y 0.840 -> ok
+  jp_s_charcoal_bales_stack.p3d  prop      test\placements\C.csv:77   (943.20, 25.000, 1033.56) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_farmhouse_kinai_kirizuma_ti building  test\placements\C.csv:78   (963.50, 25.000, 1028.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_s_kaki_curtain_half.p3d     prop      test\placements\C.csv:79   (962.30, 27.379, 1024.09) highest +1.795 lowest +1.795 bc_y 1.829 -> floats 1.795 m
+  jp_s_farm_tools_pair.p3d       prop      test\placements\C.csv:80   (965.32, 25.779, 1024.08) highest +0.005 lowest -0.000 bc_y 0.779 -> ok
+  jp_hut_east_l_board_furnished. building  test\placements\C.csv:81   (962.50, 25.000, 1002.50) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_hut_west_thatch_leanl_furni building  test\placements\C.csv:82   (947.00, 25.000, 1003.00) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_shed_walled_ishioki_woodshe building  test\placements\C.csv:83   (962.00, 25.000, 1045.50) highest -0.227 lowest -0.272 embed 0.000 bc_y 0.000 -> ok
+  jp_kura_namako_furnished.p3d   building  test\placements\C.csv:84   (1000.00, 25.000, 1097.50) highest -0.050 lowest -0.100 embed 0.000 bc_y 0.000 -> ok
+  jp_kura_kuro_hinged_furnished. building  test\placements\C.csv:85   (975.00, 25.000, 1041.00) highest -0.050 lowest -0.100 embed 0.000 bc_y 0.000 -> ok
+  jp_townhouse_edo_3ken_middle_t building  test\placements\C.csv:86   (1046.15, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:87   (1044.21, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:88   (1047.06, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_townhouse_kamigata_2ken_mid building  test\placements\C.csv:89   (989.24, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:90   (990.27, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_townhouse_kamigata_3ken_end building  test\placements\C.csv:91   (1003.24, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_bench_1ken.p3d            prop      test\placements\C.csv:92   (1004.48, 25.000, 1083.02) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:93   (1001.33, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:94   (1004.18, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_townhouse_edo_3ken_endl_tor building  test\placements\C.csv:95   (1040.59, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:96   (1038.62, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:97   (1041.47, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_townhouse_edo_2ken_middle_t building  test\placements\C.csv:98   (1050.82, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:99   (1051.85, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_townhouse_kamigata_3ken_mid building  test\placements\C.csv:100  (984.56, 25.000, 1087.64) highest -0.120 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_slab.p3d           prop      test\placements\C.csv:101  (982.62, 25.000, 1082.54) highest -0.340 lowest -0.340 bc_y 0.000 -> sunk 0.340 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C.csv:102  (985.47, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_kago_ab_tipped.p3d        building  test\placements\C3.csv:2   (1016.00, 25.000, 1079.60) highest +0.044 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.044 m
+  jp_s_travel_gear_hat_stick.p3d prop      test\placements\C3.csv:3   (1011.10, 25.074, 1080.40) highest +0.004 lowest -0.000 bc_y 0.074 -> ok
+  jp_s_travel_gear_ab_burst.p3d  building  test\placements\C3.csv:4   (1021.53, 25.094, 1081.04) highest +0.045 lowest -0.000 embed 0.000 bc_y 0.094 -> floats 0.045 m
+  jp_s_footwear_ab_scattered.p3d prop      test\placements\C3.csv:5   (1026.16, 25.050, 1079.07) highest -0.006 lowest -0.006 bc_y 0.050 -> ok
+  jp_s_tenbin_spill_veg.p3d      building  test\placements\C3.csv:6   (999.80, 25.000, 1079.80) highest +0.050 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.050 m
+  jp_s_tenbin_spill_fish.p3d     building  test\placements\C3.csv:7   (1051.80, 25.000, 1080.00) highest +0.050 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.050 m
+  jp_s_lantern_fallen_chochin.p3 hanging   test\placements\C3.csv:8   (1006.30, 25.164, 1080.59) highest +nan lowest +nan bc_y 0.164 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_lantern_fallen_crushed.p3 hanging   test\placements\C3.csv:9   (1047.14, 25.145, 1079.39) highest +nan lowest +nan bc_y 0.145 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_amado_fallen.p3d          building  test\placements\C3.csv:10  (993.20, 25.000, 1081.00) highest +0.042 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.042 m
+  jp_s_stool_ab_tipped.p3d       prop      test\placements\C3.csv:11  (1030.60, 25.000, 1079.30) highest +0.003 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_handcart_ab_broken.p3d    building  test\placements\C3.csv:12  (1038.50, 25.000, 1080.40) highest +0.049 lowest +0.006 embed 0.000 bc_y 0.000 -> floats 0.049 m
+  jp_s_leaf_pile_small.p3d       building  test\placements\C3.csv:13  (1057.03, 25.080, 1080.33) highest +0.050 lowest +0.001 embed 0.000 bc_y 0.080 -> floats 0.050 m
+  jp_s_leaf_pile_ab_scattered.p3 building  test\placements\C3.csv:14  (985.87, 25.035, 1080.04) highest +0.050 lowest -0.000 embed 0.000 bc_y 0.035 -> floats 0.050 m
+  jp_s_fire_watch_ladder_tower.p building  test\placements\C3.csv:15  (1033.00, 25.000, 1086.80) highest -0.487 lowest -0.513 embed 0.000 bc_y 0.000 -> ok
+  jp_s_fire_watch_rack.p3d       building  test\placements\C3.csv:16  (1028.50, 25.000, 1085.20) highest -0.400 lowest -0.400 embed 0.000 bc_y 0.000 -> ok
+  jp_s_kosatsu_std.p3d           building  test\placements\C3.csv:17  (1017.50, 25.000, 1087.50) highest -0.050 lowest -0.050 embed 0.000 bc_y 0.000 -> ok
+  jp_s_lantern_sign_tsuji.p3d    hanging   test\placements\C3.csv:18  (1035.90, 25.000, 1082.90) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_fire_tub_full.p3d         skip      test\placements\C3.csv:19  (1008.90, 25.000, 1083.20) highest +nan lowest +nan bc_y 0.000 -> not checked
+  jp_s_fire_tub_ab_scattered.p3d skip      test\placements\C3.csv:20  (1036.10, 25.000, 1089.80) highest +nan lowest +nan bc_y 0.000 -> not checked
+  jp_s_stone_jizo_bib.p3d        rock      test\placements\C3.csv:21  (1011.20, 25.000, 1085.00) highest +0.135 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.135 m vs soil (needs <= -0.05)
+  jp_s_potted_pair.p3d           prop      test\placements\C3.csv:22  (984.71, 25.321, 1076.22) highest -0.000 lowest -0.000 bc_y 0.321 -> ok
+  jp_s_nobori_ab_tattered.p3d    building  test\placements\C3.csv:23  (1008.00, 25.000, 1077.00) highest -0.101 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C3.csv:24  (978.04, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C3.csv:25  (979.94, 25.000, 1082.54) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C3.csv:26  (996.30, 25.000, 1077.70) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C3.csv:27  (998.20, 25.000, 1077.70) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C3.csv:28  (1001.90, 25.000, 1077.70) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_gutter_board_1ken.p3d     prop      test\placements\C3.csv:29  (1003.80, 25.000, 1077.70) highest -0.230 lowest -0.230 bc_y 0.000 -> sunk 0.230 m
+  jp_s_hasa_tiers.p3d            building  test\placements\C3.csv:30  (974.00, 25.000, 1012.00) highest -0.350 lowest -0.350 embed 0.000 bc_y 0.000 -> ok
+  jp_s_hasa_ab_sagged.p3d        building  test\placements\C3.csv:31  (974.00, 25.000, 1019.00) highest -0.314 lowest -0.361 embed 0.000 bc_y 0.000 -> ok
+  jp_s_hasa_low.p3d              building  test\placements\C3.csv:32  (929.00, 25.000, 1011.50) highest -0.339 lowest -0.361 embed 0.000 bc_y 0.000 -> ok
+  jp_s_straw_stack_nio_cone.p3d  building  test\placements\C3.csv:33  (955.00, 26.450, 1016.00) highest +0.000 lowest +0.000 embed 0.000 bc_y 1.450 -> ok
+  jp_s_straw_stack_nio_cyl.p3d   building  test\placements\C3.csv:34  (930.50, 26.351, 1036.50) highest -0.000 lowest -0.000 embed 0.000 bc_y 1.351 -> ok
+  jp_s_straw_stack_stook.p3d     prop      test\placements\C3.csv:35  (927.80, 25.567, 1016.50) highest -0.012 lowest -0.015 bc_y 0.567 -> ok
+  jp_s_straw_stack_stook.p3d     prop      test\placements\C3.csv:36  (928.90, 25.567, 1018.40) highest -0.012 lowest -0.015 bc_y 0.567 -> ok
+  jp_s_straw_stack_stook.p3d     prop      test\placements\C3.csv:37  (927.60, 25.567, 1020.30) highest -0.012 lowest -0.015 bc_y 0.567 -> ok
+  jp_s_straw_stack_ab_slumped.p3 building  test\placements\C3.csv:38  (971.45, 26.084, 1036.63) highest +0.052 lowest +0.003 embed 0.000 bc_y 1.084 -> floats 0.052 m
+  jp_s_straw_stack_tawara_stack. prop      test\placements\C3.csv:39  (951.00, 25.000, 1047.50) highest +0.003 lowest +0.003 bc_y 0.000 -> ok
+  jp_s_scarecrow_kasa.p3d        prop      test\placements\C3.csv:40  (977.50, 25.000, 1004.00) highest -0.350 lowest -0.350 bc_y 0.000 -> sunk 0.350 m
+  jp_s_scarecrow_naruko.p3d      building  test\placements\C3.csv:41  (927.80, 25.000, 1005.50) highest -0.350 lowest -0.350 embed 0.000 bc_y 0.000 -> ok
+  jp_s_laundry_pole_load_kaki.p3 building  test\placements\C3.csv:42  (952.60, 25.000, 1022.30) highest -0.068 lowest -0.080 embed 0.000 bc_y 0.000 -> ok
+  jp_s_laundry_pole_load_daikon. building  test\placements\C3.csv:43  (955.60, 25.000, 1008.00) highest -0.068 lowest -0.080 embed 0.000 bc_y 0.000 -> ok
+  jp_s_kakei_trough.p3d          building  test\placements\C3.csv:44  (953.20, 25.000, 1036.00) highest -0.336 lowest -0.364 embed 0.000 bc_y 0.000 -> ok
+  jp_s_well_hanetsurube_well.p3d skip      test\placements\C3.csv:45  (955.00, 25.000, 1001.00) highest +nan lowest +nan bc_y 0.000 -> not checked
+  jp_s_stable_yard_tie_post.p3d  prop      test\placements\C3.csv:46  (931.00, 25.000, 1021.50) highest -0.400 lowest -0.400 bc_y 0.000 -> sunk 0.400 m
+  jp_s_stable_yard_saddle_rack.p prop      test\placements\C3.csv:47  (929.40, 25.000, 1026.00) highest -0.008 lowest -0.008 bc_y 0.000 -> ok
+  jp_s_stable_yard_trough_stone. prop      test\placements\C3.csv:48  (930.80, 25.000, 1018.50) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_charcoal_bales_ab_burst.p prop      test\placements\C3.csv:49  (967.60, 25.000, 1041.80) highest +0.005 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_farm_tools_ab_fallen.p3d  prop      test\placements\C3.csv:50  (939.75, 25.665, 1008.75) highest +0.003 lowest +0.000 bc_y 0.665 -> ok
+  jp_s_leaf_pile_broom.p3d       building  test\placements\C3.csv:51  (947.53, 25.080, 1008.41) highest +0.050 lowest +0.000 embed 0.000 bc_y 0.080 -> floats 0.050 m
+  jp_s_ladder_ab_fallen.p3d      building  test\placements\C3.csv:52  (968.40, 25.000, 1008.60) highest +0.049 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.049 m
+  jp_s_oke_ab_staves.p3d         prop      test\placements\C3.csv:53  (944.80, 25.000, 1009.50) highest +0.002 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_stone_jizo_offer.p3d      rock      test\placements\C3.csv:54  (978.30, 25.000, 1029.00) highest +0.135 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.135 m vs soil (needs <= -0.05)
+  jp_s_stele_koshin.p3d          prop      test\placements\C3.csv:55  (978.30, 25.000, 1031.00) highest -0.060 lowest -0.060 bc_y 0.000 -> sunk 0.060 m
+  jp_sakura_01.p3d               plant     test\placements\F.csv:2    (985.00, 24.950, 1010.00) highest -0.183 lowest -0.222 embed 0.050 bc_y 0.000 -> ok
+  jp_sakura_02.p3d               plant     test\placements\F.csv:3    (1063.00, 24.950, 1010.00) highest -0.188 lowest -0.214 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:4    (1098.30, 24.950, 958.90) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:5    (1089.60, 24.950, 965.60) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:6    (1100.70, 24.950, 981.00) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:7    (1088.20, 24.950, 975.20) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:8    (1106.00, 24.950, 969.40) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:9    (1095.90, 24.950, 991.10) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_bamboo_clump_01.p3d         plant     test\placements\F.csv:10   (1106.30, 24.950, 987.30) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+  jp_swatch_wall.p3d             building  test\placements\M.csv:2    (957.50, 25.000, 1100.00) highest -0.150 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_torii_stone_l.p3d         rock      test\placements\SH1.csv:2  (1024.00, 25.000, 1099.50) highest +0.507 lowest -0.103 bc_y 0.000 -> base not sunk: highest contact point +0.507 m vs soil (needs <= -0.05)
+  jp_s_nobori_shrine.p3d         building  test\placements\SH1.csv:3  (1018.80, 25.000, 1103.00) highest -0.100 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_nobori_shrine.p3d         building  test\placements\SH1.csv:4  (1029.20, 25.000, 1103.00) highest -0.100 lowest -0.150 embed 0.000 bc_y 0.000 -> ok
+  jp_s_stone_lantern_kasuga_18.p hanging   test\placements\SH1.csv:5  (1021.00, 25.000, 1122.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_18.p hanging   test\placements\SH1.csv:6  (1027.00, 25.000, 1122.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stele_group3.p3d          prop      test\placements\SH1.csv:7  (1016.60, 25.000, 1125.00) highest -0.122 lowest -0.128 bc_y 0.000 -> sunk 0.128 m
+  jp_s_stele_koshin.p3d          prop      test\placements\SH1.csv:8  (1017.20, 25.016, 1127.60) highest -0.060 lowest -0.062 bc_y 0.000 -> sunk 0.062 m
+  jp_s_stele_relief_panel.p3d    prop      test\placements\SH1.csv:9  (1017.10, 25.031, 1129.20) highest -0.050 lowest -0.058 bc_y 0.000 -> sunk 0.058 m
+  jp_s_stele_arched.p3d          prop      test\placements\SH1.csv:10 (1017.00, 25.052, 1130.70) highest -0.050 lowest -0.056 bc_y 0.000 -> sunk 0.056 m
+  jp_s_stele_round.p3d           prop      test\placements\SH1.csv:11 (1015.60, 25.023, 1128.60) highest -0.081 lowest -0.087 bc_y 0.000 -> sunk 0.087 m
+  jp_s_stele_pillar.p3d          prop      test\placements\SH1.csv:12 (1015.40, 25.013, 1126.90) highest -0.250 lowest -0.252 bc_y 0.000 -> sunk 0.252 m
+  jp_s_stele_ab_tipped.p3d       prop      test\placements\SH1.csv:13 (1015.00, 25.053, 1131.60) highest -0.337 lowest -0.337 bc_y 0.000 -> sunk 0.337 m
+  jp_s_stele_natural_slab.p3d    prop      test\placements\SH1.csv:14 (1015.10, 25.000, 1123.40) highest -0.120 lowest -0.120 bc_y 0.000 -> sunk 0.120 m
+  jp_s_torii_stone_l_rope_shide. rock      test\placements\SH1.csv:15 (1024.00, 25.158, 1136.50) highest +0.501 lowest -0.119 bc_y 0.000 -> base not sunk: highest contact point +0.501 m vs soil (needs <= -0.05)
+  jp_s_chozubachi_large.p3d      prop      test\placements\SH1.csv:16 (1019.00, 25.259, 1140.50) highest -0.060 lowest -0.108 bc_y 0.000 -> sunk 0.108 m  [uneven support: tilt to the surface]
+  jp_s_stone_lantern_kasuga_24.p hanging   test\placements\SH1.csv:17 (1021.00, 25.362, 1143.50) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_24.p hanging   test\placements\SH1.csv:18 (1027.00, 25.362, 1143.50) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_square_24.p hanging   test\placements\SH1.csv:19 (1021.00, 25.585, 1149.50) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_square_24.p hanging   test\placements\SH1.csv:20 (1027.00, 25.585, 1149.50) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_24_m hanging   test\placements\SH1.csv:21 (1021.00, 25.820, 1155.50) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_24_m hanging   test\placements\SH1.csv:22 (1027.00, 25.820, 1155.50) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_torii_wood_myojin_moss_ro building  test\placements\SH1.csv:23 (1024.00, 26.074, 1161.00) highest -0.143 lowest -0.160 embed 0.021 bc_y 0.000 -> ok
+  jp_s_stone_lantern_square_24_m hanging   test\placements\SH1.csv:24 (1021.00, 26.265, 1166.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_square_24_m hanging   test\placements\SH1.csv:25 (1027.00, 26.265, 1166.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_18_m hanging   test\placements\SH1.csv:26 (1021.00, 26.508, 1172.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_ab_hoju_mos hanging   test\placements\SH1.csv:27 (1027.00, 26.471, 1172.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_30.p hanging   test\placements\SH1.csv:28 (1020.80, 26.743, 1178.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_30.p hanging   test\placements\SH1.csv:29 (1027.20, 26.743, 1178.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_joyato.p3d  hanging   test\placements\SH1.csv:30 (1019.00, 27.008, 1183.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_joyato.p3d  hanging   test\placements\SH1.csv:31 (1029.00, 27.006, 1183.00) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_oki.p3d     hanging   test\placements\SH1.csv:32 (1021.80, 27.145, 1184.60) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_oki_moss.p3 hanging   test\placements\SH1.csv:33 (1026.20, 27.139, 1184.60) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  t_fagussylvatica_3f.p3d        plant     test\placements\SH1.csv:34 (1032.99, 41.542, 1197.50) highest -0.854 lowest -1.322 embed 0.094 bc_y 13.156 -> ok
+  jp_s_shimenawa_wrap_d06.p3d    prop      test\placements\SH1.csv:35 (1033.33, 29.665, 1198.18) highest +0.733 lowest +0.732 bc_y 1.266 -> floats 0.733 m
+  jp_s_torii_wood_shinmei.p3d    building  test\placements\SH1.csv:36 (1036.00, 25.387, 1145.00) highest -0.146 lowest -0.227 embed 0.088 bc_y 0.000 -> ok
+  jp_s_jizo_hut_stone_roof.p3d   rock      test\placements\SH1.csv:37 (1038.20, 25.411, 1145.00) highest +0.009 lowest -0.117 bc_y 0.000 -> base not sunk: highest contact point +0.009 m vs soil (needs <= -0.05)
+  jp_s_torii_wood_shinmei_rope.p building  test\placements\SH1.csv:38 (1036.25, 25.534, 1149.00) highest -0.146 lowest -0.234 embed 0.096 bc_y 0.000 -> ok
+  jp_s_stele_natural_slab.p3d    prop      test\placements\SH1.csv:39 (1037.85, 25.572, 1149.00) highest -0.121 lowest -0.144 bc_y 0.000 -> sunk 0.144 m
+  jp_s_torii_wood_shinmei_rope_s building  test\placements\SH1.csv:40 (1035.80, 25.693, 1153.00) highest -0.147 lowest -0.240 embed 0.101 bc_y 0.000 -> ok
+  jp_s_jizo_hut_stone_roof.p3d   rock      test\placements\SH1.csv:41 (1038.00, 25.721, 1153.00) highest +0.006 lowest -0.122 bc_y 0.000 -> base not sunk: highest contact point +0.006 m vs soil (needs <= -0.05)
+  jp_s_torii_stone_s.p3d         rock      test\placements\SH1.csv:42 (1036.00, 25.859, 1157.00) highest +0.210 lowest -0.199 bc_y 0.000 -> base not sunk: highest contact point +0.210 m vs soil (needs <= -0.05)
+  jp_s_stele_round.p3d           prop      test\placements\SH1.csv:43 (1037.60, 25.902, 1157.00) highest -0.082 lowest -0.104 bc_y 0.000 -> sunk 0.104 m
+  jp_s_torii_stone_s_rope.p3d    rock      test\placements\SH1.csv:44 (1036.25, 26.029, 1161.00) highest +0.210 lowest -0.199 bc_y 0.000 -> base not sunk: highest contact point +0.210 m vs soil (needs <= -0.05)
+  jp_s_jizo_hut_stone_roof.p3d   rock      test\placements\SH1.csv:45 (1038.45, 26.059, 1161.00) highest +0.005 lowest -0.123 bc_y 0.000 -> base not sunk: highest contact point +0.005 m vs soil (needs <= -0.05)
+  jp_s_torii_stone_s_rope_shide. rock      test\placements\SH1.csv:46 (1035.80, 26.199, 1165.00) highest +0.209 lowest -0.196 bc_y 0.000 -> base not sunk: highest contact point +0.209 m vs soil (needs <= -0.05)
+  jp_s_stele_natural_slab.p3d    prop      test\placements\SH1.csv:47 (1037.40, 26.242, 1165.00) highest -0.121 lowest -0.144 bc_y 0.000 -> sunk 0.144 m
+  jp_s_torii_wood_shinmei_moss.p building  test\placements\SH1.csv:48 (1036.00, 26.366, 1169.00) highest -0.147 lowest -0.233 embed 0.094 bc_y 0.000 -> ok
+  jp_s_jizo_hut_stone_roof.p3d   rock      test\placements\SH1.csv:49 (1038.20, 26.393, 1169.00) highest +0.008 lowest -0.119 bc_y 0.000 -> base not sunk: highest contact point +0.008 m vs soil (needs <= -0.05)
+  jp_s_torii_wood_shinmei_moss_r building  test\placements\SH1.csv:50 (1036.25, 26.522, 1173.00) highest -0.146 lowest -0.228 embed 0.089 bc_y 0.000 -> ok
+  jp_s_stele_arched.p3d          prop      test\placements\SH1.csv:51 (1037.85, 26.559, 1173.00) highest -0.050 lowest -0.070 bc_y 0.000 -> sunk 0.070 m
+  jp_s_torii_wood_shinmei_moss_r building  test\placements\SH1.csv:52 (1035.80, 26.669, 1177.00) highest -0.146 lowest -0.251 embed 0.113 bc_y 0.000 -> ok
+  jp_s_jizo_hut_stone_roof.p3d   rock      test\placements\SH1.csv:53 (1038.00, 26.698, 1177.00) highest +0.002 lowest -0.128 bc_y 0.000 -> base not sunk: highest contact point +0.002 m vs soil (needs <= -0.05)
+  jp_s_torii_stone_s_moss.p3d    rock      test\placements\SH1.csv:54 (1036.00, 26.856, 1181.00) highest +0.216 lowest -0.242 bc_y 0.000 -> base not sunk: highest contact point +0.216 m vs soil (needs <= -0.05)
+  jp_s_stele_natural_slab.p3d    prop      test\placements\SH1.csv:55 (1037.60, 26.915, 1181.00) highest -0.122 lowest -0.157 bc_y 0.000 -> sunk 0.157 m
+  jp_s_torii_stone_s_moss_rope_s rock      test\placements\SH1.csv:56 (1036.25, 27.101, 1185.00) highest +0.213 lowest -0.278 bc_y 0.000 -> base not sunk: highest contact point +0.213 m vs soil (needs <= -0.05)
+  jp_s_jizo_hut_stone_roof.p3d   rock      test\placements\SH1.csv:57 (1038.45, 27.151, 1185.00) highest -0.014 lowest -0.158 bc_y 0.000 -> base not sunk: highest contact point -0.014 m vs soil (needs <= -0.05)
+  jp_s_torii_wood_ab_rotted.p3d  building  test\placements\SH1.csv:58 (1035.80, 27.397, 1189.00) highest -0.166 lowest -0.365 embed 0.228 bc_y 0.000 -> ok
+  jp_s_jizo_hut_ab_open.p3d      prop      test\placements\SH1.csv:59 (1038.00, 27.430, 1189.00) highest -0.166 lowest -0.240 bc_y 0.000 -> sunk 0.240 m  [uneven support: tilt to the surface]
+  jp_s_torii_wood_mini.p3d       prop      test\placements\SH1.csv:60 (1037.15, 25.417, 1145.00) highest -0.044 lowest -0.069 bc_y 0.000 -> sunk 0.069 m
+  jp_s_torii_wood_mini_rope.p3d  prop      test\placements\SH1.csv:61 (1036.65, 26.067, 1161.00) highest -0.044 lowest -0.073 bc_y 0.000 -> sunk 0.073 m
+  jp_s_stone_lantern_kasuga_30_m hanging   test\placements\SH1.csv:62 (1030.82, 29.425, 1206.10) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_ab_toppled. hanging   test\placements\SH1.csv:63 (1036.04, 28.840, 1203.56) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_18_m hanging   test\placements\SH1.csv:64 (1034.34, 30.708, 1213.30) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_kasuga_18_m hanging   test\placements\SH1.csv:65 (1038.66, 30.282, 1211.20) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_square_24_m hanging   test\placements\SH1.csv:66 (1037.64, 32.078, 1220.05) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_square_24_m hanging   test\placements\SH1.csv:67 (1041.96, 31.586, 1217.95) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_torii_wood_ab_leaning.p3d building  test\placements\SH1.csv:68 (1047.00, 29.086, 1205.50) highest -0.371 lowest -0.554 embed 0.419 bc_y 0.000 -> terrain 0.419 m above its ground line
+  jp_s_torii_stone_l_rope_shide. rock      test\placements\SH1.csv:69 (1042.00, 33.646, 1226.00) highest +0.449 lowest -0.315 bc_y 0.000 -> base not sunk: highest contact point +0.449 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3_wid rock      test\placements\SH1.csv:70 (1042.00, 34.115, 1227.60) highest -0.196 lowest -0.306 bc_y 0.000 -> ok
+  jp_s_stone_steps_cheek_3.p3d   rock      test\placements\SH1.csv:71 (1043.46, 34.111, 1227.60) highest -0.174 lowest -0.217 bc_y 0.000 -> ok
+  jp_s_stone_steps_cheek_3.p3d   rock      test\placements\SH1.csv:72 (1040.54, 34.119, 1227.60) highest -0.174 lowest -0.217 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing_wide. rock      test\placements\SH1.csv:73 (1042.00, 34.595, 1228.51) highest -0.027 lowest -0.551 bc_y 0.000 -> base not sunk: highest contact point -0.027 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3_wid rock      test\placements\SH1.csv:74 (1042.00, 34.595, 1229.31) highest -0.193 lowest -0.310 bc_y 0.000 -> ok
+  jp_s_stone_steps_cheek_3.p3d   rock      test\placements\SH1.csv:75 (1043.46, 34.591, 1229.31) highest -0.174 lowest -0.213 bc_y 0.000 -> ok
+  jp_s_stone_steps_cheek_3.p3d   rock      test\placements\SH1.csv:76 (1040.54, 34.600, 1229.31) highest -0.174 lowest -0.213 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing_wide. rock      test\placements\SH1.csv:77 (1042.00, 35.075, 1230.22) highest -0.031 lowest -0.555 bc_y 0.000 -> base not sunk: highest contact point -0.031 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3.p3d   rock      test\placements\SH1.csv:78 (1042.00, 35.075, 1231.02) highest -0.207 lowest -0.329 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:79 (1042.00, 35.555, 1231.93) highest -0.037 lowest -0.586 bc_y 0.000 -> base not sunk: highest contact point -0.037 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3.p3d rock      test\placements\SH1.csv:80 (1042.00, 35.555, 1232.63) highest -0.185 lowest -0.306 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:81 (1042.00, 36.035, 1233.54) highest -0.037 lowest -0.588 bc_y 0.000 -> base not sunk: highest contact point -0.037 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3.p3d   rock      test\placements\SH1.csv:82 (1042.00, 36.035, 1234.19) highest -0.182 lowest -0.308 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:83 (1042.00, 36.515, 1235.10) highest -0.023 lowest -0.592 bc_y 0.000 -> base not sunk: highest contact point -0.023 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3.p3d rock      test\placements\SH1.csv:84 (1042.00, 36.515, 1235.80) highest -0.172 lowest -0.298 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:85 (1042.00, 36.995, 1236.71) highest -0.036 lowest -0.623 bc_y 0.000 -> base not sunk: highest contact point -0.036 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3.p3d   rock      test\placements\SH1.csv:86 (1042.00, 36.995, 1237.26) highest -0.163 lowest -0.294 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:87 (1042.00, 37.475, 1238.17) highest -0.018 lowest -0.606 bc_y 0.000 -> base not sunk: highest contact point -0.018 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3.p3d rock      test\placements\SH1.csv:88 (1042.00, 37.475, 1238.82) highest -0.163 lowest -0.296 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:89 (1042.00, 37.955, 1239.73) highest -0.031 lowest -0.652 bc_y 0.000 -> base not sunk: highest contact point -0.031 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3.p3d   rock      test\placements\SH1.csv:90 (1042.00, 37.955, 1240.23) highest -0.150 lowest -0.286 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:91 (1042.00, 38.435, 1241.14) highest -0.020 lowest -0.649 bc_y 0.000 -> base not sunk: highest contact point -0.020 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3.p3d rock      test\placements\SH1.csv:92 (1042.00, 38.435, 1241.69) highest -0.144 lowest -0.289 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:93 (1042.00, 38.915, 1242.60) highest -0.031 lowest -0.669 bc_y 0.000 -> base not sunk: highest contact point -0.031 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3.p3d   rock      test\placements\SH1.csv:94 (1042.00, 38.915, 1243.10) highest -0.158 lowest -0.292 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:95 (1042.00, 39.395, 1244.01) highest -0.025 lowest -0.690 bc_y 0.000 -> base not sunk: highest contact point -0.025 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3.p3d rock      test\placements\SH1.csv:96 (1042.00, 39.395, 1244.46) highest -0.123 lowest -0.279 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:97 (1042.00, 39.875, 1245.37) highest -0.024 lowest -0.692 bc_y 0.000 -> base not sunk: highest contact point -0.024 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3.p3d   rock      test\placements\SH1.csv:98 (1042.00, 39.875, 1245.82) highest -0.148 lowest -0.285 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:99 (1042.00, 40.355, 1246.73) highest -0.025 lowest -0.705 bc_y 0.000 -> base not sunk: highest contact point -0.025 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_ab_heaved_rou rock      test\placements\SH1.csv:100 (1042.00, 40.355, 1247.13) highest -0.138 lowest -0.274 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:101 (1042.00, 40.835, 1248.04) highest -0.008 lowest -0.714 bc_y 0.000 -> base not sunk: highest contact point -0.008 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3.p3d   rock      test\placements\SH1.csv:102 (1042.00, 40.835, 1248.44) highest -0.124 lowest -0.265 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:103 (1042.00, 41.315, 1249.35) highest -0.012 lowest -0.722 bc_y 0.000 -> base not sunk: highest contact point -0.012 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3.p3d rock      test\placements\SH1.csv:104 (1042.00, 41.315, 1249.75) highest -0.100 lowest -0.275 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:105 (1042.00, 41.795, 1250.66) highest -0.016 lowest -0.739 bc_y 0.000 -> base not sunk: highest contact point -0.016 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_ab_heaved.p3d rock      test\placements\SH1.csv:106 (1042.00, 41.795, 1251.26) highest -0.173 lowest -0.368 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:107 (1042.00, 42.755, 1253.08) highest +0.030 lowest -0.725 bc_y 0.000 -> base not sunk: highest contact point +0.030 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_ab_heaved_rou rock      test\placements\SH1.csv:108 (1042.00, 42.755, 1253.48) highest -0.107 lowest -0.259 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:109 (1042.00, 43.235, 1254.39) highest +0.003 lowest -0.759 bc_y 0.000 -> base not sunk: highest contact point +0.003 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_ab_heaved.p3d rock      test\placements\SH1.csv:110 (1042.00, 43.235, 1254.94) highest -0.145 lowest -0.359 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:111 (1042.00, 44.195, 1256.76) highest +0.037 lowest -0.748 bc_y 0.000 -> base not sunk: highest contact point +0.037 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3.p3d rock      test\placements\SH1.csv:112 (1042.00, 44.195, 1257.16) highest -0.061 lowest -0.272 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:113 (1042.00, 44.675, 1258.07) highest -0.003 lowest -0.792 bc_y 0.000 -> base not sunk: highest contact point -0.003 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_6.p3d rock      test\placements\SH1.csv:114 (1042.00, 44.675, 1258.57) highest -0.064 lowest -0.357 bc_y 0.000 -> ok
+  jp_s_stone_steps_cheek_6.p3d   rock      test\placements\SH1.csv:115 (1043.01, 44.640, 1258.57) highest -0.180 lowest -0.187 bc_y 0.000 -> ok
+  jp_s_stone_steps_cheek_6.p3d   rock      test\placements\SH1.csv:116 (1040.99, 44.709, 1258.57) highest -0.180 lowest -0.186 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:117 (1042.00, 45.635, 1260.39) highest +0.031 lowest -0.779 bc_y 0.000 -> base not sunk: highest contact point +0.031 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_6_wid rock      test\placements\SH1.csv:118 (1042.00, 45.635, 1260.94) highest -0.009 lowest -0.365 bc_y 0.000 -> base not sunk: highest contact point -0.009 m vs soil (needs <= -0.05)
+  jp_s_torii_wood_myojin.p3d     building  test\placements\SH1.csv:119 (1042.00, 35.907, 1233.84) highest -0.156 lowest -0.285 embed 0.154 bc_y 0.000 -> ok
+  jp_s_torii_wood_myojin_rope.p3 building  test\placements\SH1.csv:120 (1042.00, 37.327, 1238.47) highest -0.158 lowest -0.300 embed 0.170 bc_y 0.000 -> ok
+  jp_s_torii_wood_myojin_rope_sh building  test\placements\SH1.csv:121 (1042.00, 39.226, 1244.23) highest -0.162 lowest -0.331 embed 0.201 bc_y 0.000 -> ok
+  jp_s_torii_wood_myojin_moss.p3 building  test\placements\SH1.csv:122 (1042.00, 41.631, 1250.96) highest -0.174 lowest -0.374 embed 0.245 bc_y 0.000 -> ok
+  jp_s_torii_wood_myojin_moss_ro building  test\placements\SH1.csv:123 (1042.00, 43.035, 1254.66) highest -0.179 lowest -0.406 embed 0.277 bc_y 0.000 -> ok
+  jp_s_torii_stone_l.p3d         rock      test\placements\SH1.csv:124 (1042.00, 46.635, 1263.96) highest +0.402 lowest -0.600 bc_y 0.000 -> base not sunk: highest contact point +0.402 m vs soil (needs <= -0.05)
+  jp_s_jizo_hut_stone_roof.p3d   rock      test\placements\SH1.csv:125 (1042.00, 47.935, 1266.96) highest -0.030 lowest -0.392 bc_y 0.000 -> base not sunk: highest contact point -0.030 m vs soil (needs <= -0.05)
+  jp_s_stone_lantern_oki_moss.p3 hanging   test\placements\SH1.csv:126 (1040.40, 47.462, 1265.56) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stone_lantern_oki_moss.p3 hanging   test\placements\SH1.csv:127 (1043.60, 47.317, 1265.56) highest +nan lowest +nan bc_y 0.000 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_chozubachi_natural.p3d    prop      test\placements\SH1.csv:128 (1045.10, 46.362, 1263.36) highest -0.127 lowest -0.389 bc_y 0.000 -> sunk 0.389 m  [uneven support: tilt to the surface]
+  jp_s_torii_wood_myojin_shu_rop building  test\placements\SH1.csv:129 (1058.00, 33.617, 1226.10) highest -0.156 lowest -0.283 embed 0.151 bc_y 0.000 -> ok
+  jp_s_stone_steps_rough_3_narro rock      test\placements\SH1.csv:130 (1058.00, 33.926, 1227.30) highest -0.220 lowest -0.317 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:131 (1058.00, 34.406, 1228.21) highest -0.010 lowest -0.536 bc_y 0.000 -> base not sunk: highest contact point -0.010 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3_nar rock      test\placements\SH1.csv:132 (1058.00, 34.406, 1229.11) highest -0.205 lowest -0.322 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:133 (1058.00, 34.886, 1230.02) highest -0.032 lowest -0.560 bc_y 0.000 -> base not sunk: highest contact point -0.032 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3_narro rock      test\placements\SH1.csv:134 (1058.00, 34.886, 1230.77) highest -0.211 lowest -0.316 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:135 (1058.00, 35.366, 1231.68) highest -0.012 lowest -0.569 bc_y 0.000 -> base not sunk: highest contact point -0.012 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3_nar rock      test\placements\SH1.csv:136 (1058.00, 35.366, 1232.48) highest -0.189 lowest -0.314 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:137 (1058.00, 35.846, 1233.39) highest -0.033 lowest -0.597 bc_y 0.000 -> base not sunk: highest contact point -0.033 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3_narro rock      test\placements\SH1.csv:138 (1058.00, 35.846, 1234.04) highest -0.198 lowest -0.310 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:139 (1058.00, 36.326, 1234.95) highest -0.014 lowest -0.590 bc_y 0.000 -> base not sunk: highest contact point -0.014 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3_nar rock      test\placements\SH1.csv:140 (1058.00, 36.326, 1235.65) highest -0.168 lowest -0.294 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:141 (1058.00, 36.806, 1236.56) highest -0.018 lowest -0.609 bc_y 0.000 -> base not sunk: highest contact point -0.018 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_rough_3_narro rock      test\placements\SH1.csv:142 (1058.00, 36.806, 1237.21) highest -0.193 lowest -0.310 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:143 (1058.00, 37.286, 1238.12) highest -0.020 lowest -0.612 bc_y 0.000 -> base not sunk: highest contact point -0.020 m vs soil (needs <= -0.05)
+  jp_s_stone_steps_dressed_3_nar rock      test\placements\SH1.csv:144 (1058.00, 37.286, 1238.77) highest -0.168 lowest -0.301 bc_y 0.000 -> ok
+  jp_s_stone_steps_landing.p3d   rock      test\placements\SH1.csv:145 (1058.00, 37.766, 1239.68) highest -0.022 lowest -0.633 bc_y 0.000 -> base not sunk: highest contact point -0.022 m vs soil (needs <= -0.05)
+  jp_s_torii_wood_myojin_shu.p3d building  test\placements\SH1.csv:146 (1058.00, 36.151, 1235.20) highest -0.161 lowest -0.316 embed 0.185 bc_y 0.000 -> ok
+  jp_s_torii_wood_ab_leaning_shu building  test\placements\SH1.csv:147 (1062.50, 30.275, 1213.00) highest -0.426 lowest -0.625 embed 0.490 bc_y 0.000 -> terrain 0.490 m above its ground line
+  jp_s_torii_wood_mini_shu.p3d   prop      test\placements\SH1.csv:148 (1058.00, 38.091, 1241.23) highest -0.048 lowest -0.083 bc_y 0.000 -> sunk 0.083 m
+  jp_s_jizo_hut_stone_roof.p3d   rock      test\placements\SH1.csv:149 (1058.00, 38.353, 1242.43) highest -0.009 lowest -0.305 bc_y 0.000 -> base not sunk: highest contact point -0.009 m vs soil (needs <= -0.05)
+  jp_s_chozubachi_ab_dry.p3d     prop      test\placements\SH1.csv:150 (1055.60, 37.345, 1239.63) highest -0.302 lowest -0.482 bc_y 0.000 -> sunk 0.482 m  [uneven support: tilt to the surface]
+  jp_s_torii_fallen_stone_quake. rock      test\placements\SH1.csv:151 (1052.00, 26.408, 1172.00) highest -0.016 lowest -0.258 bc_y 0.000 -> base not sunk: highest contact point -0.016 m vs soil (needs <= -0.05)
+  jp_s_torii_fallen_stone_quake_ rock      test\placements\SH1.csv:152 (1003.00, 25.483, 1150.00) highest +0.003 lowest -0.232 bc_y 0.000 -> base not sunk: highest contact point +0.003 m vs soil (needs <= -0.05)
+  jp_s_torii_fallen_myojin_typho building  test\placements\SH1.csv:153 (1008.00, 26.565, 1178.00) highest -0.296 lowest -0.409 embed 0.415 bc_y 0.000 -> terrain 0.415 m above its ground line
+  jp_s_torii_fallen_shinmei_rot. building  test\placements\SH1.csv:154 (1056.00, 27.122, 1188.00) highest -0.392 lowest -0.470 embed 0.332 bc_y 0.000 -> terrain 0.332 m above its ground line
+  jp_s_torii_fallen_shu_snapped. building  test\placements\SH1.csv:155 (1066.00, 27.294, 1190.00) highest -0.389 lowest -0.455 embed 0.336 bc_y 0.000 -> terrain 0.336 m above its ground line
+  jp_s_grave_wood_bohyo_new.p3d  prop      test\placements\SH1.csv:156 (990.94, 25.000, 1109.37) highest -0.199 lowest -0.201 bc_y 0.000 -> sunk 0.201 m
+  jp_s_grave_wood_bohyo.p3d      prop      test\placements\SH1.csv:157 (992.12, 25.000, 1109.20) highest -0.206 lowest -0.206 bc_y 0.000 -> sunk 0.206 m
+  jp_s_grave_stones_field_mound. prop      test\placements\SH1.csv:158 (994.35, 25.000, 1109.37) highest -0.100 lowest -0.100 bc_y 0.000 -> sunk 0.100 m
+  jp_s_grave_wood_bohyo_s.p3d    prop      test\placements\SH1.csv:159 (995.52, 25.000, 1109.36) highest -0.198 lowest -0.203 bc_y 0.000 -> sunk 0.203 m
+  jp_s_grave_stones_round_s_plai prop      test\placements\SH1.csv:160 (996.88, 25.000, 1109.83) highest -0.080 lowest -0.080 bc_y 0.000 -> sunk 0.080 m
+  jp_s_grave_wood_ab_bohyo_rotte prop      test\placements\SH1.csv:161 (998.01, 24.982, 1109.19) highest -0.200 lowest -0.205 bc_y -0.018 -> sunk 0.205 m
+  jp_s_grave_stones_round.p3d    prop      test\placements\SH1.csv:162 (999.00, 25.000, 1109.86) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:163 (998.96, 25.523, 1110.17) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_round.p3d    prop      test\placements\SH1.csv:164 (1001.49, 25.000, 1109.85) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo_ch prop      test\placements\SH1.csv:165 (1002.53, 25.000, 1109.93) highest -0.060 lowest -0.060 bc_y 0.000 -> sunk 0.060 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:166 (1002.53, 25.000, 1109.61) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_round.p3d    prop      test\placements\SH1.csv:167 (1004.87, 25.000, 1109.87) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:168 (1004.93, 25.523, 1110.19) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_wood_bohyo_roof.p3d prop      test\placements\SH1.csv:169 (1006.15, 25.000, 1109.33) highest -0.200 lowest -0.203 bc_y 0.000 -> sunk 0.203 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:170 (1007.04, 25.000, 1109.95) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_round_s_plai prop      test\placements\SH1.csv:171 (1008.44, 25.000, 1109.97) highest -0.080 lowest -0.080 bc_y 0.000 -> sunk 0.080 m
+  jp_s_grave_stones_field.p3d    prop      test\placements\SH1.csv:172 (990.96, 25.000, 1112.61) highest -0.141 lowest -0.141 bc_y 0.000 -> sunk 0.141 m
+  jp_s_grave_stones_field_pair.p prop      test\placements\SH1.csv:173 (992.19, 25.000, 1112.72) highest -0.122 lowest -0.122 bc_y 0.000 -> sunk 0.122 m
+  jp_s_grave_wood_bohyo_s.p3d    prop      test\placements\SH1.csv:174 (993.44, 25.000, 1112.06) highest -0.198 lowest -0.203 bc_y 0.000 -> sunk 0.203 m
+  jp_s_grave_wood_ab_bohyo_lean. prop      test\placements\SH1.csv:175 (994.58, 25.000, 1111.97) highest -0.259 lowest -0.259 bc_y 0.000 -> sunk 0.259 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:176 (996.87, 25.000, 1112.59) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_field_mound. prop      test\placements\SH1.csv:177 (998.00, 25.000, 1112.00) highest -0.100 lowest -0.100 bc_y 0.000 -> sunk 0.100 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:178 (999.13, 25.000, 1112.72) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:179 (999.13, 25.000, 1112.39) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:180 (1001.50, 25.000, 1112.56) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_round.p3d    prop      test\placements\SH1.csv:181 (1002.56, 25.000, 1112.61) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:182 (1002.60, 25.523, 1112.92) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_ab_round_lea prop      test\placements\SH1.csv:183 (1003.84, 25.000, 1112.57) highest -0.189 lowest -0.189 bc_y 0.000 -> sunk 0.189 m
+  jp_s_grave_stones_board_s.p3d  prop      test\placements\SH1.csv:184 (1004.77, 25.000, 1112.72) highest -0.100 lowest -0.100 bc_y 0.000 -> sunk 0.100 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:185 (1004.77, 25.000, 1112.39) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_incense.p3d    prop      test\placements\SH1.csv:186 (1004.79, 25.000, 1112.10) highest -0.040 lowest -0.040 bc_y 0.000 -> sunk 0.040 m
+  jp_s_grave_wood_bohyo.p3d      prop      test\placements\SH1.csv:187 (1006.09, 25.000, 1111.92) highest -0.206 lowest -0.206 bc_y 0.000 -> sunk 0.206 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:188 (1008.19, 25.000, 1112.66) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:189 (1008.22, 25.523, 1112.98) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:190 (1008.19, 25.000, 1112.34) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_incense.p3d    prop      test\placements\SH1.csv:191 (1008.21, 25.000, 1112.05) highest -0.040 lowest -0.040 bc_y 0.000 -> sunk 0.040 m
+  jp_s_grave_stones_jizo_child.p prop      test\placements\SH1.csv:192 (1009.60, 25.000, 1112.61) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_field.p3d    prop      test\placements\SH1.csv:193 (991.07, 25.000, 1115.10) highest -0.141 lowest -0.141 bc_y 0.000 -> sunk 0.141 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:194 (993.17, 25.000, 1115.10) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:195 (994.37, 25.000, 1115.15) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:196 (994.42, 25.523, 1115.46) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_board_s.p3d  prop      test\placements\SH1.csv:197 (995.64, 25.000, 1115.18) highest -0.100 lowest -0.100 bc_y 0.000 -> sunk 0.100 m
+  jp_s_grave_wood_bohyo.p3d      prop      test\placements\SH1.csv:198 (996.63, 25.000, 1114.51) highest -0.206 lowest -0.206 bc_y 0.000 -> sunk 0.206 m
+  jp_s_grave_stones_field_pair.p prop      test\placements\SH1.csv:199 (997.85, 25.000, 1115.03) highest -0.122 lowest -0.122 bc_y 0.000 -> sunk 0.122 m
+  jp_s_grave_wood_ab_bohyo_split prop      test\placements\SH1.csv:200 (998.92, 25.000, 1114.47) highest -0.200 lowest -0.205 bc_y 0.000 -> sunk 0.205 m
+  jp_s_grave_stones_jizo_child.p prop      test\placements\SH1.csv:201 (1001.41, 25.000, 1115.05) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo_ch prop      test\placements\SH1.csv:202 (1002.41, 25.000, 1115.15) highest -0.060 lowest -0.060 bc_y 0.000 -> sunk 0.060 m
+  jp_s_grave_stones_jizo_child.p prop      test\placements\SH1.csv:203 (1003.67, 25.000, 1115.12) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo_ch prop      test\placements\SH1.csv:204 (1004.76, 25.000, 1115.18) highest -0.060 lowest -0.060 bc_y 0.000 -> sunk 0.060 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:205 (1004.70, 25.523, 1115.50) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:206 (1007.23, 25.000, 1115.12) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_round_s_plai prop      test\placements\SH1.csv:207 (1008.19, 25.000, 1115.08) highest -0.080 lowest -0.080 bc_y 0.000 -> sunk 0.080 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:208 (1009.32, 25.000, 1115.17) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:209 (1009.30, 25.523, 1115.49) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:210 (991.08, 25.000, 1117.81) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:211 (992.27, 25.000, 1117.69) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_ab_leaning.p prop      test\placements\SH1.csv:212 (993.34, 25.000, 1117.67) highest -0.175 lowest -0.175 bc_y 0.000 -> sunk 0.175 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:213 (994.45, 25.000, 1117.72) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:214 (994.51, 25.523, 1118.03) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:215 (994.45, 25.000, 1117.39) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_incense.p3d    prop      test\placements\SH1.csv:216 (994.47, 25.000, 1117.10) highest -0.040 lowest -0.040 bc_y 0.000 -> sunk 0.040 m
+  jp_s_grave_stones_field.p3d    prop      test\placements\SH1.csv:217 (996.78, 25.000, 1117.76) highest -0.141 lowest -0.141 bc_y 0.000 -> sunk 0.141 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:218 (997.85, 25.000, 1117.66) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_board_s.p3d  prop      test\placements\SH1.csv:219 (998.95, 25.000, 1117.79) highest -0.100 lowest -0.100 bc_y 0.000 -> sunk 0.100 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:220 (998.92, 25.523, 1118.10) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:221 (1001.44, 25.000, 1117.63) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:222 (1002.54, 25.000, 1117.81) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:223 (1003.75, 25.000, 1117.63) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_jizo_child.p prop      test\placements\SH1.csv:224 (1005.95, 25.000, 1117.68) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_board_s.p3d  prop      test\placements\SH1.csv:225 (1007.13, 25.000, 1117.73) highest -0.100 lowest -0.100 bc_y 0.000 -> sunk 0.100 m
+  jp_s_grave_stones_ab_boat_halo prop      test\placements\SH1.csv:226 (1008.25, 25.000, 1117.78) highest -0.237 lowest -0.237 bc_y 0.000 -> sunk 0.237 m
+  jp_s_grave_stones_field_mound. prop      test\placements\SH1.csv:227 (1009.50, 25.000, 1117.04) highest -0.100 lowest -0.100 bc_y 0.000 -> sunk 0.100 m
+  jp_s_grave_stones_board_tall_m prop      test\placements\SH1.csv:228 (991.14, 25.000, 1120.37) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:229 (992.30, 25.000, 1120.37) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:230 (992.30, 25.523, 1120.68) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:231 (992.30, 25.000, 1120.04) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_incense.p3d    prop      test\placements\SH1.csv:232 (992.32, 25.000, 1119.75) highest -0.040 lowest -0.040 bc_y 0.000 -> sunk 0.040 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:233 (993.29, 25.000, 1120.45) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:234 (993.32, 25.523, 1120.76) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_pillar_point prop      test\placements\SH1.csv:235 (994.60, 25.000, 1120.47) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:236 (996.86, 25.000, 1120.41) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_ab_bohyo_rotte prop      test\placements\SH1.csv:237 (997.83, 24.982, 1119.77) highest -0.200 lowest -0.205 bc_y -0.018 -> sunk 0.205 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:238 (999.04, 25.000, 1120.41) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:239 (1001.36, 25.000, 1120.37) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:240 (1001.39, 25.523, 1120.68) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_ab_board_bro prop      test\placements\SH1.csv:241 (1002.58, 25.000, 1120.55) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:242 (1003.59, 25.000, 1120.46) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:243 (1003.61, 25.523, 1120.77) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_field.p3d    prop      test\placements\SH1.csv:244 (1004.74, 25.000, 1120.37) highest -0.141 lowest -0.141 bc_y 0.000 -> sunk 0.141 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:245 (1006.15, 25.000, 1120.43) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:246 (1008.29, 25.000, 1120.44) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:247 (1008.29, 25.000, 1120.11) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_incense.p3d    prop      test\placements\SH1.csv:248 (1008.31, 25.000, 1119.82) highest -0.040 lowest -0.040 bc_y 0.000 -> sunk 0.040 m
+  jp_s_grave_stones_board_s.p3d  prop      test\placements\SH1.csv:249 (1009.57, 25.000, 1120.41) highest -0.100 lowest -0.100 bc_y 0.000 -> sunk 0.100 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:250 (990.88, 25.000, 1123.04) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:251 (992.00, 25.000, 1123.06) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_gorinto_s.p3 prop      test\placements\SH1.csv:252 (993.37, 25.000, 1123.00) highest -0.040 lowest -0.040 bc_y 0.000 -> sunk 0.040 m
+  jp_s_grave_stones_board_tall_m prop      test\placements\SH1.csv:253 (995.52, 25.000, 1123.12) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_pillar.p3d   prop      test\placements\SH1.csv:254 (996.66, 25.000, 1123.12) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:255 (997.93, 25.000, 1123.05) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:256 (997.90, 25.523, 1123.37) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_field_pair.p prop      test\placements\SH1.csv:257 (999.15, 25.000, 1123.16) highest -0.122 lowest -0.122 bc_y 0.000 -> sunk 0.122 m
+  jp_s_grave_stones_board_tall_m prop      test\placements\SH1.csv:258 (1001.47, 25.000, 1123.11) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:259 (1002.50, 25.000, 1122.97) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:260 (1002.42, 25.523, 1123.29) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_stones_ab_leaning.p prop      test\placements\SH1.csv:261 (1003.70, 25.000, 1123.12) highest -0.175 lowest -0.175 bc_y 0.000 -> sunk 0.175 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:262 (1004.91, 25.000, 1123.07) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:263 (1004.91, 25.000, 1122.73) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_wood_incense.p3d    prop      test\placements\SH1.csv:264 (1004.93, 25.000, 1122.44) highest -0.040 lowest -0.040 bc_y 0.000 -> sunk 0.040 m
+  jp_s_grave_stones_gorinto_stac prop      test\placements\SH1.csv:265 (1007.10, 25.000, 1123.07) highest -0.040 lowest -0.040 bc_y 0.000 -> sunk 0.040 m
+  jp_s_grave_stones_ab_boat_halo prop      test\placements\SH1.csv:266 (1008.33, 25.000, 1123.11) highest -0.237 lowest -0.237 bc_y 0.000 -> sunk 0.237 m
+  jp_s_grave_wood_bohyo_s.p3d    prop      test\placements\SH1.csv:267 (1009.43, 25.000, 1122.44) highest -0.198 lowest -0.203 bc_y 0.000 -> sunk 0.203 m
+  jp_s_grave_stones_gorinto_heap prop      test\placements\SH1.csv:268 (991.01, 25.005, 1125.67) highest -0.017 lowest -0.019 bc_y 0.000 -> ok
+  jp_s_grave_stones_gorinto_s.p3 prop      test\placements\SH1.csv:269 (993.32, 25.007, 1125.71) highest -0.040 lowest -0.042 bc_y 0.000 -> sunk 0.042 m
+  jp_s_grave_stones_board_tall_m prop      test\placements\SH1.csv:270 (994.47, 25.007, 1125.69) highest -0.050 lowest -0.052 bc_y 0.000 -> sunk 0.052 m
+  jp_s_grave_stones_ab_gorinto_f prop      test\placements\SH1.csv:271 (995.68, 25.004, 1125.68) highest -0.049 lowest -0.051 bc_y 0.000 -> sunk 0.051 m
+  jp_s_grave_stones_pillar.p3d   prop      test\placements\SH1.csv:272 (996.68, 25.006, 1125.70) highest -0.050 lowest -0.054 bc_y 0.000 -> sunk 0.054 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:273 (996.68, 25.006, 1125.24) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_hokyointo.p3 prop      test\placements\SH1.csv:274 (997.98, 25.006, 1125.61) highest -0.050 lowest -0.054 bc_y 0.000 -> sunk 0.054 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:275 (1001.25, 25.007, 1125.63) highest -0.050 lowest -0.052 bc_y 0.000 -> sunk 0.052 m
+  jp_s_grave_stones_gorinto_l.p3 prop      test\placements\SH1.csv:276 (1003.17, 25.005, 1125.61) highest -0.050 lowest -0.056 bc_y 0.000 -> sunk 0.056 m
+  jp_s_grave_stones_ab_hokyointo prop      test\placements\SH1.csv:277 (1004.82, 25.003, 1125.68) highest -0.053 lowest -0.057 bc_y 0.000 -> sunk 0.057 m
+  jp_s_grave_stones_boat_halo.p3 prop      test\placements\SH1.csv:278 (1005.99, 25.007, 1125.67) highest -0.050 lowest -0.052 bc_y 0.000 -> sunk 0.052 m
+  jp_s_grave_wood_sotoba_x3.p3d  prop      test\placements\SH1.csv:279 (1006.01, 25.532, 1125.98) highest -0.152 lowest -0.153 bc_y 0.523 -> sunk 0.153 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:280 (1005.99, 25.006, 1125.34) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_grave_stones_field.p3d    prop      test\placements\SH1.csv:281 (1007.11, 25.006, 1125.53) highest -0.142 lowest -0.142 bc_y 0.000 -> sunk 0.142 m
+  jp_s_grave_stones_board.p3d    prop      test\placements\SH1.csv:282 (1009.55, 25.007, 1125.69) highest -0.050 lowest -0.052 bc_y 0.000 -> sunk 0.052 m
+  jp_s_grave_wood_tubes.p3d      prop      test\placements\SH1.csv:283 (1009.55, 25.006, 1125.36) highest -0.050 lowest -0.050 bc_y 0.000 -> sunk 0.050 m
+  jp_s_chozubachi_small.p3d      prop      test\placements\SH1.csv:284 (1012.00, 25.000, 1112.00) highest -0.090 lowest -0.090 bc_y 0.000 -> sunk 0.090 m
+  jp_s_grave_wood_bucket_rack.p3 prop      test\placements\SH1.csv:285 (1012.20, 25.000, 1109.90) highest -0.150 lowest -0.150 bc_y 0.000 -> sunk 0.150 m
+  jp_s_grave_wood_rack.p3d       prop      test\placements\SH1.csv:286 (1011.90, 25.000, 1114.40) highest -0.200 lowest -0.200 bc_y 0.000 -> sunk 0.200 m
+  jp_s_stone_jizo_m.p3d          rock      test\placements\SH1.csv:287 (1012.00, 25.000, 1117.00) highest +0.135 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.135 m vs soil (needs <= -0.05)
+  jp_s_stone_jizo_bib.p3d        rock      test\placements\SH1.csv:288 (1012.00, 25.000, 1117.72) highest +0.135 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.135 m vs soil (needs <= -0.05)
+  jp_s_stone_jizo_m.p3d          rock      test\placements\SH1.csv:289 (1012.00, 25.000, 1118.44) highest +0.135 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.135 m vs soil (needs <= -0.05)
+  jp_s_stone_jizo_halo.p3d       rock      test\placements\SH1.csv:290 (1012.00, 25.000, 1119.16) highest +0.121 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.121 m vs soil (needs <= -0.05)
+  jp_s_stone_jizo_bib.p3d        rock      test\placements\SH1.csv:291 (1012.00, 25.000, 1119.88) highest +0.135 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.135 m vs soil (needs <= -0.05)
+  jp_s_stone_jizo_m.p3d          rock      test\placements\SH1.csv:292 (1012.00, 25.000, 1120.60) highest +0.135 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.135 m vs soil (needs <= -0.05)
+  jp_s_stone_jizo_ab_tipped.p3d  rock      test\placements\SH1.csv:293 (1013.20, 25.000, 1121.90) highest +0.003 lowest -0.050 bc_y 0.000 -> base not sunk: highest contact point +0.003 m vs soil (needs <= -0.05)
+  jp_s_grave_wood_ab_fallen.p3d  prop      test\placements\SH1.csv:294 (996.65, 25.413, 1114.30) highest -0.141 lowest -0.145 bc_y 0.413 -> sunk 0.145 m
+  jp_s_grave_wood_ab_fallen.p3d  prop      test\placements\SH1.csv:295 (1005.62, 25.413, 1118.56) highest -0.141 lowest -0.145 bc_y 0.413 -> sunk 0.145 m
+  jp_s_grave_wood_ab_fallen.p3d  prop      test\placements\SH1.csv:296 (993.44, 25.413, 1124.02) highest -0.142 lowest -0.146 bc_y 0.413 -> sunk 0.146 m
+  jp_s_leaf_pile_ab_scattered.p3 building  test\placements\SH1.csv:297 (1000.07, 25.035, 1120.84) highest +0.050 lowest -0.000 embed 0.000 bc_y 0.035 -> floats 0.050 m
+  jp_s_leaf_pile_ab_scattered.p3 building  test\placements\SH1.csv:298 (994.60, 25.035, 1126.77) highest +0.038 lowest -0.023 embed 0.026 bc_y 0.035 -> floats 0.038 m
+  jp_s_leaf_pile_small.p3d       building  test\placements\SH1.csv:299 (1000.34, 25.080, 1114.63) highest +0.050 lowest +0.001 embed 0.000 bc_y 0.080 -> floats 0.050 m
+  jp_s_leaf_pile_small.p3d       building  test\placements\SH1.csv:300 (1006.60, 25.081, 1124.05) highest +0.050 lowest -0.002 embed 0.005 bc_y 0.080 -> floats 0.050 m
+  jp_s_leaf_pile_ab_scattered.p3 building  test\placements\SH1.csv:301 (1004.99, 25.047, 1129.28) highest +0.029 lowest -0.043 embed 0.047 bc_y 0.035 -> ok
+  jp_s_leaf_pile_small.p3d       building  test\placements\SH1.csv:302 (989.98, 25.080, 1118.64) highest +0.050 lowest +0.001 embed 0.000 bc_y 0.080 -> floats 0.050 m
+  t_quercusrobur_2f.p3d          plant     test\placements\SH1.csv:303 (988.23, 37.488, 1129.23) highest -0.763 lowest -0.956 embed 0.063 bc_y 12.508 -> ok
+  jp_f_mino_pegs.p3d             prop      test\placements\SH1.csv:304 (1073.95, 26.133, 1037.66) highest +0.533 lowest +0.528 bc_y 1.083 -> floats 0.533 m
+  jp_f_tool_wall.p3d             prop      test\placements\SH1.csv:305 (1072.54, 26.365, 1037.69) highest +0.940 lowest +0.940 bc_y 1.315 -> floats 0.940 m
+  jp_f_utensil_board.p3d         prop      test\placements\SH1.csv:306 (1071.33, 26.365, 1037.70) highest +1.082 lowest +1.080 bc_y 1.315 -> floats 1.082 m
+  jp_f_rope_pegs_2.p3d           prop      test\placements\SH1.csv:307 (1070.44, 26.450, 1037.68) highest +1.158 lowest +1.154 bc_y 1.400 -> floats 1.158 m
+  jp_f_sandals_hung_wall.p3d     prop      test\placements\SH1.csv:308 (1069.74, 26.570, 1037.69) highest +1.358 lowest +1.353 bc_y 1.520 -> floats 1.358 m
+  jp_f_fire_gear.p3d             prop      test\placements\SH1.csv:309 (1074.51, 26.715, 1036.66) highest +1.260 lowest +1.260 bc_y 1.665 -> floats 1.260 m
+  jp_f_koyomi.p3d                prop      test\placements\SH1.csv:310 (1074.66, 26.600, 1035.15) highest +1.376 lowest +1.376 bc_y 1.550 -> floats 1.376 m
+  jp_f_yumi_rack_wall.p3d        prop      test\placements\SH1.csv:311 (1069.39, 26.270, 1036.55) highest +0.600 lowest +0.600 bc_y 1.220 -> floats 0.600 m
+  jp_f_bangasa_hung.p3d          prop      test\placements\SH1.csv:312 (1069.40, 26.365, 1034.95) highest +0.740 lowest +0.740 bc_y 1.315 -> floats 0.740 m
+  jp_f_ofuda_single.p3d          prop      test\placements\SH1.csv:313 (1072.91, 26.750, 1034.11) highest +1.640 lowest +1.640 bc_y 1.700 -> floats 1.640 m
+  jp_f_kaya_draped.p3d           prop      test\placements\SH1.csv:314 (1073.82, 27.245, 1034.18) highest +1.970 lowest +1.970 bc_y -0.275 -> floats 1.970 m
+  jp_f_hoshigaki_3.p3d           prop      test\placements\SH1.csv:315 (1070.65, 27.022, 1034.18) highest +1.524 lowest +1.524 bc_y -0.498 -> floats 1.524 m
+  jp_f_drying_daikon.p3d         prop      test\placements\SH1.csv:316 (1069.85, 27.301, 1034.18) highest +2.083 lowest +2.083 bc_y -0.219 -> floats 2.083 m
+  jp_f_noren_inner_2.p3d         hanging   test\placements\SH1.csv:317 (1072.00, 26.953, 1034.17) highest +0.005 lowest +nan bc_y -0.567 -> ok
+  jp_f_taru_cask.p3d             prop      test\placements\SH1.csv:318 (1073.90, 25.050, 1036.75) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_charcoal_bale.p3d         prop      test\placements\SH1.csv:319 (1072.95, 25.050, 1036.80) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_seiro_kama2.p3d           prop      test\placements\SH1.csv:320 (1071.80, 25.050, 1036.70) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_meal_left_zen.p3d         prop      test\placements\SH1.csv:321 (1070.48, 25.146, 1036.30) highest +0.003 lowest +0.000 bc_y 0.096 -> ok
+  jp_f_enza.p3d                  prop      test\placements\SH1.csv:322 (1071.80, 25.068, 1035.45) highest -0.000 lowest -0.000 bc_y 0.018 -> ok
+  jp_f_tana_182_3.p3d            prop      test\placements\SH1.csv:323 (1079.00, 25.050, 1037.76) highest +0.650 lowest +0.650 bc_y 0.000 -> floats 0.650 m
+  jp_f_tana_182_3.p3d            prop      test\placements\SH1.csv:324 (1081.00, 25.050, 1037.76) highest +0.650 lowest +0.650 bc_y 0.000 -> floats 0.650 m
+  jp_f_tana_136_1.p3d            prop      test\placements\SH1.csv:325 (1082.66, 25.050, 1036.55) highest +0.650 lowest +0.650 bc_y 0.000 -> floats 0.650 m
+  jp_f_butsu_set_full.p3d        prop      test\placements\SH1.csv:326 (1079.53, 26.485, 1037.58) highest +1.300 lowest +1.300 bc_y 0.135 -> floats 1.300 m
+  jp_f_kamidana_set_offerings.p3 prop      test\placements\SH1.csv:327 (1078.95, 26.485, 1037.61) highest +1.300 lowest +1.300 bc_y 0.135 -> floats 1.300 m
+  jp_f_tokkuri_pair.p3d          prop      test\placements\SH1.csv:328 (1078.42, 26.440, 1037.61) highest +1.300 lowest +1.300 bc_y 0.090 -> floats 1.300 m
+  jp_f_choba_set_desk.p3d        prop      test\placements\SH1.csv:329 (1079.46, 25.989, 1037.57) highest +0.900 lowest +0.900 bc_y 0.039 -> floats 0.900 m
+  jp_f_masu_set.p3d              prop      test\placements\SH1.csv:330 (1078.71, 25.991, 1037.56) highest +0.900 lowest +0.900 bc_y 0.041 -> floats 0.900 m
+  jp_f_hiuchi_box.p3d            prop      test\placements\SH1.csv:331 (1078.38, 25.998, 1037.61) highest +0.900 lowest +0.900 bc_y 0.048 -> floats 0.900 m
+  jp_f_tea_matcha.p3d            prop      test\placements\SH1.csv:332 (1081.55, 26.408, 1037.61) highest +1.299 lowest +1.299 bc_y 0.058 -> floats 1.299 m
+  jp_f_writing_box.p3d           prop      test\placements\SH1.csv:333 (1080.79, 26.377, 1037.61) highest +1.351 lowest +1.301 bc_y 0.027 -> floats 1.351 m  [uneven support: tilt to the surface]
+  jp_f_basket_zaru.p3d           prop      test\placements\SH1.csv:334 (1080.40, 26.391, 1037.61) highest +1.299 lowest +1.299 bc_y 0.041 -> floats 1.299 m
+  jp_f_tableware_hakozen_stack.p prop      test\placements\SH1.csv:335 (1082.52, 26.250, 1036.13) highest +0.950 lowest +0.900 bc_y 0.300 -> floats 0.950 m  [uneven support: tilt to the surface]
+  jp_f_suribachi_bowl.p3d        prop      test\placements\SH1.csv:336 (1082.52, 26.123, 1036.60) highest +0.900 lowest +0.900 bc_y 0.173 -> floats 0.900 m
+  jp_f_sewing_box.p3d            prop      test\placements\SH1.csv:337 (1082.51, 26.135, 1037.00) highest +0.900 lowest +0.900 bc_y 0.185 -> floats 0.900 m
+  jp_f_butsudan_lacquer.p3d      prop      test\placements\SH1.csv:338 (1077.70, 25.050, 1037.10) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_byobu_makura.p3d          prop      test\placements\SH1.csv:339 (1078.55, 25.050, 1035.05) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_clothes_kimono.p3d        prop      test\placements\SH1.csv:340 (1080.12, 25.084, 1035.47) highest +0.004 lowest +0.000 bc_y 0.034 -> ok
+  jp_f_goban_go.p3d              prop      test\placements\SH1.csv:341 (1081.75, 25.050, 1035.05) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_toys_koma.p3d             prop      test\placements\SH1.csv:342 (1078.94, 25.083, 1036.17) highest +0.005 lowest -0.000 bc_y 0.033 -> ok
+  jp_f_mirror_stand.p3d          prop      test\placements\SH1.csv:343 (1081.55, 25.310, 1036.20) highest +0.000 lowest +0.000 bc_y 0.260 -> ok
+  jp_f_shokudai_tall.p3d         prop      test\placements\SH1.csv:344 (1077.70, 25.050, 1035.65) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_straw_bed_pile.p3d        prop      test\placements\SH1.csv:345 (1079.70, 25.050, 1036.85) highest +0.007 lowest +0.002 bc_y 0.000 -> ok
+  jp_f_chochin_crest.p3d         hanging   test\placements\SH1.csv:346 (1080.00, 27.220, 1034.18) highest +0.000 lowest +nan bc_y -0.300 -> ok
+  jp_f_iko_robe.p3d              prop      test\placements\SH1.csv:347 (1086.40, 25.050, 1037.45) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_izaribata.p3d             prop      test\placements\SH1.csv:348 (1089.55, 25.050, 1037.20) highest +0.004 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_itoguruma.p3d             prop      test\placements\SH1.csv:349 (1087.95, 25.050, 1037.35) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_straw_work_sandal.p3d     prop      test\placements\SH1.csv:350 (1086.12, 25.131, 1035.81) highest +0.004 lowest +0.000 bc_y 0.081 -> ok
+  jp_f_mi.p3d                    prop      test\placements\SH1.csv:351 (1087.70, 25.150, 1036.15) highest +0.006 lowest +0.003 bc_y 0.100 -> ok
+  jp_f_usu.p3d                   prop      test\placements\SH1.csv:352 (1089.90, 25.050, 1035.80) highest +0.004 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_katanakake_stand.p3d      prop      test\placements\SH1.csv:353 (1088.80, 25.050, 1034.75) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_yoroibitsu.p3d            prop      test\placements\SH1.csv:354 (1087.55, 25.050, 1034.90) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_manger_trough.p3d         prop      test\placements\SH1.csv:355 (1085.95, 25.050, 1035.05) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_f_fallen_leaf_shoji.p3d     prop      test\placements\SH1.csv:356 (1088.95, 25.065, 1035.75) highest +0.004 lowest +0.000 bc_y 0.015 -> ok
+  jp_s_kaki_curtain_1ken.p3d     prop      test\placements\SH1.csv:357 (1089.82, 27.349, 1033.92) highest +1.765 lowest +1.765 bc_y 1.829 -> floats 1.765 m
+  jp_s_sandals_sale_eave.p3d     prop      test\placements\SH1.csv:358 (1088.00, 27.529, 1033.92) highest +2.312 lowest +2.307 bc_y 2.009 -> floats 2.312 m
+  jp_s_bird_cage_hung.p3d        prop      test\placements\SH1.csv:359 (1086.18, 27.780, 1033.88) highest -0.348 lowest -0.456 bc_y 2.260 -> sunk 0.456 m  [uneven support: tilt to the surface]
+  jp_s_ladder_lean.p3d           building  test\placements\SH1.csv:360 (1069.20, 25.000, 1035.40) highest +0.010 lowest +0.000 embed 0.000 bc_y 0.000 -> ok
+  jp_s_charcoal_bales_stack.p3d  prop      test\placements\SH1.csv:361 (1069.26, 25.000, 1037.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_farm_tools_lean.p3d       prop      test\placements\SH1.csv:362 (1091.03, 25.840, 1036.81) highest +0.004 lowest -0.000 bc_y 0.840 -> ok
+  jp_s_amado_half_open.p3d       prop      test\placements\SH1.csv:363 (1090.80, 25.000, 1035.10) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_travel_gear_set.p3d       prop      test\placements\SH1.csv:364 (1068.64, 25.110, 1029.90) highest +0.004 lowest -0.000 bc_y 0.110 -> ok
+  jp_s_footwear_pairs.p3d        prop      test\placements\SH1.csv:365 (1070.97, 25.053, 1030.29) highest -0.000 lowest -0.000 bc_y 0.053 -> ok
+  jp_s_lantern_fallen_chochin.p3 hanging   test\placements\SH1.csv:366 (1073.39, 25.164, 1030.01) highest +nan lowest +nan bc_y 0.164 -> hangs in mid-air: no host within 0.5 m  [move it onto the host (or add a hook memory point)]
+  jp_s_stool_std.p3d             prop      test\placements\SH1.csv:367 (1075.50, 25.000, 1030.30) highest +0.001 lowest -0.001 bc_y 0.000 -> ok
+  jp_s_tsukimi_stand.p3d         prop      test\placements\SH1.csv:368 (1080.89, 25.593, 1030.61) highest +0.000 lowest +0.000 bc_y 0.593 -> ok
+  jp_s_potted_stand.p3d          prop      test\placements\SH1.csv:369 (1083.20, 25.000, 1030.30) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_stable_yard_tie_post.p3d  prop      test\placements\SH1.csv:370 (1085.90, 25.000, 1030.20) highest -0.400 lowest -0.400 bc_y 0.000 -> sunk 0.400 m
+  jp_s_scarecrow_kasa.p3d        prop      test\placements\SH1.csv:371 (1089.00, 25.000, 1030.00) highest -0.350 lowest -0.350 bc_y 0.000 -> sunk 0.350 m
+  jp_s_fire_watch_rack.p3d       building  test\placements\SH1.csv:372 (1092.40, 25.000, 1030.40) highest -0.400 lowest -0.400 embed 0.000 bc_y 0.000 -> ok
+  jp_s_hasa_low.p3d              building  test\placements\SH1.csv:373 (1069.40, 25.000, 1025.40) highest -0.339 lowest -0.361 embed 0.000 bc_y 0.000 -> ok
+  jp_s_kakei_trough.p3d          building  test\placements\SH1.csv:374 (1075.00, 25.000, 1025.40) highest -0.336 lowest -0.364 embed 0.000 bc_y 0.000 -> ok
+  jp_s_leaf_pile_broom.p3d       building  test\placements\SH1.csv:375 (1080.27, 25.080, 1024.79) highest +0.050 lowest +0.000 embed 0.000 bc_y 0.080 -> floats 0.050 m
+  jp_s_tenbin_spill_boxes.p3d    building  test\placements\SH1.csv:376 (1085.00, 25.000, 1025.20) highest +0.050 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.050 m
+  jp_s_kago_down.p3d             building  test\placements\SH1.csv:377 (1089.80, 25.000, 1025.00) highest +0.000 lowest +0.000 embed 0.000 bc_y 0.000 -> ok
+  jp_s_fishnet_poles.p3d         building  test\placements\SH1.csv:378 (1095.60, 25.000, 1023.50) highest -0.300 lowest -0.300 embed 0.000 bc_y 0.000 -> ok
+  jp_s_boat_up.p3d               building  test\placements\SH1.csv:379 (1072.50, 25.000, 1020.40) highest +0.050 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.050 m
+  jp_s_bench_1ken.p3d            prop      test\placements\SH1.csv:380 (1078.20, 25.000, 1030.50) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  jp_s_bench_dress_tea.p3d       prop      test\placements\SH1.csv:381 (1077.85, 25.468, 1030.50) highest +0.430 lowest +0.430 bc_y 0.038 -> floats 0.430 m
+  StaticObj_Misc_HayBale         prop      test\spawns\A.json:0       (1004.00, 25.770, 944.00) highest +0.004 lowest +0.004 bc_y 0.672 -> ok
+  StaticObj_Misc_HayBale_Packed  prop      test\spawns\A.json:1       (1016.00, 25.830, 940.00) highest +0.007 lowest +0.003 bc_y 0.730 -> ok
+  StaticObj_Misc_HayBale_Packed  prop      test\spawns\A.json:2       (1030.00, 25.830, 933.00) highest +0.007 lowest +0.003 bc_y 0.730 -> ok
+  StaticObj_Target_Support       prop      test\spawns\A.json:3       (1043.00, 26.430, 928.00) highest +0.001 lowest +0.000 bc_y 0.757 -> ok
+  StaticObj_Target_Concrete1     prop      test\spawns\A.json:4       (1024.00, 26.600, 926.50) highest +0.005 lowest +0.000 bc_y 1.608 -> ok
+  JP_EffTest_medium_Tansu        building  test\spawns\E.json:0       (1034.00, 25.000, 994.00) highest +0.021 lowest +0.000 embed 0.000 bc_y 0.000 -> ok
+  JP_EffTest_medium_Tansu_Ransac building  test\spawns\E.json:1       (1034.00, 25.000, 998.00) highest +0.035 lowest +0.000 embed 0.000 bc_y 0.000 -> floats 0.035 m
+  JP_EffTest_high_Tansu          prop      test\spawns\E.json:2       (1041.00, 25.000, 994.00) highest +0.000 lowest -0.002 bc_y 0.000 -> ok
+  JP_EffTest_high_Tansu_Ransacke prop      test\spawns\E.json:3       (1041.00, 25.000, 998.00) highest +0.000 lowest -0.002 bc_y 0.000 -> ok
+  JP_EffTest_xhigh_Tansu         prop      test\spawns\E.json:4       (1048.00, 25.000, 994.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  JP_EffTest_xhigh_Tansu_Ransack prop      test\spawns\E.json:5       (1048.00, 25.000, 998.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  JP_EffTest_max_Tansu           prop      test\spawns\E.json:6       (1055.00, 25.000, 994.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  JP_EffTest_max_Tansu_Ransacked prop      test\spawns\E.json:7       (1055.00, 25.000, 998.00) highest +0.000 lowest +0.000 bc_y 0.000 -> ok
+  JP_Sakura_01_Static            plant     test\spawns\F.json:0       (1110.00, 24.950, 1050.00) highest -0.183 lowest -0.222 embed 0.050 bc_y 0.000 -> ok
+  JP_BambooClump_01_Static       plant     test\spawns\F.json:1       (1110.00, 24.950, 1068.00) highest -0.153 lowest -0.158 embed 0.050 bc_y 0.000 -> ok
+
+wrote D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\data\placecheck\island\failures.csv

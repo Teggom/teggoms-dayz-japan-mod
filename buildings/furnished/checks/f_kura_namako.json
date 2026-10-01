@@ -7,7 +7,7 @@
  "door_clear_m": [
   1.0
  ],
- "checks_n": 54,
+ "checks_n": 57,
  "failures": 0,
  "checks": [
   {
@@ -103,7 +103,7 @@
   {
    "check": "ST3 head room >= 2.05 m over the flight (D4)",
    "ok": true,
-   "detail": "lowest 2.09 m over the ramp at (-1.37, -1.55, 'Component96')"
+   "detail": "lowest 2.09 m over the ramp at (-1.37, -1.55, 'Component92')"
   },
   {
    "check": "ST4 the ramp meets the lower floor at its foot and the upper floor at its head",
@@ -184,6 +184,21 @@
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
    "ok": true,
    "detail": "far-field faces R1/R2/R3 0/144/12; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+  },
+  {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 2413 touching (opposite-facing: backface-culled) and 1218 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
   },
   {
    "check": "D1 props per room 5-7: kura",
@@ -278,7 +293,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 436033 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 435904 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

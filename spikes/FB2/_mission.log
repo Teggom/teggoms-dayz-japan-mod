@@ -1,0 +1,47 @@
+events: every event inactive except ['Loot']
+types: vanilla loot shrunk to 40 items at nominal 1 (TEST_LOOT_MAX)
+types: 1 from F.xml
+types: 4 from W.xml
+mapgroupproto: 1 groups from B_mapgroupproto.xml
+mapgroupproto: 128 groups from C_mapgroupproto.xml
+mapgrouppos: 30 groups from C_mapgrouppos.xml
+  mapgrouppos: Land_JP_Machiya_T3_01_Shop from C_mapgrouppos.xml matches its wrp object exactly (1024.000 25.000 1045.000)
+  mapgrouppos: Land_JP_Toilet_T1_01 from C_mapgrouppos.xml matches its wrp object exactly (1021.700 25.000 1056.200)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_3ken_EndL_ToriL from C_mapgrouppos.xml matches its wrp object exactly (979.002 25.000 1087.640)
+  mapgrouppos: Land_JP_PostTownHouse_Row_EndL from C_mapgrouppos.xml matches its wrp object exactly (1002.810 25.000 1072.360)
+  mapgrouppos: Land_JP_PostTownHouse_Row_Middle from C_mapgrouppos.xml matches its wrp object exactly (997.254 25.000 1072.360)
+  mapgrouppos: Land_JP_Hut_East_S_Earth_Mushiro from C_mapgrouppos.xml matches its wrp object exactly (933.500 25.000 1003.000)
+  mapgrouppos: Land_JP_Shed_Open_Board from C_mapgrouppos.xml matches its wrp object exactly (1072.000 25.000 1036.000)
+  mapgrouppos: Land_JP_Shed_Open_Board from C_mapgrouppos.xml matches its wrp object exactly (1080.000 25.000 1036.000)
+  mapgrouppos: Land_JP_Shed_Open_Board from C_mapgrouppos.xml matches its wrp object exactly (1088.000 25.000 1036.000)
+  mapgrouppos: Land_JP_Shed_Open_Thatch from C_mapgrouppos.xml matches its wrp object exactly (941.000 25.000 1045.500)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_3ken_Middle_ToriL_Komeya from C_mapgrouppos.xml matches its wrp object exactly (997.682 25.000 1087.640)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_2ken_Middle_ToriR_Kamiya from C_mapgrouppos.xml matches its wrp object exactly (993.004 25.000 1087.640)
+  mapgrouppos: Land_JP_Townhouse_Edo_2ken_Middle_ToriR_Gofuku from C_mapgrouppos.xml matches its wrp object exactly (1054.592 25.000 1087.640)
+  mapgrouppos: Land_JP_Townhouse_Edo_3ken_CornerR_ToriL_Sakaya from C_mapgrouppos.xml matches its wrp object exactly (1059.238 25.000 1087.640)
+  mapgrouppos: Land_JP_PostTownHouse_Det_TileNuriya_Home from C_mapgrouppos.xml matches its wrp object exactly (988.730 25.000 1072.360)
+  mapgrouppos: Land_JP_Hatago_Std_Tile_Furnished from C_mapgrouppos.xml matches its wrp object exactly (1013.122 25.000 1071.450)
+  mapgrouppos: Land_JP_Hatago_Grand_Furnished from C_mapgrouppos.xml matches its wrp object exactly (1026.222 25.000 1071.450)
+  mapgrouppos: Land_JP_Farmhouse_Kanto_Yosemune_Umaya_Furnished from C_mapgrouppos.xml matches its wrp object exactly (942.000 25.000 1029.000)
+  mapgrouppos: Land_JP_Farmhouse_Kinai_Kirizuma_Tile_Takahe_Furnished from C_mapgrouppos.xml matches its wrp object exactly (963.500 25.000 1028.000)
+  mapgrouppos: Land_JP_Hut_East_L_Board_Furnished from C_mapgrouppos.xml matches its wrp object exactly (962.500 25.000 1002.500)
+  mapgrouppos: Land_JP_Hut_West_Thatch_LeanL_Furnished from C_mapgrouppos.xml matches its wrp object exactly (947.000 25.000 1003.000)
+  mapgrouppos: Land_JP_Shed_Walled_Ishioki_Woodshed_Furnished from C_mapgrouppos.xml matches its wrp object exactly (962.000 25.000 1045.500)
+  mapgrouppos: Land_JP_Kura_Namako_Furnished from C_mapgrouppos.xml matches its wrp object exactly (1000.000 25.000 1097.500)
+  mapgrouppos: Land_JP_Kura_Kuro_Hinged_Furnished from C_mapgrouppos.xml matches its wrp object exactly (975.000 25.000 1041.000)
+  mapgrouppos: Land_JP_Townhouse_Edo_3ken_Middle_ToriL_Kanamono from C_mapgrouppos.xml matches its wrp object exactly (1046.146 25.000 1087.640)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_2ken_Middle_ToriR_Tabako from C_mapgrouppos.xml matches its wrp object exactly (989.236 25.000 1087.640)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_3ken_EndR_ToriL_Mochiya from C_mapgrouppos.xml matches its wrp object exactly (1003.238 25.000 1087.640)
+  mapgrouppos: Land_JP_Townhouse_Edo_3ken_EndL_ToriL_Kusuri from C_mapgrouppos.xml matches its wrp object exactly (1040.590 25.000 1087.640)
+  mapgrouppos: Land_JP_Townhouse_Edo_2ken_Middle_ToriR_Board_Shitate from C_mapgrouppos.xml matches its wrp object exactly (1050.824 25.000 1087.640)
+  mapgrouppos: Land_JP_Townhouse_Kamigata_3ken_Middle_ToriL_Kyo_Ningyo from C_mapgrouppos.xml matches its wrp object exactly (984.558 25.000 1087.640)
+mapgrouppos: control house Land_House_1W01 at (1235.9, 19.21, 917.5)
+areaflags.map: 2048x2048 cells of 1 m, usage 0x180 (Town|Village), value 0x3 (Tier1|Tier2), 20971544 bytes
+object spawner: spawns/A.json (5 objects)
+object spawner: spawns/E.json (8 objects)
+object spawner: spawns/F.json (2 objects)
+creature: ZmbM_CitizenASkinny_Blue at (1010.0, 950.0) yaw 0 from A_creatures.txt
+creature: ZmbF_CitizenANormal_Beige at (1022.0, 938.0) yaw 0 from A_creatures.txt
+creature: Animal_CervusElaphus at (1037.0, 942.0) yaw 90 from A_creatures.txt
+init.c: 36 items in 2 rows (x 1000..1046.5, z 975..973.5), 3 creatures
+mission: D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\mission\japantest.japantestisland - 93 files, all xml/json parse

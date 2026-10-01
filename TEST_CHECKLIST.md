@@ -1,102 +1,69 @@
-# Japan test island: the re-check after the showcase walk (~15 min)
+# Japan test island: the second re-check (~10 min)
 
-Everything you flagged on the showcase walk, fixed, in one short loop. Two agents worked on it: **FB1** (buildings,
-doors, placements) and **FP1** (props and materials).
+Your re-check findings, fixed. Two agents: **FP2** (firewood, mochi mortar, ropes) and **FB2** (flicker, the Kinai
+gable, the partitions, the two-storey inn). Before / after pictures: `research/production/contact_sheets/fp2_fixes.jpg`
+(props) and `spikes/FB2/renders/` (buildings).
 
 **Start:**
 1. Run `start-japan-test-island.bat` in the server folder. It starts only the test server, on its own port.
 2. When the server is up, run `start-japan-test-client.bat` to join.
-3. Keep the labelled maps open: `research/production/contact_sheets/sh1_map_street.jpg`, `sh1_map_shrine.jpg`,
-   `sh1_map_gallery.jpg` (IDs as before; the full table is `spikes/SH1/SHOWCASE_MAP.md`).
+3. Labelled maps as before: `research/production/contact_sheets/sh1_map_street.jpg`, `sh1_map_gallery.jpg`
+   (IDs in `spikes/SH1/SHOWCASE_MAP.md`).
 
 **If it won't load, kicks you, or something is invisible:** just tell me. I read the server and client logs myself.
 
-**The route:** gallery (east) -> machiya -> town street -> shrine + hill stair -> hamlet -> back. ~700 m.
+**The route:** town street -> town kura -> grand inn -> hamlet. ~400 m.
 
-## 1. Doors (4 min) — the big one
+## 1. Flicker (3 min) — every building
 
-**Why none opened:** 97 of the 128 building classes didn't match their model file names (e.g. class `..._2ken_...`,
-file `..._2k_...`). The game drew those houses but never connected them to their class, so they had no doors and no
-loot. Every model file is now named after its class, and a new check fails the build if they ever drift apart again.
-The machiya shop and the outhouse were already correct; nothing else was found wrong with the doors themselves.
+**What it was:** in many places two parts were modelled in exactly the same plane (a beam face flush with a wall
+face, a door sill flush with the floor), so the game couldn't decide which to draw. A new check now finds every such
+pair in every building (over 100,000 of them, mostly tiny), and the build moves the smaller part a few millimetres so
+it sits just in front (a sill or track just below the floor). The build fails if a pair ever comes back.
 
-Try these, in this order (open AND close each, from both sides):
-1. **The machiya shop** (straight north of the spawn): the front door. It worked at G4; it should still work.
-2. **The rice dealer C-a** on the street (Kamigata row, north side): the front sliding door, then the inner doors.
-3. **The tailor D5** (Edo row, the middle of the five east of the first torii S01) and **the apothecary D4**.
-4. **The grand inn C-i:** front door, the back-room door, then upstairs.
-5. **The hamlet:** the **Kanto farmhouse's** big plank door; the **Kinai farmhouse's** front door; the **kura**'s
-   hinged plaster leaves (they start open: close both, open them again) and its inner sliding door.
-6. **The outhouse** behind the machiya: the half door.
+- **Town kura C-j** (behind the Kamigata row, ~1000, 1097): go up the stair and look at the back wall beside the
+  stairwell rail, from above and from below. That was your grey wall with the beam flickering through it (the
+  stairwell's rim beam lay in the wall's plane). **Steady now?** (The hamlet kura is the same model.)
+- **Any interior doorway:** look at the bottom of a sliding door (sill, track) in two or three houses. **Steady?**
+- **The rice-cake shop D3** (Kamigata row, ~1003, 1088), the board-walled corner by the mortar: the wall foot and the
+  floor no longer flicker.
+- Walk past anything else you remember flickering.
 
-**Loot:** with the classes connected, loot should now spawn on floors and on furniture in every house (it didn't
-before, except in the machiya). Glance into two or three houses.
+## 2. FP2's props (3 min)
 
-## 2. The gallery (3 min) — FP1's prop fixes (map `sh1_map_gallery.jpg`)
+- **Firewood** (outside the houses, the hamlet woodshed, the kitchen stacks): split billets with bark and ringed
+  ends now, no flat painted ends.
+- **D3, the mortar:** the mallet's head lies in the mortar's hollow with its handle on the rim; the tall pounder
+  stands on the floor and leans on the rim. Nothing floating?
+- **Ropes** (2.5x rounder): the rope coils on the gallery pegs, the shrine ropes (S14, S22), the lever well's ropes
+  (~955, 1001), the rice-bale ties.
 
-Walk ~65 m north-east from the spawn to the three open sheds. Pictures of every fix, before | after:
-`research/production/contact_sheets/fp1_fixes.jpg`.
+## 3. The grand inn C-i (2 min) (~1026, 1071)
 
-- **Broom L55** (back row, with the leaf pile): a real bamboo broom now (handle with nodes, bound twig fan).
-- **Rice sheaves L51** (rice rack, back row west): sheaves hung astride the rail, ears down, golden.
-- **Potted plants L58:** pine, azalea and chrysanthemum in unglazed pots (the pot and flower colours are guesses:
-  say if they're off).
-- **Sword rack L45** (shed 3): curved swords in lacquered scabbards, round guards, cords.
-- **Fallen lantern L72:** you can see into its open end; no clear sheet under it.
-- **Loom L38 and spinning wheel L37** (shed 3): nothing floating? (FP1 fixed the loom's loose parts; it found no
-  fault in the wheel - if it still floats, say where.)
-- **Bale ends** (L25 on the shed 1 floor, L57 against shed 1's west wall): closed, not see-through.
-- **Leaf litter** on the shed floors and in the street: leaf shapes, not dots.
+Upstairs, in the back room by the stair rail (your screenshot C):
+- The **dividing wall** now goes all the way up to the sloping ceiling boards, with a beam across it at the old top.
+- **No slits** where it meets the outer walls, and no vertical gaps along it (posts were missing at its ends and
+  on two frame lines, upstairs and downstairs).
+- Downstairs in any town house or inn: the wall between the front shop room and the back room now meets a beam
+  under the loft (there was an 8 cm slit above it).
 
-## 3. The town street (2 min)
+## 4. The hamlet (2 min)
 
-- **D5, the "house without a roof":** stand in the street in front of the five Edo houses east of the first torii
-  (D4, D1, **D5**, C-c, C-d). FB1 could not find a missing roof on any house there: D5's roof is in every model LOD and
-  faces the right way. D5 is the only board-roofed (pale silver shingle) house between tiled roofs, and its roof sits
-  0.17 m lower, so from the street it can read like sky. **Is it D5? Does it still look roofless? If yes, a screenshot
-  from where you stand, please** (and I'll take it from there).
-- **Fire-watch ladder** (the ward corner, ~1033, 1087, ladder facing the street): look at the ladder -> **Enter
-  ladder**, climb to the railed deck by the bell, step off; then climb back down. (New: it's now a real ladder.)
-- **Notice board** (ward corner, ~1017, 1088): boards hang on rails, the roof sits on rafters and braces.
-- **Potted plants** outside the west-end house (~985, 1076) and the **fallen lantern** in the street (~1006, 1081).
-
-## 4. The shrine and the hill stair (3 min) — map `sh1_map_shrine.jpg`
-
-- **The hill stair torii:** the torii at the foot (S63) and at the top (S70) of the hill stair are now the large
-  stone torii (2.6 m and 2.8 m clear underneath; the old medium ones gave 1.7 / 1.8 m). **Walk up and back down
-  under S70 standing.** The basin S74 moved half a metre east to make room.
-- **Stone torii texture:** S01 (and the stone lanterns): no repeating dots any more.
-- **Torii ropes:** the twisted straw ropes on S14, S22 and the rope torii of the sub-shrine row (S41, S42 ...); the
-  vermilion leaning torii S82's rope now hangs snapped.
-- **Collapsed torii (new):** S100 stone, felled by the 1707 quake (behind the sub-shrine row), S101 an old mossy one
-  half sunk (west of the approach, north of the graveyard), S102 a wooden myojin blown over by a typhoon (west of
-  the approach), S103 a shinmei fallen with its feet rotted (east, in the trees), S104 a vermilion one snapped at the
-  posts (below the Inari path). The three wooden ones lie partly in the slope (0.3-0.4 m on their uphill side).
-  **Do they read as old wrecks? Any floating?**
-
-## 5. The hamlet (3 min)
-
-- **Kinai farmhouse (the tall house with the tiled lower roofs):** the "thick thing under the roof" was the white
-  plastered gable (takahe) hanging down under each eave corner as a block, with the thatch ridge poking over and out
-  of it. Now the white gable runs along the roof edge and stands just above the thatch and its ridge. **Does the
-  gable end look right now, from the yard and from the side?**
-- **Kanto farmhouse:** the farm tools by the big door now lean on the wall (they stood half a metre off), and the
-  charcoal bales stand against the back wall. Same for the tools by the Kinai house's door.
-- **The hamlet kura:** the plaster door leaves are now 13.5 cm thick (were 19 cm) and the window shutters 8 cm (were
-  12 cm), closer to a small country kura; all its outside plaster is the new **aged plaster** (warmer, greyer, rain
-  streaks), and the town kura behind the Kamigata row too. **Thickness and colour right now?**
-- **Lever well** (by the huts, ~955, 1001): the counterweight stone hangs low in a rope sling, the bucket above the
-  curb; crouch: Drink and fill a bottle still work?
-- **Straw stack** in front of the hamlet kura (~970, 1036): one even texture (no grey bands).
-- **Charcoal bales** behind the Kanto farmhouse and at the hamlet's east edge (~968, 1042): ends closed.
-- **Broom and rice stooks/racks** in the yard (~947, 1008 and ~974, 1012).
+- **Kinai farmhouse (tall thatch, tiled lower roofs):** you asked if the big white band was real. It wasn't, as
+  built. On a real yamato-mune house the white is the **gable wall itself**, carried up a little past the thatch
+  with a narrow tile cap. It is not a thick white band laid on a brown gable. Now the whole gable above the tie beam
+  is plastered (frame lines showing), the white edge stands 26 cm over the thatch all the way up with its tile cap,
+  and the ridge between the two gables is slimmer. **Look from the yard and from the side: does it read right now?**
+  (Still not like the real thing: real yamato-mune thatch is steeper than ours, and there is no lower kitchen roof
+  on the gable end. Say if you want either.)
+- **Inside the Kinai and Kanto farmhouses** (your screenshot B): the room walls now end at a **beam on their posts**.
+  In the Kinai house, the wall under a big log beam goes **up into the log**. **Better?**
 
 ## Tell me
 
-1. **Doors:** which of the buildings in section 1 open and close? Any that don't (which door)?
-2. **Loot:** does it show up inside the houses now?
-3. **D5 / the roofless house:** still roofless? Which house (or a screenshot)?
-4. **Hill stair torii S70:** clear walking down?
-5. **Kinai gable, kura thickness and colour, tools on the walls:** right now?
-6. FP1's items (sections 2-5): which are fixed, which still look wrong (IDs)?
-7. Anything new that looks wrong.
+1. **Flicker:** the kura stair wall, door sills, the D3 wall foot: steady? Anywhere else still flickering?
+2. **FP2:** firewood, the D3 mortar and pounder, ropes: right now?
+3. **Grand inn:** does the upstairs divider meet the ceiling? Any slits left?
+4. **Kinai gable:** right now? Do you want the steeper thatch or the kitchen-end lower roof?
+5. **Farmhouse partitions:** right now?
+6. Anything new that looks wrong.
