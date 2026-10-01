@@ -4,7 +4,33 @@ Brief: one boot of the test island shows everything built so far: a shrine, a gr
 test street, a life-layer gallery (all 74 items), then ONE ~40 min walk in TEST_CHECKLIST.md. Time log:
 `japan_dev/TIMELOG_SH1.md` (logger `python spikes/SH1/log.py "<event>" "<name>" "<tag>" <5h> <wk>`).
 
-## Status: island built (world + mission rebuilt, verify_oprw PASS); renders, maps and checklist in progress
+## Status: DONE (built, on the island, world + mission rebuilt, verify_oprw PASS 4076/4076; untested in game)
+
+## Checks
+- `layout_sh1.py`: 0 problems (375 CSV objects + 3 registry sheds; all 74 life-layer items present).
+- `spikes/C3/dress_island.py`: 0 problems after the street change. `pipeline.py --combine-only`: config / model.cfg
+  unchanged, C.csv 101 placements. Mission: 93 files parse; the 3 sheds now snap to their own wrp objects.
+- Placecheck (run by build_world): 377 flags, 279 on SH1 objects, all by design or rule mismatches:
+  156 "sunk" = the props' built-in footing / stake depth (gravestones 4-6 cm, slats and posts 15-26 cm, steles,
+  basins) plus slope seating on the hill (oku-miya / Inari basins S74 / S85 up to 0.48 m on the uphill side);
+  54 "rock" rule on stair landings (visible front <= 3.7 cm, the rest hidden under the next flight by design),
+  torii footings, Jizo bases and huts; 32 "floats" = mounted items (wall / beam / shelf / eave / bench / the rope
+  round the beech): placecheck only counts terrain and building Roadways as support; 27 "hanging" = the stone
+  lanterns and the fallen paper lantern classed as hanging by their names; 8 edge floats <= 5 cm (boat hull, leaf
+  piles, spilled loads: model shape); 2 leaning torii (S62, S82) lie 0.42-0.49 m into the slope at their uphill end.
+  The C.csv / C3.csv flags are C3's known kinds (+9 gutters of the demo shops, sunk by design).
+- Stair fitter: oku-miya stair 43 modules, worst gap under a block 0.059 m (6-step flights near the top), terrain
+  at most 0.087 m over a first tread; Inari stair 16 modules, 0.030 / 0.090.
+
+## Renders / maps (research/production/contact_sheets/)
+sh1_shrine.jpg (9 views), sh1_graveyard.jpg (5), sh1_shops.jpg (9), sh1_gallery.jpg (6); labelled overhead maps
+sh1_map_shrine.jpg, sh1_map_graveyard.jpg, sh1_map_gallery.jpg, sh1_map_street.jpg (`render_sh1.py`, labels by
+`map_labels.py`); `SHOWCASE_MAP.md` = every ID -> class -> position (`showcase_map_md.py`).
+
+## Not done / open
+- Navmesh: the packed one dates from 2026-09-27 and is stale (as before SH1).
+- The trees in the renders are stand-ins; the sacred-tree rope fit is measured, not seen in game.
+- No hokora / shrine hall exist: stone-roofed huts and steles stand in.
 
 ## Where things are (world metres; spawn (1024, 985))
 - **Shrine** north of the town street: first stone torii at (1024, 1099.5) behind the ward corner, the precinct
