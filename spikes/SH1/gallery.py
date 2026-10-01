@@ -129,7 +129,7 @@ def layout():
     # ---------------------------------------------------------------- outside: leaning on the end walls (outer face
     # at model x = +-2.795: posts +-2.73 + half their 0.12; these props' z = 0 plane is the wall, anchor 'wall')
     outer = [(0, 56, SIDE + 0.125, 0.6, 90.0, "leaning on shed 1's west end wall (outside)"),
-             (0, 57, SIDE + 0.125, -1.0, 90.0, "stacked by shed 1's west end wall (outside)"),
+             (0, 57, SIDE + 0.074, -1.0, 90.0, "stacked by shed 1's west end wall (outside)"),   # FB1: the bales start 5 cm in front of z = 0
              (2, 54, -SIDE - 0.125, -0.9, 270.0, "leaning on shed 3's east end wall (outside)"),
              (2, 71, -SIDE - 0.125, 0.9, 270.0, "a shutter stood against shed 3's east end wall (outside)")]
     for s, n, x, z, yw, lab in outer:

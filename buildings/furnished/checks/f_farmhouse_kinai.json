@@ -3,7 +3,7 @@
  "key": "f_farmhouse_kinai",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "11096/4472/1530",
+ "faces": "11102/4496/1554",
  "door_clear_m": [
   1.46,
   1.06,
@@ -17,12 +17,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11096, Resolution 2 4472, Resolution 3 1530, Geometry 3332, Memory 0, Roadway 18, View Geometry 3250, Fire Geometry 3280"
+   "detail": "Resolution 1 11102, Resolution 2 4496, Resolution 3 1554, Geometry 3356, Memory 0, Roadway 18, View Geometry 3274, Fire Geometry 3304"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 11096, R2 4472, R3 1530"
+   "detail": "R1 11102, R2 4496, R3 1554"
   },
   {
    "check": "Geometry properties + mass",
@@ -37,17 +37,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "425 components, 0 bad, 0 faces outside components"
+   "detail": "429 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "411 components, 0 bad, 0 faces outside components"
+   "detail": "415 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "416 components, 0 bad, 0 faces outside components"
+   "detail": "420 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -412,7 +412,7 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "8925 columns over 2.5 m compared in each LOD"
+   "detail": "8913 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
@@ -687,7 +687,7 @@
   {
    "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
    "ok": true,
-   "detail": "18 collision props checked against 412 building components"
+   "detail": "18 collision props checked against 416 building components"
   },
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
@@ -727,7 +727,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1113567 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1118312 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

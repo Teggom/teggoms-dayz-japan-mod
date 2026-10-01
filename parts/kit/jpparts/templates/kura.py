@@ -317,7 +317,20 @@ def kura(name=None, lower="namako", door="_open", roof="sangawara", window="_sli
     H, info = S.finish({"params": {"kind": "kura", "lower": lower, "door": door, "roof": roof, "window": window},
                         "levels": {"footing": FOOT, "floor": FLOOR, "upper": LOFT, "eave": E}, "stair": stair_info,
                         "stairwell": well})
+    # FB1 (2026-10-01, Stephen: the white kura "doesn't match anything"): every exterior shikkui face (walls, eave
+    # bands, soffit, surrounds, leaves, shutters, ridge) takes FP1's aged plaster; the interior plaster stays
+    for s_ in H.solids:
+        if isinstance(s_.mats, str):
+            if s_.mats == "wall_shikkui":
+                s_.mats = PLASTER_OUT
+        elif isinstance(s_.mats, dict):
+            s_.mats = {k: (PLASTER_OUT if v == "wall_shikkui" else v) for k, v in s_.mats.items()}
+        if s_.fm:
+            s_.fm = [PLASTER_OUT if m == "wall_shikkui" else m for m in s_.fm]
     return H, info
+
+
+PLASTER_OUT = "wall_shikkui_aged"         # FB1: jp_m_wall_shikkui_aged (FP1, research/materials/make_fp1_materials.py)
 
 
 def budget_class(**params):

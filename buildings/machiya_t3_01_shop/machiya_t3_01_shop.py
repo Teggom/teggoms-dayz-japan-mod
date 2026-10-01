@@ -117,7 +117,7 @@ def furnish(rooms, floors):
     S(it("jp_s_fire_tub_open", "street", 4.55, 5.60, 0, why="fire tub at the street corner, bucket pyramid fallen"))
     S(it("jp_s_nobori_ab_tattered", "street", 3.40, 7.00, 0, why="one tattered shop banner"))
     S(it("jp_s_handcart_load_bales", "street", 1.00, 9.80, 70, why="half-loaded cart left in the street"))
-    S(it("jp_s_tenbin_leaning", "street", -3.85, 3.30, 270, why="carrying pole leaning by the shop door"))
+    S(it("jp_s_tenbin_leaning", "street", -3.785, 3.30, 270, why="carrying pole leaning by the shop door"))
     S(it("jp_s_jizo_hut_box", "street", -5.30, 6.60, 0, why="Kyoto corner box with its small Jizo"))
     S(it("jp_s_firewood_stack_wall_1ken_h120", "yard", -3.84, -2.50, 270, why="firewood against the kitchen wall"))
     S(it("jp_s_oke_tarai", "yard", -1.40, -5.40, 0, why="wash tub by the back door"))

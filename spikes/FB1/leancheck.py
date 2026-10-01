@@ -5,7 +5,8 @@ A prop with sidecar anchor 'wall' (tools leaned on a wall, a ladder, a shutter, 
 plane at prop z = 0 and stands in front of it (+z). Every such object on the island - the buildings' own site()
 objects (records -> C.csv rows) and the free rows of test/placements/C3.csv + SH1.csv - is tested against the
 Geometry LOD of every registry building placed within 15 m: rays from the prop's wall plane at heights 0.3 / 0.8 /
-1.3 m and across its width go BACK (-z of the prop) and the gap to the first building geometry is measured.
+1.3 m and across its width, starting at the prop's back-most point (bbox z0), go BACK (-z of the prop) and the gap to
+the first building geometry is measured.
 
   python spikes/FB1/leancheck.py [--all]      prints one line per wall-anchored object: gap (m) to the nearest wall
   OK = gap <= 0.03 m (touching), FAR = nothing within 1.5 m behind it (free-standing: listed, not judged).
@@ -126,7 +127,8 @@ def gap(o, blds, ground=25.0):
                     continue
                 for fx in (0.2, 0.5, 0.8):
                     ox = bb[0] + (bb[1] - bb[0]) * fx
-                    w = (wx + side[0] * ox, ground + yo + h, wz + side[2] * ox)
+                    zb = bb[4]                      # the prop's back-most point (its bbox z0), not just z = 0
+                    w = (wx + side[0] * ox - back[0] * zb, ground + yo + h, wz + side[2] * ox - back[2] * zb)
                     om = world_to_model(w, pl["pos"], pl["yaw"])
                     dm = world_to_model((w[0] + back[0], w[1], w[2] + back[2]), pl["pos"], pl["yaw"])
                     dm = (dm[0] - om[0], dm[1] - om[1], dm[2] - om[2])

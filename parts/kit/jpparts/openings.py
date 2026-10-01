@@ -628,6 +628,9 @@ def part_tobukuro(variant):
 
 
 # ------------------------------------------------------------------------------------------------ kura door
+KURA_PLASTER = "wall_shikkui"       # the kura leaves' / shutters' plaster (FB1: one place to change it)
+
+
 def kura_surround(part, cx, clear_w, clear_h, face_z, steps=4, step=0.035, proj=0.16, border=0.30, mat="wall_shikkui"):
     """Stepped plaster door/window surround projecting from an okabe face; hole = clear at the wall, widening outward."""
     ow = clear_w + 2 * border
@@ -706,7 +709,10 @@ def part_kura_door(variant):
     sliding_leaf(p, cx - cw / 2, cx + cw / 2, th, DOOR_H, -0.12, -1, +1, None, thick=0.04, kind="plank",
                  build=inner, park_span=(cx - cw / 2 - OV, KEN + KEN), note="inner sliding door (game door)")
     tracks(p, cx - cw / 2, cx + cw / 2 + cw + 0.2, -0.12, -1, 0.04, head_y=th + DOOR_H)
-    # outer leaves: 0.16 thick plastered, stepped edge
+    # outer leaves: plastered, stepped face. FB1 (2026-10-01, Stephen: 'too thick'): 0.16 + a 0.03 step (0.19) ->
+    # LEAF_T 0.11 + a 0.025 step (0.135, about 4.5 sun): a small 3 x 2 ken dozo kura's kannon leaves are about 4-5 sun at
+    # the rebated edge; 6 sun to 1 shaku+ belongs to big merchant kura (general knowledge, no source on the machine)
+    LEAF_T, STEP_T = 0.11, 0.025
     lw = cw / 2 + 4 * 0.035 + 0.03 - 0.002     # the two leaves meet at the centre (they overlapped 8 cm: G3 sweep check)
     lh = ch + 0.14 + 0.04 - th
     hinges = [(cx - cw / 2 - 4 * 0.035 - 0.03, -1), (cx + cw / 2 + 4 * 0.035 + 0.03, +1)]
@@ -716,18 +722,19 @@ def part_kura_door(variant):
             if closed:
                 x0, x1 = (hx, hx - sg * lw) if sg < 0 else (hx - lw, hx)
                 x0, x1 = min(hx, hx - sg * lw), max(hx, hx - sg * lw)
-                out.append(box(x0, x1, 0.0 + th, th + lh, zf_out, zf_out + 0.16, "wall_shikkui", vis=(1, 2, 3),
+                out.append(box(x0, x1, 0.0 + th, th + lh, zf_out, zf_out + LEAF_T, KURA_PLASTER, vis=(1, 2, 3),
                                geo=True, view=True, fire=True, tag="kura_leaf"))
-                out.append(box(x0 + 0.04, x1 - 0.04, th + 0.04, th + lh - 0.04, zf_out + 0.16, zf_out + 0.19,
-                               "wall_shikkui", vis=(1,), tag="kura_leaf_step"))
+                out.append(box(x0 + 0.04, x1 - 0.04, th + 0.04, th + lh - 0.04, zf_out + LEAF_T,
+                               zf_out + LEAF_T + STEP_T, KURA_PLASTER, vis=(1,), tag="kura_leaf_step"))
             else:
                 # static open ~100 degrees: the leaf stands out from the surround edge
                 z0 = zf_out
                 xa = hx + sg * 0.0
-                out.append(box(min(xa, xa + sg * 0.16), max(xa, xa + sg * 0.16), th, th + lh, z0, z0 + lw, "wall_shikkui",
-                               vis=(1, 2, 3), geo=True, view=True, fire=True, tag="kura_leaf"))
-                out.append(box(min(xa + sg * 0.16, xa + sg * 0.19), max(xa + sg * 0.16, xa + sg * 0.19), th + 0.04,
-                               th + lh - 0.04, z0 + 0.04, z0 + lw - 0.04, "wall_shikkui", vis=(1,), tag="kura_leaf_step"))
+                out.append(box(min(xa, xa + sg * LEAF_T), max(xa, xa + sg * LEAF_T), th, th + lh, z0, z0 + lw,
+                               KURA_PLASTER, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="kura_leaf"))
+                out.append(box(min(xa + sg * LEAF_T, xa + sg * (LEAF_T + STEP_T)),
+                               max(xa + sg * LEAF_T, xa + sg * (LEAF_T + STEP_T)), th + 0.04,
+                               th + lh - 0.04, z0 + 0.04, z0 + lw - 0.04, KURA_PLASTER, vis=(1,), tag="kura_leaf_step"))
             return out
         if hinged:
             bone = p.next_bone()
@@ -738,7 +745,7 @@ def part_kura_door(variant):
             # G3 research, PLAYBOOK §15): these axes swing both plaster leaves OUT, away from the wall
             axis = [(hx, th + lh, zf_out), (hx, th, zf_out)] if sg < 0 else [(hx, th, zf_out), (hx, th + lh, zf_out)]
             ang = math.radians(90)          # 100 swung the leaf back into the stepped surround (G3 sweep check)
-            centre = (hx - sg * lw / 2, th + lh / 2, zf_out + 0.08)
+            centre = (hx - sg * lw / 2, th + lh / 2, zf_out + LEAF_T / 2)
             p.memory[bone + "_axis"] = axis
             p.memory[bone + "_action"] = [(cx, 1.0 + th, zf_out)]
             p.memory[bone] = [centre]
@@ -759,13 +766,16 @@ def part_kura_door(variant):
     p.conn("park", (KEN, 0, 0), length=KEN, face="interior")
     p.dim("clear_m", ">=1.00 x 2.00", 0.0, source="build_list / D1")
     p.dims[-1].update(measured="%.2f x %.2f" % (cw - STUB, ch - th), ok=cw - STUB >= 1.0 and ch - th >= 2.0 - 1e-6)
-    p.dim("leaf_thickness_m", "0.15-0.20", 0.16)
+    p.dim("leaf_thickness_m", "0.12-0.15 (FB1: small kura, ~4-5 sun)", LEAF_T + STEP_T)
     p.dim("jamb_steps", "3-5", 4, tol=0)
     p.dim("door_pent_m", 0.60, 0.60)
     p.notes.append("Opening 1.24 x 2.15 from the approach level = 2.00 clear above the 0.15 threshold (1.02 clear once "
                    "the open inner leaf keeps its 0.22 stub); the okabe wall recipe must leave that hole "
                    "(walls.wall_run(kind='okabe', openings=[(0.29, 1.53, 0, 2.15)])).")
     return p
+
+
+SHUT_T = 0.08          # FB1 (2026-10-01): kura window shutter thickness (was 0.12, 'too thick'; ~2.5-3 sun)
 
 
 def part_kura_window(variant):
@@ -790,17 +800,17 @@ def part_kura_window(variant):
     p.add(box(cx - w / 2, cx + w / 2, sill, sill + h, -0.015, 0.015, "metal_iron", vis=(), geo=True, tag="bars_geo"))
     zo = fz + 0.10
     if variant == "_slide":
-        p.add(box(cx - w / 2 + 0.30, cx + w / 2 + 0.36, sill - 0.04, sill + h + 0.04, zo, zo + 0.12, "wall_shikkui",
+        p.add(box(cx - w / 2 + 0.30, cx + w / 2 + 0.36, sill - 0.04, sill + h + 0.04, zo, zo + SHUT_T, KURA_PLASTER,
                   vis=(1, 2, 3), geo=True, view=True, fire=True, tag="shutter"))
-        p.add(box(cx - w / 2 - 0.05, cx + w + 0.45, sill + h + 0.04, sill + h + 0.10, zo, zo + 0.13, "wall_shikkui",
-                  vis=(1, 2), tag="shutter_track"))
-        p.add(box(cx - w / 2 - 0.05, cx + w + 0.45, sill - 0.10, sill - 0.04, zo, zo + 0.13, "wall_shikkui",
+        p.add(box(cx - w / 2 - 0.05, cx + w + 0.45, sill + h + 0.04, sill + h + 0.10, zo, zo + SHUT_T + 0.01,
+                  KURA_PLASTER, vis=(1, 2), tag="shutter_track"))
+        p.add(box(cx - w / 2 - 0.05, cx + w + 0.45, sill - 0.10, sill - 0.04, zo, zo + SHUT_T + 0.01, KURA_PLASTER,
                   vis=(1, 2), tag="shutter_track"))
     else:
         for sg in (-1, 1):
             hx = cx + sg * (w / 2 + 0.06)
-            p.add(box(min(hx, hx + sg * 0.12), max(hx, hx + sg * 0.12), sill - 0.03, sill + h + 0.03, zo, zo + w / 2 + 0.06,
-                      "wall_shikkui", vis=(1, 2, 3), geo=True, view=True, fire=True, tag="shutter"))
+            p.add(box(min(hx, hx + sg * SHUT_T), max(hx, hx + sg * SHUT_T), sill - 0.03, sill + h + 0.03, zo,
+                      zo + w / 2 + 0.06, KURA_PLASTER, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="shutter"))
     mini_pent(p, cx - w / 2 - 0.30, cx + w / 2 + 0.30, sill + h + 0.42, fz + 0.10, depth=0.35, brackets=False)
     p.conn("post", (0, 0, 0), hidden=True)
     p.conn("post", (HALF, 0, 0), hidden=True)
@@ -808,7 +818,7 @@ def part_kura_window(variant):
     p.dims[-1].update(measured="%.2f x %.2f" % (w, h), ok=True)
     p.dim("bars_m", "0.03 at 0.09", 0.0)
     p.dims[-1].update(measured="0.03 at %.3f" % (w / 6), ok=abs(w / 6 - 0.09) < 0.02)
-    p.dim("shutter_thickness_m", 0.12, 0.12)
+    p.dim("shutter_thickness_m", "0.08 (FB1: ~2.5-3 sun; was 0.12)", SHUT_T)
     return p
 
 

@@ -97,7 +97,7 @@ Regenerate: `python spikes/SH1/layout_sh1.py` then `python spikes/SH1/showcase_m
 | S94 | `StaticObj_JP_S_Stone_Lantern_Square_24_Moss` | 1037.64 | 1220.05 | 116 | -0.21 | path to the hill stair: square 2.4 m mossy pair (west) |
 | S95 | `StaticObj_JP_S_Stone_Lantern_Square_24_Moss` | 1041.96 | 1217.95 | 296 | -0.21 | path to the hill stair: square 2.4 m mossy pair (east) |
 | S62 | `StaticObj_JP_S_Torii_Wood_Ab_Leaning` | 1047.00 | 1205.50 | 195 | -0.32 | an old wooden torii leaning in the trees (abandoned) |
-| S63 | `StaticObj_JP_S_Torii_Stone_M_Rope_Shide` | 1042.00 | 1226.00 | 180 | -0.10 | medium stone torii, rope + streamers, at the foot of the hill stair |
+| S63 | `StaticObj_JP_S_Torii_Stone_L_Rope_Shide` | 1042.00 | 1226.00 | 180 | -0.12 | large stone torii, rope + streamers, at the foot of the hill stair (FB1: was medium, too low) |
 | K01 | `StaticObj_JP_S_Stone_Steps_Dressed_3_Wide` | 1042.00 | 1227.60 | 180 | -0.08 | hill stair flight dressed_3_wide (0.91 m run) |
 | K01E | `StaticObj_JP_S_Stone_Steps_Cheek_3` | 1043.46 | 1227.60 | 180 | -0.08 | hill stair cheek wall beside that flight |
 | K01W | `StaticObj_JP_S_Stone_Steps_Cheek_3` | 1040.54 | 1227.60 | 180 | -0.08 | hill stair cheek wall beside that flight |
@@ -152,11 +152,11 @@ Regenerate: `python spikes/SH1/layout_sh1.py` then `python spikes/SH1/showcase_m
 | S66 | `StaticObj_JP_S_Torii_Wood_Myojin_Rope_Shide` | 1042.00 | 1244.23 | 180 | -0.10 | wooden myojin over the stair, rope + streamers |
 | S67 | `StaticObj_JP_S_Torii_Wood_Myojin_Moss` | 1042.00 | 1250.96 | 180 | -0.13 | wooden myojin over the stair, mossy |
 | S68 | `StaticObj_JP_S_Torii_Wood_Myojin_Moss_Rope` | 1042.00 | 1254.66 | 180 | -0.15 | wooden myojin over the stair, mossy, rope |
-| S70 | `StaticObj_JP_S_Torii_Stone_M` | 1042.00 | 1263.96 | 180 | -0.21 | medium stone torii, plain, at the head of the stair (oku-miya) |
+| S70 | `StaticObj_JP_S_Torii_Stone_L` | 1042.00 | 1263.96 | 180 | -0.28 | large stone torii, plain, at the head of the stair (oku-miya; FB1: was medium, too low) |
 | S71 | `StaticObj_JP_S_Jizo_Hut_Stone_Roof` | 1042.00 | 1266.96 | 180 | -0.20 | oku-miya: a stone-roofed hut (stand-in for the upper shrine) |
 | S72 | `StaticObj_JP_S_Stone_Lantern_Oki_Moss` | 1040.40 | 1265.56 | 180 | -0.18 | oku-miya oki lantern, mossy, west |
 | S73 | `StaticObj_JP_S_Stone_Lantern_Oki_Moss` | 1043.60 | 1265.56 | 180 | -0.17 | oku-miya oki lantern, mossy, east |
-| S74 | `StaticObj_JP_S_Chozubachi_Natural` | 1044.60 | 1263.36 | 180 | -0.18 | a natural-stone basin at the oku-miya |
+| S74 | `StaticObj_JP_S_Chozubachi_Natural` | 1045.10 | 1263.36 | 180 | -0.18 | a natural-stone basin at the oku-miya |
 | S80 | `StaticObj_JP_S_Torii_Wood_Myojin_Shu_Rope_Shide` | 1058.00 | 1226.10 | 180 | -0.08 | Inari: vermilion myojin torii, rope + streamers, at the foot of the narrow stair |
 | I01 | `StaticObj_JP_S_Stone_Steps_Rough_3_Narrow` | 1058.00 | 1227.30 | 180 | -0.08 | Inari stair flight rough_3_narrow (0.91 m run) |
 | I02 | `StaticObj_JP_S_Stone_Steps_Landing` | 1058.00 | 1228.21 | 180 | 0.16 | Inari stair landing landing (visible 0.90 m) |
@@ -397,7 +397,7 @@ Regenerate: `python spikes/SH1/layout_sh1.py` then `python spikes/SH1/showcase_m
 | L69 | `StaticObj_JP_S_Sandals_Sale_Eave` | 1088.00 | 1034.11 | 180 | 0.52 | shed 3, under the front eave: Straw sandals hung for sale outside a tea house |
 | L59 | `StaticObj_JP_S_Bird_Cage_Hung` | 1086.18 | 1034.11 | 180 | 0.52 | shed 3, under the front eave: Empty bird cage hung under the eaves |
 | L56 | `StaticObj_JP_S_Ladder_Lean` | 1069.20 | 1035.40 | 270 | 0.00 | shed 1, leaning on shed 1's west end wall (outside): Ladder leaned against the eaves |
-| L57 | `StaticObj_JP_S_Charcoal_Bales_Stack` | 1069.20 | 1037.00 | 270 | 0.00 | shed 1, stacked by shed 1's west end wall (outside): Charcoal bales stacked by a door |
+| L57 | `StaticObj_JP_S_Charcoal_Bales_Stack` | 1069.26 | 1037.00 | 270 | 0.00 | shed 1, stacked by shed 1's west end wall (outside): Charcoal bales stacked by a door |
 | L54 | `StaticObj_JP_S_Farm_Tools_Lean` | 1090.80 | 1036.90 | 90 | 0.00 | shed 3, leaning on shed 3's east end wall (outside): Farm tools leaned on a wall: hoe, sickle, flail, rake |
 | L71 | `StaticObj_JP_S_Amado_Half_Open` | 1090.80 | 1035.10 | 90 | 0.00 | shed 3, a shutter stood against shed 3's east end wall (outside): Shop shutters (amado) half open, one fallen in the street |
 | L63 | `StaticObj_JP_S_Travel_Gear_Set` | 1068.60 | 1030.00 | 180 | -0.00 | ground strip: Dropped travel gear: straw hat, walking stick, a cloth bundle, a sandal |

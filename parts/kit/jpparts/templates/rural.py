@@ -562,20 +562,31 @@ def _takahe(S, x, D, E, t, sg, stack_top, pent_top):
     its top), both slopes, capped with kawara (walls.kawara_cap) and cut clear of the lower roofs (pent_top)."""
     s = S.B.P("takahe_%d" % int(x * 10))
     h = D / 2
-    ov = 1.00
     th = 0.30
+    # FB1 (2026-10-01, Stephen: "a weird thick something below the roof"): the band used to hang 0.45 m below the
+    # slope line all the way out to the thatch eave, so at each corner a 0.3 m x ~1 m white block stood out under the
+    # eave, and the thatch ridge bundle (0.55 high, run 0.25 past the gable) rose over the wall's top and poked out
+    # of it. Now: over the eave overhang (outside the wall line) the takahe starts at the thatch underside, so its end
+    # is a thatch-thick plastered cheek; only inside the wall line does it reach down onto the gable wall; its top
+    # rises from 0.12 over the thatch at the eave to 0.12 over the ridge bundle at the ridge (yamato-mune: the
+    # takahe stands proud of the whole thatch), and the ridge bundle stops inside it (kinai(), after the roof).
+    ridge_extra = 0.55 + 0.10 - 0.12           # thatch_ridge 'bamboo' H 0.55 over the ridge line + 0.10, minus the 0.12
     for zsgn in (1.0, -1.0):
-        # (z, y) band along one slope, from the thatch eave edge to the ridge
         ov = 0.60
         z_e = ov if zsgn > 0 else -D - ov
+        z_w = 0.0 if zsgn > 0 else -D          # the wall line
         z_r = -h
-        y_top = lambda z: E + t * (min(-z, D + z)) + stack_top + 0.12       # noqa: E731
-        y_bot = lambda z: E + t * (min(-z, D + z)) - 0.45                   # noqa: E731
-        poly = [(z_e, y_bot(z_e)), (z_e, y_top(z_e)), (z_r, y_top(z_r)), (z_r, y_bot(z_r))]
-        poly = clean_poly(clip_poly(poly, 0.0, -1.0, -(pent_top + 0.08)))    # keep y >= pent_top + 0.08
-        if len(poly) >= 3:
-            s.add(prism([(yy, zz) for zz, yy in poly], "x", x - th / 2, x + th / 2, "wall_shikkui", vis=(1, 2, 3),
-                         geo=True, view=True, fire=True, tag="takahe"))
+        slope = lambda z: E + t * (min(-z, D + z))                           # noqa: E731
+        run = abs(z_r - z_e)
+        y_top = lambda z: slope(z) + stack_top + 0.12 + ridge_extra * (1.0 - abs(z - z_r) / run)  # noqa: E731
+        y_low = lambda z: slope(z) + R.STACK["thatch"]                       # noqa: E731  (thatch underside)
+        y_bot = lambda z: slope(z) - 0.45                                    # noqa: E731
+        for poly in ([(z_e, y_low(z_e)), (z_e, y_top(z_e)), (z_w, y_top(z_w)), (z_w, y_low(z_w))],
+                     [(z_w, y_bot(z_w)), (z_w, y_top(z_w)), (z_r, y_top(z_r)), (z_r, y_bot(z_r))]):
+            poly = clean_poly(clip_poly(poly, 0.0, -1.0, -(pent_top + 0.08)))    # keep y >= pent_top + 0.08
+            if len(poly) >= 3:
+                s.add(prism([(yy, zz) for zz, yy in poly], "x", x - th / 2, x + th / 2, "wall_shikkui",
+                             vis=(1, 2, 3), geo=True, view=True, fire=True, tag="takahe"))
         walls.kawara_cap(s, (x, y_top(z_e), z_e), (x, y_top(z_r), z_r), width=0.38, courses=2)
     S.H.merge(s)
 
@@ -595,6 +606,18 @@ def kinai(name=None, form="kirizuma", lower="tile", takahe=False, doma="right", 
     # ------------------------------------------------ roof (no geya: the lower roofs are pents), koyagumi, sooted
     gov = 0.05 if takahe else None
     sls, info_r, K = S.roof(W, D, form, "thatch", E, ov=0.60, gov=gov, ridge="bamboo")
+    if takahe and form == "kirizuma":
+        # FB1 (2026-10-01): the thatch ridge bundle stops inside the takahe walls (it ran 0.25 m past each gable line
+        # and showed over / outside the plastered gable, Stephen's "weird thick something"); its end bindings go
+        keep = []
+        for s_ in S.H.solids:
+            if s_.tag in ("thatch_ridge", "ridge_bamboo"):
+                s_.verts = [(min(max(v[0], 0.0), W), v[1], v[2]) for v in s_.verts]
+                s_.center = tuple(sum(v[k] for v in s_.verts) / len(s_.verts) for k in range(3))
+            elif s_.tag == "binding" and s_.center[1] > E + 1.0 and not (0.16 < s_.center[0] < W - 0.16):
+                continue
+            keep.append(s_)
+        S.H.solids = keep
     hip = form != "kirizuma"
     if hip:
         S.keta_ring(W, D, E, hip=True)

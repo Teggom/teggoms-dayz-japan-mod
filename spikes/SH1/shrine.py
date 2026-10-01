@@ -186,7 +186,10 @@ def layout():
     add("S62", "jp_s_torii_wood_ab_leaning", 1047.0, 1205.5, 195, "an old wooden torii leaning in the trees (abandoned)")
     stair, mods, worst = build_stair(OKU_X, 1215.0, 1262.0, oku_pick, "K", first_cheeks=2)
     z_foot = mods[0][2]
-    add("S63", "jp_s_torii_stone_m_rope_shide", OKU_X, z_foot - 1.6, 180, "medium stone torii, rope + streamers, at the foot of the hill stair")
+    # FB1 (2026-10-01): the medium stone torii's nuki is 1.93 m over its base (1.81 m clear on the path here, 1.66 at
+    # the stair head: Stephen was blocked walking down). Walk-through torii need >= 2.20 m (spikes/FB1/toriiclear.py):
+    # the stair line takes the large stone torii (nuki 2.94).
+    add("S63", "jp_s_torii_stone_l_rope_shide", OKU_X, z_foot - 1.6, 180, "large stone torii, rope + streamers, at the foot of the hill stair (FB1: was medium, too low)")
     O += [(i, n, x, z, yaw, y, "hill stair " + lab, {}) for (i, n, x, z, yaw, y, lab) in stair]
     # wooden myojin torii spanning the stair on landings, every ~7 m
     myo = [("jp_s_torii_wood_myojin", "wooden myojin torii over the stair, plain"),
@@ -211,11 +214,11 @@ def layout():
     top_z = mods[-1][2] + mods[-1][5]
     top_y = mods[-1][3] + (0.48 if mods[-1][4] == "flight" else 0.0)
     # the oku-miya at the stair head (on the slope)
-    add("S70", "jp_s_torii_stone_m", OKU_X, top_z + 1.2, 180, "medium stone torii, plain, at the head of the stair (oku-miya)", grp="over:stairK")
+    add("S70", "jp_s_torii_stone_l", OKU_X, top_z + 1.2, 180, "large stone torii, plain, at the head of the stair (oku-miya; FB1: was medium, too low)", grp="over:stairK")
     add("S71", "jp_s_jizo_hut_stone_roof", OKU_X, top_z + 4.2, 180, "oku-miya: a stone-roofed hut (stand-in for the upper shrine)")
     add("S72", "jp_s_stone_lantern_oki_moss", OKU_X - 1.6, top_z + 2.8, 180, "oku-miya oki lantern, mossy, west")
     add("S73", "jp_s_stone_lantern_oki_moss", OKU_X + 1.6, top_z + 2.8, 180, "oku-miya oki lantern, mossy, east")
-    add("S74", "jp_s_chozubachi_natural", OKU_X + 2.6, top_z + 0.6, 180, "a natural-stone basin at the oku-miya")
+    add("S74", "jp_s_chozubachi_natural", OKU_X + 3.1, top_z + 0.6, 180, "a natural-stone basin at the oku-miya")   # FB1: clear of the larger S70
 
     # --- the Inari corner: a narrow stair through vermilion torii ------------------------------------------------
     istair, imods, iworst = build_stair(INARI_X, 1212.0, 1240.0, inari_pick, "I")

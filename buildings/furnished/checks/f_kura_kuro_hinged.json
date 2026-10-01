@@ -168,7 +168,7 @@
   {
    "check": "C10 DoorsTwin2 reachable from its leaf side (closed)",
    "ok": true,
-   "detail": "Kura outer leaf left: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.86 m"
+   "detail": "Kura outer leaf left: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.94 m"
   },
   {
    "check": "C10 DoorsTwin3 reachable from its leaf side (open)",
@@ -178,7 +178,7 @@
   {
    "check": "C10 DoorsTwin3 reachable from its leaf side (closed)",
    "ok": true,
-   "detail": "Kura outer leaf right: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.95 m"
+   "detail": "Kura outer leaf right: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.04 m"
   },
   {
    "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
@@ -188,12 +188,12 @@
   {
    "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
    "ok": true,
-   "detail": "Kura outer leaf left: 16562 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+   "detail": "Kura outer leaf left: 16578 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
   },
   {
    "check": "C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile",
    "ok": true,
-   "detail": "Kura outer leaf right: 16562 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+   "detail": "Kura outer leaf right: 16578 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
   },
   {
    "check": "C18 DoorsTwin1 pulls on the stub edge (in the doorway when open)",
@@ -303,7 +303,7 @@
   {
    "check": "D7 DoorsTwin2 reachable with the furniture in (closed)",
    "ok": true,
-   "detail": "Kura outer leaf left: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.86 m"
+   "detail": "Kura outer leaf left: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.94 m"
   },
   {
    "check": "D7 DoorsTwin3 reachable with the furniture in (open)",
@@ -313,7 +313,7 @@
   {
    "check": "D7 DoorsTwin3 reachable with the furniture in (closed)",
    "ok": true,
-   "detail": "Kura outer leaf right: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.95 m"
+   "detail": "Kura outer leaf right: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.04 m"
   },
   {
    "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
@@ -348,7 +348,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 420140 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 419972 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

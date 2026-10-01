@@ -108,7 +108,7 @@ def kamigata_komeya(c):
     c.site("jp_s_gutter_slab", 1.94, 5.10, 0, why="stone slab over the gutter at the door")
     _gutters(c, (-1.82, 0.00), 5.10)
     c.site("jp_s_oke_tarai", 1.60, -4.75, 0, why="wash tub by the back door")
-    c.site("jp_s_firewood_stack_bundle", -1.80, -3.80, 180, why="firewood bundles against the kitchen wall")
+    c.site("jp_s_firewood_stack_bundle", -1.80, -3.683, 180, why="firewood bundles against the kitchen wall")
 
 
 def kamigata_kamiya(c):
@@ -306,7 +306,7 @@ def inn_std(c):
     c.site("jp_s_bench_long", -2.70, 5.45, 0, why="the guests' bench under the eave")
     c.site("jp_s_gutter_slab", 3.76, 6.20, 0, why="slab over the gutter at the door")
     _gutters(c, (-3.64, -1.82, 0.0, 1.82), 6.20)
-    c.site("jp_s_firewood_stack_wall_1ken_h120", -2.73, -5.00, 180, why="firewood against the kitchen wall")
+    c.site("jp_s_firewood_stack_wall_1ken_h120", -2.73, -4.735, 180, why="firewood against the kitchen wall")
 
 
 def inn_grand(c):
@@ -351,7 +351,7 @@ def inn_grand(c):
     c.site("jp_s_bench_ab_tipped", -1.80, 5.40, 180, why="a bench tipped over")
     c.site("jp_s_gutter_slab", 3.76, 6.20, 0, why="slab over the gutter at the door")
     _gutters(c, (-3.64, -1.82, 0.0, 1.82), 6.20)
-    c.site("jp_s_firewood_stack_wall_1ken_h120", -2.73, -5.00, 180, why="firewood against the kitchen wall")
+    c.site("jp_s_firewood_stack_wall_1ken_h120", -2.73, -4.735, 180, why="firewood against the kitchen wall")
 
 
 # ================================================================================================ rural (C2)
@@ -419,8 +419,8 @@ def farm_kanto(c):
     c.onwall("nando", "zmin", -3.30, "jp_f_bangasa_hung", why="an oiled umbrella hung on the back wall")
     # ---------------------------------------------------------------- outside
     c.eaves("jp_s_kaki_curtain_1ken", -1.00, 4.66, 0, 3.10, why="persimmon curtain under the front eave")
-    c.site("jp_s_farm_tools_lean", 5.60, 5.10, 0, why="hoe, sickle and rake leaned by the door")
-    c.site("jp_s_charcoal_bales_stack", -1.20, -5.10, 180, why="charcoal bales stacked by the back wall")
+    c.site("jp_s_farm_tools_lean", 5.60, 4.593, 0, why="hoe, sickle and rake leaned by the door")
+    c.site("jp_s_charcoal_bales_stack", -1.20, -4.555, 180, why="charcoal bales stacked by the back wall")
 
 
 def farm_kinai(c):
@@ -471,7 +471,7 @@ def farm_kinai(c):
     c.free("nando", "jp_f_clothes_haori", 3.80, -1.80, 30, why="a jacket dropped on the floor")
     c.onwall("nando", "zmax", 6.00, "jp_f_bangasa_hung", why="an oiled umbrella on the partition")
     c.eaves("jp_s_kaki_curtain_half", 1.20, 3.72, 0, 2.95, why="persimmons under the lower roof")
-    c.site("jp_s_farm_tools_pair", -1.80, 4.10, 0, why="tools leaned by the door")
+    c.site("jp_s_farm_tools_pair", -1.80, 3.683, 0, why="tools leaned by the door")
 
 
 def _hut_living(c, bed_side, bed_at, bed="jp_f_straw_bed_quilt", yaw_extra=0.0):

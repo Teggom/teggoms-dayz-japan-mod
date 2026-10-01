@@ -873,15 +873,15 @@
  {
   "id": "S63",
   "area": "shrine",
-  "name": "jp_s_torii_stone_m_rope_shide",
-  "class": "StaticObj_JP_S_Torii_Stone_M_Rope_Shide",
-  "p3d": "JP\\site\\shrine\\jp_s_torii_stone_m_rope_shide.p3d",
+  "name": "jp_s_torii_stone_l_rope_shide",
+  "class": "StaticObj_JP_S_Torii_Stone_L_Rope_Shide",
+  "p3d": "JP\\site\\shrine\\jp_s_torii_stone_l_rope_shide.p3d",
   "x": 1042.0,
   "z": 1226.0,
   "yaw": 180.0,
-  "y_offset": -0.098,
+  "y_offset": -0.124,
   "ground": 33.77,
-  "label": "medium stone torii, rope + streamers, at the foot of the hill stair"
+  "label": "large stone torii, rope + streamers, at the foot of the hill stair (FB1: was medium, too low)"
  },
  {
   "id": "K01",
@@ -1588,15 +1588,15 @@
  {
   "id": "S70",
   "area": "shrine",
-  "name": "jp_s_torii_stone_m",
-  "class": "StaticObj_JP_S_Torii_Stone_M",
-  "p3d": "JP\\site\\shrine\\jp_s_torii_stone_m.p3d",
+  "name": "jp_s_torii_stone_l",
+  "class": "StaticObj_JP_S_Torii_Stone_L",
+  "p3d": "JP\\site\\shrine\\jp_s_torii_stone_l.p3d",
   "x": 1042.0,
   "z": 1263.96,
   "yaw": 180.0,
-  "y_offset": -0.213,
+  "y_offset": -0.275,
   "ground": 46.91,
-  "label": "medium stone torii, plain, at the head of the stair (oku-miya)"
+  "label": "large stone torii, plain, at the head of the stair (oku-miya; FB1: was medium, too low)"
  },
  {
   "id": "S71",
@@ -1643,11 +1643,11 @@
   "name": "jp_s_chozubachi_natural",
   "class": "StaticObj_JP_S_Chozubachi_Natural",
   "p3d": "JP\\site\\shrine\\jp_s_chozubachi_natural.p3d",
-  "x": 1044.6,
+  "x": 1045.1,
   "z": 1263.36,
   "yaw": 180.0,
   "y_offset": -0.184,
-  "ground": 46.563,
+  "ground": 46.546,
   "label": "a natural-stone basin at the oku-miya"
  },
  {
@@ -4877,7 +4877,7 @@
   "name": "jp_s_charcoal_bales_stack",
   "class": "StaticObj_JP_S_Charcoal_Bales_Stack",
   "p3d": "JP\\site\\yard_life\\jp_s_charcoal_bales_stack.p3d",
-  "x": 1069.205,
+  "x": 1069.256,
   "z": 1037.0,
   "yaw": 270.0,
   "y_offset": 0.0,
