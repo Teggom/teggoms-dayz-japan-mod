@@ -400,3 +400,10 @@
   copper; 8 variants), kumimono.py (funa, oto, mitsudo, degumi, mitesaki; 9 variants), rame_storey_hakama; offline hall 8,174,
   hall_kokera 5,564, hondo 11,259, shoro 5,807 faces (R3 1,047 > standard 800: no tower class yet — ask Stephen). W2P1's kidan
   costs ~2,000 faces. **W2S launched** (shrine + temple shells, both grades; adds hiwada / copper / bronze materials).
+- 2026-10-01: **QUEUED (Stephen: yes, after W2S + W2F): kit-wide wood texture variety** = option 2 + 4: per wood material ONE atlas with
+  3-4 distinct patches (weathered / sooted / new wood), each piece picks a random patch + offset along the grain + optional flip;
+  grain always along the member's length; believable tile scale (1-2 m); PLUS a large-scale macro weathering layer (rvmat MC stage:
+  grime, sun-bleach, streaks) at a non-matching scale. In the kit's UV helpers so every building, prop and part gets it; rebuild
+  + before/after renders. ~0.5-0.7M tokens. (Stone torii already got a per-piece lichen fix in FP1.)
+- 2026-10-01: idea for later (Stephen asked, NOT ordered): mossy thatch variants (see the lead's answer: real, north slopes +
+  eaves, shibamune planted ridges, abandoned = no smoke = faster growth).
