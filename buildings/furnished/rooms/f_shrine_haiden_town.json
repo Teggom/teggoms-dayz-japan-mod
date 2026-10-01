@@ -1,0 +1,182 @@
+{
+ "building": "Land_JP_Shrine_Haiden_Town_Hiwada_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_shrine_haiden_town_hiwada_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "haiden",
+   "tag": "worship",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    0.155,
+    6.669999999999999,
+    -4.395,
+    -0.155
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "worship floor: offering box + bell rope in front of the middle bay, drum, ema, gaku",
+   "enclosed": true,
+   "rect_model": [
+    -3.257,
+    3.257,
+    -2.12,
+    2.12
+   ],
+   "fittings": [
+    {
+     "kind": "drum",
+     "room": "haiden",
+     "note": "big drum (odaiko) on its stand",
+     "centre": [
+      -2.562,
+      -1.425
+     ],
+     "size": [
+      0.9,
+      0.9
+     ],
+     "yaw": 0.0,
+     "y": 0.75
+    },
+    {
+     "kind": "kamidana",
+     "room": "haiden",
+     "note": "offering shelf / gohei stands on the back wall (towards the honden)",
+     "rect": [
+      -0.8,
+      0.8,
+      -2.12,
+      -1.7
+     ],
+     "y": 2.35
+    },
+    {
+     "kind": "gaku",
+     "room": null,
+     "note": "name board (gaku) over the middle bay, outside",
+     "centre": [
+      -0.0,
+      2.375
+     ],
+     "size": [
+      1.2,
+      0.1
+     ],
+     "yaw": 0.0,
+     "y": 3.04,
+     "outside": true
+    }
+   ]
+  },
+  {
+   "name": "en",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    -1.215,
+    8.04,
+    0.32,
+    1.185
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -4.627,
+    4.627,
+    2.595,
+    3.46
+   ],
+   "fittings": [
+    {
+     "kind": "saisen_bako",
+     "room": "en",
+     "note": "big slatted offering box (saisen-bako) on the en before the middle bay",
+     "centre": [
+      -0.0,
+      2.775
+     ],
+     "size": [
+      1.5,
+      0.55
+     ],
+     "yaw": 0.0,
+     "y": 0.75
+    },
+    {
+     "kind": "suzu",
+     "room": "en",
+     "note": "bell (suzu) with its thick cloth rope, hung from the kohai beam over the offering box",
+     "centre": [
+      -0.0,
+      2.875
+     ],
+     "size": [
+      0.3,
+      0.3
+     ],
+     "yaw": 0.0,
+     "y": 3.15
+    }
+   ],
+   "sparse": "the veranda before the worship bay"
+  },
+  {
+   "name": "en_left",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    -1.215,
+    -0.12,
+    -4.3,
+    0.0
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -4.627,
+    -3.532,
+    -2.025,
+    2.275
+   ],
+   "fittings": [],
+   "sparse": "side veranda"
+  },
+  {
+   "name": "en_right",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    6.944999999999999,
+    8.04,
+    -4.3,
+    0.0
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    3.532,
+    4.627,
+    -2.025,
+    2.275
+   ],
+   "fittings": [],
+   "sparse": "side veranda"
+  }
+ ],
+ "loot_points": 14,
+ "loot_by_room": {
+  "haiden": 8,
+  "en": 4,
+  "en_left": 1,
+  "en_right": 1
+ }
+}

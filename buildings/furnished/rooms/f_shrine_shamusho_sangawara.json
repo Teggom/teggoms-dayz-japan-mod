@@ -1,0 +1,98 @@
+{
+ "building": "Land_JP_Shrine_Shamusho_Sangawara_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_shrine_shamusho_sangawara_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    1.75,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "earth-floored entry: sandals off at the step",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    -0.98,
+    -1.76,
+    1.76
+   ],
+   "fittings": []
+  },
+  {
+   "name": "office",
+   "tag": "office",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    1.865,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [],
+   "note": "the priests' office behind the amulet window, open to the doma",
+   "enclosed": true,
+   "rect_model": [
+    -0.865,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "amulet_counter",
+     "room": "office",
+     "note": "behind the push-up counter shutter: the amulet counter (ofuda / omamori stacks, the shrine seal)",
+     "rect": [
+      0.86,
+      1.87,
+      1.22,
+      1.76
+     ],
+     "y": 0.4
+    },
+    {
+     "kind": "desk",
+     "room": "office",
+     "note": "talisman-making desk with printing blocks, brushes, registers; ritual robes on a rack by the end wall",
+     "centre": [
+      1.93,
+      -1.12
+     ],
+     "size": [
+      1.0,
+      0.5
+     ],
+     "yaw": 0.0,
+     "y": 0.4
+    },
+    {
+     "kind": "kamidana",
+     "room": "office",
+     "note": "kamidana shelf high on the back wall",
+     "rect": [
+      -0.51,
+      0.49,
+      -1.74,
+      -1.41
+     ],
+     "y": 2.15
+    }
+   ]
+  }
+ ],
+ "loot_points": 9,
+ "loot_by_room": {
+  "doma": 3,
+  "office": 6
+ }
+}

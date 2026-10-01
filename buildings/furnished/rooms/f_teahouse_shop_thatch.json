@@ -1,0 +1,73 @@
+{
+ "building": "Land_JP_Teahouse_Shop_Thatch_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_teahouse_shop_thatch_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.5700000000000003,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "customers' doma with the benches, the kamado on the back wall",
+   "enclosed": false,
+   "rect_model": [
+    -2.67,
+    0.84,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -2.23,
+      -1.32
+     ],
+     "yaw": 0.0,
+     "size": [
+      0.7,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "agari",
+   "tag": "shop:chaya",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    3.71,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [],
+   "note": "raised board seat (agari) open to the doma: customers rest and eat here",
+   "enclosed": false,
+   "rect_model": [
+    0.98,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 8,
+ "loot_by_room": {
+  "doma": 6,
+  "agari": 2
+ }
+}

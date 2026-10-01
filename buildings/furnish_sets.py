@@ -585,3 +585,8 @@ SETS = {
 import shop_sets as _shop  # noqa: E402
 
 SETS.update(_shop.sets())
+
+# W2F (2026-10-01): the wave-2 dressings (shrine, temple, tea house, smithy, guard posts): buildings/w2f_sets.py
+import w2f_sets as _w2f  # noqa: E402
+
+SETS.update(_w2f.sets())

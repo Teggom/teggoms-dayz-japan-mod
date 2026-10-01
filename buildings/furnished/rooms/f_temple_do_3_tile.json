@@ -1,0 +1,103 @@
+{
+ "building": "Land_JP_Temple_Do_3_Tile_Kannon",
+ "p3d": "\\JP\\buildings\\furnished\\jp_temple_do_3_tile_kannon.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "hall",
+   "tag": "worship",
+   "floor": "boards",
+   "level_m": 0.6,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "one-room hall: the statue on an altar shelf at the back; also the village meeting place",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "altar",
+     "room": "hall",
+     "note": "altar shelf / dais (shumidan) with the statue (Jizo / Kannon / Yakushi / Koshin / Enma), incense burner, candle stands, vases, bowl gong",
+     "rect": [
+      -0.9,
+      0.9,
+      -2.65,
+      -1.87
+     ],
+     "y": 0.6
+    }
+   ]
+  },
+  {
+   "name": "en",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.6,
+   "rect_kit": [
+    0.1,
+    5.36,
+    0.12,
+    1.185
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -2.63,
+    2.63,
+    2.85,
+    3.915
+   ],
+   "fittings": [
+    {
+     "kind": "saisen_bako",
+     "room": "en",
+     "note": "donation box on the en before the doors",
+     "centre": [
+      0.0,
+      3.18
+     ],
+     "size": [
+      1.0,
+      0.45
+     ],
+     "yaw": 0.0,
+     "y": 0.6
+    },
+    {
+     "kind": "gong",
+     "room": "en",
+     "note": "waniguchi gong + rope hung under the eave / kohai before the doors",
+     "centre": [
+      0.0,
+      3.28
+     ],
+     "size": [
+      0.3,
+      0.3
+     ],
+     "yaw": 0.0,
+     "y": 2.85
+    }
+   ],
+   "sparse": "the veranda before the hall"
+  }
+ ],
+ "loot_points": 10,
+ "loot_by_room": {
+  "hall": 8,
+  "en": 2
+ }
+}

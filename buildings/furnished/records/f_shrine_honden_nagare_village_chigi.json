@@ -1,0 +1,64 @@
+{
+ "key": "f_shrine_honden_nagare_village_chigi",
+ "class": "Land_JP_Shrine_Honden_Nagare_Village_Chigi_Furnished",
+ "name": "jp_shrine_honden_nagare_village_chigi_furnished",
+ "model": "\\JP\\buildings\\furnished\\jp_shrine_honden_nagare_village_chigi_furnished.p3d",
+ "model_dir": "furnished",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 3275,
+  "Resolution 2": 1116,
+  "Resolution 3": 550,
+  "Geometry": 356,
+  "Memory": 0,
+  "Roadway": 7,
+  "View Geometry": 290,
+  "Fire Geometry": 296
+ },
+ "loot_points": 4,
+ "config_class": "\tclass Land_JP_Shrine_Honden_Nagare_Village_Chigi_Furnished: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Shrine main sanctuary (honden), nagare with chigi + katsuogi, village, furnished (offering table; the sealed sanctum dressed)\";\n\t\tmodel=\"\\JP\\buildings\\furnished\\jp_shrine_honden_nagare_village_chigi_furnished.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_shrine_honden_nagare_village_chigi_furnished_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_shrine_honden_nagare_village_chigi_furnished: Default\n\t{\n\t\tskeletonName=\"jp_shrine_honden_nagare_village_chigi_furnished_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Shrine_Honden_Nagare_Village_Chigi_Furnished\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"1.562500 1.000000 1.108929\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"1.562500 1.000000 -1.108929\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"0.125000 1.000000 1.577500\" range=\"0.347500\" height=\"0.868750\" />",
+  "\t\t\t\t\t\t<point pos=\"0.125000 1.000000 -1.577500\" range=\"0.347500\" height=\"0.868750\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "proxies": {
+  "Resolution 1": 2,
+  "Geometry": 1,
+  "View Geometry": 1,
+  "Fire Geometry": 1
+ },
+ "proxy_addons": [
+  "JP_Furniture"
+ ],
+ "loot_containers": {
+  "lootFloor": 4,
+  "lootshelves": 0
+ },
+ "params": {
+  "base": "shrine_honden_nagare_village_chigi",
+  "dress": "w2f_honden_village"
+ },
+ "bbox": [
+  -2.345,
+  2.33,
+  -0.202,
+  5.341,
+  -1.721,
+  4.301
+ ]
+}

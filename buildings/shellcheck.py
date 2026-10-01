@@ -395,6 +395,8 @@ def run(bd):
             if getattr(mod, "DOOR_CHECK_OTHERS_OPEN", False):
                 sh = [od for od in M.doors if od is not d and not getattr(od, "passable", True)]
                 gc = RC.open_state(gc, sh, 1.0) if sh else gc
+            if any(a["type"] == "rotation" for a in d.anims):
+                return door_world_rot(d, gc)      # W2F: hinged leaves (shrine / temple doors, kido) as C7 measures them
             return MV.door_world(d, gc)
         DC.check_all(mod.D, M, L, pts, rec, door_fn=door_fn,
                      extra_openings=getattr(mod, "EXTRA_OPENINGS", None), fixed_band=getattr(mod, "FIXED_BAND", None),

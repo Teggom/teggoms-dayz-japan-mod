@@ -1,0 +1,50 @@
+{
+ "building": "Land_JP_Shrine_Temizuya_Town_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_shrine_temizuya_town_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "pavilion",
+   "tag": "worship",
+   "floor": "stone",
+   "level_m": 0.08,
+   "rect_kit": [
+    -0.45,
+    3.18,
+    -2.27,
+    0.45
+   ],
+   "doors": [],
+   "note": "open pavilion over the stone basin: wash hands and mouth before the shrine",
+   "enclosed": false,
+   "rect_model": [
+    -1.815,
+    1.815,
+    -1.36,
+    1.36
+   ],
+   "fittings": [
+    {
+     "kind": "basin",
+     "room": "pavilion",
+     "note": "the stone basin (chozubachi, W2 site prop jp_s_basin_*) with its bamboo spout and ladle rack (hishaku)",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      1.1,
+      0.7
+     ],
+     "yaw": 0.0,
+     "y": 0.08
+    }
+   ],
+   "sparse": "open purification pavilion"
+  }
+ ],
+ "loot_points": 2,
+ "loot_by_room": {
+  "pavilion": 2
+ }
+}

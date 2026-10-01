@@ -75120,4 +75120,6642 @@ class CfgVehicles
 			};
 		};
 	};
+	class Land_JP_Shrine_Haiden_Town_Hiwada_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine worship hall (haiden), town: curved cypress-bark roof, brackets, furnished (Hachimangu: drum, offerings, bell rope, name board)";
+		model="\JP\buildings\furnished\jp_shrine_haiden_town_hiwada_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="shitomi (bay 0)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1.6;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="tobira_lattice_in (bay 1)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="shitomi (bay 2)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=1.6;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Shrine_Haiden_Village_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine worship hall (haiden), village: 3 x 2 ken, board roof, furnished";
+		model="\JP\buildings\furnished\jp_shrine_haiden_village_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Haiden doors (lattice, open in)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Shrine_Honden_Nagare_Town_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine main sanctuary (honden), nagare sangen-sha, curved cypress-bark roof, furnished (offering table; the sealed sanctum dressed)";
+		model="\JP\buildings\furnished\jp_shrine_honden_nagare_town_furnished.p3d";
+		class Doors
+		{
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+			};
+		};
+	};
+	class Land_JP_Shrine_Honden_Nagare_Village_Chigi_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine main sanctuary (honden), nagare with chigi + katsuogi, village, furnished (offering table; the sealed sanctum dressed)";
+		model="\JP\buildings\furnished\jp_shrine_honden_nagare_village_chigi_furnished.p3d";
+		class Doors
+		{
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+			};
+		};
+	};
+	class Land_JP_Shrine_Temizuya_Town_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Purification pavilion (temizuya), town: curved tile roof on brackets, furnished (basin, ladles)";
+		model="\JP\buildings\furnished\jp_shrine_temizuya_town_furnished.p3d";
+		class Doors
+		{
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+			};
+		};
+	};
+	class Land_JP_Shrine_Shamusho_Sangawara_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine priests' office with the amulet window (town, tiled), furnished (amulet counter, talisman desk)";
+		model="\JP\buildings\furnished\jp_shrine_shamusho_sangawara_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Door (katabiki)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Amulet window (push-up counter shutter)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1.2;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Office window (back)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin4
+			{
+				displayName="Office window (end)";
+				component="DoorsTwin4";
+				soundPos="doorsTwin4_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin4
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin4"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Shrine_Kagura_Town_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Kagura dance stage (kagura-den), town: curved roof on brackets, furnished (drums, masks)";
+		model="\JP\buildings\furnished\jp_shrine_kagura_town_furnished.p3d";
+		class Doors
+		{
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+			};
+		};
+	};
+	class Land_JP_Temple_Hondo_Village_Jodo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple main hall (hondo), village: 4 x 4 ken, tiled irimoya, furnished, Jodo (Amida, sutra desk)";
+		model="\JP\buildings\furnished\jp_temple_hondo_village_jodo.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Hall doors left (sankarado, open in)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Hall doors right (sankarado, open in)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Shitomido 0 (upper leaf)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=1.6;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin4
+			{
+				displayName="Shitomido 3 (upper leaf)";
+				component="DoorsTwin4";
+				soundPos="doorsTwin4_action";
+				animPeriod=1.6;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin5
+			{
+				displayName="Side door (board, open in)";
+				component="DoorsTwin5";
+				soundPos="doorsTwin5_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin4
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin4"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin5
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin5"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Temple_Hondo_Town_Zen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple main hall (hondo), town: 3 x 3 bays, curved hongawara, degumi brackets, furnished, Zen (Shaka, big mokugyo)";
+		model="\JP\buildings\furnished\jp_temple_hondo_town_zen.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="shitomi (bay 0)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1.6;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="tobira_sankara_in (bay 1)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="shitomi (bay 2)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=1.6;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Temple_Do_2_Board_Jizo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small sacred hall (do), 2 x 2 ken, board hogyo roof, furnished: Jizo hall";
+		model="\JP\buildings\furnished\jp_temple_do_2_board_jizo.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Hall doors left (lattice, open in)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Hall doors right (lattice, open in)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Temple_Do_3_Tile_Kannon: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small sacred hall (do), 3 x 3 ken, tiled hogyo roof, furnished: Kannon hall";
+		model="\JP\buildings\furnished\jp_temple_do_3_tile_kannon.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Hall doors (sankarado, open in)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1.4;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Shitomido 0 (upper leaf)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1.6;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Shitomido 2 (upper leaf)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=1.6;
+				initPhase=0;
+				initOpened=0;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Temple_Kuri_Village_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple priests' quarters + kitchen (kuri), village: thatch, genkan porch, furnished";
+		model="\JP\buildings\furnished\jp_temple_kuri_village_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Kitchen door (ooto, doma)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Back door (doma)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Genkan door (guest room)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=0.8;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin4
+			{
+				displayName="Daidokoro -> guest room";
+				component="DoorsTwin4";
+				soundPos="doorsTwin4_action";
+				animPeriod=0.8;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin5
+			{
+				displayName="Doma window (front)";
+				component="DoorsTwin5";
+				soundPos="doorsTwin5_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin6
+			{
+				displayName="Daidokoro window (front)";
+				component="DoorsTwin6";
+				soundPos="doorsTwin6_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin7
+			{
+				displayName="Guest room window (back)";
+				component="DoorsTwin7";
+				soundPos="doorsTwin7_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin8
+			{
+				displayName="Doma window (end)";
+				component="DoorsTwin8";
+				soundPos="doorsTwin8_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin4
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin4"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin5
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin5"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin6
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin6"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin7
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin7"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin8
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin8"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Temple_Kuri_Town_Zen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple priests' quarters + kitchen (kuri), town: tiled, genkan porch, furnished, Zen (fish board, cloud gong)";
+		model="\JP\buildings\furnished\jp_temple_kuri_town_zen.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Kitchen door (ooto, doma)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Back door (doma)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Genkan door (guest room)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=0.8;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin4
+			{
+				displayName="Daidokoro -> guest room";
+				component="DoorsTwin4";
+				soundPos="doorsTwin4_action";
+				animPeriod=0.8;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin5
+			{
+				displayName="Doma window (front)";
+				component="DoorsTwin5";
+				soundPos="doorsTwin5_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin6
+			{
+				displayName="Daidokoro window (front)";
+				component="DoorsTwin6";
+				soundPos="doorsTwin6_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin7
+			{
+				displayName="Guest room window (back)";
+				component="DoorsTwin7";
+				soundPos="doorsTwin7_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin8
+			{
+				displayName="Doma window (end)";
+				component="DoorsTwin8";
+				soundPos="doorsTwin8_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin4
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin4"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin5
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin5"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin6
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin6"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin7
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin7"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin8
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin8"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Temple_Shoro_Village_Bell: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple bell tower (shoro), village: open four-post, with its bell";
+		model="\JP\buildings\furnished\jp_temple_shoro_village_bell.p3d";
+		class Doors
+		{
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+			};
+		};
+	};
+	class Land_JP_Temple_Shoro_Town_Bell: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple bell tower (shoro), town: hakama skirt, curved roof, brackets, with its bell";
+		model="\JP\buildings\furnished\jp_temple_shoro_town_bell.p3d";
+		class Doors
+		{
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+			};
+		};
+	};
+	class Land_JP_Temple_Gate_Yakuimon_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple small gate (yakui-mon), village: tiled, with its name board";
+		model="\JP\buildings\furnished\jp_temple_gate_yakuimon_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Gate leaves";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=2;
+				initPhase=0;
+				initOpened=1;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Temple_Gate_Shikyakumon_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple small gate (shikyaku-mon), town: curved tile roof, brackets, with its name board";
+		model="\JP\buildings\furnished\jp_temple_gate_shikyakumon_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Gate leaves";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=2;
+				initPhase=0;
+				initOpened=1;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Teahouse_Bench_Itabuki_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Roadside tea house: bench shed with the bench roof (kake-jaya, boards), furnished";
+		model="\JP\buildings\furnished\jp_teahouse_bench_itabuki_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Window (end, push-up shutter)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1.2;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Teahouse_Shop_Thatch_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Roadside tea house: open shop (chamise, thatch), furnished";
+		model="\JP\buildings\furnished\jp_teahouse_shop_thatch_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Back door (doma)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Window (agari, front)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Window (doma end)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin4
+			{
+				displayName="Window (agari end, push-up shutter)";
+				component="DoorsTwin4";
+				soundPos="doorsTwin4_action";
+				animPeriod=1.2;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin4
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin4"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Teahouse_Tateba_Itabuki_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rest-stop tea house with rooms (tateba-jaya, boards, bench roof), furnished";
+		model="\JP\buildings\furnished\jp_teahouse_tateba_itabuki_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Back door (doma)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Agari -> zashiki (hikiwake)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=0.8;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Window (agari, front L)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin4
+			{
+				displayName="Window (agari, front R)";
+				component="DoorsTwin4";
+				soundPos="doorsTwin4_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin5
+			{
+				displayName="Window (zashiki, back)";
+				component="DoorsTwin5";
+				soundPos="doorsTwin5_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin6
+			{
+				displayName="Window (doma end)";
+				component="DoorsTwin6";
+				soundPos="doorsTwin6_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin7
+			{
+				displayName="Window (zashiki end, push-up)";
+				component="DoorsTwin7";
+				soundPos="doorsTwin7_action";
+				animPeriod=1.2;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin4
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin4"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin5
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin5"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin6
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin6"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin7
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin7"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Smithy_Open_Itabuki_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Smithy (kaji-ya, open front, boards), furnished (cold forge)";
+		model="\JP\buildings\furnished\jp_smithy_open_itabuki_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Back door";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Window (front, push-up shutter)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1.2;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Window (end)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Swordsmith_Sangawara_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Swordsmith (katana-kaji): work room + darkened forge room, tiled, furnished (cold forge)";
+		model="\JP\buildings\furnished\jp_swordsmith_sangawara_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Entrance (itado pair)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Side door (forge room)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Work room -> forge room";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin4
+			{
+				displayName="Window (work room, front)";
+				component="DoorsTwin4";
+				soundPos="doorsTwin4_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin5
+			{
+				displayName="Window (forge room, high)";
+				component="DoorsTwin5";
+				soundPos="doorsTwin5_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin6
+			{
+				displayName="Window (work room, end)";
+				component="DoorsTwin6";
+				soundPos="doorsTwin6_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin4
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin4"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin5
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin5"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin6
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin6"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Guardhut_M_Itabuki_Jishinban: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Guard hut, larger (self-watch post / jishin-ban, boards), furnished: self-watch post with the ridge fire ladder";
+		model="\JP\buildings\furnished\jp_guardhut_m_itabuki_jishinban.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Door (katabiki)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Window (end)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=0.6;
+				initPhase=0;
+				initOpened=0.4;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Counter shutter (end, push-up)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=1.2;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+	class Land_JP_Kido_Lattice_Bantaya_Furnished: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ward gate (kido, lattice leaves) with the gatekeeper's hut (kido-ban), furnished (ward lantern, the keeper's hut)";
+		model="\JP\buildings\furnished\jp_kido_lattice_bantaya_furnished.p3d";
+		class Doors
+		{
+			class DoorsTwin1
+			{
+				displayName="Wicket (kuguri)";
+				component="DoorsTwin1";
+				soundPos="doorsTwin1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin2
+			{
+				displayName="Gate leaves (kido)";
+				component="DoorsTwin2";
+				soundPos="doorsTwin2_action";
+				animPeriod=2;
+				initPhase=0;
+				initOpened=1;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin3
+			{
+				displayName="Door (katabiki)";
+				component="DoorsTwin3";
+				soundPos="doorsTwin3_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.3;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+			class DoorsTwin4
+			{
+				displayName="Counter shutter (end, push-up)";
+				component="DoorsTwin4";
+				soundPos="doorsTwin4_action";
+				animPeriod=1.2;
+				initPhase=0;
+				initOpened=0.5;
+				soundOpen="doorWoodSlideOpen";
+				soundClose="doorWoodSlideClose";
+				soundLocked="doorWoodSlideRattle";
+				soundOpenABit="doorWoodSlideOpenABit";
+			};
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+				class DoorsTwin1
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin1"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin2
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin2"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin3
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin3"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+				class DoorsTwin4
+				{
+					class Health
+					{
+						hitpoints=1000;
+						transferToGlobalCoef=0;
+					};
+					componentNames[]=
+					{
+						"doorstwin4"
+					};
+					fatalInjuryCoef=-1;
+					class ArmorType
+					{
+						class Projectile
+						{
+							class Health
+							{
+								damage=3;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class Melee
+						{
+							class Health
+							{
+								damage=5;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+						class FragGrenade
+						{
+							class Health
+							{
+								damage=10;
+							};
+							class Blood
+							{
+								damage=0;
+							};
+							class Shock
+							{
+								damage=0;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
 };

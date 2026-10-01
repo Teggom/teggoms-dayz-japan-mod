@@ -1,0 +1,71 @@
+{
+ "key": "f_shrine_kagura_town",
+ "class": "Land_JP_Shrine_Kagura_Town_Furnished",
+ "name": "jp_shrine_kagura_town_furnished",
+ "model": "\\JP\\buildings\\furnished\\jp_shrine_kagura_town_furnished.p3d",
+ "model_dir": "furnished",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 4268,
+  "Resolution 2": 1683,
+  "Resolution 3": 831,
+  "Geometry": 467,
+  "Memory": 0,
+  "Roadway": 51,
+  "View Geometry": 413,
+  "Fire Geometry": 413
+ },
+ "loot_points": 4,
+ "config_class": "\tclass Land_JP_Shrine_Kagura_Town_Furnished: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Kagura dance stage (kagura-den), town: curved roof on brackets, furnished (drums, masks)\";\n\t\tmodel=\"\\JP\\buildings\\furnished\\jp_shrine_kagura_town_furnished.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_shrine_kagura_town_furnished_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_shrine_kagura_town_furnished: Default\n\t{\n\t\tskeletonName=\"jp_shrine_kagura_town_furnished_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Shrine_Kagura_Town_Furnished\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.090714 1.000000 -0.000000\" range=\"0.810000\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.997857 1.000000 0.725714\" range=\"0.572143\" height=\"1.430357\" />",
+  "\t\t\t\t</container>",
+  "\t\t\t\t<container name=\"lootshelves\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"shelves\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.280000 1.750000 1.270000\" range=\"0.300000\" height=\"0.750000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.120000 1.750000 1.270000\" range=\"0.300000\" height=\"0.750000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "proxies": {
+  "Resolution 1": 4,
+  "Geometry": 2,
+  "View Geometry": 2,
+  "Fire Geometry": 2
+ },
+ "proxy_addons": [
+  "JP_Furniture"
+ ],
+ "loot_containers": {
+  "lootFloor": 2,
+  "lootshelves": 2
+ },
+ "params": {
+  "base": "shrine_kagura_town",
+  "dress": "w2f_kagura"
+ },
+ "bbox": [
+  -3.801,
+  3.047,
+  -0.202,
+  6.536,
+  -3.047,
+  3.047
+ ]
+}

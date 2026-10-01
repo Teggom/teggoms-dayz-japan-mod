@@ -1,0 +1,185 @@
+{
+ "building": "Land_JP_Temple_Kuri_Town_Zen",
+ "p3d": "\\JP\\buildings\\furnished\\jp_temple_kuri_town_zen.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    4.4799999999999995,
+    -7.220000000000001,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the big earth-floored kitchen: the kamado row on the end wall, water jars, open to the sooted roof",
+   "enclosed": true,
+   "rect_model": [
+    -5.4,
+    -0.98,
+    -3.58,
+    3.58
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -4.96,
+      0.0
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -4.96,
+      -1.82
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado_row",
+     "room": "doma",
+     "note": "the kamado row with the big iron cauldrons, rice-steaming baskets, water jars (two kamado spots above)",
+     "rect": [
+      -5.38,
+      -4.46,
+      -2.73,
+      0.91
+     ],
+     "y": 0.05
+    }
+   ]
+  },
+  {
+   "name": "daidokoro",
+   "tag": "daidokoro",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    4.609999999999999,
+    10.86,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4"
+   ],
+   "note": "board room with the irori: the office and the priests' living room, open to the doma",
+   "enclosed": true,
+   "rect_model": [
+    -0.85,
+    5.4,
+    0.06,
+    3.58
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "daidokoro",
+     "rect": [
+      1.137,
+      2.502,
+      1.365,
+      2.275
+     ],
+     "floor_y": 0.5,
+     "pit": "irori",
+     "hook": [
+      1.82,
+      2.97,
+      1.82
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    },
+    {
+     "kind": "zen_trays",
+     "room": "daidokoro",
+     "note": "stacked lacquer meal trays (zen), account books, the temple seal box, writing desk",
+     "rect": [
+      4.91,
+      5.38,
+      0.3,
+      3.04
+     ],
+     "y": 0.5
+    }
+   ]
+  },
+  {
+   "name": "guest",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    4.609999999999999,
+    10.86,
+    -7.220000000000001,
+    -3.7
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin3"
+   ],
+   "note": "guest room (tatami) reached from the genkan",
+   "enclosed": true,
+   "rect_model": [
+    -0.85,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "fittings": []
+  },
+  {
+   "name": "genkan",
+   "tag": "yard",
+   "floor": "stone",
+   "level_m": 0.05,
+   "rect_kit": [
+    11.62,
+    13.120000000000001,
+    -7.205,
+    -3.715
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "the genkan porch: stone pad, shikidai step up to the guest room",
+   "enclosed": false,
+   "rect_model": [
+    6.16,
+    7.66,
+    -3.565,
+    -0.075
+   ],
+   "fittings": [],
+   "sparse": "the entrance porch"
+  }
+ ],
+ "loot_points": 26,
+ "loot_by_room": {
+  "doma": 11,
+  "daidokoro": 8,
+  "guest": 6,
+  "genkan": 1
+ }
+}

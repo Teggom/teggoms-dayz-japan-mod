@@ -1,0 +1,111 @@
+{
+ "building": "Land_JP_Shrine_Honden_Nagare_Town_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_shrine_honden_nagare_town_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "en",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 1.0,
+   "rect_kit": [
+    -1.215,
+    6.675,
+    0.12,
+    1.185
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -3.945,
+    3.945,
+    1.485,
+    2.55
+   ],
+   "fittings": [
+    {
+     "kind": "offering_table",
+     "room": "en",
+     "note": "hassoku-an offering tables with sanbo on the en before the doors",
+     "centre": [
+      0.0,
+      1.915
+     ],
+     "size": [
+      1.2,
+      0.45
+     ],
+     "yaw": 0.0,
+     "y": 1.0
+    },
+    {
+     "kind": "sanctum",
+     "room": null,
+     "note": "three sealed sanctum bays (a zushi each): seen through the lattice doors only",
+     "rect": [
+      -2.67,
+      2.67,
+      -1.305,
+      1.305
+     ],
+     "y": 1.0,
+     "outside": true
+    }
+   ],
+   "sparse": "the front veranda (the sanctum is sealed)"
+  },
+  {
+   "name": "en_left",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 1.0,
+   "rect_kit": [
+    -1.215,
+    -0.12,
+    -2.48,
+    0.0
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -3.945,
+    -2.85,
+    -1.115,
+    1.365
+   ],
+   "fittings": [],
+   "sparse": "side veranda"
+  },
+  {
+   "name": "en_right",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 1.0,
+   "rect_kit": [
+    5.58,
+    6.675,
+    -2.48,
+    0.0
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    2.85,
+    3.945,
+    -1.115,
+    1.365
+   ],
+   "fittings": [],
+   "sparse": "side veranda"
+  }
+ ],
+ "loot_points": 5,
+ "loot_by_room": {
+  "en": 3,
+  "en_left": 1,
+  "en_right": 1
+ }
+}

@@ -442,7 +442,7 @@ def door_opening(d, gcomps):
     return along_x, (lo, hi), wall
 
 
-def band_check(room, items, openings, fixed=(), step=0.05):
+def band_check(room, items, openings, fixed=(), step=0.05, centre=True):
     """Is there a >= 1.00 m wide walking band from every door of the room to every other door and to the room
     centre? Grid over the room rect; a cell is free when it is >= 0.5 m from the walls (rect edges) and from every
     blocking prop footprint / fixed obstacle. openings: [(label, (x, z) of the opening centre)]. Returns (ok, detail)."""
@@ -467,13 +467,19 @@ def band_check(room, items, openings, fixed=(), step=0.05):
                     if d <= maxd and (best is None or d < best[0]):
                         best = (d, i, j)
         return best
-    targets = [(lbl, p) for lbl, p in openings] + [("centre", ((x0 + x1) / 2, (z0 + z1) / 2))]
+    targets = [(lbl, p) for lbl, p in openings] + ([("centre", ((x0 + x1) / 2, (z0 + z1) / 2))] if centre else [])
+    if not targets:                  # W2F: a sparse space (veranda) with no doors and no centre target
+        return True, "no doors into this sparse space (walkable round its props)"
     starts = []
     for lbl, p in targets:
         s = snap(p, 0.9 if lbl != "centre" else 0.5)
+        if s is None and not centre:
+            continue                 # W2F: a sparse space's door that opens from a neighbour's wall (a porch)
         if s is None:
             return False, "%s: no free 1.00 m band cell near %s" % (lbl, tuple(round(v, 2) for v in p))
         starts.append((lbl, s))
+    if not starts:
+        return True, "no door reaches into this sparse space"
     # flood fill from the first
     seen = set()
     stack = [(starts[0][1][1], starts[0][1][2])]
@@ -533,8 +539,13 @@ def check_all(D, M, L, pts, rec, door_fn=None, extra_openings=None, fixed_band=N
             continue
         its = byr.get(rn, [])
         n = sum(1 for it in its if it["count"])
-        rec("D1 props per room %d-%d: %s" % (count_range[0], count_range[1], rn),
-            count_range[0] <= n <= count_range[1], "%d props: %s" % (n, ", ".join(it["name"] for it in its)))
+        # W2F (2026-10-01): a dressing may mark a space that is not a living room 'sparse' (r["sparse"] = why: a
+        # shrine en, a temizuya pavilion, a gate passage, a bell platform): D1 then takes 0-max props and D3 (a raised
+        # loot surface) is not required there. Rooms without the flag are checked exactly as before.
+        sparse = r.get("sparse")
+        lo_n = 0 if sparse else count_range[0]
+        rec("D1 props per room %d-%d: %s%s" % (lo_n, count_range[1], rn, " (sparse: %s)" % sparse if sparse else ""),
+            lo_n <= n <= count_range[1], "%d props: %s" % (n, ", ".join(it["name"] for it in its)))
         rect = r["rect_model"]
         area = (rect[1] - rect[0]) * (rect[3] - rect[2])
         cov = sum(clip_area(footprint(it), rect) for it in its if blocks(it))
@@ -542,8 +553,12 @@ def check_all(D, M, L, pts, rec, door_fn=None, extra_openings=None, fixed_band=N
         rec("D2 floor coverage <= %d %%: %s" % (lim * 100, rn), cov <= lim * area + 1e-6,
             "%.2f of %.2f m2 = %.1f %% (collision footprints)" % (cov, area, 100 * cov / area))
         raised = [p for p in pts if p.get("floor") == rn and p.get("container") == "lootshelves"]
-        rec("D3 at least one raised loot surface: %s" % rn, bool(raised),
-            "%d raised points on %s" % (len(raised), ", ".join(sorted({p["prop"] for p in raised}))))
+        if sparse:
+            rec("D3 raised loot surface not required (sparse: %s): %s" % (sparse, rn), True,
+                "%d raised points on %s" % (len(raised), ", ".join(sorted({p["prop"] for p in raised})) or "-"))
+        else:
+            rec("D3 at least one raised loot surface: %s" % rn, bool(raised),
+                "%d raised points on %s" % (len(raised), ", ".join(sorted({p["prop"] for p in raised}))))
         ops = []
         for dn in r.get("doors", []):
             k = int(dn.replace("DoorsTwin", "")) - 1
@@ -555,7 +570,7 @@ def check_all(D, M, L, pts, rec, door_fn=None, extra_openings=None, fixed_band=N
                 along_x, (lo, hi), wall = o
                 ops.append((dn, ((lo + hi) / 2, wall) if along_x else (wall, (lo + hi) / 2)))
         ops += (extra_openings or {}).get(rn, [])
-        ok, det = band_check(r, its, ops, (fixed_band or {}).get(rn, ()))
+        ok, det = band_check(r, its, ops, (fixed_band or {}).get(rn, ()), centre=not sparse)
         rec("D4 1.00 m clear band door-to-door and door-to-centre: %s" % rn, ok, det)
     # ---- doors: clear zone, sweep / D1 with the furniture in, C10 reach with the furniture in
     fa = None

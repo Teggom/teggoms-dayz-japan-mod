@@ -1,0 +1,118 @@
+{
+ "building": "Land_JP_Temple_Hondo_Town_Zen",
+ "p3d": "\\JP\\buildings\\furnished\\jp_temple_hondo_town_zen.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "hall",
+   "tag": "worship",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    0.155,
+    6.669999999999999,
+    -6.669999999999999,
+    -0.155
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "gejin in front, naijin at the back: the dais spot",
+   "enclosed": true,
+   "rect_model": [
+    -3.257,
+    3.257,
+    -3.257,
+    3.257
+   ],
+   "fittings": [
+    {
+     "kind": "altar",
+     "room": "hall",
+     "note": "naijin: Sumeru dais (shumidan) with the honzon in its zushi, canopy (tengai), keman, banners, the three / five altar pieces, front table, the priest's platform (raiban)",
+     "rect": [
+      -1.137,
+      1.138,
+      -3.258,
+      -1.888
+     ],
+     "y": 0.75
+    },
+    {
+     "kind": "sutra_desk",
+     "room": "hall",
+     "note": "sutra desk, bowl gong (keisu), mokugyo; big drum by the side",
+     "centre": [
+      -0.0,
+      -0.963
+     ],
+     "size": [
+      0.9,
+      0.5
+     ],
+     "yaw": 0.0,
+     "y": 0.75
+    }
+   ]
+  },
+  {
+   "name": "en",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    0.1,
+    6.725,
+    0.32,
+    1.185
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -3.312,
+    3.312,
+    3.732,
+    4.598
+   ],
+   "fittings": [
+    {
+     "kind": "saisen_bako",
+     "room": "en",
+     "note": "donation box on the en",
+     "centre": [
+      -0.0,
+      3.912
+     ],
+     "size": [
+      1.5,
+      0.55
+     ],
+     "yaw": 0.0,
+     "y": 0.75
+    },
+    {
+     "kind": "gong",
+     "room": "en",
+     "note": "waniguchi gong + rope under the kohai",
+     "centre": [
+      -0.0,
+      4.012
+     ],
+     "size": [
+      0.3,
+      0.3
+     ],
+     "yaw": 0.0,
+     "y": 3.2
+    }
+   ],
+   "sparse": "the veranda before the hall"
+  }
+ ],
+ "loot_points": 12,
+ "loot_by_room": {
+  "hall": 10,
+  "en": 2
+ }
+}

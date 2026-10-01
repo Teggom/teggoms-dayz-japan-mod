@@ -1,0 +1,111 @@
+{
+ "building": "Land_JP_Teahouse_Tateba_Itabuki_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_teahouse_tateba_itabuki_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.5700000000000003,
+    -5.4,
+    1.6700000000000002
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "customers' doma (porters, horses outside), the kamado; open to the agari",
+   "enclosed": false,
+   "rect_model": [
+    -4.49,
+    -0.98,
+    -2.67,
+    4.4
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -4.05,
+      -2.23
+     ],
+     "yaw": 0.0,
+     "size": [
+      0.7,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "bench_spot",
+     "room": "doma",
+     "note": "shogi benches under the front lean-to (the furnisher's props)",
+     "rect": [
+      -4.35,
+      -1.11,
+      3.8,
+      4.25
+     ]
+    }
+   ]
+  },
+  {
+   "name": "agari",
+   "tag": "shop:chaya",
+   "floor": "boards",
+   "level_m": 0.45,
+   "rect_kit": [
+    3.71,
+    9.04,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "agari open to the doma (meals, tea, sake)",
+   "enclosed": false,
+   "rect_model": [
+    -0.84,
+    4.49,
+    0.06,
+    2.67
+   ],
+   "fittings": []
+  },
+  {
+   "name": "zashiki",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.45,
+   "rect_kit": [
+    3.7,
+    9.04,
+    -5.4,
+    -2.79
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "rest room with tatami (rooms by the hour for travellers; no lodging)",
+   "enclosed": true,
+   "rect_model": [
+    -0.85,
+    4.49,
+    -2.67,
+    -0.06
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 20,
+ "loot_by_room": {
+  "doma": 13,
+  "agari": 3,
+  "zashiki": 4
+ }
+}

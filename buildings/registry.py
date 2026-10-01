@@ -661,6 +661,47 @@ W2S_TEMPLE = [
 BUILDINGS += W2S_SHRINE + W2S_TEMPLE
 
 
+# ------------------------------------------------------------------------------------------------ W2F furnished
+# Phase C wave 2 (agent W2F, 2026-10-01): furnished variants of the W2S / W2C shells (the C3 pattern, furnishkit; the
+# dressings are buildings/w2f_sets.py, the specialty props spikes/W2F/props_w2f_*.py in jp_furniture). Placed on the
+# test island by spikes/W2F/layout_w2f.py (test/placements/W2F.csv + test/ce/W2F_mapgrouppos.xml), NOT through
+# 'placements' here (the shrine precinct lies outside the flat test yard that shellcheck's placement check guards).
+W2F_FURNISHED = [
+    _furn("f_shrine_haiden_town", "shrine_haiden_town_hiwada", "w2f_haiden_town", "Furnished",
+          "furnished (Hachimangu: drum, offerings, bell rope, name board)"),
+    _furn("f_shrine_haiden_village", "shrine_haiden_village", "w2f_haiden_village", "Furnished", "furnished"),
+    _furn("f_shrine_honden_nagare_town", "shrine_honden_nagare_town", "w2f_honden_town", "Furnished",
+          "furnished (offering table; the sealed sanctum dressed)"),
+    _furn("f_shrine_honden_nagare_village_chigi", "shrine_honden_nagare_village_chigi", "w2f_honden_village",
+          "Furnished", "furnished (offering table; the sealed sanctum dressed)"),
+    _furn("f_shrine_temizuya_town", "shrine_temizuya_town", "w2f_temizuya", "Furnished", "furnished (basin, ladles)"),
+    _furn("f_shrine_shamusho_sangawara", "shrine_shamusho_sangawara", "w2f_shamusho", "Furnished",
+          "furnished (amulet counter, talisman desk)"),
+    _furn("f_shrine_kagura_town", "shrine_kagura_town", "w2f_kagura", "Furnished", "furnished (drums, masks)"),
+    _furn("f_temple_hondo_village", "temple_hondo_village", "w2f_hondo_village", "Jodo",
+          "furnished, Jodo (Amida, sutra desk)"),
+    _furn("f_temple_hondo_town", "temple_hondo_town", "w2f_hondo_town", "Zen", "furnished, Zen (Shaka, big mokugyo)"),
+    _furn("f_temple_do_2_board", "temple_do_2_board", "w2f_do_jizo", "Jizo", "furnished: Jizo hall"),
+    _furn("f_temple_do_3_tile", "temple_do_3_tile", "w2f_do_kannon", "Kannon", "furnished: Kannon hall"),
+    _furn("f_temple_kuri_village", "temple_kuri_village", "w2f_kuri_village", "Furnished", "furnished"),
+    _furn("f_temple_kuri_town", "temple_kuri_town", "w2f_kuri_town", "Zen", "furnished, Zen (fish board, cloud gong)"),
+    _furn("f_temple_shoro_village", "temple_shoro_village", "w2f_shoro", "Bell", "with its bell"),
+    _furn("f_temple_shoro_town", "temple_shoro_town", "w2f_shoro", "Bell", "with its bell"),
+    _furn("f_temple_gate_yakuimon", "temple_gate_yakuimon", "w2f_gate", "Furnished", "with its name board"),
+    _furn("f_temple_gate_shikyakumon", "temple_gate_shikyakumon", "w2f_gate", "Furnished", "with its name board"),
+    _furn("f_teahouse_bench_itabuki", "teahouse_bench_itabuki", "w2f_teahouse_bench", "Furnished", "furnished"),
+    _furn("f_teahouse_shop_thatch", "teahouse_shop_thatch", "w2f_teahouse_shop", "Furnished", "furnished"),
+    _furn("f_teahouse_tateba_itabuki", "teahouse_tateba_itabuki", "w2f_teahouse_tateba", "Furnished", "furnished"),
+    _furn("f_smithy_open_itabuki", "smithy_open_itabuki", "w2f_smithy", "Furnished", "furnished (cold forge)"),
+    _furn("f_swordsmith_sangawara", "swordsmith_sangawara", "w2f_swordsmith", "Furnished", "furnished (cold forge)"),
+    _furn("f_guardhut_m_itabuki", "guardhut_m_itabuki", "w2f_guardhut_m", "Jishinban",
+          "furnished: self-watch post with the ridge fire ladder"),
+    _furn("f_kido_lattice_bantaya", "kido_lattice_bantaya", "w2f_kido_bantaya", "Furnished",
+          "furnished (ward lantern, the keeper's hut)"),
+]
+BUILDINGS += W2F_FURNISHED
+
+
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
 # Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_

@@ -1,0 +1,53 @@
+{
+ "building": "Land_JP_Temple_Gate_Yakuimon_Furnished",
+ "p3d": "\\JP\\buildings\\furnished\\jp_temple_gate_yakuimon_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "gate",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.1,
+    2.63,
+    -2.42,
+    0.9
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the passage through the gate (outside +z, the precinct -z)",
+   "enclosed": false,
+   "rect_model": [
+    -1.265,
+    1.265,
+    -2.42,
+    0.9
+   ],
+   "fittings": [
+    {
+     "kind": "gaku",
+     "room": null,
+     "note": "the temple's name board (sangaku) over the tie beam",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      1.0,
+      0.1
+     ],
+     "yaw": 0.0,
+     "y": 2.95,
+     "outside": true
+    }
+   ],
+   "sparse": "the gate passage"
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate": 1
+ }
+}

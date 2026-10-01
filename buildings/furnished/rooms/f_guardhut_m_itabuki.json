@@ -1,0 +1,126 @@
+{
+ "building": "Land_JP_Guardhut_M_Itabuki_Jishinban",
+ "p3d": "\\JP\\buildings\\furnished\\jp_guardhut_m_itabuki_jishinban.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "guard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    1.75,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "earth floor by the door: the tool rack, a bench",
+   "enclosed": true,
+   "rect_model": [
+    -1.76,
+    -0.07,
+    -1.305,
+    1.305
+   ],
+   "fittings": [
+    {
+     "kind": "tool_rack",
+     "room": "doma",
+     "note": "the capture tools / staff / fire hook rack on the doma end wall (wall-hung props)",
+     "rect": [
+      -1.74,
+      -1.64,
+      -1.065,
+      0.965
+     ]
+    },
+    {
+     "kind": "lantern_post",
+     "room": null,
+     "note": "the ward-name lantern / notice by the door, outside (site prop)",
+     "centre": [
+      -1.37,
+      2.065
+     ],
+     "size": [
+      0.2,
+      0.2
+     ],
+     "yaw": 0.0,
+     "outside": true
+    },
+    {
+     "kind": "fire_ladder",
+     "room": null,
+     "note": "the fire ladder on the ridge (jishin-ban with a ladder: Kyoho, PLAYBOOK \u00a71 [T12]) or a fire-bell frame: a site prop",
+     "rect": [
+      -0.25,
+      0.25,
+      -0.1,
+      0.1
+     ],
+     "y": 3.73,
+     "outside": true
+    }
+   ]
+  },
+  {
+   "name": "floor",
+   "tag": "guard",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    1.865,
+    3.595,
+    -2.67,
+    -0.06
+   ],
+   "doors": [],
+   "note": "raised platform: the watchmen's seat / sleeping place behind the counter shutter, open to the doma",
+   "enclosed": true,
+   "rect_model": [
+    0.045,
+    1.775,
+    -1.305,
+    1.305
+   ],
+   "fittings": [
+    {
+     "kind": "brazier",
+     "room": "floor",
+     "note": "hibachi / brazier with the kettle on the platform (the night watch)",
+     "centre": [
+      1.37,
+      -0.915
+     ],
+     "size": [
+      0.42,
+      0.42
+     ],
+     "yaw": 0.0,
+     "y": 0.4
+    },
+    {
+     "kind": "counter",
+     "room": "floor",
+     "note": "under the end shutter: the kido-ban's sundries counter (sandals, candles, sweets), a watch hatch for the others (a toll box for the bridge / ferry / border guard)",
+     "rect": [
+      1.37,
+      1.76,
+      -0.455,
+      0.455
+     ],
+     "y": 0.4
+    }
+   ]
+  }
+ ],
+ "loot_points": 6,
+ "loot_by_room": {
+  "doma": 3,
+  "floor": 3
+ }
+}
