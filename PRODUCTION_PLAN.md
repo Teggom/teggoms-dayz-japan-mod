@@ -340,3 +340,6 @@
 - 2026-09-30: **M2 DONE** (opus-high, 239k / 14 min). Bonji (Noto Sans Siddham) on gorinto front (KHA, HA, RA, VA, A, top to
   bottom) and hokyointo (HUM E / TRAH S / HRIH W / AH N); 9 cells in jp_m_decal_carved_text_grave; 6 models; general
   knowledge (W2_ERA G16-G19). Commits 82751c7, d188959. The material gap list is now closed except the brown-heri photo.
+- 2026-09-30: **G1 DONE** (gorinto seating, Stephen spotted the floating roof): suirin now a sphere cut flat top + bottom at 0.62 of
+  the diameter, 12 sides, bonji on the middle band; every ring seats flush (new seat check: sphere->roof 0 -> 0.73);
+  gorinto_stack's 1.25x roof sits flat, 5 deg yaw. Heights s 0.565 / fallen 0.650 / l 2.00 m. Commits cec274a, 4d4e860.
