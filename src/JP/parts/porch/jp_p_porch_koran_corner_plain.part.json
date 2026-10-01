@@ -1,0 +1,179 @@
+{
+ "id": "jp_p_porch_koran_corner_plain",
+ "part": "jp_p_porch_koran",
+ "variant": "_corner_plain",
+ "group": "porch",
+ "p3d": "JP\\parts\\porch\\jp_p_porch_koran_corner_plain.p3d",
+ "build_list": {
+  "entry": "jp_p_porch_koran",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "outer corner of the en: corner deck square, the koran runs cross and run out 0.10 past the corner (straight; the hane up-turn is a W2P2 curve)",
+ "datum": "run along +x on a wall whose centreline is z 0; en deck z 0.06 .. 1.365 (edge); y 0 = en floor = hall floor (+1.00 above grade)",
+ "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.0,
+  1.41,
+  -1.11,
+  0.762,
+  -0.0,
+  1.41
+ ],
+ "dims": [
+  {
+   "name": "en_clear_m",
+   "expected": ">=1.00",
+   "measured": 1.21,
+   "tol": 0.01,
+   "source": "PLAYBOOK D5 (engawa and corridors)",
+   "ok": true
+  },
+  {
+   "name": "rail_top_m",
+   "expected": 0.75,
+   "measured": 0.75,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "hall corner post"
+  },
+  {
+   "type": "floor",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "en floor = hall floor level"
+  },
+  {
+   "type": "grade",
+   "pos": [
+    0.0,
+    -1.0,
+    0.0
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 183,
+  "Resolution 2": 147,
+  "Resolution 3": 48,
+  "Geometry": 36,
+  "Roadway": 2,
+  "View Geometry": 12,
+  "Fire Geometry": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 183, Resolution 2 147, Resolution 3 48, Geometry 36, Roadway 2, View Geometry 12, Fire Geometry 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "6 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "32/32 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 en_clear_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.21"
+  },
+  {
+   "check": "C4 rail_top_m",
+   "ok": true,
+   "detail": "expected 0.75, measured 0.75"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "3 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

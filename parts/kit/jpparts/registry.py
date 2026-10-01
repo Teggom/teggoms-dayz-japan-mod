@@ -41,6 +41,9 @@ from . import halfdoor
 halfdoor.register(reg)
 from . import pits
 pits.register(reg)
+# ---- W2P1 (2026-10-01): village-grade shrine + temple parts (parts/W2P1_NOTES.md)
+from . import koran
+koran.register(reg)
 try:
     from . import trim
     trim.register(reg)

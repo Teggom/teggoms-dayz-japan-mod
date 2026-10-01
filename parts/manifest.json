@@ -22647,6 +22647,968 @@
    "recipe": "pits.sunoko(name, x0, x1, z0, z1, y, kind) (floors.boards-style; holes + hole_fn)"
   },
   {
+   "id": "jp_p_porch_koran_plain",
+   "part": "jp_p_porch_koran",
+   "variant": "_plain",
+   "group": "porch",
+   "p3d": "JP\\parts\\porch\\jp_p_porch_koran_plain.p3d",
+   "build_list": {
+    "entry": "jp_p_porch_koran",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "1-ken run of en (kirime-en, 1.365 deep, floor +1.00) with plain kumi-koran (jifuku, hirageta, struts with bearing blocks, round hokogi); chains with its neighbours (open ends)",
+   "dims": [
+    {
+     "name": "en_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.21,
+     "tol": 0.01,
+     "source": "PLAYBOOK D5 (engawa and corridors)",
+     "ok": true
+    },
+    {
+     "name": "rail_top_m",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "hall wall post"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "hall wall post"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "en floor = hall floor level"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 240,
+    "Resolution 2": 198,
+    "Resolution 3": 24,
+    "Geometry": 18,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "run along +x on a wall whose centreline is z 0; en deck z 0.06 .. 1.365 (edge); y 0 = en floor = hall floor (+1.00 above grade)",
+   "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces"
+  },
+  {
+   "id": "jp_p_porch_koran_giboshi",
+   "part": "jp_p_porch_koran",
+   "variant": "_giboshi",
+   "group": "porch",
+   "p3d": "JP\\parts\\porch\\jp_p_porch_koran_giboshi.p3d",
+   "build_list": {
+    "entry": "jp_p_porch_koran",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "1-ken run of en with a giboshi koran: an octagonal end post with an onion finial (bronze in period; iron stand-in) at its left end; chains with its neighbours",
+   "dims": [
+    {
+     "name": "en_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.21,
+     "tol": 0.01,
+     "source": "PLAYBOOK D5 (engawa and corridors)",
+     "ok": true
+    },
+    {
+     "name": "rail_top_m",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "hall wall post"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "hall wall post"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "en floor = hall floor level"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 322,
+    "Resolution 2": 270,
+    "Resolution 3": 52,
+    "Geometry": 18,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "run along +x on a wall whose centreline is z 0; en deck z 0.06 .. 1.365 (edge); y 0 = en floor = hall floor (+1.00 above grade)",
+   "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces"
+  },
+  {
+   "id": "jp_p_porch_koran_corner_plain",
+   "part": "jp_p_porch_koran",
+   "variant": "_corner_plain",
+   "group": "porch",
+   "p3d": "JP\\parts\\porch\\jp_p_porch_koran_corner_plain.p3d",
+   "build_list": {
+    "entry": "jp_p_porch_koran",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "outer corner of the en: corner deck square, the koran runs cross and run out 0.10 past the corner (straight; the hane up-turn is a W2P2 curve)",
+   "dims": [
+    {
+     "name": "en_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.21,
+     "tol": 0.01,
+     "source": "PLAYBOOK D5 (engawa and corridors)",
+     "ok": true
+    },
+    {
+     "name": "rail_top_m",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "hall corner post"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "en floor = hall floor level"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 183,
+    "Resolution 2": 147,
+    "Resolution 3": 48,
+    "Geometry": 36,
+    "Roadway": 2,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "run along +x on a wall whose centreline is z 0; en deck z 0.06 .. 1.365 (edge); y 0 = en floor = hall floor (+1.00 above grade)",
+   "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces"
+  },
+  {
+   "id": "jp_p_porch_koran_corner_giboshi",
+   "part": "jp_p_porch_koran",
+   "variant": "_corner_giboshi",
+   "group": "porch",
+   "p3d": "JP\\parts\\porch\\jp_p_porch_koran_corner_giboshi.p3d",
+   "build_list": {
+    "entry": "jp_p_porch_koran",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "outer corner of the en with a giboshi corner post; both runs end at its faces",
+   "dims": [
+    {
+     "name": "en_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.21,
+     "tol": 0.01,
+     "source": "PLAYBOOK D5 (engawa and corridors)",
+     "ok": true
+    },
+    {
+     "name": "rail_top_m",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "hall corner post"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "en floor = hall floor level"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 265,
+    "Resolution 2": 219,
+    "Resolution 3": 76,
+    "Geometry": 36,
+    "Roadway": 2,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "run along +x on a wall whose centreline is z 0; en deck z 0.06 .. 1.365 (edge); y 0 = en floor = hall floor (+1.00 above grade)",
+   "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces"
+  },
+  {
+   "id": "jp_p_porch_koran_kizahashi",
+   "part": "jp_p_porch_koran",
+   "variant": "_kizahashi",
+   "group": "porch",
+   "p3d": "JP\\parts\\porch\\jp_p_porch_koran_kizahashi.p3d",
+   "build_list": {
+    "entry": "jp_p_porch_koran",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "1-ken front run with the kizahashi: the koran gap ends in giboshi posts, the stair (hidden walk ramp <= 38 deg, 1.10 clear between its rails) runs down to giboshi foot posts and a foot stone",
+   "dims": [
+    {
+     "name": "ramp_deg",
+     "expected": "<=38",
+     "measured": 36.23,
+     "tol": 0.0,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "stair_clear_m",
+     "expected": ">=1.10",
+     "measured": 1.1,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "riser_m",
+     "expected": "0.18-0.22 (A)",
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "en_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.21,
+     "tol": 0.01,
+     "source": "PLAYBOOK D5 (engawa and corridors)",
+     "ok": true
+    },
+    {
+     "name": "rail_top_m",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "stair_head",
+     "pos": [
+      0.91,
+      0.0,
+      1.365
+     ],
+     "note": "top of the walk ramp at the en edge"
+    },
+    {
+     "type": "stair_foot",
+     "pos": [
+      0.91,
+      -1.0,
+      2.73
+     ],
+     "note": "foot of the walk ramp at grade"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "en floor = hall floor level"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 759,
+    "Resolution 2": 593,
+    "Resolution 3": 207,
+    "Geometry": 41,
+    "Roadway": 2,
+    "View Geometry": 11,
+    "Fire Geometry": 11
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "run along +x on a wall whose centreline is z 0; en deck z 0.06 .. 1.365 (edge); y 0 = en floor = hall floor (+1.00 above grade)",
+   "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces"
+  },
+  {
+   "id": "jp_p_porch_koran_kizahashi_plain",
+   "part": "jp_p_porch_koran",
+   "variant": "_kizahashi_plain",
+   "group": "porch",
+   "p3d": "JP\\parts\\porch\\jp_p_porch_koran_kizahashi_plain.p3d",
+   "build_list": {
+    "entry": "jp_p_porch_koran",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "the same stair with plain cut-top posts (village shrines / halls without bronze)",
+   "dims": [
+    {
+     "name": "ramp_deg",
+     "expected": "<=38",
+     "measured": 36.23,
+     "tol": 0.0,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "stair_clear_m",
+     "expected": ">=1.10",
+     "measured": 1.1,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "riser_m",
+     "expected": "0.18-0.22 (A)",
+     "measured": 0.2,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    },
+    {
+     "name": "en_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.21,
+     "tol": 0.01,
+     "source": "PLAYBOOK D5 (engawa and corridors)",
+     "ok": true
+    },
+    {
+     "name": "rail_top_m",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "stair_head",
+     "pos": [
+      0.91,
+      0.0,
+      1.365
+     ],
+     "note": "top of the walk ramp at the en edge"
+    },
+    {
+     "type": "stair_foot",
+     "pos": [
+      0.91,
+      -1.0,
+      2.73
+     ],
+     "note": "foot of the walk ramp at grade"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "en floor = hall floor level"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 530,
+    "Resolution 2": 404,
+    "Resolution 3": 156,
+    "Geometry": 41,
+    "Roadway": 2,
+    "View Geometry": 11,
+    "Fire Geometry": 11
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "run along +x on a wall whose centreline is z 0; en deck z 0.06 .. 1.365 (edge); y 0 = en floor = hall floor (+1.00 above grade)",
+   "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces"
+  },
+  {
+   "id": "jp_p_porch_koran_wakishoji",
+   "part": "jp_p_porch_koran",
+   "variant": "_wakishoji",
+   "group": "porch",
+   "p3d": "JP\\parts\\porch\\jp_p_porch_koran_wakishoji.p3d",
+   "build_list": {
+    "entry": "jp_p_porch_koran",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "1-ken run of a side en ending in the wakishoji board screen (the rear end of a honden's side en)",
+   "dims": [
+    {
+     "name": "en_clear_m",
+     "expected": ">=1.00",
+     "measured": 1.21,
+     "tol": 0.01,
+     "source": "PLAYBOOK D5 (engawa and corridors)",
+     "ok": true
+    },
+    {
+     "name": "rail_top_m",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "the hall's rear corner post (the screen stands just past it)"
+    },
+    {
+     "type": "floor",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "en floor = hall floor level"
+    },
+    {
+     "type": "grade",
+     "pos": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "stone_field",
+     "id": "jp_m_stone_field",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 311,
+    "Resolution 2": 269,
+    "Resolution 3": 36,
+    "Geometry": 30,
+    "Roadway": 1,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "run along +x on a wall whose centreline is z 0; en deck z 0.06 .. 1.365 (edge); y 0 = en floor = hall floor (+1.00 above grade)",
+   "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces"
+  },
+  {
    "id": "jp_p_trim_grime_wall",
    "part": "jp_p_trim_grime",
    "variant": "_wall",

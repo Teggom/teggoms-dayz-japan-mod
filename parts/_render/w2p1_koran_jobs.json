@@ -1,0 +1,159 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\w2p1_koran",
+ "res": [
+  960,
+  720
+ ],
+ "jobs": [
+  [
+   "porch_koran_plain",
+   "1-ken en run, plain kumi-koran: jifuku, struts, hirageta, totsuka + to, round hokogi; en posts on stones, edge beam; floor +1.00",
+   {
+    "build": "part:jp_p_porch_koran_plain",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     0.6,
+     0.6
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "human": [
+     2.6,
+     1.6,
+     0.0
+    ]
+   }
+  ],
+  [
+   "porch_koran_giboshi",
+   "Giboshi koran: octagonal end post with the onion finial (iron stands in for bronze)",
+   {
+    "build": "part:jp_p_porch_koran_giboshi",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     0.6,
+     0.6
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "porch_koran_corner_plain",
+   "Corner, plain: the runs cross and run out 0.10 past the corner (the crossing run sits 1.5 cm higher: no shared planes, C20)",
+   {
+    "build": "part:jp_p_porch_koran_corner_plain",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.6,
+     0.5,
+     0.6
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "porch_koran_corner_giboshi",
+   "Corner with a giboshi corner post",
+   {
+    "build": "part:jp_p_porch_koran_corner_giboshi",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.6,
+     0.5,
+     0.6
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "porch_koran_kizahashi",
+   "Kizahashi in the koran gap: 5 risers of 0.20, 36.2 deg hidden walk ramp, 1.10 clear between the stair rails, giboshi posts at the gap and the foot, foot stone",
+   {
+    "build": "part:jp_p_porch_koran_kizahashi",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     0.3,
+     1.8
+    ],
+    "dist": 8.0,
+    "move": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "human": [
+     2.6,
+     3.4,
+     0.0
+    ]
+   }
+  ],
+  [
+   "porch_koran_kizahashi_plain",
+   "The same stair with plain cut-top posts (village)",
+   {
+    "build": "part:jp_p_porch_koran_kizahashi_plain",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     0.3,
+     1.8
+    ],
+    "dist": 8.0,
+    "move": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "porch_koran_wakishoji",
+   "Side en run ending in the wakishoji board screen",
+   {
+    "build": "part:jp_p_porch_koran_wakishoji",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     1.2,
+     0.9,
+     0.6
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   }
+  ]
+ ]
+}
