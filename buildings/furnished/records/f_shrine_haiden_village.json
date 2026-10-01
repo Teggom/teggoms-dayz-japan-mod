@@ -8,10 +8,10 @@
   "Haiden doors (lattice, open in)"
  ],
  "faces": {
-  "Resolution 1": 3479,
-  "Resolution 2": 981,
-  "Resolution 3": 585,
-  "Geometry": 482,
+  "Resolution 1": 3597,
+  "Resolution 2": 1039,
+  "Resolution 3": 609,
+  "Geometry": 494,
   "Memory": 0,
   "Roadway": 6,
   "View Geometry": 416,
@@ -35,8 +35,8 @@
   "\t\t\t\t\t\t<point pos=\"0.680000 0.600000 1.459286\" range=\"0.880000\" height=\"2.000000\" />",
   "\t\t\t\t\t\t<point pos=\"-0.485714 0.600000 -1.135000\" range=\"0.675000\" height=\"1.687500\" />",
   "\t\t\t\t\t\t<point pos=\"0.874286 0.600000 -1.135000\" range=\"0.785714\" height=\"1.964286\" />",
-  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 1.433571\" range=\"0.332500\" height=\"0.831250\" />",
-  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 -1.433571\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 1.369286\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 -1.369286\" range=\"0.332500\" height=\"0.831250\" />",
   "\t\t\t\t</container>",
   "\t\t\t\t<container name=\"lootshelves\">",
   "\t\t\t\t\t\t<category name=\"tools\" />",
@@ -65,11 +65,11 @@
  "site": [
   {
    "p3d": "\\JP\\furniture\\sacred\\jp_f_saisen_bako_m.p3d",
-   "x": 0.0,
-   "z": 4.6012,
+   "x": 1.8119,
+   "z": 3.883,
    "yaw": 0.0,
    "y": 0.0,
-   "why": "the offering box at the foot of the steps"
+   "why": "the offering box at the foot of the steps (FX1: beside the stair foot, 0.65 m clear of it)"
   }
  ],
  "params": {

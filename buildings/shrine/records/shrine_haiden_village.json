@@ -8,10 +8,10 @@
   "Haiden doors (lattice, open in)"
  ],
  "faces": {
-  "Resolution 1": 3485,
-  "Resolution 2": 981,
-  "Resolution 3": 585,
-  "Geometry": 482,
+  "Resolution 1": 3597,
+  "Resolution 2": 1033,
+  "Resolution 3": 609,
+  "Geometry": 494,
   "Memory": 0,
   "Roadway": 6,
   "View Geometry": 416,
@@ -35,8 +35,8 @@
   "\t\t\t\t\t\t<point pos=\"0.680000 0.600000 1.459286\" range=\"0.880000\" height=\"2.000000\" />",
   "\t\t\t\t\t\t<point pos=\"-0.291429 0.600000 -1.135000\" range=\"0.880000\" height=\"2.000000\" />",
   "\t\t\t\t\t\t<point pos=\"0.874286 0.600000 -1.783571\" range=\"0.785714\" height=\"1.964286\" />",
-  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 1.433571\" range=\"0.332500\" height=\"0.831250\" />",
-  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 -1.433571\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 1.369286\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 -1.369286\" range=\"0.332500\" height=\"0.831250\" />",
   "\t\t\t\t</container>",
   "\t\t</group>"
  ],

@@ -3,7 +3,7 @@
  "key": "temple_do_2_thatch",
  "date": "2026-09-30",
  "budget": "standard",
- "faces": "2448/638/484",
+ "faces": "2472/638/484",
  "door_clear_m": [
   1.6
  ],
@@ -13,12 +13,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 2448, Resolution 2 638, Resolution 3 484, Geometry 277, Memory 0, Roadway 2, View Geometry 248, Fire Geometry 260"
+   "detail": "Resolution 1 2472, Resolution 2 638, Resolution 3 484, Geometry 277, Memory 0, Roadway 2, View Geometry 248, Fire Geometry 260"
   },
   {
    "check": "C5 face budget (standard: 6000 / 2300 / 800)",
    "ok": true,
-   "detail": "R1 2448, R2 638, R3 484"
+   "detail": "R1 2472, R2 638, R3 484"
   },
   {
    "check": "Geometry properties + mass",
@@ -118,7 +118,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "hall 9600 rays, 247 out through doors/windows, 0 LEAKS"
+   "detail": "hall 9600 rays, 241 out through doors/windows, 0 LEAKS"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -168,7 +168,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 224314 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 225217 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

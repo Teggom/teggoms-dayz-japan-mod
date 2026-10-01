@@ -3,7 +3,7 @@
  "key": "temple_hondo_town",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "11510/3426/1566",
+ "faces": "11586/3478/1590",
  "door_clear_m": [
   1.92
  ],
@@ -13,12 +13,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11510, Resolution 2 3426, Resolution 3 1566, Geometry 1491, Memory 0, Roadway 125, View Geometry 1437, Fire Geometry 1455"
+   "detail": "Resolution 1 11586, Resolution 2 3478, Resolution 3 1590, Geometry 1503, Memory 0, Roadway 125, View Geometry 1437, Fire Geometry 1455"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 11510, R2 3426, R3 1566"
+   "detail": "R1 11586, R2 3478, R3 1590"
   },
   {
    "check": "Geometry properties + mass",
@@ -33,7 +33,7 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "226 components, 0 bad, 0 faces outside components"
+   "detail": "228 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
@@ -208,7 +208,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 3416 touching (opposite-facing: backface-culled) and 963 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 3420 touching (opposite-facing: backface-culled) and 976 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -223,7 +223,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 954594 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 961440 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

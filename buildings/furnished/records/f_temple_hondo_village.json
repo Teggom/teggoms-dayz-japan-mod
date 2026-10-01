@@ -12,10 +12,10 @@
   "Side door (board, open in)"
  ],
  "faces": {
-  "Resolution 1": 8725,
-  "Resolution 2": 1816,
-  "Resolution 3": 1121,
-  "Geometry": 642,
+  "Resolution 1": 8807,
+  "Resolution 2": 1874,
+  "Resolution 3": 1145,
+  "Geometry": 654,
   "Memory": 0,
   "Roadway": 11,
   "View Geometry": 561,
@@ -43,8 +43,8 @@
   "\t\t\t\t\t\t<point pos=\"-1.514286 0.600000 -2.725714\" range=\"0.754286\" height=\"1.885714\" />",
   "\t\t\t\t\t\t<point pos=\"0.605714 0.600000 -1.817143\" range=\"1.200000\" height=\"2.000000\" />",
   "\t\t\t\t\t\t<point pos=\"2.120000 0.600000 -2.120000\" range=\"1.200000\" height=\"2.000000\" />",
-  "\t\t\t\t\t\t<point pos=\"4.292500 0.600000 2.093333\" range=\"0.332500\" height=\"0.831250\" />",
-  "\t\t\t\t\t\t<point pos=\"4.292500 0.600000 -2.093333\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"4.292500 0.600000 2.026667\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"4.292500 0.600000 -2.026667\" range=\"0.332500\" height=\"0.831250\" />",
   "\t\t\t\t</container>",
   "\t\t\t\t<container name=\"lootshelves\">",
   "\t\t\t\t\t\t<category name=\"tools\" />",
@@ -58,10 +58,10 @@
   "\t\t</group>"
  ],
  "proxies": {
-  "Resolution 1": 9,
-  "Geometry": 6,
-  "View Geometry": 6,
-  "Fire Geometry": 6
+  "Resolution 1": 8,
+  "Geometry": 5,
+  "View Geometry": 5,
+  "Fire Geometry": 5
  },
  "proxy_addons": [
   "JP_Furniture"
@@ -70,6 +70,16 @@
   "lootFloor": 10,
   "lootshelves": 2
  },
+ "site": [
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_saisen_bako_m.p3d",
+   "x": 2.7219,
+   "z": 5.703,
+   "yaw": 0.0,
+   "y": 0.0,
+   "why": "the donation box (FX1: was on the en, across both doors) (FX1: beside the stair foot, 1.56 m clear of it)"
+  }
+ ],
  "params": {
   "base": "temple_hondo_village",
   "dress": "w2f_hondo_village"

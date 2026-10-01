@@ -3,7 +3,7 @@
  "key": "f_temple_do_3_tile",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "6209/1526/881",
+ "faces": "6291/1584/905",
  "door_clear_m": [
   1.6
  ],
@@ -13,12 +13,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 6209, Resolution 2 1526, Resolution 3 881, Geometry 479, Memory 0, Roadway 8, View Geometry 425, Fire Geometry 443"
+   "detail": "Resolution 1 6291, Resolution 2 1584, Resolution 3 905, Geometry 491, Memory 0, Roadway 8, View Geometry 425, Fire Geometry 443"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 6209, R2 1526, R3 881"
+   "detail": "R1 6291, R2 1584, R3 905"
   },
   {
    "check": "Geometry properties + mass",
@@ -33,7 +33,7 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "78 components, 0 bad, 0 faces outside components"
+   "detail": "80 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
@@ -208,7 +208,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 849 touching (opposite-facing: backface-culled) and 55 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 853 touching (opposite-facing: backface-culled) and 55 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -248,7 +248,7 @@
   {
    "check": "D2 floor coverage <= 25 %: en",
    "ok": true,
-   "detail": "0.00 of 5.60 m2 = 0.0 % (collision footprints)"
+   "detail": "0.00 of 5.39 m2 = 0.0 % (collision footprints)"
   },
   {
    "check": "D3 raised loot surface not required (sparse: the veranda before the hall): en",
@@ -303,7 +303,7 @@
   {
    "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
    "ok": true,
-   "detail": "6 collision props checked against 74 building components"
+   "detail": "6 collision props checked against 76 building components"
   },
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
@@ -338,7 +338,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 476199 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 483819 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

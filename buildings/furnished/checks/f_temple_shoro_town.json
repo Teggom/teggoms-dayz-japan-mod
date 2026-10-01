@@ -151,7 +151,7 @@
   {
    "check": "D2 floor coverage <= 25 %: upper",
    "ok": true,
-   "detail": "1.29 of 14.44 m2 = 9.0 % (collision footprints)"
+   "detail": "1.19 of 14.44 m2 = 8.3 % (collision footprints)"
   },
   {
    "check": "D3 raised loot surface not required (sparse: the bell platform): upper",

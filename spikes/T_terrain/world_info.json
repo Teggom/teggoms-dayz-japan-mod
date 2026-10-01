@@ -5535,9 +5535,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_l.p3d",
    "pos": [
-    1024.0,
-    28.343351654052736,
-    1186.745
+    1021.811,
+    28.342625869750975,
+    1187.232
    ],
    "yaw": 180.0,
    "src": "placement:W2F.csv"
@@ -5605,9 +5605,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_m.p3d",
    "pos": [
-    945.0,
-    25.000001907348633,
-    1065.399
+    943.188,
+    25.0,
+    1066.117
    ],
    "yaw": 180.0,
    "src": "placement:W2F.csv"
@@ -5628,6 +5628,16 @@
     972.0,
     25.0,
     1123.5
+   ],
+   "yaw": 180.0,
+   "src": "placement:W2F.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_m.p3d",
+   "pos": [
+    969.278,
+    24.999998092651367,
+    1117.797
    ],
    "yaw": 180.0,
    "src": "placement:W2F.csv"
@@ -5673,6 +5683,16 @@
    "src": "placement:W2F.csv"
   },
   {
+   "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_s.p3d",
+   "pos": [
+    965.908,
+    25.0,
+    1107.788
+   ],
+   "yaw": 90.0,
+   "src": "placement:W2F.csv"
+  },
+  {
    "p3d": "JP\\buildings\\furnished\\jp_temple_hondo_town_zen.p3d",
    "pos": [
     1100.0,
@@ -5685,9 +5705,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_l.p3d",
    "pos": [
-    1100.0,
+    1097.811,
     25.0,
-    1105.607
+    1106.094
    ],
    "yaw": 180.0,
    "src": "placement:W2F.csv"
@@ -5735,9 +5755,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_s.p3d",
    "pos": [
-    1088.511,
-    25.0,
-    1104.0
+    1087.818,
+    25.000001907348633,
+    1102.288
    ],
    "yaw": 90.0,
    "src": "placement:W2F.csv"

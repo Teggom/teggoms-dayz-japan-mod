@@ -6,10 +6,10 @@
  "model_dir": "shrine",
  "doors": [],
  "faces": {
-  "Resolution 1": 2428,
-  "Resolution 2": 913,
-  "Resolution 3": 613,
-  "Geometry": 322,
+  "Resolution 1": 2680,
+  "Resolution 2": 1021,
+  "Resolution 3": 649,
+  "Geometry": 334,
   "Memory": 0,
   "Roadway": 5,
   "View Geometry": 280,
@@ -29,7 +29,7 @@
   "\t\t\t\t\t\t<category name=\"clothes\" />",
   "\t\t\t\t\t\t<category name=\"food\" />",
   "\t\t\t\t\t\t<tag name=\"floor\" />",
-  "\t\t\t\t\t\t<point pos=\"1.562500 1.000000 0.000000\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"1.562500 1.000000 -0.000000\" range=\"0.332500\" height=\"0.831250\" />",
   "\t\t\t\t</container>",
   "\t\t</group>"
  ],

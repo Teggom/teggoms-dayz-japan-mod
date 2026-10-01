@@ -9,10 +9,10 @@
   "Hall doors right (lattice, open in)"
  ],
  "faces": {
-  "Resolution 1": 3148,
-  "Resolution 2": 983,
-  "Resolution 3": 645,
-  "Geometry": 365,
+  "Resolution 1": 3284,
+  "Resolution 2": 1035,
+  "Resolution 3": 669,
+  "Geometry": 377,
   "Memory": 0,
   "Roadway": 8,
   "View Geometry": 317,
@@ -34,8 +34,8 @@
   "\t\t\t\t\t\t<tag name=\"floor\" />",
   "\t\t\t\t\t\t<point pos=\"0.388571 0.600000 0.485714\" range=\"0.880000\" height=\"2.000000\" />",
   "\t\t\t\t\t\t<point pos=\"0.388571 0.600000 -0.874286\" range=\"0.785714\" height=\"1.964286\" />",
-  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 1.225714\" range=\"0.332500\" height=\"0.831250\" />",
-  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 -1.225714\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 1.132857\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 -1.132857\" range=\"0.332500\" height=\"0.831250\" />",
   "\t\t\t\t</container>",
   "\t\t</group>"
  ],

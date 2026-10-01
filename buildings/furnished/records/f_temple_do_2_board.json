@@ -9,10 +9,10 @@
   "Hall doors right (lattice, open in)"
  ],
  "faces": {
-  "Resolution 1": 3139,
-  "Resolution 2": 980,
-  "Resolution 3": 642,
-  "Geometry": 365,
+  "Resolution 1": 3281,
+  "Resolution 2": 1038,
+  "Resolution 3": 666,
+  "Geometry": 377,
   "Memory": 0,
   "Roadway": 8,
   "View Geometry": 317,
@@ -34,8 +34,8 @@
   "\t\t\t\t\t\t<tag name=\"floor\" />",
   "\t\t\t\t\t\t<point pos=\"0.388571 0.600000 0.291429\" range=\"0.880000\" height=\"2.000000\" />",
   "\t\t\t\t\t\t<point pos=\"1.165714 0.600000 -0.874286\" range=\"0.493826\" height=\"1.234566\" />",
-  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 1.225714\" range=\"0.332500\" height=\"0.831250\" />",
-  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 -1.225714\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 1.132857\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.472500 0.600000 -1.132857\" range=\"0.332500\" height=\"0.831250\" />",
   "\t\t\t\t</container>",
   "\t\t\t\t<container name=\"lootshelves\">",
   "\t\t\t\t\t\t<category name=\"tools\" />",
@@ -49,10 +49,10 @@
   "\t\t</group>"
  ],
  "proxies": {
-  "Resolution 1": 8,
-  "Geometry": 6,
-  "View Geometry": 6,
-  "Fire Geometry": 6
+  "Resolution 1": 7,
+  "Geometry": 5,
+  "View Geometry": 5,
+  "Fire Geometry": 5
  },
  "proxy_addons": [
   "JP_Furniture"
@@ -61,6 +61,16 @@
   "lootFloor": 4,
   "lootshelves": 2
  },
+ "site": [
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_saisen_bako_s.p3d",
+   "x": 1.7119,
+   "z": 3.908,
+   "yaw": 0.0,
+   "y": 0.0,
+   "why": "the donation box (FX1: on the ground beside the stair foot in both hall sizes; the 2-ken hall had it on the en, across the doors) (FX1: beside the stair foot, 0.65 m clear of it)"
+  }
+ ],
  "params": {
   "base": "temple_do_2_board",
   "dress": "w2f_do_jizo"

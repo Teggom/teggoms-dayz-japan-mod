@@ -3,7 +3,7 @@
  "key": "shrine_honden_nagare_village",
  "date": "2026-09-30",
  "budget": "standard",
- "faces": "3120/1039/473",
+ "faces": "3132/1039/473",
  "door_clear_m": [],
  "checks_n": 28,
  "failures": 0,
@@ -11,12 +11,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 3120, Resolution 2 1039, Resolution 3 473, Geometry 356, Memory 0, Roadway 7, View Geometry 290, Fire Geometry 296"
+   "detail": "Resolution 1 3132, Resolution 2 1039, Resolution 3 473, Geometry 356, Memory 0, Roadway 7, View Geometry 290, Fire Geometry 296"
   },
   {
    "check": "C5 face budget (standard: 6000 / 2300 / 800)",
    "ok": true,
-   "detail": "R1 3120, R2 1039, R3 473"
+   "detail": "R1 3132, R2 1039, R3 473"
   },
   {
    "check": "Geometry properties + mass",
@@ -131,7 +131,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 987 touching (opposite-facing: backface-culled) and 141 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 985 touching (opposite-facing: backface-culled) and 141 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -146,7 +146,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 266414 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 266863 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

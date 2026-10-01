@@ -278,7 +278,7 @@ def en_rooms(S, W, D, drop, sides, depth=KR.DEPTH, z0=0.12, returns=False, side_
     them."""
     rects = []
     if "front" in sides:
-        e = 0.27 if returns else 0.10
+        e = 0.20 if returns else 0.10
         x0 = -depth + 0.15 if ("left" in sides) else e
         x1 = W + depth - 0.15 if ("right" in sides) else W - e
         rects.append(("en", (x0, x1, z0, depth - 0.18)))

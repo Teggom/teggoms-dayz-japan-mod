@@ -3,23 +3,23 @@
  "key": "f_temple_do_2_board",
  "date": "2026-09-30",
  "budget": "standard",
- "faces": "3139/980/642",
+ "faces": "3281/1038/666",
  "door_clear_m": [
   1.6,
   1.6
  ],
- "checks_n": 58,
+ "checks_n": 59,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 3139, Resolution 2 980, Resolution 3 642, Geometry 365, Memory 0, Roadway 8, View Geometry 317, Fire Geometry 329"
+   "detail": "Resolution 1 3281, Resolution 2 1038, Resolution 3 666, Geometry 377, Memory 0, Roadway 8, View Geometry 317, Fire Geometry 329"
   },
   {
    "check": "C5 face budget (standard: 6000 / 2300 / 800)",
    "ok": true,
-   "detail": "R1 3139, R2 980, R3 642"
+   "detail": "R1 3281, R2 1038, R3 666"
   },
   {
    "check": "Geometry properties + mass",
@@ -34,7 +34,7 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "59 components, 0 bad, 0 faces outside components"
+   "detail": "61 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
@@ -94,7 +94,7 @@
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "351/351 samples over hall, en"
+   "detail": "329/329 samples over hall, en"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -139,7 +139,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "hall 9600 rays, 186 out through doors/windows, 0 LEAKS; open-sided by design (not checked): en"
+   "detail": "hall 9600 rays, 177 out through doors/windows, 0 LEAKS; open-sided by design (not checked): en"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -174,7 +174,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 727 touching (opposite-facing: backface-culled) and 87 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 739 touching (opposite-facing: backface-culled) and 91 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -209,12 +209,12 @@
   {
    "check": "D1 props per room 0-7: en (sparse: the veranda before the hall)",
    "ok": true,
-   "detail": "1 props: jp_f_saisen_bako_s, jp_f_waniguchi"
+   "detail": "0 props: jp_f_waniguchi"
   },
   {
    "check": "D2 floor coverage <= 25 %: en",
    "ok": true,
-   "detail": "0.45 of 3.66 m2 = 12.3 % (collision footprints)"
+   "detail": "0.00 of 3.45 m2 = 0.0 % (collision footprints)"
   },
   {
    "check": "D3 raised loot surface not required (sparse: the veranda before the hall): en",
@@ -234,7 +234,7 @@
   {
    "check": "D6 DoorsTwin1 sweep + clear >= 1.00 + head with the furniture in",
    "ok": true,
-   "detail": "Hall doors left (lattice, open in): leaves turn 90/90 deg without touching other geometry; open clear 1.20 m, head 2.00 m"
+   "detail": "Hall doors left (lattice, open in): leaves turn 90/90 deg without touching other geometry; open clear 1.60 m, head 2.00 m"
   },
   {
    "check": "D7 DoorsTwin1 reachable with the furniture in (open)",
@@ -254,7 +254,7 @@
   {
    "check": "D6 DoorsTwin2 sweep + clear >= 1.00 + head with the furniture in",
    "ok": true,
-   "detail": "Hall doors right (lattice, open in): leaves turn 90/90 deg without touching other geometry; open clear 1.20 m, head 2.00 m"
+   "detail": "Hall doors right (lattice, open in): leaves turn 90/90 deg without touching other geometry; open clear 1.60 m, head 2.00 m"
   },
   {
    "check": "D7 DoorsTwin2 reachable with the furniture in (open)",
@@ -269,7 +269,7 @@
   {
    "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
    "ok": true,
-   "detail": "6 collision props checked against 55 building components"
+   "detail": "6 collision props checked against 57 building components"
   },
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
@@ -279,7 +279,7 @@
   {
    "check": "D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall",
    "ok": true,
-   "detail": "8 props"
+   "detail": "7 props"
   },
   {
    "check": "D16 hanging items keep 2.00 m head room (or hang over a hearth / corner / furniture / doorway)",
@@ -294,12 +294,17 @@
   {
    "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
    "ok": true,
-   "detail": "26 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
+   "detail": "22 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
+  },
+  {
+   "check": "D13 yard / street objects inside the test pad",
+   "ok": true,
+   "detail": "1 objects"
   },
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 280460 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 289570 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

@@ -26,11 +26,11 @@
   "id": "P1.s1",
   "class": null,
   "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_l.p3d",
-  "x": 1024.0,
-  "z": 1186.745,
+  "x": 1021.811,
+  "z": 1187.232,
   "yaw": 180.0,
-  "y_off": 1.004,
-  "label": "the offering box at the foot of the steps",
+  "y_off": 0.964,
+  "label": "the offering box at the foot of the steps (FX1: beside the stair foot, 0.88 m clear of it)",
   "area": "P"
  },
  {
@@ -108,11 +108,11 @@
   "id": "V1.s1",
   "class": null,
   "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_m.p3d",
-  "x": 945.0,
-  "z": 1065.399,
+  "x": 943.188,
+  "z": 1066.117,
   "yaw": 180.0,
   "y_off": 0.0,
-  "label": "the offering box at the foot of the steps",
+  "label": "the offering box at the foot of the steps (FX1: beside the stair foot, 0.65 m clear of it)",
   "area": "V"
  },
  {
@@ -138,6 +138,17 @@
   "label": "village hondo (Jodo): Amida, sutra desk",
   "area": "T",
   "key": "f_temple_hondo_village"
+ },
+ {
+  "id": "T1.s1",
+  "class": null,
+  "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_m.p3d",
+  "x": 969.278,
+  "z": 1117.797,
+  "yaw": 180.0,
+  "y_off": -0.0,
+  "label": "the donation box (FX1: was on the en, across both doors) (FX1: beside the stair foot, 1.56 m clear of it)",
+  "area": "T"
  },
  {
   "id": "T2",
@@ -188,6 +199,17 @@
   "key": "f_temple_do_2_board"
  },
  {
+  "id": "T5.s1",
+  "class": null,
+  "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_s.p3d",
+  "x": 965.908,
+  "z": 1107.788,
+  "yaw": 90.0,
+  "y_off": 0.0,
+  "label": "the donation box (FX1: on the ground beside the stair foot in both hall sizes; the 2-ken hall had it on the en, across the doors) (FX1: beside the stair foot, 0.65 m clear of it)",
+  "area": "T"
+ },
+ {
   "id": "U1",
   "class": "Land_JP_Temple_Hondo_Town_Zen",
   "p3d": "JP\\buildings\\furnished\\jp_temple_hondo_town_zen.p3d",
@@ -203,11 +225,11 @@
   "id": "U1.s1",
   "class": null,
   "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_l.p3d",
-  "x": 1100.0,
-  "z": 1105.607,
+  "x": 1097.811,
+  "z": 1106.094,
   "yaw": 180.0,
   "y_off": 0.0,
-  "label": "the donation box at the foot of the steps",
+  "label": "the donation box at the foot of the steps (FX1: beside the stair foot, 0.88 m clear of it)",
   "area": "U"
  },
  {
@@ -262,11 +284,11 @@
   "id": "U5.s1",
   "class": null,
   "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_s.p3d",
-  "x": 1088.511,
-  "z": 1104.0,
+  "x": 1087.818,
+  "z": 1102.288,
   "yaw": 90.0,
   "y_off": 0.0,
-  "label": "the donation box at the stair foot",
+  "label": "the donation box (FX1: on the ground beside the stair foot in both hall sizes; the 2-ken hall had it on the en, across the doors) (FX1: beside the stair foot, 0.65 m clear of it)",
   "area": "U"
  },
  {
@@ -393,7 +415,7 @@
   "x": 945.0,
   "z": 1061.0,
   "yaw": 180.0,
-  "y_off": -0.0,
+  "y_off": 0.0,
   "label": "village shrine torii (shinmei, rope + streamers)",
   "area": "V"
  },

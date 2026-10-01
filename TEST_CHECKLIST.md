@@ -22,6 +22,30 @@ tea houses) -> the town temple -> back to the spawn.
 pass (open AND close it, from both sides); loot on floors and on furniture tops. Shrines, altars and offerings carry
 no loot on purpose (left undisturbed).
 
+## FX1 re-check (~10 min; the fixes from your wave-2 walk). IDs: spikes/SH1/SHOWCASE_MAP.md (W2F section)
+
+Before / after pictures: `research/production/contact_sheets/fx1_fixes.jpg`. Do these first, then the rest of the walk
+below only if you want to.
+1. **Door pulls** (P1 haiden ~1024, 1192; T1 village hondo ~972, 1123.5): open each door pair halfway. Pass: each
+   leaf carries its own ring pull (on a small board on the lattice doors), on BOTH faces, near the middle; nothing
+   floats or swaps leaves when they move. Also the kido K1 (1069, 1080): the iron straps sit at each leaf's hinge side.
+2. **Offering boxes** (P1.s1 1021.8, 1187.2 on the terrace; V1.s1 943.2, 1066.1; T1.s1 969.3, 1117.8; T5.s1 965.9,
+   1107.8; U1.s1 1097.8, 1106.1; U5.s1 1087.8, 1102.3): the box stands on the ground BESIDE the foot of the steps,
+   no leaves on it, and you walk straight up the stair without touching it. The P terraces have no leaf drifts now.
+3. **Hanging things**: the T3 village bell tower (984, 1112) and U3 town bell tower (1085.5, 1118.5): the striker log
+   hangs under the bell beam on two ropes that end in the beam; the bell on its hook. The U1 gong and the P1 / V1 bell
+   ropes (suzu) hang from a short bar between the porch tie beams (or across the rafters on T1 / U5). Pass:
+   nothing hangs in the air with a gap above it.
+4. **U1 town hondo (1100, 1112) veranda ends**: the railing turns the corner and runs back to the wall at both ends
+   (also on V1, T1, T5, U5). Pass: no deck / railing that stops in mid air.
+5. **Rope torii**: walk under the V3 village torii (945, 1061), the approach torii (1024, 1161), the row at x 1036
+   (z 1145-1185) and the hill-stair torii (x 1042 / 1058). Pass: the rope and the paper streamers (shide) are clearly
+   above your head (>= 2.35 m at the lowest tip, they were 1.4-2.1 m); the torii are bigger (shinmei 2.46 x 3.69 m).
+6. **Woodpiles** (outside the houses, in the kitchens, the free-standing one): two stakes at each end of every pile,
+   tied with a straw rope; the collapsed one has its stakes leaning out.
+- Tell me: any floating / clipping where the boxes, bars or stakes meet the buildings; whether the bigger torii feel
+  right; whether you want the fuller wrap-round veranda on U1 (costs ~850 faces over the 'large' budget).
+
 ## 1. The shrine precinct, town grade (10 min) — map w2f_map_precinct.jpg
 
 From the spawn walk north through the street and up the approach (x 1024) past the torii and lanterns. The empty hall

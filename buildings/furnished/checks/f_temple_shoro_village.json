@@ -81,12 +81,12 @@
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "3 points (platform 3)"
+   "detail": "4 points (platform 4)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "3 points, max diff 0.0e+00 m"
+   "detail": "4 points, max diff 0.0e+00 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -151,7 +151,7 @@
   {
    "check": "D2 floor coverage <= 25 %: platform",
    "ok": true,
-   "detail": "0.93 of 17.89 m2 = 5.2 % (collision footprints)"
+   "detail": "0.85 of 17.89 m2 = 4.7 % (collision footprints)"
   },
   {
    "check": "D3 raised loot surface not required (sparse: the bell platform): platform",
@@ -186,7 +186,7 @@
   {
    "check": "D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry",
    "ok": true,
-   "detail": "3 points (3 floor, 0 raised)"
+   "detail": "4 points (4 floor, 0 raised)"
   },
   {
    "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
@@ -196,7 +196,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 241494 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 241500 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

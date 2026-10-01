@@ -10,10 +10,10 @@
   "Shitomido 2 (upper leaf)"
  ],
  "faces": {
-  "Resolution 1": 6209,
-  "Resolution 2": 1526,
-  "Resolution 3": 881,
-  "Geometry": 479,
+  "Resolution 1": 6291,
+  "Resolution 2": 1584,
+  "Resolution 3": 905,
+  "Geometry": 491,
   "Memory": 0,
   "Roadway": 8,
   "View Geometry": 425,
@@ -39,8 +39,8 @@
   "\t\t\t\t\t\t<point pos=\"-0.864762 0.600000 -0.486429\" range=\"0.693439\" height=\"1.733597\" />",
   "\t\t\t\t\t\t<point pos=\"0.648571 0.600000 -1.135000\" range=\"0.613802\" height=\"1.534504\" />",
   "\t\t\t\t\t\t<point pos=\"1.729524 0.600000 -0.162143\" range=\"0.840476\" height=\"2.000000\" />",
-  "\t\t\t\t\t\t<point pos=\"3.382500 0.600000 1.433571\" range=\"0.332500\" height=\"0.831250\" />",
-  "\t\t\t\t\t\t<point pos=\"3.382500 0.600000 -1.433571\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"3.382500 0.600000 1.369286\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"3.382500 0.600000 -1.369286\" range=\"0.332500\" height=\"0.831250\" />",
   "\t\t\t\t</container>",
   "\t\t\t\t<container name=\"lootshelves\">",
   "\t\t\t\t\t\t<category name=\"tools\" />",
@@ -69,11 +69,11 @@
  "site": [
   {
    "p3d": "\\JP\\furniture\\sacred\\jp_f_saisen_bako_s.p3d",
-   "x": 0.0,
-   "z": 5.5112,
+   "x": 1.7119,
+   "z": 4.818,
    "yaw": 0.0,
    "y": 0.0,
-   "why": "the donation box at the stair foot"
+   "why": "the donation box (FX1: on the ground beside the stair foot in both hall sizes; the 2-ken hall had it on the en, across the doors) (FX1: beside the stair foot, 0.65 m clear of it)"
   }
  ],
  "params": {
