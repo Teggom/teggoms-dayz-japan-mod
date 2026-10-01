@@ -97,6 +97,20 @@
 - **Audio:** ambient sound with animals that actually live in Japan (no American owl), Japanese-flavoured
   sounds where it makes sense (e.g. weapon-swing grunts); reuse vanilla where it already fits.
 - Not worried yet: navmesh, the map (both planned), performance at scale.
+- **The A4 audit backlog: ALL items accepted** (Stephen, 2026-09-30: "I like all of the gaps"). Source:
+  `research/AUDIT_MISSING.md` (Part 1: 17 missing + 8 planned-with-gap DayZ systems; Part 2: 9 missing Japanese
+  details + the wrong sakura). Its top 10: (1) remake the sakura as yamazakura / edohigan in autumn leaf (the built
+  ones are banned Somei-yoshino in bloom) + check the bamboo reads as madake; (2) strip vanilla items, start a JP
+  types.xml; (3) spawn gear; (4) the food list; (5) medical / tools / containers lists; (6) the animal roster (sika,
+  serow, black bear; no sheep / reindeer / dairy cows); (7) period dynamic events (baggage train, cargo-ship wreck,
+  burned house, battle camp); (8) autumn landscape (pine avenues, ichirizuka, higanbana + susuki, fruiting persimmons);
+  (9) weather / time config + footstep sounds per surface, and fix FEASIBILITY §5's "Spring"; (10) the unpicked shrine
+  and village items (ema, straw village guardians, roku-jizo, ward gates, fire lookout, sugidama, sozu). Order not
+  picked yet.
+- **W2's material gaps, accepted** (do after S1, which owns materials until it finishes): more posthumous-name cells
+  in the carved-text atlas (grave variety), Sanskrit seed syllables for the gorinto / hokyointo stones (built blank),
+  an outdoor bare-earth material for grave mounds (they use leaf litter now).
+- **More wooden grave posts (bohyo):** 4-6 variants, agent W3 launched 2026-09-30.
 
 ### Parked (not in this plan until Stephen raises them)
 - Terrain-tool size test; the real map build; more horizontal in-between roads

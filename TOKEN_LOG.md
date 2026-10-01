@@ -32,6 +32,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 20:26 (local) | W2 + S1 (baseline, CONCURRENT) | W2: torii/lanterns/steps/basins/graves (+ Stephen's rope, moss and 2-3x grave variety); S1: the 22 shop dressing sets (spec + build + demo shops). Time logs TIMELOG_W2.md / TIMELOG_S1.md; their usage % readings include both agents | - | - | before: **36%** (5-hour 22%) |
 | 2026-09-30 ~21:00 (local) | A4 (opus-medium, research only) | the lightweight 'what are we missing' audit: research/AUDIT_MISSING.md (17 + 8 system gaps, 9 + 1 Japanese details) | **138k** (33 tool calls) | 9 min | ran alongside W2 + S1 |
 | 2026-09-30 ~21:01 (local) | W2 | 7 wave-2 outdoor items = 91 models (torii 30 with rope / shide / moss, lanterns 13, steps 13, basin 4, gravestones 24, grave wood 7), jp_site.pbo 301 classes | **529k** (176 tool calls) | 35 min | ran alongside S1 + A4 |
+| 2026-09-30 ~21:12 (local) | W3 (baseline) | launched: 4-6 more wooden grave posts (bohyo), small job, alongside S1 | - | - | before: **39%** (5-hour 42%) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
