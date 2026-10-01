@@ -452,3 +452,7 @@
   references: **option B approved** = CC0 images from the Met Museum Open Access API + Cleveland Museum of Art Open Access
   (fallback: Stephen saves photos). **Komainu wanted** (+ paired lanterns). Torii rope now looks too SHORT: hang it a little lower
   (keep head clearance). Next: FX2 (statues + komainu + detail props + rope + U1 veranda), then FX3 (textures), config assembler.
+- 2026-10-01: **FX3 phase 1 launched** (Stephen): wood atlas (3-4 patches per material) + shared uvwood helper (patch / offset /
+  flip / grain along member / 1-2 m tiles) + macro weathering layer + irregular moss, prepared and proven on samples in
+  spikes/FX3/ only, ONE sample sheet (no per-prop renders). **Phase 2 (integration + rebuild) waits for FX2**; the lead resumes
+  the same agent then.
