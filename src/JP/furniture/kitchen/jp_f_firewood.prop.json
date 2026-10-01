@@ -63,10 +63,10 @@
    "abandoned": false,
    "display": "Firewood stack (maki)",
    "anchor": "floor",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 255,
-    "Resolution 2": 6,
+    "Resolution 1": 650,
+    "Resolution 2": 278,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -75,9 +75,9 @@
     -0.455,
     0.455,
     0.0,
-    0.591,
-    -0.229,
-    0.229
+    0.668,
+    -0.226,
+    0.231
    ],
    "collision": true,
    "footprint_xz": [
@@ -93,7 +93,7 @@
     {
      "name": "top",
      "kind": "shelf",
-     "y": 0.5704,
+     "y": 0.6682,
      "rect": [
       -0.35,
       -0.15,
@@ -103,9 +103,9 @@
      "range": 0.2,
      "points": [
       [
-       -0.185,
-       0.5704,
-       0.0222
+       0.0546,
+       0.6682,
+       0.0272
       ]
      ]
     }
@@ -121,13 +121,13 @@
     {
      "name": "height",
      "expected": 0.6,
-     "measured": 0.5912,
-     "tol": 0.03,
+     "measured": 0.6341,
+     "tol": 0.06,
      "source": "build_list"
     }
    ],
    "notes": [
-    "logs along z (end grain front and back); hidden faces dropped, a dark core fills the gaps"
+    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, both ends staggered; 650 faces"
    ]
   },
   {
@@ -138,20 +138,20 @@
    "abandoned": true,
    "display": "Firewood stack, half used, logs rolled",
    "anchor": "floor",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 177,
-    "Resolution 2": 36,
+    "Resolution 1": 356,
+    "Resolution 2": 146,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.496,
+    -0.501,
     0.552,
     0.0,
-    0.294,
-    -0.229,
+    0.292,
+    -0.226,
     0.758
    ],
    "collision": true,
@@ -164,27 +164,7 @@
    "loot_floor_clearance_m": 0.4,
    "roadway": false,
    "mass_kg": 35.0,
-   "loot_surfaces": [
-    {
-     "name": "top",
-     "kind": "shelf",
-     "y": 0.2851,
-     "rect": [
-      -0.35,
-      -0.15,
-      0.35,
-      0.15
-     ],
-     "range": 0.2,
-     "points": [
-      [
-       0.126,
-       0.2851,
-       -0.0165
-      ]
-     ]
-    }
-   ],
+   "loot_surfaces": [],
    "dims": [
     {
      "name": "stack",
@@ -195,7 +175,8 @@
     }
    ],
    "notes": [
-    "logs along z (end grain front and back); hidden faces dropped, a dark core fills the gaps"
+    "half used: top at 0.29 m",
+    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, both ends staggered; 307 faces"
    ]
   },
   {

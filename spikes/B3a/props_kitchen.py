@@ -516,40 +516,36 @@ def stack(length=0.91, depth=0.40, height=0.60, log_d=(0.09, 0.13), seed=1, rows
 
 
 def firewood(kind="stack", state="intact"):
-    P = FPart("firewood", budget="small", mass=35.0 if kind == "stack" else 12.0)
+    # FP2 (2026-10-01): the stack is a woodpile of split billets (spikes/B3a/woodpile.py), both ends showing; it
+    # needs the furniture class (was small: 3-5 sided prisms)
+    P = FPart("firewood", budget="furniture" if kind == "stack" else "small", mass=35.0 if kind == "stack" else 12.0)
     if kind == "stack":
-        ss, tops, ty, cb = stack(rows_keep=3 if state != "intact" else None, seed=3, mats=(FIREWOOD, FIREEND))
+        import woodpile as WPL
+        Hs = 0.60 if state == "intact" else 0.26
+        ss, info = WPL.woodpile(-0.455, 0.455, lambda x: Hs, -0.20, 0.20, seed=3, max_faces=880, back=True,
+                                loose_top=1 if state == "intact" else 0, cells=[0.10 + 0.005 * k for k in range(12)])
         add_all(P, ss)
-        P.add(cb)
-        # the highest log near the middle carries the loot point: a flat facet
-        best = None
-        for s in ss:
-            if 1 not in s.vis:
-                continue
-            for fi in range(len(s.faces)):
-                n = s.fn[fi]
-                if n[1] > 0.97:
-                    pts = s.face_points(fi)
-                    cx = sum(p[0] for p in pts) / len(pts)
-                    cz = sum(p[2] for p in pts) / len(pts)
-                    y = pts[0][1]
-                    if abs(cx) < 0.3 and (best is None or y > best[1]):
-                        best = (cx, y, cz)
+        ty = info["top_y"]
+        P.add(col(-0.455, 0.455, 0.0, min(Hs, ty) - 0.02, -0.18, 0.18, FIREWOOD))
         if state == "intact":
             P.dim("stack", 0.91, 0.91, tol=0.01)
-            P.dim("height", 0.60, ty, tol=0.03)
-        else:
+            P.dim("height", 0.60, ty, tol=0.06)
+            lp = info["loot"]
+            P.loot_rect("top", lp[1], -0.35, 0.35, -0.15, 0.15, rng=0.2, points=[lp])
+        else:                                   # half used: three or so rows left, billets rolled off in front
             rng = random.Random(8)
-            for i in range(4):
-                s, _ = split_log(rng, 0.0, 0.05, 0.05, -0.21, 0.21, mats=(FIREWOOD, FIREEND), full=True)
-                s = xf(s, ry=rng.uniform(60, 120), t=(rng.uniform(-0.4, 0.4), 0.0, 0.45 + rng.uniform(-0.1, 0.15)))
-                P.add(s)
-            ground_to_floor(P)
+            for i in range(5):
+                pc = WPL._piece(rng, 0.10, 0.09)
+                s, P2, _ = WPL._billet(rng, pc, -0.05, -0.045, -0.2, 0.2, True, None, loose=True)
+                lo = min(p[1] for p in P2)
+                P.add(xf(s, ry=rng.uniform(55, 125), t=(rng.uniform(-0.4, 0.4), -lo, 0.42 + rng.uniform(-0.08, 0.2))))
             P.add(stain(12, 0.0, 0.40, 0.35, sx=1.6, wear="_w1"))
             P.dim("stack", 0.91, 0.91, tol=0.01)
-        if best:
-            P.loot_rect("top", best[1], -0.35, 0.35, -0.15, 0.15, rng=0.2, points=[best])
-        P.notes.append("logs along z (end grain front and back); hidden faces dropped, a dark core fills the gaps")
+            lp = info["sky"]
+            ymax = max(lp)
+            P.notes.append("half used: top at %.2f m" % ymax)
+        P.notes.append("FP2 woodpile: split billets ~%.0f cm (halves, quarters, thirds, rounds), bark sides, end grain "
+                       "from each round's pith, both ends staggered; %d faces" % (info["cell"] * 100, info["faces"]))
     else:
         rng = random.Random(5)
         spots = [(-0.20, 0.0, 0.0), (0.20, 0.0, 0.0)]
@@ -587,6 +583,11 @@ def bundle(rng, d=0.35, L=0.90, broken=False, mats=(LOGWOOD, ENDGRAIN), band=TAW
             z1 = L / 2 + rng.uniform(-0.04, 0.04)
             st = box(cx - t, cx + t, cy - t, cy + t, z0, z1, {"front": mats[1], "back": mats[1], "default": mats[0]},
                      vis=(1,))
+            st.finalize()
+            for fi in range(len(st.faces)):         # FP2: the stick's end shows a whole small round (pith centred)
+                if abs(st.fn[fi][2]) > 0.7:
+                    st.fuv[fi] = [(0.5 + 0.31 * (v[0] - cx) / t * (1 if st.fn[fi][2] > 0 else -1),
+                                   0.5 - 0.31 * (v[1] - cy) / t) for v in st.face_points(fi)]
             out.append(xf(st, rz=rng.uniform(-20, 20), pivot=(cx, cy, 0.0)))
     if not broken:
         cs = fkit.lcyl("z", 0.0, r, r - 0.03, -L / 2 + 0.06, L / 2 - 0.06, core_mat, n=7, vis=(1,))

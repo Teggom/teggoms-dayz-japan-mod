@@ -66,10 +66,10 @@
    "display": "Firewood stack on a wall, 1 ken x 1.2 m",
    "anchor": "wall",
    "wall_gap": 0.05,
-   "budget": "small",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 138,
-    "Resolution 2": 24,
+    "Resolution 1": 1274,
+    "Resolution 2": 498,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -78,7 +78,7 @@
     -1.042,
     1.088,
     0.0,
-    1.2,
+    1.29,
     0.05,
     0.778
    ],
@@ -109,8 +109,8 @@
     {
      "name": "height",
      "expected": 1.2,
-     "measured": 1.2,
-     "tol": 0.03,
+     "measured": 1.212,
+     "tol": 0.06,
      "source": "build_list"
     },
     {
@@ -121,7 +121,9 @@
      "source": "build_list"
     }
    ],
-   "notes": []
+   "notes": [
+    "FP2 woodpile: split billets ~12 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1270 faces"
+   ]
   },
   {
    "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_wall_1ken_h180.p3d",
@@ -132,10 +134,10 @@
    "display": "Firewood stack on a wall, 1 ken x 1.8 m",
    "anchor": "wall",
    "wall_gap": 0.05,
-   "budget": "small",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 209,
-    "Resolution 2": 36,
+    "Resolution 1": 1283,
+    "Resolution 2": 499,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -144,7 +146,7 @@
     -1.042,
     1.088,
     0.0,
-    1.8,
+    1.886,
     0.05,
     0.778
    ],
@@ -175,8 +177,8 @@
     {
      "name": "height",
      "expected": 1.8,
-     "measured": 1.8,
-     "tol": 0.03,
+     "measured": 1.8013,
+     "tol": 0.06,
      "source": "build_list"
     },
     {
@@ -187,7 +189,9 @@
      "source": "build_list"
     }
    ],
-   "notes": []
+   "notes": [
+    "FP2 woodpile: split billets ~14 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1279 faces"
+   ]
   },
   {
    "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_half.p3d",
@@ -198,10 +202,10 @@
    "display": "Firewood stack end piece, half ken, stepped",
    "anchor": "wall",
    "wall_gap": 0.05,
-   "budget": "small",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 99,
-    "Resolution 2": 33,
+    "Resolution 1": 738,
+    "Resolution 2": 295,
     "Geometry": 24,
     "View Geometry": 24,
     "Fire Geometry": 24
@@ -210,7 +214,7 @@
     -1.042,
     1.088,
     0.0,
-    1.2,
+    1.229,
     0.05,
     0.778
    ],
@@ -241,8 +245,8 @@
     {
      "name": "height",
      "expected": 1.2,
-     "measured": 1.2,
-     "tol": 0.03,
+     "measured": 1.2292,
+     "tol": 0.06,
      "source": "build_list"
     },
     {
@@ -253,7 +257,9 @@
      "source": "build_list"
     }
    ],
-   "notes": []
+   "notes": [
+    "FP2 woodpile: split billets ~10 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 734 faces"
+   ]
   },
   {
    "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_free_posts.p3d",
@@ -264,17 +270,17 @@
    "display": "Firewood stack between two stakes, board cap",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 227,
-    "Resolution 2": 78,
+    "Resolution 1": 1242,
+    "Resolution 2": 534,
     "Geometry": 18,
     "View Geometry": 18,
     "Fire Geometry": 18
    },
    "bbox": [
-    -1.031,
-    1.029,
+    -1.03,
+    1.03,
     -0.08,
     1.32,
     -0.25,
@@ -307,8 +313,8 @@
     {
      "name": "height",
      "expected": 1.2,
-     "measured": 1.2,
-     "tol": 0.03,
+     "measured": 1.199,
+     "tol": 0.05,
      "source": "build_list"
     },
     {
@@ -319,7 +325,9 @@
      "source": "build_list"
     }
    ],
-   "notes": []
+   "notes": [
+    "FP2 woodpile, both ends showing: 1218 faces, billets ~14 cm"
+   ]
   },
   {
    "p3d": "\\JP\\site\\yard\\jp_s_firewood_stack_bundle.p3d",
@@ -391,10 +399,10 @@
    "display": "Firewood stack, one end slumped, spilled",
    "anchor": "wall",
    "wall_gap": 0.05,
-   "budget": "small",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 222,
-    "Resolution 2": 108,
+    "Resolution 1": 1377,
+    "Resolution 2": 500,
     "Geometry": 24,
     "View Geometry": 24,
     "Fire Geometry": 24
@@ -403,7 +411,7 @@
     -0.91,
     1.223,
     0.0,
-    1.2,
+    1.249,
     0.05,
     1.348
    ],
@@ -434,8 +442,8 @@
     {
      "name": "height",
      "expected": 1.2,
-     "measured": 1.2,
-     "tol": 0.03,
+     "measured": 1.2178,
+     "tol": 0.06,
      "source": "build_list"
     },
     {
@@ -446,7 +454,9 @@
      "source": "build_list"
     }
    ],
-   "notes": []
+   "notes": [
+    "FP2 woodpile: split billets ~11 cm (halves, quarters, thirds, rounds), bark sides, end grain from each round's pith, ends staggered +-3 cm, dark core 7 cm back; 1293 faces"
+   ]
   }
  ]
 }

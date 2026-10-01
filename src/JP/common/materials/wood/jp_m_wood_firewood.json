@@ -6,15 +6,15 @@
  "tile_size_m": 2.0,
  "texture_px": 1024,
  "px_per_m": 512.0,
- "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
- "grain": "along v (billet length): split facets and bark strips",
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; TWO BANDS in u: 0.0-0.5 bark, 0.5-1.0 split wood (map bark faces into the first, split faces into the second; v along the billet)",
+ "grain": "along v; u 0-0.5 oak bark (plates, fissures), u 0.5-1 split wood (fibres, splinters)",
  "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
  "roadway_surface": null,
  "finish": "matte",
  "wear": {
   "_w0": {
    "name": "clean",
-   "look": "fresh-split tan faces, grey bark",
+   "look": "fresh: tan split faces, grey-brown bark",
    "co": "JP\\common\\materials\\wood\\jp_m_wood_firewood_w0_co.paa",
    "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_firewood_w0.rvmat",
    "target_srgb": [
@@ -46,31 +46,22 @@
     83.1,
     55.9
    ],
-   "masked_frac": 0.097
+   "masked_frac": 0.11
   }
  },
  "used_by": [
   "jp_f_firewood",
   "jp_s_firewood_stack"
  ],
- "used_on": "Split firewood",
+ "used_on": "FP2 redraw: bark band + split-wood band (was the Weathered Planks photo with joints and nail holes)",
  "sources": [
   {
-   "asset": "weathered_planks",
-   "name": "Weathered Planks",
-   "page": "https://polyhaven.com/a/weathered_planks",
-   "licence": "CC0 1.0",
-   "authors": [
-    "Dario Barresi",
-    "Dimitrios Savva"
-   ]
-  },
-  {
-   "procedural": "make_m1_materials.py (on make_b1_materials.make_one)"
+   "procedural": "make_fp2_materials.py (on make_b1_materials.make_one)"
   }
  ],
  "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
- "made_by": "research/materials/make_m1_materials.py (agent M1, 2026-09-30), through B1's make_one",
- "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)",
- "note": "Split firewood sides (i22). For firewood only; the log ends are jp_m_wood_endgrain_firewood."
+ "made_by": "research/materials/make_fp2_materials.py (agent FP2, 2026-10-01), through B1's make_one",
+ "requested_by": "research/interior/materials_needed.json",
+ "note": "Split firewood sides (i22). For firewood only; the log ends are jp_m_wood_endgrain_firewood.",
+ "fp2_note": "FP2 redraw: bark band + split-wood band (was the Weathered Planks photo with joints and nail holes)"
 }

@@ -4,10 +4,10 @@
  "palette_id": "firewood_end",
  "palette_by_wear": {},
  "tile_size_m": 0.5,
- "texture_px": 256,
- "px_per_m": 512.0,
+ "texture_px": 512,
+ "px_per_m": 1024.0,
  "uv": "NOT tileable: one 0.5 m log end, pith at (0.5, 0.5); map a disc of the log's diameter centred there (as jp_m_wood_endgrain)",
- "grain": "growth rings, bark ring, radial checks",
+ "grain": "growth rings (~11, latewood dark), heartwood core, sapwood band, bark ring, drying checks",
  "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
  "roadway_surface": null,
  "finish": "matte",
@@ -22,7 +22,7 @@
     137.6,
     70.4
    ],
-   "masked_frac": 0.0
+   "masked_frac": 0.373
   },
   "_w1": {
    "name": "normal",
@@ -34,7 +34,7 @@
     125.0,
     66.0
    ],
-   "masked_frac": 0.005
+   "masked_frac": 0.379
   },
   "_w2": {
    "name": "heavy",
@@ -46,20 +46,21 @@
     120.0,
     63.1
    ],
-   "masked_frac": 0.016
+   "masked_frac": 0.444
   }
  },
  "used_by": [
   "jp_f_firewood",
   "jp_s_firewood_stack"
  ],
- "used_on": "Firewood log ends",
+ "used_on": "FP2 redraw: clear rings at 512 px, checks, bark ring (was 25 aliased rings -> flat yellow)",
  "sources": [
   {
-   "procedural": "make_m1_materials.py (on make_b1_materials.make_one)"
+   "procedural": "make_fp2_materials.py (on make_b1_materials.make_one)"
   }
  ],
  "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
- "made_by": "research/materials/make_m1_materials.py (agent M1, 2026-09-30), through B1's make_one",
- "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)"
+ "made_by": "research/materials/make_fp2_materials.py (agent FP2, 2026-10-01), through B1's make_one",
+ "requested_by": "research/interior/materials_needed.json",
+ "fp2_note": "FP2 redraw: clear rings at 512 px, checks, bark ring (was 25 aliased rings -> flat yellow)"
 }

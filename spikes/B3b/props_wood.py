@@ -11,6 +11,7 @@ from skit import (core, box, sheet, lathe, xf, xfs, flat_poly, W, col, col_solid
                   MUSHIRO, PAPER, NOREN, KINARI, ENDG, LEAF, SUMI, BENGARA, FIREWOOD, FIREEND)
 import props_kitchen as K     # B3a (read-only): bundle(), split_log()
 import props_storage as S     # B3a (read-only): tawara_bale()
+import woodpile as WP         # FP2 (2026-10-01): the split-billet woodpile (spikes/B3a/woodpile.py)
 
 SOOT = "wood_sooted"
 WEAVE = "bamboo_weave"
@@ -377,70 +378,76 @@ def firewood(kind):
         return P
     if kind == "free_posts":
         L, Hh = 1.82, 1.20
-        P = SPart("firewood_stack", budget="small", mass=500.0)
+        # FP2 (2026-10-01): a real woodpile of split billets, both ends showing (was a box with flat end decals)
+        P = SPart("firewood_stack", budget="medium", mass=500.0)
         hf = lambda x: Hh   # noqa: E731
         z0, z1 = -D / 2, D / 2
-        add_all(P, stack_caps(-L / 2, L / 2, hf, z1 + 0.012, +1, cell=0.15, seed=11))
-        add_all(P, stack_caps(-L / 2, L / 2, hf, z0 - 0.012, -1, cell=0.15, seed=12))
-        add_all(P, stack_core(-L / 2, L / 2, hf, z0, z1, steps=1, both=True))
+        ss, info = WP.woodpile(-L / 2, L / 2, hf, z0, z1, seed=11, max_faces=1250, back=True, loose_top=0,
+                               over=0.0)
+        add_all(P, ss)
         for sx in (-1, 1):
             P.add(pole((sx * (L / 2 + 0.05), -0.08, 0.0), (sx * (L / 2 + 0.05), Hh + 0.12, 0.0), 0.04, WOOD, n=5,
                        vis=(1, 2)))
             P.add(col(sx * (L / 2 + 0.05) - 0.04, sx * (L / 2 + 0.05) + 0.04, 0.0, Hh + 0.12, -0.04, 0.04))
-        cap = W(-L / 2 - 0.12, L / 2 + 0.12, Hh + 0.005, Hh + 0.035, -0.25, 0.25, WOOD, vis=(1, 2))
-        P.add(xf(cap, rz=2.0, pivot=(0.0, Hh, 0.0)))
-        P.add(W(-L / 2, L / 2, 0.0, Hh, z0, z1, {"front": SOOT, "back": SOOT, "default": FIREWOOD}, vis=(2,)))
-        add_all(P, stack_caps(-L / 2, L / 2, hf, z1 + 0.012, +1, cell=0.30, seed=6, vis=(2,)))
-        add_all(P, stack_caps(-L / 2, L / 2, hf, z0 - 0.012, -1, cell=0.30, seed=7, vis=(2,)))
+        top = info["top_y"]
+        cap = W(-L / 2 - 0.12, L / 2 + 0.12, top + 0.005, top + 0.035, -0.25, 0.25, WOOD, vis=(1, 2))
+        P.add(xf(cap, rz=1.0, pivot=(0.0, top, 0.0)))         # the cap board rests on the highest billets
         P.add(col(-L / 2, L / 2, 0.0, Hh, z0, z1))
         P.bury = 0.08
         P.dim("length", 1.82, L, tol=0.01)
-        P.dim("height", 1.20, Hh, tol=0.03)
+        P.dim("height", 1.20, top, tol=0.05)
         P.dim("depth", 0.33, D, tol=0.03)
-        P.loot_rect("cap", Hh + 0.035 + 0.0, -0.4, 0.4, -0.1, 0.1, rng=0.2, points=[(0.0, Hh + 0.035, 0.0)])
-        P.loot = []   # the cap slopes 2 deg: dressing only
+        P.loot = []   # the cap slopes: dressing only
+        P.notes.append("FP2 woodpile, both ends showing: %d faces, billets ~%.0f cm" % (info["faces"], info["cell"] * 100))
         return P
     # wall stacks: the wall plane z = 0, the stack 5 cm off it (C6 wall-backed rule)
-    P = SPart("firewood_stack", budget="small", mass=600.0, anchor="wall", wall_gap=0.05)
+    # FP2 (2026-10-01): a real woodpile of split billets (was a sooted box with flat yellow end decals): medium class
+    P = SPart("firewood_stack", budget="medium", mass=600.0, anchor="wall", wall_gap=0.05)
     z0, z1 = 0.05, 0.05 + D
+    loose = 2
     if kind == "half":
         L = 0.91
         hf = lambda x: 1.20 if x < -0.15 else (0.95 if x < 0.2 else 0.70)   # noqa: E731
         H = 1.20
+        loose = 1
     elif kind == "ab_collapsed":
         L = 1.82
         hf = lambda x: 1.20 if x < 0.1 else max(0.40, 1.20 - (x - 0.1) * 0.95)  # noqa: E731
         H = 1.20
+        loose = 1
     else:
         L = 1.82
         H = 1.80 if kind == "wall_1ken_h180" else 1.20
         hf = lambda x: H   # noqa: E731
-    add_all(P, stack_caps(-L / 2, L / 2, hf, z1 + 0.012, +1, cell=0.13, seed=len(kind) * 7, wear=wear))
-    add_all(P, stack_core(-L / 2, L / 2, hf, z0, z1, steps=1 if kind.startswith("wall") else 8, wear=wear))
-    add_all(P, stack_caps(-L / 2, L / 2, hf, z1 + 0.012, +1, cell=0.30, seed=5, wear=wear, vis=(2,)))
-    # Res 2: the stepped block with end-grain front
+        loose = 1 if H > 1.5 else 2
+    ss, info = WP.woodpile(-L / 2, L / 2, hf, z0, z1, seed=len(kind) * 7, max_faces=1300, wear=wear,
+                           loose_top=loose)
+    add_all(P, ss)
+    sky = info["sky"]                     # (Res 2 = one end-grain quad per billet + a stepped block: woodpile)
     steps = 1 if kind.startswith("wall") else 4
     dx = L / steps
     for i in range(steps):
         a, b = -L / 2 + i * dx, -L / 2 + (i + 1) * dx
         hh = min(hf(a + 0.01), hf(b - 0.01))
-        s = box(a, b, 0.0, hh, z0, z1, {"front": SOOT, "default": FIREWOOD}, vis=(2,))
-        s.wear = "_w2"
-        P.add(s)
         P.add(col(a, b, 0.0, hh - 0.02, z0 + 0.01, z1 - 0.01))
     if kind == "ab_collapsed":
         rr = random.Random(8)
         for i in range(9):
-            s, _ = K.split_log(rr, 0.0, 0.05, 0.05, -0.16, 0.16, mats=(FIREWOOD, FIREEND), full=True, wear="_w2")
-            s = xf(s, ry=rr.uniform(-60, 60), t=(0.45 + rr.uniform(-0.25, 0.45), 0.0, z1 + 0.25 + rr.uniform(0, 0.45)))
+            pc = WP._piece(rr, 0.11, 0.10)
+            s, P2, _ = WP._billet(rr, pc, -0.055, -0.05, -0.16, 0.16, True, "_w2", loose=True)
+            lo = min(p[1] for p in P2)
+            s = xf(s, ry=rr.uniform(-60, 60), t=(0.45 + rr.uniform(-0.25, 0.45), -lo, z1 + 0.25 + rr.uniform(0, 0.45)))
             P.add(s)
         P.add(litter(9, 0.4, z1 + 0.35, 0.6, sx=1.4))
         ground(P)
     else:
         P.add(litter(2, 0.0, z1 + 0.15, 0.5, sx=1.8, sz=0.5, wear="_w1"))
     P.dim("length", L, L, tol=0.01)
-    P.dim("height", H, hf(-L / 2 + 0.02), tol=0.03)
+    P.dim("height", H, max(sky[:20]), tol=0.06)
     P.dim("depth", 0.33, D, tol=0.03)
+    P.notes.append("FP2 woodpile: split billets ~%.0f cm (halves, quarters, thirds, rounds), bark sides, end grain "
+                   "from each round's pith, ends staggered +-3 cm, dark core 7 cm back; %d faces" %
+                   (info["cell"] * 100, info["faces"]))
     return P
 
 

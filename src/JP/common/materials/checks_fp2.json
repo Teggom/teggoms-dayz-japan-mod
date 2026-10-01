@@ -1,0 +1,112 @@
+{
+ "check": "C1 palette (tools/matcheck), FP2 materials",
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w0_co.png",
+   "palette_id": "firewood_end",
+   "wear": "",
+   "mean_srgb": [
+    169.0,
+    137.6,
+    70.4
+   ],
+   "target_srgb": [
+    160,
+    130,
+    67
+   ],
+   "dE": 3.61,
+   "dE_to_entry": 3.61,
+   "tol": 8.0,
+   "spread_p75": 5.9,
+   "observed_spread": 5.9,
+   "masked_frac": 0.373,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     169.0,
+     137.6,
+     70.4
+    ],
+    "dE": 3.61,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w1_co.png",
+   "palette_id": "firewood_end",
+   "wear": "",
+   "mean_srgb": [
+    153.8,
+    125.0,
+    66.0
+   ],
+   "target_srgb": [
+    160,
+    130,
+    67
+   ],
+   "dE": 2.83,
+   "dE_to_entry": 2.83,
+   "tol": 8.0,
+   "spread_p75": 5.2,
+   "observed_spread": 5.9,
+   "masked_frac": 0.379,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     153.8,
+     125.0,
+     65.9
+    ],
+    "dE": 2.81,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w2_co.png",
+   "palette_id": "firewood_end",
+   "wear": "",
+   "mean_srgb": [
+    148.0,
+    120.0,
+    63.1
+   ],
+   "target_srgb": [
+    160,
+    130,
+    67
+   ],
+   "dE": 5.0,
+   "dE_to_entry": 5.0,
+   "tol": 8.0,
+   "spread_p75": 4.9,
+   "observed_spread": 5.9,
+   "masked_frac": 0.444,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_endgrain_firewood_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "mask excludes 44 %"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     148.0,
+     120.0,
+     63.2
+    ],
+    "dE": 5.04,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  }
+ ]
+}

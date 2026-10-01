@@ -242,23 +242,90 @@ def mi(kind):
 
 
 # ================================================================================================ 41 usu (★)
+USU_N = 16                     # FP2: a rounder mortar (was 10 sides)
+USU_PROF = [(0.0, 0.0), (0.25, 0.0), (0.25, 0.08), (0.22, 0.28), (0.25, 0.47), (0.25, 0.55), (0.20, 0.55),
+            (0.12, 0.44), (0.0, 0.40)]
+
+
 def usu_body(wear=None):
-    """Wooden mortar d 0.50 h 0.55: a waisted log, the hollow 0.15 deep, a 5 cm flat rim."""
-    return [lathe([(0.0, 0.0), (0.25, 0.0), (0.25, 0.08), (0.22, 0.28), (0.25, 0.47), (0.25, 0.55), (0.20, 0.55),
-                   (0.12, 0.44), (0.0, 0.40)], 10, WOOD, vis=(1,), wear=wear),
+    """Wooden mortar d 0.50 h 0.55: a waisted log, the hollow 0.15 deep, a 5 cm flat rim; flat base on y = 0."""
+    return [lathe(USU_PROF, USU_N, WOOD, vis=(1,), wear=wear),
             lathe([(0.0, 0.0), (0.25, 0.0), (0.23, 0.28), (0.25, 0.55), (0.0, 0.50)], 6, WOOD, vis=(2,), smooth=False),
             lathe([(0.0, 0.0), (0.25, 0.0), (0.25, 0.55), (0.0, 0.55)], 4, WOOD, vis=(3,), smooth=False)]
 
 
+def _bowl_y(r):
+    """Height of the mortar's hollow at radius r, on the FACETED lathe (inscribed radius, cos(pi / USU_N))."""
+    r = r / math.cos(math.pi / USU_N)
+    if r <= 0.12:
+        return 0.40 + r / 0.12 * 0.04
+    return 0.44 + min(r - 0.12, 0.08) / 0.08 * 0.11
+
+
 def tategine(L=0.90):
     """The vertical pounder: a pole thick at both ends, waisted in the middle for the hands."""
-    return [lathe([(0.0, 0.0), (0.05, 0.0), (0.05, 0.25), (0.03, 0.35), (0.03, 0.55), (0.05, 0.65), (0.05, L),
-                   (0.0, L)], 6, WEATH, vis=(1,))]
+    s = lathe([(r, y * L / 0.90) for r, y in TATE_PROF], 10, WEATH, vis=(1,))
+    return [s]
+
+
+TATE_PROF = [(0.0, 0.0), (0.05, 0.0), (0.05, 0.25), (0.03, 0.35), (0.03, 0.55), (0.05, 0.65), (0.05, 0.90),
+             (0.0, 0.90)]
+
+
+def _tate_r(sv):
+    """The pounder's radius at distance sv along it (TATE_PROF)."""
+    for (r0, y0), (r1, y1) in zip(TATE_PROF[1:-2], TATE_PROF[2:-1]):
+        if y0 <= sv <= y1:
+            return r0 + (r1 - r0) * (sv - y0) / max(1e-6, y1 - y0)
+    return 0.05
+
+
+def tategine_leaning(phi=16.0):
+    """FP2 (Stephen: the pounder hung in the air beside the mortar): the tategine stands on the floor beside the
+    mortar (+z side) and leans on the rim's outer edge. Solved: the foot disc's low edge on the floor, the shaft
+    surface touching the rim corner (y 0.55, r 0.25), using the pounder's real radius at the contact."""
+    f = math.radians(phi)
+    d = (math.cos(f), -math.sin(f))                     # axis direction in (y, z): up and toward the mortar
+    yb = 0.05 * math.sin(f) + 0.001                     # the foot disc's lowest edge on the floor
+    E = (0.55, 0.25)
+
+    def gap(zb):
+        vy, vz = E[0] - yb, E[1] - zb
+        t = vy * d[0] + vz * d[1]
+        return math.hypot(vy - t * d[0], vz - t * d[1]) - _tate_r(t), t
+    lo, hi = 0.25, 0.80                                 # gap shrinks as the foot moves in
+    for _ in range(60):
+        mid = (lo + hi) / 2
+        g, t = gap(mid)
+        if g > 0:
+            hi = mid
+        else:
+            lo = mid
+    zb = hi
+    g, t = gap(zb)
+    return xfs(tategine(), rx=-phi, t=(0.0, yb, zb)), {"foot": (0.0, yb, zb), "contact_s": t, "gap": g}
 
 
 def yokogine():
-    return [lkit.lcyl("x", 0.0, 0.0, 0.07, -0.14, 0.14, WEATH, n=8, vis=(1,)),
-            pole((0.0, 0.0, 0.0), (0.0, 0.0, 0.75), 0.02, WEATH, n=5, vis=(1,))]
+    """The mallet pounder (yokogine): a short thick head (d 0.14, 0.28 long, along x), the handle along +z."""
+    head = lkit.lcyl("x", 0.0, 0.0, 0.07, -0.14, 0.14, WEATH, n=12, vis=(1,))
+    lkit.auto_smooth(head, 40.0)
+    return [head, pole((0.0, 0.0, 0.06), (0.0, 0.0, 0.75), 0.02, WEATH, n=7, vis=(1,))]
+
+
+def yokogine_in_usu():
+    """FP2: the mallet's head lies in the hollow (its two end circles on the bowl), the handle rests on the rim's
+    inner edge and sticks out over it, rising a few degrees (the head's weight holds it)."""
+    zc = -0.03
+    yc = 0.0                                            # the head's end circles rest on the bowl (every point clear)
+    for k in range(72):
+        a = 2 * math.pi * k / 72
+        zz, dy = zc + 0.07 * math.cos(a), 0.07 * math.sin(a)
+        yc = max(yc, _bowl_y(math.hypot(0.14, zz)) - dy + 0.002)
+    E = (0.55, 0.20 * math.cos(math.pi / USU_N))        # the rim's inner edge on the handle side (+z)
+    dz, dy = E[1] - zc, E[0] - yc
+    th = math.atan2(dy, dz) + math.asin(0.021 / math.hypot(dy, dz))   # the handle (r 0.02) just on the edge
+    return xfs(yokogine(), rx=-math.degrees(th), t=(0.0, yc, zc)), math.degrees(th), yc
 
 
 def ishiusu(wear=None, top_on=True):
@@ -275,12 +342,19 @@ def usu(kind):
     if kind in ("usu", "usu_mallet", "usu_fallen"):
         ab = kind == "usu_fallen"
         P.adds(usu_body(wear="_w2" if ab else None))
-        if kind == "usu":
-            P.adds(rest(xfs(tategine(), rz=-12.0, t=(0.30, 0.0, 0.10)), 0.0))
-        elif kind == "usu_mallet":
-            P.adds(xfs(yokogine(), rx=-65.0, t=(0.0, 0.62, 0.05)))
+        if kind == "usu":                               # FP2: the pounder on the floor, leaning on the rim
+            ss, info = tategine_leaning()
+            P.adds(ss)
+            P.notes.append("FP2: the tategine stands on the floor %.2f m out (foot centre), leaning 16 deg on the rim's "
+                           "outer edge (touching %.0f cm up the pounder)" % (info["foot"][2], info["contact_s"] * 100))
+        elif kind == "usu_mallet":                      # FP2: head in the hollow, handle resting on the rim
+            ss, th, yc = yokogine_in_usu()
+            P.adds(ss)
+            P.notes.append("FP2: the yokogine's head lies in the hollow (centre y %.3f), the handle rests on the rim "
+                           "edge rising %.1f deg" % (yc, th))
         else:                                           # the pounder fallen across the floor, dust in the bowl
-            P.adds(xfs(tategine(), rz=90.0, ry=25.0, t=(0.90, 0.05, 0.35)))
+            # FP2: lies on its two thick ends (r 0.05) on the floor, clear of the mortar
+            P.adds(xfs(tategine(), rz=90.0, ry=25.0, t=(1.20, 0.05, 0.35)))
             P.add(xf(mound(411, 0.0, 0.0, 0.10, 0.02, RICE, wear="_w2", vis=(1,)), t=(0.0, 0.41, 0.0)))
             P.add(stain(412, 0.5, 0.3, 0.35, sx=1.5))
         P.add(cyl_col(0.25, 0.0, 0.55, n=8, mat=WOOD))
