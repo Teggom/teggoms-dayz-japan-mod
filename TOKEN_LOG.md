@@ -44,6 +44,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~00:28 (local) | SH1 | test-island showcase: shrine 149 objects, graveyard 148, 6 demo shops on the street, life-layer gallery (74), labelled maps, 44-min walk | **575k** (191 tool calls) | 42 min | |
 | 2026-10-01 09:46 (local) | FP1 + FB1 (baseline, CONCURRENT) | Stephen's showcase walk: FP1 = 15 prop fixes/remakes + collapsed torii + aged plaster; FB1 = doors (only 31 of 128 classes matched their p3d name), building fixes, placements, world rebuild, re-check list | - | - | before: **44%** (5-hour 5%) |
 | 2026-10-01 ~10:56 (local) | FP1 | 15 prop findings (broom, sheaves, bonsai/pots, sword rack, ropes, charcoal-bale ends, lantern, loom, leaf shapes, stone texture, straw stack, lever well, notice board, climbable fire-watch ladder) + 5 collapsed torii + 4 materials | **764k** (347 tool calls) | 69 min | ran alongside FB1 |
+| 2026-10-01 ~11:00 (local) | FB1 | doors: 97 of 128 building files renamed to match their classes + bindcheck.py; Kinai gable, kura doors/shutters + aged plaster, tools re-seated, hill torii raised, collapsed torii placed, world rebuilt, 15-min re-check | **532k** (282 tool calls) | 74 min | ran alongside FP1 |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

@@ -365,3 +365,14 @@
 - 2026-10-01: **GitHub remote added** (Stephen): origin = https://github.com/Teggom/teggoms-dayz-japan-mod.git, branch master.
   First push after FP1 + FB1 finish. README rule 3 rewritten: every agent commits its own paths AND pushes after each
   checkpoint (pull --rebase on rejection; never force-push).
+- 2026-10-01: **FP1 DONE** (764k / 69 min; commits 1a9b8f0 .. 4cefb88) and **FB1 DONE** (532k / 74 min; commits a138258 .. b41f638).
+  - Doors: each building .p3d renamed to its class minus Land_ (97 of 128); uildings/bindcheck.py fails any build where
+    class != Land_<p3d stem> or Geometry lacks class=house; 128/128 bind. No second cause (machiya/shop/toilet identical
+    to 3d3c46d and bound in both logs).
+  - FP1: broom, sheaves, bonsai/pots, sword rack, ropes, charcoal-bale ends, lantern, loom supports, leaf shapes, stone
+    texture, straw stack, lever well, notice board, climbable ladder Land_JP_S_Fire_Watch_Ladder_Tower (deck 4.9 m), 5
+    collapsed torii (placed S100-S104), materials shikkui_aged / stone_carved_aged / ceramic_earthenware / plant_kiku.
+  - FB1: Kinai gable fix, kura doors 0.135 / shutters 0.08 + aged plaster, tools re-seated (leancheck.py), hill torii
+    S63/S70 -> large (2.60 / 2.79 m clear). E (roofless house) not reproduced: likely D5's pale board roof 0.17 m lower
+    reading as sky; checklist asks for a screenshot. Open: gallery wall items hang 6.5 cm off the walls.
+  - **Re-check: TEST_CHECKLIST.md (~15 min), doors first.**
