@@ -15,3 +15,4 @@
 2026-09-30 21:29:43 | DEMO SHOPS DONE | S1 | 6 demo shops (one per group): kanamono 103, tabako 94, mochiya 110, kusuri ab2 103, shitate 94, ningyo 103 - all pass | 5h 49% wk 39%
 2026-09-30 21:29:43 | PBO PACKED | S1 | jp_furniture 473 classes (175 S1 ODOL, 0 warnings), jp_buildings 78.2 MB, jp_common 207.3 MB; commit 433d86f | 5h 49% wk 39%
 2026-09-30 21:39:01 | SHEETS DONE | S1 | research/interior/contact_sheets/s1_sets_1..5.jpg (28 sets: room / cut / front / ref) + s1_props_{goods,fit,sign}*.jpg (175 models) | 5h 52% wk 40%
+2026-09-30 21:52:08 | END | S1 | re-runs: B3a 113, L1 185, machiya shop 137, 128 buildings 8064 checks (10 race artefacts re-verified pass), combos 60/60 | 5h 58% wk 41%

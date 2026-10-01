@@ -27,6 +27,14 @@ to any townhouse shop room, a demo shop per 4-5 trades, signs via the shop text 
   `s1_props_goods*.jpg`, `s1_props_fit*.jpg`, `s1_props_sign*.jpg` (renderers `render_sets.py`, `render_s1.py`).
 - **decor.py:** not changed.
 
+## Re-runs (after the furnishkit / furnish_sets / registry / townhouse-template changes; decor.py unchanged)
+- B3a + B4 props 113/113, L1 185/185 (sandboxed copies `check_b3a.py`, `check_l1.py`; pass and faces unchanged).
+- Furnished machiya `python buildings/pipeline.py machiya_t3_01_shop --no-pack`: 137/137.
+- `spikes/S1/rerun_all.py 10`: 128 buildings (machiya 78, shop 137, toilet 19, C1 81, C2 21, kura 3, C3 furnished 14,
+  S1 demos 6), 8,064 checks; 10 'src p3d is not ODOL' failures were a race (another process re-staged and
+  re-binarized 59 building p3ds in src at 21:46 while the re-run read them); those 10 re-verified alone: all pass.
+  Townhouse combos 60/60, 0 over budget. The 59 rewritten building ODOLs in src are not mine and not committed.
+
 ## Decisions I made
 - All 28 named trades get a set (the "22" header undercounts).
 - Shop signs are jp_furniture front proxies (mount wall, facade frame like B3b's shopfront), hung perpendicular to the
