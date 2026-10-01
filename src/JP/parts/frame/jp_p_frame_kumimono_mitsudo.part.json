@@ -1,0 +1,160 @@
+{
+ "id": "jp_p_frame_kumimono_mitsudo",
+ "part": "jp_p_frame_kumimono",
+ "variant": "_mitsudo",
+ "group": "frame",
+ "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_mitsudo.p3d",
+ "build_list": {
+  "entry": "jp_p_frame_kumimono",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+ "datum": "column centre line x 0 at the column top y = 3.0",
+ "recipe": "kumimono.frame / bracket_set",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.487,
+  3.217,
+  0.0,
+  3.702,
+  -0.225,
+  0.225
+ ],
+ "dims": [
+  {
+   "name": "column_diameter_m",
+   "expected": "0.18-0.45",
+   "measured": 0.3,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "gangyo_out_m",
+   "expected": 0.0,
+   "measured": 0.0,
+   "tol": 0.005,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "column centre",
+   "hidden": true
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    3.702,
+    0.0
+   ],
+   "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 140,
+  "Resolution 2": 64,
+  "Resolution 3": 36,
+  "Geometry": 28,
+  "View Geometry": 28,
+  "Fire Geometry": 28
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "kumimono": {
+   "form": "mitsudo",
+   "c": 0.3,
+   "g_out": 0.0,
+   "bear_y": 3.702,
+   "keta_y": 3.702,
+   "steps": 0
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 140, Resolution 2 64, Resolution 3 36, Geometry 28, View Geometry 28, Fire Geometry 28"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 column_diameter_m",
+   "ok": true,
+   "detail": "expected 0.18-0.45, measured 0.3"
+  },
+  {
+   "check": "C4 gangyo_out_m",
+   "ok": true,
+   "detail": "expected 0.0, measured 0.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,90 @@
+{
+ "id": "jp_p_frame_kumimono_kaerumata",
+ "part": "jp_p_frame_kumimono",
+ "variant": "_kaerumata",
+ "group": "frame",
+ "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_kaerumata.p3d",
+ "build_list": {
+  "entry": "jp_p_frame_kumimono",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+ "datum": "column centre line x 0 at the column top y = 3.0",
+ "recipe": "kumimono.frame / bracket_set",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.4,
+  2.6,
+  2.845,
+  3.498,
+  -0.094,
+  0.094
+ ],
+ "dims": [],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 36,
+  "Resolution 2": 12,
+  "Resolution 3": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 36, Resolution 2 12, Resolution 3 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

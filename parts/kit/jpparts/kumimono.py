@@ -532,3 +532,15 @@ def _side_sample(p, bay, form, c):
         kaerumata(p, Frame((0.0, yt, 0.0), (1.0, 0.0, 0.0), (0.0, 0.0, 1.0)), bay / 2, 0.0, max(hsup, 0.6 * c), c)
     return {"form": form, "c": c, "g_out": n * s, "bear_y": round(bear_y, 4), "keta_y": round(keta_y, 4),
             "steps": n}
+
+
+KUMI_VARIANTS = ["_funa", "_oto", "_mitsudo", "_degumi", "_mitesaki", "_degumi_corner", "_mitesaki_corner",
+                 "_kaerumata", "_kentozuka"]
+
+
+def part_kumimono(variant):
+    return sample(variant[1:])
+
+
+def register(reg):
+    reg("jp_p_frame_kumimono", KUMI_VARIANTS, part_kumimono)

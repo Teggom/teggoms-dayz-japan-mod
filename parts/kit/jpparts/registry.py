@@ -60,6 +60,11 @@ try:
     trim.register(reg)
 except ImportError:
     pass
+# ---- W2P2 (2026-10-01): curved roofs, bracket sets, the hakama storey
+from . import sori, kumimono, storey
+sori.register(reg)
+kumimono.register(reg)
+storey.register(reg)
 
 # render hints for the contact sheets (context parts: [name, yaw, [x, y, z]])
 RENDER_HINTS = {

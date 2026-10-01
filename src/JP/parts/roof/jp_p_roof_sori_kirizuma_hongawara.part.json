@@ -1,0 +1,358 @@
+{
+ "id": "jp_p_roof_sori_kirizuma_hongawara",
+ "part": "jp_p_roof_sori",
+ "variant": "_kirizuma_hongawara",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_sori_kirizuma_hongawara.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_sori",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "temple gate / sutra store: curved kirizuma, hongawara",
+ "datum": "5.46 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+ "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -1.0,
+  6.46,
+  2.603,
+  5.382,
+  -4.99,
+  1.35
+ ],
+ "dims": [
+  {
+   "name": "pitch_eave_rate",
+   "expected": "0.30-0.50",
+   "measured": 0.42,
+   "tol": 0.0,
+   "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+  },
+  {
+   "name": "pitch_ridge_rate",
+   "expected": "0.70-1.00",
+   "measured": 0.8,
+   "tol": 0.0,
+   "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+  },
+  {
+   "name": "curve_depth_m",
+   "expected": "0.10-0.40",
+   "measured": 0.152,
+   "tol": 0.0,
+   "source": "sag under the eave-ridge chord"
+  },
+  {
+   "name": "corner_lift_m",
+   "expected": "0.15-0.50",
+   "measured": 0.2,
+   "tol": 0.0,
+   "source": "W2P2_NOTES §2 (GK)"
+  },
+  {
+   "name": "eave_overhang_m",
+   "expected": "1.0-2.6",
+   "measured": 1.25,
+   "tol": 0.0,
+   "source": "W2P2_NOTES §2 (GK)"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "column grid corner"
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    0.0
+   ],
+   "note": "column grid corner"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -3.64
+   ],
+   "note": "column grid corner"
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    -3.64
+   ],
+   "note": "column grid corner"
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.88,
+    0.0
+   ],
+   "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    -0.95,
+    4.7698,
+    -1.82
+   ],
+   "note": "ridge start"
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    6.41,
+    4.7698,
+    -1.82
+   ],
+   "note": "ridge end"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_far",
+   "id": "jp_m_roof_kawara_far",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_field",
+   "id": "jp_m_roof_kawara_field",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 2217,
+  "Resolution 2": 881,
+  "Resolution 3": 413,
+  "Geometry": 150,
+  "Memory": 0,
+  "Roadway": 25,
+  "View Geometry": 150,
+  "Fire Geometry": 150
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "roof": {
+   "form": "kirizuma",
+   "covering": "hongawara",
+   "W": 5.46,
+   "D": 3.64,
+   "ov": 1.25,
+   "g_out": 0.0,
+   "bear_y": 2.8800000000000003,
+   "t0": 0.42,
+   "t1": 0.8,
+   "p": 1.6,
+   "L": 0.2,
+   "Ls": 2.6,
+   "tiers": 2,
+   "spacing": 0.26,
+   "t_j": 0.36,
+   "t_h": 0.27999999999999997,
+   "slopes": [
+    "front",
+    "back"
+   ],
+   "missing_materials": [
+    "roof_hiwada",
+    "roof_copper"
+   ],
+   "eave_y": 2.991744077942071,
+   "zr": -1.82,
+   "gov": [
+    0.95,
+    0.95
+   ],
+   "front_ext": 0.0,
+   "curved_rafters": false,
+   "front_bear_y": 2.88,
+   "front_eave_y": 2.991744077942071,
+   "ridge": [
+    [
+     -0.95,
+     4.769836385634379,
+     -1.82
+    ],
+    [
+     6.41,
+     4.769836385634379,
+     -1.82
+    ]
+   ],
+   "ridge_top_y": 5.095,
+   "curve_depth_m": 0.152,
+   "y_ridge": 4.73,
+   "corner_lift_m": 0.2
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 2217, Resolution 2 881, Resolution 3 413, Geometry 150, Memory 0, Roadway 25, View Geometry 150, Fire Geometry 150"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "25 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "25 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "25 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "pottery"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "53/53 field points within reach of the bed; 2 eave tile sets, 20 fascia boards"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "400/400 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 pitch_eave_rate",
+   "ok": true,
+   "detail": "expected 0.30-0.50, measured 0.42"
+  },
+  {
+   "check": "C4 pitch_ridge_rate",
+   "ok": true,
+   "detail": "expected 0.70-1.00, measured 0.8"
+  },
+  {
+   "check": "C4 curve_depth_m",
+   "ok": true,
+   "detail": "expected 0.10-0.40, measured 0.152"
+  },
+  {
+   "check": "C4 corner_lift_m",
+   "ok": true,
+   "detail": "expected 0.15-0.50, measured 0.2"
+  },
+  {
+   "check": "C4 eave_overhang_m",
+   "ok": true,
+   "detail": "expected 1.0-2.6, measured 1.25"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

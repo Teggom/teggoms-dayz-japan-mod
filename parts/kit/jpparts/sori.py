@@ -1187,3 +1187,49 @@ def nagare_curved(part, W, D, front_ext=None, covering="hiwada", **kw):
     height its porch beam (kohai) must carry at z = front_ext."""
     return roof(part, W, D, form="nagare", covering=covering, front_ext=KEN if front_ext is None else front_ext,
                 **kw)
+
+
+# ------------------------------------------------------------------------------------------------ parts library
+SORI_VARIANTS = {
+    "_irimoya_hongawara": ("irimoya", "hongawara", "town temple / shrine hall: curved irimoya, hongawara, 7-course ridge"),
+    "_irimoya_kokera": ("irimoya", "kokera", "shrine haiden / temple hall: curved irimoya, thick kokera with the koba edge"),
+    "_irimoya_hiwada": ("irimoya", "hiwada", "high-rank shrine hall: curved irimoya, hiwada bark (stand-in material)"),
+    "_irimoya_copper": ("irimoya", "copper", "rich hall / castle-grade: curved irimoya, copper (stand-in material)"),
+    "_kirizuma_hongawara": ("kirizuma", "hongawara", "temple gate / sutra store: curved kirizuma, hongawara"),
+    "_kirizuma_hiwada": ("kirizuma", "hiwada", "shrine gate / honden: curved kirizuma, hiwada (stand-in material)"),
+    "_hogyo_copper": ("yosemune", "copper", "small square hall (hogyo pyramid): curved hip roof, copper (stand-in)"),
+    "_nagare_hiwada": ("nagare", "hiwada", "nagare honden (W2P1 hook): the front slope runs 1 ken on over the steps"),
+}
+
+
+def part_sori(variant):
+    form, cov, used = SORI_VARIANTS[variant]
+    W, D = (2 * KEN, 2 * KEN) if form in ("yosemune", "nagare") else (3 * KEN, 2 * KEN)
+    p = Part("jp_p_roof_sori", variant, "roof", tiers=[2, 3], used_for=used,
+             recipe="sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, "
+                    "corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]",
+             datum="%.2f x %.2f column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters "
+                   "bear on a keta at the column line, top %.2f" % (W, D, EAVE_Y))
+    if form == "nagare":
+        sls, info = nagare_curved(p, W, D, covering=cov, bear_y=EAVE_Y)
+    else:
+        sls, info = roof(p, W, D, form=form, covering=cov, bear_y=EAVE_Y)
+    p.dim("pitch_eave_rate", "0.30-0.50", info["t0"], tol=0.0, source="W2P2_NOTES §2 (GK: 3-5 sun at the eave)")
+    p.dim("pitch_ridge_rate", "0.70-1.00", info["t1"], tol=0.0, source="W2P2_NOTES §2 (GK: 7-10 sun at the top)")
+    p.dim("curve_depth_m", "0.10-0.40", info["curve_depth_m"], tol=0.0, source="sag under the eave-ridge chord")
+    p.dim("corner_lift_m", "0.15-0.50", info["corner_lift_m"], tol=0.0, source="W2P2_NOTES §2 (GK)")
+    p.dim("eave_overhang_m", "1.0-2.6", info["ov"], tol=0.0, source="W2P2_NOTES §2 (GK)")
+    for x, z in ((0, 0), (W, 0), (0, -D), (W, -D)):
+        p.conn("post", (x, 0, z), note="column grid corner")
+    p.conn("eave", (0, EAVE_Y, 0), note="bear_y: the keta (or gangyo, g_out outside) the rafters rest on")
+    a, b = info["ridge"]
+    p.conn("ridge", a, note="ridge start")
+    p.conn("ridge", b, note="ridge end")
+    if MISSING and cov in ("hiwada", "copper"):
+        p.notes.append("Stand-in material (missing from the library: %s); the generator switches automatically."
+                       % ", ".join(MISSING))
+    return p
+
+
+def register(reg):
+    reg("jp_p_roof_sori", list(SORI_VARIANTS), part_sori)

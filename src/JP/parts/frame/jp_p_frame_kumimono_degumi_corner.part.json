@@ -1,0 +1,163 @@
+{
+ "id": "jp_p_frame_kumimono_degumi_corner",
+ "part": "jp_p_frame_kumimono",
+ "variant": "_degumi_corner",
+ "group": "frame",
+ "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_degumi_corner.p3d",
+ "build_list": {
+  "entry": "jp_p_frame_kumimono",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+ "datum": "column centre line x 0 at the column top y = 3.0",
+ "recipe": "kumimono.frame / bracket_set",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.487,
+  3.217,
+  0.0,
+  4.111,
+  -3.217,
+  0.487
+ ],
+ "dims": [
+  {
+   "name": "column_diameter_m",
+   "expected": "0.18-0.45",
+   "measured": 0.3,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "gangyo_out_m",
+   "expected": 0.315,
+   "measured": 0.315,
+   "tol": 0.005,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "column centre",
+   "hidden": true
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    3.993,
+    0.315
+   ],
+   "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 928,
+  "Resolution 2": 200,
+  "Resolution 3": 120,
+  "Geometry": 56,
+  "View Geometry": 56,
+  "Fire Geometry": 56
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "kumimono": {
+   "form": "degumi",
+   "c": 0.3,
+   "g_out": 0.315,
+   "bear_y": 3.993,
+   "keta_y": 4.1064,
+   "col_top": 3.0,
+   "top_wall": 3.807,
+   "t_j": 0.36,
+   "steps": 1
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 928, Resolution 2 200, Resolution 3 120, Geometry 56, View Geometry 56, Fire Geometry 56"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 column_diameter_m",
+   "ok": true,
+   "detail": "expected 0.18-0.45, measured 0.3"
+  },
+  {
+   "check": "C4 gangyo_out_m",
+   "ok": true,
+   "detail": "expected 0.315, measured 0.315"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

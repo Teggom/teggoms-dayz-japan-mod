@@ -3645,6 +3645,576 @@
      "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
+  },
+  {
+   "id": "jp_p_roof_sori_irimoya_hongawara",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 4434, Resolution 2 1643, Resolution 3 803, Geometry 410, Memory 0, Roadway 73, View Geometry 410, Fire Geometry 410"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "134/134 field points within reach of the bed; 4 eave tile sets, 64 fascia boards"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "1001/1001 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_eave_rate",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.42"
+    },
+    {
+     "check": "C4 pitch_ridge_rate",
+     "ok": true,
+     "detail": "expected 0.70-1.00, measured 0.8"
+    },
+    {
+     "check": "C4 curve_depth_m",
+     "ok": true,
+     "detail": "expected 0.10-0.40, measured 0.152"
+    },
+    {
+     "check": "C4 corner_lift_m",
+     "ok": true,
+     "detail": "expected 0.15-0.50, measured 0.3"
+    },
+    {
+     "check": "C4 eave_overhang_m",
+     "ok": true,
+     "detail": "expected 1.0-2.6, measured 1.25"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_sori_irimoya_kokera",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 3470, Resolution 2 1112, Resolution 3 556, Geometry 410, Memory 0, Roadway 73, View Geometry 410, Fire Geometry 410"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "1001/1001 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_eave_rate",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.4"
+    },
+    {
+     "check": "C4 pitch_ridge_rate",
+     "ok": true,
+     "detail": "expected 0.70-1.00, measured 0.9"
+    },
+    {
+     "check": "C4 curve_depth_m",
+     "ok": true,
+     "detail": "expected 0.10-0.40, measured 0.2"
+    },
+    {
+     "check": "C4 corner_lift_m",
+     "ok": true,
+     "detail": "expected 0.15-0.50, measured 0.3"
+    },
+    {
+     "check": "C4 eave_overhang_m",
+     "ok": true,
+     "detail": "expected 1.0-2.6, measured 1.25"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_sori_irimoya_hiwada",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 3480, Resolution 2 1112, Resolution 3 556, Geometry 410, Memory 0, Roadway 73, View Geometry 410, Fire Geometry 410"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "1001/1001 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_eave_rate",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.42"
+    },
+    {
+     "check": "C4 pitch_ridge_rate",
+     "ok": true,
+     "detail": "expected 0.70-1.00, measured 0.95"
+    },
+    {
+     "check": "C4 curve_depth_m",
+     "ok": true,
+     "detail": "expected 0.10-0.40, measured 0.212"
+    },
+    {
+     "check": "C4 corner_lift_m",
+     "ok": true,
+     "detail": "expected 0.15-0.50, measured 0.3"
+    },
+    {
+     "check": "C4 eave_overhang_m",
+     "ok": true,
+     "detail": "expected 1.0-2.6, measured 1.25"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_sori_irimoya_copper",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 3596, Resolution 2 1112, Resolution 3 556, Geometry 410, Memory 0, Roadway 73, View Geometry 410, Fire Geometry 410"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "69 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "metalplate"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "1001/1001 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_eave_rate",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.4"
+    },
+    {
+     "check": "C4 pitch_ridge_rate",
+     "ok": true,
+     "detail": "expected 0.70-1.00, measured 0.85"
+    },
+    {
+     "check": "C4 curve_depth_m",
+     "ok": true,
+     "detail": "expected 0.10-0.40, measured 0.18"
+    },
+    {
+     "check": "C4 corner_lift_m",
+     "ok": true,
+     "detail": "expected 0.15-0.50, measured 0.3"
+    },
+    {
+     "check": "C4 eave_overhang_m",
+     "ok": true,
+     "detail": "expected 1.0-2.6, measured 1.25"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_sori_kirizuma_hongawara",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 2217, Resolution 2 881, Resolution 3 413, Geometry 150, Memory 0, Roadway 25, View Geometry 150, Fire Geometry 150"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "25 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "25 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "25 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "53/53 field points within reach of the bed; 2 eave tile sets, 20 fascia boards"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "400/400 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_eave_rate",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.42"
+    },
+    {
+     "check": "C4 pitch_ridge_rate",
+     "ok": true,
+     "detail": "expected 0.70-1.00, measured 0.8"
+    },
+    {
+     "check": "C4 curve_depth_m",
+     "ok": true,
+     "detail": "expected 0.10-0.40, measured 0.152"
+    },
+    {
+     "check": "C4 corner_lift_m",
+     "ok": true,
+     "detail": "expected 0.15-0.50, measured 0.2"
+    },
+    {
+     "check": "C4 eave_overhang_m",
+     "ok": true,
+     "detail": "expected 1.0-2.6, measured 1.25"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_sori_kirizuma_hiwada",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 1556, Resolution 2 524, Resolution 3 232, Geometry 150, Memory 0, Roadway 25, View Geometry 150, Fire Geometry 150"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "25 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "25 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "25 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "400/400 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_eave_rate",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.42"
+    },
+    {
+     "check": "C4 pitch_ridge_rate",
+     "ok": true,
+     "detail": "expected 0.70-1.00, measured 0.95"
+    },
+    {
+     "check": "C4 curve_depth_m",
+     "ok": true,
+     "detail": "expected 0.10-0.40, measured 0.212"
+    },
+    {
+     "check": "C4 corner_lift_m",
+     "ok": true,
+     "detail": "expected 0.15-0.50, measured 0.2"
+    },
+    {
+     "check": "C4 eave_overhang_m",
+     "ok": true,
+     "detail": "expected 1.0-2.6, measured 1.25"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_sori_hogyo_copper",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 2834, Resolution 2 694, Resolution 3 270, Geometry 272, Memory 0, Roadway 48, View Geometry 272, Fire Geometry 272"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "48 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "48 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "48 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "metalplate"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "632/632 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_eave_rate",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.4"
+    },
+    {
+     "check": "C4 pitch_ridge_rate",
+     "ok": true,
+     "detail": "expected 0.70-1.00, measured 0.85"
+    },
+    {
+     "check": "C4 curve_depth_m",
+     "ok": true,
+     "detail": "expected 0.10-0.40, measured 0.18"
+    },
+    {
+     "check": "C4 corner_lift_m",
+     "ok": true,
+     "detail": "expected 0.15-0.50, measured 0.3"
+    },
+    {
+     "check": "C4 eave_overhang_m",
+     "ok": true,
+     "detail": "expected 1.0-2.6, measured 1.25"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_sori_nagare_hiwada",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 1598, Resolution 2 520, Resolution 3 238, Geometry 186, Memory 0, Roadway 31, View Geometry 186, Fire Geometry 186"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "31 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "31 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "31 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "496/496 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_eave_rate",
+     "ok": true,
+     "detail": "expected 0.30-0.50, measured 0.42"
+    },
+    {
+     "check": "C4 pitch_ridge_rate",
+     "ok": true,
+     "detail": "expected 0.70-1.00, measured 0.95"
+    },
+    {
+     "check": "C4 curve_depth_m",
+     "ok": true,
+     "detail": "expected 0.10-0.40, measured 0.338"
+    },
+    {
+     "check": "C4 corner_lift_m",
+     "ok": true,
+     "detail": "expected 0.15-0.50, measured 0.2"
+    },
+    {
+     "check": "C4 eave_overhang_m",
+     "ok": true,
+     "detail": "expected 1.0-2.6, measured 1.25"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "7 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
   }
  ]
 }

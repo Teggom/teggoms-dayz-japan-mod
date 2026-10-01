@@ -9,3 +9,4 @@
 2026-10-01 13:19:59 | WAITED FOR W2P1 (start) | W2P2 | no wait needed: built offline meanwhile | 5h 15% wk 55%
 2026-10-01 13:19:59 | WAITED FOR W2P1 (end) | W2P2 | W2P1 END 13:19:02 seen | 5h 15% wk 55%
 2026-10-01 13:25:24 | GROUP DONE | kumimono | 5 forms + corner sets + kaerumata/kentozuka; storey.hakama/deck | 5h 17% wk 55%
+2026-10-01 13:26:25 | MANIFEST REGISTERED | W2P2 | 18 variants (sori 8, kumimono 9, storey 1), 234 parts, 0 failures | 5h 17% wk 55%

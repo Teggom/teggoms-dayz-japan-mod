@@ -28954,6 +28954,2343 @@
    "deviation": null,
    "datum": "y 0 = sill / grade the band starts at; band 0.45 high, 3 mm proud of the face",
    "recipe": "trim.grime_band(part, x0, x1, face_z, y0, h, normal, axis)"
+  },
+  {
+   "id": "jp_p_roof_sori_irimoya_hongawara",
+   "part": "jp_p_roof_sori",
+   "variant": "_irimoya_hongawara",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_sori_irimoya_hongawara.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_sori",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "town temple / shrine hall: curved irimoya, hongawara, 7-course ridge",
+   "dims": [
+    {
+     "name": "pitch_eave_rate",
+     "expected": "0.30-0.50",
+     "measured": 0.42,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+    },
+    {
+     "name": "pitch_ridge_rate",
+     "expected": "0.70-1.00",
+     "measured": 0.8,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+    },
+    {
+     "name": "curve_depth_m",
+     "expected": "0.10-0.40",
+     "measured": 0.152,
+     "tol": 0.0,
+     "source": "sag under the eave-ridge chord"
+    },
+    {
+     "name": "corner_lift_m",
+     "expected": "0.15-0.50",
+     "measured": 0.3,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    },
+    {
+     "name": "eave_overhang_m",
+     "expected": "1.0-2.6",
+     "measured": 1.25,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.91,
+      4.7698,
+      -1.82
+     ],
+     "note": "ridge start"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      4.55,
+      4.7698,
+      -1.82
+     ],
+     "note": "ridge end"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_field",
+     "id": "jp_m_roof_kawara_field",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_shikkui",
+     "id": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 4434,
+    "Resolution 2": 1643,
+    "Resolution 3": 803,
+    "Geometry": 410,
+    "Memory": 0,
+    "Roadway": 73,
+    "View Geometry": 410,
+    "Fire Geometry": 410
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "5.46 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+   "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]"
+  },
+  {
+   "id": "jp_p_roof_sori_irimoya_kokera",
+   "part": "jp_p_roof_sori",
+   "variant": "_irimoya_kokera",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_sori_irimoya_kokera.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_sori",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "shrine haiden / temple hall: curved irimoya, thick kokera with the koba edge",
+   "dims": [
+    {
+     "name": "pitch_eave_rate",
+     "expected": "0.30-0.50",
+     "measured": 0.4,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+    },
+    {
+     "name": "pitch_ridge_rate",
+     "expected": "0.70-1.00",
+     "measured": 0.9,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+    },
+    {
+     "name": "curve_depth_m",
+     "expected": "0.10-0.40",
+     "measured": 0.2,
+     "tol": 0.0,
+     "source": "sag under the eave-ridge chord"
+    },
+    {
+     "name": "corner_lift_m",
+     "expected": "0.15-0.50",
+     "measured": 0.3,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    },
+    {
+     "name": "eave_overhang_m",
+     "expected": "1.0-2.6",
+     "measured": 1.25,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.91,
+      4.919,
+      -1.82
+     ],
+     "note": "ridge start"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      4.55,
+      4.919,
+      -1.82
+     ],
+     "note": "ridge end"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 3470,
+    "Resolution 2": 1112,
+    "Resolution 3": 556,
+    "Geometry": 410,
+    "Memory": 0,
+    "Roadway": 73,
+    "View Geometry": 410,
+    "Fire Geometry": 410
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "5.46 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+   "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]"
+  },
+  {
+   "id": "jp_p_roof_sori_irimoya_hiwada",
+   "part": "jp_p_roof_sori",
+   "variant": "_irimoya_hiwada",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_sori_irimoya_hiwada.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_sori",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "high-rank shrine hall: curved irimoya, hiwada bark (stand-in material)",
+   "dims": [
+    {
+     "name": "pitch_eave_rate",
+     "expected": "0.30-0.50",
+     "measured": 0.42,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+    },
+    {
+     "name": "pitch_ridge_rate",
+     "expected": "0.70-1.00",
+     "measured": 0.95,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+    },
+    {
+     "name": "curve_depth_m",
+     "expected": "0.10-0.40",
+     "measured": 0.212,
+     "tol": 0.0,
+     "source": "sag under the eave-ridge chord"
+    },
+    {
+     "name": "corner_lift_m",
+     "expected": "0.15-0.50",
+     "measured": 0.3,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    },
+    {
+     "name": "eave_overhang_m",
+     "expected": "1.0-2.6",
+     "measured": 1.25,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.91,
+      4.952,
+      -1.82
+     ],
+     "note": "ridge start"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      4.55,
+      4.952,
+      -1.82
+     ],
+     "note": "ridge end"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 3480,
+    "Resolution 2": 1112,
+    "Resolution 3": 556,
+    "Geometry": 410,
+    "Memory": 0,
+    "Roadway": 73,
+    "View Geometry": 410,
+    "Fire Geometry": 410
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "5.46 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+   "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]"
+  },
+  {
+   "id": "jp_p_roof_sori_irimoya_copper",
+   "part": "jp_p_roof_sori",
+   "variant": "_irimoya_copper",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_sori_irimoya_copper.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_sori",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "rich hall / castle-grade: curved irimoya, copper (stand-in material)",
+   "dims": [
+    {
+     "name": "pitch_eave_rate",
+     "expected": "0.30-0.50",
+     "measured": 0.4,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+    },
+    {
+     "name": "pitch_ridge_rate",
+     "expected": "0.70-1.00",
+     "measured": 0.85,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+    },
+    {
+     "name": "curve_depth_m",
+     "expected": "0.10-0.40",
+     "measured": 0.18,
+     "tol": 0.0,
+     "source": "sag under the eave-ridge chord"
+    },
+    {
+     "name": "corner_lift_m",
+     "expected": "0.15-0.50",
+     "measured": 0.3,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    },
+    {
+     "name": "eave_overhang_m",
+     "expected": "1.0-2.6",
+     "measured": 1.25,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.91,
+      4.715,
+      -1.82
+     ],
+     "note": "ridge start"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      4.55,
+      4.715,
+      -1.82
+     ],
+     "note": "ridge end"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 3596,
+    "Resolution 2": 1112,
+    "Resolution 3": 556,
+    "Geometry": 410,
+    "Memory": 0,
+    "Roadway": 73,
+    "View Geometry": 410,
+    "Fire Geometry": 410
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "5.46 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+   "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]"
+  },
+  {
+   "id": "jp_p_roof_sori_kirizuma_hongawara",
+   "part": "jp_p_roof_sori",
+   "variant": "_kirizuma_hongawara",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_sori_kirizuma_hongawara.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_sori",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple gate / sutra store: curved kirizuma, hongawara",
+   "dims": [
+    {
+     "name": "pitch_eave_rate",
+     "expected": "0.30-0.50",
+     "measured": 0.42,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+    },
+    {
+     "name": "pitch_ridge_rate",
+     "expected": "0.70-1.00",
+     "measured": 0.8,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+    },
+    {
+     "name": "curve_depth_m",
+     "expected": "0.10-0.40",
+     "measured": 0.152,
+     "tol": 0.0,
+     "source": "sag under the eave-ridge chord"
+    },
+    {
+     "name": "corner_lift_m",
+     "expected": "0.15-0.50",
+     "measured": 0.2,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    },
+    {
+     "name": "eave_overhang_m",
+     "expected": "1.0-2.6",
+     "measured": 1.25,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      -0.95,
+      4.7698,
+      -1.82
+     ],
+     "note": "ridge start"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      6.41,
+      4.7698,
+      -1.82
+     ],
+     "note": "ridge end"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_field",
+     "id": "jp_m_roof_kawara_field",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_shikkui",
+     "id": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 2217,
+    "Resolution 2": 881,
+    "Resolution 3": 413,
+    "Geometry": 150,
+    "Memory": 0,
+    "Roadway": 25,
+    "View Geometry": 150,
+    "Fire Geometry": 150
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "5.46 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+   "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]"
+  },
+  {
+   "id": "jp_p_roof_sori_kirizuma_hiwada",
+   "part": "jp_p_roof_sori",
+   "variant": "_kirizuma_hiwada",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_sori_kirizuma_hiwada.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_sori",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "shrine gate / honden: curved kirizuma, hiwada (stand-in material)",
+   "dims": [
+    {
+     "name": "pitch_eave_rate",
+     "expected": "0.30-0.50",
+     "measured": 0.42,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+    },
+    {
+     "name": "pitch_ridge_rate",
+     "expected": "0.70-1.00",
+     "measured": 0.95,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+    },
+    {
+     "name": "curve_depth_m",
+     "expected": "0.10-0.40",
+     "measured": 0.212,
+     "tol": 0.0,
+     "source": "sag under the eave-ridge chord"
+    },
+    {
+     "name": "corner_lift_m",
+     "expected": "0.15-0.50",
+     "measured": 0.2,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    },
+    {
+     "name": "eave_overhang_m",
+     "expected": "1.0-2.6",
+     "measured": 1.25,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      -0.95,
+      4.952,
+      -1.82
+     ],
+     "note": "ridge start"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      6.41,
+      4.952,
+      -1.82
+     ],
+     "note": "ridge end"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1556,
+    "Resolution 2": 524,
+    "Resolution 3": 232,
+    "Geometry": 150,
+    "Memory": 0,
+    "Roadway": 25,
+    "View Geometry": 150,
+    "Fire Geometry": 150
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "5.46 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+   "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]"
+  },
+  {
+   "id": "jp_p_roof_sori_hogyo_copper",
+   "part": "jp_p_roof_sori",
+   "variant": "_hogyo_copper",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_sori_hogyo_copper.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_sori",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "small square hall (hogyo pyramid): curved hip roof, copper (stand-in)",
+   "dims": [
+    {
+     "name": "pitch_eave_rate",
+     "expected": "0.30-0.50",
+     "measured": 0.4,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+    },
+    {
+     "name": "pitch_ridge_rate",
+     "expected": "0.70-1.00",
+     "measured": 0.85,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+    },
+    {
+     "name": "curve_depth_m",
+     "expected": "0.10-0.40",
+     "measured": 0.18,
+     "tol": 0.0,
+     "source": "sag under the eave-ridge chord"
+    },
+    {
+     "name": "corner_lift_m",
+     "expected": "0.15-0.50",
+     "measured": 0.3,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    },
+    {
+     "name": "eave_overhang_m",
+     "expected": "1.0-2.6",
+     "measured": 1.25,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      1.82,
+      4.715,
+      -1.82
+     ],
+     "note": "ridge start"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      1.82,
+      4.715,
+      -1.82
+     ],
+     "note": "ridge end"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 2834,
+    "Resolution 2": 694,
+    "Resolution 3": 270,
+    "Geometry": 272,
+    "Memory": 0,
+    "Roadway": 48,
+    "View Geometry": 272,
+    "Fire Geometry": 272
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "3.64 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+   "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]"
+  },
+  {
+   "id": "jp_p_roof_sori_nagare_hiwada",
+   "part": "jp_p_roof_sori",
+   "variant": "_nagare_hiwada",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_sori_nagare_hiwada.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_sori",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "nagare honden (W2P1 hook): the front slope runs 1 ken on over the steps",
+   "dims": [
+    {
+     "name": "pitch_eave_rate",
+     "expected": "0.30-0.50",
+     "measured": 0.42,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 3-5 sun at the eave)"
+    },
+    {
+     "name": "pitch_ridge_rate",
+     "expected": "0.70-1.00",
+     "measured": 0.95,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK: 7-10 sun at the top)"
+    },
+    {
+     "name": "curve_depth_m",
+     "expected": "0.10-0.40",
+     "measured": 0.338,
+     "tol": 0.0,
+     "source": "sag under the eave-ridge chord"
+    },
+    {
+     "name": "corner_lift_m",
+     "expected": "0.15-0.50",
+     "measured": 0.2,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    },
+    {
+     "name": "eave_overhang_m",
+     "expected": "1.0-2.6",
+     "measured": 1.25,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §2 (GK)"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -3.64
+     ],
+     "note": "column grid corner"
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "bear_y: the keta (or gangyo, g_out outside) the rafters rest on"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      -0.95,
+      4.7744,
+      -1.82
+     ],
+     "note": "ridge start"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      4.59,
+      4.7744,
+      -1.82
+     ],
+     "note": "ridge end"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1598,
+    "Resolution 2": 520,
+    "Resolution 3": 238,
+    "Geometry": 186,
+    "Memory": 0,
+    "Roadway": 31,
+    "View Geometry": 186,
+    "Fire Geometry": 186
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "3.64 x 3.64 column grid, x along the ridge, z 0 front column line .. -D; y 0 = floor; rafters bear on a keta at the column line, top 2.88",
+   "recipe": "sori.roof(part, W, D, form, covering, bear_y, g_out, ov, gov, pitch=(t0, t1), curve=p, corner_lift, lift_span, tiers)  [nagare: sori.nagare_curved / sori.nagare(part, W2P1 spec)]"
+  },
+  {
+   "id": "jp_p_frame_kumimono_funa",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_funa",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_funa.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [
+    {
+     "name": "column_diameter_m",
+     "expected": "0.18-0.45",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "gangyo_out_m",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column centre",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      3.366,
+      0.0
+     ],
+     "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 60,
+    "Resolution 2": 52,
+    "Resolution 3": 36,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_kumimono_oto",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_oto",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_oto.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [
+    {
+     "name": "column_diameter_m",
+     "expected": "0.18-0.45",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "gangyo_out_m",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column centre",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      3.576,
+      0.0
+     ],
+     "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 64,
+    "Resolution 3": 36,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_kumimono_mitsudo",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_mitsudo",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_mitsudo.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [
+    {
+     "name": "column_diameter_m",
+     "expected": "0.18-0.45",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "gangyo_out_m",
+     "expected": 0.0,
+     "measured": 0.0,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column centre",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      3.702,
+      0.0
+     ],
+     "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 140,
+    "Resolution 2": 64,
+    "Resolution 3": 36,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_kumimono_degumi",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_degumi",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_degumi.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [
+    {
+     "name": "column_diameter_m",
+     "expected": "0.18-0.45",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "gangyo_out_m",
+     "expected": 0.315,
+     "measured": 0.315,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column centre",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      3.993,
+      0.315
+     ],
+     "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 290,
+    "Resolution 2": 82,
+    "Resolution 3": 42,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_kumimono_mitesaki",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_mitesaki",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_mitesaki.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [
+    {
+     "name": "column_diameter_m",
+     "expected": "0.18-0.45",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "gangyo_out_m",
+     "expected": 0.945,
+     "measured": 0.945,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column centre",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      4.7527,
+      0.945
+     ],
+     "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 558,
+    "Resolution 2": 130,
+    "Resolution 3": 42,
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_kumimono_degumi_corner",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_degumi_corner",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_degumi_corner.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [
+    {
+     "name": "column_diameter_m",
+     "expected": "0.18-0.45",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "gangyo_out_m",
+     "expected": 0.315,
+     "measured": 0.315,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column centre",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      3.993,
+      0.315
+     ],
+     "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 928,
+    "Resolution 2": 200,
+    "Resolution 3": 120,
+    "Geometry": 56,
+    "View Geometry": 56,
+    "Fire Geometry": 56
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_kumimono_mitesaki_corner",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_mitesaki_corner",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_mitesaki_corner.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [
+    {
+     "name": "column_diameter_m",
+     "expected": "0.18-0.45",
+     "measured": 0.3,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "gangyo_out_m",
+     "expected": 0.945,
+     "measured": 0.945,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "column centre",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      4.7527,
+      0.945
+     ],
+     "note": "gangyo top: sori.roof(bear_y=, g_out=)"
+    }
+   ],
+   "materials": [
+    {
+     "key": "ceil_boards",
+     "id": "jp_m_ceil_boards",
+     "palette_id": "timber_interior",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_ceil_boards<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1976,
+    "Resolution 2": 368,
+    "Resolution 3": 120,
+    "Geometry": 56,
+    "View Geometry": 56,
+    "Fire Geometry": 56
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_kumimono_kaerumata",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_kaerumata",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_kaerumata.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hidden": true
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 36,
+    "Resolution 2": 12,
+    "Resolution 3": 12
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_kumimono_kentozuka",
+   "part": "jp_p_frame_kumimono",
+   "variant": "_kentozuka",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_kumimono_kentozuka.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_kumimono",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple / shrine bracket sets (W2P2): town-grade halls, gates, bell towers, pagodas",
+   "dims": [],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hidden": true
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 24,
+    "Resolution 2": 12,
+    "Resolution 3": 12
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "column centre line x 0 at the column top y = 3.0",
+   "recipe": "kumimono.frame / bracket_set"
+  },
+  {
+   "id": "jp_p_frame_storey_hakama",
+   "part": "jp_p_frame_storey",
+   "variant": "_hakama",
+   "group": "frame",
+   "p3d": "JP\\parts\\frame\\jp_p_frame_storey_hakama.p3d",
+   "build_list": {
+    "entry": "jp_p_frame_storey",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "bell tower / drum tower lower storey: flared hakama skirt + upper deck (W2P2, the cheap part of PARTS_GAP_AUDIT #10)",
+   "dims": [
+    {
+     "name": "batter_deg",
+     "expected": "8-15",
+     "measured": 9.76,
+     "tol": 0.0,
+     "source": "W2P2_NOTES §4 (GK: ~12 deg)"
+    }
+   ],
+   "connectors": [],
+   "materials": [
+    {
+     "key": "floor_boards_rough",
+     "id": "jp_m_floor_boards_rough",
+     "palette_id": "timber_interior",
+     "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_boards_rough<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 102,
+    "Resolution 2": 102,
+    "Resolution 3": 78,
+    "Geometry": 42,
+    "Roadway": 1,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "plan centre (1.365, -1.365) = a 1.5-ken upper bay; y 0 = platform top; deck top 2.80",
+   "recipe": "storey.hakama(part, cx, cz, hb, ht, y0, y1, door=) + storey.deck(part, cx, cz, half, y)"
   }
  ]
 }

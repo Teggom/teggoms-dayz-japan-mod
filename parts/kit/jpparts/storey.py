@@ -87,3 +87,23 @@ def deck(part, cx, cz, half, y, t=0.10, mat=WOOD, beam=0.20):
         part.add(box(x0, x1, y - t - beam - grow, y - t - 0.004 + grow * 0.0, z0, z1, mat, vis=(1, 2, 3),
                      tag="deck_beam", grain="long"))
     return {"y": y, "half": half}
+
+
+def part_storey(variant):
+    """jp_p_frame_storey_hakama: the bell-tower lower storey (hakama skirt) with the upper deck on it."""
+    p = Part("jp_p_frame_storey", variant, "frame", tiers=[2, 3],
+             used_for="bell tower / drum tower lower storey: flared hakama skirt + upper deck (W2P2, the cheap part of "
+                      "PARTS_GAP_AUDIT #10)",
+             recipe="storey.hakama(part, cx, cz, hb, ht, y0, y1, door=) + storey.deck(part, cx, cz, half, y)",
+             datum="plan centre (1.365, -1.365) = a 1.5-ken upper bay; y 0 = platform top; deck top 2.80")
+    cx, cz = 1.365, -1.365
+    hakama(p, cx, cz, hb=2.05, ht=1.62, y0=0.0, y1=2.50, door="back")
+    deck(p, cx, cz, 2.05, 2.80)
+    p.dim("batter_deg", "8-15", round(math.degrees(math.atan((2.05 - 1.62) / 2.50)), 2), tol=0.0,
+          source="W2P2_NOTES §4 (GK: ~12 deg)")
+    p.notes.append("The doorway (back) leads to the stair / ladder W2S adds inside; the railing is W2P1's koran.rail.")
+    return p
+
+
+def register(reg):
+    reg("jp_p_frame_storey", ["_hakama"], part_storey)
