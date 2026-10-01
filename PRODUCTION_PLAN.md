@@ -390,3 +390,9 @@
   kumimono brackets; registers in the parts manifest after W2P1) + W2C (civic shells: tea house x3 sizes, smithy +
   swordsmith, guard hut, ward gate kido) in parallel -> then W2S (shrine + temple shells, village + town grades) -> then
   W2F (furnish + place: a hall on the showcase shrine site, a village temple, civic by the street) + one walk.
+- 2026-10-01: **W2P1 DONE** (579k / 44 min): 48 variants, 10 parts + 8 micro-shrines (site_hokora); offline honden 26/26, haiden 25/25,
+  temple hall 32/32 (register tiled halls as 'large'). Not built: small gate (use W2C's gates.py), kuri porch. Missing materials:
+  cypress bark (hiwada), bronze/copper patina. **W2C DONE** (476k / 44 min): 16 civic shells (Teahouse x7, Smithy x2 +
+  Swordsmith, Guardhut x3, Kido x3), 144/144 buildings bind + pass; prop spots in rooms json; roofed kido = general knowledge.
+  **Git hazard found:** agents share one index; W2P1's fc6c66b swept in W2C's staged files (nothing lost). README rule 3 now
+  requires git commit --only <paths>.

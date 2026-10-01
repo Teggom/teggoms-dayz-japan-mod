@@ -111,8 +111,10 @@ Stephen then does one bundled check from `TEST_CHECKLIST.md`.
    Never modify `pokemon_dev/`, other server files, other agents' paths, or `tools/common/`. Read anything.
 3. **Git: commit AND push your own work** (Stephen, 2026-10-01). The repo's remote is `origin` =
    https://github.com/Teggom/teggoms-dayz-japan-mod.git (private, Stephen's), branch `master`.
-   - Commit at every checkpoint with `git add <your specific paths>` only. Never `git add -A` / `git add .`, never
-     `git clean`, never force-push, never rewrite history. End messages with the co-author line your brief gives.
+   - Commit at every checkpoint, ONLY your own paths: `git commit --only <paths> -m "..."` (or `git commit <paths>
+     -m "..."`). Agents share ONE git index in this working tree, so a bare `git commit` after `git add` sweeps up
+     other agents' staged files (it happened 2026-10-01). Never `git add -A` / `git add .`, never `git clean`, never
+     force-push, never rewrite history. End messages with the co-author line your brief gives.
    - **Push after each checkpoint commit and at the end:** `git push origin master`. If the push is rejected because
      another agent pushed first, `git pull --rebase origin master` and push again; if that conflicts, stop and
      report. If git says `index.lock` exists, wait a few seconds and retry (never delete it).
