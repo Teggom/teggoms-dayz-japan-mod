@@ -51,6 +51,8 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 12:35 (local) | W2P1 + W2P2 + W2C (baseline, CONCURRENT) | Phase C wave 2 start: village shrine/temple parts; curved sori roof + kumimono; civic shells (tea house, smithy, guard hut, ward gate) | - | - | before: **52%** (5-hour 60%, resets 12:50) |
 | 2026-10-01 ~13:19 (local) | W2P1 | village shrine/temple parts: 48 variants / 10 parts (koran, tobira, nagare, kohai, hogyo, ornaments, stilts, kidan, shitomi, 8 micro-shrines) + 3 offline halls | **579k** (143 tool calls) | 44 min | concurrent with W2P2 + W2C |
 | 2026-10-01 ~13:19 (local) | W2C | civic shells: 7 tea houses, 3 smithies, 3 guard huts, 3 ward gates (16), gates.py, templates/civic.py | **476k** (153 tool calls) | 44 min | concurrent |
+| 2026-10-01 ~13:30 (local) | W2P2 | curved sori roof (4 forms, 4 coverings) + kumimono (5 forms) + frame_storey_hakama; 18 manifest variants; 4 offline assemblies 23/23 | **559k** (152 tool calls) | 54 min | concurrent with W2P1 + W2C |
+| 2026-10-01 ~13:31 (local) | W2S (baseline) | launched: shrine + temple shells, village + town grades, 3 materials | - | - | before: **56%** (5-hour 19%) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

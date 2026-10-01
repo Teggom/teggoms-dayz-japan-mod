@@ -396,3 +396,7 @@
   Swordsmith, Guardhut x3, Kido x3), 144/144 buildings bind + pass; prop spots in rooms json; roofed kido = general knowledge.
   **Git hazard found:** agents share one index; W2P1's fc6c66b swept in W2C's staged files (nothing lost). README rule 3 now
   requires git commit --only <paths>.
+- 2026-10-01: **W2P2 DONE** (559k / 54 min): sori.py roof (irimoya / yosemune-hogyo / kirizuma / nagare; hongawara / kokera / hiwada /
+  copper; 8 variants), kumimono.py (funa, oto, mitsudo, degumi, mitesaki; 9 variants), rame_storey_hakama; offline hall 8,174,
+  hall_kokera 5,564, hondo 11,259, shoro 5,807 faces (R3 1,047 > standard 800: no tower class yet — ask Stephen). W2P1's kidan
+  costs ~2,000 faces. **W2S launched** (shrine + temple shells, both grades; adds hiwada / copper / bronze materials).
