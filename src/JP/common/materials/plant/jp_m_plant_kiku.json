@@ -1,0 +1,66 @@
+{
+ "id": "jp_m_plant_kiku",
+ "family": "plant",
+ "palette_id": "kiku_flower",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "ATLAS: u 0-1/3 white, 1/3-2/3 yellow, 2/3-1 rust; map a flower head's faces into one column, v from the centre (0) out to the petal tips (1)",
+ "grain": "ray petals along v (centre v = 0 -> tips v = 1), three colour columns in u",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_kiku_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_kiku_w0.rvmat",
+   "target_srgb": [
+    204.6,
+    168.0,
+    111.6
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "a little faded",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_kiku_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_kiku_w1.rvmat",
+   "target_srgb": [
+    196.0,
+    160.0,
+    104.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "withered brown (dead)",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_kiku_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_kiku_w2.rvmat",
+   "target_srgb": [
+    165.5,
+    141.2,
+    98.6
+   ],
+   "masked_frac": 0.0
+  }
+ },
+ "used_by": [
+  "jp_s_potted"
+ ],
+ "used_on": "Chrysanthemum flower heads",
+ "sources": [
+  {
+   "procedural": "make_fp1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_fp1_materials.py (agent FP1, 2026-10-01), through B1's make_one",
+ "requested_by": "research/outdoor_kit/materials_needed.json",
+ "note": "Potted chrysanthemum heads (FP1 2026-10-01).",
+ "fp1_note": "Chrysanthemum flower heads"
+}

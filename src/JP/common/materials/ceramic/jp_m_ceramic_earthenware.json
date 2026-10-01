@@ -1,0 +1,66 @@
+{
+ "id": "jp_m_ceramic_earthenware",
+ "family": "ceramic",
+ "palette_id": "earthenware_unglazed",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; u round the pot",
+ "grain": "throwing rings round the pot (u), v = 0 at the rim",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\pottery.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean red-brown",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w0.rvmat",
+   "target_srgb": [
+    139.3,
+    102.9,
+    78.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "dusty, lime bloom",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w1.rvmat",
+   "target_srgb": [
+    134.0,
+    98.0,
+    74.0
+   ],
+   "masked_frac": 0.199
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "damp and green at the foot, chipped",
+   "co": "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware_w2.rvmat",
+   "target_srgb": [
+    119.5,
+    89.7,
+    69.6
+   ],
+   "masked_frac": 0.331
+  }
+ },
+ "used_by": [
+  "jp_s_potted"
+ ],
+ "used_on": "Unglazed flower pots",
+ "sources": [
+  {
+   "procedural": "make_fp1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_fp1_materials.py (agent FP1, 2026-10-01), through B1's make_one",
+ "requested_by": "research/outdoor_kit/materials_needed.json",
+ "note": "Unglazed suyaki flower and bonsai pots (FP1 2026-10-01; era: no glazed trays).",
+ "fp1_note": "Unglazed flower pots"
+}
