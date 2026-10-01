@@ -1,0 +1,254 @@
+{
+ "id": "jp_p_roof_kohai_tile",
+ "part": "jp_p_roof_kohai",
+ "variant": "_tile",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_kohai_tile.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_kohai",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "kohai step canopy in sangawara for tiled temple halls (clay bed + fascia, T1)",
+ "datum": "hall front wall line z 0, the stair bay x 0..1.82; y 0 = hall floor (+0.60 above grade); the main roof's front slope (pitch 0.45, overhang 0.90) is the shell's",
+ "recipe": "nagare.kohai(part, xa, xb, z_post, main_t, main_ov, eave_y, fam, drop)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.38,
+  2.2,
+  -0.72,
+  2.628,
+  0.36,
+  2.964
+ ],
+ "dims": [
+  {
+   "name": "kohai_beam_head_over_grade_m",
+   "expected": ">=2.05",
+   "measured": 2.119,
+   "tol": 0.01,
+   "source": "PLAYBOOK D4",
+   "ok": true
+  },
+  {
+   "name": "tuck_under_main_roof_m",
+   "expected": ">=0.02",
+   "measured": 0.03,
+   "tol": 0.01,
+   "source": "PLAYBOOK §15 T8 (no roof poke, C12)",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "hall front post (tie beam end)"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    -0.6,
+    2.275
+   ],
+   "note": "kohai post (grade)",
+   "hidden": true
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "note": "hall front post (tie beam end)"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    -0.6,
+    2.275
+   ],
+   "note": "kohai post (grade)",
+   "hidden": true
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.88,
+    0.0
+   ],
+   "note": "the hall's keta top on the front wall"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_far",
+   "id": "jp_m_roof_kawara_far",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_field",
+   "id": "jp_m_roof_kawara_field",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 580,
+  "Resolution 2": 223,
+  "Resolution 3": 134,
+  "Geometry": 40,
+  "Roadway": 1,
+  "View Geometry": 40,
+  "Fire Geometry": 40
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 580, Resolution 2 223, Resolution 3 134, Geometry 40, Roadway 1, View Geometry 40, Fire Geometry 40"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "pottery, wood"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "336/336 field points within reach of the bed; 1 eave tile sets, 1 fascia boards"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "16/16 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 kohai_beam_head_over_grade_m",
+   "ok": true,
+   "detail": "expected >=2.05, measured 2.119"
+  },
+  {
+   "check": "C4 tuck_under_main_roof_m",
+   "ok": true,
+   "detail": "expected >=0.02, measured 0.03"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

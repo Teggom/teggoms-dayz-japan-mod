@@ -1,0 +1,256 @@
+{
+ "id": "jp_p_roof_forms_hogyo_tile_3ken",
+ "part": "jp_p_roof_forms_hogyo",
+ "variant": "_tile_3ken",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_forms_hogyo_tile_3ken.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_forms_hogyo",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "hogyo roof in sangawara over a 3 x 3 ken hall, tile hip ridges, tile hoju",
+ "datum": "square footprint x 0..W, z 0 .. -W; y 0 = floor; eave line 2.88",
+ "recipe": "nagare.hogyo(part, W, fam, apex)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -1.026,
+  6.486,
+  2.442,
+  5.3,
+  -6.486,
+  1.026
+ ],
+ "dims": [
+  {
+   "name": "pitch_deg",
+   "expected": 24.2,
+   "measured": 24.2277,
+   "tol": 0.1,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    0.0
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -5.46
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    5.46,
+    0.0,
+    -5.46
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "apex",
+   "pos": [
+    2.73,
+    4.3805,
+    -2.73
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_far",
+   "id": "jp_m_roof_kawara_far",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_field",
+   "id": "jp_m_roof_kawara_field",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 3624,
+  "Resolution 2": 606,
+  "Resolution 3": 416,
+  "Geometry": 20,
+  "Roadway": 4,
+  "View Geometry": 20,
+  "Fire Geometry": 20
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "roof": {
+   "slopes": [
+    "front",
+    "back",
+    "left",
+    "right"
+   ],
+   "t": 0.45,
+   "ov": 0.9,
+   "form": "hogyo",
+   "fam": "sangawara",
+   "apex": [
+    2.73,
+    4.3805,
+    -2.73
+   ],
+   "finial_top": 5.3004999999999995
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 3624, Resolution 2 606, Resolution 3 416, Geometry 20, Roadway 4, View Geometry 20, Fire Geometry 20"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "pottery"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "2444/2444 field points within reach of the bed; 4 eave tile sets, 4 fascia boards"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "40/40 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 pitch_deg",
+   "ok": true,
+   "detail": "expected 24.2, measured 24.2277"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

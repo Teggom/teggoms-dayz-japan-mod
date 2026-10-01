@@ -18,7 +18,15 @@ for pid, v, fn in regs:
     lods = mlod.read_mlod(path)
     res, counts = checks.check_part(p, path, lods)
     z = ZF.coplanar(p)
-    res.append(("C20 zfight (part)", not z["same"], "%d same; %s" % (len(z["same"]), "; ".join(ZF.summary(z, "same", 3)))))
+    import copy
+    q = copy.deepcopy(p)
+    ZF.resolve(q)
+    z2 = ZF.coplanar(q)
+    res.append(("C20 zfight after zfight.resolve (as the building pipeline)", not z2["same"],
+                "%d raw same-facing pairs (%s) -> %d after resolve" % (len(z["same"]), "; ".join(ZF.summary(z, "same", 2)),
+                                                                     len(z2["same"]))))
+    if z["same"]:
+        print("      note: raw C20 pairs: %s" % "; ".join(ZF.summary(z, "same", 3)))
     fails = [r for r in res if not r[1]]
     nf += len(fails)
     print("%-4s %-40s %s" % ("OK" if not fails else "FAIL", p.name, counts))

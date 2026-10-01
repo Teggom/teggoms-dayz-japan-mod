@@ -1,0 +1,137 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\w2p1_tobira",
+ "res": [
+  960,
+  720
+ ],
+ "jobs": [
+  [
+   "open_tobira_board_out",
+   "Board pair (ita-tobira), strap fittings + ring pulls, opening OUT; kamoi, threshold, jamb stops, pivot blocks",
+   {
+    "build": "part:jp_p_open_tobira_board_out",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     1.1,
+     0.3
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "open": 0.6,
+    "human": [
+     2.6,
+     1.2,
+     0.0
+    ]
+   }
+  ],
+  [
+   "open_tobira_board_in",
+   "The same pair opening IN",
+   {
+    "build": "part:jp_p_open_tobira_board_in",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     1.1,
+     0.0
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "open": 0.6
+   }
+  ],
+  [
+   "open_tobira_lattice_out",
+   "Latticed doors (koshi-tobira) over a board base, opening OUT",
+   {
+    "build": "part:jp_p_open_tobira_lattice_out",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     1.1,
+     0.3
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "open": 0.6
+   }
+  ],
+  [
+   "open_tobira_lattice_in",
+   "Latticed doors opening IN (closed view)",
+   {
+    "build": "part:jp_p_open_tobira_lattice_in",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     1.1,
+     0.0
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "open_tobira_sankara_in",
+   "Temple framed panel doors (sankarado), latticed top band, opening IN (closed view)",
+   {
+    "build": "part:jp_p_open_tobira_sankara_in",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     1.1,
+     0.0
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "open_tobira_board_ajar",
+   "Static pair standing ajar (dead-world dressing)",
+   {
+    "build": "part:jp_p_open_tobira_board_ajar",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     0.9,
+     1.1,
+     0.3
+    ],
+    "dist": 7.0,
+    "move": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ]
+ ]
+}

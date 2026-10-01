@@ -1,0 +1,226 @@
+{
+ "id": "jp_p_roof_forms_hogyo_thatch_2ken",
+ "part": "jp_p_roof_forms_hogyo",
+ "variant": "_thatch_2ken",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_forms_hogyo_thatch_2ken.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_forms_hogyo",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "thatched hogyo (rural do) with a tile cap and hoju",
+ "datum": "square footprint x 0..W, z 0 .. -W; y 0 = floor; eave line 2.88",
+ "recipe": "nagare.hogyo(part, W, fam, apex)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -1.211,
+  4.851,
+  1.92,
+  6.2,
+  -4.851,
+  1.211
+ ],
+ "dims": [
+  {
+   "name": "pitch_deg",
+   "expected": 45.0,
+   "measured": 45.0,
+   "tol": 0.1,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    0.0
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -3.64
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    3.64,
+    0.0,
+    -3.64
+   ],
+   "note": "footprint corner node"
+  },
+  {
+   "type": "apex",
+   "pos": [
+    1.82,
+    5.28,
+    -1.82
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "bamboo_weathered",
+   "id": "jp_m_bamboo_weathered",
+   "palette_id": "bamboo_weathered",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_thatch",
+   "id": "jp_m_roof_thatch",
+   "palette_id": "thatch_weathered",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_thatch_cut",
+   "id": "jp_m_roof_thatch_cut",
+   "palette_id": "thatch_weathered",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 988,
+  "Resolution 2": 298,
+  "Resolution 3": 160,
+  "Geometry": 20,
+  "View Geometry": 20,
+  "Fire Geometry": 20
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {
+  "roof": {
+   "t": 1.0,
+   "ov": 1.0,
+   "form": "hogyo",
+   "fam": "thatch",
+   "apex": [
+    1.82,
+    5.28,
+    -1.82
+   ],
+   "finial_top": 6.2
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 988, Resolution 2 298, Resolution 3 160, Geometry 20, View Geometry 20, Fire Geometry 20"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "hay"
+  },
+  {
+   "check": "C4 pitch_deg",
+   "ok": true,
+   "detail": "expected 45.0, measured 45.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

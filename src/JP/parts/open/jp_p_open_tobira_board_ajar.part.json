@@ -1,0 +1,182 @@
+{
+ "id": "jp_p_open_tobira_board_ajar",
+ "part": "jp_p_open_tobira",
+ "variant": "_board_ajar",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_tobira_board_ajar.p3d",
+ "build_list": {
+  "entry": "jp_p_open_tobira",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "static board pair standing ajar (35 / 21 deg): dead-world dressing, a honden left open",
+ "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor (sill); +z = out",
+ "recipe": "tobira.tobira(part, x0, bay, style, swing, height)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.015,
+  1.805,
+  0.0,
+  2.13,
+  -0.055,
+  0.627
+ ],
+ "dims": [
+  {
+   "name": "clear_width_m",
+   "expected": ">=1.00",
+   "measured": 1.602,
+   "tol": 0.01,
+   "source": "PLAYBOOK D1 (leaves open, square to the wall)",
+   "ok": true
+  },
+  {
+   "name": "clear_height_m",
+   "expected": ">=2.00",
+   "measured": 2.0,
+   "tol": 0.01,
+   "source": "PLAYBOOK D2",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ],
+   "note": "kamoi over the doorway; the wall's head rail continues past it"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 168,
+  "Resolution 2": 48,
+  "Resolution 3": 24,
+  "Geometry": 24,
+  "View Geometry": 18,
+  "Fire Geometry": 24
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [
+  "The wall recipe must leave the hole walls.wall_run(openings=[(0.06, 1.76, 0.0, 2.0)]); the part brings its own kamoi (2.00-2.13) and threshold (0.03)."
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 168, Resolution 2 48, Resolution 3 24, Geometry 24, View Geometry 18, Fire Geometry 24"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 clear_width_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.602"
+  },
+  {
+   "check": "C4 clear_height_m",
+   "ok": true,
+   "detail": "expected >=2.00, measured 2.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

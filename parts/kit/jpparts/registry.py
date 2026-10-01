@@ -44,6 +44,11 @@ pits.register(reg)
 # ---- W2P1 (2026-10-01): village-grade shrine + temple parts (parts/W2P1_NOTES.md)
 from . import koran
 koran.register(reg)
+from . import tobira
+tobira.register(reg)
+from . import nagare, ornament
+nagare.register(reg)
+ornament.register(reg)
 try:
     from . import trim
     trim.register(reg)

@@ -1,0 +1,244 @@
+{
+ "id": "jp_p_open_tobira_sankara_in",
+ "part": "jp_p_open_tobira",
+ "variant": "_sankara_in",
+ "group": "open",
+ "p3d": "JP\\parts\\open\\jp_p_open_tobira_sankara_in.p3d",
+ "build_list": {
+  "entry": "jp_p_open_tobira",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "temple hall framed panel doors (sankarado) with a latticed top band, opening IN",
+ "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor (sill); +z = out",
+ "recipe": "tobira.tobira(part, x0, bay, style, swing, height)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.015,
+  1.805,
+  0.0,
+  2.13,
+  -0.122,
+  0.055
+ ],
+ "dims": [
+  {
+   "name": "clear_width_m",
+   "expected": ">=1.00",
+   "measured": 1.602,
+   "tol": 0.01,
+   "source": "PLAYBOOK D1 (leaves open, square to the wall)",
+   "ok": true
+  },
+  {
+   "name": "clear_height_m",
+   "expected": ">=2.00",
+   "measured": 2.0,
+   "tol": 0.01,
+   "source": "PLAYBOOK D2",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "sill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "head",
+   "pos": [
+    0.0,
+    2.0,
+    0.0
+   ],
+   "note": "kamoi over the doorway; the wall's head rail continues past it"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 336,
+  "Resolution 2": 48,
+  "Resolution 3": 24,
+  "Geometry": 24,
+  "Memory": 0,
+  "View Geometry": 18,
+  "Fire Geometry": 24
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [
+  {
+   "source": "DoorsTwin1",
+   "kind": "plank",
+   "display": "door",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "rotation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.5708,
+     "unit": "rad"
+    },
+    {
+     "bone": "doors2",
+     "type": "rotation",
+     "axis_memory": "doors2_axis",
+     "amount": 1.5708,
+     "unit": "rad"
+    }
+   ],
+   "anim_period": 1.4,
+   "init_opened": 0.0,
+   "sound": "doorWoodSlide",
+   "clear_width_m": 1.602,
+   "engine_tested": false,
+   "note": "hinged double door (sankara, swings in 90 deg)"
+  }
+ ],
+ "notes": [
+  "The wall recipe must leave the hole walls.wall_run(openings=[(0.06, 1.76, 0.0, 2.0)]); the part brings its own kamoi (2.00-2.13) and threshold (0.03).",
+  "Rotation leaves, engine-untested (PARTS_GAP_AUDIT §6 risk 4): if they swing the wrong way, swap each bone's axis points."
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 336, Resolution 2 48, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 24"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "4 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "rotation, 2 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep (window / hinged)",
+   "ok": true,
+   "detail": "moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.50 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.44 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m"
+  },
+  {
+   "check": "C4 clear_width_m",
+   "ok": true,
+   "detail": "expected >=1.00, measured 1.602"
+  },
+  {
+   "check": "C4 clear_height_m",
+   "ok": true,
+   "detail": "expected >=2.00, measured 2.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

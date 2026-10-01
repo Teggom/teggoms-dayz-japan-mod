@@ -1,0 +1,105 @@
+{
+ "id": "jp_p_roof_ornament_hoju_kawara",
+ "part": "jp_p_roof_ornament",
+ "variant": "_hoju_kawara",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_hoju_kawara.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_ornament",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "hoju finial in tile (kawara) for tiled / thatched hogyo halls",
+ "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+ "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.2,
+  0.2,
+  0.0,
+  0.92,
+  -0.2,
+  0.2
+ ],
+ "dims": [
+  {
+   "name": "hoju_height_m",
+   "expected": "0.9-1.2 (A)",
+   "measured": 0.92,
+   "tol": 0.01,
+   "source": "build_list",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "ridge",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "datum on the ridge / apex"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 158,
+  "Resolution 2": 148,
+  "Resolution 3": 134
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 158, Resolution 2 148, Resolution 3 134"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C4 hoju_height_m",
+   "ok": true,
+   "detail": "expected 0.9-1.2 (A), measured 0.92"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

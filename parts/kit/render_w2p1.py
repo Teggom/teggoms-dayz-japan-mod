@@ -47,6 +47,54 @@ SHEETS = {
           target=(0.9, 0.3, 1.8), dist=8.0),
         P("jp_p_porch_koran_wakishoji", "Side en run ending in the wakishoji board screen", target=(1.2, 0.9, 0.6)),
     ]),
+    "w2p1_tobira": ("W2P1 jp_p_open_tobira: hinged double doors for honden and halls (shown fully open; rotation, "
+                    "engine-untested)", [
+        P("jp_p_open_tobira_board_out", "Board pair (ita-tobira), strap fittings + ring pulls, opening OUT; kamoi, "
+          "threshold, jamb stops, pivot blocks", target=(0.9, 1.1, 0.3), move=0.0, open_=1.0, human=[2.6, 1.2, 0.0]),
+        P("jp_p_open_tobira_board_in", "The same pair opening IN", target=(0.9, 1.1, 0.0), move=0.0, open_=1.0),
+        P("jp_p_open_tobira_lattice_out", "Latticed doors (koshi-tobira) over a board base, opening OUT",
+          target=(0.9, 1.1, 0.3), move=0.0, open_=1.0),
+        P("jp_p_open_tobira_lattice_in", "Latticed doors opening IN (closed view)", target=(0.9, 1.1, 0.0),
+          move=0.0),
+        P("jp_p_open_tobira_sankara_in", "Temple framed panel doors (sankarado), latticed top band, opening IN "
+          "(closed view)", target=(0.9, 1.1, 0.0), move=0.0),
+        P("jp_p_open_tobira_board_ajar", "Static pair standing ajar (dead-world dressing)", target=(0.9, 1.1, 0.3),
+          move=0.0),
+    ]),
+    "w2p1_roofs": ("W2P1 shrine / temple roofs, straight (village): nagare, kohai, hogyo; ridge ornaments", [
+        P("jp_p_roof_nagare_1ken", "Nagare roof over a 1-ken body (issha), kokera: the front slope runs on over the "
+          "en and kizahashi to two kohai posts on stones; kohai beam, tie beams parallel to the rafters",
+          target=(0.9, 2.2, 0.2), dist=14.0, human=[4.0, 2.6, 0.0]),
+        P("jp_p_roof_nagare_3ken", "Nagare roof over a 3 x 2 ken body (sangen-sha): four posts on the stair-foot line",
+          target=(2.7, 2.2, -0.2), dist=17.0),
+        P("jp_p_roof_nagare_1ken_tile", "Issha nagare roof in sangawara (onigawara, clay bed, fascia)",
+          target=(0.9, 2.2, 0.2), dist=14.0),
+        P("jp_p_roof_kohai_board", "Kohai step canopy (kokera) for any hall front: flatter than the hall roof (0.8 x "
+          "its pitch), its top tucked under the main eave (C12), two posts, kohai beam, tie beams over the en",
+          target=(0.9, 1.8, 1.4), dist=10.0, move=0.6),
+        P("jp_p_roof_kohai_tile", "Kohai in sangawara (tie beams left out: < 2.00 m under them at the en rail)",
+          target=(0.9, 1.8, 1.4), dist=10.0, move=0.6),
+        P("jp_p_roof_forms_hogyo_board_2ken", "Hogyo pyramid roof, kokera, 2 x 2 ken hall: hip rolls, apex cap, "
+          "bronze-type hoju (iron stand-in)", target=(1.8, 3.0, -1.8), dist=14.0, move=0.0, human=[4.6, 1.0, 0.0]),
+        P("jp_p_roof_forms_hogyo_tile_3ken", "Hogyo in sangawara over a 3 x 3 ken hall, tile hip ridges, tile hoju",
+          target=(2.7, 3.2, -2.7), dist=17.0, move=0.0),
+        P("jp_p_roof_forms_hogyo_thatch_2ken", "Thatched hogyo (rural do) with a tile apex cap and hoju",
+          target=(1.8, 3.4, -1.8), dist=14.0, move=0.0),
+        P("jp_p_roof_ornament_chigi_soto", "Okichigi, tips cut vertical (soto-sogi)", target=(0.0, 0.40, 0.0),
+          dist=4.0, move=0.0),
+        P("jp_p_roof_ornament_chigi_uchi", "Okichigi, tips cut horizontal (uchi-sogi)", target=(0.0, 0.40, 0.0),
+          dist=4.0, move=0.0),
+        P("jp_p_roof_ornament_katsuogi_3", "3 katsuogi across a 1-ken ridge (n 2-9 in the generator)",
+          target=(0.9, 0.1, 0.0), dist=4.0, move=0.0),
+        P("jp_p_roof_ornament_katsuogi_5", "5 katsuogi across a 3-ken ridge", target=(2.7, 0.1, 0.0), dist=7.0,
+          move=0.0),
+        P("jp_p_roof_ornament_oniita", "Wooden ridge-end board (oni-ita)", target=(0.0, 0.25, 0.0), dist=2.5,
+          move=0.0),
+        P("jp_p_roof_ornament_oni_hall", "Hall onigawara (0.62 m)", target=(0.0, 0.3, 0.0), dist=2.5, move=0.0),
+        P("jp_p_roof_ornament_hoju_bronze", "Hoju finial: roban, fukubachi, lotus seat, jewel (iron stand-in)",
+          target=(0.0, 0.45, 0.0), dist=3.0, move=0.0),
+        P("jp_p_roof_ornament_hoju_kawara", "Hoju finial in tile", target=(0.0, 0.45, 0.0), dist=3.0, move=0.0),
+    ]),
 }
 
 

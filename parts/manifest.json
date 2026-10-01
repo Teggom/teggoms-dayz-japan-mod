@@ -23609,6 +23609,3043 @@
    "recipe": "koran.en_wrap(part, W, D, depth, drop, style, stair=x) for a whole hall; koran.en_deck / rail / kizahashi / wakishoji for pieces"
   },
   {
+   "id": "jp_p_open_tobira_board_out",
+   "part": "jp_p_open_tobira",
+   "variant": "_board_out",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_tobira_board_out.p3d",
+   "build_list": {
+    "entry": "jp_p_open_tobira",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "honden / hall front: paired board doors (ita-tobira) with strap fittings and ring pulls, opening OUT 90 deg (rotation; engine-untested)",
+   "dims": [
+    {
+     "name": "clear_width_m",
+     "expected": ">=1.00",
+     "measured": 1.602,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (leaves open, square to the wall)",
+     "ok": true
+    },
+    {
+     "name": "clear_height_m",
+     "expected": ">=2.00",
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi over the doorway; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 168,
+    "Resolution 2": 48,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "rotation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      },
+      {
+       "bone": "doors2",
+       "type": "rotation",
+       "axis_memory": "doors2_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      }
+     ],
+     "anim_period": 1.4,
+     "init_opened": 0.0,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.602,
+     "engine_tested": false,
+     "note": "hinged double door (board, swings out 90 deg)"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor (sill); +z = out",
+   "recipe": "tobira.tobira(part, x0, bay, style, swing, height)"
+  },
+  {
+   "id": "jp_p_open_tobira_board_in",
+   "part": "jp_p_open_tobira",
+   "variant": "_board_in",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_tobira_board_in.p3d",
+   "build_list": {
+    "entry": "jp_p_open_tobira",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "the same board pair opening IN (halls whose doors swing into the room)",
+   "dims": [
+    {
+     "name": "clear_width_m",
+     "expected": ">=1.00",
+     "measured": 1.602,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (leaves open, square to the wall)",
+     "ok": true
+    },
+    {
+     "name": "clear_height_m",
+     "expected": ">=2.00",
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi over the doorway; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 168,
+    "Resolution 2": 48,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "rotation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      },
+      {
+       "bone": "doors2",
+       "type": "rotation",
+       "axis_memory": "doors2_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      }
+     ],
+     "anim_period": 1.4,
+     "init_opened": 0.0,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.602,
+     "engine_tested": false,
+     "note": "hinged double door (board, swings in 90 deg)"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor (sill); +z = out",
+   "recipe": "tobira.tobira(part, x0, bay, style, swing, height)"
+  },
+  {
+   "id": "jp_p_open_tobira_lattice_out",
+   "part": "jp_p_open_tobira",
+   "variant": "_lattice_out",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_tobira_lattice_out.p3d",
+   "build_list": {
+    "entry": "jp_p_open_tobira",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "latticed doors (koshi-tobira) over a board base: village honden and haiden fronts; open OUT",
+   "dims": [
+    {
+     "name": "clear_width_m",
+     "expected": ">=1.00",
+     "measured": 1.602,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (leaves open, square to the wall)",
+     "ok": true
+    },
+    {
+     "name": "clear_height_m",
+     "expected": ">=2.00",
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi over the doorway; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 252,
+    "Resolution 2": 48,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "lattice",
+     "display": "door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "rotation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      },
+      {
+       "bone": "doors2",
+       "type": "rotation",
+       "axis_memory": "doors2_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      }
+     ],
+     "anim_period": 1.4,
+     "init_opened": 0.0,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.602,
+     "engine_tested": false,
+     "note": "hinged double door (lattice, swings out 90 deg)"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor (sill); +z = out",
+   "recipe": "tobira.tobira(part, x0, bay, style, swing, height)"
+  },
+  {
+   "id": "jp_p_open_tobira_lattice_in",
+   "part": "jp_p_open_tobira",
+   "variant": "_lattice_in",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_tobira_lattice_in.p3d",
+   "build_list": {
+    "entry": "jp_p_open_tobira",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "latticed doors opening IN",
+   "dims": [
+    {
+     "name": "clear_width_m",
+     "expected": ">=1.00",
+     "measured": 1.602,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (leaves open, square to the wall)",
+     "ok": true
+    },
+    {
+     "name": "clear_height_m",
+     "expected": ">=2.00",
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi over the doorway; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 252,
+    "Resolution 2": 48,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "lattice",
+     "display": "door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "rotation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      },
+      {
+       "bone": "doors2",
+       "type": "rotation",
+       "axis_memory": "doors2_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      }
+     ],
+     "anim_period": 1.4,
+     "init_opened": 0.0,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.602,
+     "engine_tested": false,
+     "note": "hinged double door (lattice, swings in 90 deg)"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor (sill); +z = out",
+   "recipe": "tobira.tobira(part, x0, bay, style, swing, height)"
+  },
+  {
+   "id": "jp_p_open_tobira_sankara_in",
+   "part": "jp_p_open_tobira",
+   "variant": "_sankara_in",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_tobira_sankara_in.p3d",
+   "build_list": {
+    "entry": "jp_p_open_tobira",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "temple hall framed panel doors (sankarado) with a latticed top band, opening IN",
+   "dims": [
+    {
+     "name": "clear_width_m",
+     "expected": ">=1.00",
+     "measured": 1.602,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (leaves open, square to the wall)",
+     "ok": true
+    },
+    {
+     "name": "clear_height_m",
+     "expected": ">=2.00",
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi over the doorway; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_sooted",
+     "id": "jp_m_wood_sooted",
+     "palette_id": "timber_sooted",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 336,
+    "Resolution 2": 48,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "Memory": 0,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Memory",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [
+    {
+     "source": "DoorsTwin1",
+     "kind": "plank",
+     "display": "door",
+     "anims": [
+      {
+       "bone": "doors1",
+       "type": "rotation",
+       "axis_memory": "doors1_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      },
+      {
+       "bone": "doors2",
+       "type": "rotation",
+       "axis_memory": "doors2_axis",
+       "amount": 1.5708,
+       "unit": "rad"
+      }
+     ],
+     "anim_period": 1.4,
+     "init_opened": 0.0,
+     "sound": "doorWoodSlide",
+     "clear_width_m": 1.602,
+     "engine_tested": false,
+     "note": "hinged double door (sankara, swings in 90 deg)"
+    }
+   ],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor (sill); +z = out",
+   "recipe": "tobira.tobira(part, x0, bay, style, swing, height)"
+  },
+  {
+   "id": "jp_p_open_tobira_board_ajar",
+   "part": "jp_p_open_tobira",
+   "variant": "_board_ajar",
+   "group": "open",
+   "p3d": "JP\\parts\\open\\jp_p_open_tobira_board_ajar.p3d",
+   "build_list": {
+    "entry": "jp_p_open_tobira",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "static board pair standing ajar (35 / 21 deg): dead-world dressing, a honden left open",
+   "dims": [
+    {
+     "name": "clear_width_m",
+     "expected": ">=1.00",
+     "measured": 1.602,
+     "tol": 0.01,
+     "source": "PLAYBOOK D1 (leaves open, square to the wall)",
+     "ok": true
+    },
+    {
+     "name": "clear_height_m",
+     "expected": ">=2.00",
+     "measured": 2.0,
+     "tol": 0.01,
+     "source": "PLAYBOOK D2",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "sill",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "head",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "note": "kamoi over the doorway; the wall's head rail continues past it"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 168,
+    "Resolution 2": 48,
+    "Resolution 3": 24,
+    "Geometry": 24,
+    "View Geometry": 18,
+    "Fire Geometry": 24
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "1-ken bay between post nodes x 0 and x 1.82; y 0 = floor (sill); +z = out",
+   "recipe": "tobira.tobira(part, x0, bay, style, swing, height)"
+  },
+  {
+   "id": "jp_p_roof_nagare_1ken",
+   "part": "jp_p_roof_nagare",
+   "variant": "_1ken",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_nagare_1ken.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_nagare",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "issha (1-ken square body) nagare-zukuri honden roof, kokera: the front slope runs on over a 1.365 en and the kizahashi (floor +1.00) to two kohai posts at the stair foot; kohai beam, tie beams parallel to the rafters; straight (village; curve hook for W2P2's sori)",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 24.2,
+     "measured": 24.2277,
+     "tol": 0.1,
+     "source": "PLAYBOOK §4 (board 4-5 sun (A))"
+    },
+    {
+     "name": "front_overhang_m",
+     "expected": 3.33,
+     "measured": 3.33,
+     "tol": 0.01,
+     "source": "kohai line (en + kizahashi) + 0.60"
+    },
+    {
+     "name": "kohai_beam_head_over_grade_m",
+     "expected": ">=2.05",
+     "measured": 2.416,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4 (head room at the stair foot)",
+     "ok": true
+    },
+    {
+     "name": "en_head_under_rafters_m",
+     "expected": ">=2.05",
+     "measured": 2.311,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4 / D5",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -1.82
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -1.82
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      -1.0,
+      2.73
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      -1.0,
+      2.73
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top (eave line) on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      -0.6,
+      3.4095,
+      -0.91
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      2.42,
+      3.4095,
+      -0.91
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 429,
+    "Resolution 2": 231,
+    "Resolution 3": 199,
+    "Geometry": 67,
+    "Roadway": 2,
+    "View Geometry": 67,
+    "Fire Geometry": 67
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "body x 0..W along the ridge, z 0 (front wall line) .. -D; y 0 = hall floor (+1.00 above grade); eave line 2.88; kohai posts at the kizahashi foot",
+   "recipe": "nagare.nagare(part, W, D, front, fam, drop, kohai_xs, curve=None|W2P2 sori)"
+  },
+  {
+   "id": "jp_p_roof_nagare_3ken",
+   "part": "jp_p_roof_nagare",
+   "variant": "_3ken",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_nagare_3ken.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_nagare",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "sangen-sha (3 x 2 ken body) nagare roof: the front slope carried by four posts across the stair-foot line",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 24.2,
+     "measured": 24.2277,
+     "tol": 0.1,
+     "source": "PLAYBOOK §4 (board 4-5 sun (A))"
+    },
+    {
+     "name": "front_overhang_m",
+     "expected": 3.33,
+     "measured": 3.33,
+     "tol": 0.01,
+     "source": "kohai line (en + kizahashi) + 0.60"
+    },
+    {
+     "name": "kohai_beam_head_over_grade_m",
+     "expected": ">=2.05",
+     "measured": 2.416,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4 (head room at the stair foot)",
+     "ok": true
+    },
+    {
+     "name": "en_head_under_rafters_m",
+     "expected": ">=2.05",
+     "measured": 2.311,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4 / D5",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -3.64
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      -1.0,
+      2.73
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      -1.0,
+      2.73
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      -1.0,
+      2.73
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      -1.0,
+      2.73
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top (eave line) on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      -0.6,
+      3.819,
+      -1.82
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      6.06,
+      3.819,
+      -1.82
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kureita",
+     "id": "jp_m_roof_kureita",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 793,
+    "Resolution 2": 355,
+    "Resolution 3": 299,
+    "Geometry": 107,
+    "Roadway": 2,
+    "View Geometry": 107,
+    "Fire Geometry": 107
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "body x 0..W along the ridge, z 0 (front wall line) .. -D; y 0 = hall floor (+1.00 above grade); eave line 2.88; kohai posts at the kizahashi foot",
+   "recipe": "nagare.nagare(part, W, D, front, fam, drop, kohai_xs, curve=None|W2P2 sori)"
+  },
+  {
+   "id": "jp_p_roof_nagare_1ken_tile",
+   "part": "jp_p_roof_nagare",
+   "variant": "_1ken_tile",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_nagare_1ken_tile.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_nagare",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "issha nagare roof in sangawara (a later / town re-roofing; most village honden keep shingle or bark)",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 24.2,
+     "measured": 24.2277,
+     "tol": 0.1,
+     "source": "PLAYBOOK §4 (board 4-5 sun (A))"
+    },
+    {
+     "name": "front_overhang_m",
+     "expected": 3.33,
+     "measured": 3.33,
+     "tol": 0.01,
+     "source": "kohai line (en + kizahashi) + 0.60"
+    },
+    {
+     "name": "kohai_beam_head_over_grade_m",
+     "expected": ">=2.05",
+     "measured": 2.416,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4 (head room at the stair foot)",
+     "ok": true
+    },
+    {
+     "name": "en_head_under_rafters_m",
+     "expected": ">=2.05",
+     "measured": 2.311,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4 / D5",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -1.82
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      -1.82
+     ],
+     "note": "body corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      -1.0,
+      2.73
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      -1.0,
+      2.73
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "keta top (eave line) on the front wall"
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      -0.6,
+      3.4715,
+      -0.91
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      2.42,
+      3.4715,
+      -0.91
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_field",
+     "id": "jp_m_roof_kawara_field",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_shikkui",
+     "id": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 1365,
+    "Resolution 2": 519,
+    "Resolution 3": 265,
+    "Geometry": 58,
+    "Roadway": 2,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "body x 0..W along the ridge, z 0 (front wall line) .. -D; y 0 = hall floor (+1.00 above grade); eave line 2.88; kohai posts at the kizahashi foot",
+   "recipe": "nagare.nagare(part, W, D, front, fam, drop, kohai_xs, curve=None|W2P2 sori)"
+  },
+  {
+   "id": "jp_p_roof_kohai_board",
+   "part": "jp_p_roof_kohai",
+   "variant": "_board",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_kohai_board.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_kohai",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "kohai step canopy (kokera) over a 1-ken stair bay of any hall front: a slope parallel to the hall's front slope, its top tucked under the main eave, verges with bargeboards, two posts, beam and tie beams (haiden, village halls)",
+   "dims": [
+    {
+     "name": "kohai_beam_head_over_grade_m",
+     "expected": ">=2.05",
+     "measured": 2.232,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "tuck_under_main_roof_m",
+     "expected": ">=0.02",
+     "measured": 0.03,
+     "tol": 0.01,
+     "source": "PLAYBOOK §15 T8 (no roof poke, C12)",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "hall front post (tie beam end)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      -0.6,
+      2.275
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "hall front post (tie beam end)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      -0.6,
+      2.275
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "the hall's keta top on the front wall"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 226,
+    "Resolution 2": 142,
+    "Resolution 3": 136,
+    "Geometry": 52,
+    "Roadway": 1,
+    "View Geometry": 52,
+    "Fire Geometry": 52
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "hall front wall line z 0, the stair bay x 0..1.82; y 0 = hall floor (+0.60 above grade); the main roof's front slope (pitch 0.45, overhang 0.90) is the shell's",
+   "recipe": "nagare.kohai(part, xa, xb, z_post, main_t, main_ov, eave_y, fam, drop)"
+  },
+  {
+   "id": "jp_p_roof_kohai_tile",
+   "part": "jp_p_roof_kohai",
+   "variant": "_tile",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_kohai_tile.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_kohai",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "kohai step canopy in sangawara for tiled temple halls (clay bed + fascia, T1)",
+   "dims": [
+    {
+     "name": "kohai_beam_head_over_grade_m",
+     "expected": ">=2.05",
+     "measured": 2.119,
+     "tol": 0.01,
+     "source": "PLAYBOOK D4",
+     "ok": true
+    },
+    {
+     "name": "tuck_under_main_roof_m",
+     "expected": ">=0.02",
+     "measured": 0.03,
+     "tol": 0.01,
+     "source": "PLAYBOOK §15 T8 (no roof poke, C12)",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "hall front post (tie beam end)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      -0.6,
+      2.275
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ],
+     "note": "hall front post (tie beam end)"
+    },
+    {
+     "type": "post",
+     "pos": [
+      1.82,
+      -0.6,
+      2.275
+     ],
+     "note": "kohai post (grade)",
+     "hidden": true
+    },
+    {
+     "type": "eave",
+     "pos": [
+      0.0,
+      2.88,
+      0.0
+     ],
+     "note": "the hall's keta top on the front wall"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_field",
+     "id": "jp_m_roof_kawara_field",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "stone_cut",
+     "id": "jp_m_stone_cut",
+     "palette_id": "stone_granite",
+     "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 580,
+    "Resolution 2": 223,
+    "Resolution 3": 134,
+    "Geometry": 40,
+    "Roadway": 1,
+    "View Geometry": 40,
+    "Fire Geometry": 40
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "hall front wall line z 0, the stair bay x 0..1.82; y 0 = hall floor (+0.60 above grade); the main roof's front slope (pitch 0.45, overhang 0.90) is the shell's",
+   "recipe": "nagare.kohai(part, xa, xb, z_post, main_t, main_ov, eave_y, fam, drop)"
+  },
+  {
+   "id": "jp_p_roof_forms_hogyo_board_2ken",
+   "part": "jp_p_roof_forms_hogyo",
+   "variant": "_board_2ken",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_forms_hogyo_board_2ken.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_forms_hogyo",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "hogyo pyramid roof, kokera, over a 2 x 2 ken hall (Jizo-do, Kannon-do, village do), bronze-type hoju (iron stand-in)",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 24.2,
+     "measured": 24.2277,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -3.64
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "apex",
+     "pos": [
+      1.82,
+      3.909,
+      -1.82
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kokera",
+     "id": "jp_m_roof_kokera",
+     "palette_id": "roof_board_silver",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 796,
+    "Resolution 2": 258,
+    "Resolution 3": 244,
+    "Geometry": 20,
+    "Roadway": 4,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "square footprint x 0..W, z 0 .. -W; y 0 = floor; eave line 2.88",
+   "recipe": "nagare.hogyo(part, W, fam, apex)"
+  },
+  {
+   "id": "jp_p_roof_forms_hogyo_tile_3ken",
+   "part": "jp_p_roof_forms_hogyo",
+   "variant": "_tile_3ken",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_forms_hogyo_tile_3ken.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_forms_hogyo",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "hogyo roof in sangawara over a 3 x 3 ken hall, tile hip ridges, tile hoju",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 24.2,
+     "measured": 24.2277,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -5.46
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      5.46,
+      0.0,
+      -5.46
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "apex",
+     "pos": [
+      2.73,
+      4.3805,
+      -2.73
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_far",
+     "id": "jp_m_roof_kawara_far",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara_field",
+     "id": "jp_m_roof_kawara_field",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_arakabe",
+     "id": "jp_m_wall_arakabe",
+     "palette_id": "earth_wall_aged",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wall_shikkui",
+     "id": "jp_m_wall_shikkui",
+     "palette_id": "shikkui_white",
+     "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 3624,
+    "Resolution 2": 606,
+    "Resolution 3": 416,
+    "Geometry": 20,
+    "Roadway": 4,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "Roadway",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": true,
+   "doors": [],
+   "deviation": null,
+   "datum": "square footprint x 0..W, z 0 .. -W; y 0 = floor; eave line 2.88",
+   "recipe": "nagare.hogyo(part, W, fam, apex)"
+  },
+  {
+   "id": "jp_p_roof_forms_hogyo_thatch_2ken",
+   "part": "jp_p_roof_forms_hogyo",
+   "variant": "_thatch_2ken",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_forms_hogyo_thatch_2ken.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_forms_hogyo",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "thatched hogyo (rural do) with a tile cap and hoju",
+   "dims": [
+    {
+     "name": "pitch_deg",
+     "expected": 45.0,
+     "measured": 45.0,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      0.0
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      0.0,
+      0.0,
+      -3.64
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "post",
+     "pos": [
+      3.64,
+      0.0,
+      -3.64
+     ],
+     "note": "footprint corner node"
+    },
+    {
+     "type": "apex",
+     "pos": [
+      1.82,
+      5.28,
+      -1.82
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "key": "bamboo_weathered",
+     "id": "jp_m_bamboo_weathered",
+     "palette_id": "bamboo_weathered",
+     "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_thatch",
+     "id": "jp_m_roof_thatch",
+     "palette_id": "thatch_weathered",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "roof_thatch_cut",
+     "id": "jp_m_roof_thatch_cut",
+     "palette_id": "thatch_weathered",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_thatch_cut<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    },
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 988,
+    "Resolution 2": 298,
+    "Resolution 3": 160,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3",
+    "Geometry",
+    "View Geometry",
+    "Fire Geometry"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "square footprint x 0..W, z 0 .. -W; y 0 = floor; eave line 2.88",
+   "recipe": "nagare.hogyo(part, W, fam, apex)"
+  },
+  {
+   "id": "jp_p_roof_ornament_chigi_soto",
+   "part": "jp_p_roof_ornament",
+   "variant": "_chigi_soto",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_chigi_soto.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "okichigi pair at one gable end, tips cut VERTICAL (soto-sogi; male kami by the Ise convention): two crossed boards astride the ridge, lower ends on the slopes",
+   "dims": [
+    {
+     "name": "chigi_rise_over_ridge_m",
+     "expected": "0.6-0.8 (A)",
+     "measured": 0.872,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 12,
+    "Resolution 2": 12,
+    "Resolution 3": 12
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
+   "id": "jp_p_roof_ornament_chigi_uchi",
+   "part": "jp_p_roof_ornament",
+   "variant": "_chigi_uchi",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_chigi_uchi.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "okichigi pair, tips cut HORIZONTAL (uchi-sogi; female kami)",
+   "dims": [
+    {
+     "name": "chigi_rise_over_ridge_m",
+     "expected": "0.6-0.8 (A)",
+     "measured": 0.716,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 12,
+    "Resolution 2": 12,
+    "Resolution 3": 12
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
+   "id": "jp_p_roof_ornament_katsuogi_2",
+   "part": "jp_p_roof_ornament",
+   "variant": "_katsuogi_2",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_katsuogi_2.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "2 katsuogi logs across a 1-ken ridge (even: with uchi-sogi chigi)",
+   "dims": [
+    {
+     "name": "katsuogi_count",
+     "expected": 2,
+     "measured": 2.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 84,
+    "Resolution 2": 84,
+    "Resolution 3": 28
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
+   "id": "jp_p_roof_ornament_katsuogi_3",
+   "part": "jp_p_roof_ornament",
+   "variant": "_katsuogi_3",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_katsuogi_3.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "3 katsuogi logs across a 1-ken ridge (odd: with soto-sogi chigi); generator takes n 2-9",
+   "dims": [
+    {
+     "name": "katsuogi_count",
+     "expected": 3,
+     "measured": 3.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      1.82,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 126,
+    "Resolution 3": 42
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
+   "id": "jp_p_roof_ornament_katsuogi_5",
+   "part": "jp_p_roof_ornament",
+   "variant": "_katsuogi_5",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_katsuogi_5.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "5 katsuogi logs across a 3-ken ridge",
+   "dims": [
+    {
+     "name": "katsuogi_count",
+     "expected": 5,
+     "measured": 5.0,
+     "tol": 0,
+     "source": "build_list"
+    }
+   ],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      5.46,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 210,
+    "Resolution 2": 210,
+    "Resolution 3": 70
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
+   "id": "jp_p_roof_ornament_oniita",
+   "part": "jp_p_roof_ornament",
+   "variant": "_oniita",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_oniita.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "wooden ridge-end board (oni-ita) for board / bark ridges",
+   "dims": [],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "wood_weathered",
+     "id": "jp_m_wood_weathered",
+     "palette_id": "timber_weathered",
+     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 19,
+    "Resolution 2": 13,
+    "Resolution 3": 13
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
+   "id": "jp_p_roof_ornament_oni_hall",
+   "part": "jp_p_roof_ornament",
+   "variant": "_oni_hall",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_oni_hall.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    2,
+    3
+   ],
+   "used_for": "large onigawara (0.62 m) for a tiled hall ridge (kawara.onigawara at hall size)",
+   "dims": [],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 37,
+    "Resolution 2": 31,
+    "Resolution 3": 21
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
+   "id": "jp_p_roof_ornament_hoju_bronze",
+   "part": "jp_p_roof_ornament",
+   "variant": "_hoju_bronze",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_hoju_bronze.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "hoju finial for a hogyo hall: roban, fukubachi, lotus seat, jewel; bronze type (iron stand-in: no bronze material)",
+   "dims": [
+    {
+     "name": "hoju_height_m",
+     "expected": "0.9-1.2 (A)",
+     "measured": 0.92,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "metal_iron",
+     "id": "jp_m_metal_iron",
+     "palette_id": "iron_black",
+     "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 158,
+    "Resolution 2": 148,
+    "Resolution 3": 134
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
+   "id": "jp_p_roof_ornament_hoju_kawara",
+   "part": "jp_p_roof_ornament",
+   "variant": "_hoju_kawara",
+   "group": "roof",
+   "p3d": "JP\\parts\\roof\\jp_p_roof_ornament_hoju_kawara.p3d",
+   "build_list": {
+    "entry": "jp_p_roof_ornament",
+    "variant": null,
+    "differs_by": null,
+    "priority": null,
+    "importance": null,
+    "refs": []
+   },
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "used_for": "hoju finial in tile (kawara) for tiled / thatched hogyo halls",
+   "dims": [
+    {
+     "name": "hoju_height_m",
+     "expected": "0.9-1.2 (A)",
+     "measured": 0.92,
+     "tol": 0.01,
+     "source": "build_list",
+     "ok": true
+    }
+   ],
+   "connectors": [
+    {
+     "type": "ridge",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "note": "datum on the ridge / apex"
+    }
+   ],
+   "materials": [
+    {
+     "key": "roof_kawara",
+     "id": "jp_m_roof_kawara",
+     "palette_id": "kawara_ibushi",
+     "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+     "default_wear": "_w1",
+     "wear_selectable": [
+      "_w0",
+      "_w1",
+      "_w2"
+     ]
+    }
+   ],
+   "lod_faces": {
+    "Resolution 1": 158,
+    "Resolution 2": 148,
+    "Resolution 3": 134
+   },
+   "contributes": [
+    "Resolution 1",
+    "Resolution 2",
+    "Resolution 3"
+   ],
+   "walkable": false,
+   "doors": [],
+   "deviation": null,
+   "datum": "ridge apex (covering top at the ridge) at the origin; ridge along x; pitch 0.45 (24.2 deg)",
+   "recipe": "ornament.chigi / katsuogi / oniita / oni_hall / hoju (see the module docstring)"
+  },
+  {
    "id": "jp_p_trim_grime_wall",
    "part": "jp_p_trim_grime",
    "variant": "_wall",

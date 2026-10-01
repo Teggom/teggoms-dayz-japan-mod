@@ -3170,6 +3170,406 @@
      "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
+  },
+  {
+   "id": "jp_p_open_tobira_board_out",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 168, Resolution 2 48, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 24"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "rotation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.04 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.56 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.44 m"
+    },
+    {
+     "check": "C4 clear_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.602"
+    },
+    {
+     "check": "C4 clear_height_m",
+     "ok": true,
+     "detail": "expected >=2.00, measured 2.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_tobira_board_in",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 168, Resolution 2 48, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 24"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "rotation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.50 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.44 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m"
+    },
+    {
+     "check": "C4 clear_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.602"
+    },
+    {
+     "check": "C4 clear_height_m",
+     "ok": true,
+     "detail": "expected >=2.00, measured 2.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_tobira_lattice_out",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 252, Resolution 2 48, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 24"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "rotation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.04 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.56 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.44 m"
+    },
+    {
+     "check": "C4 clear_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.602"
+    },
+    {
+     "check": "C4 clear_height_m",
+     "ok": true,
+     "detail": "expected >=2.00, measured 2.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_tobira_lattice_in",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 252, Resolution 2 48, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 24"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "rotation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.50 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.44 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m"
+    },
+    {
+     "check": "C4 clear_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.602"
+    },
+    {
+     "check": "C4 clear_height_m",
+     "ok": true,
+     "detail": "expected >=2.00, measured 2.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_tobira_sankara_in",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 336, Resolution 2 48, Resolution 3 24, Geometry 24, Memory 0, View Geometry 18, Fire Geometry 24"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 door doors1 selections+memory",
+     "ok": true,
+     "detail": "rotation, 2 bone(s), axis/action/leaf points"
+    },
+    {
+     "check": "C7 door doors1 sweep (window / hinged)",
+     "ok": true,
+     "detail": "moves closed -> open without touching other geometry"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (open)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.50 m"
+    },
+    {
+     "check": "C10 door doors1 reachable from both sides (closed)",
+     "ok": true,
+     "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.44 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m"
+    },
+    {
+     "check": "C4 clear_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.602"
+    },
+    {
+     "check": "C4 clear_height_m",
+     "ok": true,
+     "detail": "expected >=2.00, measured 2.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_open_tobira_board_ajar",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 168, Resolution 2 48, Resolution 3 24, Geometry 24, View Geometry 18, Fire Geometry 24"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 clear_width_m",
+     "ok": true,
+     "detail": "expected >=1.00, measured 1.602"
+    },
+    {
+     "check": "C4 clear_height_m",
+     "ok": true,
+     "detail": "expected >=2.00, measured 2.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "4 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
   }
  ]
 }

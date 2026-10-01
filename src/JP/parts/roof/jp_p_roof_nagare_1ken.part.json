@@ -1,0 +1,326 @@
+{
+ "id": "jp_p_roof_nagare_1ken",
+ "part": "jp_p_roof_nagare",
+ "variant": "_1ken",
+ "group": "roof",
+ "p3d": "JP\\parts\\roof\\jp_p_roof_nagare_1ken.p3d",
+ "build_list": {
+  "entry": "jp_p_roof_nagare",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "issha (1-ken square body) nagare-zukuri honden roof, kokera: the front slope runs on over a 1.365 en and the kizahashi (floor +1.00) to two kohai posts at the stair foot; kohai beam, tie beams parallel to the rafters; straight (village; curve hook for W2P2's sori)",
+ "datum": "body x 0..W along the ridge, z 0 (front wall line) .. -D; y 0 = hall floor (+1.00 above grade); eave line 2.88; kohai posts at the kizahashi foot",
+ "recipe": "nagare.nagare(part, W, D, front, fam, drop, kohai_xs, curve=None|W2P2 sori)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.67,
+  2.49,
+  -1.12,
+  3.49,
+  -2.631,
+  3.391
+ ],
+ "dims": [
+  {
+   "name": "pitch_deg",
+   "expected": 24.2,
+   "measured": 24.2277,
+   "tol": 0.1,
+   "source": "PLAYBOOK §4 (board 4-5 sun (A))"
+  },
+  {
+   "name": "front_overhang_m",
+   "expected": 3.33,
+   "measured": 3.33,
+   "tol": 0.01,
+   "source": "kohai line (en + kizahashi) + 0.60"
+  },
+  {
+   "name": "kohai_beam_head_over_grade_m",
+   "expected": ">=2.05",
+   "measured": 2.416,
+   "tol": 0.01,
+   "source": "PLAYBOOK D4 (head room at the stair foot)",
+   "ok": true
+  },
+  {
+   "name": "en_head_under_rafters_m",
+   "expected": ">=2.05",
+   "measured": 2.311,
+   "tol": 0.01,
+   "source": "PLAYBOOK D4 / D5",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "body corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "note": "body corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -1.82
+   ],
+   "note": "body corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    -1.82
+   ],
+   "note": "body corner node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    -1.0,
+    2.73
+   ],
+   "note": "kohai post (grade)",
+   "hidden": true
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    -1.0,
+    2.73
+   ],
+   "note": "kohai post (grade)",
+   "hidden": true
+  },
+  {
+   "type": "eave",
+   "pos": [
+    0.0,
+    2.88,
+    0.0
+   ],
+   "note": "keta top (eave line) on the front wall"
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    -0.6,
+    3.4095,
+    -0.91
+   ]
+  },
+  {
+   "type": "ridge",
+   "pos": [
+    2.42,
+    3.4095,
+    -0.91
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kokera",
+   "id": "jp_m_roof_kokera",
+   "palette_id": "roof_board_silver",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kureita",
+   "id": "jp_m_roof_kureita",
+   "palette_id": "roof_board_silver",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 429,
+  "Resolution 2": 231,
+  "Resolution 3": 199,
+  "Geometry": 67,
+  "Roadway": 2,
+  "View Geometry": 67,
+  "Fire Geometry": 67
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [
+  "Curve hook: nagare.nagare(..., curve=fn) hands nagare_spec(...) to fn(part, spec) (W2P2's sori)."
+ ],
+ "extra": {
+  "roof": {
+   "slopes": [
+    "front",
+    "back"
+   ],
+   "t": 0.45,
+   "ov": 3.33,
+   "back_ov": 0.75,
+   "gov": [
+    0.6,
+    0.6
+   ],
+   "form": "nagare",
+   "fam": "itabuki",
+   "ridge": [
+    [
+     -0.6,
+     3.4095000000000004,
+     -0.91
+    ],
+    [
+     2.42,
+     3.4095000000000004,
+     -0.91
+    ]
+   ],
+   "ridge_top": 3.4895000000000005,
+   "kohai": {
+    "post_top": 1.4160000000000004,
+    "beam": [
+     1.4160000000000004,
+     1.6160000000000003
+    ],
+    "xs": [
+     0.0,
+     1.82
+    ],
+    "z": 2.73
+   }
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 429, Resolution 2 231, Resolution 3 199, Geometry 67, Roadway 2, View Geometry 67, Fire Geometry 67"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "8 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "32/32 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 pitch_deg",
+   "ok": true,
+   "detail": "expected 24.2, measured 24.2277"
+  },
+  {
+   "check": "C4 front_overhang_m",
+   "ok": true,
+   "detail": "expected 3.33, measured 3.33"
+  },
+  {
+   "check": "C4 kohai_beam_head_over_grade_m",
+   "ok": true,
+   "detail": "expected >=2.05, measured 2.416"
+  },
+  {
+   "check": "C4 en_head_under_rafters_m",
+   "ok": true,
+   "detail": "expected >=2.05, measured 2.311"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "9 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}
