@@ -1,0 +1,140 @@
+{
+ "id": "jp_f_bonsho",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sacred",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_bonsho_s.p3d",
+   "class": "StaticObj_JP_F_Bonsho_S",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Temple bell (bonsho), village size, with the striker log",
+   "anchor": "hang",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 342,
+    "Resolution 2": 30,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -1.53,
+    0.302,
+    -1.15,
+    0.0,
+    -0.28,
+    0.28
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -1.53,
+    -0.259,
+    0.259,
+    0.259
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 400.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 0.95,
+     "measured": 0.95,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "d",
+     "expected": 0.56,
+     "measured": 0.56,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the temple bell (bonsho) on the shoro's bell_hook (mount beam: the memory point), the striker log on its ropes at the -x side; bell bottom 1.15 m under the hook"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_bonsho_s.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "hang_len": 1.15
+  },
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_bonsho_l.p3d",
+   "class": "StaticObj_JP_F_Bonsho_L",
+   "variant": "l",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Temple bell (bonsho), town size, with the striker log",
+   "anchor": "hang",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 342,
+    "Resolution 2": 30,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -1.61,
+    0.381,
+    -1.4,
+    0.0,
+    -0.36,
+    0.36
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -1.61,
+    -0.333,
+    0.333,
+    0.333
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 400.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "d",
+     "expected": 0.72,
+     "measured": 0.72,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the temple bell (bonsho) on the shoro's bell_hook (mount beam: the memory point), the striker log on its ropes at the -x side; bell bottom 1.40 m under the hook"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_bonsho_l.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "hang_len": 1.4
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

@@ -3017,4 +3017,312 @@ class CfgVehicles
 		displayName="Hanging signboard (Buddhist goods (butsugu)), one cord gone, faded";
 		model="\JP\furniture\shopsign\jp_f_kanban_butsugu_askew.p3d";
 	};
+	// jp_f_saisen_bako (sacred)
+	class StaticObj_JP_F_Saisen_Bako_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Offering box (saisen-bako), large";
+		model="\JP\furniture\sacred\jp_f_saisen_bako_l.p3d";
+	};
+	class StaticObj_JP_F_Saisen_Bako_M: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Offering box, medium";
+		model="\JP\furniture\sacred\jp_f_saisen_bako_m.p3d";
+	};
+	class StaticObj_JP_F_Saisen_Bako_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Donation box, small";
+		model="\JP\furniture\sacred\jp_f_saisen_bako_s.p3d";
+	};
+	// jp_f_suzu_rope (sacred)
+	class StaticObj_JP_F_Suzu_Rope: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine bell with its pull rope";
+		model="\JP\furniture\sacred\jp_f_suzu_rope.p3d";
+	};
+	class StaticObj_JP_F_Suzu_Rope_Faded: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine bell, the rope faded";
+		model="\JP\furniture\sacred\jp_f_suzu_rope_faded.p3d";
+	};
+	// jp_f_odaiko (sacred)
+	class StaticObj_JP_F_Odaiko: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Big drum (odaiko) on its stand";
+		model="\JP\furniture\sacred\jp_f_odaiko.p3d";
+	};
+	class StaticObj_JP_F_Kagura_Drums: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Kagura drum on its stand + flute";
+		model="\JP\furniture\sacred\jp_f_kagura_drums.p3d";
+	};
+	// jp_f_gaku (sacred)
+	class StaticObj_JP_F_Gaku_Hachimangu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shrine name board: Hachimangu";
+		model="\JP\furniture\sacred\jp_f_gaku_hachimangu.p3d";
+	};
+	class StaticObj_JP_F_Gaku_Nenbutsu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hall plaque: Namu Amida Butsu";
+		model="\JP\furniture\sacred\jp_f_gaku_nenbutsu.p3d";
+	};
+	class StaticObj_JP_F_Gaku_Worn_H: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Name board, text weathered off (horizontal)";
+		model="\JP\furniture\sacred\jp_f_gaku_worn_h.p3d";
+	};
+	// jp_f_hassokuan (sacred)
+	class StaticObj_JP_F_Hassokuan_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Offering table (hassoku-an) with offerings, as left";
+		model="\JP\furniture\sacred\jp_f_hassokuan_s.p3d";
+	};
+	class StaticObj_JP_F_Hassokuan_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Offering table, wide, with offerings";
+		model="\JP\furniture\sacred\jp_f_hassokuan_l.p3d";
+	};
+	// jp_f_shintai_zushi (sacred)
+	class StaticObj_JP_F_Shintai_Zushi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sanctum cabinet with mirror and gohei";
+		model="\JP\furniture\sacred\jp_f_shintai_zushi.p3d";
+	};
+	class StaticObj_JP_F_Shintai_Zushi_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sanctum cabinet, small";
+		model="\JP\furniture\sacred\jp_f_shintai_zushi_s.p3d";
+	};
+	// jp_f_ema_rail (sacred)
+	class StaticObj_JP_F_Ema_Rail: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Votive boards (ema) on a rail";
+		model="\JP\furniture\sacred\jp_f_ema_rail.p3d";
+	};
+	// jp_f_kagura_masks (sacred)
+	class StaticObj_JP_F_Kagura_Masks: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Kagura masks and bell tree on pegs";
+		model="\JP\furniture\sacred\jp_f_kagura_masks.p3d";
+	};
+	// jp_f_dais (sacred)
+	class StaticObj_JP_F_Dais_Amida: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Altar dais with Amida in its zushi (Jodo)";
+		model="\JP\furniture\sacred\jp_f_dais_amida.p3d";
+	};
+	class StaticObj_JP_F_Dais_Shaka: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Altar dais with Shaka in its zushi (Zen)";
+		model="\JP\furniture\sacred\jp_f_dais_shaka.p3d";
+	};
+	class StaticObj_JP_F_Dais_Kannon: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Altar dais with a standing Kannon";
+		model="\JP\furniture\sacred\jp_f_dais_kannon.p3d";
+	};
+	class StaticObj_JP_F_Dais_Jizo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Altar dais with a standing Jizo";
+		model="\JP\furniture\sacred\jp_f_dais_jizo.p3d";
+	};
+	// jp_f_tengai (sacred)
+	class StaticObj_JP_F_Tengai: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Canopy (tengai) over the image";
+		model="\JP\furniture\sacred\jp_f_tengai.p3d";
+	};
+	// jp_f_sutra_desk (sacred)
+	class StaticObj_JP_F_Sutra_Desk: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sutra desk with sutras, bowl gong and mokugyo";
+		model="\JP\furniture\sacred\jp_f_sutra_desk.p3d";
+	};
+	class StaticObj_JP_F_Mokugyo_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Big round mokugyo on its cushion (Zen)";
+		model="\JP\furniture\sacred\jp_f_mokugyo_l.p3d";
+	};
+	// jp_f_waniguchi (sacred)
+	class StaticObj_JP_F_Waniguchi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Flat bronze gong (waniguchi) with its rope";
+		model="\JP\furniture\sacred\jp_f_waniguchi.p3d";
+	};
+	// jp_f_bonsho (sacred)
+	class StaticObj_JP_F_Bonsho_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple bell (bonsho), village size, with the striker log";
+		model="\JP\furniture\sacred\jp_f_bonsho_s.p3d";
+	};
+	class StaticObj_JP_F_Bonsho_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Temple bell (bonsho), town size, with the striker log";
+		model="\JP\furniture\sacred\jp_f_bonsho_l.p3d";
+	};
+	// jp_f_zen_signals (sacred)
+	class StaticObj_JP_F_Gyoban: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Zen fish board (gyoban) with mallet";
+		model="\JP\furniture\sacred\jp_f_gyoban.p3d";
+	};
+	class StaticObj_JP_F_Umpan: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Zen cloud gong (umpan)";
+		model="\JP\furniture\sacred\jp_f_umpan.p3d";
+	};
+	// jp_f_ofuda_stack (sacred)
+	class StaticObj_JP_F_Ofuda_Stack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Talisman stacks, amulets, print block";
+		model="\JP\furniture\sacred\jp_f_ofuda_stack.p3d";
+	};
+	// jp_f_forge (civicfit)
+	class StaticObj_JP_F_Forge: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Forge hearth (hodo), cold";
+		model="\JP\furniture\civicfit\jp_f_forge.p3d";
+	};
+	class StaticObj_JP_F_Forge_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Forge hearth (hodo), swordsmith, cold";
+		model="\JP\furniture\civicfit\jp_f_forge_l.p3d";
+	};
+	// jp_f_fuigo (civicfit)
+	class StaticObj_JP_F_Fuigo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Box bellows (fuigo)";
+		model="\JP\furniture\civicfit\jp_f_fuigo.p3d";
+	};
+	class StaticObj_JP_F_Fuigo_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Box bellows (fuigo), large";
+		model="\JP\furniture\civicfit\jp_f_fuigo_l.p3d";
+	};
+	class StaticObj_JP_F_Fuigo_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Box bellows, lid askew, rod pulled out";
+		model="\JP\furniture\civicfit\jp_f_fuigo_ab.p3d";
+	};
+	// jp_f_anvil (civicfit)
+	class StaticObj_JP_F_Anvil: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Anvil in its stump, tongs on the stump";
+		model="\JP\furniture\civicfit\jp_f_anvil.p3d";
+	};
+	class StaticObj_JP_F_Anvil_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Anvil in its stump, large";
+		model="\JP\furniture\civicfit\jp_f_anvil_l.p3d";
+	};
+	// jp_f_mizubune (civicfit)
+	class StaticObj_JP_F_Mizubune: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Long quench trough, dry";
+		model="\JP\furniture\civicfit\jp_f_mizubune.p3d";
+	};
+	// jp_f_tongs_wall (civicfit)
+	class StaticObj_JP_F_Tongs_Wall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Smith's tongs, hammers and sickles on pegs";
+		model="\JP\furniture\civicfit\jp_f_tongs_wall.p3d";
+	};
+	class StaticObj_JP_F_Tongs_Wall_Taken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Smith's tool wall, half taken";
+		model="\JP\furniture\civicfit\jp_f_tongs_wall_taken.p3d";
+	};
+	// jp_f_tsuchioki (civicfit)
+	class StaticObj_JP_F_Tsuchioki: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clay-coating trough with whetstones";
+		model="\JP\furniture\civicfit\jp_f_tsuchioki.p3d";
+	};
+	// jp_f_blade_rack (civicfit)
+	class StaticObj_JP_F_Blade_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rack of bare blades";
+		model="\JP\furniture\civicfit\jp_f_blade_rack.p3d";
+	};
+	class StaticObj_JP_F_Blade_Rack_Empty: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Blade rack, emptied";
+		model="\JP\furniture\civicfit\jp_f_blade_rack_empty.p3d";
+	};
+	// jp_f_shimenawa_hang (civicfit)
+	class StaticObj_JP_F_Shimenawa_Hang: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Straw rope with streamers, hung from a beam";
+		model="\JP\furniture\civicfit\jp_f_shimenawa_hang.p3d";
+	};
+	// jp_f_mitsudogu (civicfit)
+	class StaticObj_JP_F_Mitsudogu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="The three capture tools on their rack";
+		model="\JP\furniture\civicfit\jp_f_mitsudogu.p3d";
+	};
+	class StaticObj_JP_F_Mitsudogu_Taken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Capture tools rack, one gone";
+		model="\JP\furniture\civicfit\jp_f_mitsudogu_taken.p3d";
+	};
+	// jp_f_ridge_ladder (civicfit)
+	class StaticObj_JP_F_Ridge_Ladder: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fire ladder with alarm bell on a ridge";
+		model="\JP\furniture\civicfit\jp_f_ridge_ladder.p3d";
+	};
+	// jp_f_hishaku_rack (civicfit)
+	class StaticObj_JP_F_Hishaku_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo ladles on their rack";
+		model="\JP\furniture\civicfit\jp_f_hishaku_rack.p3d";
+	};
 };

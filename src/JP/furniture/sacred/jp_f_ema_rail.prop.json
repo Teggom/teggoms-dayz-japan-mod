@@ -1,0 +1,65 @@
+{
+ "id": "jp_f_ema_rail",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sacred",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_ema_rail.p3d",
+   "class": "StaticObj_JP_F_Ema_Rail",
+   "variant": "rail",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Votive boards (ema) on a rail",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 198,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.6,
+    0.6,
+    1.406,
+    1.6,
+    0.0,
+    0.061
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "votive boards (ema) on a rail on the haiden wall (mount wall), weathered"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_ema_rail.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

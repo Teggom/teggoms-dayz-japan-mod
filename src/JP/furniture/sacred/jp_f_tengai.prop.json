@@ -1,0 +1,66 @@
+{
+ "id": "jp_f_tengai",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sacred",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_tengai.p3d",
+   "class": "StaticObj_JP_F_Tengai",
+   "variant": "std",
+   "state": "dusty",
+   "abandoned": true,
+   "display": "Canopy (tengai) over the image",
+   "anchor": "hang",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 278,
+    "Resolution 2": 12
+   },
+   "bbox": [
+    -0.589,
+    0.589,
+    -0.72,
+    0.0,
+    -0.589,
+    0.589
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "size",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "canopy (tengai) over the image: mount beam (the hall ceiling over the dais); bronze fringe"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_tengai.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "hang_len": 0.72
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

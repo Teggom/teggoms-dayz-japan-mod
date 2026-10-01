@@ -1,0 +1,66 @@
+{
+ "id": "jp_f_shimenawa_hang",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "civicfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_shimenawa_hang.p3d",
+   "class": "StaticObj_JP_F_Shimenawa_Hang",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Straw rope with streamers, hung from a beam",
+   "anchor": "hang",
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 1014,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.809,
+    0.809,
+    -0.555,
+    0.0,
+    -0.04,
+    0.04
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.6,
+     "measured": 1.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "straw rope with paper streamers hung from the tie beam over the forge (mount beam)"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_shimenawa_hang.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "hang_len": 0.555
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

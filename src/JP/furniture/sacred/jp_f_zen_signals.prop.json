@@ -1,0 +1,110 @@
+{
+ "id": "jp_f_zen_signals",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sacred",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_gyoban.p3d",
+   "class": "StaticObj_JP_F_Gyoban",
+   "variant": "fish",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Zen fish board (gyoban) with mallet",
+   "anchor": "hang",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 99,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.465,
+    0.44,
+    -0.95,
+    0.0,
+    -0.044,
+    0.044
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "length",
+     "expected": 0.88,
+     "measured": 0.88,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "Zen wooden fish board (gyoban / mokuhan) with its mallet, hung by the kuri entrance (mount beam)"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_gyoban.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "hang_len": 0.95
+  },
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_umpan.p3d",
+   "class": "StaticObj_JP_F_Umpan",
+   "variant": "cloud",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Zen cloud gong (umpan)",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 110,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.24,
+    0.24,
+    -0.47,
+    0.0,
+    -0.012,
+    0.012
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "width",
+     "expected": 0.46,
+     "measured": 0.46,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "Zen cloud-shaped bronze gong (umpan) hung at the kuri (mount beam)"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_umpan.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "hang_len": 0.47
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

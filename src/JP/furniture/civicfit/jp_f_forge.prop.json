@@ -1,0 +1,178 @@
+{
+ "id": "jp_f_forge",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "civicfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_forge.p3d",
+   "class": "StaticObj_JP_F_Forge",
+   "variant": "smithy",
+   "state": "cold",
+   "abandoned": true,
+   "display": "Forge hearth (hodo), cold",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 36,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.67,
+    0.55,
+    0.0,
+    0.55,
+    -0.45,
+    0.45
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.55,
+    -0.45,
+    0.55,
+    0.45
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 400.0,
+   "loot_surfaces": [
+    {
+     "name": "ledge",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      0.06,
+      -0.35,
+      0.49,
+      0.35
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.275,
+       0.55,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cold forge hearth (hodo): fire pot at -x (bellows side, tuyere through the -x face), the +x ledge carries loot"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_forge.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_forge_l.p3d",
+   "class": "StaticObj_JP_F_Forge_L",
+   "variant": "sword",
+   "state": "cold",
+   "abandoned": true,
+   "display": "Forge hearth (hodo), swordsmith, cold",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 130,
+    "Resolution 2": 36,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.77,
+    0.65,
+    0.0,
+    0.5,
+    -0.5,
+    0.5
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.65,
+    -0.5,
+    0.65,
+    0.5
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 400.0,
+   "loot_surfaces": [
+    {
+     "name": "ledge",
+     "kind": "shelf",
+     "y": 0.5,
+     "rect": [
+      -0.04,
+      -0.4,
+      0.59,
+      0.4
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.275,
+       0.5,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.3,
+     "measured": 1.3,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cold forge hearth (hodo): fire pot at -x (bellows side, tuyere through the -x face), the +x ledge carries loot"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_forge_l.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

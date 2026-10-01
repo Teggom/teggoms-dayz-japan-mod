@@ -1,0 +1,151 @@
+{
+ "id": "jp_f_gaku",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sacred",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_gaku_hachimangu.p3d",
+   "class": "StaticObj_JP_F_Gaku_Hachimangu",
+   "variant": "hachimangu",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shrine name board: Hachimangu",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 43,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.275,
+    0.275,
+    -0.47,
+    0.551,
+    0.0,
+    0.194
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.55,
+     "measured": 0.55,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "name board (gaku) over the worship bay / gate tie beam: a FRONT proxy (centre at the fitting's y, the beam face z = 0); text gaku_hachimangu"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_gaku_hachimangu.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  },
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_gaku_nenbutsu.p3d",
+   "class": "StaticObj_JP_F_Gaku_Nenbutsu",
+   "variant": "nenbutsu",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Hall plaque: Namu Amida Butsu",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 43,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.225,
+    0.225,
+    -0.52,
+    0.601,
+    0.0,
+    0.208
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "name board (gaku) over the worship bay / gate tie beam: a FRONT proxy (centre at the fitting's y, the beam face z = 0); text sotoba_namuamida"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_gaku_nenbutsu.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  },
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_gaku_worn_h.p3d",
+   "class": "StaticObj_JP_F_Gaku_Worn_H",
+   "variant": "worn",
+   "state": "worn",
+   "abandoned": true,
+   "display": "Name board, text weathered off (horizontal)",
+   "anchor": "wall",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 42,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.5,
+    0.5,
+    -0.198,
+    0.279,
+    0.0,
+    0.117
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "name board (gaku) over the worship bay / gate tie beam: a FRONT proxy (centre at the fitting's y, the beam face z = 0); text worn off (blank weathered board)"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_gaku_worn_h.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

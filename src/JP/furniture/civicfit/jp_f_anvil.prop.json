@@ -1,0 +1,164 @@
+{
+ "id": "jp_f_anvil",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "civicfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_anvil.p3d",
+   "class": "StaticObj_JP_F_Anvil",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Anvil in its stump, tongs on the stump",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 24,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.257,
+    0.257,
+    0.0,
+    0.56,
+    -0.27,
+    0.27
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.231,
+    -0.231,
+    0.231,
+    0.231
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 120.0,
+   "loot_surfaces": [
+    {
+     "name": "stump",
+     "kind": "shelf",
+     "y": 0.423,
+     "rect": [
+      -0.2,
+      0.08,
+      -0.08,
+      0.2
+     ],
+     "range": 0.12,
+     "points": [
+      [
+       -0.15,
+       0.423,
+       0.14
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.56,
+     "measured": 0.56,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "anvil (kanatoko) set in a stump, tongs left on the stump top (loot beside them)"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_anvil.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_anvil_l.p3d",
+   "class": "StaticObj_JP_F_Anvil_L",
+   "variant": "sword",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Anvil in its stump, large",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 24,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.285,
+    0.285,
+    0.0,
+    0.54,
+    -0.3,
+    0.3
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.259,
+    -0.259,
+    0.259,
+    0.259
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 120.0,
+   "loot_surfaces": [
+    {
+     "name": "stump",
+     "kind": "shelf",
+     "y": 0.403,
+     "rect": [
+      -0.2,
+      0.08,
+      -0.08,
+      0.2
+     ],
+     "range": 0.12,
+     "points": [
+      [
+       -0.15,
+       0.403,
+       0.14
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.54,
+     "measured": 0.54,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "anvil (kanatoko) set in a stump, tongs left on the stump top (loot beside them)"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_anvil_l.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

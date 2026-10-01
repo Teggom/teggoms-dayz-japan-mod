@@ -1,0 +1,65 @@
+{
+ "id": "jp_f_ofuda_stack",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sacred",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sacred\\jp_f_ofuda_stack.p3d",
+   "class": "StaticObj_JP_F_Ofuda_Stack",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Talisman stacks, amulets, print block",
+   "anchor": "floor",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 51,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.18,
+    0.18,
+    0.0,
+    0.064,
+    -0.09,
+    0.12
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "talismans (ofuda) in stacks, amulet bags, a print block: dressing for the amulet counter (mount surface)"
+   ],
+   "master": "spikes/W2F/out/sacred/jp_f_ofuda_stack.p3d",
+   "mount": "surface",
+   "mount_note": "on a raised surface (a shelf board, chest lid, desk top or the floor): base centre on that surface"
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

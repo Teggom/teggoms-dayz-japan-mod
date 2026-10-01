@@ -1,0 +1,238 @@
+{
+ "id": "jp_f_fuigo",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "civicfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_fuigo.p3d",
+   "class": "StaticObj_JP_F_Fuigo",
+   "variant": "smithy",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Box bellows (fuigo)",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 76,
+    "Resolution 2": 42,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.229,
+    0.428,
+    0.0,
+    0.55,
+    -0.872,
+    0.55
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.225,
+    -0.55,
+    0.225,
+    0.55
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 45.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      -0.165,
+      -0.4,
+      0.165,
+      0.4
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       0.55,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "box bellows (fuigo): nozzle on +x near the +z end (towards the forge), pull rod out of -z; as left"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_fuigo.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_fuigo_l.p3d",
+   "class": "StaticObj_JP_F_Fuigo_L",
+   "variant": "sword",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Box bellows (fuigo), large",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 76,
+    "Resolution 2": 42,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.254,
+    0.453,
+    0.0,
+    0.6,
+    -0.922,
+    0.6
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.25,
+    -0.6,
+    0.25,
+    0.6
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 45.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.6,
+     "rect": [
+      -0.19,
+      -0.45,
+      0.19,
+      0.45
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       0.6,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.2,
+     "measured": 1.2,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "box bellows (fuigo): nozzle on +x near the +z end (towards the forge), pull rod out of -z; as left"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_fuigo_l.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_fuigo_ab.p3d",
+   "class": "StaticObj_JP_F_Fuigo_Ab",
+   "variant": "smithy",
+   "state": "ransacked",
+   "abandoned": true,
+   "display": "Box bellows, lid askew, rod pulled out",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 76,
+    "Resolution 2": 42,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.294,
+    0.428,
+    0.0,
+    0.55,
+    -1.45,
+    0.635
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.225,
+    -0.55,
+    0.225,
+    0.55
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 45.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.55,
+     "rect": [
+      -0.165,
+      -0.4,
+      0.165,
+      0.4
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       0.55,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "box bellows (fuigo): nozzle on +x near the +z end (towards the forge), pull rod out of -z; lid knocked askew, rod pulled out and dropped (ransacked)"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_fuigo_ab.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}

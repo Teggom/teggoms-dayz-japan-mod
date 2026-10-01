@@ -1,0 +1,65 @@
+{
+ "id": "jp_f_ridge_ladder",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "civicfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\civicfit\\jp_f_ridge_ladder.p3d",
+   "class": "StaticObj_JP_F_Ridge_Ladder",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fire ladder with alarm bell on a ridge",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 141,
+    "Resolution 2": 30
+   },
+   "bbox": [
+    -0.309,
+    0.309,
+    0.004,
+    2.461,
+    -0.564,
+    0.564
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "fire ladder with an alarm bell (hansho) on the guard house ridge: a FRONT proxy at the ridge top"
+   ],
+   "master": "spikes/W2F/out/civicfit/jp_f_ridge_ladder.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"
+}
