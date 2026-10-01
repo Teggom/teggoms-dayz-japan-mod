@@ -215,6 +215,48 @@ class Shell:
                         mat=mat, interior=interior)
         return ns
 
+    # ---------------------------------------------------------------- partition tops (FB2)
+    def beam_over(self, fr, L, tag="ushibari"):
+        """Underside of the roof tie beam lying ON a partition line (frame fr, local x 0..L) along its whole length,
+        or None. FB2: such a partition closes up to the beam (Stephen: 'the walls rise to ~3 m and just end')."""
+        (x0, z0), (x1, z1) = to_world(fr, 0.0), to_world(fr, L)
+        best = None
+        for s_ in self.H.solids:
+            if s_.tag != tag or 1 not in s_.vis:
+                continue
+            b = s_.bbox()
+            if abs(x1 - x0) < 1e-6 and b[0] < x0 < b[1]:
+                lo, hi = min(z0, z1), max(z0, z1)
+                cov = (b[4], b[5])
+            elif abs(z1 - z0) < 1e-6 and b[4] < z0 < b[5]:
+                lo, hi = min(x0, x1), max(x0, x1)
+                cov = (b[0], b[1])
+            else:
+                continue
+            best = (best or []) + [(cov, b[2])]
+        if not best:
+            return None
+        # the beams on the line must cover it end to end (two half-span logs meet on the middle post)
+        segs = sorted(c for c, _ in best)
+        reach = lo + 0.07
+        for a, b in segs:
+            if a <= reach + 0.02:
+                reach = max(reach, b)
+        if reach < hi - 0.07:
+            return None
+        return min(y for _, y in best)
+
+    def head_beam(self, fr, L, y, name):
+        """FB2: the head beam (sashigamoi / uchinori-nageshi) that caps a partition ending under the open roof, on
+        the partition's posts (they stop at the wall top y), the full length of the line, 0.13 wide (over the 0.12
+        posts, so no face is shared)."""
+        s = self.B.P(name)
+        s.add(box(-POST / 2, L + POST / 2, y, y + 0.15, -0.065, 0.065, "wood_sooted", vis=(1, 2), geo=True, view=True,
+                  fire=True, tag="part_head"))
+        self.B.interior = True
+        self.B.put(s, fr)
+        self.B.interior = False
+
     # ---------------------------------------------------------------- doors / windows
     def door(self, part, side, lx, dy, label, key=None, mirror=False):
         fr = self.F[side] if isinstance(side, str) else side
@@ -517,6 +559,10 @@ def kanto(name=None, form="yosemune", ridge="bamboo", stable=False, doma="left",
     F_Z = (0.0, (0.0, 0.0, ZS))
     S.wall_line((F_Z, XR, "part_z"), [(0.0, XR, FLOOR)], PT, (), finish="nakanuri", grime=False, interior="both")
     B.interior = False
+    # FB2 (2026-10-01): the partitions end at a head beam on their posts (the ushibari over the x = XR line covers only
+    # the joya span, the geya ends lie under the eaves: no close-up), open above to the sooted roof (C2's design)
+    S.head_beam(F_P, D, PT, "part_x_head")
+    S.head_beam(F_Z, XR, PT, "part_z_head")
     # ------------------------------------------------ floors
     B.interior = True
     B.merge(FL.doma("doma", XD, W, -D, 0.0, road=(XD + 0.07, W - A_, -D + A_, -A_), y=DOMA, mats=FL.MATS_DOMA_EARTH))
@@ -558,37 +604,46 @@ def kanto(name=None, form="yosemune", ridge="bamboo", stable=False, doma="left",
 
 # ------------------------------------------------------------------------------------------------ DW07 Kinai
 def _takahe(S, x, D, E, t, sg, stack_top, pent_top):
-    """Yamato-mune gable (takahe): a plastered wing wall on the gable line x standing proud of the thatch (0.12 over
-    its top), both slopes, capped with kawara (walls.kawara_cap) and cut clear of the lower roofs (pent_top)."""
+    """Yamato-mune gable (takahe): the plastered gable wall carried up past the thatch on the gable line x (sg -1 = the
+    x 0 gable, +1 = the x W gable), both slopes, capped with kawara (walls.kawara_cap) and cut clear of the lower roofs
+    (pent_top).
+    FB2 (2026-10-01, Stephen: "is that how it looked in real life?", the white band too massive; verdict and basis in
+    spikes/FB2/FB2_PROGRESS.md): the takahe is the upper part of the gable WALL, not a band laid on it: its outer face
+    sits 1.5 cm over the gable frame (the plaster skin), 0.24 thick inwards so the thatch ends die into it; its top
+    runs PARALLEL to the slope a constant TAKAHE_RISE over the thatch (the ridge bundle is kept under it, kinai()),
+    and the whole gable above the tie beam is plastered with it (kinai()), so no white band stands on an earth gable.
+    Inside the wall line it comes down 0.12 under the roof line (over the gable's top edge); over the eave overhang
+    it starts at the thatch underside (a thatch-thick plastered cheek)."""
     s = S.B.P("takahe_%d" % int(x * 10))
     h = D / 2
-    th = 0.30
-    # FB1 (2026-10-01, Stephen: "a weird thick something below the roof"): the band used to hang 0.45 m below the
-    # slope line all the way out to the thatch eave, so at each corner a 0.3 m x ~1 m white block stood out under the
-    # eave, and the thatch ridge bundle (0.55 high, run 0.25 past the gable) rose over the wall's top and poked out
-    # of it. Now: over the eave overhang (outside the wall line) the takahe starts at the thatch underside, so its end
-    # is a thatch-thick plastered cheek; only inside the wall line does it reach down onto the gable wall; its top
-    # rises from 0.12 over the thatch at the eave to 0.12 over the ridge bundle at the ridge (yamato-mune: the
-    # takahe stands proud of the whole thatch), and the ridge bundle stops inside it (kinai(), after the roof).
-    ridge_extra = 0.55 + 0.10 - 0.12           # thatch_ridge 'bamboo' H 0.55 over the ridge line + 0.10, minus the 0.12
+    x_out = x + sg * TAKAHE_PROUD                  # outer face (1.5 cm over the gable frame's outer face)
+    x_in = x_out - sg * TAKAHE_T
+    xa, xb = min(x_out, x_in), max(x_out, x_in)
     for zsgn in (1.0, -1.0):
         ov = 0.60
         z_e = ov if zsgn > 0 else -D - ov
         z_w = 0.0 if zsgn > 0 else -D          # the wall line
         z_r = -h
         slope = lambda z: E + t * (min(-z, D + z))                           # noqa: E731
-        run = abs(z_r - z_e)
-        y_top = lambda z: slope(z) + stack_top + 0.12 + ridge_extra * (1.0 - abs(z - z_r) / run)  # noqa: E731
+        y_top = lambda z: slope(z) + stack_top + TAKAHE_RISE                 # noqa: E731
         y_low = lambda z: slope(z) + R.STACK["thatch"]                       # noqa: E731  (thatch underside)
-        y_bot = lambda z: slope(z) - 0.45                                    # noqa: E731
+        y_bot = lambda z: slope(z) - 0.12                                    # noqa: E731
         for poly in ([(z_e, y_low(z_e)), (z_e, y_top(z_e)), (z_w, y_top(z_w)), (z_w, y_low(z_w))],
                      [(z_w, y_bot(z_w)), (z_w, y_top(z_w)), (z_r, y_top(z_r)), (z_r, y_bot(z_r))]):
             poly = clean_poly(clip_poly(poly, 0.0, -1.0, -(pent_top + 0.08)))    # keep y >= pent_top + 0.08
             if len(poly) >= 3:
-                s.add(prism([(yy, zz) for zz, yy in poly], "x", x - th / 2, x + th / 2, "wall_shikkui",
+                s.add(prism([(yy, zz) for zz, yy in poly], "x", xa, xb, TAKAHE_MAT,
                              vis=(1, 2, 3), geo=True, view=True, fire=True, tag="takahe"))
-        walls.kawara_cap(s, (x, y_top(z_e), z_e), (x, y_top(z_r), z_r), width=0.38, courses=2)
+        xc = (xa + xb) / 2
+        walls.kawara_cap(s, (xc, y_top(z_e), z_e), (xc, y_top(z_r), z_r), width=TAKAHE_T + 0.08, courses=2)
     S.H.merge(s)
+
+
+# FB2 (2026-10-01) yamato-mune proportions (general knowledge, see spikes/FB2/FB2_PROGRESS.md "takahe")
+TAKAHE_T = 0.24          # wall thickness at the top (the thatch ends die into it)
+TAKAHE_PROUD = 0.075     # outer face from the gable line (the gable frame's outer face is 0.06)
+TAKAHE_RISE = 0.26       # top of the plaster over the thatch surface, parallel to the slope (the tile cap sits on it)
+TAKAHE_MAT = "wall_shikkui_aged" if "wall_shikkui_aged" in LIBRARY else "wall_shikkui"
 
 
 def kinai(name=None, form="kirizuma", lower="tile", takahe=False, doma="right", wear="_w1"):
@@ -609,12 +664,27 @@ def kinai(name=None, form="kirizuma", lower="tile", takahe=False, doma="right", 
     if takahe and form == "kirizuma":
         # FB1 (2026-10-01): the thatch ridge bundle stops inside the takahe walls (it ran 0.25 m past each gable line
         # and showed over / outside the plastered gable, Stephen's "weird thick something"); its end bindings go
+        # FB2 (2026-10-01): and it is kept LOW (yamato-mune: a slim ridge between the takahe, whose tops run parallel
+        # to the slope): the bundle, its bamboo and bindings are squashed so their top stays 0.04 under the takahe
+        # apex (thatch apex + TAKAHE_RISE)
+        apex = E + t * D / 2 + R.STACK["thatch"] + 0.60
+        rs = [s_ for s_ in S.H.solids if s_.tag in ("thatch_ridge", "ridge_bamboo") or
+              (s_.tag == "binding" and s_.center[1] > E + 1.0)]
+        y0 = min(v[1] for s_ in rs for v in s_.verts if s_.tag == "thatch_ridge")
+        y1 = max(v[1] for s_ in rs for v in s_.verts)
+        f = (apex + TAKAHE_RISE - 0.04 - y0) / (y1 - y0)
         keep = []
         for s_ in S.H.solids:
+            if s_ in rs:
+                s_.verts = [(v[0], y0 + (v[1] - y0) * f if v[1] > y0 else v[1], v[2]) for v in s_.verts]
             if s_.tag in ("thatch_ridge", "ridge_bamboo"):
                 s_.verts = [(min(max(v[0], 0.0), W), v[1], v[2]) for v in s_.verts]
+            if s_ in rs:
                 s_.center = tuple(sum(v[k] for v in s_.verts) / len(s_.verts) for k in range(3))
-            elif s_.tag == "binding" and s_.center[1] > E + 1.0 and not (0.16 < s_.center[0] < W - 0.16):
+                s_.fn = [s_._outward(fi) for fi in range(len(s_.faces))]
+                if s_.normals is not None:
+                    s_.normals = s_.fn
+            if s_.tag == "binding" and s_.center[1] > E + 1.0 and not (0.16 < s_.center[0] < W - 0.16):
                 continue
             keep.append(s_)
         S.H.solids = keep
@@ -671,12 +741,27 @@ def kinai(name=None, form="kirizuma", lower="tile", takahe=False, doma="right", 
             st = R.STACK["thatch"] + 0.60
             for x, sg in ((0.0, -1), (W, 1)):
                 _takahe(S, x, D, E, t, sg, st, PENT_Y + 0.25)
-            S.log.append("takahe (yamato-mune) parapets on both gables")
+            # FB2: the gable above the tie beam is the takahe's wall: plastered white outside (the frame stays
+            # exposed: panels <= 1 ken x 1 storey, PLAYBOOK 6.2), so no white band stands on an earth gable
+            from ..core import face_uvs
+            for s_ in S.H.solids:
+                if s_.tag != "gable_infill" or not s_.fn:
+                    continue
+                for fi, n_ in enumerate(s_.fn):
+                    out = (n_[0] < -0.9 and s_.center[0] < W / 2) or (n_[0] > 0.9 and s_.center[0] > W / 2)
+                    if out:
+                        s_.fm[fi] = TAKAHE_MAT
+                        s_.fuv[fi] = face_uvs(s_, fi, n_, TAKAHE_MAT)
+            S.log.append("takahe (yamato-mune) parapets on both gables; plastered gables")
     # ------------------------------------------------ partitions
     PT = FLOOR + walls.HEAD_T + 2.0 + 0.45
     B.interior = True
     F_PX = (90.0, (XM, 0.0, -D))                 # x = XM, lx = z + D: nando/daidokoro (lx 0..2K), zashiki/mise (2K..4K)
-    S.wall_line((F_PX, D, "part_xm"), [(0.0, D, FLOOR)], PT,
+    # FB2 (2026-10-01, Stephen: "the interior walls rise to ~3 m and just end below the open roof structure"): the
+    # x = XM partition stands on a koyagumi frame line, under its ushibari: it closes up into the log
+    yb = S.beam_over(F_PX, D)
+    PT_XM = yb + 0.10 if yb else PT              # the log's underside is not flat: 0.10 into its lowest point
+    S.wall_line((F_PX, D, "part_xm"), [(0.0, D, FLOOR)], PT_XM,
                 [(0.5 * KEN, 1.5 * KEN, FLOOR, FLOOR + 2.0, "door"), (2.5 * KEN, 3.5 * KEN, FLOOR, FLOOR + 2.0, "door")],
                 finish="nakanuri", grime=False, interior="both")
     S.door(openings.part_itado("_single"), F_PX, 0.5 * KEN, FLOOR, "Daidokoro -> nando", "nando")
@@ -687,6 +772,12 @@ def kinai(name=None, form="kirizuma", lower="tile", takahe=False, doma="right", 
                 interior="both")
     S.door(openings.part_shoji_ext("_hikiwake"), F_ZM, 0.5 * KEN, FLOOR, "Mise <-> daidokoro", "mid")
     B.interior = False
+    # FB2: the z = ZS partition runs across the ushibari: it ends at a head beam on its posts, open above
+    S.head_beam(F_ZM, W - XN, PT, "part_zs_head")
+    if not yb:
+        S.head_beam(F_PX, D, PT, "part_xm_head")
+    S.log.append("partitions: x = XM %s; z = ZS head beam at %.2f" % (
+        "closed up to the ushibari (%.2f)" % yb if yb else "head beam at %.2f" % PT, PT))
     # ------------------------------------------------ floors
     B.interior = True
     B.merge(FL.doma("niwa", 0.0, XN, -D, 0.0, road=(A_, XN - 0.07, -D + A_, -A_), y=DOMA, mats=FL.MATS_DOMA_EARTH))

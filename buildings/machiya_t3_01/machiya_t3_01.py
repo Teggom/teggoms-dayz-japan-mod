@@ -273,6 +273,13 @@ def build():
     B.wall(F_MID, "mid_door", "shinkabe", 2 * KEN, 3 * KEN, FLOOR, CEIL, openings_=[(2 * KEN + A_, 3 * KEN - A_, FLOOR,
                                                                                      FLOOR + 2.0)])
     B.place_door(shoji_hikiwake, F_MID, 2 * KEN, FLOOR, label="Mise <-> zashiki")
+    # FB2 (2026-10-01): the partition stopped at CEIL, 8 cm under the loft boards with only the joists over it (a slit
+    # between mise and zashiki): a loft beam on the partition line carries the joists and closes it (as the outer
+    # walls' floor beams; templates/townhouse.py does the same for every unit)
+    s = B.P("mid_beam")
+    s.add(box(XT, W, CEIL, LOFT, -POST / 2 - 0.005, POST / 2 + 0.005, "wood_weathered",
+              vis=(1, 2, 3), geo=True, view=True, fire=True, tag="floor_beam"))
+    B.put(s, F_MID)
 
     # ======================================================================== LOFT FLOOR (sealed, G0-4) + ceiling
     H.merge(FL.loft("loft", 0.0, W, ZB, 0.0, CEIL, LOFT))          # sealed, not walkable (G0-4)

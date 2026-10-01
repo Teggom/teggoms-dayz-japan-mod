@@ -11,6 +11,13 @@ Every building's verify.py calls run_g3(M, L, floors, rec) after its own checks:
   C17 closed-leaf jamb seal (nothing seen through a closed door / window at a jamb or meeting stile)   G3 fix 2
   C18 pulls on the stub edge (every pull still in the doorway when its leaf is open)                  G3 fix 2
   C19 matte finish (no environment reflection on matte library materials)                              G3 fix 2
+  C20 no z-fighting: no two visibly different faces of different solids share a plane (same-facing, within 1 mm,
+      overlapping, not covered by a third solid) in Resolution 1-3 (zfight.py; the pipeline's zfight.resolve fixes
+      them at build time)                                                                               FB2 2026-10-01
+  C21 partitions end at a beam or a ceiling: every interior wall panel's top meets a ceiling / floor / roof / beam
+      within 2.5 cm, or its stack ends in a beam running >= 0.6 m along it (parttop.py)                 FB2 2026-10-01
+  C22 no free wall ends: every interior wall panel's vertical end meets a post / wall / panel (parttop.free_ends)
+                                                                                                        FB2 2026-10-01
 M: the building Part in the model frame (M.doors, M.memory, M.solids); L: {lod name: mlod.Lod} read back from the
 MLOD; floors: [{name, rect (model x0,x1,z0,z1), y, obstacles}]; rec(check, ok, detail).
 """
@@ -156,15 +163,23 @@ def run_g3(M, L, floors, rec, extra_portals=()):
     zs = np.arange(z0 + 0.05, z1, 0.12)
     O = np.array([(x, 30.0, z) for x in xs for z in zs])
     Dn = np.tile(np.array([[0.0, -1.0, 0.0]]), (len(O), 1))
+    # FB2 (2026-10-01): each column is also cast 1 cm off in x and z; a column differs only when it differs in all
+    # five (a sliver under 1 cm at an edge, e.g. a piece zfight.resolve set 5 mm proud, cannot pop at LOD distance)
+    jit = ((0.0, 0.0), (0.01, 0.0), (-0.01, 0.0), (0.0, 0.01), (0.0, -0.01))
     tops = {}
     for lname in ("Resolution 1", "Resolution 2", "Resolution 3"):
-        t = RC.cast(RC.lod_triangles(L[lname]), O, Dn, 40.0, chunk=64)
-        tops[lname] = 30.0 - t
+        tri = RC.lod_triangles(L[lname])
+        tops[lname] = [30.0 - RC.cast(tri, O + np.array([dx, 0.0, dz]), Dn, 40.0, chunk=64) for dx, dz in jit]
     worst = []
     for lname in ("Resolution 2", "Resolution 3"):
-        a, b = tops["Resolution 1"], tops[lname]
+        dds = []
+        for j in range(len(jit)):
+            a_, b_ = tops["Resolution 1"][j], tops[lname][j]
+            dds.append(np.where(np.isfinite(a_) & np.isfinite(b_), np.abs(a_ - b_),
+                                np.where(np.isfinite(a_) & (a_ > 2.5), 9.9, 0.0)))
+        a = tops["Resolution 1"][0]
         both = np.isfinite(a) & (a > 2.5)
-        dd = np.where(np.isfinite(b), np.abs(a - b), 9.9)
+        dd = np.min(np.array(dds), axis=0)
         m = both & (dd > 0.10)
         if m.any():
             i = int(np.argmax(np.where(m, dd, 0)))
@@ -172,7 +187,7 @@ def run_g3(M, L, floors, rec, extra_portals=()):
                 lname, int(m.sum()), float(dd[i]), O[i][0], O[i][2]))
     rec("C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1", not worst,
         "; ".join(worst) if worst else "%d columns over 2.5 m compared in each LOD" % int(
-            (np.isfinite(tops["Resolution 1"]) & (tops["Resolution 1"] > 2.5)).sum()))
+            (np.isfinite(tops["Resolution 1"][0]) & (tops["Resolution 1"][0] > 2.5)).sum()))
     # C16 far-LOD roof material: matte far field in Resolution 2 / 3, the close one only in Resolution 1
     fars = {ln: sum(1 for f_ in L[ln].faces if "jp_m_roof_kawara_far" in f_[2].lower()) for ln in
             ("Resolution 1", "Resolution 2", "Resolution 3")}
@@ -209,3 +224,20 @@ def run_g3(M, L, floors, rec, extra_portals=()):
         "far-field faces R1/R2/R3 %d/%d/%d; close field in R2/R3 %d/%d; specular far %.2f < close %.2f" % (
             fars["Resolution 1"], fars["Resolution 2"], fars["Resolution 3"], nears["Resolution 2"],
             nears["Resolution 3"], sf, sn))
+    # FB2 (2026-10-01, Stephen: "items perfectly aligned and flicker"): coplanar overlapping faces (zfight.py)
+    from . import zfight as ZF
+    zr = ZF.coplanar(M)
+    rec("C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+        not zr["same"], "%d visible same-facing pairs%s; %d touching (opposite-facing: backface-culled) and %d "
+        "covered / drawn-identically pairs not judged" % (len(zr["same"]), ("; " + "; ".join(ZF.summary(zr, "same", 3)))
+                                                          if zr["same"] else "", len(zr["opposite"]), len(zr["hidden"])))
+    # FB2 (2026-10-01, Stephen: partitions "just end below the open roof structure"; the inn's upstairs divider short
+    # of the sloping ceiling): every interior wall ends at a beam or a ceiling (parttop.py)
+    from . import parttop as PTOP
+    pb = PTOP.top_ends(M)
+    rec("C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)", not pb,
+        "every interior wall top closed" if not pb else "%d open wall-top samples: %s" % (
+            len(pb), "; ".join(PTOP.summary(pb, 3))))
+    fe = PTOP.free_ends(M)
+    rec("C22 interior wall ends meet a post or a wall (no vertical see-through slot)", not fe,
+        "every interior wall panel end closed" if not fe else "%d free ends: %s" % (len(fe), fe[:4]))

@@ -239,6 +239,13 @@ def build_model(b, stage=True):
     else:
         name, cls = mod.NAME, mod.CLASS
         M, floors, rooms = mod.model()
+    # FB2 (2026-10-01): no two visibly different faces share a plane (z-fighting): the smaller solid of every
+    # visible coplanar overlap stands a few mm proud (jpparts/zfight.resolve); C20 (buildcheck.run_g3) proves it
+    from jpparts import zfight as ZF
+    zlog = []
+    ZF.resolve(M, log=zlog)
+    if zlog:
+        print("[%s] %s" % (b["key"], "; ".join(zlog)))
     lods = M.lods(geo_props=GEO_PROPS, mass=b["mass"])
     # B4 decorator: a furnished building exposes proxies() (furniture / dressing as proxies in the vanilla LODs),
     # loot_points(floors) (floor + raised points) and site() (yard objects as separate map objects, model frame)

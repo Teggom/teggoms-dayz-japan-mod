@@ -482,10 +482,23 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
     else:
         segs = [(XT, W)]                                         # 2-ken unit: both rooms open off the toriniwa only
         mid_door = False
+    # FB2 (2026-10-01): a wall run longer than 1 ken leaves a post gap at its inner ken nodes; nothing stood there on
+    # this line (a 12 cm see-through slot in the 5-ken inns, Stephen's "vertical gaps"): posts on every inner node
+    # outside the door bay
+    # (walls.wall_run leaves its post gaps every ken from the run's own start)
+    B.posts_on(F_MID, [s0 + k * KEN for (s0, s1) in segs for k in range(1, 8) if s0 + k * KEN < s1 - 1e-6],
+               FLOOR, CEIL)
     for (s0, s1) in segs:
         if s1 - s0 > 1e-6:
             B.wall(F_MID, "mid_%d" % int(s0 * 100), "shinkabe", s0, s1, FLOOR, CEIL,
                    head_clip=(KEN + POST / 2 + 0.12, 99.0) if abs(s0 - XT) < 1e-6 else None)
+    # FB2 (2026-10-01): the mise / oku partition stopped at CEIL, 8 cm under the loft boards with only the joists over
+    # it (an open slit between the rooms): a loft beam (the outer walls' floor_beam section) on the partition line
+    # carries the joists and closes it, its ends buried in the toriniwa edge post and the side wall
+    s = B.P("mid_beam")
+    s.add(box(XT, W, CEIL, LOFT, -POST / 2 - 0.005, POST / 2 + 0.005, "wood_weathered",
+              vis=(1, 2, 3), geo=True, view=True, fire=True, tag="floor_beam"))
+    B.put(s, F_MID)
 
     if split:
         # C1 (the inn): the oku split in two guest rooms, a single shoji door + a half-ken park bay (local x runs
@@ -519,13 +532,43 @@ def build(frontage=3, region="kamigata", position="end", free="right", tori="lef
         floors_obst.append(("oku", FL.floor_rect(x_foot - 0.05, x_foot + run + 0.05, ZB, oz + 1.20 + 0.06)))
         floors_obst.append(("nikai_back", FL.floor_rect(well[0] - 0.10, well[1] + 0.10, ZB, well[3] + 0.10)))
         au = round((W - KEN) / 2 / HALF) * HALF
-        B.posts_on(F_MID, [au, au + KEN], LOFT, LOFT + 2.35)
-        B.wall(F_MID, "up_mid_door", "shinkabe", au, au + KEN, LOFT, LOFT + 2.35,
+        # FB2 (2026-10-01, Stephen: the upstairs divider stops short of the sloping ceiling, slits at its ends): the
+        # divider stands under the ridge; its posts (the door posts, an end post against each gable wall and one on
+        # every inner ken node: there were none, 2-12 cm see-through slots) run up to the roof boards, a head beam (nageshi height) caps the
+        # room-height wall and a plastered kokabe closes it up to the boards (4 mm into them)
+        # posts and kokabe stop 2 cm into the rafter zone (C12: a wall may enter a roof body by <= 3 cm); a menido
+        # board (the roof framing's own filler between the rafters, on the wall line) closes up to the boards
+        y_ru = eave_o + T_MAIN * DO / 2                     # rafter underside at the ridge
+        top_up = y_ru - T_MAIN * 0.06 + 0.02                # the posts (faces 0.06 off the ridge line)
+        top_k = y_ru - T_MAIN * 0.0375 + 0.02               # the kokabe (faces 0.0375 off)
+        y_hb = LOFT + 2.35
+        inner = [s0 + k * KEN for (s0, s1) in ((0.0, au), (au + KEN, W)) for k in range(1, 8) if s0 + k * KEN < s1 - 1e-6]
+        for lx in [0.0, au, au + KEN, W] + inner:
+            x_, z_ = to_world(F_MID, lx)
+            B.posts.append((x_, z_, LOFT, top_up))
+            p_ = frame.post(H, x_, z=z_, y0=LOFT, y1=top_up)
+            p_.interior = True
+        B.wall(F_MID, "up_mid_door", "shinkabe", au, au + KEN, LOFT, y_hb,
                openings_=[(au + A_, au + KEN - A_, LOFT, LOFT + 2.0)])
         B.place_door(shoji_hikiwake, F_MID, au, LOFT, label="Upstairs front <-> back")
         dn["up_mid"] = "DoorsTwin%d" % len(H.doors)
         for (s0, s1) in ((0.0, au), (au + KEN, W)):
-            B.wall(F_MID, "up_mid_%d" % int(s0 * 100), "shinkabe", s0, s1, LOFT, LOFT + 2.35)
+            B.wall(F_MID, "up_mid_%d" % int(s0 * 100), "shinkabe", s0, s1, LOFT, y_hb)
+        s = B.P("up_mid_head")
+        s.add(box(0.0, W, y_hb, y_hb + 0.15, -0.065, 0.065, "wood_weathered", vis=(1, 2, 3), geo=True, view=True,
+                  fire=True, tag="part_head"))
+        B.put(s, F_MID)
+        for (s0, s1) in ((0.0, au), (au, au + KEN), (au + KEN, W)):
+            s = B.P("up_mid_kokabe_%d" % int(s0 * 100))
+            s.add(box(s0 + A_, s1 - A_, y_hb + 0.15, top_k, -0.0375, 0.0375, "wall_nakanuri_int", vis=(1, 2, 3),
+                      geo=True, view=True, fire=True, tag="kokabe"))
+            B.put(s, F_MID)
+        s = B.P("roof_main_menido")
+        s.add(box(0.0, W, top_k - 0.01, y_ru + 0.06 - T_MAIN * 0.015 + 0.004, -0.015, 0.015, "wood_weathered",
+                  vis=(1, 2), tag="menido"))
+        for x_ in s.solids:
+            x_.src = "roof_main"             # roof framing (C12 judges walls against the roof, not its own pieces)
+        B.put(s, F_MID)
         H.merge(FL.loft("loft", 0.0, W, ZB, 0.0, CEIL, LOFT, walkable=True,
                         holes=[{"rect": well, "kind": "stair", "open": "x1", "wall": "z0"}], hole_fn=ST.well_fn()))
 
