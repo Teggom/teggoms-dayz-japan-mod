@@ -19,3 +19,4 @@
 2026-09-30 20:55:23 | GROUP DONE | grave wood | 7 models (1 new, 5 variants, 1 abandoned), checks 7/7 incl TXT | W2 | max R1 ~260 | 5h 37% wk 38%
 2026-09-30 21:00:13 | PBO PACKED | W2 | late entry: packed ~20:57 (build.py --pack, then build_l2.py --pack): jp_site.pbo 301 classes | 5h 40% wk 38%
 2026-09-30 21:00:13 | SHEETS DONE | W2 | contact_sheets/w2_torii, w2_shrine, w2_grave, w2_closeups | 5h 40% wk 38%
+2026-09-30 21:01:04 | END | W2 | 91 models, 301 classes in jp_site.pbo, commits 6d1c6ce d402bb3 e2d17d5 | 5h 40% wk 38%
