@@ -337,3 +337,6 @@
   - **Pitfall:** python buildings/pipeline.py --help STARTS A FULL REBUILD (no argparse help). M1 hit it, stopped it and
     restored 69 townhouse masters. **FIXED 2026-09-30 (lead):** --help / -h prints the usage and builds nothing; unknown
     options build nothing (exit 2).
+- 2026-09-30: **M2 DONE** (opus-high, 239k / 14 min). Bonji (Noto Sans Siddham) on gorinto front (KHA, HA, RA, VA, A, top to
+  bottom) and hokyointo (HUM E / TRAH S / HRIH W / AH N); 9 cells in jp_m_decal_carved_text_grave; 6 models; general
+  knowledge (W2_ERA G16-G19). Commits 82751c7, d188959. The material gap list is now closed except the brown-heri photo.
