@@ -11,7 +11,7 @@ rope torii head room, woodpile support). Time log `japan_dev/TIMELOG_FX1.md` (lo
   jp_buildings repacked = src)  - [x] layout_w2f (6 boxes moved / added as site objects) + map_md + world (4134 objects)
   + mission + verify_oprw PASS 4125/4125
 - [x] checks: verify_all --full 193 / 11,822 checks / 0 failures; bindcheck 193/193; hangcheck 0; handlecheck 0/40;
-  ropeclear 0 LOW; toriipost 0  - [x] sheet fx1_fixes.jpg  - [x] TEST_CHECKLIST 'FX1 re-check'  - [ ] pushed
+  ropeclear 0 LOW; toriipost 0  - [x] sheet fx1_fixes.jpg  - [x] TEST_CHECKLIST "FX1 re-check"  - [x] pushed (cce4930, 984b072)
 
 Pipeline note: the first full run failed 2 checks (temple_do_2_board + its furnished variant: no loot point left on the
 en once the koran returns came in, en rect inset 0.27); inset 0.20 -> all pass.
