@@ -88,6 +88,16 @@
 
 **Specialty props are built WITH the shell that needs them, not up front.** A cut shell never pays for its props.
 
+### Confirmed future work (Stephen, 2026-09-30; not scheduled yet)
+- **Japanese infected:** already decided in FEASIBILITY §9 (option a: new Japanese-dressed infected; AI ronin / bandit
+  bands later). Not yet in this work order.
+- **Food overhaul:** period food replaces vanilla food (not discussed in detail yet).
+- **Cooking:** the irori and kamado become working fire/cooking spots (like the well); research a traditional
+  Japanese open-fire / campfire form to remake the vanilla campfire model.
+- **Audio:** ambient sound with animals that actually live in Japan (no American owl), Japanese-flavoured
+  sounds where it makes sense (e.g. weapon-swing grunts); reuse vanilla where it already fits.
+- Not worried yet: navmesh, the map (both planned), performance at scale.
+
 ### Parked (not in this plan until Stephen raises them)
 - Terrain-tool size test; the real map build; more horizontal in-between roads
 - Wardrobe rework, weapon carry offsets, the bamboo two-handed hold (OPEN_ISSUES)
