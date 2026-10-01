@@ -411,3 +411,8 @@
   variants per thatched building automatically (which side faces north: front / back / left / right, + an east-west 'tie'
   variant), and the MAP PLACEMENT step picks the variant from each building's final yaw. Same trick later for lichen on north
   faces of stone and sun-bleach on south faces. Do it once the map placement exists (variants are generated, not hand-kept).
+- 2026-10-01: **QUEUED (Stephen: yes) right after W2S, BEFORE W2F: faster checks.** (1) cache: a fingerprint of each building's
+  inputs (recipe source, the kit modules it imports, params) stored with its last passing result; unchanged = skipped, so a
+  kit change only re-checks the buildings that use the changed module; (2) make the slow checks smarter (spatial grid for the
+  C20 face-pair test, adaptive ray counts for C11, profile the hotspots). Keep a 'full' flag that ignores the cache.
+  Why: verify_all re-checked all 169 buildings x 60-90 checks from scratch, 10 processes, ~20+ min, growing linearly.
