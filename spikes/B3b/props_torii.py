@@ -47,7 +47,7 @@ def torii_wood(form, rope=ROPE_NONE, moss=False, shu=False, ab=None, plaque=None
     mini = form == "mini"
     wear = "_w2" if (ab or moss) else "_w1"
     mat = SHU if shu else WOOD
-    P = SPart("torii_wood", budget="small" if mini else "medium", res3=not mini,
+    P = SPart("torii_wood", budget=("box" if rope else "small") if mini else "medium", res3=not mini,   # FP2: rope
               mass={"shinmei": 600.0, "myojin": 1100.0, "mini": 15.0}[form], bury=0.15 if not mini else 0.05)
     P.wear = wear
     solids, cols = [], []

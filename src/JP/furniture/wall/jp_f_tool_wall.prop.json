@@ -27,7 +27,7 @@
    "anchor": "wall",
    "budget": "small",
    "faces": {
-    "Resolution 1": 122,
+    "Resolution 1": 133,
     "Resolution 2": 12
    },
    "bbox": [
@@ -36,7 +36,7 @@
     0.94,
     1.69,
     0.0,
-    0.129
+    0.13
    ],
    "collision": false,
    "footprint_xz": null,
@@ -121,7 +121,7 @@
    "anchor": "wall",
    "budget": "small",
    "faces": {
-    "Resolution 1": 111,
+    "Resolution 1": 122,
     "Resolution 2": 12
    },
    "bbox": [

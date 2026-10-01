@@ -322,7 +322,8 @@ def tawara_col(x=0.0, y=0.0, z=0.0, yaw=0.0, n=8):
 
 
 def tawara(state="1"):
-    P = FPart("tawara", budget="small", mass=60.0 if state in ("1", "burst") else 360.0)
+    # FP2 (2026-10-01): the rope ties' round cross-section (2.5x) takes a bale over 300: furniture class
+    P = FPart("tawara", budget="furniture", mass=60.0 if state in ("1", "burst") else 360.0)
     if state in ("1", "burst"):
         ss = tawara_bale(wear="_w2" if state == "burst" else None)
         if state == "burst":

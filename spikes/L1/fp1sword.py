@@ -166,9 +166,10 @@ def _cord(pts, r, mat, vis, wear):
     if b3b not in sys.path:
         sys.path.append(b3b)
     import w2kit
-    path = w2kit._catmull(pts, 0.03)
+    import ropekit                    # FP2 (2026-10-01): 2.5x the segments (3 -> 1.2 cm) and 1.75x the sides (4 -> 7):
+    path = w2kit._catmull(pts, 0.03 / ropekit.ROPE_K)          # the full 2.5x sides would take the rack over 1,500
     T, _, _ = w2kit._frames(path)
-    return w2kit._tube(path, T, r, 4, mat, vis, wear, tile=0.2)
+    return w2kit._tube(path, T, r, ropekit.rk(4, 1.75), mat, vis, wear, tile=0.2)
 
 
 def arm(x, y, zf=0.10, th=0.022, w=0.040, curl=0.030, vis=(1,)):

@@ -107,6 +107,111 @@
     "warnings": [],
     "masked": true
    }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_firewood_w0_co.png",
+   "palette_id": "firewood_split",
+   "wear": "",
+   "mean_srgb": [
+    116.5,
+    99.2,
+    63.5
+   ],
+   "target_srgb": [
+    108,
+    92,
+    60
+   ],
+   "dE": 3.6,
+   "dE_to_entry": 3.6,
+   "tol": 14.0,
+   "spread_p75": 19.4,
+   "observed_spread": 21.3,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     116.4,
+     99.2,
+     63.5
+    ],
+    "dE": 3.6,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_firewood_w1_co.png",
+   "palette_id": "firewood_split",
+   "wear": "",
+   "mean_srgb": [
+    108.0,
+    92.0,
+    60.0
+   ],
+   "target_srgb": [
+    108,
+    92,
+    60
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 14.0,
+   "spread_p75": 15.1,
+   "observed_spread": 21.3,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     108.0,
+     92.0,
+     60.0
+    ],
+    "dE": 0.01,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_firewood_w2_co.png",
+   "palette_id": "firewood_split",
+   "wear": "",
+   "mean_srgb": [
+    95.3,
+    83.1,
+    55.9
+   ],
+   "target_srgb": [
+    108,
+    92,
+    60
+   ],
+   "dE": 5.1,
+   "dE_to_entry": 5.1,
+   "tol": 14.0,
+   "spread_p75": 10.9,
+   "observed_spread": 21.3,
+   "masked_frac": 0.11,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_wood_firewood_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     95.2,
+     83.1,
+     55.8
+    ],
+    "dE": 5.09,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
   }
  ]
 }

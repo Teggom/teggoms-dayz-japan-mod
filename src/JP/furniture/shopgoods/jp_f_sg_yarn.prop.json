@@ -25,15 +25,15 @@
    "abandoned": false,
    "display": "Goods: skeins and bobbins",
    "anchor": "floor",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 131,
+    "Resolution 1": 539,
     "Resolution 2": 6
    },
    "bbox": [
     -0.284,
     0.262,
-    0.0,
+    -0.0,
     0.03,
     -0.092,
     0.092
@@ -60,15 +60,15 @@
    "abandoned": true,
    "display": "Goods: yarn tangled",
    "anchor": "floor",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 104,
+    "Resolution 1": 512,
     "Resolution 2": 6
    },
    "bbox": [
     -0.247,
     0.292,
-    0.002,
+    -0.0,
     0.189,
     -0.049,
     0.088

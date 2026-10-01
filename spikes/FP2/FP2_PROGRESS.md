@@ -35,4 +35,41 @@ Screenshots: test/feedback/2026-10-01_recheck/1_firewood_pile, 3_mochi_usu_kine_
   moved clear of the mortar (it passed through its foot). Mortar 10 -> 16 sides, base flat on y = 0 (checked).
   No penetration (sampled check), still small class (R1 163-216).
 
-## 3 Rope: in progress
+## 3 Rope 2.5x: DONE
+- `spikes/B3b/ropekit.py` (new): ROPE_K = 2.5 on BOTH the sides round the rope and the segments along it; smooth
+  tubes (per-vertex normals) along a Catmull-Rom curve, caps as a quad fan; `cull` drops faces that can't be seen.
+  Rope / cord materials only (straw_rope, textile_*); a bent handle, grass stems or the pine trunk drawn with
+  rope_path get the smooth tube but keep their counts. Res 2/3 keep the old cheap shapes.
+
+| Helper (users) | Before (sides x along) | After |
+|---|---|---|
+| w2kit.twisted_rope (shimenawa, rope torii, trunk wraps) | 3 / 4 per strand, a segment per pitch/4 | 8 / 10, pitch/10; strand faces inside the lay culled (and those pressed on a trunk) |
+| lkit.coil / flat_coil (rope pegs, skeins, wheel rims) | 10 x 4 (inner 8 x 3) | 25 x 10 (20 x 8), smooth; wall-facing faces culled on the pegs |
+| skit.rope_path (wells, laundry ties + net, nio, carts, sandal thongs, ...) | prism per segment, 3-5 sides | one tube, 8-13 sides, 2.5x the segments on bends (straight 2-point ropes stay 1 segment) |
+| lkit.cord (hanging strings, sign cords) | 3 sides | 8 sides |
+| bits.rope_ring (tawara / komo / bale ties) | 3-segment flat band | round 8-segment section; round the host it keeps the host's n (a rounder tie would float off the bale's facets) |
+| fp1sword._cord (sword sageo) | 4 sides, 3 cm | 7 sides (1.75x: 2.5x would take the rack over 1,500), 1.2 cm |
+
+- Budget classes raised (all within the 1,500 prop ceiling): shimenawa x6 -> medium (945-1,402); mini rope torii
+  small -> box (572); laundry kaki / daikon -> box, net -> medium; nio cyl / cone and the tawara stack -> box; B3a
+  tawara (all) small -> furniture (330 / 468); L1 rope pegs, hoshigaki, taru komo, charcoal burst -> furniture;
+  katanakake furniture -> medium (1,418 / 1,438) (fkit.BUDGET gains 'medium' 1,500 = skit's); L2 footwear -> box, charcoal
+  bales -> medium; S1 sg_yarn -> furniture. Rope torii stay medium (1,193-1,251).
+
+## Build, checks, pack (11:52)
+- Full builds: B3a 113/113, L1 185/185, S1 175/175 (--pack: jp_furniture 473 classes), B3b+W2+W3+FP1 231/231, L2
+  81/81 (--pack: jp_site 312 classes); binarize 0 warnings; CfgConvert OK; TXT 211 text models 0 failing; C7 chain
+  PASS. config.cpp / model.cfg identical to HEAD.
+- Byte-noise: masters compared with pre-FP2 masters rebuilt from af3193e in the scratchpad (`changed.py`): 240 changed
+  (B3a 10, B3b 63, L1 53, L2 27, S1 87); their ODOLs kept, 436 others restored to HEAD; PBOs repacked from the restored
+  tree (`pack.py`) and read back (`pbocheck.py`: 473 / 312 ODOL, all = src). jp_common repacked (2 materials).
+- Sheet: research/production/contact_sheets/fp2_fixes.jpg (`python spikes/FP2/sheet_fp2.py`).
+
+## In-game checks for Stephen (no world rebuild needed: same p3d paths; FB2 rebuilds the world anyway)
+1. Firewood outside the houses (and the kitchen stacks): split billets with bark and ringed ends, no flat decals.
+2. Mochi building: the mallet's head in the mortar, handle on the rim; the pounder leaning on the rim, foot on floor.
+3. Rope coils on pegs (round now), shimenawa / rope torii, well ropes, tawara ties.
+
+## Not done / open
+- Tawara / bale ties keep their host's sides round the bale (see table). The sword sageo is 1.75x sides.
+- Wall coils: through the gap between the two loops you may glimpse the wall behind (culled back faces).

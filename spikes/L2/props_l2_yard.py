@@ -724,7 +724,8 @@ import props_life_meal as LM      # noqa: E402  L1 (read-only): sumi_bale(), cha
 
 def charcoal_bales(kind):
     ab = kind.startswith("ab")
-    P = SPart("charcoal_bales", budget="box", mass=60.0, anchor="wall", wall_gap=0.05, wear="_w2" if ab else "_w1")
+    P = SPart("charcoal_bales", budget="medium", mass=60.0, anchor="wall", wall_gap=0.05,   # FP2: rope ties at 2.5x
+              wear="_w2" if ab else "_w1")
     R, h = 0.17, 0.62
     zc = 0.05 + R + 0.01
     wear = "_w2" if ab else None

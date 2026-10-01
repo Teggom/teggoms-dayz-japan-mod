@@ -93,7 +93,7 @@ def skein(x, z, mat=KINARI, wear=None, R=0.05):
 
 def sg_yarn(state="intact"):
     """Yarn: skeins of cotton thread (undyed and indigo), bobbins (bamboo spools) in a shallow basket."""
-    P = SP("sg_yarn", flat=True, mass=1.0)
+    P = SP("sg_yarn", budget="furniture", flat=True, mass=1.0)     # FP2: the skeins are coils at 2.5x
     if state == "intact":
         for k, x in enumerate((-0.22, -0.11, 0.0)):
             P.adds(skein(x, 0.0, mat=(KINARI, INDIGO, KINARI)[k]))

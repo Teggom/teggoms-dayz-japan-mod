@@ -166,10 +166,23 @@ def beam(p0, p1, w, h, mat, up=(0.0, 1.0, 0.0), vis=(1, 2), geo=False, view=Fals
     return s
 
 
-def rope_path(pts, r, mat=None, n=4, vis=(1,), wear=None):
-    """A rope along a polyline: one thin closed prism per segment (visual only)."""
+def rope_path(pts, r, mat=None, n=4, vis=(1,), wear=None, cull=None):
+    """A rope along a polyline (visual only). FP2 (2026-10-01): Res 1 is one smooth tube along a Catmull-Rom curve
+    through the points with 2.5x the sides (n) and 2.5x the segments (ropekit; rope / cord materials only: a bent
+    handle or a stem keeps its counts); other LODs keep the old capped prism per segment. cull(normal, i, quad centre)
+    drops faces that can never be seen (pressed into a straw stack)."""
     mat = mat or ROPE
-    return [pole(pts[i], pts[i + 1], r, mat, n=n, vis=vis, wear=wear) for i in range(len(pts) - 1)]
+    import ropekit
+    out = []
+    if 1 in vis:
+        k = ropekit.ROPE_K if ropekit.is_rope(mat) else 1.0
+        t = ropekit.rope_tube(pts, r, n, mat, vis=(1,), wear=wear, k=k, cull=cull)
+        if t is not None:
+            out.append(t)
+    rest_vis = tuple(v for v in vis if v != 1)
+    if rest_vis:
+        out += [pole(pts[i], pts[i + 1], r, mat, n=n, vis=rest_vis, wear=wear) for i in range(len(pts) - 1)]
+    return out
 
 
 def sag(p0, p1, drop, k=6):

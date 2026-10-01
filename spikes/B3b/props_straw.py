@@ -12,6 +12,13 @@ from props_wood import M
 import props_storage as S     # B3a (read-only): tawara_bale(), tawara_col()
 
 
+
+
+def _into_stack(nrm, i, q):
+    """FP2: a rope ring's faces turned into the straw stack it binds (never seen)."""
+    rad = math.hypot(q[0], q[2])
+    return rad > 1e-6 and (nrm[0] * q[0] + nrm[2] * q[2]) / rad < -0.55
+
 def view_cyl(r, y0, y1, n=8):
     c = cyl_col(r, y0, y1, n=n, mat=STACK)
     c.geo, c.fire = False, None
@@ -66,7 +73,7 @@ def nio(kind):
             for y in (H1 + 0.18, H1 + 0.40):
                 rr = R * 1.08 - (R * 1.08 - R * 0.55) * (y - H1 - 0.06) / 0.34 + 0.01
                 out += rope_path([(rr * math.cos(a), y, rr * math.sin(a)) for a in
-                                  [2 * math.pi * k / 10 for k in range(11)]], 0.012, ROPE)
+                                  [2 * math.pi * k / 10 for k in range(11)]], 0.012, ROPE, cull=_into_stack)
             top = H2 + 0.30
         else:
             # sheared: the upper third slid to one side; loose straw on the ground; the pole leaning
@@ -92,7 +99,7 @@ def nio(kind):
         for y in (1.9, 2.3):
             rr = R * (0.40 + (0.72 - 0.40) * (2.2 - y) / 0.6) + 0.01 if y < 2.2 else 0.28
             out += rope_path([(rr * math.cos(a), y, rr * math.sin(a)) for a in [2 * math.pi * k / 8 for k in range(9)]],
-                             0.012, ROPE)
+                             0.012, ROPE, cull=_into_stack)
         vc = [view_cone(R, 0.0, H - 0.2)]
         top = H + 0.3
         dims = [("nio_d", 2.0, 2 * R, 0.1), ("nio_h", 2.6, H, 0.1)]
@@ -109,7 +116,8 @@ def sheaf(rr, base, top, r=0.07):
 def straw_stack(kind):
     ab = kind.startswith("ab")
     if kind in ("nio_cyl", "nio_cone", "ab_slumped"):
-        P = SPart("straw_stack", budget="small", mass=300.0, need=("view",))
+        # FP2: the nio's rope rings at 2.5x (sides and segments) need the box class (600)
+        P = SPart("straw_stack", budget="small" if kind == "ab_slumped" else "box", mass=300.0, need=("view",))
         ss, vc, dims, top = nio({"nio_cyl": "cyl", "nio_cone": "cone", "ab_slumped": "slumped"}[kind])
         add_all(P, ss + vc)
         for d in dims:
@@ -139,7 +147,7 @@ def straw_stack(kind):
         P.dim("bundle_d", 0.25, 0.25, tol=0.01)
         P.dim("bundle_L", 1.0, 1.0, tol=0.1)
     else:   # tawara_stack: rice bales 3 + 2 under an eave (B3a's tawara_bale)
-        P = SPart("straw_stack", budget="small", mass=300.0)
+        P = SPart("straw_stack", budget="box", mass=300.0)      # FP2: rope ties at 2.5x -> box (600)
         dy = 0.2 * math.sqrt(3)
         for i, (x, y) in enumerate(((-0.40, 0.0), (0.0, 0.0), (0.40, 0.0), (-0.20, dy), (0.20, dy))):
             ss = S.tawara_bale(n=6, segs="lo", bands=1, rope=ROPE)
@@ -183,7 +191,8 @@ def shimenawa(kind):
     ab = kind.startswith("ab")
     wear = "_w2" if ab else "_w1"
     # FP1 (2026-10-01): the twisted-strand rope with tassels: a 2-ken length and the trunk wraps are box-class (600)
-    P = SPart("shimenawa", budget="small" if kind == "len_1ken" else "box", mass=3.0, flat=True)
+    # FP2 (2026-10-01): rope at 2.5x the sides and segments (strand faces inside the lay culled): medium (1,500)
+    P = SPart("shimenawa", budget="medium", mass=3.0, flat=True)
     P.hung = True
     rr = random.Random(len(kind))
     if kind.startswith("len") or ab:
@@ -231,7 +240,10 @@ def shimenawa(kind):
         ring = [(R * math.cos(2 * math.pi * k / n), Y + 0.03 * math.sin(3 * 2 * math.pi * k / n), R * math.sin(2 * math.pi * k / n))
                 for k in range(n + 1)]
         import w2kit as K2          # FP1 (2026-10-01): twisted straw strands, frayed hanging ends
-        add_all(P, K2.twisted_rope(ring, r, seed=int(D * 10), wear="_w1", lod2=False))
+        def on_trunk(nrm, q):                    # FP2: the rope's faces turned to the trunk (inside the bark)
+            rad = math.hypot(q[0], q[2])
+            return rad > 1e-6 and (nrm[0] * q[0] + nrm[2] * q[2]) / rad < -0.6 and rad < R
+        add_all(P, K2.twisted_rope(ring, r, seed=int(D * 10), wear="_w1", lod2=False, hide=on_trunk))
         # the knot and hanging ends at the front, shide round the tree
         add_all(P, K2.twisted_rope([(0.0, Y, R + r), (0.05, Y - 0.35, R + r + 0.03), (0.02, Y - 0.6, R + r + 0.05)],
                                    r * 0.6, seed=int(D * 10) + 1, wear="_w1", fray1=True, lod2=False))

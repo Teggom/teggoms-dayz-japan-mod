@@ -171,10 +171,23 @@ def pillow(w, d, h, mat, nx=4, nz=3, pinch=0.25, wear=None, vis=(1, 2), sag=0.0)
     return s
 
 
+ROPE_MATS = ("straw_rope",)
+
+
 def rope_ring(r, y, width, mat, n, vis=(1,), proud=0.008):
-    """A rope / hoop band: the outer strip only, a little proud of radius r (cheap: n faces + 2n edges)."""
-    return lathe([(r - 0.001, y - width / 2), (r + proud, y - width / 2 + 0.003), (r + proud, y + width / 2 - 0.003),
-                  (r - 0.001, y + width / 2)], n, mat, vis=vis)
+    """A rope / hoop band: the outer strip only, a little proud of radius r (cheap: n faces + 2n edges).
+    FP2 (2026-10-01, Stephen: rope 2.5x the segments): a straw-rope tie gets a ROUND cross-section with 2.5x the
+    segments (3 -> 8: a half-round bulge); round the host it keeps n, because a tie lies on its host's n facets (a
+    rounder ring would float off the flats). Hoops (bamboo, iron) are unchanged."""
+    if mat not in ROPE_MATS or 1 not in vis:
+        return lathe([(r - 0.001, y - width / 2), (r + proud, y - width / 2 + 0.003), (r + proud, y + width / 2 - 0.003),
+                      (r - 0.001, y + width / 2)], n, mat, vis=vis)
+    k = 8
+    prof = []
+    for j in range(k + 1):
+        a = math.pi * j / k                     # a half-round from the lower edge over the top to the upper edge
+        prof.append((r - 0.001 + (proud + 0.001) * math.sin(a), y - width / 2 * math.cos(a)))
+    return lathe(prof, n, mat, vis=vis)
 
 
 def soft_slab(w, d, h, mat, n=4, wear=None, vis=(1,), squash=1.0):

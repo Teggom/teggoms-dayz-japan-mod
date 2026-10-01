@@ -39,3 +39,18 @@ SHOTS["f1x"] = [
     ("f1_h120_endtop", [B3B + "yard/jp_s_firewood_stack_wall_1ken_h120.p3d"], (-1.0, 0.7, 0.8), 0.45, 1.0),
     ("f1_h120_eye", [B3B + "yard/jp_s_firewood_stack_wall_1ken_h120.p3d"], (0.3, 1.0, 0.25), 0.7, 1.0),
 ]
+SHOTS["f3x"] = [
+    ("f3_rope_pegs_close", [L1 + "wall/jp_f_rope_pegs_3.p3d"], (0.35, 1.0, 0.2), 0.45, 1.0),
+    ("f3_nio", [B3B + "yard/jp_s_straw_stack_nio_cyl.p3d"], (0.3, 1.0, 0.6), 0.5, 1.0),
+    ("f3_laundry_kaki", [B3B + "yard/jp_s_laundry_pole_load_kaki.p3d"], (0.2, 1.0, 0.2), 0.6, 1.0),
+    ("f3_katana", [L1 + "tier/jp_f_katanakake_stand.p3d"], (0.2, 1.0, 0.2), 0.7, 1.0),
+    ("f3_charcoal_stack", [L2 + "yard_life/jp_s_charcoal_bales_stack.p3d"], (0.5, 1.0, 0.3), 0.8, 1.0),
+    ("f3_well_close", [B3B + "water/jp_s_well_tsurube_roofed.p3d"], (0.4, 1.0, 0.5), 0.3, 1.0),
+]
+SHOTS["look"] = [
+    ("l_kanban", ["spikes/S1/out/shopsign/jp_f_kanban_soba.p3d"], (0.4, 1.0, 0.2), 0.8, 1.0),
+    ("l_yarn", ["spikes/S1/out/shopgoods/jp_f_sg_yarn.p3d"], (0.3, 1.0, 0.8), 0.7, 1.0),
+    ("l_footwear", ["spikes/L2/out/street_life/jp_s_footwear_pairs.p3d"], (0.3, 1.0, 0.8), 0.7, 1.0),
+    ("l_tsukimi", ["spikes/L2/out/yard_life/jp_s_tsukimi_stand.p3d"], (0.3, 1.0, 0.3), 0.8, 1.0),
+    ("l_potted", ["spikes/L2/out/yard_life/jp_s_potted_stand.p3d"], (0.3, 1.0, 0.3), 0.8, 1.0),
+]

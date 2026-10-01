@@ -663,7 +663,9 @@ def kimono_hung(cx, pole_y, wear="_w1", mat=KIMONO, yuki=0.64, body_w=0.31, slee
 def laundry(kind):
     ab = kind.startswith("ab")
     wear = "_w2" if ab else None
-    P = SPart("laundry_pole", budget="small", mass=15.0, bury=0.09)
+    # FP2 (2026-10-01): ties and the net's strands at 2.5x: the loaded poles go up a class (net: medium)
+    P = SPart("laundry_pole", budget={"load_net": "medium", "load_kaki": "box", "load_daikon": "box"}.get(kind, "small"),
+              mass=15.0, bury=0.09)
     L = 3.64
     crossed = kind in ("crossed", "load_kaki", "load_daikon", "load_net")
     X = L / 2 - 0.25
@@ -714,7 +716,7 @@ def laundry(kind):
             x = -1.35 + i * 0.44
             top = (x, pole_y - 0.02, 0.0)
             bot = (x + rr.uniform(-0.02, 0.02), pole_y - 0.95, 0.0)
-            P.add(pole(top, bot, 0.006, ROPE, n=3, vis=(1,)))
+            add_all(P, rope_path([top, bot], 0.006, ROPE, n=3))          # FP2: ropekit (2.5x sides)
             nfr = 4 if i != 3 else 2          # one string snapped
             for k in range(nfr):
                 yy = pole_y - 0.18 - k * 0.19
@@ -736,7 +738,7 @@ def laundry(kind):
                 b = (x + rr.uniform(-0.04, 0.04), pole_y - 0.55 - rr.uniform(0, 0.1), sz * 0.06)
                 d = pole(a, b, 0.032, PAPER, n=5, vis=(1,), r1=0.010, wear="_w2")
                 P.add(d)
-            P.add(pole((x, pole_y - 0.03, -0.03), (x, pole_y + 0.025, 0.0), 0.008, ROPE, n=3, vis=(1,)))
+            add_all(P, rope_path([(x, pole_y - 0.03, -0.03), (x, pole_y + 0.025, 0.0)], 0.008, ROPE, n=3))   # FP2
             P.add(W(x - 0.03, x + 0.03, pole_y - 0.55, pole_y - 0.03, -0.05, 0.05, PAPER, vis=(2,)))
     elif kind == "load_net":
         # a small fishing net draped over the pole: strands in both directions, a few floats
@@ -774,7 +776,7 @@ def load_ropes(cx, top_y, rim_y, r, pole_y, vis=(1,)):
     out = []
     for a in (0.3, 2.4, 4.5):
         p = (cx + r * math.cos(a), rim_y, r * math.sin(a))
-        out.append(pole(p, (cx, pole_y, 0.0), 0.006, ROPE, n=3, vis=vis))
+        out += rope_path([p, (cx, pole_y, 0.0)], 0.006, ROPE, n=3, vis=vis)    # FP2: ropekit (2.5x sides)
     return out
 
 

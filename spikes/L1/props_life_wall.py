@@ -303,6 +303,7 @@ def tool_wall(state="full"):
 # ================================================================================================ 6 rope pegs
 def rope_pegs(state="2"):
     P = wallpart("rope_pegs", 4.0)
+    P.budget = "furniture"          # FP2 (2026-10-01): coils at 2.5x round the coil and the rope (back half culled)
     y = 1.65
     n = 3 if state == "3" else 2
     xs = [-0.28, 0.0, 0.28][:n] if n == 3 else [-0.16, 0.16]
@@ -313,8 +314,8 @@ def rope_pegs(state="2"):
             continue
         R = 0.12 + 0.02 * (i % 2)
         P.add(coil(x, y - 0.02 - R * 1.6, R, 0.028, ROPE, sy=1.6, n=10, m=4, z0=0.02, wear="_w2" if state ==
-                   "fallen" else None))
-        P.add(coil(x, y - 0.02 - R * 1.6, R - 0.035, 0.024, ROPE, sy=1.6, n=8, m=3, z0=0.03))
+                   "fallen" else None, cull_back=True))    # FP2: 2.5x round the coil and the rope (25 x 10)
+        P.add(coil(x, y - 0.02 - R * 1.6, R - 0.035, 0.024, ROPE, sy=1.6, n=8, m=3, z0=0.03, cull_back=True))
     if state == "fallen":                   # one coil dropped, half paid out across the floor
         P.add(flat_coil(xs[0] + 0.05, 0.35, 0.13, 0.026, wear="_w2"))
         P.adds(rope_path([(xs[0] + 0.18, 0.02, 0.33), (xs[0] + 0.35, 0.02, 0.55), (xs[0] + 0.60, 0.02, 0.50),
@@ -403,6 +404,7 @@ def persimmon_string(x, top, n, z=0.0, seed=1, gaps=(), wear=None, drop_len=0.0)
 
 def hoshigaki(state="3"):
     P = hangpart("hoshigaki", 3.0)
+    P.budget = "furniture"          # FP2 (2026-10-01): the strings at 2.5x sides
     n = {"3": 3, "5": 5, "ab": 3}[state if state in ("3", "5") else "ab"]
     span = 0.22 * (n - 1)
     pole_y = -0.08

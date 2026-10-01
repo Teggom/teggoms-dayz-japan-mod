@@ -55,7 +55,7 @@ LITTER = "decal_litter"
 
 DUSTY = {WOOD, LACQUER, DARK, PALE}   # up faces of these take the dusty wear
 
-BUDGET = {"furniture": 1000, "small": 300}
+BUDGET = {"furniture": 1000, "small": 300, "medium": 1500}   # FP2: medium = skit's / G1 A3's 1,500 prop ceiling
 
 
 def add_smooth_face(lod, pts, outward, uvs, vns, texture, material):

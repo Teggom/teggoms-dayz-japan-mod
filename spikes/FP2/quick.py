@@ -34,5 +34,9 @@ if __name__ == "__main__":
     reg = core.registry()
     if which == "l1":
         reg = B.l1_props(reg)
+    elif which == "l2":
+        reg = B.l2_props(reg)
+    elif which == "s1":
+        reg = B.s1_props(reg)
     sel = core.select(reg, names)
     B.write_all(sel)

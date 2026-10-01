@@ -110,7 +110,12 @@ def peg_board(x0, x1, y0, y1, t=0.02, k=3, vis=(1, 2)):
 
 
 def cord(p0, p1, r=0.004, mat=ROPE, vis=(1,), n=3):
-    return pole(p0, p1, r, mat, n=n, vis=vis)
+    """A straight cord. FP2 (2026-10-01): Res 1 is a smooth tube with 2.5x the sides (ropekit); a cord asked for in
+    lower LODs only keeps the old prism."""
+    if 1 not in vis:
+        return pole(p0, p1, r, mat, n=n, vis=vis)
+    import ropekit
+    return ropekit.rope_tube([p0, p1], r, n, mat, vis=(1,))
 
 
 def hook_iron(x, y, z=0.0, drop=0.06, vis=(1,)):
@@ -137,10 +142,13 @@ def bipyramid(c, rx, ry, rz, mat, n=4, vis=(1,), phase=0.0, wear=None, top=None)
     return s
 
 
-def coil(cx, cy, R, r, mat=ROPE, sy=1.0, n=10, m=4, z0=0.0, vis=(1,), wear=None, turns_axis="z"):
+def coil(cx, cy, R, r, mat=ROPE, sy=1.0, n=10, m=4, z0=0.0, vis=(1,), wear=None, turns_axis="z", cull_back=False):
     """A rope coil (torus, oval by sy) standing flat against a wall: ring in the x-y plane, tube radius r, its back
     touching z = z0. Closed tube, explicit normals."""
-    quads, normals = [], []
+    quads, normals, vns = [], [], []
+    import ropekit
+    if ropekit.is_rope(mat):                    # FP2 (2026-10-01): 2.5x round the coil AND round the rope
+        n, m = ropekit.rk(n), ropekit.rk(m)
 
     def P(i, j):
         a = 2 * math.pi * i / n
@@ -154,11 +162,15 @@ def coil(cx, cy, R, r, mat=ROPE, sy=1.0, n=10, m=4, z0=0.0, vis=(1,), wear=None,
     for i in range(n):
         for j in range(m):
             q = [P(i, j), P(i + 1, j), P(i + 1, j + 1), P(i, j + 1)]
+            nn = core.norm([sum(v[1][k] for v in q) / 4 for k in range(3)])
+            if cull_back and nn[2] < -0.8:     # the faces turned to the wall (a coil hangs 2 cm off it): unseen
+                continue
             quads.append([p for p, _ in q])
-            nn = [sum(v[1][k] for v in q) / 4 for k in range(3)]
-            normals.append(core.norm(nn))
+            normals.append(nn)
+            vns.append([core.norm(v[1]) for v in q])
     s = sheet(quads, mat, normals, vis=vis)
     s.finalize()
+    s.vn = vns                                  # FP2: smooth (the coil and the rope both read round)
     if wear:
         s.wear = wear
     return s

@@ -426,13 +426,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -870,13 +870,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1110,13 +1110,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1186,8 +1186,8 @@
    "variant": "wall_1ken_h120",
    "pass": true,
    "faces": {
-    "Resolution 1": 138,
-    "Resolution 2": 24,
+    "Resolution 1": 1274,
+    "Resolution 2": 498,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -1213,6 +1213,7 @@
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
@@ -1230,12 +1231,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 138,
-       "Resolution 2": 24,
+       "Resolution 1": 1274,
+       "Resolution 2": 498,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
@@ -1259,8 +1260,8 @@
       {
        "name": "height",
        "expected": 1.2,
-       "measured": 1.2,
-       "tol": 0.03,
+       "measured": 1.212,
+       "tol": 0.06,
        "source": "build_list",
        "ok": true
       },
@@ -1335,6 +1336,7 @@
      "detail": {
       "jp_m_decal_litter_w1": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
     },
@@ -1346,13 +1348,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        106.4,
-        91.9,
-        73.5
+        121.6,
+        83.1,
+        53.0
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 4.8,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1368,6 +1370,18 @@
        "tolerance": 8,
        "pass": true,
        "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
       },
       {
        "material": "jp_m_wood_firewood_w2",
@@ -1411,8 +1425,8 @@
    "variant": "wall_1ken_h180",
    "pass": true,
    "faces": {
-    "Resolution 1": 209,
-    "Resolution 2": 36,
+    "Resolution 1": 1283,
+    "Resolution 2": 499,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -1438,6 +1452,7 @@
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
@@ -1455,12 +1470,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 209,
-       "Resolution 2": 36,
+       "Resolution 1": 1283,
+       "Resolution 2": 499,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
@@ -1484,8 +1499,8 @@
       {
        "name": "height",
        "expected": 1.8,
-       "measured": 1.8,
-       "tol": 0.03,
+       "measured": 1.8013,
+       "tol": 0.06,
        "source": "build_list",
        "ok": true
       },
@@ -1560,6 +1575,7 @@
      "detail": {
       "jp_m_decal_litter_w1": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
     },
@@ -1571,13 +1587,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        106.4,
-        91.9,
-        73.5
+        121.6,
+        83.1,
+        53.0
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 4.8,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1593,6 +1609,18 @@
        "tolerance": 8,
        "pass": true,
        "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
       },
       {
        "material": "jp_m_wood_firewood_w2",
@@ -1636,8 +1664,8 @@
    "variant": "half",
    "pass": true,
    "faces": {
-    "Resolution 1": 99,
-    "Resolution 2": 33,
+    "Resolution 1": 738,
+    "Resolution 2": 295,
     "Geometry": 24,
     "View Geometry": 24,
     "Fire Geometry": 24
@@ -1663,6 +1691,7 @@
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
@@ -1680,12 +1709,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 99,
-       "Resolution 2": 33,
+       "Resolution 1": 738,
+       "Resolution 2": 295,
        "Geometry": 24,
        "View Geometry": 24,
        "Fire Geometry": 24
@@ -1709,8 +1738,8 @@
       {
        "name": "height",
        "expected": 1.2,
-       "measured": 1.2,
-       "tol": 0.03,
+       "measured": 1.2292,
+       "tol": 0.06,
        "source": "build_list",
        "ok": true
       },
@@ -1785,6 +1814,7 @@
      "detail": {
       "jp_m_decal_litter_w1": true,
       "jp_m_wood_endgrain_firewood_w1": true,
+      "jp_m_wood_firewood_w1": true,
       "jp_m_wood_firewood_w2": true
      }
     },
@@ -1796,13 +1826,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        106.4,
-        91.9,
-        73.5
+        121.6,
+        83.1,
+        53.0
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 4.8,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -1818,6 +1848,18 @@
        "tolerance": 8,
        "pass": true,
        "masked": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w1",
+       "mean_srgb": [
+        108.0,
+        92.0,
+        60.0
+       ],
+       "palette": "firewood_split",
+       "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
       },
       {
        "material": "jp_m_wood_firewood_w2",
@@ -1861,8 +1903,8 @@
    "variant": "free_posts",
    "pass": true,
    "faces": {
-    "Resolution 1": 227,
-    "Resolution 2": 78,
+    "Resolution 1": 1242,
+    "Resolution 2": 534,
     "Geometry": 18,
     "View Geometry": 18,
     "Fire Geometry": 18
@@ -1889,7 +1931,6 @@
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
-       "JP\\common\\materials\\wood\\jp_m_wood_sooted_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
@@ -1907,12 +1948,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 227,
-       "Resolution 2": 78,
+       "Resolution 1": 1242,
+       "Resolution 2": 534,
        "Geometry": 18,
        "View Geometry": 18,
        "Fire Geometry": 18
@@ -1936,8 +1977,8 @@
       {
        "name": "height",
        "expected": 1.2,
-       "measured": 1.2,
-       "tol": 0.03,
+       "measured": 1.199,
+       "tol": 0.05,
        "source": "build_list",
        "ok": true
       },
@@ -2057,18 +2098,6 @@
        "masked": true
       },
       {
-       "material": "jp_m_wood_sooted_w1",
-       "mean_srgb": [
-        33.9,
-        26.0,
-        19.9
-       ],
-       "palette": "timber_sooted",
-       "dE76": 1.0,
-       "tolerance": 12,
-       "pass": true
-      },
-      {
        "material": "jp_m_wood_sooted_w2",
        "mean_srgb": [
         33.0,
@@ -2109,7 +2138,7 @@
    "variant": "bundle",
    "pass": true,
    "faces": {
-    "Resolution 1": 143,
+    "Resolution 1": 213,
     "Resolution 2": 10,
     "Geometry": 13,
     "View Geometry": 13,
@@ -2158,7 +2187,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 143,
+       "Resolution 1": 213,
        "Resolution 2": 10,
        "Geometry": 13,
        "View Geometry": 13,
@@ -2263,13 +2292,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -2339,8 +2368,8 @@
    "variant": "wall_1ken_h120",
    "pass": true,
    "faces": {
-    "Resolution 1": 222,
-    "Resolution 2": 108,
+    "Resolution 1": 1377,
+    "Resolution 2": 500,
     "Geometry": 24,
     "View Geometry": 24,
     "Fire Geometry": 24
@@ -2383,12 +2412,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 222,
-       "Resolution 2": 108,
+       "Resolution 1": 1377,
+       "Resolution 2": 500,
        "Geometry": 24,
        "View Geometry": 24,
        "Fire Geometry": 24
@@ -2412,8 +2441,8 @@
       {
        "name": "height",
        "expected": 1.2,
-       "measured": 1.2,
-       "tol": 0.03,
+       "measured": 1.2178,
+       "tol": 0.06,
        "source": "build_list",
        "ok": true
       },
@@ -2499,13 +2528,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -3371,13 +3400,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -3571,13 +3600,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -4203,7 +4232,7 @@
    "variant": "crossed",
    "pass": true,
    "faces": {
-    "Resolution 1": 267,
+    "Resolution 1": 330,
     "Resolution 2": 88,
     "Geometry": 12,
     "View Geometry": 12,
@@ -4247,11 +4276,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 267,
+       "Resolution 1": 330,
        "Resolution 2": 88,
        "Geometry": 12,
        "View Geometry": 12,
@@ -4415,7 +4444,7 @@
    "variant": "crossed",
    "pass": true,
    "faces": {
-    "Resolution 1": 242,
+    "Resolution 1": 314,
     "Resolution 2": 94,
     "Geometry": 12,
     "View Geometry": 12,
@@ -4459,11 +4488,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 242,
+       "Resolution 1": 314,
        "Resolution 2": 94,
        "Geometry": 12,
        "View Geometry": 12,
@@ -4626,7 +4655,7 @@
    "variant": "crossed",
    "pass": true,
    "faces": {
-    "Resolution 1": 228,
+    "Resolution 1": 832,
     "Resolution 2": 52,
     "Geometry": 12,
     "View Geometry": 12,
@@ -4669,11 +4698,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 228,
+       "Resolution 1": 832,
        "Resolution 2": 52,
        "Geometry": 12,
        "View Geometry": 12,
@@ -4985,13 +5014,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -5038,7 +5067,7 @@
    "variant": "baskets",
    "pass": true,
    "faces": {
-    "Resolution 1": 143,
+    "Resolution 1": 197,
     "Resolution 2": 26,
     "Geometry": 20,
     "View Geometry": 20,
@@ -5087,7 +5116,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 143,
+       "Resolution 1": 197,
        "Resolution 2": 26,
        "Geometry": 20,
        "View Geometry": 20,
@@ -5263,7 +5292,7 @@
    "variant": "buckets",
    "pass": true,
    "faces": {
-    "Resolution 1": 214,
+    "Resolution 1": 268,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
@@ -5311,7 +5340,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 214,
+       "Resolution 1": 268,
        "Resolution 2": 30,
        "Geometry": 20,
        "View Geometry": 20,
@@ -5672,7 +5701,7 @@
    "variant": "leaning",
    "pass": true,
    "faces": {
-    "Resolution 1": 130,
+    "Resolution 1": 242,
     "Resolution 2": 26,
     "Geometry": 26,
     "View Geometry": 26,
@@ -5720,7 +5749,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 130,
+       "Resolution 1": 242,
        "Resolution 2": 26,
        "Geometry": 26,
        "View Geometry": 26,
@@ -5877,7 +5906,7 @@
    "variant": "baskets",
    "pass": true,
    "faces": {
-    "Resolution 1": 139,
+    "Resolution 1": 195,
     "Resolution 2": 12,
     "Geometry": 26,
     "View Geometry": 26,
@@ -5928,7 +5957,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 139,
+       "Resolution 1": 195,
        "Resolution 2": 12,
        "Geometry": 26,
        "View Geometry": 26,
@@ -6062,13 +6091,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -6296,13 +6325,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        106.4,
-        91.9,
-        73.5
+        121.6,
+        83.1,
+        53.0
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 4.8,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -6348,7 +6377,7 @@
    "variant": "daihachi",
    "pass": true,
    "faces": {
-    "Resolution 1": 828,
+    "Resolution 1": 1158,
     "Resolution 2": 106,
     "Resolution 3": 60,
     "Geometry": 52,
@@ -6399,7 +6428,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 828,
+       "Resolution 1": 1158,
        "Resolution 2": 106,
        "Resolution 3": 60,
        "Geometry": 52,
@@ -6521,13 +6550,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        106.4,
-        91.9,
-        73.5
+        121.6,
+        83.1,
+        53.0
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 4.8,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -6597,7 +6626,7 @@
    "variant": "daihachi",
    "pass": true,
    "faces": {
-    "Resolution 1": 788,
+    "Resolution 1": 968,
     "Resolution 2": 124,
     "Resolution 3": 60,
     "Geometry": 74,
@@ -6648,7 +6677,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 788,
+       "Resolution 1": 968,
        "Resolution 2": 124,
        "Resolution 3": 60,
        "Geometry": 74,
@@ -6781,13 +6810,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        106.4,
-        91.9,
-        73.5
+        121.6,
+        83.1,
+        53.0
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 4.8,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -7014,13 +7043,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        106.4,
-        91.9,
-        73.5
+        121.6,
+        83.1,
+        53.0
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 4.8,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -7066,7 +7095,7 @@
    "variant": "daihachi",
    "pass": true,
    "faces": {
-    "Resolution 1": 702,
+    "Resolution 1": 792,
     "Resolution 2": 100,
     "Resolution 3": 54,
     "Geometry": 76,
@@ -7117,7 +7146,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 702,
+       "Resolution 1": 792,
        "Resolution 2": 100,
        "Resolution 3": 54,
        "Geometry": 76,
@@ -7689,13 +7718,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -7903,13 +7932,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -8903,13 +8932,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -9172,7 +9201,7 @@
    "variant": "curb_tub",
    "pass": true,
    "faces": {
-    "Resolution 1": 401,
+    "Resolution 1": 477,
     "Resolution 2": 69,
     "Resolution 3": 30,
     "Geometry": 42,
@@ -9226,7 +9255,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 401,
+       "Resolution 1": 477,
        "Resolution 2": 69,
        "Resolution 3": 30,
        "Geometry": 42,
@@ -9465,7 +9494,7 @@
    "variant": "curb_igeta",
    "pass": true,
    "faces": {
-    "Resolution 1": 371,
+    "Resolution 1": 447,
     "Resolution 2": 67,
     "Resolution 3": 42,
     "Geometry": 30,
@@ -9520,7 +9549,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 371,
+       "Resolution 1": 447,
        "Resolution 2": 67,
        "Resolution 3": 42,
        "Geometry": 30,
@@ -9772,7 +9801,7 @@
    "variant": "curb_stone",
    "pass": true,
    "faces": {
-    "Resolution 1": 345,
+    "Resolution 1": 421,
     "Resolution 2": 69,
     "Resolution 3": 30,
     "Geometry": 38,
@@ -9828,7 +9857,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 345,
+       "Resolution 1": 421,
        "Resolution 2": 69,
        "Resolution 3": 30,
        "Geometry": 38,
@@ -10006,7 +10035,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -10092,7 +10121,7 @@
    "variant": "roofed",
    "pass": true,
    "faces": {
-    "Resolution 1": 509,
+    "Resolution 1": 585,
     "Resolution 2": 93,
     "Resolution 3": 42,
     "Geometry": 48,
@@ -10147,7 +10176,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 509,
+       "Resolution 1": 585,
        "Resolution 2": 93,
        "Resolution 3": 42,
        "Geometry": 48,
@@ -10592,13 +10621,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -10631,7 +10660,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -10706,7 +10735,7 @@
    "variant": "curb_tub",
    "pass": true,
    "faces": {
-    "Resolution 1": 335,
+    "Resolution 1": 363,
     "Resolution 2": 69,
     "Resolution 3": 30,
     "Geometry": 42,
@@ -10762,7 +10791,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 335,
+       "Resolution 1": 363,
        "Resolution 2": 69,
        "Resolution 3": 30,
        "Geometry": 42,
@@ -10902,13 +10931,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -11031,7 +11060,7 @@
    "variant": "well",
    "pass": true,
    "faces": {
-    "Resolution 1": 337,
+    "Resolution 1": 503,
     "Resolution 2": 95,
     "Resolution 3": 74,
     "Geometry": 66,
@@ -11086,7 +11115,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 337,
+       "Resolution 1": 503,
        "Resolution 2": 95,
        "Resolution 3": 74,
        "Geometry": 66,
@@ -11330,7 +11359,7 @@
    "variant": "field",
    "pass": true,
    "faces": {
-    "Resolution 1": 379,
+    "Resolution 1": 545,
     "Resolution 2": 72,
     "Resolution 3": 62,
     "Geometry": 42,
@@ -11385,7 +11414,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 379,
+       "Resolution 1": 545,
        "Resolution 2": 72,
        "Resolution 3": 62,
        "Geometry": 42,
@@ -11631,7 +11660,7 @@
    "variant": "well",
    "pass": true,
    "faces": {
-    "Resolution 1": 350,
+    "Resolution 1": 528,
     "Resolution 2": 95,
     "Resolution 3": 74,
     "Geometry": 66,
@@ -11688,7 +11717,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 350,
+       "Resolution 1": 528,
        "Resolution 2": 95,
        "Resolution 3": 74,
        "Geometry": 66,
@@ -12112,7 +12141,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -12324,7 +12353,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -12536,7 +12565,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -12750,7 +12779,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -12761,12 +12790,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -12977,7 +13006,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -13205,13 +13234,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -13232,7 +13261,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -13462,13 +13491,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -13489,7 +13518,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -14237,12 +14266,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -14454,13 +14483,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -14720,7 +14749,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -14913,7 +14942,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -15106,7 +15135,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -15299,7 +15328,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -15500,7 +15529,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -15693,7 +15722,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -15875,13 +15904,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -15902,7 +15931,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -16109,13 +16138,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -16136,7 +16165,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -16147,12 +16176,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -17499,13 +17528,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -18020,7 +18049,7 @@
    "variant": "sudare_up",
    "pass": true,
    "faces": {
-    "Resolution 1": 50,
+    "Resolution 1": 230,
     "Resolution 2": 14
    },
    "checks": [
@@ -18061,7 +18090,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 50,
+       "Resolution 1": 230,
        "Resolution 2": 14
       },
       "extra": []
@@ -18095,11 +18124,11 @@
      "name": "anchor 'wall': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 2.2884,
+      "res1_min_y": 2.285,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": true,
-      "res1_min_z (wall plane z=0)": 0.0168,
+      "res1_min_z (wall plane z=0)": 0.0154,
       "wall_gap": 0.0
      }
     },
@@ -18335,7 +18364,7 @@
    "variant": "kanban_hang",
    "pass": true,
    "faces": {
-    "Resolution 1": 25,
+    "Resolution 1": 49,
     "Resolution 2": 12
    },
    "checks": [
@@ -18376,7 +18405,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 25,
+       "Resolution 1": 49,
        "Resolution 2": 12
       },
       "extra": []
@@ -18683,7 +18712,7 @@
    "variant": "shape",
    "pass": true,
    "faces": {
-    "Resolution 1": 50,
+    "Resolution 1": 62,
     "Resolution 2": 44
    },
    "checks": [
@@ -18725,7 +18754,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 50,
+       "Resolution 1": 62,
        "Resolution 2": 44
       },
       "extra": []
@@ -18843,7 +18872,7 @@
    "variant": "shape",
    "pass": true,
    "faces": {
-    "Resolution 1": 42,
+    "Resolution 1": 110,
     "Resolution 2": 24
    },
    "checks": [
@@ -18884,7 +18913,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 42,
+       "Resolution 1": 110,
        "Resolution 2": 24
       },
       "extra": []
@@ -18992,7 +19021,7 @@
    "variant": "shape",
    "pass": true,
    "faces": {
-    "Resolution 1": 22,
+    "Resolution 1": 34,
     "Resolution 2": 16
    },
    "checks": [
@@ -19033,7 +19062,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 22,
+       "Resolution 1": 34,
        "Resolution 2": 16
       },
       "extra": []
@@ -19140,7 +19169,7 @@
    "variant": "shape",
    "pass": true,
    "faces": {
-    "Resolution 1": 68,
+    "Resolution 1": 80,
     "Resolution 2": 62
    },
    "checks": [
@@ -19181,7 +19210,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 68,
+       "Resolution 1": 80,
        "Resolution 2": 62
       },
       "extra": []
@@ -19288,7 +19317,7 @@
    "variant": "shape",
    "pass": true,
    "faces": {
-    "Resolution 1": 50,
+    "Resolution 1": 62,
     "Resolution 2": 38
    },
    "checks": [
@@ -19330,7 +19359,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 50,
+       "Resolution 1": 62,
        "Resolution 2": 38
       },
       "extra": []
@@ -19449,7 +19478,7 @@
    "variant": "shape",
    "pass": true,
    "faces": {
-    "Resolution 1": 35,
+    "Resolution 1": 47,
     "Resolution 2": 23
    },
    "checks": [
@@ -19490,7 +19519,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 35,
+       "Resolution 1": 47,
        "Resolution 2": 23
       },
       "extra": []
@@ -19865,13 +19894,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -19905,7 +19934,7 @@
    "variant": "kanban_hang",
    "pass": true,
    "faces": {
-    "Resolution 1": 25,
+    "Resolution 1": 49,
     "Resolution 2": 12
    },
    "checks": [
@@ -19946,7 +19975,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 25,
+       "Resolution 1": 49,
        "Resolution 2": 12
       },
       "extra": []
@@ -21459,13 +21488,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -21536,7 +21565,7 @@
    "variant": "shop",
    "pass": true,
    "faces": {
-    "Resolution 1": 55,
+    "Resolution 1": 67,
     "Resolution 2": 34,
     "Geometry": 18,
     "View Geometry": 18,
@@ -21586,7 +21615,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 55,
+       "Resolution 1": 67,
        "Resolution 2": 34,
        "Geometry": 18,
        "View Geometry": 18,
@@ -21715,7 +21744,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -21778,7 +21807,7 @@
    "variant": "shrine",
    "pass": true,
    "faces": {
-    "Resolution 1": 109,
+    "Resolution 1": 133,
     "Resolution 2": 68,
     "Geometry": 36,
     "View Geometry": 36,
@@ -21828,7 +21857,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 109,
+       "Resolution 1": 133,
        "Resolution 2": 68,
        "Geometry": 36,
        "View Geometry": 36,
@@ -21957,7 +21986,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -22168,7 +22197,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -22206,7 +22235,7 @@
    "variant": "shrine_single",
    "pass": true,
    "faces": {
-    "Resolution 1": 55,
+    "Resolution 1": 67,
     "Resolution 2": 34,
     "Geometry": 18,
     "View Geometry": 18,
@@ -22257,7 +22286,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 55,
+       "Resolution 1": 67,
        "Resolution 2": 34,
        "Geometry": 18,
        "View Geometry": 18,
@@ -22399,7 +22428,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -22627,13 +22656,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -22641,7 +22670,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -23159,13 +23188,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -23429,13 +23458,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -23966,13 +23995,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -24194,13 +24223,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       }
@@ -25404,7 +25433,7 @@
    "variant": "nio_cyl",
    "pass": true,
    "faces": {
-    "Resolution 1": 225,
+    "Resolution 1": 541,
     "Resolution 2": 27,
     "View Geometry": 28
    },
@@ -25443,11 +25472,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+ViewG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+ViewG) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 225,
+       "Resolution 1": 541,
        "Resolution 2": 27,
        "View Geometry": 28
       },
@@ -25569,7 +25598,7 @@
    "variant": "nio_cone",
    "pass": true,
    "faces": {
-    "Resolution 1": 189,
+    "Resolution 1": 445,
     "Resolution 2": 27,
     "View Geometry": 14
    },
@@ -25608,11 +25637,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+ViewG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+ViewG) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 189,
+       "Resolution 1": 445,
        "Resolution 2": 27,
        "View Geometry": 14
       },
@@ -26041,7 +26070,7 @@
    "variant": "tawara_stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 242,
+    "Resolution 1": 392,
     "Resolution 2": 12,
     "Geometry": 50,
     "View Geometry": 50,
@@ -26084,11 +26113,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 242,
+       "Resolution 1": 392,
        "Resolution 2": 12,
        "Geometry": 50,
        "View Geometry": 50,
@@ -26417,7 +26446,7 @@
    "variant": "len_1ken",
    "pass": true,
    "faces": {
-    "Resolution 1": 266,
+    "Resolution 1": 945,
     "Resolution 2": 6
    },
    "checks": [
@@ -26453,11 +26482,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 266,
+       "Resolution 1": 945,
        "Resolution 2": 6
       },
       "extra": []
@@ -26558,7 +26587,7 @@
    "variant": "len_2ken",
    "pass": true,
    "faces": {
-    "Resolution 1": 432,
+    "Resolution 1": 1402,
     "Resolution 2": 6
    },
    "checks": [
@@ -26594,11 +26623,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 432,
+       "Resolution 1": 1402,
        "Resolution 2": 6
       },
       "extra": []
@@ -26699,7 +26728,7 @@
    "variant": "wrap",
    "pass": true,
    "faces": {
-    "Resolution 1": 401,
+    "Resolution 1": 1017,
     "Resolution 2": 8
    },
    "checks": [
@@ -26735,11 +26764,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 401,
+       "Resolution 1": 1017,
        "Resolution 2": 8
       },
       "extra": []
@@ -26773,7 +26802,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.852,
+      "res1_min_y": 0.8522,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": true
@@ -26840,7 +26869,7 @@
    "variant": "wrap",
    "pass": true,
    "faces": {
-    "Resolution 1": 377,
+    "Resolution 1": 917,
     "Resolution 2": 8
    },
    "checks": [
@@ -26876,11 +26905,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 377,
+       "Resolution 1": 917,
        "Resolution 2": 8
       },
       "extra": []
@@ -26914,7 +26943,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.8636,
+      "res1_min_y": 0.864,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": true
@@ -26981,7 +27010,7 @@
    "variant": "wrap",
    "pass": true,
    "faces": {
-    "Resolution 1": 395,
+    "Resolution 1": 1070,
     "Resolution 2": 8
    },
    "checks": [
@@ -27017,11 +27046,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 395,
+       "Resolution 1": 1070,
        "Resolution 2": 8
       },
       "extra": []
@@ -27055,7 +27084,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.8507,
+      "res1_min_y": 0.8512,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": true
@@ -27122,7 +27151,7 @@
    "variant": "len_1ken",
    "pass": true,
    "faces": {
-    "Resolution 1": 323,
+    "Resolution 1": 1358,
     "Resolution 2": 6
    },
    "checks": [
@@ -27159,11 +27188,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 323,
+       "Resolution 1": 1358,
        "Resolution 2": 6
       },
       "extra": []
@@ -27197,7 +27226,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": -0.0006,
+      "res1_min_y": -0.0024,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": false
@@ -27481,7 +27510,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 361,
+    "Resolution 1": 994,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -27530,7 +27559,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 361,
+       "Resolution 1": 994,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -27699,7 +27728,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 342,
+    "Resolution 1": 975,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -27749,7 +27778,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 342,
+       "Resolution 1": 975,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -28164,7 +28193,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 379,
+    "Resolution 1": 1012,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -28215,7 +28244,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 379,
+       "Resolution 1": 1012,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -28412,7 +28441,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 360,
+    "Resolution 1": 993,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -28464,7 +28493,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 360,
+       "Resolution 1": 993,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -28894,7 +28923,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 554,
+    "Resolution 1": 1231,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -28944,7 +28973,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 554,
+       "Resolution 1": 1231,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -29129,7 +29158,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 516,
+    "Resolution 1": 1193,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29180,7 +29209,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 516,
+       "Resolution 1": 1193,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -29614,7 +29643,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 574,
+    "Resolution 1": 1251,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29665,7 +29694,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 574,
+       "Resolution 1": 1251,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -29865,7 +29894,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 536,
+    "Resolution 1": 1213,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29917,7 +29946,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 536,
+       "Resolution 1": 1213,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -30378,7 +30407,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 544,
+    "Resolution 1": 1221,
     "Resolution 2": 202,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -30431,7 +30460,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 544,
+       "Resolution 1": 1221,
        "Resolution 2": 202,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -31069,7 +31098,7 @@
    "variant": "mini",
    "pass": true,
    "faces": {
-    "Resolution 1": 236,
+    "Resolution 1": 572,
     "Resolution 2": 94,
     "Geometry": 58,
     "View Geometry": 58,
@@ -31113,11 +31142,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 236,
+       "Resolution 1": 572,
        "Resolution 2": 94,
        "Geometry": 58,
        "View Geometry": 58,
@@ -31298,7 +31327,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 526,
+    "Resolution 1": 1349,
     "Resolution 2": 182,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -31350,7 +31379,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 526,
+       "Resolution 1": 1349,
        "Resolution 2": 182,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -31564,7 +31593,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 534,
+    "Resolution 1": 1357,
     "Resolution 2": 210,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -31617,7 +31646,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 534,
+       "Resolution 1": 1357,
        "Resolution 2": 210,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -31844,7 +31873,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 463,
+    "Resolution 1": 1358,
     "Resolution 2": 139,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -31896,7 +31925,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 463,
+       "Resolution 1": 1358,
        "Resolution 2": 139,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -32319,7 +32348,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 453,
+    "Resolution 1": 932,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -32369,7 +32398,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 453,
+       "Resolution 1": 932,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -32546,7 +32575,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 434,
+    "Resolution 1": 913,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -32597,7 +32626,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 434,
+       "Resolution 1": 913,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -33014,7 +33043,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 455,
+    "Resolution 1": 934,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -33066,7 +33095,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 455,
+       "Resolution 1": 934,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -33482,7 +33511,7 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 506,
+    "Resolution 1": 1158,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -33533,7 +33562,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 506,
+       "Resolution 1": 1158,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -33935,7 +33964,7 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 541,
+    "Resolution 1": 1199,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -33986,7 +34015,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 541,
+       "Resolution 1": 1199,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -37213,7 +37242,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -37470,7 +37499,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -37682,12 +37711,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -37906,13 +37935,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -37944,12 +37973,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -38172,13 +38201,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -38186,7 +38215,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -38419,13 +38448,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -38433,7 +38462,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -38666,13 +38695,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -38680,7 +38709,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -38913,13 +38942,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -38927,7 +38956,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -39160,13 +39189,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -39174,7 +39203,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -39405,13 +39434,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -39639,13 +39668,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -39851,13 +39880,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -39865,7 +39894,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -40074,13 +40103,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -40088,7 +40117,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -40285,7 +40314,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -40461,7 +40490,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -40675,13 +40704,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -40701,7 +40730,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -40933,13 +40962,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -41157,7 +41186,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -41358,7 +41387,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -41561,7 +41590,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -41572,12 +41601,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -41775,7 +41804,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -41976,7 +42005,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -42170,7 +42199,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -42360,7 +42389,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -42576,7 +42605,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -42804,7 +42833,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -43075,7 +43104,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -43086,12 +43115,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -43350,7 +43379,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -43361,12 +43390,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -43623,7 +43652,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -43634,12 +43663,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -43830,25 +43859,25 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -44056,7 +44085,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -44067,12 +44096,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -44264,7 +44293,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -44454,7 +44483,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -44633,13 +44662,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -44839,13 +44868,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -44853,7 +44882,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -45058,13 +45087,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -45084,12 +45113,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -45275,13 +45304,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -45301,12 +45330,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -45495,13 +45524,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -45521,12 +45550,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -45708,13 +45737,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -45734,12 +45763,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -45946,13 +45975,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -45972,12 +46001,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -46158,13 +46187,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -46184,12 +46213,12 @@
       {
        "material": "jp_m_decal_moss_w2",
        "mean_srgb": [
-        115.4,
+        115.3,
         121.5,
         80.6
        ],
        "palette": "moss_on_stone",
-       "dE76": 4.3,
+       "dE76": 4.4,
        "tolerance": 14,
        "pass": true,
        "masked": true
@@ -46930,7 +46959,7 @@
        "material": "jp_m_decal_moss_w1",
        "mean_srgb": [
         129.4,
-        132.0,
+        132.1,
         94.9
        ],
        "palette": "moss_on_stone",
@@ -47328,13 +47357,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -47515,13 +47544,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -47710,13 +47739,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -47917,13 +47946,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -48138,13 +48167,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -48358,13 +48387,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -48576,13 +48605,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -48739,13 +48768,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        97.8,
-        83.4,
-        65.5
+        106.8,
+        76.3,
+        53.7
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.1,
+       "tolerance": 14,
        "pass": true,
        "masked": true
       },
@@ -49896,6 +49925,14 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
+  },
+  "BIN": {
+   "pass": true,
+   "detail": {
+    "missing": [],
+    "warning_lines": [],
+    "exit": 0
+   }
   }
  },
  "summary": {

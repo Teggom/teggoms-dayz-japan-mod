@@ -25,13 +25,13 @@
    "abandoned": false,
    "display": "Two rope coils on pegs",
    "anchor": "wall",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 152,
+    "Resolution 1": 614,
     "Resolution 2": 12
    },
    "bbox": [
-    -0.308,
+    -0.306,
     0.328,
     1.1,
     1.7,
@@ -72,13 +72,13 @@
    "abandoned": false,
    "display": "Three rope coils on pegs",
    "anchor": "wall",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 225,
+    "Resolution 1": 918,
     "Resolution 2": 12
    },
    "bbox": [
-    -0.428,
+    -0.426,
     0.428,
     1.1,
     1.7,
@@ -119,18 +119,18 @@
    "abandoned": true,
    "display": "Rope coils, one fallen and paid out",
    "anchor": "wall",
-   "budget": "small",
+   "budget": "furniture",
    "faces": {
-    "Resolution 1": 136,
+    "Resolution 1": 617,
     "Resolution 2": 12
    },
    "bbox": [
     -0.3,
-    0.628,
-    0.003,
+    0.632,
+    -0.0,
     1.7,
     0.0,
-    0.632
+    0.635
    ],
    "collision": false,
    "footprint_xz": null,

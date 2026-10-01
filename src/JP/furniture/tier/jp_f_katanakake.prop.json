@@ -25,9 +25,9 @@
    "abandoned": false,
    "display": "Sword rack with a pair of swords",
    "anchor": "floor",
-   "budget": "furniture",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 932,
+    "Resolution 1": 1438,
     "Resolution 2": 38,
     "Geometry": 6,
     "View Geometry": 6,
@@ -79,9 +79,9 @@
    "abandoned": false,
    "display": "Wall sword rack with a pair of swords",
    "anchor": "wall",
-   "budget": "furniture",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 912,
+    "Resolution 1": 1418,
     "Resolution 2": 18
    },
    "bbox": [
@@ -125,7 +125,7 @@
    "abandoned": true,
    "display": "Sword rack, the swords taken",
    "anchor": "floor",
-   "budget": "furniture",
+   "budget": "medium",
    "faces": {
     "Resolution 1": 139,
     "Resolution 2": 38,
@@ -179,7 +179,7 @@
    "abandoned": true,
    "display": "Wall sword rack, the swords taken",
    "anchor": "wall",
-   "budget": "furniture",
+   "budget": "medium",
    "faces": {
     "Resolution 1": 119,
     "Resolution 2": 18

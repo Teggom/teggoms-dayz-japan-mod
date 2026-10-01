@@ -1319,13 +1319,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -1708,13 +1708,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -2165,8 +2165,8 @@
    "variant": "stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 255,
-    "Resolution 2": 6,
+    "Resolution 1": 650,
+    "Resolution 2": 278,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -2192,6 +2192,7 @@
       "materials": [
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
@@ -2205,18 +2206,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 255,
-       "Resolution 2": 6,
+       "Resolution 1": 650,
+       "Resolution 2": 278,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -2235,8 +2236,8 @@
       {
        "name": "height",
        "expected": 0.6,
-       "measured": 0.5912,
-       "tol": 0.03,
+       "measured": 0.6341,
+       "tol": 0.06,
        "source": "build_list",
        "ok": true
       }
@@ -2294,11 +2295,11 @@
       {
        "surface": "top",
        "point": [
-        -0.185,
-        0.5704,
-        0.0222
+        0.0546,
+        0.6682,
+        0.0272
        ],
-       "hit_y": 0.5757,
+       "hit_y": 0.6682,
        "ok": true
       }
      ]
@@ -2309,7 +2310,8 @@
      "pass": true,
      "detail": {
       "jp_m_wood_endgrain_firewood_w1": true,
-      "jp_m_wood_firewood_w1": true
+      "jp_m_wood_firewood_w1": true,
+      "jp_m_wood_firewood_w2": true
      }
     },
     {
@@ -2320,12 +2322,12 @@
       {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        153.5,
-        124.7,
-        65.9
+        153.9,
+        125.0,
+        66.1
        ],
        "palette": "firewood_end",
-       "dE76": 2.9,
+       "dE76": 2.8,
        "tolerance": 8,
        "pass": true
       },
@@ -2338,6 +2340,18 @@
        ],
        "palette": "firewood_split",
        "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w2",
+       "mean_srgb": [
+        95.1,
+        83.5,
+        56.3
+       ],
+       "palette": "firewood_split",
+       "dE76": 5.2,
        "tolerance": 14,
        "pass": true
       },
@@ -2364,8 +2378,8 @@
    "variant": "stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 177,
-    "Resolution 2": 36,
+    "Resolution 1": 356,
+    "Resolution 2": 146,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
@@ -2392,6 +2406,7 @@
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_endgrain_firewood_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_firewood_w1.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_firewood_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
       ],
       "bad": []
@@ -2405,18 +2420,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 177,
-       "Resolution 2": 36,
+       "Resolution 1": 356,
+       "Resolution 2": 146,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -2480,20 +2495,9 @@
     },
     {
      "id": "LOOT",
-     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (1 surfaces)",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
      "pass": true,
-     "detail": [
-      {
-       "surface": "top",
-       "point": [
-        0.126,
-        0.2851,
-        -0.0165
-       ],
-       "hit_y": 0.2824,
-       "ok": true
-      }
-     ]
+     "detail": []
     },
     {
      "id": "C19",
@@ -2502,7 +2506,8 @@
      "detail": {
       "jp_m_decal_litter_w1": true,
       "jp_m_wood_endgrain_firewood_w1": true,
-      "jp_m_wood_firewood_w1": true
+      "jp_m_wood_firewood_w1": true,
+      "jp_m_wood_firewood_w2": true
      }
     },
     {
@@ -2513,24 +2518,24 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        109.0,
-        94.8,
-        76.4
+        123.1,
+        85.6,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 5.0,
+       "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        153.5,
-        124.7,
-        65.9
+        153.9,
+        125.0,
+        66.1
        ],
        "palette": "firewood_end",
-       "dE76": 2.9,
+       "dE76": 2.8,
        "tolerance": 8,
        "pass": true
       },
@@ -2543,6 +2548,18 @@
        ],
        "palette": "firewood_split",
        "dE76": 0.0,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_wood_firewood_w2",
+       "mean_srgb": [
+        95.1,
+        83.5,
+        56.3
+       ],
+       "palette": "firewood_split",
+       "dE76": 5.2,
        "tolerance": 14,
        "pass": true
       },
@@ -2727,12 +2744,12 @@
       {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        153.5,
-        124.7,
-        65.9
+        153.9,
+        125.0,
+        66.1
        ],
        "palette": "firewood_end",
-       "dE76": 2.9,
+       "dE76": 2.8,
        "tolerance": 8,
        "pass": true
       },
@@ -2929,12 +2946,12 @@
       {
        "material": "jp_m_wood_endgrain_firewood_w1",
        "mean_srgb": [
-        153.5,
-        124.7,
-        65.9
+        153.9,
+        125.0,
+        66.1
        ],
        "palette": "firewood_end",
-       "dE76": 2.9,
+       "dE76": 2.8,
        "tolerance": 8,
        "pass": true
       },
@@ -4158,13 +4175,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -4359,13 +4376,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -4560,13 +4577,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -4746,13 +4763,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       }
      ]
@@ -5181,13 +5198,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -5661,13 +5678,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -6120,13 +6137,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -6600,13 +6617,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -7069,13 +7086,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -7579,13 +7596,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -9566,13 +9583,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -12268,7 +12285,7 @@
    "variant": "1",
    "pass": true,
    "faces": {
-    "Resolution 1": 180,
+    "Resolution 1": 330,
     "Resolution 2": 10,
     "Geometry": 14,
     "Roadway": 1,
@@ -12309,11 +12326,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 180,
+       "Resolution 1": 330,
        "Resolution 2": 10,
        "Geometry": 14,
        "Roadway": 1,
@@ -12321,7 +12338,7 @@
        "Fire Geometry": 14
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -12465,7 +12482,7 @@
    "variant": "1",
    "pass": true,
    "faces": {
-    "Resolution 1": 189,
+    "Resolution 1": 289,
     "Resolution 2": 23,
     "Geometry": 14,
     "Roadway": 1,
@@ -12509,11 +12526,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 189,
+       "Resolution 1": 289,
        "Resolution 2": 23,
        "Geometry": 14,
        "Roadway": 1,
@@ -12521,7 +12538,7 @@
        "Fire Geometry": 14
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -12635,13 +12652,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -12703,7 +12720,7 @@
    "variant": "stack6",
    "pass": true,
    "faces": {
-    "Resolution 1": 288,
+    "Resolution 1": 468,
     "Resolution 2": 18,
     "Geometry": 84,
     "Roadway": 6,
@@ -12744,11 +12761,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 288,
+       "Resolution 1": 468,
        "Resolution 2": 18,
        "Geometry": 84,
        "Roadway": 6,
@@ -12756,7 +12773,7 @@
        "Fire Geometry": 84
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -12892,7 +12909,7 @@
    "variant": "stack6",
    "pass": true,
    "faces": {
-    "Resolution 1": 286,
+    "Resolution 1": 436,
     "Resolution 2": 31,
     "Geometry": 84,
     "Roadway": 6,
@@ -12936,11 +12953,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 286,
+       "Resolution 1": 436,
        "Resolution 2": 31,
        "Geometry": 84,
        "Roadway": 6,
@@ -12948,7 +12965,7 @@
        "Fire Geometry": 84
       },
       "extra": [],
-      "budget": 300
+      "budget": 1000
      }
     },
     {
@@ -13054,13 +13071,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -13625,13 +13642,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -14216,13 +14233,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -14707,13 +14724,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -15136,13 +15153,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -15563,13 +15580,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -17707,13 +17724,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        109.0,
-        94.8,
-        76.4
+        123.1,
+        85.6,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 5.0,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -17992,25 +18009,25 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        109.0,
-        94.8,
-        76.4
+        123.1,
+        85.6,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 5.0,
+       "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -18060,7 +18077,7 @@
    "variant": "rolled",
    "pass": true,
    "faces": {
-    "Resolution 1": 127,
+    "Resolution 1": 227,
     "Resolution 2": 10,
     "Geometry": 14,
     "View Geometry": 14,
@@ -18103,7 +18120,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 127,
+       "Resolution 1": 227,
        "Resolution 2": 10,
        "Geometry": 14,
        "View Geometry": 14,
@@ -18234,7 +18251,7 @@
    "variant": "rolled",
    "pass": true,
    "faces": {
-    "Resolution 1": 130,
+    "Resolution 1": 230,
     "Resolution 2": 10,
     "Geometry": 14,
     "View Geometry": 14,
@@ -18279,7 +18296,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 130,
+       "Resolution 1": 230,
        "Resolution 2": 10,
        "Geometry": 14,
        "View Geometry": 14,
@@ -18379,13 +18396,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        109.0,
-        94.8,
-        76.4
+        123.1,
+        85.6,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 5.0,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -18650,13 +18667,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        109.0,
-        94.8,
-        76.4
+        123.1,
+        85.6,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 5.0,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -19119,13 +19136,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -19610,13 +19627,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -22043,25 +22060,25 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        109.0,
-        94.8,
-        76.4
+        123.1,
+        85.6,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 5.0,
+       "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       }
      ]
@@ -22157,13 +22174,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        109.0,
-        94.8,
-        76.4
+        123.1,
+        85.6,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 5.0,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -22270,13 +22287,13 @@
       {
        "material": "jp_m_decal_litter_w0",
        "mean_srgb": [
-        117.5,
-        103.7,
-        84.8
+        129.6,
+        83.9,
+        48.4
        ],
-       "palette": "grime_splash",
-       "dE76": 5.9,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 9.5,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -22408,13 +22425,13 @@
       {
        "material": "jp_m_decal_litter_w1",
        "mean_srgb": [
-        109.0,
-        94.8,
-        76.4
+        123.1,
+        85.6,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 2.4,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 5.0,
+       "tolerance": 14,
        "pass": true
       }
      ]
@@ -22780,13 +22797,13 @@
       {
        "material": "jp_m_decal_litter_w2",
        "mean_srgb": [
-        100.7,
-        86.5,
-        68.6
+        108.2,
+        78.5,
+        56.1
        ],
-       "palette": "grime_splash",
-       "dE76": 1.2,
-       "tolerance": 6,
+       "palette": "leaf_litter_autumn",
+       "dE76": 3.6,
+       "tolerance": 14,
        "pass": true
       },
       {

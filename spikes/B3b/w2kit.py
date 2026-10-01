@@ -457,7 +457,7 @@ def straw_fray(p, d, r, seed, n=7, length=(0.06, 0.16), wear="_w2", spread=0.55,
 
 
 def twisted_rope(pts, r, seed=1, strands=2, sides=None, wear="_w2", vis=(1,), fray0=False, fray1=False, lod2=True,
-                 pitch=None):
+                 pitch=None, hide=None):
     """FP1 (2026-10-01, Stephen: the torii's snapped rope 'needs fidelity'): a straw shimenawa as `strands` twisted
     straw strands (left-laid, hidari-nai, as a shimenawa is) along a smooth curve through pts, each strand a round tube
     whose tile runs along the straw; frayed straw ends where the rope ends free (fray0 / fray1). LOD 2: one plain
@@ -467,7 +467,11 @@ def twisted_rope(pts, r, seed=1, strands=2, sides=None, wear="_w2", vis=(1,), fr
         strands, sides = 1, 4
     elif sides is None:
         sides = 4 if r >= 0.05 else 3
-    path = _catmull(pts, pitch / 4.0)
+    # FP2 (2026-10-01, Stephen: rope 2.5x the segments): 2.5x the sides round each strand (3 -> 8, 4 -> 10) and 2.5x
+    # the segments along the curve (a quarter -> a tenth of the lay pitch); LOD 2 keeps its plain 4-sided tube
+    import ropekit
+    sides = ropekit.rk(sides)
+    path = _catmull(pts, pitch / (4.0 * ropekit.ROPE_K))
     T, N, B = _frames(path)
     sacc = [0.0]
     for i in range(1, len(path)):
@@ -481,7 +485,20 @@ def twisted_rope(pts, r, seed=1, strands=2, sides=None, wear="_w2", vis=(1,), fr
             th = 2 * math.pi * k / strands - 2 * math.pi * sacc[i] / pitch      # left-laid
             d = core.add(core.mul(N[i], math.cos(th)), core.mul(B[i], math.sin(th)))
             cs.append(core.add(c, core.mul(d, off)))
-        out.append(_tube(cs, T, rs, sides, ROPE, vis, wear, phase=0.3 * k))
+        if strands > 1:
+            # FP2: drop the strand faces turned toward the rope's axis: they lie inside the other strand(s), never seen
+            # (2 strands: offset 0.42 r, radius 0.62 r -> hidden within ~47 deg of inward); `hide(n, p)` drops more
+            def cull(nrm, i, qc, _c=cs):
+                inward = core.sub(path[i], _c[i])
+                L = core.length(inward)
+                if L > 1e-9 and core.dot(nrm, core.mul(inward, 1.0 / L)) > 0.72:
+                    return True
+                return bool(hide and hide(nrm, qc))
+        else:
+            cull = (lambda nrm, i, qc: bool(hide(nrm, qc))) if hide else None
+        t = ropekit.tube(cs, rs, sides, ROPE, vis=vis, wear=wear, phase=0.3 * k, tile=0.5, cull=cull)
+        if t is not None:
+            out.append(t)
     rg = random.Random(seed)
     if fray0:
         out += straw_fray(path[0], core.mul(T[0], -1.0), r, rg.randint(0, 9999), wear=wear, vis=vis)

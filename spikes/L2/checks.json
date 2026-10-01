@@ -1166,7 +1166,7 @@
    "variant": "1ken",
    "pass": true,
    "faces": {
-    "Resolution 1": 477,
+    "Resolution 1": 549,
     "Resolution 2": 57
    },
    "checks": [
@@ -1208,7 +1208,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 477,
+       "Resolution 1": 549,
        "Resolution 2": 57
       },
       "extra": []
@@ -1337,7 +1337,7 @@
    "variant": "half",
    "pass": true,
    "faces": {
-    "Resolution 1": 254,
+    "Resolution 1": 299,
     "Resolution 2": 39
    },
    "checks": [
@@ -1379,7 +1379,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 254,
+       "Resolution 1": 299,
        "Resolution 2": 39
       },
       "extra": []
@@ -1508,7 +1508,7 @@
    "variant": "1ken",
    "pass": true,
    "faces": {
-    "Resolution 1": 433,
+    "Resolution 1": 478,
     "Resolution 2": 27
    },
    "checks": [
@@ -1551,7 +1551,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 433,
+       "Resolution 1": 478,
        "Resolution 2": 27
       },
       "extra": []
@@ -1688,7 +1688,7 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 483,
+    "Resolution 1": 488,
     "Resolution 2": 33
    },
    "checks": [
@@ -1734,7 +1734,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 483,
+       "Resolution 1": 488,
        "Resolution 2": 33
       },
       "extra": []
@@ -1913,7 +1913,7 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 346,
+    "Resolution 1": 351,
     "Resolution 2": 33
    },
    "checks": [
@@ -1958,7 +1958,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 346,
+       "Resolution 1": 351,
        "Resolution 2": 33
       },
       "extra": []
@@ -2128,7 +2128,7 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 345,
+    "Resolution 1": 350,
     "Resolution 2": 33
    },
    "checks": [
@@ -2172,7 +2172,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 345,
+       "Resolution 1": 350,
        "Resolution 2": 33
       },
       "extra": []
@@ -2577,7 +2577,7 @@
    "variant": "naruko",
    "pass": true,
    "faces": {
-    "Resolution 1": 262,
+    "Resolution 1": 528,
     "Resolution 2": 24,
     "Resolution 3": 12,
     "Geometry": 12,
@@ -2626,7 +2626,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 262,
+       "Resolution 1": 528,
        "Resolution 2": 24,
        "Resolution 3": 12,
        "Geometry": 12,
@@ -4889,7 +4889,7 @@
    "variant": "stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 512,
+    "Resolution 1": 992,
     "Resolution 2": 60,
     "Geometry": 56,
     "View Geometry": 56,
@@ -4931,11 +4931,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 512,
+       "Resolution 1": 992,
        "Resolution 2": 60,
        "Geometry": 56,
        "View Geometry": 56,
@@ -5068,7 +5068,7 @@
    "variant": "row2",
    "pass": true,
    "faces": {
-    "Resolution 1": 292,
+    "Resolution 1": 532,
     "Resolution 2": 30,
     "Geometry": 28,
     "View Geometry": 28,
@@ -5111,11 +5111,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 292,
+       "Resolution 1": 532,
        "Resolution 2": 30,
        "Geometry": 28,
        "View Geometry": 28,
@@ -5260,7 +5260,7 @@
    "variant": "stack",
    "pass": true,
    "faces": {
-    "Resolution 1": 406,
+    "Resolution 1": 646,
     "Resolution 2": 30,
     "Geometry": 28,
     "View Geometry": 28,
@@ -5304,11 +5304,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 406,
+       "Resolution 1": 646,
        "Resolution 2": 30,
        "Geometry": 28,
        "View Geometry": 28,
@@ -6509,7 +6509,7 @@
    "variant": "hung",
    "pass": true,
    "faces": {
-    "Resolution 1": 155,
+    "Resolution 1": 164,
     "Resolution 2": 24
    },
    "checks": [
@@ -6554,7 +6554,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 155,
+       "Resolution 1": 164,
        "Resolution 2": 24
       },
       "extra": []
@@ -6719,7 +6719,7 @@
    "variant": "hung",
    "pass": true,
    "faces": {
-    "Resolution 1": 140,
+    "Resolution 1": 149,
     "Resolution 2": 24
    },
    "checks": [
@@ -6764,7 +6764,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 140,
+       "Resolution 1": 149,
        "Resolution 2": 24
       },
       "extra": []
@@ -7733,7 +7733,7 @@
    "variant": "tie_post",
    "pass": true,
    "faces": {
-    "Resolution 1": 112,
+    "Resolution 1": 216,
     "Resolution 2": 60,
     "Resolution 3": 12,
     "Geometry": 24,
@@ -7783,7 +7783,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 112,
+       "Resolution 1": 216,
        "Resolution 2": 60,
        "Resolution 3": 12,
        "Geometry": 24,
@@ -8313,7 +8313,7 @@
    "variant": "saddle_rack",
    "pass": true,
    "faces": {
-    "Resolution 1": 127,
+    "Resolution 1": 183,
     "Resolution 2": 35,
     "Resolution 3": 6,
     "Geometry": 18,
@@ -8363,7 +8363,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 127,
+       "Resolution 1": 183,
        "Resolution 2": 35,
        "Resolution 3": 6,
        "Geometry": 18,
@@ -9037,7 +9037,7 @@
    "variant": "yotsude",
    "pass": true,
    "faces": {
-    "Resolution 1": 88,
+    "Resolution 1": 176,
     "Resolution 2": 56,
     "Resolution 3": 12,
     "Geometry": 18,
@@ -9088,7 +9088,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 88,
+       "Resolution 1": 176,
        "Resolution 2": 56,
        "Resolution 3": 12,
        "Geometry": 18,
@@ -9265,7 +9265,7 @@
    "variant": "yotsude",
    "pass": true,
    "faces": {
-    "Resolution 1": 91,
+    "Resolution 1": 179,
     "Resolution 2": 56,
     "Resolution 3": 12,
     "Geometry": 18,
@@ -9317,7 +9317,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 91,
+       "Resolution 1": 179,
        "Resolution 2": 56,
        "Resolution 3": 12,
        "Geometry": 18,
@@ -9504,7 +9504,7 @@
    "variant": "yotsude",
    "pass": true,
    "faces": {
-    "Resolution 1": 112,
+    "Resolution 1": 200,
     "Resolution 2": 52,
     "Resolution 3": 6,
     "Geometry": 12,
@@ -9557,7 +9557,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 112,
+       "Resolution 1": 200,
        "Resolution 2": 52,
        "Resolution 3": 6,
        "Geometry": 12,
@@ -11665,7 +11665,7 @@
    "variant": "pairs",
    "pass": true,
    "faces": {
-    "Resolution 1": 144,
+    "Resolution 1": 408,
     "Resolution 2": 6
    },
    "checks": [
@@ -11703,11 +11703,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 144,
+       "Resolution 1": 408,
        "Resolution 2": 6
       },
       "extra": []
@@ -11824,7 +11824,7 @@
    "variant": "pairs",
    "pass": true,
    "faces": {
-    "Resolution 1": 134,
+    "Resolution 1": 310,
     "Resolution 2": 6
    },
    "checks": [
@@ -11863,11 +11863,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 134,
+       "Resolution 1": 310,
        "Resolution 2": 6
       },
       "extra": []
@@ -11893,7 +11893,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": -0.005,
+      "res1_min_y": -0.0058,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": false
@@ -12002,7 +12002,7 @@
    "variant": "single",
    "pass": true,
    "faces": {
-    "Resolution 1": 23,
+    "Resolution 1": 32,
     "Resolution 2": 6
    },
    "checks": [
@@ -12038,11 +12038,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2) + budget box R1<=600 R2<=300, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 23,
+       "Resolution 1": 32,
        "Resolution 2": 6
       },
       "extra": []
@@ -12966,7 +12966,7 @@
    "variant": "plank",
    "pass": true,
    "faces": {
-    "Resolution 1": 124,
+    "Resolution 1": 260,
     "Resolution 2": 40,
     "Resolution 3": 6,
     "Geometry": 12,
@@ -13015,7 +13015,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 124,
+       "Resolution 1": 260,
        "Resolution 2": 40,
        "Resolution 3": 6,
        "Geometry": 12,
@@ -13167,7 +13167,7 @@
    "variant": "plank",
    "pass": true,
    "faces": {
-    "Resolution 1": 127,
+    "Resolution 1": 263,
     "Resolution 2": 40,
     "Resolution 3": 6,
     "Geometry": 12,
@@ -13217,7 +13217,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 127,
+       "Resolution 1": 263,
        "Resolution 2": 40,
        "Resolution 3": 6,
        "Geometry": 12,
@@ -13571,7 +13571,7 @@
    "variant": "plank",
    "pass": true,
    "faces": {
-    "Resolution 1": 123,
+    "Resolution 1": 259,
     "Resolution 2": 40,
     "Resolution 3": 6,
     "Geometry": 12,
@@ -13621,7 +13621,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 123,
+       "Resolution 1": 259,
        "Resolution 2": 40,
        "Resolution 3": 6,
        "Geometry": 12,
@@ -14017,7 +14017,7 @@
    "variant": "tower",
    "pass": true,
    "faces": {
-    "Resolution 1": 349,
+    "Resolution 1": 358,
     "Resolution 2": 176,
     "Resolution 3": 12,
     "Geometry": 72,
@@ -14070,7 +14070,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 349,
+       "Resolution 1": 358,
        "Resolution 2": 176,
        "Resolution 3": 12,
        "Geometry": 72,
@@ -14477,7 +14477,7 @@
    "variant": "eave",
    "pass": true,
    "faces": {
-    "Resolution 1": 356,
+    "Resolution 1": 419,
     "Resolution 2": 27
    },
    "checks": [
@@ -14519,7 +14519,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 356,
+       "Resolution 1": 419,
        "Resolution 2": 27
       },
       "extra": []
@@ -14638,7 +14638,7 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 293,
+    "Resolution 1": 329,
     "Resolution 2": 39,
     "Geometry": 36,
     "View Geometry": 36,
@@ -14686,7 +14686,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 293,
+       "Resolution 1": 329,
        "Resolution 2": 39,
        "Geometry": 36,
        "View Geometry": 36,
@@ -14840,7 +14840,7 @@
    "variant": "stand",
    "pass": true,
    "faces": {
-    "Resolution 1": 149,
+    "Resolution 1": 158,
     "Resolution 2": 15
    },
    "checks": [
@@ -14882,7 +14882,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 149,
+       "Resolution 1": 158,
        "Resolution 2": 15
       },
       "extra": []
@@ -16177,6 +16177,18 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
+  },
+  "BIN": {
+   "pass": true,
+   "detail": {
+    "missing": [],
+    "warning_lines": [],
+    "exit": 0
+   }
+  },
+  "PBO": {
+   "pass": true,
+   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_site.pbo"
   }
  },
  "summary": {

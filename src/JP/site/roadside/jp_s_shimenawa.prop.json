@@ -56,14 +56,14 @@
    "display": "Straw rope with streamers, 1 ken",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 266,
+    "Resolution 1": 945,
     "Resolution 2": 6
    },
    "bbox": [
-    -0.918,
-    0.917,
+    -0.92,
+    0.921,
     2.085,
     2.535,
     -0.037,
@@ -106,18 +106,18 @@
    "display": "Straw rope with streamers, 2 ken",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "box",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 432,
+    "Resolution 1": 1402,
     "Resolution 2": 6
    },
    "bbox": [
-    -1.829,
-    1.833,
+    -1.833,
+    1.834,
     1.955,
     2.545,
-    -0.046,
-    0.046
+    -0.047,
+    0.047
    ],
    "collision": [],
    "footprint_xz": null,
@@ -156,16 +156,16 @@
    "display": "Straw rope round a 0.6 m trunk",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "box",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 401,
+    "Resolution 1": 1017,
     "Resolution 2": 8
    },
    "bbox": [
     -0.384,
-    0.376,
+    0.382,
     0.852,
-    1.677,
+    1.68,
     -0.376,
     0.505
    ],
@@ -206,17 +206,17 @@
    "display": "Straw rope round a 1.0 m trunk",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "box",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 377,
+    "Resolution 1": 917,
     "Resolution 2": 8
    },
    "bbox": [
     -0.639,
-    0.615,
+    0.614,
     0.864,
-    1.702,
-    -0.618,
+    1.711,
+    -0.634,
     0.747
    ],
    "collision": [],
@@ -256,17 +256,17 @@
    "display": "Straw rope round a 1.6 m trunk (landmark tree)",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "box",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 395,
+    "Resolution 1": 1070,
     "Resolution 2": 8
    },
    "bbox": [
-    -0.989,
-    0.999,
+    -1.0,
+    1.002,
     0.851,
-    1.753,
-    -0.993,
+    1.752,
+    -1.003,
     1.155
    ],
    "collision": [],
@@ -306,16 +306,16 @@
    "display": "Straw rope grey and frayed, one end dropped",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "box",
+   "budget": "medium",
    "faces": {
-    "Resolution 1": 323,
+    "Resolution 1": 1358,
     "Resolution 2": 6
    },
    "bbox": [
-    -0.939,
+    -0.941,
     0.458,
-    -0.001,
-    2.515,
+    -0.002,
+    2.518,
     -0.117,
     0.79
    ],

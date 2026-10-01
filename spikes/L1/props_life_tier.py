@@ -41,7 +41,7 @@ def katanakake(kind):
     wr = "_w2" if empty else None
     th = 0.022
     if wall:
-        P = LPart("katanakake", budget="furniture", mass=4.0, anchor="wall", flat=True)
+        P = LPart("katanakake", budget="medium", mass=4.0, anchor="wall", flat=True)    # FP2: sageo cords at 2.5x
         y = 1.45
         xb = 0.20
         for sx in (-1, 1):                              # two lacquered wall plates, each with two curled arms
@@ -57,7 +57,7 @@ def katanakake(kind):
             P.add(stain(451, 0.0, 0.30, 0.25, sx=1.5))
         P.dim("y", 1.45, y, tol=0.005)
     else:
-        P = LPart("katanakake", budget="furniture", mass=5.0, anchor="floor")
+        P = LPart("katanakake", budget="medium", mass=5.0, anchor="floor")    # FP2: sageo cords at 2.5x segments
         h = 0.48
         base = prism([(-0.28, 0.0), (0.28, 0.0), (0.26, 0.028), (-0.26, 0.028)], "z", -0.12, 0.12, LACQ, vis=(1, 2))
         P.add(base)

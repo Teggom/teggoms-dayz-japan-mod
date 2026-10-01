@@ -327,7 +327,7 @@ def cask(cx, cz, y=0.0, d=0.45, h=0.50, wear=None, komo=False, n=10, staved=Fals
 
 
 def taru(kind):
-    P = LPart("taru", budget="small" if kind in ("cask", "komo", "staved") else "furniture", mass=30.0,
+    P = LPart("taru", budget="small" if kind in ("cask", "staved") else "furniture", mass=30.0,   # FP2: komo ropes
               anchor="floor")
     h = 0.50
     if kind in ("cask", "komo", "staved"):
@@ -522,7 +522,8 @@ def charcoal(kind):
         P.dim("w", 0.32, w, tol=0.005)
         P.notes.append("charcoal scuttle (sumitori) with tongs (mount floor or surface; beside the hibachi)")
         return P
-    P = LPart("charcoal", budget="small" if kind != "bales3" else "furniture", mass=15.0, anchor="floor")
+    P = LPart("charcoal", budget="small" if kind not in ("bales3", "burst") else "furniture", mass=15.0,   # FP2: ropes
+              anchor="floor")
     if kind == "bale":
         P.adds(sumi_bale(0.0, 0.0))
         P.add(cyl_col(0.17, 0.0, 0.62, n=6, mat=TAWARA))

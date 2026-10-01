@@ -75,16 +75,16 @@
    "anchor": "wall",
    "budget": "small",
    "faces": {
-    "Resolution 1": 96,
+    "Resolution 1": 286,
     "Resolution 2": 6
    },
    "bbox": [
     -0.454,
-    0.452,
+    0.454,
     1.802,
-    2.051,
+    2.052,
     0.002,
-    0.315
+    0.317
    ],
    "collision": false,
    "footprint_xz": null,
@@ -171,16 +171,16 @@
    "anchor": "wall",
    "budget": "small",
    "faces": {
-    "Resolution 1": 88,
+    "Resolution 1": 278,
     "Resolution 2": 6
    },
    "bbox": [
     -0.454,
-    0.452,
+    0.454,
     1.802,
-    2.051,
+    2.052,
     0.002,
-    0.315
+    0.317
    ],
    "collision": false,
    "footprint_xz": null,

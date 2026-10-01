@@ -386,7 +386,7 @@ def zori(wear=None):
 
 def footwear(kind):
     ab = kind.startswith("ab")
-    P = SPart("footwear", budget="small", mass=1.0, flat=True, wear="_w2" if ab else "_w1")
+    P = SPart("footwear", budget="box", mass=1.0, flat=True, wear="_w2" if ab else "_w1")   # FP2: thongs at 2.5x
     if kind == "pairs":
         for x in (-0.30, 0.10):
             for sx in (-1, 1):
