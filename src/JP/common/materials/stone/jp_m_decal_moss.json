@@ -23,7 +23,7 @@
     112.1
    ],
    "masked_frac": 0.0,
-   "alpha_cover": 0.158
+   "alpha_cover": 0.159
   },
   "_w1": {
    "name": "normal",
@@ -36,7 +36,7 @@
     92.0
    ],
    "masked_frac": 0.0,
-   "alpha_cover": 0.195
+   "alpha_cover": 0.201
   },
   "_w2": {
    "name": "heavy",
@@ -49,7 +49,7 @@
     78.8
    ],
    "masked_frac": 0.037,
-   "alpha_cover": 0.472
+   "alpha_cover": 0.481
   }
  },
  "used_by": [
@@ -65,13 +65,14 @@
  "used_on": "Moss and lichen as separate alpha decal geometry laid on tops of stones, torii kasagi, lantern roofs and north faces: variety without a second UV set (decision 10)",
  "sources": [
   {
-   "procedural": "make_b1_materials.py"
+   "procedural": "make_fp1_materials.py (on make_b1_materials.make_one)"
   }
  ],
  "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
- "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "made_by": "research/materials/make_fp1_materials.py (agent FP1, 2026-10-01), through B1's make_one",
  "requested_by": "research/outdoor_kit/materials_needed.json",
  "alpha": "decal",
  "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
- "note": "G1 decision 10: moss as a separate decal material."
+ "note": "G1 decision 10: moss as a separate decal material.",
+ "fp1_note": "FP1: alpha hardened (no semi-transparent film)"
 }

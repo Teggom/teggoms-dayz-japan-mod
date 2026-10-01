@@ -1,61 +1,61 @@
 {
  "id": "jp_m_decal_litter",
  "family": "ground",
- "palette_id": "grime_splash",
+ "palette_id": "leaf_litter_autumn",
  "palette_by_wear": {},
  "tile_size_m": 2.0,
  "texture_px": 1024,
  "px_per_m": 512.0,
  "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; lay 3 mm above the floor on its own faces, never in Geometry/View/Fire",
- "grain": "none; leaves, straw, paper scraps, shards, dust",
+ "grain": "none; autumn leaves (maple, ginkgo, oak, cherry, old brown), straw bits, paper scraps, shards",
  "penetration_rvmat": null,
  "roadway_surface": null,
  "finish": "matte",
  "wear": {
   "_w0": {
    "name": "clean",
-   "look": "light litter",
+   "look": "a few leaves blown in",
    "co": "JP\\common\\materials\\ground\\jp_m_decal_litter_w0_ca.paa",
    "rvmat": "JP\\common\\materials\\ground\\jp_m_decal_litter_w0.rvmat",
    "target_srgb": [
-    111.5,
-    96.2,
-    78.0
+    125.9,
+    84.1,
+    57.8
    ],
-   "masked_frac": 0.005,
-   "alpha_cover": 0.126
+   "masked_frac": 0.003,
+   "alpha_cover": 0.1
   },
   "_w1": {
    "name": "normal",
-   "look": "normal",
+   "look": "leaves drifting in corners",
    "co": "JP\\common\\materials\\ground\\jp_m_decal_litter_w1_ca.paa",
    "rvmat": "JP\\common\\materials\\ground\\jp_m_decal_litter_w1.rvmat",
    "target_srgb": [
-    104.0,
-    89.0,
-    71.0
+    112.0,
+    76.0,
+    52.0
    ],
-   "masked_frac": 0.01,
-   "alpha_cover": 0.233
+   "masked_frac": 0.007,
+   "alpha_cover": 0.199
   },
   "_w2": {
    "name": "heavy",
-   "look": "heavy",
+   "look": "a thick leaf drift, greyed",
    "co": "JP\\common\\materials\\ground\\jp_m_decal_litter_w2_ca.paa",
    "rvmat": "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
    "target_srgb": [
-    96.6,
-    81.9,
-    64.1
+    92.7,
+    63.6,
+    45.1
    ],
-   "masked_frac": 0.017,
-   "alpha_cover": 0.381
+   "masked_frac": 0.012,
+   "alpha_cover": 0.357
   }
  },
  "used_by": [
   "jp_f_debris"
  ],
- "used_on": "Alpha-tested decal like jp_m_wall_grime; mean colour check on the opaque pixels only",
+ "used_on": "FP1 redraw: leaf shapes, cut alpha (was round dots over a soft haze)",
  "sources": [
   {
    "asset": "dry_decay_leaves",
@@ -67,12 +67,13 @@
    ]
   },
   {
-   "procedural": "make_b1_materials.py"
+   "procedural": "make_fp1_materials.py (on make_b1_materials.make_one)"
   }
  ],
  "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
- "made_by": "research/materials/make_b1_materials.py (agent B1, 2026-09-29)",
+ "made_by": "research/materials/make_fp1_materials.py (agent FP1, 2026-10-01), through B1's make_one",
  "requested_by": "research/interior/materials_needed.json",
  "alpha": "decal",
- "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful."
+ "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
+ "fp1_note": "FP1 redraw: leaf shapes, cut alpha (was round dots over a soft haze)"
 }

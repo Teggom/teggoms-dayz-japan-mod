@@ -2371,6 +2371,68 @@
     }
    ],
    "hex": "#A08243"
+  },
+  {
+   "id": "shikkui_aged",
+   "name": "Shikkui lime plaster, aged and weathered (greyed, rain-stained)",
+   "material": "old exterior lime plaster (shikkui) on kura and walls after decades of rain",
+   "group": "wall",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "jp_m_wall_shikkui_aged: kura and plastered walls in the dead world",
+   "note": "Added 2026-10-01 by FP1. Each reference weighs the same: c25 (mean of 3 sunlit plaster patches between the tile courses: 137,132,119 / 122,118,104 / 137,133,121) and c03 (193,198,203, B1's shikkui box). spikes/FP1/sample_aged.py.",
+   "srgb": [
+    162,
+    163,
+    159
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "samples": [
+    {
+     "ref": "c25_tsuijibei",
+     "box": [
+      0.755,
+      0.39,
+      0.8,
+      0.44
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c25_tsuijibei",
+     "box": [
+      0.67,
+      0.18,
+      0.71,
+      0.21
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c25_tsuijibei",
+     "box": [
+      0.61,
+      0.5,
+      0.66,
+      0.54
+     ],
+     "select": "mid 70 % luminance"
+    },
+    {
+     "ref": "c03_tsumago_street",
+     "box": [
+      0.79,
+      0.33,
+      0.86,
+      0.45
+     ],
+     "select": "mid 70 % luminance"
+    }
+   ],
+   "hex": "#A2A39F"
   }
  ]
 }

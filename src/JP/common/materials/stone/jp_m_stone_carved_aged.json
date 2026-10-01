@@ -1,0 +1,76 @@
+{
+ "id": "jp_m_stone_carved_aged",
+ "family": "stone",
+ "palette_id": "stone_lantern",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; turn and shift per piece",
+ "grain": "none; weathered granite with lichen rosettes",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\granite.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\stone_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "pale lichen here and there",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w0.rvmat",
+   "target_srgb": [
+    84.7,
+    81.6,
+    73.4
+   ],
+   "masked_frac": 0.151
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "lichen rosettes, rain darkening",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
+   "target_srgb": [
+    73.0,
+    70.0,
+    62.0
+   ],
+   "masked_frac": 0.264
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "heavy lichen and moss",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w2.rvmat",
+   "target_srgb": [
+    66.1,
+    63.2,
+    55.3
+   ],
+   "masked_frac": 0.454
+  }
+ },
+ "used_by": [
+  "jp_s_torii_stone",
+  "jp_s_stone_lantern"
+ ],
+ "used_on": "Stone torii and lanterns, weathered",
+ "sources": [
+  {
+   "asset": "rock_surface",
+   "name": "Rock Surface",
+   "page": "https://polyhaven.com/a/rock_surface",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Amal Kumar"
+   ]
+  },
+  {
+   "procedural": "make_fp1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_fp1_materials.py (agent FP1, 2026-10-01), through B1's make_one",
+ "requested_by": "research/outdoor_kit/materials_needed.json",
+ "note": "Stone torii and lanterns (FP1 2026-10-01): a 2 m tile so the lichen never repeats on one piece; lichen as irregular rosettes, not dots.",
+ "fp1_note": "Stone torii and lanterns, weathered"
+}
