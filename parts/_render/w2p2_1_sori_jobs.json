@@ -1,0 +1,99 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\w2p2_1_sori",
+ "res": [
+  960,
+  720
+ ],
+ "jobs": [
+  [
+   "iri_hon",
+   "Irimoya, hongawara: concave slopes (rate 0.42 at the eave -> 0.80 at the ridge), corners swept up 0.30 m, 7-course ridge with onigawara, curved corner ridges with small oni, descending ridges, hafu + gegyo, boarded gable face, tsutsumi at the gable foot.",
+   {
+    "build": "case:roof_irimoya_hongawara",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     2.73,
+     4.2,
+     -1.82
+    ],
+    "dist": 17
+   }
+  ],
+  [
+   "iri_hon_under",
+   "The same from below: flying rafters (hiendaruki) on the kioi beam over the base rafters (jidaruki), kayaoi along the swept eave, two-tier sumigi at the corner, soffit boards.",
+   {
+    "build": "case:roof_irimoya_hongawara",
+    "view": "under",
+    "persp": 30,
+    "target": [
+     0.6,
+     3.4,
+     0.4
+    ],
+    "dist": 7
+   }
+  ],
+  [
+   "iri_kok",
+   "Irimoya, thick kokera: the curved shingle field and the thick layered eave edge (koba, three bands each stepping out), box ridge.",
+   {
+    "build": "case:roof_irimoya_kokera",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     2.73,
+     4.2,
+     -1.82
+    ],
+    "dist": 17
+   }
+  ],
+  [
+   "kiri_hiw",
+   "Kirizuma, hiwada (cypress bark; stand-in material until roof_hiwada exists): curved hafu sweeping up at the eave ends, gegyo at the apex, verge soffit.",
+   {
+    "build": "case:roof_kirizuma_hiwada",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     2.73,
+     4.0,
+     -1.82
+    ],
+    "dist": 15
+   }
+  ],
+  [
+   "yose_cu",
+   "Yosemune on a square plan = hogyo (pyramid), copper (stand-in material until roof_copper exists): seam ribs, apex block for a hoju finial.",
+   {
+    "build": "case:roof_yosemune_copper",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     1.82,
+     4.0,
+     -1.82
+    ],
+    "dist": 13
+   }
+  ],
+  [
+   "nagare_hiw",
+   "Curved nagare (the W2P1 hook, sori.nagare_curved): the front slope runs 1 ken further out over the steps from the same ridge; its eave falls lower.",
+   {
+    "build": "case:roof_nagare_hiwada",
+    "view": "side",
+    "persp": 30,
+    "target": [
+     1.82,
+     3.6,
+     -0.6
+    ],
+    "dist": 14
+   }
+  ]
+ ]
+}

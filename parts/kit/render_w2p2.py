@@ -96,6 +96,27 @@ SHEETS_DEF = {
             ("kaerumata", "kaerumata on the head tie (and kentozuka, the plainer support, in the parts list).",
              {"build": "case:kumi_kaerumata", "view": "front", "persp": 30, "target": [1.1, 3.3, 0.0], "dist": 3}),
         ]),
+    "w2p2_3_assemblies": (
+        "W2P2 offline proofs: curved roof + bracket sets assembled (parts/kit/w2p2_assembly.py; not island buildings)", [
+            ("hall", "Town-grade worship hall 3 x 2 bays (2.275 m): degumi sets + kaerumata, curved irimoya hongawara, "
+             "board walls, open front, on a cut-stone platform. 8,174 / 2,675 / 1,131 faces.",
+             {"build": "w2:hall", "view": "3q", "persp": 30, "target": [3.4, 3.2, -2.3], "dist": 21}),
+            ("hall_eave", "Its eave from below: gangyo on the degumi sets, base rafters on the gangyo, kioi, flying "
+             "rafters, kayaoi along the swept eave, sumigi at the corner, kaerumata on the head tie.",
+             {"build": "w2:hall", "interior": {"cam": [-3.2, 1.7, 3.6], "look": [0.2, 3.7, -0.3], "lens": 22}}),
+            ("hall_kokera", "The same hall as a shrine haiden: hira-mitsudo sets, kentozuka, curved irimoya thick "
+             "kokera with the layered koba edge. 5,564 / 1,822 / 808.",
+             {"build": "w2:hall_kokera", "view": "3q", "persp": 30, "target": [3.4, 3.2, -2.3], "dist": 21}),
+            ("hondo", "Town temple main hall 3 x 3 bays: MITESAKI sets with odaruki tail rafters, gangyo 0.85 m out, "
+             "eaves 2.15 m, curved irimoya hongawara. 11,259 / 3,023 / 1,183 (large: 12,000 / 4,600 / 1,600).",
+             {"build": "w2:hondo", "view": "3q", "persp": 30, "target": [3.4, 3.6, -3.4], "dist": 24}),
+            ("hondo_kumi", "The hondo's corner from below: three-step sets, odaruki, the eave ceiling between steps "
+             "2 and 3, the corner set's diagonal arms carrying the sumigi.",
+             {"build": "w2:hondo", "interior": {"cam": [-3.4, 1.7, 3.8], "look": [0.1, 4.0, -0.2], "lens": 22}}),
+            ("shoro", "Bell tower (shoro): hakama skirt on a stone platform, upper deck with W2P1's koran railing, "
+             "degumi corner sets, bell beam (memory bell_hook), curved irimoya hongawara. 5,807 / 2,135 / 1,047.",
+             {"build": "w2:shoro", "view": "3q", "persp": 30, "target": [1.37, 3.9, -1.37], "dist": 17}),
+        ]),
 }
 
 

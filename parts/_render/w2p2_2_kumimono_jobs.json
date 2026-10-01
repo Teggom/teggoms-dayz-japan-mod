@@ -1,0 +1,99 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\w2p2_2_kumimono",
+ "res": [
+  960,
+  720
+ ],
+ "jobs": [
+  [
+   "funa",
+   "funa-hijiki: the boat-shaped arm on the column top carries the keta (village grade, honden).",
+   {
+    "build": "case:kumi_funa",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     1.36,
+     3.2,
+     0.2
+    ],
+    "dist": 6
+   }
+  ],
+  [
+   "mitsudo",
+   "hira-mitsudo: daito + wall arm + three makito; kaerumata (frog-leg strut) mid bay.",
+   {
+    "build": "case:kumi_mitsudo",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     1.36,
+     3.4,
+     0.2
+    ],
+    "dist": 6
+   }
+  ],
+  [
+   "degumi",
+   "degumi (one step): the projecting arm carries the gangyo 1.05 c out; the wall-line keta is packed up to meet the rafters (they rise from the gangyo).",
+   {
+    "build": "case:kumi_degumi",
+    "view": "3q",
+    "persp": 30,
+    "target": [
+     1.36,
+     3.5,
+     0.3
+    ],
+    "dist": 6.5
+   }
+  ],
+  [
+   "mitesaki",
+   "mitesaki (three steps): odaruki tail rafter at 25 deg on the step-2 block, step-3 block and arm on its nose, gangyo 3.15 c (0.95 m) out.",
+   {
+    "build": "case:kumi_mitesaki",
+    "view": "3q_low",
+    "persp": 30,
+    "target": [
+     1.36,
+     3.9,
+     0.6
+    ],
+    "dist": 7
+   }
+  ],
+  [
+   "mitesaki_corner",
+   "mitesaki corner set: both sides' projecting members, the diagonal arms and the corner odaruki; gangyo crossing at the corner (the sumigi bears here).",
+   {
+    "build": "case:kumi_mitesaki_corner",
+    "view": "under",
+    "persp": 30,
+    "target": [
+     0.2,
+     3.9,
+     0.2
+    ],
+    "dist": 7
+   }
+  ],
+  [
+   "kaerumata",
+   "kaerumata on the head tie (and kentozuka, the plainer support, in the parts list).",
+   {
+    "build": "case:kumi_kaerumata",
+    "view": "front",
+    "persp": 30,
+    "target": [
+     1.1,
+     3.3,
+     0.0
+    ],
+    "dist": 3
+   }
+  ]
+ ]
+}

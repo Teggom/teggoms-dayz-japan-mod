@@ -187,6 +187,11 @@
     "check": "S4 base rafters bear on the gangyo and the wall keta (<= 1 cm)",
     "ok": true,
     "detail": "worst 0.0000 m (gangyo top 3.928, keta top 4.022, g_out 0.263)"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 710938 bytes"
    }
   ]
  },
@@ -377,6 +382,11 @@
     "check": "S4 base rafters bear on the gangyo and the wall keta (<= 1 cm)",
     "ok": true,
     "detail": "worst 0.0000 m (gangyo top 3.685, keta top 3.685, g_out 0.000)"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 491171 bytes"
    }
   ]
  },
@@ -569,6 +579,11 @@
     "check": "S4 base rafters bear on the gangyo and the wall keta (<= 1 cm)",
     "ok": true,
     "detail": "worst 0.0000 m (gangyo top 4.877, keta top 5.184, g_out 0.851)"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 858397 bytes"
    }
   ]
  },
@@ -760,6 +775,11 @@
     "check": "S4 base rafters bear on the gangyo and the wall keta (<= 1 cm)",
     "ok": true,
     "detail": "worst 0.0000 m (gangyo top 6.211, keta top 6.309, g_out 0.273)"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL",
+    "ok": true,
+    "detail": "ODOL, 570866 bytes"
    }
   ]
  }

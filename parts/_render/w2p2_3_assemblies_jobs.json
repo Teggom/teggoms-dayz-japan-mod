@@ -1,0 +1,49 @@
+{
+ "out_dir": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\parts\\_render\\w2p2_3_assemblies",
+ "res": [
+  960,
+  720
+ ],
+ "jobs": [
+  [
+   "hall_eave",
+   "Its eave from below: gangyo on the degumi sets, base rafters on the gangyo, kioi, flying rafters, kayaoi along the swept eave, sumigi at the corner, kaerumata on the head tie.",
+   {
+    "build": "w2:hall",
+    "interior": {
+     "cam": [
+      -3.2,
+      1.7,
+      3.6
+     ],
+     "look": [
+      0.2,
+      3.7,
+      -0.3
+     ],
+     "lens": 22
+    }
+   }
+  ],
+  [
+   "hondo_kumi",
+   "The hondo's corner from below: three-step sets, odaruki, the eave ceiling between steps 2 and 3, the corner set's diagonal arms carrying the sumigi.",
+   {
+    "build": "w2:hondo",
+    "interior": {
+     "cam": [
+      -3.4,
+      1.7,
+      3.8
+     ],
+     "look": [
+      0.1,
+      4.0,
+      -0.2
+     ],
+     "lens": 22
+    }
+   }
+  ]
+ ]
+}
