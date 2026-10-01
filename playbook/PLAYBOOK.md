@@ -661,11 +661,18 @@ LOD2 about 13 % of LOD0:
 | Townhouse unit (snap-together row units, Stephen 2026-09-29: same per-ken detail as the machiya, many in view) | ≤9,000 | ≤3,450 | ≤1,200 |
 | Large / landmark building | ≤12,000 | ≤4,600 | ≤1,600 |
 | Furniture | ≤1,000 | | |
-| Small prop | ≤300 | | |
+| Small prop (Stephen 2026-10-01: was 300; small props make the world pop) | ≤800 | | |
+| Detail / hero prop (masks, bells, signs, rope ends, offering boxes, ritual objects) | ≤1,500 | | |
+| Statue of a person or deity (Buddha images, Jizō, komainu, kitsune): made from photo references | as needed (aim ≤3,000) | | |
 | Body garment (≥3 LODs; W's kimono 8.6k ≈ vanilla woolcoat) | ≤9,000 | | |
 | Head or feet item | ≤3,500 | | |
 | Hero tree (F's sakura LOD1 at 7.1k is "heavy") | ≤8,000 | | |
 | Filler tree | ≤3,000 | | |
+
+**Budgets are guidance, not walls (Stephen, 2026-10-01):** they exist to stop a simple object running to 100,000 faces.
+If an object genuinely needs an extra 30–50 % to read right, that's fine, as long as it isn't the norm for its class
+(e.g. U1's wrap-round veranda at 12,428 vs 12,000; the town bell tower over 'standard' sits in 'large'). Say so in the
+report when you go over.
 
 **Open task for the first B agent:** read the face counts of about 10 more vanilla buildings with W's ODOL tools and
 tighten these budgets.

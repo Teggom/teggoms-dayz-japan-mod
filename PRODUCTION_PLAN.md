@@ -447,3 +447,8 @@
   rope on the nuki front with half the sag: lowest shide 2.35-2.64 m, nuki clear 2.49-2.94 m; woodpiles have tied end stakes.
   verify_all --full 193 / 11,822; verify_oprw 4125/4125. Pitfall: build_w2f.py's folder binarize crashed on an existing ODOL
   (FX1 binarized its six props singly).
+- 2026-10-01: **Stephen's decisions:** small props 800 / detail-hero props 1,500 / statues as needed (PLAYBOOK §12); budgets are guidance:
+  +30-50 % is fine when an object needs it, not as the norm (so: no separate tower class; U1 wrap-round veranda YES). Statue
+  references: **option B approved** = CC0 images from the Met Museum Open Access API + Cleveland Museum of Art Open Access
+  (fallback: Stephen saves photos). **Komainu wanted** (+ paired lanterns). Torii rope now looks too SHORT: hang it a little lower
+  (keep head clearance). Next: FX2 (statues + komainu + detail props + rope + U1 veranda), then FX3 (textures), config assembler.
