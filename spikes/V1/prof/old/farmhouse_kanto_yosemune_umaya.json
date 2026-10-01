@@ -1,0 +1,432 @@
+{
+ "key": "farmhouse_kanto_yosemune_umaya",
+ "ok": true,
+ "build_s": 2.534,
+ "verify_s": 41.58,
+ "phases": [
+  [
+   "recipe model()",
+   0.171
+  ],
+  [
+   "zfight.resolve",
+   2.157
+  ],
+  [
+   "Part.lods",
+   0.151
+  ],
+  [
+   "write_mlod",
+   0.048
+  ]
+ ],
+ "checks": [
+  [
+   "C11 envelope leak: rooms see outside only through do",
+   25.546,
+   "OK"
+  ],
+  [
+   "C15 stable silhouette: Resolution 2 / 3 top heights",
+   6.936,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin1 closed: no see-through slit at a jamb",
+   0.874,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin6 closed: no see-through slit at a jamb",
+   0.859,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin10 closed: no see-through slit at a jam",
+   0.847,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin2 closed: no see-through slit at a jamb",
+   0.785,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin4 closed: no see-through slit at a jamb",
+   0.681,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin7 closed: no see-through slit at a jamb",
+   0.677,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin8 closed: no see-through slit at a jamb",
+   0.653,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin9 closed: no see-through slit at a jamb",
+   0.623,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin3 closed: no see-through slit at a jamb",
+   0.597,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin5 closed: no see-through slit at a jamb",
+   0.591,
+   "OK"
+  ],
+  [
+   "C20 no z-fighting: no visibly different faces share",
+   0.526,
+   "OK"
+  ],
+  [
+   "C5 LOD set (vanilla house set)",
+   0.431,
+   "OK"
+  ],
+  [
+   "C2 library materials only",
+   0.272,
+   "OK"
+  ],
+  [
+   "C7 walkable floors have Roadway at floor height",
+   0.271,
+   "OK"
+  ],
+  [
+   "C7 Roadway sits on Geometry (+-3 cm)",
+   0.067,
+   "OK"
+  ],
+  [
+   "Loot points on Roadway floors, ranges clear of walls",
+   0.029,
+   "OK"
+  ],
+  [
+   "C7 View Geometry closed + convex",
+   0.028,
+   "OK"
+  ],
+  [
+   "C7 Fire Geometry closed + convex",
+   0.028,
+   "OK"
+  ],
+  [
+   "C7 Geometry closed + convex",
+   0.027,
+   "OK"
+  ],
+  [
+   "C21 interior partitions end at a beam or a ceiling (",
+   0.021,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   0.015,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin1 reachable from both sides (open)",
+   0.015,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2",
+   0.014,
+   "OK"
+  ],
+  [
+   "Binarize -> ODOL (LODs, bones, axes, twin selections",
+   0.013,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2",
+   0.011,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2",
+   0.011,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2",
+   0.011,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin9 reachable from both sides (open)",
+   0.011,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin8 reachable from both sides (open)",
+   0.01,
+   "OK"
+  ],
+  [
+   "C22 interior wall ends meet a post or a wall (no ver",
+   0.008,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin3 reachable from both sides (open)",
+   0.006,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin4 reachable from both sides (open)",
+   0.006,
+   "OK"
+  ],
+  [
+   "C19 matte finish: no environment reflection on matte",
+   0.006,
+   "OK"
+  ],
+  [
+   "C8 era lint (no glass, kawara geometry, separate pli",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin1 reachable from both sides (closed)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin2 reachable from both sides (open)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C14 interior faces use the interior clay, not the ex",
+   0.004,
+   "OK"
+  ],
+  [
+   "B1/B2 binds in game (class == Land_<p3d stem>, shipp",
+   0.003,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin3 reachable from both sides (closed)",
+   0.003,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin4 reachable from both sides (closed)",
+   0.003,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin8 reachable from both sides (closed)",
+   0.003,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin9 reachable from both sides (closed)",
+   0.003,
+   "OK"
+  ],
+  [
+   "C12 roof / wall intersection (no part pokes into a r",
+   0.003,
+   "OK"
+  ],
+  [
+   "Placement inside the test yard, clear of the reserve",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin2 reachable from both sides (closed)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin5 reachable from its leaf side (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin6 reachable from its leaf side (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin6 reachable from its leaf side (closed)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin7 reachable from its leaf side (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin7 reachable from its leaf side (closed)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin5 window sweep",
+   0.001,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin8 window sweep",
+   0.001,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin9 window sweep",
+   0.001,
+   "OK"
+  ],
+  [
+   "CE loot frame -> world == model -> world (WORLD_BUIL",
+   0.001,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin5 reachable from its leaf side (closed)",
+   0.001,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin10 reachable from its leaf side (open)",
+   0.001,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin10 reachable from its leaf side (closed",
+   0.001,
+   "OK"
+  ],
+  [
+   "C16 far-LOD kawara: matte far material in Resolution",
+   0.001,
+   "OK"
+  ],
+  [
+   "C5 face budget (large: 12000 / 4600 / 1600)",
+   0.0,
+   "OK"
+  ],
+  [
+   "Geometry properties + mass",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 Fire Geometry penetration rvmats",
+   0.0,
+   "OK"
+  ],
+  [
+   "C3 grid snap (post nodes on the 0.455 grid)",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin3 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin4 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin5 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin6 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin6 window sweep",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin7 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin7 window sweep",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin8 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin9 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin10 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin10 window sweep",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 head room >= 2.10 over every floor",
+   0.0,
+   "OK"
+  ],
+  [
+   "C18 DoorsTwin1 pulls on the stub edge (in the doorwa",
+   0.0,
+   "OK"
+  ],
+  [
+   "C18 DoorsTwin2 pulls on the stub edge (in the doorwa",
+   0.0,
+   "OK"
+  ],
+  [
+   "C18 DoorsTwin3 pulls on the stub edge (in the doorwa",
+   0.0,
+   "OK"
+  ],
+  [
+   "C13 kawara seated on the clay bed, fascia at every e",
+   0.0,
+   "OK"
+  ]
+ ],
+ "n_checks": 81
+}

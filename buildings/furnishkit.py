@@ -24,7 +24,7 @@ from jpkit import loot as bloot  # noqa: E402
 
 POSTS, PASSAGES, PORTALS, STAIRS = [], [], [], []
 INFO = {}
-PASSAGE_LABEL = "C7 open passage clear >= 1.00 + head >= 2.00"
+PASSAGE_LABEL = _PASSAGE_LABEL_DEFAULT = "C7 open passage clear >= 1.00 + head >= 2.00"
 DOOR_CHECK_OTHERS_OPEN = False
 FRAME_NOTE = "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3"
 D = None
@@ -172,7 +172,9 @@ def model(name=None, base=None, dress=None, **kw):
     INFO.clear()
     INFO.update(getattr(bm, "INFO", {}))
     DOOR_CHECK_OTHERS_OPEN = bool(getattr(bm, "DOOR_CHECK_OTHERS_OPEN", False))
-    globals()["PASSAGE_LABEL"] = getattr(bm, "PASSAGE_LABEL", PASSAGE_LABEL)
+    # V1 (2026-10-01): a base without its own label gets the default, not the label the PREVIOUS furnished building
+    # of this process left here (the check name depended on the build order)
+    globals()["PASSAGE_LABEL"] = getattr(bm, "PASSAGE_LABEL", _PASSAGE_LABEL_DEFAULT)
     BASE.clear()
     BASE.update(key=base, cls=b["class"])
     ctx = Ctx(M, floors, rooms, INFO, base, spec["tier"])

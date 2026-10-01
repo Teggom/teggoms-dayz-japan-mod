@@ -130,7 +130,7 @@
    "detail": "window_slide moves closed -> open without touching other geometry"
   },
   {
-   "check": "C7 open doorway (mushiro, no leaf) clear >= 1.00 + head >= 2.00",
+   "check": "C7 open passage clear >= 1.00 + head >= 2.00",
    "ok": true,
    "detail": "clear 1.15 m, head 2.00 m"
   },

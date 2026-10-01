@@ -2,7 +2,7 @@
 r"""pipeline.py - the multi-building build (B0 step 0b; replaces the machiya's one-building build.py).
 
   python buildings/pipeline.py [key ...] [--all] [--no-binarize] [--no-pack] [--no-verify] [--combine-only]
-                               [--family NAME] [--jobs N] [--verify-only]
+                               [--family NAME] [--jobs N] [--verify-only] [--full]
   python buildings/pipeline.py --help     (prints this and builds nothing; unknown options also build nothing)
 
   key ...         the buildings to (re)build (buildings/registry.py keys); default = every shipped building
@@ -11,6 +11,12 @@ r"""pipeline.py - the multi-building build (B0 step 0b; replaces the machiya's o
   --family NAME   C1: every registered building whose dir (family folder) is NAME, e.g. townhouse
   --jobs N        C1: run the checks in N parallel processes (after combine / binarize / pack)
   --verify-only   C1: rebuild the model in memory + out/ and run its checks; stage nothing, combine nothing
+  --full          V1: ignore the check cache (checkcache.py): run every building's checks (fresh passes are stored)
+
+Check cache (V1, 2026-10-01; buildings/checkcache.py): the checks of a building whose fingerprint (registry entry,
+the source of every module its recipe + checks import, the data files it read) is unchanged since its last PASS are
+skipped and that pass reused ("RESULT <key>: PASS (...) [cached]"). Never a FAIL. --full ignores it.
+--jobs N is capped at 4 (README rule 2b).
 
 Families (C1, 2026-09-30): a registry entry with "dir" + "params" + "name" + "class" is one member of a family of
 shells built by one recipe module in buildings/<dir>/ (model(name=..., **params) -> (M, floors, rooms)); its record,
@@ -48,6 +54,8 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(DEV, "parts", "kit"))
 sys.path.insert(0, os.path.join(DEV, "tools", "common"))              # pbo.py (read-only, imported)
 sys.path.insert(0, os.path.join(DEV, "spikes", "B_building", "kit"))  # B's loot.py (read-only, imported)
+import checkcache as CC  # noqa: E402
+CC.install()            # V1: record what each building reads (before the kit is imported: import-time reads count)
 import registry  # noqa: E402
 from jpparts import mlod  # noqa: E402
 from jpkit import loot as bloot  # noqa: E402
@@ -94,6 +102,24 @@ def side_path(b, kind):
     if "dir" in b:
         return os.path.join(bdir(b), {"record": "records"}.get(kind, kind), b["key"] + ".json")
     return os.path.join(bdir(b), kind + ".json")
+
+
+def snapshot(mod):
+    """V1: the recipe module's state right after model() (a family module keeps POSTS / PASSAGES / D ... of the LAST
+    model it built): its attributes, lists / dicts / sets copied, so a building's checks can run after its family
+    siblings were built without rebuilding it (C2 used to rebuild every family member before its checks)."""
+    import copy
+    import types
+    snap = types.SimpleNamespace()
+    for k in dir(mod):
+        if k.startswith("__"):
+            continue
+        v = getattr(mod, k)
+        if isinstance(v, (list, dict, set)):
+            v = copy.copy(v)
+        setattr(snap, k, v)
+    snap.__name__ = getattr(mod, "__name__", "recipe")
+    return snap
 
 
 def load_module(b):
@@ -295,8 +321,8 @@ def build_model(b, stage=True):
         os.makedirs(mdir, exist_ok=True)
         copy_retry(mp, os.path.join(mdir, name + ".p3d"))
         wb(record_path(b), json.dumps(rec, indent=1))
-    return {"b": b, "mod": mod, "M": M, "floors": floors, "rooms": rooms, "pts": pts, "lods": lods, "rec": rec,
-            "mlod": mp}
+    return {"b": b, "mod": snapshot(mod), "M": M, "floors": floors, "rooms": rooms, "pts": pts, "lods": lods,
+            "rec": rec, "mlod": mp}
 
 
 def binarize(b, name):
@@ -517,30 +543,110 @@ def binarize_dir(mdir, names, logdir):
     return done
 
 
-def verify_parallel(keys, jobs):
-    """C1: the checks of many buildings in `jobs` worker processes (pipeline.py --verify-only k1 k2 ...)."""
-    import time
-    groups = [keys[i::jobs] for i in range(jobs) if keys[i::jobs]]
-    logdir = os.path.join(TEMP, "verify_logs")
-    os.makedirs(logdir, exist_ok=True)
-    procs = []
-    for i, g in enumerate(groups):
-        lf = open(os.path.join(logdir, "verify_%02d.log" % i), "wb")
-        procs.append((subprocess.Popen([sys.executable, os.path.abspath(__file__), "--verify-only"] + g, stdout=lf,
-                                       stderr=subprocess.STDOUT, cwd=DEV), lf, g))
-    ok = True
-    t0 = time.time()
-    for p, lf, g in procs:
-        rc = p.wait()
-        lf.close()
-        ok = ok and rc == 0
-    print("verify: %d buildings in %d processes, %.0f s, %s (logs %s)" % (len(keys), len(groups), time.time() - t0,
-                                                                      "all pass" if ok else "FAILURES", logdir))
+MAX_JOBS = 4            # README rule 2b: at most 4 parallel processes on Stephen's PC
+
+
+def checks_file(b):
+    return side_path(b, "checks")
+
+
+def _cached(b, full):
+    """V1: the building's still-valid cached pass (printed as a RESULT line), else None (and the miss reason)."""
+    if full:
+        return None
+    why = []
+    e = CC.lookup(b, checks_file(b), why)
+    if e:
+        print("RESULT %s: PASS (%d checks, 0 failures) [cached]" % (b["key"], e["n_checks"]))
+        return e
+    print("[%s] check cache: run (%s)" % (b["key"], why[0] if why else "miss"))
+    return None
+
+
+def verify_one(b, full=False, bd=None):
+    """V1: one building's checks through the cache. bd: its build dict from this process (its window recorded the
+    build); None = build it in memory now (as --verify-only always did). A PASS is stored; a FAIL never."""
+    if _cached(b, full):
+        return True
+    fp = CC.fingerprint(b)
+    with CC.window(b["key"]):
+        if bd is None:
+            bd = build_model(b, stage=False)
+        ok = run_verify(bd)
+    if b.get("verify") not in (None, "shellcheck"):
+        # a building's own verify.py (machiya style) prints "RESULT: ..." without its key: say it with the key
+        try:
+            with open(checks_file(b), "rb") as f:
+                doc = json.loads(f.read().decode("utf-8"))
+            ck = doc.get("checks", [])
+            print("RESULT %s: %s (%d checks, %d failures)" % (b["key"], "PASS" if ok else "FAIL", len(ck),
+                                                             sum(1 for r in ck if not r.get("ok"))))
+        except (OSError, ValueError):
+            print("RESULT %s: FAIL (0 checks, 1 failures) - no checks file" % b["key"])
+    if ok:
+        CC.store(b, bd, checks_file(b), fp)
+    CC.forget(b["key"])
     return ok
 
 
+def verify_parallel(keys, jobs, full=False):
+    """C1: the checks of many buildings in at most `jobs` (<= 4) worker processes (pipeline.py --verify-only --full
+    k1 k2 ...). V1: buildings whose cached pass is still valid are skipped here (unless full); the rest go to the
+    workers in small batches as workers free up. Returns (ok, {key: (PASS|FAIL, n_checks, n_failures, cached)})."""
+    import time
+    jobs = max(1, min(int(jobs), MAX_JOBS))
+    t0 = time.time()
+    res = {}
+    todo = []
+    for k in keys:
+        b = registry.get(k)
+        e = _cached(b, full)
+        if e:
+            res[k] = ("PASS", e["n_checks"], 0, True)
+        else:
+            todo.append(k)
+    t1 = time.time()
+    logdir = os.path.join(TEMP, "verify_logs")
+    os.makedirs(logdir, exist_ok=True)
+    for f in os.listdir(logdir):
+        if f.startswith("verify_") and f.endswith(".log"):
+            os.remove(os.path.join(logdir, f))
+    size = max(1, min(6, -(-len(todo) // (jobs * 3)))) if todo else 1
+    if os.environ.get("JP_VERIFY_BATCH"):           # V1 tests: buildings per worker process (1 = each alone)
+        size = max(1, int(os.environ["JP_VERIFY_BATCH"]))
+    batches = [todo[i:i + size] for i in range(0, len(todo), size)]
+    running, logs, ok = [], [], True
+    while batches or running:
+        while batches and len(running) < jobs:
+            g = batches.pop(0)
+            lp = os.path.join(logdir, "verify_%03d.log" % len(logs))
+            logs.append(lp)
+            lf = open(lp, "wb")
+            running.append((subprocess.Popen([sys.executable, os.path.abspath(__file__), "--verify-only", "--full"] + g,
+                                             stdout=lf, stderr=subprocess.STDOUT, cwd=DEV), lf, g))
+        time.sleep(0.2)
+        for r in list(running):
+            if r[0].poll() is not None:
+                r[1].close()
+                ok = ok and r[0].returncode == 0
+                running.remove(r)
+    for lp in logs:
+        with open(lp, "rb") as f:
+            t = f.read().decode("utf-8", "replace")
+        for m in re.finditer(r"RESULT (\S+): (PASS|FAIL) \((\d+) checks, (\d+) failures\)", t):
+            res[m.group(1)] = (m.group(2), int(m.group(3)), int(m.group(4)), False)
+    missing = [k for k in keys if k not in res]
+    nfail = sum(1 for v in res.values() if v[0] != "PASS")
+    ok = ok and not missing and not nfail
+    print("verify: %d buildings: %d cached (%.0f s), %d checked in %d batches / <= %d processes (%.0f s); %s%s "
+          "(logs %s)" % (len(keys), len(keys) - len(todo), t1 - t0, len(todo), len(logs), jobs, time.time() - t1,
+                         "all pass" if ok else "FAILURES (%d)" % nfail, ("; NO RESULT for %s" % missing) if missing
+                         else "", logdir))
+    return ok, res
+
+
 KNOWN_FLAGS = {"--all", "--no-binarize", "--no-pack", "--no-verify", "--combine-only", "--family", "--jobs",
-               "--verify-only"}
+               "--verify-only", "--full"}
 
 
 def main(argv):
@@ -573,12 +679,16 @@ def main(argv):
         todo = [registry.get(k) for k in keys]
     else:
         todo = [b for b in registry.BUILDINGS if b["ship"] or "--all" in flags]
+    full = "--full" in flags
     if "--verify-only" in flags:
         ok = True
         for b in todo:
-            ok = run_verify(build_model(b, stage=False)) and ok
+            ok = verify_one(b, full) and ok
         return 0 if ok else 1
-    built = [build_model(b) for b in todo]
+    built = []
+    for b in todo:
+        with CC.window(b["key"]):          # V1: the build's reads count for the building's check-cache entry
+            built.append(build_model(b))
     ok = combine() if any(bd["b"]["ship"] for bd in built) else True
     shipped = [bd for bd in built if bd["b"]["ship"]]
     if shipped and "--no-binarize" not in flags:
@@ -599,14 +709,12 @@ def main(argv):
         ok = pack() and ok
     if "--no-verify" not in flags:
         if jobs > 1 and len(built) > 1:
-            ok = verify_parallel([bd["b"]["key"] for bd in built], jobs) and ok
+            ok = verify_parallel([bd["b"]["key"] for bd in built], jobs, full)[0] and ok
         else:
             for bd in built:
-                if "params" in bd["b"] and len(built) > 1:
-                    # C2: a family recipe keeps per-model state (POSTS, PASSAGES, PORTALS) at module level; after
-                    # building several, it holds the LAST model's. Rebuild this one in memory before its checks.
-                    bd = build_model(bd["b"], stage=False)
-                ok = run_verify(bd) and ok
+                # C2 rebuilt every family member here (its module held the LAST model's POSTS / PASSAGES ...);
+                # V1: build_model keeps a snapshot of the module state per building (bd["mod"]): no second build
+                ok = verify_one(bd["b"], full, bd) and ok
     return 0 if ok else 1
 
 

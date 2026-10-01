@@ -1,0 +1,807 @@
+{
+ "key": "f_inn_grand",
+ "ok": true,
+ "build_s": 3.324,
+ "verify_s": 40.051,
+ "phases": [
+  [
+   "recipe model()",
+   0.25
+  ],
+  [
+   "zfight.resolve",
+   2.681
+  ],
+  [
+   "Part.lods",
+   0.164
+  ],
+  [
+   "write_mlod",
+   0.067
+  ]
+ ],
+ "checks": [
+  [
+   "C11 envelope leak: rooms see outside only through do",
+   19.419,
+   "OK"
+  ],
+  [
+   "C15 stable silhouette: Resolution 2 / 3 top heights",
+   5.895,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin5 closed: no see-through slit at a jamb",
+   2.22,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin4 closed: no see-through slit at a jamb",
+   2.179,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin1 closed: no see-through slit at a jamb",
+   2.017,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin10 closed: no see-through slit at a jam",
+   1.114,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin11 closed: no see-through slit at a jam",
+   1.002,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin7 closed: no see-through slit at a jamb",
+   0.932,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin8 closed: no see-through slit at a jamb",
+   0.654,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin9 closed: no see-through slit at a jamb",
+   0.64,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin3 closed: no see-through slit at a jamb",
+   0.629,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin2 closed: no see-through slit at a jamb",
+   0.568,
+   "OK"
+  ],
+  [
+   "C17 DoorsTwin6 closed: no see-through slit at a jamb",
+   0.504,
+   "OK"
+  ],
+  [
+   "C20 no z-fighting: no visibly different faces share",
+   0.484,
+   "OK"
+  ],
+  [
+   "C5 LOD set (vanilla house set)",
+   0.309,
+   "OK"
+  ],
+  [
+   "C2 library materials only",
+   0.293,
+   "OK"
+  ],
+  [
+   "D4 1.00 m clear band door-to-door and door-to-centre",
+   0.146,
+   "OK"
+  ],
+  [
+   "C7 walkable floors have Roadway at floor height",
+   0.1,
+   "OK"
+  ],
+  [
+   "D1 props per room 5-7: toriniwa",
+   0.074,
+   "OK"
+  ],
+  [
+   "D4 1.00 m clear band door-to-door and door-to-centre",
+   0.061,
+   "OK"
+  ],
+  [
+   "D4 1.00 m clear band door-to-door and door-to-centre",
+   0.055,
+   "OK"
+  ],
+  [
+   "C12 roof / wall intersection (no part pokes into a r",
+   0.046,
+   "OK"
+  ],
+  [
+   "D4 1.00 m clear band door-to-door and door-to-centre",
+   0.043,
+   "OK"
+  ],
+  [
+   "D4 1.00 m clear band door-to-door and door-to-centre",
+   0.04,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin5 reachable with the furniture in (open)",
+   0.036,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin5 reachable from both sides (open)",
+   0.033,
+   "OK"
+  ],
+  [
+   "C21 interior partitions end at a beam or a ceiling (",
+   0.028,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin5 reachable with the furniture in (close",
+   0.027,
+   "OK"
+  ],
+  [
+   "C7 Roadway sits on Geometry (+-3 cm)",
+   0.026,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin5 reachable from both sides (closed)",
+   0.025,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   0.023,
+   "OK"
+  ],
+  [
+   "Loot points on Roadway floors, ranges clear of walls",
+   0.02,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin1 reachable from both sides (open)",
+   0.016,
+   "OK"
+  ],
+  [
+   "D6 DoorsTwin1 sweep + clear >= 1.00 + head with the",
+   0.013,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin4 reachable with the furniture in (open)",
+   0.013,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2",
+   0.012,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin4 reachable from both sides (open)",
+   0.012,
+   "OK"
+  ],
+  [
+   "C13 kawara seated on the clay bed, fascia at every e",
+   0.012,
+   "OK"
+  ],
+  [
+   "D6 DoorsTwin4 sweep + clear >= 1.00 + head with the",
+   0.012,
+   "OK"
+  ],
+  [
+   "ST3 head room >= 2.05 m over the flight (D4)",
+   0.011,
+   "OK"
+  ],
+  [
+   "D6 DoorsTwin5 sweep + clear >= 1.00 + head with the",
+   0.011,
+   "OK"
+  ],
+  [
+   "D11 loot: floor points 0.4 m clear of footprints, ra",
+   0.011,
+   "OK"
+  ],
+  [
+   "C7 Geometry closed + convex",
+   0.01,
+   "OK"
+  ],
+  [
+   "C7 View Geometry closed + convex",
+   0.01,
+   "OK"
+  ],
+  [
+   "C7 Fire Geometry closed + convex",
+   0.01,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2",
+   0.01,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin5 sweep + clear (>= 1.00, D1) + head (D2",
+   0.01,
+   "OK"
+  ],
+  [
+   "D4 1.00 m clear band door-to-door and door-to-centre",
+   0.01,
+   "OK"
+  ],
+  [
+   "D6 DoorsTwin2 sweep + clear >= 1.00 + head with the",
+   0.01,
+   "OK"
+  ],
+  [
+   "D6 DoorsTwin3 sweep + clear >= 1.00 + head with the",
+   0.01,
+   "OK"
+  ],
+  [
+   "D6 DoorsTwin6 sweep + clear >= 1.00 + head with the",
+   0.01,
+   "OK"
+  ],
+  [
+   "Binarize -> ODOL (LODs, bones, axes, twin selections",
+   0.01,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2",
+   0.009,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2",
+   0.009,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin6 sweep + clear (>= 1.00, D1) + head (D2",
+   0.008,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin1 reachable with the furniture in (open)",
+   0.008,
+   "OK"
+  ],
+  [
+   "C7 open passage clear >= 1.00 + head >= 2.00",
+   0.005,
+   "OK"
+  ],
+  [
+   "C22 interior wall ends meet a post or a wall (no ver",
+   0.005,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin3 reachable with the furniture in (open)",
+   0.005,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin4 reachable with the furniture in (close",
+   0.005,
+   "OK"
+  ],
+  [
+   "C8 era lint (no glass, kawara geometry, separate pli",
+   0.004,
+   "OK"
+  ],
+  [
+   "Placement inside the test yard, clear of the reserve",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin1 reachable from both sides (closed)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin2 reachable from both sides (open)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin2 reachable from both sides (closed)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin3 reachable from both sides (open)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin4 reachable from both sides (closed)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin6 reachable from both sides (open)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C14 interior faces use the interior clay, not the ex",
+   0.004,
+   "OK"
+  ],
+  [
+   "C19 matte finish: no environment reflection on matte",
+   0.004,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin1 reachable with the furniture in (close",
+   0.004,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin2 reachable with the furniture in (open)",
+   0.004,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin2 reachable with the furniture in (close",
+   0.004,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin3 reachable with the furniture in (close",
+   0.004,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin6 reachable with the furniture in (open)",
+   0.004,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin3 reachable from both sides (closed)",
+   0.003,
+   "OK"
+  ],
+  [
+   "B1/B2 binds in game (class == Land_<p3d stem>, shipp",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin6 reachable from both sides (closed)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin7 reachable from its leaf side (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin7 reachable from its leaf side (closed)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin8 reachable from its leaf side (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin8 reachable from its leaf side (closed)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin9 reachable from its leaf side (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin9 reachable from its leaf side (closed)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin10 reachable from its leaf side (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin10 reachable from its leaf side (closed",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin11 reachable from its leaf side (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "C10 DoorsTwin11 reachable from its leaf side (closed",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin6 reachable with the furniture in (close",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin7 reachable with the furniture in (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin7 reachable with the furniture in (close",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin8 reachable with the furniture in (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin8 reachable with the furniture in (close",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin9 reachable with the furniture in (open)",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin9 reachable with the furniture in (close",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin10 reachable with the furniture in (open",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin10 reachable with the furniture in (clos",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin11 reachable with the furniture in (open",
+   0.002,
+   "OK"
+  ],
+  [
+   "D7 DoorsTwin11 reachable with the furniture in (clos",
+   0.002,
+   "OK"
+  ],
+  [
+   "D8 props clear of the building (no Geometry overlap",
+   0.002,
+   "OK"
+  ],
+  [
+   "D10 C6 bases on the floor (0-2 cm), wall-hung props",
+   0.002,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin10 window sweep",
+   0.001,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin11 window sweep",
+   0.001,
+   "OK"
+  ],
+  [
+   "ST5 stairwell cut: no upper-floor Roadway over the f",
+   0.001,
+   "OK"
+  ],
+  [
+   "CE loot frame -> world == model -> world (WORLD_BUIL",
+   0.001,
+   "OK"
+  ],
+  [
+   "C18 DoorsTwin6 pulls on the stub edge (in the doorwa",
+   0.001,
+   "OK"
+  ],
+  [
+   "C16 far-LOD kawara: matte far material in Resolution",
+   0.001,
+   "OK"
+  ],
+  [
+   "D12 proxies in the vanilla LODs (Q5: collision props",
+   0.001,
+   "OK"
+  ],
+  [
+   "C5 face budget (large: 12000 / 4600 / 1600)",
+   0.0,
+   "OK"
+  ],
+  [
+   "Geometry properties + mass",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 Fire Geometry penetration rvmats",
+   0.0,
+   "OK"
+  ],
+  [
+   "C3 grid snap (post nodes on the 0.455 grid)",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin3 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin4 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin5 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin6 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin7 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin7 window sweep",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin8 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin8 window sweep",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin9 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin9 window sweep",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin10 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 DoorsTwin11 selections, memory, model.cfg, config",
+   0.0,
+   "OK"
+  ],
+  [
+   "C7 head room >= 2.10 over every floor",
+   0.0,
+   "OK"
+  ],
+  [
+   "ST1 walk ramp <= 38 deg (D4, 37.8 walked in game)",
+   0.0,
+   "OK"
+  ],
+  [
+   "ST2 flight width >= 1.10 m (D4)",
+   0.0,
+   "OK"
+  ],
+  [
+   "ST4 the ramp meets the lower floor at its foot and t",
+   0.0,
+   "OK"
+  ],
+  [
+   "C18 DoorsTwin1 pulls on the stub edge (in the doorwa",
+   0.0,
+   "OK"
+  ],
+  [
+   "D2 floor coverage <= 25 %: toriniwa",
+   0.0,
+   "OK"
+  ],
+  [
+   "D3 at least one raised loot surface: toriniwa",
+   0.0,
+   "OK"
+  ],
+  [
+   "D1 props per room 5-7: mise",
+   0.0,
+   "OK"
+  ],
+  [
+   "D2 floor coverage <= 25 %: mise",
+   0.0,
+   "OK"
+  ],
+  [
+   "D3 at least one raised loot surface: mise",
+   0.0,
+   "OK"
+  ],
+  [
+   "D1 props per room 5-7: oku",
+   0.0,
+   "OK"
+  ],
+  [
+   "D2 floor coverage <= 25 %: oku",
+   0.0,
+   "OK"
+  ],
+  [
+   "D3 at least one raised loot surface: oku",
+   0.0,
+   "OK"
+  ],
+  [
+   "D1 props per room 5-7: kitchen",
+   0.0,
+   "OK"
+  ],
+  [
+   "D2 floor coverage <= 25 %: kitchen",
+   0.0,
+   "OK"
+  ],
+  [
+   "D3 at least one raised loot surface: kitchen",
+   0.0,
+   "OK"
+  ],
+  [
+   "D1 props per room 5-7: nikai_front",
+   0.0,
+   "OK"
+  ],
+  [
+   "D2 floor coverage <= 25 %: nikai_front",
+   0.0,
+   "OK"
+  ],
+  [
+   "D3 at least one raised loot surface: nikai_front",
+   0.0,
+   "OK"
+  ],
+  [
+   "D1 props per room 5-7: nikai_back",
+   0.0,
+   "OK"
+  ],
+  [
+   "D2 floor coverage <= 25 %: nikai_back",
+   0.0,
+   "OK"
+  ],
+  [
+   "D3 at least one raised loot surface: nikai_back",
+   0.0,
+   "OK"
+  ],
+  [
+   "D5 DoorsTwin1: no collision prop within 0.4 m of the",
+   0.0,
+   "OK"
+  ],
+  [
+   "D5 DoorsTwin2: no collision prop within 0.4 m of the",
+   0.0,
+   "OK"
+  ],
+  [
+   "D5 DoorsTwin3: no collision prop within 0.4 m of the",
+   0.0,
+   "OK"
+  ],
+  [
+   "D5 DoorsTwin4: no collision prop within 0.4 m of the",
+   0.0,
+   "OK"
+  ],
+  [
+   "D5 DoorsTwin5: no collision prop within 0.4 m of the",
+   0.0,
+   "OK"
+  ],
+  [
+   "D5 DoorsTwin6: no collision prop within 0.4 m of the",
+   0.0,
+   "OK"
+  ],
+  [
+   "D9 props clear of each other (no Geometry overlap >",
+   0.0,
+   "OK"
+  ],
+  [
+   "D15 surface items rest on their host's surface (+-2",
+   0.0,
+   "OK"
+  ],
+  [
+   "D13 yard / street objects inside the test pad",
+   0.0,
+   "OK"
+  ]
+ ],
+ "n_checks": 156
+}

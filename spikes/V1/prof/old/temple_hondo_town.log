@@ -1,0 +1,49 @@
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\..\parts\kit\jpparts\buildcheck.py:179: RuntimeWarning: invalid value encountered in subtract
+  dds.append(np.where(np.isfinite(a_) & np.isfinite(b_), np.abs(a_ - b_),
+[temple_hondo_town] zfight.resolve pass: 642 visible pairs, 402 solids moved; zfight.resolve pass: 99 visible pairs, 46 solids moved
+[temple_hondo_town] MLOD D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\temple\out\jp_temple_hondo_town.p3d: {'Resolution 1': 11510, 'Resolution 2': 3426, 'Resolution 3': 1566, 'Geometry': 1491, 'Memory': 0, 'Roadway': 125, 'View Geometry': 1437, 'Fire Geometry': 1455}
+OK   C5 LOD set (vanilla house set)                       Resolution 1 11510, Resolution 2 3426, Resolution 3 1566, Geometry 1491, Memory 0, Roadway 125, View Geometry 1437, Fire Geometry 1455
+OK   C5 face budget (large: 12000 / 4600 / 1600)          R1 11510, R2 3426, R3 1566
+OK   Geometry properties + mass                           {'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 90000 kg
+OK   B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house) Land_JP_Temple_Hondo_Town -> jp_temple_hondo_town.p3d
+OK   C7 Geometry closed + convex                          226 components, 0 bad, 0 faces outside components
+OK   C7 View Geometry closed + convex                     217 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry closed + convex                     220 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry penetration rvmats                  pottery, wood
+OK   C2 library materials only                            every path under JP\common\materials\ (on disk) or vanilla penetration / roadway
+OK   C8 era lint (no glass, kawara geometry, separate plinth stones) glass paths 0; no kawara (board roof); 0 individual dodai stones, 14 soseki under the posts
+OK   C3 grid snap (post nodes on the 0.455 grid)          12 posts
+OK   C7 DoorsTwin1 selections, memory, model.cfg, config  shitomi (bay 0) (shitomi): bones doors1
+OK   C7 DoorsTwin1 window sweep                           shitomi moves closed -> open without touching other geometry
+OK   C7 DoorsTwin2 selections, memory, model.cfg, config  tobira_sankara_in (bay 1) (tobira): bones doors2+doors3
+OK   C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2) leaves turn 90/90 deg without touching other geometry; open clear 1.92 m, head 2.00 m
+OK   C7 DoorsTwin3 selections, memory, model.cfg, config  shitomi (bay 2) (shitomi): bones doors4
+OK   C7 DoorsTwin3 window sweep                           shitomi moves closed -> open without touching other geometry
+OK   C7 Roadway sits on Geometry (+-3 cm)                 1808/1808 samples
+OK   C7 walkable floors have Roadway at floor height      360/360 samples over hall, en
+OK   C7 head room >= 2.10 over every floor                lowest 3.78 m
+OK   Loot points on Roadway floors, ranges clear of walls, every room 10 points (hall 8, en 2)
+OK   CE loot frame -> world == model -> world (WORLD_BUILDINGS §0) 10 points, max diff 4.3e-07 m
+OK   Placement inside the test yard, clear of the reserved spots not placed on the island (shipped in the PBO only)
+OK   C10 DoorsTwin1 reachable from both sides (open)      shitomi (bay 0): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.84 m; far: leaf hit first from 5/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.75 m
+OK   C10 DoorsTwin1 reachable from both sides (closed)    shitomi (bay 0): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.02 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.18 m
+OK   C10 DoorsTwin2 reachable from both sides (open)      tobira_sankara_in (bay 1): leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.41 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.79 m
+OK   C10 DoorsTwin2 reachable from both sides (closed)    tobira_sankara_in (bay 1): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.61 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.69 m
+OK   C10 DoorsTwin3 reachable from both sides (open)      shitomi (bay 2): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.84 m; far: leaf hit first from 5/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.75 m
+OK   C10 DoorsTwin3 reachable from both sides (closed)    shitomi (bay 2): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.02 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.18 m
+OK   C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile shitomi (bay 0): 19597 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile tobira_sankara_in (bay 1): 54036 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile shitomi (bay 2): 19597 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C11 envelope leak: rooms see outside only through doors / windows hall 9600 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): en
+OK   C12 roof / wall intersection (no part pokes into a roof body > 3 cm) 129 roof bodies clear
+OK   C13 kawara seated on the clay bed, fascia at every eave 200/200 field points within reach of the bed; 4 eave tile sets, 72 fascia boards
+OK   C14 interior faces use the interior clay, not the exterior-weathered earth no exterior earth face looks into a room
+OK   C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1 7577 columns over 2.5 m compared in each LOD
+OK   C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone) 12 library rvmats in the visual LODs, 3 glossy / glazed by design (sidecar finish, else kawara, namako, iron)
+OK   C16 far-LOD kawara: matte far material in Resolution 2 / 3 far-field faces R1/R2/R3 0/208/108; close field in R2/R3 0/0; specular far 0.22 < close 0.60
+OK   C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3 0 visible same-facing pairs; 3416 touching (opposite-facing: backface-culled) and 963 covered / drawn-identically pairs not judged
+OK   C21 interior partitions end at a beam or a ceiling (no wall top open below the roof) every interior wall top closed
+OK   C22 interior wall ends meet a post or a wall (no vertical see-through slot) every interior wall panel end closed
+OK   Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton) ODOL v55, 954594 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True
+RESULT temple_hondo_town: PASS (43 checks, 0 failures)
+PROFILE temple_hondo_town: build 2.3 s, verify 25.9 s, 43 checks, PASS

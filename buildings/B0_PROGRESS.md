@@ -37,3 +37,23 @@ Task: PRODUCTION_PLAN Phase B item B0 = PARTS_GAP_AUDIT §5 step 0a + 0b + the t
 
 ## Next
 - Nothing; B0 done. Open: face budget class for townhouse units (audit §6 risk 2) is Stephen's / B2's call.
+
+## Check cache + faster checks (V1, 2026-10-01)
+- **Check cache** (`buildings/checkcache.py`): before a building's checks run, its fingerprint is compared with its
+  last PASS (stored in `data/C/_build/check_cache/<key>.json`, git-ignored, machine-local). Unchanged = skipped, the
+  stored checks file is reused (restored if the file on disk differs): `RESULT <key>: PASS (n checks, 0 failures)
+  [cached]`. A FAIL is never stored. The fingerprint: the registry entry (+ the base entry of a furnished variant),
+  the source of every .py the recipe and the checks import (transitively: an edited kit module re-checks exactly
+  the buildings whose recipe / checks import it), and every data file the build + checks read (material sidecars and
+  rvmats, prop sidecars + masters, the ODOL, this building's own part of config.cpp / model.cfg / the CE group,
+  existence probes, directory listings). `buildings/registry.py` is not hashed (entries are): adding a building does
+  not re-check the others. A new material (the library listing changes) re-checks everything.
+- **Usage**: `python buildings/verify_all.py [--jobs N] [--full] [--family NAME] [key ...]` (default 4 processes, max
+  4: README 2b); `python buildings/pipeline.py ... --verify-only` and the pipeline's own verify step use the cache
+  too; `--full` ignores it (fresh passes are still stored). `spikes/FB2/verify_all.py [jobs] [key ...]` forwards to
+  it (jobs capped at 4).
+- **Faster checks, same results** (proved on all 169 buildings: `spikes/V1/V1_PROGRESS.md`): C11 / C17 use
+  `raycheck.escapes()` (any-hit, per-eye edge-wedge culling), C15 `raycheck.cast_down()`, zfight.coplanar builds each
+  candidate list once per plane key. `JP_RAY_ENGINE=brute` / `JP_ZFIGHT_ENGINE=old` run the old code paths.
+- The pipeline's verify step no longer rebuilds family members before their checks (build_model keeps a snapshot of
+  the recipe module's state per building: `bd["mod"]`).

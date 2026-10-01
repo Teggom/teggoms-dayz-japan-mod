@@ -169,7 +169,8 @@ def run_g3(M, L, floors, rec, extra_portals=()):
     tops = {}
     for lname in ("Resolution 1", "Resolution 2", "Resolution 3"):
         tri = RC.lod_triangles(L[lname])
-        tops[lname] = [30.0 - RC.cast(tri, O + np.array([dx, 0.0, dz]), Dn, 40.0, chunk=64) for dx, dz in jit]
+        # V1: cast_down = cast(tri, O', Dn, 40.0, chunk=64) (same nearest hits; JP_RAY_ENGINE=brute runs that)
+        tops[lname] = [30.0 - RC.cast_down(tri, O + np.array([dx, 0.0, dz]), 40.0) for dx, dz in jit]
     worst = []
     for lname in ("Resolution 2", "Resolution 3"):
         dds = []

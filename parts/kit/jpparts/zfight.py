@@ -13,6 +13,7 @@ faces Part._visual(k) writes. Returns {'same': [...], 'opposite': [...]} with on
 (lod, area_m2, tag_a, tag_b, src_a, src_b, point).
 """
 import math
+import os
 
 TOL = 0.001             # plane distance (m)
 COS = 0.99996           # normals parallel within ~0.5 deg
@@ -168,6 +169,31 @@ def _visible(occ, samples, n, skip):
     return False
 
 
+_VEC_MIN = 48           # V1: candidate lists longer than this get the numpy pre-filter
+FAST = os.environ.get("JP_ZFIGHT_ENGINE", "fast") != "old"     # V1: "old" = the pre-V1 per-face loop (equivalence runs)
+
+
+def _cand_arrays(cands, F, planes):
+    """V1: a candidate list as numpy columns (face index, solid index, canonical normal, box) for _prefilter."""
+    import numpy as np
+    ci = np.asarray(cands, dtype=np.int64)
+    return cands, (ci, np.asarray([F[j][0] for j in cands], dtype=np.int64),
+                   np.asarray([planes[j][0] for j in cands], dtype=np.float64),
+                   np.asarray([planes[j][3] for j in cands], dtype=np.float64))
+
+
+def _prefilter(arr, idx, si, cn, bb, tol):
+    """V1: the candidates that pass coplanar()'s first four per-pair tests (j > idx, another solid, normals within
+    COS, boxes within tol), in list order; the per-pair loop repeats those tests (identical IEEE arithmetic)."""
+    import numpy as np
+    ci, sol, nrm, box = arr
+    m = (ci > idx) & (sol != si)
+    m &= ~((nrm[:, 0] * cn[0] + nrm[:, 1] * cn[1] + nrm[:, 2] * cn[2]) < COS)
+    m &= ~((bb[1] < box[:, 0] - tol) | (box[:, 1] < bb[0] - tol) | (bb[3] < box[:, 2] - tol) |
+           (box[:, 3] < bb[2] - tol) | (bb[5] < box[:, 4] - tol) | (box[:, 5] < bb[4] - tol))
+    return ci[m].tolist()
+
+
 def coplanar(M, lods=(1, 2, 3), tol=TOL, min_area=MIN_AREA, skip=None, occlusion=True):
     """Every overlapping coplanar face pair of different solids. 'same' = same-facing, visibly different (material or
     uv) and not covered by a third solid (occlusion=True); 'hidden' = same-facing but drawn identically or covered;
@@ -190,15 +216,25 @@ def coplanar(M, lods=(1, 2, 3), tol=TOL, min_area=MIN_AREA, skip=None, occlusion
             key = (round(cn[0] * NQ), round(cn[1] * NQ), round(cn[2] * NQ), round(cd * DQ))
             grid.setdefault(key, []).append(idx)
         seen = set()
+        # V1 (2026-10-01): the 81-cell candidate list depends only on the face's key: built once per key (not per
+        # face), and the cheap rejections (j <= idx, same solid, normals not parallel, boxes apart) run as one numpy
+        # pass over it for long lists. Same pairs, same order, same float arithmetic as the per-pair tests below.
+        ccache = {}
         for idx, (si, fi, pts, n) in enumerate(F):
             cn, cd, sg, bb = planes[idx]
             key = (round(cn[0] * NQ), round(cn[1] * NQ), round(cn[2] * NQ), round(cd * DQ))
-            cands = []
-            for a in (-1, 0, 1):
-                for b in (-1, 0, 1):
-                    for c in (-1, 0, 1):
-                        for e in (-1, 0, 1):
-                            cands += grid.get((key[0] + a, key[1] + b, key[2] + c, key[3] + e), ())
+            cc = ccache.get(key) if FAST else None
+            if cc is None:
+                cands = []
+                for a in (-1, 0, 1):
+                    for b in (-1, 0, 1):
+                        for c in (-1, 0, 1):
+                            for e in (-1, 0, 1):
+                                cands += grid.get((key[0] + a, key[1] + b, key[2] + c, key[3] + e), ())
+                cc = ccache[key] = _cand_arrays(cands, F, planes) if FAST and len(cands) > _VEC_MIN else (cands, None)
+            cands, arr = cc
+            if arr is not None:
+                cands = _prefilter(arr, idx, si, cn, bb, tol)
             for j in cands:
                 if j <= idx:
                     continue

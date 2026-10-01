@@ -1,0 +1,157 @@
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\..\parts\kit\jpparts\buildcheck.py:179: RuntimeWarning: invalid value encountered in subtract
+  dds.append(np.where(np.isfinite(a_) & np.isfinite(b_), np.abs(a_ - b_),
+[kido_lattice] zfight.resolve pass: 68 visible pairs, 25 solids moved; zfight.resolve pass: 6 visible pairs, 4 solids moved; zfight.resolve pass: 14 visible pairs, 6 solids moved
+[kido_lattice] MLOD D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\kido\out\jp_kido_lattice.p3d: {'Resolution 1': 836, 'Resolution 2': 300, 'Resolution 3': 180, 'Geometry': 260, 'Memory': 0, 'Roadway': 2, 'View Geometry': 254, 'Fire Geometry': 260}
+[kido_board_roofed] zfight.resolve pass: 98 visible pairs, 29 solids moved; zfight.resolve pass: 6 visible pairs, 4 solids moved; zfight.resolve pass: 14 visible pairs, 6 solids moved
+[kido_board_roofed] MLOD D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\kido\out\jp_kido_board_roofed.p3d: {'Resolution 1': 1311, 'Resolution 2': 401, 'Resolution 3': 299, 'Geometry': 299, 'Memory': 0, 'Roadway': 4, 'View Geometry': 293, 'Fire Geometry': 299}
+[kido_lattice_bantaya] zfight.resolve pass: 281 visible pairs, 88 solids moved; zfight.resolve pass: 35 visible pairs, 24 solids moved; zfight.resolve pass: 43 visible pairs, 18 solids moved; zfight.resolve pass: 5 visible pairs, 2 solids moved
+[kido_lattice_bantaya] MLOD D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\kido\out\jp_kido_lattice_bantaya.p3d: {'Resolution 1': 2712, 'Resolution 2': 832, 'Resolution 3': 473, 'Geometry': 845, 'Memory': 0, 'Roadway': 9, 'View Geometry': 822, 'Fire Geometry': 834}
+  CfgConvert config.cpp: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+  CfgConvert model.cfg: OK 
+combined 169 shipped building(s): config.cpp, model.cfg, C.csv (101 placements), C_mapgroupproto.xml, C_mapgrouppos.xml
+  bindcheck: 169 of 169 shipped classes bind (class == Land_<p3d stem>, Geometry class=house)
+binarize kido: 3/3 ODOL, 8 warning/error lines
+OK   C5 LOD set (vanilla house set)                       Resolution 1 836, Resolution 2 300, Resolution 3 180, Geometry 260, Memory 0, Roadway 2, View Geometry 254, Fire Geometry 260
+OK   C5 face budget (small: 3000 / 1150 / 400)            R1 836, R2 300, R3 180
+OK   Geometry properties + mass                           {'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 6000 kg
+OK   B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house) Land_JP_Kido_Lattice -> jp_kido_lattice.p3d
+OK   C7 Geometry closed + convex                          30 components, 0 bad, 0 faces outside components
+OK   C7 View Geometry closed + convex                     29 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry closed + convex                     30 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry penetration rvmats                  dirt, granite, wood
+OK   C2 library materials only                            every path under JP\common\materials\ (on disk) or vanilla penetration / roadway
+OK   C8 era lint (no glass, kawara geometry, separate plinth stones) glass paths 0; no kawara (board roof); 0 individual dodai stones, 5 soseki under the posts
+OK   C3 grid snap (post nodes on the 0.455 grid)          5 posts
+OK   C7 DoorsTwin1 selections, memory, model.cfg, config  Wicket (kuguri) (katabiki): bones doors1
+OK   C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin2 selections, memory, model.cfg, config  Gate leaves (kido) (hinged_gate): bones doors2+doors3
+OK   C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2) leaves turn 90/90 deg without touching other geometry; open clear 2.54 m, head 2.35 m
+OK   C7 Roadway sits on Geometry (+-3 cm)                 32/32 samples
+OK   C7 walkable floors have Roadway at floor height      181/181 samples over gate
+OK   C7 head room >= 2.10 over every floor                lowest 99.00 m
+OK   Loot points on Roadway floors, ranges clear of walls, every room 3 points (gate 3)
+OK   CE loot frame -> world == model -> world (WORLD_BUILDINGS §0) 3 points, max diff 4.3e-07 m
+OK   Placement inside the test yard, clear of the reserved spots not placed on the island (shipped in the PBO only)
+OK   C10 DoorsTwin1 reachable from both sides (open)      Wicket (kuguri): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   C10 DoorsTwin1 reachable from both sides (closed)    Wicket (kuguri): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m
+OK   C10 DoorsTwin2 reachable from both sides (open)      Gate leaves (kido): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.90 m; far: leaf hit first from 6/15 standing positions (need 4), e.g. 0.7 m out, -0.3 m along, ray 2.02 m
+OK   C10 DoorsTwin2 reachable from both sides (closed)    Gate leaves (kido): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.66 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m
+OK   C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile Wicket (kuguri): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C18 DoorsTwin1 pulls on the stub edge (in the doorway when open) Wicket (kuguri): doors1 u -0.59 closed -> -1.70 open, doorway -1.81..-0.52
+OK   C11 envelope leak: rooms see outside only through doors / windows open-sided by design (not checked): gate
+OK   C12 roof / wall intersection (no part pokes into a roof body > 3 cm) 0 roof bodies clear
+OK   C13 kawara seated on the clay bed, fascia at every eave no kawara on this building (board / thatch roofs): nothing to seat
+OK   C14 interior faces use the interior clay, not the exterior-weathered earth no exterior earth face looks into a room
+OK   C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1 120 columns over 2.5 m compared in each LOD
+OK   C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone) 6 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)
+OK   C16 far-LOD kawara: matte far material in Resolution 2 / 3 far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60
+OK   C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3 0 visible same-facing pairs; 350 touching (opposite-facing: backface-culled) and 48 covered / drawn-identically pairs not judged
+OK   C21 interior partitions end at a beam or a ceiling (no wall top open below the roof) every interior wall top closed
+OK   C22 interior wall ends meet a post or a wall (no vertical see-through slot) every interior wall panel end closed
+OK   Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton) ODOL v55, 102269 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True
+RESULT kido_lattice: PASS (38 checks, 0 failures)
+OK   C5 LOD set (vanilla house set)                       Resolution 1 1311, Resolution 2 401, Resolution 3 299, Geometry 299, Memory 0, Roadway 4, View Geometry 293, Fire Geometry 299
+OK   C5 face budget (small: 3000 / 1150 / 400)            R1 1311, R2 401, R3 299
+OK   Geometry properties + mass                           {'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 7000 kg
+OK   B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house) Land_JP_Kido_Board_Roofed -> jp_kido_board_roofed.p3d
+OK   C7 Geometry closed + convex                          36 components, 0 bad, 0 faces outside components
+OK   C7 View Geometry closed + convex                     35 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry closed + convex                     36 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry penetration rvmats                  dirt, granite, wood
+OK   C2 library materials only                            every path under JP\common\materials\ (on disk) or vanilla penetration / roadway
+OK   C8 era lint (no glass, kawara geometry, separate plinth stones) glass paths 0; no kawara (board roof); 0 individual dodai stones, 5 soseki under the posts
+OK   C3 grid snap (post nodes on the 0.455 grid)          5 posts
+OK   C7 DoorsTwin1 selections, memory, model.cfg, config  Wicket (kuguri) (katabiki): bones doors1
+OK   C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin2 selections, memory, model.cfg, config  Gate leaves (kido) (hinged_gate): bones doors2+doors3
+OK   C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2) leaves turn 90/90 deg without touching other geometry; open clear 2.54 m, head 2.35 m
+OK   C7 Roadway sits on Geometry (+-3 cm)                 64/64 samples
+OK   C7 walkable floors have Roadway at floor height      181/181 samples over gate
+OK   C7 head room >= 2.10 over every floor                lowest 3.05 m
+OK   Loot points on Roadway floors, ranges clear of walls, every room 3 points (gate 3)
+OK   CE loot frame -> world == model -> world (WORLD_BUILDINGS §0) 3 points, max diff 4.3e-07 m
+OK   Placement inside the test yard, clear of the reserved spots not placed on the island (shipped in the PBO only)
+OK   C10 DoorsTwin1 reachable from both sides (open)      Wicket (kuguri): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   C10 DoorsTwin1 reachable from both sides (closed)    Wicket (kuguri): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m
+OK   C10 DoorsTwin2 reachable from both sides (open)      Gate leaves (kido): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.90 m; far: leaf hit first from 6/15 standing positions (need 4), e.g. 0.7 m out, -0.3 m along, ray 2.02 m
+OK   C10 DoorsTwin2 reachable from both sides (closed)    Gate leaves (kido): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.66 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m
+OK   C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile Wicket (kuguri): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile Gate leaves (kido): 55296 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C18 DoorsTwin1 pulls on the stub edge (in the doorway when open) Wicket (kuguri): doors1 u -0.59 closed -> -1.70 open, doorway -1.81..-0.52
+OK   C11 envelope leak: rooms see outside only through doors / windows open-sided by design (not checked): gate
+OK   C12 roof / wall intersection (no part pokes into a roof body > 3 cm) 2 roof bodies clear
+OK   C13 kawara seated on the clay bed, fascia at every eave no kawara on this building (board / thatch roofs): nothing to seat
+OK   C14 interior faces use the interior clay, not the exterior-weathered earth no exterior earth face looks into a room
+OK   C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1 1298 columns over 2.5 m compared in each LOD
+OK   C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone) 8 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)
+OK   C16 far-LOD kawara: matte far material in Resolution 2 / 3 far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60
+OK   C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3 0 visible same-facing pairs; 408 touching (opposite-facing: backface-culled) and 116 covered / drawn-identically pairs not judged
+OK   C21 interior partitions end at a beam or a ceiling (no wall top open below the roof) every interior wall top closed
+OK   C22 interior wall ends meet a post or a wall (no vertical see-through slot) every interior wall panel end closed
+OK   Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton) ODOL v55, 142438 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True
+RESULT kido_board_roofed: PASS (39 checks, 0 failures)
+OK   C5 LOD set (vanilla house set)                       Resolution 1 2712, Resolution 2 832, Resolution 3 473, Geometry 845, Memory 0, Roadway 9, View Geometry 822, Fire Geometry 834
+OK   C5 face budget (standard: 6000 / 2300 / 800)         R1 2712, R2 832, R3 473
+OK   Geometry properties + mass                           {'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 11000 kg
+OK   B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house) Land_JP_Kido_Lattice_Bantaya -> jp_kido_lattice_bantaya.p3d
+OK   C7 Geometry closed + convex                          106 components, 0 bad, 0 faces outside components
+OK   C7 View Geometry closed + convex                     102 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry closed + convex                     104 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry penetration rvmats                  dirt, granite, wood
+OK   C2 library materials only                            every path under JP\common\materials\ (on disk) or vanilla penetration / roadway
+OK   C8 era lint (no glass, kawara geometry, separate plinth stones) glass paths 0; no kawara (board roof); 0 individual dodai stones, 13 soseki under the posts
+OK   C3 grid snap (post nodes on the 0.455 grid)          13 posts
+OK   C7 DoorsTwin1 selections, memory, model.cfg, config  Wicket (kuguri) (katabiki): bones doors1
+OK   C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin2 selections, memory, model.cfg, config  Gate leaves (kido) (hinged_gate): bones doors2+doors3
+OK   C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2) leaves turn 90/90 deg without touching other geometry; open clear 2.54 m, head 2.35 m
+OK   C7 DoorsTwin3 selections, memory, model.cfg, config  Door (katabiki) (katabiki): bones doors4
+OK   C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin4 selections, memory, model.cfg, config  Counter shutter (end, push-up) (tsukiage): bones doors5
+OK   C7 DoorsTwin4 window sweep                           tsukiage moves closed -> open without touching other geometry
+OK   C7 Roadway sits on Geometry (+-3 cm)                 144/144 samples
+OK   C7 walkable floors have Roadway at floor height      536/536 samples over gate, hut_doma, hut_floor
+OK   C7 head room >= 2.10 over every floor                lowest 2.68 m
+OK   Loot points on Roadway floors, ranges clear of walls, every room 5 points (gate 3, hut_doma 1, hut_floor 1)
+OK   CE loot frame -> world == model -> world (WORLD_BUILDINGS §0) 5 points, max diff 4.3e-07 m
+OK   Placement inside the test yard, clear of the reserved spots not placed on the island (shipped in the PBO only)
+OK   C10 DoorsTwin1 reachable from both sides (open)      Wicket (kuguri): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   C10 DoorsTwin1 reachable from both sides (closed)    Wicket (kuguri): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m
+OK   C10 DoorsTwin2 reachable from both sides (open)      Gate leaves (kido): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.90 m; far: leaf hit first from 6/15 standing positions (need 4), e.g. 0.7 m out, -0.3 m along, ray 2.02 m
+OK   C10 DoorsTwin2 reachable from both sides (closed)    Gate leaves (kido): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.66 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m
+OK   C10 DoorsTwin3 reachable from both sides (open)      Door (katabiki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   C10 DoorsTwin3 reachable from both sides (closed)    Door (katabiki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m
+OK   C10 DoorsTwin4 reachable from both sides (open)      Counter shutter (end, push-up): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.50 m; far: leaf hit first from 8/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m
+OK   C10 DoorsTwin4 reachable from both sides (closed)    Counter shutter (end, push-up): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.62 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m
+OK   C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile Wicket (kuguri): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile Door (katabiki): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin4 closed: no see-through slit at a jamb or meeting stile Counter shutter (end, push-up): 16264 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C18 DoorsTwin1 pulls on the stub edge (in the doorway when open) Wicket (kuguri): doors1 u -0.59 closed -> -1.70 open, doorway -1.81..-0.52
+OK   C18 DoorsTwin3 pulls on the stub edge (in the doorway when open) Door (katabiki): doors4 u 4.41 closed -> 3.31 open, doorway 3.19..4.49
+OK   C11 envelope leak: rooms see outside only through doors / windows hut_doma 7680 rays, 0 out through doors/windows, 0 LEAKS; hut_floor 8640 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): gate
+OK   C12 roof / wall intersection (no part pokes into a roof body > 3 cm) 2 roof bodies clear
+OK   C13 kawara seated on the clay bed, fascia at every eave no kawara on this building (board / thatch roofs): nothing to seat
+OK   C14 interior faces use the interior clay, not the exterior-weathered earth no exterior earth face looks into a room
+OK   C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1 1048 columns over 2.5 m compared in each LOD
+OK   C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone) 12 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)
+OK   C16 far-LOD kawara: matte far material in Resolution 2 / 3 far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60
+OK   C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3 0 visible same-facing pairs; 1019 touching (opposite-facing: backface-culled) and 224 covered / drawn-identically pairs not judged
+OK   C21 interior partitions end at a beam or a ceiling (no wall top open below the roof) every interior wall top closed
+OK   C22 interior wall ends meet a post or a wall (no vertical see-through slot) every interior wall panel end closed
+OK   Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton) ODOL v55, 288641 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True
+RESULT kido_lattice_bantaya: PASS (49 checks, 0 failures)

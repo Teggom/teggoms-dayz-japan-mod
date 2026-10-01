@@ -1,0 +1,87 @@
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\..\parts\kit\jpparts\buildcheck.py:179: RuntimeWarning: invalid value encountered in subtract
+  dds.append(np.where(np.isfinite(a_) & np.isfinite(b_), np.abs(a_ - b_),
+[farmhouse_kanto_yosemune_umaya] zfight.resolve pass: 425 visible pairs, 138 solids moved; zfight.resolve pass: 111 visible pairs, 45 solids moved; zfight.resolve pass: 24 visible pairs, 12 solids moved; zfight.resolve pass: 2 visible pairs, 1 solids moved
+[farmhouse_kanto_yosemune_umaya] MLOD D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\farmhouse\out\jp_farmhouse_kanto_yosemune_umaya.p3d: {'Resolution 1': 9006, 'Resolution 2': 4277, 'Resolution 3': 1516, 'Geometry': 3851, 'Memory': 0, 'Roadway': 13, 'View Geometry': 3786, 'Fire Geometry': 3810}
+OK   C5 LOD set (vanilla house set)                       Resolution 1 9006, Resolution 2 4277, Resolution 3 1516, Geometry 3851, Memory 0, Roadway 13, View Geometry 3786, Fire Geometry 3810
+OK   C5 face budget (large: 12000 / 4600 / 1600)          R1 9006, R2 4277, R3 1516
+OK   Geometry properties + mass                           {'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 80000 kg
+OK   B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house) Land_JP_Farmhouse_Kanto_Yosemune_Umaya -> jp_farmhouse_kanto_yosemune_umaya.p3d
+OK   C7 Geometry closed + convex                          395 components, 0 bad, 0 faces outside components
+OK   C7 View Geometry closed + convex                     384 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry closed + convex                     388 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry penetration rvmats                  dirt, fabric_thin, granite, hay, wood
+OK   C2 library materials only                            every path under JP\common\materials\ (on disk) or vanilla penetration / roadway
+OK   C8 era lint (no glass, kawara geometry, separate plinth stones) glass paths 0; no kawara (board roof); 0 individual dodai stones, 41 soseki under the posts
+OK   C3 grid snap (post nodes on the 0.455 grid)          54 posts
+OK   C7 DoorsTwin1 selections, memory, model.cfg, config  Front door (ooto, doma) (single): bones doors1
+OK   C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.50 m without touching other geometry; open clear 1.46 m, head 2.00 m
+OK   C7 DoorsTwin2 selections, memory, model.cfg, config  Back door (doma) (katabiki): bones doors2
+OK   C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin3 selections, memory, model.cfg, config  Hiroma -> nando (katabiki): bones doors3
+OK   C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin4 selections, memory, model.cfg, config  Hiroma -> dei (katabiki): bones doors4
+OK   C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin5 selections, memory, model.cfg, config  Dei window (front) (window_slide): bones doors5
+OK   C7 DoorsTwin5 window sweep                           window_slide moves closed -> open without touching other geometry
+OK   C7 DoorsTwin6 selections, memory, model.cfg, config  Doma window (front) (window_slide): bones doors6
+OK   C7 DoorsTwin6 window sweep                           window_slide moves closed -> open without touching other geometry
+OK   C7 DoorsTwin7 selections, memory, model.cfg, config  Hiroma window (back) (window_slide): bones doors7
+OK   C7 DoorsTwin7 window sweep                           window_slide moves closed -> open without touching other geometry
+OK   C7 DoorsTwin8 selections, memory, model.cfg, config  Nando window (back, push-up shutter) (tsukiage): bones doors8
+OK   C7 DoorsTwin8 window sweep                           tsukiage moves closed -> open without touching other geometry
+OK   C7 DoorsTwin9 selections, memory, model.cfg, config  Nando window (end, push-up shutter) (tsukiage): bones doors9
+OK   C7 DoorsTwin9 window sweep                           tsukiage moves closed -> open without touching other geometry
+OK   C7 DoorsTwin10 selections, memory, model.cfg, config Doma window (end) (window_slide): bones doors10
+OK   C7 DoorsTwin10 window sweep                          window_slide moves closed -> open without touching other geometry
+OK   C7 Roadway sits on Geometry (+-3 cm)                 208/208 samples
+OK   C7 walkable floors have Roadway at floor height      835/835 samples over doma, hiroma, dei, nando
+OK   C7 head room >= 2.10 over every floor                lowest 2.42 m
+OK   Loot points on Roadway floors, ranges clear of walls, every room 23 points (doma 9, hiroma 6, dei 4, nando 4)
+OK   CE loot frame -> world == model -> world (WORLD_BUILDINGS §0) 23 points, max diff 4.3e-07 m
+OK   Placement inside the test yard, clear of the reserved spots not placed on the island (shipped in the PBO only)
+OK   C10 DoorsTwin1 reachable from both sides (open)      Front door (ooto, doma): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.78 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m
+OK   C10 DoorsTwin1 reachable from both sides (closed)    Front door (ooto, doma): leaf: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.41 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m
+OK   C10 DoorsTwin2 reachable from both sides (open)      Back door (doma): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   C10 DoorsTwin2 reachable from both sides (closed)    Back door (doma): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m
+OK   C10 DoorsTwin3 reachable from both sides (open)      Hiroma -> nando: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   C10 DoorsTwin3 reachable from both sides (closed)    Hiroma -> nando: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m
+OK   C10 DoorsTwin4 reachable from both sides (open)      Hiroma -> dei: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.34 m
+OK   C10 DoorsTwin4 reachable from both sides (closed)    Hiroma -> dei: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.64 m
+OK   C10 DoorsTwin5 reachable from its leaf side (open)   Dei window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m
+OK   C10 DoorsTwin5 reachable from its leaf side (closed) Dei window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m
+OK   C10 DoorsTwin6 reachable from its leaf side (open)   Doma window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m
+OK   C10 DoorsTwin6 reachable from its leaf side (closed) Doma window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m
+OK   C10 DoorsTwin7 reachable from its leaf side (open)   Hiroma window (back): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m
+OK   C10 DoorsTwin7 reachable from its leaf side (closed) Hiroma window (back): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m
+OK   C10 DoorsTwin8 reachable from both sides (open)      Nando window (back, push-up shutter): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.41 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m
+OK   C10 DoorsTwin8 reachable from both sides (closed)    Nando window (back, push-up shutter): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.64 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.03 m
+OK   C10 DoorsTwin9 reachable from both sides (open)      Nando window (end, push-up shutter): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.41 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m
+OK   C10 DoorsTwin9 reachable from both sides (closed)    Nando window (end, push-up shutter): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.64 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.03 m
+OK   C10 DoorsTwin10 reachable from its leaf side (open)  Doma window (end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m
+OK   C10 DoorsTwin10 reachable from its leaf side (closed) Doma window (end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m
+OK   C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile Front door (ooto, doma): 18918 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile Back door (doma): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile Hiroma -> nando: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin4 closed: no see-through slit at a jamb or meeting stile Hiroma -> dei: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin5 closed: no see-through slit at a jamb or meeting stile Dei window (front): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin6 closed: no see-through slit at a jamb or meeting stile Doma window (front): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin7 closed: no see-through slit at a jamb or meeting stile Hiroma window (back): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin8 closed: no see-through slit at a jamb or meeting stile Nando window (back, push-up shutter): 16696 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin9 closed: no see-through slit at a jamb or meeting stile Nando window (end, push-up shutter): 16702 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin10 closed: no see-through slit at a jamb or meeting stile Doma window (end): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C18 DoorsTwin1 pulls on the stub edge (in the doorway when open) Front door (ooto, doma): doors1 u -2.87 closed -> -4.37 open, doorway -4.49..-2.79
+OK   C18 DoorsTwin2 pulls on the stub edge (in the doorway when open) Back door (doma): doors2 u 2.59 closed -> 1.49 open, doorway 1.37..2.67
+OK   C18 DoorsTwin3 pulls on the stub edge (in the doorway when open) Hiroma -> nando: doors3 u 2.59 closed -> 1.49 open, doorway 1.37..2.67
+OK   C11 envelope leak: rooms see outside only through doors / windows doma 9600 rays, 0 out through doors/windows, 0 LEAKS; hiroma 9600 rays, 0 out through doors/windows, 0 LEAKS; dei 11520 rays, 0 out through doors/windows, 0 LEAKS; nando 11520 rays, 0 out through doors/windows, 0 LEAKS
+OK   C12 roof / wall intersection (no part pokes into a roof body > 3 cm) 0 roof bodies clear
+OK   C13 kawara seated on the clay bed, fascia at every eave no kawara on this building (board / thatch roofs): nothing to seat
+OK   C14 interior faces use the interior clay, not the exterior-weathered earth no exterior earth face looks into a room
+OK   C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1 11041 columns over 2.5 m compared in each LOD
+OK   C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone) 22 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)
+OK   C16 far-LOD kawara: matte far material in Resolution 2 / 3 far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60
+OK   C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3 0 visible same-facing pairs; 3271 touching (opposite-facing: backface-culled) and 149 covered / drawn-identically pairs not judged
+OK   C21 interior partitions end at a beam or a ceiling (no wall top open below the roof) every interior wall top closed
+OK   C22 interior wall ends meet a post or a wall (no vertical see-through slot) every interior wall panel end closed
+OK   Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton) ODOL v55, 1047093 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True
+RESULT farmhouse_kanto_yosemune_umaya: PASS (81 checks, 0 failures)
+PROFILE farmhouse_kanto_yosemune_umaya: build 2.5 s, verify 41.6 s, 81 checks, PASS

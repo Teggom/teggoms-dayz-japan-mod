@@ -11,6 +11,9 @@
 Components are dicts as checks.components() makes them: planes = [(inward unit normal n, d)], inside <=> n.p >= d.
 """
 import math
+import os
+
+import numpy as np
 
 from . import mlod
 from .core import add, sub, mul, dot, cross, norm, anim_point_fn
@@ -376,6 +379,173 @@ def cast(T, O, D, tmax=60.0, chunk=24):
     return out
 
 
+# ------------------------------------------------------------------------------------------------ V1 fast engine
+# V1 (2026-10-01): the same per-(ray, triangle) hit predicate as _cast_brute (two-sided Moller-Trumbore, u, v >= -1e-9,
+# u + v <= 1 + 1e-9, 1e-4 < t < tmax), with far fewer pairs tested:
+#   escapes()    C11 / C17 only ask "does the ray hit ANYTHING before tmax": per eye point, the triangles are cut to
+#                the box of the eye's ray segments, taken nearest first in distance stages, and a ray is tested only
+#                against the triangles whose cone of directions (seen from the eye, + a 1e-4 rad pad) holds it
+#   cast_down()  C15's vertical columns: a ray is tested only against the triangles whose x/z box holds its column
+# ENGINE = "brute" (or env JP_RAY_ENGINE=brute) runs the pre-V1 cast() everywhere: the equivalence runs compare both.
+ENGINE = os.environ.get("JP_RAY_ENGINE", "fast")
+NEAR = 0.05                         # triangles closer than this (box distance) to the eye: always candidates
+WEDGE_PAD = 1e-5                    # the 1e-9 barycentric slack is < 1e-5 (sin of the angle) at >= NEAR, edges < 100 m
+ANY_STAGES = (0.75, 1.5, 3.0, 6.0, 12.0)
+GROUP_MIN = 16                      # eyes with fewer rays go through the chunked segment-box path
+
+
+def _cross(a, b):
+    """np.cross for (..., 3) arrays without its per-call overhead: the same (a1 b2 - a2 b1, ...) IEEE operations."""
+    a0, a1, a2 = a[..., 0], a[..., 1], a[..., 2]
+    b0, b1, b2 = b[..., 0], b[..., 1], b[..., 2]
+    return np.stack([a1 * b2 - a2 * b1, a2 * b0 - a0 * b2, a0 * b1 - a1 * b0], -1)
+
+
+def _pdot(a, b):
+    return np.einsum("pk,pk->p", a, b)
+
+
+def hit_pairs(T, O, D, ri, ti, tmax):
+    """_cast_brute's predicate for the pairs (ray ri[k], triangle ti[k]) -> (hit mask, t). tmax: scalar or per ray."""
+    v0 = T[ti, 0]
+    e1 = T[ti, 1] - v0
+    e2 = T[ti, 2] - v0
+    dv = D[ri]
+    p = _cross(dv, e2)
+    det = _pdot(p, e1)
+    ok = np.abs(det) > 1e-12
+    inv = np.where(ok, 1.0 / np.where(ok, det, 1.0), 0.0)
+    tv = O[ri] - v0
+    uu = _pdot(tv, p) * inv
+    q = _cross(tv, e1)
+    vv = _pdot(dv, q) * inv
+    tt = _pdot(q, e2) * inv
+    tm = tmax[ri] if isinstance(tmax, np.ndarray) else tmax
+    return ok & (uu >= -1e-9) & (vv >= -1e-9) & (uu + vv <= 1 + 1e-9) & (tt > 1e-4) & (tt < tm), tt
+
+
+def _wedges(T, o, bdist):
+    """Per triangle of T seen from o: the unit normals (N,3,3) of the three planes through o and each edge, turned
+    so the triangle lies on their + side: a direction d can hit the triangle only if d . n >= -WEDGE_PAD for all three.
+    always (N,) = test every ray (the eye within NEAR of the triangle's box, or nearly in its plane)."""
+    V = T - o
+    N = np.stack([_cross(V[:, 0], V[:, 1]), _cross(V[:, 1], V[:, 2]), _cross(V[:, 2], V[:, 0])], 1)
+    ln = np.sqrt((N * N).sum(2))
+    N = N / np.maximum(ln, 1e-300)[:, :, None]
+    vol = np.einsum("nk,nk->n", V[:, 0], _cross(V[:, 1], V[:, 2]))
+    vl = np.sqrt((V * V).sum(2))
+    flat = np.abs(vol) <= 1e-6 * vl[:, 0] * vl[:, 1] * vl[:, 2]
+    N = N * np.where(vol < 0, -1.0, 1.0)[:, None, None]          # the opposite vertex on the + side of each plane
+    always = (bdist < NEAR) | flat | (ln.min(1) < 1e-12)
+    return N, always
+
+
+def escapes(T, O, D, tmax=60.0):
+    """True per ray when it hits no triangle at 1e-4 < t < tmax (tmax: scalar or one per ray): the same answer as
+    np.isinf(cast(T, O, D, tmax)) (C11), resp. cast(...) >= tmax (C17), from far fewer ray-triangle tests."""
+    import numpy as np
+    O = np.asarray(O, float)
+    D = np.asarray(D, float)
+    n = len(O)
+    hit = np.zeros(n, bool)
+    if n == 0 or len(T) == 0:
+        return ~hit
+    tm = np.broadcast_to(np.asarray(tmax, float), (n,)).copy()
+    E = O + D * tm[:, None]
+    SLO, SHI = np.minimum(O, E), np.maximum(O, E)          # each ray's segment box
+    Tmin, Tmax = T.min(1), T.max(1)
+    Dn = D / np.linalg.norm(D, axis=1)[:, None]
+    uo, inv = np.unique(O, axis=0, return_inverse=True)
+    inv = inv.reshape(-1)
+    order = np.argsort(inv, kind="stable")
+    bounds = np.searchsorted(inv[order], np.arange(len(uo) + 1))
+    small = []
+    for g in range(len(uo)):
+        rays = order[bounds[g]:bounds[g + 1]]
+        if len(rays) < GROUP_MIN:
+            small.append(rays)
+            continue
+        o = uo[g]
+        lo, hi = SLO[rays].min(0) - 1e-6, SHI[rays].max(0) + 1e-6
+        cand = np.where(np.all(Tmax >= lo, 1) & np.all(Tmin <= hi, 1))[0]
+        if not len(cand):
+            continue
+        gap = np.maximum(np.maximum(Tmin[cand] - o, o - Tmax[cand]), 0.0)
+        bd = np.sqrt((gap * gap).sum(1))
+        edges = [0.0] + list(ANY_STAGES) + [np.inf]
+        todo = rays
+        for s0, s1 in zip(edges[:-1], edges[1:]):
+            if not len(todo):
+                break
+            sel = (bd >= s0) & (bd < s1)
+            if not sel.any():
+                continue
+            tsel = cand[sel]
+            N, always = _wedges(T[tsel], o, bd[sel])
+            dd = Dn[todo]
+            m = (dd @ N[:, 0].T >= -WEDGE_PAD) & (dd @ N[:, 1].T >= -WEDGE_PAD) & (dd @ N[:, 2].T >= -WEDGE_PAD)
+            rr, cc = np.nonzero(m | always[None, :])
+            if not len(rr):
+                continue
+            ri = todo[rr]
+            h, _ = hit_pairs(T, O, D, ri, tsel[cc], tm)
+            if h.any():
+                hit[ri[h]] = True
+                todo = todo[~hit[todo]]
+    if small:
+        rest = np.sort(np.concatenate(small))
+        # chunks of rays that run side by side (same direction, same height, neighbours along the wall: C17's straight
+        # rays through the leaves) keep the chunk's segment box thin
+        _, dk = np.unique(D[rest], axis=0, return_inverse=True)
+        rest = rest[np.lexsort((O[rest, 2], O[rest, 0], O[rest, 1], dk.reshape(-1)))]
+        for s in range(0, len(rest), 64):
+            idx = rest[s:s + 64]
+            lo, hi = SLO[idx].min(0) - 1e-6, SHI[idx].max(0) + 1e-6
+            cand = np.where(np.all(Tmax >= lo, 1) & np.all(Tmin <= hi, 1))[0]
+            if not len(cand):
+                continue
+            ri = np.repeat(idx, len(cand))
+            ti = np.tile(cand, len(idx))
+            h, _ = hit_pairs(T, O, D, ri, ti, tm)
+            hit[ri[h]] = True
+    return ~hit
+
+
+def cast_down(T, O, tmax=40.0):
+    """Nearest hit distance per vertical ray (direction (0, -1, 0), inf = none) against triangles T: cast()'s answer
+    (C15 silhouette columns), testing each column only against the triangles whose x / z box holds it."""
+    import numpy as np
+    O = np.asarray(O, float)
+    out = np.full(len(O), np.inf)
+    if not len(O) or not len(T):
+        return out
+    if ENGINE == "brute":
+        return cast(T, O, np.tile(np.array([[0.0, -1.0, 0.0]]), (len(O), 1)), tmax, chunk=64)
+    D = np.tile(np.array([[0.0, -1.0, 0.0]]), (len(O), 1))
+    Tmin, Tmax = T.min(1), T.max(1)
+    ux, inv = np.unique(O[:, 0], return_inverse=True)
+    inv = inv.reshape(-1)
+    order = np.argsort(inv, kind="stable")
+    bounds = np.searchsorted(inv[order], np.arange(len(ux) + 1))
+    for g in range(len(ux)):
+        rays = order[bounds[g]:bounds[g + 1]]
+        x = ux[g]
+        strip = np.where((Tmin[:, 0] <= x + 1e-6) & (Tmax[:, 0] >= x - 1e-6))[0]
+        if not len(strip):
+            continue
+        z = O[rays, 2]
+        rr, cc = np.nonzero((Tmin[strip, 2][None, :] <= z[:, None] + 1e-6) &
+                            (Tmax[strip, 2][None, :] >= z[:, None] - 1e-6) &
+                            (Tmin[strip, 1][None, :] <= O[rays, 1][:, None] + 1e-6))
+        if not len(rr):
+            continue
+        ri = rays[rr]
+        h, tt = hit_pairs(T, O, D, ri, strip[cc], tmax)
+        if h.any():
+            np.minimum.at(out, ri[h], tt[h])
+    return out
+
+
 def seg_box(o, dv, t1, bx):
     """Does the segment o + t dv, t in [0, t1], pass through the axis-aligned box bx (x0,x1,y0,y1,z0,z1)?"""
     lo, hi = 0.0, t1
@@ -417,8 +587,11 @@ def envelope_leak(lod, rooms, portals, ndirs=320, heights=(0.5, 1.1, 1.65), grid
         O = np.asarray(O, float)
         OO = np.repeat(O, len(D), 0)
         DD = np.tile(D, (len(O), 1))
-        t = cast(T, OO, DD)
-        esc = np.where(np.isinf(t))[0]
+        if ENGINE == "brute":
+            t = cast(T, OO, DD)
+            esc = np.where(np.isinf(t))[0]
+        else:                               # V1: any-hit engine, same escaped rays
+            esc = np.where(escapes(T, OO, DD, 60.0))[0]
         leaks, via = [], 0
         for k in esc:
             o, dv = tuple(OO[k]), tuple(DD[k])
@@ -504,6 +677,18 @@ def jamb_slits(d, comps, T, near=2.6, span=0.10, step=0.005):
             eyes = [u * (s + k) + n * (nmid + sg * (0.15 + dist)) + y * (b["ymin"] + h)
                     for dist in (0.3, 0.6, 1.0, 1.8) for k in (-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
                     for h in (1.0, 1.6)]
+            if ENGINE != "brute" and eyes and tg:
+                # V1: the same rays as the loop below, built as arrays (norm per row == np.linalg.norm of the row;
+                # the wall-parallel test as the explicit 3-term dot); order eye-major, target-minor as before
+                ea, qa = np.asarray(eyes), np.asarray(tg)
+                Ee = np.repeat(ea, len(qa), 0)
+                Qq = np.tile(qa, (len(ea), 1))
+                dv = Qq - Ee
+                dv = dv / np.linalg.norm(dv, axis=1)[:, None]
+                keep = ~(np.abs(dv[:, 0] * n[0] + dv[:, 1] * n[1] + dv[:, 2] * n[2]) < 0.15)
+                E.extend(Ee[keep])
+                Q.extend(Qq[keep] + dv[keep] * 1.0)
+                continue
             for e in eyes:
                 for q in tg:
                     dv = q - e
@@ -524,8 +709,11 @@ def jamb_slits(d, comps, T, near=2.6, span=0.10, step=0.005):
     D = Q - E
     L = np.linalg.norm(D, axis=1)
     D = D / L[:, None]
-    t = cast(Tn, E, D, tmax=60.0, chunk=48)
-    clear = np.where(t >= L - 1e-4)[0]
+    if ENGINE == "brute":
+        t = cast(Tn, E, D, tmax=60.0, chunk=48)
+        clear = np.where(t >= L - 1e-4)[0]
+    else:                                   # V1: "nearest hit >= L - 1e-4" == "no hit with t < L - 1e-4"
+        clear = np.where(escapes(Tn, E, D, L - 1e-4))[0]
     return len(E), [(tuple(round(float(v), 3) for v in E[k]), tuple(round(float(v), 3) for v in Q[k])) for k in clear]
 
 

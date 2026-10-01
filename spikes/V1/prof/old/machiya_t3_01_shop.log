@@ -1,0 +1,146 @@
+D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\..\parts\kit\jpparts\buildcheck.py:179: RuntimeWarning: invalid value encountered in subtract
+  dds.append(np.where(np.isfinite(a_) & np.isfinite(b_), np.abs(a_ - b_),
+[machiya_t3_01_shop] zfight.resolve pass: 1072 visible pairs, 320 solids moved; zfight.resolve pass: 53 visible pairs, 24 solids moved; zfight.resolve pass: 15 visible pairs, 7 solids moved; zfight.resolve pass: 8 visible pairs, 4 solids moved
+[machiya_t3_01_shop] MLOD D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\buildings\machiya_t3_01_shop\out\jp_machiya_t3_01_shop.p3d: {'Resolution 1': 11915, 'Resolution 2': 4267, 'Resolution 3': 1570, 'Geometry': 1674, 'Memory': 0, 'Roadway': 21, 'View Geometry': 1670, 'Fire Geometry': 1652}; proxies {'Resolution 1': 38, 'Geometry': 29, 'View Geometry': 29, 'Fire Geometry': 29}
+OK   C5 LOD set (vanilla house set)                       Resolution 1 11915, Resolution 2 4267, Resolution 3 1570, Geometry 1674, Memory 0, Roadway 21, View Geometry 1670, Fire Geometry 1652
+OK   C5 face budget (large / landmark: 12000 / 4600 / 1600) R1 11915, R2 4267, R3 1570
+OK   Geometry properties + mass                           {'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 60000 kg
+OK   C7 Geometry closed + convex                          280 components, 0 bad, 0 faces outside components
+OK   C7 View Geometry closed + convex                     279 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry closed + convex                     276 components, 0 bad, 0 faces outside components
+OK   C7 Fire Geometry penetration rvmats                  dirt, fabric_thin, granite, pottery, wood
+OK   C2 library materials only                            every path under JP\common\materials\ (on disk) or vanilla penetration / roadway
+OK   C8 era lint (no glass, kawara geometry, separate plinth stones) glass paths 0; 2732 corrugated kawara field faces in LOD0; 55 individual dodai stones
+OK   C3 grid snap (post nodes on the 0.455 grid)          33 posts
+OK   C7 DoorsTwin1 selections, memory, model.cfg, config  Entrance (street) (hikichigai): bones doors1+doors2
+OK   C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.50/0.66 m without touching other geometry; open clear 1.46 m, head 2.00 m
+OK   C7 DoorsTwin2 selections, memory, model.cfg, config  Toriniwa -> zashiki (katabiki): bones doors3
+OK   C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin3 selections, memory, model.cfg, config  Toriniwa -> mise (katabiki): bones doors4
+OK   C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin4 selections, memory, model.cfg, config  Mise <-> zashiki (hikiwake): bones doors5+doors6
+OK   C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 0.66/0.66 m without touching other geometry; open clear 1.24 m, head 2.00 m
+OK   C7 DoorsTwin5 selections, memory, model.cfg, config  Kitchen back door (yard) (katabiki): bones doors7
+OK   C7 DoorsTwin5 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin6 selections, memory, model.cfg, config  Kitchen -> storage (katabiki): bones doors8
+OK   C7 DoorsTwin6 sweep + clear (>= 1.00, D1) + head (D2) leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   C7 DoorsTwin7 selections, memory, model.cfg, config  Street window (window_slide): bones doors9
+OK   C7 DoorsTwin7 window sweep                           window_slide moves closed -> open without touching other geometry
+OK   C7 DoorsTwin8 selections, memory, model.cfg, config  Zashiki window (hikichigai): bones doors10+doors11
+OK   C7 DoorsTwin8 window sweep                           hikichigai moves closed -> open without touching other geometry
+OK   C7 DoorsTwin9 selections, memory, model.cfg, config  Kitchen window (window_slide): bones doors12
+OK   C7 DoorsTwin9 window sweep                           window_slide moves closed -> open without touching other geometry
+OK   C7 DoorsTwin10 selections, memory, model.cfg, config Storage window (tsukiage): bones doors13
+OK   C7 DoorsTwin10 window sweep                          tsukiage moves closed -> open without touching other geometry
+OK   C7 toriniwa -> kitchen passage (open) clear + head   clear 1.15 m, head 2.00 m
+OK   C7 Roadway sits on Geometry (+-3 cm)                 336/336 samples
+OK   C7 walkable floors have Roadway at floor height      1068/1068 samples over toriniwa, mise, zashiki, kitchen, storage
+OK   C7 head room >= 2.10 over every floor                lowest 2.50 m
+OK   Loot points on Roadway floors, ranges clear of walls 43 points (toriniwa 3, mise 11, zashiki 9, kitchen 7, storage 13)
+OK   CE loot frame -> world == model -> world (WORLD_BUILDINGS §0) 43 points, max diff 4.3e-07 m
+OK   Placement footprint <= 14 x 14 m, inside the yard, clear of the sakura 8.25 x 11.10 m incl. eaves; world x 1019.9-1028.2, z 1039.4-1050.5; nearest sakura trunk 45.6 m away; ridge 6.41 m
+OK   C10 DoorsTwin1 reachable from both sides (open)      Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.80 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m
+OK   C10 DoorsTwin1 reachable from both sides (closed)    Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.58 m
+OK   C10 DoorsTwin2 reachable from both sides (open)      Toriniwa -> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m
+OK   C10 DoorsTwin2 reachable from both sides (closed)    Toriniwa -> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.28 m
+OK   C10 DoorsTwin3 reachable from both sides (open)      Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m
+OK   C10 DoorsTwin3 reachable from both sides (closed)    Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.28 m
+OK   C10 DoorsTwin4 reachable from both sides (open)      Mise <-> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.75 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m
+OK   C10 DoorsTwin4 reachable from both sides (closed)    Mise <-> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m
+OK   C10 DoorsTwin5 reachable from both sides (open)      Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   C10 DoorsTwin5 reachable from both sides (closed)    Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.27 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.40 m
+OK   C10 DoorsTwin6 reachable from both sides (open)      Kitchen -> storage: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.96 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   C10 DoorsTwin6 reachable from both sides (closed)    Kitchen -> storage: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.57 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m
+OK   C10 DoorsTwin7 reachable from its leaf side (open)   Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.21 m
+OK   C10 DoorsTwin7 reachable from its leaf side (closed) Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.24 m
+OK   C10 DoorsTwin8 reachable from both sides (open)      Zashiki window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.10 m
+OK   C10 DoorsTwin8 reachable from both sides (closed)    Zashiki window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.99 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.22 m
+OK   C10 DoorsTwin9 reachable from its leaf side (open)   Kitchen window: leaf: leaf hit first from 13/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m
+OK   C10 DoorsTwin9 reachable from its leaf side (closed) Kitchen window: leaf: leaf hit first from 13/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m
+OK   C10 DoorsTwin10 reachable from both sides (open)     Storage window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.29 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.48 m
+OK   C10 DoorsTwin10 reachable from both sides (closed)   Storage window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.69 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.88 m
+OK   C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile Entrance (street): 53472 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile Toriniwa -> zashiki: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile Toriniwa -> mise: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin4 closed: no see-through slit at a jamb or meeting stile Mise <-> zashiki: 53904 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin5 closed: no see-through slit at a jamb or meeting stile Kitchen back door (yard): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin6 closed: no see-through slit at a jamb or meeting stile Kitchen -> storage: 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin7 closed: no see-through slit at a jamb or meeting stile Street window: 17094 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin8 closed: no see-through slit at a jamb or meeting stile Zashiki window: 54342 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin9 closed: no see-through slit at a jamb or meeting stile Kitchen window: 17094 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C17 DoorsTwin10 closed: no see-through slit at a jamb or meeting stile Storage window: 16696 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through
+OK   C18 DoorsTwin1 pulls on the stub edge (in the doorway when open) Entrance (street): doors1 u 3.50 closed -> 2.00 open, doorway 1.88..3.58; doors2 u 2.65 closed -> 2.00 open, doorway 1.88..3.58
+OK   C18 DoorsTwin5 pulls on the stub edge (in the doorway when open) Kitchen back door (yard): doors7 u -3.50 closed -> -2.40 open, doorway -3.58..-2.28
+OK   C18 DoorsTwin6 pulls on the stub edge (in the doorway when open) Kitchen -> storage: doors8 u 3.50 closed -> 2.40 open, doorway 2.28..3.58
+OK   C11 envelope leak: rooms see outside only through doors / windows toriniwa 9600 rays, 0 out through doors/windows, 0 LEAKS; mise 11520 rays, 0 out through doors/windows, 0 LEAKS; zashiki 11520 rays, 0 out through doors/windows, 0 LEAKS; kitchen 9600 rays, 0 out through doors/windows, 0 LEAKS; storage 11520 rays, 0 out through doors/windows, 0 LEAKS
+OK   C12 roof / wall intersection (no part pokes into a roof body > 3 cm) 5 roof bodies clear
+OK   C13 kawara seated on the clay bed, fascia at every eave 3644/3644 field points within reach of the bed; 5 eave tile sets, 5 fascia boards
+OK   C14 interior faces use the interior clay, not the exterior-weathered earth no exterior earth face looks into a room
+OK   C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1 6337 columns over 2.5 m compared in each LOD
+OK   C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone) 19 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)
+OK   C16 far-LOD kawara: matte far material in Resolution 2 / 3 far-field faces R1/R2/R3 0/284/5; close field in R2/R3 0/0; specular far 0.22 < close 0.60
+OK   C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3 0 visible same-facing pairs; 4218 touching (opposite-facing: backface-culled) and 596 covered / drawn-identically pairs not judged
+OK   C21 interior partitions end at a beam or a ceiling (no wall top open below the roof) every interior wall top closed
+OK   C22 interior wall ends meet a post or a wall (no vertical see-through slot) every interior wall panel end closed
+OK   Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton) ODOL v55, 999891 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True
+OK   D1 props per room 5-7: toriniwa                      5 props: jp_f_tana_091_1, jp_f_oke_bucket, jp_f_oke_tipped, jp_f_debris_leaves, jp_f_debris_straw
+OK   D2 floor coverage <= 25 %: toriniwa                  0.50 of 9.08 m2 = 5.5 % (collision footprints)
+OK   D3 at least one raised loot surface: toriniwa        1 raised points on jp_f_tana_091_1
+OK   D4 1.00 m clear band door-to-door and door-to-centre: toriniwa DoorsTwin1, DoorsTwin2, DoorsTwin3, passage to the kitchen, centre joined by a 1.00 m band (818 free cells)
+OK   D1 props per room 5-7: mise                          7 props: jp_f_misedana_1ken, jp_f_goods_general_paper, jp_f_zukue_choba, jp_f_choba_goshi_3, jp_f_tana_091_3_sag, jp_f_hibachi_box, jp_f_tabakobon_spilled
+OK   D2 floor coverage <= 25 %: mise                      2.81 of 13.94 m2 = 20.2 % (collision footprints)
+OK   D3 at least one raised loot surface: mise            9 raised points on jp_f_hibachi_box, jp_f_misedana_1ken, jp_f_tana_091_3_sag, jp_f_zukue_choba
+OK   D4 1.00 m clear band door-to-door and door-to-centre: mise DoorsTwin3, DoorsTwin4, centre joined by a 1.00 m band (1559 free cells)
+OK   D1 props per room 5-7: zashiki                       6 props: jp_f_futon_laid, jp_f_futon_stack, jp_f_tansu_ransacked, jp_f_andon_kaku, jp_f_hibachi_round, jp_f_kori
+OK   D2 floor coverage <= 25 %: zashiki                   2.01 of 13.94 m2 = 14.4 % (collision footprints)
+OK   D3 at least one raised loot surface: zashiki         6 raised points on jp_f_futon_laid, jp_f_futon_stack, jp_f_kori, jp_f_tansu_ransacked
+OK   D4 1.00 m clear band door-to-door and door-to-centre: zashiki DoorsTwin2, DoorsTwin4, centre joined by a 1.00 m band (1680 free cells)
+OK   D1 props per room 5-7: kitchen                       7 props: jp_f_kama, jp_f_kama_nolid, jp_f_kama_lid, jp_f_nagashi_wood, jp_f_mizugame, jp_f_tana_136_1, jp_f_kamidana_plain, jp_f_firewood_stack
+OK   D2 floor coverage <= 25 %: kitchen                   1.83 of 12.39 m2 = 14.8 % (collision footprints)
+OK   D3 at least one raised loot surface: kitchen         5 raised points on jp_f_firewood_stack, jp_f_mizugame, jp_f_nagashi_wood, jp_f_tana_136_1
+OK   D4 1.00 m clear band door-to-door and door-to-centre: kitchen DoorsTwin5, DoorsTwin6, passage from the toriniwa, centre joined by a 1.00 m band (1453 free cells)
+OK   D1 props per room 5-7: storage                       7 props: jp_f_rack_1ken, jp_f_nagamochi_open, jp_f_tawara_stack6_burst, jp_f_box_stack3, jp_f_kori_2, jp_f_jar_l, jp_f_mushiro
+OK   D2 floor coverage <= 40 %: storage                   3.75 of 12.39 m2 = 30.2 % (collision footprints)
+OK   D3 at least one raised loot surface: storage         10 raised points on jp_f_box_stack3, jp_f_jar_l, jp_f_kori_2, jp_f_rack_1ken, jp_f_tawara_stack6_burst
+OK   D4 1.00 m clear band door-to-door and door-to-centre: storage DoorsTwin6, centre joined by a 1.00 m band (1121 free cells)
+OK   D5 DoorsTwin1: no collision prop within 0.4 m of the clear opening Entrance (street): clear
+OK   D6 DoorsTwin1 sweep + clear >= 1.00 + head with the furniture in Entrance (street): leaves slide 1.50/0.66 m without touching other geometry; open clear 1.46 m, head 2.00 m
+OK   D7 DoorsTwin1 reachable with the furniture in (open) Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.80 m; far: leaf hit first from 14/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m
+OK   D7 DoorsTwin1 reachable with the furniture in (closed) Entrance (street): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.58 m
+OK   D5 DoorsTwin2: no collision prop within 0.4 m of the clear opening Toriniwa -> zashiki: clear
+OK   D6 DoorsTwin2 sweep + clear >= 1.00 + head with the furniture in Toriniwa -> zashiki: leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   D7 DoorsTwin2 reachable with the furniture in (open) Toriniwa -> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m
+OK   D7 DoorsTwin2 reachable with the furniture in (closed) Toriniwa -> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.28 m
+OK   D5 DoorsTwin3: no collision prop within 0.4 m of the clear opening Toriniwa -> mise: clear
+OK   D6 DoorsTwin3 sweep + clear >= 1.00 + head with the furniture in Toriniwa -> mise: leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   D7 DoorsTwin3 reachable with the furniture in (open) Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.09 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.06 m
+OK   D7 DoorsTwin3 reachable with the furniture in (closed) Toriniwa -> mise: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.28 m
+OK   D5 DoorsTwin4: no collision prop within 0.4 m of the clear opening Mise <-> zashiki: clear
+OK   D6 DoorsTwin4 sweep + clear >= 1.00 + head with the furniture in Mise <-> zashiki: leaves slide 0.66/0.66 m without touching other geometry; open clear 1.24 m, head 2.00 m
+OK   D7 DoorsTwin4 reachable with the furniture in (open) Mise <-> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.75 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.39 m
+OK   D7 DoorsTwin4 reachable with the furniture in (closed) Mise <-> zashiki: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m
+OK   D5 DoorsTwin5: no collision prop within 0.4 m of the clear opening Kitchen back door (yard): clear
+OK   D6 DoorsTwin5 sweep + clear >= 1.00 + head with the furniture in Kitchen back door (yard): leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   D7 DoorsTwin5 reachable with the furniture in (open) Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.25 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   D7 DoorsTwin5 reachable with the furniture in (closed) Kitchen back door (yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.27 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.40 m
+OK   D5 DoorsTwin6: no collision prop within 0.4 m of the clear opening Kitchen -> storage: clear
+OK   D6 DoorsTwin6 sweep + clear >= 1.00 + head with the furniture in Kitchen -> storage: leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m
+OK   D7 DoorsTwin6 reachable with the furniture in (open) Kitchen -> storage: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.96 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m
+OK   D7 DoorsTwin6 reachable with the furniture in (closed) Kitchen -> storage: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.57 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m
+OK   D7 DoorsTwin7 reachable with the furniture in (open) Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.21 m
+OK   D7 DoorsTwin7 reachable with the furniture in (closed) Street window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.24 m
+OK   D7 DoorsTwin8 reachable with the furniture in (open) Zashiki window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.10 m
+OK   D7 DoorsTwin8 reachable with the furniture in (closed) Zashiki window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.99 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.22 m
+OK   D7 DoorsTwin9 reachable with the furniture in (open) Kitchen window: leaf: leaf hit first from 13/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m
+OK   D7 DoorsTwin9 reachable with the furniture in (closed) Kitchen window: leaf: leaf hit first from 13/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m
+OK   D7 DoorsTwin10 reachable with the furniture in (open) Storage window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.29 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.48 m
+OK   D7 DoorsTwin10 reachable with the furniture in (closed) Storage window: leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.69 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.88 m
+OK   D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted) 45 collision props checked against 267 building components
+OK   D9 props clear of each other (no Geometry overlap > 1 cm) 55 props pairwise
+OK   D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall 38 props
+OK   D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry 43 points (12 floor, 31 raised)
+OK   D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses 125 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']
+OK   D13 yard / street objects inside the test pad        17 objects
+OK   D14 jp_s_well_tsurube_curb_stone: a player can stand at the curb 16 of 16 directions have a free 0.5 m standing column 0.9-1.3 m from the well centre
+RESULT: PASS (140 checks, 0 failures)
+PROFILE machiya_t3_01_shop: build 3.2 s, verify 35.8 s, 140 checks, PASS
