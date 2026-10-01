@@ -56,6 +56,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~14:45 (local) | W2S | 25 shrine + temple shells (village + town grades), 3 materials (hiwada, copper, bronze), shellcheck head-room by rays; jp_buildings 169 classes | **639k** (235 tool calls) | 77 min | |
 | 2026-10-01 ~16:25 (local) | V1 | faster checks: ray acceleration (C11/C15/C17), C20 candidate lists, no double model build, checkcache.py; full 169: 935 s -> 193 s, unchanged 3 s, one module changed 29 s; byte-identical results | **394k** (154 tool calls) | 98 min | |
 | 2026-10-01 ~16:26 (local) | W2F (baseline) | launched: wave-2 specialty props, furnished variants, shrine precinct / temple / civic placement, ~30-35 min walk | - | - | |
+| 2026-10-01 ~17:20 (local) | W2F | 49 specialty props, 24 furnished wave-2 variants, shrine precinct / village shrine / 2 temples / civic placed, ~32 min walk | **675k** (215 tool calls) | 53 min | weekly **61%** after |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

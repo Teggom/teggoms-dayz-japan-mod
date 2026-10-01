@@ -426,3 +426,11 @@
   935 s -> 193 s (4 jobs); nothing changed: 3 s; sori.py changed: 29 s (exactly the 25 shrines/temples). uildings/checkcache.py;
   python buildings/verify_all.py [--jobs N<=4] [--full] [--family X] [keys]; pipeline --full. Old vs new checks.json byte-identical
   (10,262 checks). Fixed a furnishkit passage-label carry-over bug. **W2F launched.**
+- 2026-10-01: **W2F DONE — PHASE C WAVE 2 BUILT** (675k / 53 min; commits d9cd7b5 .. 8b8836e). 49 props (jp_furniture 522 classes;
+  builder spikes/W2F/build_w2f.py), 24 furnished variants (1,558 checks), placed: P town shrine on the hall site (haiden P1, honden
+  P2 on terraces + temizuya / shamusho / kagura), V village shrine north of the hamlet, T village temple by the graveyard, U town temple
+  (~1100, 1110), K kido + tea houses + smithy + swordsmith + jishin-ban at the street ends; oku-miya too steep. verify_oprw 4123/4123;
+  193 buildings / 11,820 checks / bindcheck 193. Maps w2f_map_*.jpg + SHOWCASE_MAP.md. **Walk: TEST_CHECKLIST.md (~32 min).**
+  Not done: navmesh; blank temple name boards (no atlas cell); Nichiren / Shinshu sect swaps.
+  - **PITFALL (growing):** furniture config is assembled by several builders; a B3a / L1 / S1 rebuild drops W2F's classes (re-run
+    spikes/W2F/build_w2f.py --pack), like B3b dropping L2's. TODO: one config assembler per PBO that merges every builder's classes.
