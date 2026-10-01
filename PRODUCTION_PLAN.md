@@ -416,3 +416,9 @@
   kit change only re-checks the buildings that use the changed module; (2) make the slow checks smarter (spatial grid for the
   C20 face-pair test, adaptive ray counts for C11, profile the hotspots). Keep a 'full' flag that ignores the cache. Max 4 parallel processes, normal priority (Stephen).
   Why: verify_all re-checked all 169 buildings x 60-90 checks from scratch, 10 processes, ~20+ min, growing linearly.
+- 2026-10-01: **W2S DONE** (639k / 77 min; commits 06f8b5f .. d9974e6). 25 shells, 950 checks: Haiden Village / Town_Hiwada / Town_Copper;
+  Honden Nagare_Village (+_Chigi) / Nagare_Town / Shinmei (sealed, loot on the veranda); Temizuya x2; Shamusho x2; Kagura x2; Do x4
+  (2-ken board / thatch, 3-ken tile, Town curved copper hogyo); Hondo Village / Town (degumi); Kuri x2 (genkan porch); Shoro Village /
+  Town (hakama); Gate Yakuimon / Shikyakumon. Not built: kasuga honden, wari-haiden, mitesaki hondo (17.6k faces), sanmon, pagoda,
+  sutra store. Materials: jp_m_roof_hiwada, jp_m_roof_copper, jp_m_metal_bronze. Town shoro 6,371 / 2,435 / 1,267 (registered large;
+  **tower class = Stephen's call, still open**). Prop spots listed for W2F. .gitignore now covers buildings/*/out/ + renders/.

@@ -53,6 +53,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~13:19 (local) | W2C | civic shells: 7 tea houses, 3 smithies, 3 guard huts, 3 ward gates (16), gates.py, templates/civic.py | **476k** (153 tool calls) | 44 min | concurrent |
 | 2026-10-01 ~13:30 (local) | W2P2 | curved sori roof (4 forms, 4 coverings) + kumimono (5 forms) + frame_storey_hakama; 18 manifest variants; 4 offline assemblies 23/23 | **559k** (152 tool calls) | 54 min | concurrent with W2P1 + W2C |
 | 2026-10-01 ~13:31 (local) | W2S (baseline) | launched: shrine + temple shells, village + town grades, 3 materials | - | - | before: **56%** (5-hour 19%) |
+| 2026-10-01 ~14:45 (local) | W2S | 25 shrine + temple shells (village + town grades), 3 materials (hiwada, copper, bronze), shellcheck head-room by rays; jp_buildings 169 classes | **639k** (235 tool calls) | 77 min | |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
