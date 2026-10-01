@@ -405,5 +405,9 @@
   grain always along the member's length; believable tile scale (1-2 m); PLUS a large-scale macro weathering layer (rvmat MC stage:
   grime, sun-bleach, streaks) at a non-matching scale. In the kit's UV helpers so every building, prop and part gets it; rebuild
   + before/after renders. ~0.5-0.7M tokens. (Stone torii already got a per-piece lichen fix in FP1.)
-- 2026-10-01: idea for later (Stephen asked, NOT ordered): mossy thatch variants (see the lead's answer: real, north slopes +
-  eaves, shibamune planted ridges, abandoned = no smoke = faster growth).
+- 2026-10-01: **WANTED, do LAST (Stephen: eventually; nothing now): orientation-aware moss on thatch.** Moss heaviest on the slope
+  that faces NORTH in the world (+ shaded lower eaves), lighter south; shibamune planted ridges as a Kanto variant; abandoned =
+  no hearth smoke = faster growth. Plan: the roof generator takes per-slope moss weights; the pipeline emits a few direction
+  variants per thatched building automatically (which side faces north: front / back / left / right, + an east-west 'tie'
+  variant), and the MAP PLACEMENT step picks the variant from each building's final yaw. Same trick later for lichen on north
+  faces of stone and sun-bleach on south faces. Do it once the map placement exists (variants are generated, not hand-kept).
