@@ -376,3 +376,7 @@
     S63/S70 -> large (2.60 / 2.79 m clear). E (roofless house) not reproduced: likely D5's pale board roof 0.17 m lower
     reading as sky; checklist asks for a screenshot. Open: gallery wall items hang 6.5 cm off the walls.
   - **Re-check: TEST_CHECKLIST.md (~15 min), doors first.**
+- 2026-10-01: **Stephen's re-check:** doors + the rest 'look really good'. New: firewood piles look bad; z-fighting (stair stringer vs
+  wall, doorway sills, a wall/floor in the mochi building); usu/kine float; Kinai gable white band too massive ('real?');
+  farmhouse partitions stop short of the roof; two-storey divider short + wall gaps; rope 2.5x more segments.
+  Screenshots in test/feedback/2026-10-01_recheck/. **FP2 + FB2 launched** (they push to GitHub themselves).
