@@ -59,9 +59,41 @@ Owns: spikes/B3a, L1, L2, B3b (+W2/W3/G1 code), src/JP/furniture, src/JP/site, j
   Geometry property). Added a railed lookout deck at 4.90 m to step off onto (no rungs/collision above it).
 - 15 causes: wood = rot at the feet / typhoon; stone = the Genroku 1703 / Hoei 1707 quakes.
 
-## Status (checkpoint 2, 10:47)
-- Code + masters DONE for all 15 findings + the material. Next: binarize + pack (L1, S1 -> jp_furniture; B3b, L2 ->
-  jp_site; materials -> jp_common), restore binarize-noise ODOLs to HEAD, checks, sheet, commit, END.
+## Status: DONE (10:54)
+- All 15 findings + the material built, binarized, packed: jp_common (6 FP1 materials), jp_furniture 473 classes
+  (13 changed ODOLs), jp_site 312 classes (307 + 5 collapsed torii; 70 changed ODOLs). Binarize noise restored to HEAD
+  (303 furniture + 182 site ODOLs, kept = masters that differ from the HEAD masters rebuilt in the scratchpad), both
+  PBOs repacked from the restored tree (`python spikes/FP1/pack.py furniture|site`).
+- Checks (all after the last change): B3a 113/113, L1 185/185, S1 175/175, B3b+W2+W3+FP1 231/231, L2 81/81, TXT 211
+  text models 0 failing, C7 chain PASS, CfgConvert OK, open-edge check clean on every bale, ladder ODOL verified.
+- Sheet: research/production/contact_sheets/fp1_fixes.jpg (`python spikes/FP1/sheet_fp1.py`; renders
+  `python spikes/FP1/render_fp1.py before|head|after <group>`, shots in shots.py).
+- Commits: 1a9b8f0 (materials), b53a9dc (fixes + remakes), + the closing commit (sheet, progress, time log).
+
+## In-game checks for Stephen (one walk; no world rebuild needed: same p3d paths, new config / ODOLs only)
+1. Fire-watch ladder (street corner, 1033, 1086.8, ladder face to the street): stand at its foot, look at the ladder
+   -> 'Enter ladder'; climb; at the top you step back onto the railed deck (4.9 m) by the bell; from the deck look at
+   the ladder top -> 'Enter ladder' and climb down. Pass = both. If the action never shows: report it (the binding is
+   class=house + Land_JP_S_Fire_Watch_Ladder_Tower, as the wells).
+2. Lever well (hamlet 955, 1001): stone hangs low in a sling, bucket above the curb; drink / wash still work.
+3. Notice board (1017.5, 1087.5): boards hang on rails, roof on rafters / ridge beam / braces.
+4. Charcoal bales (hamlet 967.6, 1041.8; Kanto farmhouse back wall; gallery L57): no see-through ends.
+5. Straw stack in front of the kura (970.5, 1036.5): one even texture.
+6. Loom (gallery L38): nothing floating. Spinning wheel (L37): no fault found in the model or placement (base at
+   0.000, placecheck ok) - if it still floats, say where (gallery or which house).
+7. Leaf litter (shed floors, street): leaves, not dots; under the fallen lantern (L72; street 1006.3, 1080.6) no clear
+   sheet, and the lantern's open end shows its inside.
+8. Shrine stone torii (S01) + lanterns: no repeating dots.
+9. Remakes: broom (L55, hamlet 947.5, 1008.2), rice racks (L51, hamlet 974, 1012), potted plants (L58, 984.6,
+   1076.2), sword rack (L45), rope torii and the vermilion torii's snapped rope.
+10. Collapsed torii: not placed (FB1's placement).
+
+## Not done / open
+- Palette entries `earthenware_unglazed` and `kiku_flower` are ASSUMED (no local photo): judge in game.
+- Budget classes raised where the remakes needed it (all within the brief's classes): leaf pile + broom and the 2-ken
+  shimenawa / trunk wraps / tattered rope -> box (600); potted stand -> medium (1,500); sword rack -> furniture.
+- The ladder is untested in the engine (exit animation onto the deck in particular).
+- The spinning wheel: nothing changed (no defect found).
 
 ## Status (checkpoint 1, 10:17; superseded by checkpoint 2 above)
 - DONE (code + masters, not yet binarized/packed): 5 rope, 6 charcoal bales, 7 fallen lantern, 8 loom, 9 litter
