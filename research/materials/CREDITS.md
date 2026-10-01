@@ -70,3 +70,17 @@ was taken from them. `leaf_litter_autumn` comes from the CC0 Poly Haven scan dry
 
 `dz\data\data\env_land_co.paa` (rvmat stage 7), `dz\data\data\penetration\*.rvmat` and
 `dz\surfaces\data\roadway\*.paa` (named in the sidecars), class `HouseNoDestruct`.
+
+## M1 (2026-09-30, `make_m1_materials.py`): the W2 / W3 / B3a material gaps
+- **Text:** `jp_m_decal_carved_text_grave` and `jp_m_decal_sumi_text_grave` are rendered from **Yuji Syuku**
+  (`research/fonts/yujisyuku/`, SIL OFL 1.1, the Yuji Project Authors). No new font. The Sanskrit seed syllables
+  (bonji) were NOT made: no Siddham-capable font exists on this machine; the one that would do is Noto Sans Siddham
+  (SIL OFL 1.1, google/fonts `ofl/notosanssiddham`), not downloaded.
+- **Scans (CC0, already local):** `clay_floor_001` (jp_m_ground_earth_bare), `hinoki_planks` (jp_m_wood_new),
+  `weathered_planks` (jp_m_wood_silver, jp_m_wood_firewood), `rough_linen` (jp_m_floor_tatami_heri_cha weave),
+  `rock_surface` (the carved grave text), `bamboo_wall` (the wicker_aged colour).
+- **Palette samples** (a mean colour only, never shipped; boxes in `playbook/palette.json` and `spikes/M1/sample.py`):
+  k41 Sendabori Koshin-to, Matsudo (CC0); k37 Shikaumi Shrine sacred tree (CC BY 4.0); k27 Hida torii (PD); i04
+  Tsunashima farmhouse (Kentaro Ohno, CC BY 2.0); k31 Toei Uzumasa (PD); c03 Tsumago-juku (CC0); i22 Kamado
+  (CC0). Licences as listed in `research/outdoor_kit/refs_index.json`, `research/interior/refs_index.json`,
+  `playbook/refs_index.json`.

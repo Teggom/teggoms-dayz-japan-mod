@@ -1,0 +1,75 @@
+{
+ "id": "jp_m_floor_tatami_heri_cha",
+ "family": "floor",
+ "palette_id": "cha_koge",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 512,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; the 0.03 m band may use any strip of v",
+ "grain": "plain hemp/cotton weave",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\textile_carpet_int.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "even tea-brown",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_cha_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_cha_w0.rvmat",
+   "target_srgb": [
+    111.5,
+    81.7,
+    52.8
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "frayed threads along the edges",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_cha_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_cha_w1.rvmat",
+   "target_srgb": [
+    106.0,
+    77.0,
+    50.0
+   ],
+   "masked_frac": 0.001
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "torn: the rush shows through",
+   "co": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_cha_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\floor\\jp_m_floor_tatami_heri_cha_w2.rvmat",
+   "target_srgb": [
+    111.3,
+    84.8,
+    61.6
+   ],
+   "masked_frac": 0.09
+  }
+ },
+ "used_by": [
+  "floors (jpparts.floors)"
+ ],
+ "used_on": "Brown tatami edge for farmhouse / T2 best rooms",
+ "sources": [
+  {
+   "asset": "rough_linen",
+   "name": "Rough Linen",
+   "page": "https://polyhaven.com/a/rough_linen",
+   "licence": "CC0 1.0",
+   "authors": [
+    "colormass",
+    "Rico Cilliers"
+   ]
+  },
+  {
+   "procedural": "make_m1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_m1_materials.py (agent M1, 2026-09-30), through B1's make_one",
+ "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)",
+ "note": "Plain brown (cha) heri: A2's 'plain black or brown heri' second colour. Commoner-plain; patterned (monberi) heri stay temple / elite only. Same layout as jp_m_floor_tatami_heri."
+}

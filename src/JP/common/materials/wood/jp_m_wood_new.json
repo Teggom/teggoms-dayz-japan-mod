@@ -1,0 +1,74 @@
+{
+ "id": "jp_m_wood_new",
+ "family": "wood",
+ "palette_id": "wood_new_cut",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "along v (member length), fine straight grain",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\wood_planks_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh-split / planed, pale cream-tan",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_new_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_new_w0.rvmat",
+   "target_srgb": [
+    176.9,
+    151.3,
+    135.9
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "a season old: warmer, first dirt",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_new_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_new_w1.rvmat",
+   "target_srgb": [
+    167.1,
+    137.4,
+    116.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "a year or two: the surface starting to grey, dirt splash, first checks",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_new_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_new_w2.rvmat",
+   "target_srgb": [
+    147.6,
+    129.4,
+    116.2
+   ],
+   "masked_frac": 0.002
+  }
+ },
+ "used_by": [
+  "jp_s_grave_wood"
+ ],
+ "used_on": "New wood: fresh grave posts, new repairs",
+ "sources": [
+  {
+   "asset": "hinoki_planks",
+   "name": "Hinoki Planks",
+   "page": "https://polyhaven.com/a/hinoki_planks",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Charlotte Baglioni"
+   ]
+  },
+  {
+   "procedural": "make_m1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_m1_materials.py (agent M1, 2026-09-30), through B1's make_one",
+ "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)",
+ "note": "Pale NEW sugi / hinoki. Same tile and grain direction as jp_m_wood_weathered (2 m, grain along v) so props swap material without new UVs."
+}

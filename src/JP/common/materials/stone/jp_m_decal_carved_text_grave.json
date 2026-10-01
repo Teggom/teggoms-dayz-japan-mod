@@ -1,0 +1,455 @@
+{
+ "id": "jp_m_decal_carved_text_grave",
+ "family": "stone",
+ "palette_id": "stone_lantern",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 1024,
+ "px_per_m": 1024.0,
+ "uv": "TEXT ATLAS, not world-scale (as jp_m_decal_carved_text): map a face onto one cell's rectangle (\"cells\": u0, v0, u1, v1 with v down), keeping the cell's aspect; 1024 px = 1 m. Three-column cells carry \"crops\" (fractions of the cell): NAME = the kaimyo column only, DATE_R = the era-year column, DATE_L = month and day. Lay the decal 2-3 mm off the surface; never in Geometry/View/Fire. Text runs top to bottom, columns right to left.",
+ "grain": "none; V-cut inscriptions (Yuji Syuku)",
+ "penetration_rvmat": null,
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "crisp cut",
+   "co": "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w0.rvmat",
+   "target_srgb": [
+    80.0,
+    76.9,
+    68.8
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.097
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "softened, grime in the cuts",
+   "co": "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
+   "target_srgb": [
+    73.0,
+    70.0,
+    62.0
+   ],
+   "masked_frac": 0.026,
+   "alpha_cover": 0.097
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "lichen over half the text",
+   "co": "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
+   "target_srgb": [
+    66.1,
+    63.2,
+    55.3
+   ],
+   "masked_frac": 0.033,
+   "alpha_cover": 0.11
+  }
+ },
+ "used_by": [
+  "jp_s_grave_stones"
+ ],
+ "used_on": "Carved posthumous names for gravestones",
+ "sources": [
+  {
+   "asset": "rock_surface",
+   "name": "Rock Surface",
+   "page": "https://polyhaven.com/a/rock_surface",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Amal Kumar"
+   ]
+  },
+  {
+   "procedural": "make_m1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_m1_materials.py (agent M1, 2026-09-30), through B1's make_one",
+ "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)",
+ "alpha": "decal",
+ "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
+ "note": "Posthumous names (kaimyo) and death dates for gravestones: 13 cells, 14 names (one couple stone), dates Kanbun 10 (1670) to Kyoho 14 (1729). Commoner forms only: -shinji / -shinnyo, -zenjomon / -zenjoni, -doji / -donyo, Shin-sect shaku-; no family names (Meiji). Fonts: SIL OFL 1.1, Yuji Project Authors.",
+ "cells": {
+  "kaimyo_joshin_shinji_genroku8": {
+   "uv": [
+    0.0,
+    0.0,
+    0.166,
+    0.332
+   ],
+   "for": "a man, Genroku 8 (1695)",
+   "text": "元禄八年乙亥 / 浄心信士 / 三月十日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_myotei_shinnyo_hoei4": {
+   "uv": [
+    0.166,
+    0.0,
+    0.332,
+    0.332
+   ],
+   "for": "a woman, Hoei 4 (1707)",
+   "text": "宝永四年丁亥 / 妙貞信女 / 十一月廿三日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_soen_zenjomon_enpo6": {
+   "uv": [
+    0.332,
+    0.0,
+    0.498,
+    0.332
+   ],
+   "for": "a man (zenjomon, an older stone), Enpo 6 (1678)",
+   "text": "延宝六年戊午 / 宗円禅定門 / 八月十五日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_myoju_zenjoni_kanbun10": {
+   "uv": [
+    0.498,
+    0.0,
+    0.6641,
+    0.332
+   ],
+   "for": "a woman (zenjoni, an older stone), Kanbun 10 (1670)",
+   "text": "寛文十年庚戌 / 妙寿禅定尼 / 二月九日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_shunko_doji_kyoho5": {
+   "uv": [
+    0.6641,
+    0.0,
+    0.8301,
+    0.332
+   ],
+   "for": "a boy (doji), Kyoho 5 (1720)",
+   "text": "享保五年庚子 / 春光童子 / 四月八日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_shugetsu_donyo_shotoku3": {
+   "uv": [
+    0.8301,
+    0.0,
+    0.9961,
+    0.332
+   ],
+   "for": "a girl (donyo), Shotoku 3 (1713)",
+   "text": "正徳三年癸巳 / 秋月童女 / 九月十二日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_ryozen_shinji_kyoho14": {
+   "uv": [
+    0.0,
+    0.332,
+    0.166,
+    0.6641
+   ],
+   "for": "a man, Kyoho 14 (1729)",
+   "text": "享保十四年己酉 / 了善信士 / 正月廿日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_chisei_shinnyo_kyoho10": {
+   "uv": [
+    0.166,
+    0.332,
+    0.332,
+    0.6641
+   ],
+   "for": "a woman, Kyoho 10 (1725)",
+   "text": "享保十年乙巳 / 智清信女 / 六月五日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_shaku_ryonen_kyoho8": {
+   "uv": [
+    0.332,
+    0.332,
+    0.498,
+    0.6641
+   ],
+   "for": "a man, Shin sect (shaku- name, no rank title), Kyoho 8 (1723)",
+   "text": "享保八年癸卯 / 釈了念 / 十月三日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_kigen_dokaku_shinji_genroku11": {
+   "uv": [
+    0.498,
+    0.332,
+    0.6641,
+    0.6641
+   ],
+   "for": "a man, Zen 'kigen' (returned to the source) prefix, Genroku 11 (1698)",
+   "text": "元禄十一年戊寅 / 帰元道覚信士 / 七月二日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_enjaku_myosho_shinnyo_kyoho12": {
+   "uv": [
+    0.6641,
+    0.332,
+    0.8301,
+    0.6641
+   ],
+   "for": "a woman, Zen 'enjaku' (perfect rest) prefix, Kyoho 12 (1727)",
+   "text": "享保十二年丁未 / 円寂妙照信女 / 七月十日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_hozan_zenjomon_shotoku1": {
+   "uv": [
+    0.8301,
+    0.332,
+    0.9961,
+    0.6641
+   ],
+   "for": "a man (zenjomon), Shotoku 1 (1711)",
+   "text": "正徳元年辛卯 / 法山禅定門 / 十二月朔日",
+   "crops": {
+    "NAME": [
+     0.26,
+     0.0,
+     0.74,
+     1.0
+    ],
+    "DATE_R": [
+     0.7,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "DATE_L": [
+     0.0,
+     0.0,
+     0.3,
+     1.0
+    ]
+   }
+  },
+  "kaimyo_couple_dosei_myosei": {
+   "uv": [
+    0.0,
+    0.6641,
+    0.332,
+    0.9961
+   ],
+   "for": "a married couple on one stone: husband Genroku 11 (1698), wife Kyoho 7 (1722); use the whole cell on a wide stone",
+   "text": "元禄十一年戊寅八月 / 道清信士 / 妙清信女 / 享保七年壬寅三月"
+  }
+ },
+ "fonts": [
+  "research/fonts/yujisyuku/YujiSyuku-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)"
+ ],
+ "text_sources": "spikes/M1/M1_PROGRESS.md 'Text': kaimyo forms, ranks and era dates, each checked"
+}

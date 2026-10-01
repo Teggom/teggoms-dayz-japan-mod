@@ -1,0 +1,76 @@
+{
+ "id": "jp_m_ground_earth_bare",
+ "family": "ground",
+ "palette_id": "earth_bare",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "none; crumb, pebbles, roots",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\dirt_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh-heaped, moist and darker, loose clods (a new grave mound)",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w0.rvmat",
+   "target_srgb": [
+    127.0,
+    106.7,
+    82.7
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "settled dry earth, crumb and pebbles",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w1.rvmat",
+   "target_srgb": [
+    148.0,
+    130.0,
+    108.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "overgrown: moss and weeds creeping in, wet leaves, rain rills",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare_w2.rvmat",
+   "target_srgb": [
+    132.2,
+    118.0,
+    99.1
+   ],
+   "masked_frac": 0.23
+  }
+ },
+ "used_by": [
+  "jp_s_grave_stones",
+  "jp_s_grave_wood"
+ ],
+ "used_on": "Grave mounds, worn paths, bare yard ground",
+ "sources": [
+  {
+   "asset": "clay_floor_001",
+   "name": "Clay Floor 001",
+   "page": "https://polyhaven.com/a/clay_floor_001",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Dimitrios Savva",
+    "Rico Cilliers"
+   ]
+  },
+  {
+   "procedural": "make_m1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_m1_materials.py (agent M1, 2026-09-30), through B1's make_one",
+ "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)",
+ "note": "Bare outdoor earth (grave mounds, worn paths, yards). Same tile and layout as jp_m_ground_leaf_litter (2 m), so a mound can swap one for the other."
+}

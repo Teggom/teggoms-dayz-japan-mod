@@ -1,0 +1,75 @@
+{
+ "id": "jp_m_wood_silver",
+ "family": "wood",
+ "palette_id": "wood_silver_grey",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "along v (member length), raised weathered grain",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\wood_planks_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "silver-grey, raised grain",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_silver_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver_w0.rvmat",
+   "target_srgb": [
+    131.1,
+    130.1,
+    125.1
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "dark weather streaks, pale lichen",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_silver_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver_w1.rvmat",
+   "target_srgb": [
+    115.7,
+    114.5,
+    109.2
+   ],
+   "masked_frac": 0.172
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "old and damp: darker, splits, green-black algae",
+   "co": "JP\\common\\materials\\wood\\jp_m_wood_silver_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver_w2.rvmat",
+   "target_srgb": [
+    105.3,
+    103.8,
+    98.2
+   ],
+   "masked_frac": 0.282
+  }
+ },
+ "used_by": [
+  "jp_s_grave_wood"
+ ],
+ "used_on": "Old unpainted wood gone silver",
+ "sources": [
+  {
+   "asset": "weathered_planks",
+   "name": "Weathered Planks",
+   "page": "https://polyhaven.com/a/weathered_planks",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Dario Barresi",
+    "Dimitrios Savva"
+   ]
+  },
+  {
+   "procedural": "make_m1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_m1_materials.py (agent M1, 2026-09-30), through B1's make_one",
+ "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)",
+ "note": "True silver-grey weathered wood. Same tile, scan and grain as jp_m_wood_weathered (which is the warm brown of wet facades: keep it there)."
+}

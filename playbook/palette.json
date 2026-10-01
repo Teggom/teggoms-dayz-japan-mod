@@ -1959,6 +1959,418 @@
    "method": "assumed",
    "tolerance_dE76": 12,
    "hex": "#C8CBC8"
+  },
+  {
+   "id": "earth_bare",
+   "name": "Bare outdoor earth (Kanto loam / brown forest soil), dry surface",
+   "material": "andosol (kuroboku) topsoil and brown forest soil: grave mounds, worn paths, yard ground",
+   "group": "ground",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "grave mounds, worn paths, bare yard ground (jp_m_ground_earth_bare)",
+   "note": "Added 2026-09-30 by M1 (spikes/M1/sample.py, the playbook method: per box the mid-70 % luminance median, mean of the box medians). Kept: k41 (Matsudo, Kanto loam topsoil at a roadside Koshin site, sunlit, 197,171,127), k37 (Shikaumi shrine, brown forest soil under the sacred tree, diffuse forest light: 138,117,108 and 117,101,84), k27 (a worn earth path under a Hida village torii, 140,133,112). Rejected: the deep-shade k41 box (77,69,57; B1's doma rule), x03 (concrete path), x08 (a museum yard of dressed sand). Browner and darker than earth_road (208,190,167, packed road), browner than doma_earth (137,132,128). Wet earth is darker: the _w0 fresh mound is moist.",
+   "srgb": [
+    148,
+    130,
+    108
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 20.7,
+   "samples": [
+    {
+     "ref": "k41_koshin_sendabori",
+     "box": [
+      0.03,
+      0.83,
+      0.33,
+      0.97
+     ],
+     "value": [
+      197,
+      171,
+      127
+     ]
+    },
+    {
+     "ref": "k37_shimenawa_tree",
+     "box": [
+      0.4,
+      0.66,
+      0.62,
+      0.78
+     ],
+     "value": [
+      138,
+      117,
+      108
+     ]
+    },
+    {
+     "ref": "k37_shimenawa_tree",
+     "box": [
+      0.2,
+      0.56,
+      0.38,
+      0.64
+     ],
+     "value": [
+      117,
+      101,
+      84
+     ]
+    },
+    {
+     "ref": "k27_hida_torii",
+     "box": [
+      0.44,
+      0.84,
+      0.63,
+      0.96
+     ],
+     "value": [
+      140,
+      133,
+      112
+     ]
+    }
+   ],
+   "hex": "#94826C"
+  },
+  {
+   "id": "wood_new_cut",
+   "name": "Freshly cut / split sugi-hinoki, unweathered (pale)",
+   "material": "new conifer wood: split or planed sugi / hinoki before the sun greys it",
+   "group": "timber",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "fresh grave posts, new repairs, new split boards (jp_m_wood_new); weathers to wood_silver_grey",
+   "note": "Added 2026-09-30 by M1 (spikes/M1/sample.py, the playbook method: per box the mid-70 % luminance median, mean of the box medians). Kept: i04 (Tsunashima farmhouse, three freshly split conifer sticks by the irori, lit faces), white-balanced on the hearth's ash wall in the same light (raw 144,150,152 -> the chromaticity of ash_grey): raw 179,167,153 / 152,135,123 / 155,142,136 -> 190,165,143 / 161,134,115 / 164,141,127. Rejected: k36 (red pine end grain in low sun, not sugi side grain), x01 bottom (modern plywood), the hinoki_planks scan (board_new 156,122,84: an oiled-looking board, darker and oranger than split wood). Paler than board_new, far from timber_weathered (118,82,73).",
+   "srgb": [
+    172,
+    146,
+    129
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 11,
+   "observed_spread_dE76": 10.9,
+   "samples": [
+    {
+     "ref": "i04_tsunashima_irori",
+     "box": [
+      0.683,
+      0.283,
+      0.717,
+      0.367
+     ],
+     "value": [
+      190,
+      165,
+      143
+     ]
+    },
+    {
+     "ref": "i04_tsunashima_irori",
+     "box": [
+      0.764,
+      0.317,
+      0.791,
+      0.4
+     ],
+     "value": [
+      161,
+      134,
+      115
+     ]
+    },
+    {
+     "ref": "i04_tsunashima_irori",
+     "box": [
+      0.48,
+      0.342,
+      0.502,
+      0.392
+     ],
+     "value": [
+      164,
+      141,
+      127
+     ]
+    }
+   ],
+   "white_balance": {
+    "ref": "i04_tsunashima_irori",
+    "box": [
+     0.2,
+     0.24,
+     0.36,
+     0.4
+    ],
+    "to": "ash_grey"
+   },
+   "weathering": {
+    "worst": "wood_silver_grey",
+    "max_mix": 0.35
+   },
+   "hex": "#AC9281"
+  },
+  {
+   "id": "wood_silver_grey",
+   "name": "Silver-grey weathered wood (old unpainted sugi / hinoki)",
+   "material": "unpainted softwood after years of sun and rain: the lignin washed out, the surface silver-grey",
+   "group": "timber",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "old grave posts, old fences, gates, carts, sheds: the classic silver look (jp_m_wood_silver)",
+   "note": "Added 2026-09-30 by M1 (spikes/M1/sample.py, the playbook method: per box the mid-70 % luminance median, mean of the box medians). Kept, all in daylight: k31 (an old unpainted handcart at Uzumasa, sunlit side rail, 130,124,112), c03 (Tsumago, a sunlit weathered gate post 146,146,145 and its board leaf 103,104,103). Rejected: x01 (Ioka storehouse gable boards: the right look but evening shade, 57-64 even after a white balance on the plaster), c04 (Tsumago gate posts, backlit, 44-53). Close to roof_board_silver (123,128,134, x04 roof) but a touch warmer; far from timber_weathered (118,82,73, the brown of wet facades).",
+   "srgb": [
+    126,
+    125,
+    120
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 23.1,
+   "samples": [
+    {
+     "ref": "k31_daihachi_uzumasa",
+     "box": [
+      0.18,
+      0.6,
+      0.42,
+      0.68
+     ],
+     "value": [
+      130,
+      124,
+      112
+     ]
+    },
+    {
+     "ref": "c03_tsumago_street",
+     "box": [
+      0.9,
+      0.36,
+      0.917,
+      0.53
+     ],
+     "value": [
+      146,
+      146,
+      145
+     ]
+    },
+    {
+     "ref": "c03_tsumago_street",
+     "box": [
+      0.926,
+      0.43,
+      0.967,
+      0.53
+     ],
+     "value": [
+      103,
+      104,
+      103
+     ]
+    }
+   ],
+   "weathering": {
+    "worst": "stone_lantern",
+    "max_mix": 0.3
+   },
+   "hex": "#7E7D78"
+  },
+  {
+   "id": "wicker_aged",
+   "name": "Aged wicker (woven bamboo / willow), indoor",
+   "material": "woven split bamboo or peeled willow (kori-yanagi) of travel and clothes trunks, aged indoors",
+   "group": "fitting",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "kori trunks (jp_m_wicker_aged); bamboo_weathered stays for outdoor, sun-bleached bamboo",
+   "note": "Added 2026-09-30 by M1 (spikes/M1/sample.py, the playbook method: per box the mid-70 % luminance median, mean of the box medians). No photo of a kori or of indoor wicker in usable light exists on this machine: i07's woven basket (Fukagawa Edo Museum) is under a strong orange spotlight with no grey card, k28 is hand-tinted, k06 a print. Value = the CC0 Poly Haven scan bamboo_wall (Amal Kumar; aged dried bamboo culms under controlled light), whole diffuse map. Warm tan, unlike bamboo_weathered (169,157,146, sun-bleached fences). Upgrade from a museum photo of a Toyooka willow kori when one is saved locally.",
+   "srgb": [
+    137,
+    110,
+    86
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 12,
+   "observed_spread_dE76": 5.4,
+   "samples": [
+    {
+     "ref": "polyhaven:bamboo_wall (diff 1k)",
+     "box": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "value": [
+      137,
+      110,
+      86
+     ]
+    }
+   ],
+   "hex": "#896E56"
+  },
+  {
+   "id": "firewood_split",
+   "name": "Split firewood, sides (split faces and bark)",
+   "material": "split broadleaf / conifer billets: tan split faces, grey bark",
+   "group": "timber",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "firewood stacks and bundles (jp_m_wood_firewood)",
+   "note": "Added 2026-09-30 by M1 (spikes/M1/sample.py, the playbook method: per box the mid-70 % luminance median, mean of the box medians). i22 (a kamado with split firewood stacked beside it, CC0): the split pieces (98,74,42), the mixed sticks (88,77,54) and the big round log's bark (137,126,84). The kamado body in the same light is neutral (51,53,55), so no white balance. Less red, more yellow-olive than timber_weathered, which the firewood props used before (B3a gap: 'firewood redder than ref i22').",
+   "srgb": [
+    108,
+    92,
+    60
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 14,
+   "observed_spread_dE76": 21.3,
+   "samples": [
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.7,
+      0.1,
+      0.92,
+      0.32
+     ],
+     "value": [
+      98,
+      74,
+      42
+     ]
+    },
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.62,
+      0.35,
+      0.8,
+      0.52
+     ],
+     "value": [
+      88,
+      77,
+      54
+     ]
+    },
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.6,
+      0.12,
+      0.67,
+      0.33
+     ],
+     "value": [
+      137,
+      126,
+      84
+     ]
+    }
+   ],
+   "hex": "#6C5C3C"
+  },
+  {
+   "id": "firewood_end",
+   "name": "Firewood log ends (fresh-cut end grain)",
+   "material": "saw- or axe-cut ends of firewood billets",
+   "group": "timber",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "end caps of firewood (jp_m_wood_endgrain_firewood)",
+   "note": "Added 2026-09-30 by M1 (spikes/M1/sample.py, the playbook method: per box the mid-70 % luminance median, mean of the box medians). i22: six small boxes inside six cut log ends (169,136,78 / 163,134,66 / 157,124,60 / 170,140,73 / 131,105,56 / 167,138,71). Pale yellow-tan; wood_endgrain (timber_weathered) is the red-brown end of old structural timber.",
+   "srgb": [
+    160,
+    130,
+    67
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 8,
+   "observed_spread_dE76": 5.9,
+   "samples": [
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.6813,
+      0.1393,
+      0.6937,
+      0.1581
+     ]
+    },
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.7984,
+      0.2488,
+      0.8109,
+      0.2676
+     ]
+    },
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.8792,
+      0.2817,
+      0.8917,
+      0.3005
+     ]
+    },
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.8375,
+      0.4014,
+      0.85,
+      0.4202
+     ]
+    },
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.9198,
+      0.2175,
+      0.9323,
+      0.2363
+     ]
+    },
+    {
+     "ref": "i22_kamado_firewood",
+     "box": [
+      0.676,
+      0.3388,
+      0.6885,
+      0.3576
+     ]
+    }
+   ],
+   "hex": "#A08243"
   }
  ]
 }

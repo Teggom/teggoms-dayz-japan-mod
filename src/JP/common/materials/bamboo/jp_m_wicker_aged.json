@@ -1,0 +1,74 @@
+{
+ "id": "jp_m_wicker_aged",
+ "family": "bamboo",
+ "palette_id": "wicker_aged",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "2/2 twill of ~1.5 cm strips",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "warm honey-tan wicker",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w0.rvmat",
+   "target_srgb": [
+    148.6,
+    119.9,
+    92.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "handled, grime on the strip crowns",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w1.rvmat",
+   "target_srgb": [
+    137.0,
+    110.0,
+    86.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "broken strips, mildew",
+   "co": "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_wicker_aged_w2.rvmat",
+   "target_srgb": [
+    120.4,
+    95.4,
+    75.2
+   ],
+   "masked_frac": 0.134
+  }
+ },
+ "used_by": [
+  "jp_f_kori"
+ ],
+ "used_on": "Kori wicker trunks",
+ "sources": [
+  {
+   "asset": "bamboo_wall",
+   "name": "Bamboo Wall",
+   "page": "https://polyhaven.com/a/bamboo_wall",
+   "licence": "CC0 1.0",
+   "authors": [
+    "Amal Kumar"
+   ]
+  },
+  {
+   "procedural": "make_m1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_m1_materials.py (agent M1, 2026-09-30), through B1's make_one",
+ "requested_by": "PRODUCTION_PLAN.md 'Confirmed future work' (W2 / W3 / B3a material gaps)",
+ "note": "Warm wicker for kori trunks (same twill and tile as jp_m_bamboo_weave, which stays for the props that want grey, sun-bleached bamboo)."
+}
