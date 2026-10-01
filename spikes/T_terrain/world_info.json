@@ -253,39 +253,9 @@
    "src": "placement:C.csv"
   },
   {
-   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_edo_2k_endl_torir.p3d",
-   "pos": [
-    1045.268,
-    25.0,
-    1087.64
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
    "p3d": "JP\\buildings\\townhouse\\jp_townhouse_kamigata_3k_endl_toril.p3d",
    "pos": [
-    988.358,
-    25.0,
-    1087.64
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_kamigata_3k_cornerr_torir.p3d",
-   "pos": [
-    1003.238,
-    25.0,
-    1087.64
-   ],
-   "yaw": 180.0,
-   "src": "placement:C.csv"
-  },
-  {
-   "p3d": "JP\\buildings\\townhouse\\jp_townhouse_edo_3k_middle_toril_board.p3d",
-   "pos": [
-    1049.914,
+    979.002,
     25.0,
     1087.64
    ],
@@ -320,6 +290,36 @@
     1003.0
    ],
    "yaw": 0.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\shed\\jp_shed_open_board.p3d",
+   "pos": [
+    1072.0,
+    25.0,
+    1036.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\shed\\jp_shed_open_board.p3d",
+   "pos": [
+    1080.0,
+    25.0,
+    1036.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\shed\\jp_shed_open_board.p3d",
+   "pos": [
+    1088.0,
+    25.0,
+    1036.0
+   ],
+   "yaw": 180.0,
    "src": "placement:C.csv"
   },
   {
@@ -903,6 +903,176 @@
    "src": "placement:C.csv"
   },
   {
+   "p3d": "JP\\buildings\\furnished\\jp_s1_th_edo_3k_middle_kanamono.p3d",
+   "pos": [
+    1046.146,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    1044.206,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1047.056,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_s1_th_kamigata_2k_middle_tabako.p3d",
+   "pos": [
+    989.236,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    990.266,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_s1_th_kamigata_3k_endr_mochiya.p3d",
+   "pos": [
+    1003.238,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_bench_1ken.p3d",
+   "pos": [
+    1004.48,
+    25.0,
+    1083.02
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    1001.33,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1004.18,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_s1_th_edo_3k_endl_kusuri.p3d",
+   "pos": [
+    1040.59,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    1038.618,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    1041.468,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_s1_th_edo_2k_middle_board_shitate.p3d",
+   "pos": [
+    1050.824,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    1051.854,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\furnished\\jp_s1_th_kamigata_3k_middle_kyo_ningyo.p3d",
+   "pos": [
+    984.558,
+    25.0,
+    1087.64
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_slab.p3d",
+   "pos": [
+    982.618,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
+   "pos": [
+    985.468,
+    25.0,
+    1082.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:C.csv"
+  },
+  {
    "p3d": "JP\\site\\street_life\\jp_s_kago_ab_tipped.p3d",
    "pos": [
     1016.0,
@@ -1065,9 +1235,9 @@
   {
    "p3d": "JP\\site\\street\\jp_s_lantern_sign_tsuji.p3d",
    "pos": [
-    1040.2,
+    1035.9,
     25.0,
-    1083.2
+    1082.9
    ],
    "yaw": 180.0,
    "src": "placement:C3.csv"
@@ -1085,9 +1255,9 @@
   {
    "p3d": "JP\\site\\water\\jp_s_fire_tub_ab_scattered.p3d",
    "pos": [
-    1042.0,
+    1036.1,
     25.0,
-    1085.3
+    1089.8
    ],
    "yaw": 0.0,
    "src": "placement:C3.csv"
@@ -1125,7 +1295,7 @@
   {
    "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
    "pos": [
-    987.4,
+    978.044,
     25.0,
     1082.54
    ],
@@ -1135,57 +1305,7 @@
   {
    "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
    "pos": [
-    989.3,
-    25.0,
-    1082.54
-   ],
-   "yaw": 180.0,
-   "src": "placement:C3.csv"
-  },
-  {
-   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
-   "pos": [
-    1002.3,
-    25.0,
-    1082.54
-   ],
-   "yaw": 180.0,
-   "src": "placement:C3.csv"
-  },
-  {
-   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
-   "pos": [
-    1004.2,
-    25.0,
-    1082.54
-   ],
-   "yaw": 180.0,
-   "src": "placement:C3.csv"
-  },
-  {
-   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
-   "pos": [
-    1045.3,
-    25.0,
-    1082.54
-   ],
-   "yaw": 180.0,
-   "src": "placement:C3.csv"
-  },
-  {
-   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
-   "pos": [
-    1049.0,
-    25.0,
-    1082.54
-   ],
-   "yaw": 180.0,
-   "src": "placement:C3.csv"
-  },
-  {
-   "p3d": "JP\\site\\street\\jp_s_gutter_board_1ken.p3d",
-   "pos": [
-    1050.9,
+    979.944,
     25.0,
     1082.54
    ],
@@ -1591,6 +1711,3756 @@
    ],
    "yaw": 180.0,
    "src": "placement:M.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_l.p3d",
+   "pos": [
+    1024.0,
+    25.0,
+    1099.5
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_nobori_shrine.p3d",
+   "pos": [
+    1018.8,
+    25.0,
+    1103.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_nobori_shrine.p3d",
+   "pos": [
+    1029.2,
+    25.0,
+    1103.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18.p3d",
+   "pos": [
+    1021.0,
+    25.0,
+    1122.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18.p3d",
+   "pos": [
+    1027.0,
+    25.0,
+    1122.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_group3.p3d",
+   "pos": [
+    1016.6,
+    24.99971305847168,
+    1125.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_koshin.p3d",
+   "pos": [
+    1017.2,
+    25.015960144042968,
+    1127.6
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_relief_panel.p3d",
+   "pos": [
+    1017.1,
+    25.030912109375,
+    1129.2
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_arched.p3d",
+   "pos": [
+    1017.0,
+    25.05199267578125,
+    1130.7
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_round.p3d",
+   "pos": [
+    1015.6,
+    25.02287644958496,
+    1128.6
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_pillar.p3d",
+   "pos": [
+    1015.4,
+    25.012664245605468,
+    1126.9
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_ab_tipped.p3d",
+   "pos": [
+    1015.0,
+    25.053041397094727,
+    1131.6
+   ],
+   "yaw": 60.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_natural_slab.p3d",
+   "pos": [
+    1015.1,
+    25.0,
+    1123.4
+   ],
+   "yaw": 100.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_l_rope_shide.p3d",
+   "pos": [
+    1024.0,
+    25.157866561889648,
+    1136.5
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_chozubachi_large.p3d",
+   "pos": [
+    1019.0,
+    25.259052993774414,
+    1140.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_24.p3d",
+   "pos": [
+    1021.0,
+    25.362151748657226,
+    1143.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_24.p3d",
+   "pos": [
+    1027.0,
+    25.362151748657226,
+    1143.5
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_square_24.p3d",
+   "pos": [
+    1021.0,
+    25.58505731201172,
+    1149.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_square_24.p3d",
+   "pos": [
+    1027.0,
+    25.58505731201172,
+    1149.5
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_24_moss.p3d",
+   "pos": [
+    1021.0,
+    25.819776672363282,
+    1155.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_24_moss.p3d",
+   "pos": [
+    1027.0,
+    25.819776672363282,
+    1155.5
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_myojin_moss_rope_shide.p3d",
+   "pos": [
+    1024.0,
+    26.07434049987793,
+    1161.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_square_24_moss.p3d",
+   "pos": [
+    1021.0,
+    26.265019149780272,
+    1166.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_square_24_moss.p3d",
+   "pos": [
+    1027.0,
+    26.265019149780272,
+    1166.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d",
+   "pos": [
+    1021.0,
+    26.50752275085449,
+    1172.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_ab_hoju_moss.p3d",
+   "pos": [
+    1027.0,
+    26.47052084350586,
+    1172.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_30.p3d",
+   "pos": [
+    1020.8,
+    26.743050567626952,
+    1178.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_30.p3d",
+   "pos": [
+    1027.2,
+    26.74270343017578,
+    1178.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_joyato.p3d",
+   "pos": [
+    1019.0,
+    27.008442779541017,
+    1183.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_joyato.p3d",
+   "pos": [
+    1029.0,
+    27.00635614013672,
+    1183.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_oki.p3d",
+   "pos": [
+    1021.8,
+    27.145029495239257,
+    1184.6
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_oki_moss.p3d",
+   "pos": [
+    1026.2,
+    27.13870770263672,
+    1184.6
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "dz\\plants\\tree\\t_fagussylvatica_3f.p3d",
+   "pos": [
+    1032.9876148700714,
+    41.54159111022949,
+    1197.5032351016998
+   ],
+   "yaw": 0.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_shimenawa_wrap_d06.p3d",
+   "pos": [
+    1033.33,
+    29.736465158462526,
+    1198.1650296849011
+   ],
+   "yaw": 0.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_shinmei.p3d",
+   "pos": [
+    1036.0,
+    25.387399200439454,
+    1145.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "pos": [
+    1038.2,
+    25.411401107788087,
+    1145.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_shinmei_rope.p3d",
+   "pos": [
+    1036.25,
+    25.534070205688476,
+    1149.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_natural_slab.p3d",
+   "pos": [
+    1037.85,
+    25.57207211303711,
+    1149.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_shinmei_rope_shide.p3d",
+   "pos": [
+    1035.8,
+    25.692935440063476,
+    1153.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "pos": [
+    1038.0,
+    25.72093734741211,
+    1153.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_s.p3d",
+   "pos": [
+    1036.0,
+    25.858520263671874,
+    1157.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_round.p3d",
+   "pos": [
+    1037.6,
+    25.901520263671873,
+    1157.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_s_rope.p3d",
+   "pos": [
+    1036.25,
+    26.029338592529296,
+    1161.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "pos": [
+    1038.45,
+    26.059342407226563,
+    1161.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_s_rope_shide.p3d",
+   "pos": [
+    1035.8,
+    26.198923416137696,
+    1165.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_natural_slab.p3d",
+   "pos": [
+    1037.4,
+    26.241923416137695,
+    1165.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss.p3d",
+   "pos": [
+    1036.0,
+    26.365790557861327,
+    1169.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "pos": [
+    1038.2,
+    26.39279055786133,
+    1169.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss_rope.p3d",
+   "pos": [
+    1036.25,
+    26.521506240844726,
+    1173.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_arched.p3d",
+   "pos": [
+    1037.85,
+    26.55850242614746,
+    1173.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss_rope_shide.p3d",
+   "pos": [
+    1035.8,
+    26.669413177490235,
+    1177.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "pos": [
+    1038.0,
+    26.698333068847656,
+    1177.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_s_moss.p3d",
+   "pos": [
+    1036.0,
+    26.85589892578125,
+    1181.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stele_natural_slab.p3d",
+   "pos": [
+    1037.6,
+    26.91460710144043,
+    1181.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_s_moss_rope_shide.p3d",
+   "pos": [
+    1036.25,
+    27.101117660522462,
+    1185.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "pos": [
+    1038.45,
+    27.151125839233398,
+    1185.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_ab_rotted.p3d",
+   "pos": [
+    1035.8,
+    27.397062301635742,
+    1189.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_ab_open.p3d",
+   "pos": [
+    1038.0,
+    27.43025032043457,
+    1189.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_mini.p3d",
+   "pos": [
+    1037.15,
+    25.417397293090822,
+    1145.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_mini_rope.p3d",
+   "pos": [
+    1036.65,
+    26.067338592529296,
+    1161.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_30_moss.p3d",
+   "pos": [
+    1030.824,
+    29.424520828247072,
+    1206.104
+   ],
+   "yaw": 116.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_ab_toppled.p3d",
+   "pos": [
+    1036.035,
+    28.83999626159668,
+    1203.557
+   ],
+   "yaw": 331.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d",
+   "pos": [
+    1034.344,
+    30.708488861083985,
+    1213.304
+   ],
+   "yaw": 116.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d",
+   "pos": [
+    1038.656,
+    30.28206709289551,
+    1211.196
+   ],
+   "yaw": 296.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_square_24_moss.p3d",
+   "pos": [
+    1037.644,
+    32.07847994995117,
+    1220.054
+   ],
+   "yaw": 116.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_square_24_moss.p3d",
+   "pos": [
+    1041.956,
+    31.585975830078127,
+    1217.946
+   ],
+   "yaw": 296.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_ab_leaning.p3d",
+   "pos": [
+    1047.0,
+    29.08601239013672,
+    1205.5
+   ],
+   "yaw": 195.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_m_rope_shide.p3d",
+   "pos": [
+    1042.0,
+    33.67242770385742,
+    1226.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3_wide.p3d",
+   "pos": [
+    1042.0,
+    34.11499969482422,
+    1227.6
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_cheek_3.p3d",
+   "pos": [
+    1043.465,
+    34.11070434570313,
+    1227.6
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_cheek_3.p3d",
+   "pos": [
+    1040.535,
+    34.11928741455078,
+    1227.6
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing_wide.p3d",
+   "pos": [
+    1042.0,
+    34.59467108154297,
+    1228.51
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3_wide.p3d",
+   "pos": [
+    1042.0,
+    34.595386169433596,
+    1229.31
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_cheek_3.p3d",
+   "pos": [
+    1043.465,
+    34.59104885864258,
+    1229.31
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_cheek_3.p3d",
+   "pos": [
+    1040.535,
+    34.59972729492188,
+    1229.31
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing_wide.p3d",
+   "pos": [
+    1042.0,
+    35.07527496337891,
+    1230.22
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d",
+   "pos": [
+    1042.0,
+    35.07499005126953,
+    1231.02
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    35.554878845214844,
+    1231.93
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d",
+   "pos": [
+    1042.0,
+    35.55511553955078,
+    1232.63
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    36.035252227783204,
+    1233.54
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d",
+   "pos": [
+    1042.0,
+    36.03463775634766,
+    1234.19
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    36.51477062988281,
+    1235.1
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d",
+   "pos": [
+    1042.0,
+    36.51510977172852,
+    1235.8
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    36.99477392578125,
+    1236.71
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d",
+   "pos": [
+    1042.0,
+    36.99495681762696,
+    1237.26
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    37.47515338134765,
+    1238.17
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d",
+   "pos": [
+    1042.0,
+    37.47500207519531,
+    1238.82
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    37.95520245361328,
+    1239.73
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d",
+   "pos": [
+    1042.0,
+    37.9551968383789,
+    1240.23
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    38.434776428222655,
+    1241.14
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d",
+   "pos": [
+    1042.0,
+    38.435075347900394,
+    1241.69
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    38.914658752441404,
+    1242.6
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d",
+   "pos": [
+    1042.0,
+    38.915108154296874,
+    1243.1
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    39.394863220214845,
+    1244.01
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d",
+   "pos": [
+    1042.0,
+    39.3952145690918,
+    1244.46
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    39.875457305908206,
+    1245.37
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d",
+   "pos": [
+    1042.0,
+    39.874808654785156,
+    1245.82
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    40.3550475769043,
+    1246.73
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_ab_heaved_rough.p3d",
+   "pos": [
+    1042.0,
+    40.354691101074216,
+    1247.13
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    40.83461666870117,
+    1248.04
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d",
+   "pos": [
+    1042.0,
+    40.83512283325195,
+    1248.44
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    41.31497149658203,
+    1249.35
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d",
+   "pos": [
+    1042.0,
+    41.31547766113281,
+    1249.75
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    41.79532632446289,
+    1250.66
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_ab_heaved.p3d",
+   "pos": [
+    1042.0,
+    41.7950817565918,
+    1251.26
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    42.75486401367188,
+    1253.08
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_ab_heaved_rough.p3d",
+   "pos": [
+    1042.0,
+    42.755434997558595,
+    1253.48
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    43.235358795166015,
+    1254.39
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_ab_heaved.p3d",
+   "pos": [
+    1042.0,
+    43.23526794433594,
+    1254.94
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    44.1947373046875,
+    1256.76
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d",
+   "pos": [
+    1042.0,
+    44.19532135009766,
+    1257.16
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    44.67537753295898,
+    1258.07
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_6.p3d",
+   "pos": [
+    1042.0,
+    44.674851867675784,
+    1258.57
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_cheek_6.p3d",
+   "pos": [
+    1043.01,
+    44.64039752197266,
+    1258.57
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_cheek_6.p3d",
+   "pos": [
+    1040.99,
+    44.70930621337891,
+    1258.57
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1042.0,
+    45.635084655761716,
+    1260.39
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_6_wide.p3d",
+   "pos": [
+    1042.0,
+    45.63492727661133,
+    1260.94
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_myojin.p3d",
+   "pos": [
+    1042.0,
+    35.906970092773435,
+    1233.84
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_myojin_rope.p3d",
+   "pos": [
+    1042.0,
+    37.327162231445314,
+    1238.47
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_myojin_rope_shide.p3d",
+   "pos": [
+    1042.0,
+    39.225536987304686,
+    1244.235
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_myojin_moss.p3d",
+   "pos": [
+    1042.0,
+    41.63070404052734,
+    1250.96
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_myojin_moss_rope.p3d",
+   "pos": [
+    1042.0,
+    43.03531146240234,
+    1254.665
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_stone_m.p3d",
+   "pos": [
+    1042.0,
+    46.697003662109374,
+    1263.96
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "pos": [
+    1042.0,
+    47.93526751708984,
+    1266.96
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_oki_moss.p3d",
+   "pos": [
+    1040.4,
+    47.46174816894531,
+    1265.56
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_oki_moss.p3d",
+   "pos": [
+    1043.6,
+    47.31731393432617,
+    1265.56
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_chozubachi_natural.p3d",
+   "pos": [
+    1044.6,
+    46.37890435791016,
+    1263.36
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_myojin_shu_rope_shide.p3d",
+   "pos": [
+    1058.0,
+    33.61690869140625,
+    1226.1
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3_narrow.p3d",
+   "pos": [
+    1058.0,
+    33.92583267211914,
+    1227.3
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1058.0,
+    34.40611663818359,
+    1228.21
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3_narrow.p3d",
+   "pos": [
+    1058.0,
+    34.40610137939453,
+    1229.11
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1058.0,
+    34.885863220214844,
+    1230.02
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3_narrow.p3d",
+   "pos": [
+    1058.0,
+    34.88618002319336,
+    1230.77
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1058.0,
+    35.365945678710936,
+    1231.68
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3_narrow.p3d",
+   "pos": [
+    1058.0,
+    35.36600952148437,
+    1232.48
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1058.0,
+    35.84556747436523,
+    1233.39
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3_narrow.p3d",
+   "pos": [
+    1058.0,
+    35.84611050415039,
+    1234.04
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1058.0,
+    36.32566845703125,
+    1234.95
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3_narrow.p3d",
+   "pos": [
+    1058.0,
+    36.32602014160156,
+    1235.65
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1058.0,
+    36.80606253051758,
+    1236.56
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_rough_3_narrow.p3d",
+   "pos": [
+    1058.0,
+    36.8062878112793,
+    1237.21
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1058.0,
+    37.28600701904297,
+    1238.12
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_dressed_3_narrow.p3d",
+   "pos": [
+    1058.0,
+    37.28623229980469,
+    1238.77
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "pos": [
+    1058.0,
+    37.765955322265626,
+    1239.68
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_myojin_shu.p3d",
+   "pos": [
+    1058.0,
+    36.15072317504883,
+    1235.2
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_ab_leaning_shu.p3d",
+   "pos": [
+    1062.5,
+    30.274633636474608,
+    1213.0
+   ],
+   "yaw": 165.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_torii_wood_mini_shu.p3d",
+   "pos": [
+    1058.0,
+    38.090718841552736,
+    1241.23
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d",
+   "pos": [
+    1058.0,
+    38.35282070922852,
+    1242.43
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_chozubachi_ab_dry.p3d",
+   "pos": [
+    1055.6,
+    37.3450309753418,
+    1239.63
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bohyo_new.p3d",
+   "pos": [
+    990.944,
+    25.0,
+    1109.366
+   ],
+   "yaw": 180.2,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bohyo.p3d",
+   "pos": [
+    992.12,
+    24.999998092651367,
+    1109.196
+   ],
+   "yaw": 185.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field_mound.p3d",
+   "pos": [
+    994.349,
+    25.0,
+    1109.37
+   ],
+   "yaw": 186.3,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bohyo_s.p3d",
+   "pos": [
+    995.519,
+    24.999998092651367,
+    1109.364
+   ],
+   "yaw": 170.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_round_s_plain.p3d",
+   "pos": [
+    996.877,
+    25.0,
+    1109.826
+   ],
+   "yaw": 170.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_rotted.p3d",
+   "pos": [
+    998.0146588027687,
+    24.981768384575844,
+    1109.1935434687286
+   ],
+   "yaw": 174.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_round.p3d",
+   "pos": [
+    998.995,
+    25.0,
+    1109.859
+   ],
+   "yaw": 190.2,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    998.9554425410531,
+    25.52306741476059,
+    1110.1728562583246
+   ],
+   "yaw": 186.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_round.p3d",
+   "pos": [
+    1001.489,
+    25.0,
+    1109.846
+   ],
+   "yaw": 179.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo_child.p3d",
+   "pos": [
+    1002.531,
+    25.0,
+    1109.935
+   ],
+   "yaw": 183.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    1002.531,
+    25.0,
+    1109.605
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_round.p3d",
+   "pos": [
+    1004.87,
+    25.000001907348633,
+    1109.873
+   ],
+   "yaw": 169.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1004.9282571846205,
+    25.523071229457855,
+    1110.1869113279292
+   ],
+   "yaw": 177.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bohyo_roof.p3d",
+   "pos": [
+    1006.147,
+    25.0,
+    1109.327
+   ],
+   "yaw": 187.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1007.038,
+    25.0,
+    1109.947
+   ],
+   "yaw": 177.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_round_s_plain.p3d",
+   "pos": [
+    1008.442,
+    25.0,
+    1109.967
+   ],
+   "yaw": 172.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field.p3d",
+   "pos": [
+    990.963,
+    25.000001907348633,
+    1112.611
+   ],
+   "yaw": 191.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field_pair.p3d",
+   "pos": [
+    992.191,
+    25.0,
+    1112.721
+   ],
+   "yaw": 181.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bohyo_s.p3d",
+   "pos": [
+    993.444,
+    25.0,
+    1112.06
+   ],
+   "yaw": 175.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_lean.p3d",
+   "pos": [
+    994.577,
+    25.0,
+    1111.966
+   ],
+   "yaw": 175.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    996.873,
+    25.000001907348633,
+    1112.587
+   ],
+   "yaw": 189.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field_mound.p3d",
+   "pos": [
+    998.001,
+    25.0,
+    1112.003
+   ],
+   "yaw": 184.3,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    999.127,
+    25.000001907348633,
+    1112.722
+   ],
+   "yaw": 178.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    999.127,
+    25.0,
+    1112.392
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1001.495,
+    25.000001907348633,
+    1112.559
+   ],
+   "yaw": 172.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_round.p3d",
+   "pos": [
+    1002.562,
+    25.0,
+    1112.607
+   ],
+   "yaw": 175.2,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1002.5961680042627,
+    25.523069322109222,
+    1112.9208101633249
+   ],
+   "yaw": 172.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_ab_round_lean.p3d",
+   "pos": [
+    1003.842,
+    25.0,
+    1112.566
+   ],
+   "yaw": 184.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_s.p3d",
+   "pos": [
+    1004.766,
+    25.0,
+    1112.723
+   ],
+   "yaw": 180.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    1004.766,
+    25.0,
+    1112.393
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_incense.p3d",
+   "pos": [
+    1004.786,
+    25.000001907348633,
+    1112.103
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bohyo.p3d",
+   "pos": [
+    1006.09,
+    25.0,
+    1111.92
+   ],
+   "yaw": 185.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1008.192,
+    25.0,
+    1112.665
+   ],
+   "yaw": 181.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1008.2224238596976,
+    25.523069322109222,
+    1112.9789246961332
+   ],
+   "yaw": 182.2,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    1008.192,
+    25.000001907348633,
+    1112.335
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_incense.p3d",
+   "pos": [
+    1008.212,
+    25.0,
+    1112.045
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_jizo_child.p3d",
+   "pos": [
+    1009.596,
+    25.000001907348633,
+    1112.606
+   ],
+   "yaw": 179.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field.p3d",
+   "pos": [
+    991.07,
+    25.0,
+    1115.101
+   ],
+   "yaw": 184.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    993.166,
+    25.000001907348633,
+    1115.098
+   ],
+   "yaw": 169.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    994.368,
+    25.0,
+    1115.146
+   ],
+   "yaw": 189.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    994.420913322522,
+    25.523069322109222,
+    1115.4599308760119
+   ],
+   "yaw": 180.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_s.p3d",
+   "pos": [
+    995.641,
+    25.0,
+    1115.18
+   ],
+   "yaw": 173.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bohyo.p3d",
+   "pos": [
+    996.633,
+    25.0,
+    1114.514
+   ],
+   "yaw": 184.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field_pair.p3d",
+   "pos": [
+    997.847,
+    25.000001907348633,
+    1115.026
+   ],
+   "yaw": 172.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_split.p3d",
+   "pos": [
+    998.919,
+    24.999998092651367,
+    1114.468
+   ],
+   "yaw": 193.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_jizo_child.p3d",
+   "pos": [
+    1001.413,
+    25.0,
+    1115.049
+   ],
+   "yaw": 179.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo_child.p3d",
+   "pos": [
+    1002.409,
+    24.999998092651367,
+    1115.152
+   ],
+   "yaw": 183.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_jizo_child.p3d",
+   "pos": [
+    1003.67,
+    25.0,
+    1115.119
+   ],
+   "yaw": 189.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo_child.p3d",
+   "pos": [
+    1004.757,
+    25.0,
+    1115.182
+   ],
+   "yaw": 182.2,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1004.7017917575382,
+    25.523071229457855,
+    1115.4959295891726
+   ],
+   "yaw": 179.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    1007.229,
+    25.000003814697266,
+    1115.118
+   ],
+   "yaw": 168.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_round_s_plain.p3d",
+   "pos": [
+    1008.193,
+    25.0,
+    1115.075
+   ],
+   "yaw": 168.3,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1009.324,
+    25.0,
+    1115.175
+   ],
+   "yaw": 188.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1009.2978690471604,
+    25.523069322109222,
+    1115.4888851634892
+   ],
+   "yaw": 175.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    991.083,
+    25.0,
+    1117.813
+   ],
+   "yaw": 179.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    992.27,
+    25.0,
+    1117.691
+   ],
+   "yaw": 183.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_ab_leaning.p3d",
+   "pos": [
+    993.342,
+    24.999998092651367,
+    1117.666
+   ],
+   "yaw": 193.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    994.451,
+    25.0,
+    1117.721
+   ],
+   "yaw": 170.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    994.5129417648772,
+    25.52306741476059,
+    1118.0348908947828
+   ],
+   "yaw": 176.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    994.451,
+    25.0,
+    1117.391
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_incense.p3d",
+   "pos": [
+    994.471,
+    25.0,
+    1117.101
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field.p3d",
+   "pos": [
+    996.781,
+    25.0,
+    1117.759
+   ],
+   "yaw": 173.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    997.847,
+    25.000001907348633,
+    1117.661
+   ],
+   "yaw": 190.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_s.p3d",
+   "pos": [
+    998.952,
+    24.999998092651367,
+    1117.789
+   ],
+   "yaw": 188.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    998.9174576242888,
+    25.523069322109222,
+    1118.1028455009518
+   ],
+   "yaw": 174.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    1001.443,
+    25.0,
+    1117.633
+   ],
+   "yaw": 183.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1002.545,
+    25.0,
+    1117.805
+   ],
+   "yaw": 186.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1003.754,
+    25.0,
+    1117.631
+   ],
+   "yaw": 188.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_jizo_child.p3d",
+   "pos": [
+    1005.953,
+    24.999998092651367,
+    1117.678
+   ],
+   "yaw": 172.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_s.p3d",
+   "pos": [
+    1007.131,
+    25.000001907348633,
+    1117.735
+   ],
+   "yaw": 176.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_ab_boat_halo_sunk.p3d",
+   "pos": [
+    1008.254,
+    25.0,
+    1117.775
+   ],
+   "yaw": 162.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field_mound.p3d",
+   "pos": [
+    1009.498,
+    25.0,
+    1117.04
+   ],
+   "yaw": 173.3,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_tall_moss.p3d",
+   "pos": [
+    991.138,
+    25.0,
+    1120.371
+   ],
+   "yaw": 177.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    992.296,
+    24.999998092651367,
+    1120.369
+   ],
+   "yaw": 174.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    992.298184355593,
+    25.523069322109222,
+    1120.682907247882
+   ],
+   "yaw": 177.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    992.296,
+    25.0,
+    1120.039
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_incense.p3d",
+   "pos": [
+    992.316,
+    25.0,
+    1119.749
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    993.289,
+    25.0,
+    1120.446
+   ],
+   "yaw": 183.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    993.3236668145981,
+    25.523069322109222,
+    1120.759915177963
+   ],
+   "yaw": 183.2,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_pillar_pointed.p3d",
+   "pos": [
+    994.6,
+    25.0,
+    1120.469
+   ],
+   "yaw": 177.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    996.864,
+    25.0,
+    1120.415
+   ],
+   "yaw": 190.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_rotted.p3d",
+   "pos": [
+    997.8274400036572,
+    24.981768384575844,
+    1119.7745325603976
+   ],
+   "yaw": 187.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    999.037,
+    24.999996185302734,
+    1120.407
+   ],
+   "yaw": 188.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    1001.361,
+    25.0,
+    1120.369
+   ],
+   "yaw": 181.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1001.3855301399734,
+    25.52306741476059,
+    1120.6828533869848
+   ],
+   "yaw": 174.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_ab_board_broken.p3d",
+   "pos": [
+    1002.581,
+    25.0,
+    1120.549
+   ],
+   "yaw": 190.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1003.587,
+    24.999996185302734,
+    1120.456
+   ],
+   "yaw": 172.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1003.6116510880145,
+    25.523069322109222,
+    1120.769865686276
+   ],
+   "yaw": 174.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field.p3d",
+   "pos": [
+    1004.743,
+    24.999998092651367,
+    1120.367
+   ],
+   "yaw": 185.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    1006.148,
+    24.999998092651367,
+    1120.432
+   ],
+   "yaw": 184.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1008.294,
+    25.0,
+    1120.439
+   ],
+   "yaw": 176.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    1008.294,
+    25.0,
+    1120.109
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_incense.p3d",
+   "pos": [
+    1008.314,
+    25.000001907348633,
+    1119.819
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_s.p3d",
+   "pos": [
+    1009.566,
+    24.999998092651367,
+    1120.411
+   ],
+   "yaw": 191.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    990.878,
+    25.0,
+    1123.042
+   ],
+   "yaw": 191.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    992.002,
+    25.0,
+    1123.055
+   ],
+   "yaw": 174.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_gorinto_s.p3d",
+   "pos": [
+    993.369,
+    25.0,
+    1123.002
+   ],
+   "yaw": 190.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_tall_moss.p3d",
+   "pos": [
+    995.524,
+    25.0,
+    1123.116
+   ],
+   "yaw": 171.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_pillar.p3d",
+   "pos": [
+    996.664,
+    25.0,
+    1123.122
+   ],
+   "yaw": 186.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    997.933,
+    25.0,
+    1123.053
+   ],
+   "yaw": 171.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    997.9014183551353,
+    25.523069322109222,
+    1123.3668587549282
+   ],
+   "yaw": 186.3,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field_pair.p3d",
+   "pos": [
+    999.147,
+    25.0,
+    1123.165
+   ],
+   "yaw": 189.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_tall_moss.p3d",
+   "pos": [
+    1001.467,
+    24.999998092651367,
+    1123.111
+   ],
+   "yaw": 181.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1002.504,
+    25.0,
+    1122.973
+   ],
+   "yaw": 186.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1002.4246215952768,
+    25.523069322109222,
+    1123.2869260055043
+   ],
+   "yaw": 178.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_ab_leaning.p3d",
+   "pos": [
+    1003.701,
+    25.0,
+    1123.125
+   ],
+   "yaw": 170.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    1004.915,
+    25.0,
+    1123.065
+   ],
+   "yaw": 184.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    1004.915,
+    25.0,
+    1122.735
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_incense.p3d",
+   "pos": [
+    1004.935,
+    25.0,
+    1122.445
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_gorinto_stack.p3d",
+   "pos": [
+    1007.1,
+    25.0,
+    1123.065
+   ],
+   "yaw": 184.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_ab_boat_halo_sunk.p3d",
+   "pos": [
+    1008.326,
+    25.000001907348633,
+    1123.107
+   ],
+   "yaw": 175.3,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bohyo_s.p3d",
+   "pos": [
+    1009.431,
+    25.0,
+    1122.437
+   ],
+   "yaw": 185.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_gorinto_heap.p3d",
+   "pos": [
+    991.007,
+    25.004858276367187,
+    1125.668
+   ],
+   "yaw": 178.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_gorinto_s.p3d",
+   "pos": [
+    993.319,
+    25.007056640625,
+    1125.71
+   ],
+   "yaw": 187.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board_tall_moss.p3d",
+   "pos": [
+    994.467,
+    25.00698225402832,
+    1125.694
+   ],
+   "yaw": 177.7,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_ab_gorinto_fallen.p3d",
+   "pos": [
+    995.684,
+    25.003919311523436,
+    1125.681
+   ],
+   "yaw": 172.6,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_pillar.p3d",
+   "pos": [
+    996.679,
+    25.00600895690918,
+    1125.7
+   ],
+   "yaw": 175.9,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    996.679,
+    25.005844116210938,
+    1125.24
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_hokyointo.p3d",
+   "pos": [
+    997.975,
+    25.005598876953126,
+    1125.613
+   ],
+   "yaw": 186.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    1001.25,
+    25.006659912109374,
+    1125.626
+   ],
+   "yaw": 181.1,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_gorinto_l.p3d",
+   "pos": [
+    1003.175,
+    25.00456072998047,
+    1125.605
+   ],
+   "yaw": 191.8,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_ab_hokyointo_broken.p3d",
+   "pos": [
+    1004.823,
+    25.00292121887207,
+    1125.681
+   ],
+   "yaw": 166.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "pos": [
+    1005.988,
+    25.00685446166992,
+    1125.667
+   ],
+   "yaw": 188.3,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "pos": [
+    1006.012986265273,
+    25.532335221767426,
+    1125.9809311388913
+   ],
+   "yaw": 180.4,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    1005.988,
+    25.00629997253418,
+    1125.337
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_field.p3d",
+   "pos": [
+    1007.114,
+    25.006228851318358,
+    1125.534
+   ],
+   "yaw": 185.5,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "pos": [
+    1009.553,
+    25.00698225402832,
+    1125.694
+   ],
+   "yaw": 168.3,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "pos": [
+    1009.553,
+    25.006425857543945,
+    1125.364
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_chozubachi_small.p3d",
+   "pos": [
+    1012.0,
+    25.0,
+    1112.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_bucket_rack.p3d",
+   "pos": [
+    1012.2,
+    25.0,
+    1109.9
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_rack.p3d",
+   "pos": [
+    1011.9,
+    25.0,
+    1114.4
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_m.p3d",
+   "pos": [
+    1012.0,
+    25.0,
+    1117.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_bib.p3d",
+   "pos": [
+    1012.0,
+    25.0,
+    1117.72
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_m.p3d",
+   "pos": [
+    1012.0,
+    25.0,
+    1118.44
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_halo.p3d",
+   "pos": [
+    1012.0,
+    25.0,
+    1119.16
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_bib.p3d",
+   "pos": [
+    1012.0,
+    25.0,
+    1119.88
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_m.p3d",
+   "pos": [
+    1012.0,
+    25.0,
+    1120.6
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\roadside\\jp_s_stone_jizo_ab_tipped.p3d",
+   "pos": [
+    1013.2,
+    25.0,
+    1121.9
+   ],
+   "yaw": 30.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_ab_fallen.p3d",
+   "pos": [
+    996.6508864219604,
+    25.413172245025635,
+    1114.2983461950862
+   ],
+   "yaw": 30.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_ab_fallen.p3d",
+   "pos": [
+    1005.6220971973851,
+    25.413172245025635,
+    1118.5641396087217
+   ],
+   "yaw": 200.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\grave\\jp_s_grave_wood_ab_fallen.p3d",
+   "pos": [
+    993.4358603912784,
+    25.413114475250243,
+    1124.022097197385
+   ],
+   "yaw": 110.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_ab_scattered.p3d",
+   "pos": [
+    1000.070570242405,
+    25.029999999329448,
+    1120.8590733408928
+   ],
+   "yaw": 0.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_ab_scattered.p3d",
+   "pos": [
+    994.6233046741216,
+    25.030722014710307,
+    1126.773424431976
+   ],
+   "yaw": 70.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_small.p3d",
+   "pos": [
+    1000.33787459562,
+    25.08049999922514,
+    1114.6262578090511
+   ],
+   "yaw": 20.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_small.p3d",
+   "pos": [
+    1006.5957693279258,
+    25.080971114337444,
+    1124.054108182174
+   ],
+   "yaw": 150.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_ab_scattered.p3d",
+   "pos": [
+    1004.9825527876366,
+    25.04291210870445,
+    1129.2573311880599
+   ],
+   "yaw": 210.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_small.p3d",
+   "pos": [
+    989.9807179605785,
+    25.08049999922514,
+    1118.6418588161
+   ],
+   "yaw": 300.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "dz\\plants\\tree\\t_quercusrobur_2f.p3d",
+   "pos": [
+    988.2263831240207,
+    37.48842376708984,
+    1129.23403249475
+   ],
+   "yaw": 40.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_mino_pegs.p3d",
+   "pos": [
+    1073.9489413928986,
+    26.133392024040223,
+    1037.6600000011922
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_tool_wall.p3d",
+   "pos": [
+    1072.54,
+    26.36500005722046,
+    1037.6903445842863
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_utensil_board.p3d",
+   "pos": [
+    1071.33,
+    26.36499981880188,
+    1037.695564122051
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_rope_pegs_2.p3d",
+   "pos": [
+    1070.4399999946356,
+    26.4499981880188,
+    1037.6841186258198
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_sandals_hung_wall.p3d",
+   "pos": [
+    1069.744981970191,
+    26.569999980926514,
+    1037.6862282949687
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_fire_gear.p3d",
+   "pos": [
+    1074.5149999940395,
+    26.714999961853028,
+    1036.6550000071525
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_koyomi.p3d",
+   "pos": [
+    1074.6589999999478,
+    26.599999952316285,
+    1035.15
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tier\\jp_f_yumi_rack_wall.p3d",
+   "pos": [
+    1069.394999998659,
+    26.27000002861023,
+    1036.5506238818168
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_bangasa_hung.p3d",
+   "pos": [
+    1069.398234768808,
+    26.36509780883789,
+    1034.95
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_ofuda_single.p3d",
+   "pos": [
+    1072.91,
+    26.750000047683717,
+    1034.1085999999334
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_kaya_draped.p3d",
+   "pos": [
+    1073.82,
+    27.244999994039535,
+    1034.1831961537898
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_hoshigaki_3.p3d",
+   "pos": [
+    1070.65,
+    27.022499997615814,
+    1034.1795374325663
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_drying_daikon.p3d",
+   "pos": [
+    1069.85,
+    27.300907049775123,
+    1034.18
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_noren_inner_2.p3d",
+   "pos": [
+    1072.0,
+    26.95250000476837,
+    1034.1730000007153
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_taru_cask.p3d",
+   "pos": [
+    1073.9,
+    25.05,
+    1036.75
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_charcoal_bale.p3d",
+   "pos": [
+    1072.95,
+    25.05,
+    1036.8
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_seiro_kama2.p3d",
+   "pos": [
+    1071.8,
+    25.05,
+    1036.7
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_meal_left_zen.p3d",
+   "pos": [
+    1070.480029398203,
+    25.146000000834466,
+    1036.2997484758496
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_enza.p3d",
+   "pos": [
+    1071.8,
+    25.067774999141694,
+    1035.45
+   ],
+   "yaw": 195.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\kitchen\\jp_f_tana_182_3.p3d",
+   "pos": [
+    1079.0,
+    25.05,
+    1037.755
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\kitchen\\jp_f_tana_182_3.p3d",
+   "pos": [
+    1081.0,
+    25.05,
+    1037.755
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\kitchen\\jp_f_tana_136_1.p3d",
+   "pos": [
+    1082.665,
+    25.05,
+    1036.55
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\religious\\jp_f_butsu_set_full.p3d",
+   "pos": [
+    1079.52500000149,
+    26.48536421954632,
+    1037.5825000028312
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\religious\\jp_f_kamidana_set_offerings.p3d",
+   "pos": [
+    1078.95,
+    26.485302722454072,
+    1037.605
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_tokkuri_pair.p3d",
+   "pos": [
+    1078.42,
+    26.44000000357628,
+    1037.605
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\work\\jp_f_choba_set_desk.p3d",
+   "pos": [
+    1079.4648906216025,
+    25.98864999860525,
+    1037.5654603797198
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\work\\jp_f_masu_set.p3d",
+   "pos": [
+    1078.7065956503152,
+    25.991000001132488,
+    1037.5568153592944
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_hiuchi_box.p3d",
+   "pos": [
+    1078.38,
+    25.998000000417232,
+    1037.605
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tier\\jp_f_tea_matcha.p3d",
+   "pos": [
+    1081.55,
+    26.407500001043083,
+    1037.605
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\work\\jp_f_writing_box.p3d",
+   "pos": [
+    1080.7924437642098,
+    26.37749999985099,
+    1037.605
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_basket_zaru.p3d",
+   "pos": [
+    1080.4,
+    26.39050000011921,
+    1037.605
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_tableware_hakozen_stack.p3d",
+   "pos": [
+    1082.515,
+    26.25000001192093,
+    1036.13
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\meal\\jp_f_suribachi_bowl.p3d",
+   "pos": [
+    1082.515,
+    26.123088446259498,
+    1036.5953261762857
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_sewing_box.p3d",
+   "pos": [
+    1082.5125000023843,
+    26.135000002384185,
+    1037.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\religious\\jp_f_butsudan_lacquer.p3d",
+   "pos": [
+    1077.7,
+    25.05,
+    1037.1
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_byobu_makura.p3d",
+   "pos": [
+    1078.55,
+    25.05,
+    1035.05
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_clothes_kimono.p3d",
+   "pos": [
+    1080.1211985137277,
+    25.08408468142152,
+    1035.4686640700545
+   ],
+   "yaw": 190.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_goban_go.p3d",
+   "pos": [
+    1081.75,
+    25.05,
+    1035.05
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_toys_koma.p3d",
+   "pos": [
+    1078.9403943404852,
+    25.082547496259213,
+    1036.1747268336446
+   ],
+   "yaw": 210.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_mirror_stand.p3d",
+   "pos": [
+    1081.55,
+    25.309999990463258,
+    1036.1979999996722
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_shokudai_tall.p3d",
+   "pos": [
+    1077.7,
+    25.05,
+    1035.65
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_straw_bed_pile.p3d",
+   "pos": [
+    1079.7,
+    25.05,
+    1036.85
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\wall\\jp_f_chochin_crest.p3d",
+   "pos": [
+    1080.0,
+    27.21999998807907,
+    1034.18
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\living\\jp_f_iko_robe.p3d",
+   "pos": [
+    1086.4,
+    25.05,
+    1037.45
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\work\\jp_f_izaribata.p3d",
+   "pos": [
+    1089.55,
+    25.05,
+    1037.2
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\work\\jp_f_itoguruma.p3d",
+   "pos": [
+    1087.95,
+    25.05,
+    1037.35
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\work\\jp_f_straw_work_sandal.p3d",
+   "pos": [
+    1086.125185251236,
+    25.13100000023842,
+    1035.8080305278302
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\work\\jp_f_mi.p3d",
+   "pos": [
+    1087.7,
+    25.150461810827256,
+    1036.15
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\work\\jp_f_usu.p3d",
+   "pos": [
+    1089.9,
+    25.05,
+    1035.8
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tier\\jp_f_katanakake_stand.p3d",
+   "pos": [
+    1088.8,
+    25.05,
+    1034.75
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tier\\jp_f_yoroibitsu.p3d",
+   "pos": [
+    1087.55,
+    25.05,
+    1034.9
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tier\\jp_f_manger_trough.p3d",
+   "pos": [
+    1085.95,
+    25.05,
+    1035.05
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tier\\jp_f_fallen_leaf_shoji.p3d",
+   "pos": [
+    1088.95,
+    25.064999999664725,
+    1035.75
+   ],
+   "yaw": 260.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_kaki_curtain_1ken.p3d",
+   "pos": [
+    1089.82,
+    27.348750014305114,
+    1033.9192388361691
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_sandals_sale_eave.p3d",
+   "pos": [
+    1088.0,
+    27.528749961853027,
+    1033.9162282949685
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_bird_cage_hung.p3d",
+   "pos": [
+    1086.18,
+    27.779999990463256,
+    1033.8809999978541
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_ladder_lean.p3d",
+   "pos": [
+    1069.205,
+    25.000001907348633,
+    1035.4
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_charcoal_bales_stack.p3d",
+   "pos": [
+    1069.205,
+    25.0,
+    1037.0
+   ],
+   "yaw": 270.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_farm_tools_lean.p3d",
+   "pos": [
+    1091.0333649498225,
+    25.83991378545761,
+    1036.8050000011922
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_amado_half_open.p3d",
+   "pos": [
+    1090.795,
+    25.0,
+    1035.1
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_travel_gear_set.p3d",
+   "pos": [
+    1068.6356944203376,
+    25.109887287020683,
+    1029.9002875983715
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_footwear_pairs.p3d",
+   "pos": [
+    1070.9724999964237,
+    25.052501134574413,
+    1030.292499999702
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_lantern_fallen_chochin.p3d",
+   "pos": [
+    1073.3901972754363,
+    25.164107352495193,
+    1030.0055747327478
+   ],
+   "yaw": 160.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_stool_std.p3d",
+   "pos": [
+    1075.5,
+    25.0,
+    1030.3
+   ],
+   "yaw": 200.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_tsukimi_stand.p3d",
+   "pos": [
+    1080.888219088316,
+    25.593256533145905,
+    1030.6105889067053
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_potted_stand.p3d",
+   "pos": [
+    1083.2,
+    25.0,
+    1030.3
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_stable_yard_tie_post.p3d",
+   "pos": [
+    1085.9,
+    25.0,
+    1030.2
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_scarecrow_kasa.p3d",
+   "pos": [
+    1089.0,
+    25.0,
+    1030.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_fire_watch_rack.p3d",
+   "pos": [
+    1092.4,
+    25.0,
+    1030.4
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_hasa_low.p3d",
+   "pos": [
+    1069.4,
+    25.0,
+    1025.4
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_kakei_trough.p3d",
+   "pos": [
+    1075.0,
+    25.0,
+    1025.4
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_leaf_pile_broom.p3d",
+   "pos": [
+    1080.2733902215957,
+    25.076929926872253,
+    1024.8057011067867
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_tenbin_spill_boxes.p3d",
+   "pos": [
+    1085.0,
+    25.0,
+    1025.2
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_kago_down.p3d",
+   "pos": [
+    1089.8,
+    25.0,
+    1025.0
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_fishnet_poles.p3d",
+   "pos": [
+    1080.0,
+    25.0,
+    1020.2
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_boat_up.p3d",
+   "pos": [
+    1072.5,
+    25.0,
+    1020.4
+   ],
+   "yaw": 90.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_bench_1ken.p3d",
+   "pos": [
+    1078.2,
+    25.0,
+    1030.5
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
+  },
+  {
+   "p3d": "JP\\site\\street_life\\jp_s_bench_dress_tea.p3d",
+   "pos": [
+    1077.85,
+    25.467500001490116,
+    1030.5
+   ],
+   "yaw": 180.0,
+   "src": "placement:SH1.csv"
   }
  ]
 }

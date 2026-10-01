@@ -53,20 +53,17 @@ STREET = [
     ("jp_s_fire_watch_ladder_tower", 1033.0, 1086.8, 180, "the ward's fire-watch ladder with its bell"),
     ("jp_s_fire_watch_rack", 1028.5, 1085.2, 180, "the ward's buckets and fire hooks on their rack"),
     ("jp_s_kosatsu_std", 1017.5, 1087.5, 180, "the official notice board at the ward corner"),
-    ("jp_s_lantern_sign_tsuji", 1040.2, 1083.2, 180, "the crossroads lantern"),
+    ("jp_s_lantern_sign_tsuji", 1035.9, 1082.9, 180, "the crossroads lantern"),  # SH1: moved 4.3 m west (Edo row grew)
     ("jp_s_fire_tub_full", 1008.9, 1083.2, 0, "a fire tub at the end of the Kamigata row"),
-    ("jp_s_fire_tub_ab_scattered", 1042.0, 1085.3, 0, "a fire tub at the end of the Edo row, its buckets scattered"),
+    ("jp_s_fire_tub_ab_scattered", 1036.1, 1089.8, 0, "a fire tub at the end of the Edo row, its buckets scattered"),  # SH1: moved
     ("jp_s_stone_jizo_bib", 1011.2, 1085.0, 180, "a roadside Jizo with a faded bib"),
     ("jp_s_potted_pair", 984.6, 1076.2, 0, "potted plants beside the post-town house door, dead"),
     ("jp_s_nobori_ab_tattered", 1008.0, 1077.0, 0, "a tattered banner at the inn"),
-    # gutters in front of the bare units (the furnished ones carry their own)
-    ("jp_s_gutter_board_1ken", 987.4, 1082.54, 180, "gutter, Kamigata 3k end unit"),
-    ("jp_s_gutter_board_1ken", 989.3, 1082.54, 180, "gutter, Kamigata 3k end unit"),
-    ("jp_s_gutter_board_1ken", 1002.3, 1082.54, 180, "gutter, Kamigata corner unit"),
-    ("jp_s_gutter_board_1ken", 1004.2, 1082.54, 180, "gutter, Kamigata corner unit"),
-    ("jp_s_gutter_board_1ken", 1045.3, 1082.54, 180, "gutter, Edo 2k end unit"),
-    ("jp_s_gutter_board_1ken", 1049.0, 1082.54, 180, "gutter, Edo board-roof unit"),
-    ("jp_s_gutter_board_1ken", 1050.9, 1082.54, 180, "gutter, Edo board-roof unit"),
+    # gutters in front of the bare units (the furnished ones carry their own). SH1 (2026-10-01): the Kamigata corner,
+    # the Edo 2k end and the Edo board-roof unit became S1 demo shops (their own gutters); the Kamigata end unit moved
+    # 9.356 m west to the new row end (registry SH1_MOVED)
+    ("jp_s_gutter_board_1ken", 978.044, 1082.54, 180, "gutter, Kamigata 3k end unit"),
+    ("jp_s_gutter_board_1ken", 979.944, 1082.54, 180, "gutter, Kamigata 3k end unit"),
     ("jp_s_gutter_board_1ken", 996.3, 1077.7, 0, "gutter, post-town row middle"),
     ("jp_s_gutter_board_1ken", 998.2, 1077.7, 0, "gutter, post-town row middle"),
     ("jp_s_gutter_board_1ken", 1001.9, 1077.7, 0, "gutter, post-town row end"),

@@ -447,3 +447,34 @@ S1_SHOPS = [
           "shop set: dolls"),
 ]
 BUILDINGS += S1_SHOPS
+
+
+# ------------------------------------------------------------------------------------------------ SH1 showcase
+# SH1 (2026-10-01, spikes/SH1/SH1_PROGRESS.md): S1's six demo shops go onto the C1 test street. Three take the spot
+# of a bare unit of their frontage / row-end type; the other three are middle units whose type is only on the street
+# as C3's furnished shops, so they are inserted: the Kamigata row grows two units west (its bare end unit moves to
+# the new west end), the Edo row one unit west. Positions: spikes/C1/layout.py place_row, lot line to lot line
+# (python spikes/SH1/street_sh1.py prints and checks them). Three bare open board sheds hold the life-layer gallery.
+_SH1_N = "test island: C1 test street z 1080, north side, front facing south"
+SH1_SHOPS = {
+    # demo shop key: (x, replaces / inserted)
+    "s1_th_kamigata_3k_endr_mochiya": (1003.238, "replaces the bare th_kamigata_3k_cornerr_torir (row east end)"),
+    "s1_th_kamigata_2k_middle_tabako": (989.236, "inserted west of the paper shop"),
+    "s1_th_kamigata_3k_middle_kyo_ningyo": (984.558, "inserted west of the tobacco shop"),
+    "s1_th_edo_2k_middle_board_shitate": (1050.824, "inserted west of the cloth dealer"),
+    "s1_th_edo_3k_middle_kanamono": (1046.146, "replaces the bare th_edo_3k_middle_toril_board"),
+    "s1_th_edo_3k_endl_kusuri": (1040.590, "replaces the bare th_edo_2k_endl_torir (row west end, one ken wider)"),
+}
+SH1_REMOVED = ["th_kamigata_3k_cornerr_torir", "th_edo_3k_middle_toril_board", "th_edo_2k_endl_torir"]
+SH1_MOVED = {"th_kamigata_3k_endl_toril": (979.002, 25.0, 1087.640)}
+SH1_GALLERY = {"shed_open_board": [(1072.0, 25.0, 1036.0), (1080.0, 25.0, 1036.0), (1088.0, 25.0, 1036.0)]}
+for _k in SH1_REMOVED:
+    get(_k)["placements"] = []
+for _k, _p in SH1_MOVED.items():
+    get(_k)["placements"] = [{"pos": _p, "yaw": 180.0, "where": _SH1_N + " (SH1: moved to the new row end)"}]
+for _k, (_x, _why) in SH1_SHOPS.items():
+    get(_k)["placements"] = [{"pos": (_x, 25.0, 1087.640), "yaw": 180.0, "where": _SH1_N + " (SH1 demo shop: %s)" % _why}]
+for _k, _ps in SH1_GALLERY.items():
+    get(_k)["placements"] = [{"pos": _p, "yaw": 180.0,
+                              "where": "test island: SH1 life-layer gallery (east yard), open front facing south"}
+                             for _p in _ps]

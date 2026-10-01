@@ -181,10 +181,14 @@ def build_mapgroups(info):
         name = attr(e, "name")
         pos = [float(v) for v in (attr(e, "pos") or "0 0 0").split()]
         snap = None
+        best = 10.0
         for o in placed:
             base = os.path.splitext(os.path.basename(o["p3d"].replace("\\", "/")))[0].lower()
-            if name and name.lower() == "land_" + base and math.hypot(o["pos"][0] - pos[0], o["pos"][2] - pos[2]) < 10.0:
-                snap = o
+            d = math.hypot(o["pos"][0] - pos[0], o["pos"][2] - pos[2])
+            # SH1 (2026-10-01): the NEAREST object of the class (was: the last one within 10 m, which sent two of
+            # three identical sheds 8 m apart to their neighbours' spots)
+            if name and name.lower() == "land_" + base and d < best:
+                snap, best = o, d
         if snap:
             yaw = snap["yaw"]
             new = '<group name="%s" pos="%.6f %.6f %.6f" rpy="0.000000 0.000000 %.6f" a="%.6f" />' % (
