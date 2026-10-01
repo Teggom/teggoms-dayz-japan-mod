@@ -13,3 +13,5 @@
 2026-10-01 10:22:55 | GROUP DONE | F tools off the wall | cause: C3 site() spots by eye, 0.42-0.51 m off the wall (spikes/FB1/leancheck.py); result: Kanto tools + charcoal, Kinai tools, komeya bundle, inn firewood x2, machiya tenbin, gallery L57 re-seated (touch, D8 overlap-free); 4+1 rebuilt, pass | 5h 22% wk 47%
 2026-10-01 10:22:55 | GROUP START | G low hill-stair torii | from ~10:10 (logged late) | 5h 22% wk 47%
 2026-10-01 10:22:55 | GROUP DONE | G low hill-stair torii | cause: S70 is the medium stone torii, nuki 1.93 m over its base -> 1.66 m clear on the slope (S63 1.81); result: S70 + S63 -> large stone torii (2.60 / 2.79 m clear, spikes/FB1/toriiclear.py), basin S74 moved 0.5 m clear | 5h 22% wk 47%
+2026-10-01 10:24:03 | WAITED FOR FP1 | start | H needs FP1's END (collapsed torii, ladder, well) | 5h 22% wk 47%
+2026-10-01 10:35:11 | CHECKS DONE | FB1 | 128/128 buildings pass (8,190 checks: machiya 78, furnished machiya 137, toilet 20, all family shellchecks), bindcheck 128/128, combos 60/60 (H world checks follow) | 5h 28% wk 47%
