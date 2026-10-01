@@ -380,3 +380,8 @@
   wall, doorway sills, a wall/floor in the mochi building); usu/kine float; Kinai gable white band too massive ('real?');
   farmhouse partitions stop short of the roof; two-storey divider short + wall gaps; rope 2.5x more segments.
   Screenshots in test/feedback/2026-10-01_recheck/. **FP2 + FB2 launched** (they push to GitHub themselves).
+- 2026-10-01: **FP2 DONE** (466k / 41 min: woodpile.py firewood + redrawn end grain, usu/kine seated, ropekit.py 2.5x) and **FB2 DONE**
+  (475k / 64 min: zfight.py C20 102,726 -> 0 coplanar pairs; Kinai gable rebuilt to the real yamato-mune form (plastered gable
+  wall 0.26 m above the thatch + tile cap; still shallower thatch + no lower kitchen roof: Stephen's call); partitions end at
+  head beams (C21) + an 8 cm loft slit closed in every town house / inn / machiya; grand inn divider to the roof + missing
+  posts (C22)). 128/128 buildings, 8,574 checks; machiya now 81, furnished 140. **Re-check: TEST_CHECKLIST.md (~10 min).**
