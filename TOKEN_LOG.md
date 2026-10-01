@@ -30,6 +30,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 18:41 (local) | C3 (baseline) | launched: kura + furnished variants of every wave-1 type + street/hamlet dressing + the bundled walk, time log TIMELOG_C3.md | - | - | before: **33%** (5-hour 0%, fresh window) |
 | 2026-09-30 19:53 (local) | C3 | 3 kura shells + 14 furnished variants (every wave-1 type) + street/hamlet dressing (101 objects) + the ~28 min walk | **793k** (295 tool calls) | 71 min | **36%** (5-hour 20%): C3 alone = ~3% weekly, ~20% of a 5-hour window |
 | 2026-09-30 20:26 (local) | W2 + S1 (baseline, CONCURRENT) | W2: torii/lanterns/steps/basins/graves (+ Stephen's rope, moss and 2-3x grave variety); S1: the 22 shop dressing sets (spec + build + demo shops). Time logs TIMELOG_W2.md / TIMELOG_S1.md; their usage % readings include both agents | - | - | before: **36%** (5-hour 22%) |
+| 2026-09-30 ~21:00 (local) | A4 (opus-medium, research only) | the lightweight 'what are we missing' audit: research/AUDIT_MISSING.md (17 + 8 system gaps, 9 + 1 Japanese details) | **138k** (33 tool calls) | 9 min | ran alongside W2 + S1 |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
