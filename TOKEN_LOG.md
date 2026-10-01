@@ -33,6 +33,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-09-30 ~21:00 (local) | A4 (opus-medium, research only) | the lightweight 'what are we missing' audit: research/AUDIT_MISSING.md (17 + 8 system gaps, 9 + 1 Japanese details) | **138k** (33 tool calls) | 9 min | ran alongside W2 + S1 |
 | 2026-09-30 ~21:01 (local) | W2 | 7 wave-2 outdoor items = 91 models (torii 30 with rope / shide / moss, lanterns 13, steps 13, basin 4, gravestones 24, grave wood 7), jp_site.pbo 301 classes | **529k** (176 tool calls) | 35 min | ran alongside S1 + A4 |
 | 2026-09-30 ~21:12 (local) | W3 (baseline) | launched: 4-6 more wooden grave posts (bohyo), small job, alongside S1 | - | - | before: **39%** (5-hour 42%) |
+| 2026-09-30 ~21:19 (local) | W3 | 6 wooden grave post (bohyo) variants, jp_site.pbo 307 classes | **163k** (65 tool calls) | 7 min | ran alongside S1 |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

@@ -110,7 +110,12 @@
 - **W2's material gaps, accepted** (do after S1, which owns materials until it finishes): more posthumous-name cells
   in the carved-text atlas (grave variety), Sanskrit seed syllables for the gorinto / hokyointo stones (built blank),
   an outdoor bare-earth material for grave mounds (they use leaf litter now).
-- **More wooden grave posts (bohyo):** 4-6 variants, agent W3 launched 2026-09-30.
+- **More wooden grave posts (bohyo): DONE** (W3, 163k / 7 min): 6 variants (_bohyo_new, _bohyo_s, _bohyo_roof,
+  _ab_bohyo_lean, _ab_bohyo_split, _ab_bohyo_rotted), roof cap era IN but uncommon (~1 in 8; W2_ERA.md W5),
+  jp_site.pbo 307 classes. Commits 15c1c8a, 411f75b. Material gaps added to the list above: a pale NEW-wood and a true
+  silver-grey weathered wood (the new vs grey posts differ little now), ink posthumous names (new sumi cells).
+  Lead note: binarize rewrites every ODOL with byte noise; 169 unchanged site models were restored to HEAD (no geometry
+  change) to keep the repo clean.
 
 ### Parked (not in this plan until Stephen raises them)
 - Terrain-tool size test; the real map build; more horizontal in-between roads
