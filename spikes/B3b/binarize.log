@@ -1,3 +1,164 @@
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\grave D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\grave D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\site\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\site\grave\jp_s_grave_stones_ab_board_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_ab_board_broken.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_ab_board_broken.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_ab_boat_halo_sunk.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_ab_boat_halo_sunk.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_ab_boat_halo_sunk.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_ab_gorinto_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_ab_gorinto_fallen.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_ab_gorinto_fallen.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_ab_hokyointo_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_ab_hokyointo_broken.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_ab_hokyointo_broken.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_ab_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_ab_leaning.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_ab_leaning.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_ab_round_lean.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_ab_round_lean.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_ab_round_lean.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_board.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_board.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_board.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_board_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_board_s.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_board_s.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_board_tall_moss.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_boat_halo.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_boat_halo.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_boat_halo.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_boat_halo_child.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_boat_halo_child.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_boat_halo_child.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_field.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_field.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_field.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_field_mound.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_field_mound.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_field_mound.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_field_pair.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_field_pair.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_field_pair.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_gorinto_heap.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_gorinto_heap.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_gorinto_heap.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_gorinto_l.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_gorinto_l.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_gorinto_l.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_gorinto_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_gorinto_s.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_gorinto_s.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_gorinto_stack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_gorinto_stack.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_gorinto_stack.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_hokyointo.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_hokyointo.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_hokyointo.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_jizo_child.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_jizo_child.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_jizo_child.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_pillar.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_pillar.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_pillar.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_pillar_pointed.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_pillar_pointed.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_pillar_pointed.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_round.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_round.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_round.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_stones_round_s_plain.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_round_s_plain.p3d
+<model = "P:\JP\site\grave\jp_s_grave_stones_round_s_plain.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_ab_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_ab_fallen.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_ab_fallen.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_bohyo.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_bohyo.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_bohyo.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_bucket_rack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_bucket_rack.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_bucket_rack.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_incense.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_incense.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_incense.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_rack.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_rack.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_rack.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_sotoba_x3.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d">
+</model>
+Convert model P:\JP\site\grave\jp_s_grave_wood_tubes.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_wood_tubes.p3d
+<model = "P:\JP\site\grave\jp_s_grave_wood_tubes.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_ab_board_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_ab_boat_halo_sunk.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_ab_gorinto_fallen.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_ab_hokyointo_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_ab_leaning.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_ab_round_lean.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_board.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_board_s.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_board_tall_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_boat_halo.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_boat_halo_child.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_field.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_field_mound.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_field_pair.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_gorinto_heap.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_gorinto_l.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_gorinto_s.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_gorinto_stack.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_hokyointo.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_jizo_child.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_pillar.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_pillar_pointed.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_round.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_stones_round_s_plain.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_ab_fallen.p3d: 0.02,0.47
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_bohyo.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_bucket_rack.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_incense.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_rack.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_sotoba_x3.p3d: 0.00,-0.01
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\grave\jp_s_grave_wood_tubes.p3d: 0.00,0.00
+
 C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\roadside D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\roadside *.p3d
 
 BINARIZE rev.163709
@@ -150,6 +311,283 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_l.p3d: 0.0
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_m.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_offer.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_stone_jizo_s.p3d: 0.00,0.00
+
+C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\shrine D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine *.p3d
+
+BINARIZE rev.163709
+"C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe" -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\shrine D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine *.p3d
+Binarize started
+Note: 'HouseNoDestruct' is declared, but definition was not found. Creating empty class (source: P:\JP\site\config.cpp)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory required 0.0 MB (max 8063.6 MB)
+Warning: Terrain grid 0.5 will be too slow, should use 3.1
+Convert model P:\JP\site\shrine\jp_s_chozubachi_ab_dry.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_chozubachi_ab_dry.p3d
+<model = "P:\JP\site\shrine\jp_s_chozubachi_ab_dry.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_chozubachi_large.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_chozubachi_large.p3d
+<model = "P:\JP\site\shrine\jp_s_chozubachi_large.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_chozubachi_natural.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_chozubachi_natural.p3d
+<model = "P:\JP\site\shrine\jp_s_chozubachi_natural.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_chozubachi_small.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_chozubachi_small.p3d
+<model = "P:\JP\site\shrine\jp_s_chozubachi_small.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_ab_toppled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_ab_toppled.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_ab_toppled.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_joyato.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_joyato.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_joyato.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_kasuga_18.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_kasuga_18.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_kasuga_18.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_kasuga_18_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_kasuga_18_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_kasuga_18_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_kasuga_24.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_kasuga_24.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_kasuga_24.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_kasuga_24_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_kasuga_24_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_kasuga_24_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_kasuga_30.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_kasuga_30.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_kasuga_30.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_kasuga_30_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_kasuga_30_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_kasuga_30_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_oki.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_oki.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_oki.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_oki_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_oki_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_oki_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_square_24.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_square_24.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_square_24.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_lantern_square_24_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_square_24_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_lantern_square_24_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_ab_heaved.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_ab_heaved.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_ab_heaved.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_ab_heaved_rough.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_ab_heaved_rough.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_ab_heaved_rough.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_cheek_3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_cheek_3.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_cheek_3.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_cheek_6.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_cheek_6.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_cheek_6.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_dressed_3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_dressed_3.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_dressed_3.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_dressed_3_narrow.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_dressed_3_narrow.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_dressed_3_narrow.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_dressed_3_wide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_dressed_3_wide.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_dressed_3_wide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_dressed_6.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_dressed_6.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_dressed_6.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_dressed_6_wide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_dressed_6_wide.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_dressed_6_wide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_landing.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_landing.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_landing.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_landing_wide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_landing_wide.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_landing_wide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_rough_3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_rough_3.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_rough_3.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_steps_rough_3_narrow.p3d
+<model = "P:\JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_ab_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_ab_broken.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_ab_broken.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_l.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_l.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_l.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_l_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_m.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_m.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_m.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_m_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_m_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_m_rope_shide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_s.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_s.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_s_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_s_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_s_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_rope.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_s_rope.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_stone_s_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_stone_s_rope_shide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_ab_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_ab_leaning.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_ab_leaning.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_ab_leaning_shu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_ab_leaning_shu.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_ab_leaning_shu.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_ab_rotted.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_ab_rotted.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_ab_rotted.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_mini.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_mini.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_mini.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_mini_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_mini_rope.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_mini_rope.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_mini_shu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_mini_shu.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_mini_shu.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_myojin.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_moss_rope.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_rope.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_rope.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_rope_shide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_shu.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_shu.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_shu.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_rope.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_rope.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d
+<model = "P:\JP\site\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d">
+</model>
+
+FileServer MaxCacheSize = 23987 MB
+No entry '.CfgAmmo'.
+No entry '.CfgNonAIVehicles'.
+No entry '.CfgWeapons'.
+No entry '.CfgMagazines'.
+Warning: CfgVehicles missing in PreloadConfig - may slow down vehicle creation
+No entry '.CfgDefaultSettings'.
+No entry '.defaultVisibility'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultTerrainGrid'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.defaultObjectViewDistance'.
+Trying to access error value.
+No entry '.CfgDefaultSettings'.
+No entry '.hazeDefaultDistance'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTexture'.
+Trying to access error value.
+No entry '.CfgWorlds'.
+No entry '.DefaultWorld'.
+No entry '.skyTextureR'.
+Trying to access error value.
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_chozubachi_ab_dry.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_chozubachi_large.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_chozubachi_natural.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_chozubachi_small.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_ab_toppled.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_joyato.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_kasuga_18.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_kasuga_18_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_kasuga_24.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_kasuga_24_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_kasuga_30.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_kasuga_30_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_oki.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_oki_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_square_24.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_square_24_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_ab_heaved.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_ab_heaved_rough.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_cheek_3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_cheek_6.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_dressed_3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_dressed_3_narrow.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_dressed_3_wide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_dressed_6.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_dressed_6_wide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_landing.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_landing_wide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_rough_3.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_ab_broken.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_l.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_l_rope_shide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_m.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_m_rope_shide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_s.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_s_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_s_rope.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_stone_s_rope_shide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_ab_leaning.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_ab_leaning_shu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_ab_rotted.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_mini.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_mini_rope.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_mini_shu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_myojin.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_myojin_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_myojin_moss_rope.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_myojin_rope.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_myojin_rope_shide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_myojin_shu.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_shinmei.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_shinmei_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_shinmei_rope.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d: 0.00,0.00
 
 C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\site -binpath=P:\bin P:\JP\site\street D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\street *.p3d
 

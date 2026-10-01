@@ -1,0 +1,826 @@
+{
+ "id": "jp_s_torii_stone",
+ "build_list": {
+  "name": "Stone torii (ishi-torii): granite myojin form with donor inscription",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "abandoned_state": "Unchanged but for lichen streaks under the kasagi and moss on its top; one broken by a quake as a landmark oddity.",
+  "placement_rule": "At town shrine approaches and at the first torii of a sando; a village shrine gets either stone or wood, not both.",
+  "lod_budget": "medium site object <=1,500 faces LOD0",
+  "dimensions": {
+   "small_m": {
+    "value": "span 1.82, height 2.71",
+    "source": "O11"
+   },
+   "medium_m": {
+    "value": "span 2.5, height 2.8 (posts nearly as thick as the span suggests: squat)",
+    "source": "O12"
+   },
+   "large_m": {
+    "value": "span 2.7-3.6, height 3.5-4.5 (town shrines)",
+    "source": "O13 (3.51 m high)"
+   },
+   "post_d_m": {
+    "value": "0.30-0.40, slight batter inward",
+    "assumed": true,
+    "reason": "assumed from k22"
+   }
+  },
+  "refs": [
+   {
+    "id": "k40_motoki_torii",
+    "shows": "Motoki stone torii, Yamagata: Heian myojin form still standing (photo)",
+    "period_image": false
+   },
+   {
+    "id": "c09_himeji",
+    "shows": "granite colour context",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "shrine",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "donor text on the right-hand post (carved-text atlas: 1682 village / 1697)",
+  "mossy variants only for the small village size (W2_ERA T5)",
+  "_ab_broken is rare: a landmark oddity"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_s.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_S",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii, span 1.82 (village)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 212,
+    "Resolution 2": 116,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -1.324,
+    1.324,
+    -0.102,
+    2.81,
+    -0.28,
+    0.28
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.31,
+    -0.251,
+    1.31,
+    0.251
+   ],
+   "roadway": false,
+   "mass_kg": 3500.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_tenna2_muraju"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.71,
+     "measured": 2.71,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 1.84,
+   "rope_z": 0.125,
+   "rope_span": 1.442,
+   "rope": "none",
+   "moss": false,
+   "donor_text": "hono_tenna2_muraju",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_s.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_s_rope.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_S_Rope",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii 1.82 with a straw rope",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 374,
+    "Resolution 2": 118,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -1.324,
+    1.324,
+    -0.102,
+    2.81,
+    -0.28,
+    0.28
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.31,
+    -0.251,
+    1.31,
+    0.251
+   ],
+   "roadway": false,
+   "mass_kg": 3500.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_tenna2_muraju"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.71,
+     "measured": 2.71,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 1.84,
+   "rope_z": 0.125,
+   "rope_span": 1.442,
+   "rope": "rope",
+   "moss": false,
+   "donor_text": "hono_tenna2_muraju",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_s_rope.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_s_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_S_Rope_Shide",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii 1.82, straw rope and shide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 376,
+    "Resolution 2": 118,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -1.324,
+    1.324,
+    -0.102,
+    2.81,
+    -0.28,
+    0.28
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.31,
+    -0.251,
+    1.31,
+    0.251
+   ],
+   "roadway": false,
+   "mass_kg": 3500.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_tenna2_muraju"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.71,
+     "measured": 2.71,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 1.84,
+   "rope_z": 0.125,
+   "rope_span": 1.442,
+   "rope": "rope+shide",
+   "moss": false,
+   "donor_text": "hono_tenna2_muraju",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_s_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_s_moss.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_S_Moss",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii 1.82, mossy (rural)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 233,
+    "Resolution 2": 116,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -1.324,
+    1.324,
+    -0.102,
+    2.814,
+    -0.28,
+    0.28
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.31,
+    -0.251,
+    1.31,
+    0.251
+   ],
+   "roadway": false,
+   "mass_kg": 3500.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_tenna2_muraju"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.71,
+     "measured": 2.71,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 1.84,
+   "rope_z": 0.125,
+   "rope_span": 1.442,
+   "rope": "none",
+   "moss": true,
+   "donor_text": "hono_tenna2_muraju",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_s_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_s_moss_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_S_Moss_Rope_Shide",
+   "variant": "s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii 1.82, mossy, rope and shide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 397,
+    "Resolution 2": 118,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -1.324,
+    1.324,
+    -0.102,
+    2.814,
+    -0.28,
+    0.28
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.31,
+    -0.251,
+    1.31,
+    0.251
+   ],
+   "roadway": false,
+   "mass_kg": 3500.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_tenna2_muraju"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.71,
+     "measured": 2.71,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 1.84,
+   "rope_z": 0.125,
+   "rope_span": 1.442,
+   "rope": "rope+shide",
+   "moss": true,
+   "donor_text": "hono_tenna2_muraju",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_s_moss_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_m.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_M",
+   "variant": "m",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii, span 2.5",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 212,
+    "Resolution 2": 116,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -1.685,
+    1.685,
+    -0.103,
+    2.91,
+    -0.35,
+    0.35
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.67,
+    -0.314,
+    1.67,
+    0.314
+   ],
+   "roadway": false,
+   "mass_kg": 5000.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_genroku10"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.8,
+     "measured": 2.8,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 1.88,
+   "rope_z": 0.135,
+   "rope_span": 2.039,
+   "rope": "none",
+   "moss": false,
+   "donor_text": "hono_genroku10",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_m.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_m_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_M_Rope_Shide",
+   "variant": "m",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii 2.5, straw rope and shide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 384,
+    "Resolution 2": 118,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -1.685,
+    1.685,
+    -0.103,
+    2.91,
+    -0.35,
+    0.35
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.67,
+    -0.314,
+    1.67,
+    0.314
+   ],
+   "roadway": false,
+   "mass_kg": 5000.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_genroku10"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.8,
+     "measured": 2.8,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 1.88,
+   "rope_z": 0.135,
+   "rope_span": 2.039,
+   "rope": "rope+shide",
+   "moss": false,
+   "donor_text": "hono_genroku10",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_m_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_l.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_L",
+   "variant": "l",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii, span 3.6 (town)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 212,
+    "Resolution 2": 116,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -2.419,
+    2.419,
+    -0.104,
+    4.36,
+    -0.438,
+    0.438
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -2.4,
+    -0.393,
+    2.4,
+    0.393
+   ],
+   "roadway": false,
+   "mass_kg": 11000.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_genroku10"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 3.6,
+     "measured": 3.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 4.2,
+     "measured": 4.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.89,
+   "rope_z": 0.16,
+   "rope_span": 3.01,
+   "rope": "none",
+   "moss": false,
+   "donor_text": "hono_genroku10",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_l.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_l_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_L_Rope_Shide",
+   "variant": "l",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone torii 3.6, straw rope and shide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 398,
+    "Resolution 2": 118,
+    "Resolution 3": 36,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -2.419,
+    2.419,
+    -0.104,
+    4.36,
+    -0.438,
+    0.438
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -2.4,
+    -0.393,
+    2.4,
+    0.393
+   ],
+   "roadway": false,
+   "mass_kg": 11000.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_genroku10"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 3.6,
+     "measured": 3.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 4.2,
+     "measured": 4.2,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.89,
+   "rope_z": 0.16,
+   "rope_span": 3.01,
+   "rope": "rope+shide",
+   "moss": false,
+   "donor_text": "hono_genroku10",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_l_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_stone_ab_broken.p3d",
+   "class": "StaticObj_JP_S_Torii_Stone_Ab_Broken",
+   "variant": "m",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Stone torii, kasagi fallen in two pieces (quake)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 217,
+    "Resolution 2": 120,
+    "Resolution 3": 38,
+    "Geometry": 86,
+    "View Geometry": 86,
+    "Fire Geometry": 86
+   },
+   "bbox": [
+    -1.891,
+    1.839,
+    -0.103,
+    2.422,
+    -0.35,
+    2.36
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.903,
+    -0.314,
+    1.846,
+    1.856
+   ],
+   "roadway": false,
+   "mass_kg": 5000.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_genroku10"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.5,
+     "measured": 2.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.8,
+     "measured": 2.8,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned (rare, a landmark oddity): kasagi fallen in two pieces in front of the posts"
+   ],
+   "rope_y": 1.88,
+   "rope_z": 0.135,
+   "rope_span": 2.039,
+   "rope": "none",
+   "moss": false,
+   "donor_text": "hono_genroku10",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_stone_ab_broken.p3d"
+  }
+ ]
+}

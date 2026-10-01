@@ -1,0 +1,1555 @@
+{
+ "id": "jp_s_grave_stones",
+ "build_list": {
+  "name": "Graveyard stones: the 1730 mix (board-shaped, boat-halo, round-headed, square pillar, gorinto, hokyointo)",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Graves are the one place that looks almost as before: lichen and moss heavier, some stones leaning, gorinto top rings fallen; weeds between plots.",
+  "placement_rule": "Behind or beside temples on slopes, in rows facing the path; family graves at field edges in the Kanto (2-6 stones); single traveller graves by roads.",
+  "lod_budget": "small prop <=300 faces LOD0 per stone",
+  "dimensions": {
+   "board_shaped_m": {
+    "value": "0.6-0.9 high x 0.30 x 0.15, pointed-arch top, on 1-2 bases",
+    "assumed": true,
+    "reason": "O05 gives the dating, not sizes; sizes assumed from surveyed examples"
+   },
+   "boat_halo_m": {
+    "value": "0.5-0.9 high, figure in relief",
+    "source": "O06 (form, dating); size assumed"
+   },
+   "round_headed_m": {
+    "value": "0.6-0.9 high x 0.30 x 0.20 (kushigata)",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "square_pillar_m": {
+    "value": "0.6-0.9 shaft + 2-3 bases 0.15 each",
+    "assumed": true,
+    "reason": "rising, rare in 1730 (OUTDOOR_LIST §3.3)"
+   },
+   "gorinto_m": {
+    "value": "0.6 (commoner) to 2.0 (samurai)",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "mix_1730": {
+    "value": "board 35 %, boat-halo 30 %, round-headed 20 %, square pillar 5 %, gorinto / hokyointo 10 %",
+    "source": "O05, O06, OUTDOOR_LIST §3.3 (reading)"
+   }
+  },
+  "refs": [
+   {
+    "id": "c24_jizo_cemetery",
+    "shows": "Jizo and gravestones, weathered stone",
+    "period_image": false
+   },
+   {
+    "id": "k25_gorinto",
+    "shows": "gorinto five-ring stupa (photo)",
+    "period_image": false
+   },
+   {
+    "id": "k26_gorinto_gamou",
+    "shows": "large gorinto grave (photo)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "grave",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "1730 mix for the placement agent (W2_ERA): board 30 %, boat-halo 25 %, round 12 %, field stones / mounds 15 %, child Jizo 5 %, square pillar 5 %, gorinto / hokyointo 8 %",
+  "irregular rows: 0.9 m plot grid jittered +-0.15 m and +-12 deg, mixed heights, gaps",
+  "inscriptions: two posthumous names (1705, 1724) from the carved-text atlas, cropped for variety; no family-name stones (Meiji)",
+  "abandoned share: about 1 stone in 4 leaning / sunk / broken"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_board.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Board",
+   "variant": "board",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Board-shaped gravestone (itabi) on a base, name and date",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 29,
+    "Resolution 2": 15,
+    "Geometry": 15,
+    "View Geometry": 15,
+    "Fire Geometry": 15
+   },
+   "bbox": [
+    -0.24,
+    0.24,
+    -0.05,
+    0.75,
+    -0.162,
+    0.16
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.24,
+    -0.16,
+    0.24,
+    0.16
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.62,
+     "measured": 0.62,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "stone_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_board.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_board_s.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Board_S",
+   "variant": "board_s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small board-shaped gravestone set in the ground, name only",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 23,
+    "Resolution 2": 9,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.12,
+    0.12,
+    -0.1,
+    0.38,
+    -0.062,
+    0.064
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.12,
+    -0.06,
+    0.12,
+    0.06
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "stone_w",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_board_s.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_board_tall_moss.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Board_Tall_Moss",
+   "variant": "board_tall_moss",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Tall board-shaped gravestone on two bases, mossy",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 37,
+    "Resolution 2": 21,
+    "Geometry": 21,
+    "View Geometry": 21,
+    "Fire Geometry": 21
+   },
+   "bbox": [
+    -0.28,
+    0.28,
+    -0.05,
+    1.02,
+    -0.182,
+    0.18
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.28,
+    -0.18,
+    0.28,
+    0.18
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "stone_w",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_board_tall_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Boat_Halo",
+   "variant": "boat_halo",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Boat-halo gravestone with a Jizo in relief",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 171,
+    "Resolution 2": 23,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "bbox": [
+    -0.26,
+    0.26,
+    -0.05,
+    0.92,
+    -0.172,
+    0.17
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.26,
+    -0.17,
+    0.26,
+    0.17
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "figure_h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_boat_halo.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_boat_halo_child.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Boat_Halo_Child",
+   "variant": "boat_halo_child",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small boat-halo stone (a child's grave), no inscription",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 164,
+    "Resolution 2": 17,
+    "Geometry": 17,
+    "View Geometry": 17,
+    "Fire Geometry": 17
+   },
+   "bbox": [
+    -0.13,
+    0.13,
+    -0.06,
+    0.42,
+    -0.057,
+    0.064
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.13,
+    -0.055,
+    0.13,
+    0.055
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "figure_h",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_boat_halo_child.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_round.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Round",
+   "variant": "round",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Round-headed gravestone (kushigata) on a base",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 25,
+    "Resolution 2": 23,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "bbox": [
+    -0.23,
+    0.23,
+    -0.05,
+    0.84,
+    -0.182,
+    0.18
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.23,
+    -0.18,
+    0.23,
+    0.18
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.7,
+     "measured": 0.7,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_round.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_round_s_plain.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Round_S_Plain",
+   "variant": "round_s_plain",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small round-headed stone, plain",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 18,
+    "Resolution 2": 17,
+    "Geometry": 17,
+    "View Geometry": 17,
+    "Fire Geometry": 17
+   },
+   "bbox": [
+    -0.13,
+    0.13,
+    -0.08,
+    0.42,
+    -0.082,
+    0.08
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.13,
+    -0.08,
+    0.13,
+    0.08
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.5,
+     "measured": 0.5,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_round_s_plain.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_pillar.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Pillar",
+   "variant": "pillar",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Square-pillar gravestone on three bases (rare in 1730)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 49,
+    "Resolution 2": 29,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.31,
+    0.31,
+    -0.05,
+    1.02,
+    -0.312,
+    0.31
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.31,
+    -0.31,
+    0.31,
+    0.31
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shaft_h",
+     "expected": 0.62,
+     "measured": 0.62,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_a",
+     "expected": 0.22,
+     "measured": 0.22,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rare in 1730 (about 5 % of stones); never in uniform rows (W2_ERA G4)"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_pillar.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_pillar_pointed.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Pillar_Pointed",
+   "variant": "pillar_pointed",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Square pillar with a pointed top (new Kyoho fashion, rare)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 43,
+    "Resolution 2": 23,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.27,
+    0.27,
+    -0.05,
+    1.02,
+    -0.272,
+    0.27
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.27,
+    -0.27,
+    0.27,
+    0.27
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "shaft_h",
+     "expected": 0.66,
+     "measured": 0.66,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "shaft_a",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "rare in 1730 (about 5 % of stones); never in uniform rows (W2_ERA G4)"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_pillar_pointed.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_gorinto_s.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Gorinto_S",
+   "variant": "gorinto_s",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Five-ring stupa (gorinto), 0.6",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 139,
+    "Resolution 2": 46,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "bbox": [
+    -0.12,
+    0.12,
+    -0.04,
+    0.581,
+    -0.122,
+    0.1
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.1,
+    -0.1,
+    0.1,
+    0.1
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "total_h",
+     "expected": 0.6,
+     "measured": 0.5805,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_gorinto_s.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_gorinto_l.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Gorinto_L",
+   "variant": "gorinto_l",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Large five-ring stupa on a platform, 2.0 (samurai / priest)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 151,
+    "Resolution 2": 58,
+    "Resolution 3": 30,
+    "Geometry": 54,
+    "View Geometry": 54,
+    "Fire Geometry": 54
+   },
+   "bbox": [
+    -0.6,
+    0.6,
+    -0.05,
+    2.001,
+    -0.602,
+    0.6
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.6,
+    -0.6,
+    0.6,
+    0.6
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "total_h",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.08,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_gorinto_l.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_gorinto_stack.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Gorinto_Stack",
+   "variant": "gorinto_stack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Gorinto re-stacked from two stupas, crescent missing",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 103,
+    "Resolution 2": 38,
+    "Geometry": 32,
+    "View Geometry": 32,
+    "Fire Geometry": 32
+   },
+   "bbox": [
+    -0.122,
+    0.146,
+    -0.04,
+    0.577,
+    -0.146,
+    0.124
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.1,
+    -0.11,
+    0.112,
+    0.1
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "total_h",
+     "expected": 0.6,
+     "measured": 0.5805,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "re-stacked by later hands from two stupas: roof and jewel too big, crescent missing"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_gorinto_stack.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_gorinto_heap.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Gorinto_Heap",
+   "variant": "gorinto_heap",
+   "state": "intact",
+   "abandoned": false,
+   "display": "A small heap of old gorinto fragments at a plot corner",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 171,
+    "Resolution 2": 68,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.811,
+    0.797,
+    -0.015,
+    0.286,
+    -0.582,
+    0.557
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.349,
+    -0.216,
+    0.406,
+    0.248
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "heap_h",
+     "expected": 0.4,
+     "measured": 0.2864,
+     "tol": 0.12,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a small heap of old fragments; the big muen-to pyramids are Meiji and later (W2_ERA G10)"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_gorinto_heap.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_hokyointo.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Hokyointo",
+   "variant": "hokyointo",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Hokyointo (treasure-seal stupa), 1.5",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 256,
+    "Resolution 2": 54,
+    "Resolution 3": 17,
+    "Geometry": 34,
+    "View Geometry": 34,
+    "Fire Geometry": 34
+   },
+   "bbox": [
+    -0.327,
+    0.327,
+    -0.05,
+    1.475,
+    -0.329,
+    0.327
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.31,
+    -0.31,
+    0.31,
+    0.31
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "total_h",
+     "expected": 1.5,
+     "measured": 1.475,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_hokyointo.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_jizo_child.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Jizo_Child",
+   "variant": "jizo_child",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small Jizo on a base (a child's grave), faded bib",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 194,
+    "Resolution 2": 36,
+    "Geometry": 16,
+    "View Geometry": 16,
+    "Fire Geometry": 16
+   },
+   "bbox": [
+    -0.16,
+    0.16,
+    -0.05,
+    0.584,
+    -0.132,
+    0.133
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.16,
+    -0.13,
+    0.16,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.4,
+     "measured": 0.4,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a child's grave: small standing Jizo, a faded rag bib (G1 A3 answer 4)"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:enmei_jizo"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_jizo_child.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_field.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Field",
+   "variant": "field",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Field stone as a grave marker (poor grave)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 31,
+    "Resolution 2": 27,
+    "Geometry": 27,
+    "View Geometry": 27,
+    "Fire Geometry": 27
+   },
+   "bbox": [
+    -0.156,
+    0.14,
+    -0.141,
+    0.455,
+    -0.103,
+    0.092
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.156,
+    -0.084,
+    0.14,
+    0.092
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_field.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_field_mound.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Field_Mound",
+   "variant": "field_mound",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Earth grave mound with a field stone at its head",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 135,
+    "Resolution 2": 59,
+    "Geometry": 27,
+    "View Geometry": 27,
+    "Fire Geometry": 27
+   },
+   "bbox": [
+    -0.536,
+    0.536,
+    -0.1,
+    0.32,
+    -0.804,
+    0.804
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.115,
+    -0.711,
+    0.113,
+    -0.539
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 0.32,
+     "measured": 0.32,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the mound is turned earth under leaves; no collision on it (walk over)"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_field_mound.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_field_pair.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Field_Pair",
+   "variant": "field_pair",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Two small field stones (a couple's poor grave)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 58,
+    "Resolution 2": 54,
+    "Geometry": 54,
+    "View Geometry": 54,
+    "Fire Geometry": 54
+   },
+   "bbox": [
+    -0.309,
+    0.382,
+    -0.122,
+    0.342,
+    -0.189,
+    0.646
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.28,
+    -0.077,
+    0.285,
+    0.075
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 0.34,
+     "measured": 0.34,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_field_pair.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_ab_leaning.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Leaning",
+   "variant": "leaning",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Board-shaped gravestone leaning and sunk",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 32,
+    "Resolution 2": 15,
+    "Geometry": 15,
+    "View Geometry": 15,
+    "Fire Geometry": 15
+   },
+   "bbox": [
+    -0.404,
+    0.557,
+    -0.175,
+    0.693,
+    -0.242,
+    0.625
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.253,
+    -0.241,
+    0.242,
+    0.156
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.64,
+     "measured": 0.64,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "stone_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: leaning -13 / 5 deg, sunk 0.07 m"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_doshin_shinji"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_leaning.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_ab_board_broken.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Board_Broken",
+   "variant": "board_broken",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Board-shaped gravestone, gable snapped off and lying in front",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 31,
+    "Resolution 2": 25,
+    "Geometry": 21,
+    "View Geometry": 21,
+    "Fire Geometry": 21
+   },
+   "bbox": [
+    -0.421,
+    0.644,
+    -0.05,
+    0.56,
+    -0.162,
+    0.846
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.24,
+    -0.16,
+    0.33,
+    0.58
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.66,
+     "measured": 0.66,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "stone_w",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_board_broken.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_ab_boat_halo_sunk.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Boat_Halo_Sunk",
+   "variant": "boat_halo_sunk",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Boat-halo gravestone leaning forward, half sunk, mossy",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 175,
+    "Resolution 2": 23,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "bbox": [
+    -0.439,
+    0.481,
+    -0.237,
+    0.736,
+    -0.305,
+    0.614
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.252,
+    -0.157,
+    0.26,
+    0.242
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.76,
+     "measured": 0.76,
+     "tol": 0.002,
+     "source": "build_list"
+    },
+    {
+     "name": "figure_h",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: leaning 11 / -4 deg, sunk 0.14 m"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_boat_halo_sunk.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_ab_round_lean.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Round_Lean",
+   "variant": "round_lean",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Round-headed gravestone leaning sideways",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 28,
+    "Resolution 2": 23,
+    "Geometry": 23,
+    "View Geometry": 23,
+    "Fire Geometry": 23
+   },
+   "bbox": [
+    -0.448,
+    0.538,
+    -0.189,
+    0.766,
+    -0.196,
+    0.625
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.228,
+    -0.189,
+    0.295,
+    0.18
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stone_h",
+     "expected": 0.72,
+     "measured": 0.72,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: leaning -4 / -12 deg, sunk 0.08 m"
+   ],
+   "plot_grid_m": 0.9,
+   "inscription": [
+    "decal_carved_text:grave_shakuni_myoshin"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_round_lean.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_ab_gorinto_fallen.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Gorinto_Fallen",
+   "variant": "gorinto_fallen",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Gorinto with roof, crescent and jewel fallen (quake)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 139,
+    "Resolution 2": 46,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "bbox": [
+    -0.429,
+    0.696,
+    -0.046,
+    0.38,
+    -0.176,
+    0.787
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.322,
+    -0.115,
+    0.453,
+    0.541
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "total_h",
+     "expected": 0.69,
+     "measured": 0.6676,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_gorinto_fallen.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_stones_ab_hokyointo_broken.p3d",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Hokyointo_Broken",
+   "variant": "hokyointo_broken",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Hokyointo, finial and one horn fallen",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 259,
+    "Resolution 2": 54,
+    "Resolution 3": 17,
+    "Geometry": 34,
+    "View Geometry": 34,
+    "Fire Geometry": 34
+   },
+   "bbox": [
+    -0.337,
+    1.099,
+    -0.05,
+    0.955,
+    -0.329,
+    0.916
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.31,
+    -0.31,
+    0.797,
+    0.663
+   ],
+   "roadway": false,
+   "mass_kg": 200.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "total_h",
+     "expected": 1.5,
+     "measured": 1.475,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "plot_grid_m": 0.9,
+   "inscription": null,
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_stones_ab_hokyointo_broken.p3d"
+  }
+ ]
+}

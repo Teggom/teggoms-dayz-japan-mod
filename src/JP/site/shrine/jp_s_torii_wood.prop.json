@@ -1,0 +1,1725 @@
+{
+ "id": "jp_s_torii_wood",
+ "build_list": {
+  "name": "Wooden torii (ki-no-torii): shinmei and myojin forms, plain or vermilion",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Wood torii weather fast: vermilion peeled in patches, the plain ones silver-grey with moss on the kasagi; one in five leans on a rotted post.",
+  "placement_rule": "At the start of a shrine approach, square to the path; vermilion only at Inari and Hachiman shrines; mini torii only before a yard shrine.",
+  "lod_budget": "medium site object <=1,500 faces LOD0 (decision 9); kasagi curve and silhouette in every LOD",
+  "dimensions": {
+   "village_m": {
+    "value": "post span 1.8-2.7 (1-1.5 ken), height 2.7-3.6, post d 0.20-0.25",
+    "source": "O11, O12 (stone torii of the same village class: 1.82 span x 2.71 h; 2.5 x 2.8)"
+   },
+   "mini_m": {
+    "value": "span 0.6, height 0.9 (yard shrine)",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "kasagi_overhang_m": {
+    "value": "0.35-0.50 past each post",
+    "assumed": true,
+    "reason": "assumed from proportion drawings"
+   },
+   "grid": {
+    "value": "span in half-ken steps so the sando kit lines up",
+    "assumed": true,
+    "reason": "PLAYBOOK rule 9"
+   }
+  },
+  "refs": [
+   {
+    "id": "k27_hida_torii",
+    "shows": "unpainted wooden torii (photo)",
+    "period_image": false
+   },
+   {
+    "id": "c10_inari_torii",
+    "shows": "shu vermilion and sumi black on torii",
+    "period_image": false
+   },
+   {
+    "id": "k02_bunken_ezu_p12",
+    "shows": "roadside shrine torii marks on the 1690 Tokaido map",
+    "period_image": true
+   }
+  ]
+ },
+ "group": "shrine",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "vermilion (_myojin_shu*, _mini_shu) ONLY at Inari and Hachiman shrines; mini torii only before a yard shrine (mount 'yard')",
+  "rope variants carry the straw rope on the tie-beam; '_shide' adds 4-step zigzag paper streamers (W2_ERA T1-T3)",
+  "mossy variants for rural shrines (W2_ERA T5)",
+  "a village shrine gets a wooden or a stone torii, not both"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_shinmei.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei",
+   "variant": "shinmei",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden torii, shinmei (straight), 1 ken",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 108,
+    "Resolution 2": 95,
+    "Resolution 3": 32,
+    "Geometry": 40,
+    "View Geometry": 40,
+    "Fire Geometry": 40
+   },
+   "bbox": [
+    -1.27,
+    1.27,
+    -0.14,
+    2.725,
+    -0.21,
+    0.196
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.27,
+    -0.13,
+    1.27,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.06,
+   "rope_z": 0.085,
+   "rope_span": 1.62,
+   "rope": "none",
+   "moss": false,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_shinmei.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_rope.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Rope",
+   "variant": "shinmei",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden shinmei torii with a straw rope",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 270,
+    "Resolution 2": 97,
+    "Resolution 3": 32,
+    "Geometry": 40,
+    "View Geometry": 40,
+    "Fire Geometry": 40
+   },
+   "bbox": [
+    -1.27,
+    1.27,
+    -0.14,
+    2.725,
+    -0.21,
+    0.196
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.27,
+    -0.13,
+    1.27,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.06,
+   "rope_z": 0.085,
+   "rope_span": 1.62,
+   "rope": "rope",
+   "moss": false,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_shinmei_rope.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Rope_Shide",
+   "variant": "shinmei",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden shinmei torii, straw rope and paper shide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 272,
+    "Resolution 2": 97,
+    "Resolution 3": 32,
+    "Geometry": 40,
+    "View Geometry": 40,
+    "Fire Geometry": 40
+   },
+   "bbox": [
+    -1.27,
+    1.27,
+    -0.14,
+    2.725,
+    -0.21,
+    0.196
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.27,
+    -0.13,
+    1.27,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.06,
+   "rope_z": 0.085,
+   "rope_span": 1.62,
+   "rope": "rope+shide",
+   "moss": false,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_shinmei_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Moss",
+   "variant": "shinmei",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden shinmei torii, mossy (rural)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 126,
+    "Resolution 2": 95,
+    "Resolution 3": 32,
+    "Geometry": 40,
+    "View Geometry": 40,
+    "Fire Geometry": 40
+   },
+   "bbox": [
+    -1.27,
+    1.27,
+    -0.14,
+    2.734,
+    -0.236,
+    0.196
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.27,
+    -0.13,
+    1.27,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.06,
+   "rope_z": 0.085,
+   "rope_span": 1.62,
+   "rope": "none",
+   "moss": true,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_shinmei_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss_rope.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Moss_Rope",
+   "variant": "shinmei",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden shinmei torii, mossy, straw rope",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 288,
+    "Resolution 2": 97,
+    "Resolution 3": 32,
+    "Geometry": 40,
+    "View Geometry": 40,
+    "Fire Geometry": 40
+   },
+   "bbox": [
+    -1.27,
+    1.27,
+    -0.14,
+    2.734,
+    -0.236,
+    0.196
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.27,
+    -0.13,
+    1.27,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.06,
+   "rope_z": 0.085,
+   "rope_span": 1.62,
+   "rope": "rope",
+   "moss": true,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_shinmei_moss_rope.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Moss_Rope_Shide",
+   "variant": "shinmei",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden shinmei torii, mossy, rope and shide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 290,
+    "Resolution 2": 97,
+    "Resolution 3": 32,
+    "Geometry": 40,
+    "View Geometry": 40,
+    "Fire Geometry": 40
+   },
+   "bbox": [
+    -1.27,
+    1.27,
+    -0.14,
+    2.734,
+    -0.236,
+    0.196
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.27,
+    -0.13,
+    1.27,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.06,
+   "rope_z": 0.085,
+   "rope_span": 1.62,
+   "rope": "rope+shide",
+   "moss": true,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_shinmei_moss_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_myojin.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin",
+   "variant": "myojin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden torii, myojin (upswept), 1.5 ken, plaque",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 199,
+    "Resolution 2": 134,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.856,
+    1.856,
+    -0.14,
+    3.59,
+    -0.237,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.845,
+    -0.13,
+    1.845,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:gaku_hachimangu"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "none",
+   "moss": false,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_myojin.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_myojin_rope.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Rope",
+   "variant": "myojin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden myojin torii with a straw rope",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 373,
+    "Resolution 2": 136,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.856,
+    1.856,
+    -0.14,
+    3.59,
+    -0.237,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.845,
+    -0.13,
+    1.845,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:gaku_hachimangu"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "rope",
+   "moss": false,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_myojin_rope.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_myojin_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Rope_Shide",
+   "variant": "myojin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden myojin torii, straw rope and paper shide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 377,
+    "Resolution 2": 136,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.856,
+    1.856,
+    -0.14,
+    3.59,
+    -0.237,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.845,
+    -0.13,
+    1.845,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:gaku_hachimangu"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "rope+shide",
+   "moss": false,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_myojin_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_myojin_moss.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Moss",
+   "variant": "myojin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden myojin torii, mossy (rural)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 219,
+    "Resolution 2": 134,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.856,
+    1.856,
+    -0.14,
+    3.594,
+    -0.253,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.845,
+    -0.13,
+    1.845,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "none",
+   "moss": true,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_myojin_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_myojin_moss_rope.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Moss_Rope",
+   "variant": "myojin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden myojin torii, mossy, rope",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 393,
+    "Resolution 2": 136,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.856,
+    1.856,
+    -0.14,
+    3.594,
+    -0.253,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.845,
+    -0.13,
+    1.845,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "rope",
+   "moss": true,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_myojin_moss_rope.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_myojin_moss_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Moss_Rope_Shide",
+   "variant": "myojin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden myojin torii, mossy, rope and shide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 397,
+    "Resolution 2": 136,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.856,
+    1.856,
+    -0.14,
+    3.594,
+    -0.253,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.845,
+    -0.13,
+    1.845,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "rope+shide",
+   "moss": true,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_myojin_moss_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_myojin_shu.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Shu",
+   "variant": "myojin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Vermilion myojin torii, black kasagi (Inari / Hachiman only)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 227,
+    "Resolution 2": 162,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.856,
+    1.856,
+    -0.14,
+    3.59,
+    -0.237,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.845,
+    -0.13,
+    1.845,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:gaku_inari"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "vermilion: ONLY at Inari and Hachiman shrines (restricted colour, BUILD_LIST)"
+   ],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "none",
+   "moss": false,
+   "shu": true,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_myojin_shu.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_myojin_shu_rope_shide.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Shu_Rope_Shide",
+   "variant": "myojin",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Vermilion myojin torii with rope and shide (Inari / Hachiman only)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 405,
+    "Resolution 2": 164,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.856,
+    1.856,
+    -0.14,
+    3.59,
+    -0.237,
+    0.22
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.845,
+    -0.13,
+    1.845,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:gaku_inari"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "vermilion: ONLY at Inari and Hachiman shrines (restricted colour, BUILD_LIST)"
+   ],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "rope+shide",
+   "moss": false,
+   "shu": true,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_myojin_shu_rope_shide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_mini.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Mini",
+   "variant": "mini",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Miniature wooden torii (yard shrine)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 128,
+    "Resolution 2": 54,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -0.424,
+    0.424,
+    -0.04,
+    0.94,
+    -0.054,
+    0.047
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.42,
+    -0.04,
+    0.42,
+    0.04
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.064,
+     "measured": 0.064,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.12,
+     "measured": 0.12,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 0.573,
+   "rope_z": 0.029,
+   "rope_span": 0.536,
+   "rope": "none",
+   "moss": false,
+   "shu": false,
+   "mount": "yard",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_mini.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_mini_shu.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Mini_Shu",
+   "variant": "mini",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Miniature vermilion torii (Inari yard shrine)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 128,
+    "Resolution 2": 54,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -0.424,
+    0.424,
+    -0.04,
+    0.94,
+    -0.054,
+    0.047
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.42,
+    -0.04,
+    0.42,
+    0.04
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.064,
+     "measured": 0.064,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.12,
+     "measured": 0.12,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "vermilion: ONLY at Inari and Hachiman shrines (restricted colour, BUILD_LIST)"
+   ],
+   "rope_y": 0.573,
+   "rope_z": 0.029,
+   "rope_span": 0.536,
+   "rope": "none",
+   "moss": false,
+   "shu": true,
+   "mount": "yard",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_mini_shu.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_mini_rope.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Mini_Rope",
+   "variant": "mini",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Miniature torii with a straw rope and shide (yard shrine)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 292,
+    "Resolution 2": 56,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -0.424,
+    0.424,
+    -0.04,
+    0.94,
+    -0.054,
+    0.051
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.42,
+    -0.04,
+    0.42,
+    0.04
+   ],
+   "roadway": false,
+   "mass_kg": 15.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 0.6,
+     "measured": 0.6,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.064,
+     "measured": 0.064,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.12,
+     "measured": 0.12,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "rope_y": 0.573,
+   "rope_z": 0.029,
+   "rope_span": 0.536,
+   "rope": "rope+shide",
+   "moss": false,
+   "shu": false,
+   "mount": "yard",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_mini_rope.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_ab_leaning.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Ab_Leaning",
+   "variant": "myojin",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Wooden myojin torii leaning on a rotted post, rope dropped",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 262,
+    "Resolution 2": 134,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.612,
+    2.223,
+    -0.14,
+    3.594,
+    -0.325,
+    1.544
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.502,
+    -0.13,
+    2.222,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: racked 6.0 deg on a rotted post foot; feet stay on the ground"
+   ],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "rope",
+   "moss": true,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_ab_leaning.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_ab_leaning_shu.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Ab_Leaning_Shu",
+   "variant": "myojin",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Vermilion torii peeled to grey, leaning, rope dropped",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 270,
+    "Resolution 2": 162,
+    "Resolution 3": 36,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -1.612,
+    2.216,
+    -0.14,
+    3.59,
+    -0.325,
+    1.544
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.502,
+    -0.13,
+    2.222,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 1100.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:gaku_inari"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 3.45,
+     "measured": 3.45,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: racked 6.0 deg on a rotted post foot; feet stay on the ground",
+    "vermilion: ONLY at Inari and Hachiman shrines (restricted colour, BUILD_LIST)"
+   ],
+   "rope_y": 2.46,
+   "rope_z": 0.095,
+   "rope_span": 2.394,
+   "rope": "rope+shide",
+   "moss": false,
+   "shu": true,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_ab_leaning_shu.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_torii_wood_ab_rotted.p3d",
+   "class": "StaticObj_JP_S_Torii_Wood_Ab_Rotted",
+   "variant": "shinmei",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Wooden shinmei torii, kasagi slipped off one post, rope dropped",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "medium",
+   "faces": {
+    "Resolution 1": 169,
+    "Resolution 2": 95,
+    "Resolution 3": 32,
+    "Geometry": 40,
+    "View Geometry": 40,
+    "Fire Geometry": 40
+   },
+   "bbox": [
+    -1.13,
+    1.433,
+    -0.14,
+    2.759,
+    -0.325,
+    1.544
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.114,
+    -0.13,
+    1.437,
+    0.13
+   ],
+   "roadway": false,
+   "mass_kg": 600.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_span",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "post_d",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "kasagi_overhang",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: racked 3.5 deg on a rotted post foot; feet stay on the ground"
+   ],
+   "rope_y": 2.06,
+   "rope_z": 0.085,
+   "rope_span": 1.62,
+   "rope": "rope",
+   "moss": true,
+   "shu": false,
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_torii_wood_ab_rotted.p3d"
+  }
+ ]
+}

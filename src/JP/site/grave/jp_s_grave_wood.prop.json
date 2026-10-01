@@ -1,0 +1,433 @@
+{
+ "id": "jp_s_grave_wood",
+ "build_list": {
+  "name": "Graveyard wood set: sotoba slats and rack, flower tubes, incense stand, bucket rack",
+  "importance": "filler",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Slats grey, split and fallen across the stones, their ink gone; flower tubes empty or holding dead black stems; rack leaning.",
+  "placement_rule": "Slats behind about 1 grave in 3; one rack and one bucket rack per graveyard by its water point.",
+  "lod_budget": "small prop <=300 faces LOD0 per piece",
+  "dimensions": {
+   "sotoba_m": {
+    "value": "1.05 x 0.075 x 0.009 (3.5 shaku); range 0.6-1.8",
+    "source": "O16 (modern practice; form unchanged)"
+   },
+   "rack_m": {
+    "value": "1.82 long x 1.0 high rail frame",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "flower_tube_m": {
+    "value": "bamboo d 0.06 x 0.30, in pairs",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "bucket_rack_m": {
+    "value": "0.91 x 0.3 shelf on posts, 1.0 high, 4-6 teoke",
+    "assumed": true,
+    "reason": "reuses jp_s_oke _teoke"
+   }
+  },
+  "refs": [
+   {
+    "id": "c24_jizo_cemetery",
+    "shows": "graveyard context",
+    "period_image": false
+   },
+   {
+    "id": "k30_rokujizo",
+    "shows": "six-Jizo row at a graveyard edge (photo)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "grave",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "slats behind about 1 grave in 3; one rack and one bucket rack per graveyard by its water point",
+  "_bohyo (wooden post on an earth mound) = the poor grave / a fresh grave (W2_ERA W3)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Sotoba_X3",
+   "variant": "sotoba_x3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Three sotoba slats behind a stone",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 120,
+    "Resolution 2": 18
+   },
+   "bbox": [
+    -0.148,
+    0.148,
+    -0.153,
+    1.199,
+    -0.048,
+    0.02
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:sotoba_namuamida"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "sotoba_h",
+     "expected": 1.05,
+     "measured": 1.05,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "stands 0.15-0.25 behind a gravestone; no collision (thin slats)"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_sotoba_x3.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_rack.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Rack",
+   "variant": "rack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Sotoba rack with leaning slats",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 164,
+    "Resolution 2": 72,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.97,
+    0.97,
+    -0.2,
+    1.317,
+    -0.097,
+    0.327
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.945,
+    -0.035,
+    0.945,
+    0.035
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:sotoba_namuamida"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "rack_len",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "rack_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_rack.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_tubes.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Tubes",
+   "variant": "tubes",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Bamboo flower tubes in a stone, dead stems",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 77,
+    "Resolution 2": 22,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.162,
+    0.15,
+    -0.05,
+    0.674,
+    -0.06,
+    0.075
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.15,
+    -0.06,
+    0.15,
+    0.06
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "tube_h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_tubes.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_incense.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Incense",
+   "variant": "incense",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone incense stand with ash",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 43,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.14,
+    0.14,
+    -0.04,
+    0.218,
+    -0.103,
+    0.1
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.14,
+    -0.1,
+    0.14,
+    0.1
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "stand_h",
+     "expected": 0.2,
+     "measured": 0.2,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "a simple stone with an ash hollow; burnt stick stubs"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_incense.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_bucket_rack.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Bucket_Rack",
+   "variant": "bucket_rack",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Bucket and ladle rack (teoke-kake)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 228,
+    "Resolution 2": 30,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -0.485,
+    0.485,
+    -0.15,
+    1.18,
+    -0.18,
+    0.242
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.485,
+    -0.18,
+    0.485,
+    0.18
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "rack_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "by the graveyard well or water point; one per graveyard"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_bucket_rack.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_bohyo.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Bohyo",
+   "variant": "bohyo",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Wooden grave post on an earth mound",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 104,
+    "Resolution 2": 38,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.462,
+    0.462,
+    -0.206,
+    0.855,
+    -0.735,
+    0.647
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.101,
+    -0.735,
+    0.045,
+    -0.575
+   ],
+   "roadway": false,
+   "mass_kg": 40.0,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:sotoba_namuamida"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "post_h",
+     "expected": 0.86,
+     "measured": 0.86,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the poor grave: an earth mound with a wooden post (any fresh grave before its stone)"
+   ],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_bohyo.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\grave\\jp_s_grave_wood_ab_fallen.p3d",
+   "class": "StaticObj_JP_S_Grave_Wood_Ab_Fallen",
+   "variant": "fallen",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Sotoba slats fallen and split, flower tube knocked over",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 184,
+    "Resolution 2": 24
+   },
+   "bbox": [
+    -0.787,
+    0.823,
+    -0.145,
+    0.972,
+    -0.399,
+    1.34
+   ],
+   "collision": [],
+   "footprint_xz": null,
+   "roadway": false,
+   "mass_kg": null,
+   "well": false,
+   "text_cells": [
+    "decal_sumi_text:sotoba_namuamida"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "sotoba_h",
+     "expected": 1.05,
+     "measured": 1.05,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "mount": "graveyard",
+   "master": "spikes/B3b/out/grave/jp_s_grave_wood_ab_fallen.p3d"
+  }
+ ]
+}

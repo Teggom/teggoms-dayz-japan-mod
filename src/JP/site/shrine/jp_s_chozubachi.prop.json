@@ -1,0 +1,364 @@
+{
+ "id": "jp_s_chozubachi",
+ "build_list": {
+  "name": "Purification basin (chozubachi) with ladle; roofless shrine form",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Dry, leaf-filled hollow with green algae stains; ladles fallen and split; moss on the north side.",
+  "placement_rule": "Beside the approach, right-hand side walking in, 3-6 m before the hall; one per shrine; garden variant by a veranda.",
+  "lod_budget": "small prop <=300 faces LOD0",
+  "dimensions": {
+   "basin_small_m": {
+    "value": "0.82 x 0.48 x 0.57 high",
+    "source": "O14 (Tenna 2 = 1682 basin)"
+   },
+   "basin_large_m": {
+    "value": "1.50 x 0.75 x 0.75 high; water hollow 0.35 deep; rim 0.107",
+    "source": "O14 (Omononushi shrine)"
+   },
+   "plinth_m": {
+    "value": "one or two flat stones 0.15-0.25 under the basin",
+    "assumed": true,
+    "reason": "assumed"
+   },
+   "ladle_m": {
+    "value": "bamboo or wood cup d 0.08 on a 0.45 handle",
+    "assumed": true,
+    "reason": "assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "k15_morse_chozubachi",
+    "shows": "stone water basin (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "k24_chozubachi",
+    "shows": "chozubachi with ladles at a shrine (photo)",
+    "period_image": false
+   },
+   {
+    "id": "c22_kasuga_lanterns",
+    "shows": "weathered granite + moss colour context",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "shrine",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "no roof (many village shrines had none); a temizuya shell can stand over it later (KEEP_CIVIC)",
+  "no dragon spout, no running bamboo spout (W2_ERA B1)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_chozubachi_small.p3d",
+   "class": "StaticObj_JP_S_Chozubachi_Small",
+   "variant": "small",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone basin, Tenna 2 (1682) size, on a plinth stone",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 111,
+    "Resolution 2": 33,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.467,
+    0.524,
+    -0.09,
+    0.658,
+    -0.333,
+    0.324
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.46,
+    -0.28,
+    0.46,
+    0.28
+   ],
+   "roadway": false,
+   "mass_kg": 450.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_tenna2_muraju"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "basin_l",
+     "expected": 0.82,
+     "measured": 0.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "basin_d",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.57,
+     "measured": 0.57,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "hollow_depth",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "dry: leaves and silt in the hollow, not a water source (BUILD_LIST decision 3)",
+    "beside the approach, right-hand side walking in, 3-6 m before the hall; one per shrine"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_chozubachi_small.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_chozubachi_large.p3d",
+   "class": "StaticObj_JP_S_Chozubachi_Large",
+   "variant": "large",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone basin, long (town shrine)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 116,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.75,
+    0.75,
+    -0.06,
+    0.838,
+    -0.378,
+    0.378
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.75,
+    -0.375,
+    0.75,
+    0.375
+   ],
+   "roadway": false,
+   "mass_kg": 1700.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_genroku10"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "basin_l",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "basin_d",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "hollow_depth",
+     "expected": 0.35,
+     "measured": 0.35,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "dry: leaves and silt in the hollow, not a water source (BUILD_LIST decision 3)",
+    "beside the approach, right-hand side walking in, 3-6 m before the hall; one per shrine"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_chozubachi_large.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_chozubachi_natural.p3d",
+   "class": "StaticObj_JP_S_Chozubachi_Natural",
+   "variant": "natural",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Natural stone basin with a cut hollow (mountain shrine)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 103,
+    "Resolution 2": 14,
+    "Geometry": 48,
+    "View Geometry": 48,
+    "Fire Geometry": 48
+   },
+   "bbox": [
+    -0.502,
+    0.485,
+    -0.08,
+    0.608,
+    -0.399,
+    0.413
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.502,
+    -0.399,
+    0.485,
+    0.413
+   ],
+   "roadway": false,
+   "mass_kg": 700.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "hollow_d",
+     "expected": 0.34,
+     "measured": 0.34,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.52,
+     "measured": 0.52,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "dry: leaves and silt in the hollow, not a water source (BUILD_LIST decision 3)",
+    "beside the approach, right-hand side walking in, 3-6 m before the hall; one per shrine"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_chozubachi_natural.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_chozubachi_ab_dry.p3d",
+   "class": "StaticObj_JP_S_Chozubachi_Ab_Dry",
+   "variant": "small",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Stone basin, dry and leaf-filled, ladles fallen",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 116,
+    "Resolution 2": 33,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.713,
+    1.067,
+    -0.09,
+    0.573,
+    -0.333,
+    0.917
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.46,
+    -0.28,
+    0.46,
+    0.28
+   ],
+   "roadway": false,
+   "mass_kg": 450.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:hono_tenna2_muraju"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "basin_l",
+     "expected": 0.82,
+     "measured": 0.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "basin_d",
+     "expected": 0.48,
+     "measured": 0.48,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "height",
+     "expected": 0.57,
+     "measured": 0.57,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "hollow_depth",
+     "expected": 0.24,
+     "measured": 0.24,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "dry: leaves and silt in the hollow, not a water source (BUILD_LIST decision 3)",
+    "beside the approach, right-hand side walking in, 3-6 m before the hall; one per shrine"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_chozubachi_ab_dry.p3d"
+  }
+ ]
+}

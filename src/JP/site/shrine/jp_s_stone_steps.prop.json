@@ -1,0 +1,1185 @@
+{
+ "id": "jp_s_stone_steps",
+ "build_list": {
+  "name": "Stone steps (ishidan): straight flight modules, landing, side stones; rough and dressed",
+  "importance": "standard",
+  "tiers": [
+   1,
+   2,
+   3
+  ],
+  "abandoned_state": "Treads tilted by roots and frost, leaves drifted on every step, moss in the joints, grass up the sides.",
+  "placement_rule": "Only where the terrain rises more than 0.5 m between an approach and its hall or between lane levels; seated into the terrain, never floating.",
+  "lod_budget": "small prop <=300 faces LOD0 per module",
+  "dimensions": {
+   "rise_m": {
+    "value": "0.15-0.18",
+    "assumed": true,
+    "reason": "comfortable for players and infected; matches shrine stairs"
+   },
+   "tread_m": {
+    "value": "0.30-0.36",
+    "assumed": true,
+    "reason": "rise/tread 0.18/0.30 = 31 deg, under the 38 deg walk limit (PLAYBOOK T9)"
+   },
+   "width_m": {
+    "value": "0.91, 1.82, 2.73 (half, 1, 1.5 ken)",
+    "assumed": true,
+    "reason": "grid (rule 9)"
+   },
+   "module": {
+    "value": "flights of 3 and 6 steps, landing 1.82 deep, side cheek stones",
+    "assumed": true,
+    "reason": "assumed; chains up any slope"
+   }
+  },
+  "refs": [
+   {
+    "id": "k38_shrine_steps",
+    "shows": "stone steps in a shrine precinct (photo)",
+    "period_image": false
+   },
+   {
+    "id": "k40_motoki_torii",
+    "shows": "torii on a rural approach: ground and step context",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "shrine",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "only where the terrain rises > 0.5 m between an approach and its hall or between lane levels; seated into the slope (block bottoms 0.12 under the ramp line), never floating",
+  "rise 0.16, tread 0.303 (3 treads = half a ken), ramp 27.8 deg (C7 <= 38); chain modules foot-to-head",
+  "widths: 0.91 / 1.82 / 2.73 (half, 1, 1.5 ken)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_3",
+   "variant": "dressed_3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone steps, dressed, 3 steps, 1 ken wide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 42,
+    "Resolution 2": 18,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -0.91,
+    0.91,
+    -0.12,
+    0.48,
+    -0.91,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    -0.91,
+    0.91,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 2184.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "nosing_above_ramp": 0.16,
+   "width": 1.82,
+   "run": 0.91,
+   "rise": 0.48,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.48,
+     -0.91
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_dressed_3.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_dressed_6.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_6",
+   "variant": "dressed_6",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone steps, dressed, 6 steps, 1 ken wide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 88,
+    "Resolution 2": 36,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -0.91,
+    0.964,
+    -0.12,
+    0.964,
+    -1.82,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    -1.82,
+    0.91,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 3276.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "nosing_above_ramp": 0.16,
+   "width": 1.82,
+   "run": 1.82,
+   "rise": 0.96,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.96,
+     -1.82
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_dressed_6.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_dressed_3_wide.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_3_Wide",
+   "variant": "dressed_3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone steps, dressed, 3 steps, 1.5 ken wide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 60,
+    "Resolution 2": 18,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -1.365,
+    1.365,
+    -0.12,
+    0.48,
+    -0.91,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.365,
+    -0.91,
+    1.365,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 3276.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "nosing_above_ramp": 0.16,
+   "width": 2.73,
+   "run": 0.91,
+   "rise": 0.48,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.48,
+     -0.91
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_dressed_3_wide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_dressed_6_wide.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_6_Wide",
+   "variant": "dressed_6",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone steps, dressed, 6 steps, 1.5 ken wide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 124,
+    "Resolution 2": 36,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -1.365,
+    1.365,
+    -0.12,
+    0.964,
+    -1.82,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.365,
+    -1.82,
+    1.365,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 4914.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 2.73,
+     "measured": 2.73,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "nosing_above_ramp": 0.16,
+   "width": 2.73,
+   "run": 1.82,
+   "rise": 0.96,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.96,
+     -1.82
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_dressed_6_wide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_dressed_3_narrow.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_3_Narrow",
+   "variant": "dressed_3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone steps, dressed, 3 steps, half ken wide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 24,
+    "Resolution 2": 18,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -0.455,
+    0.722,
+    -0.12,
+    0.48,
+    -0.91,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.455,
+    -0.91,
+    0.455,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 1092.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "nosing_above_ramp": 0.16,
+   "width": 0.91,
+   "run": 0.91,
+   "rise": 0.48,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.48,
+     -0.91
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_dressed_3_narrow.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Rough_3",
+   "variant": "rough_3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone steps, rough field stones, 3 steps, 1 ken wide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 202,
+    "Resolution 2": 18,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -0.967,
+    0.95,
+    -0.13,
+    0.48,
+    -1.085,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    -0.91,
+    0.91,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 2184.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "nosing_above_ramp": 0.1481,
+   "width": 1.82,
+   "run": 0.91,
+   "rise": 0.48,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.48,
+     -0.91
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_rough_3.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_rough_3_narrow.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Rough_3_Narrow",
+   "variant": "rough_3",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone steps, rough field stones, half ken wide",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 136,
+    "Resolution 2": 18,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -0.476,
+    0.685,
+    -0.132,
+    0.494,
+    -1.056,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.455,
+    -0.91,
+    0.455,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 1092.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 0.91,
+     "measured": 0.91,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "nosing_above_ramp": 0.172,
+   "width": 0.91,
+   "run": 0.91,
+   "rise": 0.48,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.48,
+     -0.91
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_rough_3_narrow.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_landing.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Landing",
+   "variant": "landing",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone landing slab course, 1 ken square",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 18,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.91,
+    1.121,
+    -0.18,
+    0.005,
+    -1.82,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    -1.82,
+    0.91,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 2184.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "landing_depth",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "width": 1.82,
+   "run": 1.82,
+   "rise": 0.0,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.0,
+     -1.82
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_landing.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_landing_wide.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Landing_Wide",
+   "variant": "landing",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone landing, 1.5 ken wide, 1 ken deep",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 24,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.365,
+    1.365,
+    -0.18,
+    0.005,
+    -1.82,
+    0.0
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.365,
+    -1.82,
+    1.365,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 3276.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "landing_depth",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [],
+   "width": 2.73,
+   "run": 1.82,
+   "rise": 0.0,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.0,
+     -1.82
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_landing_wide.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_cheek_3.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Cheek_3",
+   "variant": "cheek",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Side cheek stone for a 3-step flight",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 8,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.1,
+    0.1,
+    -0.15,
+    0.784,
+    -0.967,
+    0.056
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.1,
+    -0.96,
+    0.1,
+    0.05
+   ],
+   "roadway": false,
+   "mass_kg": 2184.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "cheek_len",
+     "expected": 1.01,
+     "measured": 1.01,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "one side stone; place one each side of a flight at x = +-(flight width / 2 + 0.10)"
+   ],
+   "width": 1.82,
+   "run": 0.91,
+   "rise": 0.48,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.48,
+     -0.91
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_cheek_3.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_cheek_6.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Cheek_6",
+   "variant": "cheek",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Side cheek stone for a 6-step flight",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 8,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.1,
+    0.1,
+    -0.15,
+    1.264,
+    -1.877,
+    0.056
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.1,
+    -1.87,
+    0.1,
+    0.05
+   ],
+   "roadway": false,
+   "mass_kg": 3276.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "cheek_len",
+     "expected": 1.9200000000000002,
+     "measured": 1.92,
+     "tol": 0.002,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "one side stone; place one each side of a flight at x = +-(flight width / 2 + 0.10)"
+   ],
+   "width": 1.82,
+   "run": 1.82,
+   "rise": 0.96,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.96,
+     -1.82
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_cheek_6.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_ab_heaved.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Ab_Heaved",
+   "variant": "dressed_6",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Stone steps heaved by roots, one step missing",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 86,
+    "Resolution 2": 36,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -0.915,
+    0.915,
+    -0.132,
+    0.969,
+    -1.823,
+    0.007
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    -1.82,
+    0.91,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 3276.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: treads tilted by roots and frost, step 3 gone, leaves on every step; the ramp under them is unchanged (still walkable)"
+   ],
+   "nosing_above_ramp": 0.1741,
+   "width": 1.82,
+   "run": 1.82,
+   "rise": 0.96,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.96,
+     -1.82
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_ab_heaved.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_steps_ab_heaved_rough.p3d",
+   "class": "StaticObj_JP_S_Stone_Steps_Ab_Heaved_Rough",
+   "variant": "rough_3",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Rough stone steps, heaved, leaves drifted",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 208,
+    "Resolution 2": 18,
+    "Geometry": 5,
+    "Roadway": 1,
+    "View Geometry": 5,
+    "Fire Geometry": 5
+   },
+   "bbox": [
+    -0.976,
+    0.966,
+    -0.135,
+    0.487,
+    -1.052,
+    0.01
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.91,
+    -0.91,
+    0.91,
+    0.0
+   ],
+   "roadway": true,
+   "mass_kg": 2184.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "riser",
+     "expected": 0.16,
+     "measured": 0.16,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "tread",
+     "expected": 0.30333333333333334,
+     "measured": 0.3033,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "ramp_deg",
+     "expected": 27.8,
+     "measured": 27.81,
+     "tol": 0.1,
+     "source": "build_list"
+    },
+    {
+     "name": "width",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: treads tilted by roots and frost, leaves on every step; the ramp under them is unchanged (still walkable)"
+   ],
+   "nosing_above_ramp": 0.1763,
+   "width": 1.82,
+   "run": 0.91,
+   "rise": 0.48,
+   "connectors": {
+    "stair_foot": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stair_head": [
+     0.0,
+     0.48,
+     -0.91
+    ]
+   },
+   "chain": "place the next module's stair_foot on this one's stair_head (same yaw): the Roadway continues (C7)",
+   "mount": "slope",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_steps_ab_heaved_rough.p3d"
+  }
+ ]
+}

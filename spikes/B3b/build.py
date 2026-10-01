@@ -45,7 +45,9 @@ PBO_OUT = os.path.join(ROOT, "@Japan", "addons", "jp_site.pbo")
 BINARIZE = B3A.BINARIZE
 CFGCONVERT = B3A.CFGCONVERT
 CHECKS = os.path.join(HERE, "checks.json")
-MODULES = ["props_wood", "props_wells", "props_stone", "props_street", "props_straw"]
+W2_CATS = {"shrine", "grave"}                          # W2 (2026-09-30): the wave-2 folders
+MODULES = ["props_wood", "props_wells", "props_stone", "props_street", "props_straw",
+           "props_torii", "props_shrine", "props_grave"]       # W2 (2026-09-30): the 7 wave-2 items
 BL = {e["id"]: e for e in json.load(open(os.path.join(DEV, "research", "outdoor_kit", "build_list.json"),
                                          encoding="utf-8"))["entries"]}
 SCRIPT_DIR = "scripts\\4_World\\JP_Site"
@@ -279,7 +281,23 @@ def sidecar(prop, built):
             "footprint_xz": fp, "roadway": bool(P.roadway), "mass_kg": P.mass if "geo" in P.need else None,
             "well": bool(m.get("well")),
             "text_cells": sorted({s.cell for s in P.solids if getattr(s, "cell", None)}), "loot_surfaces": P.loot, "dims": P.dims, "notes": P.notes, **P.extra})
+        mount = m.get("mount") or prop.get("mount")      # W2: where the decorator may put it (decor.OUTDOOR_MOUNTS)
+        if mount and prop["cat"] in W2_CATS:             # (L2's wrapper writes its own mount / master)
+            sc["models"][-1]["mount"] = mount
+            sc["models"][-1]["master"] = os.path.relpath(os.path.join(OUT, prop["cat"], m["p3d"] + ".p3d"),
+                                                         DEV).replace("\\", "/")
     return sc
+
+
+def txt_check(mp):
+    """L2's TXT check (spikes/L2/textface.py, imported read-only): every text decal faces out of its host and reads
+    left to right in game. Models without text pass with 0 faces."""
+    sys.path.insert(0, os.path.join(DEV, "spikes", "L2"))
+    import textface
+    r = textface.check_file(mp)
+    bad = [x for x in r if not (x["reads"] and x["host_behind"])]
+    return {"id": "TXT", "name": "text decals face out of their host and read left to right in game (%d faces)" % len(r),
+            "pass": not bad, "detail": bad[:4]}
 
 
 def write_all(sel):
@@ -298,6 +316,9 @@ def write_all(sel):
             os.makedirs(os.path.dirname(mp), exist_ok=True)
             mlod.write_mlod(mp, lods)
             res, faces, L = check_model(P, mp, m)
+            res.append(txt_check(mp))                    # W2: L2's TXT check (spikes/L2/textface.py) on every model
+            for fn in getattr(P, "checks_extra", []):    # W2: item-specific checks (C7 on the stone steps)
+                res.append(fn(P, L))
             fails = [c for c in res if not c["pass"]]
             results["models"][m["p3d"]] = {"prop": prop["id"], "cat": prop["cat"], "state": m["state"],
                                            "variant": m["variant"], "pass": not fails, "faces": faces, "checks": res}

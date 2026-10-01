@@ -34,6 +34,13 @@ GROUPS = [
                                                                "jp_s_shimenawa", "jp_s_kosatsu"]),
     ("street", "Street and shop front", ["jp_s_bench", "jp_s_shopfront", "jp_s_lantern_sign", "jp_s_stall",
                                          "jp_s_nobori"]),
+    # W2 (2026-09-30): wave 2 -> research/outdoor_kit/contact_sheets/w2_<group>.jpg ('--sheets w2' composes only these)
+    ("w2_torii", "W2 torii: wooden (shinmei, myojin, vermilion, mini) and stone, rope / shide / moss variants",
+     ["jp_s_torii_wood", "jp_s_torii_stone"]),
+    ("w2_shrine", "W2 shrine stones: lanterns, basin, steps", ["jp_s_stone_lantern", "jp_s_chozubachi",
+                                                               "jp_s_stone_steps"]),
+    ("w2_grave", "W2 graveyard: stones (1730 mix, x3 variety) and the wood set", ["jp_s_grave_stones",
+                                                                                 "jp_s_grave_wood"]),
 ]
 
 
@@ -331,7 +338,10 @@ def compose(props_all):
     RW, RH = 960, 540          # row render
     LW, LH = 640, 360          # lod render
     FW = 300                   # ref column width
+    only_w2 = "w2" in sys.argv[1:]
     for key, title, ids in GROUPS:
+        if only_w2 != key.startswith("w2_"):
+            continue
         ids = [i for i in ids if i in byid]
         if not ids:
             continue
@@ -339,9 +349,10 @@ def compose(props_all):
         W = 2 * FW + RW + LW + 40
         sheet = Image.new("RGB", (W, 60 + rowh * len(ids)), (24, 24, 26))
         d = ImageDraw.Draw(sheet)
-        d.text((14, 14), "B3b outdoor site objects, wave 1: %s. Left: build-list references. Middle: every model of the "
+        d.text((14, 14), ("W2 outdoor site objects, wave 2: %s. " if key.startswith("w2_") else
+                          "B3b outdoor site objects, wave 1: %s. ") % title + "Left: build-list references. Middle: every model of the "
                "prop (intact first, abandoned after), Resolution 1, from the written MLOD. Right: LOD 1-2(-3) + "
-               "collision (red) of an abandoned state." % title, fill=(235, 235, 235), font=fb)
+               "collision (red) of an abandoned state.", fill=(235, 235, 235), font=fb)
         for r, pid in enumerate(ids):
             prop = byid[pid]
             y = 60 + r * rowh
@@ -386,7 +397,7 @@ def compose(props_all):
             d.text((2 * FW + RW + 20, y + LH + 86), lab[:78], fill=(170, 170, 170), font=f)
             if len(lab) > 78:
                 d.text((2 * FW + RW + 20, y + LH + 108), lab[78:156], fill=(170, 170, 170), font=f)
-        out = os.path.join(SHEETS, "b3b_%s.jpg" % key)
+        out = os.path.join(SHEETS, ("%s.jpg" if key.startswith("w2_") else "b3b_%s.jpg") % key)
         sheet.save(out, quality=88)
         outs.append(out)
         print("sheet", out, sheet.size)

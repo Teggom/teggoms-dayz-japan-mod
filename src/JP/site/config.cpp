@@ -842,6 +842,559 @@ class CfgVehicles
 		displayName="Straw rope grey and frayed, one end dropped";
 		model="\JP\site\roadside\jp_s_shimenawa_ab_tattered.p3d";
 	};
+	// jp_s_torii_wood (shrine)
+	class StaticObj_JP_S_Torii_Wood_Shinmei: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden torii, shinmei (straight), 1 ken";
+		model="\JP\site\shrine\jp_s_torii_wood_shinmei.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Shinmei_Rope: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden shinmei torii with a straw rope";
+		model="\JP\site\shrine\jp_s_torii_wood_shinmei_rope.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Shinmei_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden shinmei torii, straw rope and paper shide";
+		model="\JP\site\shrine\jp_s_torii_wood_shinmei_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Shinmei_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden shinmei torii, mossy (rural)";
+		model="\JP\site\shrine\jp_s_torii_wood_shinmei_moss.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Shinmei_Moss_Rope: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden shinmei torii, mossy, straw rope";
+		model="\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Shinmei_Moss_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden shinmei torii, mossy, rope and shide";
+		model="\JP\site\shrine\jp_s_torii_wood_shinmei_moss_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Myojin: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden torii, myojin (upswept), 1.5 ken, plaque";
+		model="\JP\site\shrine\jp_s_torii_wood_myojin.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Myojin_Rope: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden myojin torii with a straw rope";
+		model="\JP\site\shrine\jp_s_torii_wood_myojin_rope.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Myojin_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden myojin torii, straw rope and paper shide";
+		model="\JP\site\shrine\jp_s_torii_wood_myojin_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Myojin_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden myojin torii, mossy (rural)";
+		model="\JP\site\shrine\jp_s_torii_wood_myojin_moss.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Myojin_Moss_Rope: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden myojin torii, mossy, rope";
+		model="\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Myojin_Moss_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden myojin torii, mossy, rope and shide";
+		model="\JP\site\shrine\jp_s_torii_wood_myojin_moss_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Myojin_Shu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Vermilion myojin torii, black kasagi (Inari / Hachiman only)";
+		model="\JP\site\shrine\jp_s_torii_wood_myojin_shu.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Myojin_Shu_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Vermilion myojin torii with rope and shide (Inari / Hachiman only)";
+		model="\JP\site\shrine\jp_s_torii_wood_myojin_shu_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Mini: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Miniature wooden torii (yard shrine)";
+		model="\JP\site\shrine\jp_s_torii_wood_mini.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Mini_Shu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Miniature vermilion torii (Inari yard shrine)";
+		model="\JP\site\shrine\jp_s_torii_wood_mini_shu.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Mini_Rope: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Miniature torii with a straw rope and shide (yard shrine)";
+		model="\JP\site\shrine\jp_s_torii_wood_mini_rope.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Ab_Leaning: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden myojin torii leaning on a rotted post, rope dropped";
+		model="\JP\site\shrine\jp_s_torii_wood_ab_leaning.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Ab_Leaning_Shu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Vermilion torii peeled to grey, leaning, rope dropped";
+		model="\JP\site\shrine\jp_s_torii_wood_ab_leaning_shu.p3d";
+	};
+	class StaticObj_JP_S_Torii_Wood_Ab_Rotted: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden shinmei torii, kasagi slipped off one post, rope dropped";
+		model="\JP\site\shrine\jp_s_torii_wood_ab_rotted.p3d";
+	};
+	// jp_s_torii_stone (shrine)
+	class StaticObj_JP_S_Torii_Stone_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii, span 1.82 (village)";
+		model="\JP\site\shrine\jp_s_torii_stone_s.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_S_Rope: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii 1.82 with a straw rope";
+		model="\JP\site\shrine\jp_s_torii_stone_s_rope.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_S_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii 1.82, straw rope and shide";
+		model="\JP\site\shrine\jp_s_torii_stone_s_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_S_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii 1.82, mossy (rural)";
+		model="\JP\site\shrine\jp_s_torii_stone_s_moss.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_S_Moss_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii 1.82, mossy, rope and shide";
+		model="\JP\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_M: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii, span 2.5";
+		model="\JP\site\shrine\jp_s_torii_stone_m.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_M_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii 2.5, straw rope and shide";
+		model="\JP\site\shrine\jp_s_torii_stone_m_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii, span 3.6 (town)";
+		model="\JP\site\shrine\jp_s_torii_stone_l.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_L_Rope_Shide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii 3.6, straw rope and shide";
+		model="\JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d";
+	};
+	class StaticObj_JP_S_Torii_Stone_Ab_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone torii, kasagi fallen in two pieces (quake)";
+		model="\JP\site\shrine\jp_s_torii_stone_ab_broken.p3d";
+	};
+	// jp_s_stone_lantern (shrine)
+	class StaticObj_JP_S_Stone_Lantern_Kasuga_18: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone lantern, Kasuga 1.8";
+		model="\JP\site\shrine\jp_s_stone_lantern_kasuga_18.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Kasuga_24: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone lantern, Kasuga 2.4";
+		model="\JP\site\shrine\jp_s_stone_lantern_kasuga_24.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Kasuga_30: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone lantern, Kasuga 3.0";
+		model="\JP\site\shrine\jp_s_stone_lantern_kasuga_30.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Square_24: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone lantern, square standing 2.4";
+		model="\JP\site\shrine\jp_s_stone_lantern_square_24.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Oki: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small placed stone lantern (oki-doro)";
+		model="\JP\site\shrine\jp_s_stone_lantern_oki.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Joyato: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Always-lit lantern (joyato) on a two-step base, 4.0";
+		model="\JP\site\shrine\jp_s_stone_lantern_joyato.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone lantern, Kasuga 1.8, mossy";
+		model="\JP\site\shrine\jp_s_stone_lantern_kasuga_18_moss.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Kasuga_24_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone lantern, Kasuga 2.4, mossy";
+		model="\JP\site\shrine\jp_s_stone_lantern_kasuga_24_moss.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Kasuga_30_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone lantern, Kasuga 3.0, mossy";
+		model="\JP\site\shrine\jp_s_stone_lantern_kasuga_30_moss.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Square_24_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone lantern, square 2.4, mossy";
+		model="\JP\site\shrine\jp_s_stone_lantern_square_24_moss.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Oki_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small placed stone lantern, mossy";
+		model="\JP\site\shrine\jp_s_stone_lantern_oki_moss.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Ab_Toppled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Kasuga lantern, roof and jewel fallen (quake)";
+		model="\JP\site\shrine\jp_s_stone_lantern_ab_toppled.p3d";
+	};
+	class StaticObj_JP_S_Stone_Lantern_Ab_Hoju_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Kasuga lantern 1.8, mossy, jewel fallen";
+		model="\JP\site\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d";
+	};
+	// jp_s_chozubachi (shrine)
+	class StaticObj_JP_S_Chozubachi_Small: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone basin, Tenna 2 (1682) size, on a plinth stone";
+		model="\JP\site\shrine\jp_s_chozubachi_small.p3d";
+	};
+	class StaticObj_JP_S_Chozubachi_Large: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone basin, long (town shrine)";
+		model="\JP\site\shrine\jp_s_chozubachi_large.p3d";
+	};
+	class StaticObj_JP_S_Chozubachi_Natural: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Natural stone basin with a cut hollow (mountain shrine)";
+		model="\JP\site\shrine\jp_s_chozubachi_natural.p3d";
+	};
+	class StaticObj_JP_S_Chozubachi_Ab_Dry: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone basin, dry and leaf-filled, ladles fallen";
+		model="\JP\site\shrine\jp_s_chozubachi_ab_dry.p3d";
+	};
+	// jp_s_stone_steps (shrine)
+	class StaticObj_JP_S_Stone_Steps_Dressed_3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone steps, dressed, 3 steps, 1 ken wide";
+		model="\JP\site\shrine\jp_s_stone_steps_dressed_3.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Dressed_6: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone steps, dressed, 6 steps, 1 ken wide";
+		model="\JP\site\shrine\jp_s_stone_steps_dressed_6.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Dressed_3_Wide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone steps, dressed, 3 steps, 1.5 ken wide";
+		model="\JP\site\shrine\jp_s_stone_steps_dressed_3_wide.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Dressed_6_Wide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone steps, dressed, 6 steps, 1.5 ken wide";
+		model="\JP\site\shrine\jp_s_stone_steps_dressed_6_wide.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Dressed_3_Narrow: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone steps, dressed, 3 steps, half ken wide";
+		model="\JP\site\shrine\jp_s_stone_steps_dressed_3_narrow.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Rough_3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone steps, rough field stones, 3 steps, 1 ken wide";
+		model="\JP\site\shrine\jp_s_stone_steps_rough_3.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Rough_3_Narrow: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone steps, rough field stones, half ken wide";
+		model="\JP\site\shrine\jp_s_stone_steps_rough_3_narrow.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Landing: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone landing slab course, 1 ken square";
+		model="\JP\site\shrine\jp_s_stone_steps_landing.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Landing_Wide: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone landing, 1.5 ken wide, 1 ken deep";
+		model="\JP\site\shrine\jp_s_stone_steps_landing_wide.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Cheek_3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Side cheek stone for a 3-step flight";
+		model="\JP\site\shrine\jp_s_stone_steps_cheek_3.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Cheek_6: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Side cheek stone for a 6-step flight";
+		model="\JP\site\shrine\jp_s_stone_steps_cheek_6.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Ab_Heaved: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone steps heaved by roots, one step missing";
+		model="\JP\site\shrine\jp_s_stone_steps_ab_heaved.p3d";
+	};
+	class StaticObj_JP_S_Stone_Steps_Ab_Heaved_Rough: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Rough stone steps, heaved, leaves drifted";
+		model="\JP\site\shrine\jp_s_stone_steps_ab_heaved_rough.p3d";
+	};
+	// jp_s_grave_stones (grave)
+	class StaticObj_JP_S_Grave_Stones_Board: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Board-shaped gravestone (itabi) on a base, name and date";
+		model="\JP\site\grave\jp_s_grave_stones_board.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Board_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small board-shaped gravestone set in the ground, name only";
+		model="\JP\site\grave\jp_s_grave_stones_board_s.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Board_Tall_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tall board-shaped gravestone on two bases, mossy";
+		model="\JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Boat_Halo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Boat-halo gravestone with a Jizo in relief";
+		model="\JP\site\grave\jp_s_grave_stones_boat_halo.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Boat_Halo_Child: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small boat-halo stone (a child's grave), no inscription";
+		model="\JP\site\grave\jp_s_grave_stones_boat_halo_child.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Round: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Round-headed gravestone (kushigata) on a base";
+		model="\JP\site\grave\jp_s_grave_stones_round.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Round_S_Plain: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small round-headed stone, plain";
+		model="\JP\site\grave\jp_s_grave_stones_round_s_plain.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Pillar: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Square-pillar gravestone on three bases (rare in 1730)";
+		model="\JP\site\grave\jp_s_grave_stones_pillar.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Pillar_Pointed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Square pillar with a pointed top (new Kyoho fashion, rare)";
+		model="\JP\site\grave\jp_s_grave_stones_pillar_pointed.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Gorinto_S: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Five-ring stupa (gorinto), 0.6";
+		model="\JP\site\grave\jp_s_grave_stones_gorinto_s.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Gorinto_L: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Large five-ring stupa on a platform, 2.0 (samurai / priest)";
+		model="\JP\site\grave\jp_s_grave_stones_gorinto_l.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Gorinto_Stack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Gorinto re-stacked from two stupas, crescent missing";
+		model="\JP\site\grave\jp_s_grave_stones_gorinto_stack.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Gorinto_Heap: HouseNoDestruct
+	{
+		scope=1;
+		displayName="A small heap of old gorinto fragments at a plot corner";
+		model="\JP\site\grave\jp_s_grave_stones_gorinto_heap.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Hokyointo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hokyointo (treasure-seal stupa), 1.5";
+		model="\JP\site\grave\jp_s_grave_stones_hokyointo.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Jizo_Child: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Small Jizo on a base (a child's grave), faded bib";
+		model="\JP\site\grave\jp_s_grave_stones_jizo_child.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Field: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Field stone as a grave marker (poor grave)";
+		model="\JP\site\grave\jp_s_grave_stones_field.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Field_Mound: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Earth grave mound with a field stone at its head";
+		model="\JP\site\grave\jp_s_grave_stones_field_mound.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Field_Pair: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Two small field stones (a couple's poor grave)";
+		model="\JP\site\grave\jp_s_grave_stones_field_pair.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Ab_Leaning: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Board-shaped gravestone leaning and sunk";
+		model="\JP\site\grave\jp_s_grave_stones_ab_leaning.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Ab_Board_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Board-shaped gravestone, gable snapped off and lying in front";
+		model="\JP\site\grave\jp_s_grave_stones_ab_board_broken.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Ab_Boat_Halo_Sunk: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Boat-halo gravestone leaning forward, half sunk, mossy";
+		model="\JP\site\grave\jp_s_grave_stones_ab_boat_halo_sunk.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Ab_Round_Lean: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Round-headed gravestone leaning sideways";
+		model="\JP\site\grave\jp_s_grave_stones_ab_round_lean.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Ab_Gorinto_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Gorinto with roof, crescent and jewel fallen (quake)";
+		model="\JP\site\grave\jp_s_grave_stones_ab_gorinto_fallen.p3d";
+	};
+	class StaticObj_JP_S_Grave_Stones_Ab_Hokyointo_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hokyointo, finial and one horn fallen";
+		model="\JP\site\grave\jp_s_grave_stones_ab_hokyointo_broken.p3d";
+	};
+	// jp_s_grave_wood (grave)
+	class StaticObj_JP_S_Grave_Wood_Sotoba_X3: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Three sotoba slats behind a stone";
+		model="\JP\site\grave\jp_s_grave_wood_sotoba_x3.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sotoba rack with leaning slats";
+		model="\JP\site\grave\jp_s_grave_wood_rack.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Tubes: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo flower tubes in a stone, dead stems";
+		model="\JP\site\grave\jp_s_grave_wood_tubes.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Incense: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone incense stand with ash";
+		model="\JP\site\grave\jp_s_grave_wood_incense.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Bucket_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bucket and ladle rack (teoke-kake)";
+		model="\JP\site\grave\jp_s_grave_wood_bucket_rack.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Bohyo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wooden grave post on an earth mound";
+		model="\JP\site\grave\jp_s_grave_wood_bohyo.p3d";
+	};
+	class StaticObj_JP_S_Grave_Wood_Ab_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sotoba slats fallen and split, flower tube knocked over";
+		model="\JP\site\grave\jp_s_grave_wood_ab_fallen.p3d";
+	};
 	// jp_s_hasa (yard_life)
 	class StaticObj_JP_S_Hasa_Low: HouseNoDestruct
 	{

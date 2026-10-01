@@ -1,0 +1,908 @@
+{
+ "id": "jp_s_stone_lantern",
+ "build_list": {
+  "name": "Stone lantern (ishi-doro): Kasuga, square standing and small placed types, 3 heights",
+  "importance": "standard",
+  "tiers": [
+   2,
+   3
+  ],
+  "abandoned_state": "Stone lanterns shed their top parts in quakes: 1 in 6 has its hoju or kasa on the ground beside it; the rest are dark, lichen-streaked and mossy on the roof.",
+  "placement_rule": "In mirrored pairs at the torii and the hall steps; rows of 4-20 on town approaches (landmark only); single oki-doro in courtyard gardens.",
+  "lod_budget": "small prop <=300 faces LOD0 (1.8), <=600 (3.0 and joyato)",
+  "dimensions": {
+   "kasuga_proportion": {
+    "value": "of total height: hoju 0.20, kasa 0.13, hibukuro 0.17, chudai 0.10, sao 0.36, kiso 0.05",
+    "source": "O10"
+   },
+   "heights_m": {
+    "value": "1.8 (6 shaku), 2.4 (8 shaku), 3.0 (10 shaku)",
+    "assumed": true,
+    "reason": "standard mason sizes by the shaku; the 3 heights of OUTDOOR_LIST §7.7"
+   },
+   "square_m": {
+    "value": "square standing lantern 1.8-2.4, square fire box",
+    "assumed": true,
+    "reason": "OUTDOOR_LIST §2 U (assumed common Edo form)"
+   },
+   "oki_m": {
+    "value": "placed lantern 0.6-0.9 on a stone",
+    "assumed": true,
+    "reason": "assumed"
+   }
+  },
+  "refs": [
+   {
+    "id": "c22_kasuga_lanterns",
+    "shows": "Kasuga lanterns: weathered granite and moss",
+    "period_image": false
+   },
+   {
+    "id": "k23_kasuga_lanterns",
+    "shows": "row of Kasuga Taisha stone lanterns (photo)",
+    "period_image": false
+   },
+   {
+    "id": "k16_morse_toro_tokio",
+    "shows": "stone lantern in Tokyo (Morse 1885)",
+    "period_image": false
+   },
+   {
+    "id": "k17_morse_toro_utsunomiya",
+    "shows": "stone lantern in Utsunomiya (Morse 1885)",
+    "period_image": false
+   }
+  ]
+ },
+ "group": "shrine",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "in mirrored pairs at the torii and the hall steps; rows of 4-20 only on landmark approaches; oki in courtyard gardens",
+  "mossy variants (Stephen): Kasuga 1.8 / 2.4 / 3.0, square, oki",
+  "1 in 6 placements toppled (_ab_toppled / _ab_hoju_moss)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_18",
+   "variant": "kasuga",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone lantern, Kasuga 1.8",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 271,
+    "Resolution 2": 108,
+    "Geometry": 54,
+    "View Geometry": 54,
+    "Fire Geometry": 54
+   },
+   "bbox": [
+    -0.42,
+    0.42,
+    -0.06,
+    1.8,
+    -0.37,
+    0.37
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.325,
+    -0.375,
+    0.325,
+    0.375
+   ],
+   "roadway": false,
+   "mass_kg": 120.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "kasuga_proportion_sao",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": false,
+   "kind": "kasuga",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_kasuga_18.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_24.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_24",
+   "variant": "kasuga",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone lantern, Kasuga 2.4",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 306,
+    "Resolution 2": 108,
+    "Resolution 3": 60,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -0.554,
+    0.554,
+    -0.06,
+    2.4,
+    -0.491,
+    0.491
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.433,
+    -0.501,
+    0.433,
+    0.501
+   ],
+   "roadway": false,
+   "mass_kg": 284.4444444444444,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "kasuga_proportion_sao",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": false,
+   "kind": "kasuga",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_kasuga_24.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_30.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_30",
+   "variant": "kasuga",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone lantern, Kasuga 3.0",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 306,
+    "Resolution 2": 108,
+    "Resolution 3": 60,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -0.691,
+    0.691,
+    -0.06,
+    3.0,
+    -0.613,
+    0.613
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.542,
+    -0.626,
+    0.542,
+    0.626
+   ],
+   "roadway": false,
+   "mass_kg": 555.5555555555553,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 3.0,
+     "measured": 3.0,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "kasuga_proportion_sao",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": false,
+   "kind": "kasuga",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_kasuga_30.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_square_24.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Square_24",
+   "variant": "square",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone lantern, square standing 2.4",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 137,
+    "Resolution 2": 78,
+    "Resolution 3": 60,
+    "Geometry": 38,
+    "View Geometry": 38,
+    "Fire Geometry": 38
+   },
+   "bbox": [
+    -0.481,
+    0.481,
+    -0.06,
+    2.4,
+    -0.481,
+    0.481
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.466,
+    -0.466,
+    0.466,
+    0.466
+   ],
+   "roadway": false,
+   "mass_kg": 284.4444444444444,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": false,
+   "kind": "square",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_square_24.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_oki.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Oki",
+   "variant": "oki",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small placed stone lantern (oki-doro)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 146,
+    "Resolution 2": 90,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "bbox": [
+    -0.342,
+    0.342,
+    -0.11,
+    0.75,
+    -0.296,
+    0.296
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.286,
+    -0.33,
+    0.286,
+    0.33
+   ],
+   "roadway": false,
+   "mass_kg": 8.680555555555552,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": false,
+   "kind": "oki",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_oki.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_joyato.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Joyato",
+   "variant": "joyato",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Always-lit lantern (joyato) on a two-step base, 4.0",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 149,
+    "Resolution 2": 90,
+    "Resolution 3": 72,
+    "Geometry": 50,
+    "View Geometry": 50,
+    "Fire Geometry": 50
+   },
+   "bbox": [
+    -0.85,
+    0.85,
+    -0.06,
+    4.0,
+    -0.85,
+    0.85
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.85,
+    -0.85,
+    0.85,
+    0.85
+   ],
+   "roadway": false,
+   "mass_kg": 1316.8724279835394,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:joyato"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 4.0,
+     "measured": 4.0,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": false,
+   "kind": "joyato",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_joyato.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss",
+   "variant": "kasuga",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone lantern, Kasuga 1.8, mossy",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 286,
+    "Resolution 2": 108,
+    "Geometry": 54,
+    "View Geometry": 54,
+    "Fire Geometry": 54
+   },
+   "bbox": [
+    -0.614,
+    0.516,
+    -0.06,
+    1.8,
+    -0.52,
+    0.37
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.325,
+    -0.375,
+    0.325,
+    0.375
+   ],
+   "roadway": false,
+   "mass_kg": 120.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "kasuga_proportion_sao",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": true,
+   "kind": "kasuga",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_kasuga_18_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_24_moss.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_24_Moss",
+   "variant": "kasuga",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone lantern, Kasuga 2.4, mossy",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 339,
+    "Resolution 2": 108,
+    "Resolution 3": 60,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -0.733,
+    0.617,
+    -0.06,
+    2.4,
+    -0.598,
+    0.491
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.433,
+    -0.501,
+    0.433,
+    0.501
+   ],
+   "roadway": false,
+   "mass_kg": 284.4444444444444,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "kasuga_proportion_sao",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": true,
+   "kind": "kasuga",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_kasuga_24_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_30_moss.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_30_Moss",
+   "variant": "kasuga",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone lantern, Kasuga 3.0, mossy",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 339,
+    "Resolution 2": 108,
+    "Resolution 3": 60,
+    "Geometry": 58,
+    "View Geometry": 58,
+    "Fire Geometry": 58
+   },
+   "bbox": [
+    -0.852,
+    0.717,
+    -0.06,
+    3.0,
+    -0.675,
+    0.613
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.542,
+    -0.626,
+    0.542,
+    0.626
+   ],
+   "roadway": false,
+   "mass_kg": 555.5555555555553,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 3.0,
+     "measured": 3.0,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "kasuga_proportion_sao",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": true,
+   "kind": "kasuga",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_kasuga_30_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_square_24_moss.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Square_24_Moss",
+   "variant": "square",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone lantern, square 2.4, mossy",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 156,
+    "Resolution 2": 78,
+    "Resolution 3": 60,
+    "Geometry": 38,
+    "View Geometry": 38,
+    "Fire Geometry": 38
+   },
+   "bbox": [
+    -0.733,
+    0.617,
+    -0.06,
+    2.4,
+    -0.598,
+    0.482
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.466,
+    -0.466,
+    0.466,
+    0.466
+   ],
+   "roadway": false,
+   "mass_kg": 284.4444444444444,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": true,
+   "kind": "square",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_square_24_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_oki_moss.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Oki_Moss",
+   "variant": "oki",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Small placed stone lantern, mossy",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 159,
+    "Resolution 2": 90,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
+   },
+   "bbox": [
+    -0.406,
+    0.343,
+    -0.11,
+    0.75,
+    -0.384,
+    0.297
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.286,
+    -0.33,
+    0.286,
+    0.33
+   ],
+   "roadway": false,
+   "mass_kg": 8.680555555555552,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 0.75,
+     "measured": 0.75,
+     "tol": 0.03,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": true,
+   "kind": "oki",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_oki_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_ab_toppled.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Ab_Toppled",
+   "variant": "kasuga",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Kasuga lantern, roof and jewel fallen (quake)",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "box",
+   "faces": {
+    "Resolution 1": 303,
+    "Resolution 2": 108,
+    "Resolution 3": 60,
+    "Geometry": 64,
+    "View Geometry": 64,
+    "Fire Geometry": 64
+   },
+   "bbox": [
+    -0.993,
+    2.025,
+    -0.06,
+    1.632,
+    -0.567,
+    1.626
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.103,
+    -0.396,
+    1.26,
+    1.201
+   ],
+   "roadway": false,
+   "mass_kg": 284.4444444444444,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "kasuga_proportion_sao",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: kasa + hoju fallen beside the post (quake), the most common stone-lantern ruin",
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": false,
+   "kind": "kasuga",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_ab_toppled.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_stone_lantern_ab_hoju_moss.p3d",
+   "class": "StaticObj_JP_S_Stone_Lantern_Ab_Hoju_Moss",
+   "variant": "kasuga",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Kasuga lantern 1.8, mossy, jewel fallen",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 289,
+    "Resolution 2": 108,
+    "Geometry": 60,
+    "View Geometry": 60,
+    "Fire Geometry": 60
+   },
+   "bbox": [
+    -0.705,
+    1.587,
+    -0.06,
+    1.444,
+    -0.52,
+    1.275
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.325,
+    -0.375,
+    0.609,
+    0.461
+   ],
+   "roadway": false,
+   "mass_kg": 120.0,
+   "well": false,
+   "text_cells": [
+    "decal_carved_text:kento_kyoho12_ujiko"
+   ],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "height",
+     "expected": 1.8,
+     "measured": 1.8,
+     "tol": 0.03,
+     "source": "build_list"
+    },
+    {
+     "name": "kasuga_proportion_sao",
+     "expected": 0.36,
+     "measured": 0.36,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "abandoned: hoju fallen beside the post (quake), the most common stone-lantern ruin",
+    "pairs mirrored across the approach; no light (never emissive)"
+   ],
+   "moss": true,
+   "kind": "kasuga",
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_stone_lantern_ab_hoju_moss.p3d"
+  }
+ ]
+}
