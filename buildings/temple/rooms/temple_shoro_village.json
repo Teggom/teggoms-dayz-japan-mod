@@ -1,0 +1,49 @@
+{
+ "building": "Land_JP_Temple_Shoro_Village",
+ "p3d": "\\JP\\buildings\\temple\\jp_temple_shoro_village.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/sacred.py; 'fittings' = fixed-prop spots for the furnisher (offering box, bell rope, drum, altar dais, gong, kamidana, basin, bell); 'memory_points' = model-frame memory points (bell_hook)",
+ "rooms": [
+  {
+   "name": "platform",
+   "tag": "yard",
+   "floor": "stone",
+   "level_m": 0.45,
+   "rect_kit": [
+    -0.7500000000000001,
+    3.48,
+    -3.48,
+    0.7500000000000001
+   ],
+   "doors": [],
+   "note": "the platform under the bell: the striker log hangs from the roof frame",
+   "enclosed": false,
+   "rect_model": [
+    -2.115,
+    2.115,
+    -2.115,
+    2.115
+   ],
+   "fittings": [
+    {
+     "kind": "bell",
+     "room": "platform",
+     "note": "the bronze bell (bonsho, ~0.9 m) hangs from the bell beam at memory point 'bell_hook' (y = beam underside); the striker log (shumoku) on two ropes from the beams beside it",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      1.2,
+      1.2
+     ],
+     "yaw": 0.0,
+     "y": 3.17
+    }
+   ]
+  }
+ ],
+ "loot_points": 4,
+ "loot_by_room": {
+  "platform": 4
+ }
+}

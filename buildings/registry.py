@@ -555,6 +555,112 @@ W2C_KIDO = [
 BUILDINGS += W2C_TEAHOUSES + W2C_SMITHIES + W2C_GUARDHUTS + W2C_KIDO
 
 
+# ------------------------------------------------------------------------------------------------ W2S shrine + temple
+# Phase C wave 2 (agent W2S, 2026-10-01): bare shrine + temple shells, village and town grades, from
+# parts/kit/jpparts/templates/sacred.py (buildings/sacredkit.py builds them, buildings/shellcheck.py checks them; research
+# notes spikes/W2S/W2S_NOTES.md). Not placed on the island (W2F furnishes and places them): shipped in jp_buildings.pbo.
+from jpparts.templates import sacred as _sa  # noqa: E402
+
+_LOOT_SHRINE = {"usage": ["Village", "Town"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+_LOOT_TEMPLE = {"usage": ["Village", "Town"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+
+
+def _sacred(key, dir_, cls, display, params, loot, mass):
+    return {"key": key, "dir": dir_, "module": "sacred_shells", "class": cls, "name": "jp_" + key, "display": display,
+            "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
+            "placements": [], "verify": "shellcheck", "budget": _sa.budget_class(**params), "ship": True}
+
+
+W2S_SHRINE = [
+    # SH2 worship hall (haiden)
+    _sacred("shrine_haiden_village", "shrine", "Land_JP_Shrine_Haiden_Village",
+            "Shrine worship hall (haiden), village: 3 x 2 ken, board roof", {"kind": "haiden", "grade": "village"},
+            _LOOT_SHRINE, 30000.0),
+    _sacred("shrine_haiden_town_hiwada", "shrine", "Land_JP_Shrine_Haiden_Town_Hiwada",
+            "Shrine worship hall (haiden), town: curved cypress-bark roof, brackets",
+            {"kind": "haiden", "grade": "town", "cover": "hiwada"}, _LOOT_SHRINE, 50000.0),
+    _sacred("shrine_haiden_town_copper", "shrine", "Land_JP_Shrine_Haiden_Town_Copper",
+            "Shrine worship hall (haiden), town: curved copper roof, brackets",
+            {"kind": "haiden", "grade": "town", "cover": "copper"}, _LOOT_SHRINE, 50000.0),
+    # SH3 main sanctuary (honden), sealed
+    _sacred("shrine_honden_nagare_village", "shrine", "Land_JP_Shrine_Honden_Nagare_Village",
+            "Shrine main sanctuary (honden), nagare, village", {"kind": "honden", "style": "nagare", "grade": "village"},
+            _LOOT_SHRINE, 12000.0),
+    _sacred("shrine_honden_nagare_village_chigi", "shrine", "Land_JP_Shrine_Honden_Nagare_Village_Chigi",
+            "Shrine main sanctuary (honden), nagare with chigi + katsuogi, village",
+            {"kind": "honden", "style": "nagare", "grade": "village", "chigi": True}, _LOOT_SHRINE, 12000.0),
+    _sacred("shrine_honden_nagare_town", "shrine", "Land_JP_Shrine_Honden_Nagare_Town",
+            "Shrine main sanctuary (honden), nagare sangen-sha, curved cypress-bark roof",
+            {"kind": "honden", "style": "nagare", "grade": "town"}, _LOOT_SHRINE, 25000.0),
+    _sacred("shrine_honden_shinmei", "shrine", "Land_JP_Shrine_Honden_Shinmei",
+            "Shrine main sanctuary (honden), shinmei with chigi + katsuogi", {"kind": "honden", "style": "shinmei"},
+            _LOOT_SHRINE, 12000.0),
+    # SH5 purification pavilion (temizuya)
+    _sacred("shrine_temizuya_village", "shrine", "Land_JP_Shrine_Temizuya_Village",
+            "Purification pavilion (temizuya), village: four posts, board roof", {"kind": "temizuya", "grade": "village"},
+            _LOOT_SHRINE, 4000.0),
+    _sacred("shrine_temizuya_town", "shrine", "Land_JP_Shrine_Temizuya_Town",
+            "Purification pavilion (temizuya), town: curved tile roof on brackets", {"kind": "temizuya", "grade": "town"},
+            _LOOT_SHRINE, 8000.0),
+    # SH6 priests' office + amulet window
+    _sacred("shrine_shamusho_itabuki", "shrine", "Land_JP_Shrine_Shamusho_Itabuki",
+            "Shrine priests' office with the amulet window (village, boards)", {"kind": "shamusho", "roof": "itabuki"},
+            _LOOT_SHRINE, 15000.0),
+    _sacred("shrine_shamusho_sangawara", "shrine", "Land_JP_Shrine_Shamusho_Sangawara",
+            "Shrine priests' office with the amulet window (town, tiled)", {"kind": "shamusho", "roof": "sangawara"},
+            _LOOT_SHRINE, 20000.0),
+    # SH4 kagura stage
+    _sacred("shrine_kagura_village", "shrine", "Land_JP_Shrine_Kagura_Village",
+            "Kagura dance stage (kagura-den), village", {"kind": "kagura", "grade": "village"}, _LOOT_SHRINE, 12000.0),
+    _sacred("shrine_kagura_town", "shrine", "Land_JP_Shrine_Kagura_Town",
+            "Kagura dance stage (kagura-den), town: curved roof on brackets", {"kind": "kagura", "grade": "town"},
+            _LOOT_SHRINE, 18000.0),
+]
+W2S_TEMPLE = [
+    # BU1 small sacred hall (do): Jizo / Kannon / Yakushi / Koshin / Enma halls, the village assembly hall
+    _sacred("temple_do_2_board", "temple", "Land_JP_Temple_Do_2_Board",
+            "Small sacred hall (do), 2 x 2 ken, board hogyo roof", {"kind": "do", "size": 2, "roof": "board"},
+            _LOOT_TEMPLE, 20000.0),
+    _sacred("temple_do_2_thatch", "temple", "Land_JP_Temple_Do_2_Thatch",
+            "Small sacred hall (do), 2 x 2 ken, thatched hogyo roof", {"kind": "do", "size": 2, "roof": "thatch"},
+            _LOOT_TEMPLE, 20000.0),
+    _sacred("temple_do_3_tile", "temple", "Land_JP_Temple_Do_3_Tile",
+            "Small sacred hall (do), 3 x 3 ken, tiled hogyo roof", {"kind": "do", "size": 3, "roof": "tile"},
+            _LOOT_TEMPLE, 40000.0),
+    _sacred("temple_do_town", "temple", "Land_JP_Temple_Do_Town",
+            "Small sacred hall (do), town: 3 x 3 bays, curved copper hogyo roof, brackets", {"kind": "do", "grade": "town"},
+            _LOOT_TEMPLE, 50000.0),
+    # BU2 main hall (hondo)
+    _sacred("temple_hondo_village", "temple", "Land_JP_Temple_Hondo_Village",
+            "Temple main hall (hondo), village: 4 x 4 ken, tiled irimoya", {"kind": "hondo", "grade": "village"},
+            _LOOT_TEMPLE, 70000.0),
+    _sacred("temple_hondo_town", "temple", "Land_JP_Temple_Hondo_Town",
+            "Temple main hall (hondo), town: 3 x 3 bays, curved hongawara, degumi brackets",
+            {"kind": "hondo", "grade": "town"}, _LOOT_TEMPLE, 90000.0),
+    # BU3 priests' quarters + kitchen (kuri)
+    _sacred("temple_kuri_village", "temple", "Land_JP_Temple_Kuri_Village",
+            "Temple priests' quarters + kitchen (kuri), village: thatch, genkan porch", {"kind": "kuri", "grade": "village"},
+            _LOOT_TEMPLE, 60000.0),
+    _sacred("temple_kuri_town", "temple", "Land_JP_Temple_Kuri_Town",
+            "Temple priests' quarters + kitchen (kuri), town: tiled, genkan porch", {"kind": "kuri", "grade": "town"},
+            _LOOT_TEMPLE, 70000.0),
+    # BU6 bell tower (shoro)
+    _sacred("temple_shoro_village", "temple", "Land_JP_Temple_Shoro_Village",
+            "Temple bell tower (shoro), village: open four-post", {"kind": "shoro", "grade": "village"}, _LOOT_TEMPLE,
+            15000.0),
+    _sacred("temple_shoro_town", "temple", "Land_JP_Temple_Shoro_Town",
+            "Temple bell tower (shoro), town: hakama skirt, curved roof, brackets", {"kind": "shoro", "grade": "town"},
+            _LOOT_TEMPLE, 30000.0),
+    # BU5 small gate
+    _sacred("temple_gate_yakuimon", "temple", "Land_JP_Temple_Gate_Yakuimon",
+            "Temple small gate (yakui-mon), village: tiled", {"kind": "gate", "grade": "village"}, _LOOT_TEMPLE, 8000.0),
+    _sacred("temple_gate_shikyakumon", "temple", "Land_JP_Temple_Gate_Shikyakumon",
+            "Temple small gate (shikyaku-mon), town: curved tile roof, brackets", {"kind": "gate", "grade": "town"},
+            _LOOT_TEMPLE, 12000.0),
+]
+BUILDINGS += W2S_SHRINE + W2S_TEMPLE
+
+
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
 # Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_

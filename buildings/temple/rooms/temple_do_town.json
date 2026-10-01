@@ -1,0 +1,102 @@
+{
+ "building": "Land_JP_Temple_Do_Town",
+ "p3d": "\\JP\\buildings\\temple\\jp_temple_do_town.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/sacred.py; 'fittings' = fixed-prop spots for the furnisher (offering box, bell rope, drum, altar dais, gong, kamidana, basin, bell); 'memory_points' = model-frame memory points (bell_hook)",
+ "rooms": [
+  {
+   "name": "hall",
+   "tag": "worship",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    0.155,
+    6.669999999999999,
+    -6.669999999999999,
+    -0.155
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "one-room hall: the statue on its dais at the back; also the ward's meeting hall",
+   "enclosed": true,
+   "rect_model": [
+    -3.257,
+    3.257,
+    -3.257,
+    3.257
+   ],
+   "fittings": [
+    {
+     "kind": "altar",
+     "room": "hall",
+     "note": "Sumeru dais (shumidan) with the statue in its zushi, the three altar pieces, bowl gong, sutra desk",
+     "rect": [
+      -1.2,
+      1.2,
+      -3.258,
+      -2.188
+     ],
+     "y": 0.75
+    }
+   ]
+  },
+  {
+   "name": "en",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    0.1,
+    6.725,
+    0.32,
+    1.185
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -3.312,
+    3.312,
+    3.732,
+    4.598
+   ],
+   "fittings": [
+    {
+     "kind": "saisen_bako",
+     "room": "en",
+     "note": "donation box on the en before the doors",
+     "centre": [
+      -0.0,
+      3.912
+     ],
+     "size": [
+      1.2,
+      0.5
+     ],
+     "yaw": 0.0,
+     "y": 0.75
+    },
+    {
+     "kind": "gong",
+     "room": "en",
+     "note": "waniguchi gong with its rope under the kohai",
+     "centre": [
+      -0.0,
+      4.012
+     ],
+     "size": [
+      0.3,
+      0.3
+     ],
+     "yaw": 0.0,
+     "y": 3.15
+    }
+   ]
+  }
+ ],
+ "loot_points": 11,
+ "loot_by_room": {
+  "hall": 9,
+  "en": 2
+ }
+}

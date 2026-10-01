@@ -1,0 +1,49 @@
+{
+ "building": "Land_JP_Shrine_Temizuya_Town",
+ "p3d": "\\JP\\buildings\\shrine\\jp_shrine_temizuya_town.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/sacred.py; 'fittings' = fixed-prop spots for the furnisher (offering box, bell rope, drum, altar dais, gong, kamidana, basin, bell); 'memory_points' = model-frame memory points (bell_hook)",
+ "rooms": [
+  {
+   "name": "pavilion",
+   "tag": "worship",
+   "floor": "stone",
+   "level_m": 0.08,
+   "rect_kit": [
+    -0.45,
+    3.18,
+    -2.27,
+    0.45
+   ],
+   "doors": [],
+   "note": "open pavilion over the stone basin: wash hands and mouth before the shrine",
+   "enclosed": false,
+   "rect_model": [
+    -1.815,
+    1.815,
+    -1.36,
+    1.36
+   ],
+   "fittings": [
+    {
+     "kind": "basin",
+     "room": "pavilion",
+     "note": "the stone basin (chozubachi, W2 site prop jp_s_basin_*) with its bamboo spout and ladle rack (hishaku)",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      1.1,
+      0.7
+     ],
+     "yaw": 0.0,
+     "y": 0.08
+    }
+   ]
+  }
+ ],
+ "loot_points": 2,
+ "loot_by_room": {
+  "pavilion": 2
+ }
+}

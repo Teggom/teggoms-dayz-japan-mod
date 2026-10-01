@@ -2967,156 +2967,6 @@
    ]
   },
   {
-   "id": "jp_p_roof_forms_hogyo_board_2ken",
-   "checks": [
-    {
-     "check": "C5 LODs",
-     "ok": true,
-     "detail": "Resolution 1 796, Resolution 2 258, Resolution 3 244, Geometry 20, Roadway 4, View Geometry 20, Fire Geometry 20"
-    },
-    {
-     "check": "C2 library only",
-     "ok": true,
-     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
-    },
-    {
-     "check": "C7 Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 View Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 Fire Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 Fire penetration mats",
-     "ok": true,
-     "detail": "wood"
-    },
-    {
-     "check": "C7 Roadway on Geometry",
-     "ok": true,
-     "detail": "40/40 samples on a Geometry top (+-3 cm)"
-    },
-    {
-     "check": "C4 pitch_deg",
-     "ok": true,
-     "detail": "expected 24.2, measured 24.2277"
-    },
-    {
-     "check": "C3 grid snap",
-     "ok": true,
-     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
-    }
-   ]
-  },
-  {
-   "id": "jp_p_roof_forms_hogyo_tile_3ken",
-   "checks": [
-    {
-     "check": "C5 LODs",
-     "ok": true,
-     "detail": "Resolution 1 3624, Resolution 2 606, Resolution 3 416, Geometry 20, Roadway 4, View Geometry 20, Fire Geometry 20"
-    },
-    {
-     "check": "C2 library only",
-     "ok": true,
-     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
-    },
-    {
-     "check": "C7 Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 View Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 Fire Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 Fire penetration mats",
-     "ok": true,
-     "detail": "pottery"
-    },
-    {
-     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
-     "ok": true,
-     "detail": "2444/2444 field points within reach of the bed; 4 eave tile sets, 4 fascia boards"
-    },
-    {
-     "check": "C7 Roadway on Geometry",
-     "ok": true,
-     "detail": "40/40 samples on a Geometry top (+-3 cm)"
-    },
-    {
-     "check": "C4 pitch_deg",
-     "ok": true,
-     "detail": "expected 24.2, measured 24.2277"
-    },
-    {
-     "check": "C3 grid snap",
-     "ok": true,
-     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
-    }
-   ]
-  },
-  {
-   "id": "jp_p_roof_forms_hogyo_thatch_2ken",
-   "checks": [
-    {
-     "check": "C5 LODs",
-     "ok": true,
-     "detail": "Resolution 1 988, Resolution 2 298, Resolution 3 160, Geometry 20, View Geometry 20, Fire Geometry 20"
-    },
-    {
-     "check": "C2 library only",
-     "ok": true,
-     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
-    },
-    {
-     "check": "C7 Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 View Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 Fire Geometry closed+convex",
-     "ok": true,
-     "detail": "4 components, all closed and convex"
-    },
-    {
-     "check": "C7 Fire penetration mats",
-     "ok": true,
-     "detail": "hay"
-    },
-    {
-     "check": "C4 pitch_deg",
-     "ok": true,
-     "detail": "expected 45.0, measured 45.0"
-    },
-    {
-     "check": "C3 grid snap",
-     "ok": true,
-     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
-    }
-   ]
-  },
-  {
    "id": "jp_p_roof_nagare_1ken",
    "checks": [
     {
@@ -3423,6 +3273,156 @@
      "check": "C4 tuck_under_main_roof_m",
      "ok": true,
      "detail": "expected >=0.02, measured 0.03"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_forms_hogyo_board_2ken",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 796, Resolution 2 258, Resolution 3 244, Geometry 20, Roadway 4, View Geometry 20, Fire Geometry 20"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "40/40 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 24.2, measured 24.2277"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_forms_hogyo_tile_3ken",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 3624, Resolution 2 606, Resolution 3 416, Geometry 20, Roadway 4, View Geometry 20, Fire Geometry 20"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "pottery"
+    },
+    {
+     "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+     "ok": true,
+     "detail": "2444/2444 field points within reach of the bed; 4 eave tile sets, 4 fascia boards"
+    },
+    {
+     "check": "C7 Roadway on Geometry",
+     "ok": true,
+     "detail": "40/40 samples on a Geometry top (+-3 cm)"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 24.2, measured 24.2277"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "5 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_roof_forms_hogyo_thatch_2ken",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 988, Resolution 2 298, Resolution 3 160, Geometry 20, View Geometry 20, Fire Geometry 20"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "4 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "hay"
+    },
+    {
+     "check": "C4 pitch_deg",
+     "ok": true,
+     "detail": "expected 45.0, measured 45.0"
     },
     {
      "check": "C3 grid snap",

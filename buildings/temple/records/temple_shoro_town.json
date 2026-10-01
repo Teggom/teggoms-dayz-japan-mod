@@ -1,0 +1,49 @@
+{
+ "key": "temple_shoro_town",
+ "class": "Land_JP_Temple_Shoro_Town",
+ "name": "jp_temple_shoro_town",
+ "model": "\\JP\\buildings\\temple\\jp_temple_shoro_town.p3d",
+ "model_dir": "temple",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 6371,
+  "Resolution 2": 2435,
+  "Resolution 3": 1267,
+  "Geometry": 716,
+  "Memory": 0,
+  "Roadway": 105,
+  "View Geometry": 669,
+  "Fire Geometry": 669
+ },
+ "loot_points": 2,
+ "config_class": "\tclass Land_JP_Temple_Shoro_Town: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Temple bell tower (shoro), town: hakama skirt, curved roof, brackets\";\n\t\tmodel=\"\\JP\\buildings\\temple\\jp_temple_shoro_town.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_temple_shoro_town_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_temple_shoro_town: Default\n\t{\n\t\tskeletonName=\"jp_temple_shoro_town_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Temple_Shoro_Town\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.285714 3.400000 0.535714\" range=\"0.435714\" height=\"1.089286\" />",
+  "\t\t\t\t\t\t<point pos=\"0.000000 3.400000 -1.392857\" range=\"0.407143\" height=\"1.017857\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "shoro",
+  "grade": "town"
+ },
+ "bbox": [
+  -3.115,
+  3.115,
+  -0.205,
+  9.38,
+  -3.16,
+  7.165
+ ]
+}

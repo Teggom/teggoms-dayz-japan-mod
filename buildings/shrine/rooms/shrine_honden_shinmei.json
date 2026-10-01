@@ -1,0 +1,62 @@
+{
+ "building": "Land_JP_Shrine_Honden_Shinmei",
+ "p3d": "\\JP\\buildings\\shrine\\jp_shrine_honden_shinmei.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/sacred.py; 'fittings' = fixed-prop spots for the furnisher (offering box, bell rope, drum, altar dais, gong, kamidana, basin, bell); 'memory_points' = model-frame memory points (bell_hook)",
+ "rooms": [
+  {
+   "name": "en",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 1.0,
+   "rect_kit": [
+    0.1,
+    1.72,
+    0.12,
+    1.185
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -0.81,
+    0.81,
+    1.03,
+    2.095
+   ],
+   "fittings": [
+    {
+     "kind": "offering_table",
+     "room": "en",
+     "note": "hassoku-an offering table with sanbo on the en before the doors",
+     "centre": [
+      0.0,
+      1.46
+     ],
+     "size": [
+      0.9,
+      0.45
+     ],
+     "yaw": 0.0,
+     "y": 1.0
+    },
+    {
+     "kind": "sanctum",
+     "room": null,
+     "note": "the sealed sanctum (shintai in a zushi, mirror, gohei): seen through the doors only",
+     "rect": [
+      -0.85,
+      0.85,
+      -0.85,
+      0.85
+     ],
+     "y": 1.0,
+     "outside": true
+    }
+   ]
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "en": 1
+ }
+}

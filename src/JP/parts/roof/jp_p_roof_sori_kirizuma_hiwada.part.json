@@ -133,10 +133,10 @@
  ],
  "materials": [
   {
-   "key": "roof_kureita",
-   "id": "jp_m_roof_kureita",
-   "palette_id": "roof_board_silver",
-   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kureita<wear>.rvmat",
+   "key": "roof_hiwada",
+   "id": "jp_m_roof_hiwada",
+   "palette_id": "roof_hiwada",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_hiwada<wear>.rvmat",
    "default_wear": "_w1",
    "wear_selectable": [
     "_w0",
@@ -179,9 +179,7 @@
  ],
  "walkable": true,
  "doors": [],
- "notes": [
-  "Stand-in material (missing from the library: roof_hiwada, roof_copper); the generator switches automatically."
- ],
+ "notes": [],
  "extra": {
   "roof": {
    "form": "kirizuma",
@@ -204,10 +202,7 @@
     "front",
     "back"
    ],
-   "missing_materials": [
-    "roof_hiwada",
-    "roof_copper"
-   ],
+   "missing_materials": [],
    "eave_y": 3.0317440779420712,
    "zr": -1.82,
    "gov": [

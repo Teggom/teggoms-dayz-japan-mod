@@ -84,10 +84,10 @@
  ],
  "materials": [
   {
-   "key": "metal_iron",
-   "id": "jp_m_metal_iron",
-   "palette_id": "iron_black",
-   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "key": "metal_bronze",
+   "id": "jp_m_metal_bronze",
+   "palette_id": "bronze_patina",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_bronze<wear>.rvmat",
    "default_wear": "_w1",
    "wear_selectable": [
     "_w0",

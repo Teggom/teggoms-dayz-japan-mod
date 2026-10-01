@@ -1,0 +1,53 @@
+{
+ "key": "shrine_honden_nagare_town",
+ "class": "Land_JP_Shrine_Honden_Nagare_Town",
+ "name": "jp_shrine_honden_nagare_town",
+ "model": "\\JP\\buildings\\shrine\\jp_shrine_honden_nagare_town.p3d",
+ "model_dir": "shrine",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 6614,
+  "Resolution 2": 1840,
+  "Resolution 3": 852,
+  "Geometry": 773,
+  "Memory": 0,
+  "Roadway": 46,
+  "View Geometry": 695,
+  "Fire Geometry": 713
+ },
+ "loot_points": 5,
+ "config_class": "\tclass Land_JP_Shrine_Honden_Nagare_Town: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Shrine main sanctuary (honden), nagare sangen-sha, curved cypress-bark roof\";\n\t\tmodel=\"\\JP\\buildings\\shrine\\jp_shrine_honden_nagare_town.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_shrine_honden_nagare_town_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_shrine_honden_nagare_town: Default\n\t{\n\t\tskeletonName=\"jp_shrine_honden_nagare_town_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Shrine_Honden_Nagare_Town\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"2.017500 1.000000 2.658750\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.017500 1.000000 -1.392679\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"2.017500 1.000000 -2.911964\" range=\"0.332500\" height=\"0.831250\" />",
+  "\t\t\t\t\t\t<point pos=\"0.125000 1.000000 3.397500\" range=\"0.347500\" height=\"0.868750\" />",
+  "\t\t\t\t\t\t<point pos=\"0.125000 1.000000 -3.397500\" range=\"0.347500\" height=\"0.868750\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "honden",
+  "style": "nagare",
+  "grade": "town"
+ },
+ "bbox": [
+  -4.161,
+  4.156,
+  -0.202,
+  5.706,
+  -2.22,
+  4.795
+ ]
+}

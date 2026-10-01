@@ -1,0 +1,49 @@
+{
+ "key": "shrine_kagura_town",
+ "class": "Land_JP_Shrine_Kagura_Town",
+ "name": "jp_shrine_kagura_town",
+ "model": "\\JP\\buildings\\shrine\\jp_shrine_kagura_town.p3d",
+ "model_dir": "shrine",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 4268,
+  "Resolution 2": 1683,
+  "Resolution 3": 831,
+  "Geometry": 467,
+  "Memory": 0,
+  "Roadway": 51,
+  "View Geometry": 413,
+  "Fire Geometry": 413
+ },
+ "loot_points": 2,
+ "config_class": "\tclass Land_JP_Shrine_Kagura_Town: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Kagura dance stage (kagura-den), town: curved roof on brackets\";\n\t\tmodel=\"\\JP\\buildings\\shrine\\jp_shrine_kagura_town.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_shrine_kagura_town_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_shrine_kagura_town: Default\n\t{\n\t\tskeletonName=\"jp_shrine_kagura_town_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Shrine_Kagura_Town\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.090714 1.000000 0.362857\" range=\"0.835000\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.635000 1.000000 -0.725714\" range=\"0.835000\" height=\"2.000000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "kagura",
+  "grade": "town"
+ },
+ "bbox": [
+  -3.801,
+  3.047,
+  -0.202,
+  6.536,
+  -3.047,
+  3.047
+ ]
+}

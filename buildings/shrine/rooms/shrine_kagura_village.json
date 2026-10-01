@@ -1,0 +1,61 @@
+{
+ "building": "Land_JP_Shrine_Kagura_Village",
+ "p3d": "\\JP\\buildings\\shrine\\jp_shrine_kagura_village.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front (entrance side); built by parts/kit/jpparts/templates/sacred.py; 'fittings' = fixed-prop spots for the furnisher (offering box, bell rope, drum, altar dais, gong, kamidana, basin, bell); 'memory_points' = model-frame memory points (bell_hook)",
+ "rooms": [
+  {
+   "name": "stage",
+   "tag": "worship",
+   "floor": "boards",
+   "level_m": 1.0,
+   "rect_kit": [
+    0.11,
+    3.5300000000000002,
+    -3.5300000000000002,
+    -0.11
+   ],
+   "doors": [],
+   "note": "the dance stage: open on three sides, the musicians at the back wall",
+   "enclosed": false,
+   "rect_model": [
+    -1.71,
+    1.71,
+    -1.71,
+    1.71
+   ],
+   "fittings": [
+    {
+     "kind": "drum",
+     "room": "stage",
+     "note": "big drum (odaiko) + small drums, flutes on a rack at the back wall",
+     "centre": [
+      1.22,
+      -1.27
+     ],
+     "size": [
+      0.8,
+      0.6
+     ],
+     "yaw": 0.0,
+     "y": 1.0
+    },
+    {
+     "kind": "masks",
+     "room": "stage",
+     "note": "masks on pegs, kagura bells (suzu) on a stand, gohei, fans (back wall)",
+     "rect": [
+      -1.32,
+      -0.22,
+      -1.74,
+      -1.56
+     ],
+     "y": 2.5
+    }
+   ]
+  }
+ ],
+ "loot_points": 2,
+ "loot_by_room": {
+  "stage": 2
+ }
+}
