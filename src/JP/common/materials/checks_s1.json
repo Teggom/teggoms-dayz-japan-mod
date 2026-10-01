@@ -1,0 +1,117 @@
+{
+ "check": "C1 palette (tools/matcheck), S1 materials",
+ "palette_entries_added": [],
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_sumi_text_shop_w0_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    47.7,
+    47.7,
+    47.7
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 2.0,
+   "dE_to_entry": 2.0,
+   "tol": 10.0,
+   "spread_p75": 0.9,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 0.9)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     47.7,
+     47.7,
+     47.7
+    ],
+    "dE": 1.97,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_sumi_text_shop_w1_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    74.0,
+    66.4,
+    60.1
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 8.84,
+   "dE_to_entry": 8.84,
+   "tol": 10.0,
+   "spread_p75": 1.3,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.3)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     74.1,
+     66.4,
+     60.2
+    ],
+    "dE": 8.85,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_decal_sumi_text_shop_w2_co.png",
+   "palette_id": "sumi_black",
+   "wear": "",
+   "mean_srgb": [
+    76.3,
+    68.7,
+    62.3
+   ],
+   "target_srgb": [
+    52,
+    52,
+    52
+   ],
+   "dE": 9.65,
+   "dE_to_entry": 9.65,
+   "tol": 10.0,
+   "spread_p75": 1.3,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 1.3)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     76.4,
+     68.7,
+     62.5
+    ],
+    "dE": 9.65,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  }
+ ]
+}

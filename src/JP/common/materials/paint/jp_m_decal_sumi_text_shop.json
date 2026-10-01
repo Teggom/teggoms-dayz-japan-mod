@@ -1,0 +1,529 @@
+{
+ "id": "jp_m_decal_sumi_text_shop",
+ "family": "paint",
+ "palette_id": "sumi_black",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 1024,
+ "px_per_m": 1024.0,
+ "uv": "TEXT ATLAS, not world-scale (as jp_m_decal_sumi_text): map a face onto one cell's rectangle (\"cells\": u0, v0, u1, v1 with v down), keeping the cell's aspect; 1024 px = 1 m. Lay the decal 2-3 mm off the surface; never in Geometry/View/Fire. Text runs top to bottom, columns right to left.",
+ "grain": "brush strokes (Yuji Syuku kanji, Yuji Hentaigana Akebono kana)",
+ "penetration_rvmat": null,
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "crisp black ink",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_shop_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_shop_w0.rvmat",
+   "target_srgb": [
+    47.7,
+    47.7,
+    47.7
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.132
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "faded to grey-brown",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_shop_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_shop_w1.rvmat",
+   "target_srgb": [
+    74.0,
+    66.4,
+    60.1
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.111
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "ghost of text, flaking",
+   "co": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_shop_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_decal_sumi_text_shop_w2.rvmat",
+   "target_srgb": [
+    76.3,
+    68.7,
+    62.3
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.0
+  }
+ },
+ "used_by": [
+  "jp_f_kanban",
+  "jp_f_pawn_board",
+  "jp_f_menu_board",
+  "jp_f_yakudansu",
+  "jp_f_print_line",
+  "jp_f_sg"
+ ],
+ "used_on": "Ink text and pictures for the shop sets",
+ "sources": [
+  {
+   "procedural": "make_s1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_s1_materials.py (agent S1, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/SHOP_SETS.md (S1, the shop sets)",
+ "alpha": "decal",
+ "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
+ "note": "The shop sets' ink: kanban of the 28 trades, menu strips, pawn tags, medicine labels and packets, book title slips, an Otsu-e, a fan and a page (ink only: colour prints are later than 1744). Fonts: SIL OFL 1.1, Yuji Project Authors.",
+ "cells": {
+  "kanban_aramono": {
+   "uv": [
+    0.0,
+    0.0,
+    0.0938,
+    0.1953
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "荒物"
+  },
+  "kanban_futomono": {
+   "uv": [
+    0.0938,
+    0.0,
+    0.1875,
+    0.1953
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "太物"
+  },
+  "kanban_furugi": {
+   "uv": [
+    0.1875,
+    0.0,
+    0.2812,
+    0.1953
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "古着"
+  },
+  "kanban_kanamono": {
+   "uv": [
+    0.2812,
+    0.0,
+    0.375,
+    0.1953
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "金物"
+  },
+  "kanban_setomono": {
+   "uv": [
+    0.375,
+    0.0,
+    0.4688,
+    0.1953
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "瀬戸物"
+  },
+  "kanban_nurimono": {
+   "uv": [
+    0.4688,
+    0.0,
+    0.5625,
+    0.1953
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "塗物"
+  },
+  "kanban_hitsuboku": {
+   "uv": [
+    0.5625,
+    0.0,
+    0.6562,
+    0.1953
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "筆墨"
+  },
+  "kanban_abura": {
+   "uv": [
+    0.6562,
+    0.0,
+    0.75,
+    0.1953
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "油"
+  },
+  "kanban_rousoku": {
+   "uv": [
+    0.0,
+    0.1953,
+    0.0938,
+    0.3906
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "蝋燭"
+  },
+  "kanban_sumimaki": {
+   "uv": [
+    0.0938,
+    0.1953,
+    0.1875,
+    0.3906
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "炭薪"
+  },
+  "kanban_tabidogu": {
+   "uv": [
+    0.1875,
+    0.1953,
+    0.2812,
+    0.3906
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "旅道具"
+  },
+  "kanban_otsue": {
+   "uv": [
+    0.2812,
+    0.1953,
+    0.375,
+    0.3906
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "大津絵"
+  },
+  "kanban_kome": {
+   "uv": [
+    0.375,
+    0.1953,
+    0.4688,
+    0.3906
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "米"
+  },
+  "kanban_sakana": {
+   "uv": [
+    0.4688,
+    0.1953,
+    0.5625,
+    0.3906
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "魚"
+  },
+  "kanban_aomono": {
+   "uv": [
+    0.5625,
+    0.1953,
+    0.6562,
+    0.3906
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "青物"
+  },
+  "kanban_tofu": {
+   "uv": [
+    0.6562,
+    0.1953,
+    0.75,
+    0.3906
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "豆腐"
+  },
+  "kanban_mochi": {
+   "uv": [
+    0.0,
+    0.3906,
+    0.0938,
+    0.5859
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "名物餅"
+  },
+  "kanban_niuri": {
+   "uv": [
+    0.0938,
+    0.3906,
+    0.1875,
+    0.5859
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "煮売"
+  },
+  "kanban_shichi": {
+   "uv": [
+    0.1875,
+    0.3906,
+    0.2812,
+    0.5859
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "質"
+  },
+  "kanban_ryogae": {
+   "uv": [
+    0.2812,
+    0.3906,
+    0.375,
+    0.5859
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "両替"
+  },
+  "kanban_shorin": {
+   "uv": [
+    0.375,
+    0.3906,
+    0.4688,
+    0.5859
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "書林"
+  },
+  "kanban_fukuromono": {
+   "uv": [
+    0.4688,
+    0.3906,
+    0.5625,
+    0.5859
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "袋物"
+  },
+  "kanban_momen": {
+   "uv": [
+    0.5625,
+    0.3906,
+    0.6562,
+    0.5859
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "木綿"
+  },
+  "kanban_shitate": {
+   "uv": [
+    0.6562,
+    0.3906,
+    0.75,
+    0.5859
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "仕立物"
+  },
+  "kanban_edokoro": {
+   "uv": [
+    0.0,
+    0.5859,
+    0.0938,
+    0.7812
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "絵所"
+  },
+  "kanban_nushi": {
+   "uv": [
+    0.0938,
+    0.5859,
+    0.1875,
+    0.7812
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "塗師"
+  },
+  "kanban_kushi": {
+   "uv": [
+    0.1875,
+    0.5859,
+    0.2812,
+    0.7812
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "櫛"
+  },
+  "kanban_ningyo": {
+   "uv": [
+    0.2812,
+    0.5859,
+    0.375,
+    0.7812
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "人形"
+  },
+  "kanban_butsugu": {
+   "uv": [
+    0.375,
+    0.5859,
+    0.4688,
+    0.7812
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "仏具"
+  },
+  "menu_nishime": {
+   "uv": [
+    0.4688,
+    0.5859,
+    0.5625,
+    0.7812
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "煮しめ"
+  },
+  "menu_nimame": {
+   "uv": [
+    0.5625,
+    0.5859,
+    0.6562,
+    0.7812
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "煮豆"
+  },
+  "menu_dengaku": {
+   "uv": [
+    0.6562,
+    0.5859,
+    0.75,
+    0.7812
+   ],
+   "for": "shop kanban / menu strip (S1)",
+   "text": "田楽"
+  },
+  "tag_ichi": {
+   "uv": [
+    0.0,
+    0.791,
+    0.0469,
+    0.9863
+   ],
+   "for": "jp_f_pawn_board: pawn ticket no. 1",
+   "text": "質札壱番"
+  },
+  "tag_ni": {
+   "uv": [
+    0.0469,
+    0.791,
+    0.0938,
+    0.9863
+   ],
+   "for": "jp_f_pawn_board: pawn ticket no. 2",
+   "text": "質札弐番"
+  },
+  "tag_san": {
+   "uv": [
+    0.0938,
+    0.791,
+    0.1406,
+    0.9863
+   ],
+   "for": "jp_f_pawn_board: pawn ticket no. 3",
+   "text": "質札参番"
+  },
+  "pkt_hangontan": {
+   "uv": [
+    0.1406,
+    0.791,
+    0.2109,
+    0.9863
+   ],
+   "for": "jp_f_sg medicine: Toyama Hangontan packet",
+   "text": "反魂丹"
+  },
+  "pkt_mankintan": {
+   "uv": [
+    0.2109,
+    0.791,
+    0.2812,
+    0.9863
+   ],
+   "for": "jp_f_sg medicine: Ise Mankintan packet",
+   "text": "万金丹"
+  },
+  "title_tsurezure": {
+   "uv": [
+    0.2812,
+    0.791,
+    0.3203,
+    0.9863
+   ],
+   "for": "jp_f_sg books: title slip (Tsurezuregusa)",
+   "text": "徒然草"
+  },
+  "title_hyakunin": {
+   "uv": [
+    0.3203,
+    0.791,
+    0.3594,
+    0.9863
+   ],
+   "for": "jp_f_sg books: title slip (Hyakunin isshu)",
+   "text": "百人一首"
+  },
+  "pkt_kizami": {
+   "uv": [
+    0.3594,
+    0.791,
+    0.4219,
+    0.9863
+   ],
+   "for": "jp_f_sg tobacco: cut-tobacco packet",
+   "text": "きざみ"
+  },
+  "drawer_labels": {
+   "uv": [
+    0.4375,
+    0.7969,
+    0.6875,
+    0.9844
+   ],
+   "for": "jp_f_yakudansu: 4 x 4 drawer labels (crop one 1/4 x 1/4 per drawer)",
+   "text": "甘草 桂枝 芍薬 大黄 人参 当帰 山薬 黄連 附子 麻黄 杏仁 半夏 陳皮 生姜 茯苓 白朮"
+  },
+  "pic_otsue": {
+   "uv": [
+    0.75,
+    0.0,
+    1.0,
+    0.332
+   ],
+   "for": "jp_f_print_line _otsue: an Otsu-e (the demon as a mendicant monk), ink only",
+   "text": "鬼の念仏 (Oni no nenbutsu) + the figure"
+  },
+  "pic_fan": {
+   "uv": [
+    0.75,
+    0.3418,
+    1.0,
+    0.5078
+   ],
+   "for": "jp_f_print_line _fans: a fan leaf with an ink landscape"
+  },
+  "pic_page": {
+   "uv": [
+    0.75,
+    0.5176,
+    1.0,
+    0.8496
+   ],
+   "for": "jp_f_print_line _books: a printed page (sumizuri-e), text columns and a picture",
+   "text": "春の夜の夢のうき橋/とだえして峰に別るる/横雲の空"
+  },
+  "pic_scroll": {
+   "uv": [
+    0.75,
+    0.8594,
+    1.0,
+    1.0
+   ],
+   "for": "jp_f_print_line _fans: a small ink landscape (scroll / album leaf)"
+  }
+ },
+ "fonts": [
+  "research/fonts/yujisyuku/YujiSyuku-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)",
+  "research/fonts/yujihentaiganaakebono/YujiHentaiganaAkebono-Regular.ttf (SIL OFL 1.1, Yuji Project Authors)"
+ ]
+}

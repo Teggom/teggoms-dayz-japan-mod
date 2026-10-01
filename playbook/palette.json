@@ -1919,6 +1919,46 @@
    "method": "assumed",
    "tolerance_dE76": 12,
    "hex": "#485638"
+  },
+  {
+   "id": "lacquer_shu",
+   "name": "Red (shu) lacquer on wares, aged",
+   "material": "lacquer with cinnabar / bengara red",
+   "group": "paint",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "bowls, trays, kneading bowls, doll stands (jp_m_lacquer_shu)",
+   "note": "Added 2026-09-30 by S1. Assumed: the dull brick vermilion of used shu lacquer (negoro wares wear through to black), darker and browner than the shrine paint shu_vermilion. Judge in game.",
+   "srgb": [
+    126,
+    42,
+    28
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "hex": "#7E2A1C"
+  },
+  {
+   "id": "porcelain_sometsuke",
+   "name": "Porcelain glaze, white with a grey-blue cast (sometsuke ground)",
+   "material": "Hizen (Arita / Hasami) porcelain",
+   "group": "ceramic",
+   "tiers": [
+    2,
+    3
+   ],
+   "use": "the white ground of blue-and-white wares (jp_m_ceramic_porcelain); the cobalt pattern is masked",
+   "note": "Added 2026-09-30 by S1. Assumed: the faintly blue-grey white of period Hizen glaze. Judge in game.",
+   "srgb": [
+    200,
+    203,
+    200
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 12,
+   "hex": "#C8CBC8"
   }
  ]
 }

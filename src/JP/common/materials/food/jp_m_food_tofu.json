@@ -1,0 +1,65 @@
+{
+ "id": "jp_m_food_tofu",
+ "family": "food",
+ "palette_id": "gofun_white",
+ "palette_by_wear": {},
+ "tile_size_m": 0.25,
+ "texture_px": 256,
+ "px_per_m": 1024.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "faint pores, the press-cloth weave",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh white",
+   "co": "JP\\common\\materials\\food\\jp_m_food_tofu_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_tofu_w0.rvmat",
+   "target_srgb": [
+    210.6,
+    206.6,
+    197.5
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "dried, yellowed",
+   "co": "JP\\common\\materials\\food\\jp_m_food_tofu_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_tofu_w1.rvmat",
+   "target_srgb": [
+    199.7,
+    192.5,
+    176.4
+   ],
+   "masked_frac": 0.0
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "mouldy",
+   "co": "JP\\common\\materials\\food\\jp_m_food_tofu_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\food\\jp_m_food_tofu_w2.rvmat",
+   "target_srgb": [
+    189.2,
+    178.1,
+    159.4
+   ],
+   "masked_frac": 0.134
+  }
+ },
+ "used_by": [
+  "jp_f_tofu_tank",
+  "jp_f_sg sweets"
+ ],
+ "used_on": "Tofu and rice cakes",
+ "sources": [
+  {
+   "procedural": "make_s1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_s1_materials.py (agent S1, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/SHOP_SETS.md (S1, the shop sets)"
+}

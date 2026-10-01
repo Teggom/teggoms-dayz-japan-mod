@@ -1,0 +1,65 @@
+{
+ "id": "jp_m_leather_tan",
+ "family": "textile",
+ "palette_id": "cha_koge",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "pebbled grain, creases along u",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "new tanned leather",
+   "co": "JP\\common\\materials\\textile\\jp_m_leather_tan_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_leather_tan_w0.rvmat",
+   "target_srgb": [
+    113.2,
+    81.0,
+    51.2
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "rubbed lighter at the edges",
+   "co": "JP\\common\\materials\\textile\\jp_m_leather_tan_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_leather_tan_w1.rvmat",
+   "target_srgb": [
+    106.0,
+    77.0,
+    50.0
+   ],
+   "masked_frac": 0.196
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "mould bloom",
+   "co": "JP\\common\\materials\\textile\\jp_m_leather_tan_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_leather_tan_w2.rvmat",
+   "target_srgb": [
+    96.0,
+    70.7,
+    48.2
+   ],
+   "masked_frac": 0.245
+  }
+ },
+ "used_by": [
+  "jp_f_sg pouches",
+  "jp_f_hides"
+ ],
+ "used_on": "Leather goods",
+ "sources": [
+  {
+   "procedural": "make_s1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_s1_materials.py (agent S1, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/SHOP_SETS.md (S1, the shop sets)"
+}

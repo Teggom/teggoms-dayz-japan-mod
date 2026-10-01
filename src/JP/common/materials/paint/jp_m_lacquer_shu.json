@@ -1,0 +1,67 @@
+{
+ "id": "jp_m_lacquer_shu",
+ "family": "paint",
+ "palette_id": "lacquer_shu",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 256,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "brush marks along u",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\wood.rvmat",
+ "roadway_surface": null,
+ "finish": "glazed",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "even shu",
+   "co": "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w0.rvmat",
+   "target_srgb": [
+    134.3,
+    44.5,
+    29.0
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "rubbed to black at the edges",
+   "co": "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w1.rvmat",
+   "target_srgb": [
+    126.0,
+    42.0,
+    28.0
+   ],
+   "masked_frac": 0.043
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "flaking to the wood, dusty",
+   "co": "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w2.rvmat",
+   "target_srgb": [
+    117.8,
+    39.5,
+    26.9
+   ],
+   "masked_frac": 0.127
+  }
+ },
+ "used_by": [
+  "jp_f_sg lacquer",
+  "jp_f_soba_board",
+  "jp_f_doll_tiers"
+ ],
+ "used_on": "Red lacquer wares",
+ "sources": [
+  {
+   "procedural": "make_s1_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_s1_materials.py (agent S1, 2026-09-30), through B1's make_one",
+ "requested_by": "research/interior/SHOP_SETS.md (S1, the shop sets)",
+ "note": "Red lacquer wares; wears through to black (negoro)."
+}
