@@ -362,3 +362,6 @@
   stone torii texture too regular; two-tone pot; lever well rock/rope; notice board floating; fire-watch ladder not
   climbable; wants collapsed torii. Buildings: Kinai 'thick thing under roof', kura doors/shutters thick + too white, a
   roofless street house, tools off the wall, top hill-stair torii too low. **FP1 (props) + FB1 (buildings) launched.**
+- 2026-10-01: **GitHub remote added** (Stephen): origin = https://github.com/Teggom/teggoms-dayz-japan-mod.git, branch master.
+  First push after FP1 + FB1 finish. README rule 3 rewritten: every agent commits its own paths AND pushes after each
+  checkpoint (pull --rebase on rejection; never force-push).

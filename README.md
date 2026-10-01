@@ -109,7 +109,15 @@ Stephen then does one bundled check from `TEST_CHECKLIST.md`.
    - T also owns `mission/`
 
    Never modify `pokemon_dev/`, other server files, other agents' paths, or `tools/common/`. Read anything.
-3. **No git commands.** The lead commits.
+3. **Git: commit AND push your own work** (Stephen, 2026-10-01). The repo's remote is `origin` =
+   https://github.com/Teggom/teggoms-dayz-japan-mod.git (private, Stephen's), branch `master`.
+   - Commit at every checkpoint with `git add <your specific paths>` only. Never `git add -A` / `git add .`, never
+     `git clean`, never force-push, never rewrite history. End messages with the co-author line your brief gives.
+   - **Push after each checkpoint commit and at the end:** `git push origin master`. If the push is rejected because
+     another agent pushed first, `git pull --rebase origin master` and push again; if that conflicts, stop and
+     report. If git says `index.lock` exists, wait a few seconds and retry (never delete it).
+   - Don't commit binarize byte-noise (unchanged ODOLs rewritten by a rebuild): `git checkout -- <file>` them.
+   - Nothing personal in commits beyond the configured git identity.
 4. **Allowed downloads:**
    - GSI elevation tiles (cyberjapandata.gsi.go.jp), T only
    - ambientCG and Poly Haven CC0 assets, all agents
