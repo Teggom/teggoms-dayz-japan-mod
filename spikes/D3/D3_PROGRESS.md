@@ -6,7 +6,7 @@ Time log `japan_dev/TIMELOG_D3.md` (logger `python spikes/D3/tlog.py "<EVENT>" "
 ## Status
 - [x] notes  - [x] shells (28)  - [x] furnished (16)  - [x] wait for K3  - [x] compounds (6) + corridors (2) + placement
 - [x] world + mission (verify_oprw PASS)  - [x] checks  - [x] sheets (d3_family, d3_rooms, d3_map)  - [x] checklist
-- [ ] pushed (commit 3 = site objects + placement + sheets + checklist)
+- [x] pushed: 66e8772 shells, 4ea993d furnished, ffc121c site objects + placement + sheets + checklist
 
 ## Code
 - Template `parts/kit/jpparts/templates/dwelling.py` (rural.Shell + civic / sacred helpers; new helpers ceiling,
