@@ -63,6 +63,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~20:05 (local) | FX2 | 32 CC0 museum refs (Met 7, Cleveland 13 objects), 4 altar images + Jizo family remade from photos, komainu x3 + kitsune pairs placed, detail props, torii rope 3/4 sag (lowest tip 2.31 m), U1 wrap veranda | **685k** (297 tool calls) | 81 min | |
 | 2026-10-01 ~20:06 (local) | FX3 phase 2 (resumed) | integrate uvwood + atlases + macro layer + moss into every pipeline, rebuild all | - | - | |
 | 2026-10-01 ~21:35 (local) | FX3 phase 2 | wood atlases (11 x 3) + uvwood.py in Part.lods() + Stage3 macro weathering in every wood/thatch rvmat + moss; rebuilt parts 234 / buildings 193 / all props, 5 PBOs | **410k** (86 tool calls) | 26 min | FX3 total 708k |
+| 2026-10-01 ~21:40 (local) | CA1 (baseline) | launched: one config assembler per PBO (builder fragments merged), budget-class tidy-up | - | - | before: **67%** |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
