@@ -91,10 +91,131 @@ mid-length (a vertical riser + the cap's end returns). Place the next module tha
 | Level change | Climbing corridors (nobori-ro) run as covered stairs; roofs step | `jp_p_roka_stair`: a 2-ken stair module rising 0.455 / 0.91 (14 / 26.6 deg <= 38, D4) whose roof is at the UPPER level and oversails the lower module's roof with a hafu + board gable infill (the stepped roof) |
 | Connector | A corridor meets a hall at its veranda / wall, roof tucked under the hall's eave | `jp_p_roka_connector`: a half-ken end piece whose roof ends plain against the host wall with a flashing board; floor butts the host floor edge. API `roka.connector_fit(host_eave_soffit_y, ...)` says whether the corridor ridge fits under the host's eave |
 
-## 4. Recorded choices (found while building) -- see section 7, filled at the end of the run
+## 4. Recorded choices (found while building)
+1. **One roof engine for both kits** (`striproof.py`): the surface is d(p) = max over corridors of min over their
+   eaves of the plan distance in from that eave (min = ridges and hips, max = valleys). Every module evaluates the same
+   function, so ridges, hips and valleys line up across module joints with nothing warped afterwards. A straight
+   module next to a junction cell cuts its own overhang on the VALLEY line (`branches=`); the overhang square at an
+   inner corner is shared by the two straight modules, never by the junction cell. Modules never overlap.
+2. **Coverings are clipped, not refitted:** kawara.field / eave_tiles (rule 1 geometry) are generated over the slope's
+   frame and clipped in plan to each facet (hip and valley cuts); valleys get a half lining on each side (valley
+   kawara / boards) so no two modules draw the same strip. Curved (sori) roofs use W2P2's profile maths in planar
+   d-bands (band breaks depend on d only, so hips stay shared); tiles on a curve work the same way per band.
+3. **Wall caps are strip roofs** (body 'solid': the clay / plaster bed and the collision go down to the wall top), so a
+   wall corner gets a real hipped corner cap. T and cross caps exist in the engine; the WALL kit only uses corners
+   (T / cross walls not built: rare); the corridor kit uses all three.
+4. **Corner ownership:** the module whose END (x = L) is a corner builds the cap's corner cell; bodies mitre on the
+   diagonal (battered tsuiji faces meet exactly because both runs share the section).
+5. **Gate posts are the grid nodes:** a wall ending at a gate uses end 'post' (its body stops at the post face, its cap
+   ends in a flush gable there). The kabuki beam sits at 2.91-3.15, above every wall cap of the kit (tsuiji ridge
+   ~2.85), so nothing pokes a cap (C12).
+6. **Steps** (`step()`): both caps end at the step in flush gables (no overhang, no oni) and the upper body's end
+   closes the step; footings / fence Geometry run 0.30-0.40 below grade so a module tolerates +-0.3 m of uneven ground.
+7. **Corridor heights:** floor 0.45 (agari level), head tie underside floor + 2.10, keta top (the roof's bearing line)
+   floor + 2.42, eave 0.75, board pitch 0.40 / tile 0.45; 1 ken between post centres = 1.70 m clear (D5).
+8. **Stair** (`stair()`): 2 ken, landings at both ends, risers <= 0.16 at 0.30 going (rise 0.455: 3 risers; 0.91: 6;
+   both 26.6 deg), a hidden 'stair' Roadway ramp; its roof at the UPPER level oversails the lower roof with a gable and
+   a board infill (each board a quad on both roof lines); the roof before a stair stops 7 cm short of the stair's posts
+   and tie beam (C12). A rise of 0.455 clears a tile ridge by ~0.10.
+9. **Connector** (`connector()` / `run_roka(connect=...)`): half a ken minus the host's wall half-thickness
+   (`host_face`, 0.08 default); posts only away from the host; the roof ends plain at the host face with a flashing
+   board; the floor reaches the face (the host's threshold must carry its Roadway to the same face).
+10. **One object per building:** an MLOD of two halls + a 14-ken corridor (18k R1 faces) fails binarize with "Too many
+   vertices". Keep one map object under ~15,000 R1 faces: split long corridor rings into several objects (one per side
+   of the court is natural) and keep halls separate.
+11. Wicket doors are built at the game size (1.04 x 1.96 clear, D1 / D2; the period stoop-through kuguri is D9's
+   decorative case). All hinged leaves (gates.gate_leaves and the wicket) are **engine-untested** like every rotation
+   door in the kit.
+12. The tile corrugation restarts at every module start (columns from the module's own x 0): seams on whole ken keep
+   the 7-column phase; a half-ken module shifts it by half a column (barely visible).
+
+## 4a. Missing materials (stand-ins used; none added in this run)
+- brushwood / twig bundles for shiba-gaki (`wood_firewood` stands in)
+- black palm rope (shuro-nawa) for bamboo-fence ties (`straw_rope` stands in)
+- yellow-ochre plaster of temple sujibei walls (`wall_nakanuri` stands in)
+- bare rammed earth with its lift layers (`wall_arakabe` + modelled lift ridges stand in)
+- grass / turf for bank tops (`ground_earth_bare` + `decal_moss`)
+- copper valley lining for curved temple roofs (kawara / board valley linings used)
 
 ## 5. Budgets (PLAYBOOK §12 is guidance)
 - Fence / plain wall module per ken: aim <= 800 R1 faces (small prop class); tile-capped wall module per ken: <= 1,500
   (detail class: the cap is kawara geometry, rule 1).
 - Corridor module per ken: <= 1,500 R1; a 3-ken straight <= 3,000 (small building class). A whole compound or corridor
   circuit assembled from modules is a building (standard / large class).
+
+## 6. API for D3 (and every later shell agent)
+
+All builders return a kit `Part` (frame: x along the run, z 0 = the wall / corridor centreline, +z = outside, y 0 =
+grade). Place one with `building.merge(sub.transformed(yaw_deg, (x, y, z)))` (yaw 90 turns +x into +z). Every part
+variant is also in `parts/manifest.json` (`jp_p_wall_site_*`, `jp_p_fence_*`, `jp_p_hedge_ikegaki`, `jp_p_gate_*`,
+`jp_p_roka_*`, `jp_p_kairo`) for single-module use. Checks: run your building through `buildcheck.run_g3` after
+`zfight.resolve` as usual (the proofs in `parts/kit/k3_assembly.py` show the pattern plus the extra walk checks).
+
+### How to run a wall around a plot
+```python
+from jpparts import sitewall as W
+# grid nodes (half-ken grid), axis-aligned; walk the plot CLOCKWISE seen from above (x east, z north) so the
+# outside (+z of each module) faces out
+nodes = [(0, 0), (0, 6 * KEN), (8 * KEN, 6 * KEN), (8 * KEN, 0)]
+wall = W.run_wall(nodes, "tsuiji", closed=True, finish="plaster", cap="tile",
+                  gates=[(1, 3 * KEN, "kabuki_roofed", 1.5 * KEN),     # (segment, offset from its start, kind, span)
+                         (2, KEN, "wicket", KEN)])
+building.merge(wall.transformed(0.0, (x0, 0.0, z0)))
+```
+- kinds: `tsuiji` (finish plaster | earth | nakanuri | suji5 | neri; cap tile | hongawara | board), `dobei` (finish
+  shikkui | namako | kuro; `hikae=True`), `itabei` (`kuro=True`; cap none | board | tile), `yotsume`, `kenninji`,
+  `shiba`, `takeho`, `ikegaki` (`size` low | tall), `ishigaki` (`stone` nozura | uchikomi, `H`, `retaining=True`),
+  `bank`. `state=` collapsed | tiles | overgrown | leaning | broken for the dead-world look.
+- Segment lengths must be multiples of 0.91; modules are split 2 ken / 1 ken / half ken automatically. Corners get the
+  mitred bodies + the hipped corner cap; open path ends get finished ends.
+- Single modules: `W.wall(kind, L, ends=(e0, e1), ...)` with ends `seam` | `end` | `post` | `corner+z` | `corner-z`
+  (the other run leaves to that local side; the module whose END is the corner builds the cap corner).
+- Slopes: place level modules at their own grade and put `W.step(kind, KEN, rise)` between them (rise 0.30 / 0.60;
+  the next module goes `rise` higher). Modules tolerate +-0.3 m of ground under them.
+- Map objects: walls are site objects; build a compound's walls as their own p3d (or a few, each < ~15,000 R1 faces),
+  not inside the house p3d unless the house is small.
+
+### How to cap a run with a gate
+- In `run_wall`: `gates=[(segment, offset, "kabuki" | "kabuki_roofed" | "munemon" | "wicket", span)]`. kabuki /
+  munemon spans: 1.5 ken (2.73 between post centres, ~2.5 m clear with the leaves open) standard, 1 ken minimum; the
+  gate's posts sit on the grid nodes at offset and offset + span; the walls either side end with `post`
+  automatically. A wicket takes a 1-ken slot (span = KEN).
+- By hand: `W.gate_kabuki(span, roofed=True)`, `W.gate_munemon(span, covering="hongawara")`, `W.wicket(kind)` (kind
+  itabei | dobei | kenninji, a 1-ken module with a 1.04 m door); give the neighbouring wall modules end `post` at the
+  gate posts. Leaves swing into -z (the compound side): make sure -z is inside.
+
+### How to link building A's veranda to building B with a corridor
+```python
+from jpparts import roka as R
+fits, ridge_top, margin = R.connector_fit(host_soffit_y, floor=0.45, roof="itabuki")   # check BEFORE laying out
+path = [(xa, za), (xc, za), (xc, zb), (xb, zb)]   # grid nodes; the first / last lie ON the hosts' wall lines
+roka = R.run_roka(path, sides=("enclosed", "open"), roof="itabuki", profile="straight",
+                  stairs=[(1, 2 * KEN, 2 * KEN, 0.455)],      # (segment, offset, length, rise) per level change
+                  connect=(True, True), host_face=0.08)       # connector pieces at both hosts
+```
+- `sides` = (right of travel, left of travel): `open` (koran) | `half` | `enclosed` (plaster + renji) | `board` |
+  `blank` | `none`. A KAIRO is the same call with the court on the open side (`("enclosed", "open")` when the court is
+  on your left). Corners take the turn's outside kind on their outer sides. Segments between corners need >= 1 ken.
+- `roof`: itabuki | kokera | hiwada | sangawara | hongawara; `profile="sori"` curves it (temple / shrine kairo).
+- Floors: 0.45 over grade by default (`floor=`); match the hosts' floors at both ends. Each stair adds its rise to the
+  floor after it (hall B sits that much higher).
+- Host requirements: (1) the host's eave SOFFIT over the corridor (at the host's eave edge) must clear the corridor
+  ridge top: `connector_fit(soffit)` gives the margin (floor 0.45: sangawara ridge top ~3.68 m, itabuki ~3.43);
+  otherwise raise the host's keta, drop the corridor floor, or use a board roof; (2) the host's threshold carries its
+  Roadway out to its wall face (`host_face` past the node); (3) the wall opening is >= 1.00 m wide, 2.00 m high (D1 /
+  D2) and has no post in it.
+- Veranda hosts: put the path end on the veranda's outer edge line (the connector floor meets the veranda deck at the
+  same height; the veranda's own eave is the soffit to check).
+- Single modules: `R.straight(L, sides, roof, profile, ends, branches)`, `R.junction(arms, sides={side: kind})`,
+  `R.stair(L, rise)`, `R.connector(L)`. Junction cells are centred on the crossing of the centrelines; a straight next
+  to a junction needs `branches=[(end, side)]` so its overhang is cut on the valley, and `posts0=False` when it starts
+  at a junction (the cell has the posts).
+- Keep one corridor object under ~15,000 R1 faces (about 10-12 ken of tile corridor): split a long ring by sides.
+
+### Proofs (parts/kit/k3_assembly.py; results in parts/k3_assembly_checks.json)
+`compound_corner` 24/24, `slope_fences` 19/19, `corridor_court` 24/24 (two stand-in halls + the corridor; binarized
+as two objects), `kairo_segment` 22/22: C2, C5, C7, Roadway on Geometry, C10-C22 via buildcheck.run_g3 (C20 after
+zfight.resolve), plus K3's walk checks KW1 wall line closed except at gates, KW2 terrain steps closed, KW3 Roadway
+continuous hall -> corridor -> hall, KW4 slope <= 38 deg, KW5 head room >= 2.05, KW6 clear width >= 1.00, KW7
+connector_fit; every object binarizes to ODOL. Sheets: research/production/contact_sheets/k3_walls.jpg,
+k3_corridors.jpg (`python parts/kit/render_k3.py k3_walls|k3_corridors`).

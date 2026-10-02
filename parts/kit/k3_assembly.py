@@ -129,7 +129,67 @@ def _roka_L():
                       stairs=[(1, 2 * KEN, 2 * KEN, 0.455)], name="rokaL")
 
 
+def _walls_ab():
+    from jpparts import sitewall as W
+    return _row([lambda: W.wall("tsuiji", 2 * KEN, ("end", "end"), state="collapsed"),
+                 lambda: W.wall("tsuiji", KEN, ("end", "end"), state="tiles"),
+                 lambda: W.wall("tsuiji", KEN, ("end", "end"), finish="earth", state="overgrown"),
+                 lambda: W.wall("itabei", KEN, ("end", "end"), state="leaning"),
+                 lambda: W.wall("yotsume", KEN, ("end", "end"), state="broken"),
+                 lambda: W.wall("ikegaki", KEN, ("end", "end"), state="overgrown"),
+                 lambda: W.wall("ishigaki", KEN, ("end", "end"), H=1.2, retaining=True, state="collapsed")],
+                gap=1.2, name="walls_ab")
+
+
+def _stones():
+    from jpparts import sitewall as W
+    return _row([lambda: W.wall("ishigaki", KEN, ("end", "end")),
+                 lambda: W.wall("ishigaki", KEN, ("end", "end"), H=1.8, retaining=True),
+                 lambda: W.wall("ishigaki", KEN, ("end", "end"), stone="uchikomi", H=1.2, retaining=True),
+                 lambda: W.wall("bank", KEN, ("end", "end")),
+                 lambda: W.wall("ikegaki", KEN, ("end", "end"), size="tall")], gap=1.2, name="stones")
+
+
+def _steps():
+    from jpparts import sitewall as W
+    return _row([lambda: W.step("tsuiji", KEN, 0.30, ("end", "end")), lambda: W.step("tsuiji", KEN, 0.60, ("end", "end")),
+                 lambda: W.step("dobei", KEN, 0.30, ("end", "end"), finish="namako"),
+                 lambda: W.step("itabei", KEN, 0.30, ("end", "end"), cap="tile", kuro=True)], gap=1.2, name="steps")
+
+
+def _roka_tx():
+    from jpparts import roka as R
+    return _row([lambda: R.junction(("-x", "+z"), roof="itabuki"), lambda: R.junction(("-x", "+x", "+z"), roof="sangawara"),
+                 lambda: R.junction(("-x", "+x", "-z", "+z"), roof="hongawara"),
+                 lambda: R.straight(KEN, ends=("seam", "hip"), roof="sangawara")], gap=1.4, name="roka_tx")
+
+
+def _roka_sides():
+    from jpparts import roka as R
+    return _row([lambda: R.straight(KEN, ("open", "open"), "itabuki", ends=("gable", "gable")),
+                 lambda: R.straight(KEN, ("half", "half"), "itabuki", ends=("gable", "gable")),
+                 lambda: R.straight(KEN, ("enclosed", "enclosed"), "itabuki", ends=("gable", "gable")),
+                 lambda: R.straight(KEN, ("board", "board"), "itabuki", ends=("gable", "gable")),
+                 lambda: R.straight(KEN, ("blank", "blank"), "itabuki", ends=("gable", "gable")),
+                 lambda: R.straight(2 * KEN, ("open", "half"), "itabuki", ends=("gable", "gable"), state="decay")],
+                gap=1.6, name="roka_sides")
+
+
+def _roka_sori():
+    from jpparts import roka as R
+    return _row([lambda: R.straight(2 * KEN, ("open", "open"), "kokera", "sori", ends=("gable", "gable")),
+                 lambda: R.straight(2 * KEN, ("open", "enclosed"), "hongawara", "sori", ends=("gable", "gable")),
+                 lambda: R.straight(2 * KEN, ("open", "enclosed"), "hiwada", "sori", ends=("gable", "gable"))],
+                gap=2.0, name="roka_sori")
+
+
 CASES = {
+    "walls_ab": _walls_ab,
+    "stones": _stones,
+    "steps": _steps,
+    "roka_tx": _roka_tx,
+    "roka_sides": _roka_sides,
+    "roka_sori": _roka_sori,
     "roka_row": _roka_row,
     "roka_L": _roka_L,
     "gates": _gates,

@@ -7,3 +7,4 @@
 2026-10-01 23:35:52 | GROUP DONE | corridor kit | corridors | 5h 19% wk 73%
 2026-10-01 23:35:59 | GROUP START | proofs | proofs | 5h 19% wk 73%
 2026-10-01 23:35:59 | GROUP DONE | proofs (4 assemblies, 89/89 checks incl. binarize) | proofs | 5h 19% wk 73%
+2026-10-01 23:39:17 | SHEETS DONE | k3_walls.jpg + k3_corridors.jpg | sheets | 5h 21% wk 73%

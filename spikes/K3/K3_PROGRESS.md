@@ -14,8 +14,8 @@ Resumable. Time log: TIMELOG_K3.md (logger spikes/K3/tlog.py). Notes + D3 API: p
    kairo; registry; manifest.
 6. [x] Proofs `parts/kit/k3_assembly.py`: compound corner + gate, hedge + bamboo fence on a slope, corridor around a
    courtyard with a level change, kairo segment. All checks incl. C20 + walkability; binarize.
-7. [ ] Sheets research/production/contact_sheets/k3_walls.jpg + k3_corridors.jpg.
-8. [ ] D3 API note; commit + push; END.
+7. [x] Sheets research/production/contact_sheets/k3_walls.jpg + k3_corridors.jpg.
+8. [x] D3 API note (parts/K3_NOTES.md section 6); commit + push; END.
 
 ## Status log
 - 22:44 START; setup reading done.
@@ -23,3 +23,4 @@ Resumable. Time log: TIMELOG_K3.md (logger spikes/K3/tlog.py). Notes + D3 API: p
 - 23:33 corridor kit: 32 variants (8 part ids), 0 failures (--only jp_p_roka_,jp_p_kairo). Manifest 332 parts.
 - 23:36 proofs: python parts/kit/k3_assembly.py -> 4 assemblies, 89/89 checks incl. binarize (parts/k3_assembly_checks.json).
 - Next: sheets (python parts/kit/render_k3.py k3_walls / k3_corridors; jobs in parts/kit/k3_sheets.py), D3 API in K3_NOTES §6, commit + push, END.
+- 23:39 sheets rendered (research/production/contact_sheets/k3_walls.jpg, k3_corridors.jpg); notes sections 4, 4a, 6 written.

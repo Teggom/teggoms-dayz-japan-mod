@@ -33,10 +33,6 @@ def get_part(spec):
     return RB._orig_get_part(spec)
 
 
-try:
-    from k3_sheets import SHEETS_DEF  # noqa: E402
-except ImportError:
-    SHEETS_DEF = {}
 
 
 def run_jobs(out_dir, jobs):
@@ -69,7 +65,14 @@ def main(argv):
         print(os.path.join(TRY, name + ".png"))
         return 0
     sheet = argv[0]
-    title, jobs, note = SHEETS_DEF[sheet]
+    import k3_sheets
+    title, jobs, notes = k3_sheets.sheets()[sheet]
+    note = k3_sheets._note(notes)
+    if sheet == "k3_corridors":
+        import json as _j
+        res = _j.load(open(os.path.join(DEV, "parts", "k3_assembly_checks.json"), encoding="utf-8"))
+        km = [c["detail"] for c in res.get("k3_corridor_court", {}).get("checks", []) if c["check"].startswith("KW7")]
+        jobs = [(o, c.replace("(margin %s)", "(%s)" % (km[0] if km else "")), v) for o, c, v in jobs]
     only = [a for a in argv[1:] if not a.startswith("--")]
     if "--compose" not in argv:
         todo = [j for j in jobs if not only or j[0] in only]
