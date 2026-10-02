@@ -192,5 +192,27 @@ drying rack; tile stack; tile moulding bench + onigawara table; limestone heap; 
 rollers; ore sorting table; washing sluice trough; spoil heap; windlass over a covered shaft; zaru-tori sieve stand;
 salt draining baskets; pine-needle fuel heap. Each with an 'as left' / fallen state where it makes sense.
 
-## Changes while building
-(filled in as built)
+## Changes while building (recorded, W3C2)
+- **Every site object carries a timber element on posts** (the shell checks C3 / C8 want real posts on stones; each is
+  honest and useful): the charcoal and tile kilns stand under board roofs (kama-yane, GK), the climbing kiln and the
+  lime kiln get a small stokers' / draw-floor roof on four posts over their work floor, the quarry a masons' shelter
+  (2 x 1 ken), the adit's timber sets stand on sill stones, the slide on trestles, the salt bed's sluice on four posts.
+- Charcoal kiln roof 3 x 3 ken (not 2 x 2): the loot floor round the dome needs room. Daruma kiln roof 3.5 x 2.5 ken.
+- **The adit's clear width is 1.67 m** (not 1.30): the set posts stand on the half-ken grid (C3), 2 x 0.91 apart; clear
+  height 2.15. Recorded as a game concession (real Edo drifts were narrower and lower).
+- The climbing kiln's bank falls away behind its stack (on flat ground; on the map it runs into the hill); the lime
+  kiln's bank is three mitred wedges (back + sides) meeting on the corner diagonals.
+- Bunk hall roofs: itabuki (miners) 6.1k R1 (+2 %), ishioki (loggers) 8.3k R1 (+38 %) with every 2nd weighting stone
+  kept in R1; both over_budget_ok with the reason recorded in the template.
+- The salt pan is the shell pan [GYO] on a clay firebox built into the boiling hut's floor (shell geometry, interior
+  clay: C14); the salt bed's ditch floor is 0.10 over grade (dry board floor; never at grade: gradesweep), its bed 0.30 over grade with a ramped
+  landward edge.
+- No sand material in the library: the salt bed and its heaps use the tamped-earth floor (material job, flagged).
+- The pot hook over every new irori hangs from the real tie beam (the kit's irori hook point sits 6-9 cm under it in
+  the C2 huts: hangcheck baseline; fixed in the W3C2 dressings, not in the old huts).
+- Props fixed by FX6's propfloat before placing: ware-rack planks (missing), sledge rollers / runners seated, heap lumps
+  sunk into the heap, sieve baskets on cross bars, fuel bundles lying, tile stack as flat plates.
+- Placement: the island here falls 2-3 % to the south: the site objects are seated on their work floor (stoking floor,
+  draw floor, adit mouth, splitting floor, landing) so their banks / knolls sink into the rising ground; huts and sheds
+  float <= 0.13 on their low side (hidden by the 0.20 doma slab); the tile yard's fence sinks 0.40 on its high corner
+  (its posts are footed to -0.40).

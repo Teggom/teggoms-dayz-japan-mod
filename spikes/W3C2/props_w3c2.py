@@ -146,8 +146,9 @@ def ware_rack(fallen=False):
             for j in range(5):
                 out.append(lump(r_, -0.30 + 0.28 * j, 0.0, 0.62 + 0.08 * (j % 2), 0.07, CLAY, n=5, flat=0.9))
             continue
+        out.append(plank)
         for j in range(6):
-            out.append(bowl(0.075, 0.07, CLAY, y=y, x=-0.80 + 0.32 * j, z=0.24))
+            out.append(bowl(0.075, 0.07, CLAY, y=y - 0.003, x=-0.80 + 0.32 * j, z=0.24))
     wear_all(out, "_w2")
     adds1(P, out)
     P.add(W(-0.95, 0.95, 0.0, 1.70, 0.02, 0.43, WEATH, vis=(2,)))
@@ -261,8 +262,10 @@ def kawara_stack(scattered=False):
                 out += tile(KAWARA, -0.60 + 0.17 * j + r_.uniform(-0.05, 0.05), 0.0, 0.55 + r_.uniform(0, 0.35),
                             ry=r_.uniform(-60, 60))
             continue
-        for j in range(16):
-            out += tile(KAWARA, -0.64 + 0.085 * j, 0.06 + 0.15, z, rz=82.0)
+        for j in range(29):
+            # nested face to face on edge, 4.5 cm apart, leaning a little (in a tight stack the S-wave does not show)
+            out.append(xf(W(-0.15, 0.15, -0.011, 0.011, -0.15, 0.15, KAWARA, vis=(1,)), rz=86.0,
+                          t=(-0.63 + 0.045 * j, 0.06 + 0.149, z)))
     wear_all(out, "_w2")
     adds1(P, out)
     P.add(W(-0.72, 0.72, 0.0, 0.36, -0.36, 0.36, KAWARA, vis=(2,)))
@@ -317,6 +320,17 @@ def _heap_solid(r_, rx, rz, h, mat, vis=(1,), geo=False, n=10):
     return core.rings((base, prof), mat, vis=vis, **kw)
 
 
+def _heap_y(f, h):
+    """The heap's surface height at a radius fraction f (the _heap_solid profile inverted, its jitter ignored: the
+    lumps are sunk 5 cm so they always touch it)."""
+    prof = [(0.0, 1.0), (h * 0.45, 0.70), (h * 0.80, 0.38), (h, 0.10)]
+    f = max(0.10, min(1.0, f * 1.12))
+    for (y0, s0), (y1, s1) in zip(prof[:-1], prof[1:]):
+        if s1 <= f <= s0:
+            return y0 + (s0 - f) / (s0 - s1) * (y1 - y0)
+    return h
+
+
 def heap(kind="limestone"):
     """A heap of broken stone on the ground: 'limestone' (pale limestone lumps waiting for the kiln, 2.2 x 1.6, 0.9
     high) or 'spoil' (a mine's spoil: earth and grey rock, 3.4 x 2.4, 1.3 high). Lumps lie on its slopes."""
@@ -331,8 +345,8 @@ def heap(kind="limestone"):
         a = r_.uniform(0, 2 * math.pi)
         f = r_.uniform(0.15, 0.95)
         x, z = rx * f * math.cos(a), rz * f * math.sin(a)
-        y = h * (1.0 - f) * 0.92
-        out.append(lump(r_, x, max(0.0, y - 0.06), z, r_.uniform(0.18, 0.34), lm if k % 3 else FIELD, n=6))
+        y = _heap_y(f, h)
+        out.append(lump(r_, x, max(0.0, y - 0.07), z, r_.uniform(0.18, 0.34), lm if k % 3 else FIELD, n=6))
     wear_all(out, "_w2")
     adds1(P, out)
     P.add(_heap_solid(r_, rx, rz, h, body, vis=(2,), n=8))
@@ -387,8 +401,9 @@ def ishi_shura(ab=False):
     for k, z in enumerate((-0.80, 0.0, 0.80)):
         zz = z + (0.9 if (ab and k == 2) else 0.0)
         xx = 0.35 if (ab and k == 2) else 0.0
-        out.append(pole((-0.80 + xx, 0.13, zz), (0.80 + xx, 0.13, zz), 0.08, WEATH, n=7, vis=(1,)))
-    yb = 0.21
+        yr = 0.075 if (ab and k == 2) else 0.12          # FX6 rule: rollers rest on the skids (or the ground)
+        out.append(pole((-0.80 + xx, yr, zz), (0.80 + xx, yr, zz), 0.08, WEATH, n=8, vis=(1,)))
+    yb = 0.185
     for sx in (-0.42, 0.42):
         out.append(W(sx - 0.09, sx + 0.09, yb, yb + 0.16, -1.20, 0.95, WEATH, vis=(1,)))
         out.append(xf(W(sx - 0.09, sx + 0.09, 0.0, 0.16, 0.0, 0.40, WEATH, vis=(1,)), rx=-35.0,
@@ -531,8 +546,10 @@ def zaru_tori(ab=False):
     for sx in (-0.72, 0.72):
         for sz in (-0.27, 0.27):
             out.append(W(sx - 0.03, sx + 0.03, 0.0, 0.55, sz - 0.03, sz + 0.03, WEATH, vis=(1,)))
-    for sz in (-0.27, 0.27):
-        out.append(pole((-0.80, 0.56, sz), (0.80, 0.56, sz), 0.025, BAMBOO, n=5, vis=(1,)))
+    for sx in (-0.72, 0.72):
+        out.append(W(sx - 0.035, sx + 0.035, 0.53, 0.56, -0.31, 0.31, WEATH, vis=(1,)))      # the cross rails
+    for sz in (-0.12, 0.12):
+        out.append(pole((-0.80, 0.583, sz), (0.80, 0.583, sz), 0.025, BAMBOO, n=6, vis=(1,)))
     for k, x in enumerate((-0.38, 0.38)):
         out.append(xf(tub_shell(0.25, 0.30, 0.02, WEATH, n=10), t=(x, 0.0, 0.0)))
         basket = [lathe([(0.0, 0.0), (0.18, 0.0), (0.28, 0.12), (0.265, 0.12), (0.17, 0.012), (0.0, 0.012)], 12,
@@ -542,7 +559,7 @@ def zaru_tori(ab=False):
             out += [xf(b, rx=75.0, t=(x + 0.10, 0.28, 0.55)) for b in basket]
             out.append(mound("zaru_spill", x + 0.05, 0.70, 0.30, 0.08, "ground_doma_tataki", vis=(1,)))
         else:
-            out += [xf(b, t=(x, 0.585, 0.0)) for b in basket]
+            out += [xf(b, t=(x, 0.600, 0.0)) for b in basket]
     # the shoulder pole and the two sea-water buckets (shio-oke) set down beside the frame
     for z in (0.75, 1.55):
         out.append(xf(tub_shell(0.17, 0.32, 0.02, WEATH, n=10), t=(1.05, 0.0, z - 0.40)))
@@ -594,8 +611,8 @@ def matsuba():
     for k in range(5):
         x = -0.70 + 0.35 * k
         b = lathe([(0.0, 0.0), (0.12, 0.0), (0.14, 0.90), (0.0, 0.92)], 7, "straw_stack", vis=(1,))
-        out.append(xf(b, rx=-58.0, t=(x, 0.0, 0.95)))
-    out.append(pole((1.00, 0.0, 0.70), (0.55, 0.90, 0.15), 0.018, BAMBOO, n=5, vis=(1,)))
+        out.append(xf(b, rx=90.0, ry=8.0 * (k - 2), t=(x, 0.13, 0.62)))
+    out.append(pole((1.05, 0.018, 0.95), (1.25, 0.018, -0.40), 0.018, BAMBOO, n=5, vis=(1,)))
     wear_all(out, "_w2")
     adds1(P, out)
     P.add(W(-1.00, 1.00, 0.0, 0.70, -0.65, 0.95, LITTER, vis=(2,)))

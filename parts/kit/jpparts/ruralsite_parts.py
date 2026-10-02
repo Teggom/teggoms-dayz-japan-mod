@@ -128,7 +128,7 @@ def kiln_dome(p, cx=0.0, cz=0.0):
     # the closing stones of the mouth, stacked beside it; the ash spill on the ground before it
     scatter_stones(p, rng, [(cx + 0.95, zf + 0.35, 0.22, 0.0), (cx + 1.12, zf + 0.25, 0.20, 0.0),
                             (cx + 1.02, zf + 0.30, 0.18, 0.13), (cx - 1.05, zf + 0.30, 0.20, 0.0)], tag="closing_stone")
-    p.add(prism(ellipse(cx, zf + 0.42, 0.55, 0.32, 10), "y", -0.02, 0.025, ASH, vis=(1,), tag="ash_spill"))
+    p.add(prism(ellipse(cx, zf + 0.42, 0.55, 0.32, 10), "y", 0.035, 0.062, ASH, vis=(1,), tag="ash_spill"))
     # the flue: a clay chimney at the back foot
     zb = cz - RZ + 0.10
     p.add(box(cx - 0.18, cx + 0.18, -0.10, 2.25, zb - 0.36, zb, CLAY, vis=(1, 2, 3), **_g(tag="flue")))
@@ -183,7 +183,7 @@ def kiln_climbing(p, open_door=0):
     p.add(box(-wf / 2, wf / 2, -0.30, 0.45, zc0, zf, FIRED, vis=(1, 2, 3), **_g(tag="firebox")))
     vault(p, -wf / 2, wf / 2, 0.45, 0.75, zc0 - 0.02, zf, CLAY, tag="firebox_vault")
     mouth(p, 0.0, 0.0, 0.60, 0.72, zf, rng=rng, jamb=FIRED, header=FIRED, tag="fire_mouth")
-    p.add(prism(ellipse(0.0, zf + 0.45, 0.65, 0.35, 10), "y", -0.02, 0.022, ASH, vis=(1,), tag="ash_spill"))
+    p.add(prism(ellipse(0.0, zf + 0.45, 0.65, 0.35, 10), "y", 0.035, 0.062, ASH, vis=(1,), tag="ash_spill"))
     levels = []
     for k in range(n):
         yk = y0 + st * k
@@ -251,7 +251,7 @@ def kiln_daruma(p):
     for zz, yaw in ((L / 2, 0.0), (-L / 2, 180.0)):
         m = Part("mouth", "", "")
         mouth(m, 0.0, 0.0, 0.50, 0.60, 0.0, jamb=FIRED, header=FIRED, rng=rng, tag="fire_mouth", svis=(1, 2, 3))
-        m.add(prism(ellipse(0.0, 0.42, 0.50, 0.30, 10), "y", -0.02, 0.022, ASH, vis=(1,), tag="ash_spill"))
+        m.add(prism(ellipse(0.0, 0.42, 0.50, 0.30, 10), "y", 0.035, 0.062, ASH, vis=(1,), tag="ash_spill"))
         p.merge(m.transformed(yaw, (0.0, 0.0, zz)))
     d = Part("door", "", "")
     mouth(d, 0.0, 0.35, 0.80, 1.05, 0.0, depth=0.10, jamb=FIRED, header=FIRED, rng=rng, recess=DARK, tag="loading",
@@ -302,7 +302,7 @@ def kiln_pit(p, inner=3.0, wall=0.60, H=2.0):
         p.add(rough_block(rng, x - 0.22, x + 0.22, y - 0.15, y + 0.15, o - 0.04, o + 0.05, STONE, chamfer=0.05,
                           top_jit=0.02, vis=(1,), tag="face_stone"))
     mouth(p, 0.0, 0.0, 0.60, 0.80, o + 0.002, rng=rng, tag="draw_hole", svis=(1, 2, 3))
-    p.add(prism(ellipse(0.0, o + 0.45, 0.60, 0.32, 10), "y", -0.02, 0.022, ASH, vis=(1,), tag="ash_spill"))
+    p.add(prism(ellipse(0.0, o + 0.45, 0.60, 0.32, 10), "y", 0.035, 0.062, ASH, vis=(1,), tag="ash_spill"))
     # the burnt-out heap inside (white quicklime lumps over ash), seen over the rim
     mound(p, 0.0, 0.0, i - 0.02, i - 0.02, [(0.0, 1.0), (0.55, 0.92), (0.90, 0.62), (1.10, 0.25)], LIME, n=12,
           tag="lime_heap", geo=False, vis=(1, 2, 3))

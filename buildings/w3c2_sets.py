@@ -11,6 +11,54 @@ from w3b_sets import fit1, fc, must, step_link
 import furnish_sets as FS
 
 
+def _beam_over(c, x, z, y, reach=0.60):
+    """The underside of the lowest building face right over (x, z) above y (a vertical ray against the Resolution-1
+    faces): the kit's irori hook height sits a few cm under the tie beam (hangcheck, the C2 huts' baseline); hang the
+    pot hook from the real member instead."""
+    best = None
+    for s_ in c.M.solids:
+        if 1 not in s_.vis:
+            continue
+        b = s_.bbox()
+        if not (b[0] - 0.01 <= x <= b[1] + 0.01 and b[4] - 0.01 <= z <= b[5] + 0.01 and b[3] >= y - 0.02
+                and b[2] <= y + reach):
+            continue
+        for fi in range(len(s_.faces)):
+            P = s_.face_points(fi)
+            n = s_.fn[fi]
+            if abs(n[1]) < 1e-6:
+                continue
+            # the face plane's height at (x, z), then inside the face's plan polygon
+            yy = P[0][1] - (n[0] * (x - P[0][0]) + n[2] * (z - P[0][2])) / n[1]
+            if not (y - 0.02 <= yy <= y + reach):
+                continue
+            inside, k = True, len(P)
+            sg = 0
+            for a in range(k):
+                p0, p1 = P[a], P[(a + 1) % k]
+                cr = (p1[0] - p0[0]) * (z - p0[2]) - (p1[2] - p0[2]) * (x - p0[0])
+                if abs(cr) < 1e-9:
+                    continue
+                if sg == 0:
+                    sg = 1 if cr > 0 else -1
+                elif (cr > 0) != (sg > 0):
+                    inside = False
+                    break
+            if inside:
+                best = yy if best is None else min(best, yy)
+    return best if best is not None else y
+
+
+def _hut_living(c, bed_side, bed_at, bed):
+    """furnish_sets._hut_living with the pot hook hung from the real beam over the irori (W3C2: hangcheck)."""
+    f = c.fit("living", "irori")[0]
+    hx, hy, hz = f["hook"]
+    c.hang("living", "jp_f_jizai_kagi_plain_abandoned", hx, hz, _beam_over(c, hx, hz, hy), over="hearth",
+           why="the pot hook over the irori")
+    c.wall("living", bed_side, bed_at, bed, why="the straw bed (no tatami, no futon)")
+    return f
+
+
 # ------------------------------------------------------------------------------------------------ 1 charcoal burner's hut
 def sumiyaki(c):
     """The charcoal burner's hut (C2's west hut, thatch, board floor): the one-mouth stove, the water jar, axe and saw
@@ -24,14 +72,12 @@ def sumiyaki(c):
     Dm.wall("jp_f_charcoal_scuttle", why="a charcoal scuttle")
     Dm.wall("jp_f_oke_bucket", why="a bucket")
     c.passage(("doma", "living"), -0.91, 0.0, "kamachi step doma <-> living")
-    f = FS._hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_pile")
+    f = _hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_pile")
     c.free("living", "jp_f_kama_nabe_rusted", 0.20, 0.90, 0, why="a pot by the hearth")
-    c.free("living", "jp_f_mushiro_torn", 0.30, 1.30, 0, why="a torn straw mat")
+    c.free("living", "jp_f_mushiro_torn", 0.60, 0.85, 0, why="a torn straw mat")
     c.free("living", "jp_f_basket_back", -0.30, -1.30, 0, why="a back basket for the bales")
     c.free("living", "jp_f_tabakobon_spilled", 1.10, -1.20, 0, why="a tobacco tray")
     c.free("living", "jp_f_box_s", 2.30, 1.30, 0, why="a small box")
-    hx, hy, hz = f["hook"]
-    c.hang("living", "jp_f_drying_daikon_shrivelled", hx, 1.30, hy, over="corner", why="daikon drying, shrivelled")
     c.site("jp_f_charcoal_bales3", 0.90, 2.75, 0, why="charcoal in straw bales by the door, ready to carry down")
     c.site("jp_f_charcoal_burst", 2.40, 2.60, 20, why="a burst charcoal bale")
     c.site("jp_f_firewood_stack", -3.55, 0.0, 90, why="split wood stacked against the gable")
@@ -150,7 +196,7 @@ def bunk_miners(c):
     D.wall("jp_f_basket_back_crushed", why="an ore basket, crushed")
     D.wall("jp_f_oke_bucket", why="a bucket")
     D.wall("jp_f_firewood_bundle", why="firewood")
-    f = FS._hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_pile")
+    f = _hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_pile")
     c.wall("living", "zmin", 1.60, "jp_f_straw_bed_scattered", why="another straw bed, kicked about")
     L = Room(c, "living", centre=False)
     L.wall("jp_f_mino_pegs", sides=("zmax", "zmin"), why="rain capes and hats on the pegs")
@@ -173,7 +219,7 @@ def bunk_loggers(c):
     D.wall("jp_f_rope_pegs_3", why="coils of hauling rope")
     D.wall("jp_f_firewood_stack", sides=("zmin",), why="split wood")
     D.wall("jp_f_oke_bucket", why="a bucket")
-    f = FS._hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_quilt")
+    f = _hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_quilt")
     c.wall("living", "zmin", 1.60, "jp_f_straw_bed_pile", why="another straw bed")
     L = Room(c, "living", centre=False)
     L.wall("jp_f_mino_pegs_rain", sides=("zmax", "zmin"), why="rain capes and hats on the pegs")

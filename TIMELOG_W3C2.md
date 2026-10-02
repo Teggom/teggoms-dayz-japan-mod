@@ -15,3 +15,8 @@
 2026-10-02 15:33:52 | SITE 7 DONE | logging | Land_JP_Shura + BunkHall_Ishioki_Loggers + W3B Timber_SawShed_Furnished reused | 5h 7% wk 83%
 2026-10-02 15:33:52 | SITE 8 START | salt works |  | 5h 7% wk 83%
 2026-10-02 15:36:25 | SITE 8 DONE | salt works | Land_JP_Enden + Land_JP_Kamaya_Itabuki(_Furnished) | 5h 8% wk 83%
+2026-10-02 15:43:41 | PLACED | layout | W3C2.csv 46 rows, 21 buildings, 0 problems; packed | 5h 9% wk 83%
+2026-10-02 15:45:25 | ISLAND BUILT | world + mission | verify_oprw PASS 4285/4285 | 5h 10% wk 83%
+2026-10-02 15:59:35 | CHECKS DONE | checks | verify_all 320/0 fail, oprw 4285 PASS, hang 0, roomaccess 0, propfloat 0 | 5h 12% wk 84%
+2026-10-02 16:01:21 | CHECKLIST DONE | TEST_CHECKLIST.md | 3c-2 section added below FX6 | 5h 13% wk 84%
+2026-10-02 16:02:12 | PUSHED | W3C2 (5/6) | placement + checks + sheets + docs | 5h 13% wk 84%

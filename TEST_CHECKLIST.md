@@ -60,3 +60,73 @@ into the koji room; the tub lies on the floor.
 1. Do the gate sizes now fit their fences? Any gate you'd want bigger (status) or smaller?
 2. The shiorido (paper yard): right look for a work yard, or would plain posts (no leaf) be better there?
 3. The kura's folded-back plastered doors: right, or would you rather have them as working doors?
+
+---
+
+# 3c-2: the rural / industrial sites (~20 min)
+
+New this wave: eight work sites in ONE district wrapped round the west and south of the 3c-1 trade quarter. A loop
+of lanes starts and ends on 3c-1's lane (map: `research/production/contact_sheets/w3c2_map.jpg`, IDs in
+`spikes/SH1/SHOWCASE_MAP.md` "W3C2"). Everything is cold and left: kilns out, the salt bed dry, the camps empty.
+Pictures: `w3c2_family.jpg` (every new object, bare), `w3c2_rooms.jpg` (the furnished huts and sheds + every new
+prop), `w3c2_map.jpg`.
+
+**Start:** as above (server bat, then client bat). Walk from the spawn to 3c-1's lane west end (~884, 864), about
+170 m south-west.
+
+## Route: west along the lane -> the logging spur -> south side -> the south lane -> mine -> salt -> back
+
+At every door and gate: open it, close it, walk through both ways. At every kiln: walk round it and touch it (it must
+be solid everywhere). Look for anything floating, anything you can walk through, and loot lying on floors and
+surfaces (nothing high up).
+
+1. **Potter's yard (PT, north of the lane, ~870, 873).** Bamboo fence with a plain 1.5-ken opening (no gate leaf: carts
+   went through) at ~873.5, 867.5. Inside: the work shed (open front south): kick wheel with a dry half-made jar,
+   wedging board with the clay heap, a rack of unfired bowls, glaze tub and jar; finished wares in straw in the raised
+   room (step up). Two bowl racks in the yard (one with its top plank fallen: it rests on the shelf below).
+2. **Climbing kiln (NB, ~860, 867-886).** The stokers' shelter on the lane, the fire mouth, then four humped chambers
+   stepping up the bank to the north, the stack at the top. The lowest loading door (east side) is open: a look-in
+   only (the kiln is solid, by design). Kiln shelves and firewood stacked beside it.
+3. **Tile works (TL, ~847, 874).** Board fence, two-leaf gate (no big beam) at ~851.7, 867.5. Inside: the daruma kiln
+   under its roof (a fire mouth at each end, the loading door walled up with its top pulled down), the moulding shed
+   (tiled roof, open south: moulding bench with a half-carved ridge-end tile, wedging board, green-tile rack; step up
+   to the tally desk), the drying shed (racks of green tiles, one collapsed, a pallet of fired tiles). Tile pallets in
+   the yard.
+4. **Logging spur:** at x ~880 turn north up the path to the camp lane (z ~888). **Saw shed** (~870, 883): W3B's raised
+   sawing trestle, as built. **Timber slide** (~858, 893.5): log trough on trestles falling east to its landing; a log
+   stopped in it. **Loggers' bunk hall** (~873.5, 895.5, stone-weighted roof, door south): doma with stove, water jar,
+   axes and saws; step up to the long sleeping floor, irori with its pot hook (hangs from the beam), straw beds.
+   Back down the path to the lane.
+5. **South side of the lane, going west:** **charcoal** (~866.5, 846): earth-dome kiln under its roof, the fire mouth
+   north (opened, its closing stones stacked), the flue at the back; billets in front. The **burner's hut** (~876.5,
+   846.5, door north): stove, water jar, axe and saw, irori with its hook, straw bed; charcoal bales outside.
+   **Lime kiln** (~853, 845): stone pit on its earth bank, the draw hole north under a small roof, the white burnt heap
+   seen over the rim (you can't climb the bank: it is solid); the **slaking shed** (~853, 856, open south): lime in
+   straw bales, sieve, tub. **Quarry** (~837, 845): the cut face in two benches, rows of wedge holes, a block half
+   split with its iron wedges, rubble; the masons' shelter on the splitting floor; the **quarrymen's shed** (~836,
+   856, open south): sharpening forge and anvil. Between them: cut blocks on skids, the stone sledge on rollers, two
+   stone lanterns (one fallen) = the stonemason.
+6. **South lane:** down the west side (x ~828) and east along z ~836.
+7. **Mine (MN, south of the lane):** the **adit** (~893, 832, portal north): walk in. Timber sets on stones, a straw
+   rope with paper streamers over the portal, the drainage trough along the left; 4 ken in it ends at a rockfall
+   (deliberately short). The mountain god's little shrine right of the portal. Spoil heap west of it, an ore basket by
+   the portal. **Sorting shed** (~904.5, 829, open north): sorting bench with hammers and ore, the stone ore mill, the
+   dry gold-washing sluice. **Windlass** behind it over a boarded-over shaft. **Miners' bunk hall** (~917, 828.5, door
+   north, back door south): as the loggers'.
+8. **Salt works (SL, north of the lane, ~918-938, 846):** the **salt bed** (~931, 846): walk up its ramp from the
+   north onto the raked bed; the dry board ditch and the embankment with its shut sluice on the south side; two sieve
+   stands with brine tubs by the bed (one basket tipped). The **boiling hut** (~918.5, 846, front door east facing the
+   bed, side door south): the big shallow shell pan on its clay firebox under the smoke vent, the pine-needle fuel
+   heap, salt draining baskets, salt bags. (No sea here: built on dry land like the water mill, to move to a shore
+   later.)
+9. Up the east side (x ~950) back to 3c-1's lane east end (~946, 864).
+
+## Tell me
+- Any door, gate or opening that won't open, won't close, or that you can't walk through (both ways).
+- Anything floating, hanging in the air or tilted on nothing; anything you walk through that should be solid (kilns,
+  the quarry rock, the adit knoll, the banks, the slide).
+- Anything you can't get into (a room blocked by a prop), or a step you can't climb.
+- Does each site read as what it is from 20 m: the climbing kiln on its bank, the quarry face, the mine knoll and
+  portal, the timber slide, the salt bed? (They are built for a hillside; on this flat ground the banks sit on top.)
+- The adit: is 4 ken in to a rockfall enough, or do you want it deeper?
+- Colours that look wrong (the quarry rock reads sandy; there is no sand texture for the salt bed yet).

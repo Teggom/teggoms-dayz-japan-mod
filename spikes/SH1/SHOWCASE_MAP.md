@@ -740,3 +740,104 @@ Regenerate: `python spikes/W3C1/layout_w3c1.py` then `python spikes/W3C1/map_w3c
 | LN1 | `jp_s_handcart_load_bales.p3d` | 903.50 | 864.00 | 90 | -0.02 | a handcart with rice bales on the lane |
 
 <!-- W3C1 END -->
+
+<!-- W3C2 BEGIN -->
+
+## W3C2 wave 3c-2: the rural / industrial sites (kilns, quarry, lime, charcoal, mine, logging, salt) (agent W3C2, 2026-10-02)
+
+**District (Stephen's one-district rule):** x 826-952, z 818-900, wrapped round 3c-1's trade quarter on its west and south (24.9-26.4 m, a 2-3 % fall to the south). A loop of lanes starts and ends on 3c-1's lane: LW west along z 862-866 from (884, 864) to x 826, LWS south down x 826-830, LS east along z 834-838 to x 952, LES north up x 948-952 back to 3c-1's lane east end (946, 864); a spur NP (x 878.5-882) north to the logging camp lane LN (z 887-890). Site objects with a bank / knoll / slide are seated on their work floor, the bank sinking into the rising ground behind (on the real map: into the hill).
+
+Regenerate: `python spikes/W3C2/layout_w3c2.py` then `python spikes/W3C2/map_w3c2.py`. Map: research/production/contact_sheets/w3c2_map.jpg. Huts / sheds are furnished variants (`buildings/w3c2_sets.py`, earlier shells reused per site); kilns, quarry face, adit, slide and salt bed are site objects (`templates/ruralsite.py`); yard fences (`Land_JP_Compound_*`) are K3-kit objects with FX6's picked gates; `.sN` = a site object of that building; IDs without a class are free props.
+
+### Tile works (north of the west lane, west): the daruma kiln, the moulding shed, the drying shed, the yard
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| TL1 | `Land_JP_Compound_TileYard` | 847.60 | 873.87 | 0 | -0.20 | the tile works' board fence, the two-leaf cart gate south on the lane |
+| TL2 | `Land_JP_Kawara_Gama` | 843.00 | 876.60 | 180 | 0.03 | the daruma tile kiln under its roof: a fire mouth at each end, the loading door (walled up) to the yard |
+| TL3 | `Land_JP_Workshop_Doma_Sangawara_Kawara` | 852.40 | 876.40 | 180 | 0.02 | the moulding shed (open front south): moulding bench with the half-carved onigawara, wedging board, a rack of green tiles; tally desk in the raised room |
+| TL4 | `Land_JP_Shed_Open_Board_KawaraDry` | 843.00 | 870.50 | 0 | 0.01 | the drying shed (open north to the kiln): racks of green tiles, one collapsed, a pallet of fired tiles |
+| TL5 | `jp_f_kawara_stack.p3d` | 848.40 | 869.40 | 90 | -0.01 | fired tiles stacked for the carts |
+| TL6 | `jp_f_kawara_stack_scattered.p3d` | 848.40 | 872.00 | 90 | -0.01 | fired tiles, a row pushed over |
+
+### The climbing kiln (between the two yards, its fire mouth on the west lane)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| NB1 | `Land_JP_Noborigama` | 859.70 | 874.80 | 180 | -0.10 | the climbing kiln: stokers' shelter on the lane, the firebox, four chambers stepping up its bank to the north, the stack; the lowest loading door open (east side) |
+| NB2 | `jp_f_kiln_shelves.p3d` | 862.90 | 868.60 | 90 | -0.01 | kiln shelves and props stacked by the kiln |
+| NB3 | `jp_f_firewood_stack.p3d` | 862.90 | 872.00 | 90 | -0.01 | red-pine firewood for the kiln |
+
+### The potter (north of the west lane, east): the work shed and the bamboo-fenced yard
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| PT1 | `Land_JP_Compound_PotteryYard` | 870.37 | 872.96 | 0 | -0.17 | the potter's bamboo fence, a 1.5-ken cart opening south on the lane |
+| PT2 | `Land_JP_Workshop_Doma_Itabuki_Toki` | 870.40 | 875.00 | 180 | 0.02 | the potter's work shed (open front south): kick wheel, wedging board, ware racks, glaze tubs; finished wares in straw in the raised room |
+| PT3 | `jp_f_ware_rack.p3d` | 867.50 | 869.40 | 0 | -0.01 | a ware rack in the yard: unfired bowls drying |
+| PT4 | `jp_f_ware_rack_fallen.p3d` | 867.50 | 870.90 | 0 | -0.01 | a ware rack, its top plank fallen |
+
+### The logging camp (north, on the camp lane): the timber slide, the bunk hall, the saw shed
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| LG1 | `Land_JP_Shura` | 858.00 | 893.50 | 90 | 0.09 | the timber slide's last 4 bays on trestles, falling east to the landing; a log stopped in it |
+| LG2 | `Land_JP_BunkHall_Ishioki_Loggers` | 873.50 | 895.50 | 180 | -0.03 | the loggers' bunk hall (stone-weighted roof, door south): axes and saws on the wall, straw beds round the irori |
+| LG3 | `Land_JP_Timber_SawShed_Furnished` | 870.40 | 883.00 | 0 | 0.01 | the sawing shed (W3B's, as built): the log on its raised trestle (the Japanese method, no sawpit) |
+| LG4 | `jp_f_log_stack.p3d` | 864.50 | 897.60 | 90 | -0.03 | felled logs stacked at the landing |
+| LG5 | `jp_f_log_stack_collapsed.p3d` | 855.00 | 898.30 | 0 | -0.04 | a log stack, collapsed |
+
+### The quarry + the stonemason's lanterns (south of the west lane, west)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| QR1 | `Land_JP_Ishiba` | 837.00 | 845.00 | 0 | 0.08 | the quarry face (cut north): two benches, wedge-hole rows, the half-split block with its wedges, the masons' shelter on the splitting floor |
+| QR2 | `Land_JP_Shed_Open_Board_Ishiku` | 836.00 | 856.00 | 180 | 0.01 | the quarrymen's shed (open south to the face): the sharpening forge, anvil, quench tub, chisels and wedges |
+| QR3 | `jp_f_ishi_blocks.p3d` | 841.80 | 852.20 | 0 | -0.02 | cut blocks on skids, wedge holes, the lord's mark |
+| QR4 | `jp_f_ishi_shura.p3d` | 846.20 | 853.60 | 90 | -0.03 | the stone sledge on its rollers with a block lashed on |
+| QR5 | `jp_s_stone_lantern_kasuga_18.p3d` | 842.40 | 856.40 | 0 | -0.01 | the stonemason's work: a finished lantern waiting |
+| QR6 | `jp_s_stone_lantern_ab_toppled.p3d` | 845.20 | 858.60 | 0 | -0.02 | a lantern fallen |
+
+### The lime kiln (south of the west lane)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| LM1 | `Land_JP_Ishibai_Gama` | 853.00 | 845.00 | 0 | 0.06 | the lime kiln: a dry-stone pit on its earth bank, the draw hole north under its small roof, the burnt-out heap over the rim |
+| LM2 | `Land_JP_Shed_Open_Thatch_Ishibai` | 853.00 | 855.80 | 180 | 0.02 | the slaking and packing shed (open south to the kiln): lime in straw bales, sieves, the slaking tub |
+| LM2.s1 | `jp_f_firewood_bundle_loose.p3d` | 856.70 | 855.40 | 270 | -0.01 | brushwood bundles for the burn |
+| LM2.s2 | `jp_f_firewood_bundle.p3d` | 856.70 | 856.70 | 270 | -0.01 | brushwood bundles |
+| LM3 | `jp_f_limestone_heap.p3d` | 859.60 | 852.60 | 0 | -0.02 | broken limestone waiting for the next burn |
+
+### The charcoal kiln + the burner's hut (south of the west lane, east)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| CH1 | `Land_JP_SumiGama` | 866.50 | 846.00 | 0 | 0.04 | the charcoal kiln under its roof: the earth dome, the fire mouth north (opened), the flue at the back |
+| CH2 | `Land_JP_Hut_West_Ishioki_Sumiyaki` | 876.50 | 846.50 | 0 | 0.02 | the charcoal burner's hut (door north): stove, water jar, axe and saw, straw bed round the irori; bales outside |
+| CH2.s1 | `jp_f_charcoal_bales3.p3d` | 877.40 | 849.25 | 0 | -0.01 | charcoal in straw bales by the door, ready to carry down |
+| CH2.s2 | `jp_f_charcoal_burst.p3d` | 878.90 | 849.10 | 20 | -0.00 | a burst charcoal bale |
+| CH2.s3 | `jp_f_firewood_stack.p3d` | 872.95 | 846.50 | 90 | -0.01 | split wood stacked against the gable |
+| CH3 | `jp_f_log_stack.p3d` | 866.50 | 852.60 | 0 | -0.04 | kiln billets stacked before the mouth |
+| CH4 | `jp_f_firewood_stack.p3d` | 861.60 | 846.00 | 90 | -0.01 | split wood for the kiln |
+
+### The mine (south of the south lane)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| MN1 | `Land_JP_Mabu` | 893.00 | 826.00 | 0 | 0.09 | the mine adit (portal north on the lane): a 4-ken timbered drift to a rockfall, the drainage trough, the mountain god's shrine |
+| MN2 | `Land_JP_Shed_Open_Board_Senko` | 904.50 | 829.00 | 0 | 0.01 | the sorting shed (open north): sorting bench, the stone ore mill, the washing sluice, ore baskets |
+| MN3 | `Land_JP_BunkHall_Itabuki_Miners` | 917.00 | 828.50 | 0 | 0.02 | the miners' bunk hall (door north): picks on the wall, straw beds round the irori |
+| MN4 | `jp_f_spoil_heap.p3d` | 884.80 | 826.00 | 0 | -0.04 | the mine's spoil heap |
+| MN5 | `jp_f_makiage.p3d` | 905.00 | 822.40 | 0 | -0.02 | a windlass over a boarded-over prospect shaft |
+| MN6 | `jp_f_basket_back_crushed.p3d` | 899.60 | 833.00 | 0 | -0.00 | an ore basket dropped by the portal |
+
+### The salt works (north of the south lane, east; dry land)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| SL1 | `Land_JP_Enden` | 931.00 | 846.00 | 0 | -0.16 | the salt bed (irihama, dry land): the raked bed ramped up from the north, the dry ditch and the embankment + sluice on the south ('sea') side |
+| SL2 | `Land_JP_Kamaya_Itabuki_Furnished` | 918.50 | 846.00 | 90 | 0.04 | the salt-boiling hut (front door east to the bed, side door south): the shell pan on its firebox under the smoke vent, fuel heap, draining baskets, salt bags |
+| SL3 | `jp_f_zaru_tori.p3d` | 928.60 | 853.20 | 0 | -0.01 | a sieve stand by the bed: brine tubs, sea-water buckets |
+| SL4 | `jp_f_zaru_tori_ab.p3d` | 933.60 | 853.20 | 0 | -0.01 | a sieve stand, a basket tipped off |
+
+<!-- W3C2 END -->

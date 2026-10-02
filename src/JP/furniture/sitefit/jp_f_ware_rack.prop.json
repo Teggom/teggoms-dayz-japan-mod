@@ -27,15 +27,15 @@
    "anchor": "floor",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 960,
+    "Resolution 1": 978,
     "Resolution 2": 6,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.955,
-    0.955,
+    -1.0,
+    1.0,
     0.0,
     1.7,
     0.02,
@@ -78,7 +78,7 @@
    "anchor": "floor",
    "budget": "furniture",
    "faces": {
-    "Resolution 1": 761,
+    "Resolution 1": 773,
     "Resolution 2": 6,
     "Geometry": 6,
     "View Geometry": 6,
@@ -86,7 +86,7 @@
    },
    "bbox": [
     -1.005,
-    0.955,
+    1.0,
     0.0,
     1.7,
     0.02,

@@ -403,10 +403,11 @@ def enden(name=None, wear="_w2"):
     for (x, z, r) in ((3.2, -2.6, 0.75), (8.9, -2.2, 0.60)):
         p.add(core_rings_heap(rng, x, z, r, YB))
     zd0, zd1 = -LB - 0.60, -LB
-    p.add(box(0.0, W, -0.30, 0.02, zd0, zd1, "wood_sooted", vis=(1, 2, 3), geo=True, view=True, fire=True,
+    YD = 0.10                      # the ditch's board floor 0.10 over grade (never at grade: no z-fight, FX5)
+    p.add(box(0.0, W, -0.30, YD, zd0, zd1, "wood_sooted", vis=(1, 2, 3), geo=True, view=True, fire=True,
               tag="ditch_floor"))
-    p.road([(0.0, 0.02, zd0), (W, 0.02, zd0), (W, 0.02, zd1), (0.0, 0.02, zd1)], "boards_ext")
-    p.add(box(0.0, W, 0.02, YB + 0.02, zd1 - 0.04, zd1, "wood_weathered", vis=(1, 2), tag="ditch_lining"))
+    p.road([(0.0, YD, zd0), (W, YD, zd0), (W, YD, zd1), (0.0, YD, zd1)], "boards_ext")
+    p.add(box(0.0, W, YD, YB + 0.02, zd1 - 0.04, zd1, "wood_weathered", vis=(1, 2), tag="ditch_lining"))
     zk0, zk1 = -D, zd0
     p.add(prism([(-0.30, zk1), (-0.30, zk0), (0.10, zk0), (0.85, zk0 + 0.45), (0.85, zk1 - 0.30), (0.40, zk1)], "x",
                 0.0, W, "ground_earth_bare", vis=(1, 2, 3), geo=True, view=True, fire="dirt", tag="dyke"))
@@ -423,7 +424,7 @@ def enden(name=None, wear="_w2"):
     for z in (-9 * HALF, -9.5 * HALF):
         sp.add(box(xs0 - 0.10, xs1 + 0.10, 1.25, 1.37, z - 0.07, z + 0.07, "wood_weathered", vis=(1, 2, 3), geo=True,
                    view=True, fire=True, tag="sluice_cap"))
-    sp.add(box(xs0 + 0.06, xs1 - 0.06, 0.02, 0.95, -9.25 * HALF - 0.03, -9.25 * HALF + 0.03, "wood_sooted",
+    sp.add(box(xs0 + 0.06, xs1 - 0.06, 0.10, 0.95, -9.25 * HALF - 0.03, -9.25 * HALF + 0.03, "wood_sooted",
                vis=(1, 2, 3), geo=True, view=True, fire=True, tag="sluice_gate"))
     B.put(sp, (0.0, (0.0, 0.0, 0.0)), what="the sluice (gate shut, dry)")
     S.obst.append(("bed", _r(2.4, 4.0, -3.4, -1.8)))
@@ -457,7 +458,7 @@ def _pan(S, cx, cz, w=2.40, d=1.80):
               view=True, fire="dirt", tag="pan_crust"))
     RS.mouth(p, cx, 0.0, 0.55, 0.42, cz + fd / 2, rng=rng, jamb="ceramic_earthenware", header="ceramic_earthenware",
              tag="pan_mouth", svis=(1, 2, 3))
-    p.add(prism(RS.ellipse(cx, cz + fd / 2 + 0.40, 0.60, 0.30, 10), "y", -0.02, 0.022, "ground_ash", vis=(1,),
+    p.add(prism(RS.ellipse(cx, cz + fd / 2 + 0.40, 0.60, 0.30, 10), "y", 0.035, 0.062, "ground_ash", vis=(1,),
                 tag="ash_spill"))
     S.B.interior = True
     S.B.put(p, (0.0, (0.0, 0.0, 0.0)), what="the shell pan on its clay firebox (cold, a salt crust)")

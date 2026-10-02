@@ -617,3 +617,41 @@
   (older: 173 of 1,607, 96 of them pots seated in kamado holes by design; spikes/FX6/_propseat_older.txt). Sheets
   contact_sheets/fx6_gates.jpg, fx6_fixes.jpg. **Walk: TEST_CHECKLIST.md = FX6 re-check (~8 min); 3c-2 adds its
   section below.** Weekly 81 % -> 82 %.
+- 2026-10-02: **W3C2 DONE: wave 3c-2, the rural / industrial trade sites** (Stephen approved; agent W3C2, Opus, no
+  sub-agents). Sourced setup first (spikes/W3C2/W3C2_NOTES.md: web sources Ome city on the Nariki lime burn, ja.wikipedia
+  Gyotoku salt fields, Nara National Research Institute on the daruma kiln; B_TRADE_INDUSTRY; era tests). Built site by
+  site, each whole: (1) **charcoal** Land_JP_SumiGama (earth-dome kiln under its board roof) + the burner's hut
+  Land_JP_Hut_West_Ishioki_Sumiyaki; (2) **pottery** Land_JP_Noborigama (Seto / Mino climbing kiln: firebox + 4 chambers
+  on its own bank, stokers' shelter; Tokoname used the tunnel kiln in 1730, flagged) + the potter
+  Land_JP_Workshop_Doma_Itabuki_Toki + Land_JP_Compound_PotteryYard; (3) **tile works** Land_JP_Kawara_Gama (daruma
+  updraught kiln, Sengoku-period type) + Land_JP_Workshop_Doma_Sangawara_Kawara + Land_JP_Shed_Open_Board_KawaraDry +
+  Land_JP_Compound_TileYard; (4) **lime** Land_JP_Ishibai_Gama (Nariki-type dry-stone kiln pit on its bank, the burnt
+  heap) + Land_JP_Shed_Open_Thatch_Ishibai; (5) **quarry** Land_JP_Ishiba (two cut benches, wedge-hole rows, a
+  half-split block) + Land_JP_Shed_Open_Board_Ishiku (sharpening forge); the stonemason folded in with the existing
+  lanterns + new blocks and stone sledge; (6) **mine** Land_JP_Mabu (knoll, **4-ken timbered drift ending at a
+  rockfall**, walkable; portal shimenawa, drainage trough, yama-no-kami hokora) + Land_JP_Shed_Open_Board_Senko +
+  the new Land_JP_BunkHall_Itabuki(_Miners); (7) **logging** Land_JP_Shura (the slide's last 4 bays on trestles) +
+  Land_JP_BunkHall_Ishioki(_Loggers) + W3B's furnished saw shed (the raised trestle, no sawpit); (8) **salt** (Gyotoku
+  1730 = irihama with the sieve method and a crushed-shell pan, fuel pine needles) Land_JP_Enden (raked bed, dry ditch,
+  embankment + sluice) + Land_JP_Kamaya_Itabuki(_Furnished) (the shell pan on its firebox under the smoke vent),
+  **on dry land like the water mill** (a shore later = placement only). New kiln kit
+  parts/kit/jpparts/ruralsite_parts.py (6 site parts: PGA 26 / 37 / 38 / 39 / 40 / 41), template
+  templates/ruralsite.py (12 shells), 18 props / 24 models (sitefit, jp_furniture 649 classes), 10 furnished.
+  Yards' gates by pick_gate (pottery: bamboo fence, 1.5-ken cart opening; tile works: board fence, two-leaf kido_ryo).
+  **District:** x 826-952, z 818-900, wrapped round 3c-1's west and south; a loop of lanes from 3c-1's lane west end,
+  south, east and back up to its east end, a spur north to the logging camp (SHOWCASE_MAP W3C2, w3c2_map.jpg).
+  Commits: d8e9715, 8b70fbd, e86fa69, d1296b5 + the placement / checks commit. Checks: verify_all --full 320
+  buildings / 20,700 checks / 0 failures (then cached re-run all pass); bindcheck 320; verify_oprw 4285/4285; hangcheck
+  0 (W3C2 furnished); handlecheck 40/0; gatecheck 8/0; roomaccess 23 buildings / 0 failing (21 open rooms skipped);
+  propfloat sitefit 24/0; propseat 78 props, 3 'floating' = pots seated in kamado holes (FX6 baseline by design);
+  jointcheck_w3c2 tile yard 6 OK, pottery yard open by design (yotsume); gradesweep: no up-facing at-grade faces but
+  soseki stone tops (baseline); placecheck island 442 = baseline 421 + W3C2's 21 (props sunk 2-9 cm on the slope, the
+  two stone lanterns false-flagged 'hanging', the two yard fences sunk 0.32 / 0.40 on their high corner = within the
+  posts' -0.40 footing). Over budget (reasons recorded): BunkHall_Itabuki +2 % R1, BunkHall_Ishioki +38 % R1 (stone roof).
+  Not done: kiln roofs over the climbing kiln (period images vary), a smelting hut at the mine, a second tile kiln,
+  half-carved lanterns, a sand material for the salt bed (material job), the C2 huts' irori hook sits 4-9 cm under its
+  beam (old-hut baseline; fixed in the W3C2 dressings only), navmesh. Pitfalls: the shell checks C3 / C8 need real
+  posts on stones (every site object got an honest timber element); kit HALF is half a KEN (0.91), the post grid is 0.455;
+  gradesweep counts down-facing faces; a seat box on the work floor lets a bank sink into the rising ground; never put a
+  flat ash / spill at grade under a 0.05 floor (hidden). **Walk: TEST_CHECKLIST.md = FX6 re-check (~8 min) + 3c-2
+  (~20 min).** Weekly 82 % -> 84 %. Next (Stephen's call): 3d government, 3e castle, or the fishing suite.

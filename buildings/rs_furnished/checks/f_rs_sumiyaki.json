@@ -218,7 +218,7 @@
   {
    "check": "D1 props per room 5-7: living",
    "ok": true,
-   "detail": "6 props: jp_f_jizai_kagi_plain_abandoned, jp_f_straw_bed_pile, jp_f_kama_nabe_rusted, jp_f_mushiro_torn, jp_f_basket_back, jp_f_tabakobon_spilled, jp_f_box_s, jp_f_drying_daikon_shrivelled"
+   "detail": "6 props: jp_f_jizai_kagi_plain_abandoned, jp_f_straw_bed_pile, jp_f_kama_nabe_rusted, jp_f_mushiro_torn, jp_f_basket_back, jp_f_tabakobon_spilled, jp_f_box_s"
   },
   {
    "check": "D2 floor coverage <= 25 %: living",
@@ -273,17 +273,17 @@
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
    "ok": true,
-   "detail": "17 props pairwise"
+   "detail": "16 props pairwise"
   },
   {
    "check": "D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall",
    "ok": true,
-   "detail": "14 props"
+   "detail": "13 props"
   },
   {
    "check": "D16 hanging items keep 2.00 m head room (or hang over a hearth / corner / furniture / doorway)",
    "ok": true,
-   "detail": "2 items"
+   "detail": "1 items"
   },
   {
    "check": "D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry",
@@ -293,7 +293,7 @@
   {
    "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
    "ok": true,
-   "detail": "41 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
+   "detail": "40 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
   },
   {
    "check": "D13 yard / street objects inside the test pad",
@@ -303,7 +303,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 447267 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 446973 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }
