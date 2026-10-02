@@ -1,0 +1,466 @@
+{
+ "wood": {
+  "wood_weathered": {
+   "joints": 9,
+   "roll_px": -973,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.04,
+     "patch_L": [
+      40.4,
+      40.6,
+      40.2,
+      40.9
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.04,
+     "patch_L": [
+      37.0,
+      37.3,
+      36.6,
+      37.8
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.03,
+     "patch_L": [
+      32.7,
+      33.0,
+      32.4,
+      33.4
+     ]
+    }
+   }
+  },
+  "wood_street_dark": {
+   "joints": 14,
+   "roll_px": -3,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.03,
+     "patch_L": [
+      27.5,
+      23.3,
+      25.2,
+      25.6
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.06,
+     "patch_L": [
+      29.6,
+      25.2,
+      27.2,
+      27.6
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.06,
+     "patch_L": [
+      32.6,
+      28.2,
+      30.4,
+      30.4
+     ]
+    }
+   }
+  },
+  "wood_kuro": {
+   "joints": 6,
+   "roll_px": -1015,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.06,
+     "patch_L": [
+      7.6,
+      7.3,
+      7.6,
+      7.4
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.03,
+     "patch_L": [
+      11.8,
+      10.1,
+      10.6,
+      11.5
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.03,
+     "patch_L": [
+      12.5,
+      10.3,
+      10.8,
+      12.2
+     ]
+    }
+   }
+  },
+  "wood_sooted": {
+   "joints": 14,
+   "roll_px": -3,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.03,
+     "patch_L": [
+      13.4,
+      10.5,
+      11.9,
+      12.3
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.04,
+     "patch_L": [
+      10.4,
+      9.6,
+      9.8,
+      10.3
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.04,
+     "patch_L": [
+      9.9,
+      9.1,
+      9.3,
+      9.8
+     ]
+    }
+   }
+  },
+  "wood_bengara": {
+   "joints": 14,
+   "roll_px": -3,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.05,
+     "patch_L": [
+      18.0,
+      16.3,
+      16.7,
+      17.7
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.02,
+     "patch_L": [
+      19.0,
+      17.2,
+      17.7,
+      18.7
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.06,
+     "patch_L": [
+      21.2,
+      19.2,
+      19.7,
+      20.7
+     ]
+    }
+   }
+  },
+  "wood_new": {
+   "joints": 11,
+   "roll_px": -1021,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.24,
+     "patch_L": [
+      64.0,
+      64.8,
+      63.2,
+      65.6
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.07,
+     "patch_L": [
+      57.7,
+      61.1,
+      58.3,
+      60.5
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.07,
+     "patch_L": [
+      53.8,
+      57.0,
+      54.4,
+      56.4
+     ]
+    }
+   }
+  },
+  "wood_silver": {
+   "joints": 9,
+   "roll_px": -973,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.0,
+     "patch_L": [
+      54.5,
+      54.2,
+      54.5,
+      54.2
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.01,
+     "patch_L": [
+      48.5,
+      47.8,
+      48.3,
+      48.1
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.01,
+     "patch_L": [
+      44.1,
+      43.6,
+      44.0,
+      43.8
+     ]
+    }
+   }
+  },
+  "wood_interior": {
+   "joints": 14,
+   "roll_px": 0,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.1,
+     "patch_L": [
+      27.6,
+      27.2,
+      26.6,
+      28.3
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.02,
+     "patch_L": [
+      23.8,
+      23.1,
+      22.7,
+      24.2
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.02,
+     "patch_L": [
+      27.6,
+      27.3,
+      26.8,
+      28.1
+     ]
+    }
+   }
+  },
+  "ceil_boards": {
+   "joints": 7,
+   "roll_px": -3,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.11,
+     "patch_L": [
+      33.7,
+      33.1,
+      33.2,
+      33.7
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.04,
+     "patch_L": [
+      23.4,
+      23.4,
+      23.2,
+      23.8
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.05,
+     "patch_L": [
+      21.6,
+      21.2,
+      21.3,
+      21.7
+     ]
+    }
+   }
+  },
+  "floor_boards_int": {
+   "joints": 8,
+   "roll_px": -4,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.05,
+     "patch_L": [
+      27.5,
+      27.4,
+      26.1,
+      28.8
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.04,
+     "patch_L": [
+      23.1,
+      23.7,
+      22.3,
+      24.7
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.1,
+     "patch_L": [
+      29.1,
+      27.8,
+      26.6,
+      30.2
+     ]
+    }
+   }
+  },
+  "floor_boards_rough": {
+   "joints": 10,
+   "roll_px": -21,
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.01,
+     "patch_L": [
+      26.0,
+      26.9,
+      26.0,
+      27.0
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.02,
+     "patch_L": [
+      24.0,
+      24.8,
+      24.0,
+      24.9
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.02,
+     "patch_L": [
+      21.0,
+      21.8,
+      21.0,
+      21.9
+     ]
+    }
+   }
+  }
+ },
+ "macro_uv": {
+  "wood": [
+   0.2721,
+   0.1156
+  ],
+  "thatch": [
+   0.2151,
+   0.2597
+  ]
+ },
+ "macro_shift_dE": {
+  "wood_weathered": {
+   "_w0": 1.12,
+   "_w1": 1.38,
+   "_w2": 1.34
+  },
+  "wood_street_dark": {
+   "_w0": 1.03,
+   "_w1": 1.89,
+   "_w2": 2.6
+  },
+  "wood_kuro": {
+   "_w0": 0.49,
+   "_w1": 0.64,
+   "_w2": 0.82
+  },
+  "wood_sooted": {
+   "_w0": 0.24,
+   "_w1": 0.52,
+   "_w2": 0.76
+  },
+  "wood_bengara": {
+   "_w0": 0.73,
+   "_w1": 1.2,
+   "_w2": 1.69
+  },
+  "wood_new": {
+   "_w0": 1.9,
+   "_w1": 2.99,
+   "_w2": 3.36
+  },
+  "wood_silver": {
+   "_w0": 1.33,
+   "_w1": 1.73,
+   "_w2": 1.73
+  },
+  "wood_interior": {
+   "_w0": 0.22,
+   "_w1": 0.2,
+   "_w2": 0.36
+  },
+  "ceil_boards": {
+   "_w0": 0.34,
+   "_w1": 0.2,
+   "_w2": 0.24
+  },
+  "floor_boards_int": {
+   "_w0": 0.22,
+   "_w1": 0.2,
+   "_w2": 0.38
+  },
+  "floor_boards_rough": {
+   "_w0": 0.21,
+   "_w1": 0.22,
+   "_w2": 0.22
+  },
+  "roof_thatch": {
+   "_w1": 0.82,
+   "_w2": 3.98
+  }
+ },
+ "macro_alpha_mean": {
+  "wood": [
+   0.056,
+   0.097,
+   0.133
+  ],
+  "thatch": [
+   null,
+   0.082,
+   0.185
+  ],
+  "thatch_w2_moss_cover": 0.17
+ },
+ "thatch_w2_regen_mean_abs_diff_outside_old_moss": 0.6,
+ "moss_decal": {
+  "_w0": {
+   "coverage": 0.108,
+   "semi": 0.0154
+  },
+  "_w1": {
+   "coverage": 0.333,
+   "semi": 0.0362
+  },
+  "_w2": {
+   "coverage": 0.554,
+   "semi": 0.0403
+  }
+ }
+}
