@@ -3,22 +3,22 @@
  "key": "ts_cmp_paperyard",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "3240/1838/292",
+ "faces": "3386/1810/252",
  "door_clear_m": [
-  2.5
+  1.11
  ],
- "checks_n": 33,
+ "checks_n": 32,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 3240, Resolution 2 1838, Resolution 3 292, Geometry 350, Memory 0, Roadway 5, View Geometry 254, Fire Geometry 254"
+   "detail": "Resolution 1 3386, Resolution 2 1810, Resolution 3 252, Geometry 370, Memory 0, Roadway 5, View Geometry 268, Fire Geometry 268"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 3240, R2 1838, R3 292"
+   "detail": "R1 3386, R2 1810, R3 252"
   },
   {
    "check": "Geometry properties + mass",
@@ -38,12 +38,12 @@
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "21 components, 0 bad, 0 faces outside components"
+   "detail": "20 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "21 components, 0 bad, 0 faces outside components"
+   "detail": "20 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -68,12 +68,12 @@
   {
    "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
    "ok": true,
-   "detail": "Gate (kabuki) (hinged_gate): bones doors1+doors2"
+   "detail": "Gate (shiorido) (hinged): bones doors1"
   },
   {
    "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 2.50 m, head 2.81 m"
+   "detail": "leaves turn 90 deg without touching other geometry; open clear 1.11 m, head 99.00 m"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
@@ -108,17 +108,12 @@
   {
    "check": "C10 DoorsTwin1 reachable from both sides (open)",
    "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.90 m; far: leaf hit first from 7/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.43 m"
+   "detail": "Gate (shiorido): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.48 m; far: leaf hit first from 9/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.78 m"
   },
   {
    "check": "C10 DoorsTwin1 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.61 m"
-  },
-  {
-   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
-   "ok": true,
-   "detail": "Gate (kabuki): 56100 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+   "detail": "Gate (shiorido): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.54 m"
   },
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
@@ -143,12 +138,12 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "56 columns over 2.5 m compared in each LOD"
+   "detail": "0 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "8 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "5 library rvmats in the visual LODs, 0 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -158,7 +153,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 246 touching (opposite-facing: backface-culled) and 0 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 132 touching (opposite-facing: backface-culled) and 0 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -173,7 +168,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 285554 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 278160 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

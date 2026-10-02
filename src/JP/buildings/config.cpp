@@ -105039,12 +105039,12 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido kata)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
-				animPeriod=2;
+				animPeriod=1.2;
 				initPhase=0;
-				initOpened=1;
+				initOpened=0;
 				soundOpen="doorWoodSlideOpen";
 				soundClose="doorWoodSlideClose";
 				soundLocked="doorWoodSlideRattle";
@@ -105183,12 +105183,12 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido kata)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
-				animPeriod=2;
+				animPeriod=1.2;
 				initPhase=0;
-				initOpened=1;
+				initOpened=0;
 				soundOpen="doorWoodSlideOpen";
 				soundClose="doorWoodSlideClose";
 				soundLocked="doorWoodSlideRattle";
@@ -105340,7 +105340,7 @@ class CfgVehicles
 			};
 			class DoorsTwin2
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido ryo)";
 				component="DoorsTwin2";
 				soundPos="doorsTwin2_action";
 				animPeriod=2;
@@ -105545,12 +105545,12 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido kata)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
-				animPeriod=2;
+				animPeriod=1.2;
 				initPhase=0;
-				initOpened=1;
+				initOpened=0;
 				soundOpen="doorWoodSlideOpen";
 				soundClose="doorWoodSlideClose";
 				soundLocked="doorWoodSlideRattle";
@@ -105687,19 +105687,6 @@ class CfgVehicles
 		model="\JP\buildings\dw_site\jp_compound_kumiyashiki.p3d";
 		class Doors
 		{
-			class DoorsTwin1
-			{
-				displayName="Gate (kabuki)";
-				component="DoorsTwin1";
-				soundPos="doorsTwin1_action";
-				animPeriod=2;
-				initPhase=0;
-				initOpened=1;
-				soundOpen="doorWoodSlideOpen";
-				soundClose="doorWoodSlideClose";
-				soundLocked="doorWoodSlideRattle";
-				soundOpenABit="doorWoodSlideOpenABit";
-			};
 		};
 		class DamageSystem
 		{
@@ -105760,67 +105747,6 @@ class CfgVehicles
 			};
 			class DamageZones
 			{
-				class DoorsTwin1
-				{
-					class Health
-					{
-						hitpoints=1000;
-						transferToGlobalCoef=0;
-					};
-					componentNames[]=
-					{
-						"doorstwin1"
-					};
-					fatalInjuryCoef=-1;
-					class ArmorType
-					{
-						class Projectile
-						{
-							class Health
-							{
-								damage=3;
-							};
-							class Blood
-							{
-								damage=0;
-							};
-							class Shock
-							{
-								damage=0;
-							};
-						};
-						class Melee
-						{
-							class Health
-							{
-								damage=5;
-							};
-							class Blood
-							{
-								damage=0;
-							};
-							class Shock
-							{
-								damage=0;
-							};
-						};
-						class FragGrenade
-						{
-							class Health
-							{
-								damage=10;
-							};
-							class Blood
-							{
-								damage=0;
-							};
-							class Shock
-							{
-								damage=0;
-							};
-						};
-					};
-				};
 			};
 		};
 	};
@@ -125085,7 +125011,7 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido ryo)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
 				animPeriod=2;
@@ -125229,7 +125155,7 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido ryo)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
 				animPeriod=2;
@@ -125373,7 +125299,7 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido ryo)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
 				animPeriod=2;
@@ -133713,7 +133639,7 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido ryo)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
 				animPeriod=2;
@@ -133857,12 +133783,12 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (kido kata)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
-				animPeriod=2;
+				animPeriod=1.2;
 				initPhase=0;
-				initOpened=1;
+				initOpened=0;
 				soundOpen="doorWoodSlideOpen";
 				soundClose="doorWoodSlideClose";
 				soundLocked="doorWoodSlideRattle";
@@ -134001,12 +133927,12 @@ class CfgVehicles
 		{
 			class DoorsTwin1
 			{
-				displayName="Gate (kabuki)";
+				displayName="Gate (shiorido)";
 				component="DoorsTwin1";
 				soundPos="doorsTwin1_action";
-				animPeriod=2;
+				animPeriod=1.2;
 				initPhase=0;
-				initOpened=1;
+				initOpened=0;
 				soundOpen="doorWoodSlideOpen";
 				soundClose="doorWoodSlideClose";
 				soundLocked="doorWoodSlideRattle";

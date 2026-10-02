@@ -1116,6 +1116,245 @@ def wicket(kind="itabei", L=KEN, pid="jp_p_gate_wicket", variant="", kuro=False)
     return P
 
 
+# ------------------------------------------------------------------------------------------------ small gates (FX6)
+# FX6 (2026-10-02, Stephen's 3c-1 walk: "the gate to the paper yard is waaaay too big for that fence ... every
+# double-door gate seems to be the same"): a family of small gates sized to the fence they sit in. Research, sizes and
+# the picker rule: spikes/FX6/FX6_NOTES.md; API: parts/K3_NOTES.md §6. Frame as every gate: posts on the wall line
+# z 0 at x 0 and x span (grid nodes), +z outside, leaves on the -z face swinging 90 deg into the compound; leaf_y0 =
+# the leaves' bottom over grade (compound gates lift them over FX5's sill pad). POST_W[kind] is the post width the
+# fence modules either side stop at (dwelling._wall_path passes it as wall(post_w=...)).
+POST_W = {"kabuki": 0.21, "kabuki_roofed": 0.21, "munemon": 0.21, "kido_kata": 0.15, "kido_ryo": 0.18,
+          "shiorido": 0.12, "opening": 0.12, "opening_board": 0.15}
+KIDO_LATCH = 1.26           # kido_kata / shiorido: the latch post's centre from the hinge post's centre
+LIGHT_FENCES = ("yotsume", "kenninji", "shiba", "takeho")
+
+
+def _leaf_door(P, a0, a1, y0, h, zf, mat, rng, variant="_board", note="gate leaf", lattice_fn=None):
+    """One hinged leaf a0..a1 (hinge at a0), its street face at zf, on the -z side, swinging 90 deg into the compound
+    (right-hand rule about +y, gates.py convention; engine-untested like every rotation door). lattice_fn(zb, zf) ->
+    visual solids replaces the board / lattice visuals (the shiorido's bamboo diamond lattice). Returns the Door."""
+    from .gates import _leaf_solids
+    bone = P.next_bone()
+    t = 0.045 if lattice_fn is None else 0.04
+    zb = zf - t
+    if lattice_fn is None:
+        sols = _leaf_solids(a0, a1, y0, y0 + h, zb, zf, variant, rng, astragal=0, hinge="l")
+        for s in sols:
+            if isinstance(s.mats, str) and s.mats == "wood_street_dark" and mat != "wood_street_dark":
+                s.mats = mat
+                s.fm = None
+                s.finalize()
+    else:
+        # the leaf's collision box carries View + Fire too: the door action and its checks need a View leaf
+        sols = [box(a0, a1, y0, y0 + h, zb, zf, mat, vis=(), geo=True, view=True, fire=True, tag="gate_leaf_geo")]
+        sols += lattice_fn(zb, zf)
+    for s in sols:
+        s.door = bone
+        P.add(s)
+    axis = [(a0, y0, zb), (a0, y0 + h, zb)]
+    P.memory[bone + "_axis"] = axis
+    P.memory[bone] = [((a0 + a1) / 2, y0 + min(1.0, h / 2), (zb + zf) / 2)]
+    action = ((a0 + a1) / 2, y0 - 0.03 + 1.0, zf)          # 1.0 over the floor the leaf clears by 3 cm (act_h)
+    P.memory[bone + "_action"] = [action]
+    kind = "lattice" if (lattice_fn is not None or variant == "_lattice") else "plank"
+    d = Door(kind=kind, anims=[{"bone": bone, "type": "rotation", "axis": axis, "amount": math.radians(90.0),
+                                "note": note + ", swings into the compound"}], action=action,
+             centre=((a0 + a1) / 2, y0 + h / 2, (zb + zf) / 2), anim_period=1.2, init_opened=0.0,
+             sound="doorWoodSlide", display="gate", style="hinged", note=note, engine_tested=False, passable=True,
+             has_view=True, opening=(a0, a1, y0, y0 + h), z_face=zf, side=-1, leaf_z=(zb, zf),
+             sweep=(a0, a1), stub=0.0, hinged=True, swing_deg=90.0)
+    P.doors.append(d)
+    return d
+
+
+def _sq_post(P, x, w, top, mat, rng, depth=None, stone=True, tag="gate_post"):
+    dz = (depth or w) / 2
+    P.add(box(x - w / 2, x + w / 2, FOOT, top, -dz, dz, mat, vis=(1, 2, 3), geo=True, view=True, fire=True, tag=tag,
+              grain="long"))
+    if stone:
+        _post_stone(P, x, rng, w)
+
+
+def _round_post(P, x, r, top, rng, cap=True):
+    P.add(cyl("y", x, 0.0, r, FOOT, top, "wood_weathered", n=8, vis=(1, 2, 3), geo=True, view=True, fire=True,
+              tag="gate_post"))
+    if cap:
+        P.add(cyl("y", x, 0.0, r + 0.008, top - 0.03, top + 0.01, "wood_weathered", n=8, vis=(1,), tag="post_cap"))
+
+
+def _side_panel(P, fence, x0, x1, kuro=False):
+    """The fixed fence panel between a gate's latch post (x0 face) and its far post (x1 face): the fence's own kind."""
+    if x1 - x0 < 0.05:
+        return
+    if fence in LIGHT_FENCES:
+        q = wall(fence, x1 - x0 + 0.02, ("post", "post"), pid="gate_side", seed=3, post_w=0.02)
+        P.merge(q.transformed(0.0, (x0 - 0.01, 0.0, 0.0)))
+        return
+    m = "wood_kuro" if kuro else "wood_weathered"
+    rng = rng_for("gate_side" + fence + str(kuro))
+    for y in (0.30, 1.00, 1.62):
+        P.add(box(x0, x1, y, y + 0.09, -0.045, 0.06, m, vis=(1, 2), tag="fence_nuki"))
+    P.extend(board_run(x0, x1, 0.04, 1.80, 0.06, 0.08, rng, 0.20, 0.28, m, vis=(1,), tag="fence_board"))
+    P.add(box(x0, x1, 0.04, 1.80, 0.06, 0.08, m, vis=(2, 3), tag="fence_board_lod"))
+    P.add(box(x0, x1, -0.30, 1.80, -0.045, 0.08, m, vis=(), geo=True, view=True, fire=True, tag="fence_geo"))
+
+
+def gate_kido_kata(span=KEN, fence="itabei", kuro=False, leaf_y0=None, pid="jp_p_gate_kido", variant="_kata"):
+    """Single-leaf board gate (katabiraki ita-kido) for board fences and hedges: two square posts (0.15) to 2.15 with a
+    cap board across their tops, a latch post 1.26 m from the hinge post, one battened board leaf (1.86 high) hinged on
+    the left post, a fixed panel of the fence's boards between the latch post and the far post. No kabuki beam."""
+    from . import gates as G
+    P = Part(pid, variant, GROUP, tiers=[2, 3], used_for="single-leaf board gate (kido) in a board fence / hedge",
+             datum="posts centred at x 0 and x span on the wall line z 0 (+z outside), y 0 = grade",
+             recipe="sitewall.gate_kido_kata(span=%.3f, fence=%r)" % (span, fence))
+    rng = rng_for(pid + variant + fence)
+    m = "wood_kuro" if kuro else "wood_weathered"
+    pw, top = POST_W["kido_kata"], 2.15
+    for x in (0.0, span):
+        _sq_post(P, x, pw, top, m, rng)
+    xl = KIDO_LATCH
+    _sq_post(P, xl, 0.12, top, m, rng, depth=pw, stone=False, tag="latch_post")
+    P.add(prism([(-0.12, top + 0.02), (-0.08, top), (span + 0.08, top), (span + 0.12, top + 0.02),
+                 (span + 0.12, top + 0.06), (-0.12, top + 0.06)], "z", -0.09, 0.09, m, vis=(1, 2, 3), geo=True,
+                view=True, fire=True, tag="kasagi"))
+    _side_panel(P, fence if fence != "ikegaki" else "itabei", xl + 0.06, span - pw / 2, kuro)
+    y0 = G.LEAF_Y0 if leaf_y0 is None else leaf_y0
+    zf = -pw / 2 - G.GAP
+    _leaf_door(P, pw / 2 - G.OVERLAP, xl - 0.06 + 0.03, y0, 1.86, zf, m, rng, note="kido leaf (single)")
+    for x in (0.0, span):
+        P.conn("post", (x, 0.0, 0.0), size=pw, role="gate_post")
+    P.dim("clear_open_m", ">=1.00 (D1)", xl - 0.06 - pw / 2 - 0.05)
+    P.dim("head_m", ">=2.00 (D2) over the sill", top - y0 + 0.03)
+    return P
+
+
+def gate_kido_ryo(span=KEN, kuro=False, leaf_y0=None, pid="jp_p_gate_kido", variant="_ryo"):
+    """Two-leaf board gate (ryobiraki ita-kido) without the kabuki beam: two square posts (0.18) to 2.35 under a cap
+    beam (kasagi) with cut ends; gates.gate_leaves '_board' 1.90 high. 1 ken (clear ~1.6) or 1.5 ken for carts."""
+    from . import gates as G
+    P = Part(pid, variant, GROUP, tiers=[2, 3], used_for="two-leaf board gate (kido) in a board fence: yard gates",
+             datum="posts centred at x 0 and x span on the wall line z 0 (+z outside), y 0 = grade",
+             recipe="sitewall.gate_kido_ryo(span=%.3f)" % span)
+    rng = rng_for(pid + variant)
+    m = "wood_kuro" if kuro else "wood_weathered"
+    pw, top = POST_W["kido_ryo"], 2.35
+    for x in (0.0, span):
+        _sq_post(P, x, pw, top, m, rng)
+    P.add(prism([(-0.22, top + 0.04), (-0.14, top), (span + 0.14, top), (span + 0.22, top + 0.04),
+                 (span + 0.22, top + 0.12), (-0.22, top + 0.12)], "z", -0.10, 0.10, m, vis=(1, 2, 3), geo=True,
+                view=True, fire=True, tag="kasagi", grain="long"))
+    y0 = G.LEAF_Y0 if leaf_y0 is None else leaf_y0
+    lv = G.gate_leaves("_board", span, post=pw, y0=y0, height=1.90, y_floor=y0 - G.LEAF_Y0)
+    for s in lv.solids:
+        if isinstance(s.mats, str) and s.mats == "wood_street_dark":
+            s.mats = m                          # the leaves take the fence's own wood (black in a kuro fence)
+            s.fm = None
+            s.finalize()
+    P.merge(lv)
+    for x in (0.0, span):
+        P.conn("post", (x, 0.0, 0.0), size=pw, role="gate_post")
+    P.dim("clear_open_m", ">=1.00 (D1)", span - pw - 2 * G.LEAF_T)
+    return P
+
+
+def _diamond(a0, a1, y0, y1, zb, zf, step=0.16, w=0.022, mat="bamboo_weathered"):
+    """Split-bamboo strips in a diamond lattice over the rectangle a0..a1 x y0..y1 (two layers, +45 / -45 deg)."""
+    from .shapes import oriented_box
+    out = []
+    zm = (zb + zf) / 2
+    for sgn, zc in ((1.0, zm - 0.006), (-1.0, zm + 0.006)):
+        # lines x = a0 + c + sgn * (y - y0), c on a 'step' spacing; clip t = y - y0 in [0, H] so x stays in [a0, a1]
+        H_ = y1 - y0
+        c = -H_ - step
+        while c < (a1 - a0) + H_ + step:
+            lo, hi = 0.0, H_
+            # a0 <= a0 + c + sgn * t <= a1
+            if sgn > 0:
+                lo, hi = max(lo, -c), min(hi, (a1 - a0) - c)
+            else:
+                lo, hi = max(lo, c - (a1 - a0)), min(hi, c)
+            if hi - lo > 0.05:
+                pa = (a0 + c + sgn * lo, y0 + lo)
+                pb = (a0 + c + sgn * hi, y0 + hi)
+                L = math.hypot(pb[0] - pa[0], pb[1] - pa[1])
+                u = ((pb[0] - pa[0]) / L, (pb[1] - pa[1]) / L, 0.0)
+                out.append(oriented_box(((pa[0] + pb[0]) / 2, (pa[1] + pb[1]) / 2, zc), u, (-u[1], u[0], 0.0),
+                                        (0.0, 0.0, 1.0), L / 2, w / 2, 0.003, mat, vis=(1,), tag="shiori_strip"))
+            c += step
+    return out
+
+
+def gate_shiorido(span=KEN, fence="yotsume", leaf_y0=None, pid="jp_p_gate_shiorido", variant=""):
+    """Shiorido: the low bamboo garden gate of light fences (yotsume, kenninji, brushwood): two round posts to 1.35, a
+    latch post, one leaf of split bamboo woven in a diamond lattice on a thin round-bamboo frame, rope ties; open
+    above (no head). See-through (Geometry only, no View), like the fence."""
+    from . import gates as G
+    P = Part(pid, variant, GROUP, tiers=[2, 3], used_for="shiorido: low bamboo lattice gate in a light fence",
+             datum="posts centred at x 0 and x span on the wall line z 0 (+z outside), y 0 = grade",
+             recipe="sitewall.gate_shiorido(span=%.3f, fence=%r)" % (span, fence))
+    rng = rng_for(pid + variant + fence)
+    r, top = POST_W["shiorido"] / 2, 1.35
+    for x in (0.0, span):
+        _round_post(P, x, r, top, rng)
+    xl = KIDO_LATCH
+    _round_post(P, xl, 0.05, top - 0.05, rng)
+    _side_panel(P, fence, xl + 0.05, span - r)
+    y0 = G.LEAF_Y0 if leaf_y0 is None else leaf_y0
+    h = 1.20
+    a0, a1 = r - 0.02, xl - 0.05 + 0.03
+    zf = -r - 0.004
+
+    def lattice(zb, zf_):
+        zc = (zb + zf_) / 2
+        out = []
+        fr = 0.02
+        for x in (a0 + fr, a1 - fr):
+            out.append(cyl("y", x, zc, fr, y0, y0 + h, "bamboo_weathered", n=6, vis=(1, 2), tag="shiori_frame"))
+        for y in (y0 + fr, y0 + h - fr, y0 + h * 0.55):
+            out.append(cyl("x", y, zc, fr * 0.9, a0 + fr, a1 - fr, "bamboo_weathered", n=6, vis=(1, 2),
+                           tag="shiori_frame"))
+        out += _diamond(a0 + 2 * fr, a1 - 2 * fr, y0 + 2 * fr, y0 + h - 2 * fr, zb, zf_)
+        # rope ties at the hinge (two loops round the post) and the latch
+        for y in (y0 + 0.25, y0 + h - 0.25):
+            out.append(box(a0 - 0.01, a0 + 0.06, y - 0.02, y + 0.02, zb - 0.005, zf_ + 0.005, "straw_rope", vis=(1,),
+                           tag="tie"))
+        out.append(box(a1 - 0.07, a1 + 0.01, y0 + h * 0.55 - 0.02, y0 + h * 0.55 + 0.02, zb - 0.005, zf_ + 0.005,
+                       "straw_rope", vis=(1,), tag="tie"))
+        return out
+    _leaf_door(P, a0, a1, y0, h, zf, "bamboo_weathered", rng, note="shiorido leaf (bamboo lattice)",
+               lattice_fn=lattice)
+    for x in (0.0, span):
+        P.conn("post", (x, 0.0, 0.0), size=2 * r, role="gate_post")
+    P.dim("clear_open_m", ">=1.00 (D1)", xl - 0.05 - r - 0.045)
+    return P
+
+
+def gate_opening(span=KEN, fence="yotsume", pid="jp_p_gate_opening", variant=""):
+    """A plain opening between two posts, no leaf (light fences: the lane entrance of a row yard, a work yard's
+    gap): round posts to 1.35 in bamboo fences, square 0.15 posts to 2.10 in board fences."""
+    P = Part(pid, variant, GROUP, tiers=[2, 3], used_for="a plain opening between two gate posts (no leaf)",
+             datum="posts centred at x 0 and x span on the wall line z 0 (+z outside), y 0 = grade",
+             recipe="sitewall.gate_opening(span=%.3f, fence=%r)" % (span, fence))
+    rng = rng_for(pid + variant + fence)
+    if fence in LIGHT_FENCES:
+        for x in (0.0, span):
+            _round_post(P, x, POST_W["opening"] / 2, 1.35, rng)
+    else:
+        for x in (0.0, span):
+            _sq_post(P, x, POST_W["opening_board"], 2.10, "wood_weathered", rng)
+    for x in (0.0, span):
+        P.conn("post", (x, 0.0, 0.0), role="gate_post")
+    P.dim("clear_m", ">=1.00 (D1)", span - POST_W["opening"])
+    return P
+
+
+def gate_post_w(kind, fence=None):
+    """The post width a fence module stops at beside a gate of this kind."""
+    if kind == "opening" and fence not in LIGHT_FENCES:
+        return POST_W["opening_board"]
+    return POST_W.get(kind, 0.21)
+
+
 # ------------------------------------------------------------------------------------------------ whole runs
 def _split(length):
     out = []

@@ -3,22 +3,20 @@
  "key": "dw_cmp_kumi",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "1327/827/166",
- "door_clear_m": [
-  1.6
- ],
- "checks_n": 33,
+ "faces": "1165/685/112",
+ "door_clear_m": [],
+ "checks_n": 28,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 1327, Resolution 2 827, Resolution 3 166, Geometry 164, Memory 0, Roadway 5, View Geometry 128, Fire Geometry 128"
+   "detail": "Resolution 1 1165, Resolution 2 685, Resolution 3 112, Geometry 158, Memory 0, Roadway 5, View Geometry 122, Fire Geometry 122"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 1327, R2 827, R3 166"
+   "detail": "R1 1165, R2 685, R3 112"
   },
   {
    "check": "Geometry properties + mass",
@@ -33,17 +31,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "18 components, 0 bad, 0 faces outside components"
+   "detail": "15 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "12 components, 0 bad, 0 faces outside components"
+   "detail": "9 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "12 components, 0 bad, 0 faces outside components"
+   "detail": "9 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -64,16 +62,6 @@
    "check": "C3 grid snap (post nodes on the 0.455 grid)",
    "ok": true,
    "detail": "4 posts"
-  },
-  {
-   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
-   "ok": true,
-   "detail": "Gate (kabuki) (hinged_gate): bones doors1+doors2"
-  },
-  {
-   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
-   "ok": true,
-   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 1.60 m, head 2.81 m"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
@@ -106,21 +94,6 @@
    "detail": "not placed on the island (shipped in the PBO only)"
   },
   {
-   "check": "C10 DoorsTwin1 reachable from both sides (open)",
-   "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m"
-  },
-  {
-   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
-   "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.48 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
-  },
-  {
-   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
-   "ok": true,
-   "detail": "Gate (kabuki): 54282 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
-  },
-  {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
    "detail": "open-sided by design (not checked): gate0"
@@ -143,12 +116,12 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "21 columns over 2.5 m compared in each LOD"
+   "detail": "0 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "8 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "5 library rvmats in the visual LODs, 0 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -158,7 +131,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 150 touching (opposite-facing: backface-culled) and 0 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 48 touching (opposite-facing: backface-culled) and 0 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -173,7 +146,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 147520 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 117383 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

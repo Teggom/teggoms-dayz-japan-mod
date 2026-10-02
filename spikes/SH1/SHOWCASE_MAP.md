@@ -549,12 +549,12 @@ Regenerate: `python spikes/D3/layout_d3.py` then `python spikes/D3/map_d3.py`. M
 | S1.s2 | `jp_s_potted_stand.p3d` | 971.57 | 976.55 | 90 | -0.00 | bonsai on a stand in the garden |
 | S1.s3 | `jp_s_leaf_pile_small.p3d` | 971.97 | 980.05 | 90 | -0.00 | leaves swept into a pile, never burnt |
 | S2 | `Land_JP_NagayaMon_Samurai_Furnished` | 981.70 | 962.82 | 180 | -0.00 | samurai nagaya-mon (furnished): the gate passage, servants' room, storage; plaster + namako |
-| S3 | `Land_JP_Compound_Samurai_M` | 978.97 | 976.92 | 0 | 0.00 | the mansion's black board fence + back gate (north) |
+| S3 | `Land_JP_Compound_Samurai_M` | 978.97 | 976.92 | 0 | 0.00 | the mansion's black board fence + back gate (north; FX6: single-leaf board gate) |
 | S4 | `Land_JP_Kura_Plain` | 975.00 | 989.60 | 0 | 0.00 | the mansion's kura (plain), door south |
 | S5 | `Land_JP_KumiYashiki_3_Itabuki_Furnished` | 937.00 | 946.90 | 0 | -0.00 | foot-soldier row (furnished: sword unit, umbrella side-job unit, an abandoned unit), doors north |
 | S5.s1 | `jp_s_laundry_pole_crossed.p3d` | 932.00 | 951.30 | 0 | -0.00 | a laundry pole before the row |
 | S5.s2 | `jp_s_potted_pair.p3d` | 939.20 | 950.50 | 0 | -0.00 | potted plants (the side job) |
-| S6 | `Land_JP_Compound_KumiYashiki` | 937.00 | 953.91 | 0 | -0.00 | the row's bamboo (yotsume) fence + small gate on the lane |
+| S6 | `Land_JP_Compound_KumiYashiki` | 937.00 | 953.91 | 0 | -0.00 | the row's bamboo (yotsume) fence + its lane entrance (FX6: two posts, no leaf) |
 | S7 | `Land_JP_Doshin_Itabuki_Furnished` | 959.10 | 944.80 | 0 | 0.00 | doshin house (furnished), entrance on the east gable |
 | S8 | `Land_JP_Compound_Doshin` | 959.10 | 944.78 | 0 | 0.00 | board fence + kabuki gate (north) |
 | S9 | `Land_JP_Doshin_Sangawara` | 979.10 | 944.80 | 0 | -0.00 | doshin house (tiled, bare), entrance on the east gable |
@@ -566,7 +566,7 @@ Regenerate: `python spikes/D3/layout_d3.py` then `python spikes/D3/map_d3.py`. M
 |---|---|---|---|---|---|---|
 | H1 | `Land_JP_Headman_East_Furnished` | 942.20 | 977.16 | 180 | -0.00 | Kanto headman house (furnished): genkan doma + shikidai at the east end of the front, the formal zashiki |
 | H2 | `Land_JP_NagayaMon_Headman` | 942.20 | 962.82 | 180 | -0.00 | the headman's board nagaya-mon (bare) |
-| H3 | `Land_JP_Compound_Headman_East` | 942.20 | 976.47 | 0 | -0.00 | clipped hedge ring + back gate (north) |
+| H3 | `Land_JP_Compound_Headman_East` | 942.20 | 976.47 | 0 | -0.00 | clipped hedge ring + back gate (north; FX6: single-leaf board gate) |
 | H4 | `Land_JP_Itagura_Itabuki_Furnished` | 954.00 | 988.00 | 180 | 0.00 | board storehouse on rat-guarded posts (furnished: grain) |
 | H5 | `Land_JP_Stable_Horse_Furnished` | 930.00 | 987.50 | 180 | -0.00 | stable (furnished: two horse stalls) |
 | H5.s1 | `jp_s_stable_yard_saddle_rack.p3d` | 926.40 | 986.50 | 90 | -0.00 | the pack-saddle rack outside |
@@ -580,7 +580,7 @@ Regenerate: `python spikes/D3/layout_d3.py` then `python spikes/D3/map_d3.py`. M
 | J1.s1 | `jp_s_footwear_pairs.p3d` | 1104.69 | 1062.34 | 0 | 0.00 | sandals left on the stone pad |
 | J2 | `Land_JP_Honjin_Oku_Furnished` | 1107.65 | 1033.73 | 270 | 0.00 | honjin family / kitchen block (furnished), the family's door west |
 | J3 | `Land_JP_Roka_Honjin` | 1104.92 | 1042.83 | 0 | -0.00 | covered corridor omote <-> oku (half walls, tiled) |
-| J4 | `Land_JP_Compound_Honjin` | 1109.47 | 1044.16 | 0 | 0.00 | plastered street wall + roofed kabuki-mon (north), board fence, back gate (south) |
+| J4 | `Land_JP_Compound_Honjin` | 1109.47 | 1044.16 | 0 | 0.00 | plastered street wall + roofed kabuki-mon (north), board fence, back gate (south; FX6: two-leaf board gate, 1 ken) |
 | J5 | `Land_JP_Wakihonjin_Furnished` | 1110.00 | 1005.00 | 270 | -0.00 | waki-honjin (furnished; no gate): genkan north facing the honjin's back gate |
 
 ### Great merchant behind the Edo row (panel J)
@@ -590,7 +590,7 @@ Regenerate: `python spikes/D3/layout_d3.py` then `python spikes/D3/map_d3.py`. M
 | M1 | `Land_JP_Merchant_Residence_Furnished` | 1051.50 | 1107.00 | 180 | -0.00 | great merchant residence (furnished): kitchen door south, the garden engawa north |
 | M1.s1 | `jp_s_potted_stand.p3d` | 1047.50 | 1114.40 | 180 | -0.00 | bonsai on a stand in the garden |
 | M1.s2 | `jp_s_leaf_pile_small.p3d` | 1051.00 | 1114.00 | 180 | -0.00 | leaves swept into a pile |
-| M2 | `Land_JP_Compound_Merchant` | 1053.02 | 1113.15 | 0 | 0.00 | board fence + gate (south) |
+| M2 | `Land_JP_Compound_Merchant` | 1053.02 | 1113.15 | 0 | 0.00 | board fence + gate (south; FX6: single-leaf board gate) |
 | M3 | `Land_JP_Chashitsu_Thatch_Furnished` | 1060.00 | 1121.00 | 180 | -0.00 | tea hut in the merchant's garden (furnished) |
 | M3.s1 | `jp_s_stone_lantern_oki_moss.p3d` | 1062.40 | 1118.40 | 180 | -0.00 | a low stone lantern by the path |
 | M3.s2 | `jp_s_chozubachi_natural.p3d` | 1061.20 | 1118.10 | 180 | -0.00 | the stone basin (tsukubai) before the crawl-in door |
@@ -649,7 +649,7 @@ Regenerate: `python spikes/W3B/layout_w3b.py` then `python spikes/W3B/map_w3b.py
 | ID | Class / p3d | x | z | yaw | y_off | What |
 |---|---|---|---|---|---|---|
 | B1 | `Land_JP_Sento_Sangawara_Furnished` | 1048.50 | 1061.00 | 0 | -0.00 | public bathhouse (sento, furnished): entrance + bandai west, changing room, the zakuro-guchi, the bath room east, the boiler lean-to on the east gable |
-| B2 | `Land_JP_Compound_StableYard` | 1069.30 | 1056.40 | 180 | 0.00 | the stable yard's board fence, the wide gate north (street side) |
+| B2 | `Land_JP_Compound_StableYard` | 1069.30 | 1056.40 | 180 | 0.00 | the stable yard's board fence, the wide gate north (street side; FX6: two-leaf board gate 1.5 ken) |
 | B3 | `Land_JP_StableRow_Itabuki_Furnished` | 1069.30 | 1054.01 | 0 | -0.00 | stable row (furnished): four stalls open to the yard (north), the tack room east |
 | B3.s1 | `jp_s_stable_yard_trough_stone.p3d` | 1066.80 | 1057.90 | 0 | 0.00 | the stone water trough before the stalls |
 | B3.s2 | `jp_s_stable_yard_tie_post.p3d` | 1069.30 | 1058.11 | 0 | 0.00 | tie posts in the yard |
@@ -661,7 +661,7 @@ Regenerate: `python spikes/W3B/layout_w3b.py` then `python spikes/W3B/map_w3b.py
 
 | ID | Class / p3d | x | z | yaw | y_off | What |
 |---|---|---|---|---|---|---|
-| T1 | `Land_JP_Compound_TimberYard` | 1013.65 | 912.00 | 180 | -0.09 | the timber yard's board fence, the wide gate north |
+| T1 | `Land_JP_Compound_TimberYard` | 1013.65 | 912.00 | 180 | -0.09 | the timber yard's board fence, the wide gate north (FX6: two-leaf board gate 1.5 ken) |
 | T2 | `Land_JP_Timber_SawShed_Furnished` | 1007.00 | 905.60 | 0 | -0.03 | the sawing shed (open): the sawing trestle with the log and the big saw |
 | T3 | `Land_JP_Timber_Store_Furnished` | 1018.60 | 905.30 | 0 | -0.03 | the timber store: timber stood upright, planks |
 | T4 | `Land_JP_Timber_ShingleShed_Furnished` | 1003.10 | 916.50 | 90 | -0.01 | the shingle splitter's shed (open east) |
@@ -674,7 +674,7 @@ Regenerate: `python spikes/W3B/layout_w3b.py` then `python spikes/W3B/map_w3b.py
 
 | ID | Class / p3d | x | z | yaw | y_off | What |
 |---|---|---|---|---|---|---|
-| F1 | `Land_JP_Compound_FoundryYard` | 1044.10 | 910.30 | 180 | -0.06 | the foundry yard's board fence, the gate north |
+| F1 | `Land_JP_Compound_FoundryYard` | 1044.10 | 910.30 | 180 | -0.06 | the foundry yard's board fence, the gate north (FX6: two-leaf board gate 1.5 ken) |
 | F2 | `Land_JP_Foundry_Itabuki_Furnished` | 1040.60 | 907.30 | 0 | -0.03 | foundry (furnished): the cupola furnace, treadle bellows, sand casting bed, new pots, scrap; open bays north to the yard |
 | F3 | `jp_f_bell_mould.p3d` | 1048.30 | 912.60 | 0 | -0.00 | the bell casting site: the clay mould in its pit (never poured) |
 | F4 | `jp_s_charcoal_bales_stack.p3d` | 1050.80 | 906.30 | 90 | -0.00 | charcoal bales for the melt |
@@ -695,7 +695,7 @@ Regenerate: `python spikes/W3C1/layout_w3c1.py` then `python spikes/W3C1/map_w3c
 
 | ID | Class / p3d | x | z | yaw | y_off | What |
 |---|---|---|---|---|---|---|
-| BR1 | `Land_JP_Compound_Brewery` | 894.92 | 879.83 | 0 | -0.22 | the brewery's black board fence, the wide gate south on the lane |
+| BR1 | `Land_JP_Compound_Brewery` | 894.92 | 879.83 | 0 | -0.22 | the brewery's black board fence, the wide gate south on the lane (FX6: two-leaf board gate 1.5 ken, ~893.6, 868.0) |
 | BR2 | `Land_JP_SakaGura_Okura_Furnished` | 894.92 | 886.60 | 180 | -0.15 | the large kura (o-kura): four big tubs, the lever press (west end), the starter loft (east end, stair up); doors on both gables |
 | BR3 | `Land_JP_SakaGura_Maegura_Furnished` | 894.92 | 879.79 | 180 | -0.05 | the front kura (mae-gura), facing the yard: the brewers' rest room (west), the koji room, the steaming hearth + washing floor (east); its back eave + gutter against the o-kura |
 | BR4 | `Land_JP_SakaGura_Seimai_Furnished` | 900.90 | 871.02 | 0 | -0.03 | the rice-polishing shed (open north to the yard): four treadle mortars |
@@ -710,7 +710,7 @@ Regenerate: `python spikes/W3C1/layout_w3c1.py` then `python spikes/W3C1/map_w3c
 | ID | Class / p3d | x | z | yaw | y_off | What |
 |---|---|---|---|---|---|---|
 | DY1 | `Land_JP_Konya_Sangawara_Furnished` | 918.65 | 869.33 | 180 | -0.02 | the indigo dyer (shop open south to the lane, shop-front cloths); behind the step the vat room with the four sunk vats round the fire pit; back door north to the yard |
-| DY2 | `Land_JP_Compound_DyersYard` | 920.88 | 879.06 | 0 | -0.11 | the dyer's drying yard: board fence, the gate behind the back door |
+| DY2 | `Land_JP_Compound_DyersYard` | 920.88 | 879.06 | 0 | -0.11 | the dyer's drying yard: board fence, the gate behind the back door (FX6: single-leaf board gate, ~917.2, 873.6) |
 | DY3 | `jp_f_monohoshi.p3d` | 917.50 | 877.30 | 0 | -0.02 | a tall drying frame, indigo lengths hung doubled |
 | DY4 | `jp_f_monohoshi.p3d` | 923.80 | 877.30 | 0 | -0.02 | a second drying frame |
 | DY5 | `jp_f_monohoshi_torn.p3d` | 920.60 | 880.90 | 90 | -0.05 | a drying frame, two lengths fallen, two torn |
@@ -722,7 +722,7 @@ Regenerate: `python spikes/W3C1/layout_w3c1.py` then `python spikes/W3C1/map_w3c
 | ID | Class / p3d | x | z | yaw | y_off | What |
 |---|---|---|---|---|---|---|
 | PM1 | `Land_JP_KamiSuki_Thatch_Furnished` | 935.00 | 868.90 | 180 | -0.03 | the paper mill (door south to the lane): the vat under the windows, the beating board, the couching press; the bark steamer in the lean-to (west) |
-| PM2 | `Land_JP_Compound_PaperYard` | 937.39 | 877.86 | 0 | -0.12 | the paper mill's drying yard behind it: bamboo fence, the gate at the south-east corner (the path east of the mill) |
+| PM2 | `Land_JP_Compound_PaperYard` | 937.39 | 877.86 | 0 | -0.12 | the paper mill's drying yard behind it: bamboo fence, the gate at the south-east corner (the path east of the mill; FX6: shiorido bamboo gate, ~942.9, 872.4) |
 | PM3 | `jp_f_hoshiita_rack.p3d` | 933.50 | 878.00 | 180 | -0.01 | drying boards leaned to the sun (south), sheets on three |
 | PM4 | `jp_f_hoshiita_rack.p3d` | 939.80 | 878.00 | 180 | -0.01 | drying boards leaned to the sun |
 | PM5 | `jp_f_hoshiita_rack_fallen.p3d` | 936.60 | 881.40 | 0 | -0.03 | drying boards fallen flat |

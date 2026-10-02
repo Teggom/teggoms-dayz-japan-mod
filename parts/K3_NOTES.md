@@ -184,6 +184,41 @@ building.merge(wall.transformed(0.0, (x0, 0.0, z0)))
   itabei | dobei | kenninji, a 1-ken module with a 1.04 m door); give the neighbouring wall modules end `post` at the
   gate posts. Leaves swing into -z (the compound side): make sure -z is inside.
 
+### Small gates + the gate-picker rule (FX6, 2026-10-02; use this for every new compound)
+Stephen's 3c-1 walk: one 3.15 m kabuki-mon on every fence ("waaaay too big" for the paper yard's 1.05 m bamboo fence).
+Research, sizes, sources: `spikes/FX6/FX6_NOTES.md`. New builders in `sitewall.py` (frame as every gate: posts on the
+wall line z 0 at x 0 and x span, +z outside, leaves on the -z face swinging 90 deg into the compound; `leaf_y0` lifts
+them over the compound's sill pad):
+- `W.gate_kido_kata(span=KEN, fence, kuro, leaf_y0)`: single-leaf board gate: square posts 0.15 to 2.15 + cap board,
+  latch post 1.26 m from the hinge post, one board leaf 1.86 high (clear 1.08 x 2.05 over the sill), a fixed panel of
+  the fence's boards beside it. For board fences and hedges.
+- `W.gate_kido_ryo(span, kuro, leaf_y0)`: two-leaf board gate, posts 0.18 to 2.35 under a cap beam, NO kabuki beam;
+  1 ken (clear 1.54) or 1.5 ken for carts / horses (clear 2.45). Leaves take the fence's wood (black in a kuro fence).
+- `W.gate_shiorido(span=KEN, fence, leaf_y0)`: low bamboo lattice garden gate: round posts to 1.35, one diamond-lattice
+  leaf 1.20 high (clear 1.11), the fence's own grid beside it, open above. For yotsume / kenninji / brushwood fences.
+- `W.gate_opening(span, fence)`: two posts, no leaf (round to 1.35 in light fences, square to 2.10 in board fences).
+- `W.gate_post_w(kind, fence)`: the post width the fence modules beside the gate stop at.
+- Kept for status gates: `gate_kabuki` (+ roofed), `gate_munemon`, the nagaya-mon objects.
+
+**In a compound** (`templates/dwelling.compound`), write each gate as `(run, segment, offset) + DW.pick_gate(fence,
+fence_opt, status=..., role=..., carts=...)` (returns `(kind, span)`); naming the kind and span by hand is the explicit
+override. `compound()` places doors for leaf gates, merges the opening as a plain part, lays FX5's sill pad under every
+gate and stops the fences at the gate's own post faces (`_wall_path` gaps carry `post_w`; `_abut` seals run ends).
+
+| Fence (height) | status high, front | high, back | mid (any role) | work, carts | work, on foot | lane (shared row entrance) |
+|---|---|---|---|---|---|---|
+| dobei / tsuiji (2.1-2.3) | kabuki_roofed 1.5 ken (or munemon / a nagaya-mon object) | kabuki 1 ken | kabuki 1 ken | kido_ryo 1.5 ken | kido_kata | kido_kata |
+| itabei board fence (1.80) | kabuki 1.5 ken | kido_kata (kido_ryo 1 ken if carts) | kido_kata (kido_ryo 1 ken if carts) | kido_ryo 1.5 ken | kido_kata | kido_kata |
+| ikegaki tall hedge | kabuki 1.5 ken | kido_kata | kido_kata | kido_ryo 1.5 ken | kido_kata | kido_kata |
+| light: yotsume / kenninji / shiba / takeho / low hedge (<= 1.5) | shiorido | shiorido | shiorido | opening 1.5 ken | shiorido | opening |
+
+status: `high` = samurai / official / honjin / temple; `mid` = headman, rich merchant, townsman; `work` = a trade yard.
+role: `front` | `back` | `lane`. Gates are 1 ken unless the table says 1.5; spans stay on the half-ken grid.
+`run_wall(gates=...)` still knows only kabuki / munemon / wicket: put the small gates in through `compound()` (or by
+hand with `_wall_path(gaps=[(seg, off, span, W.gate_post_w(kind, fence))])` + the gate part, as
+`spikes/FX6/render_fx6.gate_demo` does). Checks:
+`python spikes/FX6/gatecheck.py` (handle conventions, D1, doors), jointcheck, gradesweep as before.
+
 ### How to link building A's veranda to building B with a corridor
 ```python
 from jpparts import roka as R

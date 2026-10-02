@@ -1793,12 +1793,15 @@ def _wall_path(nodes, kind, ends=("end", "end"), gaps=(), closed=False, name="wa
         deg = math.degrees(math.atan2(dz, dx))
         e0 = turn(i - 1, i) if (closed or i > 0) else ends[0]
         e1 = turn(i, (i + 1) % len(segs)) if (closed or i < len(segs) - 1) else ends[1]
-        runs, x = [], 0.0
+        # FX6: a gap may carry its gate's post width (4th item): the fence stops at THAT post's face
+        runs, x, pw_prev = [], 0.0, None
         for g in sorted([g for g in gaps if g[0] == i], key=lambda g: g[1]):
-            runs.append((x, g[1], "post_end"))
+            pw = g[3] if len(g) > 3 else 0.21
+            runs.append((x, g[1], pw, pw_prev))
             x = g[1] + g[2]
-        runs.append((x, Ls, None))
-        for ri, (x0, x1, tail) in enumerate(runs):
+            pw_prev = pw
+        runs.append((x, Ls, None, pw_prev))
+        for ri, (x0, x1, tail, head) in enumerate(runs):
             if x1 - x0 < 0.05:
                 continue
             mods = W._split(x1 - x0)
@@ -1811,8 +1814,9 @@ def _wall_path(nodes, kind, ends=("end", "end"), gaps=(), closed=False, name="wa
                     s1 = "post"
                 else:
                     s1 = "seam"
+                pw_m = head if (s0 == "post" and head) else (tail if (s1 == "post" and tail) else 0.21)
                 q = W.wall(kind, m, (s0, s1), seed=int(xx * 100) + i * 1000, pid=name + "_%d_%d_%d" % (i, ri, mi),
-                           run=(s_seg + xx, rseed), **opt)
+                           run=(s_seg + xx, rseed), post_w=pw_m, **opt)
                 P.merge(q.transformed(deg, (a[0] + math.cos(math.radians(deg)) * xx, 0.0,
                                             a[1] + math.sin(math.radians(deg)) * xx)))
                 xx += m
@@ -1820,16 +1824,64 @@ def _wall_path(nodes, kind, ends=("end", "end"), gaps=(), closed=False, name="wa
     return P
 
 
-def _gate_part(kind, span):
+# FX6 (2026-10-02, Stephen's 3c-1 walk: one big kabuki-mon on every fence): the GATE-PICKER RULE. The gate follows the
+# fence it sits in (kind + height), the compound's status and the gate's role; a compound gate entry may still name its
+# kind (the explicit override). Table + sources: spikes/FX6/FX6_NOTES.md §3, parts/K3_NOTES.md §6.
+#   status: "high" (samurai / official / honjin / temple), "mid" (headman, merchant, townsman), "work" (a trade yard)
+#   role:   "front" | "back" | "lane" (a shared row entrance);  carts: carts / horses / casks pass the gate
+_HEAVY = ("dobei", "tsuiji")
+_LIGHT = ("yotsume", "kenninji", "shiba", "takeho")
+
+
+def pick_gate(fence, opt=None, status="mid", role="front", carts=False):
+    """(kind, span) of the gate for a gap in `fence` (sitewall kind; opt = its wall options, e.g. ikegaki size)."""
+    opt = opt or {}
+    light = fence in _LIGHT or (fence == "ikegaki" and opt.get("size", "low") == "low")
+    if light:
+        if status == "work" and carts:
+            return "opening", 1.5 * KEN
+        if role == "lane":
+            return "opening", KEN
+        return "shiorido", KEN
+    if status == "work":
+        return ("kido_ryo", 1.5 * KEN) if carts else ("kido_kata", KEN)
+    if role == "lane":
+        return "kido_kata", KEN
+    if status == "high" and role == "front":
+        return ("kabuki_roofed" if fence in _HEAVY else "kabuki"), 1.5 * KEN
+    if fence in _HEAVY:
+        return "kabuki", KEN
+    return ("kido_ryo", KEN) if carts else ("kido_kata", KEN)
+
+
+def _gate_fence(plot, ri):
+    nodes, kind, opt, ends = COMPOUNDS[plot]["runs"][ri]
+    return kind, opt
+
+
+def _gate_part(kind, span, fence="itabei", fence_opt=None):
     from .. import sitewall as W
     ly0 = FL.SILL_TOP + 0.03                 # FX5: the leaves clear the raised sill pad of the passage
+    fo = fence_opt or {}
     if kind.startswith("kabuki"):
         return W.gate_kabuki(span, roofed=kind.endswith("roofed"), leaf_y0=ly0)
     if kind == "munemon":
         return W.gate_munemon(span, leaf_y0=ly0)
+    if kind == "kido_kata":
+        return _twin_single(W.gate_kido_kata(span, fence=fence, kuro=fo.get("kuro", False), leaf_y0=ly0))
+    if kind == "kido_ryo":
+        return W.gate_kido_ryo(span, kuro=fo.get("kuro", False), leaf_y0=ly0)
+    if kind == "shiorido":
+        return _twin_single(W.gate_shiorido(span, fence=fence, leaf_y0=ly0))
+    if kind == "opening":
+        return W.gate_opening(span, fence=fence)
     p = W.wicket(kind.split("_", 1)[1] if "_" in kind else "itabei", span)
-    # the wicket's one hinged leaf carries no twin name: give it the DoorsTwin convention (one selection, an
-    # <twin>_action point) so Builder.place_door can number it
+    return _twin_single(p)
+
+
+def _twin_single(p):
+    """A part's one hinged leaf carries no twin name: give it the DoorsTwin convention (one selection, an
+    <twin>_action point) so Builder.place_door can number it (the wicket; FX6: kido_kata, shiorido)."""
     d = p.doors[0]
     bones = {a_["bone"] for a_ in d.anims}
     d.twin = "doorstwin1"
@@ -1850,33 +1902,42 @@ COMPOUNDS = {
     "samurai_m": dict(W=13 * KEN, D=17.5 * KEN, gate_obj=(4.5 * KEN, 11.5 * KEN),
                       runs=[([(4.5 * KEN, 0.0), (0.0, 0.0), (0.0, 17.5 * KEN), (13 * KEN, 17.5 * KEN), (13 * KEN, 0.0),
                               (11.5 * KEN, 0.0)], "itabei", dict(kuro=True, cap="none"), ("end", "end"))],
-                      gates=[(0, 2, 6 * KEN, "kabuki", KEN)]),
+                      # FX6: the back gate (was a 1-ken kabuki-mon) by the rule: high status, back gate, board fence
+                      gates=[(0, 2, 6 * KEN) + pick_gate("itabei", status="high", role="back")]),
     # DW16 Kanto headman: the board nagaya-mon in the south line, a tall clipped hedge (ikegaki) round the yard
     "headman_east": dict(W=20 * KEN, D=17 * KEN, gate_obj=(6.5 * KEN, 13.5 * KEN),
                          runs=[([(6.5 * KEN, 0.0), (0.0, 0.0), (0.0, 17 * KEN), (20 * KEN, 17 * KEN), (20 * KEN, 0.0),
                                  (13.5 * KEN, 0.0)], "ikegaki", dict(size="tall"), ("end", "end"))],
-                         gates=[(0, 2, 9.5 * KEN, "kabuki", KEN)]),
+                         # FX6: the back gate in the hedge (was a 1-ken kabuki-mon): a headman's back gate
+                         gates=[(0, 2, 9.5 * KEN) + pick_gate("ikegaki", dict(size="tall"), status="mid",
+                                                              role="back")]),
     # the honjin: a plastered wall (dobei) along the street front (north) with the roofed kabuki-mon (T19: the
     # formal front gate), board fences round the sides and the back
     "honjin": dict(W=17 * KEN, D=26 * KEN,
                    runs=[([(0.0, 26 * KEN), (17 * KEN, 26 * KEN)], "dobei", dict(finish="shikkui"), ("end", "end")),
                          ([(17 * KEN, 25.5 * KEN), (17 * KEN, 0.0), (0.0, 0.0), (0.0, 25.5 * KEN)], "itabei",
                           dict(kuro=False, cap="none"), ("end", "end"))],
-                   gates=[(0, 0, 4.5 * KEN, "kabuki_roofed", 1.5 * KEN), (1, 1, 8 * KEN, "kabuki", KEN)]),
+                   # FX6: the roofed kabuki-mon stays (status front gate); the back gate (was a 1-ken kabuki-mon) is
+                   # the inn's service gate: carts bring its supplies
+                   gates=[(0, 0, 4.5 * KEN) + pick_gate("dobei", status="high", role="front"),
+                          (1, 1, 8 * KEN) + pick_gate("itabei", status="high", role="back", carts=True)]),
     # the great merchant's garden: a plain board fence with a wicket to the lane behind the shop row
     "merchant": dict(W=16.5 * KEN, D=15 * KEN, closed=True,
                      runs=[([(0.0, 0.0), (0.0, 15 * KEN), (16.5 * KEN, 15 * KEN), (16.5 * KEN, 0.0)], "itabei",
                             dict(kuro=False, cap="none"), ("end", "end"))],
-                     gates=[(0, 3, 3 * KEN, "kabuki", KEN)]),
-    # the ashigaru row: a bamboo (yotsume) fence along the lane with a small board gate
+                     # FX6: the garden gate to the back lane (was a 1-ken kabuki-mon)
+                     gates=[(0, 3, 3 * KEN) + pick_gate("itabei", status="mid", role="back")]),
+    # the ashigaru row: a bamboo (yotsume) fence along the lane with its entrance
     "kumi": dict(W=10 * KEN, D=1 * KEN,
                  runs=[([(0.0, 0.0), (10 * KEN, 0.0)], "yotsume", {}, ("end", "end"))],
-                 gates=[(0, 0, 4.5 * KEN, "kabuki", KEN)]),
+                 # FX6: the row's lane entrance (was a 1-ken kabuki-mon in a 1.05 m bamboo fence): two posts, no leaf
+                 gates=[(0, 0, 4.5 * KEN) + pick_gate("yotsume", status="high", role="lane")]),
     # the doshin house: a plain board fence round the plot, a simple (unroofed) kabuki gate
     "doshin": dict(W=10 * KEN, D=8 * KEN, closed=True,
                    runs=[([(0.0, 0.0), (0.0, 8 * KEN), (10 * KEN, 8 * KEN), (10 * KEN, 0.0)], "itabei",
                           dict(kuro=False, cap="none"), ("end", "end"))],
-                   gates=[(0, 1, 6.5 * KEN, "kabuki", 1.5 * KEN)]),
+                   # FX6: the doshin's kabuki-mon stays (by the rule: high status, front gate, board fence)
+                   gates=[(0, 1, 6.5 * KEN) + pick_gate("itabei", status="high", role="front")]),
 }
 
 
@@ -1932,8 +1993,9 @@ def compound(name=None, plot="samurai_m", wear="_w1"):
     S = Shell(name or "jp_compound", W, D, [2, 3], "compound walls (%s)" % plot, wear)
     S.ceilings = []
     gaps = {}
+    from .. import sitewall as W_
     for (ri, si, off, kind, span) in spec["gates"]:
-        gaps.setdefault(ri, []).append((si, off, span))
+        gaps.setdefault(ri, []).append((si, off, span, W_.gate_post_w(kind, spec["runs"][ri][1])))
     for ri, (nodes, kind, opt, ends) in enumerate(spec["runs"]):
         ab = (0.0, 0.0) if spec.get("closed", False) else _abut(spec["runs"], ri)
         S.H.merge(_wall_path(nodes, kind, ends=ends, gaps=gaps.get(ri, ()), closed=spec.get("closed", False),
@@ -1947,8 +2009,13 @@ def compound(name=None, plot="samurai_m", wear="_w1"):
         u = ((b[0] - a[0]) / L, (b[1] - a[1]) / L)
         deg = math.degrees(math.atan2(u[1], u[0]))
         ox, oz = a[0] + u[0] * off, a[1] + u[1] * off
-        S.door(_gate_part(kind, span), (deg, (ox, 0.0, oz)), 0.0, 0.0, "Gate (%s)" % kind.replace("_", " "),
-               "gate%d" % gi)
+        fence, fopt = spec["runs"][ri][1], spec["runs"][ri][2]
+        gp = _gate_part(kind, span, fence, fopt)
+        if gp.doors:
+            S.door(gp, (deg, (ox, 0.0, oz)), 0.0, 0.0, "Gate (%s)" % kind.replace("_", " "), "gate%d" % gi)
+        else:                                  # FX6: a plain opening (posts only): no door
+            S.H.merge(gp.transformed(deg, (ox, 0.0, oz)))
+            S.dn["gate%d" % gi] = None
         for t in (0.0, span):
             S.posts.append((round(ox + u[0] * t, 4), round(oz + u[1] * t, 4), 0.0, 2.9))
         # the gate passage: an earth strip through the opening (the inside is -z of the run = to the right of travel)
@@ -1973,7 +2040,8 @@ def compound(name=None, plot="samurai_m", wear="_w1"):
               (px0 - nx * 0.30, pz0 - nz * 0.30), (px1 - nx * 0.30, pz1 - nz * 0.30)]
         S.obst.append((nm, _r(min(c[0] for c in sw), max(c[0] for c in sw), min(c[1] for c in sw),
                               max(c[1] for c in sw))))
-        S.room(nm, "yard", "earth", FL.SILL_TOP, (rx0, rx1, rz0, rz1), [S.dn[nm]], "the gate passage (%s)" % kind,
+        S.room(nm, "yard", "earth", FL.SILL_TOP, (rx0, rx1, rz0, rz1), [S.dn[nm]] if S.dn.get(nm) else [],
+               "the gate passage (%s)" % kind,
                enclosed=False)
         # stepping stones (tobi-ishi) through the gate: separate flat stones at grade, one outside, two inside
         from ..core import stone as _stone, rng_for as _rng

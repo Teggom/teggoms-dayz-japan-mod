@@ -851,17 +851,21 @@ YARDS = {
     "brewery": dict(W=12 * KEN, D=13 * KEN, closed=True,
                     runs=[([(0.0, 0.0), (0.0, 13 * KEN), (12 * KEN, 13 * KEN), (12 * KEN, 0.0)], "itabei",
                            dict(kuro=True, cap="none"), ("end", "end"))],
-                    gates=[(0, 3, 6.0 * KEN, "kabuki", 1.5 * KEN)]),
+                    # FX6: a two-leaf board yard gate for the cask carts (was a 1.5-ken kabuki-mon)
+                    gates=[(0, 3, 6.0 * KEN) + DW.pick_gate("itabei", dict(kuro=True), status="work", carts=True)]),
     # the dyer's drying yard behind the workshop: a board fence, the gate in its south line facing the back door
     "dyersyard": dict(W=8 * KEN, D=6 * KEN, closed=True,
                       runs=[([(0.0, 0.0), (0.0, 6 * KEN), (8 * KEN, 6 * KEN), (8 * KEN, 0.0)], "itabei",
                              dict(kuro=False, cap="none"), ("end", "end"))],
-                      gates=[(0, 3, 5.5 * KEN, "kabuki", 1.5 * KEN)]),
+                      # FX6: a single-leaf board gate behind the back door (was a 1.5-ken kabuki-mon)
+                      gates=[(0, 3, 5.5 * KEN) + DW.pick_gate("itabei", status="work")]),
     # the paper mill's drying yard (behind the mill): an open bamboo fence (yotsume), the gate at the south-east corner
     "paperyard": dict(W=9 * KEN, D=6 * KEN, closed=True,
                       runs=[([(0.0, 0.0), (0.0, 6 * KEN), (9 * KEN, 6 * KEN), (9 * KEN, 0.0)], "yotsume", {},
                              ("end", "end"))],
-                      gates=[(0, 3, 1.0 * KEN, "kabuki", 1.5 * KEN)]),
+                      # FX6 (Stephen: "waaaay too big for that fence"): a shiorido in the 1.05 m bamboo fence (was a
+                      # 1.5-ken kabuki-mon, 3.15 m tall)
+                      gates=[(0, 3, 1.0 * KEN) + DW.pick_gate("yotsume", status="work")]),
 }
 DW.COMPOUNDS.update(YARDS)
 

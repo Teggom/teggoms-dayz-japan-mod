@@ -591,3 +591,29 @@
   LOD; gradesweep counts down-facing faces too (start floor slabs below grade); prop names containing 'hang' read as hanging
   props in placecheck. **Walk: TEST_CHECKLIST.md = FX5 re-check (~5 min) + 3c-1 (~15 min).** Weekly 77 % -> 80 %.
   Next (Stephen's call): 3c-2 (kilns, salt, charcoal, logging, quarry, mine), 3d government, 3e castle.
+- 2026-10-02: **FX6 DONE: Stephen's 3c-1 walk fixes + the small-gate family.** FX5 confirmed in game by Stephen 2026-10-02
+  (gate sills, honjin joints, hedge). Root causes and fixes: (1) **dyer's cloths**: the torn frame's fallen lengths were a
+  flat strip + a stiff 1 m cloth ramp standing in the air, and every hung length hung BESIDE the bar (up to 4.5 cm off);
+  now they drape over the bar and the fallen ones lie flat (5 cm, 4 cm under the yard surface). The same sweep fixed
+  every 3c-1 prop that rested on nothing (dye-rack bar, press beam + slings, tub ladder, couching lever, drying-board bar,
+  bark strips, three ab states). (2) **gates**: new `sitewall` family sized to the fence: kido_kata (single-leaf board
+  gate + side panel), kido_ryo (two-leaf board gate, no kabuki beam, 1 / 1.5 ken), shiorido (bamboo lattice gate),
+  opening (posts only); `dwelling.pick_gate` = the rule (fence kind + height x status x role x carts; table in
+  parts/K3_NOTES.md §6 and spikes/FX6/FX6_NOTES.md §3); all 12 compounds re-assigned (status gates kept: honjin roofed
+  kabuki-mon, doshin kabuki-mon, nagaya-mon objects; the paper yard now has a shiorido, the kumi row an opening, the
+  cart yards two-leaf board gates, back / garden gates single-leaf). Fences stop at each gate's own post (post_w),
+  FX5 sill pads + `_abut` unchanged. (3) **kura doors**: every `_open` kura doorway built its plastered leaves standing
+  straight out (looked like doors that should work); now folded back flat (period practice; the wooden sliding door is
+  the door). Rebuilt Kura_Plain, Kura_Namako (+ furnished), SakaGura_Okura / _Maegura (+ furnished), the cask kura;
+  Kura_Kuro_Hinged unchanged (its plaster leaves are the working rotation-door test). (4) **koji room**: the bed stood
+  0.35 m inside the muro's only door; furnish check D4 skipped it ('sparse' room, no free cell = "no door reaches");
+  bed to the back wall, shelves to the side. (5) **washbasin**: hangiri_scattered's third tub stood on edge on one rim
+  point; now upside down on the floor. New checks: spikes/FX6/propfloat.py (prop bodies rest / don't tip / cloth hangs),
+  propseat.py (props in rooms seated), roomaccess.py (0.6 m capsule from every door), gatecheck.py. Checks: verify_all
+  --full 297 / 19,633 / 0; bindcheck 297; verify_oprw 4239/4239; placecheck baseline (421, W3C1's same 6 rows); hang 0;
+  handle 40/0; gatecheck 8/0; gradesweep 0.00 m2 on compounds (paper yard 0.12 = yotsume culm feet, baseline);
+  jointcheck FX5 56 OK + W3C1 13 OK (+ by-design open bamboo); roomaccess --all 294 buildings 0 failing (only the muro
+  failed before); propfloat 3c-1 0 (107 older props listed in spikes/FX6/_propfloat_catalogue.txt), propseat 3c-1 0
+  (older: 173 of 1,607, 96 of them pots seated in kamado holes by design; spikes/FX6/_propseat_older.txt). Sheets
+  contact_sheets/fx6_gates.jpg, fx6_fixes.jpg. **Walk: TEST_CHECKLIST.md = FX6 re-check (~8 min); 3c-2 adds its
+  section below.** Weekly 81 % -> 82 %.

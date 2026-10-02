@@ -348,7 +348,7 @@
  {
   "joint": "dyersyard gate0 post B",
   "world": [
-   915.42,
+   916.33,
    873.6
   ],
   "objects": [
@@ -368,7 +368,6 @@
    "jp_konya_sangawara_furnished.p3d",
    "jp_s_handcart_load_bales.p3d",
    "jp_sakagura_maegura_furnished.p3d",
-   "jp_sakagura_okura_furnished.p3d",
    "jp_sakagura_seimai_furnished.p3d",
    "jp_suisha_itabuki_furnished.p3d",
    "jp_workshop_doma_sangawara_sakaya.p3d"
@@ -523,7 +522,7 @@
  {
   "joint": "paperyard gate0 post B",
   "world": [
-   941.03,
+   941.94,
    872.4
   ],
   "objects": [
@@ -543,8 +542,8 @@
   "view@0.35": "LEAK (wide open)",
   "view@1.00": "LEAK (wide open)",
   "view@1.60": "LEAK (wide open)",
-  "res1@0.35": "LEAK gap ~0.52 m",
-  "res1@1.00": "LEAK gap ~0.52 m",
+  "res1@0.35": "LEAK gap ~0.28 m",
+  "res1@1.00": "LEAK gap ~0.28 m",
   "res1@1.60": "LEAK (wide open)",
   "by_design": "yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design"
  }

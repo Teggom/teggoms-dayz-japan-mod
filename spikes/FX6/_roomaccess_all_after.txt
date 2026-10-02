@@ -1,0 +1,1238 @@
+f_dw_chashitsu.json
+  PASS chashitsu  DoorsTwin2: reaches 5.88 of 5.88 m2
+  PASS mizuya     DoorsTwin1: reaches 5.22 of 5.22 m2; DoorsTwin2: reaches 5.22 of 5.22 m2
+f_dw_coastal.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 8.37 of 8.37 m2; DoorsTwin2: reaches 8.37 of 8.37 m2
+  PASS living     DoorsTwin3: reaches 8.08 of 8.08 m2
+  PASS back_room  DoorsTwin3: reaches 8.54 of 8.54 m2
+f_dw_doshin.json
+  PASS doma       DoorsTwin1: reaches 12.98 of 12.98 m2; DoorsTwin2: reaches 12.98 of 12.98 m2
+  PASS daidokoro  DoorsTwin3: reaches 10.41 of 10.41 m2; DoorsTwin4: reaches 10.41 of 10.41 m2
+  PASS chanoma    DoorsTwin3: reaches 9.19 of 9.19 m2; DoorsTwin6: reaches 9.19 of 9.19 m2; DoorsTwin7: reaches 9.19 of 9.19 m2
+  PASS nando      DoorsTwin4: reaches 11.33 of 11.33 m2; DoorsTwin5: reaches 11.33 of 11.33 m2; DoorsTwin7: reaches 11.33 of 11.33 m2
+  PASS genkan_ma  DoorsTwin6: reaches 7.64 of 7.67 m2; DoorsTwin8: reaches 7.64 of 7.67 m2; DoorsTwin9: reaches 7.64 of 7.67 m2
+  PASS zashiki    DoorsTwin5: reaches 10.51 of 10.51 m2; DoorsTwin8: reaches 10.51 of 10.51 m2
+f_dw_furoba.json
+  PASS furoba     DoorsTwin1: reaches 2.37 of 2.37 m2
+  skip sunoko     no doors (open sides): skipped
+f_dw_headman_east.json
+  PASS doma       DoorsTwin2: reaches 33.64 of 33.64 m2; DoorsTwin3: reaches 33.64 of 33.64 m2
+  PASS genkan     DoorsTwin1: reaches 4.55 of 4.55 m2
+  PASS genkan_ma  DoorsTwin4: reaches 10.18 of 10.18 m2; DoorsTwin6: reaches 10.18 of 10.18 m2
+  PASS zashiki    DoorsTwin4: reaches 16.56 of 16.56 m2; DoorsTwin5: reaches 16.56 of 16.56 m2
+  PASS dei        DoorsTwin6: reaches 10.07 of 10.07 m2; DoorsTwin8: reaches 10.07 of 10.07 m2
+  PASS nando      DoorsTwin5: reaches 9.67 of 9.67 m2; DoorsTwin7: reaches 9.67 of 9.67 m2
+  PASS hiroma     DoorsTwin7: reaches 26.04 of 26.04 m2; DoorsTwin8: reaches 26.04 of 26.04 m2
+f_dw_headman_kinai.json
+  PASS genkan_porch DoorsTwin9: reaches 8.88 of 8.88 m2
+  PASS niwa       DoorsTwin1: reaches 27.19 of 27.19 m2; DoorsTwin2: reaches 27.19 of 27.19 m2
+  PASS mise       DoorsTwin4: reaches 9.53 of 9.53 m2; DoorsTwin7: reaches 9.53 of 9.53 m2
+  PASS daidokoro  DoorsTwin3: reaches 9.07 of 9.07 m2; DoorsTwin7: reaches 9.07 of 9.07 m2
+  PASS tsugi      DoorsTwin4: reaches 8.24 of 8.24 m2; DoorsTwin6: reaches 8.24 of 8.24 m2
+  PASS nando      DoorsTwin3: reaches 8.52 of 8.52 m2; DoorsTwin5: reaches 8.52 of 8.52 m2
+  PASS genkan_ma  DoorsTwin9: reaches 7.68 of 7.68 m2; DoorsTwin6: reaches 7.68 of 7.68 m2; DoorsTwin8: reaches 7.68 of 7.68 m2
+  PASS zashiki    DoorsTwin8: reaches 7.82 of 7.82 m2; DoorsTwin5: reaches 7.82 of 7.82 m2
+f_dw_honjin_oku.json
+  PASS doma       DoorsTwin1: reaches 35.55 of 35.55 m2; DoorsTwin2: reaches 35.55 of 35.55 m2
+  PASS daidokoro  DoorsTwin4: reaches 26.77 of 26.77 m2; DoorsTwin5: reaches 26.77 of 26.77 m2
+  PASS family_room DoorsTwin4: reaches 18.83 of 18.83 m2; DoorsTwin6: reaches 18.83 of 18.83 m2; DoorsTwin3: reaches 18.83 of 18.83 m2
+  PASS family_oku DoorsTwin5: reaches 18.60 of 18.60 m2; DoorsTwin6: reaches 18.60 of 18.60 m2
+f_dw_honjin_omote.json
+  PASS genkan_porch DoorsTwin12: reaches 4.41 of 4.41 m2
+  PASS engawa     DoorsTwin1: reaches 16.22 of 16.22 m2; DoorsTwin2: reaches 16.22 of 16.22 m2; DoorsTwin3: reaches 16.22 of 16.22 m2
+  PASS attendants_2 DoorsTwin6: reaches 16.66 of 16.66 m2; DoorsTwin9: reaches 16.66 of 16.66 m2; DoorsTwin4: reaches 16.66 of 16.66 m2
+  PASS san_no_ma  DoorsTwin5: reaches 18.06 of 18.06 m2; DoorsTwin9: reaches 18.06 of 18.06 m2; DoorsTwin1: reaches 18.06 of 18.06 m2
+  PASS attendants_1 DoorsTwin6: reaches 16.21 of 16.21 m2; DoorsTwin8: reaches 16.21 of 16.21 m2; DoorsTwin10: reaches 16.21 of 16.21 m2
+  PASS tsugi_no_ma DoorsTwin5: reaches 17.81 of 17.81 m2; DoorsTwin7: reaches 17.81 of 17.81 m2; DoorsTwin10: reaches 17.81 of 17.81 m2; DoorsTwin2: reaches 17.81 of 17.81 m2
+  PASS genkan_ma  DoorsTwin8: reaches 17.10 of 17.10 m2; DoorsTwin11: reaches 17.10 of 17.10 m2; DoorsTwin12: reaches 17.10 of 17.10 m2
+  PASS jodan_no_ma DoorsTwin7: reaches 17.18 of 17.18 m2; DoorsTwin11: reaches 17.18 of 17.18 m2; DoorsTwin3: reaches 17.18 of 17.18 m2
+f_dw_itagura.json
+  PASS kura       DoorsTwin1: reaches 4.38 of 4.38 m2
+f_dw_kumi.json
+  PASS u0_doma    DoorsTwin1: reaches 2.08 of 2.08 m2
+  PASS u0_front   DoorsTwin4: reaches 5.90 of 5.90 m2
+  PASS u0_back    DoorsTwin4: reaches 5.47 of 5.47 m2
+  PASS u1_doma    DoorsTwin2: reaches 2.08 of 2.08 m2
+  PASS u1_front   DoorsTwin5: reaches 6.10 of 6.10 m2
+  PASS u1_back    DoorsTwin5: reaches 4.42 of 4.42 m2
+  PASS u2_doma    DoorsTwin3: reaches 2.08 of 2.08 m2
+  PASS u2_front   DoorsTwin6: reaches 5.63 of 5.63 m2
+  PASS u2_back    DoorsTwin6: reaches 4.51 of 4.51 m2
+f_dw_merchant.json
+  PASS engawa     DoorsTwin3: reaches 7.26 of 7.26 m2; DoorsTwin4: reaches 7.26 of 7.26 m2
+  PASS doma       DoorsTwin1: reaches 20.08 of 20.08 m2; DoorsTwin2: reaches 20.08 of 20.08 m2
+  PASS daidokoro  DoorsTwin5: reaches 19.00 of 19.00 m2; DoorsTwin6: reaches 19.00 of 19.00 m2
+  PASS chanoma    DoorsTwin5: reaches 11.50 of 11.50 m2; DoorsTwin8: reaches 11.50 of 11.50 m2; DoorsTwin9: reaches 11.50 of 11.50 m2
+  PASS tsugi      DoorsTwin6: reaches 11.17 of 11.17 m2; DoorsTwin7: reaches 11.17 of 11.17 m2; DoorsTwin9: reaches 11.17 of 11.17 m2; DoorsTwin3: reaches 11.17 of 11.17 m2
+  PASS butsuma    DoorsTwin8: reaches 10.82 of 10.82 m2; DoorsTwin10: reaches 10.82 of 10.82 m2
+  PASS oku_zashiki DoorsTwin7: reaches 11.18 of 11.18 m2; DoorsTwin10: reaches 11.18 of 11.18 m2; DoorsTwin4: reaches 11.18 of 11.18 m2
+f_dw_mountain.json
+  PASS doma       DoorsTwin1: reaches 16.46 of 16.46 m2; DoorsTwin2: reaches 16.46 of 16.46 m2
+  PASS oe         DoorsTwin3: reaches 21.69 of 21.69 m2; DoorsTwin4: reaches 21.69 of 21.69 m2
+  PASS dei        DoorsTwin4: reaches 7.34 of 7.34 m2
+  PASS nando      DoorsTwin3: reaches 7.33 of 7.33 m2
+f_dw_nagayamon.json
+  skip room       no doors (open sides): skipped
+  PASS doma       DoorsTwin2: reaches 3.26 of 3.26 m2
+  PASS storage    DoorsTwin1: reaches 7.98 of 7.98 m2
+  PASS gate       DoorsTwin3: reaches 8.29 of 8.29 m2
+f_dw_samurai_m.json
+  PASS genkan_porch DoorsTwin11: reaches 4.55 of 4.55 m2
+  PASS engawa     DoorsTwin3: reaches 8.98 of 8.98 m2; DoorsTwin4: reaches 8.98 of 8.98 m2
+  PASS doma       DoorsTwin1: reaches 13.70 of 13.70 m2; DoorsTwin2: reaches 13.70 of 13.70 m2
+  PASS daidokoro  DoorsTwin5: reaches 19.01 of 19.01 m2; DoorsTwin6: reaches 19.01 of 19.01 m2
+  PASS chanoma    DoorsTwin5: reaches 11.57 of 11.57 m2; DoorsTwin8: reaches 11.57 of 11.57 m2; DoorsTwin9: reaches 11.57 of 11.57 m2
+  PASS tsugi      DoorsTwin6: reaches 11.17 of 11.17 m2; DoorsTwin7: reaches 11.17 of 11.17 m2; DoorsTwin9: reaches 11.17 of 11.17 m2; DoorsTwin3: reaches 11.17 of 11.17 m2
+  PASS genkan_ma  DoorsTwin8: reaches 18.66 of 18.66 m2; DoorsTwin10: reaches 18.66 of 18.66 m2; DoorsTwin11: reaches 18.66 of 18.66 m2
+  PASS zashiki    DoorsTwin7: reaches 17.60 of 17.60 m2; DoorsTwin10: reaches 17.60 of 17.60 m2; DoorsTwin4: reaches 17.60 of 17.60 m2
+f_dw_stable.json
+  PASS floor      DoorsTwin1: reaches 12.80 of 12.80 m2
+f_dw_wakihonjin.json
+  PASS genkan_porch DoorsTwin14: reaches 4.41 of 4.41 m2
+  PASS engawa     DoorsTwin3: reaches 11.02 of 11.02 m2; DoorsTwin4: reaches 11.02 of 11.02 m2; DoorsTwin5: reaches 11.02 of 11.02 m2
+  PASS doma       DoorsTwin1: reaches 11.82 of 11.82 m2; DoorsTwin2: reaches 11.82 of 11.82 m2
+  PASS daidokoro  DoorsTwin6: reaches 16.91 of 16.91 m2; DoorsTwin7: reaches 16.91 of 16.91 m2
+  PASS chanoma    DoorsTwin6: reaches 11.27 of 11.27 m2; DoorsTwin9: reaches 11.27 of 11.27 m2; DoorsTwin12: reaches 11.27 of 11.27 m2
+  PASS family_oku DoorsTwin7: reaches 8.63 of 8.63 m2; DoorsTwin8: reaches 8.63 of 8.63 m2; DoorsTwin12: reaches 8.63 of 8.63 m2; DoorsTwin3: reaches 8.63 of 8.63 m2
+  PASS attendants DoorsTwin9: reaches 11.21 of 11.21 m2; DoorsTwin11: reaches 11.21 of 11.21 m2; DoorsTwin13: reaches 11.21 of 11.21 m2
+  PASS tsugi_no_ma DoorsTwin8: reaches 8.81 of 8.81 m2; DoorsTwin10: reaches 8.81 of 8.81 m2; DoorsTwin13: reaches 8.81 of 8.81 m2; DoorsTwin4: reaches 8.81 of 8.81 m2
+  PASS genkan_ma  DoorsTwin11: reaches 10.83 of 10.87 m2; DoorsTwin14: reaches 10.83 of 10.87 m2
+  PASS jodan_no_ma DoorsTwin10: reaches 7.82 of 7.82 m2; DoorsTwin5: reaches 7.82 of 7.82 m2
+dw_honjin_oku.json
+  PASS doma       DoorsTwin1: reaches 40.95 of 40.95 m2; DoorsTwin2: reaches 40.95 of 40.95 m2
+  PASS daidokoro  DoorsTwin4: reaches 28.06 of 28.06 m2; DoorsTwin5: reaches 28.06 of 28.06 m2
+  PASS family_room DoorsTwin4: reaches 19.60 of 19.60 m2; DoorsTwin6: reaches 19.60 of 19.60 m2; DoorsTwin3: reaches 19.60 of 19.60 m2
+  PASS family_oku DoorsTwin5: reaches 19.36 of 19.36 m2; DoorsTwin6: reaches 19.36 of 19.36 m2
+dw_honjin_omote.json
+  PASS genkan_porch DoorsTwin12: reaches 4.41 of 4.41 m2
+  PASS engawa     DoorsTwin1: reaches 16.22 of 16.22 m2; DoorsTwin2: reaches 16.22 of 16.22 m2; DoorsTwin3: reaches 16.22 of 16.22 m2
+  PASS attendants_2 DoorsTwin6: reaches 19.48 of 19.48 m2; DoorsTwin9: reaches 19.48 of 19.48 m2; DoorsTwin4: reaches 19.48 of 19.48 m2
+  PASS san_no_ma  DoorsTwin5: reaches 19.65 of 19.65 m2; DoorsTwin9: reaches 19.65 of 19.65 m2; DoorsTwin1: reaches 19.65 of 19.65 m2
+  PASS attendants_1 DoorsTwin6: reaches 19.53 of 19.53 m2; DoorsTwin8: reaches 19.53 of 19.53 m2; DoorsTwin10: reaches 19.53 of 19.53 m2
+  PASS tsugi_no_ma DoorsTwin5: reaches 19.96 of 19.96 m2; DoorsTwin7: reaches 19.96 of 19.96 m2; DoorsTwin10: reaches 19.96 of 19.96 m2; DoorsTwin2: reaches 19.96 of 19.96 m2
+  PASS genkan_ma  DoorsTwin8: reaches 19.57 of 19.57 m2; DoorsTwin11: reaches 19.57 of 19.57 m2; DoorsTwin12: reaches 19.57 of 19.57 m2
+  PASS jodan_no_ma DoorsTwin7: reaches 19.05 of 19.05 m2; DoorsTwin11: reaches 19.05 of 19.05 m2; DoorsTwin3: reaches 19.05 of 19.05 m2
+dw_wakihonjin.json
+  PASS genkan_porch DoorsTwin14: reaches 4.41 of 4.41 m2
+  PASS engawa     DoorsTwin3: reaches 11.02 of 11.02 m2; DoorsTwin4: reaches 11.02 of 11.02 m2; DoorsTwin5: reaches 11.02 of 11.02 m2
+  PASS doma       DoorsTwin1: reaches 16.04 of 16.04 m2; DoorsTwin2: reaches 16.04 of 16.04 m2
+  PASS daidokoro  DoorsTwin6: reaches 18.11 of 18.11 m2; DoorsTwin7: reaches 18.11 of 18.11 m2
+  PASS chanoma    DoorsTwin6: reaches 12.34 of 12.34 m2; DoorsTwin9: reaches 12.34 of 12.34 m2; DoorsTwin12: reaches 12.34 of 12.34 m2
+  PASS family_oku DoorsTwin7: reaches 9.99 of 9.99 m2; DoorsTwin8: reaches 9.99 of 9.99 m2; DoorsTwin12: reaches 9.99 of 9.99 m2; DoorsTwin3: reaches 9.99 of 9.99 m2
+  PASS attendants DoorsTwin9: reaches 12.34 of 12.34 m2; DoorsTwin11: reaches 12.34 of 12.34 m2; DoorsTwin13: reaches 12.34 of 12.34 m2
+  PASS tsugi_no_ma DoorsTwin8: reaches 10.10 of 10.10 m2; DoorsTwin10: reaches 10.10 of 10.10 m2; DoorsTwin13: reaches 10.10 of 10.10 m2; DoorsTwin4: reaches 10.10 of 10.10 m2
+  PASS genkan_ma  DoorsTwin11: reaches 12.10 of 12.10 m2; DoorsTwin14: reaches 12.10 of 12.10 m2
+  PASS jodan_no_ma DoorsTwin10: reaches 8.99 of 8.99 m2; DoorsTwin5: reaches 8.99 of 8.99 m2
+dw_furoba.json
+  PASS furoba     DoorsTwin1: reaches 2.78 of 2.78 m2
+  skip sunoko     no doors (open sides): skipped
+dw_itagura_itabuki.json
+  PASS kura       DoorsTwin1: reaches 6.74 of 6.74 m2
+dw_itagura_sangawara.json
+  PASS kura       DoorsTwin1: reaches 6.74 of 6.74 m2
+dw_stable_horse.json
+  PASS floor      DoorsTwin1: reaches 13.33 of 13.33 m2
+dw_stable_ox.json
+  PASS floor      DoorsTwin1: reaches 9.76 of 9.76 m2
+dw_coastal_ishioki.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 10.67 of 10.67 m2; DoorsTwin2: reaches 10.67 of 10.67 m2
+  PASS living     DoorsTwin3: reaches 8.95 of 8.95 m2
+  PASS back_room  DoorsTwin3: reaches 9.00 of 9.00 m2
+dw_coastal_thatch.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 10.67 of 10.67 m2; DoorsTwin2: reaches 10.67 of 10.67 m2
+  PASS living     DoorsTwin3: reaches 8.95 of 8.95 m2
+  PASS back_room  DoorsTwin3: reaches 9.00 of 9.00 m2
+dw_mountain_ishioki.json
+  PASS doma       DoorsTwin1: reaches 20.33 of 20.33 m2; DoorsTwin2: reaches 20.33 of 20.33 m2
+  PASS oe         DoorsTwin3: reaches 22.19 of 22.19 m2; DoorsTwin4: reaches 22.19 of 22.19 m2
+  PASS dei        DoorsTwin4: reaches 9.25 of 9.25 m2
+  PASS nando      DoorsTwin3: reaches 9.25 of 9.25 m2
+dw_mountain_ishioki_lean.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 20.33 of 20.33 m2; DoorsTwin2: reaches 20.33 of 20.33 m2
+  PASS oe         DoorsTwin3: reaches 22.19 of 22.19 m2; DoorsTwin4: reaches 22.19 of 22.19 m2
+  PASS dei        DoorsTwin4: reaches 9.25 of 9.25 m2
+  PASS nando      DoorsTwin3: reaches 9.25 of 9.25 m2
+dw_mountain_itabuki.json
+  PASS doma       DoorsTwin1: reaches 20.33 of 20.33 m2; DoorsTwin2: reaches 20.33 of 20.33 m2
+  PASS oe         DoorsTwin3: reaches 22.19 of 22.19 m2; DoorsTwin4: reaches 22.19 of 22.19 m2
+  PASS dei        DoorsTwin4: reaches 9.25 of 9.25 m2
+  PASS nando      DoorsTwin3: reaches 9.25 of 9.25 m2
+dw_doshin_itabuki.json
+  PASS doma       DoorsTwin1: reaches 16.02 of 16.02 m2; DoorsTwin2: reaches 16.02 of 16.02 m2
+  PASS daidokoro  DoorsTwin3: reaches 11.37 of 11.37 m2; DoorsTwin4: reaches 11.37 of 11.37 m2
+  PASS chanoma    DoorsTwin3: reaches 9.60 of 9.60 m2; DoorsTwin6: reaches 9.60 of 9.60 m2; DoorsTwin7: reaches 9.60 of 9.60 m2
+  PASS nando      DoorsTwin4: reaches 12.37 of 12.37 m2; DoorsTwin5: reaches 12.37 of 12.37 m2; DoorsTwin7: reaches 12.37 of 12.37 m2
+  PASS genkan_ma  DoorsTwin6: reaches 9.60 of 9.60 m2; DoorsTwin8: reaches 9.60 of 9.60 m2; DoorsTwin9: reaches 9.60 of 9.60 m2
+  PASS zashiki    DoorsTwin5: reaches 12.17 of 12.17 m2; DoorsTwin8: reaches 12.17 of 12.17 m2
+dw_doshin_sangawara.json
+  PASS doma       DoorsTwin1: reaches 16.02 of 16.02 m2; DoorsTwin2: reaches 16.02 of 16.02 m2
+  PASS daidokoro  DoorsTwin3: reaches 11.37 of 11.37 m2; DoorsTwin4: reaches 11.37 of 11.37 m2
+  PASS chanoma    DoorsTwin3: reaches 9.60 of 9.60 m2; DoorsTwin6: reaches 9.60 of 9.60 m2; DoorsTwin7: reaches 9.60 of 9.60 m2
+  PASS nando      DoorsTwin4: reaches 12.37 of 12.37 m2; DoorsTwin5: reaches 12.37 of 12.37 m2; DoorsTwin7: reaches 12.37 of 12.37 m2
+  PASS genkan_ma  DoorsTwin6: reaches 9.60 of 9.60 m2; DoorsTwin8: reaches 9.60 of 9.60 m2; DoorsTwin9: reaches 9.60 of 9.60 m2
+  PASS zashiki    DoorsTwin5: reaches 12.17 of 12.17 m2; DoorsTwin8: reaches 12.17 of 12.17 m2
+dw_kumi_itabuki.json
+  PASS u0_doma    DoorsTwin1: reaches 2.59 of 2.59 m2
+  PASS u0_front   DoorsTwin4: reaches 6.99 of 6.99 m2
+  PASS u0_back    DoorsTwin4: reaches 6.21 of 6.21 m2
+  PASS u1_doma    DoorsTwin2: reaches 2.59 of 2.59 m2
+  PASS u1_front   DoorsTwin5: reaches 6.99 of 6.99 m2
+  PASS u1_back    DoorsTwin5: reaches 6.21 of 6.21 m2
+  PASS u2_doma    DoorsTwin3: reaches 2.59 of 2.59 m2
+  PASS u2_front   DoorsTwin6: reaches 7.00 of 7.00 m2
+  PASS u2_back    DoorsTwin6: reaches 6.20 of 6.20 m2
+dw_kumi_sangawara.json
+  PASS u0_doma    DoorsTwin1: reaches 2.59 of 2.59 m2
+  PASS u0_front   DoorsTwin4: reaches 6.99 of 6.99 m2
+  PASS u0_back    DoorsTwin4: reaches 6.21 of 6.21 m2
+  PASS u1_doma    DoorsTwin2: reaches 2.59 of 2.59 m2
+  PASS u1_front   DoorsTwin5: reaches 6.99 of 6.99 m2
+  PASS u1_back    DoorsTwin5: reaches 6.21 of 6.21 m2
+  PASS u2_doma    DoorsTwin3: reaches 2.59 of 2.59 m2
+  PASS u2_front   DoorsTwin6: reaches 7.00 of 7.00 m2
+  PASS u2_back    DoorsTwin6: reaches 6.20 of 6.20 m2
+dw_nagayamon_samurai.json
+  skip room       no doors (open sides): skipped
+  PASS doma       DoorsTwin2: reaches 3.70 of 3.70 m2
+  PASS storage    DoorsTwin1: reaches 13.22 of 13.22 m2
+  PASS gate       DoorsTwin3: reaches 8.29 of 8.29 m2
+dw_samurai_l.json
+  PASS genkan_porch DoorsTwin11: reaches 4.41 of 4.41 m2
+  PASS engawa     DoorsTwin3: reaches 8.98 of 8.98 m2; DoorsTwin4: reaches 8.98 of 8.98 m2
+  PASS doma       DoorsTwin1: reaches 25.38 of 25.38 m2; DoorsTwin2: reaches 25.38 of 25.38 m2
+  PASS daidokoro  DoorsTwin5: reaches 28.05 of 28.05 m2; DoorsTwin6: reaches 28.05 of 28.05 m2
+  PASS chanoma    DoorsTwin5: reaches 12.34 of 12.34 m2; DoorsTwin8: reaches 12.34 of 12.34 m2; DoorsTwin9: reaches 12.34 of 12.34 m2
+  PASS tsugi      DoorsTwin6: reaches 12.70 of 12.70 m2; DoorsTwin7: reaches 12.70 of 12.70 m2; DoorsTwin9: reaches 12.70 of 12.70 m2; DoorsTwin3: reaches 12.70 of 12.70 m2
+  PASS genkan_ma  DoorsTwin8: reaches 19.57 of 19.57 m2; DoorsTwin10: reaches 19.57 of 19.57 m2; DoorsTwin11: reaches 19.57 of 19.57 m2
+  PASS zashiki    DoorsTwin7: reaches 19.17 of 19.17 m2; DoorsTwin10: reaches 19.17 of 19.17 m2; DoorsTwin4: reaches 19.17 of 19.17 m2
+dw_samurai_m.json
+  PASS genkan_porch DoorsTwin11: reaches 4.55 of 4.55 m2
+  PASS engawa     DoorsTwin3: reaches 8.98 of 8.98 m2; DoorsTwin4: reaches 8.98 of 8.98 m2
+  PASS doma       DoorsTwin1: reaches 17.94 of 17.94 m2; DoorsTwin2: reaches 17.94 of 17.94 m2
+  PASS daidokoro  DoorsTwin5: reaches 20.26 of 20.26 m2; DoorsTwin6: reaches 20.26 of 20.26 m2
+  PASS chanoma    DoorsTwin5: reaches 12.34 of 12.34 m2; DoorsTwin8: reaches 12.34 of 12.34 m2; DoorsTwin9: reaches 12.34 of 12.34 m2
+  PASS tsugi      DoorsTwin6: reaches 12.70 of 12.70 m2; DoorsTwin7: reaches 12.70 of 12.70 m2; DoorsTwin9: reaches 12.70 of 12.70 m2; DoorsTwin3: reaches 12.70 of 12.70 m2
+  PASS genkan_ma  DoorsTwin8: reaches 19.60 of 19.60 m2; DoorsTwin10: reaches 19.60 of 19.60 m2; DoorsTwin11: reaches 19.60 of 19.60 m2
+  PASS zashiki    DoorsTwin7: reaches 19.22 of 19.22 m2; DoorsTwin10: reaches 19.22 of 19.22 m2; DoorsTwin4: reaches 19.22 of 19.22 m2
+dw_samurai_s.json
+  PASS genkan_porch DoorsTwin10: reaches 4.55 of 4.55 m2
+  PASS engawa     DoorsTwin3: reaches 7.25 of 7.25 m2; DoorsTwin4: reaches 7.25 of 7.25 m2
+  PASS doma       DoorsTwin1: reaches 16.04 of 16.04 m2; DoorsTwin2: reaches 16.04 of 16.04 m2
+  PASS daidokoro  DoorsTwin5: reaches 18.11 of 18.11 m2; DoorsTwin6: reaches 18.11 of 18.11 m2
+  PASS chanoma    DoorsTwin5: reaches 12.34 of 12.34 m2; DoorsTwin8: reaches 12.34 of 12.34 m2; DoorsTwin9: reaches 12.34 of 12.34 m2
+  PASS tsugi      DoorsTwin6: reaches 9.99 of 9.99 m2; DoorsTwin7: reaches 9.99 of 9.99 m2; DoorsTwin9: reaches 9.99 of 9.99 m2; DoorsTwin3: reaches 9.99 of 9.99 m2
+  PASS genkan_ma  DoorsTwin8: reaches 12.10 of 12.10 m2; DoorsTwin10: reaches 12.10 of 12.10 m2
+  PASS zashiki    DoorsTwin7: reaches 9.02 of 9.02 m2; DoorsTwin4: reaches 9.02 of 9.02 m2
+dw_cmp_doshin.json
+  PASS gate0      DoorsTwin1: reaches 5.25 of 5.25 m2
+dw_cmp_headman_east.json
+  PASS gate0      DoorsTwin1: reaches 2.72 of 2.72 m2
+dw_cmp_honjin.json
+  PASS gate0      DoorsTwin1: reaches 5.15 of 5.15 m2
+  PASS gate1      DoorsTwin2: reaches 3.08 of 3.08 m2
+dw_cmp_kumi.json
+  skip gate0      no doors (open sides): skipped
+dw_cmp_merchant.json
+  PASS gate0      DoorsTwin1: reaches 2.73 of 2.73 m2
+dw_cmp_samurai_m.json
+  PASS gate0      DoorsTwin1: reaches 2.73 of 2.73 m2
+dw_roka_honjin.json
+  skip deck       no doors (open sides): skipped
+dw_roka_temple_u.json
+  skip deck       no doors (open sides): skipped
+dw_chashitsu_kokera.json
+  PASS chashitsu  DoorsTwin2: reaches 5.88 of 5.88 m2
+  PASS mizuya     DoorsTwin1: reaches 6.63 of 6.63 m2; DoorsTwin2: reaches 6.63 of 6.63 m2
+dw_chashitsu_thatch.json
+  PASS chashitsu  DoorsTwin2: reaches 5.88 of 5.88 m2
+  PASS mizuya     DoorsTwin1: reaches 6.63 of 6.63 m2; DoorsTwin2: reaches 6.63 of 6.63 m2
+dw_headman_east.json
+  PASS doma       DoorsTwin2: reaches 39.05 of 39.05 m2; DoorsTwin3: reaches 39.05 of 39.05 m2
+  PASS genkan     DoorsTwin1: reaches 4.55 of 4.55 m2
+  PASS genkan_ma  DoorsTwin4: reaches 12.58 of 12.58 m2; DoorsTwin6: reaches 12.58 of 12.58 m2
+  PASS zashiki    DoorsTwin4: reaches 18.29 of 18.29 m2; DoorsTwin5: reaches 18.29 of 18.29 m2
+  PASS dei        DoorsTwin6: reaches 11.64 of 11.64 m2; DoorsTwin8: reaches 11.64 of 11.64 m2
+  PASS nando      DoorsTwin5: reaches 11.60 of 11.60 m2; DoorsTwin7: reaches 11.60 of 11.60 m2
+  PASS hiroma     DoorsTwin7: reaches 26.47 of 26.47 m2; DoorsTwin8: reaches 26.47 of 26.47 m2
+dw_headman_east_shiba.json
+  PASS doma       DoorsTwin2: reaches 39.05 of 39.05 m2; DoorsTwin3: reaches 39.05 of 39.05 m2
+  PASS genkan     DoorsTwin1: reaches 4.55 of 4.55 m2
+  PASS genkan_ma  DoorsTwin4: reaches 12.58 of 12.58 m2; DoorsTwin6: reaches 12.58 of 12.58 m2
+  PASS zashiki    DoorsTwin4: reaches 18.28 of 18.28 m2; DoorsTwin5: reaches 18.28 of 18.28 m2
+  PASS dei        DoorsTwin6: reaches 11.64 of 11.64 m2; DoorsTwin8: reaches 11.64 of 11.64 m2
+  PASS nando      DoorsTwin5: reaches 11.60 of 11.60 m2; DoorsTwin7: reaches 11.60 of 11.60 m2
+  PASS hiroma     DoorsTwin7: reaches 26.49 of 26.49 m2; DoorsTwin8: reaches 26.49 of 26.49 m2
+dw_headman_kinai.json
+  PASS genkan_porch DoorsTwin9: reaches 8.88 of 8.88 m2
+  PASS niwa       DoorsTwin1: reaches 32.03 of 32.03 m2; DoorsTwin2: reaches 32.03 of 32.03 m2
+  PASS mise       DoorsTwin4: reaches 10.29 of 10.29 m2; DoorsTwin7: reaches 10.29 of 10.29 m2
+  PASS daidokoro  DoorsTwin3: reaches 10.24 of 10.24 m2; DoorsTwin7: reaches 10.24 of 10.24 m2
+  PASS tsugi      DoorsTwin4: reaches 9.38 of 9.38 m2; DoorsTwin6: reaches 9.38 of 9.38 m2
+  PASS nando      DoorsTwin3: reaches 9.44 of 9.44 m2; DoorsTwin5: reaches 9.44 of 9.44 m2
+  PASS genkan_ma  DoorsTwin9: reaches 9.61 of 9.61 m2; DoorsTwin6: reaches 9.61 of 9.61 m2; DoorsTwin8: reaches 9.61 of 9.61 m2
+  PASS zashiki    DoorsTwin8: reaches 9.48 of 9.48 m2; DoorsTwin5: reaches 9.48 of 9.48 m2
+dw_merchant.json
+  PASS engawa     DoorsTwin3: reaches 7.26 of 7.26 m2; DoorsTwin4: reaches 7.26 of 7.26 m2
+  PASS doma       DoorsTwin1: reaches 25.38 of 25.38 m2; DoorsTwin2: reaches 25.38 of 25.38 m2
+  PASS daidokoro  DoorsTwin5: reaches 20.25 of 20.25 m2; DoorsTwin6: reaches 20.25 of 20.25 m2
+  PASS chanoma    DoorsTwin5: reaches 12.33 of 12.33 m2; DoorsTwin8: reaches 12.33 of 12.33 m2; DoorsTwin9: reaches 12.33 of 12.33 m2
+  PASS tsugi      DoorsTwin6: reaches 12.70 of 12.70 m2; DoorsTwin7: reaches 12.70 of 12.70 m2; DoorsTwin9: reaches 12.70 of 12.70 m2; DoorsTwin3: reaches 12.70 of 12.70 m2
+  PASS butsuma    DoorsTwin8: reaches 12.12 of 12.12 m2; DoorsTwin10: reaches 12.12 of 12.12 m2
+  PASS oku_zashiki DoorsTwin7: reaches 12.50 of 12.50 m2; DoorsTwin10: reaches 12.50 of 12.50 m2; DoorsTwin4: reaches 12.50 of 12.50 m2
+dw_nagayamon_headman.json
+  skip room       no doors (open sides): skipped
+  PASS doma       DoorsTwin2: reaches 3.73 of 3.73 m2
+  PASS storage    DoorsTwin1: reaches 13.50 of 13.50 m2
+  PASS gate       DoorsTwin3: reaches 8.29 of 8.29 m2
+farmhouse_kanto_irimoya_domar.json
+  PASS doma       DoorsTwin1: reaches 39.07 of 39.07 m2; DoorsTwin2: reaches 39.07 of 39.07 m2
+  PASS hiroma     DoorsTwin3: reaches 26.74 of 26.74 m2; DoorsTwin4: reaches 26.74 of 26.74 m2
+  PASS dei        DoorsTwin4: reaches 11.37 of 11.37 m2
+  PASS nando      DoorsTwin3: reaches 11.33 of 11.33 m2
+farmhouse_kanto_yosemune.json
+  PASS doma       DoorsTwin1: reaches 39.17 of 39.17 m2; DoorsTwin2: reaches 39.17 of 39.17 m2
+  PASS hiroma     DoorsTwin3: reaches 26.47 of 26.47 m2; DoorsTwin4: reaches 26.47 of 26.47 m2
+  PASS dei        DoorsTwin4: reaches 11.37 of 11.37 m2
+  PASS nando      DoorsTwin3: reaches 11.32 of 11.32 m2
+farmhouse_kanto_yosemune_umaya.json
+  PASS doma       DoorsTwin1: reaches 36.67 of 36.67 m2; DoorsTwin2: reaches 36.67 of 36.67 m2
+  PASS hiroma     DoorsTwin3: reaches 26.48 of 26.48 m2; DoorsTwin4: reaches 26.48 of 26.48 m2
+  PASS dei        DoorsTwin4: reaches 11.37 of 11.37 m2
+  PASS nando      DoorsTwin3: reaches 11.32 of 11.32 m2
+farmhouse_kanto_yosemune_umaya_domar.json
+  PASS doma       DoorsTwin1: reaches 36.64 of 36.64 m2; DoorsTwin2: reaches 36.64 of 36.64 m2
+  PASS hiroma     DoorsTwin3: reaches 26.74 of 26.74 m2; DoorsTwin4: reaches 26.74 of 26.74 m2
+  PASS dei        DoorsTwin4: reaches 11.37 of 11.37 m2
+  PASS nando      DoorsTwin3: reaches 11.32 of 11.32 m2
+farmhouse_kinai_irimoya_board.json
+  PASS niwa       DoorsTwin1: reaches 29.55 of 29.55 m2; DoorsTwin2: reaches 29.55 of 29.55 m2
+  PASS mise       DoorsTwin4: reaches 10.28 of 10.28 m2; DoorsTwin5: reaches 10.28 of 10.28 m2
+  PASS daidokoro  DoorsTwin3: reaches 10.23 of 10.23 m2; DoorsTwin5: reaches 10.23 of 10.23 m2
+  PASS zashiki    DoorsTwin4: reaches 9.09 of 9.09 m2
+  PASS nando      DoorsTwin3: reaches 9.08 of 9.08 m2
+farmhouse_kinai_irimoya_tile.json
+  PASS niwa       DoorsTwin1: reaches 29.67 of 29.67 m2; DoorsTwin2: reaches 29.67 of 29.67 m2
+  PASS mise       DoorsTwin4: reaches 10.20 of 10.20 m2; DoorsTwin5: reaches 10.20 of 10.20 m2
+  PASS daidokoro  DoorsTwin3: reaches 10.15 of 10.15 m2; DoorsTwin5: reaches 10.15 of 10.15 m2
+  PASS zashiki    DoorsTwin4: reaches 9.09 of 9.09 m2
+  PASS nando      DoorsTwin3: reaches 9.08 of 9.08 m2
+farmhouse_kinai_kirizuma_board.json
+  PASS niwa       DoorsTwin1: reaches 29.67 of 29.67 m2; DoorsTwin2: reaches 29.67 of 29.67 m2
+  PASS mise       DoorsTwin4: reaches 10.20 of 10.20 m2; DoorsTwin5: reaches 10.20 of 10.20 m2
+  PASS daidokoro  DoorsTwin3: reaches 10.15 of 10.15 m2; DoorsTwin5: reaches 10.15 of 10.15 m2
+  PASS zashiki    DoorsTwin4: reaches 9.09 of 9.09 m2
+  PASS nando      DoorsTwin3: reaches 9.08 of 9.08 m2
+farmhouse_kinai_kirizuma_tile_takahe.json
+  PASS niwa       DoorsTwin1: reaches 29.55 of 29.55 m2; DoorsTwin2: reaches 29.55 of 29.55 m2
+  PASS mise       DoorsTwin4: reaches 10.28 of 10.28 m2; DoorsTwin5: reaches 10.28 of 10.28 m2
+  PASS daidokoro  DoorsTwin3: reaches 10.23 of 10.23 m2; DoorsTwin5: reaches 10.23 of 10.23 m2
+  PASS zashiki    DoorsTwin4: reaches 9.09 of 9.09 m2
+  PASS nando      DoorsTwin3: reaches 9.08 of 9.08 m2
+f_farmhouse_kanto.json
+  PASS doma       DoorsTwin1: reaches 32.91 of 32.91 m2; DoorsTwin2: reaches 32.91 of 32.91 m2
+  PASS hiroma     DoorsTwin3: reaches 25.47 of 25.47 m2; DoorsTwin4: reaches 25.47 of 25.47 m2
+  PASS dei        DoorsTwin4: reaches 8.27 of 8.30 m2
+  PASS nando      DoorsTwin3: reaches 9.98 of 9.98 m2
+f_farmhouse_kinai.json
+  PASS niwa       DoorsTwin1: reaches 27.24 of 27.24 m2; DoorsTwin2: reaches 27.24 of 27.24 m2
+  PASS mise       DoorsTwin4: reaches 7.70 of 7.70 m2; DoorsTwin5: reaches 7.70 of 7.70 m2
+  PASS daidokoro  DoorsTwin3: reaches 9.69 of 9.69 m2; DoorsTwin5: reaches 9.69 of 9.69 m2
+  PASS zashiki    DoorsTwin4: reaches 7.12 of 7.12 m2
+  PASS nando      DoorsTwin3: reaches 6.88 of 6.88 m2
+f_guardhut_m_itabuki.json
+  PASS doma       DoorsTwin1: reaches 2.12 of 2.12 m2
+  skip floor      no doors (open sides): skipped
+f_hut_east_l_board.json
+  PASS doma       DoorsTwin1: reaches 9.42 of 9.42 m2
+  skip living     no doors (open sides): skipped
+f_hut_west_thatch_leanl.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 3.06 of 3.06 m2
+  skip living     no doors (open sides): skipped
+f_inn_grand.json
+  PASS toriniwa   DoorsTwin1: reaches 5.10 of 5.10 m2; DoorsTwin2: reaches 5.10 of 5.10 m2; DoorsTwin3: reaches 5.10 of 5.10 m2
+  PASS mise       DoorsTwin3: reaches 12.25 of 12.25 m2; DoorsTwin4: reaches 12.25 of 12.25 m2
+  PASS oku        DoorsTwin2: reaches 8.92 of 8.92 m2; DoorsTwin4: reaches 8.92 of 8.92 m2
+  PASS kitchen    DoorsTwin6: reaches 20.80 of 20.80 m2
+  PASS nikai_front DoorsTwin5: reaches 17.44 of 17.44 m2
+  PASS nikai_back DoorsTwin5: reaches 13.25 of 13.25 m2
+f_inn_std_tile.json
+  PASS toriniwa   DoorsTwin1: reaches 5.10 of 5.10 m2; DoorsTwin2: reaches 5.10 of 5.10 m2; DoorsTwin3: reaches 5.10 of 5.10 m2
+  PASS mise       DoorsTwin3: reaches 12.25 of 12.25 m2; DoorsTwin4: reaches 12.25 of 12.25 m2
+  PASS oku        DoorsTwin2: reaches 6.73 of 6.73 m2; DoorsTwin4: reaches 6.73 of 6.73 m2; DoorsTwin5: reaches 6.73 of 6.73 m2
+  PASS oku2       DoorsTwin5: reaches 6.35 of 6.35 m2
+  PASS kitchen    DoorsTwin6: reaches 20.80 of 20.80 m2
+f_kido_lattice_bantaya.json
+  PASS gate       DoorsTwin2: reaches 13.93 of 13.93 m2; DoorsTwin1: reaches 13.93 of 13.93 m2
+  PASS hut_doma   DoorsTwin3: reaches 1.34 of 1.34 m2
+  skip hut_floor  no doors (open sides): skipped
+f_kura_kuro_hinged.json
+  PASS kura       DoorsTwin1: reaches 4.66 of 4.78 m2
+  skip nikai      no doors (open sides): skipped
+f_kura_namako.json
+  PASS kura       DoorsTwin1: reaches 4.66 of 4.78 m2
+  skip nikai      no doors (open sides): skipped
+f_pt_det_tile_nuriya_home.json
+  PASS toriniwa   DoorsTwin1: reaches 5.14 of 5.14 m2; DoorsTwin2: reaches 5.14 of 5.14 m2; DoorsTwin3: reaches 5.14 of 5.14 m2
+  PASS mise       DoorsTwin3: reaches 5.05 of 5.05 m2; DoorsTwin4: reaches 5.05 of 5.05 m2
+  PASS oku        DoorsTwin2: reaches 4.67 of 4.67 m2; DoorsTwin4: reaches 4.67 of 4.67 m2
+  PASS kitchen    DoorsTwin5: reaches 3.34 of 3.34 m2
+f_shed_walled_woodshed.json
+  skip leanto     no doors (open sides): skipped
+  PASS floor      DoorsTwin1: reaches 9.96 of 9.96 m2
+f_shrine_haiden_town.json
+  PASS haiden     DoorsTwin2: reaches 19.74 of 19.74 m2
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+f_shrine_haiden_village.json
+  PASS haiden     DoorsTwin1: reaches 11.71 of 11.71 m2
+  skip en         no doors (open sides): skipped
+f_shrine_honden_nagare_town.json
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+f_shrine_honden_nagare_village_chigi.json
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+f_shrine_kagura_town.json
+  skip stage      no doors (open sides): skipped
+f_shrine_shamusho_sangawara.json
+  PASS doma       DoorsTwin1: reaches 2.75 of 2.75 m2
+  skip office     no doors (open sides): skipped
+f_shrine_temizuya_town.json
+  skip pavilion   no doors (open sides): skipped
+f_smithy_open_itabuki.json
+  PASS doma       DoorsTwin1: reaches 11.16 of 11.16 m2
+f_swordsmith_sangawara.json
+  PASS work       DoorsTwin1: reaches 13.45 of 13.45 m2; DoorsTwin3: reaches 13.45 of 13.45 m2
+  PASS forge      DoorsTwin3: reaches 6.08 of 7.67 m2; DoorsTwin2: reaches 6.08 of 7.67 m2
+f_teahouse_bench_itabuki.json
+  skip doma       no doors (open sides): skipped
+f_teahouse_shop_thatch.json
+  PASS doma       DoorsTwin1: reaches 5.38 of 5.38 m2
+  skip agari      no doors (open sides): skipped
+f_teahouse_tateba_itabuki.json
+  PASS doma       DoorsTwin1: reaches 11.98 of 11.98 m2
+  PASS agari      DoorsTwin2: reaches 10.78 of 10.78 m2
+  PASS zashiki    DoorsTwin2: reaches 8.98 of 8.99 m2
+f_temple_do_2_board.json
+  PASS hall       DoorsTwin1: reaches 6.95 of 7.12 m2; DoorsTwin2: reaches 6.95 of 7.12 m2
+  skip en         no doors (open sides): skipped
+f_temple_do_3_tile.json
+  PASS hall       DoorsTwin1: reaches 20.91 of 20.91 m2
+  skip en         no doors (open sides): skipped
+f_temple_gate_shikyakumon.json
+  PASS gate       DoorsTwin1: reaches 11.17 of 11.17 m2
+f_temple_gate_yakuimon.json
+  PASS gate       DoorsTwin1: reaches 7.76 of 7.76 m2
+f_temple_hondo_town.json
+  PASS hall       DoorsTwin2: reaches 30.61 of 30.62 m2
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+f_temple_hondo_village.json
+  PASS hall       DoorsTwin1: reaches 39.58 of 39.58 m2; DoorsTwin2: reaches 39.58 of 39.58 m2; DoorsTwin5: reaches 39.58 of 39.58 m2
+  skip en         no doors (open sides): skipped
+f_temple_kuri_town.json
+  PASS doma       DoorsTwin1: reaches 20.56 of 20.56 m2; DoorsTwin2: reaches 20.56 of 20.56 m2
+  PASS daidokoro  DoorsTwin4: reaches 16.77 of 16.77 m2
+  PASS guest      DoorsTwin4: reaches 15.58 of 15.58 m2; DoorsTwin3: reaches 15.58 of 15.58 m2
+  PASS genkan     DoorsTwin3: reaches 4.55 of 4.55 m2
+f_temple_kuri_village.json
+  PASS doma       DoorsTwin1: reaches 20.56 of 20.56 m2; DoorsTwin2: reaches 20.56 of 20.56 m2
+  PASS daidokoro  DoorsTwin4: reaches 16.77 of 16.77 m2
+  PASS guest      DoorsTwin4: reaches 15.58 of 15.58 m2; DoorsTwin3: reaches 15.58 of 15.58 m2
+  PASS genkan     DoorsTwin3: reaches 4.55 of 4.55 m2
+f_temple_shoro_town.json
+  skip upper      no doors (open sides): skipped
+f_temple_shoro_village.json
+  skip platform   no doors (open sides): skipped
+f_th_edo_2k_middle_gofuku.json
+  PASS toriniwa   DoorsTwin1: reaches 5.63 of 5.63 m2; DoorsTwin2: reaches 5.63 of 5.63 m2; DoorsTwin3: reaches 5.63 of 5.63 m2
+  PASS mise       DoorsTwin3: reaches 2.44 of 2.44 m2
+  PASS oku        DoorsTwin2: reaches 2.06 of 2.06 m2
+  PASS kitchen    DoorsTwin4: reaches 2.66 of 2.66 m2
+f_th_edo_3k_cornerr_sakaya.json
+  PASS toriniwa   DoorsTwin1: reaches 5.18 of 5.18 m2; DoorsTwin2: reaches 5.18 of 5.18 m2; DoorsTwin3: reaches 5.18 of 5.18 m2
+  PASS mise       DoorsTwin3: reaches 5.12 of 5.12 m2; DoorsTwin4: reaches 5.12 of 5.12 m2
+  PASS oku        DoorsTwin2: reaches 5.30 of 5.30 m2; DoorsTwin4: reaches 5.30 of 5.30 m2
+  PASS kitchen    DoorsTwin5: reaches 3.32 of 3.32 m2
+f_th_kamigata_2k_middle_kamiya.json
+  PASS toriniwa   DoorsTwin1: reaches 5.36 of 5.36 m2; DoorsTwin2: reaches 5.36 of 5.36 m2; DoorsTwin3: reaches 5.36 of 5.36 m2
+  PASS mise       DoorsTwin3: reaches 2.44 of 2.44 m2
+  PASS oku        DoorsTwin2: reaches 2.20 of 2.20 m2
+  PASS kitchen    DoorsTwin4: reaches 2.66 of 2.66 m2
+f_th_kamigata_3k_middle_komeya.json
+  PASS toriniwa   DoorsTwin1: reaches 5.28 of 5.28 m2; DoorsTwin2: reaches 5.28 of 5.28 m2; DoorsTwin3: reaches 5.28 of 5.28 m2
+  PASS mise       DoorsTwin3: reaches 4.88 of 4.88 m2; DoorsTwin4: reaches 4.88 of 4.88 m2
+  PASS oku        DoorsTwin2: reaches 5.82 of 5.82 m2; DoorsTwin4: reaches 5.82 of 5.82 m2
+  PASS kitchen    DoorsTwin5: reaches 3.34 of 3.34 m2
+s1_th_edo_2k_middle_board_shitate.json
+  PASS toriniwa   DoorsTwin1: reaches 5.36 of 5.36 m2; DoorsTwin2: reaches 5.36 of 5.36 m2; DoorsTwin3: reaches 5.36 of 5.36 m2
+  PASS mise       DoorsTwin3: reaches 2.37 of 2.37 m2
+  PASS oku        DoorsTwin2: reaches 2.20 of 2.20 m2
+  PASS kitchen    DoorsTwin4: reaches 2.66 of 2.66 m2
+s1_th_edo_3k_endl_kusuri.json
+  PASS toriniwa   DoorsTwin1: reaches 5.57 of 5.57 m2; DoorsTwin2: reaches 5.57 of 5.57 m2; DoorsTwin3: reaches 5.57 of 5.57 m2
+  PASS mise       DoorsTwin3: reaches 5.29 of 5.29 m2; DoorsTwin4: reaches 5.29 of 5.29 m2
+  PASS oku        DoorsTwin2: reaches 5.84 of 5.84 m2; DoorsTwin4: reaches 5.84 of 5.84 m2
+  PASS kitchen    DoorsTwin5: reaches 3.36 of 3.36 m2
+s1_th_edo_3k_middle_kanamono.json
+  PASS toriniwa   DoorsTwin1: reaches 5.57 of 5.57 m2; DoorsTwin2: reaches 5.57 of 5.57 m2; DoorsTwin3: reaches 5.57 of 5.57 m2
+  PASS mise       DoorsTwin3: reaches 5.24 of 5.24 m2; DoorsTwin4: reaches 5.24 of 5.24 m2
+  PASS oku        DoorsTwin2: reaches 5.82 of 5.82 m2; DoorsTwin4: reaches 5.82 of 5.82 m2
+  PASS kitchen    DoorsTwin5: reaches 3.34 of 3.34 m2
+s1_th_kamigata_2k_middle_tabako.json
+  PASS toriniwa   DoorsTwin1: reaches 5.36 of 5.36 m2; DoorsTwin2: reaches 5.36 of 5.36 m2; DoorsTwin3: reaches 5.36 of 5.36 m2
+  PASS mise       DoorsTwin3: reaches 2.37 of 2.37 m2
+  PASS oku        DoorsTwin2: reaches 2.20 of 2.20 m2
+  PASS kitchen    DoorsTwin4: reaches 2.66 of 2.66 m2
+s1_th_kamigata_3k_endr_mochiya.json
+  PASS toriniwa   DoorsTwin1: reaches 5.57 of 5.57 m2; DoorsTwin2: reaches 5.57 of 5.57 m2; DoorsTwin3: reaches 5.57 of 5.57 m2
+  PASS mise       DoorsTwin3: reaches 5.24 of 5.24 m2; DoorsTwin4: reaches 5.24 of 5.24 m2
+  PASS oku        DoorsTwin2: reaches 5.80 of 5.80 m2; DoorsTwin4: reaches 5.80 of 5.80 m2
+  PASS kitchen    DoorsTwin5: reaches 3.32 of 3.32 m2
+s1_th_kamigata_3k_middle_kyo_ningyo.json
+  PASS toriniwa   DoorsTwin1: reaches 5.57 of 5.57 m2; DoorsTwin2: reaches 5.57 of 5.57 m2; DoorsTwin3: reaches 5.57 of 5.57 m2
+  PASS mise       DoorsTwin3: reaches 5.83 of 5.83 m2; DoorsTwin4: reaches 5.83 of 5.83 m2
+  PASS oku        DoorsTwin2: reaches 5.82 of 5.82 m2; DoorsTwin4: reaches 5.82 of 5.82 m2
+  PASS kitchen    DoorsTwin5: reaches 3.34 of 3.34 m2
+guardhut_m_itabuki.json
+  PASS doma       DoorsTwin1: reaches 2.68 of 2.68 m2
+  skip floor      no doors (open sides): skipped
+guardhut_s_itabuki.json
+  PASS doma       DoorsTwin1: reaches 1.66 of 1.66 m2
+  skip floor      no doors (open sides): skipped
+guardhut_s_sangawara.json
+  PASS doma       DoorsTwin1: reaches 1.66 of 1.66 m2
+  skip floor      no doors (open sides): skipped
+inn_grand.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 14.28 of 14.28 m2; DoorsTwin4: reaches 14.28 of 14.28 m2
+  PASS oku        DoorsTwin2: reaches 9.75 of 9.75 m2; DoorsTwin4: reaches 9.75 of 9.75 m2
+  PASS kitchen    DoorsTwin6: reaches 25.82 of 25.82 m2
+  PASS nikai_front DoorsTwin5: reaches 17.85 of 17.85 m2
+  PASS nikai_back DoorsTwin5: reaches 15.28 of 15.28 m2
+inn_std_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 14.31 of 14.31 m2; DoorsTwin4: reaches 14.31 of 14.31 m2
+  PASS oku        DoorsTwin2: reaches 7.00 of 7.00 m2; DoorsTwin4: reaches 7.00 of 7.00 m2; DoorsTwin5: reaches 7.00 of 7.00 m2
+  PASS oku2       DoorsTwin5: reaches 6.38 of 6.38 m2
+  PASS kitchen    DoorsTwin6: reaches 25.82 of 25.82 m2
+inn_std_mushiko.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 14.28 of 14.28 m2; DoorsTwin4: reaches 14.28 of 14.28 m2
+  PASS oku        DoorsTwin2: reaches 7.00 of 7.00 m2; DoorsTwin4: reaches 7.00 of 7.00 m2; DoorsTwin5: reaches 7.00 of 7.00 m2
+  PASS oku2       DoorsTwin5: reaches 6.35 of 6.35 m2
+  PASS kitchen    DoorsTwin6: reaches 25.82 of 25.82 m2
+inn_std_tile.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 14.28 of 14.28 m2; DoorsTwin4: reaches 14.28 of 14.28 m2
+  PASS oku        DoorsTwin2: reaches 7.00 of 7.00 m2; DoorsTwin4: reaches 7.00 of 7.00 m2; DoorsTwin5: reaches 7.00 of 7.00 m2
+  PASS oku2       DoorsTwin5: reaches 6.35 of 6.35 m2
+  PASS kitchen    DoorsTwin6: reaches 25.82 of 25.82 m2
+hut_east_l_board.json
+  PASS doma       DoorsTwin1: reaches 10.31 of 10.31 m2
+  skip living     no doors (open sides): skipped
+hut_east_l_earth.json
+  PASS doma       DoorsTwin1: reaches 32.23 of 32.23 m2
+hut_east_s_earth_mushiro.json
+  skip doma       no doors (open sides): skipped
+hut_east_s_sunoko.json
+  PASS doma       DoorsTwin1: reaches 3.74 of 3.74 m2
+  skip living     no doors (open sides): skipped
+hut_west_ishioki.json
+  PASS doma       DoorsTwin1: reaches 3.90 of 3.90 m2
+  skip living     no doors (open sides): skipped
+hut_west_ishioki_leanr.json
+  skip leanto     no doors (open sides): skipped
+  skip doma       no doors (open sides): skipped
+hut_west_itabuki.json
+  PASS doma       DoorsTwin1: reaches 3.90 of 3.90 m2
+  skip living     no doors (open sides): skipped
+hut_west_thatch.json
+  PASS doma       DoorsTwin1: reaches 15.04 of 15.04 m2
+hut_west_thatch_leanl.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 3.90 of 3.90 m2
+  skip living     no doors (open sides): skipped
+kido_board_roofed.json
+  PASS gate       DoorsTwin2: reaches 13.93 of 13.93 m2; DoorsTwin1: reaches 13.93 of 13.93 m2
+kido_lattice.json
+  PASS gate       DoorsTwin2: reaches 13.93 of 13.93 m2; DoorsTwin1: reaches 13.93 of 13.93 m2
+kido_lattice_bantaya.json
+  PASS gate       DoorsTwin2: reaches 13.93 of 13.93 m2; DoorsTwin1: reaches 13.93 of 13.93 m2
+  PASS hut_doma   DoorsTwin3: reaches 1.66 of 1.66 m2
+  skip hut_floor  no doors (open sides): skipped
+kura_kuro_hinged.json
+  PASS kura       DoorsTwin1: reaches 9.72 of 9.72 m2
+  skip nikai      no doors (open sides): skipped
+kura_namako.json
+  PASS kura       DoorsTwin1: reaches 9.72 of 9.72 m2
+  skip nikai      no doors (open sides): skipped
+kura_plain.json
+  PASS kura       DoorsTwin1: reaches 9.72 of 9.72 m2
+  skip nikai      no doors (open sides): skipped
+pt_det_board_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+pt_det_board_nuriya.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.71 of 6.71 m2; DoorsTwin4: reaches 6.71 of 6.71 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+pt_det_stable_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS kitchen    DoorsTwin5: reaches 12.56 of 12.56 m2
+pt_det_stable_tile.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.71 of 6.71 m2; DoorsTwin4: reaches 6.71 of 6.71 m2
+  PASS kitchen    DoorsTwin5: reaches 12.54 of 12.54 m2
+pt_det_tile_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+pt_det_tile_nuriya.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.71 of 6.71 m2; DoorsTwin4: reaches 6.71 of 6.71 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+pt_row_endl.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+pt_row_middle.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+barn_walled_thatch.json
+  PASS floor      DoorsTwin1: reaches 32.84 of 32.84 m2
+shed_open_board.json
+  skip floor      no doors (open sides): skipped
+shed_open_thatch.json
+  skip floor      no doors (open sides): skipped
+shed_walled_ishioki_woodshed.json
+  skip leanto     no doors (open sides): skipped
+  PASS floor      DoorsTwin1: reaches 15.11 of 15.11 m2
+shrine_haiden_town_copper.json
+  PASS haiden     DoorsTwin2: reaches 24.61 of 24.61 m2
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+shrine_haiden_town_hiwada.json
+  PASS haiden     DoorsTwin2: reaches 24.61 of 24.61 m2
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+shrine_haiden_village.json
+  PASS haiden     DoorsTwin1: reaches 15.58 of 15.58 m2
+  skip en         no doors (open sides): skipped
+shrine_honden_nagare_town.json
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+shrine_honden_nagare_village.json
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+shrine_honden_nagare_village_chigi.json
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+shrine_honden_shinmei.json
+  skip en         no doors (open sides): skipped
+shrine_kagura_town.json
+  skip stage      no doors (open sides): skipped
+shrine_kagura_village.json
+  skip stage      no doors (open sides): skipped
+shrine_shamusho_itabuki.json
+  PASS doma       DoorsTwin1: reaches 3.82 of 3.82 m2
+  skip office     no doors (open sides): skipped
+shrine_shamusho_sangawara.json
+  PASS doma       DoorsTwin1: reaches 3.67 of 3.67 m2
+  skip office     no doors (open sides): skipped
+shrine_temizuya_town.json
+  skip pavilion   no doors (open sides): skipped
+shrine_temizuya_village.json
+  skip pavilion   no doors (open sides): skipped
+smithy_open_itabuki.json
+  PASS doma       DoorsTwin1: reaches 14.98 of 14.98 m2
+smithy_open_sangawara.json
+  PASS doma       DoorsTwin1: reaches 14.98 of 14.98 m2
+swordsmith_sangawara.json
+  PASS work       DoorsTwin1: reaches 14.26 of 14.26 m2; DoorsTwin3: reaches 14.26 of 14.26 m2
+  PASS forge      DoorsTwin3: reaches 14.21 of 14.21 m2; DoorsTwin2: reaches 14.21 of 14.21 m2
+teahouse_bench_itabuki.json
+  skip doma       no doors (open sides): skipped
+teahouse_bench_thatch.json
+  skip doma       no doors (open sides): skipped
+teahouse_pass_ishioki.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 13.66 of 13.66 m2
+  skip agari      no doors (open sides): skipped
+teahouse_shop_itabuki.json
+  PASS doma       DoorsTwin1: reaches 13.66 of 13.66 m2
+  skip agari      no doors (open sides): skipped
+teahouse_shop_thatch.json
+  PASS doma       DoorsTwin1: reaches 9.58 of 9.58 m2
+  skip agari      no doors (open sides): skipped
+teahouse_tateba_itabuki.json
+  PASS doma       DoorsTwin1: reaches 18.87 of 18.87 m2
+  PASS agari      DoorsTwin2: reaches 10.78 of 10.78 m2
+  PASS zashiki    DoorsTwin2: reaches 10.30 of 10.30 m2
+teahouse_tateba_thatch.json
+  PASS doma       DoorsTwin1: reaches 14.92 of 14.92 m2
+  PASS agari      DoorsTwin2: reaches 10.78 of 10.78 m2
+  PASS zashiki    DoorsTwin2: reaches 10.30 of 10.30 m2
+temple_do_2_board.json
+  PASS hall       DoorsTwin1: reaches 9.84 of 9.84 m2; DoorsTwin2: reaches 9.84 of 9.84 m2
+  skip en         no doors (open sides): skipped
+temple_do_2_thatch.json
+  PASS hall       DoorsTwin1: reaches 9.84 of 9.84 m2
+temple_do_3_tile.json
+  PASS hall       DoorsTwin1: reaches 23.82 of 23.82 m2
+  skip en         no doors (open sides): skipped
+temple_do_town.json
+  PASS hall       DoorsTwin2: reaches 38.73 of 38.73 m2
+  skip en         no doors (open sides): skipped
+temple_gate_shikyakumon.json
+  PASS gate       DoorsTwin1: reaches 11.17 of 11.17 m2
+temple_gate_yakuimon.json
+  PASS gate       DoorsTwin1: reaches 7.76 of 7.76 m2
+temple_hondo_town.json
+  PASS hall       DoorsTwin2: reaches 38.73 of 38.73 m2
+  skip en         no doors (open sides): skipped
+  skip en_left    no doors (open sides): skipped
+  skip en_right   no doors (open sides): skipped
+temple_hondo_village.json
+  PASS hall       DoorsTwin1: reaches 45.12 of 45.12 m2; DoorsTwin2: reaches 45.12 of 45.12 m2; DoorsTwin5: reaches 45.12 of 45.12 m2
+  skip en         no doors (open sides): skipped
+temple_kuri_town.json
+  PASS doma       DoorsTwin1: reaches 26.15 of 26.15 m2; DoorsTwin2: reaches 26.15 of 26.15 m2
+  PASS daidokoro  DoorsTwin4: reaches 18.10 of 18.10 m2
+  PASS guest      DoorsTwin4: reaches 18.33 of 18.33 m2; DoorsTwin3: reaches 18.33 of 18.33 m2
+  PASS genkan     DoorsTwin3: reaches 4.55 of 4.55 m2
+temple_kuri_village.json
+  PASS doma       DoorsTwin1: reaches 26.15 of 26.15 m2; DoorsTwin2: reaches 26.15 of 26.15 m2
+  PASS daidokoro  DoorsTwin4: reaches 18.10 of 18.10 m2
+  PASS guest      DoorsTwin4: reaches 18.33 of 18.33 m2; DoorsTwin3: reaches 18.33 of 18.33 m2
+  PASS genkan     DoorsTwin3: reaches 4.55 of 4.55 m2
+temple_shoro_town.json
+  skip upper      no doors (open sides): skipped
+temple_shoro_village.json
+  skip platform   no doors (open sides): skipped
+th_edo_2k_cornerl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.67 of 2.67 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_cornerl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.65 of 2.65 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_cornerr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.62 of 2.62 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_cornerr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.70 of 2.70 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_endl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.67 of 2.67 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_endl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.65 of 2.65 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_endr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.62 of 2.62 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_endr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.70 of 2.70 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_middle_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.67 of 2.67 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_middle_toril_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.67 of 2.67 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_middle_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.70 of 2.70 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_2k_middle_torir_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.70 of 2.70 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_edo_3k_cornerl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_cornerl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_cornerr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.71 of 6.71 m2; DoorsTwin4: reaches 6.71 of 6.71 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_cornerr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.80 of 6.80 m2; DoorsTwin4: reaches 6.80 of 6.80 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_endl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_endl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_endr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.71 of 6.71 m2; DoorsTwin4: reaches 6.71 of 6.71 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_endr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.80 of 6.80 m2; DoorsTwin4: reaches 6.80 of 6.80 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_middle_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_middle_toril_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_middle_toril_kakigara.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_middle_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.80 of 6.80 m2; DoorsTwin4: reaches 6.80 of 6.80 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_3k_middle_torir_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.80 of 6.80 m2; DoorsTwin4: reaches 6.80 of 6.80 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_edo_4k_cornerl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.57 of 10.57 m2; DoorsTwin4: reaches 10.57 of 10.57 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_cornerl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.55 of 10.55 m2; DoorsTwin4: reaches 10.55 of 10.55 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_cornerr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.52 of 10.52 m2; DoorsTwin4: reaches 10.52 of 10.52 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_cornerr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.60 of 10.60 m2; DoorsTwin4: reaches 10.60 of 10.60 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_endl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.57 of 10.57 m2; DoorsTwin4: reaches 10.57 of 10.57 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_endl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.55 of 10.55 m2; DoorsTwin4: reaches 10.55 of 10.55 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_endr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.52 of 10.52 m2; DoorsTwin4: reaches 10.52 of 10.52 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_endr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.60 of 10.60 m2; DoorsTwin4: reaches 10.60 of 10.60 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_middle_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.57 of 10.57 m2; DoorsTwin4: reaches 10.57 of 10.57 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_middle_toril_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.57 of 10.57 m2; DoorsTwin4: reaches 10.57 of 10.57 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_middle_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.60 of 10.60 m2; DoorsTwin4: reaches 10.60 of 10.60 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_edo_4k_middle_torir_board.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.60 of 10.60 m2; DoorsTwin4: reaches 10.60 of 10.60 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_2k_cornerl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.67 of 2.67 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_cornerl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.65 of 2.65 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_cornerr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.62 of 2.62 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_cornerr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.70 of 2.70 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_endl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.67 of 2.67 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_endl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.65 of 2.65 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_endr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.62 of 2.62 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_endr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.70 of 2.70 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_middle_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.67 of 2.67 m2
+  PASS oku        DoorsTwin2: reaches 2.67 of 2.67 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_2k_middle_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 2.70 of 2.70 m2
+  PASS oku        DoorsTwin2: reaches 2.70 of 2.70 m2
+  PASS kitchen    DoorsTwin4: reaches 4.08 of 4.08 m2
+th_kamigata_3k_cornerl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_cornerl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_cornerr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.71 of 6.71 m2; DoorsTwin4: reaches 6.71 of 6.71 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_cornerr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.80 of 6.80 m2; DoorsTwin4: reaches 6.80 of 6.80 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_endl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_endl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_endr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.71 of 6.71 m2; DoorsTwin4: reaches 6.71 of 6.71 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_endr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.80 of 6.80 m2; DoorsTwin4: reaches 6.80 of 6.80 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_middle_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_middle_toril_kyo.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.74 of 6.74 m2; DoorsTwin4: reaches 6.74 of 6.74 m2
+  PASS oku        DoorsTwin2: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_middle_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.80 of 6.80 m2; DoorsTwin4: reaches 6.80 of 6.80 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_3k_middle_torir_komeya.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 6.77 of 6.77 m2; DoorsTwin4: reaches 6.77 of 6.77 m2
+  PASS oku        DoorsTwin2: reaches 6.80 of 6.80 m2; DoorsTwin4: reaches 6.80 of 6.80 m2
+  PASS kitchen    DoorsTwin5: reaches 6.26 of 6.26 m2
+th_kamigata_4k_cornerl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.57 of 10.57 m2; DoorsTwin4: reaches 10.57 of 10.57 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_cornerl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.55 of 10.55 m2; DoorsTwin4: reaches 10.55 of 10.55 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_cornerr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.52 of 10.52 m2; DoorsTwin4: reaches 10.52 of 10.52 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_cornerr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.60 of 10.60 m2; DoorsTwin4: reaches 10.60 of 10.60 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_endl_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.06 of 6.06 m2; DoorsTwin2: reaches 6.06 of 6.06 m2; DoorsTwin3: reaches 6.06 of 6.06 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.57 of 10.57 m2; DoorsTwin4: reaches 10.57 of 10.57 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_endl_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.55 of 10.55 m2; DoorsTwin4: reaches 10.55 of 10.55 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_endr_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.52 of 10.52 m2; DoorsTwin4: reaches 10.52 of 10.52 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_endr_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.22 of 6.22 m2; DoorsTwin2: reaches 6.22 of 6.22 m2; DoorsTwin3: reaches 6.22 of 6.22 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.60 of 10.60 m2; DoorsTwin4: reaches 10.60 of 10.60 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_middle_toril.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.56 of 10.56 m2; DoorsTwin4: reaches 10.56 of 10.56 m2
+  PASS oku        DoorsTwin2: reaches 10.57 of 10.57 m2; DoorsTwin4: reaches 10.57 of 10.57 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+th_kamigata_4k_middle_torir.json
+  PASS toriniwa   DoorsTwin1: reaches 6.05 of 6.05 m2; DoorsTwin2: reaches 6.05 of 6.05 m2; DoorsTwin3: reaches 6.05 of 6.05 m2
+  PASS mise       DoorsTwin3: reaches 10.58 of 10.58 m2; DoorsTwin4: reaches 10.58 of 10.58 m2
+  PASS oku        DoorsTwin2: reaches 10.60 of 10.60 m2; DoorsTwin4: reaches 10.60 of 10.60 m2
+  PASS kitchen    DoorsTwin5: reaches 8.40 of 8.40 m2
+tr_booth_barber.json
+  skip doma       no doors (open sides): skipped
+  skip bench      no doors (open sides): skipped
+tr_booth_misemono.json
+  skip pit        no doors (open sides): skipped
+  skip stage      no doors (open sides): skipped
+tr_foundry_itabuki.json
+  PASS doma       DoorsTwin1: reaches 32.56 of 32.56 m2
+tr_foundry_sangawara.json
+  PASS doma       DoorsTwin1: reaches 32.56 of 32.56 m2
+f_tr_booth_barber.json
+  skip doma       no doors (open sides): skipped
+  skip bench      no doors (open sides): skipped
+f_tr_booth_misemono.json
+  skip pit        no doors (open sides): skipped
+  skip stage      no doors (open sides): skipped
+f_tr_foundry.json
+  PASS doma       DoorsTwin1: reaches 26.12 of 26.12 m2
+f_tr_sento.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 8.71 of 8.71 m2; DoorsTwin2: reaches 8.71 of 8.71 m2
+  PASS datsuiba   DoorsTwin3: reaches 22.95 of 22.95 m2
+  PASS bath       DoorsTwin3: reaches 7.28 of 8.15 m2
+f_tr_stablerow.json
+  skip stalls     no doors (open sides): skipped
+  PASS tack       DoorsTwin1: reaches 7.04 of 7.04 m2
+f_tr_timber_saw.json
+  skip floor      no doors (open sides): skipped
+f_tr_timber_shingle.json
+  skip floor      no doors (open sides): skipped
+f_tr_timber_store.json
+  skip floor      no doors (open sides): skipped
+f_tr_ws_basket.json
+  PASS doma       DoorsTwin1: reaches 11.42 of 11.42 m2
+  skip room       no doors (open sides): skipped
+f_tr_ws_joinery.json
+  PASS doma       DoorsTwin1: reaches 9.11 of 9.11 m2
+  skip room       no doors (open sides): skipped
+f_tr_ws_kinko.json
+  PASS doma       DoorsTwin1: reaches 9.09 of 9.09 m2; DoorsTwin2: reaches 9.09 of 9.09 m2
+  PASS work       DoorsTwin3: reaches 6.55 of 6.55 m2
+  PASS back       DoorsTwin3: reaches 4.36 of 4.36 m2
+f_tr_ws_lacquer.json
+  PASS doma       DoorsTwin1: reaches 9.09 of 9.09 m2; DoorsTwin2: reaches 9.09 of 9.09 m2
+  PASS work       DoorsTwin3: reaches 6.25 of 6.25 m2
+  PASS back       DoorsTwin3: reaches 4.66 of 4.66 m2
+f_tr_ws_polisher.json
+  PASS doma       DoorsTwin1: reaches 9.09 of 9.09 m2; DoorsTwin2: reaches 9.09 of 9.09 m2
+  PASS work       DoorsTwin3: reaches 6.00 of 6.00 m2
+  PASS back       DoorsTwin3: reaches 4.76 of 4.76 m2
+f_tr_ws_turner.json
+  PASS doma       DoorsTwin1: reaches 11.03 of 11.03 m2
+  skip room       no doors (open sides): skipped
+tr_sento_itabuki.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 10.41 of 10.41 m2; DoorsTwin2: reaches 10.41 of 10.41 m2
+  PASS datsuiba   DoorsTwin3: reaches 24.50 of 24.50 m2
+  PASS bath       DoorsTwin3: reaches 10.24 of 10.24 m2
+tr_sento_sangawara.json
+  skip leanto     no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 10.41 of 10.41 m2; DoorsTwin2: reaches 10.41 of 10.41 m2
+  PASS datsuiba   DoorsTwin3: reaches 24.50 of 24.50 m2
+  PASS bath       DoorsTwin3: reaches 10.24 of 10.24 m2
+tr_cmp_foundryyard.json
+  PASS gate0      DoorsTwin1: reaches 5.15 of 5.15 m2
+tr_cmp_stableyard.json
+  PASS gate0      DoorsTwin1: reaches 5.15 of 5.15 m2
+tr_cmp_timberyard.json
+  PASS gate0      DoorsTwin1: reaches 5.15 of 5.15 m2
+tr_stablerow_itabuki.json
+  skip stalls     no doors (open sides): skipped
+  PASS tack       DoorsTwin1: reaches 8.37 of 8.37 m2
+tr_stablerow_thatch.json
+  skip stalls     no doors (open sides): skipped
+  PASS tack       DoorsTwin1: reaches 8.37 of 8.37 m2
+tr_timber_saw.json
+  skip floor      no doors (open sides): skipped
+tr_timber_shingle.json
+  skip floor      no doors (open sides): skipped
+tr_timber_store.json
+  skip floor      no doors (open sides): skipped
+tr_ws_bench_itabuki.json
+  PASS doma       DoorsTwin1: reaches 10.41 of 10.41 m2; DoorsTwin2: reaches 10.41 of 10.41 m2
+  PASS work       DoorsTwin3: reaches 6.98 of 6.98 m2
+  PASS back       DoorsTwin3: reaches 6.40 of 6.40 m2
+tr_ws_bench_sangawara.json
+  PASS doma       DoorsTwin1: reaches 10.41 of 10.41 m2; DoorsTwin2: reaches 10.41 of 10.41 m2
+  PASS work       DoorsTwin3: reaches 6.98 of 6.98 m2
+  PASS back       DoorsTwin3: reaches 6.40 of 6.40 m2
+tr_ws_doma_itabuki.json
+  PASS doma       DoorsTwin1: reaches 12.10 of 12.10 m2
+  skip room       no doors (open sides): skipped
+tr_ws_doma_sangawara.json
+  PASS doma       DoorsTwin1: reaches 12.10 of 12.10 m2
+  skip room       no doors (open sides): skipped
+ts_maegura.json
+  PASS kama       DoorsTwin1: reaches 39.43 of 39.43 m2; DoorsTwin2: reaches 39.43 of 39.43 m2; DoorsTwin4: reaches 39.43 of 39.43 m2
+  PASS mae        DoorsTwin4: reaches 6.43 of 6.43 m2; DoorsTwin5: reaches 6.43 of 6.43 m2
+  PASS muro       DoorsTwin5: reaches 6.16 of 6.16 m2
+  PASS kaidoma    DoorsTwin3: reaches 3.17 of 3.17 m2
+  skip kaisho     no doors (open sides): skipped
+ts_okura.json
+  PASS moto       DoorsTwin1: reaches 30.42 of 30.42 m2
+  PASS kura       DoorsTwin2: reaches 64.41 of 64.41 m2
+  skip loft       no doors (open sides): skipped
+ts_seimai.json
+  skip floor      no doors (open sides): skipped
+ts_konya_itabuki.json
+  skip mise       no doors (open sides): skipped
+  PASS aiba       DoorsTwin1: reaches 21.31 of 21.31 m2
+ts_konya_sangawara.json
+  skip mise       no doors (open sides): skipped
+  PASS aiba       DoorsTwin1: reaches 21.31 of 21.31 m2
+f_ts_kamisuki.json
+  skip leanto     no doors (open sides): skipped
+  PASS floor      DoorsTwin1: reaches 21.68 of 21.68 m2
+f_ts_konya.json
+  skip mise       no doors (open sides): skipped
+  PASS aiba       DoorsTwin1: reaches 18.16 of 18.16 m2
+f_ts_kura_casks.json
+  PASS kura       DoorsTwin1: reaches 5.18 of 5.36 m2
+  skip nikai      no doors (open sides): skipped
+f_ts_maegura.json
+  PASS kama       DoorsTwin1: reaches 31.21 of 31.28 m2; DoorsTwin2: reaches 31.21 of 31.28 m2; DoorsTwin4: reaches 31.21 of 31.28 m2
+  PASS mae        DoorsTwin4: reaches 6.43 of 6.43 m2; DoorsTwin5: reaches 6.43 of 6.43 m2
+  PASS muro       DoorsTwin5: reaches 2.87 of 2.87 m2
+  PASS kaidoma    DoorsTwin3: reaches 2.89 of 2.89 m2
+  skip kaisho     no doors (open sides): skipped
+f_ts_okura.json
+  PASS moto       DoorsTwin1: reaches 27.57 of 27.57 m2
+  PASS kura       DoorsTwin2: reaches 38.09 of 38.34 m2
+  skip loft       no doors (open sides): skipped
+f_ts_sakaya.json
+  PASS doma       DoorsTwin1: reaches 9.28 of 9.45 m2
+  skip room       no doors (open sides): skipped
+f_ts_seimai.json
+  skip floor      no doors (open sides): skipped
+f_ts_suisha.json
+  PASS floor      DoorsTwin1: reaches 9.15 of 9.15 m2
+ts_suisha_itabuki.json
+  PASS floor      DoorsTwin1: reaches 10.49 of 10.49 m2
+ts_suisha_thatch.json
+  PASS floor      DoorsTwin1: reaches 10.49 of 10.49 m2
+ts_kamisuki_itabuki.json
+  skip leanto     no doors (open sides): skipped
+  PASS floor      DoorsTwin1: reaches 26.42 of 26.42 m2
+ts_kamisuki_thatch.json
+  skip leanto     no doors (open sides): skipped
+  PASS floor      DoorsTwin1: reaches 26.42 of 26.42 m2
+ts_cmp_brewery.json
+  PASS gate0      DoorsTwin1: reaches 5.15 of 5.15 m2
+ts_cmp_dyersyard.json
+  PASS gate0      DoorsTwin1: reaches 2.79 of 2.79 m2
+ts_cmp_paperyard.json
+  PASS gate0      DoorsTwin1: reaches 2.85 of 2.85 m2
+ROOMACCESS: 294 buildings, 0 rooms failing

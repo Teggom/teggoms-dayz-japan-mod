@@ -3,10 +3,10 @@
  "key": "dw_cmp_honjin",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "14301/3465/2197",
+ "faces": "14295/3459/2197",
  "door_clear_m": [
   2.5,
-  1.6
+  1.62
  ],
  "checks_n": 38,
  "failures": 0,
@@ -14,12 +14,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 14301, Resolution 2 3465, Resolution 3 2197, Geometry 892, Memory 0, Roadway 10, View Geometry 892, Fire Geometry 892"
+   "detail": "Resolution 1 14295, Resolution 2 3459, Resolution 3 2197, Geometry 892, Memory 0, Roadway 10, View Geometry 892, Fire Geometry 892"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 14301, R2 3465, R3 2197 | OVER BUDGET +37.3 % (deliberate: a 86-ken compound ring (plastered street wall + board fences) and two gates in one object)"
+   "detail": "R1 14295, R2 3459, R3 2197 | OVER BUDGET +37.3 % (deliberate: a 86-ken compound ring (plastered street wall + board fences) and two gates in one object)"
   },
   {
    "check": "Geometry properties + mass",
@@ -79,12 +79,12 @@
   {
    "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
    "ok": true,
-   "detail": "Gate (kabuki) (hinged_gate): bones doors3+doors4"
+   "detail": "Gate (kido ryo) (hinged_gate): bones doors3+doors4"
   },
   {
    "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 1.60 m, head 2.81 m"
+   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 1.62 m, head 2.25 m"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
@@ -129,12 +129,12 @@
   {
    "check": "C10 DoorsTwin2 reachable from both sides (open)",
    "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m"
+   "detail": "Gate (kido ryo): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m"
   },
   {
    "check": "C10 DoorsTwin2 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.48 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
+   "detail": "Gate (kido ryo): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.53 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
   },
   {
    "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
@@ -144,7 +144,7 @@
   {
    "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
    "ok": true,
-   "detail": "Gate (kabuki): 54282 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+   "detail": "Gate (kido ryo): 54342 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
   },
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
@@ -169,7 +169,7 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "605 columns over 2.5 m compared in each LOD"
+   "detail": "563 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
@@ -184,7 +184,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 4491 touching (opposite-facing: backface-culled) and 786 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 4487 touching (opposite-facing: backface-culled) and 786 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -199,7 +199,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1046835 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1046470 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

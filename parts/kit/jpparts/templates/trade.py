@@ -611,17 +611,20 @@ YARDS = {
     "stableyard": dict(W=8 * KEN, D=7 * KEN, closed=True,
                        runs=[([(0.0, 0.0), (0.0, 7 * KEN), (8 * KEN, 7 * KEN), (8 * KEN, 0.0)], "itabei",
                               dict(kuro=False, cap="none"), ("end", "end"))],
-                       gates=[(0, 3, 3 * KEN, "kabuki", 1.5 * KEN)]),
+                       # FX6: a board yard gate for the horses (was a 1.5-ken kabuki-mon)
+                       gates=[(0, 3, 3 * KEN) + DW.pick_gate("itabei", status="work", carts=True)]),
     # the timber yard: a long board fence, a wide gate for the log carts (south) and a back wicket-size gate (north)
     "timberyard": dict(W=15 * KEN, D=11 * KEN, closed=True,
                        runs=[([(0.0, 0.0), (0.0, 11 * KEN), (15 * KEN, 11 * KEN), (15 * KEN, 0.0)], "itabei",
                               dict(kuro=False, cap="none"), ("end", "end"))],
-                       gates=[(0, 3, 6 * KEN, "kabuki", 1.5 * KEN)]),
+                       # FX6: a board yard gate for the log carts (was a 1.5-ken kabuki-mon)
+                       gates=[(0, 3, 6 * KEN) + DW.pick_gate("itabei", status="work", carts=True)]),
     # the foundry yard: a board fence, the gate on the south (the bell mould site sits in the yard)
     "foundryyard": dict(W=10 * KEN, D=8 * KEN, closed=True,
                         runs=[([(0.0, 0.0), (0.0, 8 * KEN), (10 * KEN, 8 * KEN), (10 * KEN, 0.0)], "itabei",
                                dict(kuro=False, cap="none"), ("end", "end"))],
-                        gates=[(0, 3, 4 * KEN, "kabuki", 1.5 * KEN)]),
+                        # FX6: a board yard gate for the carts (was a 1.5-ken kabuki-mon)
+                        gates=[(0, 3, 4 * KEN) + DW.pick_gate("itabei", status="work", carts=True)]),
 }
 DW.COMPOUNDS.update(YARDS)
 

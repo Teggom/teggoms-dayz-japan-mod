@@ -1,0 +1,563 @@
+jp_chashitsu_thatch_furnished.p3d            8 floor props, 0 floating
+  FAIL jp_f_kama                      at (-3.14, 0.63, -1.27) yaw 0: 8/8 support points float: [((-3.14, 0.63, -1.27), 0.482), ((-3.06, 0.64, -1.21), 0.488), ((-3.16, 0.64, -1.17), 0.488), ((-3.24, 0.64, -1.23), 0.488)]
+jp_coastal_ishioki_netstore_furnished.p3d    16 floor props, 1 floating
+  FAIL jp_f_kama                      at (-5.41, 0.63, -2.78) yaw 0: 8/8 support points float: [((-5.41, 0.63, -2.78), 0.482), ((-5.33, 0.64, -2.72), 0.488), ((-5.44, 0.64, -2.68), 0.488), ((-5.51, 0.64, -2.74), 0.488)]
+  FAIL jp_f_writing_box_open          at (-0.66, 0.83, 3.81) yaw 180: 2/11 support points float: [((-1.1, 0.83, 3.96), 0.33), ((-1.06, 0.83, 3.62), 0.33)]
+jp_doshin_itabuki_furnished.p3d              32 floor props, 2 floating
+jp_furoba_furnished.p3d                      5 floor props, 0 floating
+  FAIL jp_f_kama                      at (8.60, 0.63, 1.68) yaw 0: 8/8 support points float: [((8.6, 0.63, 1.68), 0.482), ((8.68, 0.64, 1.74), 0.488), ((8.58, 0.64, 1.78), 0.488), ((8.5, 0.64, 1.72), 0.488)]
+  FAIL jp_f_kama_nolid                at (8.60, 0.63, 0.13) yaw 0: 8/8 support points float: [((8.6, 0.63, 0.13), 0.482), ((8.68, 0.64, 0.19), 0.488), ((8.58, 0.64, 0.23), 0.488), ((8.5, 0.64, 0.18), 0.488)]
+  FAIL jp_f_seiro_kama2               at (8.60, 0.63, -1.42) yaw 0: 11/11 support points float: [((8.6, 0.63, -1.42), 0.482), ((8.69, 0.65, -1.29), 0.502), ((8.75, 0.65, -1.37), 0.502), ((8.6, 0.65, -1.26), 0.502)]
+  FAIL jp_f_tableware_hakozen_stack   at (0.76, 1.40, 4.34) yaw 180: 2/4 support points float: [((0.62, 1.4, 4.5), 1.4), ((0.9, 1.4, 4.17), 0.9)]
+  FAIL jp_f_choba_set_desk            at (-6.91, 0.83, 4.26) yaw 180: 3/18 support points float: [((-7.19, 0.84, 4.29), 0.343), ((-7.19, 0.83, 4.05), 0.33), ((-6.95, 0.83, 4.05), 0.33)]
+jp_headman_east_furnished.p3d                36 floor props, 5 floating
+  FAIL jp_f_kama                      at (-7.69, 0.63, 1.68) yaw 0: 8/8 support points float: [((-7.69, 0.63, 1.68), 0.482), ((-7.61, 0.64, 1.74), 0.488), ((-7.71, 0.64, 1.78), 0.488), ((-7.79, 0.64, 1.72), 0.488)]
+  FAIL jp_f_kama_nolid                at (-7.69, 0.63, 0.13) yaw 0: 8/8 support points float: [((-7.69, 0.63, 0.13), 0.482), ((-7.61, 0.64, 0.19), 0.488), ((-7.71, 0.64, 0.23), 0.488), ((-7.79, 0.64, 0.18), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-7.69, 0.63, -1.42) yaw 0: 11/11 support points float: [((-7.69, 0.63, -1.42), 0.482), ((-7.6, 0.65, -1.29), 0.502), ((-7.54, 0.65, -1.37), 0.502), ((-7.69, 0.65, -1.26), 0.502)]
+  FAIL jp_f_choba_set_desk            at (-2.37, 0.83, 3.35) yaw 180: 3/18 support points float: [((-2.64, 0.84, 3.38), 0.343), ((-2.65, 0.83, 3.14), 0.33), ((-2.41, 0.83, 3.14), 0.33)]
+jp_headman_kinai_furnished.p3d               40 floor props, 4 floating
+  FAIL jp_f_kama                      at (-6.78, 0.63, -3.24) yaw 0: 8/8 support points float: [((-6.78, 0.63, -3.24), 0.482), ((-6.7, 0.64, -3.17), 0.488), ((-6.8, 0.64, -3.13), 0.488), ((-6.88, 0.64, -3.19), 0.488)]
+  FAIL jp_f_kama_nolid                at (-6.78, 0.63, -1.69) yaw 0: 8/8 support points float: [((-6.78, 0.63, -1.69), 0.482), ((-6.7, 0.64, -1.63), 0.488), ((-6.8, 0.64, -1.59), 0.488), ((-6.88, 0.64, -1.64), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-6.78, 0.63, -0.14) yaw 0: 11/11 support points float: [((-6.78, 0.63, -0.14), 0.482), ((-6.69, 0.65, -0.01), 0.502), ((-6.63, 0.65, -0.09), 0.502), ((-6.78, 0.65, 0.02), 0.502)]
+  FAIL jp_f_tableware_hakozen_stack   at (-0.82, 1.40, -4.34) yaw 0: 2/4 support points float: [((-0.68, 1.4, -4.5), 1.4), ((-0.96, 1.4, -4.17), 0.9)]
+  FAIL jp_f_choba_set_desk            at (3.88, 0.83, 4.26) yaw 180: 3/18 support points float: [((3.6, 0.84, 4.29), 0.343), ((3.59, 0.83, 4.05), 0.33), ((3.84, 0.83, 4.05), 0.33)]
+jp_honjin_oku_furnished.p3d                  26 floor props, 5 floating
+  FAIL jp_f_futon_stack_slumped       at (-6.84, 0.50, 4.08) yaw 180: 1/12 support points float: [((-8.14, 0.51, 4.36), 0.506)]
+jp_honjin_omote_furnished.p3d                36 floor props, 1 floating
+  FAIL jp_f_tawara_stack6             at (-1.13, 0.60, -0.90) yaw 0: 2/6 support points float: [((-1.64, 0.62, -0.9), 0.05), ((-1.43, 0.62, -0.9), 0.05)]
+jp_itagura_itabuki_furnished.p3d             5 floor props, 1 floating
+  FAIL jp_f_kama                      at (-7.79, 0.63, 0.09) yaw 0: 8/8 support points float: [((-7.79, 0.63, 0.09), 0.482), ((-7.71, 0.64, 0.16), 0.488), ((-7.81, 0.64, 0.2), 0.488), ((-7.89, 0.64, 0.14), 0.488)]
+  FAIL jp_f_writing_box               at (-3.11, 0.78, -0.17) yaw 0: 2/8 support points float: [((-2.67, 0.78, -0.32), 0.73), ((-2.7, 0.78, 0.02), 0.33)]
+  FAIL jp_f_kama                      at (-2.33, 0.63, 0.09) yaw 0: 8/8 support points float: [((-2.33, 0.63, 0.09), 0.482), ((-2.25, 0.64, 0.16), 0.488), ((-2.35, 0.64, 0.2), 0.488), ((-2.43, 0.64, 0.14), 0.488)]
+  FAIL jp_f_writing_box               at (2.36, 0.78, -0.17) yaw 0: 2/8 support points float: [((2.79, 0.78, -0.32), 0.73), ((2.76, 0.78, 0.02), 0.33)]
+  FAIL jp_f_kama                      at (3.13, 0.63, 0.09) yaw 0: 8/8 support points float: [((3.13, 0.63, 0.09), 0.482), ((3.21, 0.64, 0.16), 0.488), ((3.11, 0.64, 0.2), 0.488), ((3.03, 0.64, 0.14), 0.488)]
+jp_kumiyashiki_3_itabuki_furnished.p3d       35 floor props, 5 floating
+  FAIL jp_f_kama                      at (-6.32, 0.63, -3.24) yaw 0: 8/8 support points float: [((-6.32, 0.63, -3.24), 0.482), ((-6.24, 0.64, -3.17), 0.488), ((-6.35, 0.64, -3.13), 0.488), ((-6.42, 0.64, -3.19), 0.488)]
+  FAIL jp_f_kama_nolid                at (-6.32, 0.63, -1.69) yaw 0: 8/8 support points float: [((-6.32, 0.63, -1.69), 0.482), ((-6.24, 0.64, -1.63), 0.488), ((-6.35, 0.64, -1.59), 0.488), ((-6.42, 0.64, -1.64), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-6.32, 0.63, -0.14) yaw 0: 11/11 support points float: [((-6.32, 0.63, -0.14), 0.482), ((-6.23, 0.65, -0.01), 0.502), ((-6.17, 0.65, -0.09), 0.502), ((-6.32, 0.65, 0.02), 0.502)]
+  FAIL jp_f_tableware_hakozen_stack   at (-2.18, 1.40, -4.34) yaw 0: 2/4 support points float: [((-2.05, 1.4, -4.5), 1.4), ((-2.32, 1.4, -4.17), 0.9)]
+  FAIL jp_f_choba_set_desk            at (1.70, 0.83, 4.26) yaw 180: 3/18 support points float: [((1.42, 0.84, 4.29), 0.343), ((1.42, 0.83, 4.05), 0.33), ((1.66, 0.83, 4.05), 0.33)]
+jp_merchant_residence_furnished.p3d          37 floor props, 5 floating
+  FAIL jp_f_kama                      at (-4.96, 0.63, -1.24) yaw 0: 8/8 support points float: [((-4.96, 0.63, -1.24), 0.482), ((-4.88, 0.64, -1.17), 0.488), ((-4.98, 0.64, -1.13), 0.488), ((-5.06, 0.64, -1.19), 0.488)]
+jp_mountain_ishioki_furnished.p3d            23 floor props, 1 floating
+jp_nagayamon_samurai_furnished.p3d           15 floor props, 0 floating
+  FAIL jp_f_kama                      at (-6.78, 0.63, -3.24) yaw 0: 8/8 support points float: [((-6.78, 0.63, -3.24), 0.482), ((-6.7, 0.64, -3.17), 0.488), ((-6.8, 0.64, -3.13), 0.488), ((-6.88, 0.64, -3.19), 0.488)]
+  FAIL jp_f_kama_nolid                at (-6.78, 0.63, -1.69) yaw 0: 8/8 support points float: [((-6.78, 0.63, -1.69), 0.482), ((-6.7, 0.64, -1.63), 0.488), ((-6.8, 0.64, -1.59), 0.488), ((-6.88, 0.64, -1.64), 0.488)]
+  FAIL jp_f_tableware_hakozen_stack   at (-3.55, 1.40, -4.34) yaw 0: 2/4 support points float: [((-3.41, 1.4, -4.5), 1.4), ((-3.69, 1.4, -4.17), 0.9)]
+jp_samurai_m_furnished.p3d                   34 floor props, 3 floating
+jp_stable_horse_furnished.p3d                5 floor props, 0 floating
+  FAIL jp_f_kama                      at (-7.69, 0.63, -2.78) yaw 0: 8/8 support points float: [((-7.69, 0.63, -2.78), 0.482), ((-7.61, 0.64, -2.72), 0.488), ((-7.71, 0.64, -2.68), 0.488), ((-7.79, 0.64, -2.74), 0.488)]
+  FAIL jp_f_kama_nolid                at (-7.69, 0.63, -1.24) yaw 0: 8/8 support points float: [((-7.69, 0.63, -1.24), 0.482), ((-7.61, 0.64, -1.17), 0.488), ((-7.71, 0.64, -1.13), 0.488), ((-7.79, 0.64, -1.19), 0.488)]
+  FAIL jp_f_tableware_hakozen_stack   at (-4.46, 1.40, -3.88) yaw 0: 2/4 support points float: [((-4.32, 1.4, -4.04), 1.4), ((-4.6, 1.4, -3.72), 0.9)]
+  FAIL jp_f_choba_set_desk            at (-1.27, 0.83, 3.81) yaw 180: 3/18 support points float: [((-1.55, 0.84, 3.84), 0.343), ((-1.55, 0.83, 3.6), 0.33), ((-1.31, 0.83, 3.6), 0.33)]
+jp_wakihonjin_furnished.p3d                  44 floor props, 4 floating
+jp_honjin_oku.p3d                            0 floor props, 0 floating
+jp_honjin_omote.p3d                          0 floor props, 0 floating
+jp_wakihonjin.p3d                            0 floor props, 0 floating
+jp_furoba.p3d                                0 floor props, 0 floating
+jp_itagura_itabuki.p3d                       0 floor props, 0 floating
+jp_itagura_sangawara.p3d                     0 floor props, 0 floating
+jp_stable_horse.p3d                          0 floor props, 0 floating
+jp_stable_ox.p3d                             0 floor props, 0 floating
+jp_coastal_ishioki_netstore.p3d              0 floor props, 0 floating
+jp_coastal_thatch_netstore.p3d               0 floor props, 0 floating
+jp_mountain_ishioki.p3d                      0 floor props, 0 floating
+jp_mountain_ishioki_lean.p3d                 0 floor props, 0 floating
+jp_mountain_itabuki.p3d                      0 floor props, 0 floating
+jp_doshin_itabuki.p3d                        0 floor props, 0 floating
+jp_doshin_sangawara.p3d                      0 floor props, 0 floating
+jp_kumiyashiki_3_itabuki.p3d                 0 floor props, 0 floating
+jp_kumiyashiki_3_sangawara.p3d               0 floor props, 0 floating
+jp_nagayamon_samurai.p3d                     0 floor props, 0 floating
+jp_samurai_l.p3d                             0 floor props, 0 floating
+jp_samurai_m.p3d                             0 floor props, 0 floating
+jp_samurai_s.p3d                             0 floor props, 0 floating
+jp_compound_doshin.p3d                       0 floor props, 0 floating
+jp_compound_headman_east.p3d                 0 floor props, 0 floating
+jp_compound_honjin.p3d                       0 floor props, 0 floating
+jp_compound_honjin_front.p3d                 0 floor props, 0 floating
+jp_compound_honjin_rear.p3d                  0 floor props, 0 floating
+jp_compound_kumiyashiki.p3d                  0 floor props, 0 floating
+jp_compound_merchant.p3d                     0 floor props, 0 floating
+jp_compound_samurai_m.p3d                    0 floor props, 0 floating
+jp_roka_honjin.p3d                           0 floor props, 0 floating
+jp_roka_temple_u.p3d                         0 floor props, 0 floating
+jp_chashitsu_kokera.p3d                      0 floor props, 0 floating
+jp_chashitsu_thatch.p3d                      0 floor props, 0 floating
+jp_headman_east.p3d                          0 floor props, 0 floating
+jp_headman_east_shiba.p3d                    0 floor props, 0 floating
+jp_headman_kinai.p3d                         0 floor props, 0 floating
+jp_merchant_residence.p3d                    0 floor props, 0 floating
+jp_nagayamon_headman.p3d                     0 floor props, 0 floating
+jp_farmhouse_kanto_irimoya_domar.p3d         0 floor props, 0 floating
+jp_farmhouse_kanto_yosemune.p3d              0 floor props, 0 floating
+jp_farmhouse_kanto_yosemune_umaya.p3d        0 floor props, 0 floating
+jp_farmhouse_kanto_yosemune_umaya_domar.p3d  0 floor props, 0 floating
+jp_farmhouse_kinai_irimoya_board.p3d         0 floor props, 0 floating
+jp_farmhouse_kinai_irimoya_tile.p3d          0 floor props, 0 floating
+jp_farmhouse_kinai_kirizuma_board.p3d        0 floor props, 0 floating
+jp_farmhouse_kinai_kirizuma_tile_takahe.p3d  0 floor props, 0 floating
+  FAIL jp_f_kama                      at (5.87, 0.63, 0.58) yaw 0: 8/8 support points float: [((5.87, 0.63, 0.58), 0.482), ((5.95, 0.64, 0.65), 0.488), ((5.85, 0.64, 0.69), 0.488), ((5.77, 0.64, 0.63), 0.488)]
+  FAIL jp_f_kama_nolid                at (5.87, 0.63, 1.24) yaw 0: 8/8 support points float: [((5.87, 0.63, 1.24), 0.482), ((5.95, 0.64, 1.3), 0.488), ((5.85, 0.64, 1.34), 0.488), ((5.77, 0.64, 1.28), 0.488)]
+  FAIL jp_f_tableware_hakozen_stack   at (-1.00, 1.40, 4.34) yaw 180: 2/4 support points float: [((-1.14, 1.4, 4.5), 1.4), ((-0.86, 1.4, 4.17), 0.9)]
+jp_f_farmhouse_kanto.p3d                     23 floor props, 3 floating
+  FAIL jp_f_kama                      at (-5.87, 0.63, 1.68) yaw 0: 8/8 support points float: [((-5.87, 0.63, 1.68), 0.482), ((-5.79, 0.64, 1.74), 0.488), ((-5.89, 0.64, 1.78), 0.488), ((-5.97, 0.64, 1.72), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-5.87, 0.63, 2.33) yaw 0: 11/11 support points float: [((-5.87, 0.63, 2.33), 0.482), ((-5.78, 0.65, 2.46), 0.502), ((-5.72, 0.65, 2.38), 0.502), ((-5.87, 0.65, 2.49), 0.502)]
+jp_f_farmhouse_kinai.p3d                     28 floor props, 2 floating
+  FAIL jp_f_kama_nolid                at (-3.19, 0.63, -2.28) yaw 0: 8/8 support points float: [((-3.19, 0.63, -2.28), 0.482), ((-3.11, 0.64, -2.22), 0.488), ((-3.21, 0.64, -2.18), 0.488), ((-3.29, 0.64, -2.23), 0.488)]
+jp_f_hut_east_l_board.p3d                    10 floor props, 1 floating
+  FAIL jp_f_kama_nolid                at (-2.28, 0.63, -1.37) yaw 0: 8/8 support points float: [((-2.28, 0.63, -1.37), 0.482), ((-2.2, 0.64, -1.31), 0.488), ((-2.3, 0.64, -1.27), 0.488), ((-2.38, 0.64, -1.32), 0.488)]
+  FAIL jp_f_mushiro                   at (0.30, 0.40, 1.35) yaw 0: 2/4 support points float: [((1.21, 0.41, 1.8), 0.406), ((-0.61, 0.41, 1.8), 0.406)]
+jp_f_hut_west_thatch_leanl.p3d               15 floor props, 2 floating
+  FAIL jp_f_choba_goshi_3             at (-3.50, 0.50, 2.75) yaw 0: 1/5 support points float: [((-3.14, 0.51, 2.75), 0.062)]
+  FAIL jp_f_choba_set_desk            at (-3.28, 0.83, 2.11) yaw 0: 3/18 support points float: [((-3.0, 0.84, 2.08), 0.343), ((-3.0, 0.83, 2.32), 0.33), ((-3.24, 0.83, 2.32), 0.33)]
+  FAIL jp_f_kama                      at (-3.58, 0.63, -4.11) yaw 0: 8/8 support points float: [((-3.58, 0.63, -4.11), 0.482), ((-3.49, 0.64, -4.05), 0.488), ((-3.6, 0.64, -4.01), 0.488), ((-3.67, 0.64, -4.06), 0.488)]
+  FAIL jp_f_kama_nolid                at (-2.83, 0.63, -4.11) yaw 0: 8/8 support points float: [((-2.83, 0.63, -4.11), 0.482), ((-2.74, 0.64, -4.05), 0.488), ((-2.85, 0.64, -4.01), 0.488), ((-2.92, 0.64, -4.06), 0.488)]
+  FAIL jp_f_seiro_kama3               at (-2.08, 0.63, -4.11) yaw 0: 11/11 support points float: [((-2.08, 0.63, -4.11), 0.482), ((-1.98, 0.65, -3.98), 0.502), ((-1.92, 0.65, -4.06), 0.502), ((-2.08, 0.65, -3.95), 0.502)]
+  FAIL jp_f_tableware_hakozen_stack   at (-2.50, 0.95, -1.12) yaw 180: 2/4 support points float: [((-2.64, 0.95, -0.96), 0.68), ((-2.36, 0.95, -1.29), 0.9)]
+jp_f_inn_grand.p3d                           39 floor props, 6 floating
+  FAIL jp_f_choba_goshi_3             at (-3.50, 0.50, 2.75) yaw 0: 1/5 support points float: [((-3.14, 0.51, 2.75), 0.062)]
+  FAIL jp_f_choba_set_desk            at (-3.28, 0.83, 2.11) yaw 0: 3/18 support points float: [((-3.0, 0.84, 2.08), 0.343), ((-3.0, 0.83, 2.32), 0.33), ((-3.24, 0.83, 2.32), 0.33)]
+  FAIL jp_f_meal_left_two             at (-2.80, 0.50, 0.00) yaw 10: 1/18 support points float: [((-2.78, 0.5, -0.96), 0.23)]
+  FAIL jp_f_kama                      at (-3.58, 0.63, -4.11) yaw 0: 8/8 support points float: [((-3.58, 0.63, -4.11), 0.482), ((-3.49, 0.64, -4.05), 0.488), ((-3.6, 0.64, -4.01), 0.488), ((-3.67, 0.64, -4.06), 0.488)]
+  FAIL jp_f_kama_nolid                at (-2.83, 0.63, -4.11) yaw 0: 8/8 support points float: [((-2.83, 0.63, -4.11), 0.482), ((-2.74, 0.64, -4.05), 0.488), ((-2.85, 0.64, -4.01), 0.488), ((-2.92, 0.64, -4.06), 0.488)]
+  FAIL jp_f_seiro_kama3               at (-2.08, 0.63, -4.11) yaw 0: 11/11 support points float: [((-2.08, 0.63, -4.11), 0.482), ((-1.98, 0.65, -3.98), 0.502), ((-1.92, 0.65, -4.06), 0.502), ((-2.08, 0.65, -3.95), 0.502)]
+  FAIL jp_f_tableware_hakozen_stack   at (-2.50, 0.95, -1.12) yaw 180: 2/4 support points float: [((-2.64, 0.95, -0.96), 0.68), ((-2.36, 0.95, -1.29), 0.9)]
+jp_f_inn_std_tile.p3d                        30 floor props, 7 floating
+jp_f_kura_kuro_hinged.p3d                    11 floor props, 0 floating
+jp_f_kura_namako.p3d                         11 floor props, 0 floating
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_f_pt_det_tile_nuriya_home.p3d             22 floor props, 2 floating
+jp_f_shed_walled_woodshed.p3d                11 floor props, 0 floating
+  FAIL jp_f_clothes_kimono_obi        at (0.40, 0.50, -0.45) yaw 60: 10/51 support points float: [((0.05, 0.5, -0.2), 0.503), ((-0.21, 0.51, -0.45), 0.458), ((-0.24, 0.5, -0.25), 0.452), ((-0.17, 0.51, -0.66), 0.456)]
+  FAIL jp_f_kama                      at (1.39, 0.63, -3.15) yaw 0: 8/8 support points float: [((1.39, 0.63, -3.15), 0.482), ((1.47, 0.64, -3.09), 0.488), ((1.37, 0.64, -3.05), 0.488), ((1.29, 0.64, -3.1), 0.488)]
+jp_f_th_edo_2k_middle_gofuku.p3d             20 floor props, 2 floating
+  FAIL jp_f_tokkuri_pair              at (-2.37, 1.33, 2.60) yaw 90: 4/8 support points float: [((-2.48, 1.34, 2.76), 0.032), ((-2.48, 1.34, 2.44), 0.032), ((-2.26, 1.34, 2.76), 0.032), ((-2.26, 1.34, 2.44), 0.032)]
+  FAIL jp_f_masu_set                  at (-1.62, 0.83, 3.05) yaw 180: 4/13 support points float: [((-1.9, 0.83, 3.1), 0.332), ((-2.01, 0.83, 3.11), 0.332), ((-1.92, 0.83, 3.03), 0.332), ((-2.01, 0.83, 3.03), 0.332)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_kama_nolid                at (-2.30, 0.63, -2.47) yaw 0: 8/8 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.22, 0.64, -2.41), 0.488), ((-2.32, 0.64, -2.37), 0.488), ((-2.4, 0.64, -2.43), 0.488)]
+jp_f_th_edo_3k_cornerr_sakaya.p3d            25 floor props, 4 floating
+  FAIL jp_f_writing_box_open          at (1.38, 0.83, 1.20) yaw 0: 2/11 support points float: [((1.81, 0.83, 1.04), 0.56), ((1.78, 0.83, 1.38), 0.56)]
+  FAIL jp_f_kama_nolid                at (1.39, 0.63, -3.15) yaw 0: 8/8 support points float: [((1.39, 0.63, -3.15), 0.482), ((1.47, 0.64, -3.09), 0.488), ((1.37, 0.64, -3.05), 0.488), ((1.29, 0.64, -3.1), 0.488)]
+jp_f_th_kamigata_2k_middle_kamiya.p3d        21 floor props, 2 floating
+  FAIL jp_f_choba_set_desk            at (-2.44, 0.83, 1.67) yaw 90: 3/18 support points float: [((-2.47, 0.84, 1.4), 0.343), ((-2.23, 0.83, 1.39), 0.33), ((-2.23, 0.83, 1.63), 0.33)]
+  FAIL jp_f_masu_to                   at (-1.30, 0.89, 3.20) yaw 8: 4/4 support points float: [((-1.47, 0.89, 3.07), 0.066), ((-1.17, 0.89, 3.03), 0.066), ((-1.43, 0.89, 3.37), 0.066), ((-1.13, 0.89, 3.33), 0.066)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_f_th_kamigata_3k_middle_komeya.p3d        25 floor props, 4 floating
+  FAIL jp_f_kama                      at (5.87, 0.63, 0.58) yaw 0: 8/8 support points float: [((5.87, 0.63, 0.58), 0.482), ((5.95, 0.64, 0.65), 0.488), ((5.85, 0.64, 0.69), 0.488), ((5.77, 0.64, 0.63), 0.488)]
+  FAIL jp_f_kama_nolid                at (5.87, 0.63, 1.24) yaw 0: 8/8 support points float: [((5.87, 0.63, 1.24), 0.482), ((5.95, 0.64, 1.3), 0.488), ((5.85, 0.64, 1.34), 0.488), ((5.77, 0.64, 1.28), 0.488)]
+  FAIL jp_f_tableware_hakozen_stack   at (-1.00, 1.40, 4.34) yaw 180: 2/4 support points float: [((-1.14, 1.4, 4.5), 1.4), ((-0.86, 1.4, 4.17), 0.9)]
+jp_farmhouse_kanto_yosemune_umaya_furnished.p3d 23 floor props, 3 floating
+  FAIL jp_f_kama                      at (-5.87, 0.63, 1.68) yaw 0: 8/8 support points float: [((-5.87, 0.63, 1.68), 0.482), ((-5.79, 0.64, 1.74), 0.488), ((-5.89, 0.64, 1.78), 0.488), ((-5.97, 0.64, 1.72), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-5.87, 0.63, 2.33) yaw 0: 11/11 support points float: [((-5.87, 0.63, 2.33), 0.482), ((-5.78, 0.65, 2.46), 0.502), ((-5.72, 0.65, 2.38), 0.502), ((-5.87, 0.65, 2.49), 0.502)]
+jp_farmhouse_kinai_kirizuma_tile_takahe_furnished.p3d 28 floor props, 2 floating
+  FAIL jp_f_tea_dobin                 at (1.54, 0.70, -0.92) yaw 0: 7/11 support points float: [((1.72, 0.71, -1.05), 0.307), ((1.72, 0.71, -0.79), 0.307), ((1.48, 0.71, -0.92), 0.035), ((1.43, 0.71, -0.92), 0.035)]
+  FAIL jp_f_sg_candles                at (1.54, 0.73, 0.17) yaw -90: 2/18 support points float: [((1.6, 0.73, 0.46), 0.33), ((1.48, 0.73, 0.46), 0.33)]
+jp_guardhut_m_itabuki_jishinban.p3d          12 floor props, 2 floating
+  FAIL jp_f_choba_set_desk            at (-3.28, 0.83, 2.11) yaw 0: 3/18 support points float: [((-3.0, 0.84, 2.08), 0.343), ((-3.0, 0.83, 2.32), 0.33), ((-3.24, 0.83, 2.32), 0.33)]
+  FAIL jp_f_kama                      at (-3.58, 0.63, -4.11) yaw 0: 8/8 support points float: [((-3.58, 0.63, -4.11), 0.482), ((-3.49, 0.64, -4.05), 0.488), ((-3.6, 0.64, -4.01), 0.488), ((-3.67, 0.64, -4.06), 0.488)]
+  FAIL jp_f_kama_nolid                at (-2.83, 0.63, -4.11) yaw 0: 8/8 support points float: [((-2.83, 0.63, -4.11), 0.482), ((-2.74, 0.64, -4.05), 0.488), ((-2.85, 0.64, -4.01), 0.488), ((-2.92, 0.64, -4.06), 0.488)]
+  FAIL jp_f_seiro_kama3               at (-2.08, 0.63, -4.11) yaw 0: 11/11 support points float: [((-2.08, 0.63, -4.11), 0.482), ((-1.98, 0.65, -3.98), 0.502), ((-1.92, 0.65, -4.06), 0.502), ((-2.08, 0.65, -3.95), 0.502)]
+  FAIL jp_f_tableware_hakozen_stack   at (-2.50, 0.95, -1.12) yaw 180: 2/4 support points float: [((-2.64, 0.95, -0.96), 0.68), ((-2.36, 0.95, -1.29), 0.9)]
+jp_hatago_grand_furnished.p3d                39 floor props, 5 floating
+  FAIL jp_f_choba_set_desk            at (-3.28, 0.83, 2.11) yaw 0: 3/18 support points float: [((-3.0, 0.84, 2.08), 0.343), ((-3.0, 0.83, 2.32), 0.33), ((-3.24, 0.83, 2.32), 0.33)]
+  FAIL jp_f_meal_left_two             at (-2.80, 0.50, 0.00) yaw 10: 1/18 support points float: [((-2.78, 0.5, -0.96), 0.23)]
+  FAIL jp_f_kama                      at (-3.58, 0.63, -4.11) yaw 0: 8/8 support points float: [((-3.58, 0.63, -4.11), 0.482), ((-3.49, 0.64, -4.05), 0.488), ((-3.6, 0.64, -4.01), 0.488), ((-3.67, 0.64, -4.06), 0.488)]
+  FAIL jp_f_kama_nolid                at (-2.83, 0.63, -4.11) yaw 0: 8/8 support points float: [((-2.83, 0.63, -4.11), 0.482), ((-2.74, 0.64, -4.05), 0.488), ((-2.85, 0.64, -4.01), 0.488), ((-2.92, 0.64, -4.06), 0.488)]
+  FAIL jp_f_seiro_kama3               at (-2.08, 0.63, -4.11) yaw 0: 11/11 support points float: [((-2.08, 0.63, -4.11), 0.482), ((-1.98, 0.65, -3.98), 0.502), ((-1.92, 0.65, -4.06), 0.502), ((-2.08, 0.65, -3.95), 0.502)]
+  FAIL jp_f_tableware_hakozen_stack   at (-2.50, 0.95, -1.12) yaw 180: 2/4 support points float: [((-2.64, 0.95, -0.96), 0.68), ((-2.36, 0.95, -1.29), 0.9)]
+jp_hatago_std_tile_furnished.p3d             30 floor props, 6 floating
+  FAIL jp_f_kama_nolid                at (-3.19, 0.63, -2.28) yaw 0: 8/8 support points float: [((-3.19, 0.63, -2.28), 0.482), ((-3.11, 0.64, -2.22), 0.488), ((-3.21, 0.64, -2.18), 0.488), ((-3.29, 0.64, -2.23), 0.488)]
+jp_hut_east_l_board_furnished.p3d            10 floor props, 1 floating
+  FAIL jp_f_kama_nolid                at (-2.28, 0.63, -1.37) yaw 0: 8/8 support points float: [((-2.28, 0.63, -1.37), 0.482), ((-2.2, 0.64, -1.31), 0.488), ((-2.3, 0.64, -1.27), 0.488), ((-2.38, 0.64, -1.32), 0.488)]
+  FAIL jp_f_mushiro                   at (0.30, 0.40, 1.35) yaw 0: 2/4 support points float: [((1.21, 0.41, 1.8), 0.406), ((-0.61, 0.41, 1.8), 0.406)]
+jp_hut_west_thatch_leanl_furnished.p3d       15 floor props, 2 floating
+  FAIL jp_f_debris_straw              at (5.40, 0.05, -3.30) yaw 60: 1/36 support points float: [((5.19, 0.05, -2.68), 0.053)]
+jp_kido_lattice_bantaya_furnished.p3d        7 floor props, 1 floating
+jp_kura_kuro_hinged_furnished.p3d            11 floor props, 0 floating
+jp_kura_namako_furnished.p3d                 11 floor props, 0 floating
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_posttownhouse_det_tilenuriya_home.p3d     22 floor props, 2 floating
+  FAIL jp_f_writing_box_open          at (1.53, 0.83, 1.64) yaw -90: 1/11 support points float: [((1.35, 0.83, 2.05), 0.327)]
+  FAIL jp_f_kama_nolid                at (1.39, 0.63, -3.15) yaw 0: 8/8 support points float: [((1.39, 0.63, -3.15), 0.482), ((1.47, 0.64, -3.09), 0.488), ((1.37, 0.64, -3.05), 0.488), ((1.29, 0.64, -3.1), 0.488)]
+jp_s1_th_edo_2k_middle_board_shitate.p3d     23 floor props, 2 floating
+  FAIL jp_f_writing_box_open          at (-2.41, 0.83, 1.29) yaw 90: 2/11 support points float: [((-2.56, 0.83, 0.86), 0.83), ((-2.23, 0.83, 0.89), 0.33)]
+  FAIL jp_f_choba_set_scattered       at (-1.59, 0.50, 2.12) yaw 25: 1/36 support points float: [((-1.76, 0.51, 2.5), 0.061)]
+  FAIL jp_f_yakudansu_ransacked       at (-2.41, 0.50, 3.10) yaw 90: 1/26 support points float: [((-1.97, 0.51, 3.34), 0.036)]
+  FAIL jp_f_jar_m_open                at (0.57, 0.50, 2.64) yaw 0: 3/23 support points float: [((0.89, 0.52, 2.8), 0.52), ((0.91, 0.51, 2.65), 0.11), ((0.93, 0.51, 2.73), 0.108)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_s1_th_edo_3k_endl_kusuri.p3d              29 floor props, 6 floating
+  FAIL jp_f_writing_box_open          at (-2.44, 0.83, 1.29) yaw 90: 2/11 support points float: [((-2.6, 0.83, 0.86), 0.83), ((-2.26, 0.83, 0.89), 0.33)]
+  FAIL jp_f_choba_set_scattered       at (-1.62, 0.50, 2.12) yaw 25: 1/36 support points float: [((-1.79, 0.51, 2.5), 0.061)]
+  FAIL jp_f_sg_ironware_spilled       at (-1.38, 0.95, 3.07) yaw 0: 8/21 support points float: [((-1.56, 0.96, 3.21), 0.085), ((-1.33, 0.95, 3.17), 0.152), ((-1.35, 0.95, 3.23), 0.098), ((-1.4, 0.95, 3.26), 0.098)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_s1_th_edo_3k_middle_kanamono.p3d          28 floor props, 5 floating
+  FAIL jp_f_choba_set_desk            at (1.53, 0.83, 1.64) yaw -90: 3/18 support points float: [((1.56, 0.84, 1.92), 0.343), ((1.32, 0.83, 1.92), 0.33), ((1.32, 0.83, 1.68), 0.33)]
+  FAIL jp_f_kama_nolid                at (1.39, 0.63, -3.15) yaw 0: 8/8 support points float: [((1.39, 0.63, -3.15), 0.482), ((1.47, 0.64, -3.09), 0.488), ((1.37, 0.64, -3.05), 0.488), ((1.29, 0.64, -3.1), 0.488)]
+jp_s1_th_kamigata_2k_middle_tabako.p3d       21 floor props, 2 floating
+  FAIL jp_f_choba_set_desk            at (-2.47, 0.83, 1.29) yaw 90: 3/18 support points float: [((-2.5, 0.84, 1.02), 0.343), ((-2.26, 0.83, 1.01), 0.33), ((-2.26, 0.83, 1.25), 0.33)]
+  FAIL jp_f_seiro_stack               at (-2.55, 1.40, 2.91) yaw 90: 4/12 support points float: [((-2.39, 1.41, 2.8), 0.912), ((-2.35, 1.41, 2.91), 0.912), ((-2.74, 1.41, 2.91), 0.912), ((-2.7, 1.41, 2.8), 0.911)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_s1_th_kamigata_3k_endr_mochiya.p3d        27 floor props, 4 floating
+  FAIL jp_f_writing_box_open          at (-2.44, 0.83, 1.29) yaw 90: 2/11 support points float: [((-2.6, 0.83, 0.86), 0.83), ((-2.26, 0.83, 0.89), 0.33)]
+  FAIL jp_f_choba_set_scattered       at (-1.62, 0.50, 2.12) yaw 25: 1/36 support points float: [((-1.79, 0.51, 2.5), 0.061)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_s1_th_kamigata_3k_middle_kyo_ningyo.p3d   26 floor props, 4 floating
+jp_shed_walled_ishioki_woodshed_furnished.p3d 11 floor props, 0 floating
+jp_shrine_haiden_town_hiwada_furnished.p3d   6 floor props, 0 floating
+jp_shrine_haiden_village_furnished.p3d       5 floor props, 0 floating
+jp_shrine_honden_nagare_town_furnished.p3d   4 floor props, 0 floating
+jp_shrine_honden_nagare_village_chigi_furnished.p3d 2 floor props, 0 floating
+jp_shrine_kagura_town_furnished.p3d          3 floor props, 0 floating
+  FAIL jp_f_writing_box_open          at (2.11, 0.73, -1.53) yaw 0: 2/11 support points float: [((2.54, 0.73, -1.69), 0.33), ((2.51, 0.73, -1.35), 0.33)]
+jp_shrine_shamusho_sangawara_furnished.p3d   12 floor props, 1 floating
+jp_shrine_temizuya_town_furnished.p3d        2 floor props, 0 floating
+jp_smithy_open_itabuki_furnished.p3d         6 floor props, 0 floating
+jp_swordsmith_sangawara_furnished.p3d        10 floor props, 0 floating
+  FAIL jp_f_kama                      at (-1.37, 0.63, -0.92) yaw 0: 8/8 support points float: [((-1.37, 0.63, -0.92), 0.482), ((-1.29, 0.64, -0.85), 0.488), ((-1.39, 0.64, -0.81), 0.488), ((-1.47, 0.64, -0.87), 0.488)]
+jp_teahouse_bench_itabuki_furnished.p3d      7 floor props, 1 floating
+  FAIL jp_f_kama                      at (-2.23, 0.63, -1.32) yaw 0: 8/8 support points float: [((-2.23, 0.63, -1.32), 0.482), ((-2.15, 0.64, -1.26), 0.488), ((-2.25, 0.64, -1.22), 0.488), ((-2.33, 0.64, -1.27), 0.488)]
+jp_teahouse_shop_thatch_furnished.p3d        10 floor props, 1 floating
+  FAIL jp_f_kama                      at (-4.05, 0.63, -2.23) yaw 0: 8/8 support points float: [((-4.05, 0.63, -2.23), 0.482), ((-3.97, 0.64, -2.17), 0.488), ((-4.07, 0.64, -2.13), 0.488), ((-4.15, 0.64, -2.18), 0.488)]
+jp_teahouse_tateba_itabuki_furnished.p3d     18 floor props, 1 floating
+jp_temple_do_2_board_jizo.p3d                6 floor props, 0 floating
+jp_temple_do_3_tile_kannon.p3d               6 floor props, 0 floating
+jp_temple_gate_shikyakumon_furnished.p3d     0 floor props, 0 floating
+jp_temple_gate_yakuimon_furnished.p3d        0 floor props, 0 floating
+jp_temple_hondo_town_zen.p3d                 7 floor props, 0 floating
+jp_temple_hondo_village_jodo.p3d             6 floor props, 0 floating
+  FAIL jp_f_kama                      at (-4.96, 0.63, -0.32) yaw 0: 8/8 support points float: [((-4.96, 0.63, -0.32), 0.482), ((-4.88, 0.64, -0.26), 0.488), ((-4.98, 0.64, -0.22), 0.488), ((-5.06, 0.64, -0.28), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-4.96, 0.63, 0.32) yaw 0: 11/11 support points float: [((-4.96, 0.63, 0.32), 0.482), ((-4.87, 0.65, 0.45), 0.502), ((-4.81, 0.65, 0.37), 0.502), ((-4.96, 0.65, 0.48), 0.502)]
+  FAIL jp_f_kama_nolid                at (-4.96, 0.63, -2.14) yaw 0: 8/8 support points float: [((-4.96, 0.63, -2.14), 0.482), ((-4.88, 0.64, -2.08), 0.488), ((-4.98, 0.64, -2.04), 0.488), ((-5.06, 0.64, -2.1), 0.488)]
+  FAIL jp_f_tableware_hakozen_stack   at (5.24, 1.40, 1.67) yaw -90: 2/4 support points float: [((5.41, 1.4, 1.81), 1.4), ((5.08, 1.4, 1.53), 0.9)]
+  FAIL jp_f_choba_set_desk            at (3.42, 0.83, 3.35) yaw 180: 3/18 support points float: [((3.15, 0.84, 3.38), 0.343), ((3.14, 0.83, 3.14), 0.33), ((3.38, 0.83, 3.14), 0.33)]
+jp_temple_kuri_town_zen.p3d                  18 floor props, 5 floating
+  FAIL jp_f_kama                      at (-4.96, 0.63, -0.32) yaw 0: 8/8 support points float: [((-4.96, 0.63, -0.32), 0.482), ((-4.88, 0.64, -0.26), 0.488), ((-4.98, 0.64, -0.22), 0.488), ((-5.06, 0.64, -0.28), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-4.96, 0.63, 0.32) yaw 0: 11/11 support points float: [((-4.96, 0.63, 0.32), 0.482), ((-4.87, 0.65, 0.45), 0.502), ((-4.81, 0.65, 0.37), 0.502), ((-4.96, 0.65, 0.48), 0.502)]
+  FAIL jp_f_kama_nolid                at (-4.96, 0.63, -2.14) yaw 0: 8/8 support points float: [((-4.96, 0.63, -2.14), 0.482), ((-4.88, 0.64, -2.08), 0.488), ((-4.98, 0.64, -2.04), 0.488), ((-5.06, 0.64, -2.1), 0.488)]
+  FAIL jp_f_tableware_hakozen_stack   at (5.24, 1.40, 1.67) yaw -90: 2/4 support points float: [((5.41, 1.4, 1.81), 1.4), ((5.08, 1.4, 1.53), 0.9)]
+  FAIL jp_f_choba_set_desk            at (3.42, 0.83, 3.35) yaw 180: 3/18 support points float: [((3.15, 0.84, 3.38), 0.343), ((3.14, 0.83, 3.14), 0.33), ((3.38, 0.83, 3.14), 0.33)]
+jp_temple_kuri_village_furnished.p3d         18 floor props, 5 floating
+jp_temple_shoro_town_bell.p3d                0 floor props, 0 floating
+jp_temple_shoro_village_bell.p3d             0 floor props, 0 floating
+  FAIL jp_f_writing_box_open          at (1.53, 0.83, 1.64) yaw -90: 1/11 support points float: [((1.35, 0.83, 2.05), 0.327)]
+  FAIL jp_f_kama_nolid                at (1.39, 0.63, -3.15) yaw 0: 8/8 support points float: [((1.39, 0.63, -3.15), 0.482), ((1.47, 0.64, -3.09), 0.488), ((1.37, 0.64, -3.05), 0.488), ((1.29, 0.64, -3.1), 0.488)]
+jp_townhouse_edo_2ken_middle_torir_board_shitate.p3d 23 floor props, 2 floating
+  FAIL jp_f_clothes_kimono_obi        at (0.40, 0.50, -0.45) yaw 60: 10/51 support points float: [((0.05, 0.5, -0.2), 0.503), ((-0.21, 0.51, -0.45), 0.458), ((-0.24, 0.5, -0.25), 0.452), ((-0.17, 0.51, -0.66), 0.456)]
+  FAIL jp_f_kama                      at (1.39, 0.63, -3.15) yaw 0: 8/8 support points float: [((1.39, 0.63, -3.15), 0.482), ((1.47, 0.64, -3.09), 0.488), ((1.37, 0.64, -3.05), 0.488), ((1.29, 0.64, -3.1), 0.488)]
+jp_townhouse_edo_2ken_middle_torir_gofuku.p3d 20 floor props, 2 floating
+  FAIL jp_f_tokkuri_pair              at (-2.37, 1.33, 2.60) yaw 90: 4/8 support points float: [((-2.48, 1.34, 2.76), 0.032), ((-2.48, 1.34, 2.44), 0.032), ((-2.26, 1.34, 2.76), 0.032), ((-2.26, 1.34, 2.44), 0.032)]
+  FAIL jp_f_masu_set                  at (-1.62, 0.83, 3.05) yaw 180: 4/13 support points float: [((-1.9, 0.83, 3.1), 0.332), ((-2.01, 0.83, 3.11), 0.332), ((-1.92, 0.83, 3.03), 0.332), ((-2.01, 0.83, 3.03), 0.332)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_kama_nolid                at (-2.30, 0.63, -2.47) yaw 0: 8/8 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.22, 0.64, -2.41), 0.488), ((-2.32, 0.64, -2.37), 0.488), ((-2.4, 0.64, -2.43), 0.488)]
+jp_townhouse_edo_3ken_cornerr_toril_sakaya.p3d 25 floor props, 4 floating
+  FAIL jp_f_writing_box_open          at (-2.41, 0.83, 1.29) yaw 90: 2/11 support points float: [((-2.56, 0.83, 0.86), 0.83), ((-2.23, 0.83, 0.89), 0.33)]
+  FAIL jp_f_yakudansu_ransacked       at (-2.41, 0.50, 3.10) yaw 90: 1/26 support points float: [((-1.97, 0.51, 3.34), 0.036)]
+  FAIL jp_f_jar_m_open                at (0.57, 0.50, 2.64) yaw 0: 2/23 support points float: [((0.91, 0.51, 2.65), 0.11), ((0.93, 0.51, 2.73), 0.108)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_townhouse_edo_3ken_endl_toril_kusuri.p3d  29 floor props, 5 floating
+  FAIL jp_f_writing_box_open          at (-2.44, 0.83, 1.29) yaw 90: 2/11 support points float: [((-2.6, 0.83, 0.86), 0.83), ((-2.26, 0.83, 0.89), 0.33)]
+  FAIL jp_f_sg_ironware_spilled       at (-1.38, 0.95, 3.07) yaw 0: 8/21 support points float: [((-1.56, 0.96, 3.21), 0.085), ((-1.33, 0.95, 3.17), 0.152), ((-1.35, 0.95, 3.23), 0.098), ((-1.4, 0.95, 3.26), 0.098)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_townhouse_edo_3ken_middle_toril_kanamono.p3d 28 floor props, 4 floating
+  FAIL jp_f_writing_box_open          at (1.38, 0.83, 1.20) yaw 0: 2/11 support points float: [((1.81, 0.83, 1.04), 0.56), ((1.78, 0.83, 1.38), 0.56)]
+  FAIL jp_f_kama_nolid                at (1.39, 0.63, -3.15) yaw 0: 8/8 support points float: [((1.39, 0.63, -3.15), 0.482), ((1.47, 0.64, -3.09), 0.488), ((1.37, 0.64, -3.05), 0.488), ((1.29, 0.64, -3.1), 0.488)]
+jp_townhouse_kamigata_2ken_middle_torir_kamiya.p3d 21 floor props, 2 floating
+  FAIL jp_f_choba_set_desk            at (1.53, 0.83, 1.64) yaw -90: 3/18 support points float: [((1.56, 0.84, 1.92), 0.343), ((1.32, 0.83, 1.92), 0.33), ((1.32, 0.83, 1.68), 0.33)]
+  FAIL jp_f_kama_nolid                at (1.39, 0.63, -3.15) yaw 0: 8/8 support points float: [((1.39, 0.63, -3.15), 0.482), ((1.47, 0.64, -3.09), 0.488), ((1.37, 0.64, -3.05), 0.488), ((1.29, 0.64, -3.1), 0.488)]
+jp_townhouse_kamigata_2ken_middle_torir_tabako.p3d 21 floor props, 2 floating
+  FAIL jp_f_choba_set_desk            at (-2.47, 0.83, 1.29) yaw 90: 3/18 support points float: [((-2.5, 0.84, 1.02), 0.343), ((-2.26, 0.83, 1.01), 0.33), ((-2.26, 0.83, 1.25), 0.33)]
+  FAIL jp_f_seiro_stack               at (-2.55, 1.40, 2.91) yaw 90: 4/12 support points float: [((-2.39, 1.41, 2.8), 0.912), ((-2.35, 1.41, 2.91), 0.912), ((-2.74, 1.41, 2.91), 0.912), ((-2.7, 1.41, 2.8), 0.911)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_townhouse_kamigata_3ken_endr_toril_mochiya.p3d 27 floor props, 4 floating
+  FAIL jp_f_choba_set_desk            at (-2.44, 0.83, 1.67) yaw 90: 3/18 support points float: [((-2.47, 0.84, 1.4), 0.343), ((-2.23, 0.83, 1.39), 0.33), ((-2.23, 0.83, 1.63), 0.33)]
+  FAIL jp_f_masu_to                   at (-1.30, 0.89, 3.20) yaw 8: 4/4 support points float: [((-1.47, 0.89, 3.07), 0.066), ((-1.17, 0.89, 3.03), 0.066), ((-1.43, 0.89, 3.37), 0.066), ((-1.13, 0.89, 3.33), 0.066)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_townhouse_kamigata_3ken_middle_toril_komeya.p3d 25 floor props, 4 floating
+  FAIL jp_f_writing_box_open          at (-2.44, 0.83, 1.29) yaw 90: 2/11 support points float: [((-2.6, 0.83, 0.86), 0.83), ((-2.26, 0.83, 0.89), 0.33)]
+  FAIL jp_f_kama                      at (-2.30, 0.63, -3.12) yaw 0: 8/8 support points float: [((-2.3, 0.63, -3.12), 0.482), ((-2.22, 0.64, -3.06), 0.488), ((-2.32, 0.64, -3.02), 0.488), ((-2.4, 0.64, -3.08), 0.488)]
+  FAIL jp_f_seiro_kama2               at (-2.30, 0.63, -2.47) yaw 0: 11/11 support points float: [((-2.3, 0.63, -2.47), 0.482), ((-2.21, 0.65, -2.35), 0.502), ((-2.15, 0.65, -2.43), 0.502), ((-2.3, 0.65, -2.31), 0.502)]
+jp_townhouse_kamigata_3ken_middle_toril_kyo_ningyo.p3d 26 floor props, 3 floating
+jp_guardhut_m_itabuki.p3d                    0 floor props, 0 floating
+jp_guardhut_s_itabuki.p3d                    0 floor props, 0 floating
+jp_guardhut_s_sangawara.p3d                  0 floor props, 0 floating
+jp_hatago_grand.p3d                          0 floor props, 0 floating
+jp_hatago_std_board.p3d                      0 floor props, 0 floating
+jp_hatago_std_mushiko.p3d                    0 floor props, 0 floating
+jp_hatago_std_tile.p3d                       0 floor props, 0 floating
+jp_hut_east_l_board.p3d                      0 floor props, 0 floating
+jp_hut_east_l_earth.p3d                      0 floor props, 0 floating
+jp_hut_east_s_earth_mushiro.p3d              0 floor props, 0 floating
+jp_hut_east_s_sunoko.p3d                     0 floor props, 0 floating
+jp_hut_west_ishioki.p3d                      0 floor props, 0 floating
+jp_hut_west_ishioki_leanr.p3d                0 floor props, 0 floating
+jp_hut_west_itabuki.p3d                      0 floor props, 0 floating
+jp_hut_west_thatch.p3d                       0 floor props, 0 floating
+jp_hut_west_thatch_leanl.p3d                 0 floor props, 0 floating
+jp_kido_board_roofed.p3d                     0 floor props, 0 floating
+jp_kido_lattice.p3d                          0 floor props, 0 floating
+jp_kido_lattice_bantaya.p3d                  0 floor props, 0 floating
+jp_kura_kuro_hinged.p3d                      0 floor props, 0 floating
+jp_kura_namako.p3d                           0 floor props, 0 floating
+jp_kura_plain.p3d                            0 floor props, 0 floating
+jp_machiya_t3_01.p3d                         0 floor props, 0 floating
+  FAIL jp_f_kama                      at (-3.21, 0.63, -2.95) yaw 90: 8/8 support points float: [((-3.21, 0.63, -2.95), 0.482), ((-3.15, 0.64, -3.03), 0.488), ((-3.11, 0.64, -2.93), 0.488), ((-3.16, 0.64, -2.85), 0.488)]
+  FAIL jp_f_kama_nolid                at (-3.21, 0.63, -2.05) yaw 90: 8/8 support points float: [((-3.21, 0.63, -2.05), 0.482), ((-3.15, 0.64, -2.13), 0.488), ((-3.11, 0.64, -2.03), 0.488), ((-3.16, 0.64, -1.95), 0.488)]
+  FAIL jp_f_tawara_stack6_burst       at (3.00, 0.08, -1.36) yaw 0: 9/20 support points float: [((2.83, 0.08, -0.64), 0.031), ((3.29, 0.08, -0.69), 0.031), ((3.44, 0.08, -0.83), 0.031), ((2.8, 0.08, -0.9), 0.031)]
+jp_machiya_t3_01_shop.p3d                    28 floor props, 3 floating
+jp_posttown_det_board_board.p3d              0 floor props, 0 floating
+jp_posttown_det_board_nuriya.p3d             0 floor props, 0 floating
+jp_posttown_det_stable_board.p3d             0 floor props, 0 floating
+jp_posttown_det_stable_tile.p3d              0 floor props, 0 floating
+jp_posttown_det_tile_board.p3d               0 floor props, 0 floating
+jp_posttown_det_tile_nuriya.p3d              0 floor props, 0 floating
+jp_posttown_row_endl.p3d                     0 floor props, 0 floating
+jp_posttown_row_middle.p3d                   0 floor props, 0 floating
+jp_posttownhouse_det_boardboard.p3d          0 floor props, 0 floating
+jp_posttownhouse_det_boardnuriya.p3d         0 floor props, 0 floating
+jp_posttownhouse_det_stable_board.p3d        0 floor props, 0 floating
+jp_posttownhouse_det_stable_tile.p3d         0 floor props, 0 floating
+jp_posttownhouse_det_tileboard.p3d           0 floor props, 0 floating
+jp_posttownhouse_det_tilenuriya.p3d          0 floor props, 0 floating
+jp_posttownhouse_row_endl.p3d                0 floor props, 0 floating
+jp_posttownhouse_row_middle.p3d              0 floor props, 0 floating
+jp_barn_walled_thatch.p3d                    0 floor props, 0 floating
+jp_shed_open_board.p3d                       0 floor props, 0 floating
+jp_shed_open_thatch.p3d                      0 floor props, 0 floating
+jp_shed_walled_ishioki_woodshed.p3d          0 floor props, 0 floating
+jp_shrine_haiden_town_copper.p3d             0 floor props, 0 floating
+jp_shrine_haiden_town_hiwada.p3d             0 floor props, 0 floating
+jp_shrine_haiden_village.p3d                 0 floor props, 0 floating
+jp_shrine_honden_nagare_town.p3d             0 floor props, 0 floating
+jp_shrine_honden_nagare_village.p3d          0 floor props, 0 floating
+jp_shrine_honden_nagare_village_chigi.p3d    0 floor props, 0 floating
+jp_shrine_honden_shinmei.p3d                 0 floor props, 0 floating
+jp_shrine_kagura_town.p3d                    0 floor props, 0 floating
+jp_shrine_kagura_village.p3d                 0 floor props, 0 floating
+jp_shrine_shamusho_itabuki.p3d               0 floor props, 0 floating
+jp_shrine_shamusho_sangawara.p3d             0 floor props, 0 floating
+jp_shrine_temizuya_town.p3d                  0 floor props, 0 floating
+jp_shrine_temizuya_village.p3d               0 floor props, 0 floating
+jp_smithy_open_itabuki.p3d                   0 floor props, 0 floating
+jp_smithy_open_sangawara.p3d                 0 floor props, 0 floating
+jp_swordsmith_sangawara.p3d                  0 floor props, 0 floating
+jp_teahouse_bench_itabuki.p3d                0 floor props, 0 floating
+jp_teahouse_bench_thatch.p3d                 0 floor props, 0 floating
+jp_teahouse_pass_ishioki.p3d                 0 floor props, 0 floating
+jp_teahouse_shop_itabuki.p3d                 0 floor props, 0 floating
+jp_teahouse_shop_thatch.p3d                  0 floor props, 0 floating
+jp_teahouse_tateba_itabuki.p3d               0 floor props, 0 floating
+jp_teahouse_tateba_thatch.p3d                0 floor props, 0 floating
+jp_temple_do_2_board.p3d                     0 floor props, 0 floating
+jp_temple_do_2_thatch.p3d                    0 floor props, 0 floating
+jp_temple_do_3_tile.p3d                      0 floor props, 0 floating
+jp_temple_do_town.p3d                        0 floor props, 0 floating
+jp_temple_gate_shikyakumon.p3d               0 floor props, 0 floating
+jp_temple_gate_yakuimon.p3d                  0 floor props, 0 floating
+jp_temple_hondo_town.p3d                     0 floor props, 0 floating
+jp_temple_hondo_village.p3d                  0 floor props, 0 floating
+jp_temple_kuri_town.p3d                      0 floor props, 0 floating
+jp_temple_kuri_village.p3d                   0 floor props, 0 floating
+jp_temple_shoro_town.p3d                     0 floor props, 0 floating
+jp_temple_shoro_village.p3d                  0 floor props, 0 floating
+jp_toilet_t1_01.p3d                          0 floor props, 0 floating
+jp_townhouse_edo_2k_cornerl_toril.p3d        0 floor props, 0 floating
+jp_townhouse_edo_2k_cornerl_torir.p3d        0 floor props, 0 floating
+jp_townhouse_edo_2k_cornerr_toril.p3d        0 floor props, 0 floating
+jp_townhouse_edo_2k_cornerr_torir.p3d        0 floor props, 0 floating
+jp_townhouse_edo_2k_endl_toril.p3d           0 floor props, 0 floating
+jp_townhouse_edo_2k_endl_torir.p3d           0 floor props, 0 floating
+jp_townhouse_edo_2k_endr_toril.p3d           0 floor props, 0 floating
+jp_townhouse_edo_2k_endr_torir.p3d           0 floor props, 0 floating
+jp_townhouse_edo_2k_middle_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_2k_middle_toril_board.p3d   0 floor props, 0 floating
+jp_townhouse_edo_2k_middle_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_2k_middle_torir_board.p3d   0 floor props, 0 floating
+jp_townhouse_edo_2ken_cornerl_toril.p3d      0 floor props, 0 floating
+jp_townhouse_edo_2ken_cornerl_torir.p3d      0 floor props, 0 floating
+jp_townhouse_edo_2ken_cornerr_toril.p3d      0 floor props, 0 floating
+jp_townhouse_edo_2ken_cornerr_torir.p3d      0 floor props, 0 floating
+jp_townhouse_edo_2ken_endl_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_2ken_endl_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_2ken_endr_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_2ken_endr_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_2ken_middle_toril.p3d       0 floor props, 0 floating
+jp_townhouse_edo_2ken_middle_toril_board.p3d 0 floor props, 0 floating
+jp_townhouse_edo_2ken_middle_torir.p3d       0 floor props, 0 floating
+jp_townhouse_edo_2ken_middle_torir_board.p3d 0 floor props, 0 floating
+jp_townhouse_edo_3k_cornerl_toril.p3d        0 floor props, 0 floating
+jp_townhouse_edo_3k_cornerl_torir.p3d        0 floor props, 0 floating
+jp_townhouse_edo_3k_cornerr_toril.p3d        0 floor props, 0 floating
+jp_townhouse_edo_3k_cornerr_torir.p3d        0 floor props, 0 floating
+jp_townhouse_edo_3k_endl_toril.p3d           0 floor props, 0 floating
+jp_townhouse_edo_3k_endl_torir.p3d           0 floor props, 0 floating
+jp_townhouse_edo_3k_endr_toril.p3d           0 floor props, 0 floating
+jp_townhouse_edo_3k_endr_torir.p3d           0 floor props, 0 floating
+jp_townhouse_edo_3k_middle_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_3k_middle_toril_board.p3d   0 floor props, 0 floating
+jp_townhouse_edo_3k_middle_toril_kakigara.p3d 0 floor props, 0 floating
+jp_townhouse_edo_3k_middle_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_3k_middle_torir_board.p3d   0 floor props, 0 floating
+jp_townhouse_edo_3ken_cornerl_toril.p3d      0 floor props, 0 floating
+jp_townhouse_edo_3ken_cornerl_torir.p3d      0 floor props, 0 floating
+jp_townhouse_edo_3ken_cornerr_toril.p3d      0 floor props, 0 floating
+jp_townhouse_edo_3ken_cornerr_torir.p3d      0 floor props, 0 floating
+jp_townhouse_edo_3ken_endl_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_3ken_endl_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_3ken_endr_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_3ken_endr_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_3ken_middle_toril.p3d       0 floor props, 0 floating
+jp_townhouse_edo_3ken_middle_toril_board.p3d 0 floor props, 0 floating
+jp_townhouse_edo_3ken_middle_toril_kakigara.p3d 0 floor props, 0 floating
+jp_townhouse_edo_3ken_middle_torir.p3d       0 floor props, 0 floating
+jp_townhouse_edo_3ken_middle_torir_board.p3d 0 floor props, 0 floating
+jp_townhouse_edo_4k_cornerl_toril.p3d        0 floor props, 0 floating
+jp_townhouse_edo_4k_cornerl_torir.p3d        0 floor props, 0 floating
+jp_townhouse_edo_4k_cornerr_toril.p3d        0 floor props, 0 floating
+jp_townhouse_edo_4k_cornerr_torir.p3d        0 floor props, 0 floating
+jp_townhouse_edo_4k_endl_toril.p3d           0 floor props, 0 floating
+jp_townhouse_edo_4k_endl_torir.p3d           0 floor props, 0 floating
+jp_townhouse_edo_4k_endr_toril.p3d           0 floor props, 0 floating
+jp_townhouse_edo_4k_endr_torir.p3d           0 floor props, 0 floating
+jp_townhouse_edo_4k_middle_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_4k_middle_toril_board.p3d   0 floor props, 0 floating
+jp_townhouse_edo_4k_middle_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_4k_middle_torir_board.p3d   0 floor props, 0 floating
+jp_townhouse_edo_4ken_cornerl_toril.p3d      0 floor props, 0 floating
+jp_townhouse_edo_4ken_cornerl_torir.p3d      0 floor props, 0 floating
+jp_townhouse_edo_4ken_cornerr_toril.p3d      0 floor props, 0 floating
+jp_townhouse_edo_4ken_cornerr_torir.p3d      0 floor props, 0 floating
+jp_townhouse_edo_4ken_endl_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_4ken_endl_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_4ken_endr_toril.p3d         0 floor props, 0 floating
+jp_townhouse_edo_4ken_endr_torir.p3d         0 floor props, 0 floating
+jp_townhouse_edo_4ken_middle_toril.p3d       0 floor props, 0 floating
+jp_townhouse_edo_4ken_middle_toril_board.p3d 0 floor props, 0 floating
+jp_townhouse_edo_4ken_middle_torir.p3d       0 floor props, 0 floating
+jp_townhouse_edo_4ken_middle_torir_board.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_2k_cornerl_toril.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_2k_cornerl_torir.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_2k_cornerr_toril.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_2k_cornerr_torir.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_2k_endl_toril.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_2k_endl_torir.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_2k_endr_toril.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_2k_endr_torir.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_2k_middle_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_2k_middle_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_cornerl_toril.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_cornerl_torir.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_cornerr_toril.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_cornerr_torir.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_endl_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_endl_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_endr_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_endr_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_middle_toril.p3d  0 floor props, 0 floating
+jp_townhouse_kamigata_2ken_middle_torir.p3d  0 floor props, 0 floating
+jp_townhouse_kamigata_3k_cornerl_toril.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_3k_cornerl_torir.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_3k_cornerr_toril.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_3k_cornerr_torir.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_3k_endl_toril.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_3k_endl_torir.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_3k_endr_toril.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_3k_endr_torir.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_3k_middle_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_3k_middle_toril_kyo.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_3k_middle_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_3k_middle_torir_komeya.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_cornerl_toril.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_cornerl_torir.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_cornerr_toril.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_cornerr_torir.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_endl_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_endl_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_endr_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_endr_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_middle_toril.p3d  0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_middle_toril_kyo.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_middle_torir.p3d  0 floor props, 0 floating
+jp_townhouse_kamigata_3ken_middle_torir_komeya.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_4k_cornerl_toril.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_4k_cornerl_torir.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_4k_cornerr_toril.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_4k_cornerr_torir.p3d   0 floor props, 0 floating
+jp_townhouse_kamigata_4k_endl_toril.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_4k_endl_torir.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_4k_endr_toril.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_4k_endr_torir.p3d      0 floor props, 0 floating
+jp_townhouse_kamigata_4k_middle_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_4k_middle_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_cornerl_toril.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_cornerl_torir.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_cornerr_toril.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_cornerr_torir.p3d 0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_endl_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_endl_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_endr_toril.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_endr_torir.p3d    0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_middle_toril.p3d  0 floor props, 0 floating
+jp_townhouse_kamigata_4ken_middle_torir.p3d  0 floor props, 0 floating
+jp_townhouse_unit_test.p3d                   0 floor props, 0 floating
+jp_booth_barber.p3d                          0 floor props, 0 floating
+jp_booth_misemono.p3d                        0 floor props, 0 floating
+jp_foundry_itabuki.p3d                       0 floor props, 0 floating
+jp_foundry_sangawara.p3d                     0 floor props, 0 floating
+jp_booth_barber_furnished.p3d                8 floor props, 0 floating
+jp_booth_misemono_furnished.p3d              11 floor props, 0 floating
+  FAIL jp_f_koshikiro                 at (-1.37, 0.05, -1.88) yaw 180: 5/46 support points float: [((-1.47, 0.05, -2.98), 0.05), ((-1.27, 0.05, -2.98), 0.05), ((-1.45, 0.05, -2.83), 0.051), ((-1.71, 0.05, -2.88), 0.051)]
+jp_foundry_itabuki_furnished.p3d             6 floor props, 1 floating
+  FAIL jp_f_bath_stools_tipped        at (1.95, 0.46, -1.38) yaw 0: 9/22 support points float: [((2.08, 0.47, -1.41), 0.067), ((2.16, 0.48, -1.14), 0.08), ((1.8, 0.47, -1.03), 0.066), ((1.92, 0.47, -1.0), 0.066)]
+jp_sento_sangawara_furnished.p3d             15 floor props, 1 floating
+jp_stablerow_itabuki_furnished.p3d           9 floor props, 0 floating
+jp_timber_sawshed_furnished.p3d              2 floor props, 0 floating
+jp_timber_shingleshed_furnished.p3d          1 floor props, 0 floating
+jp_timber_store_furnished.p3d                1 floor props, 0 floating
+  FAIL jp_f_kama_nolid                at (-2.77, 0.63, -2.23) yaw 0: 8/8 support points float: [((-2.77, 0.63, -2.23), 0.482), ((-2.68, 0.64, -2.17), 0.488), ((-2.79, 0.64, -2.13), 0.488), ((-2.86, 0.64, -2.18), 0.488)]
+jp_workshop_bench_itabuki_lacquer.p3d        16 floor props, 1 floating
+  FAIL jp_f_kama_nolid                at (-2.77, 0.63, -2.23) yaw 0: 8/8 support points float: [((-2.77, 0.63, -2.23), 0.482), ((-2.68, 0.64, -2.17), 0.488), ((-2.79, 0.64, -2.13), 0.488), ((-2.86, 0.64, -2.18), 0.488)]
+jp_workshop_bench_sangawara_kinko.p3d        14 floor props, 1 floating
+  FAIL jp_f_kama_nolid                at (-2.77, 0.63, -2.23) yaw 0: 8/8 support points float: [((-2.77, 0.63, -2.23), 0.482), ((-2.68, 0.64, -2.17), 0.488), ((-2.79, 0.64, -2.13), 0.488), ((-2.86, 0.64, -2.18), 0.488)]
+jp_workshop_bench_sangawara_polisher.p3d     15 floor props, 1 floating
+jp_workshop_doma_itabuki_basket.p3d          10 floor props, 0 floating
+jp_workshop_doma_itabuki_turner.p3d          10 floor props, 0 floating
+jp_workshop_doma_sangawara_joinery.p3d       9 floor props, 0 floating
+jp_sento_itabuki.p3d                         0 floor props, 0 floating
+jp_sento_sangawara.p3d                       0 floor props, 0 floating
+jp_compound_foundryyard.p3d                  0 floor props, 0 floating
+jp_compound_stableyard.p3d                   0 floor props, 0 floating
+jp_compound_timberyard.p3d                   0 floor props, 0 floating
+jp_stablerow_itabuki.p3d                     0 floor props, 0 floating
+jp_stablerow_thatch.p3d                      0 floor props, 0 floating
+jp_timber_sawshed.p3d                        0 floor props, 0 floating
+jp_timber_shingleshed.p3d                    0 floor props, 0 floating
+jp_timber_store.p3d                          0 floor props, 0 floating
+jp_workshop_bench_itabuki.p3d                0 floor props, 0 floating
+jp_workshop_bench_sangawara.p3d              0 floor props, 0 floating
+jp_workshop_doma_itabuki.p3d                 0 floor props, 0 floating
+jp_workshop_doma_sangawara.p3d               0 floor props, 0 floating
+jp_sakagura_maegura.p3d                      0 floor props, 0 floating
+jp_sakagura_okura.p3d                        0 floor props, 0 floating
+jp_sakagura_seimai.p3d                       0 floor props, 0 floating
+jp_konya_itabuki.p3d                         0 floor props, 0 floating
+jp_konya_sangawara.p3d                       0 floor props, 0 floating
+jp_suisha_itabuki.p3d                        0 floor props, 0 floating
+jp_suisha_thatch.p3d                         0 floor props, 0 floating
+jp_kamisuki_itabuki.p3d                      0 floor props, 0 floating
+jp_kamisuki_thatch.p3d                       0 floor props, 0 floating
+jp_compound_brewery.p3d                      0 floor props, 0 floating
+jp_compound_dyersyard.p3d                    0 floor props, 0 floating
+jp_compound_paperyard.p3d                    0 floor props, 0 floating
+PROPSEAT: 1607 props, 173 floating

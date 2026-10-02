@@ -665,12 +665,14 @@ def monohoshi(torn=False):
             drop = r_.uniform(1.4, 2.2)
         if state == "fallen":
             # FX6 (Stephen's 3c-1 walk: "the ones on the ground are floating in mid air"): the length slid off the bar
-            # and lies in a soft heap at the frame's foot, sunk 4 cm so the yard's slope never shows under it (was a
-            # flat strip + a stiff 1 m cloth ramp standing in the air)
-            for j, (dx, dz, r0, hh) in enumerate(((0.0, 0.10, 0.34, 0.14), (0.10, 0.42, 0.24, 0.10),
-                                                  (-0.08, -0.18, 0.22, 0.09))):
-                out.append(xf(mound("cloth%d%d" % (k, j), x + dx, dz, r0, hh + 0.04, mat, sx=0.75, sz=1.25, vis=(1,)),
-                              t=(0.0, -0.04, 0.0)))
+            # and lies on the ground below it: a strip lying flat, 5 cm thick with 4 cm of it under the yard's surface
+            # so the slope never shows under it, and the slack end folded over itself in two layers (was a flat 1 cm
+            # strip on the plane + a stiff 1 m cloth ramp standing in the air)
+            zs = 0.15 if k == 1 else -1.55
+            out.append(W(x - 0.18, x + 0.18, -0.04, 0.012, zs, zs + 1.40, mat, vis=(1,)))
+            zf_ = zs + (0.10 if k == 1 else 0.85)
+            out.append(xf(W(-0.19, 0.19, 0.012, 0.030, -0.25, 0.25, mat, vis=(1,)), ry=7.0, t=(x, 0.0, zf_)))
+            out.append(xf(W(-0.17, 0.17, 0.030, 0.046, -0.18, 0.18, mat, vis=(1,)), ry=-11.0, t=(x + 0.02, 0.0, zf_)))
             continue
         # FX6: the length hangs doubled OVER the bar (a fold over the top, the two legs against the bar's faces); it
         # hung beside the bar before, its top at the bar's centre, up to 4.5 cm off it

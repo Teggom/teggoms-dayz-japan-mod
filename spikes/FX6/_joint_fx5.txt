@@ -1,0 +1,60 @@
+samurai_m itabei run end 0.0     OK   
+samurai_m itabei corner 0.1      OK   
+samurai_m itabei corner 0.2      OK   
+samurai_m itabei corner 0.3      OK   
+samurai_m itabei corner 0.4      OK   
+samurai_m itabei run end 0.5     OK   
+samurai_m gate0 post A           OK   
+samurai_m gate0 post B           OK   
+headman_east ikegaki run end 0.0 OK   
+headman_east ikegaki corner 0.1  OK   
+headman_east ikegaki corner 0.2  OK   
+headman_east ikegaki corner 0.3  OK   
+headman_east ikegaki corner 0.4  OK   
+headman_east ikegaki run end 0.5 OK   
+headman_east gate0 post A        OK   
+headman_east gate0 post B        OK   
+honjin dobei run end 0.0         OK   
+honjin dobei run end 0.1         OK   
+honjin itabei run end 1.0        OK   
+honjin itabei corner 1.1         OK   
+honjin itabei corner 1.2         OK   
+honjin itabei run end 1.3        OK   
+honjin gate0 post A              OK   
+honjin gate0 post B              OK   
+honjin gate1 post A              OK   
+honjin gate1 post B              OK   
+merchant itabei corner 0.0       OK   
+merchant itabei corner 0.1       OK   
+merchant itabei corner 0.2       OK   
+merchant itabei corner 0.3       OK   
+merchant gate0 post A            OK   
+merchant gate0 post B            OK   
+kumi yotsume run end 0.0         open by design (yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design; its lane ends are free)
+kumi yotsume run end 0.1         open by design (yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design; its lane ends are free)
+kumi gate0 post A                open by design (yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design; its lane ends are free)
+kumi gate0 post B                open by design (yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design; its lane ends are free)
+doshin itabei corner 0.0         OK   
+doshin itabei corner 0.1         OK   
+doshin itabei corner 0.2         OK   
+doshin itabei corner 0.3         OK   
+doshin gate0 post A              OK   
+doshin gate0 post B              OK   
+stableyard itabei corner 0.0     OK   
+stableyard itabei corner 0.1     OK   
+stableyard itabei corner 0.2     OK   
+stableyard itabei corner 0.3     OK   
+stableyard gate0 post A          OK   
+stableyard gate0 post B          OK   
+timberyard itabei corner 0.0     OK   
+timberyard itabei corner 0.1     OK   
+timberyard itabei corner 0.2     OK   
+timberyard itabei corner 0.3     OK   
+timberyard gate0 post A          OK   
+timberyard gate0 post B          OK   
+foundryyard itabei corner 0.0    OK   
+foundryyard itabei corner 0.1    OK   
+foundryyard itabei corner 0.2    OK   
+foundryyard itabei corner 0.3    OK   
+foundryyard gate0 post A         OK   
+foundryyard gate0 post B         OK   
