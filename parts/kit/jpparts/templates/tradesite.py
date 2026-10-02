@@ -422,7 +422,7 @@ def maegura(name=None, wear="_w1"):
     lp.solids = lining
 
     def inside(c, n):
-        if not (mx0 - 0.01 <= c[0] <= mx1 + 0.01 and mz0 - 0.01 <= c[2] <= mz1 + 0.01 and FOOT < c[1] < PT + 0.2):
+        if not (mx0 - 0.10 <= c[0] <= mx1 + 0.10 and mz0 - 0.10 <= c[2] <= mz1 + 0.10 and FOOT < c[1] < PT + 0.2):
             return False
         cx, cz = (mx0 + mx1) / 2, (mz0 + mz1) / 2
         # a face looks into the muro when its normal points towards the room's centre (or down, for the ceiling)
@@ -643,7 +643,7 @@ def _vat_bank(S, cx, cz, y, lids=(0, 3)):
     cells = [(jx - 0.40, jx + 0.40, jz - 0.40, jz + 0.40) for (jx, jz) in jar_c]
     pit = (cx - 0.225, cx + 0.225, cz - 0.225, cz + 0.225)
     for (a, b, c, d) in FL.rect_minus((cx - hb, cx + hb, cz - hb, cz + hb), cells + [pit]):
-        p.add(box(a, b, 0.0, y, c, d, {"top": "ground_doma_earth", "default": "stone_cut"}, vis=(1, 2, 3), geo=True,
+        p.add(box(a, b, -0.10, y, c, d, {"top": "ground_doma_earth", "default": "stone_cut"}, vis=(1, 2, 3), geo=True,
                   view=True, fire="dirt", tag="bank_earth"))
         p.road([(a, y, c), (b, y, c), (b, y, d), (a, y, d)], "doma")
     for k, (jx, jz) in enumerate(jar_c):
@@ -691,7 +691,7 @@ def _vat_bank(S, cx, cz, y, lids=(0, 3)):
                              (a + 0.04, b - 0.04, d - 0.04, d)):
         p.add(box(a0, a1, ya, y, b0, b1, "wall_nakanuri_int", vis=(1, 2), geo=True, view=True, fire="dirt",
                   tag="pit_wall"))
-    p.add(box(a + 0.04, b - 0.04, 0.0, ya, c + 0.04, d - 0.04, {"top": "ground_ash", "default": "wall_arakabe"},
+    p.add(box(a + 0.04, b - 0.04, -0.10, ya, c + 0.04, d - 0.04, {"top": "ground_ash", "default": "wall_arakabe"},
               vis=(1, 2, 3), geo=True, view=True, fire="dirt", tag="pit_ash"))
     p.road([(a + 0.04, ya, c + 0.04), (b - 0.04, ya, c + 0.04), (b - 0.04, ya, d - 0.04), (a + 0.04, ya, d - 0.04)],
            "doma")
@@ -756,10 +756,10 @@ def konya(name=None, roof="sangawara", wear="_w2"):
     vr = (A_, W - A_, -D + A_, ZK - 0.12)
     vp = B.P("vat_floor")
     for (a, b, c, d) in FL.rect_minus(vr, [bank]):
-        vp.add(box(a, b, 0.0, VAT_Y, c, d, {"top": "ground_doma_earth", "default": "stone_cut"}, vis=(1, 2, 3),
+        vp.add(box(a, b, -0.10, VAT_Y, c, d, {"top": "ground_doma_earth", "default": "stone_cut"}, vis=(1, 2, 3),
                    geo=True, view=True, fire="dirt", tag="doma"))
         vp.road([(a, VAT_Y, c), (b, VAT_Y, c), (b, VAT_Y, d), (a, VAT_Y, d)], "doma")
-    vp.add(box(A_, W - A_, 0.0, VAT_Y + 0.012, ZK - 0.12, ZK, "stone_cut", vis=(1, 2, 3), geo=True, view=True,
+    vp.add(box(A_, W - A_, -0.10, VAT_Y + 0.012, ZK - 0.12, ZK, "stone_cut", vis=(1, 2, 3), geo=True, view=True,
                fire="granite", tag="kerb"))
     vp.road([(A_, VAT_Y + 0.012, ZK - 0.12), (W - A_, VAT_Y + 0.012, ZK - 0.12), (W - A_, VAT_Y + 0.012, ZK),
              (A_, VAT_Y + 0.012, ZK)], "stone_ext")

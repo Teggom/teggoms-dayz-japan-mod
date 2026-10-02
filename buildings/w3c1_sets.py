@@ -94,10 +94,10 @@ def maegura(c):
     sparse(c, "muro", "the koji room: the bed and the shelves fill it")
     t = fit1(c, "muro", "toko")
     tx, tz = fc(t)
-    c.free("muro", "jp_f_koji_toko_ab", tx, tz, 0.0, why="the koji bed, its cloth dragged off")
-    U = Room(c, "muro", centre=False)
-    U.used.append((tx - 0.95, tx + 0.95, tz - 0.65, tz + 0.65))
-    U.wall("jp_f_kojibuta_tana_ab", sides=("zmin",), why="the tray shelves, half pulled down")
+    mr = c.R("muro")
+    tz = mr[3] - 0.95                                  # the bed towards the door, the shelves on the back wall
+    c.free("muro", "jp_f_koji_toko", tx, tz, 0.0, why="the koji bed, its cloth folded back over dried koji")
+    c.wall("muro", "zmin", tx, "jp_f_kojibuta_tana_ab", why="the tray shelves, half pulled down")
     # the kaishoba
     st = step_link(c, "kaidoma", "kaisho")
     sparse(c, "kaidoma", "the rest room's small entrance doma")

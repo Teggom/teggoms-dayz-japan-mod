@@ -37,7 +37,7 @@ Common rules: one storey + attic cap (G1-5; a kura loft by stair is the allowed 
 ### Recorded choices (sizes)
 | Piece | Choice | Why / source |
 |---|---|---|
-| o-kura | 9 x 4 ken (16.4 x 7.3 m), eave 5.40, earth floor 0.30 on the footing, a loft (the moto-ba, yeast starter) over the west 2.5 ken at 2.85 by the kura's open stair | Tatsuuma: two-storey large brewery, starter upstairs; real Nada kura run 20-30 ken long (GK), scaled to 9 ken for the island. Eave 5.40 so the loft keeps >= 2.10 m under the tie beams |
+| o-kura | 9 x 4 ken (16.4 x 7.3 m), eave 5.40, earth floor 0.30 on the footing, a loft (the moto-ba, yeast starter) over one end, 3.25 ken, at 2.85 by the kura's open stair along the back wall (built: 3.25 ken so the stair head keeps a 1 m landing; see Changes while building) | Tatsuuma: two-storey large brewery, starter upstairs; real Nada kura run 20-30 ken long (GK), scaled to 9 ken for the island. Eave 5.40 so the loft keeps >= 2.10 m under the tie beams |
 | o-kura openings | doors on both gables (west: starter / store end, east: press end; the kura door part), 3 barred kura windows in the north wall + 1 loft window in the west gable; the south wall blind (the mae-gura stands against it) | Tatsuuma north windows |
 | mae-gura | 9 x 3 ken (16.4 x 5.5 m), eave 3.70, one storey; from the west: araiba + kamaba (one 5-ken earth floor, two front doors, a koshiyane steam vent over the hearth), the koji-muro block (an ante-room + the muro behind it = the double doors), the kaishoba (a raised board room for the brewers with a small entrance doma) | sake-museum: front building functions; 3.70 eave puts its ridge under the o-kura's eave |
 | the join (roof union) | the mae-gura's back eave stops 6 cm short of the o-kura's south wall; a wooden gutter (tani-doi) on brackets under that eave + a flashing board on the o-kura wall carry the water away; the two kura are separate objects 4 cm apart (each closed, each its own doors) | see "New parts" below; the internal link between the two kura is NOT made (each opens to the yard) |
@@ -45,7 +45,7 @@ Common rules: one storey + attic cap (G1-5; a kura loft by stair is the allowed 
 | starter tubs (hangiri) | shallow wide tubs 1.10 across x 0.30, stacked; the starter tubs (moto-oke) 0.75 x 0.60 | GK; Tatsuuma "shallow wooden tubs" upstairs |
 | steamer (koshiki) over the hearth (kamaba) | clay-and-stone hearth 2.2 x 2.0 x 0.85 with the fire mouth to the front, an iron cauldron 1.4 across sunk in it, the cedar koshiki 1.45 across x 1.15 high on it with its lid; a step block | sake-museum: "a cauldron of water placed on a fire with a large steamer filled with rice placed on top" |
 | koji-muro | an inner room 2 x 2 ken, walls and ceiling lined with straw mats (the husk insulation), a board ceiling at 2.30, entered through an ante-room: two doors in series (the double doors); inside the koji bed (toko: a table 1.8 x 1.2 with cloths) and shelves of koji trays (koji-buta 0.45 x 0.30) | sake-museum: "rice husks and other insulating materials were affixed on the ceiling, the walls and the floor", "double doors at the entrance" |
-| the lever press (fune + tenbin) | the press box (fune) 2.4 x 0.95 x 0.95 m with its spout over a sunk receiving jar; the beam 6.4 m (0.30 sq) pivoting under a cross-beam held between two heavy posts (otoko-bashira) at the box's head, pressing the lid blocks; at the free end the weight stones (6) hang in rope slings. Abandoned state: the beam down, slings cut, stones on the floor | GK: the lever press with hanging stones (tenbin-shibori) is the Itami / Nada method of the period; brewing manuals from the late 17th c. (Domo shuzoki, c.1687, GK) describe pressing in the fune; the form follows the Nihon sankai meisan zue plates (1799; form only). IN |
+| the lever press (fune + tenbin) | the press box (fune) 2.4 x 0.95 x 0.95 m with its spout over a sunk receiving jar; the beam 6.4 m planned, **built 5.8 m** (0.30 sq; the press bay is 6.3 m) pivoting under a cross-beam held between two heavy posts (otoko-bashira) at the box's head, pressing the lid blocks; at the free end the weight stones (6) hang in rope slings. Abandoned state: the beam down, slings cut, stones on the floor | GK: the lever press with hanging stones (tenbin-shibori) is the Itami / Nada method of the period; brewing manuals from the late 17th c. (Domo shuzoki, c.1687, GK) describe pressing in the fune; the form follows the Nihon sankai meisan zue plates (1799; form only). IN |
 | rice polishing | the seimai-goya: an open board shed 4 x 2 ken in the yard with 4 foot-treadle mortars (kara-usu): a 2.4 m lever on a pivot between two posts, the pestle head over a mortar sunk to its rim, a hand rail for the treader | Nada's water-wheel polishing begins in the Meiwa era (1764-72) (sake-museum.jp "History of rice polishing, Edo"; nada-ken "suisha seimai"); before that, and in Itami, foot polishing. So in 1730: FOOT polishing (the water mill is a separate rural mill, TR04) |
 | sugidama | a ball of cedar sprigs 0.75 m across hung from the shop's front eave by a rope; **brown** (hung green with the new sake in early spring, brown by autumn) + a fallen state | GK; the cedar sign is attested in Edo-period pictures; first date uncertain (flag) |
 | casks | the 4-to taru (B3a / L1 props: jp_f_taru_cask, _komo, _rack3) in the cask kura | reuse |
@@ -120,12 +120,26 @@ sugidama on the eave), the board-fenced yard with its gate (`Land_JP_Compound_Br
 | 24 jp_p_ladder | **not built as a part**: a static leaning ladder PROP only | the engine ladder action is untested here; the kura loft uses the stair (G1-5) |
 | frame_koyagumi, floor_pit, stair | reused | exist (manifest) |
 
+## Changes while building (recorded, W3C1)
+- o-kura: the loft is 3.25 ken (not 2.5) so the stair head has a full landing; the fermentation floor and the press
+  bay are one open room ('kura', storage) with the tubs at the west of it; the press beam is 5.8 m.
+- koji-muro: the straw-mat lining covers the two partitions and the board ceiling; the kura's own back / front
+  plaster walls inside the muro stay plain plaster (one long wall face each; not split for the lining).
+- The kasane-gura are two objects 0.20 m apart (wall face to wall face); seated on their own ground they differ by
+  0.13 m in height on the island (the front kura sits higher): the gutter and slot boards are the front kura's.
+- Seating on uneven ground (layout_w3c1.py): a building sits at max(lowest ground, highest ground - floor clearance)
+  so no floor has terrain through it; the water mill's low side floats 0.06.
+- Gates: brewery gate 6 ken from the south-east corner; the dyer's yard gate behind the back door; the paper yard
+  gate at its south-east corner.
+
 ## District (Stephen's 2026-10-02 rule: one new district, off the showcase)
 Ground survey (spikes/SH1/terrain_sh1.ground, 5 m grid): the pad (25.00) is full; the flattest free ground near the
-spawn is SOUTH-WEST, off the pad's corner: x 885-950, z 845-895 lies at 25.6-26.2 m (within 0.3 m over most
-50 x 30 m blocks), ~150 m from the spawn, nothing placed there, no trees. The trade quarter goes there: an east-west
-lane with the brewery and the dyer on its north side, the paper mill and the water mill on its south side. Extent and
-IDs: SHOWCASE_MAP.md "W3C1" + w3c1_map.jpg.
+spawn is SOUTH-WEST, off the pad's corner: x 885-950, z 845-895 lies at 25.6-26.2 m; within it a plateau x 894-946,
+z 866-884 is flat to +-0.08 m. Built (after a finer survey): the district **x 884-946, z 852-892**, ~160 m from the
+spawn, an east-west lane at z 861.5-866; north of it the brewery (west), the brewer's shop, the dyer + its yard, the
+paper mill + its yard (east, on the plateau); south of it the water mill (its flume crosses the lane). Free ground
+for the next districts: west x 835-882, z 850-900 and south x 884-946, z 825-851. IDs: SHOWCASE_MAP.md "W3C1" +
+w3c1_map.jpg.
 
 ## Not built / cut (cost rule)
 - The internal door between the two kura; the brewer's house (omoya) beyond the shop; a shochu still; the vinegar /

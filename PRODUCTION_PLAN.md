@@ -551,3 +551,28 @@
   corridor soseki faces at grade (0.35-0.44 m2 in the two roka objects; fixing them would change U9). Sheets
   contact_sheets/fx5_hedge.jpg, fx5_hedge_variants.jpg, fx5_gates_joints.jpg. **Walk: TEST_CHECKLIST.md = FX5 re-check
   (~5 min); wave 3c-1 adds its section below.**
+- 2026-10-02: **W3C1 DONE: WAVE 3c-1 BUILT, the trade quarter** (e97f33f, aba3726 + the W3C1 3/4, 4/4 commits). Research first
+  (spikes/W3C1/W3C1_NOTES.md: sake-museum.jp / nada-ken / Mitaka water-mill pages + project research; every size recorded).
+  **Brewery = the Nada kasane-gura**: Land_JP_SakaGura_Okura (9 x 4 ken, eave 5.40, log truss, four 1.8 m tubs, the lever press
+  with a 5.8 m beam + hanging stones, the starter loft by stair) + Land_JP_SakaGura_Maegura (steaming hearth + koshiki under a
+  steam vent, koji ante-room + straw-lined muro behind two doors, brewers' rest room) side by side, joined by
+  jp_p_roof_union _gutter (roofs.roof learns per-eave overhangs); Land_JP_SakaGura_Seimai (FOOT-treadle polishing: Nada's
+  water-wheel polishing is Meiwa 1764-72, after 1730); the cask kura (C3 kura dressed) and the brewer's shop (W3B doma
+  workshop dressed) with a big brown sugidama; a Hatcho miso vat as dressing. **Water mill** Land_JP_Suisha_Itabuki / _Thatch:
+  jp_p_mech_waterwheel _overshot + jp_p_water_flume (dry, sluice shut, on dry land per Stephen), three cam-lifted pestles; the
+  stone mill is a HAND quern (gear-driven millstones are late Edo: flagged). **Dyer** Land_JP_Konya_* : four ai-game sunk to the
+  rim round a fire pit (shell floor pits in a 0.30 raised earth floor: the island terrain would show in a jar sunk below
+  grade), drying frames in its yard. **Paper mill** Land_JP_KamiSuki_*: vat + mould on a spring pole, beating board, couching
+  press, bark steamer lean-to, drying boards in its yard. 3 yards (K3 kit). 12 shells, 8 furnished, 22 props / 40 models
+  (jp_furniture 625 classes). **New district rule applied:** everything in ONE district south-west of the yard (x 884-946,
+  z 852-892, lane z ~864; ~160 m from the spawn), free ground for 3c-2 recorded west and south of it (SHOWCASE_MAP W3C1,
+  w3c1_map.jpg); buildings on the slight slope are seated so no floor has terrain through it. Checks: verify_all --full 297 /
+  19,640 / 0; bindcheck 297; verify_oprw 4239/4239; hangcheck 0; handlecheck 40/0; yard joints sealed (jointcheck_w3c1);
+  gradesweep: no up-facing at-grade faces on the yards. Over budget (with reasons): Konya_Sangawara +23 % R1 (the vat bank),
+  Suisha R3 +47 % (the wheel's buckets in every LOD for C15). Not done: ☆ country sake brewer, an inside door between the two
+  kura, L / T roof valleys, an engine ladder (static prop only), shibori pattern texture, navmesh. Pitfalls: a shitami skirt
+  wall_run across a doorway needs internal_posts=False (a hidden post stood in the kura doorway: 0.44 m clear); a kura door
+  bay's skirt must skip the whole bay; C15 compares top heights from above, so an open-bucket wheel needs its buckets in every
+  LOD; gradesweep counts down-facing faces too (start floor slabs below grade); prop names containing 'hang' read as hanging
+  props in placecheck. **Walk: TEST_CHECKLIST.md = FX5 re-check (~5 min) + 3c-1 (~15 min).** Weekly 77 % -> 80 %.
+  Next (Stephen's call): 3c-2 (kilns, salt, charcoal, logging, quarry, mine), 3d government, 3e castle.

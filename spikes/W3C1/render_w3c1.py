@@ -35,7 +35,12 @@ PAIR = [["okura", {}, 0.0, -_DZ, 0.0], ["maegura", {}, 0.0, 0.0, 0.0]]
 
 def family_jobs():
     import registry
-    jobs = []
+    jobs = [("fam_pair_3q", "the kasane-gura as placed: mae-gura (front) + o-kura (behind), the gutter join between",
+             {"multi": PAIR, "view": "3q", "fit": 1.0, "res": [480, 360]}),
+            ("fam_pair_back", "the kasane-gura from the back: the o-kura's north windows",
+             {"multi": PAIR, "view": "back", "fit": 1.0, "res": [480, 360]}),
+            ("fam_pair_cut", "the kasane-gura, roofs off: the log truss, the loft, the koji block",
+             {"multi": PAIR, "view": "3q", "fit": 1.0, "res": [480, 360], "drop": "roof"})]
     for b in registry.BUILDINGS:
         if b.get("dir") not in FAMS:
             continue
@@ -164,7 +169,7 @@ def compose_family():
             nck += c.get("checks_n", 0)
             fails += c.get("failures", 0)
     sub = ("W3C1 trade-site shells (bare), %d checks %s (buildings/ts_*/checks/*.json). "
-           "Dark figure = 1.8 m; one 3/4 front view each; the yard fences last." % (nck, "all pass" if not fails else
+           "Dark figure = 1.8 m; the kasane-gura pair first (as placed, back, roofs off), then one 3/4 front view each; the yards last." % (nck, "all pass" if not fails else
                                                                               "%d FAILURES" % fails))
     compose("family", family_jobs(), "W3C1: wave 3c-1 trade sites (sake brewery, water mill, dyer, paper mill) + yards",
             sub, 6, 480, 360, 22, 52)

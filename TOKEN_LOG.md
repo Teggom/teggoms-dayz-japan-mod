@@ -73,6 +73,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-02 00:31 (local) | W3B (baseline) | launched: wave 3b workshops + services (approved by Stephen before bed, usage-checked) | - | - | before: **74%** (projected ~78-80%) |
 | 2026-10-02 ~01:30 (local) | W3B | wave 3b: 18 shells (sento x2, stable row x2, barber + misemono booths, doma + bench workshops x2 each, timber sheds x3, foundry x2, 3 yard compounds), 34 props / 63 models, 14 furnished, 38 placements | **644k** (182 tool calls) | 55 min | weekly **76%** after |
 | 2026-10-02 ~11:35 (local) | FX5 | fixes from the 3a / 3b walk: gate sill pads (9 compounds), honjin wall / fence joints + hedge slits, continuous hedge + 2 new materials, U9 deferred, 5-min re-check | 392k | 45 min | weekly **77%** after (76% at start) |
+| 2026-10-02 ~13:05 (local) | W3C1 | wave 3c-1 trade quarter: sake brewery kasane-gura (o-kura + mae-gura + gutter union), polishing shed, cask kura + brewer's shop dressings, water mill x2 (wheel, flume, stamps), dyer x2 (sunk vats), paper mill x2, 3 yards; 3 new parts, 22 props / 40 models, 8 furnished; one new district | (see completion notice) | ~90 min | weekly **80%** after (77% at start) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

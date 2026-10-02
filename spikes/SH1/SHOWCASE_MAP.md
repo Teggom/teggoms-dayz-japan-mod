@@ -682,3 +682,61 @@ Regenerate: `python spikes/W3B/layout_w3b.py` then `python spikes/W3B/map_w3b.py
 | F6 | `jp_f_cast_pots.p3d` | 1038.20 | 914.60 | 0 | -0.00 | new pots and kettles on a rack outside |
 
 <!-- W3B END -->
+
+<!-- W3C1 BEGIN -->
+
+## W3C1 wave 3c-1: the trade quarter (sake brewery, dyer, paper mill, water mill) (agent W3C1, 2026-10-02)
+
+**District (Stephen, 2026-10-02: one new district per wave, off the showcase):** x 884-946, z 852-892, south-west of the yard pad, ~160 m from the spawn (1024, 985); an east-west lane at z 861.5-866. **Free ground for the next districts (3c-2 etc.):** west of it x 835-882, z 850-900 (25.6-26.4 m, gentle) and south of it x 884-946, z 825-851 (a 2 % slope down to the south). Ground survey: spikes/W3C1/W3C1_NOTES.md "District".
+
+Regenerate: `python spikes/W3C1/layout_w3c1.py` then `python spikes/W3C1/map_w3c1.py`. Map: research/production/contact_sheets/w3c1_map.jpg. Buildings are furnished variants (`buildings/w3c1_sets.py`); yard fences (`Land_JP_Compound_*`) are K3-kit objects; `.sN` = a site object of that building; IDs without a class are free props. y_off is over the ground at the object (a building on uneven ground sits so no floor has terrain poking through it).
+
+### The sake brewery (north of the lane, west): the kasane-gura, the polishing shed, the cask kura, the brewer's shop
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| BR1 | `Land_JP_Compound_Brewery` | 894.92 | 879.83 | 0 | -0.22 | the brewery's black board fence, the wide gate south on the lane |
+| BR2 | `Land_JP_SakaGura_Okura_Furnished` | 894.92 | 886.60 | 180 | -0.15 | the large kura (o-kura): four big tubs, the lever press (west end), the starter loft (east end, stair up); doors on both gables |
+| BR3 | `Land_JP_SakaGura_Maegura_Furnished` | 894.92 | 879.79 | 180 | -0.05 | the front kura (mae-gura), facing the yard: the brewers' rest room (west), the koji room, the steaming hearth + washing floor (east); its back eave + gutter against the o-kura |
+| BR4 | `Land_JP_SakaGura_Seimai_Furnished` | 900.90 | 871.02 | 0 | -0.03 | the rice-polishing shed (open north to the yard): four treadle mortars |
+| BR4.s1 | `jp_f_tawara_stack6.p3d` | 900.90 | 874.29 | 0 | -0.04 | rice bales waiting to be polished |
+| BR4.s2 | `jp_f_tawara_burst.p3d` | 903.50 | 874.09 | 30 | -0.04 | a burst rice bale |
+| BR5 | `Land_JP_Kura_Plain_SakeCasks` | 888.00 | 870.90 | 0 | -0.06 | the cask kura (door north to the yard): casks on both floors |
+| BR6 | `Land_JP_Workshop_Doma_Sangawara_Sakaya` | 910.25 | 868.90 | 180 | -0.03 | the brewer's shop on the lane (open front south): casks, measures, the counting desk; the big brown sugidama under the front beam |
+| BR8 | `jp_f_taru_rack3.p3d` | 897.50 | 875.00 | 0 | -0.00 | casks drying on a rack in the yard |
+
+### The indigo dyer (north of the lane, east) and its drying yard
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| DY1 | `Land_JP_Konya_Sangawara_Furnished` | 918.65 | 869.33 | 180 | -0.02 | the indigo dyer (shop open south to the lane, shop-front cloths); behind the step the vat room with the four sunk vats round the fire pit; back door north to the yard |
+| DY2 | `Land_JP_Compound_DyersYard` | 920.88 | 879.06 | 0 | -0.11 | the dyer's drying yard: board fence, the gate behind the back door |
+| DY3 | `jp_f_monohoshi.p3d` | 917.50 | 877.30 | 0 | -0.02 | a tall drying frame, indigo lengths hung doubled |
+| DY4 | `jp_f_monohoshi.p3d` | 923.80 | 877.30 | 0 | -0.02 | a second drying frame |
+| DY5 | `jp_f_monohoshi_torn.p3d` | 920.60 | 880.90 | 90 | -0.05 | a drying frame, two lengths fallen, two torn |
+| DY6 | `jp_f_sukumo_bales_scattered.p3d` | 926.60 | 882.60 | 0 | -0.03 | sukumo bales tumbled in the yard |
+| DY7 | `jp_f_hangiri.p3d` | 915.90 | 882.40 | 0 | -0.01 | rinsing tubs stacked by the fence |
+
+### The paper mill (north of the lane, far east) and its drying yard
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| PM1 | `Land_JP_KamiSuki_Thatch_Furnished` | 935.00 | 868.90 | 180 | -0.03 | the paper mill (door south to the lane): the vat under the windows, the beating board, the couching press; the bark steamer in the lean-to (west) |
+| PM2 | `Land_JP_Compound_PaperYard` | 937.39 | 877.86 | 0 | -0.12 | the paper mill's drying yard behind it: bamboo fence, the gate at the south-east corner (the path east of the mill) |
+| PM3 | `jp_f_hoshiita_rack.p3d` | 933.50 | 878.00 | 180 | -0.01 | drying boards leaned to the sun (south), sheets on three |
+| PM4 | `jp_f_hoshiita_rack.p3d` | 939.80 | 878.00 | 180 | -0.01 | drying boards leaned to the sun |
+| PM5 | `jp_f_hoshiita_rack_fallen.p3d` | 936.60 | 881.40 | 0 | -0.03 | drying boards fallen flat |
+
+### The water mill (south of the lane)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| WM1 | `Land_JP_Suisha_Itabuki_Furnished` | 916.00 | 857.80 | 0 | 0.01 | the water mill south of the lane (door north on the lane): the overshot wheel on the east gable, its dry flume coming in from the north over the lane on trestles; inside three pestles on the cam shaft, the hand quern |
+
+### On the lane
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| LN1 | `jp_s_handcart_load_bales.p3d` | 903.50 | 864.00 | 90 | -0.02 | a handcart with rice bales on the lane |
+
+<!-- W3C1 END -->

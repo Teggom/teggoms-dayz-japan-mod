@@ -137,12 +137,12 @@
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "22 points (kama 12, mae 2, kaidoma 2, kaisho 4, muro 2)"
+   "detail": "26 points (kama 12, mae 2, muro 6, kaidoma 2, kaisho 4)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "22 points, max diff 4.3e-07 m"
+   "detail": "26 points, max diff 4.3e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -277,7 +277,7 @@
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "20 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "21 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -342,17 +342,17 @@
   {
    "check": "D1 props per room 0-7: muro (sparse: the koji room: the bed and the shelves fill it)",
    "ok": true,
-   "detail": "1 props: jp_f_koji_toko_ab"
+   "detail": "2 props: jp_f_koji_toko, jp_f_kojibuta_tana_ab"
   },
   {
    "check": "D2 floor coverage <= 40 %: muro",
    "ok": true,
-   "detail": "2.16 of 8.98 m2 = 24.1 % (collision footprints)"
+   "detail": "3.02 of 8.98 m2 = 33.6 % (collision footprints)"
   },
   {
    "check": "D3 raised loot surface not required (sparse: the koji room: the bed and the shelves fill it): muro",
    "ok": true,
-   "detail": "2 raised points on jp_f_koji_toko_ab"
+   "detail": "4 raised points on jp_f_koji_toko, jp_f_kojibuta_tana_ab"
   },
   {
    "check": "D4 1.00 m clear band door-to-door and door-to-centre: muro",
@@ -502,32 +502,32 @@
   {
    "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
    "ok": true,
-   "detail": "15 collision props checked against 224 building components"
+   "detail": "16 collision props checked against 224 building components"
   },
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
    "ok": true,
-   "detail": "18 props pairwise"
+   "detail": "19 props pairwise"
   },
   {
    "check": "D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall",
    "ok": true,
-   "detail": "18 props"
+   "detail": "19 props"
   },
   {
    "check": "D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry",
    "ok": true,
-   "detail": "22 points (13 floor, 9 raised)"
+   "detail": "26 points (15 floor, 11 raised)"
   },
   {
    "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
    "ok": true,
-   "detail": "63 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
+   "detail": "67 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
   },
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 906361 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 909989 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

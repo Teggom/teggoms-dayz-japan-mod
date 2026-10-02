@@ -1,0 +1,551 @@
+[
+ {
+  "joint": "brewery itabei corner 0.0",
+  "world": [
+   884.0,
+   868.0
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_kura_plain_sakecasks.p3d",
+   "jp_s_handcart_load_bales.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "brewery itabei corner 0.1",
+  "world": [
+   884.0,
+   891.66
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_kura_plain_sakecasks.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "brewery itabei corner 0.2",
+  "world": [
+   905.84,
+   891.66
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_compound_dyersyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "brewery itabei corner 0.3",
+  "world": [
+   905.84,
+   868.0
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_compound_dyersyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_kura_plain_sakecasks.p3d",
+   "jp_s_handcart_load_bales.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d",
+   "jp_suisha_itabuki_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "brewery gate0 post A",
+  "world": [
+   894.92,
+   868.0
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_kura_plain_sakecasks.p3d",
+   "jp_s_handcart_load_bales.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d",
+   "jp_suisha_itabuki_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "brewery gate0 post B",
+  "world": [
+   892.19,
+   868.0
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_kura_plain_sakecasks.p3d",
+   "jp_s_handcart_load_bales.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "dyersyard itabei corner 0.0",
+  "world": [
+   913.6,
+   873.6
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_kamisuki_thatch_furnished.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_s_handcart_load_bales.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d",
+   "jp_suisha_itabuki_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "dyersyard itabei corner 0.1",
+  "world": [
+   913.6,
+   884.52
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_s_handcart_load_bales.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "dyersyard itabei corner 0.2",
+  "world": [
+   928.16,
+   884.52
+  ],
+  "objects": [
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_kamisuki_thatch_furnished.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "dyersyard itabei corner 0.3",
+  "world": [
+   928.16,
+   873.6
+  ],
+  "objects": [
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_kamisuki_thatch_furnished.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_suisha_itabuki_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "dyersyard gate0 post A",
+  "world": [
+   918.15,
+   873.6
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_kamisuki_thatch_furnished.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_s_handcart_load_bales.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d",
+   "jp_suisha_itabuki_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "dyersyard gate0 post B",
+  "world": [
+   915.42,
+   873.6
+  ],
+  "objects": [
+   "jp_compound_brewery.p3d",
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_f_taru_rack3.p3d",
+   "jp_f_tawara_burst.p3d",
+   "jp_f_tawara_stack6.p3d",
+   "jp_kamisuki_thatch_furnished.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_s_handcart_load_bales.p3d",
+   "jp_sakagura_maegura_furnished.p3d",
+   "jp_sakagura_okura_furnished.p3d",
+   "jp_sakagura_seimai_furnished.p3d",
+   "jp_suisha_itabuki_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "paperyard yotsume corner 0.0",
+  "world": [
+   929.2,
+   872.4
+  ],
+  "objects": [
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_kamisuki_thatch_furnished.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_suisha_itabuki_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "LEAK (wide open)",
+  "view@0.35": "LEAK (wide open)",
+  "view@1.00": "LEAK (wide open)",
+  "view@1.60": "LEAK (wide open)",
+  "res1@0.35": "LEAK gap ~0.28 m",
+  "res1@1.00": "LEAK gap ~0.28 m",
+  "res1@1.60": "LEAK (wide open)",
+  "by_design": "yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design"
+ },
+ {
+  "joint": "paperyard yotsume corner 0.1",
+  "world": [
+   929.2,
+   883.32
+  ],
+  "objects": [
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hangiri.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_kamisuki_thatch_furnished.p3d",
+   "jp_konya_sangawara_furnished.p3d",
+   "jp_workshop_doma_sangawara_sakaya.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "sealed",
+  "view@0.35": "sealed",
+  "view@1.00": "sealed",
+  "view@1.60": "sealed",
+  "res1@0.35": "sealed",
+  "res1@1.00": "sealed",
+  "res1@1.60": "sealed"
+ },
+ {
+  "joint": "paperyard yotsume corner 0.2",
+  "world": [
+   945.58,
+   883.32
+  ],
+  "objects": [
+   "jp_compound_paperyard.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_kamisuki_thatch_furnished.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "LEAK (wide open)",
+  "view@0.35": "LEAK (wide open)",
+  "view@1.00": "LEAK (wide open)",
+  "view@1.60": "LEAK (wide open)",
+  "res1@0.35": "LEAK gap ~0.28 m",
+  "res1@1.00": "LEAK gap ~0.28 m",
+  "res1@1.60": "LEAK (wide open)",
+  "by_design": "yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design"
+ },
+ {
+  "joint": "paperyard yotsume corner 0.3",
+  "world": [
+   945.58,
+   872.4
+  ],
+  "objects": [
+   "jp_compound_paperyard.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_kamisuki_thatch_furnished.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "LEAK (wide open)",
+  "view@0.35": "LEAK (wide open)",
+  "view@1.00": "LEAK (wide open)",
+  "view@1.60": "LEAK (wide open)",
+  "res1@0.35": "LEAK gap ~0.28 m",
+  "res1@1.00": "LEAK gap ~0.28 m",
+  "res1@1.60": "LEAK (wide open)",
+  "by_design": "yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design"
+ },
+ {
+  "joint": "paperyard gate0 post A",
+  "world": [
+   943.76,
+   872.4
+  ],
+  "objects": [
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_kamisuki_thatch_furnished.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "LEAK (wide open)",
+  "view@0.35": "LEAK (wide open)",
+  "view@1.00": "LEAK (wide open)",
+  "view@1.60": "LEAK (wide open)",
+  "res1@0.35": "LEAK gap ~0.28 m",
+  "res1@1.00": "LEAK gap ~0.28 m",
+  "res1@1.60": "LEAK (wide open)",
+  "by_design": "yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design"
+ },
+ {
+  "joint": "paperyard gate0 post B",
+  "world": [
+   941.03,
+   872.4
+  ],
+  "objects": [
+   "jp_compound_dyersyard.p3d",
+   "jp_compound_paperyard.p3d",
+   "jp_f_hoshiita_rack.p3d",
+   "jp_f_hoshiita_rack_fallen.p3d",
+   "jp_f_monohoshi.p3d",
+   "jp_f_monohoshi_torn.p3d",
+   "jp_f_sukumo_bales_scattered.p3d",
+   "jp_kamisuki_thatch_furnished.p3d",
+   "jp_konya_sangawara_furnished.p3d"
+  ],
+  "geo@0.35": "sealed",
+  "geo@1.00": "sealed",
+  "geo@1.60": "LEAK (wide open)",
+  "view@0.35": "LEAK (wide open)",
+  "view@1.00": "LEAK (wide open)",
+  "view@1.60": "LEAK (wide open)",
+  "res1@0.35": "LEAK gap ~0.52 m",
+  "res1@1.00": "LEAK gap ~0.52 m",
+  "res1@1.60": "LEAK (wide open)",
+  "by_design": "yotsume-gaki: an open bamboo grid 1.05 m high, see-through by K3 design"
+ }
+]
