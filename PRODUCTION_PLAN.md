@@ -534,3 +534,20 @@
   verify_oprw 4216/4216. Not done: hot-spring bath hut, painted show-booth sign texture, navmesh. Pitfall: binarizing the props folder
   crashes on already-binarized models: use spikes/W3B/binsingle.py. **Walk: TEST_CHECKLIST.md = D3 (~28 min) + FX4 re-check + 3b
   (~15 min).** Weekly 76 %. Next (Stephen's call): 3c trade sites (brewery etc.), 3d government, 3e castle.
+- 2026-10-02: **FX5 DONE: Stephen's 3a / 3b walk fixes** (a5639a1, 7747dea, + checks / checklist commit). Root causes and fixes:
+  (1) **gate floors flickered**: `dwelling.compound()` laid every gate passage as an earth slab whose top lay exactly AT
+  grade (z-fight with the terrain; all 9 compounds incl. the 3 W3B yards); now `floors.sill_pad()`: packed earth, top
+  +0.10 (0.06 would have been coplanar again at the timber / foundry yards, sunk ~6 cm on their slope), sloped 20 deg
+  margins into the ground, Roadway on top + slopes, stones 3.5 cm proud, gate leaves lifted (`gate_kabuki(leaf_y0)`).
+  (2) **honjin plaster-to-fence gap**: the side board fences started half a ken short of the dobei street wall (0.70 m
+  walk-through gap, measured in the built ODOLs); `dwelling._abut()` extends any open run to the wall it meets. Also the
+  hedge's corners / back-gate post had 8 cm slits. `spikes/FX5/jointcheck.py --all`: 56/56 joints sealed in Geometry /
+  View / Res 1 (kumi yotsume open by design). (3) **hedge**: lumps restarted per module + module-local UVs + an alpha-cut
+  card material on solid boxes; now one continuous clipped form on the run coordinate (`wall(run=...)`), smooth normals
+  (new `Solid.vn`), new `jp_m_plant_hedge` + `_fringe` (make_fx5_materials.py), sprig fringe; parts + compound rebuilt.
+  (4) **U9**: recorded under Confirmed future work (modular host variants, end of production), untouched.
+  Checks: verify_all --full 277 buildings / 18,522 checks / 0 failures; bindcheck 277/277; verify_oprw 4216/4216; placecheck island unchanged
+  (415, same as W3B); hangcheck 0; handlecheck 40/0; gradesweep: 0.00 m2 at grade on all compounds. Not fixed: K3's
+  corridor soseki faces at grade (0.35-0.44 m2 in the two roka objects; fixing them would change U9). Sheets
+  contact_sheets/fx5_hedge.jpg, fx5_hedge_variants.jpg, fx5_gates_joints.jpg. **Walk: TEST_CHECKLIST.md = FX5 re-check
+  (~5 min); wave 3c-1 adds its section below.**
