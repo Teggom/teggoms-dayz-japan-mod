@@ -474,3 +474,11 @@
   backwards texture: you can see into it (inside faces / open mouth); (2) the climbable fire-watch tower is too short at the top:
   you clip into its roof (head room on the deck); (3) stone torii columns still show duplicated textures (FX3 covered wood only:
   extend the atlas + per-piece patch approach to stone). Other minor things deferred by Stephen.
+- 2026-10-01: **Stephen: stop agent work for the week at 90% weekly usage** (other lighter projects need tokens); below that, order
+  doesn't matter. **Next = wave 3 (more buildings), not items** (Stephen: spawn locations stay the same; items swap in later; the map can
+  even come before items). Proposed wave-3 order (lead): FX4 (bell, fire-watch roof, stone atlas) -> 3a upper/samurai dwellings +
+  honjin + the WALL KIT (earth / plaster walls, hedges, bamboo fences, stone walls, gates) -> 3b everyday workshops + services (sento,
+  stable yard, stall kit, earth-floor + raised-floor workshops, timber yard, foundry) -> 3c trade sites (brewery, water mill, dyer,
+  kilns, paper, salt, charcoal, logging, quarry, mine) -> 3d government (official compound, post-station office, checkpoint kit, jail,
+  fire watchtower) -> 3e the castle kit (keep with swaps, turrets, tamon, box gate, palace wing, ruins). Pleasure quarters + kabuki
+  theatre go with landmarks.
