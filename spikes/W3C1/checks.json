@@ -797,9 +797,9 @@
    "faces": {
     "Resolution 1": 462,
     "Resolution 2": 12,
-    "Geometry": 42,
-    "View Geometry": 42,
-    "Fire Geometry": 42
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
    },
    "checks": [
     {
@@ -841,9 +841,9 @@
       "faces": {
        "Resolution 1": 462,
        "Resolution 2": 12,
-       "Geometry": 42,
-       "View Geometry": 42,
-       "Fire Geometry": 42
+       "Geometry": 28,
+       "View Geometry": 28,
+       "Fire Geometry": 28
       },
       "extra": [],
       "budget": 1000
@@ -878,7 +878,7 @@
      "name": "Geometry: closed convex components, mass, autocenter=0",
      "pass": true,
      "detail": {
-      "components": 3,
+      "components": 2,
       "problems": {},
       "mass": 40.0
      }
@@ -888,7 +888,7 @@
      "name": "View Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 3
+      "components": 2
      }
     },
     {
@@ -896,7 +896,7 @@
      "name": "Fire Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 3
+      "components": 2
      }
     },
     {

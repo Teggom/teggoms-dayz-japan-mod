@@ -125,7 +125,6 @@ def hangiri(scattered=False):
         P.add(W(-1.37, -0.27, 0.0, h, 0.37, 1.47, WEATH, vis=(2,)))
         P.add(cyl_col(R, 0.0, h, cx=-0.20, cz=-0.10, mat=WEATH))
         P.add(cyl_col(R * 0.8, 0.0, h, cx=0.95, cz=0.75, mat=WEATH))
-        P.add(cyl_col(R * 0.8, 0.0, h, cx=-0.82, cz=0.92, mat=WEATH))
         P.loot_rect("tub", 0.03, -0.45, 0.05, -0.35, 0.15, rng=0.15, kind="floor", per=1.0)
     else:
         P.add(W(-0.30 - R, -0.30 + R, 0.0, 3 * h - 0.06, -R, R, WEATH, vis=(2,)))

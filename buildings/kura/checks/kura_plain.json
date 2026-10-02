@@ -173,7 +173,7 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "2228 columns over 2.5 m compared in each LOD"
+   "detail": "2226 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
@@ -188,7 +188,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 1464 touching (opposite-facing: backface-culled) and 220 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 1460 touching (opposite-facing: backface-culled) and 220 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -203,7 +203,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 379639 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 379778 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

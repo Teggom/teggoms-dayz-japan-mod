@@ -287,7 +287,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 1976 touching (opposite-facing: backface-culled) and 321 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 1964 touching (opposite-facing: backface-culled) and 321 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -317,7 +317,7 @@
   {
    "check": "D4 1.00 m clear band door-to-door and door-to-centre: kama",
    "ok": true,
-   "detail": "DoorsTwin1, DoorsTwin2, DoorsTwin4, centre joined by a 1.00 m band (7071 free cells)"
+   "detail": "DoorsTwin1, DoorsTwin2, DoorsTwin4, centre joined by a 1.00 m band (7058 free cells)"
   },
   {
    "check": "D1 props per room 0-7: mae (sparse: the small ante-room between the two koji doors)",
@@ -347,7 +347,7 @@
   {
    "check": "D2 floor coverage <= 40 %: muro",
    "ok": true,
-   "detail": "3.02 of 8.98 m2 = 33.6 % (collision footprints)"
+   "detail": "3.01 of 8.98 m2 = 33.6 % (collision footprints)"
   },
   {
    "check": "D3 raised loot surface not required (sparse: the koji room: the bed and the shelves fill it): muro",
@@ -357,7 +357,7 @@
   {
    "check": "D4 1.00 m clear band door-to-door and door-to-centre: muro",
    "ok": true,
-   "detail": "no door reaches into this sparse space"
+   "detail": "DoorsTwin5 joined by a 1.00 m band (404 free cells)"
   },
   {
    "check": "D1 props per room 0-7: kaidoma (sparse: the rest room's small entrance doma)",
@@ -527,7 +527,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 909989 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 910358 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

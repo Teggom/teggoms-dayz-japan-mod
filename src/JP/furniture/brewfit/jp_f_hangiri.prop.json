@@ -100,9 +100,9 @@
    "faces": {
     "Resolution 1": 462,
     "Resolution 2": 12,
-    "Geometry": 42,
-    "View Geometry": 42,
-    "Fire Geometry": 42
+    "Geometry": 28,
+    "View Geometry": 28,
+    "Fire Geometry": 28
    },
    "bbox": [
     -1.372,
@@ -114,10 +114,10 @@
    ],
    "collision": true,
    "footprint_xz": [
-    -1.227,
+    -0.708,
     -0.608,
     1.357,
-    1.327
+    1.157
    ],
    "loot_floor_clearance_m": 0.4,
    "roadway": false,

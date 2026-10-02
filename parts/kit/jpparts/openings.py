@@ -727,14 +727,19 @@ def part_kura_door(variant):
                 out.append(box(x0 + 0.04, x1 - 0.04, th + 0.04, th + lh - 0.04, zf_out + LEAF_T,
                                zf_out + LEAF_T + STEP_T, KURA_PLASTER, vis=(1,), tag="kura_leaf_step"))
             else:
-                # static open ~100 degrees: the leaf stands out from the surround edge
-                z0 = zf_out
-                xa = hx + sg * 0.0
-                out.append(box(min(xa, xa + sg * LEAF_T), max(xa, xa + sg * LEAF_T), th, th + lh, z0, z0 + lw,
-                               KURA_PLASTER, vis=(1, 2, 3), geo=True, view=True, fire=True, tag="kura_leaf"))
-                out.append(box(min(xa + sg * LEAF_T, xa + sg * (LEAF_T + STEP_T)),
-                               max(xa + sg * LEAF_T, xa + sg * (LEAF_T + STEP_T)), th + 0.04,
-                               th + lh - 0.04, z0 + 0.04, z0 + lw - 0.04, KURA_PLASTER, vis=(1,), tag="kura_leaf_step"))
+                # FX6 (2026-10-02, Stephen's 3c-1 walk: "two sets of doors, the white and the wood, and the white ones
+                # don't open or close"): the static plastered leaves stood straight out from the wall (open ~90 deg)
+                # and read as doors that should work. Period practice: the heavy kannon leaves stood open by day,
+                # folded right back against the wall; the wooden inner door was the one used. Now they lie folded
+                # back flat (180 deg) on the stepped surround and the wall face beside it, their stepped (outer)
+                # face to the wall, clear of the doorway.
+                xa0, xa1 = (hx, hx + sg * lw)
+                x0, x1 = min(xa0, xa1), max(xa0, xa1)
+                zb = zf_out + 0.005                     # 5 mm proud of the surround's outer face
+                out.append(box(x0 + 0.04, x1 - 0.04, th + 0.04, th + lh - 0.04, zb, zb + STEP_T, KURA_PLASTER,
+                               vis=(1,), tag="kura_leaf_step"))
+                out.append(box(x0, x1, th, th + lh, zb + STEP_T, zb + STEP_T + LEAF_T, KURA_PLASTER, vis=(1, 2, 3),
+                               geo=True, view=True, fire=True, tag="kura_leaf"))
             return out
         if hinged:
             bone = p.next_bone()

@@ -38,7 +38,11 @@ def okura(c):
     zmid = (c.R("kura")[2] + c.R("kura")[3]) / 2
     for k, (f, nm) in enumerate(zip(c.fit("kura", "tub"), names)):
         x, z = fc(f)
-        c.free("kura", nm, x, z, 0.0 if z < zmid else 180.0, why="big fermentation tub (#%d), dry" % (k + 1))
+        yaw = 0.0 if z < zmid else 180.0
+        if nm.endswith("_staved"):
+            # FX6: the fallen staves lie towards the room (+z of the prop): they pushed out through the kura wall
+            yaw = 180.0 if z < zmid else 0.0
+        c.free("kura", nm, x, z, yaw, why="big fermentation tub (#%d), dry" % (k + 1))
         T.used.append((x - 0.95, x + 0.95, z - 0.95, z + 0.95))
     p = fit1(c, "kura", "press")
     r = p["rect"]
@@ -92,12 +96,14 @@ def maegura(c):
     A.wall("jp_f_oke_bucket", why="a bucket")
     # the muro
     sparse(c, "muro", "the koji room: the bed and the shelves fill it")
-    t = fit1(c, "muro", "toko")
-    tx, tz = fc(t)
+    fit1(c, "muro", "toko")
     mr = c.R("muro")
-    tz = mr[3] - 0.95                                  # the bed towards the door, the shelves on the back wall
-    c.free("muro", "jp_f_koji_toko", tx, tz, 0.0, why="the koji bed, its cloth folded back over dried koji")
-    c.wall("muro", "zmin", tx, "jp_f_kojibuta_tana_ab", why="the tray shelves, half pulled down")
+    # FX6 (Stephen's 3c-1 walk: "a large table in the middle; I cannot enter the room"): the bed stood 0.35 m inside
+    # the muro's only door. Now it stands against the back wall, east of the door's line, and the tray shelves stand
+    # on the west wall: a 1.3 m clear floor inside the door
+    c.free("muro", "jp_f_koji_toko", mr[1] - 0.05 - 0.90, mr[2] + 0.05 + 0.60, 0.0,
+           why="the koji bed against the back wall, its cloth folded back over dried koji")
+    c.wall("muro", "xmin", (mr[2] + mr[3]) / 2 - 0.20, "jp_f_kojibuta_tana_ab", why="the tray shelves, half pulled down")
     # the kaishoba
     st = step_link(c, "kaidoma", "kaisho")
     sparse(c, "kaidoma", "the rest room's small entrance doma")
@@ -135,7 +141,8 @@ def kura_casks(c):
     c.free("kura", "jp_f_tawara_stack6", 0.90, 0.60, 0, why="rice bales")
     c.free("kura", "jp_f_taru_komo", -2.15, 0.90, 0, why="a straw-wrapped cask")
     if rk is not None:
-        c.surf(rk, "jp_f_masu_set", why="measures left on the casks")
+        # FX6: sake flasks (the measure set overhung the cask tops by up to 0.5 m: its far measures floated)
+        c.surf(rk, "jp_f_tokkuri_pair", why="flasks left on the casks")
     c.wall("nikai", "zmax", -1.30, "jp_f_taru_rack3_ab", why="empty casks, two rolled off")
     c.wall("nikai", "zmax", 1.30, "jp_f_rack_1ken", why="shelving")
     c.free("nikai", "jp_f_taru_cask", -2.10, -0.30, 0, why="a cask")
@@ -157,9 +164,8 @@ def sakaya(c):
     D = Room(c, "doma", open_sides=("zmax",), points=st)
     D.wall("jp_f_taru_rack3", sides=("zmin",), why="casks on their rack")
     D.wall("jp_f_taru_rack3_ab", sides=("zmin", "xmin"), why="casks, two rolled off")
-    k = D.free("jp_f_taru_komo", 0.30, 0.75, 0, why="a cask to sit on")
-    if k is not None:
-        c.surf(k, "jp_f_masu_set", why="measures left on the cask")
+    # FX6: nothing on the komo cask's top (its loot surface lies 3 cm over the recessed lid: things on it floated)
+    D.free("jp_f_taru_komo", 0.30, 0.75, 0, why="a cask to sit on")
     D.wall("jp_f_oke_bucket", why="a bucket")
     # the sugidama under the open front's head beam (anchor 'hang'): beam underside = the shell's YT - 0.40
     from jpparts.core import KETA_H
