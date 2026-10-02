@@ -71,6 +71,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~23:45 (local) | K3 | wall kit (65 variants) + watari-roka / kairo corridor kit (32) + striproof.py, 4 offline proofs 89/89 | **642k** (168 tool calls) | 57 min | concurrent with D3 |
 | 2026-10-02 ~00:28 (local) | D3 | 28 dwelling shells + honjin / waki-honjin, 16 furnished, 8 compounds / corridors (incl. temple U hondo<->kuri roka), 29 placed, 28-min walk | **161k reported** (319 tool calls; the count looks low for the run) | 106 min | weekly **74%** after 3a |
 | 2026-10-02 00:31 (local) | W3B (baseline) | launched: wave 3b workshops + services (approved by Stephen before bed, usage-checked) | - | - | before: **74%** (projected ~78-80%) |
+| 2026-10-02 ~01:30 (local) | W3B | wave 3b: 18 shells (sento x2, stable row x2, barber + misemono booths, doma + bench workshops x2 each, timber sheds x3, foundry x2, 3 yard compounds), 34 props / 63 models, 14 furnished, 38 placements | (see notification) | ~60 min | weekly **76%** after |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

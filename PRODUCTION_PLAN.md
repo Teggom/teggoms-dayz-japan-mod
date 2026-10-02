@@ -515,3 +515,11 @@
   and Roka_Honjin (shrine-P kairo skipped: terraced halls, no level run). Placed S1-S10, H1-H6, J1-J5, M1-M4, E1-E3, U9.
   verify_all --full 245 buildings / 16,697 checks; bindcheck 245; verify_oprw 4178/4178. Known false flag: placecheck calls every kasuga
   lantern 'hanging'. **Walk: TEST_CHECKLIST.md (~28 min) + FX4 re-check.** **W3B (wave 3b) launched** at 74 % weekly.
+- 2026-10-02: **W3B DONE — WAVE 3b BUILT** (cf3b704 .. 0ac243b). 18 shells (template jpparts/templates/trade.py): Sento x2 (one mixed
+  bath in 1730, bans from 1791; zakuro-guchi decorative + a board door), StableRow x2, Booth_Barber / _Misemono, Workshop_Doma x2,
+  Workshop_Bench x2, Timber_SawShed / _Store / _ShingleShed (trestle sawing, not a sawpit), Foundry x2 (koshiki-ro cupola + treadle
+  bellows), 3 yard compounds; 34 props / 63 models (jp_furniture 585); 14 furnished. Placed A1-A14 artisans' street, B1-B5 bathhouse +
+  stable yard, T1-T8 timber yard, F1-F6 foundry (W3B.csv; map w3b_map.jpg). 277 buildings / 18,522 checks; bindcheck 277;
+  verify_oprw 4216/4216. Not done: hot-spring bath hut, painted show-booth sign texture, navmesh. Pitfall: binarizing the props folder
+  crashes on already-binarized models: use spikes/W3B/binsingle.py. **Walk: TEST_CHECKLIST.md = D3 (~28 min) + FX4 re-check + 3b
+  (~15 min).** Weekly 76 %. Next (Stephen's call): 3c trade sites (brewery etc.), 3d government, 3e castle.
