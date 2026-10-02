@@ -3,7 +3,7 @@
  "key": "dw_cmp_honjin",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "14185/3385/2377",
+ "faces": "14301/3465/2197",
  "door_clear_m": [
   2.5,
   1.6
@@ -14,12 +14,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 14185, Resolution 2 3385, Resolution 3 2377, Geometry 860, Memory 0, Roadway 2, View Geometry 860, Fire Geometry 860"
+   "detail": "Resolution 1 14301, Resolution 2 3465, Resolution 3 2197, Geometry 892, Memory 0, Roadway 10, View Geometry 892, Fire Geometry 892"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 14185, R2 3385, R3 2377 | OVER BUDGET +48.6 % (deliberate: a 86-ken compound ring (plastered street wall + board fences) and two gates in one object)"
+   "detail": "R1 14301, R2 3465, R3 2197 | OVER BUDGET +37.3 % (deliberate: a 86-ken compound ring (plastered street wall + board fences) and two gates in one object)"
   },
   {
    "check": "Geometry properties + mass",
@@ -34,17 +34,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "142 components, 0 bad, 0 faces outside components"
+   "detail": "146 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "142 components, 0 bad, 0 faces outside components"
+   "detail": "146 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "142 components, 0 bad, 0 faces outside components"
+   "detail": "146 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -74,7 +74,7 @@
   {
    "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 2.50 m, head 2.91 m"
+   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 2.50 m, head 2.81 m"
   },
   {
    "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
@@ -84,12 +84,12 @@
   {
    "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 1.60 m, head 2.91 m"
+   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 1.60 m, head 2.81 m"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "32/32 samples"
+   "detail": "160/160 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
@@ -99,7 +99,7 @@
   {
    "check": "C7 head room >= 2.10 over every floor",
    "ok": true,
-   "detail": "lowest 3.07 m"
+   "detail": "lowest 2.92 m"
   },
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
@@ -109,7 +109,7 @@
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "2 points, max diff 2.9e-07 m"
+   "detail": "2 points, max diff 1.4e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -119,22 +119,22 @@
   {
    "check": "C10 DoorsTwin1 reachable from both sides (open)",
    "ok": true,
-   "detail": "Gate (kabuki roofed): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.88 m; far: leaf hit first from 7/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.42 m"
+   "detail": "Gate (kabuki roofed): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.90 m; far: leaf hit first from 7/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.43 m"
   },
   {
    "check": "C10 DoorsTwin1 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Gate (kabuki roofed): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.65 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.58 m"
+   "detail": "Gate (kabuki roofed): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.68 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.61 m"
   },
   {
    "check": "C10 DoorsTwin2 reachable from both sides (open)",
    "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.45 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m"
+   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m"
   },
   {
    "check": "C10 DoorsTwin2 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.45 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.40 m"
+   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.48 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
   },
   {
    "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
@@ -184,7 +184,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 4418 touching (opposite-facing: backface-culled) and 762 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 4491 touching (opposite-facing: backface-culled) and 786 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -199,7 +199,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1051842 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1046835 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

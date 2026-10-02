@@ -36969,10 +36969,10 @@
    ],
    "materials": [
     {
-     "key": "plant_foliage",
-     "id": "jp_m_plant_foliage",
+     "key": "plant_hedge",
+     "id": "jp_m_plant_hedge",
      "palette_id": "foliage_green",
-     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_foliage<wear>.rvmat",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -36981,10 +36981,10 @@
      ]
     },
     {
-     "key": "wood_silver",
-     "id": "jp_m_wood_silver",
-     "palette_id": "wood_silver_grey",
-     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver<wear>.rvmat",
+     "key": "plant_hedge_fringe",
+     "id": "jp_m_plant_hedge_fringe",
+     "palette_id": "foliage_green",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -36994,9 +36994,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 196,
-    "Resolution 2": 6,
-    "Resolution 3": 6,
+    "Resolution 1": 106,
+    "Resolution 2": 7,
+    "Resolution 3": 7,
     "Geometry": 6,
     "View Geometry": 6
    },
@@ -37068,10 +37068,10 @@
    ],
    "materials": [
     {
-     "key": "plant_foliage",
-     "id": "jp_m_plant_foliage",
+     "key": "plant_hedge",
+     "id": "jp_m_plant_hedge",
      "palette_id": "foliage_green",
-     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_foliage<wear>.rvmat",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -37080,10 +37080,10 @@
      ]
     },
     {
-     "key": "wood_silver",
-     "id": "jp_m_wood_silver",
-     "palette_id": "wood_silver_grey",
-     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver<wear>.rvmat",
+     "key": "plant_hedge_fringe",
+     "id": "jp_m_plant_hedge_fringe",
+     "palette_id": "foliage_green",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -37093,9 +37093,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 196,
-    "Resolution 2": 6,
-    "Resolution 3": 6,
+    "Resolution 1": 130,
+    "Resolution 2": 8,
+    "Resolution 3": 8,
     "Geometry": 6,
     "View Geometry": 6
    },
@@ -37167,10 +37167,10 @@
    ],
    "materials": [
     {
-     "key": "plant_foliage",
-     "id": "jp_m_plant_foliage",
+     "key": "plant_hedge",
+     "id": "jp_m_plant_hedge",
      "palette_id": "foliage_green",
-     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_foliage<wear>.rvmat",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -37179,10 +37179,10 @@
      ]
     },
     {
-     "key": "wood_silver",
-     "id": "jp_m_wood_silver",
-     "palette_id": "wood_silver_grey",
-     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver<wear>.rvmat",
+     "key": "plant_hedge_fringe",
+     "id": "jp_m_plant_hedge_fringe",
+     "palette_id": "foliage_green",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -37192,9 +37192,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 196,
-    "Resolution 2": 6,
-    "Resolution 3": 6,
+    "Resolution 1": 123,
+    "Resolution 2": 10,
+    "Resolution 3": 10,
     "Geometry": 6,
     "View Geometry": 6
    },
@@ -37266,10 +37266,10 @@
    ],
    "materials": [
     {
-     "key": "plant_foliage",
-     "id": "jp_m_plant_foliage",
+     "key": "plant_hedge",
+     "id": "jp_m_plant_hedge",
      "palette_id": "foliage_green",
-     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_foliage<wear>.rvmat",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -37278,10 +37278,10 @@
      ]
     },
     {
-     "key": "wood_silver",
-     "id": "jp_m_wood_silver",
-     "palette_id": "wood_silver_grey",
-     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver<wear>.rvmat",
+     "key": "plant_hedge_fringe",
+     "id": "jp_m_plant_hedge_fringe",
+     "palette_id": "foliage_green",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -37291,9 +37291,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 228,
-    "Resolution 2": 6,
-    "Resolution 3": 6,
+    "Resolution 1": 112,
+    "Resolution 2": 7,
+    "Resolution 3": 7,
     "Geometry": 6,
     "View Geometry": 6
    },
@@ -37365,10 +37365,10 @@
    ],
    "materials": [
     {
-     "key": "plant_foliage",
-     "id": "jp_m_plant_foliage",
+     "key": "plant_hedge",
+     "id": "jp_m_plant_hedge",
      "palette_id": "foliage_green",
-     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_foliage<wear>.rvmat",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge<wear>.rvmat",
      "default_wear": "_w2",
      "wear_selectable": [
       "_w0",
@@ -37377,10 +37377,10 @@
      ]
     },
     {
-     "key": "wood_silver",
-     "id": "jp_m_wood_silver",
-     "palette_id": "wood_silver_grey",
-     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver<wear>.rvmat",
+     "key": "plant_hedge_fringe",
+     "id": "jp_m_plant_hedge_fringe",
+     "palette_id": "foliage_green",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe<wear>.rvmat",
      "default_wear": "_w2",
      "wear_selectable": [
       "_w0",
@@ -37390,9 +37390,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 177,
-    "Resolution 2": 6,
-    "Resolution 3": 6,
+    "Resolution 1": 249,
+    "Resolution 2": 8,
+    "Resolution 3": 8,
     "Geometry": 6,
     "View Geometry": 6
    },
@@ -38739,10 +38739,10 @@
    ],
    "materials": [
     {
-     "key": "plant_foliage",
-     "id": "jp_m_plant_foliage",
+     "key": "plant_hedge",
+     "id": "jp_m_plant_hedge",
      "palette_id": "foliage_green",
-     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_foliage<wear>.rvmat",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -38751,10 +38751,10 @@
      ]
     },
     {
-     "key": "wood_silver",
-     "id": "jp_m_wood_silver",
-     "palette_id": "wood_silver_grey",
-     "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver<wear>.rvmat",
+     "key": "plant_hedge_fringe",
+     "id": "jp_m_plant_hedge_fringe",
+     "palette_id": "foliage_green",
+     "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe<wear>.rvmat",
      "default_wear": "_w1",
      "wear_selectable": [
       "_w0",
@@ -38764,9 +38764,9 @@
     }
    ],
    "lod_faces": {
-    "Resolution 1": 160,
-    "Resolution 2": 12,
-    "Resolution 3": 12,
+    "Resolution 1": 132,
+    "Resolution 2": 14,
+    "Resolution 3": 14,
     "Geometry": 12,
     "View Geometry": 12
    },

@@ -1,0 +1,70 @@
+{
+ "id": "jp_m_plant_hedge_fringe",
+ "family": "plant",
+ "palette_id": "foliage_green",
+ "palette_by_wear": {},
+ "tile_size_m": 0.5,
+ "texture_px": 512,
+ "px_per_m": 1024.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "leaf sprigs fanning up from each cell's lower middle",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh green sprigs",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe_w0_ca.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe_w0.rvmat",
+   "target_srgb": [
+    74.9,
+    94.4,
+    59.4
+   ],
+   "masked_frac": 0.0,
+   "alpha_cover": 0.251
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "a few browned leaves",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe_w1_ca.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe_w1.rvmat",
+   "target_srgb": [
+    72.0,
+    86.0,
+    56.0
+   ],
+   "masked_frac": 0.009,
+   "alpha_cover": 0.24
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "dull, browner",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe_w2_ca.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe_w2.rvmat",
+   "target_srgb": [
+    86.8,
+    88.8,
+    49.0
+   ],
+   "masked_frac": 0.028,
+   "alpha_cover": 0.24
+  }
+ },
+ "used_by": [
+  "jp_p_hedge_ikegaki"
+ ],
+ "used_on": "Clipped hedges (ikegaki): the leafy fringe",
+ "sources": [
+  {
+   "procedural": "make_fx5_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_fx5_materials.py (agent FX5, 2026-10-02), through B1's make_one",
+ "requested_by": "FX5 (Stephen's 3a walk: the hedge read as flat paint with visible segments)",
+ "alpha": "cut",
+ "render": "_ca alpha = holes / tears / gaps; renderFlags AlphaTest32 (vanilla ghillie / fur pattern). RGB continues under the holes.",
+ "note": "Hedge fringe cards: 2 x 2 cells of 0.25 m, one sprig per cell; map a card onto one whole cell (u, v in [0, 0.5] or [0.5, 1]), its bottom edge = the cell's bottom (v down). Two-sided cards."
+}

@@ -7,12 +7,12 @@
    "name": "gate0",
    "tag": "yard",
    "floor": "earth",
-   "level_m": 0.0,
+   "level_m": 0.1,
    "rect_kit": [
-    11.98,
-    14.41,
-    13.26,
-    15.66
+    12.03,
+    14.360000000000001,
+    13.309999999999999,
+    15.610000000000001
    ],
    "doors": [
     "DoorsTwin1"
@@ -20,10 +20,10 @@
    "note": "the gate passage (kabuki)",
    "enclosed": false,
    "rect_model": [
-    2.88,
-    5.31,
-    5.98,
-    8.38
+    2.93,
+    5.26,
+    6.03,
+    8.33
    ],
    "fittings": []
   }

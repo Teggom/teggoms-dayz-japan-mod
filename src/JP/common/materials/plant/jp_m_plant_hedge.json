@@ -1,0 +1,65 @@
+{
+ "id": "jp_m_plant_hedge",
+ "family": "plant",
+ "palette_id": "foliage_green",
+ "palette_by_wear": {},
+ "tile_size_m": 1.0,
+ "texture_px": 1024,
+ "px_per_m": 1024.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "dense small leaves, random directions (no grain)",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\cloth.rvmat",
+ "roadway_surface": null,
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "fresh clipped green",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_hedge_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_w0.rvmat",
+   "target_srgb": [
+    74.9,
+    94.4,
+    59.4
+   ],
+   "masked_frac": 0.0
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "a season unclipped, browned patches",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_hedge_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_w1.rvmat",
+   "target_srgb": [
+    72.0,
+    86.0,
+    56.0
+   ],
+   "masked_frac": 0.046
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "years untended: dull, browner, dead twigs",
+   "co": "JP\\common\\materials\\plant\\jp_m_plant_hedge_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_w2.rvmat",
+   "target_srgb": [
+    86.8,
+    88.8,
+    49.0
+   ],
+   "masked_frac": 0.24
+  }
+ },
+ "used_by": [
+  "jp_p_hedge_ikegaki"
+ ],
+ "used_on": "Clipped hedges (ikegaki): the hedge body",
+ "sources": [
+  {
+   "procedural": "make_fx5_materials.py (on make_b1_materials.make_one)"
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_fx5_materials.py (agent FX5, 2026-10-02), through B1's make_one",
+ "requested_by": "FX5 (Stephen's 3a walk: the hedge read as flat paint with visible segments)",
+ "note": "Clipped evergreen hedge face (ikegaki body). Opaque; world-scale u along the run, v round the section. The leafy fringe uses jp_m_plant_foliage's leaf half (two-sided alpha cards)."
+}

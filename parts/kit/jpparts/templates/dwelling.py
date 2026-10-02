@@ -1748,14 +1748,34 @@ def nagayamon(name=None, rank="samurai", wear="_w1"):
 
 
 # ================================================================================================ compounds (K3's kits)
-def _wall_path(nodes, kind, ends=("end", "end"), gaps=(), closed=False, name="walls", **opt):
+def _wall_path(nodes, kind, ends=("end", "end"), gaps=(), closed=False, name="walls", abut=(0.0, 0.0), **opt):
     """K3's sitewall.run_wall module loop, with chosen path-end types and gate GAPS [(segment, offset, span)]: the
     walls either side of a gap end 'post' (the gates themselves are placed by the caller as doors). Walk the plot
-    clockwise seen from above (x east, z north): +z of every module = outside."""
+    clockwise seen from above (x east, z north): +z of every module = outside.
+    abut=(d0, d1) (FX5): an open path end that butts against another wall continues d m past its grid node (off the
+    half-ken grid) to that wall's face, so the two meet with no gap (its end post stands against the face)."""
     from .. import sitewall as W
     P = Part(name, "", "")
     n = len(nodes)
     segs = [(nodes[i], nodes[(i + 1) % n]) for i in range(n if closed else n - 1)]
+    if not closed and (abut[0] > 0.01 or abut[1] > 0.01):
+        rseed_ = W.run_seed(name)
+        for which, d in ((0, abut[0]), (1, abut[1])):
+            if d <= 0.01:
+                continue
+            a, b = (segs[0] if which == 0 else segs[-1])
+            Ls_ = math.hypot(b[0] - a[0], b[1] - a[1])
+            u_ = ((b[0] - a[0]) / Ls_, (b[1] - a[1]) / Ls_)
+            deg_ = math.degrees(math.atan2(u_[1], u_[0]))
+            if which == 0:
+                q = W.wall(kind, d, (ends[0], "seam"), seed=7, pid=name + "_abut0", run=(-d, rseed_), **opt)
+                o = (a[0] - u_[0] * d, a[1] - u_[1] * d)
+            else:
+                tot = sum(math.hypot(bb[0] - aa[0], bb[1] - aa[1]) for aa, bb in segs)
+                q = W.wall(kind, d, ("seam", ends[1]), seed=8, pid=name + "_abut1", run=(tot, rseed_), **opt)
+                o = b
+            P.merge(q.transformed(deg_, (o[0], 0.0, o[1])))
+        ends = ("seam" if abut[0] > 0.01 else ends[0], "seam" if abut[1] > 0.01 else ends[1])
 
     def turn(i, j):
         (a, b), (c, d) = segs[i], segs[j]
@@ -1765,6 +1785,8 @@ def _wall_path(nodes, kind, ends=("end", "end"), gaps=(), closed=False, name="wa
         if abs(cr) < 1e-9:
             return "seam"
         return "corner+z" if cr > 0 else "corner-z"
+    rseed = W.run_seed(name)
+    s_seg = 0.0
     for i, (a, b) in enumerate(segs):
         dx, dz = b[0] - a[0], b[1] - a[1]
         Ls = math.hypot(dx, dz)
@@ -1790,19 +1812,21 @@ def _wall_path(nodes, kind, ends=("end", "end"), gaps=(), closed=False, name="wa
                 else:
                     s1 = "seam"
                 q = W.wall(kind, m, (s0, s1), seed=int(xx * 100) + i * 1000, pid=name + "_%d_%d_%d" % (i, ri, mi),
-                           **opt)
+                           run=(s_seg + xx, rseed), **opt)
                 P.merge(q.transformed(deg, (a[0] + math.cos(math.radians(deg)) * xx, 0.0,
                                             a[1] + math.sin(math.radians(deg)) * xx)))
                 xx += m
+        s_seg += Ls
     return P
 
 
 def _gate_part(kind, span):
     from .. import sitewall as W
+    ly0 = FL.SILL_TOP + 0.03                 # FX5: the leaves clear the raised sill pad of the passage
     if kind.startswith("kabuki"):
-        return W.gate_kabuki(span, roofed=kind.endswith("roofed"))
+        return W.gate_kabuki(span, roofed=kind.endswith("roofed"), leaf_y0=ly0)
     if kind == "munemon":
-        return W.gate_munemon(span)
+        return W.gate_munemon(span, leaf_y0=ly0)
     p = W.wicket(kind.split("_", 1)[1] if "_" in kind else "itabei", span)
     # the wicket's one hinged leaf carries no twin name: give it the DoorsTwin convention (one selection, an
     # <twin>_action point) so Builder.place_door can number it
@@ -1856,6 +1880,49 @@ COMPOUNDS = {
 }
 
 
+# FX5: half the thickness of each wall kind at its face (a run that butts against it stops at this face)
+_HALF_THICK = {"dobei": 0.15, "tsuiji": 0.45, "itabei": 0.08, "yotsume": 0.06, "kenninji": 0.05, "shiba": 0.07,
+               "takeho": 0.07}
+
+
+def _half_thick(kind, opt):
+    if kind == "ikegaki":
+        return (0.70 if opt.get("size", "low") == "low" else 0.90) / 2
+    return _HALF_THICK.get(kind, 0.10)
+
+
+def _abut(runs, ri):
+    """(d0, d1) for run ri's open ends (FX5, Stephen's 3a walk: the honjin's plastered street wall and its board
+    fences stopped half a ken apart, a 0.70 m walk-through gap): if the line of the run, continued past an end node,
+    meets another run's wall line within 1.5 ken, the run is extended to that wall's near face."""
+    nodes = runs[ri][0]
+    out = []
+    for which in (0, 1):
+        a, b = (nodes[0], nodes[1]) if which == 0 else (nodes[-1], nodes[-2])
+        L = math.hypot(a[0] - b[0], a[1] - b[1])
+        u = ((a[0] - b[0]) / L, (a[1] - b[1]) / L)                # pointing out of the run, past its end node
+        best = 0.0
+        for rj, (n2, k2, o2, _e) in enumerate(runs):
+            if rj == ri:
+                continue
+            for c, d in zip(n2, n2[1:]):
+                # the other segment's line (axis-aligned plots): distance t along u to it, within its extent
+                if abs(c[1] - d[1]) < 1e-6 and abs(u[1]) > 0.5:
+                    t = (c[1] - a[1]) / u[1]
+                    x = a[0] + u[0] * t
+                    ok = min(c[0], d[0]) - 1e-6 <= x <= max(c[0], d[0]) + 1e-6
+                elif abs(c[0] - d[0]) < 1e-6 and abs(u[0]) > 0.5:
+                    t = (c[0] - a[0]) / u[0]
+                    zz = a[1] + u[1] * t
+                    ok = min(c[1], d[1]) - 1e-6 <= zz <= max(c[1], d[1]) + 1e-6
+                else:
+                    continue
+                if ok and 0.0 < t <= 1.5 * KEN:
+                    best = max(best, t - _half_thick(k2, o2))
+        out.append(best)
+    return tuple(out)
+
+
 def compound(name=None, plot="samurai_m", wear="_w1"):
     """A compound's walls / fences / hedges and its gate(s), from K3's wall kit (parts/K3_NOTES.md section 6), as one
     map object: the plot in the kit frame (x east, z north, origin at the south-west corner). Gate passages are
@@ -1868,8 +1935,9 @@ def compound(name=None, plot="samurai_m", wear="_w1"):
     for (ri, si, off, kind, span) in spec["gates"]:
         gaps.setdefault(ri, []).append((si, off, span))
     for ri, (nodes, kind, opt, ends) in enumerate(spec["runs"]):
+        ab = (0.0, 0.0) if spec.get("closed", False) else _abut(spec["runs"], ri)
         S.H.merge(_wall_path(nodes, kind, ends=ends, gaps=gaps.get(ri, ()), closed=spec.get("closed", False),
-                             name="%s_run%d" % (plot, ri), **opt))
+                             name="%s_run%d" % (plot, ri), abut=ab, **opt))
         for (x, z) in nodes:
             S.posts.append((round(x, 4), round(z, 4), 0.0, 1.8))
     for gi, (ri, si, off, kind, span) in enumerate(spec["gates"]):
@@ -1892,16 +1960,20 @@ def compound(name=None, plot="samurai_m", wear="_w1"):
         rx0, rx1 = min(c[0] for c in cs), max(c[0] for c in cs)
         rz0, rz1 = min(c[1] for c in cs), max(c[1] for c in cs)
         nm = "gate%d" % gi
+        # FX5: a packed-earth sill pad (top 0.10 over grade, sloped margins into the ground) instead of an earth slab
+        # whose top lay exactly at grade and z-fought with the terrain (Stephen's 3a walk: every compound gate)
+        prect = (rx0 - 0.30, rx1 + 0.30, rz0 - 0.30, rz1 + 0.30)
         S.B.interior = True
-        S.B.merge(FL.doma(nm, rx0 - 0.1, rx1 + 0.1, rz0 - 0.1, rz1 + 0.1, road=(rx0, rx1, rz0, rz1), y=0.0,
-                          mats=FL.MATS_DOMA_EARTH))
+        pad = FL.sill_pad(nm, *prect)
+        S.B.merge(pad)
         S.B.interior = False
+        rx0, rx1, rz0, rz1 = pad.meta["top_rect"]
         # the leaves' swing (inside, 1.3 m) and the closed line stay clear of loot
         sw = [(px0 + nx * 0.30, pz0 + nz * 0.30), (px1 + nx * 0.30, pz1 + nz * 0.30),
               (px0 - nx * 0.30, pz0 - nz * 0.30), (px1 - nx * 0.30, pz1 - nz * 0.30)]
         S.obst.append((nm, _r(min(c[0] for c in sw), max(c[0] for c in sw), min(c[1] for c in sw),
                               max(c[1] for c in sw))))
-        S.room(nm, "yard", "earth", 0.0, (rx0, rx1, rz0, rz1), [S.dn[nm]], "the gate passage (%s)" % kind,
+        S.room(nm, "yard", "earth", FL.SILL_TOP, (rx0, rx1, rz0, rz1), [S.dn[nm]], "the gate passage (%s)" % kind,
                enclosed=False)
         # stepping stones (tobi-ishi) through the gate: separate flat stones at grade, one outside, two inside
         from ..core import stone as _stone, rng_for as _rng
@@ -1909,8 +1981,10 @@ def compound(name=None, plot="samurai_m", wear="_w1"):
         mx_, mz_ = ox + u[0] * span / 2, oz + u[1] * span / 2
         for k_, dd in enumerate((1.25, 0.75, -0.75, -1.25)):
             sx, sz = mx_ + nx * dd, mz_ + nz * dd
-            st_ = _stone(rr, sx, sz, 0.42, 0.36, 0.10, 0.02, "stone_field", bury=0.08, n=7, flat_top=0.8, vis=(1, 2, 3),
-                         tag="soseki")
+            # each stone's flat top 3.5 cm over the surface it lies in (the sill pad or the ground): never coplanar
+            ty = FL.sill_height(sx, sz, prect) + 0.035
+            st_ = _stone(rr, sx, sz, 0.42, 0.36, 0.10 + ty, ty, "stone_field", bury=0.08, n=7, flat_top=0.8,
+                         vis=(1, 2), tag="soseki")
             S.H.add(st_)
     trim_lods(S.H)
     for s_ in S.H.solids:

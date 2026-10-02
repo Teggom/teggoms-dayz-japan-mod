@@ -11,7 +11,7 @@ Tatami holes must sit on the half-ken mat grid (they replace whole cells).
 
 With no holes every function builds exactly what the machiya built before (same solids in the same order).
 """
-from .core import Part, box, sheet, HALF, rng_for
+from .core import Part, Solid, box, sheet, HALF, rng_for
 
 DOMA_Y = 0.05          # PLAYBOOK §4: doma = grade + 0.05
 TATAMI_T = 0.055       # mat thickness (the kit's inakama mat, G1 A2)
@@ -256,6 +256,53 @@ def doma(name, x0, x1, z0, z1, road=None, y=DOMA_Y, holes=(), hole_fn=None, mats
         s.road([(a, y, c), (b, y, c), (b, y, d), (a, y, d)], "doma")
     _finish_holes(s, hs, y, hole_fn)
     return s
+
+
+# ------------------------------------------------------------------------------------------------ outdoor sill pad
+SILL_TOP = 0.10        # FX5: a passage floor this far over grade does not z-fight with the terrain, even where an
+#                        object stands a few cm sunk on a slope (the W3B timber / foundry yards: terrain +0.06 at the
+#                        gate, so a 0.06 pad would have been coplanar there again)
+SILL_RAMP = 0.35       # the sloped margin (top -> foot): 0.13 over 0.35 = 20 deg, walked over without a step
+SILL_FOOT = -0.03      # the ramp ends just under grade, so on flat ground no vertical lip shows
+
+
+def sill_pad(name, x0, x1, z0, z1, top=SILL_TOP, ramp=SILL_RAMP, foot=SILL_FOOT, base=-0.20, mats=None, surf="doma"):
+    """FX5 (2026-10-02): a packed-earth sill pad for an outdoor passage (compound gates): flat top `top` over grade inset
+    `ramp` from the rect, sloped margins down to `foot` (below grade) at the rect edge, a body to `base`. Replaces an
+    earth slab whose top lay exactly AT grade (it z-fought with the terrain: Stephen's 3a walk). One convex solid in
+    every LOD + Geometry; Roadway on the top and the four slopes. Returns the Part; part.meta['top_rect'] = the flat
+    top (x0, x1, z0, z1) for loot."""
+    mt = _mats(MATS_DOMA_EARTH, mats)
+    m = {"top": mt["top"], "default": mt.get("body_ext", mt["top"])}
+    s = Part(name, "", "")
+    a0, a1, c0, c1 = x0 + ramp, x1 - ramp, z0 + ramp, z1 - ramp
+    verts = [(x0, base, z0), (x1, base, z0), (x1, base, z1), (x0, base, z1),
+             (x0, foot, z0), (x1, foot, z0), (x1, foot, z1), (x0, foot, z1),
+             (a0, top, c0), (a1, top, c0), (a1, top, c1), (a0, top, c1)]
+    faces = [[0, 1, 2, 3], [8, 9, 10, 11]]
+    for i in range(4):
+        j = (i + 1) % 4
+        faces.append([i, j, 4 + j, 4 + i])           # the buried body sides
+        faces.append([4 + i, 4 + j, 8 + j, 8 + i])   # the sloped margins
+    # Resolutions 1-2 only: in the far LOD the terrain alone shows (nothing there to fight it)
+    s.add(Solid(verts, faces, m, vis=(1, 2), geo=True, view=True, fire="dirt", tag="sill_pad"))
+    s.road([(a0, top, c0), (a1, top, c0), (a1, top, c1), (a0, top, c1)], surf)
+    for i in range(4):
+        j = (i + 1) % 4
+        s.road([verts[4 + i], verts[4 + j], verts[8 + j], verts[8 + i]], surf)
+    s.meta["top_rect"] = (a0, a1, c0, c1)
+    return s
+
+
+def sill_height(x, z, rect, top=SILL_TOP, ramp=SILL_RAMP, foot=SILL_FOOT):
+    """The pad's surface height at (x, z) (grade 0 outside it)."""
+    x0, x1, z0, z1 = rect
+    d = min(x - x0, x1 - x, z - z0, z1 - z)
+    if d < 0:
+        return 0.0
+    if d >= ramp:
+        return top
+    return max(0.0, foot + (top - foot) * d / ramp)
 
 
 # ------------------------------------------------------------------------------------------------ shop floor

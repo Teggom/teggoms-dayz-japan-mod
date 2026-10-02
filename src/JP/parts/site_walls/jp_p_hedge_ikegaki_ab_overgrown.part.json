@@ -23,12 +23,12 @@
  "deviation": null,
  "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
  "bbox_m": [
-  0.011,
-  1.957,
+  -0.115,
+  1.942,
   -0.3,
-  2.633,
-  -0.554,
-  0.546
+  2.646,
+  -0.846,
+  0.894
  ],
  "dims": [
   {
@@ -65,10 +65,10 @@
  ],
  "materials": [
   {
-   "key": "plant_foliage",
-   "id": "jp_m_plant_foliage",
+   "key": "plant_hedge",
+   "id": "jp_m_plant_hedge",
    "palette_id": "foliage_green",
-   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_foliage<wear>.rvmat",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge<wear>.rvmat",
    "default_wear": "_w2",
    "wear_selectable": [
     "_w0",
@@ -77,10 +77,10 @@
    ]
   },
   {
-   "key": "wood_silver",
-   "id": "jp_m_wood_silver",
-   "palette_id": "wood_silver_grey",
-   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_silver<wear>.rvmat",
+   "key": "plant_hedge_fringe",
+   "id": "jp_m_plant_hedge_fringe",
+   "palette_id": "foliage_green",
+   "rvmat": "JP\\common\\materials\\plant\\jp_m_plant_hedge_fringe<wear>.rvmat",
    "default_wear": "_w2",
    "wear_selectable": [
     "_w0",
@@ -90,9 +90,9 @@
   }
  ],
  "lod_faces": {
-  "Resolution 1": 177,
-  "Resolution 2": 6,
-  "Resolution 3": 6,
+  "Resolution 1": 249,
+  "Resolution 2": 8,
+  "Resolution 3": 8,
   "Geometry": 6,
   "View Geometry": 6
  },
@@ -113,7 +113,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 177, Resolution 2 6, Resolution 3 6, Geometry 6, View Geometry 6"
+   "detail": "Resolution 1 249, Resolution 2 8, Resolution 3 8, Geometry 6, View Geometry 6"
   },
   {
    "check": "C2 library only",

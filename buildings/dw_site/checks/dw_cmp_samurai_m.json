@@ -3,7 +3,7 @@
  "key": "dw_cmp_samurai_m",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "4760/1400/748",
+ "faces": "4764/1404/640",
  "door_clear_m": [
   1.6
  ],
@@ -13,12 +13,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 4760, Resolution 2 1400, Resolution 3 748, Geometry 412, Memory 0, Roadway 1, View Geometry 412, Fire Geometry 412"
+   "detail": "Resolution 1 4764, Resolution 2 1404, Resolution 3 640, Geometry 416, Memory 0, Roadway 5, View Geometry 416, Fire Geometry 416"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 4760, R2 1400, R3 748"
+   "detail": "R1 4764, R2 1404, R3 640"
   },
   {
    "check": "Geometry properties + mass",
@@ -73,12 +73,12 @@
   {
    "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
    "ok": true,
-   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 1.60 m, head 2.91 m"
+   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 1.60 m, head 2.81 m"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "16/16 samples"
+   "detail": "80/80 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
@@ -98,7 +98,7 @@
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "1 points, max diff 2.9e-07 m"
+   "detail": "1 points, max diff 1.4e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -108,12 +108,12 @@
   {
    "check": "C10 DoorsTwin1 reachable from both sides (open)",
    "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.45 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m"
+   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m; far: leaf hit first from 12/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m"
   },
   {
    "check": "C10 DoorsTwin1 reachable from both sides (closed)",
    "ok": true,
-   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.45 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.40 m"
+   "detail": "Gate (kabuki): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.48 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m"
   },
   {
    "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
@@ -173,7 +173,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 365017 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 357954 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

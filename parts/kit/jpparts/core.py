@@ -293,6 +293,8 @@ class Solid:
             s.fn = [rot_y(f(n), deg) for n in self.fn]
         if self.normals is not None:
             s.normals = s.fn
+        if getattr(self, "vn", None) is not None:      # FX5: smooth per-vertex normals turn with the solid
+            s.vn = [[rot_y(f(n), deg) for n in row] for row in self.vn]
         s.faces = [list(ff) for ff in self.faces]
         return s
 
@@ -500,6 +502,24 @@ ROT_SIGN = 1.0      # +1: model.cfg angle1 > 0 turns by the right-hand rule abou
 
 
 # ---------------------------------------------------------------------------------------------------- part
+def _smooth_face(lod, pts, outward, uvs, vns, texture, material):
+    """As mlod.Lod.add_flat_face, with per-vertex (smooth) normals (FX5; the same writer as spikes/B3a/fkit's
+    add_smooth_face). MLOD stores normals pointing inward. Returns (face index, [point indices])."""
+    pts = [tuple(float(c) for c in p) for p in pts]
+    n = mlod._face_formula_normal(pts)
+    uvs, vns = list(uvs), list(vns)
+    if dot(n, outward) > 0:
+        pts, uvs, vns = pts[::-1], uvs[::-1], vns[::-1]
+    verts = []
+    pis = []
+    for p, uv, vv in zip(pts, uvs, vns):
+        pi = lod.add_point(p)
+        pis.append(pi)
+        ni = lod.add_normal(mul(norm(vv), -1.0))
+        verts.append((pi, ni, uv[0], uv[1]))
+    return lod.add_face(verts, texture, material), pis
+
+
 class Part:
     def __init__(self, pid, variant="", group="", **meta):
         self.pid = pid
@@ -665,10 +685,16 @@ class Part:
         for s in self.solids:
             if k not in s.vis:
                 continue
+            vn = getattr(s, "vn", None)
             for fi in range(len(s.faces)):
                 m = s.fm[fi]
                 w = self.wear_of(m)
-                face, pis = lod.add_flat_face(s.face_points(fi), s.fn[fi], s.fuv[fi], tex_path(m, w), rvmat_path(m, w))
+                if vn is None:
+                    face, pis = lod.add_flat_face(s.face_points(fi), s.fn[fi], s.fuv[fi], tex_path(m, w),
+                                                  rvmat_path(m, w))
+                else:                                   # FX5: smooth shading (per-vertex normals, as fkit's lathes)
+                    face, pis = _smooth_face(lod, s.face_points(fi), s.fn[fi], s.fuv[fi], vn[fi], tex_path(m, w),
+                                             rvmat_path(m, w))
                 if s.door:
                     lod.select(s.door, {pi: 1.0 for pi in pis}, [face])
                 if s.sel:

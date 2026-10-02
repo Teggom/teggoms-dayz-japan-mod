@@ -21,7 +21,7 @@ states: None, "collapsed", "tiles" (fallen cap tiles), "overgrown", "leaning", "
 import math
 
 from .core import Part, Solid, box, prism, hexa, cyl, stone, rings, rand_convex, KEN, HALF, QK, rng_for, Door, \
-    add, sub, mul, norm, cross, dot
+    add, sub, mul, norm, cross, dot, newell as _newell
 from .shapes import board_run, rough_block, tube, half_tube, oriented_box
 from . import striproof as SR
 from . import walls as WL
@@ -556,47 +556,242 @@ def _brush(L, ends, kind, state, rng, P):
 
 
 # ------------------------------------------------------------------------------------------------ hedge
-def _hedge(L, ends, size, state, rng, P):
+# FX5 (2026-10-02, Stephen's 3a walk: "I can see each segment, the bulges are bad"). The hedge is ONE continuous clipped
+# form along the whole run: a battered section with rounded top edges swept along the module, its surface moved in and
+# out by smooth noise of the RUN coordinate (s = distance along the whole wall path, passed in by run_wall /
+# dwelling._wall_path as run=(s0, seed)), so modules join with no seam, no restart of the bulges and continuous UVs
+# (u = s / tile, v = arc length round the section). Smooth per-vertex normals. Opaque leaf material jp_m_plant_hedge on
+# the body; a leafy fringe of two-sided alpha cards (jp_m_plant_hedge_fringe, sprig cells) breaks the silhouette along the
+# top edges and the upper faces. The noise fades to zero at corners (mitred like the wall bodies), at gate posts and at
+# free ends, so neighbouring pieces meet exactly. Geometry / View: a mitred box core (blocks walking and seeing; the
+# compound template makes it Fire Geometry too).
+HEDGE_TILE = 0.5                     # jp_m_plant_hedge tile (m)
+
+
+def _h32(i, j, seed):
+    n = (i * 374761393 + j * 668265263 + seed * 1442695041) & 0xFFFFFFFF
+    n = ((n ^ (n >> 13)) * 1274126177) & 0xFFFFFFFF
+    return ((n ^ (n >> 16)) & 0xFFFF) / 32767.5 - 1.0
+
+
+def _vnoise(s, t, seed):
+    i, j = math.floor(s), math.floor(t)
+    fs, ft = s - i, t - j
+    u, v = fs * fs * (3 - 2 * fs), ft * ft * (3 - 2 * ft)
+    a, b = _h32(i, j, seed), _h32(i + 1, j, seed)
+    c, d = _h32(i, j + 1, seed), _h32(i + 1, j + 1, seed)
+    return (a + (b - a) * u) + ((c + (d - c) * u) - (a + (b - a) * u)) * v
+
+
+def _hedge_noise(s, t, seed):
+    """Smooth surface noise of the run coordinate s and the section arc t (about -1..1): broad, soft swells."""
+    return 0.68 * _vnoise(s / 1.45, t / 0.85, seed) + 0.32 * _vnoise(s / 0.70, t / 0.45, seed + 7)
+
+
+def _hedge_section(H, W, R, step=0.48):
+    """The clean clipped section, from the buried foot of the +z face, up, over the rounded top, down the -z face:
+    [(y, z, ny, nz)] (outward unit normals) and the arc length t of every point."""
+    Wb, Wt = W, W - 0.10                       # a slight batter: clipped hedges are trimmed narrower at the top
+    zf = lambda y: Wb / 2 - (Wb - Wt) / 2 * max(0.0, y) / H        # noqa: E731
+    bat = math.atan2((Wb - Wt) / 2, H)
+    side = []
+    n = max(1, int(math.ceil((H - R) / step)))
+    ys = [-0.30] + [(H - R) * k / n for k in range(1, n + 1)]
+    for y in ys:
+        side.append((y, zf(max(y, 0.0)), math.sin(bat), math.cos(bat)))
+    yc, zc = H - R, zf(H - R) - R
+    for k in (1, 2):
+        a = math.radians(45.0 * k)
+        side.append((yc + R * math.sin(a), zc + R * math.cos(a), math.sin(a), math.cos(a)))
+    top = [(H, zc * 0.5, 1.0, 0.0), (H, 0.0, 1.0, 0.0)]
+    pts = side + top
+    mirror = [(y, -z, ny, -nz) for (y, z, ny, nz) in reversed(side + top[:1])]
+    pts = pts + mirror
+    t, arc = [0.0], 0.0
+    for a_, b_ in zip(pts, pts[1:]):
+        arc += math.hypot(b_[0] - a_[0], b_[1] - a_[1])
+        t.append(arc)
+    return pts, t
+
+
+def _end_x(end, x_node, idx, z):
+    """x of the hedge body at a module end for a section point at z (corners: the wall kit's mitre plane)."""
+    if end.startswith("corner"):
+        e = _end_plane(end, x_node, idx)
+        return e[0] + e[2] * z
+    if end == "seam":
+        return x_node
+    if end == "post":
+        return x_node + (_PW[0] - 0.01 if idx == 0 else -(_PW[0] - 0.01))    # 1 cm into the gate post: no slit
+    return x_node + (0.05 if idx == 0 else -0.05)
+
+
+def _smooth01(x):
+    x = min(1.0, max(0.0, x))
+    return x * x * (3 - 2 * x)
+
+
+def _hedge(L, ends, size, state, rng, P, run=None):
+    s0, seed = run if run else (0.0, int(rng.random() * 1e6))
     H, W = (1.40, 0.70) if size == "low" else (2.00, 0.90)
-    if state == "overgrown":
+    over = state == "overgrown"
+    if over:
         H, W = H + 0.45, W + 0.35
-    xa = 0.0 if ends[0] in ("seam",) else 0.05
-    xb = L if ends[1] in ("seam",) else L - 0.05
-    if ends[1].startswith("corner"):
-        xb = L + W / 2 - 0.05
-    if ends[0].startswith("corner"):
-        xa = W / 2 + 0.01
-    m = "plant_foliage"
-    # a clipped core (Geometry + View; no Fire: bullets pass through leaves) ...
-    core_ = box(xa + 0.04, xb - 0.04, -0.30, H - 0.06, -W / 2 + 0.05, W / 2 - 0.05, m, vis=(1, 2, 3), geo=True,
-                view=True, fire=None, tag="hedge_core", uvscale=(1.2, 1.2))
-    P.add(core_)
-    # ... with lumpy clipped faces: convex lumps on both faces and on top, a few shoots when untrimmed
-    n = max(2, int((xb - xa) / 0.32))
-    for k in range(n):
-        x = xa + (k + 0.5) * (xb - xa) / n + rng.uniform(-0.05, 0.05)
-        for s in (1.0, -1.0):
-            if state == "overgrown" and rng.random() < 0.25:
-                continue
-            y = rng.uniform(0.35, H - 0.45)
-            r = rng.uniform(0.20, 0.30)
-            zc = s * (W / 2 - 0.10)
-            base = [(x + p, zc + q) for p, q in rand_convex(rng, 6, r, 0.12)]
-            P.add(rings((base, [(y - r, 0.7), (y, 1.0), (y + r * 0.8, 0.75)]), m, vis=(1,), tag="hedge_lump",
-                        uvscale=(1.2, 1.2)))
-        if k % 2 == 0:
-            r = rng.uniform(0.18, 0.26)
-            base = [(x + p, q) for p, q in rand_convex(rng, 6, r, W / 2 - 0.08)]
-            P.add(rings((base, [(H - 0.10, 1.0), (H + (0.02 if state != "overgrown" else 0.30), 0.85)]), m, vis=(1,),
-                        tag="hedge_top", uvscale=(1.2, 1.2)))
-    if state == "overgrown":
-        for k in range(n):
-            x = rng.uniform(xa, xb)
+    R = 0.16 if size == "low" else 0.20
+    R = R + (0.12 if over else 0.0)
+    amp = 0.045 if not over else 0.090          # metres: a well-kept clipped face is nearly flat
+    m = "plant_hedge"
+    sec, tt = _hedge_section(H, W, R)
+    ns = len(sec)
+    nx = max(2, int(math.ceil(L / 0.40))) + 1   # stations along the module, every <= 0.40 m
+    fade_len = 0.40
+
+    def fade_x(x):
+        f = 1.0
+        if ends[0] != "seam":
+            f = min(f, _smooth01(x / fade_len))
+        if ends[1] != "seam":
+            f = min(f, _smooth01((L - x) / fade_len))
+        return f
+
+    grid = []
+    for k in range(nx):
+        f = k / (nx - 1)
+        row = []
+        for (y, z, ny, nz), t in zip(sec, tt):
+            xa_ = _end_x(ends[0], 0.0, 0, z)
+            xb_ = _end_x(ends[1], L, 1, z)
+            x = xa_ + (xb_ - xa_) * f
+            xc = min(max(x, 0.0), L)
+            fy = _smooth01((y - 0.02) / 0.30)
+            d = amp * _hedge_noise(s0 + xc, t, seed) * fade_x(xc) * fy
+            if ny > 0.9:                         # the clipped top: a slow rise and fall along the run too
+                d += 0.6 * amp * _vnoise((s0 + xc) / 3.2, 0.5, seed + 29) * fade_x(xc)
+            row.append(((x, y + ny * d, z + nz * d), (s0 + x) / HEDGE_TILE, t / HEDGE_TILE))
+        grid.append(row)
+    verts, faces, uvs, fns = [], [], [], []
+    idx = {}
+    for k in range(nx):
+        for i in range(ns):
+            idx[(k, i)] = len(verts)
+            verts.append(grid[k][i][0])
+    for k in range(nx - 1):
+        for i in range(ns - 1):
+            q = [(k, i), (k + 1, i), (k + 1, i + 1), (k, i + 1)]
+            faces.append([idx[a] for a in q])
+            uvs.append([(grid[a][b][1], grid[a][b][2]) for a, b in q])
+            pts = [grid[a][b][0] for a, b in q]
+            n = norm(_newell(pts))
+            want = (0.0, sec[i][2] + sec[i + 1][2], sec[i][3] + sec[i + 1][3])
+            if dot(n, want) < 0:
+                n = mul(n, -1.0)
+            fns.append(n)
+    acc = {}                                     # smooth normals: the mean of the faces round each grid point
+    for f_, n in zip(faces, fns):
+        for vi in f_:
+            a = acc.get(vi, (0.0, 0.0, 0.0))
+            acc[vi] = (a[0] + n[0], a[1] + n[1], a[2] + n[2])
+    body = Solid(verts, faces, m, vis=(1,), normals=fns, uv=uvs, tag="hedge_body")
+    body.vn = [[norm(acc[vi]) for vi in f_] for f_ in faces]
+    P.add(body)
+    # end caps at free ends and gate posts (the noise is faded out there: the clean convex section)
+    for idx_end, k in ((0, 0), (1, nx - 1)):
+        if ends[idx_end] in ("end", "post"):
+            pts = [grid[k][i][0] for i in range(ns)]
+            capuv = [(p[2] / HEDGE_TILE, -p[1] / HEDGE_TILE) for p in pts]
+            P.add(Solid(pts, [list(range(ns))], m, vis=(1,), normals=[(-1.0 if idx_end == 0 else 1.0, 0.0, 0.0)],
+                        uv=[capuv], tag="hedge_cap"))
+    # far LODs: the clean section (every other point) at the module ends only, capped where res 1 is capped
+    coarse = [j for j in range(ns) if j % 2 == 0 or j == ns - 1]
+    nc = len(coarse)
+    cv = []
+    for f in (0.0, 1.0):
+        for j in coarse:
+            y, z, ny, nz = sec[j]
+            xa_ = _end_x(ends[0], 0.0, 0, z)
+            xb_ = _end_x(ends[1], L, 1, z)
+            cv.append((xa_ + (xb_ - xa_) * f, y, z))
+    cf, cn, cu = [], [], []
+    for i in range(nc - 1):
+        q = [i, nc + i, nc + i + 1, i + 1]
+        cf.append(q)
+        a_, b_ = sec[coarse[i]], sec[coarse[i + 1]]
+        cn.append(norm((0.0, a_[2] + b_[2], a_[3] + b_[3])))
+        cu.append([((s0 + cv[v][0]) / HEDGE_TILE, tt[coarse[v % nc]] / HEDGE_TILE) for v in q])
+    P.add(Solid(cv, cf, m, vis=(2, 3), normals=cn, uv=cu, tag="hedge_lod"))
+    for idx_end in (0, 1):
+        if ends[idx_end] in ("end", "post"):
+            pts = cv[idx_end * nc:(idx_end + 1) * nc]
+            P.add(Solid(pts, [list(range(nc))], m, vis=(2, 3), normals=[(-1.0 if idx_end == 0 else 1.0, 0.0, 0.0)],
+                        uv=[[(p[2] / HEDGE_TILE, -p[1] / HEDGE_TILE) for p in pts]], tag="hedge_lod"))
+    # the core (Geometry + View; the compound template adds Fire): mitred like the body, inside the clean faces
+    cw = W / 2 - 0.06
+    csec = [(-0.30, -cw), (-0.30, cw), (H - 0.08, cw - 0.05), (H - 0.08, -cw + 0.05)]
+
+    def plane(end, idx_end, x_node):
+        if end.startswith("corner"):
+            return _end_plane(end, x_node, idx_end)
+        return (_end_x(end, x_node, idx_end, 0.0) + (0.005 if idx_end == 0 else -0.005), 0.0, 0.0)
+    P.add(_xprism(csec, plane(ends[0], 0, 0.0), plane(ends[1], 1, L), m, vis=(), geo=True, view=True, fire=None,
+                  tag="hedge_core"))
+    _hedge_fringe(P, L, ends, H, sec, tt, amp, s0, seed, over, fade_x)
+    if over:
+        for k in range(max(2, int(L / 0.32))):
+            x = rng.uniform(0.1, L - 0.1)
             P.add(tube((x, H - 0.1, rng.uniform(-0.2, 0.2)), (x + rng.uniform(-0.2, 0.2), H + rng.uniform(0.4, 0.8),
-                                                              rng.uniform(-0.4, 0.4)), 0.04, m, n=5, vis=(1,),
-                       tag="shoot"))
-    P.add(box(xa, xb, 0.0, 0.25, -W / 2 + 0.12, W / 2 - 0.12, "wood_silver", vis=(), tag="stems"))
+                                                              rng.uniform(-0.4, 0.4)), 0.04, "plant_hedge", n=5,
+                       vis=(1,), tag="shoot"))
     return P
+
+
+def _hedge_fringe(P, L, ends, H, sec, tt, amp, s0, seed, over, fade_x):
+    """Two-sided leaf-sprig cards (jp_m_plant_hedge_fringe, one 2 x 2 atlas cell each) along the two top edges, a few on the top and
+    on the upper faces: bases sunk in the body, tips standing 0.10-0.18 m proud, so the silhouette is leafy instead of
+    a ruled line. Placed by the run coordinate (no restart per module)."""
+    fm = "plant_hedge_fringe"
+    step = 0.16 if not over else 0.13
+    k0 = int(math.ceil(s0 / step))
+    k1 = int(math.floor((s0 + L) / step))
+    anchors = []
+    for j, (y, z, ny, nz) in enumerate(sec):
+        if 0.40 < ny < 0.95:
+            anchors.append((j, 0.92))                     # rounded top edge
+        elif ny > 0.95 and abs(z) < 0.01:
+            anchors.append((j, 0.35))                     # top middle
+        elif over and ny < 0.2 and 0.25 < y < H - 0.05:
+            anchors.append((j, 0.35))                     # untrimmed: sprigs all over the faces
+    for kk in range(k0, k1 + 1):
+        x = kk * step - s0
+        for (j, prob) in anchors:
+            if _h32(kk, j * 31 + 5, seed + 101) * 0.5 + 0.5 > prob:
+                continue
+            xs = x + 0.4 * step * _h32(kk, j, seed + 103)
+            if xs < 0.06 or xs > L - 0.06 or fade_x(xs) < 0.35:
+                continue                                  # corners / posts / free ends stay clean
+            y, z, ny, nz = sec[j]
+            d = amp * _hedge_noise(s0 + xs, tt[j], seed)
+            c = (xs, y + ny * d, z + nz * d)
+            up = norm((0.0, (0.55 * ny + 0.45) if ny < 0.9 else 1.0, 0.75 * nz))
+            ang = math.radians(40.0 * _h32(kk, j, seed + 107))
+            r0 = norm(sub((1.0, 0.0, 0.0), mul(up, up[0])))
+            right = norm(add(mul(r0, math.cos(ang)), mul(cross(up, r0), math.sin(ang))))
+            w = (0.36 if not over else 0.46) * (0.85 + 0.15 * (_h32(kk, j, seed + 109) + 1.0))
+            hh = (0.32 if not over else 0.42) * (0.85 + 0.15 * (_h32(kk, j, seed + 111) + 1.0))
+            base = sub(c, mul(up, 0.11))
+            p0 = sub(base, mul(right, w / 2))
+            p1 = add(base, mul(right, w / 2))
+            p2 = add(p1, mul(up, hh))
+            p3 = add(p0, mul(up, hh))
+            cell = int((_h32(kk, j, seed + 113) * 0.5 + 0.5) * 3.999)        # one sprig cell of the 2 x 2 atlas
+            u0, v0 = 0.5 * (cell % 2), 0.5 * (cell // 2)
+            if _h32(kk, j, seed + 117) > 0.0:                                 # mirrored half the time
+                uv = [(u0 + 0.5, v0 + 0.5), (u0, v0 + 0.5), (u0, v0), (u0 + 0.5, v0)]
+            else:
+                uv = [(u0, v0 + 0.5), (u0 + 0.5, v0 + 0.5), (u0 + 0.5, v0), (u0, v0)]
+            quad = [p0, p1, p2, p3]
+            n = norm(_newell(quad))
+            for q, nn, uu in ((quad, n, uv), (quad[::-1], mul(n, -1.0), uv[::-1])):
+                P.add(Solid(q, [[0, 1, 2, 3]], fm, vis=(1,), normals=[nn], uv=[uu], tag="hedge_fringe"))
 
 
 # ------------------------------------------------------------------------------------------------ stone walls, banks
@@ -690,8 +885,10 @@ def _bank(L, ends, state, rng, P):
 
 # ------------------------------------------------------------------------------------------------ the module API
 def wall(kind, L=KEN, ends=("seam", "seam"), finish=None, cap=None, state=None, hikae=False, size="low", stone="nozura",
-         H=None, retaining=False, kuro=False, seed=0, pid=None, variant="", post_w=0.21):
-    """One wall module (see the module docstring). Returns a Part with connectors 'post' (hidden) at both end nodes."""
+         H=None, retaining=False, kuro=False, seed=0, pid=None, variant="", post_w=0.21, run=None):
+    """One wall module (see the module docstring). Returns a Part with connectors 'post' (hidden) at both end nodes.
+    run=(s0, seed): the module's start along the whole wall path and the path's seed (FX5: the hedge's surface noise,
+    fringe and UVs follow the run, so a run is continuous across modules); None for a single module."""
     pid = pid or "jp_p_wall_site_" + kind
     P = Part(pid, variant, GROUP, tiers=[1, 2, 3], used_for="site wall module: " + kind,
              datum="run along +x 0..L on the wall centreline z 0, +z the outside face, y 0 = grade; footing to -0.40",
@@ -712,7 +909,7 @@ def wall(kind, L=KEN, ends=("seam", "seam"), finish=None, cap=None, state=None, 
     elif kind in ("shiba", "takeho"):
         _brush(L, ends, kind, state, rng, P)
     elif kind == "ikegaki":
-        _hedge(L, ends, size, state, rng, P)
+        _hedge(L, ends, size, state, rng, P, run=run)
     elif kind == "ishigaki":
         _ishigaki(L, ends, stone, H or 0.90, retaining, state, rng, P)
     elif kind == "bank":
@@ -766,7 +963,7 @@ def _post_stone(P, x, rng, size=0.21):
 
 
 def gate_kabuki(span=1.5 * KEN, roofed=False, covering="itabuki", leaves="_board", pid="jp_p_gate_kabuki",
-                variant=""):
+                variant="", leaf_y0=None):
     """Kabuki-mon: two 0.21 posts `span` apart (centres at x 0 and span, on the wall line z 0), the kabuki beam on
     the post tops with cut ends, a head tie, two hinged board leaves swinging into the compound (-z; W2C's
     gates.gate_leaves); `roofed` adds a small gable roof on the beam. The beam sits at 2.91..3.15, above any wall cap
@@ -787,7 +984,9 @@ def gate_kabuki(span=1.5 * KEN, roofed=False, covering="itabuki", leaves="_board
                  (-0.36, yt)], "z", -0.11, 0.11, "wood_weathered", vis=(1, 2, 3), geo=True, view=True, fire=True,
                 tag="kabuki", grain="long"))
     P.add(box(post / 2, span - post / 2, 2.40, 2.52, -0.04, 0.04, "wood_weathered", vis=(1, 2), tag="kashiranuki"))
-    P.merge(G.gate_leaves(leaves, span, post=post, height=2.22))
+    # leaf_y0 (FX5): the leaves' bottom over grade when the passage carries a raised sill (compound gates)
+    y0 = G.LEAF_Y0 if leaf_y0 is None else leaf_y0
+    P.merge(G.gate_leaves(leaves, span, post=post, y0=y0, height=2.22 - (y0 - G.LEAF_Y0), y_floor=y0 - G.LEAF_Y0))
     if roofed:
         S = SR.Spec(0.22, 0.42, top + 0.05, covering, t=0.42, gov=0.42, body="solid", y_solid=top, walkable=False,
                     rafter_sp=0.20, rafter_sec=(0.04, 0.05), ridge_w=0.20, bed_mat="wall_arakabe")
@@ -807,7 +1006,8 @@ def _arm(x, top):
                  fire=True, tag="hijiki", grain="long")
 
 
-def gate_munemon(span=1.5 * KEN, covering="hongawara", leaves="_board", pid="jp_p_gate_munemon", variant=""):
+def gate_munemon(span=1.5 * KEN, covering="hongawara", leaves="_board", pid="jp_p_gate_munemon", variant="",
+                 leaf_y0=None):
     """Mune-mon: the single-ridge gate: two main posts on the gate line carry, through cross arms (hijiki) on their
     tops, a gable roof whose ridge runs along the gate line (eaves front and back, no rear posts), a head tie and
     two hinged board leaves into the compound."""
@@ -825,7 +1025,9 @@ def gate_munemon(span=1.5 * KEN, covering="hongawara", leaves="_board", pid="jp_
     P.add(box(-0.30, span + 0.30, top + 0.16, top + 0.32, -0.10, 0.10, "wood_weathered", vis=(1, 2, 3), geo=True,
               view=True, fire=True, tag="munagi", grain="long"))
     P.add(box(post / 2, span - post / 2, 2.40, 2.54, -0.05, 0.05, "wood_weathered", vis=(1, 2), tag="kashiranuki"))
-    P.merge(G.gate_leaves(leaves, span, post=post, height=2.22))
+    # leaf_y0 (FX5): the leaves' bottom over grade when the passage carries a raised sill (compound gates)
+    y0 = G.LEAF_Y0 if leaf_y0 is None else leaf_y0
+    P.merge(G.gate_leaves(leaves, span, post=post, y0=y0, height=2.22 - (y0 - G.LEAF_Y0), y_floor=y0 - G.LEAF_Y0))
     S = SR.Spec(0.20, 1.05, top + 0.32, covering, t=0.42, gov=0.55, body="open", walkable=True, rafter_sp=0.26,
                 courses=5 if covering == "hongawara" else 3)
     r = Part(pid + "_roof", "", "")
@@ -949,6 +1151,8 @@ def run_wall(nodes, kind, gates=(), closed=False, name="wall_run", **opt):
     def put(q, deg, a, x0):
         P.merge(q.transformed(deg, (a[0] + math.cos(math.radians(deg)) * x0, 0.0,
                                     a[1] + math.sin(math.radians(deg)) * x0)))
+    rseed = run_seed(name)
+    s_seg = 0.0
     for i, (a, b) in enumerate(segs):
         dx, dz = b[0] - a[0], b[1] - a[1]
         Ls = math.hypot(dx, dz)
@@ -993,10 +1197,18 @@ def run_wall(nodes, kind, gates=(), closed=False, name="wall_run", **opt):
                     s1 = "seam" if ga == "wicket" else "post"
                 else:
                     s1 = "seam"
-                q = wall(kind, m, (s0, s1), seed=int(xx * 100) + i * 1000, pid=name + "_%d_%d" % (i, m_i), **opt)
+                q = wall(kind, m, (s0, s1), seed=int(xx * 100) + i * 1000, pid=name + "_%d_%d" % (i, m_i),
+                         run=(s_seg + xx, rseed), **opt)
                 put(q, deg, a, xx)
                 xx += m
+        s_seg += Ls
     return P
+
+
+def run_seed(name):
+    """A stable per-run seed (FX5: the hedge noise of one path)."""
+    import zlib
+    return zlib.crc32(name.encode("utf-8")) & 0xFFFF
 
 
 # ------------------------------------------------------------------------------------------------ registry

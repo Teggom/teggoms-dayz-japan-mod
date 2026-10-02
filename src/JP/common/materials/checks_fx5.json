@@ -1,0 +1,221 @@
+{
+ "check": "C1 palette (tools/matcheck), FX5 materials",
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_w0_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    74.9,
+    94.4,
+    59.3
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 4.7,
+   "dE_to_entry": 4.7,
+   "tol": 12.0,
+   "spread_p75": 2.3,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     74.9,
+     94.4,
+     59.3
+    ],
+    "dE": 4.68,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_w1_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    72.0,
+    85.9,
+    56.0
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 0.05,
+   "dE_to_entry": 0.05,
+   "tol": 12.0,
+   "spread_p75": 2.3,
+   "observed_spread": null,
+   "masked_frac": 0.046,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     72.1,
+     85.9,
+     55.9
+    ],
+    "dE": 0.06,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_w2_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    86.8,
+    88.8,
+    49.0
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 8.31,
+   "dE_to_entry": 8.31,
+   "tol": 12.0,
+   "spread_p75": 2.3,
+   "observed_spread": null,
+   "masked_frac": 0.24,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     87.0,
+     88.7,
+     48.9
+    ],
+    "dE": 8.37,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_fringe_w0_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    75.0,
+    94.2,
+    59.5
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 4.45,
+   "dE_to_entry": 4.45,
+   "tol": 12.0,
+   "spread_p75": 0.0,
+   "observed_spread": null,
+   "masked_frac": 0.0,
+   "mask": null,
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 0.0)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     75.1,
+     95.0,
+     58.7
+    ],
+    "dE": 5.3,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": false
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_fringe_w1_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    71.9,
+    86.0,
+    55.5
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 0.26,
+   "dE_to_entry": 0.26,
+   "tol": 12.0,
+   "spread_p75": 0.0,
+   "observed_spread": null,
+   "masked_frac": 0.009,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_fringe_w1_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 0.0)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     71.8,
+     86.0,
+     55.6
+    ],
+    "dE": 0.25,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_fringe_w2_co.png",
+   "palette_id": "foliage_green",
+   "wear": "",
+   "mean_srgb": [
+    86.5,
+    88.7,
+    49.0
+   ],
+   "target_srgb": [
+    72,
+    86,
+    56
+   ],
+   "dE": 8.17,
+   "dE_to_entry": 8.17,
+   "tol": 12.0,
+   "spread_p75": 0.0,
+   "observed_spread": null,
+   "masked_frac": 0.028,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_plant_hedge_fringe_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "flat (spread 0.0)"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     86.5,
+     88.7,
+     48.2
+    ],
+    "dE": 8.53,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  }
+ ]
+}
