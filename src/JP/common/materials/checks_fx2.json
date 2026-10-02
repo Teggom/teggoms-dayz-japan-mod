@@ -1,0 +1,113 @@
+{
+ "check": "C1 palette (tools/matcheck), FX2 materials",
+ "palette_entries_added": [
+  "gilt_worn"
+ ],
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_gilt_worn_w0_co.png",
+   "palette_id": "gilt_worn",
+   "wear": "",
+   "mean_srgb": [
+    166.5,
+    126.4,
+    97.2
+   ],
+   "target_srgb": [
+    135,
+    110,
+    81
+   ],
+   "dE": 10.2,
+   "dE_to_entry": 10.2,
+   "tol": 18.0,
+   "spread_p75": 4.6,
+   "observed_spread": 0.0,
+   "masked_frac": 0.071,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_gilt_worn_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     166.4,
+     126.3,
+     97.2
+    ],
+    "dE": 10.18,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_gilt_worn_w1_co.png",
+   "palette_id": "gilt_worn",
+   "wear": "",
+   "mean_srgb": [
+    135.0,
+    110.0,
+    81.0
+   ],
+   "target_srgb": [
+    135,
+    110,
+    81
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 18.0,
+   "spread_p75": 3.9,
+   "observed_spread": 0.0,
+   "masked_frac": 0.166,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_gilt_worn_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     134.9,
+     109.9,
+     81.0
+    ],
+    "dE": 0.09,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_gilt_worn_w2_co.png",
+   "palette_id": "gilt_worn",
+   "wear": "",
+   "mean_srgb": [
+    108.5,
+    98.8,
+    73.3
+   ],
+   "target_srgb": [
+    135,
+    110,
+    81
+   ],
+   "dE": 9.38,
+   "dE_to_entry": 9.38,
+   "tol": 18.0,
+   "spread_p75": 3.1,
+   "observed_spread": 0.0,
+   "masked_frac": 0.304,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_gilt_worn_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     108.4,
+     98.6,
+     73.5
+    ],
+    "dE": 9.43,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  }
+ ]
+}

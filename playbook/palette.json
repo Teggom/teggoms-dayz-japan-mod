@@ -2569,6 +2569,58 @@
    "observed_spread_dE76": 0.0,
    "samples": [],
    "hex": "#4E4638"
+  },
+  {
+   "id": "gilt_worn",
+   "name": "Worn gold leaf over black lacquer (old temple image)",
+   "material": "gold leaf laid on black urushi over carved cypress, dulled by incense smoke and dust, rubbed through to the black ground on the high points",
+   "group": "fitting",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "Buddhist images on the altars (jp_m_gilt_worn; FX2)",
+   "note": "Added 2026-10-01 by FX2 (research/materials/make_fx2_materials.py; research/statues/NOTES.md). The mean of the lit gilt in the fetched open-access photos (boxes in 'samples'); museum lighting is warm and bright, so the in-hall value reads darker in game (dust _w1/_w2).",
+   "srgb": [
+    135,
+    110,
+    81
+   ],
+   "method": "sampled",
+   "tolerance_dE76": 18,
+   "observed_spread_dE76": 0.0,
+   "samples": [
+    {
+     "ref": "met_44890_0.jpg",
+     "box": [
+      0.4,
+      0.42,
+      0.6,
+      0.5
+     ],
+     "value": [
+      153,
+      130,
+      100
+     ]
+    },
+    {
+     "ref": "cma_147588_0.jpg",
+     "box": [
+      0.42,
+      0.42,
+      0.56,
+      0.5
+     ],
+     "value": [
+      117,
+      91,
+      62
+     ]
+    }
+   ],
+   "hex": "#876E51"
   }
  ]
 }
