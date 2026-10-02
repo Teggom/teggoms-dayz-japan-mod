@@ -441,8 +441,8 @@ def generic_verify(bd):
     rec("C5 LOD set (vanilla house set)", all(w in L for w in want), ", ".join("%s %d" % kv for kv in faces.items()))
     bud = registry.BUDGETS[b["budget"]]
     got = (faces.get("Resolution 1", 0), faces.get("Resolution 2", 0), faces.get("Resolution 3", 0))
-    rec("C5 face budget (%s: %d / %d / %d)" % ((b["budget"],) + bud), all(g <= m for g, m in zip(got, bud)),
-        "R1 %d, R2 %d, R3 %d" % got)
+    fits, note = registry.budget_check(b, got)         # CA1: a deliberate overage (over_budget_ok) passes, reported
+    rec("C5 face budget (%s: %d / %d / %d)" % ((b["budget"],) + bud), fits, "R1 %d, R2 %d, R3 %d" % got + note)
     if b["ship"]:
         import bindcheck          # FB1: the engine binds a WRP object only via Land_<p3d stem> + Geometry class=house
         r_ = bd["rec"]

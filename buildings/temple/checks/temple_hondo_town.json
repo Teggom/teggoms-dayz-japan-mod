@@ -2,7 +2,7 @@
  "building": "Land_JP_Temple_Hondo_Town",
  "key": "temple_hondo_town",
  "date": "2026-09-30",
- "budget": "large_plus",
+ "budget": "large",
  "faces": "12428/3688/1638",
  "door_clear_m": [
   1.92
@@ -16,9 +16,9 @@
    "detail": "Resolution 1 12428, Resolution 2 3688, Resolution 3 1638, Geometry 1551, Memory 0, Roadway 127, View Geometry 1473, Fire Geometry 1491"
   },
   {
-   "check": "C5 face budget (large_plus: 15000 / 5750 / 2000)",
+   "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 12428, R2 3688, R3 1638"
+   "detail": "R1 12428, R2 3688, R3 1638 | OVER BUDGET +3.6 % (deliberate: the mawari-en (veranda on three sides, Stephen 2026-10-01: yes): ~12,4xx R1 faces vs large 12,000)"
   },
   {
    "check": "Geometry properties + mass",

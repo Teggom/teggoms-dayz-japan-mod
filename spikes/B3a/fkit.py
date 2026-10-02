@@ -55,12 +55,28 @@ LITTER = "decal_litter"
 
 DUSTY = {WOOD, LACQUER, DARK, PALE}   # up faces of these take the dusty wear
 
-BUDGET = {"furniture": 1000, "small": 300, "medium": 1500}   # FP2: medium = skit's / G1 A3's 1,500 prop ceiling
-# FX2 (2026-10-01, PLAYBOOK §12 as Stephen set it): detail / hero props 1,500; a statue 'as needed (aim <= 3,000)'
-# +50 % = 4,500; an altar dais = its image (statue) + the cabinet and altar pieces (furniture, 1,000) = 5,500
-# detail_l = a detail / hero prop at the +50 % Stephen allows when it needs it: the mask wall (four sculpted masks + the
-# bell tree in one model), the temple bell with its striker log and ropes
-BUDGET.update({"detail": 1500, "detail_l": 2250, "statue": 4500, "altar": 5500})
+# PLAYBOOK §12's simple set (CA1, 2026-10-01: FX2's ad-hoc 'detail_l' 2,250 and 'altar' 5,500 folded back; small = the
+# 800 Stephen set 2026-10-01, was 300). 'medium' = the legacy name of 'detail' (FP2: skit's / G1 A3's 1,500 ceiling).
+# A statue is 'as needed (aim <= 3,000)'. Budgets are guidance (Stephen 2026-10-01): an object that deliberately needs
+# more carries P.over_budget_ok = "<reason>" and may go up to +50 % (a statue: reason required above the aim, 2x = the
+# runaway guard); the check then PASSES and reports the overage (checks.json C5 detail "over_budget"; tools/budget_report.py).
+BUDGET = {"furniture": 1000, "small": 800, "detail": 1500, "medium": 1500, "statue": 3000}
+OVER_BUDGET_MAX = 1.5                 # +50 %: the most a deliberate overage may take (Stephen 2026-10-01)
+AS_NEEDED = {"statue": 2.0}           # 'as needed' classes: aim + reason; the factor is only a runaway guard
+
+
+def budget_fit(P, got, caps):
+    """CA1: PLAYBOOK §12 budget test for a part. got / caps = face counts / class caps, same order (R1[, R2, R3]).
+    -> (ok, over): over is None inside the class, else {"over_pct", "caps", "reason", "deliberate"}. Over the class
+    is ok only with P.over_budget_ok (a reason) and within OVER_BUDGET_MAX (AS_NEEDED for 'as needed' classes)."""
+    if all(g <= c for g, c in zip(got, caps)):
+        return True, None
+    reason = getattr(P, "over_budget_ok", None)
+    cap = AS_NEEDED.get(P.budget, OVER_BUDGET_MAX) if isinstance(P.budget, str) else OVER_BUDGET_MAX
+    ok = bool(reason) and all(g <= c * cap for g, c in zip(got, caps))
+    pct = max((g - c) * 100.0 / c for g, c in zip(got, caps) if c)
+    return ok, {"over_pct": round(pct, 1), "caps": list(caps), "max_factor": cap, "deliberate": ok,
+                "reason": reason or "none: set P.over_budget_ok = '<reason>' (<= +50 %) or trim the model"}
 
 
 def add_smooth_face(lod, pts, outward, uvs, vns, texture, material):
@@ -85,6 +101,7 @@ class FPart(core.Part):
         self.wear = wear
         self.loot = []
         self.budget = budget
+        self.over_budget_ok = None    # CA1: a reason string when the model deliberately exceeds its class (<= +50 %)
         self.res3 = res3
         self.mass = mass
         self.anchor = anchor

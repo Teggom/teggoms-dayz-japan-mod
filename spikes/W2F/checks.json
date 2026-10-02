@@ -1407,7 +1407,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 800, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -1415,7 +1415,7 @@
        "Resolution 2": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 800
      }
     },
     {
@@ -1575,7 +1575,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 800, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -1583,7 +1583,7 @@
        "Resolution 2": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 800
      }
     },
     {
@@ -1742,7 +1742,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 800, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -1750,7 +1750,7 @@
        "Resolution 2": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 800
      }
     },
     {
@@ -2954,7 +2954,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 2250, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -2962,7 +2962,16 @@
        "Resolution 2": 612
       },
       "extra": [],
-      "budget": 2250
+      "budget": 1500,
+      "over_budget": {
+       "over_pct": 41.9,
+       "caps": [
+        1500
+       ],
+       "max_factor": 1.5,
+       "deliberate": true,
+       "reason": "four sculpted kagura masks + the suzu bell tree in one wall model (CA1: was FX2's 'detail_l' 2,250)"
+      }
      }
     },
     {
@@ -3248,7 +3257,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 5500, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 3000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -3259,7 +3268,16 @@
        "Fire Geometry": 12
       },
       "extra": [],
-      "budget": 5500
+      "budget": 3000,
+      "over_budget": {
+       "over_pct": 54.1,
+       "caps": [
+        3000
+       ],
+       "max_factor": 2.0,
+       "deliberate": true,
+       "reason": "the seated image (a statue, as needed) + its zushi cabinet, dais and three altar pieces in one model"
+      }
      }
     },
     {
@@ -3595,7 +3613,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 5500, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 3000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -3606,7 +3624,16 @@
        "Fire Geometry": 12
       },
       "extra": [],
-      "budget": 5500
+      "budget": 3000,
+      "over_budget": {
+       "over_pct": 35.0,
+       "caps": [
+        3000
+       ],
+       "max_factor": 2.0,
+       "deliberate": true,
+       "reason": "the seated image (a statue, as needed) + its zushi cabinet, dais and three altar pieces in one model"
+      }
      }
     },
     {
@@ -3942,7 +3969,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 5500, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 3000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -3953,7 +3980,16 @@
        "Fire Geometry": 12
       },
       "extra": [],
-      "budget": 5500
+      "budget": 3000,
+      "over_budget": {
+       "over_pct": 27.3,
+       "caps": [
+        3000
+       ],
+       "max_factor": 2.0,
+       "deliberate": true,
+       "reason": "the seated image (a statue, as needed) + its zushi cabinet, dais and three altar pieces in one model"
+      }
      }
     },
     {
@@ -4289,7 +4325,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 5500, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 3000, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -4300,7 +4336,16 @@
        "Fire Geometry": 12
       },
       "extra": [],
-      "budget": 5500
+      "budget": 3000,
+      "over_budget": {
+       "over_pct": 23.0,
+       "caps": [
+        3000
+       ],
+       "max_factor": 2.0,
+       "deliberate": true,
+       "reason": "the seated image (a statue, as needed) + its zushi cabinet, dais and three altar pieces in one model"
+      }
      }
     },
     {
@@ -5444,7 +5489,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 2250, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -5455,7 +5500,16 @@
        "Fire Geometry": 20
       },
       "extra": [],
-      "budget": 2250
+      "budget": 1500,
+      "over_budget": {
+       "over_pct": 29.7,
+       "caps": [
+        1500
+       ],
+       "max_factor": 1.5,
+       "deliberate": true,
+       "reason": "temple bell body + its striker log and ropes in one model (CA1: was FX2's 'detail_l' 2,250)"
+      }
      }
     },
     {
@@ -5658,7 +5712,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 2250, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -5669,7 +5723,16 @@
        "Fire Geometry": 20
       },
       "extra": [],
-      "budget": 2250
+      "budget": 1500,
+      "over_budget": {
+       "over_pct": 29.7,
+       "caps": [
+        1500
+       ],
+       "max_factor": 1.5,
+       "deliberate": true,
+       "reason": "temple bell body + its striker log and ropes in one model (CA1: was FX2's 'detail_l' 2,250)"
+      }
      }
     },
     {
@@ -6024,7 +6087,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 800, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -6032,7 +6095,7 @@
        "Resolution 2": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 800
      }
     },
     {
@@ -6151,7 +6214,7 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 300, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 800, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
@@ -6159,7 +6222,7 @@
        "Resolution 2": 6
       },
       "extra": [],
-      "budget": 300
+      "budget": 800
      }
     },
     {

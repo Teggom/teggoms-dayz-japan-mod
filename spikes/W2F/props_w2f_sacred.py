@@ -356,7 +356,9 @@ def image(kind):
 
 def dais(kind, W_=2.4, D=0.85, H=0.85):
     """Sumeru dais (shumidan) with a zushi cabinet (doors open) holding the image, and the three altar pieces."""
-    P = LPart("dais", budget="altar", mass=150.0, anchor="floor")   # FX2: the image is a statue (PLAYBOOK §12)
+    P = LPart("dais", budget="statue", mass=150.0, anchor="floor")   # FX2: the image is a statue (PLAYBOOK §12)
+    # CA1 (was FX2's ad-hoc class 'altar' 5,500): a statue is 'as needed (aim <= 3,000)'; 3,690-4,622 faces
+    P.over_budget_ok = "the seated image (a statue, as needed) + its zushi cabinet, dais and three altar pieces in one model"
     out = [W(-W_ / 2, W_ / 2, 0.0, 0.12, -D / 2, D / 2, LACQ),
            W(-W_ / 2 + 0.04, W_ / 2 - 0.04, 0.12, 0.20, -D / 2 + 0.04, D / 2 - 0.04, LACQ, vis=(1,)),
            W(-W_ / 2 + 0.10, W_ / 2 - 0.10, 0.20, H - 0.16, -D / 2 + 0.10, D / 2 - 0.10, LACQ),
@@ -510,7 +512,8 @@ def waniguchi():
 
 
 def bonsho(H=0.95, D=0.56):
-    P = LPart("bonsho", budget="detail_l", mass=400.0, anchor="hang")   # FX2: bell + log + ropes (+30 %)
+    P = LPart("bonsho", budget="detail", mass=400.0, anchor="hang")   # FX2: bell + log + ropes (+30 %)
+    P.over_budget_ok = "temple bell body + its striker log and ropes in one model (CA1: was FX2's 'detail_l' 2,250)"
     out = [pole((0.0, 0.0, 0.0), (0.0, -0.05, 0.0), 0.03, IRON, n=6, vis=(1,))]
     # the dragon-head lug (ryuzu): an arch of two heads
     out.append(W(-0.10, 0.10, -0.12, -0.05, -0.035, 0.035, BRONZE, vis=(1,)))

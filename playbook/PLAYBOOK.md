@@ -672,7 +672,10 @@ LOD2 about 13 % of LOD0:
 **Budgets are guidance, not walls (Stephen, 2026-10-01):** they exist to stop a simple object running to 100,000 faces.
 If an object genuinely needs an extra 30–50 % to read right, that's fine, as long as it isn't the norm for its class
 (e.g. U1's wrap-round veranda at 12,428 vs 12,000; the town bell tower over 'standard' sits in 'large'). Say so in the
-report when you go over.
+report when you go over. **How (CA1, 2026-10-01): never add a new class for an overage.** Keep the class from this
+table and give the object a reason: a prop part `P.over_budget_ok = "<reason>"`, a building registry entry
+`"over_budget_ok": "<reason>"`. Up to +50 % the C5 check then passes and reports the overage (a statue is 'as needed':
+a reason above the 3,000 aim); `python tools/budget_report.py` lists them all.
 
 **Open task for the first B agent:** read the face counts of about 10 more vanilla buildings with W's ODOL tools and
 tighten these budgets.

@@ -945,7 +945,8 @@ def _hondo_town(name, form, wear):
     kaerumata, board walls + a board ceiling, curved irimoya hongawara, the en on three sides with giboshi koran,
     wakishoji, kizahashi, a hongawara-style kohai fitted under the curved eave; sankarado in the middle bay, hinged
     shitomido beside, a board side door. FX1 put koran returns on a front-only en (budget); FX2 restores the
-    mawari-en (three sides, the sides one bay deep to wakishoji) at Stephen's yes (budget class large_plus)."""
+    mawari-en (three sides, the sides one bay deep to wakishoji) at Stephen's yes (budget class large +
+    over_budget_ok, CA1)."""
     n, bay = 3, TOWN_BAY
     W = D = n * bay
     drop, col_h = 0.75, 3.2
@@ -960,7 +961,7 @@ def _hondo_town(name, form, wear):
     S.dn["front"] = dn[1]
     # FX2 (2026-10-01, Stephen: 'U1 wrap-round veranda: YES, even though it goes to ~12,428 faces'): the period
     # mawari-en: the en on three sides, the side runs one bay deep back to a wakishoji screen (koran.en_wrap side_len,
-    # FX1's variant a), instead of FX1's koran returns. Budget class 'large_plus' (registry: large + 25 %)
+    # FX1's variant a), instead of FX1's koran returns. Budget: 'large' + over_budget_ok() (CA1; was FX2's 'large_plus')
     en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front", "left", "right"), stair=W / 2, waki=True,
                     side_len=bay)
     rp = Part("roof", "", "")
@@ -1384,8 +1385,6 @@ def budget_class(kind, **params):
     grade = params.get("grade", "village")
     if kind == "shoro":
         return "large" if grade == "town" else "standard"     # the town tower: R3 > 800 (no 'tower' class yet)
-    if kind == "hondo" and grade == "town":
-        return "large_plus"                                    # FX2: the mawari-en (Stephen: yes, ~12,4xx faces)
     if kind in ("hondo", "kuri"):
         return "large"
     if grade == "town" and kind in ("haiden", "do", "kagura", "honden"):
@@ -1393,6 +1392,15 @@ def budget_class(kind, **params):
     if kind == "do" and params.get("roof") == "tile":
         return "large"
     return "standard"
+
+
+def over_budget_ok(kind, **params):
+    """PLAYBOOK §12 'budgets are guidance' (Stephen 2026-10-01: +30-50 % when an object needs it): the reason a shell
+    deliberately exceeds its budget_class(), or None. buildings/registry.budget_check reports it instead of failing.
+    (CA1 2026-10-01: replaces FX2's ad-hoc 'large_plus' class.)"""
+    if kind == "hondo" and params.get("grade", "village") == "town":
+        return "the mawari-en (veranda on three sides, Stephen 2026-10-01: yes): ~12,4xx R1 faces vs large 12,000"
+    return None
 
 
 def model(kind, name=None, **params):

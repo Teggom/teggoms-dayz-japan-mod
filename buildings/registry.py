@@ -94,10 +94,24 @@ BUILDINGS = [
 ]
 
 BUDGETS = {"small": (3000, 1150, 400), "standard": (6000, 2300, 800), "townhouse": (9000, 3450, 1200),
-           "large": (12000, 4600, 1600),
-           # FX2 (2026-10-01): PLAYBOOK §12 'budgets are guidance: +30-50 % when an object needs it': the town hondo
-           # with its mawari-en (Stephen: yes) = large + 25 %
-           "large_plus": (15000, 5750, 2000)}
+           "large": (12000, 4600, 1600)}
+# CA1 (2026-10-01): PLAYBOOK §12's simple set only (FX2's 'large_plus' folded back). Budgets are guidance (Stephen
+# 2026-10-01): a building that deliberately needs more carries "over_budget_ok": "<reason>" in its registry entry and
+# may go up to +50 %; C5 then passes and reports the overage (budget_check; tools/budget_report.py lists them all).
+OVER_BUDGET_MAX = 1.5
+
+
+def budget_check(b, got):
+    """PLAYBOOK §12 face budget of a registry entry b for got = (R1, R2, R3) faces -> (ok, detail suffix)."""
+    bud = BUDGETS[b["budget"]]
+    if all(g <= m for g, m in zip(got, bud)):
+        return True, ""
+    reason = b.get("over_budget_ok")
+    pct = max((g - m) * 100.0 / m for g, m in zip(got, bud))
+    if reason and all(g <= m * OVER_BUDGET_MAX for g, m in zip(got, bud)):
+        return True, " | OVER BUDGET +%.1f %% (deliberate: %s)" % (pct, reason)
+    return False, " | OVER BUDGET +%.1f %% (%s)" % (pct, ("over the +50 %% limit: " + reason) if reason else
+                                                     "no over_budget_ok reason in the registry entry")
 
 # ------------------------------------------------------------------------------------------------ C1 families
 # Phase C wave 1 (agent C1, 2026-09-30): template shells, one registry entry each (buildings/shellkit.py builds them,
@@ -373,7 +387,7 @@ def _furn(key, base, dress, suffix, display):
             "name": "jp_" + key, "display": b["display"] + ", " + display,
             "params": {"base": base, "dress": dress}, "model_dir": "furnished", "mass": b["mass"],
             "sound": b["sound"], "loot": b["loot"], "placements": [], "verify": "shellcheck", "budget": b["budget"],
-            "ship": True}
+            "ship": True, **({"over_budget_ok": b["over_budget_ok"]} if b.get("over_budget_ok") else {})}
 
 
 C3_FURNISHED = [
@@ -571,7 +585,8 @@ _LOOT_TEMPLE = {"usage": ["Village", "Town"], "categories": ["tools", "container
 def _sacred(key, dir_, cls, display, params, loot, mass):
     return {"key": key, "dir": dir_, "module": "sacred_shells", "class": cls, "name": "jp_" + key, "display": display,
             "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
-            "placements": [], "verify": "shellcheck", "budget": _sa.budget_class(**params), "ship": True}
+            "placements": [], "verify": "shellcheck", "budget": _sa.budget_class(**params), "ship": True,
+            **({"over_budget_ok": _sa.over_budget_ok(**params)} if _sa.over_budget_ok(**params) else {})}
 
 
 W2S_SHRINE = [

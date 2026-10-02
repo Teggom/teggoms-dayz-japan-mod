@@ -61,11 +61,14 @@ FIREEND = "wood_endgrain_firewood"  # M1: firewood log ends (ref i22)
 BENGARA = "wood_bengara"
 BIB = "textile_bib_red"          # added by B3b through B1's pipeline (research/materials/make_b3b_materials.py)
 
-# PLAYBOOK §12 + G1 A3 decision 9 (1,500 is a ceiling): LOD0 / LOD1 / LOD2 caps per class
-BUDGET = {"small": (300, 300, 300), "box": (600, 300, 120), "medium": (1500, 600, 200)}
-# FX2 (2026-10-01, PLAYBOOK §12): a statue (stone Jizo, komainu, kitsune) 'as needed (aim <= 3,000)' + 50 % with its
-# pedestal; detail / hero props 1,500
-BUDGET.update({"statue": (4500, 1700, 700), "detail": (1500, 600, 250)})
+# PLAYBOOK §12 + G1 A3 decision 9 (1,500 is a ceiling): LOD0 / LOD1 / LOD2 caps per class. CA1 (2026-10-01): §12's
+# simple set: small prop 800 (Stephen 2026-10-01, was 300; LOD1/2 caps kept), detail / hero 1,500, statue 'as needed
+# (aim <= 3,000)' with LOD1/2 at §12's ratios (FX2's 4,500 = the aim + 50 % folded back: a statue over its aim carries
+# P.over_budget_ok, fkit.budget_fit). 'box' (big stone pieces) and 'medium' (= detail with a tighter LOD2) are the
+# B3b-era names, kept as they are.
+BUDGET = {"small": (800, 300, 300), "box": (600, 300, 120), "medium": (1500, 600, 200), "detail": (1500, 600, 250),
+          "statue": (3000, 1150, 400)}
+budget_fit = fkit.budget_fit          # CA1: one budget rule for furniture and site props
 
 
 class SPart(FPart):

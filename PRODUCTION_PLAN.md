@@ -234,8 +234,6 @@
   - 24 outdoor items = 81 models (22 new, 20 variants, 39 abandoned); era: all kept, 7 swaps inside items.
     Decorator: `on_site()`, `under_eaves()`. Materials: `jp_m_textile_net`, `jp_m_plant_foliage`. jp_site.pbo = 210
     classes. Sheets `research/outdoor_kit/contact_sheets/l2_*.jpg`.
-  - **Pitfall for later agents:** B3b's own `spikes/B3b/build.py` rewrites config.cpp WITHOUT the L2 classes. After
-    any B3b rebuild, run `python spikes/L2/build_l2.py --pack`.
   - Life layer items aren't placed anywhere yet (the machiya keeps B4's dressing); Phase C shells will use them.
 - 2026-09-30: **G4 walk (Stephen): ~95% good.** 8 findings (noren streaks, fire-tub see-through, laundry cloth +
   forks, floating kama lid, kamidana roof turned, floating chest cloth, no Roadway on the goods stand) + the well gives
@@ -432,8 +430,6 @@
   (~1100, 1110), K kido + tea houses + smithy + swordsmith + jishin-ban at the street ends; oku-miya too steep. verify_oprw 4123/4123;
   193 buildings / 11,820 checks / bindcheck 193. Maps w2f_map_*.jpg + SHOWCASE_MAP.md. **Walk: TEST_CHECKLIST.md (~32 min).**
   Not done: navmesh; blank temple name boards (no atlas cell); Nichiren / Shinshu sect swaps.
-  - **PITFALL (growing):** furniture config is assembled by several builders; a B3a / L1 / S1 rebuild drops W2F's classes (re-run
-    spikes/W2F/build_w2f.py --pack), like B3b dropping L2's. TODO: one config assembler per PBO that merges every builder's classes.
 - 2026-10-01: **Stephen's wave-2 walk** (notes: test/feedback/2026-10-01_wave2/NOTES.md). Curved roofs + most of P good. Findings:
   tobira handles on the wrong leaf (P1, t1); offering box litter + blocks the stairs; masks (P5) low-res; Buddha / Jizo statues
   are blobs (need picture references + care; Jizo staff top see-through); shoro striker rope + U1 bell floating; U1 veranda sides
@@ -487,3 +483,15 @@
   precinct, samurai / honjin / daimyo wings linked around gardens): straight 1/2/3 ken, corner, T, cross, end, stepped-roof piece for
   slopes; sides open-railed / half-walled / enclosed; raised board floor; roofs straight board / tile / curved sori. Proof on the island:
   link one temple's hondo to its kuri (and a kairo segment at the town shrine if cheap).
+- 2026-10-01: **CA1 DONE** (config assembler + budget classes; spikes/CA1/CA1_PROGRESS.md, TIMELOG_CA1.md).
+  - `tools/assemble_config.py`: jp_furniture (B3a+B4 113, L1 185, S1 175, W2F 49 = 522) and jp_site (B3b+W2/FP1/FX2 239, L2 81 = 320)
+    are merged from per-builder fragments `src/JP/<area>/_frags/<builder>.json`; every builder writes only its own; conflicting
+    duplicate classes fail loudly. One command: `python tools/assemble_config.py jp_furniture|jp_site --pack`. The other 11 PBOs
+    have one writer each (unchanged). README "Config fragments" has the usage.
+  - Proof: all 13 PBOs 0 class differences before/after (`tools/cfgdiff.py`, `spikes/CA1/snapshot.py --compare`); B3a alone and
+    B3b alone rebuilt + packed keep 522 / 320 classes (L1 / S1 / W2F / L2 all present); byte-noise ODOLs restored.
+  - **The two config pitfalls are REMOVED from this log** (B3b dropping L2's classes; B3a / L1 / S1 dropping W2F's): obsolete.
+  - Budgets: FX2's ad-hoc 'altar', 'detail_l' and 'large_plus' folded into PLAYBOOK §12's set (statue / detail / large) with a
+    per-object `over_budget_ok` reason; C5 passes and reports deliberate overages (`python tools/budget_report.py`: 9, all
+    deliberate). Props small = 800 as §12 says. Checks: props 842/842 (faces unchanged), TXT 191/191, verify_all 193 (cache + --full),
+    bindcheck 193, hangcheck 0, handlecheck 0/40.

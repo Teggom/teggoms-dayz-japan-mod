@@ -77,7 +77,7 @@ def write_all(sel):
                                            "variant": m["variant"], "pass": not fails, "faces": faces, "checks": res}
             print("%-34s %-9s R1 %4d R2 %4d R3 %4s  %s" % (
                 m["p3d"], P.budget, faces.get("Resolution 1", 0), faces.get("Resolution 2", 0),
-                faces.get("Resolution 3", "-"), "PASS" if not fails else "FAIL " + ", ".join(
+                faces.get("Resolution 3", "-"), ("PASS" + B.over_note(res)) if not fails else "FAIL " + ", ".join(
                     "%s(%s)" % (c["id"], json.dumps(c["detail"], ensure_ascii=False)[:400]) for c in fails)))
             built.append((m, P, faces))
         B.wb(os.path.join(B.SRC, prop["cat"], prop["id"] + ".prop.json"), json.dumps(sidecar(prop, built), indent=1,

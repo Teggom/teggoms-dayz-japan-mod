@@ -57,3 +57,18 @@ Task: PRODUCTION_PLAN Phase B item B0 = PARTS_GAP_AUDIT §5 step 0a + 0b + the t
   candidate list once per plane key. `JP_RAY_ENGINE=brute` / `JP_ZFIGHT_ENGINE=old` run the old code paths.
 - The pipeline's verify step no longer rebuilds family members before their checks (build_model keeps a snapshot of
   the recipe module's state per building: `bd["mod"]`).
+
+## Config assembler + budget classes (CA1, 2026-10-01)
+- jp_buildings stays a single writer (`pipeline.combine()` already writes config.cpp / model.cfg from every shipped
+  record). The prop PBOs fed by several builders (jp_furniture, jp_site) are now merged from per-builder fragments by
+  `tools/assemble_config.py` (README "Config fragments"); the old "re-run W2F / L2 --pack after a B3a / B3b rebuild"
+  pitfalls are gone.
+- **Budget classes = PLAYBOOK §12's set only:** `registry.BUDGETS` small / standard / townhouse / large (FX2's
+  `large_plus` folded back). A building that deliberately needs more (<= +50 %) carries `"over_budget_ok": "<reason>"`
+  in its registry entry (for template shells: the template's `over_budget_ok(kind, **params)`, e.g.
+  `sacred.over_budget_ok` for the town hondo's mawari-en, copied to its furnished variant by `_furn`).
+  `registry.budget_check()` (shellcheck + pipeline C5) then PASSES and appends `| OVER BUDGET +x % (deliberate: ...)` to
+  the C5 detail. Props: `fkit.BUDGET` furniture 1000 / small 800 / detail 1500 (`medium` = its old name) / statue 3000
+  'as needed'; `skit.BUDGET` likewise with LOD1/2 caps; a part sets `P.over_budget_ok = "<reason>"`
+  (`fkit.budget_fit`). `python tools/budget_report.py` lists every overage (2026-10-01: 9, all deliberate: town hondo
+  + furnished +3.6 %, altar daises +23-54 % as statues, kagura masks +42 %, bonsho +30 %).

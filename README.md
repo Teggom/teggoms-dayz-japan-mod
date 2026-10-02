@@ -92,6 +92,26 @@ Each agent writes only its own files. T's build scripts merge everything they fi
 Once all spikes are done, the lead reruns T's world and mission build so everything lands in one test world.
 Stephen then does one bundled check from `TEST_CHECKLIST.md`.
 
+### Config fragments (PBOs fed by several builders; CA1, 2026-10-01)
+
+`jp_furniture` (B3a + B4, L1, S1, W2F) and `jp_site` (B3b + W2 / FP1 / FX2, L2) are assembled, never written whole by
+one builder:
+- Each builder writes ONLY its own classes + model.cfg entries (+ jp_site's well script lines) to
+  `src/JP/<area>/_frags/<builder>.json` (tracked in git), then calls `tools/assemble_config.py`, which merges ALL
+  fragments of the PBO into `config.cpp` + `model.cfg` (+ `jp_site_wells.c`): stable order (fragment `order`, then the
+  builder's own order), dedupe, and a loud failure on two different bodies for one class name. Rebuilding any builder
+  alone keeps every other builder's classes.
+- **One command to rebuild a PBO's config and pack it:** `python tools/assemble_config.py jp_furniture --pack` (or
+  `jp_site`; no name = both). `--check` reports stale files, `--list` the fragments. Every builder's `--pack` and the
+  FP1 / FP2 / B4 pack helpers go through the same assembler. `<builder> --config-only [--pack]` re-emits one builder's
+  fragment from its masters without rebuilding a model.
+- **A new builder for one of these PBOs:** reuse the pipeline's `frag_classes()` and call
+  `ASM.write_fragment(pbo, "<you>", "<your script>", <order>, classes, models)` then `ASM.assemble(pbo)`; pick an
+  `order` after the existing ones (furniture 10/20/30/40, site 10/20).
+- `python tools/cfgdiff.py A B` compares the classes of two configs or PBOs (comments, whitespace and order ignored).
+- Single-builder PBOs (jp_buildings = buildings/pipeline.py, jp_common = build_materials.py, characters, weapons,
+  plants, structures, the world, the effort-test tansus) keep writing their own config.
+
 ---
 
 ## Rules for every agent (hard)

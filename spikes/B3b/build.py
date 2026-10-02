@@ -175,14 +175,19 @@ def check_model(P, mp, spec):
     extra = [n for n in L if n not in need and n != "Roadway"]
     b0, b1, b2 = skit.BUDGET[P.budget]
     f1, f2, f3 = faces.get("Resolution 1", 0), faces.get("Resolution 2", 0), faces.get("Resolution 3", 0)
-    steps = f2 < f1 and f2 <= b1
+    steps = f2 < f1
     if P.res3:
-        steps = steps and f3 < f2 and f3 <= b2
-    ok = all(n in L for n in need) and not extra and 0 < f1 <= b0 and steps and (("Memory" not in L) or getattr(P, "keep_memory", False)) \
+        steps = steps and f3 < f2
+    # CA1: budgets via fkit.budget_fit: a deliberate overage (P.over_budget_ok, <= +50 %) passes and is reported
+    fits, over = skit.budget_fit(P, (f1, f2, f3) if P.res3 else (f1, f2), (b0, b1, b2) if P.res3 else (b0, b1))
+    ok = all(n in L for n in need) and not extra and 0 < f1 and fits and steps and (("Memory" not in L) or getattr(P, "keep_memory", False)) \
         and (("Roadway" in L) == bool(P.roadway))
+    det = {"faces": faces, "extra": extra}
+    if over:
+        det["over_budget"] = over
     add("C5", "LOD set (%s) + budget %s R1<=%d R2<=%d%s, LODs step down" % ("+".join(
         n.replace("Resolution ", "R").replace(" Geometry", "G") for n in need), P.budget, b0, b1,
-        " R3<=%d" % b2 if P.res3 else ""), ok, {"faces": faces, "extra": extra})
+        " R3<=%d" % b2 if P.res3 else ""), ok, det)
     dd = [dict(d, ok=abs(d["measured"] - d["expected"]) <= d["tol"] + 1e-9) for d in P.dims]
     add("C4", "dimensions against the build list (tol per dim)", all(d["ok"] for d in dd) and len(dd) > 0, dd)
     # C6 placement: seated 0-2 cm (or `bury`) into the terrain; wall-backed items `wall_gap` off the wall line
@@ -338,7 +343,7 @@ def write_all(sel):
                                            "variant": m["variant"], "pass": not fails, "faces": faces, "checks": res}
             print("%-40s %-6s R1 %4d R2 %4d R3 %4s  %s" % (
                 m["p3d"], P.budget, faces.get("Resolution 1", 0), faces.get("Resolution 2", 0),
-                faces.get("Resolution 3", "-"), "PASS" if not fails else "FAIL " + ", ".join(
+                faces.get("Resolution 3", "-"), ("PASS" + B3A.over_note(res)) if not fails else "FAIL " + ", ".join(
                     "%s(%s)" % (c["id"], json.dumps(c["detail"])[:300]) for c in fails)))
             built.append((m, P, faces))
         wb(os.path.join(SRC, prop["cat"], prop["id"] + ".prop.json"), json.dumps(sidecar(prop, built), indent=1,

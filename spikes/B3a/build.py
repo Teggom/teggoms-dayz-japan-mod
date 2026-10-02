@@ -234,11 +234,14 @@ def check_model(P, mp, spec):
     steps = f2 < f1                 # binarize warns when LODs are not ordered by face count
     if P.res3:
         steps = steps and f3 < f2
-    ok = all(n in L for n in need) and not extra and 0 < f1 <= budget and steps and ("Memory" not in L) \
+    fits, over = fkit.budget_fit(P, (f1,), (budget,))     # CA1: a deliberate overage (P.over_budget_ok) is reported
+    ok = all(n in L for n in need) and not extra and 0 < f1 and fits and steps and ("Memory" not in L) \
         and (("Roadway" in L) == bool(P.roadway))
+    det = {"faces": faces, "extra": extra, "budget": budget}
+    if over:
+        det["over_budget"] = over
     add("C5", "LOD set (%s) + budget Res 1 <= %d, LODs step down" % ("+".join(
-        n.replace("Resolution ", "R").replace(" Geometry", "G") for n in need), budget), ok,
-        {"faces": faces, "extra": extra, "budget": budget})
+        n.replace("Resolution ", "R").replace(" Geometry", "G") for n in need), budget), ok, det)
     # C4 dimensions
     dd = [dict(d, ok=abs(d["measured"] - d["expected"]) <= d["tol"] + 1e-9) for d in P.dims]
     add("C4", "dimensions against the build list (tol per dim)", all(d["ok"] for d in dd), dd)
@@ -325,6 +328,16 @@ def check_model(P, mp, spec):
     return res, faces, L
 
 
+def over_note(res):
+    """CA1: ' OVER +23% (deliberate: <reason>)' when a model's C5 passed over its budget class, else ''."""
+    for c in res:
+        o = c["detail"].get("over_budget") if c["id"] == "C5" and isinstance(c["detail"], dict) else None
+        if o:
+            return " OVER +%g%% (%s: %s)" % (o["over_pct"], "deliberate" if o["deliberate"] else "NOT allowed",
+                                            o["reason"])
+    return ""
+
+
 # ================================================================================================ build
 def select(reg, argv):
     names = [a for a in argv if not a.startswith("--")]
@@ -383,7 +396,7 @@ def write_all(sel):
                                            "variant": m["variant"], "pass": not fails, "faces": faces, "checks": res}
             print("%-34s %-10s R1 %4d R2 %4d R3 %4s  %s" % (
                 m["p3d"], P.budget, faces.get("Resolution 1", 0), faces.get("Resolution 2", 0),
-                faces.get("Resolution 3", "-"), "PASS" if not fails else "FAIL " + ", ".join(
+                faces.get("Resolution 3", "-"), ("PASS" + over_note(res)) if not fails else "FAIL " + ", ".join(
                     "%s(%s)" % (c["id"], json.dumps(c["detail"])[:260]) for c in fails)))
             built.append((m, P, faces))
         wb(os.path.join(SRC, prop["cat"], prop["id"] + ".prop.json"), json.dumps(sidecar(prop, built), indent=1))

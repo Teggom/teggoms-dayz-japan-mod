@@ -83,7 +83,8 @@ def fringe(p, length, r, mat, n=8, wear=None, seed=1, vis=(1,)):
 # ================================================================================================ kagura masks
 def kagura_masks():
     import fx2props as FX
-    P = LPart("kagura_masks", budget="detail_l", mass=3.0, anchor="wall", flat=True)   # 4 masks + the bell tree
+    P = LPart("kagura_masks", budget="detail", mass=3.0, anchor="wall", flat=True)   # 4 masks + the bell tree
+    P.over_budget_ok = "four sculpted kagura masks + the suzu bell tree in one wall model (CA1: was FX2's 'detail_l' 2,250)"
     y = 1.50
     out = [W(-0.55, 0.55, y + 0.08, y + 0.14, 0.0, 0.022, WEATH)]
     masks = [(-0.42, "mask_okina", FUSUMA), (-0.17, "mask_oni", PAINT), (0.08, "mask_okame", FUSUMA),
