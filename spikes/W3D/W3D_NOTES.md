@@ -103,6 +103,14 @@ object < ~15,000 faces.
   tripod-frame with a bale on its hook and the counterweight on the beam (C_CIVIC §4.3 18-19: large steelyard scales
   for cargo; the kanme-aratame-sho of c.1712 at five stations [verify], so the cargo weight station = this scale in
   the same yard: a dressing swap, nearly free).
+  **FX7 (2026-10-02, Stephen's walk: "I don't think this is the weighing scale"; the W3D two-post frame with the bale
+  lying under it read as a gallows next to the jail):** rebuilt on a timber TRIPOD (sankyaku, apex 3.00, feet on a
+  1.25 m radius); recorded choice: a heavy steelyard hung from a tripod or from a carrying pole shouldered by two men
+  / laid on trestles, and the tripod is the one form that stands alone and reads as a hoist, never as a gallows. The
+  rice bale HANGS (belly 0.43 off the ground) in a four-rope sling on the iron J-hook of the short arm; the 2.00 m
+  beam carries bronze graduation pins every 0.10 m (long marks every 0.50); the iron counterweight hangs on its loop
+  on the long arm. `_ab`: the tripod standing, the beam down on the ground, the weight on its side, the bale by a
+  leg, the fulcrum cord hanging (abandoned, still a scale). propfloat 0 / propseat 0.
 - River-crossing office: not built (needs a river; a dressing swap of this shell later).
 
 ## Site 3: official compound (intendant's jinya / daikansho), ONE size

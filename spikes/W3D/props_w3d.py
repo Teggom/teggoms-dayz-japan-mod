@@ -87,56 +87,100 @@ def mitsudogu_tate(ab=False):
 
 
 # ================================================================================================ 2 the beam scale
+BRONZE = "metal_bronze"      # the steelyard's inlaid graduation pins (W2S material)
+TRI_APEX = 3.00
+TRI_R = 1.25
+TRI_AZ = (270.0, 30.0, 150.0)     # the legs' feet (deg from +x towards +z): one behind, two at the front corners
+
+
+def _tripod(out, P):
+    """The timber tripod (sankyaku): three poles lashed at the apex (their tips crossing 0.18 past it), a rope lashing."""
+    apex = (0.0, TRI_APEX, 0.0)
+    for az in TRI_AZ:
+        a = math.radians(az)
+        foot = (TRI_R * math.cos(a), 0.025, TRI_R * math.sin(a))       # the slanted foot cap stays over the floor
+        d = [apex[i] - foot[i] for i in range(3)]
+        L = math.sqrt(sum(c * c for c in d))
+        tip = tuple(apex[i] + d[i] / L * 0.18 for i in range(3))
+        out.append(pole(foot, tip, 0.055, WEATH, n=7, vis=(1,), r1=0.045))
+        P.add(pole(foot, apex, 0.06, WEATH, n=6, vis=(2,)))
+        top = tuple(foot[i] + 0.85 * (apex[i] - foot[i]) for i in range(3))     # Geometry legs stop short of
+        P.add(pole(foot, top, 0.06, WEATH, n=6, vis=(), geo=True, view=True, fire=True))   # the apex (C6b)
+    out.append(core.cyl("y", 0.0, 0.0, 0.085, TRI_APEX - 0.10, TRI_APEX + 0.04, ROPE, n=8, vis=(1,)))   # lashing
+    return apex
+
+
 def kanme_hakari(ab=False):
-    """The big steelyard (chigi-bakari) of the post-station yard (C_CIVIC 4.3 18-19: large steelyard scales for cargo;
-    the cargo weight check): a gallows frame (two posts on sills, a cross beam at 2.45); the steelyard beam (1.90 m)
-    hangs from its fulcrum cord, a rice bale on the load hook resting on the ground (the ropes slack-tight), the iron
-    counterweight on the long arm. ab: the steelyard down on the ground under the frame, the bale rolled off."""
+    """The big steelyard (chigi-bakari, the cargo weight check of the post-station yard; C_CIVIC 4.3 18-19: large
+    steelyard scales for cargo). FX7 (Stephen's 3d walk: the W3D gallows-like frame with the bale lying under it read
+    as a gallows next to the jail): a heavy steelyard was hung from a timber TRIPOD or from a carrying pole on two men
+    / trestles; chosen: the tripod (free-standing, reads at once as a hoist, never as a gallows). A long graduated
+    beam (2.00 m) hangs by its iron strap and a cord from the lashing; the rice bale HANGS clear of the ground (0.43)
+    in a four-rope sling on the load hook of the short arm; the iron counterweight hangs on its loop ON the long arm,
+    which carries bronze graduation pins every 0.10 m (long marks every 0.50). ab: abandoned, still a scale, not a
+    gallows: the tripod standing, the beam down on the ground, the weight beside it, the bale lying by a leg, the
+    fulcrum cord hanging."""
     P = LPart("kanme_hakari", budget="detail", mass=80.0, anchor="floor")
     out = []
-    for x in (-0.95, 0.95):
-        out.append(W(x - 0.08, x + 0.08, 0.0, 0.10, -0.45, 0.45, WEATH, vis=(1,)))          # sills
-        out.append(W(x - 0.06, x + 0.06, 0.10, 2.45, -0.06, 0.06, WEATH, vis=(1,)))         # posts
-        for sz in (-1, 1):                                                                    # knee braces
-            out.append(xf(W(-0.025, 0.025, 0.0, 0.62, -0.025, 0.025, WEATH, vis=(1,)), rx=sz * 38.0,
-                          t=(x, 0.10, sz * 0.38)))
-    out.append(W(-1.10, 1.10, 2.45, 2.60, -0.07, 0.07, WEATH, vis=(1,)))                     # cross beam
-    bale = core.cyl("x", 0.27, 0.0, 0.27, -0.40, 0.40, TAWARA, n=10, vis=(1,))
+    _tripod(out, P)
+    yb = 1.60                                                          # the steelyard beam's axis height
+    XB0, XB1 = -0.55, 1.45
+    w_prof = [(0.0, 0.0), (0.06, 0.015), (0.085, 0.09), (0.06, 0.17), (0.025, 0.20), (0.0, 0.21)]
     if not ab:
-        yb = 1.55                                                         # the steelyard beam's height
-        xf_ = -0.10                                                       # the fulcrum
-        out.append(cord((xf_, 2.45, 0.0), (xf_, yb + 0.03, 0.0), 0.008))
-        out.append(W(-0.55, 0.80, yb - 0.025, yb + 0.025, -0.025, 0.025, WEATH, vis=(1,)))   # the beam (clear of the post)
-        for k in range(7):                                                                    # brass graduations
-            xx = 0.05 + 0.11 * k
-            out.append(W(xx - 0.004, xx + 0.004, yb + 0.025, yb + 0.029, -0.012, 0.012, IRON, vis=(1,)))
-        xl = -0.48                                                        # the load hook + its ropes to the bale
-        out.append(cord((xl, yb - 0.025, 0.0), (xl, 0.62, 0.0), 0.006))
-        out.append(xf(bale, t=(xl, 0.0, 0.0)))
-        for sz in (-1, 1):
-            out.append(cord((xl, 0.62, 0.0), (xl, 0.40, sz * 0.24), 0.008))
-        xw = 0.70                                                         # the counterweight
-        out.append(cord((xw, yb - 0.025, 0.0), (xw, 1.12, 0.0), 0.004))
-        out.append(lathe([(0.0, 0.0), (0.06, 0.02), (0.07, 0.10), (0.04, 0.16), (0.0, 0.17)], 8, IRON, vis=(1,)))
-        out[-1] = xf(out[-1], t=(xw, 0.95, 0.0))
+        out.append(cord((0.0, TRI_APEX - 0.06, 0.0), (0.0, yb, 0.0), 0.010))                 # the fulcrum cord
+        out.append(W(-0.03, 0.03, yb - 0.045, yb + 0.045, -0.04, 0.04, IRON, vis=(1,)))       # its iron strap
+        # the beam: a square timber tapering to the long end (two boxes), the load end shod with iron
+        out.append(W(XB0, 0.10, yb - 0.035, yb + 0.035, -0.035, 0.035, WEATH, vis=(1,)))
+        out.append(W(0.10, XB1, yb - 0.027, yb + 0.027, -0.027, 0.027, WEATH, vis=(1,)))
+        out.append(W(XB0 - 0.01, XB0 + 0.08, yb - 0.04, yb + 0.04, -0.04, 0.04, IRON, vis=(1,)))
+        for k in range(13):                                            # graduation pins on the top + the front face
+            xx = 0.20 + 0.10 * k
+            big = k % 5 == 0
+            hw = 0.008 if big else 0.005
+            dz = 0.024 if big else 0.012
+            dy = 0.022 if big else 0.010
+            out.append(W(xx - hw, xx + hw, yb + 0.026, yb + 0.031, -dz, dz, BRONZE, vis=(1,)))
+            out.append(W(xx - hw, xx + hw, yb - dy, yb + dy, 0.026, 0.031, BRONZE, vis=(1,)))
+        xl = -0.32                                                     # the load hook (strap, shank, J) + the sling
+        out.append(W(xl - 0.025, xl + 0.025, yb - 0.045, yb + 0.045, -0.045, 0.045, IRON, vis=(1,)))
+        out.append(W(xl - 0.010, xl + 0.010, 1.24, yb - 0.03, -0.010, 0.010, IRON, vis=(1,)))
+        out.append(W(xl - 0.010, xl + 0.075, 1.22, 1.25, -0.010, 0.010, IRON, vis=(1,)))
+        out.append(W(xl + 0.055, xl + 0.075, 1.22, 1.30, -0.010, 0.010, IRON, vis=(1,)))
+        cy = 0.70                                                      # the bale's axis: its belly 0.43 off the ground
+        out.append(core.cyl("x", cy, 0.0, 0.27, xl - 0.40, xl + 0.40, TAWARA, n=10, vis=(1,)))
+        hk = (xl + 0.03, 1.235, 0.0)
+        for dx in (-0.25, 0.25):
+            for dz in (-0.10, 0.10):
+                out.append(cord(hk, (xl + dx, cy + 0.235, dz), 0.008))
+        xw = 1.15                                                      # the counterweight on its loop on the long arm
+        out.append(W(xw - 0.012, xw + 0.012, yb - 0.035, yb + 0.035, -0.033, 0.033, ROPE, vis=(1,)))
+        out.append(cord((xw, yb - 0.02, 0.0), (xw, 1.30, 0.0), 0.006))
+        out.append(xf(lathe(w_prof, 8, IRON, vis=(1,)), t=(xw, 1.30 - 0.19, 0.0)))
+        P.add(W(XB0, XB1, yb - 0.04, yb + 0.04, -0.04, 0.04, WEATH, vis=(2,)))
+        P.add(core.cyl("x", cy, 0.0, 0.27, xl - 0.40, xl + 0.40, TAWARA, n=6, vis=(2,)))
+        P.add(col(xl - 0.40, xl + 0.40, cy - 0.27, cy + 0.27, -0.27, 0.27, TAWARA))
+        P.add(col(XB0, XB1, yb - 0.04, yb + 0.04, -0.04, 0.04, WEATH))
     else:
-        out.append(xf(W(-0.95, 0.95, 0.0, 0.05, -0.025, 0.025, WEATH, vis=(1,)), ry=12.0, t=(0.0, 0.0, 0.25)))
-        out.append(lathe([(0.0, 0.0), (0.06, 0.02), (0.07, 0.10), (0.04, 0.16), (0.0, 0.17)], 8, IRON, vis=(1,)))
-        out[-1] = xf(out[-1], t=(0.55, 0.0, 0.45))
-        out.append(xf(bale, ry=30.0, t=(-0.30, 0.0, 0.95)))
-        out.append(cord((0.10, 2.45, 0.0), (0.10, 1.70, 0.0), 0.008))    # the fulcrum cord left hanging
+        out.append(cord((0.0, TRI_APEX - 0.06, 0.0), (0.0, 1.95, 0.0), 0.010))              # the fulcrum cord left
+        beam = [W(XB0, 0.10, 0.0, 0.07, -0.035, 0.035, WEATH, vis=(1,)),
+                W(0.10, XB1, 0.008, 0.062, -0.027, 0.027, WEATH, vis=(1,))]
+        for k in range(13):
+            xx = 0.20 + 0.10 * k
+            beam.append(W(xx - 0.005, xx + 0.005, 0.061, 0.066, -0.012, 0.012, BRONZE, vis=(1,)))
+        out += [xf(s_, ry=-18.0, t=(0.05, 0.0, 0.30)) for s_ in beam]
+        out.append(xf(lathe(w_prof, 8, IRON, vis=(1,)), rz=80.0, t=(1.30, 0.085, 0.80)))   # the weight on its side
+        out.append(xf(core.cyl("x", 0.27, 0.0, 0.27, -0.40, 0.40, TAWARA, n=10, vis=(1,)), ry=25.0,
+                      t=(-0.85, 0.0, 0.15)))                                                 # the bale by the leg
+        P.add(xf(W(XB0, XB1, 0.0, 0.07, -0.04, 0.04, WEATH, vis=(2,)), ry=-18.0, t=(0.05, 0.0, 0.30)))
+        P.add(xf(core.cyl("x", 0.27, 0.0, 0.27, -0.40, 0.40, TAWARA, n=6, vis=(2,)), ry=25.0, t=(-0.85, 0.0, 0.15)))
+        P.add(xf(col(-0.40, 0.40, 0.0, 0.54, -0.27, 0.27, TAWARA), ry=25.0, t=(-0.85, 0.0, 0.15)))
     wear_all(out, "_w2" if ab else "_w1")
     P.adds(out)
-    P.add(W(-1.10, 1.10, 0.0, 2.60, -0.10, 0.10, WEATH, vis=(2,)))
-    P.add(xf(core.cyl("x", 0.27, 0.0, 0.27, -0.40, 0.40, TAWARA, n=6, vis=(2,)),
-             t=((-0.48, 0.0, 0.0) if not ab else (-0.30, 0.0, 0.95))))
-    for x in (-0.95, 0.95):
-        P.add(col(x - 0.08, x + 0.08, 0.0, 2.45, -0.10, 0.10, WEATH))
-    P.add(col(-1.10, 1.10, 2.45, 2.60, -0.07, 0.07, WEATH))
-    P.add(xf(col(-0.40, 0.40, 0.0, 0.54, -0.27, 0.27, TAWARA), t=((-0.48, 0.0, 0.0) if not ab else (-0.30, 0.0, 0.95))))
-    P.dim("beam_y", 2.60, 2.60, tol=0.01)
-    P.notes.append("big steelyard on its gallows frame, a rice bale on the hook (cargo weight check)%s"
-                   % ("; the steelyard down, the bale rolled off" if ab else ""))
+    P.dim("h", TRI_APEX + 0.10, max(v[1] for s_ in out for v in s_.verts), tol=0.10)
+    P.notes.append("big steelyard hung from a timber tripod, a rice bale hanging in its sling on the hook, the "
+                   "counterweight on the graduated long arm (cargo weight check)%s"
+                   % ("; abandoned: the beam down, the weight and the bale on the ground, the tripod standing" if ab
+                      else ""))
     return P
 
 
@@ -193,8 +237,8 @@ PROPS = [
         M("jp_f_mitsudogu_tate_ab", "std", "fallen", "Capture-tool rack, the sodegarami fallen",
           lambda: mitsudogu_tate(True))]},
     {"id": "jp_f_kanme_hakari", "cat": CAT, "mount": "floor", "models": [
-        M("jp_f_kanme_hakari", "std", "intact", "Big steelyard on its frame, a bale on the hook", lambda: kanme_hakari()),
-        M("jp_f_kanme_hakari_ab", "std", "broken", "Big steelyard down, the bale rolled off",
+        M("jp_f_kanme_hakari", "std", "intact", "Big steelyard on its tripod, a bale hanging on the hook", lambda: kanme_hakari()),
+        M("jp_f_kanme_hakari_ab", "std", "broken", "Big steelyard down by its tripod, the bale on the ground",
           lambda: kanme_hakari(True))]},
     {"id": "jp_f_matoi_nobori", "cat": CAT, "mount": "floor", "models": [
         M("jp_f_matoi_nobori", "std", "intact", "Fire-brigade standard (matoi-nobori) in its stand",

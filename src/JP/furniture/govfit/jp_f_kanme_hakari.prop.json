@@ -23,30 +23,30 @@
    "variant": "std",
    "state": "intact",
    "abandoned": false,
-   "display": "Big steelyard on its frame, a bale on the hook",
+   "display": "Big steelyard on its tripod, a bale hanging on the hook",
    "anchor": "floor",
    "budget": "detail",
    "faces": {
-    "Resolution 1": 222,
-    "Resolution 2": 16,
-    "Geometry": 24,
-    "View Geometry": 24,
-    "Fire Geometry": 24
+    "Resolution 1": 405,
+    "Resolution 2": 46,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
    },
    "bbox": [
-    -1.1,
-    1.1,
-    0.0,
-    2.6,
-    -0.781,
-    0.781
+    -1.134,
+    1.45,
+    0.002,
+    3.183,
+    -1.305,
+    0.684
    ],
    "collision": true,
    "footprint_xz": [
-    -1.1,
-    -0.27,
-    1.1,
-    0.27
+    -1.132,
+    -1.305,
+    1.45,
+    0.684
    ],
    "loot_floor_clearance_m": 0.4,
    "roadway": false,
@@ -54,15 +54,15 @@
    "loot_surfaces": [],
    "dims": [
     {
-     "name": "beam_y",
-     "expected": 2.6,
-     "measured": 2.6,
-     "tol": 0.01,
+     "name": "h",
+     "expected": 3.1,
+     "measured": 3.1829,
+     "tol": 0.1,
      "source": "build_list"
     }
    ],
    "notes": [
-    "big steelyard on its gallows frame, a rice bale on the hook (cargo weight check)"
+    "big steelyard hung from a timber tripod, a rice bale hanging in its sling on the hook, the counterweight on the graduated long arm (cargo weight check)"
    ],
    "master": "spikes/W3D/out/govfit/jp_f_kanme_hakari.p3d",
    "mount": "floor",
@@ -74,30 +74,30 @@
    "variant": "std",
    "state": "broken",
    "abandoned": true,
-   "display": "Big steelyard down, the bale rolled off",
+   "display": "Big steelyard down by its tripod, the bale on the ground",
    "anchor": "floor",
    "budget": "detail",
    "faces": {
-    "Resolution 1": 124,
-    "Resolution 2": 16,
-    "Geometry": 24,
-    "View Geometry": 24,
-    "Fire Geometry": 24
+    "Resolution 1": 215,
+    "Resolution 2": 46,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
    },
    "bbox": [
-    -1.1,
-    1.1,
+    -1.327,
+    1.441,
     0.0,
-    2.6,
-    -0.781,
-    1.384
+    3.183,
+    -1.305,
+    0.879
    ],
    "collision": true,
    "footprint_xz": [
-    -1.1,
-    -0.1,
-    1.1,
-    1.22
+    -1.327,
+    -1.305,
+    1.132,
+    0.684
    ],
    "loot_floor_clearance_m": 0.4,
    "roadway": false,
@@ -105,15 +105,15 @@
    "loot_surfaces": [],
    "dims": [
     {
-     "name": "beam_y",
-     "expected": 2.6,
-     "measured": 2.6,
-     "tol": 0.01,
+     "name": "h",
+     "expected": 3.1,
+     "measured": 3.1829,
+     "tol": 0.1,
      "source": "build_list"
     }
    ],
    "notes": [
-    "big steelyard on its gallows frame, a rice bale on the hook (cargo weight check); the steelyard down, the bale rolled off"
+    "big steelyard hung from a timber tripod, a rice bale hanging in its sling on the hook, the counterweight on the graduated long arm (cargo weight check); abandoned: the beam down, the weight and the bale on the ground, the tripod standing"
    ],
    "master": "spikes/W3D/out/govfit/jp_f_kanme_hakari_ab.p3d",
    "mount": "floor",

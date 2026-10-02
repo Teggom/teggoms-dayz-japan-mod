@@ -4192,13 +4192,13 @@ class CfgVehicles
 	class StaticObj_JP_F_Kanme_Hakari: HouseNoDestruct
 	{
 		scope=1;
-		displayName="Big steelyard on its frame, a bale on the hook";
+		displayName="Big steelyard on its tripod, a bale hanging on the hook";
 		model="\JP\furniture\govfit\jp_f_kanme_hakari.p3d";
 	};
 	class StaticObj_JP_F_Kanme_Hakari_Ab: HouseNoDestruct
 	{
 		scope=1;
-		displayName="Big steelyard down, the bale rolled off";
+		displayName="Big steelyard down by its tripod, the bale on the ground";
 		model="\JP\furniture\govfit\jp_f_kanme_hakari_ab.p3d";
 	};
 	// jp_f_matoi_nobori (govfit)

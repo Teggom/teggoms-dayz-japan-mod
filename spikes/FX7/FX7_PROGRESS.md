@@ -5,7 +5,7 @@ Stop rule: weekly usage 88 % -> checkpoint, commit + push, resume note here.
 
 ## Status
 - [x] 1 checkpoint entry (guardhouse) + entrycheck island-wide
-- [ ] 2 cargo scale jp_f_kanme_hakari (+ _ab)
+- [x] 2 cargo scale jp_f_kanme_hakari (+ _ab)
 - [ ] 3 rock / earth masses (Ishiba, Mabu, Ishibai_Gama, Noborigama)
 
 ## 1. The checkpoint "I can't walk in, I need to jump"
@@ -34,3 +34,14 @@ Stop rule: weekly usage 88 % -> checkpoint, commit + push, resume note here.
     `jp_shrine_shamusho_sangawara_furnished` (doma: no free standing cell = furnished full / check artifact, office
     reached 0.11), `jp_shrine_kagura_town_furnished` (stage 1.00 reached with a 0.32 rise: marginal).
   Debug views: `python spikes/FX7/_map.py <stem>` (plan of heights over the seat, # = blocked), `_blk.py`.
+
+## 2. The cargo scale (`jp_f_kanme_hakari` + `_ab`, spikes/W3D/props_w3d.py)
+- Rebuilt on a timber tripod (choice + reason recorded in spikes/W3D/W3D_NOTES.md, site 2): the bale hangs 0.43 off
+  the ground in a four-rope sling on the iron J-hook, a 2.00 m graduated beam (bronze pins every 0.10, long marks every
+  0.50), the counterweight hanging on its loop on the long arm. `_ab`: tripod standing, beam + weight + bale on the
+  ground. R1 405 / 215 faces. Build `python spikes/W3D/build_w3d.py jp_f_kanme_hakari` then
+  `python spikes/W3D/binsingle.py jp_f_kanme_hakari jp_f_kanme_hakari_ab` (the folder run's binarize crash), pack
+  `python tools/assemble_config.py jp_furniture --pack`. propfloat 2/0, propseat 77/0.
+- Layout: TY3 re-seated (-0.039, the wider tripod footprint); SK6 (the straw mat on the gravel) moved 0.50 south
+  (757.60, 866.60) off the new guardhouse steps (layout_w3d placecheck 0 problems). World + mission rebuilt at the end.
+- Renders: spikes/FX7/renders/before_kanme_hakari*.png (W3D), fx7_kanme_hakari*.png (after).

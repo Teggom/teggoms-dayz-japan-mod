@@ -387,11 +387,11 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 222,
-    "Resolution 2": 16,
-    "Geometry": 24,
-    "View Geometry": 24,
-    "Fire Geometry": 24
+    "Resolution 1": 405,
+    "Resolution 2": 46,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
    },
    "checks": [
     {
@@ -412,6 +412,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1.rvmat",
@@ -432,11 +433,11 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 222,
-       "Resolution 2": 16,
-       "Geometry": 24,
-       "View Geometry": 24,
-       "Fire Geometry": 24
+       "Resolution 1": 405,
+       "Resolution 2": 46,
+       "Geometry": 42,
+       "View Geometry": 42,
+       "Fire Geometry": 42
       },
       "extra": [],
       "budget": 1500
@@ -448,10 +449,10 @@
      "pass": true,
      "detail": [
       {
-       "name": "beam_y",
-       "expected": 2.6,
-       "measured": 2.6,
-       "tol": 0.01,
+       "name": "h",
+       "expected": 3.1,
+       "measured": 3.1829,
+       "tol": 0.1,
        "source": "build_list",
        "ok": true
       }
@@ -462,8 +463,8 @@
      "name": "anchor 'floor': base / wall / hook plane within 0-2 cm",
      "pass": true,
      "detail": {
-      "res1_min_y": 0.0,
-      "geo_min_y": 0.0
+      "res1_min_y": 0.0042,
+      "geo_min_y": 0.0018
      }
     },
     {
@@ -471,7 +472,7 @@
      "name": "Geometry: closed convex components, mass, autocenter=0",
      "pass": true,
      "detail": {
-      "components": 4,
+      "components": 5,
       "problems": {},
       "mass": 80.0
      }
@@ -481,7 +482,7 @@
      "name": "View Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 4
+      "components": 5
      }
     },
     {
@@ -489,7 +490,7 @@
      "name": "Fire Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 4
+      "components": 5
      }
     },
     {
@@ -497,10 +498,10 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.01,
+      "worst_m": 0.0051,
       "pair": [
-       "Component01",
-       "Component04"
+       "Component02",
+       "Component05"
       ]
      }
     },
@@ -515,6 +516,7 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_metal_bronze_w1": true,
       "jp_m_straw_rope_w1": true,
       "jp_m_straw_tawara_w1": true
      }
@@ -524,6 +526,18 @@
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_metal_bronze_w1",
+       "mean_srgb": [
+        77.6,
+        70.8,
+        56.8
+       ],
+       "palette": "bronze_patina",
+       "dE76": 0.7,
+       "tolerance": 16,
+       "pass": true
+      },
       {
        "material": "jp_m_metal_iron_w1",
        "mean_srgb": [
@@ -583,11 +597,11 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 124,
-    "Resolution 2": 16,
-    "Geometry": 24,
-    "View Geometry": 24,
-    "Fire Geometry": 24
+    "Resolution 1": 215,
+    "Resolution 2": 46,
+    "Geometry": 36,
+    "View Geometry": 36,
+    "Fire Geometry": 36
    },
    "checks": [
     {
@@ -608,6 +622,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\metal\\jp_m_metal_bronze_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_tawara_w1.rvmat",
@@ -630,11 +645,11 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 124,
-       "Resolution 2": 16,
-       "Geometry": 24,
-       "View Geometry": 24,
-       "Fire Geometry": 24
+       "Resolution 1": 215,
+       "Resolution 2": 46,
+       "Geometry": 36,
+       "View Geometry": 36,
+       "Fire Geometry": 36
       },
       "extra": [],
       "budget": 1500
@@ -646,10 +661,10 @@
      "pass": true,
      "detail": [
       {
-       "name": "beam_y",
-       "expected": 2.6,
-       "measured": 2.6,
-       "tol": 0.01,
+       "name": "h",
+       "expected": 3.1,
+       "measured": 3.1829,
+       "tol": 0.1,
        "source": "build_list",
        "ok": true
       }
@@ -695,8 +710,11 @@
      "name": "no Geometry interpenetration > 1 cm",
      "pass": true,
      "detail": {
-      "worst_m": 0.0,
-      "pair": null
+      "worst_m": 0.0001,
+      "pair": [
+       "Component03",
+       "Component04"
+      ]
      }
     },
     {
@@ -710,6 +728,7 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_metal_bronze_w2": true,
       "jp_m_straw_rope_w2": true,
       "jp_m_straw_tawara_w1": true,
       "jp_m_straw_tawara_w2": true
@@ -720,6 +739,18 @@
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_metal_bronze_w2",
+       "mean_srgb": [
+        79.2,
+        84.1,
+        70.3
+       ],
+       "palette": "bronze_patina",
+       "dE76": 7.7,
+       "tolerance": 16,
+       "pass": true
+      },
       {
        "material": "jp_m_metal_iron_w2",
        "mean_srgb": [
@@ -1198,6 +1229,14 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
+  },
+  "BIN": {
+   "pass": true,
+   "detail": {
+    "missing": [],
+    "warning_lines": [],
+    "exit": 3221225477
+   }
   }
  },
  "summary": {
