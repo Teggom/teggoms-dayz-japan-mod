@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Compound_Merchant",
+ "p3d": "\\JP\\buildings\\dw_site\\jp_compound_merchant.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.0,
+   "rect_kit": [
+    22.9,
+    24.42,
+    -1.1,
+    1.3
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kabuki)",
+   "enclosed": false,
+   "rect_model": [
+    7.885,
+    9.405,
+    -14.75,
+    -12.35
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}

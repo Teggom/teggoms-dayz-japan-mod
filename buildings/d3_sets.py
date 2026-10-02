@@ -480,9 +480,8 @@ def samurai(c):
     E = Room(c, "engawa", centre=False)
     E.free("jp_f_enza_zabuton_folded", 0.3, 0.5, 0, why="a cushion left on the veranda", count=True, band=False)
     sparse(c, "genkan_porch", "the genkan porch")
-    c.site("jp_s_footwear_pairs", 8.6, 1.6, 90, why="sandals left on the stone pad")
+    c.site("jp_s_footwear_pairs", 8.6, 1.6, 90, y=0.05, why="sandals left on the stone pad")
     c.site("jp_s_potted_stand", 2.5, -7.4, 0, why="bonsai on a stand in the garden")
-    c.site("jp_s_leaf_pile_small", -1.0, -7.0, 0, why="leaves swept into a pile, never burnt")
 
 
 def doshin(c):
@@ -556,7 +555,6 @@ def merchant(c):
     _formal(c, "oku_zashiki", 3)
     sparse(c, "engawa", "the veranda along the garden")
     c.site("jp_s_potted_stand", 4.0, -7.4, 0, why="bonsai on a stand in the garden")
-    c.site("jp_s_leaf_pile_small", 0.5, -7.0, 0, why="leaves swept into a pile")
 
 
 def honjin_omote(c):
@@ -591,7 +589,7 @@ def honjin_omote(c):
     J.free("jp_f_hibachi_round", 0.6, 0.8, 0, why="a round brazier")
     sparse(c, "engawa", "the veranda along the garden")
     sparse(c, "genkan_porch", "the genkan porch")
-    c.site("jp_s_footwear_pairs", 9.5, 1.6, 90, why="sandals left on the stone pad")
+    c.site("jp_s_footwear_pairs", 9.5, 1.6, 90, y=0.05, why="sandals left on the stone pad")
 
 
 def honjin_oku(c):
@@ -772,8 +770,8 @@ def chashitsu(c):
     M.wall("jp_f_oke_bucket", why="a bucket")
     M.wall("jp_f_box_l", why="a box of tea utensils")
     M.free("jp_f_charcoal_scuttle", 0.4, 0.4, 0, why="charcoal for the ro")
-    c.site("jp_s_stone_lantern_oki_moss", -2.4, 2.6, 0, why="a low stone lantern by the path")
-    c.site("jp_s_chozubachi_natural", -1.2, 2.9, 0, why="the stone basin (tsukubai) before the crawl-in door")
+    c.site("jp_s_stone_lantern_kasuga_18_moss", -2.6, 3.3, 0, why="a small stone lantern by the path")
+    c.site("jp_s_chozubachi_natural", -1.2, 2.9, 0, y=0.08, why="the stone basin (tsukubai) before the crawl-in door")
 
 
 def itagura(c):

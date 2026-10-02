@@ -20,7 +20,7 @@ OUT = os.path.join(HERE, "renders")
 SHEETS = os.path.join(DEV, "research", "production", "contact_sheets")
 sys.path.insert(0, os.path.join(DEV, "buildings"))
 sys.path.insert(0, KIT)
-FAMS = ("dw_rural", "dw_samurai", "dw_upper", "dw_out", "dw_honjin")
+FAMS = ("dw_rural", "dw_samurai", "dw_upper", "dw_out", "dw_honjin", "dw_site")
 ROOF_TAGS = ("thatch_body", "thatch_band", "lath", "rafter", "hip_roll", "thatch_ridge", "ridge_bamboo", "binding",
              "umanori", "umanori_pole", "turf", "iris", "sheathing", "board_field", "board_field_lod", "eave_stack",
              "kawara_field", "hafu", "verge_batten", "board_ridge", "ridge_batten", "ridge_stone", "stone", "batten",
@@ -36,9 +36,6 @@ def family_jobs():
             continue
         cap = b["class"].replace("Land_JP_", "")
         jobs.append(("fam_" + b["key"], cap, {"key": b["key"], "view": "3q", "fit": 1.0, "res": [480, 360]}))
-        jobs.append(("famb_" + b["key"], cap + " (back / inside)",
-                     {"key": b["key"], "view": "3q_left" if b.get("dir") == "kido" else "back", "fit": 1.0,
-                      "res": [480, 360], "open": 1.0}))
     return jobs
 
 
@@ -151,10 +148,10 @@ def compose_family():
             nck += c.get("checks_n", 0)
             fails += c.get("failures", 0)
     sub = ("D3 dwelling shells (bare), %d checks %s (buildings/dw_*/checks/*.json). "
-           "Dark figure = 1.8 m; second view: back or inside, doors open." % (nck, "all pass" if not fails else
+           "Dark figure = 1.8 m; one 3/4 front view each; last row = compounds + corridors." % (nck, "all pass" if not fails else
                                                                               "%d FAILURES" % fails))
     compose("family", family_jobs(), "D3: wave 3a dwellings, outbuildings, gatehouses, honjin",
-            sub, 4, 480, 360, 22, 52)
+            sub, 6, 480, 360, 22, 52)
 
 
 def run_jobs(alljobs, jobs_n):

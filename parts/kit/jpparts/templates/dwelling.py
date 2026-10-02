@@ -1747,10 +1747,253 @@ def nagayamon(name=None, rank="samurai", wear="_w1"):
     return H, info
 
 
+# ================================================================================================ compounds (K3's kits)
+def _wall_path(nodes, kind, ends=("end", "end"), gaps=(), closed=False, name="walls", **opt):
+    """K3's sitewall.run_wall module loop, with chosen path-end types and gate GAPS [(segment, offset, span)]: the
+    walls either side of a gap end 'post' (the gates themselves are placed by the caller as doors). Walk the plot
+    clockwise seen from above (x east, z north): +z of every module = outside."""
+    from .. import sitewall as W
+    P = Part(name, "", "")
+    n = len(nodes)
+    segs = [(nodes[i], nodes[(i + 1) % n]) for i in range(n if closed else n - 1)]
+
+    def turn(i, j):
+        (a, b), (c, d) = segs[i], segs[j]
+        d1 = ((b[0] - a[0]), (b[1] - a[1]))
+        d2 = ((d[0] - c[0]), (d[1] - c[1]))
+        cr = d1[0] * d2[1] - d1[1] * d2[0]
+        if abs(cr) < 1e-9:
+            return "seam"
+        return "corner+z" if cr > 0 else "corner-z"
+    for i, (a, b) in enumerate(segs):
+        dx, dz = b[0] - a[0], b[1] - a[1]
+        Ls = math.hypot(dx, dz)
+        deg = math.degrees(math.atan2(dz, dx))
+        e0 = turn(i - 1, i) if (closed or i > 0) else ends[0]
+        e1 = turn(i, (i + 1) % len(segs)) if (closed or i < len(segs) - 1) else ends[1]
+        runs, x = [], 0.0
+        for g in sorted([g for g in gaps if g[0] == i], key=lambda g: g[1]):
+            runs.append((x, g[1], "post_end"))
+            x = g[1] + g[2]
+        runs.append((x, Ls, None))
+        for ri, (x0, x1, tail) in enumerate(runs):
+            if x1 - x0 < 0.05:
+                continue
+            mods = W._split(x1 - x0)
+            xx = x0
+            for mi, m in enumerate(mods):
+                s0 = e0 if xx < 1e-6 else ("post" if (mi == 0 and ri > 0) else "seam")
+                if abs(xx + m - Ls) < 1e-6:
+                    s1 = e1
+                elif mi == len(mods) - 1 and tail:
+                    s1 = "post"
+                else:
+                    s1 = "seam"
+                q = W.wall(kind, m, (s0, s1), seed=int(xx * 100) + i * 1000, pid=name + "_%d_%d_%d" % (i, ri, mi),
+                           **opt)
+                P.merge(q.transformed(deg, (a[0] + math.cos(math.radians(deg)) * xx, 0.0,
+                                            a[1] + math.sin(math.radians(deg)) * xx)))
+                xx += m
+    return P
+
+
+def _gate_part(kind, span):
+    from .. import sitewall as W
+    if kind.startswith("kabuki"):
+        return W.gate_kabuki(span, roofed=kind.endswith("roofed"))
+    if kind == "munemon":
+        return W.gate_munemon(span)
+    p = W.wicket(kind.split("_", 1)[1] if "_" in kind else "itabei", span)
+    # the wicket's one hinged leaf carries no twin name: give it the DoorsTwin convention (one selection, an
+    # <twin>_action point) so Builder.place_door can number it
+    d = p.doors[0]
+    bones = {a_["bone"] for a_ in d.anims}
+    d.twin = "doorstwin1"
+    for s in p.solids:
+        if s.door in bones:
+            s.sel = "doorstwin1"
+    for k in list(p.memory):
+        if k.endswith("_action") and k[:-len("_action")] in bones:
+            p.memory["doorstwin1_action"] = p.memory.pop(k)
+    return p
+
+
+# per compound: plot W x D (ken grid; kit frame x east 0..W, z north 0..D), wall runs [(nodes, kind, opts, ends)],
+# gates [(run index, segment, offset, kind, span)]
+COMPOUNDS = {
+    # DW19 hatamoto mansion: the samurai nagaya-mon (a separate object, 7 ken) stands in the gap of the south line;
+    # black board fence (itabei kuro) round the other three sides
+    "samurai_m": dict(W=13 * KEN, D=17.5 * KEN, gate_obj=(4.5 * KEN, 11.5 * KEN),
+                      runs=[([(4.5 * KEN, 0.0), (0.0, 0.0), (0.0, 17.5 * KEN), (13 * KEN, 17.5 * KEN), (13 * KEN, 0.0),
+                              (11.5 * KEN, 0.0)], "itabei", dict(kuro=True, cap="none"), ("end", "end"))],
+                      gates=[(0, 2, 6 * KEN, "kabuki", KEN)]),
+    # DW16 Kanto headman: the board nagaya-mon in the south line, a tall clipped hedge (ikegaki) round the yard
+    "headman_east": dict(W=20 * KEN, D=17 * KEN, gate_obj=(6.5 * KEN, 13.5 * KEN),
+                         runs=[([(6.5 * KEN, 0.0), (0.0, 0.0), (0.0, 17 * KEN), (20 * KEN, 17 * KEN), (20 * KEN, 0.0),
+                                 (13.5 * KEN, 0.0)], "ikegaki", dict(size="tall"), ("end", "end"))],
+                         gates=[(0, 2, 9.5 * KEN, "kabuki", KEN)]),
+    # the honjin: a plastered wall (dobei) along the street front (north) with the roofed kabuki-mon (T19: the
+    # formal front gate), board fences round the sides and the back
+    "honjin": dict(W=17 * KEN, D=26 * KEN,
+                   runs=[([(0.0, 26 * KEN), (17 * KEN, 26 * KEN)], "dobei", dict(finish="shikkui"), ("end", "end")),
+                         ([(17 * KEN, 25.5 * KEN), (17 * KEN, 0.0), (0.0, 0.0), (0.0, 25.5 * KEN)], "itabei",
+                          dict(kuro=False, cap="none"), ("end", "end"))],
+                   gates=[(0, 0, 4.5 * KEN, "kabuki_roofed", 1.5 * KEN), (1, 1, 8 * KEN, "kabuki", KEN)]),
+    # the great merchant's garden: a plain board fence with a wicket to the lane behind the shop row
+    "merchant": dict(W=16.5 * KEN, D=15 * KEN, closed=True,
+                     runs=[([(0.0, 0.0), (0.0, 15 * KEN), (16.5 * KEN, 15 * KEN), (16.5 * KEN, 0.0)], "itabei",
+                            dict(kuro=False, cap="none"), ("end", "end"))],
+                     gates=[(0, 3, 3 * KEN, "kabuki", KEN)]),
+    # the ashigaru row: a bamboo (yotsume) fence along the lane with a small board gate
+    "kumi": dict(W=10 * KEN, D=1 * KEN,
+                 runs=[([(0.0, 0.0), (10 * KEN, 0.0)], "yotsume", {}, ("end", "end"))],
+                 gates=[(0, 0, 4.5 * KEN, "kabuki", KEN)]),
+    # the doshin house: a plain board fence round the plot, a simple (unroofed) kabuki gate
+    "doshin": dict(W=10 * KEN, D=8 * KEN, closed=True,
+                   runs=[([(0.0, 0.0), (0.0, 8 * KEN), (10 * KEN, 8 * KEN), (10 * KEN, 0.0)], "itabei",
+                          dict(kuro=False, cap="none"), ("end", "end"))],
+                   gates=[(0, 1, 6.5 * KEN, "kabuki", 1.5 * KEN)]),
+}
+
+
+def compound(name=None, plot="samurai_m", wear="_w1"):
+    """A compound's walls / fences / hedges and its gate(s), from K3's wall kit (parts/K3_NOTES.md section 6), as one
+    map object: the plot in the kit frame (x east, z north, origin at the south-west corner). Gate passages are
+    open floors (loot may lie there); a gatehouse (nagaya-mon) is a separate building in the gap of the line."""
+    spec = COMPOUNDS[plot]
+    W, D = spec["W"], spec["D"]
+    S = Shell(name or "jp_compound", W, D, [2, 3], "compound walls (%s)" % plot, wear)
+    S.ceilings = []
+    gaps = {}
+    for (ri, si, off, kind, span) in spec["gates"]:
+        gaps.setdefault(ri, []).append((si, off, span))
+    for ri, (nodes, kind, opt, ends) in enumerate(spec["runs"]):
+        S.H.merge(_wall_path(nodes, kind, ends=ends, gaps=gaps.get(ri, ()), closed=spec.get("closed", False),
+                             name="%s_run%d" % (plot, ri), **opt))
+        for (x, z) in nodes:
+            S.posts.append((round(x, 4), round(z, 4), 0.0, 1.8))
+    for gi, (ri, si, off, kind, span) in enumerate(spec["gates"]):
+        nodes = spec["runs"][ri][0]
+        a, b = nodes[si], nodes[(si + 1) % len(nodes)]
+        L = math.hypot(b[0] - a[0], b[1] - a[1])
+        u = ((b[0] - a[0]) / L, (b[1] - a[1]) / L)
+        deg = math.degrees(math.atan2(u[1], u[0]))
+        ox, oz = a[0] + u[0] * off, a[1] + u[1] * off
+        S.door(_gate_part(kind, span), (deg, (ox, 0.0, oz)), 0.0, 0.0, "Gate (%s)" % kind.replace("_", " "),
+               "gate%d" % gi)
+        for t in (0.0, span):
+            S.posts.append((round(ox + u[0] * t, 4), round(oz + u[1] * t, 4), 0.0, 2.9))
+        # the gate passage: an earth strip through the opening (the inside is -z of the run = to the right of travel)
+        px0, pz0 = ox + u[0] * 0.15, oz + u[1] * 0.15
+        px1, pz1 = ox + u[0] * (span - 0.15), oz + u[1] * (span - 0.15)
+        nx, nz = -u[1], u[0]                                  # local +z (outside)
+        cs = [(px0 + nx * 1.1, pz0 + nz * 1.1), (px1 + nx * 1.1, pz1 + nz * 1.1), (px0 - nx * 1.3, pz0 - nz * 1.3),
+              (px1 - nx * 1.3, pz1 - nz * 1.3)]
+        rx0, rx1 = min(c[0] for c in cs), max(c[0] for c in cs)
+        rz0, rz1 = min(c[1] for c in cs), max(c[1] for c in cs)
+        nm = "gate%d" % gi
+        S.B.interior = True
+        S.B.merge(FL.doma(nm, rx0 - 0.1, rx1 + 0.1, rz0 - 0.1, rz1 + 0.1, road=(rx0, rx1, rz0, rz1), y=0.0,
+                          mats=FL.MATS_DOMA_EARTH))
+        S.B.interior = False
+        # the leaves' swing (inside, 1.3 m) and the closed line stay clear of loot
+        sw = [(px0 + nx * 0.30, pz0 + nz * 0.30), (px1 + nx * 0.30, pz1 + nz * 0.30),
+              (px0 - nx * 0.30, pz0 - nz * 0.30), (px1 - nx * 0.30, pz1 - nz * 0.30)]
+        S.obst.append((nm, _r(min(c[0] for c in sw), max(c[0] for c in sw), min(c[1] for c in sw),
+                              max(c[1] for c in sw))))
+        S.room(nm, "yard", "earth", 0.0, (rx0, rx1, rz0, rz1), [S.dn[nm]], "the gate passage (%s)" % kind,
+               enclosed=False)
+        # stepping stones (tobi-ishi) through the gate: separate flat stones at grade, one outside, two inside
+        from ..core import stone as _stone, rng_for as _rng
+        rr = _rng("tobi" + plot + str(gi))
+        mx_, mz_ = ox + u[0] * span / 2, oz + u[1] * span / 2
+        for k_, dd in enumerate((1.25, 0.75, -0.75, -1.25)):
+            sx, sz = mx_ + nx * dd, mz_ + nz * dd
+            st_ = _stone(rr, sx, sz, 0.42, 0.36, 0.10, 0.02, "stone_field", bury=0.08, n=7, flat_top=0.8, vis=(1, 2, 3),
+                         tag="soseki")
+            S.H.add(st_)
+    trim_lods(S.H)
+    for s_ in S.H.solids:
+        if s_.tag == "hedge_core":
+            s_.fire = True                     # vanilla house LOD set: the hedge's core is its Fire Geometry too
+        if s_.tag in ("board_field", "board_field_lod") and s_.vis and 1 in s_.vis:
+            s_.vis = set(s_.vis) | {2, 3}      # C15: the small gate roof keeps its whole field in the far LODs
+    H, info = S.finish({"params": {"kind": "compound", "plot": plot}, "levels": {"grade": 0.0},
+                        "centre_kit": (W / 2, D / 2), "gate_obj": spec.get("gate_obj")})
+    return H, info
+
+
+# ------------------------------------------------------------------------------------------------ corridors
+ROKA = {
+    # the honjin: omote (left gable corridor door) <-> oku (right gable corridor door), 2 ken, half-walled, tiled
+    "honjin": dict(path=[(0.0, 0.0), (0.0, 2 * KEN)], sides=("half", "half"), roof="sangawara", floor=0.50, stairs=(),
+                   connect=(True, True), step=None),
+    # the town temple U (W2F): from the hondo's side veranda (0.75) east to the kuri's genkan porch: the deck at the
+    # veranda level, no rail on the north (the step down to the porch's stone pad at the open end), a koran on the
+    # south (a 2-ken run has no room for K3's stair: the 0.70 step down is the level change)
+    "temple_u": dict(path=[(2 * KEN, 0.0), (0.0, 0.0)], sides=("none", "open"), roof="itabuki", floor=0.75,
+                     stairs=(), connect=(False, True), step=("start_right", 0.70)),
+}
+
+
+def roka(name=None, run="honjin", wear="_w1"):
+    """A covered corridor (watari-roka) from K3's corridor kit (roka.run_roka) as one map object. Kit frame = the
+    path's frame (grid nodes); the hosts' wall / veranda lines lie on the connected path ends."""
+    from .. import roka as RK
+    spec = ROKA[run]
+    path = spec["path"]
+    xs = [p[0] for p in path]
+    zs = [p[1] for p in path]
+    W = max(xs) - min(xs) + KEN
+    D = max(zs) - min(zs) + KEN
+    S = Shell(name or "jp_roka", W, D, [2, 3], "covered corridor (%s)" % run, wear)
+    S.ceilings = []
+    P = RK.run_roka(path, sides=spec["sides"], roof=spec["roof"], floor=spec["floor"], stairs=spec["stairs"],
+                    connect=spec["connect"], name="roka_" + run)
+    S.H.merge(P)
+    for (x, z) in path:
+        S.posts.append((round(x, 4), round(z, 4), 0.0, spec["floor"]))
+    if spec.get("step"):
+        where, drop = spec["step"]
+        a, b = path[0], path[1]
+        L = math.hypot(b[0] - a[0], b[1] - a[1])
+        u = ((b[0] - a[0]) / L, (b[1] - a[1]) / L)
+        # a step off the deck on the right of travel near the open start; its ramp runs out from the deck
+        nx, nz = u[1], -u[0]
+        cx, cz = a[0] + u[0] * 0.25 * KEN, a[1] + u[1] * 0.25 * KEN
+        deg = math.degrees(math.atan2(-nx, nz))
+        st = Part("roka_step", "", "")
+        found.step(st, 0.0, "natural", drop=drop, width=1.04)
+        S.B.put(st, (deg, (cx + nx * (KEN / 2 + 0.02), 0.0, cz + nz * (KEN / 2 + 0.02))), 0.0, spec["floor"],
+                what="found.step: off the corridor deck at its open end")
+    stones_as_soseki(S.H)
+    trim_lods(S.H)
+    for s_ in S.H.solids:
+        if s_.tag == "kutsunugi" and s_.vis:
+            s_.vis = set(s_.vis) | {2, 3}       # the step stone outside the roof keeps its far LODs (C15)
+        if s_.tag == "board_field" and s_.vis and 1 in s_.vis:
+            s_.vis = set(s_.vis) | {2, 3}       # C15: the board field overhangs the far sheathing at the eaves
+    # the deck as a loot floor (the flat run at the corridor's start level; stairs and connectors excluded)
+    a, b = path[0], path[1]
+    L0 = math.hypot(b[0] - a[0], b[1] - a[1])
+    u = ((b[0] - a[0]) / L0, (b[1] - a[1]) / L0)
+    s0 = 0.5 * KEN if spec["connect"][0] else 0.0
+    run0 = (spec["stairs"][0][1] if spec["stairs"] else L0 - (0.5 * KEN if spec["connect"][1] else 0.0)) - s0
+    p0 = (a[0] + u[0] * (s0 + 0.10), a[1] + u[1] * (s0 + 0.10))
+    p1 = (a[0] + u[0] * (s0 + run0 - 0.10), a[1] + u[1] * (s0 + run0 - 0.10))
+    hw = 0.70
+    rx0, rx1 = min(p0[0], p1[0]) - (hw if abs(u[1]) > 0.5 else 0.0), max(p0[0], p1[0]) + (hw if abs(u[1]) > 0.5 else 0.0)
+    rz0, rz1 = min(p0[1], p1[1]) - (hw if abs(u[0]) > 0.5 else 0.0), max(p0[1], p1[1]) + (hw if abs(u[0]) > 0.5 else 0.0)
+    S.room("deck", "veranda", "boards", spec["floor"], (rx0, rx1, rz0, rz1), [], "the corridor deck", enclosed=False)
+    H, info = S.finish({"params": {"kind": "roka", "run": run}, "levels": {"floor": spec["floor"]},
+                        "centre_kit": ((max(xs) + min(xs)) / 2, (max(zs) + min(zs)) / 2)})
+    return H, info
+
+
 BUILDERS = {"mountain": mountain, "coastal": coastal, "samurai": samurai, "doshin": doshin, "merchant": merchant,
             "honjin_omote": honjin_omote, "honjin_oku": honjin_oku, "wakihonjin": wakihonjin, "kumi": kumi,
             "headman_east": headman_east, "headman_kinai": headman_kinai, "chashitsu": chashitsu, "itagura": itagura,
-            "stable": stable, "furoba": furoba, "nagayamon": nagayamon}
+            "stable": stable, "furoba": furoba, "nagayamon": nagayamon, "compound": compound, "roka": roka}
 
 
 def build(kind, **params):
@@ -1762,7 +2005,8 @@ def build(kind, **params):
 BUDGET = {"mountain": "large", "coastal": "standard", "kumi": "large", "doshin": "large",
           "headman_east": "large", "headman_kinai": "large", "merchant": "large", "samurai": "large",
           "chashitsu": "small", "itagura": "small", "stable": "standard", "furoba": "small", "nagayamon": "standard",
-          "honjin_omote": "large", "honjin_oku": "large", "wakihonjin": "large"}
+          "honjin_omote": "large", "honjin_oku": "large", "wakihonjin": "large", "compound": "large",
+          "roka": "standard"}
 
 
 def budget_class(kind, **params):
@@ -1796,6 +2040,10 @@ def over_budget_ok(kind, **params):
         return "a 7-ken plastered gatehouse with namako lower walls (tile + joint geometry) and a kawara roof"
     if kind == "nagayamon":
         return "a 7-ken gatehouse (two rooms + the gate passage and its leaves) in one object"
+    if kind == "compound" and params.get("plot") == "honjin":
+        return "a 86-ken compound ring (plastered street wall + board fences) and two gates in one object"
+    if kind == "compound" and params.get("plot") == "headman_east":
+        return "a 67-ken ring of clipped hedge (every hedge lump is geometry in Resolution 1; the far LODs are one core)"
     return None
 
 

@@ -170,3 +170,28 @@ Common rules applied to all of them:
   engawa to the garden); Honjin_Oku: the family / kitchen block (big doma with the stove bank, daidokoro with the irori,
   family rooms, the family's own entrance). Linked by K3's covered corridor; the gate from K3's wall kit. Waki-honjin:
   one block with a smaller jōdan, its own kitchen doma, genkan with shikidai, NO gate (KEEP_TRADES 6).
+
+## Compounds, corridors, placement (step 3, after K3)
+- **Compounds** (`dw_site`, `Land_JP_Compound_*`, template `compound()` on K3's `sitewall`): samurai M (black board
+  fence, the nagaya-mon fills the street side, kabuki back gate), Kanto headman (tall clipped hedge, hedge core is also
+  Fire Geometry, nagaya-mon in front, back gate), honjin (plastered dobei street wall with the roofed kabuki-mon +
+  board fence round sides / back + back gate), merchant (closed board fence, kabuki gate), kumi row (yotsume bamboo
+  on the lane + gate), doshin (closed board fence + kabuki gate). K3's board-fence cap was too heavy (cap "none");
+  the wickets were swapped for 1-ken kabuki gates (cleaner door checks). Each gate passage carries an earth floor at
+  grade (loot + Roadway) and 3 stepping stones (C8 wants 4+ soseki-tagged pieces).
+- **Corridors** (`Land_JP_Roka_Honjin`, `Land_JP_Roka_Temple_U`, template `roka()` on K3's `roka.run_roka`): the honjin
+  watari-roka is half-walled, sangawara, floor 0.50 = both blocks' floor, connected both ends (connector_fit margin
+  ~0.9 m at the omote, ~0.27 m at the oku). Stephen's proof at the town temple: U1 hondo east veranda (0.75) -> U2 kuri
+  genkan porch, one level, itabuki, open on the garden side, a 0.70 m step off at the porch end (a stair there broke
+  the connector fit; flagged in the checklist).
+- **Kairo at shrine P:** not built (the precinct terraces leave no level run between the halls; K3's kairo kit is
+  ready if wanted).
+- **DW13** skipped (the townhouse units cover it, per the brief); **DW20** waits.
+- **Placement** (`spikes/D3/layout_d3.py` -> test/placements/D3.csv, test/ce/D3_mapgrouppos.xml; map
+  `map_d3.py` -> d3_map.jpg + SHOWCASE_MAP.md D3): samurai quarter S (row, two doshin, mansion + nagaya-mon + kura)
+  south-west of the yard; Kanto headman H west by the hamlet; honjin J + waki-honjin south of the street's east end
+  (honjin moved east of SH1's fire-watch rack); merchant M north of the Edo row with tea hut + kura; Kinai headman +
+  coastal house south-east (no sea near the yard, so the coastal house is on dry land), mountain house east of the
+  street (the north slope is too steep for its plan). 29 buildings, 43 rows, 29 CE groups; layout checks 0 problems;
+  verify_oprw PASS 4178/4178. The one placecheck flag (M3.s1 kasuga lantern "hanging") is the classifier calling
+  every kasuga lantern on the island "hanging" (19 rows across SH1 / W2F / FX2 too), not a real float.

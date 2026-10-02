@@ -968,7 +968,7 @@
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
    "ok": true,
-   "detail": "44 props pairwise"
+   "detail": "43 props pairwise"
   },
   {
    "check": "D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall",
@@ -998,12 +998,12 @@
   {
    "check": "D13 yard / street objects inside the test pad",
    "ok": true,
-   "detail": "3 objects"
+   "detail": "2 objects"
   },
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1279362 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1279980 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

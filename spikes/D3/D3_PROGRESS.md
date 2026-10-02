@@ -4,8 +4,9 @@ Time log `japan_dev/TIMELOG_D3.md` (logger `python spikes/D3/tlog.py "<EVENT>" "
 `spikes/D3/D3_NOTES.md`. Stop rule: Stephen stops agent work at 90 % weekly usage.
 
 ## Status
-- [x] notes  - [ ] shells  - [ ] furnished  - [ ] wait for K3 (`| END |` in TIMELOG_K3.md)  - [ ] compounds + placement
-- [ ] world + mission  - [ ] checks  - [ ] sheets  - [ ] checklist  - [ ] pushed
+- [x] notes  - [x] shells (28)  - [x] furnished (16)  - [x] wait for K3  - [x] compounds (6) + corridors (2) + placement
+- [x] world + mission (verify_oprw PASS)  - [x] checks  - [x] sheets (d3_family, d3_rooms, d3_map)  - [x] checklist
+- [ ] pushed (commit 3 = site objects + placement + sheets + checklist)
 
 ## Code
 - Template `parts/kit/jpparts/templates/dwelling.py` (rural.Shell + civic / sacred helpers; new helpers ceiling,
@@ -18,3 +19,8 @@ Time log `japan_dev/TIMELOG_D3.md` (logger `python spikes/D3/tlog.py "<EVENT>" "
 ## How to resume
 - One shell: `cd buildings && python pipeline.py <key> --no-pack`; checks only `--verify-only`.
 - Logs: data/C/_build/verify_logs/verify_*.log (grep FAIL).
+- Placement: `python spikes/D3/layout_d3.py` (CSV + CE + d3_items.json), `python spikes/D3/map_d3.py` (map + SHOWCASE),
+  then build_world.py, build_mission.py, tools/verify_oprw.py.
+- Sheets: `python spikes/D3/render_d3.py --jobs 4` (d3_family.jpg), `python spikes/D3/render_d3_rooms.py rooms --jobs 4`
+  (d3_rooms.jpg, jobs in d3_jobs.py).
+- Not done: kairo at shrine P (no level run between the terraced halls); DW13 skipped, DW20 waits (brief).

@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Compound_Headman_East",
+ "p3d": "\\JP\\buildings\\dw_site\\jp_compound_headman_east.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.0,
+   "rect_kit": [
+    17.439999999999998,
+    18.96,
+    29.64,
+    32.04
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kabuki)",
+   "enclosed": false,
+   "rect_model": [
+    -0.76,
+    0.76,
+    14.17,
+    16.57
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}

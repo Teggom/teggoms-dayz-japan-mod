@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Compound_KumiYashiki",
+ "p3d": "\\JP\\buildings\\dw_site\\jp_compound_kumiyashiki.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.0,
+   "rect_kit": [
+    8.34,
+    9.86,
+    -1.3,
+    1.1
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kabuki)",
+   "enclosed": false,
+   "rect_model": [
+    -0.76,
+    0.76,
+    -2.21,
+    0.19
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}

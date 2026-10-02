@@ -832,6 +832,30 @@ D3_FURNISHED = [
     _furn("f_dw_furoba", "dw_furoba", "d3_furoba", "Furnished", "furnished"),
     _furn("f_dw_nagayamon", "dw_nagayamon_samurai", "d3_nagayamon", "Furnished", "furnished (servants' room)"),
 ]
+# D3 compounds (K3's wall kit: walls / fences / hedges + gates) and covered corridors (K3's roka kit), one object each
+_LOOT_DW_GATE = {"usage": ["Village", "Town"], "categories": ["tools", "containers"], "tags": ["floor"]}
+D3_SITE = [
+    _dwl("dw_cmp_samurai_m", "dw_site", "Land_JP_Compound_Samurai_M", "Samurai mansion compound: black board fence, "
+         "back wicket (the nagaya-mon stands in the front gap)", {"kind": "compound", "plot": "samurai_m"}, _LOOT_DW_GATE,
+         20000.0),
+    _dwl("dw_cmp_headman_east", "dw_site", "Land_JP_Compound_Headman_East", "Headman compound: clipped hedge (the "
+         "board nagaya-mon stands in the front gap)", {"kind": "compound", "plot": "headman_east"}, _LOOT_DW_GATE, 20000.0),
+    _dwl("dw_cmp_honjin", "dw_site", "Land_JP_Compound_Honjin", "Honjin compound: plastered street wall + the roofed "
+         "kabuki-mon, board fence round the sides and back, a back gate", {"kind": "compound", "plot": "honjin"},
+         _LOOT_DW_GATE, 30000.0),
+    _dwl("dw_cmp_merchant", "dw_site", "Land_JP_Compound_Merchant", "Merchant garden: board fence + wicket",
+         {"kind": "compound", "plot": "merchant"}, _LOOT_DW_GATE, 20000.0),
+    _dwl("dw_cmp_kumi", "dw_site", "Land_JP_Compound_KumiYashiki", "Foot-soldier row front: bamboo fence + gate",
+         {"kind": "compound", "plot": "kumi"}, _LOOT_DW_GATE, 5000.0),
+    _dwl("dw_cmp_doshin", "dw_site", "Land_JP_Compound_Doshin", "Doshin plot: board fence + kabuki gate",
+         {"kind": "compound", "plot": "doshin"}, _LOOT_DW_GATE, 10000.0),
+    _dwl("dw_roka_honjin", "dw_site", "Land_JP_Roka_Honjin", "Covered corridor (watari-roka): honjin omote <-> oku",
+         {"kind": "roka", "run": "honjin"}, _LOOT_DW_GATE, 8000.0),
+    _dwl("dw_roka_temple_u", "dw_site", "Land_JP_Roka_Temple_U", "Covered corridor (watari-roka): town temple hondo "
+         "<-> kuri genkan", {"kind": "roka", "run": "temple_u"}, _LOOT_DW_GATE, 8000.0),
+]
+BUILDINGS += D3_SITE
+
 for _f in D3_FURNISHED:                       # D3's own model folder (batch binarize, no noise in C3 / W2F's)
     _f["dir"] = _f["model_dir"] = "dw_furnished"
 BUILDINGS += D3_FURNISHED

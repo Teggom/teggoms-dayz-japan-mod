@@ -1,0 +1,33 @@
+{
+ "building": "Land_JP_Roka_Temple_U",
+ "p3d": "\\JP\\buildings\\dw_site\\jp_roka_temple_u.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "deck",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    1.0100000000000002,
+    3.54,
+    -0.7,
+    0.7
+   ],
+   "doors": [],
+   "note": "the corridor deck",
+   "enclosed": false,
+   "rect_model": [
+    -0.81,
+    1.72,
+    -0.7,
+    0.7
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "deck": 1
+ }
+}

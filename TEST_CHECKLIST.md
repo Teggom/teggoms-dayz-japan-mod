@@ -1,28 +1,120 @@
-# Japan test island: wave 2 walk, shrine + temples + civic (~32 min)
+# Japan test island: wave 3a walk, houses, compounds, corridors, honjin (~28 min)
 
-Phase C wave 2 is built and placed: 24 furnished buildings (W2F), on the shells W2P1 / W2P2 / W2C / W2S made, with 49
-new props (offering boxes, bells, drums, name boards, altar daises with Buddhist images, temple bells, forges,
-bellows, anvils, capture tools, two stone terraces). Nothing here has been seen in the engine yet. Pictures:
-`research/production/contact_sheets/w2f_precinct.jpg`, `w2f_temple.jpg`, `w2f_civic.jpg`, `w2f_rooms.jpg`,
-`w2f_props_*.jpg`.
+Wave 3a (D3) is built and placed: 28 new shells (mountain + coastal farmhouses, the foot-soldier row, doshin and
+samurai houses in three sizes, the great merchant, the honjin + waki-honjin, two headman houses, tea hut, board
+storehouse, stable, bath hut, two nagaya-mon), 16 of them furnished, and 8 new site objects built with K3's kits
+(6 compound walls / fences / hedges with gates, 2 covered corridors). Nothing here has been seen in the engine yet.
+Pictures: `research/production/contact_sheets/d3_family.jpg` (every shell + compound + corridor), `d3_rooms.jpg`
+(the furnished rooms), labelled map `d3_map.jpg` (every ID below is in `spikes/SH1/SHOWCASE_MAP.md`, D3 section).
 
 **Start:**
 1. Run `start-japan-test-island.bat` in the server folder. It starts only the test server, on its own port.
-2. When the server is up, run `start-japan-test-client.bat` to join.
-3. Labelled maps: `research/production/contact_sheets/w2f_map_precinct.jpg`, `w2f_map_village.jpg`,
-   `w2f_map_east.jpg` (every ID in `spikes/SH1/SHOWCASE_MAP.md`, W2F section).
+2. When the server is up, run `start-japan-test-client.bat` to join. You spawn at ~1024, 985.
 
-**If it won't load, kicks you, or something is invisible:** just tell me. I read the server and client logs myself.
+**If it won't load, kicks you, or something is invisible:** just tell me. The lead reads the server and client logs.
 
-**The route (~900 m):** spawn -> north up the shrine approach to the precinct -> west to the village temple by the
-graveyard -> the village shrine above the hamlet -> the street's west end -> along the street to its east end (gate,
-tea houses) -> the town temple -> back to the spawn.
+**The route (~700 m):** spawn -> west to the samurai quarter (S) -> south to the doshin houses and the foot-soldier
+row -> north-west to the Kanto headman's compound (H) -> back east past the spawn, south-east to the Kinai headman
+and the coastal house (E1, E2) -> north to the waki-honjin and the honjin (J) -> the mountain house (E3) -> the town
+temple's new corridor (U9) -> west to the great merchant's garden (M) -> back to the spawn.
 
 **Everywhere, all walk long:** anything floating, see-through, flickering, or popping at a distance; every door you
-pass (open AND close it, from both sides); loot on floors and on furniture tops. Shrines, altars and offerings carry
-no loot on purpose (left undisturbed).
+pass (open AND close it, from both sides; the sliding ones too); every gate leaf; loot on floors and on furniture
+tops (nothing higher than ~1.4 m). Each step up / down: walk it both ways, no stumble, no invisible wall.
 
-## FX4 re-check (~6 min; bell, fire-watch roof, stone textures). IDs: spikes/SH1/SHOWCASE_MAP.md
+## 1. Samurai quarter (7 min) — map d3_map.jpg panel S
+
+- **S2 samurai nagaya-mon** (981.7, 962.8; the long gatehouse facing south): walk through the gate passage from the
+  lane, open / close the big gate leaves from both sides. Plaster with the black-and-white namako tiles at the foot.
+  Inside the gatehouse: the servants' room (bedding, a go board knocked over, brazier) and the storage room.
+- **S3 the mansion's fence** (black board fence round the plot, small back gate on the north side): walk the fence
+  line once inside; the back gate opens both ways. Anything you can walk or see through where the fence meets the
+  nagaya-mon?
+- **S1 samurai mansion (M)** (979, 979): enter by the **genkan porch** on the south (sandals on the stone pad):
+  doma -> the **shikidai** board step -> the genkan room. Then the **zashiki** in the south-west corner: the
+  **tokonoma** (raised alcove) and the **chigaidana** (staggered shelves) beside it. The kitchen (kamado, irori, rice
+  bin) on the north, the garden **engawa** on the west (bonsai on a stand outside, S1.s2). The **kura S4** (975, 989.6)
+  behind, door on its south.
+- **S7 doshin house** (959.1, 944.8, furnished) and **S9** (979.1, 944.8, tiled, bare), each in its own board fence
+  (S8 / S10) with a roofed kabuki gate on the north. Entrance on the east gable.
+- **S5 foot-soldier row (kumi-yashiki)** (937, 947): three units in one long row, doors on the north, each a doma +
+  two small tatami rooms: one with a sword rack, one with the umbrella side job, one abandoned.
+  **S6** the bamboo (yotsume) fence on the lane with its small gate.
+- Tell me: do the three house sizes (row / doshin / mansion) read as a pecking order? The nagaya-mon: right size?
+
+## 2. Kanto headman's compound (4 min) — panel S
+
+- **H2 the headman's nagaya-mon** (942.2, 962.8, board walls, bare): through the passage, gate leaves.
+- **H3 the clipped hedge** round the yard (back gate north). **Can you see or shoot through the hedge?** (it should
+  block both.)
+- **H1 the headman house** (942.2, 977.2): the genkan doma with the shikidai step at the east end of the front (a
+  village headman's privilege), the formal zashiki (no tokonoma: a commoner, on purpose), the big hiroma with the
+  irori.
+- Behind, on the north: **H4 the board storehouse** on posts with rat guards (954, 988; climb the wooden step, rice
+  bales inside), **H5 the stable** (930, 987.5; two stalls, the pack-saddle rack outside), **H6 the bath hut** (941,
+  987.7; the tub and the duckboard floor).
+
+## 3. South-east: Kinai headman + coastal house (3 min) — panel E
+
+- **E1 Kinai headman house** (1078, 937): white plaster, tiled pents along both long walls, the formal door + shikidai
+  step under the tiled lean-to on the east gable, the earth-floored niwa with the kamado row, six rooms (no
+  tokonoma: a commoner, on purpose).
+- **E2 coastal house** (1113, 938): the low stone-weighted roof, the net store on the east, nets on poles, the boat
+  turned over, an old net heap. (There is no sea within a walk of the yard, so it stands on dry land here.)
+
+## 4. Waki-honjin + honjin (6 min) — panel J
+
+- **J5 waki-honjin** (1110, 1005): smaller, no gate of its own. The genkan faces north (towards the honjin's back
+  gate). Inside: the **jodan-no-ma** (the raised top room, +0.15 m) with the tokonoma; kitchen + doma.
+- **J4 honjin compound** (plot x 1094-1125, z 1020-1068): walk round to the **street front on the north**: the white
+  plastered wall and the **roofed kabuki-mon** (~1103.5, 1068). Open the gate leaves from both sides. The board fence
+  round the sides and back, the **back gate** on the south (~1109.5, 1020.5).
+- **J1 honjin omote** (formal block, 1106.3, 1052.8): the genkan + shikidai inside the gate (sandals on the pad);
+  the attendants' rooms; the **jodan-no-ma** (raised +0.15 m, tokonoma + chigaidana) at the back with the engawa east.
+  Step up into the jodan and down again from each side: no stumble.
+- **J3 the covered corridor (watari-roka)** (~1105, 1043): from the formal block walk SOUTH along the half-walled,
+  tiled corridor into **J2 honjin oku** (family / kitchen block, 1107.7, 1033.7). The corridor floor is at the
+  houses' floor height (0.50 m): **is the join at each end smooth (no step, no gap, no invisible wall)?** Can you see
+  sky or ground through the corridor roof or floor? J2: the family door on the west, the kitchen and doma.
+- Tell me: does the honjin read as the grandest house on the island? Gate + plaster wall right for a post-town
+  honjin?
+
+## 5. Mountain house + the temple corridor (3 min) — panels J / E
+
+- **E3 mountain house** (1113, 1080): stone-weighted board roof, the **hidana** (smoke rack hung over the irori),
+  winter firewood stacked high on the back wall, the low drying rack in the yard.
+- **U9 town temple corridor** (1106.4, 1109.5; Stephen's proof): from the **U1 hondo's east veranda** walk the
+  covered corridor to the **U2 kuri's genkan porch**. It runs level with the veranda (0.75 m) and **steps down
+  0.70 m at the porch end**. Walk it both ways. **Smooth at the veranda join? The step down OK, or does it want a
+  proper stair?** Roof clear of your head?
+
+## 6. The great merchant's garden (4 min) — panel J
+
+- **M2 board fence + gate** on the south (~1061.5, 1099.5).
+- **M1 great merchant residence** (1051.5, 1107): kitchen door on the south, doma with the row of kamado, the chanoma, the
+  butsuma, the oku-zashiki with the garden engawa on the north (bonsai outside).
+- **M3 tea hut** (1060, 1121) in the garden: the stone basin (tsukubai) and a small mossy lantern before the
+  **crawl-in door (nijiri-guchi)**: a closed 0.66 x 0.72 m board door, decoration only (it would not fit a
+  player); you go in by the normal door on the side. The tea room is sparse on purpose (a mat, a kettle, a broken tea
+  bowl); the service room (mizuya) has the shelves.
+- **M4 the merchant's kura** (1043, 1120), door east.
+
+## Tell me
+
+1. **Compounds:** walls, fences, hedge: any gap, any place you can walk or see through, anything floating at the
+   ends? Do the gates swing the right way and close flush from both sides? (If a leaf swings wrong, say which: the fix
+   is one line.)
+2. **Corridors** (J3 honjin, U9 temple): the joins and the step; the roofs; right look?
+3. **Status rooms:** tokonoma + chigaidana (S1, J1, J5), the raised jodan-no-ma (J1, J5), the shikidai step (S1, H1,
+   E1, J1): right?
+4. **Houses:** anything floating, see-through or flickering (thatch eaves, the stone-weighted roofs, the rat guards
+   on H4)? Any door that sticks or opens into furniture?
+5. **Loot:** found where you'd expect (floors, chest lids, shelves, the corridor decks)? Nothing up high?
+6. **Placement:** does the samurai quarter / headman compound / honjin sit right on the island, or should anything
+   move?
+7. Anything else that looks wrong.
+
+## FX4 re-check, if not walked yet (~6 min; bell, fire-watch roof, stone textures). IDs: spikes/SH1/SHOWCASE_MAP.md
 
 Before / after picture: `research/production/contact_sheets/fx4_fixes.jpg` (drawn with back faces culled, as the game).
 1. **Temple bells** (T3 village bell tower 984, 1112; U3 town bell tower 1085.5, 1118.5): walk round the bell and
@@ -39,184 +131,3 @@ Before / after picture: `research/production/contact_sheets/fx4_fixes.jpg` (draw
 4. **Stone weathering layer** (new, like FX3's wood): soft grime / pale lichen clouds at ~11 m scale. Pass: not
    blotchy or tiled; tell me if too strong.
 - Tell me: any bell or gong you can still see into; head room on the deck; stone repeats left anywhere.
-
-## FX3 re-check (~6 min; wood texture variety + moss). IDs: spikes/SH1/SHOWCASE_MAP.md
-
-Before / after picture: `spikes/FX3/fx3_insitu.jpg` (and `spikes/FX3/fx3_samples.jpg`). Every wood surface now
-picks its own patch / offset / flip of a 4 m wide atlas, plus a large soft weathering layer (grime, sun-bleach,
-streaks, ~15 m across) on top.
-1. **Torii poles** (any wooden torii: V3 945, 1061; the x 1036 row; the approach torii 1024, 1161): the two poles
-   and the beams no longer show the same knot / mark at the same height. Pass: no obvious twin pattern.
-2. **Board walls, posts, verandas** (the street houses, K2 tea house 1075.5, 1086.8, P1 haiden): no 2 m repeat
-   marching along a wall; no hard seam INSIDE one board (seams at board edges / posts are fine).
-3. **Watch the lighting on the grain (the one technical risk):** about half the wood faces now have their texture
-   mirrored. In low sun, walk along a board wall and a few posts: the grain bumps / board grooves should catch the
-   light the same way on every face. If some faces look embossed the wrong way (light from the wrong side), tell me:
-   it is one switch (uvwood ALLOW_FLIP) and a rebuild.
-4. **Weathering layer**: soft grime clouds, paler sun-bleached areas and faint streaks at a big scale on outdoor wood;
-   indoors only faint grime. Pass: reads as weathering, not as blotches or a tiled pattern; not too strong.
-5. **K2 tea house thatch** (1075.5, 1086.8): moss in irregular patches across the roof, no rows of identical moss
-   blobs. **Moss decals** on stone lanterns / komainu / torii feet: irregular clumps, no repeating dots.
-6. **Furniture** (tansu, nagamochi, shelves in any house): planks clean (no seam across one board), no grey patches.
-- Tell me: more or less variety / weathering? Any face with wrong-way lighting?
-
-## FX2 re-check (~12 min; statues, guardians, detail props, rope, U1 veranda). IDs: spikes/SH1/SHOWCASE_MAP.md (W2F + FX2 sections)
-
-Pictures beside their reference photos: `research/production/contact_sheets/fx2_statues.jpg`, `fx2_komainu.jpg`,
-`fx2_detail.jpg`, `fx2_rope.jpg`; map of the new pairs `fx2_map_guardians.jpg`. Do these first.
-1. **Altar images** (open the doors; stand at the altar): T1 village hondo (972, 1123.5) **Amida** seated, hands in the
-   lap with the two finger rings, curls + ushnisha, the wheel halo; U1 town hondo (1100, 1112) **Shaka** seated, right
-   hand raised palm out, the boat halo with flames; U5 Kannon hall (1083, 1104) standing **Kannon** with the crown and
-   the lotus bud in her left hand; T5 Jizo hall (962, 1109.5) standing **Jizo**, jewel in his left hand, the ringed
-   staff in his right. Pass: each reads as that figure with a face from 2-3 m; worn gilt (not bright gold) on the
-   first three; no gaps where the figure meets its lotus seat.
-2. **Staff head** (T5 Jizo, any stone Jizo): the staff top is a closed pointed loop with rings / beads, no see-through
-   hole at the tip.
-3. **Stone Jizo**: T8 (958.4, 1106.8) with its bib, the six Jizo row at the graveyard's east gate (GJ1-GJ6), the child
-   Jizo graves in the graveyard, the Jizo huts in the sub-shrine row (x 1038, z 1145-1189). Pass: a face (closed eyes,
-   nose, mouth), robe with the kesa band, jewel + staff; the bib and cap sit on the figure (no float, no clipping).
-4. **Komainu pairs** (new): FX-P1 just inside the first torii (1021.5 / 1026.5, 1102.1), FX-P2 inside the second torii
-   (1021.3 / 1026.7, 1138.9), FX-V1 mossy, outside the village torii (942.8 / 947.2, 1059.5). Pass: each pair faces
-   down the approach, the open-mouth one on the RIGHT as you face the shrine, the closed one (with a small horn on the
-   upright form) on the left; nothing floats; you can walk between them.
-5. **Inari foxes** (new) FX-I1 (1056.2 / 1059.8, 1223.9) below the vermilion torii, with the lantern pair FX-I2
-   (1056 / 1060, 1221.4): key in the left fox's mouth, jewel in the right one's. The ground slopes ~13 deg there:
-   the pedestals' uphill sides are set ~0.28 m into the slope. Pass / tell me if it looks wrong.
-6. **Detail props**: P5 kagura stage back wall (1011.5, 1188.5): four masks with faces (old man with a beard, red
-   horned demon, plump woman, the pursed-mouth hyottoko) + the bell tree (bells on top, ribbons below); the P1 / V1
-   bell ropes (twisted red-white, fringed tassel); the U1 gong (flat, a slit round the lower rim, twisted rope); the
-   T3 / U3 temple bells (nipples in panels, bands, the dragon lug); the ema rail + the framed votive picture on the P1
-   / V1 haiden; the offering boxes (slats, iron straps with nails, the bronze crest).
-7. **Rope torii** (V3 945, 1061; 1024, 1161; the x 1036 row; the hill stair): the rope now hangs a little lower with
-   more sag than after FX1 (3/4 of the original), the paper shide tucked into the rope. Pass: still above your head
-   (lowest tip >= 2.31 m) and no longer looks short.
-8. **U1 town hondo veranda** (1100, 1112): the veranda runs round the front AND both sides (one bay deep) and ends at
-   a board screen (wakishoji) on each side. Pass: walk round it; no railing gap, nothing floating.
-- Tell me: statue faces (good enough or another pass?), the komainu forms (keep both?), the fox pedestals on the
-  slope, the rope height.
-
-## FX1 re-check (~10 min; the fixes from your wave-2 walk). IDs: spikes/SH1/SHOWCASE_MAP.md (W2F section)
-
-Before / after pictures: `research/production/contact_sheets/fx1_fixes.jpg`. Do these first, then the rest of the walk
-below only if you want to.
-1. **Door pulls** (P1 haiden ~1024, 1192; T1 village hondo ~972, 1123.5): open each door pair halfway. Pass: each
-   leaf carries its own ring pull (on a small board on the lattice doors), on BOTH faces, near the middle; nothing
-   floats or swaps leaves when they move. Also the kido K1 (1069, 1080): the iron straps sit at each leaf's hinge side.
-2. **Offering boxes** (P1.s1 1021.8, 1187.2 on the terrace; V1.s1 943.2, 1066.1; T1.s1 969.3, 1117.8; T5.s1 965.9,
-   1107.8; U1.s1 1097.8, 1106.1; U5.s1 1087.8, 1102.3): the box stands on the ground BESIDE the foot of the steps,
-   no leaves on it, and you walk straight up the stair without touching it. The P terraces have no leaf drifts now.
-3. **Hanging things**: the T3 village bell tower (984, 1112) and U3 town bell tower (1085.5, 1118.5): the striker log
-   hangs under the bell beam on two ropes that end in the beam; the bell on its hook. The U1 gong and the P1 / V1 bell
-   ropes (suzu) hang from a short bar between the porch tie beams (or across the rafters on T1 / U5). Pass:
-   nothing hangs in the air with a gap above it.
-4. **U1 town hondo (1100, 1112) veranda ends**: the railing turns the corner and runs back to the wall at both ends
-   (also on V1, T1, T5, U5). Pass: no deck / railing that stops in mid air.
-5. **Rope torii**: walk under the V3 village torii (945, 1061), the approach torii (1024, 1161), the row at x 1036
-   (z 1145-1185) and the hill-stair torii (x 1042 / 1058). Pass: the rope and the paper streamers (shide) are clearly
-   above your head (>= 2.35 m at the lowest tip, they were 1.4-2.1 m); the torii are bigger (shinmei 2.46 x 3.69 m).
-6. **Woodpiles** (outside the houses, in the kitchens, the free-standing one): two stakes at each end of every pile,
-   tied with a straw rope; the collapsed one has its stakes leaning out.
-- Tell me: any floating / clipping where the boxes, bars or stakes meet the buildings; whether the bigger torii feel
-  right; whether you want the fuller wrap-round veranda on U1 (costs ~850 faces over the 'large' budget).
-
-## 1. The shrine precinct, town grade (10 min) — map w2f_map_precinct.jpg
-
-From the spawn walk north through the street and up the approach (x 1024) past the torii and lanterns. The empty hall
-site at its head now has the halls, each on a **stone terrace** (the ground rises ~1 m across the site; the terrace
-back sinks into the slope).
-- **P3 temizuya** (~1014, 1147, west of the approach): the curved tile roof on brackets, the stone basin inside, the
-  ladle rack.
-- **P4 shamusho** (~1011, 1165): the priests' office. Step up into the office: the amulet counter under the push-up
-  shutter (talismans on it), the talisman desk, robes, the god shelf. Open the push-up shutter from inside.
-- **P5 kagura stage** (~1011, 1188): kagura drum + flute, the costume chest, masks on the back wall. The stage stands
-  on stilts and is seated on its lowest corner: its uphill (north) posts go ~0.5 m into the slope. **OK, or odd?**
-- **P1t / P1 the town haiden** (~1024, 1192): climb the terrace's stone flight (9 steps) and the haiden's own stair
-  (kizahashi, the railed steps). Look at the **curved bark roof, the bracket sets (kumimono), the step canopy (kohai),
-  the railing with its bronze post caps (koran)**, the name board 八幡宮 over the worship bay, the bell with its
-  faded red-and-white rope (visual only: walk through it). The **offering box** stands at the foot of the haiden stair,
-  on the terrace (the en in front of the one door is too shallow for it).
-  - The middle doors are **hinged lattice doors (tobira) that open inwards**: open and close them from both sides.
-    **Do they swing the right way and close cleanly?** The side bays are fixed shitomi.
-  - Inside: the drum on its stand, the offering table under the god shelf (sanbo, white flasks, dried sakaki), two
-    candle stands, the ritual chest (loot on its lid), straw cushions, votive boards (ema) on both side walls.
-- **P2t / P2 the town honden** (~1024, 1207), behind, on a higher terrace (12 steps): the **sealed sanctum**. Its three
-  lattice doors do NOT open (by design). Look through the lattice: three shrine cabinets with a mirror and gohei.
-  Walk the railed veranda round it (loot on the veranda only). The offering table before the doors.
-- **The terraces:** do the flights walk smoothly (no stumble at the top or bottom)? Can you walk off the terrace
-  sides? Any gap or floating edge where a terrace meets the slope?
-
-## 2. The village temple, Jodo (5 min) — map w2f_map_village.jpg
-
-West of the graveyard (~972, 1104-1124).
-- **T4 gate (yakui-mon):** the hinged board gate leaves (open / close both). The name board over the tie beam is a
-  blank weathered board (there is no temple-name text yet, flagged).
-- **T1 hondo** (~972, 1123.5): the straight tile roof, the en and stair. The two front doors are **hinged (sankarado,
-  open inwards)**, plus a side door at the back of the right-hand wall. Inside: the altar dais with **Amida in its zushi** (doors open), the
-  canopy over it, the sutra desk with the bowl gong and a small mokugyo, candle stands, the vestment chest (loot).
-  On the en: the donation box and the gong with its rope.
-- **T3 bell tower** (~984, 1112): the **bell** (bonsho) hangs from the bell beam, the striker log on two ropes beside
-  it. It has collision: walk round it. **Does the bell hang right on its beam (no gap, no poking through)?**
-- **T2 kuri** (~955, 1122): the earth-floored kitchen with **two kamado and their pots**, shelves, firewood; step up
-  into the board room with the irori (pot hook, persimmons), the meal-tray shelves, the account desk; the tatami
-  guest room behind (chest, folded bedding, screen). The genkan porch door into the guest room.
-- **T5 Jizo hall** (~962, 1109.5): the two lattice doors (hinged). Inside: **a standing Jizo with staff and red bib**
-  on the dais; a stone Jizo (T8) outside.
-
-## 3. The village shrine (2 min) — map w2f_map_village.jpg
-
-North of the hamlet (~945, 1061-1080): **V3** shinmei torii with rope and streamers, two mossy lanterns, **V1** the
-village haiden (straight board roof, hinged lattice doors, the drum, the offering table, the box at the stair foot)
-and **V2** the nagare honden with chigi + katsuogi on the ridge (sealed, board doors).
-
-## 4. The street's west end (5 min) — map w2f_map_village.jpg
-
-- **K5 smithy** (~969.5, 1086, north side): open front. The **cold forge** (clay hearth, dead charcoal, the tuyere),
-  the **box bellows** beside it, the **anvil** in its stump (tongs on the stump), the dry quench tub, a charcoal bale,
-  half-emptied tool wall, a rack. Loot on the forge ledge, the bellows lid, the stump.
-- **K6 swordsmith** (~967, 1072, south side): the work room (clay-coating trough with whetstones, the rack of bare
-  blades, a work bench) and, through the inner door, the **dark forge room**: forge, the big bellows, the anvil, the
-  long dry quench trough, **the straw rope with paper streamers over the forge**, the god shelf.
-- **K7 jishin-ban guard house** (~977.5, 1072.5): the **fire ladder with its alarm bell on the ridge** (look from the
-  street), the ward lantern by the door. Inside: the three capture tools on the wall rack, fire buckets, the brazier
-  with a kettle, the sundries counter under the push-up shutter (candles).
-
-## 5. The street's east end (5 min) — map w2f_map_east.jpg
-
-- **K1 ward gate (kido) + keeper's hut** (~1069, 1080), across the street east of the last houses: **the first engine
-  test of hinged gate leaves (rotation doors)**. Open and close the big pair from both sides; use the small wicket.
-  **Do both leaves swing the right way, together, and close flush?** The ward lantern under the tie beam. The keeper's
-  hut: the capture tools (one gone), the brazier, candles on the counter boards.
-- **K2 tea house** (~1075.5, 1087): the kettle on its hearth, a bench with tea things, the raised room (brazier, tray
-  meal, a tobacco tray knocked over). **K3** the bench tea house across the road, **K4** the tateba with its sake casks,
-  the raised room and the tatami room behind its sliding doors.
-
-## 6. The town temple, Zen (5 min) — map w2f_map_east.jpg
-
-North-east (~1100, 1097-1118).
-- **U4 gate (shikyaku-mon):** curved roof on brackets, hinged leaves.
-- **U1 hondo:** the curved tile roof on degumi brackets, the copper step canopy. The middle **hinged doors** (open
-  inwards). Inside: **Shaka** in the zushi, canopy, sutra desk, the **big red mokugyo**, the drum, the chest. The
-  donation box at the stair foot, the gong on the en.
-- **U2 kuri:** as the village one, plus the Zen **wooden fish board and cloud gong** hung by the kitchen door.
-- **U3 bell tower** (hakama skirt, outside stair): climb to the deck. The town bell is big and fills much of the deck
-  (the striker log at waist height). **Walkable, or in the way?**
-- **U5 Kannon hall:** a standing Kannon with a halo on the dais.
-- **From ~100 m away, look back at U3:** does the bell tower pop or change shape at distance?
-
-## Tell me
-
-1. **Shrine precinct:** the curved roofs, brackets, rails and stairs: right? The terraces: OK as a way to put halls on
-   a slope? The sealed honden (lattice, cabinets inside): right?
-2. **Hinged doors:** shrine / temple doors and the kido gate leaves: swing the right way, close from both sides? (If a
-   leaf swings the wrong way, say which: the fix is one line.)
-3. **Altars and bells:** the Buddhist images, the temple bells, the offering boxes, the shrine bell ropes: do they
-   read right? Anything floating, clipping or see-through?
-4. **Smithy / swordsmith / guard house:** do the forge set, the tools and the ridge ladder read right?
-5. **Tea houses:** right? Want more on the benches?
-6. **Loot:** found where you'd expect (floors, chest lids, counters, the forge ledge)? Nothing on the altars (on
-   purpose)?
-7. **The 'tower' budget class (open since W2P2):** the town bell tower's far model (Resolution 3) is 1,267 faces,
-   over the 'standard' 800, so it is filed as 'large'. **Do you want a separate 'tower' face-budget class** for bell
-   towers, drum towers, fire watchtowers and pagodas (proposal: 9,000 / 3,450 / 1,300), or keep them under 'large'?
-8. **The kagura stage** half into the slope (P5): fine, or should it get a terrace too?
-9. Anything else that looks wrong.

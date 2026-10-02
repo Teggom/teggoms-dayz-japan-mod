@@ -533,3 +533,86 @@ Regenerate: `python spikes/FX2/layout_fx2.py`. Pairs are symmetric about their a
 | FX-I2b | `StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss` | 1060.00 | 1221.40 | 270 | -0.15 | lantern pair on the Inari path (east) |
 
 <!-- FX2 END -->
+
+<!-- D3 BEGIN -->
+
+## D3 wave 3a: dwellings, compounds, corridors, honjin (agent D3, 2026-10-01)
+
+Regenerate: `python spikes/D3/layout_d3.py` then `python spikes/D3/map_d3.py`. Map: research/production/contact_sheets/d3_map.jpg. Buildings are furnished variants (`buildings/d3_sets.py`) unless the class has no `_Furnished`; compounds (`Land_JP_Compound_*`) and corridors (`Land_JP_Roka_*`) are K3-kit objects; `.sN` = a site object of that building. y_off is over the ground at the object.
+
+### Samurai quarter, south-west of the yard (panel S)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| S1 | `Land_JP_Samurai_M_Furnished` | 978.97 | 979.05 | 90 | -0.00 | hatamoto mansion (furnished): genkan porch south, the zashiki with tokonoma + chigaidana, garden engawa west, kitchen north |
+| S1.s1 | `jp_s_footwear_pairs.p3d` | 980.57 | 970.45 | 180 | -0.00 | sandals left on the stone pad |
+| S1.s2 | `jp_s_potted_stand.p3d` | 971.57 | 976.55 | 90 | -0.00 | bonsai on a stand in the garden |
+| S1.s3 | `jp_s_leaf_pile_small.p3d` | 971.97 | 980.05 | 90 | -0.00 | leaves swept into a pile, never burnt |
+| S2 | `Land_JP_NagayaMon_Samurai_Furnished` | 981.70 | 962.82 | 180 | -0.00 | samurai nagaya-mon (furnished): the gate passage, servants' room, storage; plaster + namako |
+| S3 | `Land_JP_Compound_Samurai_M` | 978.97 | 976.92 | 0 | 0.00 | the mansion's black board fence + back gate (north) |
+| S4 | `Land_JP_Kura_Plain` | 975.00 | 989.60 | 0 | 0.00 | the mansion's kura (plain), door south |
+| S5 | `Land_JP_KumiYashiki_3_Itabuki_Furnished` | 937.00 | 946.90 | 0 | -0.00 | foot-soldier row (furnished: sword unit, umbrella side-job unit, an abandoned unit), doors north |
+| S5.s1 | `jp_s_laundry_pole_crossed.p3d` | 932.00 | 951.30 | 0 | -0.00 | a laundry pole before the row |
+| S5.s2 | `jp_s_potted_pair.p3d` | 939.20 | 950.50 | 0 | -0.00 | potted plants (the side job) |
+| S6 | `Land_JP_Compound_KumiYashiki` | 937.00 | 953.91 | 0 | -0.00 | the row's bamboo (yotsume) fence + small gate on the lane |
+| S7 | `Land_JP_Doshin_Itabuki_Furnished` | 959.10 | 944.80 | 0 | 0.00 | doshin house (furnished), entrance on the east gable |
+| S8 | `Land_JP_Compound_Doshin` | 959.10 | 944.78 | 0 | 0.00 | board fence + kabuki gate (north) |
+| S9 | `Land_JP_Doshin_Sangawara` | 979.10 | 944.80 | 0 | -0.00 | doshin house (tiled, bare), entrance on the east gable |
+| S10 | `Land_JP_Compound_Doshin` | 979.10 | 944.78 | 0 | 0.00 | board fence + kabuki gate (north) |
+
+### Kanto headman's compound by the hamlet (panel S)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| H1 | `Land_JP_Headman_East_Furnished` | 942.20 | 977.16 | 180 | -0.00 | Kanto headman house (furnished): genkan doma + shikidai at the east end of the front, the formal zashiki |
+| H2 | `Land_JP_NagayaMon_Headman` | 942.20 | 962.82 | 180 | -0.00 | the headman's board nagaya-mon (bare) |
+| H3 | `Land_JP_Compound_Headman_East` | 942.20 | 976.47 | 0 | -0.00 | clipped hedge ring + back gate (north) |
+| H4 | `Land_JP_Itagura_Itabuki_Furnished` | 954.00 | 988.00 | 180 | 0.00 | board storehouse on rat-guarded posts (furnished: grain) |
+| H5 | `Land_JP_Stable_Horse_Furnished` | 930.00 | 987.50 | 180 | -0.00 | stable (furnished: two horse stalls) |
+| H5.s1 | `jp_s_stable_yard_saddle_rack.p3d` | 926.40 | 986.50 | 90 | -0.00 | the pack-saddle rack outside |
+| H6 | `Land_JP_Furoba_Furnished` | 941.00 | 987.70 | 180 | 0.00 | bath hut (furnished) |
+
+### Honjin + waki-honjin by the street's east end (panel J)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| J1 | `Land_JP_Honjin_Omote_Furnished` | 1106.29 | 1052.84 | 270 | -0.00 | honjin formal block (furnished): genkan + shikidai north, the jodan-no-ma (raised) with tokonoma + chigaidana, engawa east |
+| J1.s1 | `jp_s_footwear_pairs.p3d` | 1104.69 | 1062.34 | 0 | 0.00 | sandals left on the stone pad |
+| J2 | `Land_JP_Honjin_Oku_Furnished` | 1107.65 | 1033.73 | 270 | 0.00 | honjin family / kitchen block (furnished), the family's door west |
+| J3 | `Land_JP_Roka_Honjin` | 1104.92 | 1042.83 | 0 | -0.00 | covered corridor omote <-> oku (half walls, tiled) |
+| J4 | `Land_JP_Compound_Honjin` | 1109.47 | 1044.16 | 0 | 0.00 | plastered street wall + roofed kabuki-mon (north), board fence, back gate (south) |
+| J5 | `Land_JP_Wakihonjin_Furnished` | 1110.00 | 1005.00 | 270 | -0.00 | waki-honjin (furnished; no gate): genkan north facing the honjin's back gate |
+
+### Great merchant behind the Edo row (panel J)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| M1 | `Land_JP_Merchant_Residence_Furnished` | 1051.50 | 1107.00 | 180 | -0.00 | great merchant residence (furnished): kitchen door south, the garden engawa north |
+| M1.s1 | `jp_s_potted_stand.p3d` | 1047.50 | 1114.40 | 180 | -0.00 | bonsai on a stand in the garden |
+| M1.s2 | `jp_s_leaf_pile_small.p3d` | 1051.00 | 1114.00 | 180 | -0.00 | leaves swept into a pile |
+| M2 | `Land_JP_Compound_Merchant` | 1053.02 | 1113.15 | 0 | 0.00 | board fence + gate (south) |
+| M3 | `Land_JP_Chashitsu_Thatch_Furnished` | 1060.00 | 1121.00 | 180 | -0.00 | tea hut in the merchant's garden (furnished) |
+| M3.s1 | `jp_s_stone_lantern_oki_moss.p3d` | 1062.40 | 1118.40 | 180 | -0.00 | a low stone lantern by the path |
+| M3.s2 | `jp_s_chozubachi_natural.p3d` | 1061.20 | 1118.10 | 180 | -0.00 | the stone basin (tsukubai) before the crawl-in door |
+| M4 | `Land_JP_Kura_Namako` | 1043.00 | 1120.00 | 90 | 0.00 | the merchant's kura (namako), door east |
+
+### South-east and east: Kinai headman, coastal house, mountain house (panels E / J)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| E1 | `Land_JP_Headman_Kinai_Furnished` | 1078.00 | 937.00 | 180 | -0.00 | Kinai headman house (furnished): the tiled genkan lean-to on the east gable |
+| E2 | `Land_JP_Coastal_Ishioki_NetStore_Furnished` | 1113.00 | 938.00 | 180 | 0.00 | coastal (fisherman's) house (furnished): the net store on the east |
+| E2.s1 | `jp_s_fishnet_poles.p3d` | 1117.60 | 933.00 | 180 | 0.00 | nets hung to dry on poles |
+| E2.s2 | `jp_s_boat_upturned.p3d` | 1111.80 | 932.40 | 260 | 0.00 | the boat hauled up and turned over |
+| E2.s3 | `jp_s_fishnet_heap.p3d` | 1118.80 | 941.60 | 200 | 0.00 | an old net heaped by the store |
+| E3 | `Land_JP_Mountain_Ishioki_Furnished` | 1113.00 | 1080.00 | 180 | 0.00 | mountain house (furnished): stone-weighted boards, the hidana |
+| E3.s1 | `jp_s_firewood_stack_wall_1ken_h180.p3d` | 1110.40 | 1083.83 | 0 | 0.00 | winter firewood stacked high on the back wall |
+| E3.s2 | `jp_s_hasa_low.p3d` | 1110.00 | 1074.40 | 180 | 0.00 | a low drying rack in the yard (autumn) |
+
+### Town temple U (W2F): the covered corridor hondo -> kuri (panel J)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| U9 | `Land_JP_Roka_Temple_U` | 1106.45 | 1109.45 | 0 | -0.00 | covered corridor: the hondo's east veranda -> the kuri's genkan porch (step down at the porch) |
+
+<!-- D3 END -->

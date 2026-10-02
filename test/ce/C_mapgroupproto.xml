@@ -4904,6 +4904,87 @@
 						<point pos="-0.785000 0.050000 -0.000000" range="0.985000" height="2.000000" />
 				</container>
 		</group>
+		<group name="Land_JP_Compound_Samurai_M">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="15.139286 0.000000 -0.000000" range="0.385714" height="0.964286" />
+				</container>
+		</group>
+		<group name="Land_JP_Compound_Headman_East">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="14.684286 0.000000 -0.000000" range="0.385714" height="0.964286" />
+				</container>
+		</group>
+		<group name="Land_JP_Compound_Honjin">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="22.874286 0.000000 5.915000" range="0.385714" height="0.964286" />
+						<point pos="-22.874286 0.000000 -0.000000" range="0.385714" height="0.964286" />
+				</container>
+		</group>
+		<group name="Land_JP_Compound_Merchant">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="-12.864286 0.000000 -8.645000" range="0.385714" height="0.964286" />
+				</container>
+		</group>
+		<group name="Land_JP_Compound_KumiYashiki">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="-1.695714 0.000000 -0.000000" range="0.385714" height="0.964286" />
+				</container>
+		</group>
+		<group name="Land_JP_Compound_Doshin">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="6.494286 0.000000 -4.095000" range="0.385714" height="0.964286" />
+				</container>
+		</group>
+		<group name="Land_JP_Roka_Honjin">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="-0.000000 0.500000 -0.000000" range="0.500000" height="1.250000" />
+				</container>
+		</group>
+		<group name="Land_JP_Roka_Temple_U">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="0.000000 0.750000 -0.455000" range="0.500000" height="1.250000" />
+				</container>
+		</group>
 		<group name="Land_JP_Mountain_Ishioki_Furnished">
 				<usage name="Farm" />
 				<usage name="Village" />

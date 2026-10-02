@@ -1,0 +1,48 @@
+{
+ "key": "dw_cmp_kumi",
+ "class": "Land_JP_Compound_KumiYashiki",
+ "name": "jp_compound_kumiyashiki",
+ "model": "\\JP\\buildings\\dw_site\\jp_compound_kumiyashiki.p3d",
+ "model_dir": "dw_site",
+ "doors": [
+  "Gate (kabuki)"
+ ],
+ "faces": {
+  "Resolution 1": 1323,
+  "Resolution 2": 823,
+  "Resolution 3": 269,
+  "Geometry": 160,
+  "Memory": 0,
+  "Roadway": 1,
+  "View Geometry": 124,
+  "Fire Geometry": 124
+ },
+ "loot_points": 1,
+ "config_class": "\tclass Land_JP_Compound_KumiYashiki: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Foot-soldier row front: bamboo fence + gate\";\n\t\tmodel=\"\\JP\\buildings\\dw_site\\jp_compound_kumiyashiki.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t\tclass DoorsTwin1\n\t\t\t{\n\t\t\t\tdisplayName=\"Gate (kabuki)\";\n\t\t\t\tcomponent=\"DoorsTwin1\";\n\t\t\t\tsoundPos=\"doorsTwin1_action\";\n\t\t\t\tanimPeriod=2;\n\t\t\t\tinitPhase=0;\n\t\t\t\tinitOpened=1;\n\t\t\t\tsoundOpen=\"doorWoodSlideOpen\";\n\t\t\t\tsoundClose=\"doorWoodSlideClose\";\n\t\t\t\tsoundLocked=\"doorWoodSlideRattle\";\n\t\t\t\tsoundOpenABit=\"doorWoodSlideOpenABit\";\n\t\t\t};\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t\tclass DoorsTwin1\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\thitpoints=1000;\n\t\t\t\t\t\ttransferToGlobalCoef=0;\n\t\t\t\t\t};\n\t\t\t\t\tcomponentNames[]=\n\t\t\t\t\t{\n\t\t\t\t\t\t\"doorstwin1\"\n\t\t\t\t\t};\n\t\t\t\t\tfatalInjuryCoef=-1;\n\t\t\t\t\tclass ArmorType\n\t\t\t\t\t{\n\t\t\t\t\t\tclass Projectile\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=3;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass Melee\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=5;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass FragGrenade\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=10;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_compound_kumiyashiki_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\t\t\t\"doors1\",\"\",\n\t\t\t\"doors2\",\"\"\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_compound_kumiyashiki: Default\n\t{\n\t\tskeletonName=\"jp_compound_kumiyashiki_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t\tclass Doors1\n\t\t\t{\n\t\t\t\ttype=\"rotation\";\n\t\t\t\tsource=\"DoorsTwin1\";\n\t\t\t\tselection=\"doors1\";\n\t\t\t\taxis=\"doors1_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\tangle0=0;\n\t\t\t\tangle1=1.570796;\n\t\t\t};\n\t\t\tclass Doors2\n\t\t\t{\n\t\t\t\ttype=\"rotation\";\n\t\t\t\tsource=\"DoorsTwin1\";\n\t\t\t\tselection=\"doors2\";\n\t\t\t\taxis=\"doors2_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\tangle0=0;\n\t\t\t\tangle1=1.570796;\n\t\t\t};\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Compound_KumiYashiki\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.695714 0.000000 -0.000000\" range=\"0.385714\" height=\"0.964286\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "compound",
+  "plot": "kumi"
+ },
+ "bbox": [
+  -9.15,
+  9.15,
+  -0.4,
+  3.15,
+  -2.324,
+  0.505
+ ]
+}
