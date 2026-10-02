@@ -47,7 +47,7 @@
     55.1,
     52.1
    ],
-   "masked_frac": 0.108
+   "masked_frac": 0.0
   }
  },
  "used_by": [
@@ -68,5 +68,13 @@
   }
  ],
  "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
- "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)",
+ "macro": {
+  "stage3": "JP\\common\\materials\\macro\\jp_m_macro_thatch_w<n>_mc.paa (_w1, _w2)",
+  "aside_up": [
+   0.2151,
+   0.2597
+  ],
+  "fx3": "_w2 moss lives in the macro (irregular carpets, ~9 m repeat), not in the 2 m tile"
+ }
 }

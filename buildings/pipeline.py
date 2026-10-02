@@ -268,6 +268,9 @@ def build_model(b, stage=True):
     # FB2 (2026-10-01): no two visibly different faces share a plane (z-fighting): the smaller solid of every
     # visible coplanar overlap stands a few mm proud (jpparts/zfight.resolve); C20 (buildcheck.run_g3) proves it
     from jpparts import zfight as ZF
+    # FX3 (2026-10-01): wood atlas uv groups BEFORE zfight, so zfight judges the final uv (jpparts/uvwood.py)
+    from jpparts import uvwood
+    uvwood.remap_part(M, salt=name)
     zlog = []
     ZF.resolve(M, log=zlog)
     if zlog:

@@ -79,6 +79,8 @@ def _load_lib():
                 "road": sc.get("roadway_surface"), "alpha": bool(sc.get("alpha")), "palette_id": sc.get("palette_id"),
                 # the rvmat finish (build_materials.FINISH: matte / wall / glossy / glazed); older sidecars have none
                 "finish": sc.get("finish"),
+                # FX3 (2026-10-01): wood atlas (4 m x 2 m, 4 patches): uvwood.remap_part maps the UVs into it
+                "atlas": sc.get("atlas"),
             }
     return out
 
@@ -628,6 +630,8 @@ class Part:
     def lods(self, geo_props=None, mass=None):
         """Every LOD the part contributes to: Res 1-3, Geometry, Memory, Roadway, View, Fire (empty ones omitted,
         Res 1 always written)."""
+        from . import uvwood                # FX3: wood atlas patches / offsets / flips per uv group (idempotent)
+        uvwood.remap_part(self)
         out = []
         for k in (1, 2, 3):
             lod = self._visual(k)

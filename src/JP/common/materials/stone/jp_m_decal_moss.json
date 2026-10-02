@@ -3,8 +3,8 @@
  "family": "stone",
  "palette_id": "moss_on_stone",
  "palette_by_wear": {},
- "tile_size_m": 0.5,
- "texture_px": 256,
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
  "px_per_m": 512.0,
  "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; decal faces 3 mm off the stone tops and north faces",
  "grain": "none; alpha patches",
@@ -74,5 +74,6 @@
  "alpha": "decal",
  "render": "_ca alpha = coverage; renderFlags NoZWrite (jp_m_wall_grime / vanilla decal pattern). RGB is the material colour everywhere, so the palette mean is meaningful.",
  "note": "G1 decision 10: moss as a separate decal material.",
- "fp1_note": "FP1: alpha hardened (no semi-transparent film)"
+ "fp1_note": "FP1: alpha hardened (no semi-transparent film)",
+ "fx3": "1024 px = 2 m irregular drifts (was 256 px = 0.5 m); uvwood flips + offsets each decal"
 }

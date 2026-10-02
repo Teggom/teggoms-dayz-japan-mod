@@ -4,7 +4,10 @@
  "palette_id": "timber_sooted",
  "palette_by_wear": {},
  "tile_size_m": 2.0,
- "texture_px": 1024,
+ "texture_px": [
+  2048,
+  1024
+ ],
  "px_per_m": 512.0,
  "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
  "grain": "along member",
@@ -65,5 +68,20 @@
   }
  ],
  "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
- "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)",
+ "atlas": {
+  "w_m": 4.0,
+  "h_m": 2.0,
+  "patches": 4,
+  "lock": null,
+  "roll_px": 1021,
+  "note": "FX3: 4 m x 2 m atlas (tile + board-shuffled variant); tile_size_m stays the board tile, parts/kit/jpparts/uvwood.py maps the UVs into the atlas per uv group"
+ },
+ "macro": {
+  "stage3": "JP\\common\\materials\\macro\\jp_m_macro_wood_dark_w<n>_mc.paa",
+  "aside_up": [
+   0.2721,
+   0.1156
+  ]
+ }
 }

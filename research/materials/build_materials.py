@@ -216,7 +216,15 @@ def ppath(mid, wear, suf):
 def rvmat_text(nohq, smdi, s, p, finish="matte"):
     t = dict(("t%d" % k, v) for k, v in STAGES.items())
     t.update(t1=nohq, t5=smdi, s=s, p=p, t6=FINISH[finish][0], t7=FINISH[finish][1])
-    return RVMAT % t
+    txt = RVMAT % t
+    # FX3 (2026-10-01): wood + thatch rvmats carry a Stage3 macro (make_wood_atlas.macro_for); every rvmat writer
+    # (this file, make_b1 / m1 / part / fix materials) comes through here, so a rewrite keeps it
+    import re
+    m = re.search(r"\\(jp_m_[a-z0-9_]+?)(_w[0-2])_nohq\.paa$", nohq)
+    if m:
+        import make_wood_atlas as WA
+        txt = WA.with_macro(txt, m.group(1), m.group(2))
+    return txt
 
 
 def write_rvmats(only=None):

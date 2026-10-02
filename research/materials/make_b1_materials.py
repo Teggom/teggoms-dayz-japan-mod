@@ -1297,7 +1297,7 @@ MATS = [
     # ---- outdoor kit (A3, research/outdoor_kit/materials_needed.json): 11 of 13
     M("jp_m_stone_carved", "stone", "stone_lantern", 1.0, 512, stone_carved, (0.2, 40), "granite", "stone_ext",
       "none; softened chisel marks", uv=WORLD, srcs=["rock_surface"], where="outdoor"),
-    M("jp_m_decal_moss", "stone", "moss_on_stone", 0.5, 256, decal_moss, (0.05, 10), None, None,
+    M("jp_m_decal_moss", "stone", "moss_on_stone", 2.0, 1024, decal_moss, (0.05, 10), None, None,   # FX3: 2 m (fp1 maker)
       "none; alpha patches", alpha="decal", uv=WORLD + "; decal faces 3 mm off the stone tops and north faces",
       where="outdoor", note="G1 decision 10: moss as a separate decal material."),
     M("jp_m_straw_rope", "straw", "straw_aged", 0.5, 256, straw_rope, (0.08, 15), "hay", None,

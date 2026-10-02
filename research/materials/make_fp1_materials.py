@@ -372,7 +372,8 @@ def table():
     lit.update({"maker": decal_litter, "pid": "leaf_litter_autumn",
                 "grain": "none; autumn leaves (maple, ginkgo, oak, cherry, old brown), straw bits, paper scraps, shards"})
     moss = dict(B.BYID["jp_m_decal_moss"])
-    moss.update({"maker": decal_moss})
+    import make_wood_atlas as WA          # FX3 (2026-10-01): irregular drifts, 2 m at 1024 px (Stephen: "too regular")
+    moss.update({"maker": WA.moss_b1, "tile": 2.0, "tile_v": 2.0, "px": (1024, 1024), "S": 1024})
     return [
         (lit, {"_w0": "a few leaves blown in", "_w1": "leaves drifting in corners", "_w2": "a thick leaf drift, greyed"},
          None, "FP1 redraw: leaf shapes, cut alpha (was round dots over a soft haze)"),

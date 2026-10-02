@@ -579,11 +579,9 @@ def roof_thatch(lv, S):
     h, sh = courses(S, 5, 111, 1.0)
     co = co * (1 - 0.18 * sh)[..., None]
     mask = np.zeros((S, S), bool)
-    if lv == 2:                                                   # W6 moss + sagging hollows
-        mo = blur((fbm(S, 2.4, 1, 1, 112) + 0.6 * fbm(S, 1.2, 1, 1, 113) > 1.25).astype(np.float32), 2) > 0.5
-        co = patch(co, mo, (72, 84, 44), 0.8, 115)
-        h = h - 3.0 * np.clip(fbm(S, 3.2, 1, 1, 114) - 0.5, 0, None)
-        mask = mo
+    if lv == 2:                                                   # sagging hollows (FX3 2026-10-01: the W6 moss
+        h = h - 3.0 * np.clip(fbm(S, 3.2, 1, 1, 114) - 0.5, 0, None)   # lives in the rvmat macro, make_wood_atlas.py:
+        #                                                           a 2 m tile repeated it in rows on K2's roof)
     n = combine(pn, h2n(h, 2.0))
     return R(co, n, pr, mask, 0.08, 0.15, t)
 

@@ -321,6 +321,7 @@ def band_fit(s, lo_px, hi_px, normal=(0.0, 0.0, 1.0), tex_px=1024, voff=0.0):
             u0, u1 = min(us), max(us)
             span = (u1 - u0) or 1.0
             s.fuv[fi] = [(lo + (a - u0) / span * (hi - lo), b + voff) for a, b in s.fuv[fi]]
+            s.uvband = set(getattr(s, "uvband", ())) | {fi}     # FX3: pixel-locked band (jpparts/uvwood band mode)
     return s
 
 
