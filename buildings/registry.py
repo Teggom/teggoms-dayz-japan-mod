@@ -720,6 +720,100 @@ W2F_FURNISHED = [
 BUILDINGS += W2F_FURNISHED
 
 
+# ------------------------------------------------------------------------------------------------ D3 dwellings
+# Phase C wave 3a (agent D3, 2026-10-01): dwellings, outbuildings, gatehouses and the honjin from
+# parts/kit/jpparts/templates/dwelling.py (buildings/dwellingkit.py builds them, buildings/shellcheck.py checks them;
+# research notes spikes/D3/D3_NOTES.md). Placed on the test island by spikes/D3/layout_d3.py (test/placements/D3.csv +
+# test/ce/D3_mapgrouppos.xml), not through 'placements' here (the compounds lie outside the flat test yard).
+from jpparts.templates import dwelling as _dw  # noqa: E402
+
+_LOOT_DW_RURAL = {"usage": ["Farm", "Village"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+_LOOT_DW_TOWN = {"usage": ["Town", "Village"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+_LOOT_DW_OUT = {"usage": ["Farm", "Village"], "categories": ["tools", "containers", "food"], "tags": ["floor"]}
+
+
+def _dwl(key, dir_, cls, display, params, loot, mass):
+    e = {"key": key, "dir": dir_, "module": "dwelling_shells", "class": cls, "name": "jp_" + key, "display": display,
+         "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
+         "placements": [], "verify": "shellcheck", "budget": _dw.budget_class(**params), "ship": True}
+    ob = _dw.over_budget_ok(**params)
+    if ob:
+        e["over_budget_ok"] = ob
+    return e
+
+
+D3_SHELLS = [
+    # DW08 mountain board-roof house (Kiso / Hida): roof x the woodshed lean-to
+    _dwl("dw_mountain_ishioki", "dw_rural", "Land_JP_Mountain_Ishioki", "Mountain house (Kiso / Hida, stone-weighted "
+         "board roof, hidana over the irori)", {"kind": "mountain", "roof": "ishioki"}, _LOOT_DW_RURAL, 50000.0),
+    _dwl("dw_mountain_ishioki_lean", "dw_rural", "Land_JP_Mountain_Ishioki_Lean", "Mountain house with a woodshed "
+         "lean-to (stone-weighted board roof)", {"kind": "mountain", "roof": "ishioki", "leanto": "left"},
+         _LOOT_DW_RURAL, 55000.0),
+    _dwl("dw_mountain_itabuki", "dw_rural", "Land_JP_Mountain_Itabuki", "Mountain house (board roof, no stones)",
+         {"kind": "mountain", "roof": "itabuki"}, _LOOT_DW_RURAL, 50000.0),
+    # DW09 coastal house (fisherman): roof x the net store lean-to
+    _dwl("dw_coastal_ishioki", "dw_rural", "Land_JP_Coastal_Ishioki_NetStore", "Coastal house (fisherman, "
+         "stone-weighted boards, net store)", {"kind": "coastal", "roof": "ishioki"}, _LOOT_DW_RURAL, 30000.0),
+    _dwl("dw_coastal_thatch", "dw_rural", "Land_JP_Coastal_Thatch_NetStore", "Coastal house (fisherman, thatch, "
+         "net store)", {"kind": "coastal", "roof": "thatch"}, _LOOT_DW_RURAL, 30000.0),
+    # DW14 foot-soldier row (kumi-yashiki), one storey, 3 units
+    _dwl("dw_kumi_itabuki", "dw_samurai", "Land_JP_KumiYashiki_3_Itabuki", "Foot-soldier row (ashigaru kumi-yashiki, "
+         "3 units, board roof)", {"kind": "kumi", "units": 3, "roof": "itabuki"}, _LOOT_DW_TOWN, 60000.0),
+    _dwl("dw_kumi_sangawara", "dw_samurai", "Land_JP_KumiYashiki_3_Sangawara", "Foot-soldier row (ashigaru "
+         "kumi-yashiki, 3 units, tiled)", {"kind": "kumi", "units": 3, "roof": "sangawara"}, _LOOT_DW_TOWN, 65000.0),
+    # DW15 small samurai house (doshin)
+    _dwl("dw_doshin_itabuki", "dw_samurai", "Land_JP_Doshin_Itabuki", "Small samurai house (doshin, board roof)",
+         {"kind": "doshin", "roof": "itabuki"}, _LOOT_DW_TOWN, 45000.0),
+    _dwl("dw_doshin_sangawara", "dw_samurai", "Land_JP_Doshin_Sangawara", "Small samurai house (doshin, tiled)",
+         {"kind": "doshin", "roof": "sangawara"}, _LOOT_DW_TOWN, 50000.0),
+    # DW19 samurai mansion, three plot sizes
+    _dwl("dw_samurai_s", "dw_samurai", "Land_JP_Samurai_S", "Samurai mansion, small plot (genkan + shikidai, "
+         "zashiki with tokonoma)", {"kind": "samurai", "size": "s"}, _LOOT_DW_TOWN, 70000.0),
+    _dwl("dw_samurai_m", "dw_samurai", "Land_JP_Samurai_M", "Samurai mansion, middle plot (hatamoto)",
+         {"kind": "samurai", "size": "m"}, _LOOT_DW_TOWN, 80000.0),
+    _dwl("dw_samurai_l", "dw_samurai", "Land_JP_Samurai_L", "Samurai mansion, large plot (karo)",
+         {"kind": "samurai", "size": "l"}, _LOOT_DW_TOWN, 100000.0),
+    # DW18 great merchant residence
+    _dwl("dw_merchant", "dw_upper", "Land_JP_Merchant_Residence", "Great merchant residence (odana no oku)",
+         {"kind": "merchant"}, _LOOT_DW_TOWN, 80000.0),
+    # KEEP_TRADES 6: honjin (two blocks) + waki-honjin
+    _dwl("dw_honjin_omote", "dw_honjin", "Land_JP_Honjin_Omote", "Honjin (lords' inn): formal block with the "
+         "jodan-no-ma", {"kind": "honjin_omote"}, _LOOT_DW_TOWN, 90000.0),
+    _dwl("dw_honjin_oku", "dw_honjin", "Land_JP_Honjin_Oku", "Honjin (lords' inn): family and kitchen block",
+         {"kind": "honjin_oku"}, _LOOT_DW_TOWN, 80000.0),
+    _dwl("dw_wakihonjin", "dw_honjin", "Land_JP_Wakihonjin", "Waki-honjin (deputy lords' inn)",
+         {"kind": "wakihonjin"}, _LOOT_DW_TOWN, 90000.0),
+    # DW16 / DW17 headman houses
+    _dwl("dw_headman_east", "dw_upper", "Land_JP_Headman_East", "Headman house, Kanto (nanushi: hipped thatch, "
+         "shikidai genkan, formal zashiki)", {"kind": "headman_east", "ridge": "umanori"}, _LOOT_DW_RURAL, 100000.0),
+    _dwl("dw_headman_east_shiba", "dw_upper", "Land_JP_Headman_East_Shiba", "Headman house, Kanto (shiba ridge)",
+         {"kind": "headman_east", "ridge": "shiba"}, _LOOT_DW_RURAL, 100000.0),
+    _dwl("dw_headman_kinai", "dw_upper", "Land_JP_Headman_Kinai", "Headman house, Kinai (shoya: thatch + tile, "
+         "white plaster, the genkan lean-to)", {"kind": "headman_kinai"}, _LOOT_DW_RURAL, 100000.0),
+    # DW21 tea hut
+    _dwl("dw_chashitsu_thatch", "dw_upper", "Land_JP_Chashitsu_Thatch", "Tea hut (soan, thatch)",
+         {"kind": "chashitsu", "roof": "thatch"}, _LOOT_DW_TOWN, 12000.0),
+    _dwl("dw_chashitsu_kokera", "dw_upper", "Land_JP_Chashitsu_Kokera", "Tea hut (soan, shingle roof)",
+         {"kind": "chashitsu", "roof": "kokera"}, _LOOT_DW_TOWN, 12000.0),
+    # DW23 / DW25 / DW27 outbuildings
+    _dwl("dw_itagura_itabuki", "dw_out", "Land_JP_Itagura_Itabuki", "Board storehouse (itagura) on rat-guarded posts",
+         {"kind": "itagura", "roof": "itabuki"}, _LOOT_DW_OUT, 8000.0),
+    _dwl("dw_itagura_sangawara", "dw_out", "Land_JP_Itagura_Sangawara", "Board storehouse (itagura), tiled",
+         {"kind": "itagura", "roof": "sangawara"}, _LOOT_DW_OUT, 9000.0),
+    _dwl("dw_stable_horse", "dw_out", "Land_JP_Stable_Horse", "Stable (two horse stalls, board roof)",
+         {"kind": "stable", "animal": "horse"}, _LOOT_DW_OUT, 15000.0),
+    _dwl("dw_stable_ox", "dw_out", "Land_JP_Stable_Ox", "Ox shed (thatch)", {"kind": "stable", "animal": "ox"},
+         _LOOT_DW_OUT, 10000.0),
+    _dwl("dw_furoba", "dw_out", "Land_JP_Furoba", "Bath hut (furoba)", {"kind": "furoba"}, _LOOT_DW_OUT, 5000.0),
+    # DW29 gatehouse with rooms
+    _dwl("dw_nagayamon_samurai", "dw_samurai", "Land_JP_NagayaMon_Samurai", "Gatehouse with rooms (nagaya-mon), "
+         "samurai: plaster + namako, tiled", {"kind": "nagayamon", "rank": "samurai"}, _LOOT_DW_TOWN, 40000.0),
+    _dwl("dw_nagayamon_headman", "dw_upper", "Land_JP_NagayaMon_Headman", "Gatehouse with rooms (nagaya-mon), "
+         "headman: boards", {"kind": "nagayamon", "rank": "headman"}, _LOOT_DW_RURAL, 30000.0),
+]
+BUILDINGS += D3_SHELLS
+
+
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
 # Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_

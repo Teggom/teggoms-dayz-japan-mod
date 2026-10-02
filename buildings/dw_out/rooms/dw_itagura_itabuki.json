@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Itagura_Itabuki",
+ "p3d": "\\JP\\buildings\\dw_out\\jp_itagura_itabuki.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "kura",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 0.6,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the board storehouse: grain bales, straw bags, tools, seed (rat guards on the posts)",
+   "enclosed": true,
+   "rect_model": [
+    -1.76,
+    1.76,
+    -1.305,
+    1.305
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 2,
+ "loot_by_room": {
+  "kura": 2
+ }
+}

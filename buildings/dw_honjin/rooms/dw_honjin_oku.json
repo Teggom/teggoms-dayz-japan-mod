@@ -1,0 +1,177 @@
+{
+ "building": "Land_JP_Honjin_Oku",
+ "p3d": "\\JP\\buildings\\dw_honjin\\jp_honjin_oku.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.39,
+    -9.04,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the big kitchen doma: the kamado bank cooks for the lord's train",
+   "enclosed": true,
+   "rect_model": [
+    -7.22,
+    -1.89,
+    -4.49,
+    4.49
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -6.78,
+      -2.912
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -6.78,
+      -1.365
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -6.78,
+      0.182
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "daidokoro",
+   "tag": "daidokoro",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.53,
+    9.04,
+    -9.04,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin5"
+   ],
+   "note": "the board kitchen room, open to the doma and the sooted roof",
+   "enclosed": true,
+   "rect_model": [
+    -1.75,
+    1.76,
+    -4.49,
+    4.49
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "daidokoro",
+     "rect": [
+      -0.455,
+      0.455,
+      -0.683,
+      0.683
+     ],
+     "floor_y": 0.5,
+     "pit": "irori",
+     "hook": [
+      0.0,
+      2.97,
+      0.0
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    }
+   ]
+  },
+  {
+   "name": "family_room",
+   "tag": "living",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    14.5,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin6",
+    "DoorsTwin3"
+   ],
+   "note": "the honjin family's living room",
+   "enclosed": true,
+   "rect_model": [
+    1.88,
+    7.22,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "family_oku",
+   "tag": "sleeping",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    14.5,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin5",
+    "DoorsTwin6"
+   ],
+   "note": "the family's back room",
+   "enclosed": true,
+   "rect_model": [
+    1.88,
+    7.22,
+    -4.49,
+    -0.06
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 24,
+ "loot_by_room": {
+  "doma": 10,
+  "daidokoro": 6,
+  "family_room": 4,
+  "family_oku": 4
+ }
+}

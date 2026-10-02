@@ -1,0 +1,253 @@
+{
+ "building": "Land_JP_Headman_East_Shiba",
+ "p3d": "\\JP\\buildings\\dw_upper\\jp_headman_east_shiba.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    12.81,
+    18.14,
+    -9.04,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin2",
+    "DoorsTwin3"
+   ],
+   "note": "the big doma: the stove bank (three kamado) on the end wall, the ooto",
+   "enclosed": true,
+   "rect_model": [
+    3.71,
+    9.04,
+    -4.49,
+    4.49
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      8.6,
+      2.002
+     ],
+     "yaw": 270.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      8.6,
+      0.455
+     ],
+     "yaw": 270.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      8.6,
+      -1.092
+     ],
+     "yaw": 270.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "genkan",
+   "tag": "doma",
+   "floor": "stone",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    1.75,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the formal genkan doma (its own door) with the shikidai step up to the genkan room",
+   "enclosed": true,
+   "rect_model": [
+    -9.04,
+    -7.35,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "genkan_ma",
+   "tag": "zashiki",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    1.8900000000000001,
+    5.4,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin6"
+   ],
+   "note": "the genkan room (officials are received here)",
+   "enclosed": true,
+   "rect_model": [
+    -7.21,
+    -3.7,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "zashiki",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin5"
+   ],
+   "note": "the formal zashiki (15 mats; no tokonoma: commoner, G1 A2)",
+   "enclosed": true,
+   "rect_model": [
+    -9.04,
+    -3.7,
+    -4.49,
+    -0.06
+   ],
+   "fittings": []
+  },
+  {
+   "name": "dei",
+   "tag": "living",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.52,
+    9.04,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin6",
+    "DoorsTwin8"
+   ],
+   "note": "dei",
+   "enclosed": true,
+   "rect_model": [
+    -3.58,
+    -0.06,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "nando",
+   "tag": "sleeping",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.52,
+    9.04,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin5",
+    "DoorsTwin7"
+   ],
+   "note": "nando",
+   "enclosed": true,
+   "rect_model": [
+    -3.58,
+    -0.06,
+    -4.49,
+    -0.06
+   ],
+   "fittings": []
+  },
+  {
+   "name": "hiroma",
+   "tag": "daidokoro",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    12.67,
+    -9.04,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin7",
+    "DoorsTwin8"
+   ],
+   "note": "hiroma with the irori, open to the doma",
+   "enclosed": true,
+   "rect_model": [
+    0.06,
+    3.57,
+    -4.49,
+    4.49
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "hiroma",
+     "rect": [
+      1.365,
+      2.275,
+      -0.683,
+      0.683
+     ],
+     "floor_y": 0.5,
+     "pit": "irori",
+     "hook": [
+      1.82,
+      4.64,
+      0.0
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    }
+   ]
+  }
+ ],
+ "loot_points": 33,
+ "loot_by_room": {
+  "doma": 10,
+  "genkan": 1,
+  "genkan_ma": 4,
+  "zashiki": 4,
+  "dei": 4,
+  "nando": 4,
+  "hiroma": 6
+ }
+}

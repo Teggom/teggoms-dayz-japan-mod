@@ -1,0 +1,238 @@
+{
+ "building": "Land_JP_Honjin_Omote",
+ "p3d": "\\JP\\buildings\\dw_honjin\\jp_honjin_omote.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "genkan_porch",
+   "tag": "yard",
+   "floor": "stone",
+   "level_m": 0.05,
+   "rect_kit": [
+    17.08,
+    18.58,
+    -3.565,
+    -0.07500000000000007
+   ],
+   "doors": [
+    "DoorsTwin12"
+   ],
+   "note": "the genkan porch: stone pad, the shikidai board step up to the formal entrance",
+   "enclosed": false,
+   "rect_model": [
+    8.89,
+    10.39,
+    0.985,
+    4.475
+   ],
+   "fittings": []
+  },
+  {
+   "name": "engawa",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.15,
+    16.23,
+    -10.365,
+    -9.219999999999999
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2",
+    "DoorsTwin3"
+   ],
+   "note": "the engawa along the garden: open, under the eave",
+   "enclosed": false,
+   "rect_model": [
+    -8.04,
+    8.04,
+    -5.815,
+    -4.67
+   ],
+   "fittings": []
+  },
+  {
+   "name": "attendants_2",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin6",
+    "DoorsTwin9",
+    "DoorsTwin4"
+   ],
+   "note": "attendants' room",
+   "enclosed": true,
+   "rect_model": [
+    -8.13,
+    -2.79,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "san_no_ma",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin5",
+    "DoorsTwin9",
+    "DoorsTwin1"
+   ],
+   "note": "san-no-ma",
+   "enclosed": true,
+   "rect_model": [
+    -8.13,
+    -2.79,
+    -4.49,
+    -0.06
+   ],
+   "fittings": []
+  },
+  {
+   "name": "attendants_1",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.52,
+    10.86,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin6",
+    "DoorsTwin8",
+    "DoorsTwin10"
+   ],
+   "note": "attendants' room",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "tsugi_no_ma",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.52,
+    10.86,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin5",
+    "DoorsTwin7",
+    "DoorsTwin10",
+    "DoorsTwin2"
+   ],
+   "note": "tsugi-no-ma",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -4.49,
+    -0.06
+   ],
+   "fittings": []
+  },
+  {
+   "name": "genkan_ma",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    10.98,
+    16.32,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin8",
+    "DoorsTwin11",
+    "DoorsTwin12"
+   ],
+   "note": "genkan room (shikidai-no-ma)",
+   "enclosed": true,
+   "rect_model": [
+    2.79,
+    8.13,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "jodan_no_ma",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.65,
+   "rect_kit": [
+    10.98,
+    16.32,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin7",
+    "DoorsTwin11",
+    "DoorsTwin3"
+   ],
+   "note": "jodan-no-ma: the lord's raised room (+0.15), tokonoma + chigaidana (T19)",
+   "enclosed": true,
+   "rect_model": [
+    2.79,
+    8.13,
+    -4.49,
+    -0.06
+   ],
+   "fittings": [
+    {
+     "kind": "tokonoma",
+     "room": "jodan_no_ma",
+     "rect": [
+      7.18,
+      8.19,
+      -4.54,
+      -0.01
+     ],
+     "y": 0.77,
+     "note": "tokonoma (hanging scroll + flower / incense on the toko board) + chigaidana (staggered shelves, fukurodana)"
+    }
+   ]
+  }
+ ],
+ "loot_points": 31,
+ "loot_by_room": {
+  "genkan_porch": 1,
+  "engawa": 6,
+  "attendants_2": 4,
+  "san_no_ma": 4,
+  "attendants_1": 4,
+  "tsugi_no_ma": 4,
+  "genkan_ma": 4,
+  "jodan_no_ma": 4
+ }
+}

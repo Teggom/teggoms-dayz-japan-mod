@@ -1,0 +1,58 @@
+{
+ "building": "Land_JP_Stable_Ox",
+ "p3d": "\\JP\\buildings\\dw_out\\jp_stable_ox.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the stable: the ox stall, the aisle by the door",
+   "enclosed": true,
+   "rect_model": [
+    -1.76,
+    1.76,
+    -2.215,
+    2.215
+   ],
+   "fittings": [
+    {
+     "kind": "stall",
+     "room": "floor",
+     "rect": [
+      -0.12,
+      1.7,
+      -2.215,
+      0.455
+     ],
+     "note": "jp_p_frame_stall _ox, bars down (as left)"
+    },
+    {
+     "kind": "fodder",
+     "room": "floor",
+     "note": "the fodder corner: straw, the fodder cutter, the plough",
+     "rect": [
+      -1.71,
+      -0.1,
+      -2.075,
+      0.091
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 3,
+ "loot_by_room": {
+  "floor": 3
+ }
+}

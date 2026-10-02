@@ -1,0 +1,184 @@
+{
+ "building": "Land_JP_Doshin_Sangawara",
+ "p3d": "\\JP\\buildings\\dw_samurai\\jp_doshin_sangawara.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    2.66,
+    -8.129999999999999,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the kitchen doma: the kamado, water jars, the service entrance",
+   "enclosed": true,
+   "rect_model": [
+    -5.855,
+    -3.255,
+    -4.035,
+    4.035
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -5.415,
+      -2.457
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "daidokoro",
+   "tag": "daidokoro",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    2.8,
+    4.49,
+    -8.129999999999999,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin4"
+   ],
+   "note": "the board kitchen room, open to the doma and the sooted roof",
+   "enclosed": true,
+   "rect_model": [
+    -3.115,
+    -1.425,
+    -4.035,
+    4.035
+   ],
+   "fittings": []
+  },
+  {
+   "name": "chanoma",
+   "tag": "living",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    4.609999999999999,
+    8.129999999999999,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin6",
+    "DoorsTwin7"
+   ],
+   "note": "chanoma (family room)",
+   "enclosed": true,
+   "rect_model": [
+    -1.305,
+    2.215,
+    0.515,
+    4.035
+   ],
+   "fittings": []
+  },
+  {
+   "name": "nando",
+   "tag": "sleeping",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    4.609999999999999,
+    8.129999999999999,
+    -8.129999999999999,
+    -3.7
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin5",
+    "DoorsTwin7"
+   ],
+   "note": "sleeping room",
+   "enclosed": true,
+   "rect_model": [
+    -1.305,
+    2.215,
+    -4.035,
+    0.395
+   ],
+   "fittings": []
+  },
+  {
+   "name": "genkan_ma",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    8.25,
+    11.77,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin6",
+    "DoorsTwin8",
+    "DoorsTwin9"
+   ],
+   "note": "the entrance room (genkan, no shikidai)",
+   "enclosed": true,
+   "rect_model": [
+    2.335,
+    5.855,
+    0.515,
+    4.035
+   ],
+   "fittings": []
+  },
+  {
+   "name": "zashiki",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    8.25,
+    11.77,
+    -8.129999999999999,
+    -3.7
+   ],
+   "doors": [
+    "DoorsTwin5",
+    "DoorsTwin8"
+   ],
+   "note": "zashiki (the best room, plain: no tokonoma)",
+   "enclosed": true,
+   "rect_model": [
+    2.335,
+    5.855,
+    -4.035,
+    0.395
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 19,
+ "loot_by_room": {
+  "doma": 4,
+  "daidokoro": 3,
+  "chanoma": 2,
+  "nando": 4,
+  "genkan_ma": 2,
+  "zashiki": 4
+ }
+}

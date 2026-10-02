@@ -1,0 +1,58 @@
+{
+ "building": "Land_JP_Stable_Horse",
+ "p3d": "\\JP\\buildings\\dw_out\\jp_stable_horse.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the stable: two stalls side by side, the aisle by the door",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -2.215,
+    2.215
+   ],
+   "fittings": [
+    {
+     "kind": "stall",
+     "room": "floor",
+     "rect": [
+      -1.82,
+      1.82,
+      -2.215,
+      0.455
+     ],
+     "note": "jp_p_frame_stall _row2, bars down (as left)"
+    },
+    {
+     "kind": "tack",
+     "room": "floor",
+     "note": "the tack corner: pack saddles, harness, straw horseshoes on the end wall",
+     "rect": [
+      2.32,
+      2.67,
+      -1.975,
+      0.455
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 2,
+ "loot_by_room": {
+  "floor": 2
+ }
+}

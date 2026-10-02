@@ -1,0 +1,99 @@
+{
+ "building": "Land_JP_Chashitsu_Thatch",
+ "p3d": "\\JP\\buildings\\dw_upper\\jp_chashitsu_thatch.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "chashitsu",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.4,
+   "rect_kit": [
+    0.06,
+    2.67,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "the tea room (4.5 mats, the ro, the tokonoma at the back, the low ceiling)",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    -0.06,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "ro",
+     "room": "chashitsu",
+     "rect": [
+      -0.665,
+      -0.245,
+      1.155,
+      1.575
+     ],
+     "floor_y": 0.4,
+     "note": "the sunken hearth (ro) for the tea kettle, in the board half-mat"
+    },
+    {
+     "kind": "tokonoma",
+     "room": "chashitsu",
+     "rect": [
+      -2.72,
+      -0.83,
+      -1.82,
+      -0.81
+     ],
+     "y": 0.52,
+     "note": "tokonoma (one scroll, one flower)"
+    }
+   ]
+  },
+  {
+   "name": "mizuya",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    2.79,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the mizuya (prep room): the way in",
+   "enclosed": true,
+   "rect_model": [
+    0.06,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "mizuya_shelf",
+     "room": "mizuya",
+     "note": "the mizuya's shelves + sink (sunoko drain): props",
+     "rect": [
+      2.27,
+      2.67,
+      -1.62,
+      1.52
+     ],
+     "y": 0.4
+    }
+   ]
+  }
+ ],
+ "loot_points": 4,
+ "loot_by_room": {
+  "chashitsu": 2,
+  "mizuya": 2
+ }
+}

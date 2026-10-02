@@ -1,0 +1,283 @@
+{
+ "building": "Land_JP_Samurai_M",
+ "p3d": "\\JP\\buildings\\dw_samurai\\jp_samurai_m.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/dwelling.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "genkan_porch",
+   "tag": "yard",
+   "floor": "stone",
+   "level_m": 0.05,
+   "rect_kit": [
+    15.26,
+    16.759999999999998,
+    -3.565,
+    -0.07500000000000007
+   ],
+   "doors": [
+    "DoorsTwin11"
+   ],
+   "note": "the genkan porch: stone pad, the shikidai board step up to the formal entrance",
+   "enclosed": false,
+   "rect_model": [
+    7.98,
+    9.48,
+    0.985,
+    4.475
+   ],
+   "fittings": []
+  },
+  {
+   "name": "engawa",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.61,
+    14.41,
+    -10.365,
+    -9.219999999999999
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin4"
+   ],
+   "note": "the engawa along the garden: open, under the eave",
+   "enclosed": false,
+   "rect_model": [
+    -1.67,
+    7.13,
+    -5.815,
+    -4.67
+   ],
+   "fittings": []
+  },
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    2.66,
+    -9.04,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the kitchen doma: the kamado, water jars, the service entrance",
+   "enclosed": true,
+   "rect_model": [
+    -7.22,
+    -4.62,
+    -4.49,
+    4.49
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -6.78,
+      -2.912
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -6.78,
+      -1.365
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "daidokoro",
+   "tag": "daidokoro",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    2.8,
+    5.4,
+    -9.04,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin5",
+    "DoorsTwin6"
+   ],
+   "note": "the board kitchen room, open to the doma and the sooted roof",
+   "enclosed": true,
+   "rect_model": [
+    -4.48,
+    -1.88,
+    -4.49,
+    4.49
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "daidokoro",
+     "rect": [
+      -3.64,
+      -2.73,
+      -0.683,
+      0.683
+     ],
+     "floor_y": 0.5,
+     "pit": "irori",
+     "hook": [
+      -3.185,
+      2.97,
+      0.0
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    }
+   ]
+  },
+  {
+   "name": "chanoma",
+   "tag": "living",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.52,
+    9.04,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin5",
+    "DoorsTwin8",
+    "DoorsTwin9"
+   ],
+   "note": "chanoma (family room)",
+   "enclosed": true,
+   "rect_model": [
+    -1.76,
+    1.76,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "tsugi",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.52,
+    9.04,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin6",
+    "DoorsTwin7",
+    "DoorsTwin9",
+    "DoorsTwin3"
+   ],
+   "note": "tsugi-no-ma (ante-room before the zashiki)",
+   "enclosed": true,
+   "rect_model": [
+    -1.76,
+    1.76,
+    -4.49,
+    -0.06
+   ],
+   "fittings": []
+  },
+  {
+   "name": "genkan_ma",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    14.5,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin8",
+    "DoorsTwin10",
+    "DoorsTwin11"
+   ],
+   "note": "genkan room (shikidai-no-ma): the crested screen faces the door",
+   "enclosed": true,
+   "rect_model": [
+    1.88,
+    7.22,
+    0.06,
+    4.49
+   ],
+   "fittings": []
+  },
+  {
+   "name": "zashiki",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    14.5,
+    -9.04,
+    -4.609999999999999
+   ],
+   "doors": [
+    "DoorsTwin7",
+    "DoorsTwin10",
+    "DoorsTwin4"
+   ],
+   "note": "zashiki: tokonoma + chigaidana, ceiling",
+   "enclosed": true,
+   "rect_model": [
+    1.88,
+    7.22,
+    -4.49,
+    -0.06
+   ],
+   "fittings": [
+    {
+     "kind": "tokonoma",
+     "room": "zashiki",
+     "rect": [
+      6.27,
+      7.28,
+      -4.54,
+      -0.01
+     ],
+     "y": 0.62,
+     "note": "tokonoma (hanging scroll + flower / incense on the toko board) + chigaidana (staggered shelves, fukurodana)"
+    }
+   ]
+  }
+ ],
+ "loot_points": 30,
+ "loot_by_room": {
+  "genkan_porch": 1,
+  "engawa": 4,
+  "doma": 5,
+  "daidokoro": 4,
+  "chanoma": 4,
+  "tsugi": 4,
+  "genkan_ma": 4,
+  "zashiki": 4
+ }
+}
