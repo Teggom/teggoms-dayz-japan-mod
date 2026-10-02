@@ -99,25 +99,25 @@
    "budget": "furniture",
    "faces": {
     "Resolution 1": 462,
-    "Resolution 2": 6,
-    "Geometry": 28,
-    "View Geometry": 28,
-    "Fire Geometry": 28
+    "Resolution 2": 12,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
    },
    "bbox": [
-    -1.317,
+    -1.372,
     1.3,
     0.0,
-    1.129,
+    0.3,
     -0.658,
-    1.244
+    1.476
    ],
    "collision": true,
    "footprint_xz": [
-    -0.708,
+    -1.227,
     -0.608,
     1.357,
-    1.157
+    1.327
    ],
    "loot_floor_clearance_m": 0.4,
    "roadway": false,

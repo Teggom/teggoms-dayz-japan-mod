@@ -27,7 +27,7 @@
    "anchor": "floor",
    "budget": "detail",
    "faces": {
-    "Resolution 1": 136,
+    "Resolution 1": 166,
     "Resolution 2": 24,
     "Geometry": 12,
     "View Geometry": 12,
@@ -78,7 +78,7 @@
    "anchor": "floor",
    "budget": "detail",
    "faces": {
-    "Resolution 1": 136,
+    "Resolution 1": 212,
     "Resolution 2": 24,
     "Geometry": 12,
     "View Geometry": 12,
@@ -90,7 +90,7 @@
     0.0,
     5.6,
     -1.234,
-    3.2
+    1.234
    ],
    "collision": true,
    "footprint_xz": [

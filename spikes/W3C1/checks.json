@@ -796,10 +796,10 @@
    "pass": true,
    "faces": {
     "Resolution 1": 462,
-    "Resolution 2": 6,
-    "Geometry": 28,
-    "View Geometry": 28,
-    "Fire Geometry": 28
+    "Resolution 2": 12,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
    },
    "checks": [
     {
@@ -840,10 +840,10 @@
      "detail": {
       "faces": {
        "Resolution 1": 462,
-       "Resolution 2": 6,
-       "Geometry": 28,
-       "View Geometry": 28,
-       "Fire Geometry": 28
+       "Resolution 2": 12,
+       "Geometry": 42,
+       "View Geometry": 42,
+       "Fire Geometry": 42
       },
       "extra": [],
       "budget": 1000
@@ -878,7 +878,7 @@
      "name": "Geometry: closed convex components, mass, autocenter=0",
      "pass": true,
      "detail": {
-      "components": 2,
+      "components": 3,
       "problems": {},
       "mass": 40.0
      }
@@ -888,7 +888,7 @@
      "name": "View Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 2
+      "components": 3
      }
     },
     {
@@ -896,7 +896,7 @@
      "name": "Fire Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 2
+      "components": 3
      }
     },
     {
@@ -1742,7 +1742,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 456,
+    "Resolution 1": 462,
     "Resolution 2": 30,
     "Geometry": 42,
     "View Geometry": 42,
@@ -1792,7 +1792,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 456,
+       "Resolution 1": 462,
        "Resolution 2": 30,
        "Geometry": 42,
        "View Geometry": 42,
@@ -2490,7 +2490,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 85,
+    "Resolution 1": 91,
     "Resolution 2": 6,
     "Geometry": 6,
     "View Geometry": 6,
@@ -2535,7 +2535,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 85,
+       "Resolution 1": 91,
        "Resolution 2": 6,
        "Geometry": 6,
        "View Geometry": 6,
@@ -5226,7 +5226,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 136,
+    "Resolution 1": 166,
     "Resolution 2": 24,
     "Geometry": 12,
     "View Geometry": 12,
@@ -5274,7 +5274,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 136,
+       "Resolution 1": 166,
        "Resolution 2": 24,
        "Geometry": 12,
        "View Geometry": 12,
@@ -5459,7 +5459,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 136,
+    "Resolution 1": 212,
     "Resolution 2": 24,
     "Geometry": 12,
     "View Geometry": 12,
@@ -5507,7 +5507,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 136,
+       "Resolution 1": 212,
        "Resolution 2": 24,
        "Geometry": 12,
        "View Geometry": 12,
@@ -5990,7 +5990,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 51,
+    "Resolution 1": 63,
     "Resolution 2": 6,
     "Geometry": 6,
     "View Geometry": 6,
@@ -6035,7 +6035,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 51,
+       "Resolution 1": 63,
        "Resolution 2": 6,
        "Geometry": 6,
        "View Geometry": 6,

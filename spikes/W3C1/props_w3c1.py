@@ -76,12 +76,15 @@ def shikomi_oke(state="dry"):
             out.append(W(-hw, hw, H, H + 0.035, z0, z0 + 0.22, WEATH, vis=(1,)))
         out.append(W(-0.05, 0.05, H + 0.035, H + 0.075, -R + 0.12, -0.02, WEATH, vis=(1,)))
     if state == "ladder":
-        rl = [(-0.24, 0.0, R + 0.78), (-0.24, H + 0.15, R - 0.02)]
+        # FX6: the rails lean ON the rim (they passed 5 cm outside it, leaning on nothing): the rail line goes through
+        # the rim's outer edge at x +-0.24 (z = sqrt(R2 - 0.24^2) + the rail radius)
+        zr = math.sqrt(R * R - 0.24 * 0.24) + 0.03 - 0.025      # (the lathe's chords lie inside R)
+        zf_, zt_ = R + 0.78, R + 0.78 + (zr - R - 0.78) * (H + 0.15) / H
         for sx in (-0.24, 0.24):
-            out.append(pole((sx, 0.0, R + 0.78), (sx, H + 0.15, R - 0.02), 0.03, WEATH, n=5, vis=(1,)))
+            out.append(pole((sx, 0.0, zf_), (sx, H + 0.15, zt_), 0.03, WEATH, n=5, vis=(1,)))
         for k in range(1, 7):
             f = k / 7.0
-            y, z = f * (H + 0.15), R + 0.78 - f * 0.80
+            y, z = f * (H + 0.15), zf_ + f * (zt_ - zf_)
             out.append(pole((-0.24, y, z), (0.24, y, z), 0.018, WEATH, n=4, vis=(1,)))
     wear_all(out, "_w2")
     adds1(P, out)
@@ -106,7 +109,9 @@ def hangiri(scattered=False):
     R, h = 0.55, 0.28
     out = []
     if scattered:
-        poses = [((-0.20, 0.0, -0.10), 0.0, 0.0), ((0.75, 0.0, 0.55), 0.0, 0.0), ((-0.70, 0.30, 0.70), 70.0, 30.0)]
+        # FX6 (Stephen's 3c-1 walk: "a washbasin floating in mid-air at an angle"): the third tub stood on edge at
+        # 70 deg on one rim point, leaning on nothing; now it lies upside down on the floor beside the others
+        poses = [((-0.20, 0.0, -0.10), 0.0, 0.0), ((0.75, 0.0, 0.55), 0.0, 0.0), ((-0.82, h, 0.92), 180.0, 30.0)]
     else:
         poses = [((-0.30, 0.0, 0.0), 0.0, 0.0), ((-0.30, h - 0.03, 0.0), 0.0, 0.0), ((-0.30, 2 * h - 0.06, 0.0), 0.0, 0.0),
                  ((0.85, 0.0, 0.10), 0.0, 0.0)]
@@ -117,8 +122,10 @@ def hangiri(scattered=False):
     adds1(P, out)
     if scattered:
         P.add(W(-0.75, 1.30, 0.0, 0.30, -0.65, 1.15, WEATH, vis=(2,)))
+        P.add(W(-1.37, -0.27, 0.0, h, 0.37, 1.47, WEATH, vis=(2,)))
         P.add(cyl_col(R, 0.0, h, cx=-0.20, cz=-0.10, mat=WEATH))
         P.add(cyl_col(R * 0.8, 0.0, h, cx=0.95, cz=0.75, mat=WEATH))
+        P.add(cyl_col(R * 0.8, 0.0, h, cx=-0.82, cz=0.92, mat=WEATH))
         P.loot_rect("tub", 0.03, -0.45, 0.05, -0.35, 0.15, rng=0.15, kind="floor", per=1.0)
     else:
         P.add(W(-0.30 - R, -0.30 + R, 0.0, 3 * h - 0.06, -R, R, WEATH, vis=(2,)))
@@ -215,6 +222,9 @@ def kamaba(state="cold"):
     return P
 
 
+BEAM_REST = 1.645      # FX6: the press beam's underside over the pressing blocks (beam (3.10, 1.88) -> (-2.70, 1.64))
+
+
 def fune_press(state="slack"):
     """The lever press (fune + tenbin): the press box (2.40 x 0.95 x 0.95) with its lid and pressing blocks, the spout
     over a receiving jar; at the box's head two heavy posts (otoko-bashira) with a cross-beam under which the 6.4 m
@@ -245,6 +255,8 @@ def fune_press(state="slack"):
         out.append(W(bx0 + 0.08, bx1 - 0.08, bh - 0.12, bh - 0.06, -bw / 2 + 0.08, bw / 2 - 0.08, WEATH, vis=(1,)))
         out.append(W(1.20, 1.80, bh - 0.06, bh + 0.30, -0.20, 0.20, WEATH, vis=(1,)))        # pressing blocks
         out.append(W(1.25, 1.75, bh + 0.30, bh + 0.52, -0.18, 0.18, WEATH, vis=(1,)))
+        # FX6: a third block up to the beam's underside (the beam floated 0.18 m over the blocks)
+        out.append(W(1.30, 1.70, bh + 0.52, BEAM_REST, -0.16, 0.16, WEATH, vis=(1,)))
     else:
         out.append(xf(W(-1.10, 1.10, 0.0, 0.06, -0.40, 0.40, WEATH, vis=(1,)), rz=70.0, t=(bx1 + 0.40, 0.90, 0.70)))
         out.append(W(0.30, 0.90, 0.0, 0.36, 0.80, 1.20, WEATH, vis=(1,)))
@@ -267,7 +279,8 @@ def fune_press(state="slack"):
             zz = -0.22 if k < 3 else 0.22
             yb = 0.30 + 0.05 * (k % 3)
             out.append(stone_lump(r_, x, yb, zz, 0.36, RIVER, n=8))
-            out.append(cord((x, yb + 0.30, zz), (-2.45, 1.49, zz * 0.3), r=0.012))
+            # FX6: the sling from inside the stone's top to inside the sling bar (it started 0.12 m over the stone)
+            out.append(cord((x, yb + 0.14, zz), (-2.45, 1.46, zz * 0.3), r=0.012))
         out.append(W(-2.70, -2.20, 1.42, 1.50, -0.26, 0.26, WEATH, vis=(1,)))               # sling bar
     else:
         for k in range(6):
@@ -287,7 +300,7 @@ def fune_press(state="slack"):
         P.add(col(px - 0.14, px + 0.14, 0.10, 2.04, sz - 0.14, sz + 0.14, SOOTW))
     P.add(col(px - 0.16, px + 0.16, 2.05, 2.35, -0.75, 0.75, SOOTW))
     if state == "slack":
-        P.add(col(1.20, 1.80, bh - 0.05, bh + 0.52, -0.20, 0.20, WEATH))
+        P.add(col(1.20, 1.80, bh - 0.05, BEAM_REST - 0.01, -0.20, 0.20, WEATH))
         P.add(ocol((px - 0.25, 1.88 - 0.01, 0.0), (-2.70, 1.64, 0.0), 0.30, 0.30))
         P.add(col(-2.85, -2.05, 0.12, 0.66, -0.42, 0.42, RIVER))
     else:
@@ -322,8 +335,16 @@ def koji_toko(ab=False):
     out.append(mound("koji", -0.25, 0.0, 0.40, 0.10, "food_rice"))
     out[-1] = xf(out[-1], t=(0.0, h, 0.0))
     if ab:
-        out.append(xf(W(-0.70, 0.70, 0.0, 0.01, -0.50, 0.50, KINARI, vis=(1,)), rx=-35.0, t=(0.30, h - 0.30, d / 2 + 0.20)))
-        out.append(W(-0.60, 0.40, 0.0, 0.012, d / 2 + 0.35, d / 2 + 0.95, KINARI, vis=(1,)))
+        # FX6: the cloth runs from the bed's rim edge down to the floor and lies there (its slanted part used to stand
+        # free of the bed, its top edge on nothing)
+        ya, za, yb_, zb_ = h + 0.085, d / 2 - 0.005, 0.006, d / 2 + 0.45
+        L_ = math.hypot(za - zb_, ya - yb_)
+        v_ = (0.0, (yb_ - ya) / L_, (zb_ - za) / L_)
+        n_ = (0.0, v_[2], -v_[1])
+        out.append(oriented_box((-0.10, (ya + yb_) / 2, (za + zb_) / 2), (1.0, 0.0, 0.0), v_, n_, 0.50, L_ / 2, 0.005,
+                                KINARI, vis=(1,)))
+        out.append(W(-0.60, 0.40, 0.0, 0.012, zb_ - 0.01, d / 2 + 0.95, KINARI, vis=(1,)))
+        out.append(W(-0.60, 0.40, h + 0.08, h + 0.09, -0.10, d / 2, KINARI, vis=(1,)))
         out.append(xf(W(-0.22, 0.22, 0.0, 0.05, -0.15, 0.15, WEATH, vis=(1,)), ry=30.0, rz=8.0, t=(-0.50, 0.0, d / 2 + 0.55)))
     else:
         out.append(W(0.10, 0.85, h + 0.01, h + 0.045, -0.50, 0.50, KINARI, vis=(1,)))
@@ -472,6 +493,9 @@ def core_ring_rope():
     return flat_coil(0.0, 0.0, 0.14, 0.012, n=10, m=3)
 
 
+LID_SIGN = 1.0     # FX6: the sense of xf(rz=+9) on the lid's slope (checked with spikes/FX6/propfloat.py)
+
+
 def hatcho_oke(ab=False):
     """A Hatcho-style miso vat (dressing): a big cedar vat (1.60 across x 1.45) under a plank lid with a cone of river
     stones piled on it (the Okazaki way). ab: the lid knocked askew, half the stones tumbled round the foot."""
@@ -483,9 +507,12 @@ def hatcho_oke(ab=False):
     lid_t = H + 0.04
     if ab:
         out.append(xf(disc(R - 0.06, 0.0, 0.04, WEATH, n=16, vis=(1,)), rz=9.0, t=(0.18, H - 0.06, 0.0)))
-        cone = [(0.30, 0.18, 0.00), (-0.15, 0.15, 0.20), (0.10, 0.16, -0.25)]
-        for (x, y, z) in cone:
-            out.append(stone_lump(r_, x, lid_t + y, z, 0.28))
+        # FX6: the three stones left on the tilted lid rest ON it (they floated 11-17 cm over it); the lid's top at
+        # x is lid_y(x) (the disc turned 9 deg about z at x 0.18)
+        def lid_y(x):
+            return H - 0.06 + 0.04 + (x - 0.18) * math.tan(math.radians(9.0)) * LID_SIGN
+        for (x, z) in ((0.30, 0.00), (-0.15, 0.20), (0.10, -0.25)):
+            out.append(stone_lump(r_, x, lid_y(x) + 0.25 * 0.28 - 0.035, z, 0.28))
         for k in range(12):
             a = r_.uniform(0, 2 * math.pi)
             rr = R + r_.uniform(0.15, 0.55)
@@ -627,6 +654,7 @@ def monohoshi(torn=False):
     out.append(pole((-L / 2 - 0.20, Hh - 0.15, 0.0), (L / 2 + 0.20, Hh - 0.15, 0.0), 0.045, BAMBOO, n=6, vis=(1,)))
     out.append(pole((-L / 2, Hh - 1.10, 0.0), (L / 2, Hh - 1.10, 0.0), 0.04, BAMBOO, n=6, vis=(1,)))
     yb = Hh - 0.15
+    rb = 0.045                                            # the top bar's radius
     cloths = (-1.45, -0.75, 0.0, 0.70, 1.40)
     for k, x in enumerate(cloths):
         mat = INDIGO if k % 2 == 0 else KINARI
@@ -637,13 +665,21 @@ def monohoshi(torn=False):
         elif torn and k in (0, 4):
             drop = r_.uniform(1.4, 2.2)
         if state == "fallen":
-            out.append(W(x - 0.18, x + 0.18, 0.0, 0.012, -0.30, 3.20, mat, vis=(1,)))
-            out.append(xf(W(x - 0.18, x + 0.18, 0.0, 0.012, 0.0, 1.0, mat, vis=(1,)), rx=-55.0, t=(0.0, 0.0, -0.30)))
+            # FX6 (Stephen's 3c-1 walk: "the ones on the ground are floating in mid air"): the length slid off the bar
+            # and lies in a soft heap at the frame's foot, sunk 4 cm so the yard's slope never shows under it (was a
+            # flat strip + a stiff 1 m cloth ramp standing in the air)
+            for j, (dx, dz, r0, hh) in enumerate(((0.0, 0.10, 0.34, 0.14), (0.10, 0.42, 0.24, 0.10),
+                                                  (-0.08, -0.18, 0.22, 0.09))):
+                out.append(xf(mound("cloth%d%d" % (k, j), x + dx, dz, r0, hh + 0.04, mat, sx=0.75, sz=1.25, vis=(1,)),
+                              t=(0.0, -0.04, 0.0)))
             continue
+        # FX6: the length hangs doubled OVER the bar (a fold over the top, the two legs against the bar's faces); it
+        # hung beside the bar before, its top at the bar's centre, up to 4.5 cm off it
+        zl = rb + 0.003
         for sz in (-1, 1):
-            sw = r_.uniform(-0.04, 0.04)
-            out.append(W(x - 0.18, x + 0.18, yb - drop, yb, sz * 0.050 + sw - 0.002, sz * 0.050 + sw + 0.002, mat,
-                         vis=(1,)))
+            out.append(W(x - 0.18, x + 0.18, yb - drop * (1.0 if sz > 0 else 0.97), yb, sz * zl - 0.002,
+                         sz * zl + 0.002, mat, vis=(1,)))
+        out.append(W(x - 0.18, x + 0.18, yb + rb - 0.001, yb + rb + 0.003, -zl - 0.002, zl + 0.002, mat, vis=(1,)))
     wear_all(out, "_w2")
     adds1(P, out)
     for sx in (-L / 2, L / 2):
@@ -692,6 +728,9 @@ def dye_rack():
     for sx in (-0.55, 0.55):
         out.append(W(sx - 0.03, sx + 0.03, 0.0, 1.60, 0.0, 0.06, WEATH, vis=(1,)))
     out.append(pole((-0.62, 1.45, 0.20), (0.62, 1.45, 0.20), 0.025, WEATH, n=5, vis=(1,)))
+    # FX6: two brackets carry the wringing bar off the posts (it stood 14 cm in front of them on nothing)
+    for sx in (-0.55, 0.55):
+        out.append(W(sx - 0.025, sx + 0.025, 1.38, 1.426, 0.0, 0.225, WEATH, vis=(1,)))
     out.append(W(-0.50, 0.10, 0.55, 1.47, 0.18, 0.185, INDIGO, vis=(1,)))
     out.append(W(-0.50, 0.10, 0.70, 1.47, 0.215, 0.22, INDIGO, vis=(1,)))
     for k, x in enumerate((0.25, 0.38, 0.50)):
@@ -725,7 +764,8 @@ def sukibune(ab=False):
     out.append(W(-w / 2 - 0.16, -w / 2 - 0.04, 0.0, 1.80, -0.06, 0.06, WEATH, vis=(1,)))
     if ab:
         out.append(pole((-w / 2 - 0.10, 1.75, 0.0), (-0.10, 2.05, 0.0), 0.025, BAMBOO, n=5, vis=(1,)))
-        out.append(pole((-0.10, 2.05, 0.0), (0.20, 1.15, 0.05), 0.022, BAMBOO, n=5, vis=(1,)))
+        # FX6: the snapped end rests on the vat's front wall (it hung in the air)
+        out.append(pole((-0.10, 2.05, 0.0), (0.20, h + 0.015, d / 2 - 0.03), 0.022, BAMBOO, n=5, vis=(1,)))
         fr = [W(-0.375, 0.375, 0.0, 0.03, -0.275, 0.275, WEATH, vis=(1,)),
               W(-0.34, 0.34, 0.03, 0.035, -0.24, 0.24, "bamboo_weave", vis=(1,))]
         out += [xf(s, rx=70.0, t=(0.20, 0.17, 0.05)) for s in fr]
@@ -768,8 +808,9 @@ def kozo_beat(scattered=False):
     for k in range(3):
         cx, cz = (-0.90 + 0.18 * k, 0.15 * k - 0.10) if not scattered else (r_.uniform(-1.0, 1.0), r_.uniform(0.4, 0.8))
         for j in range(5):
-            out.append(pole((cx - 0.40, 0.04 + 0.02 * (j % 2), cz + 0.025 * j), (cx + 0.40, 0.04 + 0.02 * (j % 2),
-                                                                                cz + 0.025 * j), 0.012, WEATH, n=4,
+            # FX6: the bundles' strips lie ON the floor (they floated 3-5 cm)
+            yy = 0.011 + 0.018 * (j % 2)
+            out.append(pole((cx - 0.40, yy, cz + 0.025 * j), (cx + 0.40, yy, cz + 0.025 * j), 0.012, WEATH, n=4,
                             vis=(1,)))
     wear_all(out, "_w2")
     adds1(P, out)
@@ -797,9 +838,10 @@ def shime_press(ab=False):
     else:
         out.append(W(-0.35, 0.35, 0.42, 0.46, -0.25, 0.25, WEATH, vis=(1,)))
         out.append(W(-0.12, 0.12, 0.46, 0.62, -0.12, 0.12, WEATH, vis=(1,)))
-        out.append(beam((-0.64, 0.72, 0.0), (1.50, 0.66, 0.0), 0.10, 0.12, WEATH, vis=(1,)))
+        # FX6: the lever rests on the block (it passed 7 cm over it)
+        out.append(beam((-0.64, 0.69, 0.0), (1.50, 0.655, 0.0), 0.10, 0.12, WEATH, vis=(1,)))
         for k in range(3):
-            out.append(stone_lump(r_, 1.10 + 0.17 * k, 0.72, 0.0, 0.24))
+            out.append(stone_lump(r_, 1.10 + 0.17 * k, 0.69, 0.0, 0.24))
     wear_all(out, "_w2")
     adds1(P, out)
     P.add(W(-0.42, 0.42, 0.0, 0.46, -0.32, 0.32, WEATH, vis=(2,)))
@@ -831,7 +873,8 @@ def hoshiita_rack(fallen=False):
     else:
         for sx in (-1.55, 1.55):
             out.append(W(sx - 0.04, sx + 0.04, 0.0, 1.50, -0.44, -0.36, WEATH, vis=(1,)))
-        out.append(pole((-1.60, 1.47, -0.40), (1.60, 1.47, -0.40), 0.03, BAMBOO, n=5, vis=(1,)))
+        # FX6: the bar 1.5 cm forward so the leaned boards touch it (3.5 cm gap: they leaned on nothing)
+        out.append(pole((-1.60, 1.47, -0.385), (1.60, 1.47, -0.385), 0.03, BAMBOO, n=5, vis=(1,)))
         for k, x in enumerate(xs):
             b = [W(-0.225, 0.225, 0.0, 1.80, -0.015, 0.015, WEATH, vis=(1,))]
             if k % 2 == 0:

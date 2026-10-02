@@ -1,0 +1,272 @@
+  FAIL jp_f_bangasa_open_torn               (floor, 19 pieces)
+         TIPS body of 19 pieces, 2.14 m2, centre (-0.01, 0.18, 0.04), y 0.00..0.75: 0.19 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_basket_back_crushed             (floor, 4 pieces)
+         TIPS body of 4 pieces, 2.16 m2, centre (0.33, 0.23, 0.14), y 0.00..0.47: 0.21 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_byobu_tsuitate_fallen           (floor, 5 pieces)
+         TIPS body of 4 pieces, 2.91 m2, centre (0.11, 0.25, -0.62), y 0.00..0.45: 0.45 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_cast_pots_scattered             (floor, 12 pieces)
+         FLOAT body of 1 pieces, 0.17 m2 at (0.44, 0.17, 1.03), y 0.05..0.30, 0.05 m from anything that rests
+  FAIL jp_f_chochin_crest                   (hang, 7 pieces)
+         FLOAT body of 6 pieces, 0.48 m2 at (-0.00, -0.37, 0.00), y -0.60..-0.12, 0.09 m from anything that rests
+  FAIL jp_f_chochin_crest2                  (hang, 7 pieces)
+         FLOAT body of 6 pieces, 0.48 m2 at (-0.00, -0.37, 0.00), y -0.60..-0.12, 0.09 m from anything that rests
+  FAIL jp_f_chochin_shop                    (hang, 7 pieces)
+         FLOAT body of 6 pieces, 0.48 m2 at (-0.00, -0.37, -0.00), y -0.60..-0.12, 0.09 m from anything that rests
+  FAIL jp_f_chochin_shop2                   (hang, 7 pieces)
+         FLOAT body of 6 pieces, 0.48 m2 at (-0.00, -0.37, -0.00), y -0.60..-0.12, 0.09 m from anything that rests
+  FAIL jp_f_chochin_torn                    (hang, 7 pieces)
+         FLOAT body of 6 pieces, 0.48 m2 at (0.04, -0.37, -0.02), y -0.61..-0.11, 0.09 m from anything that rests
+  FAIL jp_f_dogubako                        (floor, 11 pieces)
+         FLOAT body of 6 pieces, 0.31 m2 at (-0.06, 0.24, 0.00), y 0.22..0.28, 0.04 m from anything that rests
+  FAIL jp_f_fallen_leaf_shoji_broken        (floor, 13 pieces)
+         TIPS body of 6 pieces, 0.96 m2, centre (0.25, 0.09, 0.42), y 0.00..0.28: 0.58 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_goods_general_cloth             (floor, 21 pieces)
+         FLOAT body of 2 pieces, 0.15 m2 at (-0.30, 0.14, 0.00), y 0.09..0.19, 0.03 m from anything that rests
+         FLOAT body of 2 pieces, 0.15 m2 at (-0.10, 0.14, -0.00), y 0.09..0.19, 0.03 m from anything that rests
+         FLOAT body of 2 pieces, 0.15 m2 at (-0.20, 0.23, 0.00), y 0.17..0.28, 0.03 m from anything that rests
+  FAIL jp_f_hatcho_oke_ab                   (floor, 22 pieces)
+         FLOAT body of 1 pieces, 0.19 m2 at (0.30, 1.70, 0.01), y 1.60..1.81, 0.11 m from anything that rests
+         FLOAT body of 1 pieces, 0.18 m2 at (-0.16, 1.67, 0.21), y 1.57..1.78, 0.17 m from anything that rests
+         FLOAT body of 1 pieces, 0.23 m2 at (0.10, 1.68, -0.25), y 1.58..1.79, 0.11 m from anything that rests
+  FAIL jp_f_hishaku_rack                    (floor, 9 pieces)
+         FLOAT body of 2 pieces, 0.05 m2 at (-0.18, 0.41, 0.06), y 0.35..0.62, 0.03 m from anything that rests
+         FLOAT body of 2 pieces, 0.05 m2 at (0.00, 0.42, 0.06), y 0.35..0.62, 0.03 m from anything that rests
+         FLOAT body of 2 pieces, 0.05 m2 at (0.18, 0.42, 0.07), y 0.35..0.62, 0.03 m from anything that rests
+  FAIL jp_f_iko_fallen                      (floor, 10 pieces)
+         TIPS body of 8 pieces, 1.17 m2, centre (0.00, 0.20, -0.83), y 0.00..0.40: 0.78 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_itoguruma_thread                (floor, 30 pieces)
+         CLOTH cloth 0.01 m2, y 0.27..0.73 at (0.15, -0.00): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_izaribata                       (floor, 24 pieces)
+         CLOTH cloth 1.17 m2, y 0.36..0.86 at (0.13, 0.00): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.00 m2, y 0.75..0.94 at (0.06, -0.27): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.00 m2, y 0.75..0.94 at (0.06, 0.27): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_izaribata_bare                  (floor, 22 pieces)
+         CLOTH cloth 1.17 m2, y 0.36..0.86 at (0.13, 0.00): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.00 m2, y 0.75..0.94 at (0.06, -0.27): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.00 m2, y 0.75..0.94 at (0.06, 0.27): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_kagura_masks                    (wall, 21 pieces)
+         FLOAT body of 5 pieces, 0.05 m2 at (0.47, 1.22, 0.07), y 0.99..1.57, 0.04 m from anything that rests
+  FAIL jp_f_kanamono_wall                   (wall, 29 pieces)
+         FLOAT body of 2 pieces, 0.06 m2 at (0.42, 1.27, 0.06), y 1.18..1.36, 0.03 m from anything that rests
+  FAIL jp_f_kezuridai                       (floor, 9 pieces)
+         TIPS body of 7 pieces, 3.76 m2, centre (0.26, 0.35, -0.02), y 0.00..0.68: 0.25 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_kezuridai_knocked               (floor, 9 pieces)
+         TIPS body of 4 pieces, 3.10 m2, centre (0.36, 0.32, -0.03), y 0.00..0.68: 0.15 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_koji_toko_ab                    (floor, 9 pieces)
+         CLOTH cloth 2.85 m2, y 0.13..0.71 at (0.30, 0.80): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_log_stack                       (floor, 16 pieces)
+         FLOAT body of 2 pieces, 4.88 m2 at (0.01, 0.32, -0.42), y 0.13..0.51, 0.03 m from anything that rests
+         FLOAT body of 2 pieces, 4.84 m2 at (0.01, 0.32, -0.00), y 0.14..0.50, 0.05 m from anything that rests
+         FLOAT body of 2 pieces, 4.70 m2 at (0.01, 0.32, 0.42), y 0.14..0.50, 0.06 m from anything that rests
+         FLOAT body of 2 pieces, 4.67 m2 at (0.01, 0.66, 0.21), y 0.49..0.84, 0.04 m from anything that rests
+  FAIL jp_f_log_stack_collapsed             (floor, 16 pieces)
+         FLOAT body of 2 pieces, 4.88 m2 at (0.01, 0.32, -0.42), y 0.13..0.51, 0.03 m from anything that rests
+         FLOAT body of 2 pieces, 4.84 m2 at (0.01, 0.32, -0.00), y 0.14..0.50, 0.05 m from anything that rests
+         FLOAT body of 2 pieces, 4.70 m2 at (0.01, 0.32, 0.42), y 0.14..0.50, 0.06 m from anything that rests
+         FLOAT body of 2 pieces, 5.04 m2 at (0.01, 0.66, -0.21), y 0.47..0.86, 0.03 m from anything that rests
+  FAIL jp_f_mi                              (floor, 3 pieces)
+         TIPS body of 3 pieces, 0.78 m2, centre (-0.00, 0.07, 0.00), y 0.00..0.20: 0.14 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_mi_spilled                      (floor, 6 pieces)
+         TIPS body of 3 pieces, 0.78 m2, centre (0.02, 0.19, -0.06), y 0.00..0.44: 0.22 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_mirror_stand                    (floor, 7 pieces)
+         CLOTH cloth 0.13 m2, y 0.20..0.46 at (0.00, 0.04): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_misedana_1ken_toppled           (floor, 2 pieces)
+         TIPS body of 2 pieces, 7.53 m2, centre (-0.05, 0.37, 0.52), y 0.00..0.60: 0.07 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_misedana_half_toppled           (floor, 1 pieces)
+         TIPS body of 1 pieces, 4.09 m2, centre (-0.05, 0.37, 0.51), y 0.00..0.60: 0.07 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_misemono_sign                   (wall, 8 pieces)
+         CLOTH cloth 0.56 m2, y 2.25..2.75 at (-0.35, 0.03): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.26 m2, y 2.28..2.70 at (0.80, 0.03): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_misemono_sign_torn              (wall, 7 pieces)
+         CLOTH cloth 0.56 m2, y 2.25..2.75 at (-0.35, 0.03): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 1.01 m2, y 2.20..2.74 at (0.70, 0.10): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_mizugame_open                   (floor, 5 pieces)
+         TIPS body of 2 pieces, 0.64 m2, centre (0.29, 0.28, 0.37), y 0.00..0.56: 0.07 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_nagamochi_open                  (floor, 28 pieces)
+         FLOAT body of 3 pieces, 2.99 m2 at (-0.00, 1.12, -0.42), y 0.75..1.48, 0.03 m from anything that rests
+  FAIL jp_f_scrap_heap                      (floor, 13 pieces)
+         FLOAT body of 1 pieces, 0.07 m2 at (0.31, 0.14, -0.34), y 0.10..0.19, 0.04 m from anything that rests
+         FLOAT body of 2 pieces, 0.18 m2 at (0.39, 0.16, 0.08), y 0.03..0.25, 0.03 m from anything that rests
+  FAIL jp_f_shokudai_tipped                 (floor, 6 pieces)
+         TIPS body of 3 pieces, 0.18 m2, centre (-0.25, 0.12, -0.12), y 0.00..0.22: 0.24 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_sukibune_ab                     (floor, 9 pieces)
+         TIPS body of 3 pieces, 1.16 m2, centre (-0.83, 1.10, 0.00), y 0.00..2.07: 0.11 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_suzu_rope                       (hang, 20 pieces)
+         CLOTH cloth 0.01 m2, y -1.80..-1.57 at (0.04, -0.00): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.80..-1.57 at (0.03, 0.02): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.78..-1.57 at (0.01, 0.04): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.81..-1.57 at (-0.00, 0.04): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.79..-1.57 at (-0.03, 0.03): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.80..-1.57 at (-0.04, -0.01): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_suzu_rope_faded                 (hang, 20 pieces)
+         CLOTH cloth 0.01 m2, y -1.80..-1.57 at (0.04, -0.00): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.80..-1.57 at (0.03, 0.02): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.78..-1.57 at (0.01, 0.04): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.81..-1.57 at (-0.00, 0.04): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.79..-1.57 at (-0.03, 0.03): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.80..-1.57 at (-0.04, -0.01): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_tack_wall                       (wall, 25 pieces)
+         CLOTH cloth 0.13 m2, y 0.75..1.48 at (0.12, 0.06): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_tofu_press_tipped               (floor, 8 pieces)
+         TIPS body of 6 pieces, 1.73 m2, centre (0.11, 0.30, 0.03), y 0.00..0.60: 0.06 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_f_togidai_upset                   (floor, 20 pieces)
+         FLOAT body of 3 pieces, 0.81 m2 at (0.48, 0.26, 0.17), y 0.05..0.46, 0.03 m from anything that rests
+  FAIL jp_f_urushiburo_open                 (floor, 14 pieces)
+         FLOAT body of 1 pieces, 1.15 m2 at (-0.32, 0.72, 0.39), y 0.10..1.35, 0.03 m from anything that rests
+  FAIL jp_f_waniguchi                       (hang, 19 pieces)
+         CLOTH cloth 0.01 m2, y -1.90..-1.74 at (0.03, 0.10): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.91..-1.74 at (0.01, 0.13): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.91..-1.74 at (-0.01, 0.13): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.91..-1.74 at (-0.03, 0.12): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.90..-1.74 at (-0.03, 0.09): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+         CLOTH cloth 0.01 m2, y -1.92..-1.74 at (-0.02, 0.07): its top edge hangs from nothing (no bar / peg / beam / edge within 2 cm)
+  FAIL jp_f_yumi_rack_wall_empty            (wall, 8 pieces)
+         FLOAT body of 5 pieces, 0.20 m2 at (0.02, 1.65, 0.07), y 1.42..1.73, 0.06 m from anything that rests
+  FAIL jp_s_bench_1ken                      (floor, 12 pieces)
+         FLOAT body of 1 pieces, 0.23 m2 at (-0.00, 0.20, 0.00), y 0.18..0.22, 0.04 m from anything that rests
+  FAIL jp_s_bench_ab_tipped                 (floor, 13 pieces)
+         FLOAT body of 1 pieces, 0.23 m2 at (0.00, 0.27, -0.20), y 0.25..0.29, 0.04 m from anything that rests
+  FAIL jp_s_bench_long                      (floor, 17 pieces)
+         FLOAT body of 1 pieces, 0.38 m2 at (-0.00, 0.20, 0.00), y 0.18..0.22, 0.04 m from anything that rests
+  FAIL jp_s_bench_mat                       (floor, 13 pieces)
+         FLOAT body of 1 pieces, 0.23 m2 at (-0.00, 0.20, 0.00), y 0.18..0.22, 0.04 m from anything that rests
+  FAIL jp_s_boat_upturned                   (floor, 10 pieces)
+         FLOAT body of 7 pieces, 18.51 m2 at (0.00, 0.72, -0.29), y 0.16..0.90, 0.16 m from anything that rests
+  FAIL jp_s_grave_stones_ab_boat_halo_sunk  (floor, 11 pieces)
+         FLOAT body of 1 pieces, 0.06 m2 at (0.05, 0.51, 0.24), y 0.39..0.64, 0.03 m from anything that rests
+  FAIL jp_s_grave_wood_bohyo_roof           (floor, 9 pieces)
+         FLOAT body of 1 pieces, 0.13 m2 at (-0.04, 1.04, -0.66), y 0.98..1.10, 0.07 m from anything that rests
+  FAIL jp_s_grave_wood_bucket_rack          (floor, 21 pieces)
+         FLOAT body of 2 pieces, 0.06 m2 at (0.11, 0.86, 0.20), y 0.47..0.99, 0.05 m from anything that rests
+  FAIL jp_s_grave_wood_rack                 (floor, 18 pieces)
+         TIPS body of 1 pieces, 0.23 m2, centre (-0.16, 0.50, 0.16), y -0.15..1.17: 0.15 m outside the hull of its floor contacts (tilted with nothing holding it)
+         TIPS body of 1 pieces, 0.26 m2, centre (0.21, 0.58, 0.14), y -0.15..1.31: 0.17 m outside the hull of its floor contacts (tilted with nothing holding it)
+         TIPS body of 2 pieces, 0.29 m2, centre (0.37, 0.58, 0.14), y -0.15..1.31: 0.17 m outside the hull of its floor contacts (tilted with nothing holding it)
+         TIPS body of 1 pieces, 0.26 m2, centre (0.54, 0.58, 0.15), y -0.15..1.32: 0.16 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_handcart_ab_broken              (floor, 46 pieces)
+         TIPS body of 32 pieces, 8.31 m2, centre (0.16, 0.53, 0.14), y 0.01..1.12: 1.87 m outside the hull of its floor contacts (tilted with nothing holding it)
+         FLOAT body of 11 pieces, 1.69 m2 at (1.34, 0.24, -0.40), y 0.12..0.36, 0.10 m from anything that rests
+         FLOAT body of 3 pieces, 0.11 m2 at (0.99, 0.21, 0.30), y 0.20..0.22, 0.08 m from anything that rests
+  FAIL jp_s_handcart_ab_tipped              (floor, 55 pieces)
+         FLOAT body of 7 pieces, 4.04 m2 at (1.50, 1.20, 0.02), y 1.04..1.42, 0.55 m from anything that rests
+  FAIL jp_s_handcart_ab_wreck               (floor, 41 pieces)
+         TIPS body of 41 pieces, 13.69 m2, centre (-0.07, 0.18, -0.02), y 0.00..1.10: 0.55 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_hasa_ab_collapsed               (floor, 34 pieces)
+         FLOAT body of 1 pieces, 0.49 m2 at (0.00, 0.09, -0.25), y 0.07..0.11, 0.07 m from anything that rests
+  FAIL jp_s_hasa_low                        (floor, 67 pieces)
+         FLOAT body of 61 pieces, 5.75 m2 at (0.02, 0.91, 0.00), y 0.53..1.27, 0.03 m from anything that rests
+  FAIL jp_s_jizo_hut_hall                   (floor, 33 pieces)
+         FLOAT body of 7 pieces, 19.99 m2 at (-0.00, 2.44, 0.00), y 2.02..2.87, 0.44 m from anything that rests
+  FAIL jp_s_jizo_hut_stone_roof             (floor, 12 pieces)
+         FLOAT body of 2 pieces, 1.58 m2 at (0.01, 0.82, -0.01), y 0.74..0.88, 0.04 m from anything that rests
+  FAIL jp_s_kosatsu_ab_boards_down          (floor, 82 pieces)
+         FLOAT body of 3 pieces, 1.56 m2 at (-1.08, 2.98, 0.15), y 2.73..3.20, 0.05 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (1.08, 2.98, 0.15), y 2.73..3.20, 0.05 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (0.54, 2.40, 0.15), y 2.15..2.62, 0.05 m from anything that rests
+         FLOAT body of 1 pieces, 0.38 m2 at (0.00, 1.10, 0.88), y 1.09..1.11, 0.04 m from anything that rests
+         FLOAT body of 1 pieces, 0.38 m2 at (0.00, 1.60, 0.88), y 1.59..1.61, 0.04 m from anything that rests
+  FAIL jp_s_kosatsu_large                   (floor, 102 pieces)
+         FLOAT body of 3 pieces, 1.56 m2 at (-1.62, 2.98, 0.15), y 2.73..3.20, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (-0.54, 2.98, 0.15), y 2.73..3.20, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (0.54, 2.98, 0.15), y 2.73..3.20, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (1.62, 2.98, 0.15), y 2.73..3.20, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (-1.08, 2.40, 0.15), y 2.15..2.62, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (0.00, 2.40, 0.15), y 2.15..2.62, 0.04 m from anything that rests
+  FAIL jp_s_kosatsu_std                     (floor, 86 pieces)
+         FLOAT body of 3 pieces, 1.56 m2 at (-1.08, 2.98, 0.15), y 2.73..3.20, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (0.00, 2.98, 0.15), y 2.73..3.20, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (1.08, 2.98, 0.15), y 2.73..3.20, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (-0.54, 2.40, 0.15), y 2.15..2.62, 0.04 m from anything that rests
+         FLOAT body of 3 pieces, 1.56 m2 at (0.54, 2.40, 0.15), y 2.15..2.62, 0.04 m from anything that rests
+         FLOAT body of 1 pieces, 0.38 m2 at (0.00, 1.10, 0.88), y 1.09..1.11, 0.04 m from anything that rests
+  FAIL jp_s_lantern_sign_ab_torn            (wall, 8 pieces)
+         FLOAT body of 5 pieces, 0.57 m2 at (-0.00, 1.79, 0.41), y 1.50..2.11, 0.04 m from anything that rests
+  FAIL jp_s_lantern_sign_chochin_shop       (wall, 8 pieces)
+         FLOAT body of 5 pieces, 0.57 m2 at (-0.00, 1.79, 0.41), y 1.50..2.11, 0.04 m from anything that rests
+  FAIL jp_s_lantern_sign_tsuji              (floor, 10 pieces)
+         FLOAT body of 2 pieces, 1.28 m2 at (0.00, 2.77, -0.00), y 2.62..2.92, 0.16 m from anything that rests
+  FAIL jp_s_laundry_pole_ab_down            (floor, 9 pieces)
+         TIPS body of 1 pieces, 0.65 m2, centre (0.22, 1.13, 0.12), y 0.02..2.25: 2.05 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_laundry_pole_crossed            (floor, 7 pieces)
+         FLOAT body of 1 pieces, 0.51 m2 at (0.00, 1.96, -0.00), y 1.94..1.98, 0.21 m from anything that rests
+  FAIL jp_s_laundry_pole_forked             (floor, 7 pieces)
+         FLOAT body of 1 pieces, 0.51 m2 at (0.00, 2.08, 0.00), y 2.06..2.10, 0.22 m from anything that rests
+  FAIL jp_s_laundry_pole_load_cloth         (floor, 12 pieces)
+         FLOAT body of 5 pieces, 6.79 m2 at (-0.29, 1.62, 0.00), y 0.78..2.11, 0.22 m from anything that rests
+  FAIL jp_s_laundry_pole_load_daikon        (floor, 31 pieces)
+         FLOAT body of 25 pieces, 1.72 m2 at (-0.00, 1.78, -0.00), y 1.32..1.99, 0.15 m from anything that rests
+  FAIL jp_s_laundry_pole_load_kaki          (floor, 43 pieces)
+         FLOAT body of 34 pieces, 1.27 m2 at (-0.02, 1.68, -0.00), y 1.01..1.98, 0.15 m from anything that rests
+  FAIL jp_s_laundry_pole_load_net           (floor, 24 pieces)
+         FLOAT body of 18 pieces, 1.17 m2 at (-0.04, 1.51, 0.02), y 0.66..1.98, 0.21 m from anything that rests
+  FAIL jp_s_nobori_ab_tattered              (floor, 8 pieces)
+         TIPS body of 8 pieces, 3.90 m2, centre (0.44, 2.96, 0.01), y -0.15..5.96: 0.35 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_nobori_shop                     (floor, 8 pieces)
+         TIPS body of 8 pieces, 6.10 m2, centre (0.17, 3.02, 0.02), y -0.15..6.00: 0.08 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_nobori_shrine                   (floor, 16 pieces)
+         TIPS body of 8 pieces, 6.10 m2, centre (-0.73, 3.02, 0.02), y -0.15..6.00: 0.08 m outside the hull of its floor contacts (tilted with nothing holding it)
+         TIPS body of 8 pieces, 6.10 m2, centre (1.07, 3.02, 0.02), y -0.15..6.00: 0.08 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_potted_ab_fallen                (floor, 49 pieces)
+         TIPS body of 5 pieces, 3.32 m2, centre (0.00, 0.44, 0.65), y 0.00..0.83: 0.31 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_shimenawa_len_1ken              (floor, 15 pieces)
+         FLOAT body of 15 pieces, 0.50 m2 at (0.00, 2.43, 0.00), y 2.16..2.54, 2.16 m from anything that rests
+  FAIL jp_s_shimenawa_len_2ken              (floor, 29 pieces)
+         FLOAT body of 29 pieces, 1.24 m2 at (0.01, 2.38, 0.00), y 2.09..2.55, 2.09 m from anything that rests
+  FAIL jp_s_shimenawa_wrap_d10              (floor, 24 pieces)
+         FLOAT body of 21 pieces, 1.57 m2 at (0.01, 1.55, 0.08), y 0.86..1.71, 0.03 m from anything that rests
+  FAIL jp_s_shimenawa_wrap_d16              (floor, 30 pieces)
+         FLOAT body of 27 pieces, 3.56 m2 at (0.01, 1.56, 0.09), y 0.85..1.75, 0.03 m from anything that rests
+  FAIL jp_s_shopfront_mizuhiki              (wall, 2 pieces)
+         FLOAT body of 2 pieces, 1.44 m2 at (0.00, 2.20, 0.12), y 2.00..2.38, 0.10 m from anything that rests
+  FAIL jp_s_shopfront_shape_fan             (wall, 4 pieces)
+         FLOAT body of 2 pieces, 0.52 m2 at (-0.00, 2.16, 0.48), y 1.93..2.36, 0.08 m from anything that rests
+  FAIL jp_s_shopfront_shape_tabi            (wall, 3 pieces)
+         FLOAT body of 1 pieces, 0.40 m2 at (-0.00, 2.00, 0.48), y 1.70..2.32, 0.13 m from anything that rests
+  FAIL jp_s_stable_yard_ab_saddle_fallen    (floor, 17 pieces)
+         FLOAT body of 8 pieces, 0.46 m2 at (0.85, 0.40, 0.40), y 0.04..0.76, 0.04 m from anything that rests
+  FAIL jp_s_stable_yard_saddle_rack         (floor, 15 pieces)
+         FLOAT body of 1 pieces, 0.40 m2 at (-0.00, 0.91, -0.12), y 0.80..1.01, 0.06 m from anything that rests
+         FLOAT body of 1 pieces, 0.40 m2 at (0.00, 0.91, 0.12), y 0.80..1.01, 0.06 m from anything that rests
+         FLOAT body of 8 pieces, 0.46 m2 at (0.00, 1.04, 0.00), y 0.93..1.16, 0.04 m from anything that rests
+  FAIL jp_s_stable_yard_tie_post            (floor, 9 pieces)
+         TIPS body of 1 pieces, 0.07 m2, centre (0.16, 0.39, 0.24), y -0.01..1.02: 0.14 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stall_yatai                     (floor, 20 pieces)
+         FLOAT body of 5 pieces, 0.78 m2 at (-0.03, 1.82, 0.51), y 1.60..1.98, 0.06 m from anything that rests
+  FAIL jp_s_stone_steps_ab_heaved           (floor, 24 pieces)
+         TIPS body of 24 pieces, 15.58 m2, centre (-0.00, 0.43, -0.94), y -0.13..0.97: 0.56 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_ab_heaved_rough     (floor, 12 pieces)
+         TIPS body of 12 pieces, 7.40 m2, centre (0.00, 0.20, -0.52), y -0.13..0.49: 0.07 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_cheek_3             (floor, 3 pieces)
+         TIPS body of 3 pieces, 1.59 m2, centre (0.00, 0.32, -0.46), y -0.15..0.78: 0.51 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_cheek_6             (floor, 3 pieces)
+         TIPS body of 3 pieces, 2.87 m2, centre (0.00, 0.56, -0.91), y -0.15..1.26: 0.96 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_dressed_3           (floor, 9 pieces)
+         TIPS body of 9 pieces, 8.39 m2, centre (-0.01, 0.18, -0.47), y -0.12..0.48: 0.08 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_dressed_3_narrow    (floor, 6 pieces)
+         TIPS body of 6 pieces, 4.30 m2, centre (0.01, 0.18, -0.47), y -0.12..0.48: 0.08 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_dressed_3_wide      (floor, 12 pieces)
+         TIPS body of 12 pieces, 12.49 m2, centre (0.00, 0.17, -0.47), y -0.12..0.48: 0.08 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_dressed_6           (floor, 21 pieces)
+         TIPS body of 21 pieces, 17.40 m2, centre (0.00, 0.42, -0.93), y -0.12..0.96: 0.55 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_dressed_6_wide      (floor, 27 pieces)
+         TIPS body of 27 pieces, 25.82 m2, centre (-0.00, 0.42, -0.93), y -0.12..0.96: 0.55 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_rough_3             (floor, 10 pieces)
+         TIPS body of 10 pieces, 6.99 m2, centre (0.01, 0.18, -0.52), y -0.13..0.48: 0.08 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stone_steps_rough_3_narrow      (floor, 7 pieces)
+         TIPS body of 7 pieces, 3.77 m2, centre (0.02, 0.20, -0.53), y -0.13..0.49: 0.09 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_stool_ab_broken                 (floor, 8 pieces)
+         FLOAT body of 6 pieces, 0.48 m2 at (0.05, 0.36, 0.04), y 0.04..0.53, 0.04 m from anything that rests
+  FAIL jp_s_torii_fallen_myojin_typhoon     (floor, 54 pieces)
+         TIPS body of 5 pieces, 0.80 m2, centre (2.65, 0.09, -1.29), y -0.03..0.20: 0.74 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_torii_fallen_shu_snapped        (floor, 48 pieces)
+         TIPS body of 7 pieces, 1.76 m2, centre (-2.80, 0.11, 0.79), y -0.03..0.26: 0.64 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_torii_fallen_stone_quake        (floor, 27 pieces)
+         TIPS body of 3 pieces, 2.68 m2, centre (-1.20, 0.25, 2.35), y -0.03..0.53: 0.18 m outside the hull of its floor contacts (tilted with nothing holding it)
+         TIPS body of 3 pieces, 2.69 m2, centre (1.90, 0.25, 2.80), y -0.03..0.53: 0.18 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_tsukimi_ab_tipped               (floor, 18 pieces)
+         TIPS body of 18 pieces, 1.26 m2, centre (0.16, 0.25, 0.13), y 0.00..0.69: 0.56 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_well_hanetsurube_field          (floor, 25 pieces)
+         TIPS body of 16 pieces, 5.00 m2, centre (-1.09, 1.93, 0.00), y -0.30..4.56: 0.64 m outside the hull of its floor contacts (tilted with nothing holding it)
+  FAIL jp_s_well_hanetsurube_well           (floor, 24 pieces)
+         TIPS body of 16 pieces, 4.96 m2, centre (-1.11, 1.97, 0.00), y -0.30..4.56: 0.62 m outside the hull of its floor contacts (tilted with nothing holding it)
+PROPFLOAT: 945 props checked, 107 failing
