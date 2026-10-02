@@ -502,3 +502,9 @@
 - 2026-10-01 (night): **Stephen approved: launch 3b automatically once D3 finishes** (sento, stable yard, stall kit, earth-floor +
   raised-floor workshops, timber yard, foundry; shells + furnished + placement + walk), after a usage check: only if the
   projected weekly stays safely under 90 % (estimate 3b ~4-6 %).
+- 2026-10-01 (night): **K3 DONE** (3b39ef1, 0fd4a89, 131e29d): 97 variants (332 parts). Wall kit 65 (tsuiji x5 finishes, dobei, itabei,
+  yotsume, kenninji, shiba / takeho, ikegaki, nozura + uchikomi stone, earth bank; corners, ends, +0.30 / +0.60 steps; kabuki-mon,
+  mune-mon, wickets; abandoned states). Corridor kit 32 (1/2/3 ken, corner, T, cross, ends, covered stairs, connector, kairo).
+  jpparts/striproof.py roofs both. API in parts/K3_NOTES.md §6 (run_wall, run_roka, connector_fit). **Pitfall: keep each object
+  under ~15,000 faces: binarize fails 'Too many vertices' (two halls + a corridor in one p3d).** Missing materials (stand-ins):
+  brushwood, black palm rope, ochre plaster, turf, copper valley lining. Hinged gate/wicket leaves untested in the engine.
