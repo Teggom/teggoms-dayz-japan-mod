@@ -462,3 +462,11 @@
   save 2-3**). Mask wall 2,128 + temple bell 1,946 (new 2,250 class). Torii rope 3/4 sag, shide tucked, lowest tip 2.31 m. U1 wrap
   veranda 12,428 ('large_plus'); village hall kept returns (wrap failed 2 checks). 193 bldgs / 11,830 checks pass. **FX3 phase 2
   resumed.**
+- 2026-10-01: **FX3 DONE** (phase 1 298k + phase 2 410k; bbce5c3, 0449ae0). Wood: 11 materials x 3 wears as 4 m x 2 m 4-patch atlases
+  (esearch/materials/make_wood_atlas.py); parts/kit/jpparts/uvwood.py runs from Part.lods() (every pipeline); Stage3 macro
+  weathering added by build_materials.rvmat_text (dark woods half bleach, interiors grime only); thatch moss -> macro; moss decal 2 m
+  irregular. All rebuilt; verify_all --full 193 / 11,830; uvdiff: 0 changes on non-atlas materials.
+  - **Pitfalls:** re-running any wood material maker needs make_wood_atlas.py after it + a jp_common repack (uvwood refuses a
+    non-atlas texture). If flipped faces' bumps light wrong in game: uvwood.ALLOW_FLIP = False + rebuild. jp_efftest_medium (test
+    tansus) still has old UVs.
+  - **Re-check: TEST_CHECKLIST.md has FX1, FX2 and FX3 sections.** Next: the config assembler, then wave 3 or the items track.
