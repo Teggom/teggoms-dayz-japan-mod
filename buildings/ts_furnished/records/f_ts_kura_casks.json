@@ -1,0 +1,91 @@
+{
+ "key": "f_ts_kura_casks",
+ "class": "Land_JP_Kura_Plain_SakeCasks",
+ "name": "jp_kura_plain_sakecasks",
+ "model": "\\JP\\buildings\\ts_furnished\\jp_kura_plain_sakecasks.p3d",
+ "model_dir": "ts_furnished",
+ "doors": [
+  "Kura door (inner sliding door)"
+ ],
+ "faces": {
+  "Resolution 1": 4335,
+  "Resolution 2": 1433,
+  "Resolution 3": 605,
+  "Geometry": 610,
+  "Memory": 0,
+  "Roadway": 12,
+  "View Geometry": 559,
+  "Fire Geometry": 570
+ },
+ "loot_points": 22,
+ "config_class": "\tclass Land_JP_Kura_Plain_SakeCasks: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Kura (plastered storehouse, plain), furnished: the brewery's cask store\";\n\t\tmodel=\"\\JP\\buildings\\ts_furnished\\jp_kura_plain_sakecasks.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t\tclass DoorsTwin1\n\t\t\t{\n\t\t\t\tdisplayName=\"Kura door (inner sliding door)\";\n\t\t\t\tcomponent=\"DoorsTwin1\";\n\t\t\t\tsoundPos=\"doorsTwin1_action\";\n\t\t\t\tanimPeriod=1;\n\t\t\t\tinitPhase=0;\n\t\t\t\tinitOpened=0.3;\n\t\t\t\tsoundOpen=\"doorWoodSlideOpen\";\n\t\t\t\tsoundClose=\"doorWoodSlideClose\";\n\t\t\t\tsoundLocked=\"doorWoodSlideRattle\";\n\t\t\t\tsoundOpenABit=\"doorWoodSlideOpenABit\";\n\t\t\t};\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t\tclass DoorsTwin1\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\thitpoints=1000;\n\t\t\t\t\t\ttransferToGlobalCoef=0;\n\t\t\t\t\t};\n\t\t\t\t\tcomponentNames[]=\n\t\t\t\t\t{\n\t\t\t\t\t\t\"doorstwin1\"\n\t\t\t\t\t};\n\t\t\t\t\tfatalInjuryCoef=-1;\n\t\t\t\t\tclass ArmorType\n\t\t\t\t\t{\n\t\t\t\t\t\tclass Projectile\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=3;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass Melee\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=5;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass FragGrenade\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=10;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_kura_plain_sakecasks_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\t\t\t\"doors1\",\"\"\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_kura_plain_sakecasks: Default\n\t{\n\t\tskeletonName=\"jp_kura_plain_sakecasks_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t\tclass Doors1\n\t\t\t{\n\t\t\t\ttype=\"translation\";\n\t\t\t\tsource=\"DoorsTwin1\";\n\t\t\t\tselection=\"doors1\";\n\t\t\t\taxis=\"doors1_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\toffset0=0;\n\t\t\t\toffset1=1.0400;\n\t\t\t};\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Kura_Plain_SakeCasks\">",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.092857 0.450000 2.052143\" range=\"0.457857\" height=\"1.144643\" />",
+  "\t\t\t\t\t\t<point pos=\"0.278571 0.450000 0.473571\" range=\"0.563092\" height=\"1.407731\" />",
+  "\t\t\t\t\t\t<point pos=\"0.092857 2.850000 1.105000\" range=\"0.316143\" height=\"0.790357\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.092857 2.850000 -2.052143\" range=\"0.405274\" height=\"1.013186\" />",
+  "\t\t\t\t\t\t<point pos=\"0.092857 2.850000 -0.473571\" range=\"0.452857\" height=\"1.132143\" />",
+  "\t\t\t\t</container>",
+  "\t\t\t\t<container name=\"lootshelves\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"shelves\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.550000 1.230000 -2.280000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.000000 1.280000 -2.280000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.550000 1.230000 -2.280000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.437000 0.980000 1.900000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.900000 0.930000 1.200000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.750000 1.516000 -0.900000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.900000 0.980000 2.150000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.370000 3.680000 1.300000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.445000 2.950000 -1.755000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.445000 2.950000 -0.845000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.445000 3.550000 -1.755000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.445000 3.550000 -0.845000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.445000 4.100000 -1.505000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.445000 4.100000 -1.095000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.300000 3.330000 2.100000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.920000 3.280000 -0.880000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.250000 3.250000 2.200000\" range=\"0.200000\" height=\"0.500000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "proxies": {
+  "Resolution 1": 11,
+  "Geometry": 10,
+  "View Geometry": 10,
+  "Fire Geometry": 10
+ },
+ "proxy_addons": [
+  "JP_Furniture"
+ ],
+ "loot_containers": {
+  "lootFloor": 5,
+  "lootshelves": 17
+ },
+ "params": {
+  "base": "kura_plain",
+  "dress": "w3c1_kura_casks"
+ },
+ "bbox": [
+  -3.391,
+  3.391,
+  -0.1,
+  6.303,
+  -2.519,
+  2.888
+ ]
+}

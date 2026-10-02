@@ -1,0 +1,92 @@
+{
+ "building": "Land_JP_Workshop_Doma_Sangawara_Sakaya",
+ "p3d": "\\JP\\buildings\\ts_furnished\\jp_workshop_doma_sangawara_sakaya.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.5700000000000003,
+    -4.49,
+    -0.15
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the earth work floor, open to the street by day",
+   "enclosed": false,
+   "rect_model": [
+    -2.67,
+    0.84,
+    -2.215,
+    2.125
+   ],
+   "fittings": [
+    {
+     "kind": "work_centre",
+     "room": "doma",
+     "note": "the main work spot: the planing beam / lathe / basket work (the furnisher's specialty props)",
+     "rect": [
+      -2.13,
+      0.11,
+      -0.875,
+      1.175
+     ]
+    },
+    {
+     "kind": "tool_wall",
+     "room": "doma",
+     "note": "tools on the back wall (saws, planes, knives)",
+     "rect": [
+      -2.48,
+      0.61,
+      -2.195,
+      -2.095
+     ]
+    },
+    {
+     "kind": "stock",
+     "room": "doma",
+     "note": "raw stock along the end wall (timber, bamboo poles)",
+     "rect": [
+      -2.65,
+      -2.07,
+      -1.875,
+      1.875
+     ]
+    }
+   ]
+  },
+  {
+   "name": "room",
+   "tag": "living",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    3.71,
+    5.4,
+    -4.49,
+    -0.06
+   ],
+   "doors": [],
+   "note": "the raised room: finished goods, the master's desk; open to the work floor",
+   "enclosed": false,
+   "rect_model": [
+    0.98,
+    2.67,
+    -2.215,
+    2.215
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 10,
+ "loot_by_room": {
+  "doma": 8,
+  "room": 2
+ }
+}

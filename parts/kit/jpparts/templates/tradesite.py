@@ -208,7 +208,7 @@ def _plaster_out(H):
 def _earth(S, name, x0, x1, z0, z1, y, holes=()):
     """An earth (tataki) floor slab at y on the footing (rect_minus round any holes)."""
     S.B.interior = True
-    S.B.merge(FL.doma(name, x0, x1, z0, z1, road=(x0 + 0.02, x1 - 0.02, z0 + 0.02, z1 - 0.02), y=y,
+    S.B.merge(FL.doma(name, x0, x1, z0, z1, road=(x0, x1, z0, z1), y=y,
                       holes=holes, mats=FL.MATS_DOMA_EARTH))
     S.B.interior = False
 
@@ -253,8 +253,8 @@ def okura(name=None, wear="_w1"):
               wear)
     B = S.B
     xi0, xi1, zi0, zi1 = FACE, W - FACE, -D + FACE, -FACE
-    LX = 2.5 * KEN                                   # the loft (moto-ba) over x 0..LX
-    XF = 5 * KEN                                     # fermentation | funaba
+    LX = 3.25 * KEN                                  # the loft (moto-ba) over x 0..LX
+    XF = 5.5 * KEN                                   # fermentation | funaba (one open floor, two fitting zones)
     holes = {"front": [], "back": [], "left": [], "right": []}
     # doors on both gables (bay 1.5..2.5 ken, parking over 2.5..3.5 inside)
     hl, ol = _kura_door(S, "left", 1.5 * KEN, FOOT, "Kura door (west gable: the starter end)", "west")
@@ -262,7 +262,7 @@ def okura(name=None, wear="_w1"):
     holes["left"].append(hl)
     holes["right"].append(hr)
     S.obst.append(("moto", ol))
-    S.obst.append(("funaba", orr))
+    S.obst.append(("kura", orr))
     # windows: three in the back (north) wall (lx = W - x), one in the west gable at the loft
     wins = [("back", 1.0 * KEN, FOOT + 0.60), ("back", 3.5 * KEN, FOOT + 0.60), ("back", 5.5 * KEN, FOOT + 0.60),
             ("left", D / 2 - HALF / 2 + KEN, LOFT)]
@@ -279,7 +279,7 @@ def okura(name=None, wear="_w1"):
     stp = Part("stair_okura", "", "")
     SS = ST.stair(stp, STAIR_W, rise, "open")
     srun = SS["run"]
-    x_foot, oz = 0.45, zi0
+    x_foot, oz = 1.15, zi0
     B.interior = True
     B.merge(stp.transformed(180.0, (x_foot, FOOT, oz), mirror=True))
     wx0, wx1, wz0, wz1 = ST.well_rect(srun, STAIR_W, rise)
@@ -295,7 +295,7 @@ def okura(name=None, wear="_w1"):
         lp.add(box(LX - 0.10, LX + 0.02, FOOT, LOFT_CEIL - 0.24, z - 0.06, z + 0.06, "wood_weathered", vis=(1, 2, 3),
                    geo=True, view=True, fire=True, tag="loft_post"))
         S.obst.append(("moto", _r(LX - 0.25, LX + 0.17, z - 0.20, z + 0.20)))
-        S.obst.append(("tubs", _r(LX - 0.25, LX + 0.17, z - 0.20, z + 0.20)))
+        S.obst.append(("kura", _r(LX - 0.25, LX + 0.17, z - 0.20, z + 0.20)))
     for (z0_, z1_) in ((zi0 + 0.02, zi1 - 0.02),):
         lp.add(box(LX - 0.07, LX - 0.01, LOFT + 0.80, LOFT + 0.88, z0_, z1_, "wood_weathered", vis=(1, 2), geo=True,
                    view=True, fire=True, tag="loft_rail"))
@@ -312,13 +312,13 @@ def okura(name=None, wear="_w1"):
     stair_info = {"foot": (x_foot, oz), "run": srun, "width": STAIR_W, "y_low": FOOT, "y_up": LOFT, "well": well}
     # fittings: the four big tubs (two rows), the press along the north wall at the east end, the starter tubs
     zt_n, zt_s = zi0 + 0.15 + 0.91, zi1 - 0.15 - 0.91
-    tubs = [(LX + 1.30, zt_n), (LX + 3.62, zt_n), (LX + 1.30, zt_s), (LX + 3.62, zt_s)]
+    tubs = [(LX + 1.08, zt_n), (LX + 3.02, zt_n), (LX + 1.08, zt_s), (LX + 3.02, zt_s)]
     for k, (x, z) in enumerate(tubs):
-        fit(S, "tub", "tubs", centre=(x, z), size=(1.95, 1.95), yaw=0.0,
+        fit(S, "tub", "kura", centre=(x, z), size=(1.95, 1.95), yaw=0.0,
             note="a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#%d)" % (k + 1))
-    fit(S, "press", "funaba", rect=(W - FACE - 6.95, W - FACE - 0.05, zi0 + 0.05, zi0 + 1.45), obstacle=True,
+    fit(S, "press", "kura", rect=(W - FACE - 6.20, W - FACE - 0.06, zi0 + 0.05, zi0 + 1.65), obstacle=True,
         note="the lever press (fune + tenbin beam + stones): the box head and posts at the east end, the beam west")
-    fit(S, "casks", "funaba", rect=(XF + 0.40, W - 2.6, zi1 - 0.95, zi1 - 0.05), obstacle=False,
+    fit(S, "casks", "kura", rect=(XF + 0.40, W - 2.6, zi1 - 0.95, zi1 - 0.05), obstacle=False,
         note="casks and tubs along the south wall of the press bay")
     fit(S, "starter", "moto", rect=(xi0 + 0.10, LX - 0.40, zi1 - 1.6, zi1 - 0.10), obstacle=False,
         note="starter tubs and the stirring poles under the loft")
@@ -327,10 +327,9 @@ def okura(name=None, wear="_w1"):
     S.place_windows()
     S.room("moto", "storage", "earth", FOOT, (xi0, LX - 0.13, zi0, zi1), [S.dn["west"]],
            "under the loft: the starter end, the stair up (west door)", enclosed=False)
-    S.room("tubs", "storage", "earth", FOOT, (LX + 0.03, XF, zi0, zi1), [],
-           "the fermentation floor: four big tubs in two rows", enclosed=False)
-    S.room("funaba", "workshop", "earth", FOOT, (XF, xi1, zi0, zi1), [S.dn["east"]],
-           "the press bay (funaba): the lever press with its stones, casks (east door)", enclosed=False)
+    S.room("kura", "storage", "earth", FOOT, (LX + 0.03, xi1, zi0, zi1), [S.dn["east"]],
+           "the brewing floor: four big tubs in two rows (west), the press bay (funaba) with the lever press, casks "
+           "(east door)", enclosed=False)
     S.room("loft", "storage", "boards", LOFT, (xi0, LX - 0.08, zi0, zi1), [],
            "the moto-ba loft (the yeast-starter work; G1-5: a kura loft by stair)", enclosed=False)
     trim_lods(S.H)
@@ -488,7 +487,7 @@ def seimai(name=None, wear="_w2"):
             note="a foot-treadle mortar (kara-usu): the mortar at the front, the lever and the treader's end at the "
                  "back (#%d)" % (k + 1))
     S.place_windows()
-    S.room("floor", "workshop", "earth", DOMA, (A_, W - A_, -D + A_, -0.15), [],
+    S.room("floor", "storage", "earth", DOMA, (A_, W - A_, -D + A_, -0.15), [],
            "the polishing shed: four treadle mortars in a row, rice bales", enclosed=False)
     trim_lods(S.H)
     H, info = S.finish({"params": {"kind": "seimai"}, "levels": {"doma": DOMA, "eave": E}, "koyagumi": K["counts"]},
@@ -847,22 +846,22 @@ def kamisuki(name=None, roof="itabuki", wear="_w2"):
 
 # ================================================================================================ yards
 YARDS = {
-    # the brewery: a black board fence round the plot (12 x 12 ken), the wide gate in the south (lane) line; the
+    # the brewery: a black board fence round the plot (12 x 13 ken), the wide gate in the south (lane) line; the
     # kasane-gura stands along the north line, the polishing shed and the cask kura in the yard
-    "brewery": dict(W=12 * KEN, D=12 * KEN, closed=True,
-                    runs=[([(0.0, 0.0), (0.0, 12 * KEN), (12 * KEN, 12 * KEN), (12 * KEN, 0.0)], "itabei",
+    "brewery": dict(W=12 * KEN, D=13 * KEN, closed=True,
+                    runs=[([(0.0, 0.0), (0.0, 13 * KEN), (12 * KEN, 13 * KEN), (12 * KEN, 0.0)], "itabei",
                            dict(kuro=True, cap="none"), ("end", "end"))],
-                    gates=[(0, 3, 4.5 * KEN, "kabuki", 1.5 * KEN)]),
+                    gates=[(0, 3, 6.0 * KEN, "kabuki", 1.5 * KEN)]),
     # the dyer's drying yard behind the workshop: a board fence, the gate in its south line facing the back door
     "dyersyard": dict(W=8 * KEN, D=6 * KEN, closed=True,
                       runs=[([(0.0, 0.0), (0.0, 6 * KEN), (8 * KEN, 6 * KEN), (8 * KEN, 0.0)], "itabei",
                              dict(kuro=False, cap="none"), ("end", "end"))],
-                      gates=[(0, 3, 3.5 * KEN, "kabuki", 1.5 * KEN)]),
-    # the paper mill's drying yard: an open bamboo fence (yotsume), the gate in the north (lane) line
+                      gates=[(0, 3, 5.5 * KEN, "kabuki", 1.5 * KEN)]),
+    # the paper mill's drying yard (behind the mill): an open bamboo fence (yotsume), the gate at the south-east corner
     "paperyard": dict(W=9 * KEN, D=6 * KEN, closed=True,
                       runs=[([(0.0, 0.0), (0.0, 6 * KEN), (9 * KEN, 6 * KEN), (9 * KEN, 0.0)], "yotsume", {},
                              ("end", "end"))],
-                      gates=[(0, 1, 1.0 * KEN, "kabuki", 1.5 * KEN)]),
+                      gates=[(0, 3, 1.0 * KEN, "kabuki", 1.5 * KEN)]),
 }
 DW.COMPOUNDS.update(YARDS)
 

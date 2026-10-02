@@ -1011,6 +1011,22 @@ W3C1_SHELLS = [
 ]
 BUILDINGS += W3C1_SHELLS
 
+# W3C1 furnished variants (the C3 / W2F / D3 / W3B pattern: furnishkit + buildings/w3c1_sets.py); the cask kura and the
+# brewer's shop are earlier shells (C3's plain kura, W3B's tiled earth-floor workshop) dressed for the brewery
+W3C1_FURNISHED = [
+    _furn("f_ts_okura", "ts_okura", "w3c1_okura", "Furnished", "furnished (big tubs, the lever press, starter loft)"),
+    _furn("f_ts_maegura", "ts_maegura", "w3c1_maegura", "Furnished", "furnished (steaming hearth, koji room, rest room)"),
+    _furn("f_ts_seimai", "ts_seimai", "w3c1_seimai", "Furnished", "furnished (four treadle mortars)"),
+    _furn("f_ts_kura_casks", "kura_plain", "w3c1_kura_casks", "SakeCasks", "furnished: the brewery's cask store"),
+    _furn("f_ts_sakaya", "tr_ws_doma_sangawara", "w3c1_sakaya", "Sakaya", "furnished: the brewer's shop (sugidama)"),
+    _furn("f_ts_suisha", "ts_suisha_itabuki", "w3c1_suisha", "Furnished", "furnished (hand quern, bales)"),
+    _furn("f_ts_konya", "ts_konya_sangawara", "w3c1_konya", "Furnished", "furnished (sukumo, lye tubs, shop cloths)"),
+    _furn("f_ts_kamisuki", "ts_kamisuki_thatch", "w3c1_kamisuki", "Furnished", "furnished (vat, beating board, press)"),
+]
+for _f in W3C1_FURNISHED:                     # W3C1's own model folder
+    _f["dir"] = _f["model_dir"] = "ts_furnished"
+BUILDINGS += W3C1_FURNISHED
+
 
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named

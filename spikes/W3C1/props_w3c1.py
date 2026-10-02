@@ -219,7 +219,7 @@ def fune_press(state="slack"):
     """The lever press (fune + tenbin): the press box (2.40 x 0.95 x 0.95) with its lid and pressing blocks, the spout
     over a receiving jar; at the box's head two heavy posts (otoko-bashira) with a cross-beam under which the 6.4 m
     beam pivots; the beam lies over the blocks; at its free end six weight stones hang in rope slings. Along +x: the
-    posts at +3.0, the free end at -3.3. state 'down': the slings cut, the beam's free end on the floor, the stones
+    posts at +3.0, the free end at -2.7. state 'down': the slings cut, the beam's free end on the floor, the stones
     rolled about, the lid off."""
     P = LPart("fune_press", budget="detail", mass=4000.0, anchor="floor")
     r_ = rng("fune")
@@ -256,23 +256,23 @@ def fune_press(state="slack"):
     out.append(W(px - 0.25, px + 0.25, 0.0, 0.10, -0.80, 0.80, WEATH, vis=(1,)))
     # the beam
     if state == "slack":
-        p0, p1 = (px + 0.10, 2.05 - 0.17, 0.0), (-3.30, 1.62, 0.0)
+        p0, p1 = (px + 0.10, 2.05 - 0.17, 0.0), (-2.70, 1.64, 0.0)
     else:
-        p0, p1 = (px + 0.10, 2.05 - 0.17, 0.0), (-3.10, 0.17, 0.10)
+        p0, p1 = (px + 0.10, 2.05 - 0.17, 0.0), (-2.40, 0.17, 1.85)
     out.append(beam(p0, p1, 0.30, 0.32, SOOTW, vis=(1,)))
     # the weight stones in rope slings at the free end (slack) / on the floor (down)
     if state == "slack":
         for k in range(6):
-            x = -3.05 + (k % 3) * 0.22 - 0.22
+            x = -2.45 + (k % 3) * 0.22 - 0.22
             zz = -0.22 if k < 3 else 0.22
             yb = 0.30 + 0.05 * (k % 3)
             out.append(stone_lump(r_, x, yb, zz, 0.36, RIVER, n=8))
-            out.append(cord((x, yb + 0.30, zz), (x * 0.0 - 3.05, 1.47, zz * 0.3), r=0.012))
-        out.append(W(-3.30, -2.80, 1.40, 1.48, -0.26, 0.26, WEATH, vis=(1,)))               # sling bar
+            out.append(cord((x, yb + 0.30, zz), (-2.45, 1.49, zz * 0.3), r=0.012))
+        out.append(W(-2.70, -2.20, 1.42, 1.50, -0.26, 0.26, WEATH, vis=(1,)))               # sling bar
     else:
         for k in range(6):
             a = 0.9 * k
-            out.append(stone_lump(r_, -2.9 + 0.75 * math.cos(a), 0.0, 0.10 + 0.70 * math.sin(a), 0.34, RIVER, n=8))
+            out.append(stone_lump(r_, -2.0 + 0.60 * math.cos(a), 0.0, 1.10 + 0.55 * math.sin(a), 0.34, RIVER, n=8))
     wear_all(out, "_w2")
     adds1(P, out)
     # Resolution 2
@@ -288,17 +288,18 @@ def fune_press(state="slack"):
     P.add(col(px - 0.16, px + 0.16, 2.05, 2.35, -0.75, 0.75, SOOTW))
     if state == "slack":
         P.add(col(1.20, 1.80, bh - 0.05, bh + 0.52, -0.20, 0.20, WEATH))
-        P.add(ocol((px - 0.25, 1.88 - 0.01, 0.0), (-3.30, 1.62, 0.0), 0.30, 0.30))
-        P.add(col(-3.42, -2.60, 0.12, 0.66, -0.42, 0.42, RIVER))
+        P.add(ocol((px - 0.25, 1.88 - 0.01, 0.0), (-2.70, 1.64, 0.0), 0.30, 0.30))
+        P.add(col(-2.85, -2.05, 0.12, 0.66, -0.42, 0.42, RIVER))
     else:
-        P.add(ocol((px - 0.25, 1.83, 0.0), (-3.10, 0.17, 0.10), 0.30, 0.30))
+        zq = 1.85 * (px + 0.10 - 0.05) / (px + 0.10 + 2.40)
+        P.add(ocol((0.05, 0.17 + 1.66 * (0.05 + 2.40) / (px + 0.10 + 2.40), zq), (-2.40, 0.17, 1.85), 0.30, 0.30))
     if state == "slack":
         P.loot_rect("lid", bh - 0.06, bx1 - 0.65, bx1 - 0.15, -0.30, 0.30, rng=0.12, per=1.0)
     else:
         P.loot_rect("bags", 0.22, bx0 + 0.40, bx0 + 1.40, -0.25, 0.25, rng=0.12, per=1.0,
                     points=[(bx0 + 0.52, 0.22, 0.0), (bx0 + 1.27, 0.22, 0.0)])
-    P.dim("len", 6.4, round(math.dist(p0, p1), 2), tol=0.4)
-    P.over_budget_ok = "the lever press is the brewery's hero machine (box, posts, 6.4 m beam, six weight stones)"
+    P.dim("len", 5.8, round(math.dist(p0, p1), 2), tol=0.4)
+    P.over_budget_ok = "the lever press is the brewery's hero machine (box, posts, 5.8 m beam, six weight stones)"
     P.notes.append("the lever press (fune + tenbin beam + weight stones)%s" % (
         ", slack" if state == "slack" else ": slings cut, the beam down, the stones rolled about"))
     return P

@@ -1,0 +1,203 @@
+{
+ "building": "Land_JP_SakaGura_Maegura_Furnished",
+ "p3d": "\\JP\\buildings\\ts_furnished\\jp_sakagura_maegura_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "kama",
+   "tag": "kitchen",
+   "floor": "earth",
+   "level_m": 0.3,
+   "rect_kit": [
+    0.12,
+    9.04,
+    -5.34,
+    -0.12
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2",
+    "DoorsTwin4"
+   ],
+   "note": "araiba + kamaba: washing tubs, the great hearth with the steamer under the steam vent",
+   "enclosed": true,
+   "rect_model": [
+    -8.07,
+    0.85,
+    -2.61,
+    2.61
+   ],
+   "fittings": [
+    {
+     "kind": "hearth",
+     "room": "kama",
+     "note": "the kamaba hearth: clay-and-stone kamado with the iron cauldron and the cedar koshiki on it, under the steam vent (specialty prop, fire mouth to the front)",
+     "centre": [
+      -1.365,
+      -1.55
+     ],
+     "size": [
+      2.3,
+      2.1
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "wash",
+     "room": "kama",
+     "note": "the araiba: washing tubs and the draining trough along the back wall",
+     "rect": [
+      -7.92,
+      -4.75,
+      -2.51,
+      -1.21
+     ]
+    }
+   ]
+  },
+  {
+   "name": "mae",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.3,
+   "rect_kit": [
+    9.16,
+    12.68,
+    -2.67,
+    -0.12
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin5"
+   ],
+   "note": "the koji ante-room (between the two doors)",
+   "enclosed": true,
+   "rect_model": [
+    0.97,
+    4.49,
+    0.06,
+    2.61
+   ],
+   "fittings": [
+    {
+     "kind": "mae",
+     "room": "mae",
+     "note": "the ante-room: trays, cloths, the warming jar",
+     "rect": [
+      1.16,
+      4.3,
+      0.3,
+      2.41
+     ]
+    }
+   ],
+   "sparse": "the small ante-room between the two koji doors"
+  },
+  {
+   "name": "muro",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.3,
+   "rect_kit": [
+    9.16,
+    12.68,
+    -5.34,
+    -2.79
+   ],
+   "doors": [
+    "DoorsTwin5"
+   ],
+   "note": "the koji-muro: straw-lined, ceiled, the koji bed and the tray shelves",
+   "enclosed": true,
+   "rect_model": [
+    0.97,
+    4.49,
+    -2.61,
+    -0.06
+   ],
+   "fittings": [
+    {
+     "kind": "toko",
+     "room": "muro",
+     "note": "the koji bed (toko) in the middle of the muro, cloths over it",
+     "centre": [
+      2.73,
+      -1.335
+     ],
+     "size": [
+      1.85,
+      1.25
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "koji_shelf",
+     "room": "muro",
+     "note": "shelves of koji trays (koji-buta) along the muro's back wall",
+     "rect": [
+      0.99,
+      4.47,
+      -2.59,
+      -2.16
+     ]
+    }
+   ],
+   "sparse": "the koji room: the bed and the shelves fill it"
+  },
+  {
+   "name": "kaidoma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.3,
+   "rect_kit": [
+    12.8,
+    16.259999999999998,
+    -1.76,
+    -0.12
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "the kaishoba's entrance doma",
+   "enclosed": true,
+   "rect_model": [
+    4.61,
+    8.07,
+    0.97,
+    2.61
+   ],
+   "fittings": [],
+   "sparse": "the rest room's small entrance doma"
+  },
+  {
+   "name": "kaisho",
+   "tag": "living",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    12.8,
+    16.259999999999998,
+    -5.34,
+    -1.8800000000000001
+   ],
+   "doors": [],
+   "note": "the kaishoba: the brewers' rest room (raised boards)",
+   "enclosed": true,
+   "rect_model": [
+    4.61,
+    8.07,
+    -2.61,
+    0.85
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 22,
+ "loot_by_room": {
+  "kama": 12,
+  "mae": 2,
+  "muro": 2,
+  "kaidoma": 2,
+  "kaisho": 4
+ }
+}

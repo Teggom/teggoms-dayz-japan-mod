@@ -1,0 +1,132 @@
+{
+ "building": "Land_JP_KamiSuki_Thatch_Furnished",
+ "p3d": "\\JP\\buildings\\ts_furnished\\jp_kamisuki_thatch_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "leanto",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    7.3500000000000005,
+    8.95,
+    -4.3999999999999995,
+    -0.15
+   ],
+   "doors": [],
+   "note": "open lean-to on the right gable (woodshed / work space)",
+   "enclosed": false,
+   "rect_model": [
+    3.71,
+    5.31,
+    -2.125,
+    2.125
+   ],
+   "fittings": [
+    {
+     "kind": "steamer",
+     "room": "leanto",
+     "note": "the bark steamer (koshiki over a cauldron on a hearth) under the lean-to",
+     "centre": [
+      4.59,
+      0.0
+     ],
+     "size": [
+      1.1,
+      1.1
+     ],
+     "yaw": 90.0
+    }
+   ],
+   "sparse": "the open lean-to: the bark steamer"
+  },
+  {
+   "name": "floor",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    7.220000000000001,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the paper workshop: the vat by the light, the picking tub, the beating board, the press",
+   "enclosed": true,
+   "rect_model": [
+    -3.58,
+    3.58,
+    -2.215,
+    2.215
+   ],
+   "fittings": [
+    {
+     "kind": "vat",
+     "room": "floor",
+     "note": "the paper vat (suki-bune) under the front windows, the mould hung from its bamboo spring pole",
+     "centre": [
+      -1.365,
+      1.325
+     ],
+     "size": [
+      2.0,
+      1.1
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "chiritori",
+     "room": "floor",
+     "note": "the picking tub (chiri-tori) by the west wall",
+     "centre": [
+      -3.09,
+      -1.425
+     ],
+     "size": [
+      0.8,
+      0.8
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "beat",
+     "room": "floor",
+     "note": "the beating board with the mallets and bark bundles",
+     "centre": [
+      2.002,
+      -1.425
+     ],
+     "size": [
+      1.3,
+      0.8
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "press",
+     "room": "floor",
+     "note": "the couching stack under its small lever press with stones",
+     "centre": [
+      -0.182,
+      -1.575
+     ],
+     "size": [
+      1.6,
+      0.9
+     ],
+     "yaw": 0.0
+    }
+   ],
+   "sparse": "the paper workshop: vat, beating board and press fill the floor"
+  }
+ ],
+ "loot_points": 8,
+ "loot_by_room": {
+  "leanto": 1,
+  "floor": 7
+ }
+}

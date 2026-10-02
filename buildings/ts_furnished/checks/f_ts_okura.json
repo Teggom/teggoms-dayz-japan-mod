@@ -1,0 +1,365 @@
+{
+ "building": "Land_JP_SakaGura_Okura_Furnished",
+ "key": "f_ts_okura",
+ "date": "2026-09-30",
+ "budget": "large",
+ "faces": "11699/2483/789",
+ "door_clear_m": [
+  1.0,
+  1.0
+ ],
+ "checks_n": 70,
+ "failures": 0,
+ "checks": [
+  {
+   "check": "C5 LOD set (vanilla house set)",
+   "ok": true,
+   "detail": "Resolution 1 11699, Resolution 2 2483, Resolution 3 789, Geometry 1237, Memory 0, Roadway 16, View Geometry 1159, Fire Geometry 1181"
+  },
+  {
+   "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+   "ok": true,
+   "detail": "R1 11699, R2 2483, R3 789"
+  },
+  {
+   "check": "Geometry properties + mass",
+   "ok": true,
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 120000 kg"
+  },
+  {
+   "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
+   "ok": true,
+   "detail": "Land_JP_SakaGura_Okura_Furnished -> jp_sakagura_okura_furnished.p3d"
+  },
+  {
+   "check": "C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "174 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "160 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "164 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry penetration rvmats",
+   "ok": true,
+   "detail": "dirt, granite, pottery, wood"
+  },
+  {
+   "check": "C2 library materials only",
+   "ok": true,
+   "detail": "every path under JP\\common\\materials\\ (on disk) or vanilla penetration / roadway"
+  },
+  {
+   "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
+   "ok": true,
+   "detail": "glass paths 0; 3864 corrugated kawara field faces in LOD0; 0 individual dodai stones, 63 soseki under the posts"
+  },
+  {
+   "check": "C3 grid snap (post nodes on the 0.455 grid)",
+   "ok": true,
+   "detail": "26 posts"
+  },
+  {
+   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end) (single): bones doors1"
+  },
+  {
+   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end) (single): bones doors2"
+  },
+  {
+   "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "C7 Roadway sits on Geometry (+-3 cm)",
+   "ok": true,
+   "detail": "256/256 samples"
+  },
+  {
+   "check": "C7 walkable floors have Roadway at floor height",
+   "ok": true,
+   "detail": "518/518 samples over moto, kura, loft"
+  },
+  {
+   "check": "C7 head room >= 2.10 over every floor",
+   "ok": true,
+   "detail": "lowest 2.11 m"
+  },
+  {
+   "check": "ST1 walk ramp <= 38 deg (D4, 37.8 walked in game)",
+   "ok": true,
+   "detail": "ramp faces [35.01] deg"
+  },
+  {
+   "check": "ST2 flight width >= 1.10 m (D4)",
+   "ok": true,
+   "detail": "1.10 m"
+  },
+  {
+   "check": "ST3 head room >= 2.05 m over the flight (D4)",
+   "ok": true,
+   "detail": "lowest 2.10 m over the ramp at (-6.62, -3.37, 'Component142')"
+  },
+  {
+   "check": "ST4 the ramp meets the lower floor at its foot and the upper floor at its head",
+   "ok": true,
+   "detail": "foot [5.903, 0.3, 0.314, 2.85] / head side [5.903, 0.3, 2.85] (floors 0.30 / 2.85)"
+  },
+  {
+   "check": "ST5 stairwell cut: no upper-floor Roadway over the flight",
+   "ok": true,
+   "detail": "0 samples covered"
+  },
+  {
+   "check": "Loot points on Roadway floors, ranges clear of walls, every room",
+   "ok": true,
+   "detail": "37 points (moto 11, kura 14, loft 12)"
+  },
+  {
+   "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
+   "ok": true,
+   "detail": "37 points, max diff 4.3e-07 m"
+  },
+  {
+   "check": "Placement inside the test yard, clear of the reserved spots",
+   "ok": true,
+   "detail": "not placed on the island (shipped in the PBO only)"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end): 17130 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end): 17130 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C18 DoorsTwin1 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end): doors1 u 0.53 closed -> -0.51 open, doorway -0.62..0.62"
+  },
+  {
+   "check": "C18 DoorsTwin2 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end): doors2 u 0.53 closed -> -0.51 open, doorway -0.62..0.62"
+  },
+  {
+   "check": "C11 envelope leak: rooms see outside only through doors / windows",
+   "ok": true,
+   "detail": "open-sided by design (not checked): moto, kura, loft"
+  },
+  {
+   "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+   "ok": true,
+   "detail": "2 roof bodies clear"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed, fascia at every eave",
+   "ok": true,
+   "detail": "4916/4916 field points within reach of the bed; 8 eave tile sets, 8 fascia boards"
+  },
+  {
+   "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+   "ok": true,
+   "detail": "no exterior earth face looks into a room"
+  },
+  {
+   "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+   "ok": true,
+   "detail": "10414 columns over 2.5 m compared in each LOD"
+  },
+  {
+   "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+   "ok": true,
+   "detail": "11 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+  },
+  {
+   "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+   "ok": true,
+   "detail": "far-field faces R1/R2/R3 0/332/8; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+  },
+  {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 1661 touching (opposite-facing: backface-culled) and 299 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
+   "check": "D1 props per room 5-7: moto",
+   "ok": true,
+   "detail": "5 props: jp_f_hangiri, jp_f_kai_poles, jp_f_hashigo, jp_f_oke_bucket, jp_f_jar_l, jp_f_debris_leaves"
+  },
+  {
+   "check": "D2 floor coverage <= 40 %: moto",
+   "ok": true,
+   "detail": "3.50 of 39.88 m2 = 8.8 % (collision footprints)"
+  },
+  {
+   "check": "D3 at least one raised loot surface: moto",
+   "ok": true,
+   "detail": "2 raised points on jp_f_hangiri, jp_f_jar_l"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: moto",
+   "ok": true,
+   "detail": "DoorsTwin1, stair foot, centre joined by a 1.00 m band (7858 free cells)"
+  },
+  {
+   "check": "D1 props per room 0-7: kura (sparse: the brewing floor: four 1.8 m tubs and the 6 m lever press fill it)",
+   "ok": true,
+   "detail": "7 props: jp_f_shikomi_oke, jp_f_shikomi_oke_ladder, jp_f_shikomi_oke_staved, jp_f_shikomi_oke, jp_f_fune_press, jp_f_taru_rack3, jp_f_hatcho_oke, jp_f_debris_leaves"
+  },
+  {
+   "check": "D2 floor coverage <= 40 %: kura",
+   "ok": true,
+   "detail": "26.49 of 72.62 m2 = 36.5 % (collision footprints)"
+  },
+  {
+   "check": "D3 raised loot surface not required (sparse: the brewing floor: four 1.8 m tubs and the 6 m lever press fill it): kura",
+   "ok": true,
+   "detail": "4 raised points on jp_f_fune_press, jp_f_taru_rack3"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: kura",
+   "ok": true,
+   "detail": "DoorsTwin2 joined by a 1.00 m band (9986 free cells)"
+  },
+  {
+   "check": "D1 props per room 5-7: loft",
+   "ok": true,
+   "detail": "5 props: jp_f_hangiri_scattered, jp_f_hangiri, jp_f_box_l, jp_f_tawara_kamasu_stack3, jp_f_oke_tipped"
+  },
+  {
+   "check": "D2 floor coverage <= 40 %: loft",
+   "ok": true,
+   "detail": "6.74 of 40.23 m2 = 16.7 % (collision footprints)"
+  },
+  {
+   "check": "D3 at least one raised loot surface: loft",
+   "ok": true,
+   "detail": "3 raised points on jp_f_box_l, jp_f_hangiri, jp_f_tawara_kamasu_stack3"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: loft",
+   "ok": true,
+   "detail": "stair head, centre joined by a 1.00 m band (5333 free cells)"
+  },
+  {
+   "check": "D5 DoorsTwin1: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end): clear"
+  },
+  {
+   "check": "D6 DoorsTwin1 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end): leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin1 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "D7 DoorsTwin1 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Kura door (west gable: the starter end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "D5 DoorsTwin2: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end): clear"
+  },
+  {
+   "check": "D6 DoorsTwin2 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end): leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin2 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "D7 DoorsTwin2 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Kura door (east gable: the press end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
+   "ok": true,
+   "detail": "17 collision props checked against 172 building components"
+  },
+  {
+   "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
+   "ok": true,
+   "detail": "19 props pairwise"
+  },
+  {
+   "check": "D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall",
+   "ok": true,
+   "detail": "19 props"
+  },
+  {
+   "check": "D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry",
+   "ok": true,
+   "detail": "37 points (28 floor, 9 raised)"
+  },
+  {
+   "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
+   "ok": true,
+   "detail": "70 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
+  },
+  {
+   "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
+   "ok": true,
+   "detail": "ODOL v55, 822777 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+  }
+ ]
+}

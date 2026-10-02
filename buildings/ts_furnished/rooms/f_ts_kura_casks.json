@@ -1,0 +1,58 @@
+{
+ "building": "Land_JP_Kura_Plain_SakeCasks",
+ "p3d": "\\JP\\buildings\\ts_furnished\\jp_kura_plain_sakecasks.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "kura",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 0.45,
+   "rect_kit": [
+    0.12,
+    5.34,
+    -3.52,
+    -0.12
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "ground floor: boards on the footing, the stair up along the back wall",
+   "enclosed": true,
+   "rect_model": [
+    -2.61,
+    2.61,
+    -1.7,
+    1.7
+   ],
+   "fittings": []
+  },
+  {
+   "name": "nikai",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 2.85,
+   "rect_kit": [
+    0.12,
+    5.34,
+    -3.52,
+    -0.12
+   ],
+   "doors": [],
+   "note": "upper floor (the kura's storey, reached by the stair; G1-5 elevation)",
+   "enclosed": true,
+   "rect_model": [
+    -2.61,
+    2.61,
+    -1.7,
+    1.7
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 22,
+ "loot_by_room": {
+  "kura": 9,
+  "nikai": 13
+ }
+}

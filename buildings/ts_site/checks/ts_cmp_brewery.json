@@ -3,7 +3,7 @@
  "key": "ts_cmp_brewery",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "4158/1146/508",
+ "faces": "4338/1218/544",
  "door_clear_m": [
   2.5
  ],
@@ -13,12 +13,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 4158, Resolution 2 1146, Resolution 3 508, Geometry 326, Memory 0, Roadway 5, View Geometry 326, Fire Geometry 326"
+   "detail": "Resolution 1 4338, Resolution 2 1218, Resolution 3 544, Geometry 350, Memory 0, Roadway 5, View Geometry 350, Fire Geometry 350"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 4158, R2 1146, R3 508"
+   "detail": "R1 4338, R2 1218, R3 544"
   },
   {
    "check": "Geometry properties + mass",
@@ -33,17 +33,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "53 components, 0 bad, 0 faces outside components"
+   "detail": "57 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "53 components, 0 bad, 0 faces outside components"
+   "detail": "57 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "53 components, 0 bad, 0 faces outside components"
+   "detail": "57 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -158,7 +158,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 1883 touching (opposite-facing: backface-culled) and 252 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 1954 touching (opposite-facing: backface-culled) and 276 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -173,7 +173,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 312378 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 325181 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

@@ -3,7 +3,7 @@
  "key": "ts_okura",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "11687/2483/789",
+ "faces": "11699/2483/789",
  "door_clear_m": [
   1.0,
   1.0
@@ -14,12 +14,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11687, Resolution 2 2483, Resolution 3 789, Geometry 1237, Memory 0, Roadway 16, View Geometry 1159, Fire Geometry 1181"
+   "detail": "Resolution 1 11699, Resolution 2 2483, Resolution 3 789, Geometry 1237, Memory 0, Roadway 16, View Geometry 1159, Fire Geometry 1181"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 11687, R2 2483, R3 789"
+   "detail": "R1 11699, R2 2483, R3 789"
   },
   {
    "check": "Geometry properties + mass",
@@ -94,12 +94,12 @@
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "616/616 samples over moto, tubs, funaba, loft"
+   "detail": "518/518 samples over moto, kura, loft"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
    "ok": true,
-   "detail": "lowest 2.18 m"
+   "detail": "lowest 2.11 m"
   },
   {
    "check": "ST1 walk ramp <= 38 deg (D4, 37.8 walked in game)",
@@ -114,7 +114,7 @@
   {
    "check": "ST3 head room >= 2.05 m over the flight (D4)",
    "ok": true,
-   "detail": "lowest 2.10 m over the ramp at (-7.32, -3.37, 'Component142')"
+   "detail": "lowest 2.10 m over the ramp at (-6.62, -3.37, 'Component142')"
   },
   {
    "check": "ST4 the ramp meets the lower floor at its foot and the upper floor at its head",
@@ -129,12 +129,12 @@
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "23 points (moto 6, tubs 2, funaba 9, loft 6)"
+   "detail": "29 points (moto 9, kura 11, loft 9)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "23 points, max diff 4.3e-07 m"
+   "detail": "29 points, max diff 4.8e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -184,7 +184,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "open-sided by design (not checked): moto, tubs, funaba, loft"
+   "detail": "open-sided by design (not checked): moto, kura, loft"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -219,7 +219,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 1655 touching (opposite-facing: backface-culled) and 299 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 1659 touching (opposite-facing: backface-culled) and 299 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -234,7 +234,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 808006 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 808190 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

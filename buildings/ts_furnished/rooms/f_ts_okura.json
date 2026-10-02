@@ -1,0 +1,187 @@
+{
+ "building": "Land_JP_SakaGura_Okura_Furnished",
+ "p3d": "\\JP\\buildings\\ts_furnished\\jp_sakagura_okura_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "moto",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.3,
+   "rect_kit": [
+    0.12,
+    5.785,
+    -7.16,
+    -0.12
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "under the loft: the starter end, the stair up (west door)",
+   "enclosed": false,
+   "rect_model": [
+    -8.07,
+    -2.405,
+    -3.52,
+    3.52
+   ],
+   "fittings": [
+    {
+     "kind": "starter",
+     "room": "moto",
+     "note": "starter tubs and the stirring poles under the loft",
+     "rect": [
+      -7.97,
+      -2.675,
+      1.92,
+      3.42
+     ]
+    }
+   ]
+  },
+  {
+   "name": "kura",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.3,
+   "rect_kit": [
+    5.945,
+    16.259999999999998,
+    -7.16,
+    -0.12
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "the brewing floor: four big tubs in two rows (west), the press bay (funaba) with the lever press, casks (east door)",
+   "enclosed": false,
+   "rect_model": [
+    -2.245,
+    8.07,
+    -3.52,
+    3.52
+   ],
+   "fittings": [
+    {
+     "kind": "tub",
+     "room": "kura",
+     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#1)",
+     "centre": [
+      -1.195,
+      -2.46
+     ],
+     "size": [
+      1.95,
+      1.95
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "tub",
+     "room": "kura",
+     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#2)",
+     "centre": [
+      0.745,
+      -2.46
+     ],
+     "size": [
+      1.95,
+      1.95
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "tub",
+     "room": "kura",
+     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#3)",
+     "centre": [
+      -1.195,
+      2.46
+     ],
+     "size": [
+      1.95,
+      1.95
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "tub",
+     "room": "kura",
+     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#4)",
+     "centre": [
+      0.745,
+      2.46
+     ],
+     "size": [
+      1.95,
+      1.95
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "press",
+     "room": "kura",
+     "note": "the lever press (fune + tenbin beam + stones): the box head and posts at the east end, the beam west",
+     "rect": [
+      1.87,
+      8.01,
+      -3.47,
+      -1.87
+     ]
+    },
+    {
+     "kind": "casks",
+     "room": "kura",
+     "note": "casks and tubs along the south wall of the press bay",
+     "rect": [
+      2.22,
+      5.59,
+      2.57,
+      3.47
+     ]
+    }
+   ],
+   "sparse": "the brewing floor: four 1.8 m tubs and the 6 m lever press fill it"
+  },
+  {
+   "name": "loft",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 2.85,
+   "rect_kit": [
+    0.12,
+    5.835,
+    -7.16,
+    -0.12
+   ],
+   "doors": [],
+   "note": "the moto-ba loft (the yeast-starter work; G1-5: a kura loft by stair)",
+   "enclosed": false,
+   "rect_model": [
+    -8.07,
+    -2.355,
+    -3.52,
+    3.52
+   ],
+   "fittings": [
+    {
+     "kind": "moto_loft",
+     "room": "loft",
+     "note": "the moto-ba upstairs: shallow starter tubs (hangiri) stacked and set out",
+     "rect": [
+      -7.87,
+      -2.575,
+      -1.0,
+      3.32
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 37,
+ "loot_by_room": {
+  "moto": 11,
+  "kura": 14,
+  "loft": 12
+ }
+}

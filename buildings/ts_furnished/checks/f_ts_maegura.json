@@ -1,0 +1,533 @@
+{
+ "building": "Land_JP_SakaGura_Maegura_Furnished",
+ "key": "f_ts_maegura",
+ "date": "2026-09-30",
+ "budget": "large",
+ "faces": "11866/2818/975",
+ "door_clear_m": [
+  1.0,
+  1.0,
+  1.0,
+  1.06,
+  1.06
+ ],
+ "checks_n": 103,
+ "failures": 0,
+ "checks": [
+  {
+   "check": "C5 LOD set (vanilla house set)",
+   "ok": true,
+   "detail": "Resolution 1 11866, Resolution 2 2818, Resolution 3 975, Geometry 1571, Memory 0, Roadway 24, View Geometry 1467, Fire Geometry 1512"
+  },
+  {
+   "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+   "ok": true,
+   "detail": "R1 11866, R2 2818, R3 975"
+  },
+  {
+   "check": "Geometry properties + mass",
+   "ok": true,
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 90000 kg"
+  },
+  {
+   "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
+   "ok": true,
+   "detail": "Land_JP_SakaGura_Maegura_Furnished -> jp_sakagura_maegura_furnished.p3d"
+  },
+  {
+   "check": "C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "229 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "210 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "218 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry penetration rvmats",
+   "ok": true,
+   "detail": "dirt, granite, pottery, wood"
+  },
+  {
+   "check": "C2 library materials only",
+   "ok": true,
+   "detail": "every path under JP\\common\\materials\\ (on disk) or vanilla penetration / roadway"
+  },
+  {
+   "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
+   "ok": true,
+   "detail": "glass paths 0; 3918 corrugated kawara field faces in LOD0; 0 individual dodai stones, 59 soseki under the posts"
+  },
+  {
+   "check": "C3 grid snap (post nodes on the 0.455 grid)",
+   "ok": true,
+   "detail": "32 posts"
+  },
+  {
+   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kura door (araiba) (single): bones doors1"
+  },
+  {
+   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kura door (kamaba) (single): bones doors2"
+  },
+  {
+   "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin3 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kura door (kaishoba) (single): bones doors3"
+  },
+  {
+   "check": "C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin4 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door) (katabiki): bones doors4"
+  },
+  {
+   "check": "C7 DoorsTwin4 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin5 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door) (katabiki): bones doors5"
+  },
+  {
+   "check": "C7 DoorsTwin5 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 Roadway sits on Geometry (+-3 cm)",
+   "ok": true,
+   "detail": "384/384 samples"
+  },
+  {
+   "check": "C7 walkable floors have Roadway at floor height",
+   "ok": true,
+   "detail": "1054/1054 samples over kama, mae, muro, kaidoma, kaisho"
+  },
+  {
+   "check": "C7 head room >= 2.10 over every floor",
+   "ok": true,
+   "detail": "lowest 2.46 m"
+  },
+  {
+   "check": "Loot points on Roadway floors, ranges clear of walls, every room",
+   "ok": true,
+   "detail": "22 points (kama 12, mae 2, kaidoma 2, kaisho 4, muro 2)"
+  },
+  {
+   "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
+   "ok": true,
+   "detail": "22 points, max diff 4.3e-07 m"
+  },
+  {
+   "check": "Placement inside the test yard, clear of the reserved spots",
+   "ok": true,
+   "detail": "not placed on the island (shipped in the PBO only)"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kura door (araiba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kura door (araiba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kura door (kamaba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kura door (kamaba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kura door (kaishoba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kura door (kaishoba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kura door (araiba): 17562 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kura door (kamaba): 17562 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kura door (kaishoba): 17130 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin4 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin5 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C18 DoorsTwin1 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kura door (araiba): doors1 u 6.90 closed -> 5.86 open, doorway 5.75..6.99"
+  },
+  {
+   "check": "C18 DoorsTwin2 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kura door (kamaba): doors2 u 3.26 closed -> 2.22 open, doorway 2.11..3.35"
+  },
+  {
+   "check": "C18 DoorsTwin3 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kura door (kaishoba): doors3 u -4.93 closed -> -5.97 open, doorway -6.08..-4.84"
+  },
+  {
+   "check": "C18 DoorsTwin4 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door): doors4 u -0.14 closed -> -1.24 open, doorway -1.36..-0.06"
+  },
+  {
+   "check": "C18 DoorsTwin5 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door): doors5 u -1.96 closed -> -3.06 open, doorway -3.18..-1.88"
+  },
+  {
+   "check": "C11 envelope leak: rooms see outside only through doors / windows",
+   "ok": true,
+   "detail": "kama 9600 rays, 6 out through doors/windows, 0 LEAKS; mae 11520 rays, 0 out through doors/windows, 0 LEAKS; muro 11520 rays, 0 out through doors/windows, 0 LEAKS; kaidoma 9600 rays, 0 out through doors/windows, 0 LEAKS; kaisho 11520 rays, 17 out through doors/windows, 0 LEAKS"
+  },
+  {
+   "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+   "ok": true,
+   "detail": "2 roof bodies clear"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed, fascia at every eave",
+   "ok": true,
+   "detail": "5200/5200 field points within reach of the bed; 7 eave tile sets, 7 fascia boards"
+  },
+  {
+   "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+   "ok": true,
+   "detail": "no exterior earth face looks into a room"
+  },
+  {
+   "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+   "ok": true,
+   "detail": "8143 columns over 2.5 m compared in each LOD"
+  },
+  {
+   "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+   "ok": true,
+   "detail": "20 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+  },
+  {
+   "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+   "ok": true,
+   "detail": "far-field faces R1/R2/R3 0/328/7; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+  },
+  {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 1976 touching (opposite-facing: backface-culled) and 321 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
+   "check": "D1 props per room 5-7: kama",
+   "ok": true,
+   "detail": "7 props: jp_f_kamaba, jp_f_firewood_stack, jp_f_hangiri_scattered, jp_f_oke_tarai, jp_f_kai_poles, jp_f_oke_bucket, jp_f_tawara_stack6, jp_f_debris_leaves"
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: kama",
+   "ok": true,
+   "detail": "11.03 of 46.56 m2 = 23.7 % (collision footprints)"
+  },
+  {
+   "check": "D3 at least one raised loot surface: kama",
+   "ok": true,
+   "detail": "4 raised points on jp_f_firewood_stack, jp_f_kamaba, jp_f_tawara_stack6"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: kama",
+   "ok": true,
+   "detail": "DoorsTwin1, DoorsTwin2, DoorsTwin4, centre joined by a 1.00 m band (7071 free cells)"
+  },
+  {
+   "check": "D1 props per room 0-7: mae (sparse: the small ante-room between the two koji doors)",
+   "ok": true,
+   "detail": "2 props: jp_f_box_m, jp_f_oke_bucket"
+  },
+  {
+   "check": "D2 floor coverage <= 40 %: mae",
+   "ok": true,
+   "detail": "0.21 of 8.98 m2 = 2.4 % (collision footprints)"
+  },
+  {
+   "check": "D3 raised loot surface not required (sparse: the small ante-room between the two koji doors): mae",
+   "ok": true,
+   "detail": "0 raised points on -"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: mae",
+   "ok": true,
+   "detail": "DoorsTwin4, DoorsTwin5 joined by a 1.00 m band (1508 free cells)"
+  },
+  {
+   "check": "D1 props per room 0-7: muro (sparse: the koji room: the bed and the shelves fill it)",
+   "ok": true,
+   "detail": "1 props: jp_f_koji_toko_ab"
+  },
+  {
+   "check": "D2 floor coverage <= 40 %: muro",
+   "ok": true,
+   "detail": "2.16 of 8.98 m2 = 24.1 % (collision footprints)"
+  },
+  {
+   "check": "D3 raised loot surface not required (sparse: the koji room: the bed and the shelves fill it): muro",
+   "ok": true,
+   "detail": "2 raised points on jp_f_koji_toko_ab"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: muro",
+   "ok": true,
+   "detail": "no door reaches into this sparse space"
+  },
+  {
+   "check": "D1 props per room 0-7: kaidoma (sparse: the rest room's small entrance doma)",
+   "ok": true,
+   "detail": "1 props: jp_f_tana_091_1"
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: kaidoma",
+   "ok": true,
+   "detail": "0.27 of 5.67 m2 = 4.8 % (collision footprints)"
+  },
+  {
+   "check": "D3 raised loot surface not required (sparse: the rest room's small entrance doma): kaidoma",
+   "ok": true,
+   "detail": "1 raised points on jp_f_tana_091_1"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: kaidoma",
+   "ok": true,
+   "detail": "DoorsTwin3, kamachi step joined by a 1.00 m band (572 free cells)"
+  },
+  {
+   "check": "D1 props per room 5-7: kaisho",
+   "ok": true,
+   "detail": "6 props: jp_f_kori, jp_f_futon_stack_slumped, jp_f_tabakobon_spilled, jp_f_andon_kaku_tipped, jp_f_enza, jp_f_mino_pegs"
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: kaisho",
+   "ok": true,
+   "detail": "1.99 of 11.97 m2 = 16.6 % (collision footprints)"
+  },
+  {
+   "check": "D3 at least one raised loot surface: kaisho",
+   "ok": true,
+   "detail": "2 raised points on jp_f_futon_stack_slumped, jp_f_kori"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: kaisho",
+   "ok": true,
+   "detail": "kamachi step, centre joined by a 1.00 m band (821 free cells)"
+  },
+  {
+   "check": "D5 DoorsTwin1: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Kura door (araiba): clear"
+  },
+  {
+   "check": "D6 DoorsTwin1 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Kura door (araiba): leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin1 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Kura door (araiba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "D7 DoorsTwin1 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Kura door (araiba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "D5 DoorsTwin2: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Kura door (kamaba): clear"
+  },
+  {
+   "check": "D6 DoorsTwin2 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Kura door (kamaba): leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin2 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Kura door (kamaba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "D7 DoorsTwin2 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Kura door (kamaba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "D5 DoorsTwin3: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Kura door (kaishoba): clear"
+  },
+  {
+   "check": "D6 DoorsTwin3 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Kura door (kaishoba): leaves slide 1.04 m without touching other geometry; open clear 1.00 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin3 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Kura door (kaishoba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.93 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.19 m"
+  },
+  {
+   "check": "D7 DoorsTwin3 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Kura door (kaishoba): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.52 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.46 m"
+  },
+  {
+   "check": "D5 DoorsTwin4: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door): clear"
+  },
+  {
+   "check": "D6 DoorsTwin4 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door): leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin4 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "D7 DoorsTwin4 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Kamaba -> koji ante-room (first door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "D5 DoorsTwin5: no collision prop within 0.4 m of the clear opening",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door): clear"
+  },
+  {
+   "check": "D6 DoorsTwin5 sweep + clear >= 1.00 + head with the furniture in",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door): leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "D7 DoorsTwin5 reachable with the furniture in (open)",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "D7 DoorsTwin5 reachable with the furniture in (closed)",
+   "ok": true,
+   "detail": "Ante-room -> koji-muro (second door): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
+   "ok": true,
+   "detail": "15 collision props checked against 224 building components"
+  },
+  {
+   "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
+   "ok": true,
+   "detail": "18 props pairwise"
+  },
+  {
+   "check": "D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall",
+   "ok": true,
+   "detail": "18 props"
+  },
+  {
+   "check": "D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry",
+   "ok": true,
+   "detail": "22 points (13 floor, 9 raised)"
+  },
+  {
+   "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
+   "ok": true,
+   "detail": "63 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
+  },
+  {
+   "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
+   "ok": true,
+   "detail": "ODOL v55, 906361 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+  }
+ ]
+}

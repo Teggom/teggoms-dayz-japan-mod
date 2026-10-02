@@ -601,3 +601,8 @@ SETS.update(_d3.sets())
 import w3b_sets as _w3b  # noqa: E402
 
 SETS.update(_w3b.sets())
+# W3C1 (2026-10-02): the wave-3c-1 dressings (brewery kura, polishing shed, cask kura, brewer's shop, water mill, dyer,
+# paper mill): buildings/w3c1_sets.py
+import w3c1_sets as _w3c1  # noqa: E402
+
+SETS.update(_w3c1.sets())

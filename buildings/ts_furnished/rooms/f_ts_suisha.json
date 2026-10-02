@@ -1,0 +1,62 @@
+{
+ "building": "Land_JP_Suisha_Itabuki_Furnished",
+ "p3d": "\\JP\\buildings\\ts_furnished\\jp_suisha_itabuki_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the mill floor: three pestles on the wheel's cam shaft over their mortars, the hand quern",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "quern",
+     "room": "floor",
+     "note": "the stone hand mill (ishi-usu) on the floor by the door: grinding by hand (gears: late Edo, W3C1_NOTES)",
+     "centre": [
+      -1.78,
+      1.27
+     ],
+     "size": [
+      0.7,
+      0.7
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "sacks",
+     "room": "floor",
+     "note": "rice bales and grain sacks by the front wall",
+     "rect": [
+      1.43,
+      2.62,
+      1.07,
+      1.71
+     ]
+    }
+   ],
+   "sparse": "the mill floor: the stamps and their frame fill the middle"
+  }
+ ],
+ "loot_points": 7,
+ "loot_by_room": {
+  "floor": 7
+ }
+}

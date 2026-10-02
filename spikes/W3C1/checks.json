@@ -1809,8 +1809,8 @@
      "detail": [
       {
        "name": "len",
-       "expected": 6.4,
-       "measured": 6.41,
+       "expected": 5.8,
+       "measured": 5.8,
        "tol": 0.4,
        "source": "build_list",
        "ok": true
@@ -2077,8 +2077,8 @@
      "detail": [
       {
        "name": "len",
-       "expected": 6.4,
-       "measured": 6.43,
+       "expected": 5.8,
+       "measured": 6.05,
        "tol": 0.4,
        "source": "build_list",
        "ok": true

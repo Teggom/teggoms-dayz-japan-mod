@@ -6,3 +6,4 @@
 2026-10-02 12:24:03 | GROUP DONE | parts | waterwheel + flume + roof union (4 variants), 0 failures | 5h 19% wk 79%
 2026-10-02 12:24:03 | GROUP DONE | shells | 12 shells, all pass | 5h 19% wk 79%
 2026-10-02 12:24:03 | GROUP DONE | props | 22 props / 40 models, all pass | 5h 19% wk 79%
+2026-10-02 12:39:09 | GROUP DONE | furnishing | 8 furnished (w3c1_sets), all pass | 5h 20% wk 79%

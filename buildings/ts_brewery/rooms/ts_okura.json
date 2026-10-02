@@ -10,7 +10,7 @@
    "level_m": 0.3,
    "rect_kit": [
     0.12,
-    4.42,
+    5.785,
     -7.16,
     -0.12
    ],
@@ -21,7 +21,7 @@
    "enclosed": false,
    "rect_model": [
     -8.07,
-    -3.77,
+    -2.405,
     -3.52,
     3.52
    ],
@@ -32,7 +32,7 @@
      "note": "starter tubs and the stirring poles under the loft",
      "rect": [
       -7.97,
-      -4.04,
+      -2.675,
       1.92,
       3.42
      ]
@@ -40,91 +40,12 @@
    ]
   },
   {
-   "name": "tubs",
+   "name": "kura",
    "tag": "storage",
    "floor": "earth",
    "level_m": 0.3,
    "rect_kit": [
-    4.58,
-    9.1,
-    -7.16,
-    -0.12
-   ],
-   "doors": [],
-   "note": "the fermentation floor: four big tubs in two rows",
-   "enclosed": false,
-   "rect_model": [
-    -3.61,
-    0.91,
-    -3.52,
-    3.52
-   ],
-   "fittings": [
-    {
-     "kind": "tub",
-     "room": "tubs",
-     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#1)",
-     "centre": [
-      -2.34,
-      -2.46
-     ],
-     "size": [
-      1.95,
-      1.95
-     ],
-     "yaw": 0.0
-    },
-    {
-     "kind": "tub",
-     "room": "tubs",
-     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#2)",
-     "centre": [
-      -0.02,
-      -2.46
-     ],
-     "size": [
-      1.95,
-      1.95
-     ],
-     "yaw": 0.0
-    },
-    {
-     "kind": "tub",
-     "room": "tubs",
-     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#3)",
-     "centre": [
-      -2.34,
-      2.46
-     ],
-     "size": [
-      1.95,
-      1.95
-     ],
-     "yaw": 0.0
-    },
-    {
-     "kind": "tub",
-     "room": "tubs",
-     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#4)",
-     "centre": [
-      -0.02,
-      2.46
-     ],
-     "size": [
-      1.95,
-      1.95
-     ],
-     "yaw": 0.0
-    }
-   ]
-  },
-  {
-   "name": "funaba",
-   "tag": "workshop",
-   "floor": "earth",
-   "level_m": 0.3,
-   "rect_kit": [
-    9.1,
+    5.945,
     16.259999999999998,
     -7.16,
     -0.12
@@ -132,32 +53,88 @@
    "doors": [
     "DoorsTwin2"
    ],
-   "note": "the press bay (funaba): the lever press with its stones, casks (east door)",
+   "note": "the brewing floor: four big tubs in two rows (west), the press bay (funaba) with the lever press, casks (east door)",
    "enclosed": false,
    "rect_model": [
-    0.91,
+    -2.245,
     8.07,
     -3.52,
     3.52
    ],
    "fittings": [
     {
+     "kind": "tub",
+     "room": "kura",
+     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#1)",
+     "centre": [
+      -1.195,
+      -2.46
+     ],
+     "size": [
+      1.95,
+      1.95
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "tub",
+     "room": "kura",
+     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#2)",
+     "centre": [
+      0.745,
+      -2.46
+     ],
+     "size": [
+      1.95,
+      1.95
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "tub",
+     "room": "kura",
+     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#3)",
+     "centre": [
+      -1.195,
+      2.46
+     ],
+     "size": [
+      1.95,
+      1.95
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "tub",
+     "room": "kura",
+     "note": "a big fermentation tub (shikomi-oke, 1.82 x 1.70) on the earth floor (#4)",
+     "centre": [
+      0.745,
+      2.46
+     ],
+     "size": [
+      1.95,
+      1.95
+     ],
+     "yaw": 0.0
+    },
+    {
      "kind": "press",
-     "room": "funaba",
+     "room": "kura",
      "note": "the lever press (fune + tenbin beam + stones): the box head and posts at the east end, the beam west",
      "rect": [
-      1.12,
-      8.02,
+      1.87,
+      8.01,
       -3.47,
-      -2.07
+      -1.87
      ]
     },
     {
      "kind": "casks",
-     "room": "funaba",
+     "room": "kura",
      "note": "casks and tubs along the south wall of the press bay",
      "rect": [
-      1.31,
+      2.22,
       5.59,
       2.57,
       3.47
@@ -172,7 +149,7 @@
    "level_m": 2.85,
    "rect_kit": [
     0.12,
-    4.47,
+    5.835,
     -7.16,
     -0.12
    ],
@@ -181,7 +158,7 @@
    "enclosed": false,
    "rect_model": [
     -8.07,
-    -3.72,
+    -2.355,
     -3.52,
     3.52
    ],
@@ -192,7 +169,7 @@
      "note": "the moto-ba upstairs: shallow starter tubs (hangiri) stacked and set out",
      "rect": [
       -7.87,
-      -3.94,
+      -2.575,
       -1.0,
       3.32
      ]
@@ -200,11 +177,10 @@
    ]
   }
  ],
- "loot_points": 23,
+ "loot_points": 29,
  "loot_by_room": {
-  "moto": 6,
-  "tubs": 2,
-  "funaba": 9,
-  "loft": 6
+  "moto": 9,
+  "kura": 11,
+  "loft": 9
  }
 }
