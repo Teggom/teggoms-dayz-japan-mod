@@ -342,6 +342,182 @@ def heap(kind="limestone"):
     return P
 
 
+# ================================================================================================ 5 quarry
+def ishi_blocks():
+    """Cut building blocks (andesite / granite) waiting by the face: three squared blocks on skid timbers, one on top
+    showing its row of wedge holes (ya-ana) along a split edge, a fourth with the lord's mark cut on its face."""
+    P = LPart("ishi_blocks", budget="furniture", mass=6000.0, anchor="floor")
+    r_ = rng("ishiblocks")
+    from jpparts.shapes import rough_block
+    out = []
+    for sz in (-0.45, 0.45):
+        out.append(W(-1.10, 1.10, 0.0, 0.12, sz - 0.07, sz + 0.07, WEATH, vis=(1,)))
+    blocks = [(-0.55, 0.12, 0.0, 0.95, 0.60, 0.80), (0.50, 0.12, 0.0, 1.00, 0.55, 0.85), (0.0, 0.67, 0.0, 1.20, 0.50, 0.70)]
+    for (x, y, z, w, h, d) in blocks:
+        out.append(rough_block(r_, x - w / 2, x + w / 2, y, y + h, z - d / 2, z + d / 2, CUTSTONE, chamfer=0.03,
+                               top_jit=0.01, vis=(1,)))
+    for k in range(5):
+        x = -0.45 + 0.22 * k
+        out.append(W(x - 0.035, x + 0.035, 1.12, 1.172, 0.33, 0.352, DARK, vis=(1,)))
+    # the fourth block on the ground in front, the lord's mark (a cut circle-and-bar) on its face
+    out.append(rough_block(r_, -0.40, 0.40, 0.0, 0.55, 0.85, 1.45, CUTSTONE, chamfer=0.03, top_jit=0.01, vis=(1,)))
+    out.append(W(-0.12, 0.12, 0.25, 0.27, 1.45, 1.455, DARK, vis=(1,)))
+    out.append(W(-0.01, 0.01, 0.14, 0.38, 1.45, 1.455, DARK, vis=(1,)))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-1.10, 1.10, 0.0, 1.17, -0.52, 0.52, CUTSTONE, vis=(2,)))
+    P.add(W(-0.40, 0.40, 0.0, 0.55, 0.85, 1.45, CUTSTONE, vis=(2,)))
+    P.add(col(-1.05, 1.05, 0.0, 1.17, -0.52, 0.52, CUTSTONE))
+    P.add(col(-0.40, 0.40, 0.0, 0.55, 0.85, 1.45, CUTSTONE))
+    P.dim("h", 1.17, 1.17, tol=0.02)
+    P.notes.append("cut blocks on skids, wedge holes along one, the lord's mark on another")
+    return P
+
+
+def ishi_shura(ab=False):
+    """The stone sledge (shura): a heavy oak sledge 2.4 m long, its two runners turned up at the front, cross-pieces,
+    a squared block lashed on it, resting on three log rollers on two plank skids; the hauling rope coiled at the front.
+    ab: the lashing cut, the block slid half off, a roller rolled away."""
+    P = LPart("ishi_shura", budget="furniture", mass=3000.0, anchor="floor")
+    r_ = rng("shura" + str(ab))
+    from jpparts.shapes import rough_block
+    out = []
+    for sx in (-0.55, 0.55):
+        out.append(W(sx - 0.10, sx + 0.10, 0.0, 0.05, -1.50, 1.50, WEATH, vis=(1,)))          # the skids
+    for k, z in enumerate((-0.80, 0.0, 0.80)):
+        zz = z + (0.9 if (ab and k == 2) else 0.0)
+        xx = 0.35 if (ab and k == 2) else 0.0
+        out.append(pole((-0.80 + xx, 0.13, zz), (0.80 + xx, 0.13, zz), 0.08, WEATH, n=7, vis=(1,)))
+    yb = 0.21
+    for sx in (-0.42, 0.42):
+        out.append(W(sx - 0.09, sx + 0.09, yb, yb + 0.16, -1.20, 0.95, WEATH, vis=(1,)))
+        out.append(xf(W(sx - 0.09, sx + 0.09, 0.0, 0.16, 0.0, 0.40, WEATH, vis=(1,)), rx=-35.0,
+                      t=(0.0, yb, 0.95)))
+    for z in (-0.95, -0.30, 0.35):
+        out.append(W(-0.55, 0.55, yb + 0.16, yb + 0.24, z - 0.07, z + 0.07, WEATH, vis=(1,)))
+    yt = yb + 0.24
+    if ab:
+        out.append(xf(rough_block(r_, -0.45, 0.45, 0.0, 0.60, -0.45, 0.45, CUTSTONE, chamfer=0.03, top_jit=0.01,
+                                  vis=(1,)), rz=-12.0, t=(0.55, yt - 0.10, -0.30)))
+    else:
+        out.append(rough_block(r_, -0.45, 0.45, yt, yt + 0.60, -0.75, 0.15, CUTSTONE, chamfer=0.03, top_jit=0.01,
+                               vis=(1,)))
+        for z in (-0.55, -0.05):
+            out.append(cord((-0.47, yt + 0.61, z), (0.47, yt + 0.61, z), 0.012))
+            for sx in (-0.47, 0.47):
+                out.append(cord((sx, yt + 0.61, z), (sx, yt, z), 0.012))
+    out.append(lathe([(0.10, 0.0), (0.26, 0.0), (0.26, 0.10), (0.10, 0.10)], 10, ROPE, vis=(1,)))
+    out[-1] = xf(out[-1], t=(0.0, 0.0, 1.65))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-0.65, 0.65, 0.0, yt, -1.50, 1.30, WEATH, vis=(2,)))
+    P.add(col(-0.65, 0.65, 0.0, yt, -1.40, 1.20, WEATH))
+    if not ab:
+        P.add(W(-0.45, 0.45, yt, yt + 0.60, -0.75, 0.15, CUTSTONE, vis=(2,)))
+        P.add(col(-0.45, 0.45, yt, yt + 0.60, -0.75, 0.15, CUTSTONE))
+    P.dim("l", 2.6, 2.6, tol=0.5)
+    P.notes.append("stone sledge (shura) on log rollers%s" % (", the block slid off, a roller gone" if ab else
+                                                             " with a block lashed on"))
+    return P
+
+
+# ================================================================================================ 6 mine
+def senko_dai():
+    """The ore sorting table (the women's work in the sorting shed): a low plank bench (1.80 x 0.70 at 0.40) with two
+    flat anvil stones, small hand hammers, a heap of broken ore, sorted piles in shallow baskets beside it."""
+    P = LPart("senko_dai", budget="furniture", mass=120.0, anchor="floor")
+    r_ = rng("senko")
+    out = [W(-0.90, 0.90, 0.34, 0.40, -0.35, 0.35, WEATH, vis=(1,))]
+    for sx in (-0.78, 0.78):
+        out.append(W(sx - 0.08, sx + 0.08, 0.0, 0.34, -0.30, 0.30, WEATH, vis=(1,)))
+    for x in (-0.45, 0.35):
+        out.append(lump(r_, x, 0.40, 0.0, 0.28, FIELD, n=7, flat=0.85))
+        out.append(W(x + 0.10, x + 0.32, 0.40, 0.43, 0.15, 0.19, WEATH, vis=(1,)))     # hammer handle
+        out.append(W(x + 0.06, x + 0.12, 0.40, 0.46, 0.13, 0.21, IRON, vis=(1,)))      # its head
+    for k in range(9):
+        out.append(lump(r_, -0.05 + r_.uniform(-0.25, 0.25), 0.40, r_.uniform(-0.25, 0.20), r_.uniform(0.05, 0.10),
+                        FIELD if k % 2 else "stone_cut", n=5, flat=0.7))
+    for (x, z) in ((-0.55, 0.65), (0.35, 0.68)):
+        out.append(xf(lathe([(0.0, 0.0), (0.22, 0.0), (0.26, 0.10), (0.24, 0.10), (0.20, 0.015), (0.0, 0.015)], 10,
+                            BAMBOO, vis=(1,)), t=(x, 0.0, z)))
+        for j in range(4):
+            out.append(lump(r_, x + r_.uniform(-0.10, 0.10), 0.015, z + r_.uniform(-0.10, 0.10), 0.07, FIELD, n=5))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-0.90, 0.90, 0.0, 0.42, -0.35, 0.35, WEATH, vis=(2,)))
+    P.add(col(-0.90, 0.90, 0.0, 0.40, -0.35, 0.35, WEATH))
+    P.dim("h", 0.40, 0.40, tol=0.01)
+    P.notes.append("ore sorting bench with anvil stones, hammers, ore; sorted ore in baskets")
+    return P
+
+
+def nekonagashi():
+    """The washing sluice (neko-nagashi): a board trough 2.4 m long on two trestles, sloping (0.75 -> 0.45), lined with
+    straw mats that caught the gold, a wooden pan (yuri-ita) on its lower end, a tub under the spout; dry."""
+    P = LPart("nekonagashi", budget="furniture", mass=50.0, anchor="floor")
+    a = math.degrees(math.atan2(0.30, 2.40))
+    tr = [W(-1.20, 1.20, 0.0, 0.03, -0.20, 0.20, WEATH, vis=(1,)),
+          W(-1.20, 1.20, 0.03, 0.16, -0.22, -0.20, WEATH, vis=(1,)),
+          W(-1.20, 1.20, 0.03, 0.16, 0.20, 0.22, WEATH, vis=(1,)),
+          W(1.17, 1.20, 0.03, 0.16, -0.20, 0.20, WEATH, vis=(1,)),
+          W(-1.10, 1.10, 0.03, 0.036, -0.19, 0.19, "straw_mushiro", vis=(1,))]
+    out = [xf(s_, rz=a, t=(0.0, 0.60, 0.0)) for s_ in tr]
+    for (x, h) in ((-0.95, 0.60 - 0.95 * math.tan(math.radians(a)) - 0.01), (0.95, 0.60 + 0.95 * math.tan(math.radians(a)) - 0.01)):
+        for sz in (-0.18, 0.18):
+            out.append(W(x - 0.03, x + 0.03, 0.0, h, sz - 0.03, sz + 0.03, WEATH, vis=(1,)))
+        out.append(W(x - 0.035, x + 0.035, h - 0.04, h, -0.24, 0.24, WEATH, vis=(1,)))
+    out.append(xf(tub_shell(0.24, 0.26, 0.02, WEATH, n=10), t=(-1.40, 0.0, 0.0)))
+    out.append(xf(W(-0.28, 0.28, 0.0, 0.03, -0.18, 0.18, WEATH, vis=(1,)), rz=8.0, t=(-1.45, 0.27, 0.0)))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-1.65, 1.20, 0.0, 0.75, -0.24, 0.24, WEATH, vis=(2,)))
+    P.add(col(-1.20, 1.20, 0.0, 0.70, -0.24, 0.24, WEATH))
+    P.dim("l", 2.40, 2.40, tol=0.01)
+    P.notes.append("the gold-washing sluice with straw mats, dry")
+    return P
+
+
+def makiage():
+    """The windlass (makiage-guruma) over a prospect shaft, the shaft boarded over: a frame of two A-shaped trestles
+    1.60 apart carrying the drum (0.26 across) with its two crank handles, the rope wound on it running down to a
+    bucket set on the boards; the board cover (1.6 x 1.4) lies flush on a timber collar."""
+    P = LPart("makiage", budget="furniture", mass=150.0, anchor="floor")
+    out = []
+    # the collar and the board cover over the shaft
+    for (a, b, c, d) in ((-0.85, 0.85, -0.75, -0.62), (-0.85, 0.85, 0.62, 0.75), (-0.85, -0.72, -0.62, 0.62),
+                         (0.72, 0.85, -0.62, 0.62)):
+        out.append(W(a, b, 0.0, 0.14, c, d, SOOTW, vis=(1,)))
+    for k in range(6):
+        z = -0.60 + 0.20 * k + 0.10
+        out.append(W(-0.80, 0.80, 0.14, 0.17, z - 0.095, z + 0.095, WEATH, vis=(1,)))
+    # the trestles
+    yd = 1.05
+    for sx in (-0.80, 0.80):
+        for sz in (-0.55, 0.55):
+            out.append(pole((sx, 0.0, sz), (sx, yd, 0.0), 0.05, WEATH, n=6, vis=(1,)))
+        out.append(W(sx - 0.06, sx + 0.06, yd - 0.08, yd + 0.06, -0.12, 0.12, WEATH, vis=(1,)))
+    out.append(pole((-0.95, yd, 0.0), (0.95, yd, 0.0), 0.13, WEATH, n=8, vis=(1,)))
+    out.append(xf(lathe([(0.135, -0.25), (0.165, -0.25), (0.165, 0.25), (0.135, 0.25)], 8, ROPE, vis=(1,),
+                        closed_ends=False), rz=90.0, t=(0.0, yd, 0.0)))
+    for sx, sg in ((-0.95, -1), (0.95, 1)):
+        out.append(W(sx + sg * 0.0, sx + sg * 0.04, yd - 0.02, yd + 0.34, -0.03, 0.03, WEATH, vis=(1,)))
+        out.append(pole((sx + sg * 0.02, yd + 0.32, 0.0), (sx + sg * 0.25, yd + 0.32, 0.0), 0.02, WEATH, n=5, vis=(1,)))
+    out.append(cord((0.10, yd - 0.15, 0.0), (0.10, 0.48, 0.0), 0.012))
+    out.append(xf(tub_shell(0.17, 0.30, 0.02, WEATH, n=10), t=(0.10, 0.17, 0.0)))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-0.85, 0.85, 0.0, 0.17, -0.75, 0.75, WEATH, vis=(2,)))
+    P.add(W(-0.95, 0.95, yd - 0.13, yd + 0.13, -0.13, 0.13, WEATH, vis=(2,)))
+    for sx in (-0.80, 0.80):
+        P.add(W(sx - 0.06, sx + 0.06, 0.17, yd, -0.45, 0.45, WEATH, vis=(2,)))
+        P.add(col(sx - 0.06, sx + 0.06, 0.17, yd - 0.13, -0.50, 0.50, WEATH))
+    P.add(col(-0.85, 0.85, 0.0, 0.17, -0.75, 0.75, WEATH))
+    P.add(col(-0.95, 0.95, yd - 0.13, yd + 0.13, -0.13, 0.13, WEATH))
+    P.dim("drum_y", yd, yd, tol=0.01)
+    P.notes.append("the windlass over a boarded-over prospect shaft, rope wound, the bucket on the boards")
+    return P
+
+
 PROPS = [
     {"id": "jp_f_keri_rokuro", "cat": CAT, "mount": "floor", "models": [
         M("jp_f_keri_rokuro", "std", "intact", "Potter's kick wheel with a dry half-thrown jar", lambda: keri_rokuro()),
@@ -369,4 +545,15 @@ PROPS = [
         M("jp_f_limestone_heap", "std", "intact", "Heap of broken limestone for the kiln", lambda: heap("limestone"))]},
     {"id": "jp_f_spoil_heap", "cat": CAT, "mount": "floor", "models": [
         M("jp_f_spoil_heap", "std", "intact", "Mine spoil heap (earth and rock)", lambda: heap("spoil"))]},
+    {"id": "jp_f_ishi_blocks", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_ishi_blocks", "std", "intact", "Cut stone blocks on skids", ishi_blocks)]},
+    {"id": "jp_f_ishi_shura", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_ishi_shura", "std", "intact", "Stone sledge (shura) on rollers with a block", lambda: ishi_shura()),
+        M("jp_f_ishi_shura_ab", "std", "broken", "Stone sledge, the block slid off", lambda: ishi_shura(True))]},
+    {"id": "jp_f_senko_dai", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_senko_dai", "std", "intact", "Ore sorting bench with hammers and ore", senko_dai)]},
+    {"id": "jp_f_nekonagashi", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_nekonagashi", "std", "intact", "Gold-washing sluice on trestles, dry", nekonagashi)]},
+    {"id": "jp_f_makiage", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_makiage", "std", "intact", "Windlass over a boarded-over prospect shaft", makiage)]},
 ]

@@ -8,3 +8,6 @@
 2026-10-02 15:20:23 | SITE 3 DONE | tile works | Land_JP_Kawara_Gama + _Kawara + _KawaraDry + Compound_TileYard | 5h 4% wk 82%
 2026-10-02 15:22:13 | SITE 4 kiln | lime | Land_JP_Ishibai_Gama built | 5h 5% wk 82%
 2026-10-02 15:22:37 | SITE 4 DONE | lime | Land_JP_Ishibai_Gama + Shed_Open_Thatch_Ishibai | 5h 6% wk 82%
+2026-10-02 15:23:26 | SITE 5 START | quarry |  | 5h 3% wk 83%
+2026-10-02 15:24:49 | SITE 5 DONE | quarry | Land_JP_Ishiba + Shed_Open_Board_Ishiku (+ lanterns placed) | 5h 4% wk 83%
+2026-10-02 15:30:03 | SITE 6 DONE | mine | Land_JP_Mabu + Shed_Open_Board_Senko + BunkHall_Itabuki(_Miners) + BunkHall_Ishioki | 5h 6% wk 83%

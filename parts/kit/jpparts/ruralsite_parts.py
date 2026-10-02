@@ -340,8 +340,114 @@ def part_kiln_shaft(variant):
     return p
 
 
+# ------------------------------------------------------------------------------------------------ 37 site_adit
+ADIT = {"half": 0.91, "post": 0.15, "clear_h": 2.15, "pitch": 0.91, "sets": 9, "len": 4 * KEN}
+
+
+def adit(p, cx=0.0, zp=0.0, H=4.0, W=9.1, D=10.0, floor_y=0.05):
+    """The mine adit (mabu; W3C2_NOTES TR27): a knoll of earth + rock round a 4-ken timbered drift that ends at a
+    rockfall (a short dead end, recorded). The portal face lies at z = zp (+z = out), the drift runs to -z. Clear
+    section 1.215 wide (between the set posts) x 2.15 high (game D1 / D2). Timber sets (two round posts on sill stones
+    + a cap) every 0.91, lagging boards over the caps, a heavier portal set with a shimenawa and paper streamers, a board
+    drainage trough along the left foot running out of the mouth. Returns the drift's numbers + the set posts."""
+    rng = rng_for("adit")
+    A = ADIT
+    hw, pw = A["half"], A["post"] / 2
+    rw = hw + pw + 0.045                               # the rock faces either side
+    z_end = zp - A["len"]
+    yc0 = floor_y + A["clear_h"]                       # cap underside
+    yc1 = yc0 + 0.18
+    x0, x1 = cx - W / 2, cx + W / 2
+    zb = zp - D
+    g = dict(vis=(1, 2, 3), geo=True, view=True, fire="granite")
+    MR = {"top": EARTH, "default": STONE}
+    # the knoll: left + right masses, the roof over the drift, the back (the rockfall face)
+    # the side masses fall away from the drift to the knoll's foot (a hill nose cut by the portal face); the back mass
+    # falls to the rear; each a convex hexahedron with planar faces
+    ye = 0.45
+    for sg, tg in ((-1, "knoll_left"), (1, "knoll_right")):
+        xi, xo = cx + sg * rw, cx + sg * W / 2
+        c = [(xi, -0.30, zp), (xi, -0.30, zb), (xo, -0.30, zb), (xo, -0.30, zp),
+             (xi, H - 0.3, zp), (xi, H - 0.3, zb), (xo, ye, zb), (xo, ye, zp)]
+        if sg > 0:
+            c = c[:4][::-1] + c[4:][::-1]
+        p.add(hexa(c, MR, tag=tg, **g))
+    p.add(box(cx - rw - 0.02, cx + rw + 0.02, yc1 + 0.025, H - 0.3, z_end - 0.02, zp, MR, tag="knoll_roof", **g))
+    p.add(hexa([(cx - rw - 0.02, -0.30, z_end), (cx + rw + 0.02, -0.30, z_end), (cx + rw + 0.02, -0.30, zb),
+                (cx - rw - 0.02, -0.30, zb), (cx - rw - 0.02, H - 0.3, z_end), (cx + rw + 0.02, H - 0.3, z_end),
+                (cx + rw + 0.02, ye, zb), (cx - rw - 0.02, ye, zb)], MR, tag="knoll_back", **g))
+    # the rounded crown and shoulders (natural rock + earth)
+    for (x, z, w, d, h, top) in ((cx, zp - 4.0, 3.4, 4.6, 1.0, H + 0.30), (cx - 2.2, zp - 5.5, 2.4, 3.4, 1.4, H - 0.6),
+                                 (cx + 2.2, zp - 3.0, 2.2, 3.0, 1.4, H - 0.7), (cx - 3.5, zp - 1.0, 1.4, 1.6, 1.2, 1.5),
+                                 (cx + 3.6, zp - 1.2, 1.4, 1.6, 1.3, 1.6)):
+        p.add(stone(rng, x, z, w, d, h, top, EARTH if top > 3.0 else STONE, bury=0.30, n=9, flat_top=0.5,
+                    tag="knoll_crown", **g))
+    # the timber sets: round posts on flat sill stones, a cap, lagging boards over the caps
+    posts = []
+    for k in range(A["sets"]):
+        z = zp - k * A["pitch"]
+        heavy = k == 0
+        r = 0.11 if heavy else 0.075
+        for sx in (-1, 1):
+            x = cx + sx * hw
+            p.add(tube((x, floor_y - 0.02, z), (x, yc0, z), r, SOOT if not heavy else WOOD, n=8, vis=(1, 2),
+                       tag="set_post"))
+            p.add(box(x - r, x + r, floor_y - 0.02, yc0, z - r, z + r, WOOD, vis=(3,), geo=True, view=True,
+                      fire=True, tag="set_post_lod"))
+            p.add(stone(rng, x, z, 0.30, 0.28, 0.10, floor_y + 0.0, STONE, bury=0.10, n=7, flat_top=0.85,
+                        vis=(1,), tag="soseki"))
+            posts.append((round(x, 4), round(z, 4), floor_y, yc0))
+        p.add(box(cx - rw + 0.01, cx + rw - 0.01, yc0, yc1, z - (0.11 if heavy else 0.08), z + (0.11 if heavy else 0.08),
+                  WOOD if heavy else SOOT, vis=(1, 2, 3), tag="set_cap", **dict(geo=True, view=True, fire=True)))
+    for j in range(int(A["len"] / 0.25)):
+        z = zp - 0.12 - j * 0.25
+        p.add(box(cx - rw + 0.02, cx + rw - 0.02, yc1, yc1 + 0.025, z - 0.11, z + 0.11, SOOT, vis=(1,),
+                  tag="lagging"))
+    # the rockfall at the end
+    for k in range(8):
+        x, z = cx + rng.uniform(-0.55, 0.55), z_end + 0.25 + rng.uniform(0.0, 0.55)
+        sz = rng.uniform(0.25, 0.50)
+        p.add(stone(rng, x, z, sz, sz * 0.8, sz * 0.7, floor_y + sz * (0.7 if k < 5 else 1.3), STONE, bury=0.05, n=7,
+                    flat_top=0.5, vis=(1, 2), tag="rockfall"))
+    p.add(box(cx - rw, cx + rw, floor_y - 0.05, floor_y + 0.75, z_end, z_end + 0.70, STONE, vis=(), geo=True,
+              view=True, fire="granite", tag="rockfall_geo"))
+    # the drainage trough (board, 0.16 wide) along the left foot and out of the mouth
+    xt = cx - hw + pw + 0.10
+    zt0, zt1 = z_end + 0.75, zp + 1.40
+    for (a, b, y0, y1) in ((xt - 0.08, xt - 0.065, floor_y, floor_y + 0.12), (xt + 0.065, xt + 0.08, floor_y,
+                                                                            floor_y + 0.12),
+                           (xt - 0.08, xt + 0.08, floor_y - 0.02, floor_y)):
+        p.add(box(a, b, y0, y1, zt0, zt1, SOOT, vis=(1, 2), tag="trough"))
+    p.add(box(xt - 0.08, xt + 0.08, floor_y - 0.02, floor_y + 0.12, zt0, zt1, SOOT, vis=(), geo=True, view=False,
+              fire=True, tag="trough_geo"))
+    # the shimenawa over the portal cap, its paper streamers (shide)
+    zr = zp + 0.02
+    p.add(tube((cx - rw, yc0 + 0.05, zr + 0.11), (cx + rw, yc0 + 0.05, zr + 0.11), 0.035, "straw_rope", n=6,
+               vis=(1, 2), tag="shimenawa"))
+    for k in range(4):
+        x = cx - 0.45 + 0.30 * k
+        p.add(box(x - 0.035, x + 0.035, yc0 - 0.28, yc0 + 0.02, zr + 0.145, zr + 0.150, "textile_kinari", vis=(1,),
+                  tag="shide"))
+    return {"posts": posts, "z_end": z_end, "rw": rw, "clear": (2 * (hw - pw), A["clear_h"]), "trough_x": xt,
+            "cap": yc0}
+
+
+def part_adit(variant):
+    p = Part("jp_p_site_adit", variant, "site", tiers=[1, 2],
+             used_for="the mine adit (mabu, TR27): a knoll with a 4-ken timbered drift ending at a rockfall, the "
+                      "portal's shimenawa, the drainage trough; walkable (a loot floor)",
+             recipe="ruralsite_parts.adit(part, cx, zp, H, W, D, floor_y)",
+             datum="x centred on the drift, z 0 = the portal face (+z = out), y 0 = grade")
+    a = adit(p)
+    p.dim("drift_clear_m", ">= 1.00 x 2.00 (D1 / D2)", a["clear"][0], source="W3C2_NOTES TR27")
+    p.dims[-1]["ok"] = a["clear"][0] >= 1.0
+    p.conn("portal", (0.0, 0.05, 0.0), note="the portal (the drift's mouth)")
+    return p
+
+
 def register(reg):
     reg("jp_p_site_kiln_dome", ["_charcoal"], part_kiln_dome)
     reg("jp_p_site_kiln_climbing", ["_4ch"], part_kiln_climbing)
     reg("jp_p_site_kiln_updraught", ["_daruma"], part_kiln_updraught)
     reg("jp_p_site_kiln_shaft", ["_stone"], part_kiln_shaft)
+    reg("jp_p_site_adit", ["_timbered"], part_adit)

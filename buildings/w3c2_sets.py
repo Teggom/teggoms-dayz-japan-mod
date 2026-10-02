@@ -109,12 +109,66 @@ def ishibai(c):
     c.site("jp_f_firewood_bundle", -3.70, -0.90, 90, why="brushwood bundles")
 
 
+# ------------------------------------------------------------------------------------------------ 5 quarry
+def ishiku(c):
+    """The quarrymen's shed (C2's open board shed): the sharpening forge for the picks and wedges (W2F's forge and
+    anvil), the quench tub, charcoal, chisels and wedges on the wall; the stonemason's finished lanterns stand outside
+    (placed with the site)."""
+    sparse(c, "floor", "the open shed: the sharpening forge fills one end")
+    F = Room(c, "floor", open_sides=("zmax",), centre=False)
+    must(F, "jp_f_forge", "the small sharpening forge for picks and wedges", sides=("zmin",))
+    must(F, "jp_f_anvil", "the anvil")
+    F.wall("jp_f_oke_tarai_dry", why="the quench tub, dry")
+    F.wall("jp_f_charcoal_bale", why="charcoal for the forge")
+    F.wall("jp_f_tool_wall", sides=("zmin",), why="chisels, points and wedges on the wall")
+    F.wall("jp_f_basket_work", why="a basket of wedges")
+
+
+# ------------------------------------------------------------------------------------------------ 6 mine
+def senko(c):
+    """The mine's sorting shed (C2's open board shed): the sorting bench with hammers and ore, the stone ore mill
+    (the hand quern), ore baskets, the gold-washing sluice by the open front."""
+    sparse(c, "floor", "the open sorting shed: bench, mill and sluice fill it")
+    F = Room(c, "floor", open_sides=("zmax",), centre=False)
+    must(F, "jp_f_senko_dai", "the ore sorting bench, hammers and broken ore", sides=("zmin",))
+    must(F, "jp_f_nekonagashi", "the gold-washing sluice, dry", sides=("zmin",))
+    must(F, "jp_f_usu_ishiusu", "the stone mill that ground the ore")
+    F.wall("jp_f_basket_back", why="an ore basket")
+    F.wall("jp_f_basket_work_abandoned", why="an ore basket, dropped")
+    F.wall("jp_f_oke_bucket", why="a bucket")
+
+
+def bunk_miners(c):
+    """The miners' bunk hall (board roof): in the doma the stove, the water jar, picks and hammers on the wall, ore
+    baskets; on the long sleeping floor the straw beds round the irori, clothes on pegs, the men's few things left."""
+    FS._kamado_on_spot(c, "doma", 1)
+    c.pot("doma", "jp_f_kama_nolid", 0, why="the pot left in the stove")
+    c.passage(("doma", "living"), -1.82, 0.35, "kamachi step doma <-> living")
+    D = Room(c, "doma", centre=False)
+    D.wall("jp_f_jar_l", why="the water jar")
+    D.wall("jp_f_tool_wall", sides=("xmin",), why="picks, hammers and chisels on the wall")
+    D.wall("jp_f_basket_back_crushed", why="an ore basket, crushed")
+    D.wall("jp_f_oke_bucket", why="a bucket")
+    D.wall("jp_f_firewood_bundle", why="firewood")
+    f = FS._hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_pile")
+    c.wall("living", "zmin", 1.60, "jp_f_straw_bed_scattered", why="another straw bed, kicked about")
+    L = Room(c, "living", centre=False)
+    L.wall("jp_f_mino_pegs", sides=("zmax", "zmin"), why="rain capes and hats on the pegs")
+    L.wall("jp_f_kori", why="a wicker trunk")
+    L.free("jp_f_kama_nabe_rusted", 0.45, 0.55, 0, why="a rusting pot by the hearth", band=False)
+    L.free("jp_f_meal_left_hakozen", 0.60, 0.35, 0, why="a box-tray meal left", band=False)
+    L.wall("jp_f_andon_kaku_tipped", why="a lamp, knocked over")
+
+
 SETS_W3C2 = {
     "w3c2_sumiyaki": {"tier": 1, "fn": sumiyaki},
     "w3c2_toki": {"tier": 1, "fn": toki},
     "w3c2_kawara": {"tier": 1, "fn": kawara},
     "w3c2_kawara_dry": {"tier": 1, "fn": kawara_dry},
     "w3c2_ishibai": {"tier": 1, "fn": ishibai},
+    "w3c2_ishiku": {"tier": 1, "fn": ishiku},
+    "w3c2_senko": {"tier": 1, "fn": senko},
+    "w3c2_bunk_miners": {"tier": 1, "fn": bunk_miners},
 }
 
 

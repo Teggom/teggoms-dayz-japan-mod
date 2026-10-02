@@ -1,0 +1,72 @@
+{
+ "key": "f_rs_ishiku",
+ "class": "Land_JP_Shed_Open_Board_Ishiku",
+ "name": "jp_shed_open_board_ishiku",
+ "model": "\\JP\\buildings\\rs_furnished\\jp_shed_open_board_ishiku.p3d",
+ "model_dir": "rs_furnished",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 2304,
+  "Resolution 2": 629,
+  "Resolution 3": 293,
+  "Geometry": 603,
+  "Memory": 0,
+  "Roadway": 4,
+  "View Geometry": 603,
+  "Fire Geometry": 603
+ },
+ "loot_points": 8,
+ "config_class": "\tclass Land_JP_Shed_Open_Board_Ishiku: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Shed, open front (board roof), furnished: the quarrymen's shed (forge)\";\n\t\tmodel=\"\\JP\\buildings\\rs_furnished\\jp_shed_open_board_ishiku.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_shed_open_board_ishiku_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_shed_open_board_ishiku: Default\n\t{\n\t\tskeletonName=\"jp_shed_open_board_ishiku_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Shed_Open_Board_Ishiku\">",
+  "\t\t\t\t<usage name=\"Farm\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.138929 0.050000 1.135000\" range=\"0.811924\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.988214 0.050000 1.783571\" range=\"0.581786\" height=\"1.454464\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.138929 0.050000 -1.459286\" range=\"0.857500\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.988214 0.050000 -0.810714\" range=\"0.479714\" height=\"1.199286\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.490000 0.062000 1.740000\" range=\"0.120000\" height=\"0.300000\" />",
+  "\t\t\t\t</container>",
+  "\t\t\t\t<container name=\"lootshelves\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"shelves\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.280000 0.600000 -0.285000\" range=\"0.200000\" height=\"0.500000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.952500 0.473000 0.150000\" range=\"0.120000\" height=\"0.300000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.566000 0.640000 1.383000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "proxies": {
+  "Resolution 1": 6,
+  "Geometry": 5,
+  "View Geometry": 5,
+  "Fire Geometry": 5
+ },
+ "proxy_addons": [
+  "JP_Furniture"
+ ],
+ "loot_containers": {
+  "lootFloor": 5,
+  "lootshelves": 3
+ },
+ "params": {
+  "base": "shed_open_board",
+  "dress": "w3c2_ishiku"
+ },
+ "bbox": [
+  -3.15,
+  3.15,
+  -0.272,
+  4.119,
+  -2.631,
+  2.631
+ ]
+}

@@ -4107,4 +4107,45 @@ class CfgVehicles
 		displayName="Mine spoil heap (earth and rock)";
 		model="\JP\furniture\sitefit\jp_f_spoil_heap.p3d";
 	};
+	// jp_f_ishi_blocks (sitefit)
+	class StaticObj_JP_F_Ishi_Blocks: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cut stone blocks on skids";
+		model="\JP\furniture\sitefit\jp_f_ishi_blocks.p3d";
+	};
+	// jp_f_ishi_shura (sitefit)
+	class StaticObj_JP_F_Ishi_Shura: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone sledge (shura) on rollers with a block";
+		model="\JP\furniture\sitefit\jp_f_ishi_shura.p3d";
+	};
+	class StaticObj_JP_F_Ishi_Shura_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone sledge, the block slid off";
+		model="\JP\furniture\sitefit\jp_f_ishi_shura_ab.p3d";
+	};
+	// jp_f_senko_dai (sitefit)
+	class StaticObj_JP_F_Senko_Dai: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ore sorting bench with hammers and ore";
+		model="\JP\furniture\sitefit\jp_f_senko_dai.p3d";
+	};
+	// jp_f_nekonagashi (sitefit)
+	class StaticObj_JP_F_Nekonagashi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Gold-washing sluice on trestles, dry";
+		model="\JP\furniture\sitefit\jp_f_nekonagashi.p3d";
+	};
+	// jp_f_makiage (sitefit)
+	class StaticObj_JP_F_Makiage: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Windlass over a boarded-over prospect shaft";
+		model="\JP\furniture\sitefit\jp_f_makiage.p3d";
+	};
 };

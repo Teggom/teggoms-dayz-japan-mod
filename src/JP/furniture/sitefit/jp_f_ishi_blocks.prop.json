@@ -1,0 +1,73 @@
+{
+ "id": "jp_f_ishi_blocks",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sitefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sitefit\\jp_f_ishi_blocks.p3d",
+   "class": "StaticObj_JP_F_Ishi_Blocks",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Cut stone blocks on skids",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 142,
+    "Resolution 2": 12,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -1.1,
+    1.1,
+    0.0,
+    1.172,
+    -0.52,
+    1.455
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -1.05,
+    -0.52,
+    1.05,
+    1.45
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 6000.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 1.17,
+     "measured": 1.17,
+     "tol": 0.02,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "cut blocks on skids, wedge holes along one, the lord's mark on another"
+   ],
+   "master": "spikes/W3C2/out/sitefit/jp_f_ishi_blocks.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C2/build_w3c2.py (agent W3C2, 2026-10-02) on spikes/B3a/build.py"
+}

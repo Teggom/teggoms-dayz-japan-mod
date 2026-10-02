@@ -1,0 +1,190 @@
+{
+ "id": "jp_p_site_adit_timbered",
+ "part": "jp_p_site_adit",
+ "variant": "_timbered",
+ "group": "site",
+ "p3d": "JP\\parts\\site\\jp_p_site_adit_timbered.p3d",
+ "build_list": {
+  "entry": "jp_p_site_adit",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2
+ ],
+ "used_for": "the mine adit (mabu, TR27): a knoll with a 4-ken timbered drift ending at a rockfall, the portal's shimenawa, the drainage trough; walkable (a loot floor)",
+ "datum": "x centred on the drift, z 0 = the portal face (+z = out), y 0 = grade",
+ "recipe": "ruralsite_parts.adit(part, cx, zp, H, W, D, floor_y)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -4.55,
+  4.55,
+  -0.3,
+  4.3,
+  -10.0,
+  1.4
+ ],
+ "dims": [
+  {
+   "name": "drift_clear_m",
+   "expected": ">= 1.00 x 2.00 (D1 / D2)",
+   "measured": 1.67,
+   "tol": 0.01,
+   "source": "W3C2_NOTES TR27",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "portal",
+   "pos": [
+    0.0,
+    0.05,
+    0.0
+   ],
+   "note": "the portal (the drift's mouth)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "ground_earth_bare",
+   "id": "jp_m_ground_earth_bare",
+   "palette_id": "earth_bare",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "straw_rope",
+   "id": "jp_m_straw_rope",
+   "palette_id": "straw_aged",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "textile_kinari",
+   "id": "jp_m_textile_kinari",
+   "palette_id": "kinari_cloth",
+   "rvmat": "JP\\common\\materials\\textile\\jp_m_textile_kinari<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 1428,
+  "Resolution 2": 744,
+  "Resolution 3": 356,
+  "Geometry": 368,
+  "View Geometry": 362,
+  "Fire Geometry": 368
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 1428, Resolution 2 744, Resolution 3 356, Geometry 368, View Geometry 362, Fire Geometry 368"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "38 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "37 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "38 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "granite, wood"
+  },
+  {
+   "check": "C4 drift_clear_m",
+   "ok": true,
+   "detail": "expected >= 1.00 x 2.00 (D1 / D2), measured 1.67"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

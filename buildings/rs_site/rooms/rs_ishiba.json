@@ -1,0 +1,33 @@
+{
+ "building": "Land_JP_Ishiba",
+ "p3d": "\\JP\\buildings\\rs_site\\jp_ishiba.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/ruralsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.15,
+    10.77,
+    -3.439999999999999,
+    -0.15
+   ],
+   "doors": [],
+   "note": "the splitting floor before the quarry face; the masons' small shelter at the east end",
+   "enclosed": false,
+   "rect_model": [
+    -5.31,
+    5.31,
+    0.655,
+    3.945
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 5,
+ "loot_by_room": {
+  "floor": 5
+ }
+}

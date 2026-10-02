@@ -147,6 +147,66 @@
     "displayName=\"Mine spoil heap (earth and rock)\";",
     "model=\"\\JP\\furniture\\sitefit\\jp_f_spoil_heap.p3d\";"
    ]
+  },
+  {
+   "group": "jp_f_ishi_blocks (sitefit)",
+   "class": "StaticObj_JP_F_Ishi_Blocks",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Cut stone blocks on skids\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_ishi_blocks.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_ishi_shura (sitefit)",
+   "class": "StaticObj_JP_F_Ishi_Shura",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone sledge (shura) on rollers with a block\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_ishi_shura.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_ishi_shura (sitefit)",
+   "class": "StaticObj_JP_F_Ishi_Shura_Ab",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone sledge, the block slid off\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_ishi_shura_ab.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_senko_dai (sitefit)",
+   "class": "StaticObj_JP_F_Senko_Dai",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Ore sorting bench with hammers and ore\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_senko_dai.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_nekonagashi (sitefit)",
+   "class": "StaticObj_JP_F_Nekonagashi",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Gold-washing sluice on trestles, dry\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_nekonagashi.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_makiage (sitefit)",
+   "class": "StaticObj_JP_F_Makiage",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Windlass over a boarded-over prospect shaft\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_makiage.p3d\";"
+   ]
   }
  ],
  "models": [
@@ -163,7 +223,13 @@
   "jp_f_kawara_stack_scattered",
   "jp_f_kawara_bench",
   "jp_f_limestone_heap",
-  "jp_f_spoil_heap"
+  "jp_f_spoil_heap",
+  "jp_f_ishi_blocks",
+  "jp_f_ishi_shura",
+  "jp_f_ishi_shura_ab",
+  "jp_f_senko_dai",
+  "jp_f_nekonagashi",
+  "jp_f_makiage"
  ],
  "scripts": {}
 }

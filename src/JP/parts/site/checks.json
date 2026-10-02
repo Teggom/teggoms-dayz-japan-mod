@@ -540,6 +540,51 @@
      "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
+  },
+  {
+   "id": "jp_p_site_adit_timbered",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 1428, Resolution 2 744, Resolution 3 356, Geometry 368, View Geometry 362, Fire Geometry 368"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "38 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "37 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "38 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "granite, wood"
+    },
+    {
+     "check": "C4 drift_clear_m",
+     "ok": true,
+     "detail": "expected >= 1.00 x 2.00 (D1 / D2), measured 1.67"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
   }
  ]
 }

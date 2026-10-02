@@ -1,0 +1,56 @@
+{
+ "building": "Land_JP_Mabu",
+ "p3d": "\\JP\\buildings\\rs_site\\jp_mabu.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/ruralsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "mouth",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    2.8499999999999996,
+    6.25,
+    -1.82,
+    -0.1
+   ],
+   "doors": [],
+   "note": "the mouth floor before the portal (the drainage trough runs out here; the mine shrine on the right)",
+   "enclosed": false,
+   "rect_model": [
+    -1.7,
+    1.7,
+    4.09,
+    5.81
+   ],
+   "fittings": []
+  },
+  {
+   "name": "drift",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    3.715,
+    5.385,
+    -8.35,
+    -1.82
+   ],
+   "doors": [],
+   "note": "the timbered drift: 4 ken in, a dead end at the rockfall (recorded: no long tunnel)",
+   "enclosed": false,
+   "rect_model": [
+    -0.835,
+    0.835,
+    -2.44,
+    4.09
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 4,
+ "loot_by_room": {
+  "mouth": 2,
+  "drift": 2
+ }
+}

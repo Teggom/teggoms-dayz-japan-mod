@@ -1068,6 +1068,17 @@ W3C2_SHELLS = [
     # TR26 the lime kiln (the slaking / packing shed = C2's open thatch shed, furnished)
     _rsd("rs_ishibaigama", "rs_kiln", "Land_JP_Ishibai_Gama", "Lime kiln (dry-stone pit on its bank) + draw floor",
          {"kind": "ishibaigama"}, _LOOT_RS_SITE, 300000.0),
+    # TR25 the quarry face (the quarrymen's shed = C2's open board shed with the sharpening forge, furnished)
+    _rsd("rs_ishiba", "rs_site", "Land_JP_Ishiba", "Quarry face (two cut benches, wedge-hole rows) + splitting floor",
+         {"kind": "ishiba"}, _LOOT_RS_SITE, 900000.0),
+    # TR27 the mine adit (the sorting shed = C2's open board shed, the miners' bunk hall = new, both furnished)
+    _rsd("rs_mabu", "rs_site", "Land_JP_Mabu", "Mine adit (timbered drift into a knoll, dead end) + mine shrine",
+         {"kind": "mabu"}, _LOOT_RS_SITE, 900000.0),
+    # the bunk hall (KEEP_DWELLINGS 4): miners (board roof) and loggers (stone-weighted boards)
+    _rsd("rs_bunkhall_itabuki", "rs_hall", "Land_JP_BunkHall_Itabuki", "Bunk hall (miners / loggers; board roof)",
+         {"kind": "bunkhall", "roof": "itabuki"}, _LOOT_RS_HUT, 25000.0),
+    _rsd("rs_bunkhall_ishioki", "rs_hall", "Land_JP_BunkHall_Ishioki", "Bunk hall (stone-weighted board roof)",
+         {"kind": "bunkhall", "roof": "ishioki"}, _LOOT_RS_HUT, 28000.0),
 ]
 BUILDINGS += W3C2_SHELLS
 
@@ -1078,6 +1089,9 @@ W3C2_FURNISHED = [
     _furn("f_rs_kawara", "tr_ws_doma_sangawara", "w3c2_kawara", "Kawara", "furnished: the tile maker's moulding shed"),
     _furn("f_rs_kawara_dry", "shed_open_board", "w3c2_kawara_dry", "KawaraDry", "furnished: the tile drying shed"),
     _furn("f_rs_ishibai", "shed_open_thatch", "w3c2_ishibai", "Ishibai", "furnished: the lime slaking + packing shed"),
+    _furn("f_rs_ishiku", "shed_open_board", "w3c2_ishiku", "Ishiku", "furnished: the quarrymen's shed (forge)"),
+    _furn("f_rs_senko", "shed_open_board", "w3c2_senko", "Senko", "furnished: the mine's sorting shed"),
+    _furn("f_rs_bunk_miners", "rs_bunkhall_itabuki", "w3c2_bunk_miners", "Miners", "furnished: the miners' bunk hall"),
 ]
 for _f in W3C2_FURNISHED:                     # W3C2's own model folder
     _f["dir"] = _f["model_dir"] = "rs_furnished"
