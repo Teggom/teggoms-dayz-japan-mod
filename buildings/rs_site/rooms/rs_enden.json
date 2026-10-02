@@ -1,0 +1,33 @@
+{
+ "building": "Land_JP_Enden",
+ "p3d": "\\JP\\buildings\\rs_site\\jp_enden.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/ruralsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "bed",
+   "tag": "yard",
+   "floor": "sand",
+   "level_m": 0.3,
+   "rect_kit": [
+    0.3,
+    12.44,
+    -7.08,
+    -0.65
+   ],
+   "doors": [],
+   "note": "the salt bed (dry, raked); the sieve stands and rakes on it; the ditch and the embankment beyond",
+   "enclosed": false,
+   "rect_model": [
+    -6.07,
+    6.07,
+    -2.53,
+    3.9
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 15,
+ "loot_by_room": {
+  "bed": 15
+ }
+}

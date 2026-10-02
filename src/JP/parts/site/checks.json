@@ -585,6 +585,51 @@
      "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
+  },
+  {
+   "id": "jp_p_site_shura_log4",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 349, Resolution 2 349, Resolution 3 297, Geometry 72, View Geometry 72, Fire Geometry 72"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "12 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "12 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "12 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "wood"
+    },
+    {
+     "check": "C4 bay_m",
+     "ok": true,
+     "detail": "expected 3-4 (GK), measured 3.64"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
   }
  ]
 }

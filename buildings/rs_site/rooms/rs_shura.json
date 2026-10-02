@@ -1,0 +1,33 @@
+{
+ "building": "Land_JP_Shura",
+ "p3d": "\\JP\\buildings\\rs_site\\jp_shura.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/ruralsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "landing",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.15,
+    3.49,
+    -2.71,
+    -0.15
+   ],
+   "doors": [],
+   "note": "the landing at the slide's foot (the log stack stands beside it)",
+   "enclosed": false,
+   "rect_model": [
+    -1.67,
+    1.67,
+    6.085,
+    8.645
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 2,
+ "loot_by_room": {
+  "landing": 2
+ }
+}

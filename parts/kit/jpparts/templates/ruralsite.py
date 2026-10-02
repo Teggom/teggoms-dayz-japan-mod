@@ -14,6 +14,9 @@ Kinds (kit frame as rural.py: x 0..W along the front, z 0 = front line, +z = out
   ishibaigama  the lime kiln pit on its bank (jp_p_site_kiln_shaft) + the draw floor under a small roof (2 x 1 ken)
   ishiba       the quarry face: a rock outcrop cut in two benches + the splitting floor and a small shelter
   mabu         the mine adit: a knoll with a 4-ken timbered drift (dead end), the mouth floor, the mine shrine
+  shura        the timber slide's lowest 4 bays on trestles + the landing at its foot
+  enden        a Gyotoku irihama salt-bed section on dry land: the raised raked bed, the dry ditch, the embankment + sluice
+  kamaya       W 4 x D 3 ken salt-boiling hut: board walls, the shell pan on its clay firebox under a long smoke vent
   bunkhall     W 6 x D 3 ken, board walls: the entrance doma (2 ken, front + back doors, the hearth) and the long
                raised sleeping floor (0.40, one irori); roof itabuki | ishioki
 """
@@ -25,7 +28,8 @@ from .rural import Shell, _r, DOMA, A_, _kamado, _irori, big_leaf
 from .civic import fit, trim_lods, koshiyane, open_front, _ext
 from . import dwelling as DW
 
-KINDS = ("sumigama", "noborigama", "darumagama", "ishibaigama", "ishiba", "mabu", "bunkhall", "compound")
+KINDS = ("sumigama", "noborigama", "darumagama", "ishibaigama", "ishiba", "mabu", "shura", "enden", "kamaya",
+         "bunkhall", "compound")
 
 
 def _open_roof(S, W, D, E, fam="itabuki", ov=None, ridge="bamboo"):
@@ -323,6 +327,185 @@ def bunkhall(name=None, roof="itabuki", wear="_w2"):
     H, info = S.finish({"params": {"kind": "bunkhall", "roof": roof}, "levels": {"doma": DOMA, "floor": FLOOR,
                                                                                "eave": E}, "koyagumi": K["counts"]},
                        exterior=_ext(W, D))
+    return H, info
+
+
+# ================================================================================================ TR24 timber slide
+def shura(name=None, wear="_w2"):
+    """The timber slide's lowest 4 bays (jp_p_site_shura _log4) on trestles (posts on stones, a cap, a brace) at every
+    bay end, its foot on the landing floor (1.5 ken) where the logs came out."""
+    K = RS.SHURA
+    W, LL = 2 * KEN, 1.5 * KEN
+    L = K["bays"] * K["bay"]
+    D = LL + L + 0.30
+    S = Shell(name or "jp_shura", W, D, [1, 2], "timber slide (shura, TR24): the lowest 4 bays + the landing", wear)
+    B = S.B
+    cx = W / 2
+    kp = B.P("slide")
+    si = RS.shura(kp, x0=cx, z0=-LL)
+    B.put(kp, (0.0, (0.0, 0.0, 0.0)), what="jp_p_site_shura _log4 (a log stopped in it)")
+    # the trestles: two posts (on stones) under each bay end but the foot, a cap under the sleeper, a cross brace
+    tp = B.P("trestles")
+    for b in range(1, K["bays"] + 1):
+        z = round(-LL - b * K["bay"], 4)
+        yb = si["ybed"](z) - 0.15
+        for sx in (-1, 1):
+            S.post(round(cx + sx * HALF, 4), z, yb)
+        tp.add(box(cx - HALF - 0.10, cx + HALF + 0.10, yb, yb + 0.12, z - 0.07, z + 0.07, "wood_weathered",
+                   vis=(1, 2, 3), geo=True, view=True, fire=True, tag="trestle_cap"))
+        if yb > 1.0:
+            from ..shapes import tube as _tube
+            tp.add(_tube((cx - HALF, 0.25, z), (cx + HALF, yb - 0.15, z), 0.04, "wood_weathered", n=5, vis=(1, 2),
+                         tag="trestle_brace"))
+    B.put(tp, (0.0, (0.0, 0.0, 0.0)), what="the slide's trestles")
+    B.interior = True
+    B.merge(FL.doma("landing", 0.0, W, -LL, 0.0, road=(0.15, W - 0.15, -LL + 0.02, -0.15), y=DOMA,
+                    mats=FL.MATS_DOMA_EARTH))
+    B.interior = False
+    S.obst.append(("landing", _r(cx - 0.55, cx + 0.55, -LL, -LL + 0.40)))
+    S.room("landing", "yard", "earth", DOMA, (0.15, W - 0.15, -LL + 0.02, -0.15), [],
+           "the landing at the slide's foot (the log stack stands beside it)", enclosed=False)
+    trim_lods(S.H)
+    H, info = S.finish({"params": {"kind": "shura"}, "levels": {"doma": DOMA, "top": K["rise"]}}, exterior=None)
+    return H, info
+
+
+# ================================================================================================ TR22 salt works
+def core_rings_heap(rng, x, z, r, y0, mat="ground_doma_tataki"):
+    from ..core import rings as _rings
+    base = [(x + r * (1 + rng.uniform(-0.1, 0.1)) * math.cos(2 * math.pi * k / 9),
+             z + r * 0.8 * (1 + rng.uniform(-0.1, 0.1)) * math.sin(2 * math.pi * k / 9)) for k in range(9)]
+    return _rings((base, [(y0 - 0.02, 1.0), (y0 + 0.18, 0.62), (y0 + 0.32, 0.25)]), mat, vis=(1, 2), tag="sand_heap")
+
+
+def enden(name=None, wear="_w2"):
+    """One section of a Gyotoku irihama salt field [GYO] on dry land (dead world: the bed dry, the ditch empty): a
+    levelled bed of raked sand 7 x 4 ken raised 0.30 (its landward edge ramped), the tidal ditch (hama-mizo, 0.60
+    wide, plank-lined, dry) along the sea side, the low embankment (tsutsumi) beyond it with a small timber sluice
+    (posts on stones, the gate board shut), two heaps of scraped sand. Walkable bed."""
+    from ..core import rng_for, stone as _stone
+    W, D = 7 * KEN, 5 * KEN
+    LB = 4 * KEN
+    YB = 0.30
+    S = Shell(name or "jp_enden", W, D, [1, 2], "salt field section (enden, irihama, TR22), dry", wear)
+    B = S.B
+    rng = rng_for("enden")
+    SAND = {"top": "ground_doma_tataki", "default": "ground_earth_bare"}
+    p = B.P("bed")
+    p.add(box(0.0, W, -0.30, YB, -LB, -0.60, SAND, vis=(1, 2, 3), geo=True, view=True, fire="dirt", tag="bed"))
+    p.road([(0.0, YB, -LB), (W, YB, -LB), (W, YB, -0.60), (0.0, YB, -0.60)], "doma")
+    p.add(prism([(-0.30, -0.60), (-0.30, 0.0), (0.0, 0.0), (YB, -0.60)], "x", 0.0, W, SAND, vis=(1, 2, 3), geo=True,
+                view=True, fire="dirt", tag="bed_ramp"))
+    p.road([(0.0, YB, -0.60), (W, YB, -0.60), (W, 0.0, 0.0), (0.0, 0.0, 0.0)], "doma")
+    for k in range(12):
+        z = -0.95 - k * 0.25
+        p.add(box(0.25, W - 0.25, YB, YB + 0.012, z - 0.03, z + 0.03, "ground_earth_bare", vis=(1,), tag="rake_line"))
+    for (x, z, r) in ((3.2, -2.6, 0.75), (8.9, -2.2, 0.60)):
+        p.add(core_rings_heap(rng, x, z, r, YB))
+    zd0, zd1 = -LB - 0.60, -LB
+    p.add(box(0.0, W, -0.30, 0.02, zd0, zd1, "wood_sooted", vis=(1, 2, 3), geo=True, view=True, fire=True,
+              tag="ditch_floor"))
+    p.road([(0.0, 0.02, zd0), (W, 0.02, zd0), (W, 0.02, zd1), (0.0, 0.02, zd1)], "boards_ext")
+    p.add(box(0.0, W, 0.02, YB + 0.02, zd1 - 0.04, zd1, "wood_weathered", vis=(1, 2), tag="ditch_lining"))
+    zk0, zk1 = -D, zd0
+    p.add(prism([(-0.30, zk1), (-0.30, zk0), (0.10, zk0), (0.85, zk0 + 0.45), (0.85, zk1 - 0.30), (0.40, zk1)], "x",
+                0.0, W, "ground_earth_bare", vis=(1, 2, 3), geo=True, view=True, fire="dirt", tag="dyke"))
+    for k in range(16):
+        x = 0.4 + k * (W - 0.8) / 15
+        p.add(_stone(rng, x, zk0 + 0.15, 0.55, 0.35, 0.40, 0.42, "stone_field", bury=0.20, n=7, flat_top=0.6, vis=(1,),
+                     tag="dyke_stone"))
+    B.put(p, (0.0, (0.0, 0.0, 0.0)), what="the salt bed, the ditch, the embankment")
+    xs0, xs1 = 12.5 * HALF, 13.5 * HALF          # (HALF = half a ken, 0.91)
+    for x in (xs0, xs1):
+        for z in (-9 * HALF, -9.5 * HALF):
+            S.post(x, z, 1.25)
+    sp = B.P("sluice")
+    for z in (-9 * HALF, -9.5 * HALF):
+        sp.add(box(xs0 - 0.10, xs1 + 0.10, 1.25, 1.37, z - 0.07, z + 0.07, "wood_weathered", vis=(1, 2, 3), geo=True,
+                   view=True, fire=True, tag="sluice_cap"))
+    sp.add(box(xs0 + 0.06, xs1 - 0.06, 0.02, 0.95, -9.25 * HALF - 0.03, -9.25 * HALF + 0.03, "wood_sooted",
+               vis=(1, 2, 3), geo=True, view=True, fire=True, tag="sluice_gate"))
+    B.put(sp, (0.0, (0.0, 0.0, 0.0)), what="the sluice (gate shut, dry)")
+    S.obst.append(("bed", _r(2.4, 4.0, -3.4, -1.8)))
+    S.obst.append(("bed", _r(8.2, 9.6, -2.9, -1.5)))
+    S.room("bed", "yard", "sand", YB, (0.30, W - 0.30, -LB + 0.20, -0.65), [],
+           "the salt bed (dry, raked); the sieve stands and rakes on it; the ditch and the embankment beyond",
+           enclosed=False)
+    trim_lods(S.H)
+    H, info = S.finish({"params": {"kind": "enden"}, "levels": {"bed": YB}}, exterior=None)
+    return H, info
+
+
+def _pan(S, cx, cz, w=2.40, d=1.80):
+    """The salt-boiling pan (a Gyotoku shell pan, kai-gama [GYO]: shell-lime plastered, shallow) on its clay firebox
+    (shell geometry, like the dyer's vats): the firebox 0.55 high, its fire mouth to the front (+z), the pan's rim 0.15
+    over it, a crust of salt dried in it; cold. Returns the footprint."""
+    from ..core import rng_for
+    p = S.B.P("pan")
+    rng = rng_for("kamaya_pan")
+    fw, fd, fh = w + 0.50, d + 0.50, 0.55
+    p.add(box(cx - fw / 2, cx + fw / 2, 0.0, fh, cz - fd / 2, cz + fd / 2, "wall_nakanuri_int", vis=(1, 2, 3),
+              geo=True, view=True, fire="dirt", tag="firebox"))
+    t = 0.10
+    for (a, b, c, d_) in ((cx - w / 2 - t, cx + w / 2 + t, cz - d / 2 - t, cz - d / 2),
+                          (cx - w / 2 - t, cx + w / 2 + t, cz + d / 2, cz + d / 2 + t),
+                          (cx - w / 2 - t, cx - w / 2, cz - d / 2, cz + d / 2),
+                          (cx + w / 2, cx + w / 2 + t, cz - d / 2, cz + d / 2)):
+        p.add(box(a, b, fh, fh + 0.15, c, d_, "wall_shikkui_aged", vis=(1, 2, 3), geo=True, view=True, fire="dirt",
+                  tag="pan_rim"))
+    p.add(box(cx - w / 2, cx + w / 2, fh, fh + 0.03, cz - d / 2, cz + d / 2, "wall_shikkui", vis=(1, 2, 3), geo=True,
+              view=True, fire="dirt", tag="pan_crust"))
+    RS.mouth(p, cx, 0.0, 0.55, 0.42, cz + fd / 2, rng=rng, jamb="ceramic_earthenware", header="ceramic_earthenware",
+             tag="pan_mouth", svis=(1, 2, 3))
+    p.add(prism(RS.ellipse(cx, cz + fd / 2 + 0.40, 0.60, 0.30, 10), "y", -0.02, 0.022, "ground_ash", vis=(1,),
+                tag="ash_spill"))
+    S.B.interior = True
+    S.B.put(p, (0.0, (0.0, 0.0, 0.0)), what="the shell pan on its clay firebox (cold, a salt crust)")
+    S.B.interior = False
+    return (cx - fw / 2, cx + fw / 2, cz - fd / 2, cz + fd / 2 + 0.35)
+
+
+def kamaya(name=None, wear="_w2"):
+    """The salt-boiling hut (kamaya): W 4 x D 3 ken, board walls, earth floor, eave 3.30; the shell pan on its firebox
+    in the middle under a long smoke vent; the front door (itado) at the left, a side door on the right gable, a
+    push-up window at the back; room for the fuel heap, the brine tubs and the draining baskets."""
+    W, D, E = 4 * KEN, 3 * KEN, 3.30
+    fam = "itabuki"
+    YT, YG = E - KETA_H, E - 0.21
+    t = R.PITCH[fam]
+    S = Shell(name or "jp_kamaya", W, D, [1, 2], "salt-boiling hut (kamaya, TR22) with its shell pan", wear)
+    B = S.B
+    sls, info_r, K = S.roof(W, D, "kirizuma", fam, E, soot=True, ridge="bamboo")
+    S.keta_ring(W, D, E, hip=False)
+    koshiyane(S, 1.0 * KEN, 2.0 * KEN, info_r, E, D, fam)
+    bw = dict(kind="board_vertical", mat="wood_weathered", grime=False)
+    S.wall_line("front", [(0.0, W, DOMA)], YT, [(0.5 * KEN, 1.5 * KEN, DOMA, DOMA + 2.0, "door")],
+                nodes_extra=(0.5 * KEN, 1.5 * KEN), **bw)
+    S.door(big_leaf("_plain"), "front", 0.5 * KEN, DOMA, "Front door (itado)", "front")
+    S.wall_line("back", [(0.0, W, DOMA)], YT, [(1.5 * KEN, 2.0 * KEN, DOMA + 0.90, DOMA + 1.60, "window")],
+                nodes_extra=(1.5 * KEN, 2.0 * KEN), **bw)
+    S.window(openings.part_tsukiage("_board"), "back", 1.5 * KEN, DOMA, "Window (back, push-up)")
+    S.wall_line("left", [(0.0, D, DOMA)], YG, [(1.0 * KEN, 1.5 * KEN, DOMA + 0.90, DOMA + 1.60, "window")],
+                nodes_extra=(1.0 * KEN, 1.5 * KEN), **bw)
+    S.window(openings.part_window_slide("_board"), "left", 1.0 * KEN, DOMA, "Window (end)")
+    S.wall_line("right", [(0.0, D, DOMA)], YG, [(1.0 * KEN, 2.0 * KEN, DOMA, DOMA + 2.0, "door")],
+                nodes_extra=(1.0 * KEN, 2.0 * KEN), **bw)
+    S.door(openings.part_itado("_single"), "right", 1.0 * KEN, DOMA, "Side door", "side")
+    for g_ in ("left", "right"):
+        S.gable(g_, D, t, E, "_board")
+    B.interior = True
+    B.merge(FL.doma("floor", 0.0, W, -D, 0.0, road=(A_, W - A_, -D + A_, -A_), y=DOMA, mats=FL.MATS_DOMA_EARTH))
+    B.interior = False
+    pr = _pan(S, 2.0 * KEN, -1.55 * KEN)
+    S.obst.append(("floor", _r(pr[0] - 0.10, pr[1] + 0.10, pr[2] - 0.10, pr[3])))
+    fit(S, "fuel", "floor", rect=(A_ + 0.05, A_ + 2.15, -D + A_ + 0.05, -D + A_ + 1.75), obstacle=False,
+        note="the fuel heap of pine needles and bamboo leaves [GYO]")
+    S.place_windows()
+    S.room("floor", "workshop", "earth", DOMA, (A_, W - A_, -D + A_, -A_), [S.dn["front"], S.dn["side"]],
+           "the boiling floor: the shell pan on its firebox under the smoke vent, fuel, brine tubs, draining baskets")
+    trim_lods(S.H)
+    H, info = S.finish({"params": {"kind": "kamaya"}, "levels": {"doma": DOMA, "eave": E}, "koyagumi": K["counts"],
+                        "pan": pr}, exterior=_ext(W, D))
     return H, info
 
 

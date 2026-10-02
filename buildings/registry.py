@@ -1079,6 +1079,14 @@ W3C2_SHELLS = [
          {"kind": "bunkhall", "roof": "itabuki"}, _LOOT_RS_HUT, 25000.0),
     _rsd("rs_bunkhall_ishioki", "rs_hall", "Land_JP_BunkHall_Ishioki", "Bunk hall (stone-weighted board roof)",
          {"kind": "bunkhall", "roof": "ishioki"}, _LOOT_RS_HUT, 28000.0),
+    # TR24 the timber slide (the camp = the stone-roofed bunk hall furnished for loggers + W3B's saw shed as it is)
+    _rsd("rs_shura", "rs_site", "Land_JP_Shura", "Timber slide (shura): the lowest 4 bays on trestles + the landing",
+         {"kind": "shura"}, _LOOT_RS_SITE, 30000.0),
+    # TR22 the salt works (Gyotoku irihama, dry land): the salt bed + the boiling hut with its shell pan
+    _rsd("rs_enden", "rs_site", "Land_JP_Enden", "Salt field section (irihama): raked bed, dry ditch, embankment, sluice",
+         {"kind": "enden"}, _LOOT_RS_SITE, 300000.0),
+    _rsd("rs_kamaya", "rs_hall", "Land_JP_Kamaya_Itabuki", "Salt-boiling hut (kamaya) with its shell pan",
+         {"kind": "kamaya"}, _LOOT_RS_HUT, 22000.0),
 ]
 BUILDINGS += W3C2_SHELLS
 
@@ -1092,6 +1100,8 @@ W3C2_FURNISHED = [
     _furn("f_rs_ishiku", "shed_open_board", "w3c2_ishiku", "Ishiku", "furnished: the quarrymen's shed (forge)"),
     _furn("f_rs_senko", "shed_open_board", "w3c2_senko", "Senko", "furnished: the mine's sorting shed"),
     _furn("f_rs_bunk_miners", "rs_bunkhall_itabuki", "w3c2_bunk_miners", "Miners", "furnished: the miners' bunk hall"),
+    _furn("f_rs_bunk_loggers", "rs_bunkhall_ishioki", "w3c2_bunk_loggers", "Loggers", "furnished: the loggers' bunk hall"),
+    _furn("f_rs_kamaya", "rs_kamaya", "w3c2_kamaya", "Furnished", "furnished: the salt-boiling hut (fuel, baskets, bags)"),
 ]
 for _f in W3C2_FURNISHED:                     # W3C2's own model folder
     _f["dir"] = _f["model_dir"] = "rs_furnished"

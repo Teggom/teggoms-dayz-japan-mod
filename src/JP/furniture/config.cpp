@@ -4148,4 +4148,31 @@ class CfgVehicles
 		displayName="Windlass over a boarded-over prospect shaft";
 		model="\JP\furniture\sitefit\jp_f_makiage.p3d";
 	};
+	// jp_f_zaru_tori (sitefit)
+	class StaticObj_JP_F_Zaru_Tori: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Salt sieve stand over brine tubs (zaru-tori)";
+		model="\JP\furniture\sitefit\jp_f_zaru_tori.p3d";
+	};
+	class StaticObj_JP_F_Zaru_Tori_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Salt sieve stand, a basket tipped off";
+		model="\JP\furniture\sitefit\jp_f_zaru_tori_ab.p3d";
+	};
+	// jp_f_shio_zaru (sitefit)
+	class StaticObj_JP_F_Shio_Zaru: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Salt draining baskets on their rack";
+		model="\JP\furniture\sitefit\jp_f_shio_zaru.p3d";
+	};
+	// jp_f_matsuba (sitefit)
+	class StaticObj_JP_F_Matsuba: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Pine-needle fuel heap with brushwood bundles";
+		model="\JP\furniture\sitefit\jp_f_matsuba.p3d";
+	};
 };

@@ -518,6 +518,93 @@ def makiage():
     return P
 
 
+# ================================================================================================ 8 salt works
+SALT = "wall_shikkui"
+
+
+def zaru_tori(ab=False):
+    """Gyotoku's sieve method [GYO]: a low frame (1.50 x 0.60 at 0.55) carrying two big shallow sieve baskets (zaru,
+    0.55 across) of salty sand, a brine tub under each; a shoulder pole with two sea-water buckets beside it. Dry.
+    ab: one basket tipped off, its sand spilled."""
+    P = LPart("zaru_tori", budget="furniture", mass=40.0, anchor="floor")
+    out = []
+    for sx in (-0.72, 0.72):
+        for sz in (-0.27, 0.27):
+            out.append(W(sx - 0.03, sx + 0.03, 0.0, 0.55, sz - 0.03, sz + 0.03, WEATH, vis=(1,)))
+    for sz in (-0.27, 0.27):
+        out.append(pole((-0.80, 0.56, sz), (0.80, 0.56, sz), 0.025, BAMBOO, n=5, vis=(1,)))
+    for k, x in enumerate((-0.38, 0.38)):
+        out.append(xf(tub_shell(0.25, 0.30, 0.02, WEATH, n=10), t=(x, 0.0, 0.0)))
+        basket = [lathe([(0.0, 0.0), (0.18, 0.0), (0.28, 0.12), (0.265, 0.12), (0.17, 0.012), (0.0, 0.012)], 12,
+                        BAMBOO, vis=(1,)),
+                  lathe([(0.0, 0.012), (0.17, 0.012), (0.24, 0.09), (0.0, 0.11)], 10, "ground_doma_tataki", vis=(1,))]
+        if ab and k == 1:
+            out += [xf(b, rx=75.0, t=(x + 0.10, 0.28, 0.55)) for b in basket]
+            out.append(mound("zaru_spill", x + 0.05, 0.70, 0.30, 0.08, "ground_doma_tataki", vis=(1,)))
+        else:
+            out += [xf(b, t=(x, 0.585, 0.0)) for b in basket]
+    # the shoulder pole and the two sea-water buckets (shio-oke) set down beside the frame
+    for z in (0.75, 1.55):
+        out.append(xf(tub_shell(0.17, 0.32, 0.02, WEATH, n=10), t=(1.05, 0.0, z - 0.40)))
+    out.append(pole((1.05, 0.33, 0.30), (1.05, 0.33, 1.20), 0.022, BAMBOO, n=5, vis=(1,)))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-0.80, 0.80, 0.0, 0.70, -0.30, 0.30, WEATH, vis=(2,)))
+    P.add(col(-0.80, 0.80, 0.0, 0.58, -0.30, 0.30, WEATH))
+    P.add(col(0.86, 1.24, 0.0, 0.32, 0.17, 1.33, WEATH))
+    P.dim("h", 0.55, 0.55, tol=0.01)
+    P.notes.append("the zaru-tori sieve stand over brine tubs, sea-water buckets on their pole%s" % (
+        ", one basket tipped off" if ab else ""))
+    return P
+
+
+def shio_zaru():
+    """Salt draining baskets: a plank rack (1.60 x 0.55 at 0.45) over a shallow trough, three deep baskets of wet salt
+    (gone dry and grey-white) on it, a salt bag (tawara) leaning at the end."""
+    P = LPart("shio_zaru", budget="furniture", mass=60.0, anchor="floor")
+    out = [W(-0.80, 0.80, 0.0, 0.14, -0.26, 0.26, WEATH, vis=(1,)),
+           W(-0.78, 0.78, 0.14, 0.15, -0.24, 0.24, "lacquer_black", vis=(1,))]
+    for sx in (-0.72, 0.72):
+        for sz in (-0.24, 0.24):
+            out.append(W(sx - 0.03, sx + 0.03, 0.14, 0.45, sz - 0.03, sz + 0.03, WEATH, vis=(1,)))
+    for sz in (-0.18, 0.0, 0.18):
+        out.append(W(-0.80, 0.80, 0.42, 0.45, sz - 0.05, sz + 0.05, WEATH, vis=(1,)))
+    for x in (-0.50, 0.0, 0.50):
+        out.append(xf(lathe([(0.0, 0.0), (0.14, 0.0), (0.20, 0.32), (0.185, 0.32), (0.13, 0.012), (0.0, 0.012)], 10,
+                            BAMBOO, vis=(1,)), t=(x, 0.45, 0.0)))
+        out.append(xf(lathe([(0.0, 0.012), (0.13, 0.012), (0.18, 0.30), (0.10, 0.36), (0.0, 0.37)], 9, SALT, vis=(1,)),
+                      t=(x, 0.45, 0.0)))
+    out.append(xf(lathe([(0.0, 0.0), (0.16, 0.0), (0.19, 0.30), (0.15, 0.58), (0.0, 0.60)], 9, STRAW, vis=(1,)),
+                  rz=-12.0, t=(0.98, 0.0, 0.0)))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-0.80, 0.80, 0.0, 0.80, -0.26, 0.26, WEATH, vis=(2,)))
+    P.add(col(-0.80, 0.80, 0.0, 0.45, -0.26, 0.26, WEATH))
+    P.dim("w", 1.60, 1.60, tol=0.01)
+    P.notes.append("salt draining baskets on a rack over the trough, a salt bag")
+    return P
+
+
+def matsuba():
+    """The boiling fuel [GYO]: a heap of pine needles and bamboo leaves (2.0 x 1.4, 0.9 high) with bound bundles of
+    brushwood leaned on it and a rake."""
+    P = LPart("matsuba", budget="furniture", mass=200.0, anchor="floor")
+    r_ = rng("matsuba")
+    out = [mound("matsuba_heap", 0.0, 0.0, 0.95, 0.85, LITTER, sx=1.05, sz=0.75, vis=(1,))]
+    for k in range(5):
+        x = -0.70 + 0.35 * k
+        b = lathe([(0.0, 0.0), (0.12, 0.0), (0.14, 0.90), (0.0, 0.92)], 7, "straw_stack", vis=(1,))
+        out.append(xf(b, rx=-58.0, t=(x, 0.0, 0.95)))
+    out.append(pole((1.00, 0.0, 0.70), (0.55, 0.90, 0.15), 0.018, BAMBOO, n=5, vis=(1,)))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-1.00, 1.00, 0.0, 0.70, -0.65, 0.95, LITTER, vis=(2,)))
+    P.add(col(-0.95, 0.95, 0.0, 0.70, -0.60, 0.70, LITTER))
+    P.dim("w", 2.0, 2.0, tol=0.3)
+    P.notes.append("pine-needle and bamboo-leaf fuel heap with brushwood bundles")
+    return P
+
+
 PROPS = [
     {"id": "jp_f_keri_rokuro", "cat": CAT, "mount": "floor", "models": [
         M("jp_f_keri_rokuro", "std", "intact", "Potter's kick wheel with a dry half-thrown jar", lambda: keri_rokuro()),
@@ -556,4 +643,11 @@ PROPS = [
         M("jp_f_nekonagashi", "std", "intact", "Gold-washing sluice on trestles, dry", nekonagashi)]},
     {"id": "jp_f_makiage", "cat": CAT, "mount": "floor", "models": [
         M("jp_f_makiage", "std", "intact", "Windlass over a boarded-over prospect shaft", makiage)]},
+    {"id": "jp_f_zaru_tori", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_zaru_tori", "std", "intact", "Salt sieve stand over brine tubs (zaru-tori)", lambda: zaru_tori()),
+        M("jp_f_zaru_tori_ab", "std", "broken", "Salt sieve stand, a basket tipped off", lambda: zaru_tori(True))]},
+    {"id": "jp_f_shio_zaru", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_shio_zaru", "std", "intact", "Salt draining baskets on their rack", shio_zaru)]},
+    {"id": "jp_f_matsuba", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_matsuba", "std", "intact", "Pine-needle fuel heap with brushwood bundles", matsuba)]},
 ]

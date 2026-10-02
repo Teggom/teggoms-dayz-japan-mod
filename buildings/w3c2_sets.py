@@ -160,6 +160,48 @@ def bunk_miners(c):
     L.wall("jp_f_andon_kaku_tipped", why="a lamp, knocked over")
 
 
+# ------------------------------------------------------------------------------------------------ 7 logging camp
+def bunk_loggers(c):
+    """The loggers' bunk hall (stone-weighted roof): axes, felling saws and wedges on the wall, coils of rope, the stove
+    and the water jar in the doma; straw beds round the irori, rain capes on pegs."""
+    FS._kamado_on_spot(c, "doma", 1)
+    c.pot("doma", "jp_f_kama", 0, why="the pot, lid on, in the stove")
+    c.passage(("doma", "living"), -1.82, 0.35, "kamachi step doma <-> living")
+    D = Room(c, "doma", centre=False)
+    D.wall("jp_f_jar_l", why="the water jar")
+    D.wall("jp_f_tool_wall_wood", sides=("xmin",), why="axes, felling saws and wedges on the pegs")
+    D.wall("jp_f_rope_pegs_3", why="coils of hauling rope")
+    D.wall("jp_f_firewood_stack", sides=("zmin",), why="split wood")
+    D.wall("jp_f_oke_bucket", why="a bucket")
+    f = FS._hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_quilt")
+    c.wall("living", "zmin", 1.60, "jp_f_straw_bed_pile", why="another straw bed")
+    L = Room(c, "living", centre=False)
+    L.wall("jp_f_mino_pegs_rain", sides=("zmax", "zmin"), why="rain capes and hats on the pegs")
+    L.wall("jp_f_kori", why="a wicker trunk")
+    L.free("jp_f_kama_nabe", 0.45, 0.55, 0, why="a pot by the hearth", band=False)
+    L.free("jp_f_tabakobon_spilled", 0.60, 0.35, 0, why="a tobacco tray", band=False)
+    L.wall("jp_f_andon_kaku_tipped", why="a lamp, knocked over")
+
+
+# ------------------------------------------------------------------------------------------------ 8 salt works
+def kamaya(c):
+    """The salt-boiling hut: the shell pan is the shell's; round it the fuel heap of pine needles and bamboo leaves
+    [GYO] on its spot, the salt draining baskets, brine tubs and jars, salt in straw bags, rakes on the wall. Cold."""
+    sparse(c, "floor", "the boiling floor: the pan and its firebox fill the middle")
+    fu = fit1(c, "floor", "fuel")
+    x, z = fc(fu)
+    c.free("floor", "jp_f_matsuba", x, z, 0.0, why="the fuel heap of pine needles and bamboo leaves")
+    F = Room(c, "floor", centre=False)
+    r = fu["rect"]
+    F.used.append((r[0] - 0.10, r[1] + 0.10, r[2] - 0.10, r[3] + 0.10))
+    must(F, "jp_f_shio_zaru", "salt draining in baskets over the trough", sides=("zmin", "xmax"))
+    F.wall("jp_f_tawara_stack6", sides=("xmax", "zmin"), why="salt in straw bags (shio-dawara)")
+    F.wall("jp_f_oke_tarai_dry", why="a brine tub, dry, salt-crusted")
+    F.wall("jp_f_jar_l_open", why="a brine jar")
+    F.wall("jp_f_tool_wall_wood", sides=("zmin", "xmin"), why="rakes and the long pan scraper on the wall")
+    F.wall("jp_f_oke_bucket", why="a bucket")
+
+
 SETS_W3C2 = {
     "w3c2_sumiyaki": {"tier": 1, "fn": sumiyaki},
     "w3c2_toki": {"tier": 1, "fn": toki},
@@ -169,6 +211,8 @@ SETS_W3C2 = {
     "w3c2_ishiku": {"tier": 1, "fn": ishiku},
     "w3c2_senko": {"tier": 1, "fn": senko},
     "w3c2_bunk_miners": {"tier": 1, "fn": bunk_miners},
+    "w3c2_bunk_loggers": {"tier": 1, "fn": bunk_loggers},
+    "w3c2_kamaya": {"tier": 1, "fn": kamaya},
 }
 
 

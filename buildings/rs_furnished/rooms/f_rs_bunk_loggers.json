@@ -1,0 +1,93 @@
+{
+ "building": "Land_JP_BunkHall_Ishioki_Loggers",
+ "p3d": "\\JP\\buildings\\rs_furnished\\jp_bunkhall_ishioki_loggers.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.5700000000000003,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the entrance doma: stove, water jar, tools",
+   "enclosed": true,
+   "rect_model": [
+    -5.4,
+    -1.89,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -4.96,
+      -2.23
+     ],
+     "yaw": 0.0,
+     "size": [
+      0.6,
+      0.6
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "living",
+   "tag": "living",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    3.71,
+    10.86,
+    -5.4,
+    -0.06
+   ],
+   "doors": [],
+   "note": "the long sleeping floor with the irori",
+   "enclosed": true,
+   "rect_model": [
+    -1.75,
+    5.4,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "living",
+     "rect": [
+      1.365,
+      2.275,
+      -0.455,
+      0.455
+     ],
+     "floor_y": 0.4,
+     "pit": "irori",
+     "hook": [
+      1.82,
+      2.62,
+      0.0
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    }
+   ]
+  }
+ ],
+ "loot_points": 18,
+ "loot_by_room": {
+  "doma": 5,
+  "living": 13
+ }
+}

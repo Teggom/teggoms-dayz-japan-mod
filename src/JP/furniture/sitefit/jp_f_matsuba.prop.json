@@ -1,0 +1,73 @@
+{
+ "id": "jp_f_matsuba",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sitefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sitefit\\jp_f_matsuba.p3d",
+   "class": "StaticObj_JP_F_Matsuba",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Pine-needle fuel heap with brushwood bundles",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 128,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.0,
+    1.017,
+    0.0,
+    0.921,
+    -0.794,
+    1.012
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.95,
+    -0.6,
+    0.95,
+    0.7
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 200.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 2.0,
+     "measured": 2.0,
+     "tol": 0.3,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "pine-needle and bamboo-leaf fuel heap with brushwood bundles"
+   ],
+   "master": "spikes/W3C2/out/sitefit/jp_f_matsuba.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C2/build_w3c2.py (agent W3C2, 2026-10-02) on spikes/B3a/build.py"
+}

@@ -207,6 +207,46 @@
     "displayName=\"Windlass over a boarded-over prospect shaft\";",
     "model=\"\\JP\\furniture\\sitefit\\jp_f_makiage.p3d\";"
    ]
+  },
+  {
+   "group": "jp_f_zaru_tori (sitefit)",
+   "class": "StaticObj_JP_F_Zaru_Tori",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Salt sieve stand over brine tubs (zaru-tori)\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_zaru_tori.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_zaru_tori (sitefit)",
+   "class": "StaticObj_JP_F_Zaru_Tori_Ab",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Salt sieve stand, a basket tipped off\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_zaru_tori_ab.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_shio_zaru (sitefit)",
+   "class": "StaticObj_JP_F_Shio_Zaru",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Salt draining baskets on their rack\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_shio_zaru.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_matsuba (sitefit)",
+   "class": "StaticObj_JP_F_Matsuba",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pine-needle fuel heap with brushwood bundles\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_matsuba.p3d\";"
+   ]
   }
  ],
  "models": [
@@ -229,7 +269,11 @@
   "jp_f_ishi_shura_ab",
   "jp_f_senko_dai",
   "jp_f_nekonagashi",
-  "jp_f_makiage"
+  "jp_f_makiage",
+  "jp_f_zaru_tori",
+  "jp_f_zaru_tori_ab",
+  "jp_f_shio_zaru",
+  "jp_f_matsuba"
  ],
  "scripts": {}
 }

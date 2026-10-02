@@ -11,3 +11,7 @@
 2026-10-02 15:23:26 | SITE 5 START | quarry |  | 5h 3% wk 83%
 2026-10-02 15:24:49 | SITE 5 DONE | quarry | Land_JP_Ishiba + Shed_Open_Board_Ishiku (+ lanterns placed) | 5h 4% wk 83%
 2026-10-02 15:30:03 | SITE 6 DONE | mine | Land_JP_Mabu + Shed_Open_Board_Senko + BunkHall_Itabuki(_Miners) + BunkHall_Ishioki | 5h 6% wk 83%
+2026-10-02 15:30:47 | SITE 7 START | logging |  | 5h 6% wk 83%
+2026-10-02 15:33:52 | SITE 7 DONE | logging | Land_JP_Shura + BunkHall_Ishioki_Loggers + W3B Timber_SawShed_Furnished reused | 5h 7% wk 83%
+2026-10-02 15:33:52 | SITE 8 START | salt works |  | 5h 7% wk 83%
+2026-10-02 15:36:25 | SITE 8 DONE | salt works | Land_JP_Enden + Land_JP_Kamaya_Itabuki(_Furnished) | 5h 8% wk 83%

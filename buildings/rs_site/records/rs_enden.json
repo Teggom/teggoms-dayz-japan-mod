@@ -1,0 +1,58 @@
+{
+ "key": "rs_enden",
+ "class": "Land_JP_Enden",
+ "name": "jp_enden",
+ "model": "\\JP\\buildings\\rs_site\\jp_enden.p3d",
+ "model_dir": "rs_site",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 767,
+  "Resolution 2": 128,
+  "Resolution 3": 46,
+  "Geometry": 158,
+  "Memory": 0,
+  "Roadway": 3,
+  "View Geometry": 158,
+  "Fire Geometry": 158
+ },
+ "loot_points": 15,
+ "config_class": "\tclass Land_JP_Enden: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Salt field section (irihama): raked bed, dry ditch, embankment, sluice\";\n\t\tmodel=\"\\JP\\buildings\\rs_site\\jp_enden.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_enden_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_enden: Default\n\t{\n\t\tskeletonName=\"jp_enden_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Enden\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Industrial\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.655476 0.300000 4.212000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.685000 0.300000 4.860000\" range=\"0.904154\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"2.561667 0.300000 4.860000\" range=\"0.790000\" height=\"1.975000\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.655476 0.300000 1.944000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.685000 0.300000 1.296000\" range=\"1.070342\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"2.561667 0.300000 1.296000\" range=\"0.974000\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.387381 0.300000 -0.000000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.953095 0.300000 -0.000000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"2.293571 0.300000 -0.000000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.387381 0.300000 -2.268000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.685000 0.300000 -1.296000\" range=\"1.002897\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"2.561667 0.300000 -1.296000\" range=\"0.434000\" height=\"1.085000\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.387381 0.300000 -3.888000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.953095 0.300000 -4.536000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"2.561667 0.300000 -4.536000\" range=\"1.138333\" height=\"2.000000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "enden"
+ },
+ "bbox": [
+  -6.37,
+  6.37,
+  -0.3,
+  1.37,
+  -4.59,
+  4.55
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "building": "Land_JP_Kamaya_Itabuki",
+ "p3d": "\\JP\\buildings\\rs_hall\\jp_kamaya_itabuki.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/ruralsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    7.220000000000001,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the boiling floor: the shell pan on its firebox under the smoke vent, fuel, brine tubs, draining baskets",
+   "enclosed": true,
+   "rect_model": [
+    -3.58,
+    3.58,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "fuel",
+     "room": "floor",
+     "note": "the fuel heap of pine needles and bamboo leaves [GYO]",
+     "rect": [
+      -3.53,
+      -1.43,
+      -2.62,
+      -0.92
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 8,
+ "loot_by_room": {
+  "floor": 8
+ }
+}

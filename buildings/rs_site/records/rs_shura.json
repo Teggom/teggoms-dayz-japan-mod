@@ -1,0 +1,45 @@
+{
+ "key": "rs_shura",
+ "class": "Land_JP_Shura",
+ "name": "jp_shura",
+ "model": "\\JP\\buildings\\rs_site\\jp_shura.p3d",
+ "model_dir": "rs_site",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 724,
+  "Resolution 2": 454,
+  "Resolution 3": 321,
+  "Geometry": 326,
+  "Memory": 0,
+  "Roadway": 1,
+  "View Geometry": 326,
+  "Fire Geometry": 326
+ },
+ "loot_points": 2,
+ "config_class": "\tclass Land_JP_Shura: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Timber slide (shura): the lowest 4 bays on trestles + the landing\";\n\t\tmodel=\"\\JP\\buildings\\rs_site\\jp_shura.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_shura_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_shura: Default\n\t{\n\t\tskeletonName=\"jp_shura_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Shura\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Industrial\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"7.302143 0.050000 -0.000000\" range=\"0.640000\" height=\"1.600000\" />",
+  "\t\t\t\t\t\t<point pos=\"8.056429 0.050000 1.088571\" range=\"0.481429\" height=\"1.203571\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "shura"
+ },
+ "bbox": [
+  -1.82,
+  1.82,
+  -0.272,
+  2.859,
+  -8.707,
+  8.795
+ ]
+}

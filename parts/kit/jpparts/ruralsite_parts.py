@@ -445,9 +445,68 @@ def part_adit(variant):
     return p
 
 
+# ------------------------------------------------------------------------------------------------ 26 site_shura
+SHURA = {"bays": 4, "bay": 3.64, "rise": 2.40, "logs": 7, "r": 0.10}
+
+
+def shura(p, x0=0.0, z0=0.0):
+    """The timber slide (shura; W3C2_NOTES TR24): its lowest 4 bays, the trough of 7 logs laid side by side lengthwise
+    (the middle one lowest: a 0.75-wide trough 0.30 deep), falling from `rise` at its upper end (-z) to grade at the
+    landing (z0, +z = the landing); joined over cross-sleepers at every bay end, a log stopped in it near the foot.
+    The trestles under it are the shell's (posts on stones). Returns the bed height function."""
+    K = SHURA
+    L = K["bays"] * K["bay"]
+    zt = z0 - L
+
+    def ybed(z):
+        return 0.10 + (z0 - z) / L * (K["rise"] - 0.10)
+    offs = [(-0.36, 0.26), (-0.24, 0.13), (-0.12, 0.04), (0.0, 0.0), (0.12, 0.04), (0.24, 0.13), (0.36, 0.26)]
+    for b in range(K["bays"]):
+        za, zb = z0 - b * K["bay"], z0 - (b + 1) * K["bay"]
+        for (dx, dy) in offs:
+            p.add(tube((x0 + dx, ybed(za) + dy + K["r"], za + 0.10), (x0 + dx, ybed(zb) + dy + K["r"], zb - 0.10),
+                       K["r"], WOOD, n=6, vis=(1, 2, 3), tag="shura_log"))
+        # one oriented collision slab per bay (the trough's body)
+        from .shapes import oriented_box
+        import math as _m
+        dz = za - zb
+        dy = ybed(zb) - ybed(za)
+        n = _m.hypot(dz, dy)
+        u = (0.0, dy / n, -dz / n)
+        up = (0.0, dz / n, dy / n)
+        # the trough's far-LOD body as three slabs (the middle lower: C15 compares top heights): x centre, half width,
+        # top over the bed
+        for (xc, hx, top) in ((0.0, 0.18, 0.22), (-0.33, 0.15, 0.45), (0.33, 0.15, 0.45)):
+            hy = (top + 0.05) / 2
+            c = (x0 + xc, (ybed(za) + ybed(zb)) / 2 - 0.05 + hy, (za + zb) / 2)
+            p.add(oriented_box(c, (1.0, 0.0, 0.0), up, u, hx, hy, n / 2 + 0.05, WOOD, vis=(), geo=True, view=True,
+                               fire=True, tag="shura_geo"))
+        # the cross-sleeper at the bay's lower end
+        p.add(tube((x0 - 0.55, ybed(za) - 0.05, za), (x0 + 0.55, ybed(za) - 0.05, za), 0.10, SOOT, n=7, vis=(1, 2),
+                   tag="sleeper"))
+    # a log stopped in the trough near the foot (bark-dark), its butt branded
+    zl0, zl1 = z0 - 0.6, z0 - 4.6
+    p.add(tube((x0, ybed(zl0) + 0.20, zl0), (x0, ybed(zl1) + 0.20, zl1), 0.20, SOOT, n=9, vis=(1, 2, 3), tag="log"))
+    return {"L": L, "top": zt, "ybed": ybed}
+
+
+def part_shura(variant):
+    p = Part("jp_p_site_shura", variant, "site", tiers=[1, 2],
+             used_for="the timber slide (shura, TR24; a stone slide later TR20 / TR25): a trough of logs laid "
+                      "lengthwise, falling to the landing; a log stopped in it",
+             recipe="ruralsite_parts.shura(part, x0, z0)",
+             datum="x centred, z 0 = the landing end (+z = the landing), the slide rises towards -z; y 0 = grade")
+    k = shura(p)
+    p.dim("bay_m", "3-4 (GK)", SHURA["bay"], source="W3C2_NOTES TR24")
+    p.dims[-1]["ok"] = True
+    p.conn("landing", (0.0, 0.10, 0.0), note="the slide's foot")
+    return p
+
+
 def register(reg):
     reg("jp_p_site_kiln_dome", ["_charcoal"], part_kiln_dome)
     reg("jp_p_site_kiln_climbing", ["_4ch"], part_kiln_climbing)
     reg("jp_p_site_kiln_updraught", ["_daruma"], part_kiln_updraught)
     reg("jp_p_site_kiln_shaft", ["_stone"], part_kiln_shaft)
     reg("jp_p_site_adit", ["_timbered"], part_adit)
+    reg("jp_p_site_shura", ["_log4"], part_shura)
