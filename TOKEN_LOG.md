@@ -66,6 +66,8 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~21:40 (local) | CA1 (baseline) | launched: one config assembler per PBO (builder fragments merged), budget-class tidy-up | - | - | before: **67%** |
 | 2026-10-01 ~22:05 (local) | CA1 | config assembler: per-builder fragments + tools/assemble_config.py for jp_furniture (522) + jp_site (320), 0 class diffs over 13 PBOs, single-builder rebuild proof, budget classes folded back (9 deliberate overages reported) | **334k** (196 tool calls) | 28 min | |
 | 2026-10-01 ~22:06 (local) | FX4 (baseline) | launched: bell interior, fire-tower head room, stone atlas + per-piece mapping | - | - | before: **68%** |
+| 2026-10-01 ~22:45 (local) | FX4 | bonsho + hansho made hollow (lathe profile direction; lathecheck.py: 6 inside-out shapes -> 0), fire-watch roof 1.10 -> 2.20 m above the deck, stone atlases (make_stone_atlas.py) + per-face turn/offset/mirror | **341k** (175 tool calls) | 38 min | |
+| 2026-10-01 ~22:47 (local) | K3 + D3 (baseline, CONCURRENT) | wave 3a: K3 = wall kit + watari-roka / kairo corridor kit; D3 = 14 dwelling types + honjin / waki-honjin, furnished, compounds + corridors + placement, walk | - | - | before: **69%** |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 

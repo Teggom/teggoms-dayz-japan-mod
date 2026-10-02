@@ -495,3 +495,7 @@
     per-object `over_budget_ok` reason; C5 passes and reports deliberate overages (`python tools/budget_report.py`: 9, all
     deliberate). Props small = 800 as §12 says. Checks: props 842/842 (faces unchanged), TXT 191/191, verify_all 193 (cache + --full),
     bindcheck 193, hangcheck 0, handlecheck 0/40.
+- 2026-10-01: **FX4 DONE** (341k / 38 min; 71b049a, 597e937): bells hollow (fkit.lathe profile direction; new spikes/FX4/lathecheck.py
+  fixed 6 inside-out shapes incl. waniguchi, collars, lids, sedge hat), fire-watch roof 2.20 m above the deck, stone atlases
+  (esearch/materials/make_stone_atlas.py: carved / carved_aged / cut) + uvwood stone mode. Pitfall: re-run make_stone_atlas.py
+  after any stone material maker + repack jp_common. **Wave 3a launched: K3 (kits) + D3 (dwellings; waits for K3 to build compounds).**
