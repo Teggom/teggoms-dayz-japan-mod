@@ -7,3 +7,5 @@
 2026-10-02 17:20:34 | VERIFY_ALL | verify_all --full + bindcheck | 341 buildings / checks below / 0 fail; bindcheck 341 | 5h 25% wk 85%
 2026-10-02 17:24:26 | CHECKS DONE | checks | verify_all 341/22009/0, bind 341, oprw 4316 PASS, floorcheck 0, roomaccess 0, hang 0, handle 40/0, gate 9/0, propfloat 0, propseat 4 kamado pots | 5h 26% wk 85%
 2026-10-02 17:28:13 | CHECKLIST DONE | TEST_CHECKLIST.md | 3d section added below 3c-2; sheets w3d_family / w3d_rooms / w3d_map | 5h 27% wk 86%
+2026-10-02 17:28:41 | PUSHED | W3D (3/3) | checks + sheets + docs | 5h 27% wk 86%
+2026-10-02 17:28:49 | END | W3D | sites 1-5 built + placed; site 6 not done; weekly 84 -> 86 | 5h 27% wk 86%
