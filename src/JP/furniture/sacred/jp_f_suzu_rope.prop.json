@@ -25,9 +25,9 @@
    "abandoned": false,
    "display": "Shrine bell with its pull rope",
    "anchor": "hang",
-   "budget": "furniture",
+   "budget": "detail",
    "faces": {
-    "Resolution 1": 355,
+    "Resolution 1": 828,
     "Resolution 2": 12
    },
    "bbox": [
@@ -49,12 +49,12 @@
      "name": "bell_d",
      "expected": 0.24,
      "measured": 0.24,
-     "tol": 0.005,
+     "tol": 0.01,
      "source": "build_list"
     }
    ],
    "notes": [
-    "the shrine bell with its cloth pull rope, hung from the kohai / eave beam over the offering box (mount beam); hangs 1.82 m; faded = the red gone pink-grey"
+    "FX2: the shrine bell (slotted crotal, rim, loop) with its twisted red / white rope, knot and fringed tassel (mount beam); hangs 1.82 m; faded = the red gone pink-grey"
    ],
    "master": "spikes/W2F/out/sacred/jp_f_suzu_rope.p3d",
    "mount": "beam",
@@ -69,9 +69,9 @@
    "abandoned": true,
    "display": "Shrine bell, the rope faded",
    "anchor": "hang",
-   "budget": "furniture",
+   "budget": "detail",
    "faces": {
-    "Resolution 1": 355,
+    "Resolution 1": 828,
     "Resolution 2": 12
    },
    "bbox": [
@@ -93,12 +93,12 @@
      "name": "bell_d",
      "expected": 0.24,
      "measured": 0.24,
-     "tol": 0.005,
+     "tol": 0.01,
      "source": "build_list"
     }
    ],
    "notes": [
-    "the shrine bell with its cloth pull rope, hung from the kohai / eave beam over the offering box (mount beam); hangs 1.82 m; faded = the red gone pink-grey"
+    "FX2: the shrine bell (slotted crotal, rim, loop) with its twisted red / white rope, knot and fringed tassel (mount beam); hangs 1.82 m; faded = the red gone pink-grey"
    ],
    "master": "spikes/W2F/out/sacred/jp_f_suzu_rope_faded.p3d",
    "mount": "beam",

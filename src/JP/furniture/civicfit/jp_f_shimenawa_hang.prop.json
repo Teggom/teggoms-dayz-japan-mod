@@ -27,13 +27,13 @@
    "anchor": "hang",
    "budget": "medium",
    "faces": {
-    "Resolution 1": 1014,
+    "Resolution 1": 1048,
     "Resolution 2": 6
    },
    "bbox": [
-    -0.809,
-    0.809,
-    -0.555,
+    -0.807,
+    0.808,
+    -0.52,
     0.0,
     -0.04,
     0.04
@@ -59,7 +59,7 @@
    "master": "spikes/W2F/out/civicfit/jp_f_shimenawa_hang.p3d",
    "mount": "beam",
    "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
-   "hang_len": 0.555
+   "hang_len": 0.52
   }
  ],
  "made_by": "spikes/W2F/build_w2f.py (agent W2F, 2026-10-01) on spikes/B3a/build.py"

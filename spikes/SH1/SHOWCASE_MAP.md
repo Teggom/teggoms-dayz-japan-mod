@@ -500,3 +500,36 @@ Regenerate: `python spikes/W2F/layout_w2f.py` then `python spikes/W2F/map_md.py`
 | K7.s1 | `jp_s_lantern_sign_tsuji.p3d` | 976.03 | 1074.87 | 0 | 0.00 | the ward lantern |
 
 <!-- W2F END -->
+
+<!-- FX2 BEGIN -->
+
+## FX2: komainu, kitsune and lantern pairs (agent FX2, 2026-10-01)
+
+Regenerate: `python spikes/FX2/layout_fx2.py`. Pairs are symmetric about their approach axis: the 'a' (open mouth) on the right and the 'un' on the left as one faces the shrine, toed in 15 deg. Every lantern on the SH1 / W2F approaches already stood in a mirrored pair (S04/S05 ... S29/S30, S92-S95, V4/V5, T6/T7, U6/U7); the Inari path had none: FX-I2 adds one.
+
+### Town shrine approach (map fx2_map_guardians.jpg, panel P; with SH1 S01-S32)
+
+| ID | Class | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| FX-P1a | `StaticObj_JP_S_Komainu_B_Un` | 1021.45 | 1102.10 | 165 | -0.00 | komainu pair, compact Edo form, just inside the ichi-no-torii S01 (west / left, facing the shrine) |
+| FX-P1b | `StaticObj_JP_S_Komainu_B_A` | 1026.55 | 1102.10 | 195 | 0.00 | komainu pair, compact Edo form, just inside the ichi-no-torii S01 (east / right) |
+| FX-P2a | `StaticObj_JP_S_Komainu_A_Un` | 1021.30 | 1138.90 | 165 | -0.02 | komainu pair, upright form (un with horn), inside the ni-no-torii S14 (west / left, facing the shrine) |
+| FX-P2b | `StaticObj_JP_S_Komainu_A_A` | 1026.70 | 1138.90 | 195 | -0.02 | komainu pair, upright form (un with horn), inside the ni-no-torii S14 (east / right) |
+
+### Village shrine (panel V; with W2F V1-V5)
+
+| ID | Class | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| FX-V1a | `StaticObj_JP_S_Komainu_A_Un_Moss` | 942.80 | 1059.50 | 165 | 0.00 | komainu pair, upright form, mossy (old village shrine), outside the torii V3 (west / left, facing the shrine) |
+| FX-V1b | `StaticObj_JP_S_Komainu_A_A_Moss` | 947.20 | 1059.50 | 195 | 0.00 | komainu pair, upright form, mossy (old village shrine), outside the torii V3 (east / right) |
+
+### Inari corner (panel I; with SH1 S80-S85, I01-I16)
+
+| ID | Class | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| FX-I1a | `StaticObj_JP_S_Kitsune_Key` | 1056.20 | 1223.90 | 165 | -0.11 | Inari fox pair (key / jewel), below the vermilion torii S80 (west / left, facing the shrine) |
+| FX-I1b | `StaticObj_JP_S_Kitsune_Jewel` | 1059.80 | 1223.90 | 195 | -0.11 | Inari fox pair (key / jewel), below the vermilion torii S80 (east / right) |
+| FX-I2a | `StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss` | 1056.00 | 1221.40 | 90 | -0.13 | lantern pair on the Inari path, Kasuga 1.8 mossy (west) |
+| FX-I2b | `StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss` | 1060.00 | 1221.40 | 270 | -0.15 | lantern pair on the Inari path (east) |
+
+<!-- FX2 END -->

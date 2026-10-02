@@ -33,7 +33,6 @@ Convert model P:\JP\site\grave\jp_s_grave_stones_board_s.p3d -> D:\DayZ-Server_A
 </model>
 Convert model P:\JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_board_tall_moss.p3d
 <model = "P:\JP\site\grave\jp_s_grave_stones_board_tall_moss.p3d">
-TexMaterial loading race detected for jp\common\materials\stone\jp_m_stone_carved_w2.rvmat
 </model>
 Convert model P:\JP\site\grave\jp_s_grave_stones_boat_halo.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_boat_halo.p3d
 <model = "P:\JP\site\grave\jp_s_grave_stones_boat_halo.p3d">
@@ -49,7 +48,6 @@ Convert model P:\JP\site\grave\jp_s_grave_stones_field_mound.p3d -> D:\DayZ-Serv
 </model>
 Convert model P:\JP\site\grave\jp_s_grave_stones_field_pair.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_field_pair.p3d
 <model = "P:\JP\site\grave\jp_s_grave_stones_field_pair.p3d">
-TexMaterial loading race detected for jp\common\materials\stone\jp_m_stone_field_w1.rvmat
 </model>
 Convert model P:\JP\site\grave\jp_s_grave_stones_gorinto_heap.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\grave\jp_s_grave_stones_gorinto_heap.p3d
 <model = "P:\JP\site\grave\jp_s_grave_stones_gorinto_heap.p3d">
@@ -317,7 +315,7 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_forest.p3d: 0
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_large.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_kosatsu_std.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_ab_tattered.p3d: -0.24,0.34
-DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_len_1ken.p3d: 0.00,-0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_len_1ken.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_len_2ken.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_wrap_d06.p3d: -0.00,0.06
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\roadside\jp_s_shimenawa_wrap_d10.p3d: -0.01,0.06
@@ -358,6 +356,30 @@ Convert model P:\JP\site\shrine\jp_s_chozubachi_natural.p3d -> D:\DayZ-Server_AI
 </model>
 Convert model P:\JP\site\shrine\jp_s_chozubachi_small.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_chozubachi_small.p3d
 <model = "P:\JP\site\shrine\jp_s_chozubachi_small.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_kitsune_jewel.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_kitsune_jewel.p3d
+<model = "P:\JP\site\shrine\jp_s_kitsune_jewel.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_kitsune_key.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_kitsune_key.p3d
+<model = "P:\JP\site\shrine\jp_s_kitsune_key.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_komainu_a_a.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_komainu_a_a.p3d
+<model = "P:\JP\site\shrine\jp_s_komainu_a_a.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_komainu_a_a_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_komainu_a_a_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_komainu_a_a_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_komainu_a_un.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_komainu_a_un.p3d
+<model = "P:\JP\site\shrine\jp_s_komainu_a_un.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_komainu_a_un_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_komainu_a_un_moss.p3d
+<model = "P:\JP\site\shrine\jp_s_komainu_a_un_moss.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_komainu_b_a.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_komainu_b_a.p3d
+<model = "P:\JP\site\shrine\jp_s_komainu_b_a.p3d">
+</model>
+Convert model P:\JP\site\shrine\jp_s_komainu_b_un.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_komainu_b_un.p3d
+<model = "P:\JP\site\shrine\jp_s_komainu_b_un.p3d">
 </model>
 Convert model P:\JP\site\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d
 <model = "P:\JP\site\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d">
@@ -460,7 +482,7 @@ Convert model P:\JP\site\shrine\jp_s_torii_stone_l.p3d -> D:\DayZ-Server_AI-2026
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_l_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_l_rope_shide.p3d">
-UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185582, max 0.00390625, min 0.00185016
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00185723, max 0.00390625, min 0.00184878
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_m.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_m.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_m.p3d">
@@ -478,15 +500,15 @@ UV mapping too varied on jp\common\materials\stone\jp_m_stone_carved_aged_w2_co.
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_s_moss_rope_shide.p3d">
-UV mapping too varied on jp\common\materials\stone\jp_m_stone_carved_aged_w2_co.paa, stage 0: texel size used 0.0019536, max 0.00406989, min 0.001952
+UV mapping too varied on jp\common\materials\stone\jp_m_stone_carved_aged_w2_co.paa, stage 0: texel size used 0.00195336, max 0.00406782, min 0.00195233
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_s_rope.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_rope.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_s_rope.p3d">
-UV mapping too varied on jp\common\materials\stone\jp_m_stone_carved_aged_w1_co.paa, stage 0: texel size used 0.00195344, max 0.00406423, min 0.00195203
+UV mapping too varied on jp\common\materials\stone\jp_m_stone_carved_aged_w1_co.paa, stage 0: texel size used 0.00195335, max 0.00406648, min 0.00195246
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_stone_s_rope_shide.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_stone_s_rope_shide.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_stone_s_rope_shide.p3d">
-UV mapping too varied on jp\common\materials\stone\jp_m_stone_carved_aged_w1_co.paa, stage 0: texel size used 0.00195351, max 0.00407118, min 0.00195229
+UV mapping too varied on jp\common\materials\stone\jp_m_stone_carved_aged_w1_co.paa, stage 0: texel size used 0.00195335, max 0.00406599, min 0.00195246
 </model>
 Convert model P:\JP\site\shrine\jp_s_torii_wood_ab_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\shrine\jp_s_torii_wood_ab_leaning.p3d
 <model = "P:\JP\site\shrine\jp_s_torii_wood_ab_leaning.p3d">
@@ -581,6 +603,14 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_chozubachi_ab_dry.p3d: 
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_chozubachi_large.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_chozubachi_natural.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_chozubachi_small.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_kitsune_jewel.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_kitsune_key.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_komainu_a_a.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_komainu_a_a_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_komainu_a_un.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_komainu_a_un_moss.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_komainu_b_a.p3d: 0.00,0.00
+DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_komainu_b_un.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_ab_hoju_moss.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_ab_toppled.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\site\shrine\jp_s_stone_lantern_joyato.p3d: 0.00,0.00
@@ -922,8 +952,8 @@ UV mapping too varied on jp\common\materials\metal\jp_m_metal_iron_w1_co.paa, st
 </model>
 Convert model P:\JP\site\water\jp_s_well_hanetsurube_well.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_hanetsurube_well.p3d
 <model = "P:\JP\site\water\jp_s_well_hanetsurube_well.p3d">
-UV mapping too varied on jp\common\materials\metal\jp_m_metal_iron_w1_co.paa, stage 0: texel size used 0.00193705, max 0.00390625, min 0.00178109
 UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00194077, max 0.00390625, min 0.00183227
+UV mapping too varied on jp\common\materials\metal\jp_m_metal_iron_w1_co.paa, stage 0: texel size used 0.00193705, max 0.00390625, min 0.00178109
 </model>
 Convert model P:\JP\site\water\jp_s_well_tsurube_ab_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_ab_open.p3d
 <model = "P:\JP\site\water\jp_s_well_tsurube_ab_open.p3d">
@@ -936,8 +966,8 @@ UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, st
 </model>
 Convert model P:\JP\site\water\jp_s_well_tsurube_curb_stone.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_curb_stone.p3d
 <model = "P:\JP\site\water\jp_s_well_tsurube_curb_stone.p3d">
-UV mapping too varied on jp\common\materials\metal\jp_m_metal_iron_w1_co.paa, stage 0: texel size used 0.00195214, max 0.00390625, min 0.00178318
 UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00193765, max 0.00390625, min 0.00182672
+UV mapping too varied on jp\common\materials\metal\jp_m_metal_iron_w1_co.paa, stage 0: texel size used 0.00195214, max 0.00390625, min 0.00178318
 </model>
 Convert model P:\JP\site\water\jp_s_well_tsurube_curb_tub.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\water\jp_s_well_tsurube_curb_tub.p3d
 <model = "P:\JP\site\water\jp_s_well_tsurube_curb_tub.p3d">
@@ -1100,8 +1130,8 @@ UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, st
 </model>
 Convert model P:\JP\site\yard\jp_s_straw_stack_nio_cyl.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_straw_stack_nio_cyl.p3d
 <model = "P:\JP\site\yard\jp_s_straw_stack_nio_cyl.p3d">
-UV mapping too varied on jp\common\materials\straw\jp_m_straw_stack_w1_co.paa, stage 0: texel size used 0.0060754, max 0.0180996, min 0.00390625
 UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00194642, max 0.00390625, min 0.00192198
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_stack_w1_co.paa, stage 0: texel size used 0.0060754, max 0.0180996, min 0.00390625
 </model>
 Convert model P:\JP\site\yard\jp_s_straw_stack_stook.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3b\_build\binarized\yard\jp_s_straw_stack_stook.p3d
 <model = "P:\JP\site\yard\jp_s_straw_stack_stook.p3d">

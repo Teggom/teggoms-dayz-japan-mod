@@ -25,18 +25,18 @@
    "abandoned": false,
    "display": "Kagura masks and bell tree on pegs",
    "anchor": "wall",
-   "budget": "furniture",
+   "budget": "detail_l",
    "faces": {
-    "Resolution 1": 364,
-    "Resolution 2": 12
+    "Resolution 1": 2128,
+    "Resolution 2": 612
    },
    "bbox": [
     -0.55,
     0.55,
-    1.0,
+    0.99,
     1.64,
     -0.001,
-    0.112
+    0.117
    ],
    "collision": false,
    "footprint_xz": null,
@@ -54,7 +54,7 @@
     }
    ],
    "notes": [
-    "kagura masks (okina, oni, plain) on pegs + the kagura bell tree, stage back wall (mount wall)"
+    "FX2: four sculpted kagura masks (okina, oni, okame, hyottoko) on pegs + the kagura bell tree (15 bells, 5 ribbons), stage back wall (mount wall)"
    ],
    "master": "spikes/W2F/out/sacred/jp_f_kagura_masks.p3d",
    "mount": "wall",

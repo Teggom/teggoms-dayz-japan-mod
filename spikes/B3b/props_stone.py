@@ -3,7 +3,9 @@ Stone endures (dead-world rule): standing, mossier (jp_m_decal_moss patches on t
 (jp_m_decal_carved_text cells, Yuji Syuku), a rare toppled or sunk variant. Bibs: jp_m_textile_bib_red (added by B3b)
 on about 1 in 3 (the `_bib` variant; G1 A3 answer 4)."""
 import math
+import os
 import random
+import sys
 
 import skit
 from skit import (core, box, prism, lathe, xf, xfs, flat_poly, W, col, col_solid, cyl_col, SPart, pole, beam, rope_path,
@@ -11,43 +13,25 @@ from skit import (core, box, prism, lathe, xf, xfs, flat_poly, W, col, col_solid
                   RIVER, WOOD, DARK, ROOFB, CTEXT, BIB, BAMBOO, LEAF)
 from props_wood import M
 
+DEV = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+
 X, Y, Z = (1.0, 0.0, 0.0), (0.0, 1.0, 0.0), (0.0, 0.0, 1.0)
 
 
 # ================================================================================================ the Jizo figure
-def jizo_figure(H, vis_hi=(1,), vis_lo=(2,), vis_3=(3,), wear=None, relief=False, n=10):
-    """Standing monk (tsuji-jizo) of figure height H, base on y = 0, facing +z: robe body (flattened lathe), shaven
-    head, hands at the chest holding the jewel, the shakujo staff at his right (the viewer's left). relief=True: the
-    back half is cut (boat-halo relief)."""
-    zs = 0.78                                          # body depth / width
-    prof = [(0.0, 0.0), (0.17 * H, 0.0), (0.175 * H, 0.06 * H), (0.155 * H, 0.45 * H), (0.165 * H, 0.66 * H),
-            (0.14 * H, 0.74 * H), (0.065 * H, 0.775 * H), (0.075 * H, 0.80 * H), (0.095 * H, 0.86 * H),
-            (0.085 * H, 0.94 * H), (0.045 * H, 0.985 * H), (0.0, H)]
-    out = []
-    body = lathe(prof, n, CARVED, vis=vis_hi, wear=wear)
-    body = scale_z(body, zs if not relief else zs * 0.5)
-    out.append(body)
-    lo = lathe([(0.0, 0.0), (0.17 * H, 0.0), (0.16 * H, 0.70 * H), (0.08 * H, 0.78 * H), (0.09 * H, 0.9 * H),
-                (0.0, H)], 6, CARVED, vis=vis_lo, wear=wear, smooth=False)
-    out.append(scale_z(lo, zs if not relief else zs * 0.5))
-    if vis_3:
-        l3 = lathe([(0.0, 0.0), (0.17 * H, 0.0), (0.10 * H, 0.80 * H), (0.0, H)], 5, CARVED, vis=vis_3, wear=wear,
-                   smooth=False)
-        out.append(scale_z(l3, zs if not relief else zs * 0.5))
-    # hands and jewel at the chest (a rounded block proud of the robe)
-    hz = 0.155 * H * (zs if not relief else zs * 0.5)
-    hb = lathe([(0.0, -0.03 * H), (0.05 * H, -0.02 * H), (0.05 * H, 0.03 * H), (0.0, 0.045 * H)], 6, CARVED, vis=vis_hi,
-               wear=wear)
-    out.append(xf(hb, rx=90.0, t=(0.02 * H, 0.58 * H, hz)))
-    # the staff at the figure's right hand (the viewer's left: -x from the front)
-    sx = -0.20 * H
-    out.append(pole((sx, 0.0, hz * 0.6), (sx, 1.02 * H, hz * 0.6), 0.012 * H + 0.004, CARVED, n=4, vis=vis_hi,
-                    wear=wear))
-    ring = lathe([(0.05 * H, -0.01 * H), (0.05 * H, 0.01 * H)], 6, CARVED, vis=vis_hi, smooth=False)
-    out.append(xf(ring, rx=90.0, t=(sx, 1.02 * H + 0.04 * H, hz * 0.6)))
-    out.append(pole((sx + 0.03 * H, 0.5 * H, hz * 0.6), (-0.10 * H, 0.52 * H, hz * 0.9), 0.02 * H, CARVED, n=4,
-                    vis=vis_hi, wear=wear))
-    return out
+def jizo_figure(H, vis_hi=(1,), vis_lo=(2,), vis_3=(3,), wear=None, relief=False, n=10, kind="jizo_stone"):
+    """Standing monk (tsuji-jizo) of figure height H, base on y = 0, facing +z. FX2 (2026-10-01, Stephen: 'even the
+    Jizo statues are bare bones; the staff has a see-through top'): the sculpted stone Jizo of spikes/FX2 (photo
+    references research/statues/REFS.md: Met 53175 / 76084; proportions research/statues/NOTES.md): shaven head with
+    a face, robe with the kesa, the jewel in the left hand, the ringed staff (closed loop, beads) in the right (the
+    figure's right = +x, the viewer's left in game). kind: 'jizo_stone' (roadside), 'jizo_child' (a child's grave:
+    hands in prayer), 'kannon' (the bato Kannon relief). relief=True: the depth halved (boat-halo / panel relief).
+    Res 1 / 2 / 3 = the mesh's three LODs (vis_lo / vis_3 empty skips one). n is unused (kept for callers)."""
+    sys.path.insert(0, os.path.join(DEV, "spikes", "FX2"))
+    import fx2props as FX
+    # the aged carved stone (FP1's irregular lichen, 2 m tile), not stone_carved's dot pattern (which reads as
+    # camouflage on a sculpted surface)
+    return FX.figure(kind, H, "stone_carved_aged", vis=(vis_hi, vis_lo, vis_3), sz=0.5 if relief else 1.0, wear=wear)
 
 
 def scale_z(s, k):
@@ -80,20 +64,25 @@ def plinth(kind, w, h, wear=None):
     return out, h
 
 
-def bib_and_cap(H, zs=0.78, wear="_w2"):
-    """A faded rag bib tied at the neck, hanging over the chest, and a knitted-cloth cap (jp_m_textile_bib_red)."""
-    r = 0.155 * H * zs
-    ny = 0.77 * H
+def bib_and_cap(H, zs=0.78, wear="_w2", form="stone"):
+    """A faded rag bib tied at the neck, hanging over the chest, and a knitted-cloth cap (jp_m_textile_bib_red).
+    FX2: fitted to the sculpted figures: form 'stone' (the roadside Jizo mesh: neck 0.79 H, chest 0.145 H) or
+    'child' (the child's Jizo: neck 0.70 H, robe 0.17-0.19 H, a round head 0.116 H)."""
+    if form == "child":
+        ny, r0, r1, drop, zs, cap = 0.705 * H, 0.08 * H, 0.20 * H, 0.22 * H, 0.82, (0.125, 0.80, 0.995)
+    else:
+        ny, r0, r1, drop, zs, cap = 0.795 * H, 0.062 * H, 0.165 * H, 0.21 * H, 0.80, (0.088, 0.885, 1.0)
 
     def f(u, v):
         a = math.pi * (u - 0.5) * 1.3
-        rr = 0.075 * H + (0.17 * H - 0.075 * H) * v
-        y = ny - 0.26 * H * v * (1 - 0.35 * abs(u - 0.5))
-        return (rr * math.sin(a), y, rr * zs * math.cos(a) + 0.012 + 0.02 * v)
-    out = [grid_sheet(f, 4, 2, BIB, vis=(1,), wear=wear)]
-    cap = lathe([(0.10 * H, 0.89 * H), (0.098 * H, 0.95 * H), (0.05 * H, 0.998 * H), (0.0, 1.01 * H)], 8, BIB, vis=(1,),
-                wear=wear)
-    out.append(scale_z(cap, 0.95))
+        rr = r0 + (r1 - r0) * v
+        y = ny - drop * v * (1 - 0.35 * abs(u - 0.5))
+        return (rr * math.sin(a), y, rr * zs * math.cos(a) + 0.006 + 0.012 * v)
+    out = [grid_sheet(f, 6, 3, BIB, vis=(1,), wear=wear)]
+    cr, cy0, ctop = cap
+    cap = lathe([(cr * H, cy0 * H), (cr * 0.98 * H, (cy0 + 0.06) * H), (cr * 0.55 * H, (ctop - 0.005) * H),
+                 (0.0, (ctop + 0.012) * H)], 10, BIB, vis=(1,), wear=wear)
+    out.append(xf(scale_z(cap, 0.95), t=(0.0, 0.0, -0.01 * H)))
     return out
 
 
@@ -103,8 +92,8 @@ def jizo(kind):
     size = {"s": 0.45, "m": 0.90, "l": 1.36}.get(kind, 0.90)
     if kind == "halo":
         size = 0.62
-    P = SPart("stone_jizo", budget="small", res3=True, mass={0.45: 60.0, 0.90: 300.0, 1.36: 900.0}.get(size, 250.0),
-              bury=0.06)
+    P = SPart("stone_jizo", budget="statue", res3=True, mass={0.45: 60.0, 0.90: 300.0, 1.36: 900.0}.get(size, 250.0),
+              bury=0.06)   # FX2: a sculpted statue (PLAYBOOK §12)
     pk = "lotus" if kind == "l" else "square"
     pw = {0.45: 0.36, 0.62: 0.50, 0.90: 0.50, 1.36: 0.72}[size]
     ph = {0.45: 0.20, 0.62: 0.22, 0.90: 0.30, 1.36: 0.42}[size]
@@ -124,7 +113,7 @@ def jizo(kind):
         total = top + hh
     else:
         fig = xfs(jizo_figure(size, wear=wear), t=(0.0, top, 0.0))
-        cols = [cyl_col(0.17 * size, top, top + size, n=8, mat=CARVED)]
+        cols = [cyl_col(0.19 * size, top, top + size, n=8, mat=CARVED)]
         total = top + size
         if kind in ("m", "l", "bib", "offer", "ab_tipped"):
             fig.append(text_on((0.0, ph * 0.28, pw / 2), X, Y, min(0.22, ph * 0.5), CTEXT, "enmei_jizo",
@@ -151,7 +140,7 @@ def jizo(kind):
         fig.append(litter(7, 0.0, fx, 0.25))
     if kind == "ab_tipped":
         # toppled face-down beside the plinth (quake), the head cracked off
-        head = [s for s in fig if s.bbox()[2] > top + 0.74 * size and s.bbox()[3] <= top + 1.001 * size]
+        head = [s for s in fig if getattr(s, "fx2part", None) == "head"]                 # FX2: the head part
         body = [s for s in fig if not any(s is h for h in head)]
         body = [s for s in body if s.mats != CTEXT]
         fall = xfs(xfs(body, t=(0.0, -top, 0.0)), rx=92.0)
@@ -272,7 +261,8 @@ def round_stone(seed=6, d=0.55, h=0.60, cellname="dosojin", wear=None):
 def stele(kind):
     ab = kind.startswith("ab")
     wear = "_w2" if ab else None
-    P = SPart("stele", budget="small", res3=False, mass=250.0, bury=0.13)
+    fig = kind in ("koshin", "ab_tipped", "relief_panel")             # FX2: the sculpted relief figure
+    P = SPart("stele", budget="statue" if fig else "small", res3=False, mass=250.0, bury=0.13)
     if kind == "koshin" or kind == "ab_tipped":
         ss, cs, top = koshin_pillar(wear=wear)
         if ab:
@@ -287,7 +277,8 @@ def stele(kind):
     elif kind == "relief_panel":
         # bato Kannon: an arched panel with a niche and the figure in relief, the name carved beside it
         ss, cs, top = arched(w=0.46, h=0.85, t=0.18, cellname="bato_kanzeon", wear=wear)
-        ss += xfs([scale_z(s, 0.5) for s in jizo_figure(0.50, relief=True, vis_3=(), vis_lo=())], t=(-0.06, 0.26, 0.09))
+        ss += xfs([scale_z(s, 0.5) for s in jizo_figure(0.50, relief=True, vis_3=(), vis_lo=(), kind="kannon")],
+                  t=(-0.06, 0.26, 0.09))                               # FX2: a Kannon, not a Jizo
         ss = [s for s in ss if not (s.mats == CTEXT)]
         ss.append(text_on((0.15, 0.14 + 0.85 * 0.5, 0.09), X, Y, 0.36, CTEXT, "bato_kanzeon", wear="_w1"))
         P.dim("panel_h", 0.85, 0.85, tol=0.01)
@@ -382,7 +373,7 @@ def jizo_hut(kind):
     ab = kind.startswith("ab")
     wear = "_w2" if ab else None
     if kind in ("box", "ab_open"):
-        P = SPart("jizo_hut", budget="box", res3=True, mass=120.0, bury=0.12)
+        P = SPart("jizo_hut", budget="statue", res3=True, mass=120.0, bury=0.12)   # FX2: holds a statue
         S, FL, WH = 0.90, 0.60, 1.40            # half-ken plan, raised floor 0.6, walls to 1.4, ridge ~1.75
         # stone base under a board box
         P.add(core.stone(random.Random(3), 0.0, 0.0, 1.0, 1.0, 0.25, 0.20, FIELD, bury=0.06, n=8, vis=(1, 2, 3)))
@@ -418,7 +409,7 @@ def jizo_hut(kind):
         P.dim("floor_h", 0.60, FL, tol=0.01)
         P.dim("height", 1.75, WH + 0.33 + 0.07, tol=0.1)
     elif kind == "hall":
-        P = SPart("jizo_hut", budget="medium", res3=True, mass=900.0, bury=0.15)
+        P = SPart("jizo_hut", budget="statue", res3=True, mass=900.0, bury=0.15)
         S, EV, RG = 1.82, 1.90, 2.80
         for sx in (-1, 1):
             for sz in (-1, 1):
@@ -457,7 +448,7 @@ def jizo_hut(kind):
         P.dim("eave_h", 1.90, EV, tol=0.01)
         P.dim("ridge_h", 2.80, RG, tol=0.1)
     else:   # stone_roof: two upright slabs and a flat stone roof over a small figure (mountain)
-        P = SPart("jizo_hut", budget="box", res3=True, mass=700.0, bury=0.10)
+        P = SPart("jizo_hut", budget="statue", res3=True, mass=700.0, bury=0.10)
         for sx in (-1, 1):
             sl = core.stone(random.Random(20 + sx), sx * 0.34, 0.0, 0.14, 0.55, 0.70, 0.70, FIELD, bury=0.08, n=6,
                             flat_top=0.9, vis=(1, 2, 3))

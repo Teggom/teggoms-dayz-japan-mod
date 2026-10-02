@@ -56,6 +56,11 @@ LITTER = "decal_litter"
 DUSTY = {WOOD, LACQUER, DARK, PALE}   # up faces of these take the dusty wear
 
 BUDGET = {"furniture": 1000, "small": 300, "medium": 1500}   # FP2: medium = skit's / G1 A3's 1,500 prop ceiling
+# FX2 (2026-10-01, PLAYBOOK §12 as Stephen set it): detail / hero props 1,500; a statue 'as needed (aim <= 3,000)'
+# +50 % = 4,500; an altar dais = its image (statue) + the cabinet and altar pieces (furniture, 1,000) = 5,500
+# detail_l = a detail / hero prop at the +50 % Stephen allows when it needs it: the mask wall (four sculpted masks + the
+# bell tree in one model), the temple bell with its striker log and ropes
+BUDGET.update({"detail": 1500, "detail_l": 2250, "statue": 4500, "altar": 5500})
 
 
 def add_smooth_face(lod, pts, outward, uvs, vns, texture, material):

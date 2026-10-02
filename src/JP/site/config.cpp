@@ -1462,6 +1462,56 @@ class CfgVehicles
 		displayName="Stone torii fallen in an old earthquake, mossy and leaf-covered";
 		model="\JP\site\shrine\jp_s_torii_fallen_stone_quake_old.p3d";
 	};
+	// jp_s_komainu (shrine)
+	class StaticObj_JP_S_Komainu_A_A: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone komainu, open mouth (a), upright form";
+		model="\JP\site\shrine\jp_s_komainu_a_a.p3d";
+	};
+	class StaticObj_JP_S_Komainu_A_Un: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone komainu, closed mouth (un) with horn, upright form";
+		model="\JP\site\shrine\jp_s_komainu_a_un.p3d";
+	};
+	class StaticObj_JP_S_Komainu_B_A: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone komainu, open mouth (a), compact Edo form";
+		model="\JP\site\shrine\jp_s_komainu_b_a.p3d";
+	};
+	class StaticObj_JP_S_Komainu_B_Un: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone komainu, closed mouth (un), compact Edo form";
+		model="\JP\site\shrine\jp_s_komainu_b_un.p3d";
+	};
+	class StaticObj_JP_S_Komainu_A_A_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone komainu (a), upright form, mossy and weathered";
+		model="\JP\site\shrine\jp_s_komainu_a_a_moss.p3d";
+	};
+	class StaticObj_JP_S_Komainu_A_Un_Moss: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone komainu (un), upright form, mossy and weathered";
+		model="\JP\site\shrine\jp_s_komainu_a_un_moss.p3d";
+	};
+	// jp_s_kitsune (shrine)
+	class StaticObj_JP_S_Kitsune_Key: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone Inari fox with the key in its mouth";
+		model="\JP\site\shrine\jp_s_kitsune_key.p3d";
+	};
+	class StaticObj_JP_S_Kitsune_Jewel: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stone Inari fox with the jewel in its mouth";
+		model="\JP\site\shrine\jp_s_kitsune_jewel.p3d";
+	};
 	// jp_s_hasa (yard_life)
 	class StaticObj_JP_S_Hasa_Low: HouseNoDestruct
 	{

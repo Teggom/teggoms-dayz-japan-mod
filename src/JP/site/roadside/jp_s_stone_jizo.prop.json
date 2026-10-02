@@ -54,11 +54,11 @@
    "display": "Stone Jizo, small (0.45)",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 163,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2415,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -67,7 +67,7 @@
     -0.18,
     0.18,
     -0.05,
-    0.7,
+    0.695,
     -0.183,
     0.18
    ],
@@ -121,11 +121,11 @@
    "display": "Stone Jizo, standard (0.90)",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 164,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2416,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -134,7 +134,7 @@
     -0.25,
     0.25,
     -0.05,
-    1.299,
+    1.289,
     -0.253,
     0.253
    ],
@@ -190,20 +190,20 @@
    "display": "Stone Jizo, large on a lotus (1.36)",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 218,
-    "Resolution 2": 54,
-    "Resolution 3": 39,
+    "Resolution 1": 2470,
+    "Resolution 2": 882,
+    "Resolution 3": 314,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
    },
    "bbox": [
     -0.36,
-    0.36,
+    0.371,
     -0.05,
-    1.93,
+    1.915,
     -0.363,
     0.363
    ],
@@ -259,10 +259,10 @@
    "display": "Boat-halo Jizo stone (funagata)",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 184,
-    "Resolution 2": 59,
+    "Resolution 1": 2436,
+    "Resolution 2": 887,
     "Resolution 3": 29,
     "Geometry": 23,
     "View Geometry": 23,
@@ -328,11 +328,11 @@
    "display": "Stone Jizo with a faded rag bib and cap",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 204,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2482,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -341,7 +341,7 @@
     -0.25,
     0.25,
     -0.05,
-    1.299,
+    1.289,
     -0.253,
     0.253
    ],
@@ -397,11 +397,11 @@
    "display": "Stone Jizo with offerings (cup, stones, dead flowers)",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 280,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2532,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -410,7 +410,7 @@
     -0.305,
     0.25,
     -0.05,
-    1.299,
+    1.289,
     -0.253,
     0.556
    ],
@@ -466,11 +466,11 @@
    "display": "Stone Jizo toppled, head broken off",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 167,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2419,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -479,9 +479,9 @@
     -0.519,
     0.937,
     -0.05,
-    0.303,
+    0.315,
     -0.253,
-    1.127
+    1.274
    ],
    "collision": [
     "geo",

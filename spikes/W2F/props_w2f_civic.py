@@ -224,7 +224,7 @@ def blade_rack(empty=False):
 def shimenawa_hang(L=1.60):
     P = LPart("shimenawa_hang", budget="medium", mass=2.0, anchor="hang", flat=True)
     y = -0.22
-    out = w2kit.torii_rope(-L / 2, L / 2, y, 0.0, r=0.03, drop=0.10, with_shide=True, wear="_w2", seed=7)
+    out = w2kit.torii_rope(-L / 2, L / 2, y, 0.0, r=0.03, drop=0.075 * L / 1.82, with_shide=True, wear="_w2", seed=7)  # FX2 sag
     for x in (-L / 2, L / 2):
         out.append(cord((x, y + 0.02, 0.0), (x, 0.0, 0.0), 0.005))
     for s in out:

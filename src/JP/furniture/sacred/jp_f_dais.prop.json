@@ -25,10 +25,10 @@
    "abandoned": true,
    "display": "Altar dais with Amida in its zushi (Jodo)",
    "anchor": "floor",
-   "budget": "medium",
+   "budget": "altar",
    "faces": {
-    "Resolution 1": 510,
-    "Resolution 2": 84,
+    "Resolution 1": 4622,
+    "Resolution 2": 1444,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -37,7 +37,7 @@
     -1.2,
     1.2,
     0.0,
-    2.03,
+    1.962,
     -0.465,
     0.425
    ],
@@ -83,10 +83,10 @@
    "abandoned": true,
    "display": "Altar dais with Shaka in its zushi (Zen)",
    "anchor": "floor",
-   "budget": "medium",
+   "budget": "altar",
    "faces": {
-    "Resolution 1": 504,
-    "Resolution 2": 84,
+    "Resolution 1": 4051,
+    "Resolution 2": 1497,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -95,7 +95,7 @@
     -1.0,
     1.0,
     0.0,
-    2.03,
+    2.032,
     -0.465,
     0.425
    ],
@@ -141,10 +141,10 @@
    "abandoned": true,
    "display": "Altar dais with a standing Kannon",
    "anchor": "floor",
-   "budget": "medium",
+   "budget": "altar",
    "faces": {
-    "Resolution 1": 455,
-    "Resolution 2": 84,
+    "Resolution 1": 3819,
+    "Resolution 2": 1423,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -153,7 +153,7 @@
     -0.8,
     0.8,
     0.0,
-    2.16,
+    1.965,
     -0.39,
     0.35
    ],
@@ -199,10 +199,10 @@
    "abandoned": true,
    "display": "Altar dais with a standing Jizo",
    "anchor": "floor",
-   "budget": "medium",
+   "budget": "altar",
    "faces": {
-    "Resolution 1": 523,
-    "Resolution 2": 96,
+    "Resolution 1": 3690,
+    "Resolution 2": 1352,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -211,7 +211,7 @@
     -0.75,
     0.75,
     0.0,
-    2.14,
+    1.88,
     -0.39,
     0.35
    ],

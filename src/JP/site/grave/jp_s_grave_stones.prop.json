@@ -279,9 +279,9 @@
    "display": "Boat-halo gravestone with a Jizo in relief",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 171,
+    "Resolution 1": 2423,
     "Resolution 2": 23,
     "Geometry": 23,
     "View Geometry": 23,
@@ -346,9 +346,9 @@
    "display": "Small boat-halo stone (a child's grave), the child's name",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 165,
+    "Resolution 1": 2417,
     "Resolution 2": 17,
     "Geometry": 17,
     "View Geometry": 17,
@@ -360,7 +360,7 @@
     -0.06,
     0.42,
     -0.057,
-    0.064
+    0.061
    ],
    "collision": [
     "geo",
@@ -1151,10 +1151,10 @@
    "display": "Small Jizo on a base (a child's grave), faded bib",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 194,
-    "Resolution 2": 36,
+    "Resolution 1": 1174,
+    "Resolution 2": 426,
     "Geometry": 16,
     "View Geometry": 16,
     "Fire Geometry": 16
@@ -1163,7 +1163,7 @@
     -0.16,
     0.16,
     -0.05,
-    0.584,
+    0.543,
     -0.132,
     0.133
    ],
@@ -1519,9 +1519,9 @@
    "display": "Boat-halo gravestone leaning forward, half sunk, mossy",
    "anchor": "floor",
    "wall_gap": null,
-   "budget": "small",
+   "budget": "statue",
    "faces": {
-    "Resolution 1": 175,
+    "Resolution 1": 2427,
     "Resolution 2": 23,
     "Geometry": 23,
     "View Geometry": 23,

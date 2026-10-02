@@ -33,6 +33,13 @@ LEATHER = "leather_tan"
 CUTSTONE = "stone_cut"
 
 
+def _dx():
+    """FX2's detail remakes (spikes/FX2/detail_fx2.py)."""
+    sys.path.insert(0, os.path.join(DEV, "spikes", "FX2"))
+    import detail_fx2
+    return detail_fx2
+
+
 def rot(ss, **kw):
     return [xf(s, **kw) for s in ss]
 
@@ -43,87 +50,16 @@ def mv(ss, t):
 
 # ================================================================================================ offering box
 def saisen_bako(w, d, h, wear="_w1"):
-    P = LPart("saisen_bako", budget="furniture", mass=35.0, anchor="floor")
-    t = 0.035
-    out = [W(-w / 2, w / 2, 0.0, 0.07, -d / 2 + 0.03, -d / 2 + 0.09, WEATH),          # two runners
-           W(-w / 2, w / 2, 0.0, 0.07, d / 2 - 0.09, d / 2 - 0.03, WEATH),
-           W(-w / 2, w / 2, 0.07, h, d / 2 - t, d / 2, WEATH),                            # front
-           W(-w / 2, w / 2, 0.07, h, -d / 2, -d / 2 + t, WEATH),                          # back
-           W(-w / 2, -w / 2 + t, 0.07, h, -d / 2 + t, d / 2 - t, WEATH),                  # ends
-           W(w / 2 - t, w / 2, 0.07, h, -d / 2 + t, d / 2 - t, WEATH),
-           W(-w / 2 + t, w / 2 - t, 0.07, 0.10, -d / 2 + t, d / 2 - t, WEATH, vis=(1,)),   # bottom
-           W(-w / 2 - 0.01, w / 2 + 0.01, h - 0.035, h, d / 2 - 0.005, d / 2 + 0.012, WEATH, vis=(1,)),   # top rail
-           W(-w / 2 - 0.01, w / 2 + 0.01, h - 0.035, h, -d / 2 - 0.012, -d / 2 + 0.005, WEATH, vis=(1,))]
-    # the slatted top: two rows of inclined slats falling to the middle line (coins drop in, nothing fishes out)
-    inner = d / 2 - t
-    k = 3
-    pitch = inner / k
-    for side in (-1, 1):
-        for i in range(k):
-            zc = side * (pitch * (i + 0.5))
-            yc = h - 0.03 - (inner - abs(zc)) * 0.30
-            s = W(-w / 2 + t, w / 2 - t, -0.008, 0.008, -pitch * 0.42, pitch * 0.42, WEATH, vis=(1,))
-            out.append(xf(s, rx=side * 22.0, t=(0.0, yc, zc)))
-    for sx in (-1, 1):                                                                   # iron corner straps
-        for sz in (-1, 1):
-            x0 = sx * w / 2
-            z0 = sz * d / 2
-            out.append(box(x0 - sx * 0.10 if sx > 0 else x0, x0 if sx > 0 else x0 + 0.10, h - 0.12, h,
-                           z0 - 0.004 if sz > 0 else z0 - 0.004, z0 + 0.004, IRON, vis=(1,)))
-            out.append(box(x0 - 0.004, x0 + 0.004, h - 0.12, h, z0 - sz * 0.08 if sz > 0 else z0,
-                           z0 if sz > 0 else z0 + 0.08, IRON, vis=(1,)))
-    wear_all(out, wear)
-    P.adds(out)
-    # FX1 (2026-10-01, Stephen: 'the leaves on the offering box are weirdly draped on it; nowhere else nearby has
-    # leaves'): no litter decal on the box (litter goes only where its surroundings have it)
-    P.add(lod_box([s for s in out if 1 in s.vis], WEATH, vis=(2,)))
-    P.add(col(-w / 2, w / 2, 0.0, h, -d / 2, d / 2, WEATH))
-    P.dim("w", w, w, tol=0.005)
-    P.dim("h", h, h, tol=0.005)
-    P.notes.append("offering box (saisen-bako) on the en before the worship bay; undisturbed, no loot (G1 A2-12)")
-    return P
+    """FX2 (2026-10-01): the detail remake (spikes/FX2/detail_fx2.py: slats, iron straps with nails, the bronze
+    crest, a hasp). FX1's rule stays: no litter decal on the box."""
+    return _dx().saisen_box(w, d, h, wear)
 
 
-# ================================================================================================ bell + rope
 def suzu_rope(faded=False):
-    P = LPart("suzu", budget="furniture", mass=2.0, anchor="hang", flat=True)
-    wr = "_w2" if faded else "_w1"
-    out = [box(-0.006, 0.006, -0.07, 0.0, -0.006, 0.006, IRON, vis=(1,)),
-           pole((0.0, -0.07, 0.0), (0.0, -0.09, 0.0), 0.02, IRON, n=6, vis=(1,))]
-    # the bell: a bronze crotal (sphere with a slot) and its top loop
-    r = 0.12
-    cy = -0.09 - 0.03 - r
-    prof = [(0.0, -r)] + [(r * math.sin(math.pi * k / 6), -r * math.cos(math.pi * k / 6)) for k in range(1, 6)] + \
-        [(0.0, r)]
-    out.append(xf(lathe(prof, 10, BRONZE, vis=(1,)), t=(0.0, cy, 0.0)))
-    out.append(box(-r * 0.75, r * 0.75, cy - r * 0.55, cy - r * 0.47, -r * 0.62, r * 0.62, DARK, vis=(1,)))    # slot
-    out.append(pole((0.0, cy + r, 0.0), (0.0, -0.09, 0.0), 0.012, BRONZE, n=5, vis=(1,)))
-    # the rope (suzu-no-o): two twisted cloth strands, red and white, a knot and a tassel
-    y0, y1 = cy - r - 0.01, cy - r - 1.10
-    seg = 12
-    for k, mat in enumerate((RED, KINARI)):
-        pts = []
-        for i in range(seg + 1):
-            a = math.pi * k + 2 * math.pi * i / 4.0
-            y = y0 + (y1 - y0) * i / seg
-            pts.append((0.016 * math.cos(a), y, 0.016 * math.sin(a)))
-        for i in range(seg):
-            out.append(pole(pts[i], pts[i + 1], 0.022, mat, n=5, vis=(1,), wear=wr))
-    out.append(xf(lathe([(0.0, 0.0), (0.05, 0.02), (0.045, 0.07), (0.0, 0.09)], 8, KINARI, vis=(1,), wear=wr),
-                  t=(0.0, y1 - 0.06, 0.0)))
-    out.append(xf(lathe([(0.0, 0.0), (0.06, 0.0), (0.035, 0.30), (0.0, 0.30)], 8, RED, vis=(1,), wear=wr),
-                  t=(0.0, y1 - 0.36, 0.0)))
-    P.adds(out)
-    P.add(box(-0.12, 0.12, cy - r, -0.07, -0.12, 0.12, BRONZE, vis=(2,)))
-    P.add(box(-0.03, 0.03, y1 - 0.36, cy - r, -0.03, 0.03, RED, vis=(2,)))
-    P.finish_hang()
-    P.dim("bell_d", 0.24, 2 * r, tol=0.005)
-    P.notes.append("the shrine bell with its cloth pull rope, hung from the kohai / eave beam over the offering box "
-                   "(mount beam); hangs %.2f m; faded = the red gone pink-grey" % P.hang_len)
-    return P
+    """FX2: the detail remake (spikes/FX2/detail_fx2.py)."""
+    return _dx().suzu_rope(faded)
 
 
-# ================================================================================================ drums
 def odaiko():
     P = LPart("odaiko", budget="furniture", res3=False, mass=60.0, anchor="floor")
     R, L, cy = 0.35, 0.72, 0.86
@@ -298,33 +234,8 @@ def shintai_zushi(w=0.55):
 
 # ================================================================================================ ema + masks
 def ema_rail(n=9):
-    P = LPart("ema_rail", budget="furniture", mass=3.0, anchor="wall", flat=True)
-    L, y = 1.20, 1.55
-    out = [W(-L / 2, L / 2, y, y + 0.05, 0.0, 0.035, WEATH)]
-    for sx in (-1, 1):
-        out.append(W(sx * L / 2 - 0.03, sx * L / 2 + 0.03 if sx > 0 else sx * L / 2 + 0.03, y - 0.06, y + 0.05,
-                     0.0, 0.02, WEATH, vis=(1,)) if False else W(sx * (L / 2 - 0.03) - 0.025, sx * (L / 2 - 0.03)
-                                                                  + 0.025, y - 0.06, y + 0.05, 0.0, 0.02, WEATH,
-                                                                  vis=(1,)))
-    r = rng("ema_rail")
-    pent = [(-0.075, 0.0), (0.075, 0.0), (0.075, 0.075), (0.0, 0.105), (-0.075, 0.075)]
-    for i in range(n):
-        x = -L / 2 + 0.08 + i * (L - 0.16) / (n - 1) + r.uniform(-0.02, 0.02)
-        mat = (NEW, SILVER, WEATH)[i % 3]
-        top = y - 0.01
-        e = prism(pent, "z", 0.0, 0.008, mat, vis=(1,))
-        e = xf(e, t=(0.0, -0.105, 0.0))
-        e = xf(e, rz=r.uniform(-8, 8), t=(x, top - 0.02, 0.04 + 0.01 * (i % 2)))
-        out.append(e)
-        out.append(W(x - 0.035, x + 0.035, top - 0.11, top - 0.06, 0.049 + 0.01 * (i % 2), 0.051 + 0.01 * (i % 2),
-                     KURO, vis=(1,)))                                    # the faded painting
-        out.append(pole((x, top - 0.02, 0.045 + 0.01 * (i % 2)), (x, y + 0.02, 0.036), 0.003, RED, n=3, vis=(1,)))
-    wear_all(out, "_w1")
-    P.adds(out)
-    P.add(W(-L / 2, L / 2, y - 0.13, y + 0.05, 0.0, 0.05, WEATH, vis=(2,)))
-    P.dim("length", L, L, tol=0.005)
-    P.notes.append("votive boards (ema) on a rail on the haiden wall (mount wall), weathered")
-    return P
+    """FX2: the detail remake (spikes/FX2/detail_fx2.py: two rows + a framed gaku-ema)."""
+    return _dx().ema_rail()
 
 
 def mask(cx, cy, mat, kind, z0=0.03):
@@ -351,30 +262,10 @@ def mask(cx, cy, mat, kind, z0=0.03):
 
 
 def kagura_masks():
-    P = LPart("kagura_masks", budget="furniture", mass=3.0, anchor="wall", flat=True)
-    y = 1.50
-    out = [W(-0.55, 0.55, y + 0.08, y + 0.14, 0.0, 0.022, WEATH)]
-    for k, (x, mat, kind) in enumerate(((-0.36, FUSUMA, "okina"), (-0.12, PAINT, "oni"), (0.12, KURO, "plain"))):
-        out.append(peg(x, y + 0.11, L=0.05, z0=0.0))
-        out += mask(x, y, mat, kind)
-    # the kagura bell tree hung on the last peg
-    bx = 0.36
-    out.append(peg(bx, y + 0.11, L=0.05, z0=0.0))
-    out.append(pole((bx, y + 0.11, 0.05), (bx, y - 0.25, 0.05), 0.012, KURO, n=5, vis=(1,)))
-    for i, (dx, dy) in enumerate(((0.0, 0.10), (-0.04, 0.06), (0.04, 0.06), (-0.05, 0.01), (0.05, 0.01), (0.0, 0.0))):
-        out.append(xf(lathe([(0.0, -0.018), (0.016, -0.008), (0.016, 0.008), (0.0, 0.018)], 6, BRONZE, vis=(1,)),
-                      t=(bx + dx, y + dy - 0.05, 0.07)))
-    out.append(xf(lathe([(0.0, 0.0), (0.03, 0.01), (0.0, 0.25)], 5, RED, vis=(1,)), rx=180.0,
-                  t=(bx, y - 0.25, 0.05)))
-    wear_all(out, "_w2")
-    P.adds(out)
-    P.add(W(-0.55, 0.55, y - 0.25, y + 0.14, 0.0, 0.10, WEATH, vis=(2,)))
-    P.dim("width", 1.10, 1.10, tol=0.005)
-    P.notes.append("kagura masks (okina, oni, plain) on pegs + the kagura bell tree, stage back wall (mount wall)")
-    return P
+    """FX2 (Stephen: 'P5: masks etc. on the wall are too low resolution'): sculpted masks (spikes/FX2/detail_fx2.py)."""
+    return _dx().kagura_masks()
 
 
-# ================================================================================================ altar dais + images
 def seated_figure(mat):
     out = [lathe([(0.0, 0.0), (0.17, 0.0), (0.22, 0.06), (0.24, 0.10), (0.16, 0.12), (0.0, 0.12)], 10, mat, vis=(1,)),
            lathe([(0.0, 0.12), (0.24, 0.12), (0.22, 0.20), (0.13, 0.27), (0.12, 0.40), (0.08, 0.46), (0.0, 0.47)], 10,
@@ -408,9 +299,64 @@ def standing_figure(mat, kind):
     return out, h
 
 
+def image(kind):
+    """FX2: the altar image on its lotus seat and octagonal tiers, with its halo. Returns (Res 1 solids, Res 2 solids,
+    total height). Amida: seated, jobon-josho-in, the wheel halo (Met 44890); Shaka: seated, semui-in + yogan-in, a
+    boat halo with flames (CMA 153384, CMA 147590); Kannon: standing Sho Kannon, a boat halo (CMA 152018, Met 49257);
+    Jizo: standing monk with the jewel and the ringed staff, no halo (Met 53175, Met 76084). Gilt (jp_m_gilt_worn)
+    except Jizo (black-brown lacquered wood, a bronze staff)."""
+    sys.path.insert(0, os.path.join(DEV, "spikes", "FX2"))
+    import fx2props as FX
+    hi, lo = [], []
+    gilt = FX.GILT
+    if kind in ("amida", "shaka"):
+        b, by = FX.octagon_tiers([(0.27, 0.04), (0.235, 0.03)], LACQ, vis=(1, 2), wear="_w2")
+        hi += b
+        R = 0.22
+        hi += FX.lotus(R, gilt, vis=((1,), (2,), ()), t=(0.0, by, 0.0), wear="_w1")
+        ty = by + FX.lotus_top(R)
+        Hs = 0.50
+        name = "nyorai_jo" if kind == "amida" else "nyorai_semui"
+        f = FX.figure(name, Hs, gilt, vis=((1,), (2,), ()), t=(0.0, ty - 0.01, 0.0), wear="_w1")
+        hi += [q for q in f if 1 in q.vis]
+        lo += [q for q in f if 2 in q.vis]
+        head_y = ty + Hs * 0.80
+        if kind == "amida":
+            hi += FX.halo_wheel(ty + Hs * 0.52, 0.115, 0.30, gilt, z=-0.165, vis=(1,), wear="_w2", cy_head=head_y)
+            lo.append(FX.disc(0.31, 0.014, gilt, n=10, vis=(2,), wear="_w2"))
+            lo[-1] = xf(lo[-1], t=(0.0, ty + Hs * 0.52, -0.165))
+            top = ty + Hs * 0.52 + 0.33
+        else:
+            bh = 0.66
+            hi += mv(FX.halo_boat(0.62, bh, gilt, z=-0.17, vis=(1,), wear="_w2", head=(head_y - ty + 0.01, 0.12)),
+                     (0.0, ty, 0.0))
+            lo += mv(FX.halo_boat(0.62, bh, gilt, z=-0.17, vis=(2,), wear="_w2"), (0.0, ty, 0.0))
+            top = ty + bh
+        return hi, lo, top
+    b, by = FX.octagon_tiers([(0.19, 0.035)], LACQ, vis=(1, 2), wear="_w2")
+    hi += b
+    R = 0.15
+    hi += FX.lotus(R, gilt if kind == "kannon" else KURO, vis=((1,), (2,), ()), t=(0.0, by, 0.0), wear="_w1")
+    ty = by + FX.lotus_top(R)
+    Hf = 0.68 if kind == "kannon" else 0.66
+    if kind == "kannon":
+        f = FX.figure("kannon", Hf, gilt, vis=((1,), (2,), ()), t=(0.0, ty - 0.005, 0.0), wear="_w1")
+        bh = 0.82
+        hi += mv(FX.halo_boat(0.38, bh, gilt, z=-0.11, vis=(1,), wear="_w2", head=(Hf * 0.87, 0.085)), (0.0, ty, 0.0))
+        lo += mv(FX.halo_boat(0.38, bh, gilt, z=-0.11, vis=(2,), wear="_w2"), (0.0, ty, 0.0))
+        top = ty + bh
+    else:
+        f = FX.figure("jizo", Hf, {"*": KURO, "staff": BRONZE, "staffhead": BRONZE}, vis=((1,), (2,), ()),
+                      t=(0.0, ty - 0.005, 0.0), wear="_w1")
+        top = ty + Hf * 1.19
+    hi += [q for q in f if 1 in q.vis]
+    lo += [q for q in f if 2 in q.vis]
+    return hi, lo, top
+
+
 def dais(kind, W_=2.4, D=0.85, H=0.85):
     """Sumeru dais (shumidan) with a zushi cabinet (doors open) holding the image, and the three altar pieces."""
-    P = LPart("dais", budget="medium", mass=150.0, anchor="floor")
+    P = LPart("dais", budget="altar", mass=150.0, anchor="floor")   # FX2: the image is a statue (PLAYBOOK §12)
     out = [W(-W_ / 2, W_ / 2, 0.0, 0.12, -D / 2, D / 2, LACQ),
            W(-W_ / 2 + 0.04, W_ / 2 - 0.04, 0.12, 0.20, -D / 2 + 0.04, D / 2 - 0.04, LACQ, vis=(1,)),
            W(-W_ / 2 + 0.10, W_ / 2 - 0.10, 0.20, H - 0.16, -D / 2 + 0.10, D / 2 - 0.10, LACQ),
@@ -422,12 +368,11 @@ def dais(kind, W_=2.4, D=0.85, H=0.85):
         out.append(W(x - (W_ - 0.2) / np_ * 0.38, x + (W_ - 0.2) / np_ * 0.38, 0.26, H - 0.22, D / 2 - 0.10,
                      D / 2 - 0.095, SHU, vis=(1,)))
     figure = {"amida": "seated", "shaka": "seated", "kannon": "kannon", "jizo": "jizo"}[kind]
-    if figure == "seated":
-        fig, fh = seated_figure(BRONZE)
-    else:
-        fig, fh = standing_figure(KURO if kind == "jizo" else BRONZE, figure)
+    # FX2 (2026-10-01, Stephen: 'the Buddha statue is a blob ... any humanoid statue should have a picture
+    # reference'): the sculpted images (spikes/FX2, research/statues/NOTES.md) on lotus seats with their halos
+    fig, fig_lo, fh = image(kind)
     zw, zd = (0.95, 0.55) if figure == "seated" else (0.70, 0.42)
-    zh = fh + 0.30
+    zh = fh + 0.18                                                     # FX2: was + 0.30
     zz = -D / 2 + zd / 2 + 0.02
     zt = H + zh
     zc = [W(-zw / 2, zw / 2, H, H + 0.05, zz - zd / 2, zz + zd / 2, LACQ),                         # floor
@@ -445,6 +390,7 @@ def dais(kind, W_=2.4, D=0.85, H=0.85):
                        BRONZE, vis=(1,)))
     out += zc
     out += mv(fig, (0.0, H + 0.05, zz + 0.03))
+    out += mv(fig_lo, (0.0, H + 0.05, zz + 0.03))
     # the three altar pieces in front of the zushi, dusty and burnt down
     fz = D / 2 - 0.13
     out += mv(LR.koro(0.0, fz, r=0.06, wear="_w2"), (0.0, H, 0.0))
@@ -454,7 +400,12 @@ def dais(kind, W_=2.4, D=0.85, H=0.85):
         out += mv(LR.sanbo(0.0, fz - 0.17, wear="_w2", full=False), (0.0, H, 0.0))
     P.adds(out)
     P.add(W(-W_ / 2, W_ / 2, 0.0, H, -D / 2, D / 2, LACQ, vis=(2,)))
-    P.add(W(-zw / 2, zw / 2, H, zt + 0.14, zz - zd / 2, zz + zd / 2, LACQ, vis=(2,)))
+    for q in (W(-zw / 2, zw / 2, H, H + 0.05, zz - zd / 2, zz + zd / 2, LACQ, vis=(2,)),      # FX2: the open cabinet at
+              W(-zw / 2, zw / 2, H, zt + 0.14, zz - zd / 2, zz - zd / 2 + 0.03, LACQ, vis=(2,)),   # LOD 2 (the image
+              W(-zw / 2, -zw / 2 + 0.03, H, zt + 0.14, zz - zd / 2, zz + zd / 2, LACQ, vis=(2,)),  # shows through)
+              W(zw / 2 - 0.03, zw / 2, H, zt + 0.14, zz - zd / 2, zz + zd / 2, LACQ, vis=(2,)),
+              W(-zw / 2 - 0.08, zw / 2 + 0.08, zt, zt + 0.14, zz - zd / 2 - 0.06, zz + zd / 2 + 0.10, LACQ, vis=(2,))):
+        P.add(q)
     P.add(col(-W_ / 2, W_ / 2, 0.0, H, -D / 2, D / 2, LACQ))
     P.add(col(-zw / 2, zw / 2, H, zt + 0.14, zz - zd / 2, zz + zd / 2, LACQ))
     P.dim("w", W_, W_, tol=0.005)
@@ -554,39 +505,12 @@ def mokugyo_l():
 
 # ================================================================================================ gongs, bells
 def waniguchi():
-    P = LPart("waniguchi", budget="furniture", mass=6.0, anchor="hang", flat=True)
-    out = [cord((-0.10, 0.0, 0.0), (-0.12, -0.10, 0.0), 0.006), cord((0.10, 0.0, 0.0), (0.12, -0.10, 0.0), 0.006)]
-    gy = -0.10 - 0.22
-    g = lathe([(0.0, -0.045), (0.19, -0.035), (0.22, 0.0), (0.19, 0.035), (0.0, 0.045)], 14, BRONZE, vis=(1,))
-    out.append(xf(g, rx=90.0, t=(0.0, gy, 0.0)))
-    out.append(box(-0.15, 0.15, gy - 0.20, gy - 0.17, -0.05, 0.05, DARK, vis=(1,)))       # the mouth slit
-    for sx in (-1, 1):
-        out.append(box(sx * 0.12 - 0.015, sx * 0.12 + 0.015, gy + 0.18, gy + 0.22, -0.015, 0.015, BRONZE, vis=(1,)))
-    # the pull rope (cloth, faded) hanging in front of it
-    z = 0.09
-    pts = [(0.0, gy + 0.05, z), (0.03, gy - 0.40, z + 0.01), (0.01, gy - 0.90, z), (0.0, gy - 1.35, z)]
-    for k in range(3):
-        for i in range(3):
-            a, b = pts[i], pts[i + 1]
-            off = 0.012 * math.cos(2 * math.pi * k / 3)
-            out.append(pole((a[0] + off, a[1], a[2] + 0.012 * math.sin(2 * math.pi * k / 3)),
-                            (b[0] + off, b[1], b[2] + 0.012 * math.sin(2 * math.pi * k / 3)), 0.014,
-                            (RED, KINARI, INDIGO)[k], n=4, vis=(1,), wear="_w2"))
-    out.append(xf(lathe([(0.0, 0.0), (0.05, 0.0), (0.03, 0.25), (0.0, 0.25)], 6, KINARI, vis=(1,), wear="_w2"),
-                  t=(0.0, gy - 1.60, z)))
-    out.append(cord((0.0, gy + 0.05, z), (0.0, 0.0, 0.0), 0.006))
-    P.adds(out)
-    P.add(box(-0.22, 0.22, gy - 0.22, gy + 0.22, -0.05, 0.05, BRONZE, vis=(2,)))
-    P.add(box(-0.03, 0.03, gy - 1.60, gy, z - 0.03, z + 0.03, KINARI, vis=(2,)))
-    P.finish_hang()
-    P.dim("d", 0.44, 0.44, tol=0.005)
-    P.notes.append("the flat 'crocodile mouth' gong (waniguchi) + pull rope under the kohai (mount beam); hangs %.2f m"
-                   % P.hang_len)
-    return P
+    """FX2: the detail remake (spikes/FX2/detail_fx2.py)."""
+    return _dx().waniguchi()
 
 
 def bonsho(H=0.95, D=0.56):
-    P = LPart("bonsho", budget="furniture", mass=400.0, anchor="hang")
+    P = LPart("bonsho", budget="detail_l", mass=400.0, anchor="hang")   # FX2: bell + log + ropes (+30 %)
     out = [pole((0.0, 0.0, 0.0), (0.0, -0.05, 0.0), 0.03, IRON, n=6, vis=(1,))]
     # the dragon-head lug (ryuzu): an arch of two heads
     out.append(W(-0.10, 0.10, -0.12, -0.05, -0.035, 0.035, BRONZE, vis=(1,)))
@@ -595,17 +519,10 @@ def bonsho(H=0.95, D=0.56):
                      BRONZE, vis=(1,)))
     y0 = -0.20
     R = D / 2
-    prof = [(0.0, y0), (R * 0.55, y0), (R * 0.85, y0 - 0.04), (R * 0.95, y0 - 0.10), (R * 0.97, y0 - H * 0.6),
-            (R, y0 - H + 0.04), (R * 1.02, y0 - H), (R * 0.90, y0 - H), (0.0, y0 - H + 0.02)]
-    out.append(lathe(prof, 16, BRONZE, vis=(1,)))
-    for f in (0.30, 0.62):                                               # the belt bands (kesadasuki)
-        yb = y0 - H * f
-        out.append(lathe([(R * 0.965, yb - 0.02), (R * 0.99, yb - 0.02), (R * 0.99, yb + 0.02), (R * 0.965, yb + 0.02)],
-                         16, BRONZE, vis=(1,)))
-    ys = y0 - H * 0.78                                                   # the striking seats (tsukiza), both sides
-    for sx in (-1, 1):
-        out.append(xf(lathe([(0.0, 0.0), (0.07, 0.0), (0.06, 0.02), (0.0, 0.025)], 8, BRONZE, vis=(1,)),
-                      rz=-90.0 * sx, t=(sx * R * 0.99, ys, 0.0)))
+    # FX2 (2026-10-01): the bell at detail fidelity (spikes/FX2/detail_fx2.bonsho_body: 32 sides, nyu, bands, lotus
+    # seats, the two-headed dragon lug); FX1's hook, log and ropes below are unchanged
+    body, ys = _dx().bonsho_body(H, D, y0, BRONZE)
+    out = [pole((0.0, 0.0, 0.0), (0.0, -0.05, 0.0), 0.02, IRON, n=8, vis=(1,))] + body     # the hook into the lug
     # the striker log (shumoku) on two ropes, at the -x seat. FX1 (2026-10-01, Stephen: 'the rope hanging the log
     # floats in mid air, attached to nothing'): the log runs UNDER the bell beam (the shoro dressings hang the bell at
     # yaw 90, beam along the log), so both ropes rise straight to the beam's underside (y 0, as the hook) and end in

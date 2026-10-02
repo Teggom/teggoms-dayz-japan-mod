@@ -25,18 +25,18 @@
    "abandoned": false,
    "display": "Votive boards (ema) on a rail",
    "anchor": "wall",
-   "budget": "furniture",
+   "budget": "detail",
    "faces": {
-    "Resolution 1": 198,
-    "Resolution 2": 12
+    "Resolution 1": 830,
+    "Resolution 2": 30
    },
    "bbox": [
     -0.6,
-    0.6,
-    1.406,
-    1.6,
+    0.628,
+    1.127,
+    2.11,
     0.0,
-    0.061
+    0.1
    ],
    "collision": false,
    "footprint_xz": null,
@@ -54,7 +54,7 @@
     }
    ],
    "notes": [
-    "votive boards (ema) on a rail on the haiden wall (mount wall), weathered"
+    "FX2: votive boards (ema) in two rows on a rail (pentagonal, roof bevel, painted horses / wishes, red cords) + a framed gaku-ema under a little roof above it (Met 36108); haiden wall (mount wall)"
    ],
    "master": "spikes/W2F/out/sacred/jp_f_ema_rail.p3d",
    "mount": "wall",

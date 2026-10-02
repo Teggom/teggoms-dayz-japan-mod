@@ -25,9 +25,9 @@
    "abandoned": false,
    "display": "Temple bell (bonsho), village size, with the striker log",
    "anchor": "hang",
-   "budget": "furniture",
+   "budget": "detail_l",
    "faces": {
-    "Resolution 1": 354,
+    "Resolution 1": 1946,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
@@ -35,11 +35,11 @@
    },
    "bbox": [
     -1.38,
-    0.302,
+    0.304,
     -1.15,
     0.0,
-    -0.28,
-    0.28
+    -0.286,
+    0.286
    ],
    "collision": true,
    "footprint_xz": [
@@ -84,9 +84,9 @@
    "abandoned": false,
    "display": "Temple bell (bonsho), town size, with the striker log",
    "anchor": "hang",
-   "budget": "furniture",
+   "budget": "detail_l",
    "faces": {
-    "Resolution 1": 354,
+    "Resolution 1": 1946,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
@@ -94,11 +94,11 @@
    },
    "bbox": [
     -1.46,
-    0.381,
+    0.383,
     -1.4,
     0.0,
-    -0.36,
-    0.36
+    -0.367,
+    0.367
    ],
    "collision": true,
    "footprint_xz": [

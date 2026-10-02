@@ -63,6 +63,9 @@ BIB = "textile_bib_red"          # added by B3b through B1's pipeline (research/
 
 # PLAYBOOK §12 + G1 A3 decision 9 (1,500 is a ceiling): LOD0 / LOD1 / LOD2 caps per class
 BUDGET = {"small": (300, 300, 300), "box": (600, 300, 120), "medium": (1500, 600, 200)}
+# FX2 (2026-10-01, PLAYBOOK §12): a statue (stone Jizo, komainu, kitsune) 'as needed (aim <= 3,000)' + 50 % with its
+# pedestal; detail / hero props 1,500
+BUDGET.update({"statue": (4500, 1700, 700), "detail": (1500, 600, 250)})
 
 
 class SPart(FPart):

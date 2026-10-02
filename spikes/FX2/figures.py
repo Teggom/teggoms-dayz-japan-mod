@@ -522,3 +522,57 @@ def lotus_seat(n=12, rows=3):
              torus((0.0, 0.095, 0.0), 0.23, 0.02), k=0.02)
     seat = floor_cut(U(cup, drum, *petals, k=0.012))
     return [Part("seat", seat, (-0.62, 0.0, -0.62), (0.62, 0.40, 0.62), 0.006, share=1.0)]
+
+
+# ================================================================================================ kagura masks
+def kagura_mask(kind="okina"):
+    """A kagura / noh-type mask, height 1.0 (chin .. top), width ~0.75, face to +z, the back flat at z 0 (hung on a
+    wall peg). kind: 'okina' (the smiling old man: tufted brows, crescent eyes, the cut chin with its beard; CMA
+    149100), 'oni' (the demon of the kagura plays: bulging ringed eyes, knotted brows, flared nose, fangs and two
+    horns; CMA 147048 ko-beshimi for the face), 'okame' (the plump woman: high round cheeks, high brow dots, a small
+    mouth; CMA 147046 waka-onna), 'hyottoko' (the pursed, sideways-blowing mouth, uneven eyes; CMA 148010 usobuki)."""
+    face = ellipsoid((0.0, 0.50, 0.0), (0.36, 0.50, 0.30))
+    cut_back = plane((0.0, 0.0, -1.0), 0.0)          # keep z >= 0
+    parts = []
+    cuts = []
+    if kind == "okina":
+        face = displace(face, lambda P: ridges(P[:, 1] + 0.15 * np.abs(P[:, 0]), 70.0) * (P[:, 1] > 0.62), 0.008)
+        parts += [mirror_x(ellipsoid((0.15, 0.66, 0.20), (0.11, 0.045, 0.05), rz=-12.0)),   # tufted brows
+                  mirror_x(ellipsoid((0.15, 0.40, 0.20), (0.10, 0.08, 0.07))),               # round cheeks
+                  capsule((0.0, 0.58, 0.25), (0.0, 0.42, 0.29), 0.035, 0.05),                # nose
+                  sphere((0.0, 0.41, 0.285), 0.05),
+                  capsule((0.0, 0.12, 0.17), (0.0, -0.10, 0.12), 0.06, 0.015)]              # beard tuft
+        cuts += [mirror_x(_arc(bezier((0.06, 0.54, 0.26), (0.14, 0.59, 0.27), (0.23, 0.54, 0.22), 5), 0.024)),
+                 _arc(bezier((-0.17, 0.27, 0.22), (0.0, 0.20, 0.27), (0.17, 0.27, 0.22), 6), 0.028),   # grin
+                 _arc(bezier((-0.25, 0.15, 0.18), (0.0, 0.10, 0.23), (0.25, 0.15, 0.18), 6), 0.010)]   # the cut chin
+    elif kind == "oni":
+        parts += [mirror_x(sphere((0.13, 0.55, 0.18), 0.075)),                              # bulging eyes
+                  mirror_x(ellipsoid((0.15, 0.66, 0.19), (0.13, 0.05, 0.07), rz=-20.0)),    # knotted brows
+                  ellipsoid((0.0, 0.40, 0.25), (0.11, 0.08, 0.07)),                          # flared nose
+                  mirror_x(sphere((0.08, 0.37, 0.24), 0.05)),
+                  mirror_x(ellipsoid((0.20, 0.30, 0.15), (0.10, 0.09, 0.08))),
+                  mirror_x(capsule((0.18, 0.92, 0.0), (0.24, 1.18, -0.02), 0.06, 0.012)),   # horns
+                  mirror_x(capsule((0.10, 0.17, 0.20), (0.10, 0.07, 0.21), 0.022, 0.004))]  # fangs (up from the jaw)
+        cuts += [mirror_x(torus((0.13, 0.55, 0.245), 0.035, 0.010, rx=90.0)),
+                 _arc(bezier((-0.17, 0.22, 0.20), (0.0, 0.25, 0.25), (0.17, 0.22, 0.20), 6), 0.022)]
+    elif kind == "okame":
+        face = ellipsoid((0.0, 0.48, 0.0), (0.38, 0.48, 0.28))
+        parts += [mirror_x(ellipsoid((0.17, 0.33, 0.17), (0.14, 0.13, 0.10))),             # the plump cheeks
+                  mirror_x(ellipsoid((0.11, 0.80, 0.19), (0.04, 0.025, 0.02))),            # high brow dots
+                  capsule((0.0, 0.50, 0.22), (0.0, 0.40, 0.24), 0.025, 0.032),
+                  ellipsoid((0.0, 0.20, 0.22), (0.05, 0.03, 0.03))]                          # small lips
+        cuts += [mirror_x(_arc(bezier((0.06, 0.55, 0.25), (0.12, 0.535, 0.26), (0.19, 0.55, 0.22), 4), 0.022)),
+                 ellipsoid((0.0, 0.20, 0.27), (0.03, 0.012, 0.05))]
+    else:  # hyottoko
+        face = ellipsoid((0.0, 0.48, 0.0), (0.35, 0.48, 0.29))
+        parts += [capsule((0.03, 0.22, 0.25), (0.12, 0.21, 0.33), 0.05, 0.035),             # the pursed mouth, to one side
+                  capsule((0.0, 0.52, 0.26), (0.0, 0.40, 0.31), 0.03, 0.04),
+                  mirror_x(ellipsoid((0.20, 0.30, 0.18), (0.10, 0.09, 0.09)))]
+        cuts += [sphere((0.13, 0.56, 0.275), 0.045), sphere((-0.14, 0.58, 0.27), 0.032),
+                 torus((0.12, 0.215, 0.36), 0.018, 0.008, rz=90.0, rx=0.0)]
+    m = U(face, *parts, k=0.04)
+    if cuts:
+        m = S(m, *cuts, k=0.008)
+    m = I(m, cut_back)
+    top = 1.22 if kind == "oni" else 1.02
+    return [Part("mask", m, (-0.42, -0.15, 0.0), (0.42, top, 0.40), 0.008, share=1.0)]

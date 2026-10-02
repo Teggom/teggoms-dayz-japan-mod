@@ -293,7 +293,9 @@ def torii_rope(x0, x1, y, z, r=0.04, drop=0.10, with_shide=True, wear="_w2", see
         xx = x0 + (x1 - x0) * t
         yy = y - drop * 4 * t * (1 - t) - r * 0.8
         if with_shide and i % 2 == 1:
-            out.append(shide((xx, yy, z + 0.01), s=0.24 + rr.uniform(-0.04, 0.03), wear=wear))
+            # FX2 (2026-10-01): the shide is pushed INTO the rope's lay (as it is done), its top at the rope's centre
+            # line on the front, not hung under it: the rope can sag more and the tips stay as high
+            out.append(shide((xx, yy + r * 0.8, z + r * 0.9), s=0.24 + rr.uniform(-0.04, 0.03), wear=wear))
         else:
             ln = 0.18 + rr.uniform(-0.04, 0.05)
             if r < 0.02:                                         # a mini torii's cord: one thin tuft
@@ -512,13 +514,20 @@ def twisted_rope(pts, r, seed=1, strands=2, sides=None, wear="_w2", vis=(1,), fr
 
 
 def tassel(p, length, seed, wear="_w2", vis=(1,)):
-    """A straw tassel (shibe) hanging from p: three tapered straw bundles fanning slightly, tied at the top."""
+    """A straw tassel (shibe) hanging from p. FX2 (2026-10-01, detail pass): five tapered straw bundles fanning from a
+    bound collar with a cord binding, instead of three cones."""
     rg = random.Random(seed)
     out = []
-    for k in range(3):
-        a = 2 * math.pi * k / 3 + rg.uniform(-0.3, 0.3)
-        q = (p[0] + 0.035 * math.cos(a) + rg.uniform(-0.01, 0.01), p[1] - length * rg.uniform(0.85, 1.05),
-             p[2] + 0.035 * math.sin(a))
-        out.append(pole(p, q, 0.016, ROPE, n=4, vis=vis, r1=0.004, wear=wear))
-    out.append(pole((p[0], p[1] + 0.012, p[2]), (p[0], p[1] - 0.03, p[2]), 0.019, ROPE, n=5, vis=vis, wear=wear))
+    for k in range(5):
+        a = 2 * math.pi * k / 5 + rg.uniform(-0.25, 0.25)
+        top = (p[0] + 0.010 * math.cos(a), p[1] - 0.03, p[2] + 0.010 * math.sin(a))
+        q = (p[0] + 0.032 * math.cos(a) + rg.uniform(-0.01, 0.01), p[1] - length * rg.uniform(0.82, 0.97),
+             p[2] + 0.032 * math.sin(a))
+        out.append(pole(top, q, 0.011, ROPE, n=3, vis=vis, r1=0.003, wear=wear))
+    out.append(pole((p[0], p[1] + 0.012, p[2]), (p[0], p[1] - 0.035, p[2]), 0.016, ROPE, n=5, vis=vis, wear=wear))
+    ring = lathe([(0.0175, -0.022), (0.0185, -0.018), (0.0175, -0.014)], 5, ROPE, vis=vis)    # the binding
+    ring = xf(ring, t=p)
+    if wear:
+        ring.wear = wear
+    out.append(ring)
     return out

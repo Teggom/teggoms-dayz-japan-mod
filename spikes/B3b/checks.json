@@ -12185,9 +12185,9 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 163,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2415,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -12213,6 +12213,7 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
       "bad": []
@@ -12229,13 +12230,13 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 163,
-       "Resolution 2": 42,
-       "Resolution 3": 27,
+       "Resolution 1": 2415,
+       "Resolution 2": 870,
+       "Resolution 3": 302,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
@@ -12332,6 +12333,7 @@
      "pass": true,
      "detail": {
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -12351,6 +12353,19 @@
        "dE76": 1.7,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
       },
       {
        "material": "jp_m_stone_carved_w1",
@@ -12382,9 +12397,9 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 164,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2416,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -12411,6 +12426,7 @@
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
       "bad": []
@@ -12427,13 +12443,13 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 164,
-       "Resolution 2": 42,
-       "Resolution 3": 27,
+       "Resolution 1": 2416,
+       "Resolution 2": 870,
+       "Resolution 3": 302,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
@@ -12531,6 +12547,7 @@
      "detail": {
       "jp_m_decal_carved_text_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -12565,6 +12582,19 @@
        "pass": true
       },
       {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_stone_carved_w1",
        "mean_srgb": [
         73.0,
@@ -12594,9 +12624,9 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 218,
-    "Resolution 2": 54,
-    "Resolution 3": 39,
+    "Resolution 1": 2470,
+    "Resolution 2": 882,
+    "Resolution 3": 314,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -12623,6 +12653,7 @@
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
       "bad": []
@@ -12639,13 +12670,13 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 218,
-       "Resolution 2": 54,
-       "Resolution 3": 39,
+       "Resolution 1": 2470,
+       "Resolution 2": 882,
+       "Resolution 3": 314,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
@@ -12743,6 +12774,7 @@
      "detail": {
       "jp_m_decal_carved_text_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -12777,6 +12809,19 @@
        "pass": true
       },
       {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_stone_carved_w1",
        "mean_srgb": [
         73.0,
@@ -12806,8 +12851,8 @@
    "variant": "halo",
    "pass": true,
    "faces": {
-    "Resolution 1": 184,
-    "Resolution 2": 59,
+    "Resolution 1": 2436,
+    "Resolution 2": 887,
     "Resolution 3": 29,
     "Geometry": 23,
     "View Geometry": 23,
@@ -12836,6 +12881,7 @@
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
       "bad": []
@@ -12852,12 +12898,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 184,
-       "Resolution 2": 59,
+       "Resolution 1": 2436,
+       "Resolution 2": 887,
        "Resolution 3": 29,
        "Geometry": 23,
        "View Geometry": 23,
@@ -12957,6 +13003,7 @@
       "jp_m_decal_carved_text_w2": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -13004,6 +13051,19 @@
        "masked": true
       },
       {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_stone_carved_w1",
        "mean_srgb": [
         73.0,
@@ -13033,9 +13093,9 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 204,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2482,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -13062,6 +13122,7 @@
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_bib_red_w2.rvmat"
       ],
@@ -13079,13 +13140,13 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 204,
-       "Resolution 2": 42,
-       "Resolution 3": 27,
+       "Resolution 1": 2482,
+       "Resolution 2": 870,
+       "Resolution 3": 302,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
@@ -13183,6 +13244,7 @@
      "detail": {
       "jp_m_decal_carved_text_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true,
       "jp_m_textile_bib_red_w2": true
      }
@@ -13216,6 +13278,19 @@
        "dE76": 1.7,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
       },
       {
        "material": "jp_m_stone_carved_w1",
@@ -13260,9 +13335,9 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 280,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2532,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -13291,6 +13366,7 @@
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_river_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_sooted_w2.rvmat"
@@ -13309,13 +13385,13 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 280,
-       "Resolution 2": 42,
-       "Resolution 3": 27,
+       "Resolution 1": 2532,
+       "Resolution 2": 870,
+       "Resolution 3": 302,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
@@ -13414,6 +13490,7 @@
       "jp_m_decal_litter_w2": true,
       "jp_m_decal_carved_text_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -13473,6 +13550,19 @@
        "pass": true
       },
       {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_stone_carved_w1",
        "mean_srgb": [
         73.0,
@@ -13527,9 +13617,9 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 167,
-    "Resolution 2": 42,
-    "Resolution 3": 27,
+    "Resolution 1": 2419,
+    "Resolution 2": 870,
+    "Resolution 3": 302,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -13557,7 +13647,7 @@
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
       ],
       "bad": []
@@ -13574,13 +13664,13 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300 R3<=300, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 167,
-       "Resolution 2": 42,
-       "Resolution 3": 27,
+       "Resolution 1": 2419,
+       "Resolution 2": 870,
+       "Resolution 3": 302,
        "Geometry": 12,
        "View Geometry": 12,
        "Fire Geometry": 12
@@ -13624,8 +13714,8 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": -0.05,
-      "geo_min_y": -0.0071,
+      "res1_min_y": -0.0475,
+      "geo_min_y": 0.0046,
       "bury": 0.06,
       "hung": false
      }
@@ -13682,7 +13772,7 @@
       "jp_m_decal_litter_w2": true,
       "jp_m_decal_carved_text_w2": true,
       "jp_m_decal_moss_w1": true,
-      "jp_m_stone_carved_w1": true,
+      "jp_m_stone_carved_aged_w2": true,
       "jp_m_stone_carved_w2": true
      }
     },
@@ -13730,14 +13820,14 @@
        "pass": true
       },
       {
-       "material": "jp_m_stone_carved_w1",
+       "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        73.0,
-        70.0,
-        62.0
+        66.1,
+        63.2,
+        55.3
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 3.0,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13772,8 +13862,8 @@
    "variant": "box",
    "pass": true,
    "faces": {
-    "Resolution 1": 342,
-    "Resolution 2": 115,
+    "Resolution 1": 2594,
+    "Resolution 2": 943,
     "Resolution 3": 57,
     "Geometry": 18,
     "View Geometry": 18,
@@ -13801,7 +13891,7 @@
       "materials": [
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
        "JP\\common\\materials\\roof\\jp_m_roof_kureita_w1.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
@@ -13820,12 +13910,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 342,
-       "Resolution 2": 115,
+       "Resolution 1": 2594,
+       "Resolution 2": 943,
        "Resolution 3": 57,
        "Geometry": 18,
        "View Geometry": 18,
@@ -13923,7 +14013,7 @@
      "pass": true,
      "detail": {
       "jp_m_ground_leaf_litter_w1": true,
-      "jp_m_stone_carved_w1": true
+      "jp_m_stone_carved_aged_w1": true
      }
     },
     {
@@ -13956,7 +14046,7 @@
        "pass": true
       },
       {
-       "material": "jp_m_stone_carved_w1",
+       "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
         70.0,
@@ -14023,8 +14113,8 @@
    "variant": "hall",
    "pass": true,
    "faces": {
-    "Resolution 1": 379,
-    "Resolution 2": 120,
+    "Resolution 1": 2631,
+    "Resolution 2": 948,
     "Resolution 3": 60,
     "Geometry": 66,
     "View Geometry": 66,
@@ -14053,6 +14143,7 @@
        "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered_w1.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w1.rvmat",
        "JP\\common\\materials\\roof\\jp_m_roof_kureita_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_cut_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
@@ -14072,12 +14163,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget medium R1<=1500 R2<=600 R3<=200, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 379,
-       "Resolution 2": 120,
+       "Resolution 1": 2631,
+       "Resolution 2": 948,
        "Resolution 3": 60,
        "Geometry": 66,
        "View Geometry": 66,
@@ -14178,6 +14269,7 @@
      "pass": true,
      "detail": {
       "jp_m_ground_leaf_litter_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -14221,6 +14313,19 @@
        "dE76": 0.0,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
       },
       {
        "material": "jp_m_stone_carved_w1",
@@ -14289,9 +14394,9 @@
    "variant": "stone_roof",
    "pass": true,
    "faces": {
-    "Resolution 1": 227,
-    "Resolution 2": 104,
-    "Resolution 3": 89,
+    "Resolution 1": 2479,
+    "Resolution 2": 932,
+    "Resolution 3": 364,
     "Geometry": 18,
     "View Geometry": 18,
     "Fire Geometry": 18
@@ -14319,7 +14424,7 @@
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat"
       ],
       "bad": []
@@ -14336,13 +14441,13 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 227,
-       "Resolution 2": 104,
-       "Resolution 3": 89,
+       "Resolution 1": 2479,
+       "Resolution 2": 932,
+       "Resolution 3": 364,
        "Geometry": 18,
        "View Geometry": 18,
        "Fire Geometry": 18
@@ -14433,7 +14538,7 @@
       "jp_m_ground_leaf_litter_w2": true,
       "jp_m_decal_carved_text_w1": true,
       "jp_m_decal_moss_w2": true,
-      "jp_m_stone_carved_w1": true
+      "jp_m_stone_carved_aged_w1": true
      }
     },
     {
@@ -14480,7 +14585,7 @@
        "masked": true
       },
       {
-       "material": "jp_m_stone_carved_w1",
+       "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
         70.0,
@@ -14522,8 +14627,8 @@
    "variant": "box",
    "pass": true,
    "faces": {
-    "Resolution 1": 346,
-    "Resolution 2": 115,
+    "Resolution 1": 2598,
+    "Resolution 2": 943,
     "Resolution 3": 57,
     "Geometry": 18,
     "View Geometry": 18,
@@ -14552,7 +14657,7 @@
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\roof\\jp_m_roof_kureita_w2.rvmat",
-       "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_field_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_street_dark_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
@@ -14571,12 +14676,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget box R1<=600 R2<=300 R3<=120, LODs step down",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 346,
-       "Resolution 2": 115,
+       "Resolution 1": 2598,
+       "Resolution 2": 943,
        "Resolution 3": 57,
        "Geometry": 18,
        "View Geometry": 18,
@@ -14675,7 +14780,7 @@
      "detail": {
       "jp_m_decal_litter_w2": true,
       "jp_m_ground_leaf_litter_w2": true,
-      "jp_m_stone_carved_w1": true
+      "jp_m_stone_carved_aged_w1": true
      }
     },
     {
@@ -14722,7 +14827,7 @@
        "masked": true
       },
       {
-       "material": "jp_m_stone_carved_w1",
+       "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
         70.0,
@@ -14789,7 +14894,7 @@
    "variant": "koshin",
    "pass": true,
    "faces": {
-    "Resolution 1": 290,
+    "Resolution 1": 2542,
     "Resolution 2": 27,
     "Geometry": 15,
     "View Geometry": 15,
@@ -14816,6 +14921,7 @@
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
       "bad": []
@@ -14832,11 +14938,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 290,
+       "Resolution 1": 2542,
        "Resolution 2": 27,
        "Geometry": 15,
        "View Geometry": 15,
@@ -14927,6 +15033,7 @@
      "detail": {
       "jp_m_decal_carved_text_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -14961,6 +15068,19 @@
        "pass": true
       },
       {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_stone_carved_w1",
        "mean_srgb": [
         73.0,
@@ -14990,7 +15110,7 @@
    "variant": "relief_panel",
    "pass": true,
    "faces": {
-    "Resolution 1": 171,
+    "Resolution 1": 2623,
     "Resolution 2": 23,
     "Geometry": 23,
     "View Geometry": 23,
@@ -15017,6 +15137,7 @@
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
       "bad": []
@@ -15033,11 +15154,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 171,
+       "Resolution 1": 2623,
        "Resolution 2": 23,
        "Geometry": 23,
        "View Geometry": 23,
@@ -15120,6 +15241,7 @@
      "detail": {
       "jp_m_decal_carved_text_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -15152,6 +15274,19 @@
        "dE76": 1.7,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
       },
       {
        "material": "jp_m_stone_carved_w1",
@@ -16185,7 +16320,7 @@
    "variant": "koshin",
    "pass": true,
    "faces": {
-    "Resolution 1": 297,
+    "Resolution 1": 2549,
     "Resolution 2": 27,
     "Geometry": 15,
     "View Geometry": 15,
@@ -16214,6 +16349,7 @@
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
       ],
       "bad": []
@@ -16230,11 +16366,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 297,
+       "Resolution 1": 2549,
        "Resolution 2": 27,
        "Geometry": 15,
        "View Geometry": 15,
@@ -16330,6 +16466,7 @@
       "jp_m_decal_carved_text_w2": true,
       "jp_m_decal_moss_w1": true,
       "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w2": true
      }
     },
@@ -16386,6 +16523,19 @@
        "palette": "moss_on_stone",
        "dE76": 4.4,
        "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
        "pass": true,
        "masked": true
       },
@@ -26649,7 +26799,7 @@
    "variant": "len_1ken",
    "pass": true,
    "faces": {
-    "Resolution 1": 945,
+    "Resolution 1": 979,
     "Resolution 2": 6
    },
    "checks": [
@@ -26689,7 +26839,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 945,
+       "Resolution 1": 979,
        "Resolution 2": 6
       },
       "extra": []
@@ -26723,7 +26873,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 2.085,
+      "res1_min_y": 2.165,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": true
@@ -26790,7 +26940,7 @@
    "variant": "len_2ken",
    "pass": true,
    "faces": {
-    "Resolution 1": 1402,
+    "Resolution 1": 1483,
     "Resolution 2": 6
    },
    "checks": [
@@ -26830,7 +26980,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1402,
+       "Resolution 1": 1483,
        "Resolution 2": 6
       },
       "extra": []
@@ -26864,7 +27014,7 @@
      "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
      "pass": true,
      "detail": {
-      "res1_min_y": 1.955,
+      "res1_min_y": 2.09,
       "geo_min_y": null,
       "bury": 0.02,
       "hung": true
@@ -27713,7 +27863,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 989,
+    "Resolution 1": 1044,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -27762,7 +27912,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 989,
+       "Resolution 1": 1044,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -27931,7 +28081,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 970,
+    "Resolution 1": 1008,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -27981,7 +28131,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 970,
+       "Resolution 1": 1008,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -28396,7 +28546,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 1007,
+    "Resolution 1": 1062,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -28447,7 +28597,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1007,
+       "Resolution 1": 1062,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -28644,7 +28794,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 988,
+    "Resolution 1": 1026,
     "Resolution 2": 135,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -28696,7 +28846,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 988,
+       "Resolution 1": 1026,
        "Resolution 2": 135,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -29126,7 +29276,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1236,
+    "Resolution 1": 1320,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29176,7 +29326,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1236,
+       "Resolution 1": 1320,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -29361,7 +29511,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1198,
+    "Resolution 1": 1248,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29412,7 +29562,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1198,
+       "Resolution 1": 1248,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -29846,7 +29996,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1256,
+    "Resolution 1": 1340,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -29897,7 +30047,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1256,
+       "Resolution 1": 1340,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -30097,7 +30247,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1218,
+    "Resolution 1": 1268,
     "Resolution 2": 174,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -30149,7 +30299,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1218,
+       "Resolution 1": 1268,
        "Resolution 2": 174,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -30610,7 +30760,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1226,
+    "Resolution 1": 1276,
     "Resolution 2": 202,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -30663,7 +30813,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1226,
+       "Resolution 1": 1276,
        "Resolution 2": 202,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -31530,7 +31680,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1389,
+    "Resolution 1": 1386,
     "Resolution 2": 182,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -31582,7 +31732,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1389,
+       "Resolution 1": 1386,
        "Resolution 2": 182,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -31796,7 +31946,7 @@
    "variant": "myojin",
    "pass": true,
    "faces": {
-    "Resolution 1": 1397,
+    "Resolution 1": 1394,
     "Resolution 2": 210,
     "Resolution 3": 36,
     "Geometry": 58,
@@ -31849,7 +31999,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1397,
+       "Resolution 1": 1394,
        "Resolution 2": 210,
        "Resolution 3": 36,
        "Geometry": 58,
@@ -32076,7 +32226,7 @@
    "variant": "shinmei",
    "pass": true,
    "faces": {
-    "Resolution 1": 1408,
+    "Resolution 1": 1398,
     "Resolution 2": 139,
     "Resolution 3": 32,
     "Geometry": 40,
@@ -32128,7 +32278,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1408,
+       "Resolution 1": 1398,
        "Resolution 2": 139,
        "Resolution 3": 32,
        "Geometry": 40,
@@ -32551,7 +32701,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 932,
+    "Resolution 1": 983,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -32601,7 +32751,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 932,
+       "Resolution 1": 983,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -32778,7 +32928,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 913,
+    "Resolution 1": 947,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -32829,7 +32979,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 913,
+       "Resolution 1": 947,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -33246,7 +33396,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 934,
+    "Resolution 1": 968,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -33298,7 +33448,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 934,
+       "Resolution 1": 968,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -33714,7 +33864,7 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 1161,
+    "Resolution 1": 1196,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -33765,7 +33915,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1161,
+       "Resolution 1": 1196,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -34167,7 +34317,7 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 1195,
+    "Resolution 1": 1248,
     "Resolution 2": 156,
     "Resolution 3": 36,
     "Geometry": 86,
@@ -34218,7 +34368,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1195,
+       "Resolution 1": 1248,
        "Resolution 2": 156,
        "Resolution 3": 36,
        "Geometry": 86,
@@ -41844,7 +41994,7 @@
    "variant": "boat_halo",
    "pass": true,
    "faces": {
-    "Resolution 1": 171,
+    "Resolution 1": 2423,
     "Resolution 2": 23,
     "Geometry": 23,
     "View Geometry": 23,
@@ -41871,6 +42021,7 @@
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
       "bad": []
@@ -41887,11 +42038,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 171,
+       "Resolution 1": 2423,
        "Resolution 2": 23,
        "Geometry": 23,
        "View Geometry": 23,
@@ -41982,6 +42133,7 @@
      "detail": {
       "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -42016,6 +42168,19 @@
        "pass": true
       },
       {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
        "material": "jp_m_stone_carved_w1",
        "mean_srgb": [
         73.0,
@@ -42045,7 +42210,7 @@
    "variant": "boat_halo_child",
    "pass": true,
    "faces": {
-    "Resolution 1": 165,
+    "Resolution 1": 2417,
     "Resolution 2": 17,
     "Geometry": 17,
     "View Geometry": 17,
@@ -42072,6 +42237,7 @@
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat"
       ],
       "bad": []
@@ -42088,11 +42254,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 165,
+       "Resolution 1": 2417,
        "Resolution 2": 17,
        "Geometry": 17,
        "View Geometry": 17,
@@ -42183,6 +42349,7 @@
      "detail": {
       "jp_m_decal_carved_text_grave_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true
      }
     },
@@ -42215,6 +42382,19 @@
        "dE76": 1.7,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
       },
       {
        "material": "jp_m_stone_carved_w1",
@@ -44339,8 +44519,8 @@
    "variant": "jizo_child",
    "pass": true,
    "faces": {
-    "Resolution 1": 194,
-    "Resolution 2": 36,
+    "Resolution 1": 1174,
+    "Resolution 2": 426,
     "Geometry": 16,
     "View Geometry": 16,
     "Fire Geometry": 16
@@ -44366,6 +44546,7 @@
       "materials": [
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w1.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w1.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_bib_red_w2.rvmat"
       ],
@@ -44383,12 +44564,12 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 194,
-       "Resolution 2": 36,
+       "Resolution 1": 1174,
+       "Resolution 2": 426,
        "Geometry": 16,
        "View Geometry": 16,
        "Fire Geometry": 16
@@ -44470,6 +44651,7 @@
      "detail": {
       "jp_m_decal_carved_text_w1": true,
       "jp_m_decal_moss_w1": true,
+      "jp_m_stone_carved_aged_w1": true,
       "jp_m_stone_carved_w1": true,
       "jp_m_textile_bib_red_w2": true
      }
@@ -44503,6 +44685,19 @@
        "dE76": 1.7,
        "tolerance": 14,
        "pass": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w1",
+       "mean_srgb": [
+        73.0,
+        70.0,
+        62.0
+       ],
+       "palette": "stone_lantern",
+       "dE76": 0.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
       },
       {
        "material": "jp_m_stone_carved_w1",
@@ -45573,7 +45768,7 @@
    "variant": "boat_halo_sunk",
    "pass": true,
    "faces": {
-    "Resolution 1": 175,
+    "Resolution 1": 2427,
     "Resolution 2": 23,
     "Geometry": 23,
     "View Geometry": 23,
@@ -45601,6 +45796,7 @@
        "JP\\common\\materials\\ground\\jp_m_decal_litter_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_carved_text_grave_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w2.rvmat",
        "JP\\common\\materials\\stone\\jp_m_stone_carved_w2.rvmat"
       ],
       "bad": []
@@ -45617,11 +45813,11 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget small R1<=300 R2<=300, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 175,
+       "Resolution 1": 2427,
        "Resolution 2": 23,
        "Geometry": 23,
        "View Geometry": 23,
@@ -45716,6 +45912,7 @@
       "jp_m_decal_litter_w2": true,
       "jp_m_decal_carved_text_grave_w2": true,
       "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w2": true,
       "jp_m_stone_carved_w2": true
      }
     },
@@ -45760,6 +45957,19 @@
        "palette": "moss_on_stone",
        "dE76": 4.4,
        "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w2",
+       "mean_srgb": [
+        66.1,
+        63.2,
+        55.3
+       ],
+       "palette": "stone_lantern",
+       "dE76": 3.0,
+       "tolerance": 9,
        "pass": true,
        "masked": true
       },
@@ -50119,6 +50329,1638 @@
      "detail": []
     }
    ]
+  },
+  "jp_s_komainu_a_a": {
+   "prop": "jp_s_komainu",
+   "cat": "shrine",
+   "state": "intact",
+   "variant": "a",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 2838,
+    "Resolution 2": 1018,
+    "Resolution 3": 356,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w0.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 2838,
+       "Resolution 2": 1018,
+       "Resolution 3": 356,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 1.0,
+       "measured": 1.0,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.85,
+       "measured": 1.85,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 1500.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w0": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.1,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.3,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.4,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w0",
+       "mean_srgb": [
+        84.7,
+        81.6,
+        73.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_komainu_a_un": {
+   "prop": "jp_s_komainu",
+   "cat": "shrine",
+   "state": "intact",
+   "variant": "un",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 2838,
+    "Resolution 2": 1018,
+    "Resolution 3": 358,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w0.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 2838,
+       "Resolution 2": 1018,
+       "Resolution 3": 358,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 1.0,
+       "measured": 1.0,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.85,
+       "measured": 1.85,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 1500.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w0": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.1,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.3,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.4,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w0",
+       "mean_srgb": [
+        84.7,
+        81.6,
+        73.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_komainu_b_a": {
+   "prop": "jp_s_komainu",
+   "cat": "shrine",
+   "state": "intact",
+   "variant": "a",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 2638,
+    "Resolution 2": 968,
+    "Resolution 3": 338,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w0.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 2638,
+       "Resolution 2": 968,
+       "Resolution 3": 338,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.88,
+       "measured": 0.88,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.56,
+       "measured": 1.56,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 1500.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w0": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.1,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.3,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.4,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w0",
+       "mean_srgb": [
+        84.7,
+        81.6,
+        73.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_komainu_b_un": {
+   "prop": "jp_s_komainu",
+   "cat": "shrine",
+   "state": "intact",
+   "variant": "un",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 2638,
+    "Resolution 2": 968,
+    "Resolution 3": 338,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w0.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 2638,
+       "Resolution 2": 968,
+       "Resolution 3": 338,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.88,
+       "measured": 0.88,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.56,
+       "measured": 1.56,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 1500.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w0": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.1,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.3,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.4,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w0",
+       "mean_srgb": [
+        84.7,
+        81.6,
+        73.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_komainu_a_a_moss": {
+   "prop": "jp_s_komainu",
+   "cat": "shrine",
+   "state": "intact",
+   "variant": "a",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 2847,
+    "Resolution 2": 1018,
+    "Resolution 3": 356,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 2847,
+       "Resolution 2": 1018,
+       "Resolution 3": 356,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 1.0,
+       "measured": 1.0,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.85,
+       "measured": 1.85,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 1500.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.1,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.3,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.4,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w2",
+       "mean_srgb": [
+        66.1,
+        63.2,
+        55.3
+       ],
+       "palette": "stone_lantern",
+       "dE76": 3.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_komainu_a_un_moss": {
+   "prop": "jp_s_komainu",
+   "cat": "shrine",
+   "state": "intact",
+   "variant": "un",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 2847,
+    "Resolution 2": 1018,
+    "Resolution 3": 358,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 2847,
+       "Resolution 2": 1018,
+       "Resolution 3": 358,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 1.0,
+       "measured": 1.0,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.85,
+       "measured": 1.85,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 1500.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.1,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.3,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.4,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w2",
+       "mean_srgb": [
+        66.1,
+        63.2,
+        55.3
+       ],
+       "palette": "stone_lantern",
+       "dE76": 3.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_kitsune_key": {
+   "prop": "jp_s_kitsune",
+   "cat": "shrine",
+   "state": "intact",
+   "variant": "key",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 2036,
+    "Resolution 2": 768,
+    "Resolution 3": 266,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w0.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 2036,
+       "Resolution 2": 768,
+       "Resolution 3": 266,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.88,
+       "measured": 0.88,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.72,
+       "measured": 1.72,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 1500.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w0": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.1,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.3,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.4,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w0",
+       "mean_srgb": [
+        84.7,
+        81.6,
+        73.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  },
+  "jp_s_kitsune_jewel": {
+   "prop": "jp_s_kitsune",
+   "cat": "shrine",
+   "state": "intact",
+   "variant": "jewel",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 2038,
+    "Resolution 2": 768,
+    "Resolution 3": 268,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w1.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_decal_moss_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_carved_aged_w0.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG) + budget statue R1<=4500 R2<=1700 R3<=700, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 2038,
+       "Resolution 2": 768,
+       "Resolution 3": 268,
+       "Geometry": 24,
+       "View Geometry": 24,
+       "Fire Geometry": 24
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "figure_h",
+       "expected": 0.88,
+       "measured": 0.88,
+       "tol": 0.01,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "total_h",
+       "expected": 1.72,
+       "measured": 1.72,
+       "tol": 0.05,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.06,
+      "geo_min_y": 0.0,
+      "bury": 0.06,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 4,
+      "problems": {},
+      "mass": 1500.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 4
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_decal_moss_w1": true,
+      "jp_m_decal_moss_w2": true,
+      "jp_m_stone_carved_aged_w0": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_decal_moss_w1",
+       "mean_srgb": [
+        129.4,
+        132.1,
+        94.9
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 1.7,
+       "tolerance": 14,
+       "pass": true
+      },
+      {
+       "material": "jp_m_decal_moss_w2",
+       "mean_srgb": [
+        115.3,
+        121.5,
+        80.6
+       ],
+       "palette": "moss_on_stone",
+       "dE76": 4.4,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_carved_aged_w0",
+       "mean_srgb": [
+        84.7,
+        81.6,
+        73.4
+       ],
+       "palette": "stone_lantern",
+       "dE76": 5.0,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
   }
  },
  "global": {
@@ -50139,7 +51981,7 @@
   }
  },
  "summary": {
-  "models": 231,
-  "pass": 231
+  "models": 239,
+  "pass": 239
  }
 }

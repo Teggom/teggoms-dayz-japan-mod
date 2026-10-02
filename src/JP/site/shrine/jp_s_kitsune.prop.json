@@ -1,0 +1,148 @@
+{
+ "id": "jp_s_kitsune",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "shrine",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "Inari shrines only, IN PAIRS like komainu: the fox with the rice-store key and the fox with the jewel; no stone-fox photo in the open-access sets (proportions from Met 60375 + general knowledge)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_kitsune_key.p3d",
+   "class": "StaticObj_JP_S_Kitsune_Key",
+   "variant": "key",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone Inari fox with the key in its mouth",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "statue",
+   "faces": {
+    "Resolution 1": 2036,
+    "Resolution 2": 768,
+    "Resolution 3": 266,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.328,
+    0.31,
+    -0.06,
+    1.721,
+    -0.406,
+    0.37
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.31,
+    -0.37,
+    0.31,
+    0.37
+   ],
+   "roadway": false,
+   "mass_kg": 1500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.88,
+     "measured": 0.88,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.72,
+     "measured": 1.72,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "kitsune on a three-stone pedestal (top 0.84 m), figure 0.88 m; FX2 sculpted mesh (kitsune_key)"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_kitsune_key.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_kitsune_jewel.p3d",
+   "class": "StaticObj_JP_S_Kitsune_Jewel",
+   "variant": "jewel",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone Inari fox with the jewel in its mouth",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "statue",
+   "faces": {
+    "Resolution 1": 2038,
+    "Resolution 2": 768,
+    "Resolution 3": 268,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.328,
+    0.31,
+    -0.06,
+    1.721,
+    -0.406,
+    0.37
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.31,
+    -0.37,
+    0.31,
+    0.37
+   ],
+   "roadway": false,
+   "mass_kg": 1500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.88,
+     "measured": 0.88,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.72,
+     "measured": 1.72,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "kitsune on a three-stone pedestal (top 0.84 m), figure 0.88 m; FX2 sculpted mesh (kitsune_jewel)"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_kitsune_jewel.p3d"
+  }
+ ]
+}

@@ -25,21 +25,21 @@
    "abandoned": false,
    "display": "Offering box (saisen-bako), large",
    "anchor": "floor",
-   "budget": "furniture",
+   "budget": "detail",
    "faces": {
-    "Resolution 1": 138,
+    "Resolution 1": 496,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.76,
-    0.76,
+    -0.762,
+    0.762,
     0.0,
     0.55,
-    -0.287,
-    0.287
+    -0.289,
+    0.293
    ],
    "collision": true,
    "footprint_xz": [
@@ -57,7 +57,7 @@
      "name": "w",
      "expected": 1.5,
      "measured": 1.5,
-     "tol": 0.005,
+     "tol": 0.03,
      "source": "build_list"
     },
     {
@@ -69,7 +69,7 @@
     }
    ],
    "notes": [
-    "offering box (saisen-bako) on the en before the worship bay; undisturbed, no loot (G1 A2-12)"
+    "FX2: offering box (saisen-bako): six slats a side, iron straps with nails, the bronze mitsudomoe crest on the front, a hasp; undisturbed, no loot (G1 A2-12)"
    ],
    "master": "spikes/W2F/out/sacred/jp_f_saisen_bako_l.p3d",
    "mount": "floor",
@@ -83,21 +83,21 @@
    "abandoned": false,
    "display": "Offering box, medium",
    "anchor": "floor",
-   "budget": "furniture",
+   "budget": "detail",
    "faces": {
-    "Resolution 1": 138,
+    "Resolution 1": 496,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.61,
-    0.61,
+    -0.612,
+    0.612,
     0.0,
     0.5,
-    -0.262,
-    0.262
+    -0.264,
+    0.268
    ],
    "collision": true,
    "footprint_xz": [
@@ -115,7 +115,7 @@
      "name": "w",
      "expected": 1.2,
      "measured": 1.2,
-     "tol": 0.005,
+     "tol": 0.03,
      "source": "build_list"
     },
     {
@@ -127,7 +127,7 @@
     }
    ],
    "notes": [
-    "offering box (saisen-bako) on the en before the worship bay; undisturbed, no loot (G1 A2-12)"
+    "FX2: offering box (saisen-bako): six slats a side, iron straps with nails, the bronze mitsudomoe crest on the front, a hasp; undisturbed, no loot (G1 A2-12)"
    ],
    "master": "spikes/W2F/out/sacred/jp_f_saisen_bako_m.p3d",
    "mount": "floor",
@@ -141,21 +141,21 @@
    "abandoned": false,
    "display": "Donation box, small",
    "anchor": "floor",
-   "budget": "furniture",
+   "budget": "detail",
    "faces": {
-    "Resolution 1": 138,
+    "Resolution 1": 496,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
     "Fire Geometry": 6
    },
    "bbox": [
-    -0.51,
-    0.51,
+    -0.512,
+    0.512,
     0.0,
     0.45,
-    -0.237,
-    0.237
+    -0.239,
+    0.243
    ],
    "collision": true,
    "footprint_xz": [
@@ -173,7 +173,7 @@
      "name": "w",
      "expected": 1.0,
      "measured": 1.0,
-     "tol": 0.005,
+     "tol": 0.03,
      "source": "build_list"
     },
     {
@@ -185,7 +185,7 @@
     }
    ],
    "notes": [
-    "offering box (saisen-bako) on the en before the worship bay; undisturbed, no loot (G1 A2-12)"
+    "FX2: offering box (saisen-bako): six slats a side, iron straps with nails, the bronze mitsudomoe crest on the front, a hasp; undisturbed, no loot (G1 A2-12)"
    ],
    "master": "spikes/W2F/out/sacred/jp_f_saisen_bako_s.p3d",
    "mount": "floor",

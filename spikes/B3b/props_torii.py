@@ -165,10 +165,13 @@ def torii_wood(form, rope=ROPE_NONE, moss=False, shu=False, ab=None, plaque=None
     # ---- straw rope on the tie-beam. FX1: hung across the FRONT of the nuki (centre 0.35 of its height up, was 7 cm
     # under it) and half the sag (was 0.10 per 1.82 m of span): 15-20 cm more head room before the scale
     rr_ = 0.045 if form == "myojin" else (0.035 if form == "shinmei" else 0.012)
-    rope_y = (ny0 + nh * 0.35) if not mini else ny0 - 0.03 - 0.012
+    # FX2 (2026-10-01, Stephen: 'the rope now looks too SHORT: hang it a little lower'): the rope 0.20 of the nuki
+    # height up its front (FX1 0.35) and 3/4 of the old sag (FX1 halved it: 0.10 -> 0.05 -> 0.075 per 1.82 m of
+    # span); the shide go into the rope's lay (w2kit.torii_rope), so the lowest tip stays >= 2.30 m (ropeclear)
+    rope_y = (ny0 + nh * 0.20) if not mini else ny0 - 0.03 - 0.012
     rope_z = (nd / 2 + rr_ * 0.9) if not mini else nd / 2 + 0.015
     if rope and not ab:
-        solids += K.torii_rope(-xp + r, xp - r, rope_y, rope_z, r=rr_, drop=0.05 * S / 1.82 if not mini else 0.03,
+        solids += K.torii_rope(-xp + r, xp - r, rope_y, rope_z, r=rr_, drop=0.075 * S / 1.82 if not mini else 0.03,
                                with_shide=rope == ROPE_SHIDE, wear="_w2", seed=len(form) * 3 + rope,
                                n_tassel=None if not mini else 3)
         for sx in (-1, 1):
@@ -330,10 +333,10 @@ def torii_stone(size, rope=ROPE_NONE, moss=False, ab=None):
         solids.append(K.moss_strip(kas_top, kd * 0.5, seed=37, wear="_w0", frac=(0.3, 0.55)))
     # FX1: the rope across the front of the nuki (was 5 cm under it), half the sag
     rr_ = 0.05 if size != "l" else 0.07
-    rope_y = ny0 + nh * 0.35
+    rope_y = ny0 + nh * 0.20                         # FX2: a little lower, 3/4 of the old sag (see torii_wood)
     rope_z = nd / 2 + rr_ * 0.9
     if rope and not ab:
-        solids += K.torii_rope(-xp + r, xp - r, rope_y, rope_z, r=rr_, drop=0.05 * S / 1.82,
+        solids += K.torii_rope(-xp + r, xp - r, rope_y, rope_z, r=rr_, drop=0.075 * S / 1.82,
                                with_shide=rope == ROPE_SHIDE, wear="_w2", seed=40 + rope)
         for sx in (-1, 1):
             ring = xf(lathe([(r + rr_ * 0.7, rope_y - rr_), (r + rr_ * 0.7, rope_y + rr_)], 8, ROPE, vis=(1,)),

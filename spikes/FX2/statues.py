@@ -26,6 +26,10 @@ CAT = {
     "kitsune_key": (G.kitsune, {"item": "key"}, (2000, 750, 250)),
     "kitsune_jewel": (G.kitsune, {"item": "jewel"}, (2000, 750, 250)),
     "lotus": (G.lotus_seat, {}, (700, 260, 90)),
+    "mask_okina": (G.kagura_mask, {"kind": "okina"}, (400, 150, 50)),
+    "mask_oni": (G.kagura_mask, {"kind": "oni"}, (400, 150, 50)),
+    "mask_okame": (G.kagura_mask, {"kind": "okame"}, (400, 150, 50)),
+    "mask_hyottoko": (G.kagura_mask, {"kind": "hyottoko"}, (400, 150, 50)),
 }
 
 

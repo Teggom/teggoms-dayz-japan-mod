@@ -292,8 +292,12 @@ def statue(name, build, lods=(3000, 1100, 380), params=None, force=False):
 
 
 def _deps_src():
-    # the whole modelling source: a change to a shared head / helper rebuilds every statue that might use it
-    return "".join(open(os.path.join(HERE, f), encoding="utf-8").read() for f in ("sdf.py", "figures.py"))
+    # sdf.py + the shared figure helpers (heads, hair, staff head, folds): a change there rebuilds every statue; a
+    # change to one figure's own build function rebuilds only that figure (its source is hashed separately)
+    import figures as FG
+    helpers = [FG.head, FG.curls_cap, FG.bosatsu_hair, FG.head_part, FG.ridges, FG.floor_cut, FG.shakujo_head,
+               FG._arc, FG._cap_points, FG.Node_offset]
+    return open(os.path.join(HERE, "sdf.py"), encoding="utf-8").read() + "".join(inspect.getsource(f) for f in helpers)
 
 
 def _load(d):

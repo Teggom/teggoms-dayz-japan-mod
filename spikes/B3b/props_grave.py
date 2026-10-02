@@ -269,7 +269,8 @@ def grave(kind):
     ab = kind.startswith("ab")
     rr = random.Random(core.hash_str(kind))
     big = kind in ("gorinto_l", "hokyointo", "ab_hokyointo_broken")
-    P = SPart("grave_stones", budget="box" if big else "small", res3=big, mass=200.0, bury=0.12)
+    fig = "boat_halo" in kind or kind == "jizo_child"          # FX2: the sculpted Jizo = a statue budget
+    P = SPart("grave_stones", budget="statue" if fig else ("box" if big else "small"), res3=big, mass=200.0, bury=0.12)
     wear = "_w2" if (ab or "moss" in kind or kind in ("gorinto_heap", "field_mound")) else "_w1"
     P.wear = wear
     vis, cols, tx = [], [], []
@@ -554,9 +555,9 @@ def grave(kind):
         bv, bc, y0 = base_stack([(0.32, 0.26, 0.14)], wear=wear)
         vis += bv
         cols += bc
-        vis += xfs(PS.jizo_figure(H, vis_3=()), t=(0.0, y0, 0.0))
-        cols.append(cyl_col(0.17 * H, y0, y0 + H, n=6, mat=CARVED))
-        vis += xfs(PS.bib_and_cap(H), t=(0.0, y0, 0.0))
+        vis += xfs(PS.jizo_figure(H, vis_3=(), kind="jizo_child"), t=(0.0, y0, 0.0))     # FX2: the child's Jizo
+        cols.append(cyl_col(0.19 * H, y0, y0 + H, n=6, mat=CARVED))
+        vis += xfs(PS.bib_and_cap(H, form="child"), t=(0.0, y0, 0.0))
         tx.append(K.carved((0.0, y0 * 0.5, 0.13), X, Y, 0.10, "enmei_jizo", wear=wear, crop=(0.0, 0.0, 1.0, 0.4)))
         top = y0 + H
         P.dim("figure_h", H, H, tol=0.002)

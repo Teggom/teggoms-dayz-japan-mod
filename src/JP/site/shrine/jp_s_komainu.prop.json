@@ -1,0 +1,405 @@
+{
+ "id": "jp_s_komainu",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "shrine",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot",
+ "notes": [
+  "IN PAIRS flanking an approach (at the torii foot or before the hall steps): the 'a' (open) on the right and the 'un' (closed) on the left as one faces the shrine, both facing down the approach, toed in ~15 deg (research/statues/NOTES.md)",
+  "style a: the upright form of the references (CMA 106262 / 106263, Met 53190), heavy curls, the un with a horn; style b: the compact Edo stone form, no horn; _moss: style a weathered (old village shrines)"
+ ],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_komainu_a_a.p3d",
+   "class": "StaticObj_JP_S_Komainu_A_A",
+   "variant": "a",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone komainu, open mouth (a), upright form",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "statue",
+   "faces": {
+    "Resolution 1": 2838,
+    "Resolution 2": 1018,
+    "Resolution 3": 356,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.45,
+    0.45,
+    -0.06,
+    1.803,
+    -0.56,
+    0.56
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.45,
+    -0.56,
+    0.45,
+    0.56
+   ],
+   "roadway": false,
+   "mass_kg": 1500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.85,
+     "measured": 1.85,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "komainu on a three-stone pedestal (top 0.85 m), figure 1.00 m; FX2 sculpted mesh (komainu_a_a)"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_komainu_a_a.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_komainu_a_un.p3d",
+   "class": "StaticObj_JP_S_Komainu_A_Un",
+   "variant": "un",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone komainu, closed mouth (un) with horn, upright form",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "statue",
+   "faces": {
+    "Resolution 1": 2838,
+    "Resolution 2": 1018,
+    "Resolution 3": 358,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.45,
+    0.45,
+    -0.06,
+    1.901,
+    -0.56,
+    0.56
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.45,
+    -0.56,
+    0.45,
+    0.56
+   ],
+   "roadway": false,
+   "mass_kg": 1500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.85,
+     "measured": 1.85,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "komainu on a three-stone pedestal (top 0.85 m), figure 1.00 m; FX2 sculpted mesh (komainu_a_un)"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_komainu_a_un.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_komainu_b_a.p3d",
+   "class": "StaticObj_JP_S_Komainu_B_A",
+   "variant": "a",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone komainu, open mouth (a), compact Edo form",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "statue",
+   "faces": {
+    "Resolution 1": 2638,
+    "Resolution 2": 968,
+    "Resolution 3": 338,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.42,
+    0.42,
+    -0.06,
+    1.462,
+    -0.52,
+    0.52
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.42,
+    -0.52,
+    0.42,
+    0.52
+   ],
+   "roadway": false,
+   "mass_kg": 1500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.88,
+     "measured": 0.88,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.56,
+     "measured": 1.56,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "komainu on a three-stone pedestal (top 0.68 m), figure 0.88 m; FX2 sculpted mesh (komainu_b_a)"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_komainu_b_a.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_komainu_b_un.p3d",
+   "class": "StaticObj_JP_S_Komainu_B_Un",
+   "variant": "un",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone komainu, closed mouth (un), compact Edo form",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "statue",
+   "faces": {
+    "Resolution 1": 2638,
+    "Resolution 2": 968,
+    "Resolution 3": 338,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.42,
+    0.42,
+    -0.06,
+    1.462,
+    -0.52,
+    0.52
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.42,
+    -0.52,
+    0.42,
+    0.52
+   ],
+   "roadway": false,
+   "mass_kg": 1500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 0.88,
+     "measured": 0.88,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.56,
+     "measured": 1.56,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "komainu on a three-stone pedestal (top 0.68 m), figure 0.88 m; FX2 sculpted mesh (komainu_b_un)"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_komainu_b_un.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_komainu_a_a_moss.p3d",
+   "class": "StaticObj_JP_S_Komainu_A_A_Moss",
+   "variant": "a",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone komainu (a), upright form, mossy and weathered",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "statue",
+   "faces": {
+    "Resolution 1": 2847,
+    "Resolution 2": 1018,
+    "Resolution 3": 356,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.45,
+    0.45,
+    -0.06,
+    1.803,
+    -0.56,
+    0.56
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.45,
+    -0.56,
+    0.45,
+    0.56
+   ],
+   "roadway": false,
+   "mass_kg": 1500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.85,
+     "measured": 1.85,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "komainu on a three-stone pedestal (top 0.85 m), figure 1.00 m; FX2 sculpted mesh (komainu_a_a), mossy (aged _w2 + moss)"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_komainu_a_a_moss.p3d"
+  },
+  {
+   "p3d": "\\JP\\site\\shrine\\jp_s_komainu_a_un_moss.p3d",
+   "class": "StaticObj_JP_S_Komainu_A_Un_Moss",
+   "variant": "un",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Stone komainu (un), upright form, mossy and weathered",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "statue",
+   "faces": {
+    "Resolution 1": 2847,
+    "Resolution 2": 1018,
+    "Resolution 3": 358,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.45,
+    0.45,
+    -0.06,
+    1.901,
+    -0.56,
+    0.56
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -0.45,
+    -0.56,
+    0.45,
+    0.56
+   ],
+   "roadway": false,
+   "mass_kg": 1500.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "figure_h",
+     "expected": 1.0,
+     "measured": 1.0,
+     "tol": 0.01,
+     "source": "build_list"
+    },
+    {
+     "name": "total_h",
+     "expected": 1.85,
+     "measured": 1.85,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "komainu on a three-stone pedestal (top 0.85 m), figure 1.00 m; FX2 sculpted mesh (komainu_a_un), mossy (aged _w2 + moss)"
+   ],
+   "mount": "shrine",
+   "master": "spikes/B3b/out/shrine/jp_s_komainu_a_un_moss.p3d"
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+[
+ {
+  "id": "FX-P1a",
+  "class": "StaticObj_JP_S_Komainu_B_Un",
+  "p3d": "JP\\site\\shrine\\jp_s_komainu_b_un.p3d",
+  "x": 1021.45,
+  "z": 1102.1,
+  "yaw": 165.0,
+  "y_off": -0.0,
+  "label": "komainu pair, compact Edo form, just inside the ichi-no-torii S01 (west / left, facing the shrine)",
+  "area": "P"
+ },
+ {
+  "id": "FX-P1b",
+  "class": "StaticObj_JP_S_Komainu_B_A",
+  "p3d": "JP\\site\\shrine\\jp_s_komainu_b_a.p3d",
+  "x": 1026.55,
+  "z": 1102.1,
+  "yaw": 195.0,
+  "y_off": 0.0,
+  "label": "komainu pair, compact Edo form, just inside the ichi-no-torii S01 (east / right)",
+  "area": "P"
+ },
+ {
+  "id": "FX-P2a",
+  "class": "StaticObj_JP_S_Komainu_A_Un",
+  "p3d": "JP\\site\\shrine\\jp_s_komainu_a_un.p3d",
+  "x": 1021.3,
+  "z": 1138.9,
+  "yaw": 165.0,
+  "y_off": -0.018,
+  "label": "komainu pair, upright form (un with horn), inside the ni-no-torii S14 (west / left, facing the shrine)",
+  "area": "P"
+ },
+ {
+  "id": "FX-P2b",
+  "class": "StaticObj_JP_S_Komainu_A_A",
+  "p3d": "JP\\site\\shrine\\jp_s_komainu_a_a.p3d",
+  "x": 1026.7,
+  "z": 1138.9,
+  "yaw": 195.0,
+  "y_off": -0.018,
+  "label": "komainu pair, upright form (un with horn), inside the ni-no-torii S14 (east / right)",
+  "area": "P"
+ },
+ {
+  "id": "FX-V1a",
+  "class": "StaticObj_JP_S_Komainu_A_Un_Moss",
+  "p3d": "JP\\site\\shrine\\jp_s_komainu_a_un_moss.p3d",
+  "x": 942.8,
+  "z": 1059.5,
+  "yaw": 165.0,
+  "y_off": 0.0,
+  "label": "komainu pair, upright form, mossy (old village shrine), outside the torii V3 (west / left, facing the shrine)",
+  "area": "V"
+ },
+ {
+  "id": "FX-V1b",
+  "class": "StaticObj_JP_S_Komainu_A_A_Moss",
+  "p3d": "JP\\site\\shrine\\jp_s_komainu_a_a_moss.p3d",
+  "x": 947.2,
+  "z": 1059.5,
+  "yaw": 195.0,
+  "y_off": 0.0,
+  "label": "komainu pair, upright form, mossy (old village shrine), outside the torii V3 (east / right)",
+  "area": "V"
+ },
+ {
+  "id": "FX-I1a",
+  "class": "StaticObj_JP_S_Kitsune_Key",
+  "p3d": "JP\\site\\shrine\\jp_s_kitsune_key.p3d",
+  "x": 1056.2,
+  "z": 1223.9,
+  "yaw": 165.0,
+  "y_off": -0.106,
+  "label": "Inari fox pair (key / jewel), below the vermilion torii S80 (west / left, facing the shrine)",
+  "area": "I"
+ },
+ {
+  "id": "FX-I1b",
+  "class": "StaticObj_JP_S_Kitsune_Jewel",
+  "p3d": "JP\\site\\shrine\\jp_s_kitsune_jewel.p3d",
+  "x": 1059.8,
+  "z": 1223.9,
+  "yaw": 195.0,
+  "y_off": -0.108,
+  "label": "Inari fox pair (key / jewel), below the vermilion torii S80 (east / right)",
+  "area": "I"
+ },
+ {
+  "id": "FX-I2a",
+  "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss",
+  "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d",
+  "x": 1056.0,
+  "z": 1221.4,
+  "yaw": 90.0,
+  "y_off": -0.128,
+  "label": "lantern pair on the Inari path, Kasuga 1.8 mossy (west)",
+  "area": "I"
+ },
+ {
+  "id": "FX-I2b",
+  "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss",
+  "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d",
+  "x": 1060.0,
+  "z": 1221.4,
+  "yaw": 270.0,
+  "y_off": -0.152,
+  "label": "lantern pair on the Inari path (east)",
+  "area": "I"
+ }
+]

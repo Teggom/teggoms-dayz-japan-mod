@@ -7,7 +7,7 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 138,
+    "Resolution 1": 496,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
@@ -32,6 +32,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
@@ -46,18 +47,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 138,
+       "Resolution 1": 496,
        "Resolution 2": 42,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
       "extra": [],
-      "budget": 1000
+      "budget": 1500
      }
     },
     {
@@ -69,7 +70,7 @@
        "name": "w",
        "expected": 1.5,
        "measured": 1.5,
-       "tol": 0.005,
+       "tol": 0.03,
        "source": "build_list",
        "ok": true
       },
@@ -137,13 +138,27 @@
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
-     "detail": {}
+     "detail": {
+      "jp_m_metal_bronze_w1": true
+     }
     },
     {
      "id": "C1",
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_metal_bronze_w1",
+       "mean_srgb": [
+        77.6,
+        70.8,
+        56.8
+       ],
+       "palette": "bronze_patina",
+       "dE76": 0.7,
+       "tolerance": 16,
+       "pass": true
+      },
       {
        "material": "jp_m_metal_iron_w1",
        "mean_srgb": [
@@ -179,7 +194,7 @@
    "variant": "m",
    "pass": true,
    "faces": {
-    "Resolution 1": 138,
+    "Resolution 1": 496,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
@@ -204,6 +219,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat"
       ],
@@ -218,18 +234,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 138,
+       "Resolution 1": 496,
        "Resolution 2": 42,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
       "extra": [],
-      "budget": 1000
+      "budget": 1500
      }
     },
     {
@@ -241,7 +257,7 @@
        "name": "w",
        "expected": 1.2,
        "measured": 1.2,
-       "tol": 0.005,
+       "tol": 0.03,
        "source": "build_list",
        "ok": true
       },
@@ -309,13 +325,27 @@
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
-     "detail": {}
+     "detail": {
+      "jp_m_metal_bronze_w1": true
+     }
     },
     {
      "id": "C1",
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_metal_bronze_w1",
+       "mean_srgb": [
+        77.6,
+        70.8,
+        56.8
+       ],
+       "palette": "bronze_patina",
+       "dE76": 0.7,
+       "tolerance": 16,
+       "pass": true
+      },
       {
        "material": "jp_m_metal_iron_w1",
        "mean_srgb": [
@@ -351,7 +381,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 138,
+    "Resolution 1": 496,
     "Resolution 2": 42,
     "Geometry": 6,
     "View Geometry": 6,
@@ -376,6 +406,7 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\metal\\jp_m_metal_bronze_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
@@ -391,18 +422,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 138,
+       "Resolution 1": 496,
        "Resolution 2": 42,
        "Geometry": 6,
        "View Geometry": 6,
        "Fire Geometry": 6
       },
       "extra": [],
-      "budget": 1000
+      "budget": 1500
      }
     },
     {
@@ -414,7 +445,7 @@
        "name": "w",
        "expected": 1.0,
        "measured": 1.0,
-       "tol": 0.005,
+       "tol": 0.03,
        "source": "build_list",
        "ok": true
       },
@@ -482,13 +513,27 @@
      "id": "C19",
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
-     "detail": {}
+     "detail": {
+      "jp_m_metal_bronze_w2": true
+     }
     },
     {
      "id": "C1",
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_metal_bronze_w2",
+       "mean_srgb": [
+        79.2,
+        84.1,
+        70.3
+       ],
+       "palette": "bronze_patina",
+       "dE76": 7.7,
+       "tolerance": 16,
+       "pass": true
+      },
       {
        "material": "jp_m_metal_iron_w2",
        "mean_srgb": [
@@ -536,7 +581,7 @@
    "variant": "rope",
    "pass": true,
    "faces": {
-    "Resolution 1": 355,
+    "Resolution 1": 828,
     "Resolution 2": 12
    },
    "checks": [
@@ -573,15 +618,15 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 355,
+       "Resolution 1": 828,
        "Resolution 2": 12
       },
       "extra": [],
-      "budget": 1000
+      "budget": 1500
      }
     },
     {
@@ -593,7 +638,7 @@
        "name": "bell_d",
        "expected": 0.24,
        "measured": 0.24,
-       "tol": 0.005,
+       "tol": 0.01,
        "source": "build_list",
        "ok": true
       }
@@ -711,7 +756,7 @@
    "variant": "rope",
    "pass": true,
    "faces": {
-    "Resolution 1": 355,
+    "Resolution 1": 828,
     "Resolution 2": 12
    },
    "checks": [
@@ -749,15 +794,15 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 355,
+       "Resolution 1": 828,
        "Resolution 2": 12
       },
       "extra": [],
-      "budget": 1000
+      "budget": 1500
      }
     },
     {
@@ -769,7 +814,7 @@
        "name": "bell_d",
        "expected": 0.24,
        "measured": 0.24,
-       "tol": 0.005,
+       "tol": 0.01,
        "source": "build_list",
        "ok": true
       }
@@ -2674,8 +2719,8 @@
    "variant": "rail",
    "pass": true,
    "faces": {
-    "Resolution 1": 198,
-    "Resolution 2": 12
+    "Resolution 1": 830,
+    "Resolution 2": 30
    },
    "checks": [
     {
@@ -2693,6 +2738,8 @@
      "pass": true,
      "detail": {
       "materials": [
+       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_paint_shu_w1.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_bib_red_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_kuro_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_new_w1.rvmat",
@@ -2710,15 +2757,15 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 198,
-       "Resolution 2": 12
+       "Resolution 1": 830,
+       "Resolution 2": 30
       },
       "extra": [],
-      "budget": 1000
+      "budget": 1500
      }
     },
     {
@@ -2756,6 +2803,7 @@
      "name": "matte library rvmats have the black env map (glossy ceramics / lacquer / iron exempt)",
      "pass": true,
      "detail": {
+      "jp_m_paint_shu_w1": true,
       "jp_m_textile_bib_red_w1": true,
       "jp_m_wood_new_w1": true,
       "jp_m_wood_silver_w1": true
@@ -2766,6 +2814,30 @@
      "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
      "pass": true,
      "detail": [
+      {
+       "material": "jp_m_ceramic_stoneware_dark_w1",
+       "mean_srgb": [
+        80.6,
+        59.3,
+        45.5
+       ],
+       "palette": "stoneware_dark",
+       "dE76": 3.2,
+       "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_paint_shu_w1",
+       "mean_srgb": [
+        148.0,
+        34.0,
+        12.7
+       ],
+       "palette": "shu_vermilion",
+       "dE76": 5.0,
+       "tolerance": 7,
+       "pass": true
+      },
       {
        "material": "jp_m_textile_bib_red_w1",
        "mean_srgb": [
@@ -2837,8 +2909,8 @@
    "variant": "masks",
    "pass": true,
    "faces": {
-    "Resolution 1": 364,
-    "Resolution 2": 12
+    "Resolution 1": 2128,
+    "Resolution 2": 612
    },
    "checks": [
     {
@@ -2857,14 +2929,17 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
-       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_pale_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_bronze_w2.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_paint_shu_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_paint_shu_w2.rvmat",
-       "JP\\common\\materials\\paper\\jp_m_paper_fusuma_w2.rvmat",
+       "JP\\common\\materials\\paper\\jp_m_paper_fusuma_w1.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_bib_red_w2.rvmat",
+       "JP\\common\\materials\\textile\\jp_m_textile_cotton_indigo_w2.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_cotton_plain_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_interior_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_kuro_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_new_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
       ],
@@ -2879,15 +2954,15 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 2250, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 364,
-       "Resolution 2": 12
+       "Resolution 1": 2128,
+       "Resolution 2": 612
       },
       "extra": [],
-      "budget": 1000
+      "budget": 2250
      }
     },
     {
@@ -2926,11 +3001,15 @@
      "pass": true,
      "detail": {
       "jp_m_metal_bronze_w2": true,
+      "jp_m_paint_shu_w1": true,
       "jp_m_paint_shu_w2": true,
-      "jp_m_paper_fusuma_w2": true,
+      "jp_m_paper_fusuma_w1": true,
+      "jp_m_straw_rope_w2": true,
       "jp_m_textile_bib_red_w2": true,
+      "jp_m_textile_cotton_indigo_w2": true,
       "jp_m_textile_cotton_plain_w2": true,
-      "jp_m_wood_interior_w2": true
+      "jp_m_wood_interior_w2": true,
+      "jp_m_wood_new_w1": true
      }
     },
     {
@@ -2951,18 +3030,6 @@
        "pass": true
       },
       {
-       "material": "jp_m_ceramic_stoneware_pale_w2",
-       "mean_srgb": [
-        166.5,
-        147.9,
-        116.3
-       ],
-       "palette": "stoneware_pale",
-       "dE76": 1.3,
-       "tolerance": 14,
-       "pass": true
-      },
-      {
        "material": "jp_m_metal_bronze_w2",
        "mean_srgb": [
         79.2,
@@ -2972,6 +3039,18 @@
        "palette": "bronze_patina",
        "dE76": 7.7,
        "tolerance": 16,
+       "pass": true
+      },
+      {
+       "material": "jp_m_paint_shu_w1",
+       "mean_srgb": [
+        148.0,
+        34.0,
+        12.7
+       ],
+       "palette": "shu_vermilion",
+       "dE76": 5.0,
+       "tolerance": 7,
        "pass": true
       },
       {
@@ -2987,15 +3066,27 @@
        "pass": false
       },
       {
-       "material": "jp_m_paper_fusuma_w2",
+       "material": "jp_m_paper_fusuma_w1",
        "mean_srgb": [
-        185.6,
-        174.2,
-        155.3
+        188.1,
+        177.5,
+        156.7
        ],
        "palette": "gofun_white",
-       "dE76": 11.3,
+       "dE76": 10.9,
        "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        86.9,
+        73.3,
+        52.7
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.1,
+       "tolerance": 14,
        "pass": true
       },
       {
@@ -3008,6 +3099,18 @@
        "palette": "bib_red_faded",
        "dE76": 7.7,
        "tolerance": 12,
+       "pass": true
+      },
+      {
+       "material": "jp_m_textile_cotton_indigo_w2",
+       "mean_srgb": [
+        63.2,
+        70.4,
+        72.9
+       ],
+       "palette": "aizome_kon",
+       "dE76": 3.9,
+       "tolerance": 6,
        "pass": true
       },
       {
@@ -3047,6 +3150,18 @@
        "pass": true
       },
       {
+       "material": "jp_m_wood_new_w1",
+       "mean_srgb": [
+        167.1,
+        137.4,
+        116.2
+       ],
+       "palette": "wood_new_cut",
+       "dE76": 4.4,
+       "tolerance": 11,
+       "pass": true
+      },
+      {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
         111.2,
@@ -3081,8 +3196,8 @@
    "variant": "amida",
    "pass": true,
    "faces": {
-    "Resolution 1": 510,
-    "Resolution 2": 84,
+    "Resolution 1": 4622,
+    "Resolution 2": 1444,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -3115,6 +3230,8 @@
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_gilt_worn_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_gilt_worn_w2.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w1.rvmat",
@@ -3131,18 +3248,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 5500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 510,
-       "Resolution 2": 84,
+       "Resolution 1": 4622,
+       "Resolution 2": 1444,
        "Geometry": 12,
        "View Geometry": 12,
        "Fire Geometry": 12
       },
       "extra": [],
-      "budget": 1500
+      "budget": 5500
      }
     },
     {
@@ -3225,7 +3342,9 @@
      "detail": {
       "jp_m_ground_ash_w1": true,
       "jp_m_ground_leaf_litter_w2": true,
-      "jp_m_metal_bronze_w1": true
+      "jp_m_metal_bronze_w1": true,
+      "jp_m_gilt_worn_w1": true,
+      "jp_m_gilt_worn_w2": true
      }
     },
     {
@@ -3342,6 +3461,30 @@
        "pass": true
       },
       {
+       "material": "jp_m_gilt_worn_w1",
+       "mean_srgb": [
+        128.2,
+        104.8,
+        77.7
+       ],
+       "palette": "gilt_worn",
+       "dE76": 2.5,
+       "tolerance": 18,
+       "pass": true
+      },
+      {
+       "material": "jp_m_gilt_worn_w2",
+       "mean_srgb": [
+        101.2,
+        91.9,
+        69.6
+       ],
+       "palette": "gilt_worn",
+       "dE76": 11.9,
+       "tolerance": 18,
+       "pass": true
+      },
+      {
        "material": "jp_m_lacquer_black_w1",
        "mean_srgb": [
         48.0,
@@ -3400,8 +3543,8 @@
    "variant": "shaka",
    "pass": true,
    "faces": {
-    "Resolution 1": 504,
-    "Resolution 2": 84,
+    "Resolution 1": 4051,
+    "Resolution 2": 1497,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -3434,6 +3577,8 @@
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_gilt_worn_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_gilt_worn_w2.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w1.rvmat",
@@ -3450,18 +3595,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 5500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 504,
-       "Resolution 2": 84,
+       "Resolution 1": 4051,
+       "Resolution 2": 1497,
        "Geometry": 12,
        "View Geometry": 12,
        "Fire Geometry": 12
       },
       "extra": [],
-      "budget": 1500
+      "budget": 5500
      }
     },
     {
@@ -3544,7 +3689,9 @@
      "detail": {
       "jp_m_ground_ash_w1": true,
       "jp_m_ground_leaf_litter_w2": true,
-      "jp_m_metal_bronze_w1": true
+      "jp_m_metal_bronze_w1": true,
+      "jp_m_gilt_worn_w1": true,
+      "jp_m_gilt_worn_w2": true
      }
     },
     {
@@ -3661,6 +3808,30 @@
        "pass": true
       },
       {
+       "material": "jp_m_gilt_worn_w1",
+       "mean_srgb": [
+        128.2,
+        104.8,
+        77.7
+       ],
+       "palette": "gilt_worn",
+       "dE76": 2.5,
+       "tolerance": 18,
+       "pass": true
+      },
+      {
+       "material": "jp_m_gilt_worn_w2",
+       "mean_srgb": [
+        101.2,
+        91.9,
+        69.6
+       ],
+       "palette": "gilt_worn",
+       "dE76": 11.9,
+       "tolerance": 18,
+       "pass": true
+      },
+      {
        "material": "jp_m_lacquer_black_w1",
        "mean_srgb": [
         48.0,
@@ -3719,8 +3890,8 @@
    "variant": "kannon",
    "pass": true,
    "faces": {
-    "Resolution 1": 455,
-    "Resolution 2": 84,
+    "Resolution 1": 3819,
+    "Resolution 2": 1423,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -3753,6 +3924,8 @@
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_gilt_worn_w1.rvmat",
+       "JP\\common\\materials\\paint\\jp_m_gilt_worn_w2.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w1.rvmat",
@@ -3769,18 +3942,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 5500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 455,
-       "Resolution 2": 84,
+       "Resolution 1": 3819,
+       "Resolution 2": 1423,
        "Geometry": 12,
        "View Geometry": 12,
        "Fire Geometry": 12
       },
       "extra": [],
-      "budget": 1500
+      "budget": 5500
      }
     },
     {
@@ -3863,7 +4036,9 @@
      "detail": {
       "jp_m_ground_ash_w1": true,
       "jp_m_ground_leaf_litter_w2": true,
-      "jp_m_metal_bronze_w1": true
+      "jp_m_metal_bronze_w1": true,
+      "jp_m_gilt_worn_w1": true,
+      "jp_m_gilt_worn_w2": true
      }
     },
     {
@@ -3980,6 +4155,30 @@
        "pass": true
       },
       {
+       "material": "jp_m_gilt_worn_w1",
+       "mean_srgb": [
+        128.2,
+        104.8,
+        77.7
+       ],
+       "palette": "gilt_worn",
+       "dE76": 2.5,
+       "tolerance": 18,
+       "pass": true
+      },
+      {
+       "material": "jp_m_gilt_worn_w2",
+       "mean_srgb": [
+        101.2,
+        91.9,
+        69.6
+       ],
+       "palette": "gilt_worn",
+       "dE76": 11.9,
+       "tolerance": 18,
+       "pass": true
+      },
+      {
        "material": "jp_m_lacquer_black_w1",
        "mean_srgb": [
         48.0,
@@ -4038,8 +4237,8 @@
    "variant": "jizo",
    "pass": true,
    "faces": {
-    "Resolution 1": 523,
-    "Resolution 2": 96,
+    "Resolution 1": 3690,
+    "Resolution 2": 1352,
     "Geometry": 12,
     "View Geometry": 12,
     "Fire Geometry": 12
@@ -4071,13 +4270,11 @@
        "JP\\common\\materials\\ground\\jp_m_ground_ash_w1.rvmat",
        "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
-       "JP\\common\\materials\\metal\\jp_m_metal_iron_w1.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w1.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_black_w2.rvmat",
        "JP\\common\\materials\\paint\\jp_m_lacquer_shu_w1.rvmat",
        "JP\\common\\materials\\paper\\jp_m_paper_shoji_w2.rvmat",
-       "JP\\common\\materials\\textile\\jp_m_textile_bib_red_w1.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_interior_w2.rvmat",
        "JP\\common\\materials\\wood\\jp_m_wood_kuro_w1.rvmat"
       ],
@@ -4092,18 +4289,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1500, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 5500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 523,
-       "Resolution 2": 96,
+       "Resolution 1": 3690,
+       "Resolution 2": 1352,
        "Geometry": 12,
        "View Geometry": 12,
        "Fire Geometry": 12
       },
       "extra": [],
-      "budget": 1500
+      "budget": 5500
      }
     },
     {
@@ -4187,7 +4384,6 @@
       "jp_m_ground_ash_w1": true,
       "jp_m_ground_leaf_litter_w2": true,
       "jp_m_metal_bronze_w1": true,
-      "jp_m_textile_bib_red_w1": true,
       "jp_m_wood_interior_w2": true
      }
     },
@@ -4293,18 +4489,6 @@
        "pass": true
       },
       {
-       "material": "jp_m_metal_iron_w1",
-       "mean_srgb": [
-        78.6,
-        69.1,
-        62.8
-       ],
-       "palette": "iron_black",
-       "dE76": 3.5,
-       "tolerance": 10,
-       "pass": true
-      },
-      {
        "material": "jp_m_metal_iron_w2",
        "mean_srgb": [
         82.0,
@@ -4361,18 +4545,6 @@
        ],
        "palette": "washi_shoji",
        "dE76": 9.5,
-       "tolerance": 12,
-       "pass": true
-      },
-      {
-       "material": "jp_m_textile_bib_red_w1",
-       "mean_srgb": [
-        141.8,
-        80.0,
-        68.0
-       ],
-       "palette": "bib_red_faded",
-       "dE76": 0.1,
        "tolerance": 12,
        "pass": true
       },
@@ -5039,7 +5211,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 188,
+    "Resolution 1": 1249,
     "Resolution 2": 12
    },
    "checks": [
@@ -5059,7 +5231,6 @@
      "detail": {
       "materials": [
        "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w1.rvmat",
-       "JP\\common\\materials\\ceramic\\jp_m_ceramic_stoneware_dark_w2.rvmat",
        "JP\\common\\materials\\metal\\jp_m_metal_bronze_w1.rvmat",
        "JP\\common\\materials\\straw\\jp_m_straw_rope_w1.rvmat",
        "JP\\common\\materials\\textile\\jp_m_textile_bib_red_w2.rvmat",
@@ -5078,15 +5249,15 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2) + budget Res 1 <= 1500, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 188,
+       "Resolution 1": 1249,
        "Resolution 2": 12
       },
       "extra": [],
-      "budget": 1000
+      "budget": 1500
      }
     },
     {
@@ -5098,7 +5269,7 @@
        "name": "d",
        "expected": 0.44,
        "measured": 0.44,
-       "tol": 0.005,
+       "tol": 0.02,
        "source": "build_list",
        "ok": true
       }
@@ -5109,7 +5280,7 @@
      "name": "anchor 'hang': base / wall / hook plane within 0-2 cm",
      "pass": true,
      "detail": {
-      "res1_max_y (hook beam)": 0.0019
+      "res1_max_y (hook beam)": 0.0005
      }
     },
     {
@@ -5145,18 +5316,6 @@
        ],
        "palette": "stoneware_dark",
        "dE76": 3.2,
-       "tolerance": 12,
-       "pass": true
-      },
-      {
-       "material": "jp_m_ceramic_stoneware_dark_w2",
-       "mean_srgb": [
-        82.4,
-        61.1,
-        47.3
-       ],
-       "palette": "stoneware_dark",
-       "dE76": 4.0,
        "tolerance": 12,
        "pass": true
       },
@@ -5243,7 +5402,7 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 354,
+    "Resolution 1": 1946,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
@@ -5285,18 +5444,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 2250, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 354,
+       "Resolution 1": 1946,
        "Resolution 2": 30,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
       },
       "extra": [],
-      "budget": 1000
+      "budget": 2250
      }
     },
     {
@@ -5457,7 +5616,7 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 354,
+    "Resolution 1": 1946,
     "Resolution 2": 30,
     "Geometry": 20,
     "View Geometry": 20,
@@ -5499,18 +5658,18 @@
     },
     {
      "id": "C5",
-     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 1000, LODs step down",
+     "name": "LOD set (R1+R2+Geometry+ViewG+FireG) + budget Res 1 <= 2250, LODs step down",
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 354,
+       "Resolution 1": 1946,
        "Resolution 2": 30,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
       },
       "extra": [],
-      "budget": 1000
+      "budget": 2250
      }
     },
     {
@@ -8432,7 +8591,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 1014,
+    "Resolution 1": 1048,
     "Resolution 2": 6
    },
    "checks": [
@@ -8470,7 +8629,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1014,
+       "Resolution 1": 1048,
        "Resolution 2": 6
       },
       "extra": [],
@@ -9421,21 +9580,6 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
-  },
-  "BIN": {
-   "pass": false,
-   "detail": {
-    "missing": [
-     "jp_f_saisen_bako_l",
-     "jp_f_saisen_bako_m",
-     "jp_f_saisen_bako_s",
-     "jp_f_terrace_l",
-     "jp_f_terrace_m",
-     "jp_f_mizubune"
-    ],
-    "warning_lines": [],
-    "exit": 3221225477
-   }
   },
   "PBO": {
    "pass": true,

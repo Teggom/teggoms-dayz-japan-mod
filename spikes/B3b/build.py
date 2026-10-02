@@ -48,7 +48,8 @@ CHECKS = os.path.join(HERE, "checks.json")
 W2_CATS = {"shrine", "grave"}                          # W2 (2026-09-30): the wave-2 folders
 MODULES = ["props_wood", "props_wells", "props_stone", "props_street", "props_straw",
            "props_torii", "props_shrine", "props_grave",       # W2 (2026-09-30): the 7 wave-2 items
-           "props_torii_fallen"]                               # FP1 (2026-10-01): collapsed torii
+           "props_torii_fallen",                               # FP1 (2026-10-01): collapsed torii
+           "props_guardian"]                                   # FX2 (2026-10-01): komainu + kitsune pairs
 BL = {e["id"]: e for e in json.load(open(os.path.join(DEV, "research", "outdoor_kit", "build_list.json"),
                                          encoding="utf-8"))["entries"]}
 SCRIPT_DIR = "scripts\\4_World\\JP_Site"

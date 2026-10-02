@@ -148,7 +148,7 @@ def blender_main(jobs):
         lamp.location = cpos
         d = (t - cpos).normalized()
         lamp.rotation_mode = "QUATERNION"
-        lamp.rotation_quaternion = (d + Vector((0.25, 0.0, -0.45))).normalized().to_track_quat("-Z", "Y")
+        lamp.rotation_quaternion = (d + Vector((0.7, 0.0, -1.1))).normalized().to_track_quat("-Z", "Y")
         sc.collection.objects.link(lamp)
         sc.render.filepath = os.path.join(OUT, j["out"] + ".png")
         bpy.ops.render.render(write_still=True)

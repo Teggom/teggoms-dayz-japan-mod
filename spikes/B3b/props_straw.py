@@ -201,7 +201,7 @@ def shimenawa(kind):
         r = 0.035 if L < 2 else 0.045
         a, b = (-L / 2, Y, 0.0), (L / 2, Y, 0.0)
         if not ab:
-            pts = sag(a, b, 0.12 * L / 1.82, 8)
+            pts = sag(a, b, 0.075 * L / 1.82, 8)   # FX2: the torii rope's sag (was 0.12 per 1.82 m)
         else:
             # one end dropped: the rope hangs from the left anchor down to the ground, frayed
             pts = [a, (-L / 2 + 0.25, Y - 0.45, 0.02), (-L / 2 + 0.40, Y - 1.2, 0.05), (-L / 2 + 0.55, 0.9, 0.1),
@@ -219,12 +219,12 @@ def shimenawa(kind):
                 if i % 2 == 0:
                     add_all(P, K2.tassel(core.add(c, (0.0, -r * 0.8, 0.0)), 0.22, 50 + i, wear=wear))
                 else:
-                    P.add(shide(core.add(c, (0.0, -r, 0.01)), wear="_w2"))
+                    P.add(shide(core.add(c, (0.0, 0.0, r * 0.9)), wear="_w2"))   # FX2: into the lay
         else:
             P.add(shide((0.2, Y - 0.1, 0.02), s=0.12, wear="_w2"))
             P.add(litter(3, -L / 2 + 1.0, 0.3, 0.4))
             P.hung = False
-        P.add(W(-L / 2, L / 2, Y - 0.12 * L / 1.82 - r, Y + r, -r, r, ROPE, vis=(2,)) if not ab else
+        P.add(W(-L / 2, L / 2, Y - 0.075 * L / 1.82 - r, Y + r, -r, r, ROPE, vis=(2,)) if not ab else
               W(-L / 2, -L / 2 + 1.2, 0.0, Y, -0.02, 0.02, ROPE, vis=(2,)))
         P.solids[-1].wear = wear
         P.dim("span", L, L, tol=0.01)
