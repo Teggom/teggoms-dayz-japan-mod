@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 r"""build_s1.py - S1, the KEEP_TRADES shop sets (research/interior/SHOP_SETS.md) -> jp_furniture.pbo
 
-  python build_s1.py [prop ...] [--list] [--no-binarize] [--pack]
+  python build_s1.py [prop ...] [--list] [--no-binarize] [--pack] [--config-only]
 
-Builds INTO B3a's furniture pipeline (spikes/B3a/build.py) the way spikes/L1/build_l1.py does, without editing either:
-the S1 props_s1_*.py modules are appended after B3a's and L1's MODULES, so config.cpp / model.cfg / jp_furniture.pbo
-carry B3a's + B4's + L1's + S1's models together.
+Builds INTO B3a's furniture pipeline (spikes/B3a/build.py) the way spikes/L1/build_l1.py does: the S1 props_s1_*.py
+modules are appended after B3a's and L1's MODULES. Config (CA1, 2026-10-01): S1 writes ONLY its own classes to
+src/JP/furniture/_frags/S1.json; tools/assemble_config.py merges every builder's fragment into config.cpp / model.cfg.
+--config-only: no model build / binarize, just re-emit S1's fragment from spikes/S1/out + assemble (+ --pack).
   - S1's MLOD masters go to spikes/S1/out/<cat>/ (B3a's stay in spikes/B3a/out, L1's in spikes/L1/out); only S1's
     models are binarized
   - checks -> spikes/S1/checks.json (B3a's check set + TXT: spikes/L2/textface.py on every model with text);
@@ -104,6 +105,14 @@ def built_models(reg):
     return out
 
 
+def write_fragment(models):
+    """CA1: S1's own classes (S1_CATS, master in spikes/S1/out) -> _frags/S1.json, then assemble jp_furniture."""
+    mine = [(p, m) for p, m in models if p["cat"] in S1_CATS]
+    B.ASM.write_fragment(B.PBO, "S1", "spikes/S1/build_s1.py", 30, B.frag_classes(mine), [m["p3d"] for _, m in mine],
+                         required=("DZ_Data", "JP_Common"))
+    return B.ASM.assemble(B.PBO)
+
+
 def binarize(models):
     for prop, _ in models:
         os.makedirs(os.path.join(B.SRC, prop["cat"]), exist_ok=True)
@@ -125,6 +134,13 @@ def main(argv):
             n += len(p["models"])
         print(len(mine), "props,", n, "models")
         return 0
+    if "--config-only" in argv:     # CA1: re-emit the fragment from the masters + assemble (+ --pack)
+        asm = write_fragment(built_models(reg))
+        ok = all(B.cfgconvert(os.path.join(B.SRC, f))[0] for f in ("config.cpp", "model.cfg"))
+        print("CFG", "PASS" if ok else "FAIL", "; classes in config.cpp: %d" % asm["classes"])
+        if "--pack" in argv:
+            print("packed:", *B.pack())
+        return 0 if ok else 1
     sel = B.select(mine, argv)
     results = write_all(sel)
     models = built_models(reg)
@@ -132,8 +148,7 @@ def main(argv):
     dup = sorted({n for n in names if names.count(n) > 1})
     if dup:
         raise SystemExit("duplicate p3d names: %s" % dup)
-    B.wb(os.path.join(B.SRC, "config.cpp"), B.config_cpp(models))
-    B.wb(os.path.join(B.SRC, "model.cfg"), B.model_cfg(models))
+    asm = write_fragment(models)
     glob = {}
     conv = [B.cfgconvert(os.path.join(B.SRC, "config.cpp")), B.cfgconvert(os.path.join(B.SRC, "model.cfg"))]
     glob["CFG"] = {"pass": all(c[0] for c in conv), "detail": [c[1] for c in conv]}
@@ -149,12 +164,12 @@ def main(argv):
     mine_names = {m["p3d"] for p in mine for m in p["models"]}
     results["summary"] = {"models": len(results["models"]),
                           "pass": sum(1 for r in results["models"].values() if r["pass"]),
-                          "s1_registered": len(mine_names), "classes_in_config": len(models)}
+                          "s1_registered": len(mine_names), "classes_in_config": asm["classes"]}
     B.wb(B.CHECKS, json.dumps(results, indent=1, ensure_ascii=False))
     for k, v in glob.items():
         print(k, "PASS" if v["pass"] else "FAIL", json.dumps(v["detail"])[:300])
-    print("S1 models: %d, all checks pass: %d; classes in config.cpp: %d" % (
-        results["summary"]["models"], results["summary"]["pass"], len(models)))
+    print("S1 models: %d, all checks pass: %d; classes in config.cpp (all builders): %d" % (
+        results["summary"]["models"], results["summary"]["pass"], asm["classes"]))
     return 0
 
 

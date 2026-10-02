@@ -1,0 +1,2050 @@
+{
+ "pbo": "jp_furniture",
+ "builder": "L1",
+ "writer": "spikes/L1/build_l1.py",
+ "order": 20,
+ "requiredAddons": [
+  "DZ_Data",
+  "JP_Common"
+ ],
+ "classes": [
+  {
+   "group": "jp_f_mino_pegs (wall)",
+   "class": "StaticObj_JP_F_Mino_Pegs",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall pegs: straw raincoat, hat, hoe, sickle\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_mino_pegs.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mino_pegs (wall)",
+   "class": "StaticObj_JP_F_Mino_Pegs_Rain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall pegs: straw raincoat and hat\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_mino_pegs_rain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mino_pegs (wall)",
+   "class": "StaticObj_JP_F_Mino_Pegs_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall pegs, the hat fallen, one peg empty\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_mino_pegs_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_ofuda (wall)",
+   "class": "StaticObj_JP_F_Ofuda_Single",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Paper charm (Ise taima) on a post\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_ofuda_single.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_ofuda (wall)",
+   "class": "StaticObj_JP_F_Ofuda_Akiba",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire charm (Akiba) on a kitchen post\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_ofuda_akiba.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_ofuda (wall)",
+   "class": "StaticObj_JP_F_Ofuda_Row",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three paper charms on a post, old and new\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_ofuda_row.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_ofuda (wall)",
+   "class": "StaticObj_JP_F_Ofuda_Torn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Paper charms, faded, one peeling, one torn away\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_ofuda_torn.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_koyomi (wall)",
+   "class": "StaticObj_JP_F_Koyomi",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Printed calendar (Kyoho 15) on the wall\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_koyomi.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_koyomi (wall)",
+   "class": "StaticObj_JP_F_Koyomi_Curled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Calendar, faded, a corner curling off\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_koyomi_curled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_utensil_board (wall)",
+   "class": "StaticObj_JP_F_Utensil_Board",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Kitchen utensil board: dipper, paddle, ladles, knives, board\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_utensil_board.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_utensil_board (wall)",
+   "class": "StaticObj_JP_F_Utensil_Board_Small",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small utensil board\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_utensil_board_small.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_utensil_board (wall)",
+   "class": "StaticObj_JP_F_Utensil_Board_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Utensil board, board and ladle on the floor\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_utensil_board_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tool_wall (wall)",
+   "class": "StaticObj_JP_F_Tool_Wall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tool wall: saw, adze, axe, hatchet\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_tool_wall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tool_wall (wall)",
+   "class": "StaticObj_JP_F_Tool_Wall_Wood",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tool wall: axes, saw, hatchet\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_tool_wall_wood.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tool_wall (wall)",
+   "class": "StaticObj_JP_F_Tool_Wall_Taken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tool wall, axe taken, saw on the floor\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_tool_wall_taken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_rope_pegs (wall)",
+   "class": "StaticObj_JP_F_Rope_Pegs_2",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Two rope coils on pegs\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_rope_pegs_2.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_rope_pegs (wall)",
+   "class": "StaticObj_JP_F_Rope_Pegs_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three rope coils on pegs\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_rope_pegs_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_rope_pegs (wall)",
+   "class": "StaticObj_JP_F_Rope_Pegs_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rope coils, one fallen and paid out\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_rope_pegs_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_sandals_hung (wall)",
+   "class": "StaticObj_JP_F_Sandals_Hung_Wall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw sandals in bunches on wall pegs\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_sandals_hung_wall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_sandals_hung (wall)",
+   "class": "StaticObj_JP_F_Sandals_Hung_Beam",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A bunch of straw sandals on a beam hook\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_sandals_hung_beam.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_sandals_hung (wall)",
+   "class": "StaticObj_JP_F_Sandals_Hung_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw sandals, one bunch burst on the floor\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_sandals_hung_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hoshigaki (wall)",
+   "class": "StaticObj_JP_F_Hoshigaki_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Dried persimmons, three strings\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_hoshigaki_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hoshigaki (wall)",
+   "class": "StaticObj_JP_F_Hoshigaki_5",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Dried persimmons, five strings\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_hoshigaki_5.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hoshigaki (wall)",
+   "class": "StaticObj_JP_F_Hoshigaki_Rotten",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Dried persimmons, blackened, gaps, a broken string\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_hoshigaki_rotten.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_drying (wall)",
+   "class": "StaticObj_JP_F_Drying_Daikon",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Radishes drying on a pole\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_drying_daikon.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_drying (wall)",
+   "class": "StaticObj_JP_F_Drying_Chilli",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Chilli strings drying\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_drying_chilli.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_drying (wall)",
+   "class": "StaticObj_JP_F_Drying_Fish",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small fish drying on straws\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_drying_fish.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_drying (wall)",
+   "class": "StaticObj_JP_F_Drying_Daikon_Shrivelled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Radishes shrivelled, two fallen\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_drying_daikon_shrivelled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_chochin (wall)",
+   "class": "StaticObj_JP_F_Chochin_Crest",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Paper lantern with a family crest\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_chochin_crest.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_chochin (wall)",
+   "class": "StaticObj_JP_F_Chochin_Crest2",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Paper lantern, three-bar crest\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_chochin_crest2.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_chochin (wall)",
+   "class": "StaticObj_JP_F_Chochin_Shop",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Paper lantern, shop name Iseya\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_chochin_shop.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_chochin (wall)",
+   "class": "StaticObj_JP_F_Chochin_Shop2",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Paper lantern, shop name Yamatoya\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_chochin_shop2.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_chochin (wall)",
+   "class": "StaticObj_JP_F_Chochin_Torn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Paper lantern, torn, hanging askew\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_chochin_torn.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_chochin (wall)",
+   "class": "StaticObj_JP_F_Chochin_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Paper lantern fallen and crushed\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_chochin_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_bangasa (wall)",
+   "class": "StaticObj_JP_F_Bangasa_Hung",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Oiled-paper umbrella hung on a peg\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_bangasa_hung.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_bangasa (wall)",
+   "class": "StaticObj_JP_F_Bangasa_Leaning",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Oiled-paper umbrella leaning on the wall\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_bangasa_leaning.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_bangasa (wall)",
+   "class": "StaticObj_JP_F_Bangasa_Open_Torn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Umbrella dropped open, paper split\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_bangasa_open_torn.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_noren_inner (wall)",
+   "class": "StaticObj_JP_F_Noren_Inner_2",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Inner noren, two panels (0.88)\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_noren_inner_2.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_noren_inner (wall)",
+   "class": "StaticObj_JP_F_Noren_Inner_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Inner noren, three panels (1.32)\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_noren_inner_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_noren_inner (wall)",
+   "class": "StaticObj_JP_F_Noren_Inner_Torn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Inner noren, a panel torn off\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_noren_inner_torn.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kaya (wall)",
+   "class": "StaticObj_JP_F_Kaya_Draped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Mosquito net folded over a pole\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_kaya_draped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kaya (wall)",
+   "class": "StaticObj_JP_F_Kaya_Bundle",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Mosquito net tied in a bundle on a hook\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_kaya_bundle.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kaya (wall)",
+   "class": "StaticObj_JP_F_Kaya_Loose",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Mosquito net come loose, hanging in a swag\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_kaya_loose.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_fire_gear (wall)",
+   "class": "StaticObj_JP_F_Fire_Gear",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire buckets on a shelf, fire hook on pegs\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_fire_gear.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_fire_gear (wall)",
+   "class": "StaticObj_JP_F_Fire_Gear_Buckets",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Two fire buckets hung on pegs\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_fire_gear_buckets.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_fire_gear (wall)",
+   "class": "StaticObj_JP_F_Fire_Gear_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire gear, a bucket on the floor, the hook askew\";",
+    "model=\"\\JP\\furniture\\wall\\jp_f_fire_gear_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsudan (religious)",
+   "class": "StaticObj_JP_F_Butsudan_Lacquer",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Buddhist cabinet (butsudan), lacquered, doors shut\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsudan_lacquer.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsudan (religious)",
+   "class": "StaticObj_JP_F_Butsudan_Plain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Buddhist cabinet, plain wood\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsudan_plain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsudan (religious)",
+   "class": "StaticObj_JP_F_Butsudan_Shelf",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Buddhist shelf with a small shrine box\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsudan_shelf.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsudan (religious)",
+   "class": "StaticObj_JP_F_Butsudan_Lacquer_Dusty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Buddhist cabinet, undisturbed, dusty\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsudan_lacquer_dusty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsudan (religious)",
+   "class": "StaticObj_JP_F_Butsudan_Plain_Dusty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Buddhist cabinet, plain, dusty\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsudan_plain_dusty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsudan (religious)",
+   "class": "StaticObj_JP_F_Butsudan_Shelf_Dusty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Buddhist shelf, undisturbed, dusty\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsudan_shelf_dusty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsu_set (religious)",
+   "class": "StaticObj_JP_F_Butsu_Set_Full",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Butsudan set: tablets, incense burner, candle, vase, bell\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsu_set_full.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsu_set (religious)",
+   "class": "StaticObj_JP_F_Butsu_Set_Simple",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Butsudan set: a tablet, burner and vase\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsu_set_simple.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsu_set (religious)",
+   "class": "StaticObj_JP_F_Butsu_Set_Full_Dusty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Butsudan set, flowers dried, candle burnt down\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsu_set_full_dusty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_butsu_set (religious)",
+   "class": "StaticObj_JP_F_Butsu_Set_Simple_Dusty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Butsudan set, simple, dusty\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_butsu_set_simple_dusty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kamidana_set (religious)",
+   "class": "StaticObj_JP_F_Kamidana_Set_Offerings",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"God-shelf offerings: sanbo, flasks, sakaki\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_kamidana_set_offerings.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kamidana_set (religious)",
+   "class": "StaticObj_JP_F_Kamidana_Set_Shimenawa",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sacred rope with paper streamers for a god shelf\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_kamidana_set_shimenawa.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kamidana_set (religious)",
+   "class": "StaticObj_JP_F_Kamidana_Set_Offerings_Dry",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"God-shelf offerings, sakaki dried, dishes empty\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_kamidana_set_offerings_dry.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kamidana_set (religious)",
+   "class": "StaticObj_JP_F_Kamidana_Set_Shimenawa_Old",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sacred rope, faded, a streamer gone\";",
+    "model=\"\\JP\\furniture\\religious\\jp_f_kamidana_set_shimenawa_old.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tableware (meal)",
+   "class": "StaticObj_JP_F_Tableware_Hakozen_Stack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Box trays (hakozen), three stacked, lacquer\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_tableware_hakozen_stack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tableware (meal)",
+   "class": "StaticObj_JP_F_Tableware_Hakozen_Plain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Box trays, plain wood, two stacked\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_tableware_hakozen_plain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tableware (meal)",
+   "class": "StaticObj_JP_F_Tableware_Zen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Legged tray (zen) with lidded bowls\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_tableware_zen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tableware (meal)",
+   "class": "StaticObj_JP_F_Tableware_Bowls",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A stack of bowls and dishes\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_tableware_bowls.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tableware (meal)",
+   "class": "StaticObj_JP_F_Tableware_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tableware knocked over, bowls upturned\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_tableware_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_meal_left (meal)",
+   "class": "StaticObj_JP_F_Meal_Left_Zen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A meal left on its tray, a cup knocked over\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_meal_left_zen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_meal_left (meal)",
+   "class": "StaticObj_JP_F_Meal_Left_Two",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Two meals left, one tray pushed back, the flask down\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_meal_left_two.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_meal_left (meal)",
+   "class": "StaticObj_JP_F_Meal_Left_Hakozen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A poor meal on a box-tray lid\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_meal_left_hakozen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tokkuri (meal)",
+   "class": "StaticObj_JP_F_Tokkuri_Pair",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Two sake flasks and cups on a tray\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_tokkuri_pair.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tokkuri (meal)",
+   "class": "StaticObj_JP_F_Tokkuri_Large",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A large sake flask and a cup\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_tokkuri_large.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tokkuri (meal)",
+   "class": "StaticObj_JP_F_Tokkuri_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sake flask on its side, a cup rolled off\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_tokkuri_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_suribachi (meal)",
+   "class": "StaticObj_JP_F_Suribachi_Bowl",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Grinding bowl (suribachi) and pestle\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_suribachi_bowl.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_suribachi (meal)",
+   "class": "StaticObj_JP_F_Suribachi_Board",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Cutting board with a knife and a radish\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_suribachi_board.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_suribachi (meal)",
+   "class": "StaticObj_JP_F_Suribachi_Spilled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Grinding bowl tipped, pestle rolled, board askew\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_suribachi_spilled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_seiro (meal)",
+   "class": "StaticObj_JP_F_Seiro_Kama2",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Steamer, two tiers, on the rice pot\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_seiro_kama2.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_seiro (meal)",
+   "class": "StaticObj_JP_F_Seiro_Kama3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Steamer, three tiers, on the rice pot\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_seiro_kama3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_seiro (meal)",
+   "class": "StaticObj_JP_F_Seiro_Stack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Steamer tiers stacked\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_seiro_stack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_seiro (meal)",
+   "class": "StaticObj_JP_F_Seiro_Toppled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Steamer on the pot, lid and a tier fallen\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_seiro_toppled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_taru (meal)",
+   "class": "StaticObj_JP_F_Taru_Cask",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Coopered cask (taru)\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_taru_cask.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_taru (meal)",
+   "class": "StaticObj_JP_F_Taru_Komo",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw-wrapped sake cask, marked\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_taru_komo.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_taru (meal)",
+   "class": "StaticObj_JP_F_Taru_Rack3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three casks on a low rack\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_taru_rack3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_taru (meal)",
+   "class": "StaticObj_JP_F_Taru_Staved",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Cask staved in, dry\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_taru_staved.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_taru (meal)",
+   "class": "StaticObj_JP_F_Taru_Rack3_Ab",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Cask rack, one cask gone, one rolled off\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_taru_rack3_ab.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_basket (meal)",
+   "class": "StaticObj_JP_F_Basket_Zaru",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Flat sieve basket (zaru)\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_basket_zaru.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_basket (meal)",
+   "class": "StaticObj_JP_F_Basket_Zaru_Stack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three sieve baskets stacked\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_basket_zaru_stack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_basket (meal)",
+   "class": "StaticObj_JP_F_Basket_Zaru_Wall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sieve basket hung on a wall peg\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_basket_zaru_wall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_basket (meal)",
+   "class": "StaticObj_JP_F_Basket_Kago",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tall basket (kago)\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_basket_kago.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_basket (meal)",
+   "class": "StaticObj_JP_F_Basket_Back",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Back basket (seoi-kago) with straps\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_basket_back.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_basket (meal)",
+   "class": "StaticObj_JP_F_Basket_Kago_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tall basket on its side, leaves spilled\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_basket_kago_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_basket (meal)",
+   "class": "StaticObj_JP_F_Basket_Back_Crushed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Back basket on its side\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_basket_back_crushed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_charcoal (meal)",
+   "class": "StaticObj_JP_F_Charcoal_Bale",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Charcoal bale (sumi-dawara), open\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_charcoal_bale.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_charcoal (meal)",
+   "class": "StaticObj_JP_F_Charcoal_Bales3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three charcoal bales\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_charcoal_bales3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_charcoal (meal)",
+   "class": "StaticObj_JP_F_Charcoal_Scuttle",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Charcoal scuttle with tongs\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_charcoal_scuttle.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_charcoal (meal)",
+   "class": "StaticObj_JP_F_Charcoal_Burst",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Charcoal bale burst, charcoal spilled\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_charcoal_burst.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hiuchi (meal)",
+   "class": "StaticObj_JP_F_Hiuchi_Box",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire-striker box, the steel on the lid\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_hiuchi_box.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hiuchi (meal)",
+   "class": "StaticObj_JP_F_Hiuchi_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire-striker kit laid out\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_hiuchi_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hiuchi (meal)",
+   "class": "StaticObj_JP_F_Hiuchi_Spilled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire-striker box tipped, tinder spilled\";",
+    "model=\"\\JP\\furniture\\meal\\jp_f_hiuchi_spilled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_enza (living)",
+   "class": "StaticObj_JP_F_Enza",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Round straw cushion (enza)\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_enza.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_enza (living)",
+   "class": "StaticObj_JP_F_Enza_Stack3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three straw cushions stacked\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_enza_stack3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_enza (living)",
+   "class": "StaticObj_JP_F_Enza_Zabuton",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Cotton cushion (zabuton), T3\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_enza_zabuton.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_enza (living)",
+   "class": "StaticObj_JP_F_Enza_Zabuton_Stack3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three zabuton stacked, T3\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_enza_zabuton_stack3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_enza (living)",
+   "class": "StaticObj_JP_F_Enza_Kicked",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw cushion kicked against the wall\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_enza_kicked.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_enza (living)",
+   "class": "StaticObj_JP_F_Enza_Zabuton_Folded",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Zabuton folded over, askew, T3\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_enza_zabuton_folded.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_byobu (living)",
+   "class": "StaticObj_JP_F_Byobu_Makura",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Low bedding screen, two leaves\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_byobu_makura.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_byobu (living)",
+   "class": "StaticObj_JP_F_Byobu_Tsuitate",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Entrance screen on two feet\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_byobu_tsuitate.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_byobu (living)",
+   "class": "StaticObj_JP_F_Byobu_Makura_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bedding screen knocked flat, torn\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_byobu_makura_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_byobu (living)",
+   "class": "StaticObj_JP_F_Byobu_Tsuitate_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Entrance screen fallen, torn\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_byobu_tsuitate_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_iko (living)",
+   "class": "StaticObj_JP_F_Iko_Robe",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Clothes rack, lacquered, a robe spread over it\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_iko_robe.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_iko (living)",
+   "class": "StaticObj_JP_F_Iko_Plain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Clothes rack, plain, an under-robe hung\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_iko_plain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_iko (living)",
+   "class": "StaticObj_JP_F_Iko_Empty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Clothes rack, plain, a sash end over the rail\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_iko_empty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_iko (living)",
+   "class": "StaticObj_JP_F_Iko_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Clothes rack fallen, the robe on the mat\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_iko_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_clothes (living)",
+   "class": "StaticObj_JP_F_Clothes_Kimono",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A kimono dropped on the mat\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_clothes_kimono.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_clothes (living)",
+   "class": "StaticObj_JP_F_Clothes_Kimono_Obi",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"An under-kimono and a sash on the mat\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_clothes_kimono_obi.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_clothes (living)",
+   "class": "StaticObj_JP_F_Clothes_Haori",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A short jacket and a sash on the mat\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_clothes_haori.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_sewing (living)",
+   "class": "StaticObj_JP_F_Sewing_Box",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sewing box (haribako) with a pincushion\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_sewing_box.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_sewing (living)",
+   "class": "StaticObj_JP_F_Sewing_Work",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sewing box and a half-sewn garment\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_sewing_work.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_sewing (living)",
+   "class": "StaticObj_JP_F_Sewing_Spilled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sewing box, drawer out, spools rolled\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_sewing_spilled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mirror_stand (living)",
+   "class": "StaticObj_JP_F_Mirror_Stand",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Mirror stand, the mirror under its cloth\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_mirror_stand.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mirror_stand (living)",
+   "class": "StaticObj_JP_F_Mirror_Stand_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Mirror stand, the bronze mirror uncovered\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_mirror_stand_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mirror_stand (living)",
+   "class": "StaticObj_JP_F_Mirror_Stand_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Mirror stand knocked over, the mirror on the mat\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_mirror_stand_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_goban (living)",
+   "class": "StaticObj_JP_F_Goban_Go",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Go board with stones and bowls\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_goban_go.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_goban (living)",
+   "class": "StaticObj_JP_F_Goban_Shogi",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shogi board with pieces\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_goban_shogi.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_goban (living)",
+   "class": "StaticObj_JP_F_Goban_Go_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Go board, a bowl tipped, stones strewn\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_goban_go_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_goban (living)",
+   "class": "StaticObj_JP_F_Goban_Shogi_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shogi board, pieces strewn\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_goban_shogi_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_toys (living)",
+   "class": "StaticObj_JP_F_Toys_Koma",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A spinning top and its string\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_toys_koma.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_toys (living)",
+   "class": "StaticObj_JP_F_Toys_Hagoita",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A battledore and shuttlecock\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_toys_hagoita.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_toys (living)",
+   "class": "StaticObj_JP_F_Toys_Doll",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A small cloth doll\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_toys_doll.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_toys (living)",
+   "class": "StaticObj_JP_F_Toys_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Toys left on the floor together\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_toys_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_shokudai (living)",
+   "class": "StaticObj_JP_F_Shokudai_Tall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tall lacquered candle stand, unlit\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_shokudai_tall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_shokudai (living)",
+   "class": "StaticObj_JP_F_Shokudai_Short",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Short iron candle stand\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_shokudai_short.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_shokudai (living)",
+   "class": "StaticObj_JP_F_Shokudai_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Candle stand knocked over, the candle broken\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_shokudai_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_straw_bed (living)",
+   "class": "StaticObj_JP_F_Straw_Bed_Pile",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw bedding under a straw mat\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_straw_bed_pile.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_straw_bed (living)",
+   "class": "StaticObj_JP_F_Straw_Bed_Quilt",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw bedding, a paper quilt thrown back\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_straw_bed_quilt.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_straw_bed (living)",
+   "class": "StaticObj_JP_F_Straw_Bed_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw bedding scattered and flattened\";",
+    "model=\"\\JP\\furniture\\living\\jp_f_straw_bed_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_itoguruma (work)",
+   "class": "StaticObj_JP_F_Itoguruma",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Spinning wheel (itoguruma)\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_itoguruma.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_itoguruma (work)",
+   "class": "StaticObj_JP_F_Itoguruma_Thread",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Spinning wheel with thread and a basket of cotton\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_itoguruma_thread.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_itoguruma (work)",
+   "class": "StaticObj_JP_F_Itoguruma_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Spinning wheel, the wheel knocked off and broken\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_itoguruma_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_izaribata (work)",
+   "class": "StaticObj_JP_F_Izaribata",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Ground loom (izari-bata) with cloth on it\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_izaribata.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_izaribata (work)",
+   "class": "StaticObj_JP_F_Izaribata_Bare",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Ground loom, warped, no cloth yet\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_izaribata_bare.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_izaribata (work)",
+   "class": "StaticObj_JP_F_Izaribata_Cut",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Ground loom, the warp cut, cloth across the floor\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_izaribata_cut.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_straw_work (work)",
+   "class": "StaticObj_JP_F_Straw_Work_Sandal",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw work: a half-made sandal on a stool, a bundle\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_straw_work_sandal.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_straw_work (work)",
+   "class": "StaticObj_JP_F_Straw_Work_Beating",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw-beating stone and mallet, a bundle\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_straw_work_beating.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_straw_work (work)",
+   "class": "StaticObj_JP_F_Straw_Work_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw work scattered, the stool tipped\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_straw_work_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mi (work)",
+   "class": "StaticObj_JP_F_Mi",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Winnowing basket (mi)\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_mi.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mi (work)",
+   "class": "StaticObj_JP_F_Mi_Wall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Winnowing basket hung on a wall peg\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_mi_wall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mi (work)",
+   "class": "StaticObj_JP_F_Mi_Furui",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice sieve (furui)\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_mi_furui.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mi (work)",
+   "class": "StaticObj_JP_F_Mi_Spilled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Winnowing basket tipped, grain spilled\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_mi_spilled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_usu (work)",
+   "class": "StaticObj_JP_F_Usu",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice mortar (usu) with a pounder\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_usu.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_usu (work)",
+   "class": "StaticObj_JP_F_Usu_Mallet",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice mortar with a mallet pounder\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_usu_mallet.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_usu (work)",
+   "class": "StaticObj_JP_F_Usu_Ishiusu",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone hand mill on a straw mat\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_usu_ishiusu.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_usu (work)",
+   "class": "StaticObj_JP_F_Usu_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice mortar, the pounder fallen, dust in the bowl\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_usu_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_usu (work)",
+   "class": "StaticObj_JP_F_Usu_Ishiusu_Off",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone hand mill, the top stone off\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_usu_ishiusu_off.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_writing_box (work)",
+   "class": "StaticObj_JP_F_Writing_Box",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Writing box and a paper stack\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_writing_box.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_writing_box (work)",
+   "class": "StaticObj_JP_F_Writing_Box_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Writing box open: inkstone, brushes, paper\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_writing_box_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_writing_box (work)",
+   "class": "StaticObj_JP_F_Writing_Box_Spilled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Writing box knocked, papers slid, ink spilled\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_writing_box_spilled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_set (work)",
+   "class": "StaticObj_JP_F_Choba_Set_Desk",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Ledgers, abacus and writing box for the desk\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_choba_set_desk.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_set (work)",
+   "class": "StaticObj_JP_F_Choba_Set_Zenibako",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Coin box (zenibako), locked\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_choba_set_zenibako.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_set (work)",
+   "class": "StaticObj_JP_F_Choba_Set_Tenbin",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Money balance on its box\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_choba_set_tenbin.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_set (work)",
+   "class": "StaticObj_JP_F_Choba_Set_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Ledgers splayed, abacus upturned, papers\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_choba_set_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_set (work)",
+   "class": "StaticObj_JP_F_Choba_Set_Zenibako_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Coin box forced open, empty\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_choba_set_zenibako_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_masu (work)",
+   "class": "StaticObj_JP_F_Masu_Set",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Measures (masu), three sizes, and the strickle\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_masu_set.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_masu (work)",
+   "class": "StaticObj_JP_F_Masu_To",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A one-to measure heaped with rice, the strickle across\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_masu_to.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_masu (work)",
+   "class": "StaticObj_JP_F_Masu_Spilled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Measure tipped, the rice spilled\";",
+    "model=\"\\JP\\furniture\\work\\jp_f_masu_spilled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_katanakake (tier)",
+   "class": "StaticObj_JP_F_Katanakake_Stand",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sword rack with a pair of swords\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_katanakake_stand.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_katanakake (tier)",
+   "class": "StaticObj_JP_F_Katanakake_Wall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall sword rack with a pair of swords\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_katanakake_wall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_katanakake (tier)",
+   "class": "StaticObj_JP_F_Katanakake_Stand_Empty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sword rack, the swords taken\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_katanakake_stand_empty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_katanakake (tier)",
+   "class": "StaticObj_JP_F_Katanakake_Wall_Empty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall sword rack, the swords taken\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_katanakake_wall_empty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_yoroibitsu (tier)",
+   "class": "StaticObj_JP_F_Yoroibitsu",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Armour chest, lacquered, crested\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_yoroibitsu.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_yoroibitsu (tier)",
+   "class": "StaticObj_JP_F_Yoroibitsu_Plain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Armour chest, plain wood\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_yoroibitsu_plain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_yoroibitsu (tier)",
+   "class": "StaticObj_JP_F_Yoroibitsu_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Armour chest thrown open, empty\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_yoroibitsu_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_yumi_rack (tier)",
+   "class": "StaticObj_JP_F_Yumi_Rack_Wall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bows on wall hooks and a quiver\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_yumi_rack_wall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_yumi_rack (tier)",
+   "class": "StaticObj_JP_F_Yumi_Rack_Stand",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Upright bow stand with bows and a quiver\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_yumi_rack_stand.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_yumi_rack (tier)",
+   "class": "StaticObj_JP_F_Yumi_Rack_Wall_Empty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bow hooks, one bow left, the string snapped\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_yumi_rack_wall_empty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tea (tier)",
+   "class": "StaticObj_JP_F_Tea_Matcha",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tea set: bowl, caddy, whisk, scoop on a tray\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_tea_matcha.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tea (tier)",
+   "class": "StaticObj_JP_F_Tea_Dobin",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Clay tea pot and two bowls on a tray\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_tea_dobin.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tea (tier)",
+   "class": "StaticObj_JP_F_Tea_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tea set: the bowl broken, the pot tipped\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_tea_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_manger (tier)",
+   "class": "StaticObj_JP_F_Manger_Trough",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Manger (kaiba-oke) on legs, some fodder\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_manger_trough.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_manger (tier)",
+   "class": "StaticObj_JP_F_Manger_Cutter",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fodder cutter and a straw bundle\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_manger_cutter.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_manger (tier)",
+   "class": "StaticObj_JP_F_Manger_Straw",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw pile of the stable corner\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_manger_straw.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_manger (tier)",
+   "class": "StaticObj_JP_F_Manger_Trough_Empty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Manger, empty, stained\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_manger_trough_empty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_manger (tier)",
+   "class": "StaticObj_JP_F_Manger_Straw_Rotted",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw pile, rotted dark and flattened\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_manger_straw_rotted.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_fallen_leaf (tier)",
+   "class": "StaticObj_JP_F_Fallen_Leaf_Shoji",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A shoji leaf fallen flat\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_fallen_leaf_shoji.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_fallen_leaf (tier)",
+   "class": "StaticObj_JP_F_Fallen_Leaf_Fusuma",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A fusuma leaf fallen flat\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_fallen_leaf_fusuma.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_fallen_leaf (tier)",
+   "class": "StaticObj_JP_F_Fallen_Leaf_Shoji_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A shoji leaf snapped, paper torn\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_fallen_leaf_shoji_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_fallen_leaf (tier)",
+   "class": "StaticObj_JP_F_Fallen_Leaf_Fusuma_Torn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A fusuma leaf, the paper torn open\";",
+    "model=\"\\JP\\furniture\\tier\\jp_f_fallen_leaf_fusuma_torn.p3d\";"
+   ]
+  }
+ ],
+ "models": [
+  "jp_f_mino_pegs",
+  "jp_f_mino_pegs_rain",
+  "jp_f_mino_pegs_fallen",
+  "jp_f_ofuda_single",
+  "jp_f_ofuda_akiba",
+  "jp_f_ofuda_row",
+  "jp_f_ofuda_torn",
+  "jp_f_koyomi",
+  "jp_f_koyomi_curled",
+  "jp_f_utensil_board",
+  "jp_f_utensil_board_small",
+  "jp_f_utensil_board_fallen",
+  "jp_f_tool_wall",
+  "jp_f_tool_wall_wood",
+  "jp_f_tool_wall_taken",
+  "jp_f_rope_pegs_2",
+  "jp_f_rope_pegs_3",
+  "jp_f_rope_pegs_fallen",
+  "jp_f_sandals_hung_wall",
+  "jp_f_sandals_hung_beam",
+  "jp_f_sandals_hung_fallen",
+  "jp_f_hoshigaki_3",
+  "jp_f_hoshigaki_5",
+  "jp_f_hoshigaki_rotten",
+  "jp_f_drying_daikon",
+  "jp_f_drying_chilli",
+  "jp_f_drying_fish",
+  "jp_f_drying_daikon_shrivelled",
+  "jp_f_chochin_crest",
+  "jp_f_chochin_crest2",
+  "jp_f_chochin_shop",
+  "jp_f_chochin_shop2",
+  "jp_f_chochin_torn",
+  "jp_f_chochin_fallen",
+  "jp_f_bangasa_hung",
+  "jp_f_bangasa_leaning",
+  "jp_f_bangasa_open_torn",
+  "jp_f_noren_inner_2",
+  "jp_f_noren_inner_3",
+  "jp_f_noren_inner_torn",
+  "jp_f_kaya_draped",
+  "jp_f_kaya_bundle",
+  "jp_f_kaya_loose",
+  "jp_f_fire_gear",
+  "jp_f_fire_gear_buckets",
+  "jp_f_fire_gear_fallen",
+  "jp_f_butsudan_lacquer",
+  "jp_f_butsudan_plain",
+  "jp_f_butsudan_shelf",
+  "jp_f_butsudan_lacquer_dusty",
+  "jp_f_butsudan_plain_dusty",
+  "jp_f_butsudan_shelf_dusty",
+  "jp_f_butsu_set_full",
+  "jp_f_butsu_set_simple",
+  "jp_f_butsu_set_full_dusty",
+  "jp_f_butsu_set_simple_dusty",
+  "jp_f_kamidana_set_offerings",
+  "jp_f_kamidana_set_shimenawa",
+  "jp_f_kamidana_set_offerings_dry",
+  "jp_f_kamidana_set_shimenawa_old",
+  "jp_f_tableware_hakozen_stack",
+  "jp_f_tableware_hakozen_plain",
+  "jp_f_tableware_zen",
+  "jp_f_tableware_bowls",
+  "jp_f_tableware_scattered",
+  "jp_f_meal_left_zen",
+  "jp_f_meal_left_two",
+  "jp_f_meal_left_hakozen",
+  "jp_f_tokkuri_pair",
+  "jp_f_tokkuri_large",
+  "jp_f_tokkuri_tipped",
+  "jp_f_suribachi_bowl",
+  "jp_f_suribachi_board",
+  "jp_f_suribachi_spilled",
+  "jp_f_seiro_kama2",
+  "jp_f_seiro_kama3",
+  "jp_f_seiro_stack",
+  "jp_f_seiro_toppled",
+  "jp_f_taru_cask",
+  "jp_f_taru_komo",
+  "jp_f_taru_rack3",
+  "jp_f_taru_staved",
+  "jp_f_taru_rack3_ab",
+  "jp_f_basket_zaru",
+  "jp_f_basket_zaru_stack",
+  "jp_f_basket_zaru_wall",
+  "jp_f_basket_kago",
+  "jp_f_basket_back",
+  "jp_f_basket_kago_tipped",
+  "jp_f_basket_back_crushed",
+  "jp_f_charcoal_bale",
+  "jp_f_charcoal_bales3",
+  "jp_f_charcoal_scuttle",
+  "jp_f_charcoal_burst",
+  "jp_f_hiuchi_box",
+  "jp_f_hiuchi_open",
+  "jp_f_hiuchi_spilled",
+  "jp_f_enza",
+  "jp_f_enza_stack3",
+  "jp_f_enza_zabuton",
+  "jp_f_enza_zabuton_stack3",
+  "jp_f_enza_kicked",
+  "jp_f_enza_zabuton_folded",
+  "jp_f_byobu_makura",
+  "jp_f_byobu_tsuitate",
+  "jp_f_byobu_makura_fallen",
+  "jp_f_byobu_tsuitate_fallen",
+  "jp_f_iko_robe",
+  "jp_f_iko_plain",
+  "jp_f_iko_empty",
+  "jp_f_iko_fallen",
+  "jp_f_clothes_kimono",
+  "jp_f_clothes_kimono_obi",
+  "jp_f_clothes_haori",
+  "jp_f_sewing_box",
+  "jp_f_sewing_work",
+  "jp_f_sewing_spilled",
+  "jp_f_mirror_stand",
+  "jp_f_mirror_stand_open",
+  "jp_f_mirror_stand_tipped",
+  "jp_f_goban_go",
+  "jp_f_goban_shogi",
+  "jp_f_goban_go_scattered",
+  "jp_f_goban_shogi_scattered",
+  "jp_f_toys_koma",
+  "jp_f_toys_hagoita",
+  "jp_f_toys_doll",
+  "jp_f_toys_scattered",
+  "jp_f_shokudai_tall",
+  "jp_f_shokudai_short",
+  "jp_f_shokudai_tipped",
+  "jp_f_straw_bed_pile",
+  "jp_f_straw_bed_quilt",
+  "jp_f_straw_bed_scattered",
+  "jp_f_itoguruma",
+  "jp_f_itoguruma_thread",
+  "jp_f_itoguruma_broken",
+  "jp_f_izaribata",
+  "jp_f_izaribata_bare",
+  "jp_f_izaribata_cut",
+  "jp_f_straw_work_sandal",
+  "jp_f_straw_work_beating",
+  "jp_f_straw_work_scattered",
+  "jp_f_mi",
+  "jp_f_mi_wall",
+  "jp_f_mi_furui",
+  "jp_f_mi_spilled",
+  "jp_f_usu",
+  "jp_f_usu_mallet",
+  "jp_f_usu_ishiusu",
+  "jp_f_usu_fallen",
+  "jp_f_usu_ishiusu_off",
+  "jp_f_writing_box",
+  "jp_f_writing_box_open",
+  "jp_f_writing_box_spilled",
+  "jp_f_choba_set_desk",
+  "jp_f_choba_set_zenibako",
+  "jp_f_choba_set_tenbin",
+  "jp_f_choba_set_scattered",
+  "jp_f_choba_set_zenibako_open",
+  "jp_f_masu_set",
+  "jp_f_masu_to",
+  "jp_f_masu_spilled",
+  "jp_f_katanakake_stand",
+  "jp_f_katanakake_wall",
+  "jp_f_katanakake_stand_empty",
+  "jp_f_katanakake_wall_empty",
+  "jp_f_yoroibitsu",
+  "jp_f_yoroibitsu_plain",
+  "jp_f_yoroibitsu_open",
+  "jp_f_yumi_rack_wall",
+  "jp_f_yumi_rack_stand",
+  "jp_f_yumi_rack_wall_empty",
+  "jp_f_tea_matcha",
+  "jp_f_tea_dobin",
+  "jp_f_tea_broken",
+  "jp_f_manger_trough",
+  "jp_f_manger_cutter",
+  "jp_f_manger_straw",
+  "jp_f_manger_trough_empty",
+  "jp_f_manger_straw_rotted",
+  "jp_f_fallen_leaf_shoji",
+  "jp_f_fallen_leaf_fusuma",
+  "jp_f_fallen_leaf_shoji_broken",
+  "jp_f_fallen_leaf_fusuma_torn"
+ ],
+ "scripts": {}
+}

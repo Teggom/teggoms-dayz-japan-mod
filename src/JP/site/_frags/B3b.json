@@ -1,0 +1,2656 @@
+{
+ "pbo": "jp_site",
+ "builder": "B3b",
+ "writer": "spikes/B3b/build.py",
+ "order": 10,
+ "requiredAddons": [
+  "DZ_Data",
+  "DZ_Scripts",
+  "JP_Common"
+ ],
+ "classes": [
+  {
+   "group": "jp_s_oke (yard)",
+   "class": "StaticObj_JP_S_Oke_Tarai",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wash tub (tarai), leaves inside\";",
+    "model=\"\\JP\\site\\yard\\jp_s_oke_tarai.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_oke (yard)",
+   "class": "StaticObj_JP_S_Oke_Teoke",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Hand bucket (teoke)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_oke_teoke.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_oke (yard)",
+   "class": "StaticObj_JP_S_Oke_Ninai",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Carrying bucket (ninai-oke)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_oke_ninai.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_oke (yard)",
+   "class": "StaticObj_JP_S_Oke_Taru_Lid",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pickle barrel with lid and stone\";",
+    "model=\"\\JP\\site\\yard\\jp_s_oke_taru_lid.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_oke (yard)",
+   "class": "StaticObj_JP_S_Oke_Stake",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bucket upside down on a stake (oke-hoshi)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_oke_stake.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_oke (yard)",
+   "class": "StaticObj_JP_S_Oke_Ab_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Barrel tipped over, hoop sprung\";",
+    "model=\"\\JP\\site\\yard\\jp_s_oke_ab_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_oke (yard)",
+   "class": "StaticObj_JP_S_Oke_Ab_Staves",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tub collapsed into staves\";",
+    "model=\"\\JP\\site\\yard\\jp_s_oke_ab_staves.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_fire_tub (water)",
+   "class": "StaticObj_JP_S_Fire_Tub_Full",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Corner fire tub with a bucket pyramid\";",
+    "model=\"\\JP\\site\\water\\jp_s_fire_tub_full.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_fire_tub (water)",
+   "class": "StaticObj_JP_S_Fire_Tub_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire tub, lid gone, three buckets down\";",
+    "model=\"\\JP\\site\\water\\jp_s_fire_tub_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_fire_tub (water)",
+   "class": "StaticObj_JP_S_Fire_Tub_Eave",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire bucket on an eave peg (building proxy)\";",
+    "model=\"\\JP\\site\\water\\jp_s_fire_tub_eave.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_fire_tub (water)",
+   "class": "StaticObj_JP_S_Fire_Tub_Rural",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rain barrel under an eave (rural)\";",
+    "model=\"\\JP\\site\\water\\jp_s_fire_tub_rural.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_fire_tub (water)",
+   "class": "StaticObj_JP_S_Fire_Tub_Ab_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fire tub, pyramid collapsed, buckets scattered\";",
+    "model=\"\\JP\\site\\water\\jp_s_fire_tub_ab_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_firewood_stack (yard)",
+   "class": "StaticObj_JP_S_Firewood_Stack_Wall_1ken_H120",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Firewood stack on a wall, 1 ken x 1.2 m\";",
+    "model=\"\\JP\\site\\yard\\jp_s_firewood_stack_wall_1ken_h120.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_firewood_stack (yard)",
+   "class": "StaticObj_JP_S_Firewood_Stack_Wall_1ken_H180",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Firewood stack on a wall, 1 ken x 1.8 m\";",
+    "model=\"\\JP\\site\\yard\\jp_s_firewood_stack_wall_1ken_h180.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_firewood_stack (yard)",
+   "class": "StaticObj_JP_S_Firewood_Stack_Half",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Firewood stack end piece, half ken, stepped\";",
+    "model=\"\\JP\\site\\yard\\jp_s_firewood_stack_half.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_firewood_stack (yard)",
+   "class": "StaticObj_JP_S_Firewood_Stack_Free_Posts",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Firewood stack between two stakes, board cap\";",
+    "model=\"\\JP\\site\\yard\\jp_s_firewood_stack_free_posts.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_firewood_stack (yard)",
+   "class": "StaticObj_JP_S_Firewood_Stack_Bundle",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Brushwood bundle (soda) leaning on a wall\";",
+    "model=\"\\JP\\site\\yard\\jp_s_firewood_stack_bundle.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_firewood_stack (yard)",
+   "class": "StaticObj_JP_S_Firewood_Stack_Ab_Collapsed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Firewood stack, one end slumped, spilled\";",
+    "model=\"\\JP\\site\\yard\\jp_s_firewood_stack_ab_collapsed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_bench (street)",
+   "class": "StaticObj_JP_S_Bench_1ken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bench (endai), 1 ken\";",
+    "model=\"\\JP\\site\\street\\jp_s_bench_1ken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_bench (street)",
+   "class": "StaticObj_JP_S_Bench_Long",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tea-stand bench, 1.5 ken\";",
+    "model=\"\\JP\\site\\street\\jp_s_bench_long.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_bench (street)",
+   "class": "StaticObj_JP_S_Bench_Mat",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bench with a rotted straw mat\";",
+    "model=\"\\JP\\site\\street\\jp_s_bench_mat.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_bench (street)",
+   "class": "StaticObj_JP_S_Bench_Ab_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bench tipped on its side\";",
+    "model=\"\\JP\\site\\street\\jp_s_bench_ab_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_bench (street)",
+   "class": "StaticObj_JP_S_Bench_Ab_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bench, one leg frame collapsed\";",
+    "model=\"\\JP\\site\\street\\jp_s_bench_ab_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_laundry_pole (yard)",
+   "class": "StaticObj_JP_S_Laundry_Pole_Forked",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Drying pole on forked posts\";",
+    "model=\"\\JP\\site\\yard\\jp_s_laundry_pole_forked.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_laundry_pole (yard)",
+   "class": "StaticObj_JP_S_Laundry_Pole_Crossed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Drying pole on crossed stakes\";",
+    "model=\"\\JP\\site\\yard\\jp_s_laundry_pole_crossed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_laundry_pole (yard)",
+   "class": "StaticObj_JP_S_Laundry_Pole_Load_Cloth",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Drying pole, faded kimono, one cloth fallen\";",
+    "model=\"\\JP\\site\\yard\\jp_s_laundry_pole_load_cloth.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_laundry_pole (yard)",
+   "class": "StaticObj_JP_S_Laundry_Pole_Load_Kaki",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Persimmons dried black on strings (autumn)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_laundry_pole_load_kaki.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_laundry_pole (yard)",
+   "class": "StaticObj_JP_S_Laundry_Pole_Load_Daikon",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Daikon hung in pairs, shrivelled (autumn)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_laundry_pole_load_daikon.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_laundry_pole (yard)",
+   "class": "StaticObj_JP_S_Laundry_Pole_Load_Net",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A small net draped on the pole (fishing village)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_laundry_pole_load_net.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_laundry_pole (yard)",
+   "class": "StaticObj_JP_S_Laundry_Pole_Ab_Down",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Drying pole down, one post leaning\";",
+    "model=\"\\JP\\site\\yard\\jp_s_laundry_pole_ab_down.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_tenbin (yard)",
+   "class": "StaticObj_JP_S_Tenbin_Baskets",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shoulder pole with two baskets\";",
+    "model=\"\\JP\\site\\yard\\jp_s_tenbin_baskets.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_tenbin (yard)",
+   "class": "StaticObj_JP_S_Tenbin_Buckets",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shoulder pole with two buckets\";",
+    "model=\"\\JP\\site\\yard\\jp_s_tenbin_buckets.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_tenbin (yard)",
+   "class": "StaticObj_JP_S_Tenbin_Boxes",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shoulder pole with peddler's boxes\";",
+    "model=\"\\JP\\site\\yard\\jp_s_tenbin_boxes.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_tenbin (yard)",
+   "class": "StaticObj_JP_S_Tenbin_Leaning",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shoulder pole leaning on a wall\";",
+    "model=\"\\JP\\site\\yard\\jp_s_tenbin_leaning.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_tenbin (yard)",
+   "class": "StaticObj_JP_S_Tenbin_Ab_Dropped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shoulder pole dropped, basket overturned\";",
+    "model=\"\\JP\\site\\yard\\jp_s_tenbin_ab_dropped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_handcart (yard)",
+   "class": "StaticObj_JP_S_Handcart_Empty",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Handcart (daihachi-guruma), handles down\";",
+    "model=\"\\JP\\site\\yard\\jp_s_handcart_empty.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_handcart (yard)",
+   "class": "StaticObj_JP_S_Handcart_Load_Bales",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Handcart with rice bales roped on\";",
+    "model=\"\\JP\\site\\yard\\jp_s_handcart_load_bales.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_handcart (yard)",
+   "class": "StaticObj_JP_S_Handcart_Load_Barrels",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Handcart with barrels\";",
+    "model=\"\\JP\\site\\yard\\jp_s_handcart_load_barrels.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_handcart (yard)",
+   "class": "StaticObj_JP_S_Handcart_Small",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small cart (niguruma)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_handcart_small.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_handcart (yard)",
+   "class": "StaticObj_JP_S_Handcart_Ab_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Handcart tipped on its side, load spilled\";",
+    "model=\"\\JP\\site\\yard\\jp_s_handcart_ab_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_handcart (yard)",
+   "class": "StaticObj_JP_S_Handcart_Ab_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Handcart with a broken wheel, bed down\";",
+    "model=\"\\JP\\site\\yard\\jp_s_handcart_ab_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_handcart (yard)",
+   "class": "StaticObj_JP_S_Handcart_Ab_Wreck",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Handcart wreck, wheels off, slats gone\";",
+    "model=\"\\JP\\site\\yard\\jp_s_handcart_ab_wreck.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_tsurube (water)",
+   "class": "Land_JP_S_Well_Tsurube_Curb_Tub",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pulley well, round tub curb\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_tsurube_curb_tub.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_tsurube (water)",
+   "class": "Land_JP_S_Well_Tsurube_Curb_Igeta",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pulley well, square igeta curb\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_tsurube_curb_igeta.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_tsurube (water)",
+   "class": "Land_JP_S_Well_Tsurube_Curb_Stone",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pulley well, stone curb\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_tsurube_curb_stone.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_tsurube (water)",
+   "class": "Land_JP_S_Well_Tsurube_Roofed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Roofed pulley well (dwelling 28)\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_tsurube_roofed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_tsurube (water)",
+   "class": "Land_JP_S_Well_Tsurube_Lid",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Well curb with a board lid\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_tsurube_lid.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_tsurube (water)",
+   "class": "Land_JP_S_Well_Tsurube_Ab_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pulley well, rope rotted, lid askew\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_tsurube_ab_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_hanetsurube (water)",
+   "class": "Land_JP_S_Well_Hanetsurube_Well",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Lever well (hanetsurube)\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_hanetsurube_well.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_hanetsurube (water)",
+   "class": "StaticObj_JP_S_Well_Hanetsurube_Field",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Field sweep over a ditch\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_hanetsurube_field.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_well_hanetsurube (water)",
+   "class": "Land_JP_S_Well_Hanetsurube_Ab_Down",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Lever well, lashing rotted, pole down\";",
+    "model=\"\\JP\\site\\water\\jp_s_well_hanetsurube_ab_down.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_jizo (roadside)",
+   "class": "StaticObj_JP_S_Stone_Jizo_S",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone Jizo, small (0.45)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stone_jizo_s.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_jizo (roadside)",
+   "class": "StaticObj_JP_S_Stone_Jizo_M",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone Jizo, standard (0.90)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stone_jizo_m.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_jizo (roadside)",
+   "class": "StaticObj_JP_S_Stone_Jizo_L",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone Jizo, large on a lotus (1.36)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stone_jizo_l.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_jizo (roadside)",
+   "class": "StaticObj_JP_S_Stone_Jizo_Halo",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Boat-halo Jizo stone (funagata)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stone_jizo_halo.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_jizo (roadside)",
+   "class": "StaticObj_JP_S_Stone_Jizo_Bib",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone Jizo with a faded rag bib and cap\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stone_jizo_bib.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_jizo (roadside)",
+   "class": "StaticObj_JP_S_Stone_Jizo_Offer",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone Jizo with offerings (cup, stones, dead flowers)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stone_jizo_offer.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_jizo (roadside)",
+   "class": "StaticObj_JP_S_Stone_Jizo_Ab_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone Jizo toppled, head broken off\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stone_jizo_ab_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_jizo_hut (roadside)",
+   "class": "StaticObj_JP_S_Jizo_Hut_Box",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Jizo box (street corner), small Jizo inside\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_jizo_hut_box.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_jizo_hut (roadside)",
+   "class": "StaticObj_JP_S_Jizo_Hut_Hall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Jizo hall, one ken, open front\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_jizo_hut_hall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_jizo_hut (roadside)",
+   "class": "StaticObj_JP_S_Jizo_Hut_Stone_Roof",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone-roofed Jizo niche (mountain)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_jizo_hut_stone_roof.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_jizo_hut (roadside)",
+   "class": "StaticObj_JP_S_Jizo_Hut_Ab_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Jizo box, lattice door fallen, roof lifted\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_jizo_hut_ab_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stele (roadside)",
+   "class": "StaticObj_JP_S_Stele_Koshin",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Koshin pillar with Shomen Kongo relief\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stele_koshin.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stele (roadside)",
+   "class": "StaticObj_JP_S_Stele_Relief_Panel",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bato Kannon relief panel\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stele_relief_panel.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stele (roadside)",
+   "class": "StaticObj_JP_S_Stele_Natural_Slab",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Natural slab with deep-cut characters\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stele_natural_slab.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stele (roadside)",
+   "class": "StaticObj_JP_S_Stele_Arched",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Arched-top nenbutsu stone\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stele_arched.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stele (roadside)",
+   "class": "StaticObj_JP_S_Stele_Pillar",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Direction / boundary post\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stele_pillar.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stele (roadside)",
+   "class": "StaticObj_JP_S_Stele_Round",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Round road-god stone (dosojin)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stele_round.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stele (roadside)",
+   "class": "StaticObj_JP_S_Stele_Group3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three roadside stones on one base\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stele_group3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stele (roadside)",
+   "class": "StaticObj_JP_S_Stele_Ab_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Koshin pillar leaning and half sunk, lichen\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_stele_ab_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_gutter (street)",
+   "class": "StaticObj_JP_S_Gutter_Stone_1ken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Street gutter, stone-lined, 1 ken\";",
+    "model=\"\\JP\\site\\street\\jp_s_gutter_stone_1ken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_gutter (street)",
+   "class": "StaticObj_JP_S_Gutter_Stone_Half",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Street gutter, stone-lined, half ken\";",
+    "model=\"\\JP\\site\\street\\jp_s_gutter_stone_half.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_gutter (street)",
+   "class": "StaticObj_JP_S_Gutter_Corner",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Street gutter, 90-degree corner\";",
+    "model=\"\\JP\\site\\street\\jp_s_gutter_corner.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_gutter (street)",
+   "class": "StaticObj_JP_S_Gutter_Slab",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Street gutter with a slab crossing (door)\";",
+    "model=\"\\JP\\site\\street\\jp_s_gutter_slab.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_gutter (street)",
+   "class": "StaticObj_JP_S_Gutter_Board_1ken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Alley drain with dobu-ita covers, 1 ken\";",
+    "model=\"\\JP\\site\\street\\jp_s_gutter_board_1ken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_gutter (street)",
+   "class": "StaticObj_JP_S_Gutter_Outfall",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Gutter outfall into a canal or ditch\";",
+    "model=\"\\JP\\site\\street\\jp_s_gutter_outfall.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_gutter (street)",
+   "class": "StaticObj_JP_S_Gutter_Earth_1ken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rural earth-banked gutter, field-stone edge\";",
+    "model=\"\\JP\\site\\street\\jp_s_gutter_earth_1ken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_gutter (street)",
+   "class": "StaticObj_JP_S_Gutter_Ab_Silted",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Street gutter silted with leaves, a stone tipped in\";",
+    "model=\"\\JP\\site\\street\\jp_s_gutter_ab_silted.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Noren_Long",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Long noren, 3 panels, shop mark\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_noren_long.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Noren_Half",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Half noren (eating house)\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_noren_half.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Mizuhiki",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Eave curtain (mizuhiki-noren), 1 ken\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_mizuhiki.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Sudare_Up",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Reed blind rolled up\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_sudare_up.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Sudare_Down",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Reed blind down, slumped and holed\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_sudare_down.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Kanban_Hang",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Hanging signboard (confectioner)\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_kanban_hang.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Kanban_Stand",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Standing signboard (soba)\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_kanban_stand.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Brush",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shape sign: giant brush\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_shape_brush.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Geta",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shape sign: geta\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_shape_geta.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Tabi",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shape sign: tabi\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_shape_tabi.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Gourd",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shape sign: medicine gourd\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_shape_gourd.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Umbrella",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shape sign: umbrella\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_shape_umbrella.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Shape_Fan",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shape sign: fan\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_shape_fan.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Ab_Noren_Torn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Noren faded to grey-blue, a panel torn off\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_ab_noren_torn.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Ab_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Noren pole dropped, noren heaped on the threshold\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_ab_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shopfront (street)",
+   "class": "StaticObj_JP_S_Shopfront_Ab_Kanban_Askew",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Hanging signboard hanging from one cord\";",
+    "model=\"\\JP\\site\\street\\jp_s_shopfront_ab_kanban_askew.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_lantern_sign (street)",
+   "class": "StaticObj_JP_S_Lantern_Sign_Chochin_Shop",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shop lantern (sake)\";",
+    "model=\"\\JP\\site\\street\\jp_s_lantern_sign_chochin_shop.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_lantern_sign (street)",
+   "class": "StaticObj_JP_S_Lantern_Sign_Chochin_Inn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Inn lantern\";",
+    "model=\"\\JP\\site\\street\\jp_s_lantern_sign_chochin_inn.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_lantern_sign (street)",
+   "class": "StaticObj_JP_S_Lantern_Sign_Chochin_Gate",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Ward-gate lantern (Honcho)\";",
+    "model=\"\\JP\\site\\street\\jp_s_lantern_sign_chochin_gate.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_lantern_sign (street)",
+   "class": "StaticObj_JP_S_Lantern_Sign_Kake",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Hanging box sign lamp (kake-andon)\";",
+    "model=\"\\JP\\site\\street\\jp_s_lantern_sign_kake.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_lantern_sign (street)",
+   "class": "StaticObj_JP_S_Lantern_Sign_Oki",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Standing sign lamp (oki-andon)\";",
+    "model=\"\\JP\\site\\street\\jp_s_lantern_sign_oki.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_lantern_sign (street)",
+   "class": "StaticObj_JP_S_Lantern_Sign_Tsuji",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Crossroads lamp on a post (tsuji-andon)\";",
+    "model=\"\\JP\\site\\street\\jp_s_lantern_sign_tsuji.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_lantern_sign (street)",
+   "class": "StaticObj_JP_S_Lantern_Sign_Ab_Torn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shop lantern, paper split and holed\";",
+    "model=\"\\JP\\site\\street\\jp_s_lantern_sign_ab_torn.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_lantern_sign (street)",
+   "class": "StaticObj_JP_S_Lantern_Sign_Ab_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Standing lamp tipped, a lantern crushed on the ground\";",
+    "model=\"\\JP\\site\\street\\jp_s_lantern_sign_ab_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_nobori (street)",
+   "class": "StaticObj_JP_S_Nobori_Shop",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shop banner (soba) on a bamboo pole\";",
+    "model=\"\\JP\\site\\street\\jp_s_nobori_shop.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_nobori (street)",
+   "class": "StaticObj_JP_S_Nobori_Shrine",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shrine dedication banners, a pair\";",
+    "model=\"\\JP\\site\\street\\jp_s_nobori_shrine.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_nobori (street)",
+   "class": "StaticObj_JP_S_Nobori_Socket_Stones",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Banner socket stones, banner taken down\";",
+    "model=\"\\JP\\site\\street\\jp_s_nobori_socket_stones.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_nobori (street)",
+   "class": "StaticObj_JP_S_Nobori_Ab_Tattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Banner shredded to a strip, pole leaning\";",
+    "model=\"\\JP\\site\\street\\jp_s_nobori_ab_tattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_nobori (street)",
+   "class": "StaticObj_JP_S_Nobori_Ab_Down",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Banner pole fallen across the approach\";",
+    "model=\"\\JP\\site\\street\\jp_s_nobori_ab_down.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stall (street)",
+   "class": "StaticObj_JP_S_Stall_Reed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Reed-screen stall with counter\";",
+    "model=\"\\JP\\site\\street\\jp_s_stall_reed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stall (street)",
+   "class": "StaticObj_JP_S_Stall_Booth",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Plank booth (kake-mise)\";",
+    "model=\"\\JP\\site\\street\\jp_s_stall_booth.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stall (street)",
+   "class": "StaticObj_JP_S_Stall_Yatai",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Roofed street stall (yatai), no wheels\";",
+    "model=\"\\JP\\site\\street\\jp_s_stall_yatai.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stall (street)",
+   "class": "StaticObj_JP_S_Stall_Row3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three reed stalls (market row)\";",
+    "model=\"\\JP\\site\\street\\jp_s_stall_row3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stall (street)",
+   "class": "StaticObj_JP_S_Stall_Ab_Collapsed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Reed stall collapsed, mat fallen in\";",
+    "model=\"\\JP\\site\\street\\jp_s_stall_ab_collapsed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stall (street)",
+   "class": "StaticObj_JP_S_Stall_Ab_Frame",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bare stall frame, screens gone\";",
+    "model=\"\\JP\\site\\street\\jp_s_stall_ab_frame.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_kosatsu (roadside)",
+   "class": "StaticObj_JP_S_Kosatsu_Std",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Notice board (kosatsuba), post-town size\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_kosatsu_std.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_kosatsu (roadside)",
+   "class": "StaticObj_JP_S_Kosatsu_Large",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Notice board, bridge-end size (Fuchu type)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_kosatsu_large.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_kosatsu (roadside)",
+   "class": "StaticObj_JP_S_Kosatsu_Forest",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Single roofed notice board (forest)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_kosatsu_forest.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_kosatsu (roadside)",
+   "class": "StaticObj_JP_S_Kosatsu_Ab_Boards_Down",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Notice board, two boards fallen, fence gaps\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_kosatsu_ab_boards_down.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_straw_stack (yard)",
+   "class": "StaticObj_JP_S_Straw_Stack_Nio_Cyl",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw stack, cylinder with conical cap (Kinai)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_straw_stack_nio_cyl.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_straw_stack (yard)",
+   "class": "StaticObj_JP_S_Straw_Stack_Nio_Cone",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw stack, conical (Kanto)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_straw_stack_nio_cone.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_straw_stack (yard)",
+   "class": "StaticObj_JP_S_Straw_Stack_Stook",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice sheaves leaning in a stook\";",
+    "model=\"\\JP\\site\\yard\\jp_s_straw_stack_stook.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_straw_stack (yard)",
+   "class": "StaticObj_JP_S_Straw_Stack_Bundle",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tied straw bundle\";",
+    "model=\"\\JP\\site\\yard\\jp_s_straw_stack_bundle.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_straw_stack (yard)",
+   "class": "StaticObj_JP_S_Straw_Stack_Tawara_Stack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice bales stacked (5)\";",
+    "model=\"\\JP\\site\\yard\\jp_s_straw_stack_tawara_stack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_straw_stack (yard)",
+   "class": "StaticObj_JP_S_Straw_Stack_Ab_Slumped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw stack slumped, cap blown off\";",
+    "model=\"\\JP\\site\\yard\\jp_s_straw_stack_ab_slumped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shimenawa (roadside)",
+   "class": "StaticObj_JP_S_Shimenawa_Len_1ken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw rope with streamers, 1 ken\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_shimenawa_len_1ken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shimenawa (roadside)",
+   "class": "StaticObj_JP_S_Shimenawa_Len_2ken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw rope with streamers, 2 ken\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_shimenawa_len_2ken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shimenawa (roadside)",
+   "class": "StaticObj_JP_S_Shimenawa_Wrap_D06",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw rope round a 0.6 m trunk\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_shimenawa_wrap_d06.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shimenawa (roadside)",
+   "class": "StaticObj_JP_S_Shimenawa_Wrap_D10",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw rope round a 1.0 m trunk\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_shimenawa_wrap_d10.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shimenawa (roadside)",
+   "class": "StaticObj_JP_S_Shimenawa_Wrap_D16",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw rope round a 1.6 m trunk (landmark tree)\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_shimenawa_wrap_d16.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_shimenawa (roadside)",
+   "class": "StaticObj_JP_S_Shimenawa_Ab_Tattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw rope grey and frayed, one end dropped\";",
+    "model=\"\\JP\\site\\roadside\\jp_s_shimenawa_ab_tattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden torii, shinmei (straight), 1 ken\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_shinmei.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Rope",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden shinmei torii with a straw rope\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_rope.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden shinmei torii, straw rope and paper shide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden shinmei torii, mossy (rural)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Moss_Rope",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden shinmei torii, mossy, straw rope\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss_rope.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Shinmei_Moss_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden shinmei torii, mossy, rope and shide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_shinmei_moss_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden torii, myojin (upswept), 1.5 ken, plaque\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_myojin.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Rope",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden myojin torii with a straw rope\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_myojin_rope.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden myojin torii, straw rope and paper shide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_myojin_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden myojin torii, mossy (rural)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_myojin_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Moss_Rope",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden myojin torii, mossy, rope\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_myojin_moss_rope.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Moss_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden myojin torii, mossy, rope and shide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_myojin_moss_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Shu",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Vermilion myojin torii, black kasagi (Inari / Hachiman only)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_myojin_shu.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Myojin_Shu_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Vermilion myojin torii with rope and shide (Inari / Hachiman only)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_myojin_shu_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Mini",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Miniature wooden torii (yard shrine)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_mini.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Mini_Shu",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Miniature vermilion torii (Inari yard shrine)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_mini_shu.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Mini_Rope",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Miniature torii with a straw rope and shide (yard shrine)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_mini_rope.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Ab_Leaning",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden myojin torii leaning on a rotted post, rope dropped\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_ab_leaning.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Ab_Leaning_Shu",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Vermilion torii peeled to grey, leaning, rope dropped\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_ab_leaning_shu.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_wood (shrine)",
+   "class": "StaticObj_JP_S_Torii_Wood_Ab_Rotted",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden shinmei torii, kasagi slipped off one post, rope dropped\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_wood_ab_rotted.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_S",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii, span 1.82 (village)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_s.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_S_Rope",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii 1.82 with a straw rope\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_s_rope.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_S_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii 1.82, straw rope and shide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_s_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_S_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii 1.82, mossy (rural)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_s_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_S_Moss_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii 1.82, mossy, rope and shide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_s_moss_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_M",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii, span 2.5\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_m.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_M_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii 2.5, straw rope and shide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_m_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_L",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii, span 3.6 (town)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_l.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_L_Rope_Shide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii 3.6, straw rope and shide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_l_rope_shide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_stone (shrine)",
+   "class": "StaticObj_JP_S_Torii_Stone_Ab_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii, kasagi fallen in two pieces (quake)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_stone_ab_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_18",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone lantern, Kasuga 1.8\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_24",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone lantern, Kasuga 2.4\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_24.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_30",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone lantern, Kasuga 3.0\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_30.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Square_24",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone lantern, square standing 2.4\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_square_24.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Oki",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small placed stone lantern (oki-doro)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_oki.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Joyato",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Always-lit lantern (joyato) on a two-step base, 4.0\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_joyato.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone lantern, Kasuga 1.8, mossy\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_24_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone lantern, Kasuga 2.4, mossy\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_24_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Kasuga_30_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone lantern, Kasuga 3.0, mossy\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_kasuga_30_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Square_24_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone lantern, square 2.4, mossy\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_square_24_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Oki_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small placed stone lantern, mossy\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_oki_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Ab_Toppled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Kasuga lantern, roof and jewel fallen (quake)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_ab_toppled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_lantern (shrine)",
+   "class": "StaticObj_JP_S_Stone_Lantern_Ab_Hoju_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Kasuga lantern 1.8, mossy, jewel fallen\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_lantern_ab_hoju_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_chozubachi (shrine)",
+   "class": "StaticObj_JP_S_Chozubachi_Small",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone basin, Tenna 2 (1682) size, on a plinth stone\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_chozubachi_small.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_chozubachi (shrine)",
+   "class": "StaticObj_JP_S_Chozubachi_Large",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone basin, long (town shrine)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_chozubachi_large.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_chozubachi (shrine)",
+   "class": "StaticObj_JP_S_Chozubachi_Natural",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Natural stone basin with a cut hollow (mountain shrine)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_chozubachi_natural.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_chozubachi (shrine)",
+   "class": "StaticObj_JP_S_Chozubachi_Ab_Dry",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone basin, dry and leaf-filled, ladles fallen\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_chozubachi_ab_dry.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone steps, dressed, 3 steps, 1 ken wide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_dressed_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_6",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone steps, dressed, 6 steps, 1 ken wide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_dressed_6.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_3_Wide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone steps, dressed, 3 steps, 1.5 ken wide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_dressed_3_wide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_6_Wide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone steps, dressed, 6 steps, 1.5 ken wide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_dressed_6_wide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Dressed_3_Narrow",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone steps, dressed, 3 steps, half ken wide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_dressed_3_narrow.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Rough_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone steps, rough field stones, 3 steps, 1 ken wide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_rough_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Rough_3_Narrow",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone steps, rough field stones, half ken wide\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_rough_3_narrow.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Landing",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone landing slab course, 1 ken square\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_landing.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Landing_Wide",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone landing, 1.5 ken wide, 1 ken deep\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_landing_wide.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Cheek_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Side cheek stone for a 3-step flight\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_cheek_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Cheek_6",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Side cheek stone for a 6-step flight\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_cheek_6.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Ab_Heaved",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone steps heaved by roots, one step missing\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_ab_heaved.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_stone_steps (shrine)",
+   "class": "StaticObj_JP_S_Stone_Steps_Ab_Heaved_Rough",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rough stone steps, heaved, leaves drifted\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_stone_steps_ab_heaved_rough.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Board",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Board-shaped gravestone (itabi) on a base, name and date\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_board.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Board_S",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small board-shaped gravestone set in the ground, name only\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_board_s.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Board_Tall_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tall board-shaped gravestone on two bases, mossy\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_board_tall_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Boat_Halo",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Boat-halo gravestone with a Jizo in relief\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_boat_halo.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Boat_Halo_Child",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small boat-halo stone (a child's grave), the child's name\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_boat_halo_child.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Round",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Round-headed gravestone (kushigata) on a base\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_round.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Round_S_Plain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small round-headed stone, plain\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_round_s_plain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Pillar",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Square-pillar gravestone on three bases (rare in 1730)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_pillar.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Pillar_Pointed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Square pillar with a pointed top (new Kyoho fashion, rare)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_pillar_pointed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Gorinto_S",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Five-ring stupa (gorinto), 0.6\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_gorinto_s.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Gorinto_L",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Large five-ring stupa on a platform, 2.0 (samurai / priest)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_gorinto_l.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Gorinto_Stack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Gorinto re-stacked from two stupas, crescent missing\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_gorinto_stack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Gorinto_Heap",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"A small heap of old gorinto fragments at a plot corner\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_gorinto_heap.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Hokyointo",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Hokyointo (treasure-seal stupa), 1.5\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_hokyointo.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Jizo_Child",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small Jizo on a base (a child's grave), faded bib\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_jizo_child.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Field",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Field stone as a grave marker (poor grave)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_field.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Field_Mound",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Earth grave mound with a field stone at its head\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_field_mound.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Field_Pair",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Two small field stones (a couple's poor grave)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_field_pair.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Leaning",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Board-shaped gravestone leaning and sunk\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_ab_leaning.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Board_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Board-shaped gravestone, gable snapped off and lying in front\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_ab_board_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Boat_Halo_Sunk",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Boat-halo gravestone leaning forward, half sunk, mossy\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_ab_boat_halo_sunk.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Round_Lean",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Round-headed gravestone leaning sideways\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_ab_round_lean.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Gorinto_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Gorinto with roof, crescent and jewel fallen (quake)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_ab_gorinto_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_stones (grave)",
+   "class": "StaticObj_JP_S_Grave_Stones_Ab_Hokyointo_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Hokyointo, finial and one horn fallen\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_stones_ab_hokyointo_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Sotoba_X3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Three sotoba slats behind a stone\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_sotoba_x3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Rack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sotoba rack with leaning slats\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_rack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Tubes",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bamboo flower tubes in a stone, dead stems\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_tubes.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Incense",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone incense stand with ash\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_incense.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Bucket_Rack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bucket and ladle rack (teoke-kake)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_bucket_rack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Bohyo",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden grave post on an earth mound\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_bohyo.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Bohyo_New",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fresh wooden grave post, tall, on a new high mound\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_bohyo_new.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Bohyo_S",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small silver-grey grave post (child or very poor grave)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_bohyo_s.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Bohyo_Roof",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden grave post with a small gabled cap (kasa-toba)\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_bohyo_roof.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Ab_Fallen",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sotoba slats fallen and split, flower tube knocked over\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_ab_fallen.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Lean",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Grey grave post leaning hard, mound slumped\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_lean.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Split",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Black rotting grave post, top split apart\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_split.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_grave_wood (grave)",
+   "class": "StaticObj_JP_S_Grave_Wood_Ab_Bohyo_Rotted",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Sunken grave mound, post rotted to a stump\";",
+    "model=\"\\JP\\site\\grave\\jp_s_grave_wood_ab_bohyo_rotted.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_fallen (shrine)",
+   "class": "StaticObj_JP_S_Torii_Fallen_Shinmei_Rot",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden shinmei torii rotted at the feet and fallen\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_fallen_shinmei_rot.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_fallen (shrine)",
+   "class": "StaticObj_JP_S_Torii_Fallen_Myojin_Typhoon",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden myojin torii blown over by a typhoon\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_fallen_myojin_typhoon.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_fallen (shrine)",
+   "class": "StaticObj_JP_S_Torii_Fallen_Shu_Snapped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Vermilion torii, one post snapped, the kasagi fallen and broken (Inari / Hachiman only)\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_fallen_shu_snapped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_fallen (shrine)",
+   "class": "StaticObj_JP_S_Torii_Fallen_Stone_Quake",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii thrown down by an earthquake\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_fallen_stone_quake.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_torii_fallen (shrine)",
+   "class": "StaticObj_JP_S_Torii_Fallen_Stone_Quake_Old",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone torii fallen in an old earthquake, mossy and leaf-covered\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_torii_fallen_stone_quake_old.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_komainu (shrine)",
+   "class": "StaticObj_JP_S_Komainu_A_A",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone komainu, open mouth (a), upright form\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_komainu_a_a.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_komainu (shrine)",
+   "class": "StaticObj_JP_S_Komainu_A_Un",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone komainu, closed mouth (un) with horn, upright form\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_komainu_a_un.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_komainu (shrine)",
+   "class": "StaticObj_JP_S_Komainu_B_A",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone komainu, open mouth (a), compact Edo form\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_komainu_b_a.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_komainu (shrine)",
+   "class": "StaticObj_JP_S_Komainu_B_Un",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone komainu, closed mouth (un), compact Edo form\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_komainu_b_un.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_komainu (shrine)",
+   "class": "StaticObj_JP_S_Komainu_A_A_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone komainu (a), upright form, mossy and weathered\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_komainu_a_a_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_komainu (shrine)",
+   "class": "StaticObj_JP_S_Komainu_A_Un_Moss",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone komainu (un), upright form, mossy and weathered\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_komainu_a_un_moss.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_kitsune (shrine)",
+   "class": "StaticObj_JP_S_Kitsune_Key",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone Inari fox with the key in its mouth\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_kitsune_key.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_s_kitsune (shrine)",
+   "class": "StaticObj_JP_S_Kitsune_Jewel",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stone Inari fox with the jewel in its mouth\";",
+    "model=\"\\JP\\site\\shrine\\jp_s_kitsune_jewel.p3d\";"
+   ]
+  }
+ ],
+ "models": [
+  "jp_s_oke_tarai",
+  "jp_s_oke_teoke",
+  "jp_s_oke_ninai",
+  "jp_s_oke_taru_lid",
+  "jp_s_oke_stake",
+  "jp_s_oke_ab_tipped",
+  "jp_s_oke_ab_staves",
+  "jp_s_fire_tub_full",
+  "jp_s_fire_tub_open",
+  "jp_s_fire_tub_eave",
+  "jp_s_fire_tub_rural",
+  "jp_s_fire_tub_ab_scattered",
+  "jp_s_firewood_stack_wall_1ken_h120",
+  "jp_s_firewood_stack_wall_1ken_h180",
+  "jp_s_firewood_stack_half",
+  "jp_s_firewood_stack_free_posts",
+  "jp_s_firewood_stack_bundle",
+  "jp_s_firewood_stack_ab_collapsed",
+  "jp_s_bench_1ken",
+  "jp_s_bench_long",
+  "jp_s_bench_mat",
+  "jp_s_bench_ab_tipped",
+  "jp_s_bench_ab_broken",
+  "jp_s_laundry_pole_forked",
+  "jp_s_laundry_pole_crossed",
+  "jp_s_laundry_pole_load_cloth",
+  "jp_s_laundry_pole_load_kaki",
+  "jp_s_laundry_pole_load_daikon",
+  "jp_s_laundry_pole_load_net",
+  "jp_s_laundry_pole_ab_down",
+  "jp_s_tenbin_baskets",
+  "jp_s_tenbin_buckets",
+  "jp_s_tenbin_boxes",
+  "jp_s_tenbin_leaning",
+  "jp_s_tenbin_ab_dropped",
+  "jp_s_handcart_empty",
+  "jp_s_handcart_load_bales",
+  "jp_s_handcart_load_barrels",
+  "jp_s_handcart_small",
+  "jp_s_handcart_ab_tipped",
+  "jp_s_handcart_ab_broken",
+  "jp_s_handcart_ab_wreck",
+  "jp_s_well_tsurube_curb_tub",
+  "jp_s_well_tsurube_curb_igeta",
+  "jp_s_well_tsurube_curb_stone",
+  "jp_s_well_tsurube_roofed",
+  "jp_s_well_tsurube_lid",
+  "jp_s_well_tsurube_ab_open",
+  "jp_s_well_hanetsurube_well",
+  "jp_s_well_hanetsurube_field",
+  "jp_s_well_hanetsurube_ab_down",
+  "jp_s_stone_jizo_s",
+  "jp_s_stone_jizo_m",
+  "jp_s_stone_jizo_l",
+  "jp_s_stone_jizo_halo",
+  "jp_s_stone_jizo_bib",
+  "jp_s_stone_jizo_offer",
+  "jp_s_stone_jizo_ab_tipped",
+  "jp_s_jizo_hut_box",
+  "jp_s_jizo_hut_hall",
+  "jp_s_jizo_hut_stone_roof",
+  "jp_s_jizo_hut_ab_open",
+  "jp_s_stele_koshin",
+  "jp_s_stele_relief_panel",
+  "jp_s_stele_natural_slab",
+  "jp_s_stele_arched",
+  "jp_s_stele_pillar",
+  "jp_s_stele_round",
+  "jp_s_stele_group3",
+  "jp_s_stele_ab_tipped",
+  "jp_s_gutter_stone_1ken",
+  "jp_s_gutter_stone_half",
+  "jp_s_gutter_corner",
+  "jp_s_gutter_slab",
+  "jp_s_gutter_board_1ken",
+  "jp_s_gutter_outfall",
+  "jp_s_gutter_earth_1ken",
+  "jp_s_gutter_ab_silted",
+  "jp_s_shopfront_noren_long",
+  "jp_s_shopfront_noren_half",
+  "jp_s_shopfront_mizuhiki",
+  "jp_s_shopfront_sudare_up",
+  "jp_s_shopfront_sudare_down",
+  "jp_s_shopfront_kanban_hang",
+  "jp_s_shopfront_kanban_stand",
+  "jp_s_shopfront_shape_brush",
+  "jp_s_shopfront_shape_geta",
+  "jp_s_shopfront_shape_tabi",
+  "jp_s_shopfront_shape_gourd",
+  "jp_s_shopfront_shape_umbrella",
+  "jp_s_shopfront_shape_fan",
+  "jp_s_shopfront_ab_noren_torn",
+  "jp_s_shopfront_ab_fallen",
+  "jp_s_shopfront_ab_kanban_askew",
+  "jp_s_lantern_sign_chochin_shop",
+  "jp_s_lantern_sign_chochin_inn",
+  "jp_s_lantern_sign_chochin_gate",
+  "jp_s_lantern_sign_kake",
+  "jp_s_lantern_sign_oki",
+  "jp_s_lantern_sign_tsuji",
+  "jp_s_lantern_sign_ab_torn",
+  "jp_s_lantern_sign_ab_fallen",
+  "jp_s_nobori_shop",
+  "jp_s_nobori_shrine",
+  "jp_s_nobori_socket_stones",
+  "jp_s_nobori_ab_tattered",
+  "jp_s_nobori_ab_down",
+  "jp_s_stall_reed",
+  "jp_s_stall_booth",
+  "jp_s_stall_yatai",
+  "jp_s_stall_row3",
+  "jp_s_stall_ab_collapsed",
+  "jp_s_stall_ab_frame",
+  "jp_s_kosatsu_std",
+  "jp_s_kosatsu_large",
+  "jp_s_kosatsu_forest",
+  "jp_s_kosatsu_ab_boards_down",
+  "jp_s_straw_stack_nio_cyl",
+  "jp_s_straw_stack_nio_cone",
+  "jp_s_straw_stack_stook",
+  "jp_s_straw_stack_bundle",
+  "jp_s_straw_stack_tawara_stack",
+  "jp_s_straw_stack_ab_slumped",
+  "jp_s_shimenawa_len_1ken",
+  "jp_s_shimenawa_len_2ken",
+  "jp_s_shimenawa_wrap_d06",
+  "jp_s_shimenawa_wrap_d10",
+  "jp_s_shimenawa_wrap_d16",
+  "jp_s_shimenawa_ab_tattered",
+  "jp_s_torii_wood_shinmei",
+  "jp_s_torii_wood_shinmei_rope",
+  "jp_s_torii_wood_shinmei_rope_shide",
+  "jp_s_torii_wood_shinmei_moss",
+  "jp_s_torii_wood_shinmei_moss_rope",
+  "jp_s_torii_wood_shinmei_moss_rope_shide",
+  "jp_s_torii_wood_myojin",
+  "jp_s_torii_wood_myojin_rope",
+  "jp_s_torii_wood_myojin_rope_shide",
+  "jp_s_torii_wood_myojin_moss",
+  "jp_s_torii_wood_myojin_moss_rope",
+  "jp_s_torii_wood_myojin_moss_rope_shide",
+  "jp_s_torii_wood_myojin_shu",
+  "jp_s_torii_wood_myojin_shu_rope_shide",
+  "jp_s_torii_wood_mini",
+  "jp_s_torii_wood_mini_shu",
+  "jp_s_torii_wood_mini_rope",
+  "jp_s_torii_wood_ab_leaning",
+  "jp_s_torii_wood_ab_leaning_shu",
+  "jp_s_torii_wood_ab_rotted",
+  "jp_s_torii_stone_s",
+  "jp_s_torii_stone_s_rope",
+  "jp_s_torii_stone_s_rope_shide",
+  "jp_s_torii_stone_s_moss",
+  "jp_s_torii_stone_s_moss_rope_shide",
+  "jp_s_torii_stone_m",
+  "jp_s_torii_stone_m_rope_shide",
+  "jp_s_torii_stone_l",
+  "jp_s_torii_stone_l_rope_shide",
+  "jp_s_torii_stone_ab_broken",
+  "jp_s_stone_lantern_kasuga_18",
+  "jp_s_stone_lantern_kasuga_24",
+  "jp_s_stone_lantern_kasuga_30",
+  "jp_s_stone_lantern_square_24",
+  "jp_s_stone_lantern_oki",
+  "jp_s_stone_lantern_joyato",
+  "jp_s_stone_lantern_kasuga_18_moss",
+  "jp_s_stone_lantern_kasuga_24_moss",
+  "jp_s_stone_lantern_kasuga_30_moss",
+  "jp_s_stone_lantern_square_24_moss",
+  "jp_s_stone_lantern_oki_moss",
+  "jp_s_stone_lantern_ab_toppled",
+  "jp_s_stone_lantern_ab_hoju_moss",
+  "jp_s_chozubachi_small",
+  "jp_s_chozubachi_large",
+  "jp_s_chozubachi_natural",
+  "jp_s_chozubachi_ab_dry",
+  "jp_s_stone_steps_dressed_3",
+  "jp_s_stone_steps_dressed_6",
+  "jp_s_stone_steps_dressed_3_wide",
+  "jp_s_stone_steps_dressed_6_wide",
+  "jp_s_stone_steps_dressed_3_narrow",
+  "jp_s_stone_steps_rough_3",
+  "jp_s_stone_steps_rough_3_narrow",
+  "jp_s_stone_steps_landing",
+  "jp_s_stone_steps_landing_wide",
+  "jp_s_stone_steps_cheek_3",
+  "jp_s_stone_steps_cheek_6",
+  "jp_s_stone_steps_ab_heaved",
+  "jp_s_stone_steps_ab_heaved_rough",
+  "jp_s_grave_stones_board",
+  "jp_s_grave_stones_board_s",
+  "jp_s_grave_stones_board_tall_moss",
+  "jp_s_grave_stones_boat_halo",
+  "jp_s_grave_stones_boat_halo_child",
+  "jp_s_grave_stones_round",
+  "jp_s_grave_stones_round_s_plain",
+  "jp_s_grave_stones_pillar",
+  "jp_s_grave_stones_pillar_pointed",
+  "jp_s_grave_stones_gorinto_s",
+  "jp_s_grave_stones_gorinto_l",
+  "jp_s_grave_stones_gorinto_stack",
+  "jp_s_grave_stones_gorinto_heap",
+  "jp_s_grave_stones_hokyointo",
+  "jp_s_grave_stones_jizo_child",
+  "jp_s_grave_stones_field",
+  "jp_s_grave_stones_field_mound",
+  "jp_s_grave_stones_field_pair",
+  "jp_s_grave_stones_ab_leaning",
+  "jp_s_grave_stones_ab_board_broken",
+  "jp_s_grave_stones_ab_boat_halo_sunk",
+  "jp_s_grave_stones_ab_round_lean",
+  "jp_s_grave_stones_ab_gorinto_fallen",
+  "jp_s_grave_stones_ab_hokyointo_broken",
+  "jp_s_grave_wood_sotoba_x3",
+  "jp_s_grave_wood_rack",
+  "jp_s_grave_wood_tubes",
+  "jp_s_grave_wood_incense",
+  "jp_s_grave_wood_bucket_rack",
+  "jp_s_grave_wood_bohyo",
+  "jp_s_grave_wood_bohyo_new",
+  "jp_s_grave_wood_bohyo_s",
+  "jp_s_grave_wood_bohyo_roof",
+  "jp_s_grave_wood_ab_fallen",
+  "jp_s_grave_wood_ab_bohyo_lean",
+  "jp_s_grave_wood_ab_bohyo_split",
+  "jp_s_grave_wood_ab_bohyo_rotted",
+  "jp_s_torii_fallen_shinmei_rot",
+  "jp_s_torii_fallen_myojin_typhoon",
+  "jp_s_torii_fallen_shu_snapped",
+  "jp_s_torii_fallen_stone_quake",
+  "jp_s_torii_fallen_stone_quake_old",
+  "jp_s_komainu_a_a",
+  "jp_s_komainu_a_un",
+  "jp_s_komainu_b_a",
+  "jp_s_komainu_b_un",
+  "jp_s_komainu_a_a_moss",
+  "jp_s_komainu_a_un_moss",
+  "jp_s_kitsune_key",
+  "jp_s_kitsune_jewel"
+ ],
+ "scripts": {
+  "scripts\\4_World\\JP_Site\\jp_site_wells.c": [
+   "class Land_JP_S_Well_Tsurube_Curb_Tub extends Well {};",
+   "class Land_JP_S_Well_Tsurube_Curb_Igeta extends Well {};",
+   "class Land_JP_S_Well_Tsurube_Curb_Stone extends Well {};",
+   "class Land_JP_S_Well_Tsurube_Roofed extends Well {};",
+   "class Land_JP_S_Well_Tsurube_Lid extends Well {};",
+   "class Land_JP_S_Well_Tsurube_Ab_Open extends Well {};",
+   "class Land_JP_S_Well_Hanetsurube_Well extends Well {};",
+   "class Land_JP_S_Well_Hanetsurube_Ab_Down extends Well {};"
+  ]
+ }
+}

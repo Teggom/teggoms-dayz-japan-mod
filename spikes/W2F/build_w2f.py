@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 r"""build_w2f.py - W2F specialty props (shrine / temple / smithy / guard post) -> jp_furniture.pbo
 
-  python build_w2f.py [prop ...] [--list] [--no-binarize] [--pack]
+  python build_w2f.py [prop ...] [--list] [--no-binarize] [--pack] [--config-only]
 
-Builds INTO the furniture pipeline the way spikes/S1/build_s1.py does (B3a's build.py + L1 + S1, none edited): the
-W2F props_w2f_*.py modules are appended after B3a's, L1's and S1's MODULES, so config.cpp / model.cfg /
-jp_furniture.pbo carry all of them together.
+Builds INTO the furniture pipeline the way spikes/S1/build_s1.py does (B3a's build.py + L1 + S1): the W2F
+props_w2f_*.py modules are appended after B3a's, L1's and S1's MODULES.
   - W2F masters -> spikes/W2F/out/<cat>/ ; only W2F models are binarized
   - checks -> spikes/W2F/checks.json (B3a's check set + TXT); logs + PBO stage -> spikes/W2F/_build
   - sidecars (src/JP/furniture/<cat>/<prop>.prop.json) carry master + mount like L1 / S1's
-PITFALL: a later B3a / L1 / S1 build rewrites config.cpp without the W2F classes: run this with --pack afterwards.
+  - config (CA1, 2026-10-01): ONLY W2F's classes -> src/JP/furniture/_frags/W2F.json; tools/assemble_config.py merges
+    every builder's fragment into config.cpp / model.cfg, so a later B3a / L1 / S1 build keeps the W2F classes
+  --config-only: no model build / binarize, just re-emit W2F's fragment from spikes/W2F/out + assemble (+ --pack).
 Never starts or stops the server, the game or any GUI program.
 """
 import json
@@ -95,6 +96,14 @@ def built_models(reg):
     return out
 
 
+def write_fragment(models):
+    """CA1: W2F's own classes (W2F_CATS, master in spikes/W2F/out) -> _frags/W2F.json, then assemble jp_furniture."""
+    mine = [(p, m) for p, m in models if p["cat"] in W2F_CATS]
+    B.ASM.write_fragment(B.PBO, "W2F", "spikes/W2F/build_w2f.py", 40, B.frag_classes(mine),
+                         [m["p3d"] for _, m in mine], required=("DZ_Data", "JP_Common"))
+    return B.ASM.assemble(B.PBO)
+
+
 def binarize(models):
     for prop, _ in models:
         os.makedirs(os.path.join(B.SRC, prop["cat"]), exist_ok=True)
@@ -116,6 +125,13 @@ def main(argv):
             n += len(p["models"])
         print(len(my), "props,", n, "models")
         return 0
+    if "--config-only" in argv:     # CA1: re-emit the fragment from the masters + assemble (+ --pack)
+        asm = write_fragment(built_models(reg))
+        ok = all(B.cfgconvert(os.path.join(B.SRC, f))[0] for f in ("config.cpp", "model.cfg"))
+        print("CFG", "PASS" if ok else "FAIL", "; classes in config.cpp: %d" % asm["classes"])
+        if "--pack" in argv:
+            print("packed:", *B.pack())
+        return 0 if ok else 1
     sel = B.select(my, argv)
     results = write_all(sel)
     models = built_models(reg)
@@ -123,8 +139,7 @@ def main(argv):
     dup = sorted({n for n in names if names.count(n) > 1})
     if dup:
         raise SystemExit("duplicate p3d names: %s" % dup)
-    B.wb(os.path.join(B.SRC, "config.cpp"), B.config_cpp(models))
-    B.wb(os.path.join(B.SRC, "model.cfg"), B.model_cfg(models))
+    asm = write_fragment(models)
     glob = {}
     conv = [B.cfgconvert(os.path.join(B.SRC, "config.cpp")), B.cfgconvert(os.path.join(B.SRC, "model.cfg"))]
     glob["CFG"] = {"pass": all(c[0] for c in conv), "detail": [c[1] for c in conv]}
@@ -140,12 +155,12 @@ def main(argv):
     mine_names = {m["p3d"] for p in my for m in p["models"]}
     results["summary"] = {"models": len([k for k in results["models"] if k in mine_names]),
                           "pass": sum(1 for k, r in results["models"].items() if r["pass"] and k in mine_names),
-                          "w2f_registered": len(mine_names), "classes_in_config": len(models)}
+                          "w2f_registered": len(mine_names), "classes_in_config": asm["classes"]}
     B.wb(B.CHECKS, json.dumps(results, indent=1, ensure_ascii=False))
     for k, v in glob.items():
         print(k, "PASS" if v["pass"] else "FAIL", json.dumps(v["detail"])[:300])
-    print("W2F models: %d, all checks pass: %d; classes in config.cpp: %d" % (
-        results["summary"]["models"], results["summary"]["pass"], len(models)))
+    print("W2F models: %d, all checks pass: %d; classes in config.cpp (all builders): %d" % (
+        results["summary"]["models"], results["summary"]["pass"], asm["classes"]))
     return 0
 
 

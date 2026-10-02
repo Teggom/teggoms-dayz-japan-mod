@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 r"""build_l2.py - L2, the outdoor life layer (research/interior/LIFE_LAYER.md, items 51-74) -> jp_site.pbo
 
-  python build_l2.py [prop ...] [--list] [--no-binarize] [--pack]
+  python build_l2.py [prop ...] [--list] [--no-binarize] [--pack] [--config-only]
 
-Builds INTO B3b's site pipeline (spikes/B3b/build.py) without editing it: the L2 props_l2_*.py modules are appended
-to B3b's MODULES, so config.cpp / model.cfg / jp_site.pbo carry B3b's 129 + L2's models together.
+Builds INTO B3b's site pipeline (spikes/B3b/build.py): the L2 props_l2_*.py modules are appended to B3b's MODULES.
+Config (CA1, 2026-10-01): L2 writes ONLY its own classes to src/JP/site/_frags/L2.json; tools/assemble_config.py merges
+every builder's fragment (B3b, L2, ...) into config.cpp / model.cfg / jp_site_wells.c, so jp_site.pbo carries them all.
+--config-only: no model build / binarize, just re-emit L2's fragment from spikes/L2/out + assemble (+ --pack).
 What differs from a plain B3b run (the wrapped functions below):
   - L2's MLOD masters go to spikes/L2/out/<cat>/ (B3b's stay in spikes/B3b/out/); only L2's models are binarized
     (B3b's ODOLs in src/JP/site are left as they are)
@@ -13,8 +15,8 @@ What differs from a plain B3b run (the wrapped functions below):
   - every L2 sidecar model entry also carries: "master" (the MLOD master, DEV-relative, for the decorator), "mount"
     (yard | street | eaves | road | shore | field | surface: where the decorator may put it), "mount_note", "tiers"
 Frames and anchors are B3b's (skit.py): 'floor' base centre on the terrain; 'wall' the wall plane is z = 0, y = 0 at
-the wall foot (eaves pieces hang from 'hang_y'). NOTE: B3b's own build.py regenerates config.cpp from B3b's modules
-only; after a B3b rebuild, rerun this script (with --pack) so the L2 classes are back in jp_site.pbo.
+the wall foot (eaves pieces hang from 'hang_y'). (The old "rerun this after a B3b rebuild" pitfall is gone since CA1:
+B3b now writes only its own fragment.)
 Never starts or stops the server, the game or any GUI program.
 """
 import json
@@ -117,6 +119,12 @@ def built_models(reg):
     return out
 
 
+def write_fragment(models):
+    """CA1: L2's own classes (L2_CATS, master in spikes/L2/out) -> _frags/L2.json, then assemble jp_site."""
+    return B.write_fragment([(p, m) for p, m in models if p["cat"] in L2_CATS], builder="L2",
+                            writer="spikes/L2/build_l2.py", order=20)
+
+
 def binarize(models):
     """B3b's binarize, but copying the masters from spikes/L2/out (L2 models only)."""
     save = B.OUT
@@ -137,6 +145,13 @@ def main(argv):
             n += len(p["models"])
         print(len(mine), "props,", n, "models")
         return 0
+    if "--config-only" in argv:     # CA1: re-emit the fragment from the masters + assemble (+ --pack)
+        asm = write_fragment(built_models(reg))
+        ok = all(B.B3A.cfgconvert(os.path.join(B.SRC, f))[0] for f in ("config.cpp", "model.cfg"))
+        print("CFG", "PASS" if ok else "FAIL", "; classes in config.cpp: %d" % asm["classes"])
+        if "--pack" in argv:
+            print("packed:", *B.pack())
+        return 0 if ok else 1
     sel = B.select(mine, argv)
     results = write_all(sel)
     models = built_models(reg)
@@ -144,9 +159,7 @@ def main(argv):
     dup = sorted({n for n in names if names.count(n) > 1})
     if dup:
         raise SystemExit("duplicate p3d names: %s" % dup)
-    B.wb(os.path.join(B.SRC, "config.cpp"), B.config_cpp(models))
-    B.wb(os.path.join(B.SRC, "model.cfg"), B.model_cfg(models))
-    B.wb(os.path.join(B.SRC, B.SCRIPT_DIR, "jp_site_wells.c"), B.wells_script(models))
+    asm = write_fragment(models)
     glob = {}
     conv = [B.B3A.cfgconvert(os.path.join(B.SRC, "config.cpp")), B.B3A.cfgconvert(os.path.join(B.SRC, "model.cfg"))]
     glob["CFG"] = {"pass": all(c[0] for c in conv), "detail": [c[1] for c in conv]}
@@ -161,12 +174,12 @@ def main(argv):
     results["global"] = glob
     results["summary"] = {"models": len(results["models"]),
                           "pass": sum(1 for r in results["models"].values() if r["pass"]),
-                          "classes_in_config": len(models)}
+                          "classes_in_config": asm["classes"]}
     B.wb(B.CHECKS, json.dumps(results, indent=1, ensure_ascii=False))
     for k, v in glob.items():
         print(k, "PASS" if v["pass"] else "FAIL", json.dumps(v["detail"])[:300])
-    print("L2 models: %d, all checks pass: %d; classes in config.cpp: %d" % (
-        results["summary"]["models"], results["summary"]["pass"], len(models)))
+    print("L2 models: %d, all checks pass: %d; classes in config.cpp (all builders): %d" % (
+        results["summary"]["models"], results["summary"]["pass"], asm["classes"]))
     return 0
 
 

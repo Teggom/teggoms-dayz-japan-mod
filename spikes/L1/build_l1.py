@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 r"""build_l1.py - L1, the interior life layer (research/interior/LIFE_LAYER.md, items 1-50) -> jp_furniture.pbo
 
-  python build_l1.py [prop ...] [--list] [--no-binarize] [--pack]
+  python build_l1.py [prop ...] [--list] [--no-binarize] [--pack] [--config-only]
 
-Builds INTO B3a's furniture pipeline (spikes/B3a/build.py) without editing it: the L1 props_life_*.py modules are
-appended to B3a's MODULES, so config.cpp / model.cfg / jp_furniture.pbo carry B3a's 110 + B4's 2 + L1's models together.
+Builds INTO B3a's furniture pipeline (spikes/B3a/build.py): the L1 props_life_*.py modules are appended to B3a's
+MODULES. Config (CA1, 2026-10-01): L1 writes ONLY its own classes to src/JP/furniture/_frags/L1.json and
+tools/assemble_config.py merges every builder's fragment into config.cpp / model.cfg (jp_furniture.pbo carries them all).
+--config-only: no model build / binarize, just re-emit L1's fragment from spikes/L1/out + assemble (+ --pack).
 What differs from a plain B3a run (the wrapped functions below):
   - L1's MLOD masters go to spikes/L1/out/<cat>/ (B3a's stay in spikes/B3a/out/); only L1's models are binarized
     (B3a's ODOLs in src/JP/furniture are left as they are)
@@ -116,6 +118,15 @@ def built_models(reg):
     return out
 
 
+def write_fragment(models):
+    """CA1: L1's own classes (L1_CATS, master in spikes/L1/out) -> _frags/L1.json, then assemble jp_furniture."""
+    mine = [(p, m) for p, m in models if p["cat"] in L1_CATS]
+    ASM = B.ASM
+    ASM.write_fragment(B.PBO, "L1", "spikes/L1/build_l1.py", 20, B.frag_classes(mine), [m["p3d"] for _, m in mine],
+                       required=("DZ_Data", "JP_Common"))
+    return ASM.assemble(B.PBO)
+
+
 def binarize(models):
     """B3a's binarize, but copying the masters from spikes/L1/out (L1 models only)."""
     for prop, _ in models:
@@ -139,6 +150,13 @@ def main(argv):
             n += len(p["models"])
         print(len(mine), "props,", n, "models")
         return 0
+    if "--config-only" in argv:     # CA1: re-emit the fragment from the masters + assemble (+ --pack)
+        asm = write_fragment(built_models(reg))
+        ok = all(B.cfgconvert(os.path.join(B.SRC, f))[0] for f in ("config.cpp", "model.cfg"))
+        print("CFG", "PASS" if ok else "FAIL", "; classes in config.cpp: %d" % asm["classes"])
+        if "--pack" in argv:
+            print("packed:", *B.pack())
+        return 0 if ok else 1
     sel = B.select(mine, argv)
     results = write_all(sel)
     models = built_models(reg)
@@ -146,8 +164,7 @@ def main(argv):
     dup = sorted({n for n in names if names.count(n) > 1})
     if dup:
         raise SystemExit("duplicate p3d names: %s" % dup)
-    B.wb(os.path.join(B.SRC, "config.cpp"), B.config_cpp(models))
-    B.wb(os.path.join(B.SRC, "model.cfg"), B.model_cfg(models))
+    asm = write_fragment(models)
     glob = {}
     conv = [B.cfgconvert(os.path.join(B.SRC, "config.cpp")), B.cfgconvert(os.path.join(B.SRC, "model.cfg"))]
     glob["CFG"] = {"pass": all(c[0] for c in conv), "detail": [c[1] for c in conv]}
@@ -162,12 +179,12 @@ def main(argv):
     results["global"] = glob
     results["summary"] = {"models": len(results["models"]),
                           "pass": sum(1 for r in results["models"].values() if r["pass"]),
-                          "classes_in_config": len(models)}
+                          "classes_in_config": asm["classes"]}
     B.wb(B.CHECKS, json.dumps(results, indent=1, ensure_ascii=False))
     for k, v in glob.items():
         print(k, "PASS" if v["pass"] else "FAIL", json.dumps(v["detail"])[:300])
-    print("L1 models: %d, all checks pass: %d; classes in config.cpp: %d" % (
-        results["summary"]["models"], results["summary"]["pass"], len(models)))
+    print("L1 models: %d, all checks pass: %d; classes in config.cpp (all builders): %d" % (
+        results["summary"]["models"], results["summary"]["pass"], asm["classes"]))
     return 0
 
 

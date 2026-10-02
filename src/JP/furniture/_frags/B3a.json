@@ -1,0 +1,1258 @@
+{
+ "pbo": "jp_furniture",
+ "builder": "B3a",
+ "writer": "spikes/B3a/build.py",
+ "order": 10,
+ "requiredAddons": [
+  "DZ_Data",
+  "JP_Common"
+ ],
+ "classes": [
+  {
+   "group": "jp_f_kama (kitchen)",
+   "class": "StaticObj_JP_F_Kama",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice pot (kama) with lid\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_kama.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kama (kitchen)",
+   "class": "StaticObj_JP_F_Kama_Nolid",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice pot, lid off, rusted\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_kama_nolid.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kama (kitchen)",
+   "class": "StaticObj_JP_F_Kama_Lid",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice pot lid, knocked off onto the floor\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_kama_lid.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kama (kitchen)",
+   "class": "StaticObj_JP_F_Kama_Nabe",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small pot (nabe) with bail\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_kama_nabe.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kama (kitchen)",
+   "class": "StaticObj_JP_F_Kama_Nabe_Rusted",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Small pot, rusted, burnt crust\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_kama_nabe_rusted.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jizai_kagi (kitchen)",
+   "class": "StaticObj_JP_F_Jizai_Kagi",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pot hook (jizai-kagi) with fish lever\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jizai_kagi.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jizai_kagi (kitchen)",
+   "class": "StaticObj_JP_F_Jizai_Kagi_Abandoned",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pot hook, lever jammed high, rusted pot\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jizai_kagi_abandoned.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jizai_kagi (kitchen)",
+   "class": "StaticObj_JP_F_Jizai_Kagi_Plain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pot hook, plain bar lever\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jizai_kagi_plain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jizai_kagi (kitchen)",
+   "class": "StaticObj_JP_F_Jizai_Kagi_Plain_Abandoned",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pot hook (plain), jammed, rusted pot\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jizai_kagi_plain_abandoned.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mizugame (kitchen)",
+   "class": "StaticObj_JP_F_Mizugame",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Water jar (mizugame), lid and dipper\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_mizugame.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mizugame (kitchen)",
+   "class": "StaticObj_JP_F_Mizugame_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Water jar, lid off leaning, dry\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_mizugame_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mizugame (kitchen)",
+   "class": "StaticObj_JP_F_Mizugame_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Water jar, cracked, piece on the floor\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_mizugame_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_oke (kitchen)",
+   "class": "StaticObj_JP_F_Oke_Bucket",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Handled bucket (oke)\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_oke_bucket.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_oke (kitchen)",
+   "class": "StaticObj_JP_F_Oke_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bucket on its side\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_oke_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_oke (kitchen)",
+   "class": "StaticObj_JP_F_Oke_Tarai",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Shallow washing tub (tarai)\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_oke_tarai.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_oke (kitchen)",
+   "class": "StaticObj_JP_F_Oke_Tarai_Dry",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tarai, dried out, stave and hoop off\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_oke_tarai_dry.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_oke (kitchen)",
+   "class": "StaticObj_JP_F_Oke_Pickle",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pickle tub with lid and stone\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_oke_pickle.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_oke (kitchen)",
+   "class": "StaticObj_JP_F_Oke_Pickle_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Pickle tub, lid off, stone on the floor\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_oke_pickle_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_091_1",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 0.91 m, 1 board\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_091_1.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_091_1_Sag",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 0.91 m, 1 board, sagging\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_091_1_sag.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_091_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 0.91 m, 3 boards\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_091_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_091_3_Sag",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 0.91 m, 3 boards, sagging\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_091_3_sag.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_136_1",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 1.36 m, 1 board\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_136_1.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_136_1_Sag",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 1.36 m, 1 board, sagging\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_136_1_sag.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_136_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 1.36 m, 3 boards\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_136_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_136_3_Sag",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 1.36 m, 3 boards, sagging\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_136_3_sag.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_182_1",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 1.82 m, 1 board\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_182_1.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_182_1_Sag",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 1.82 m, 1 board, sagging\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_182_1_sag.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_182_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 1.82 m, 3 boards\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_182_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tana (kitchen)",
+   "class": "StaticObj_JP_F_Tana_182_3_Sag",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wall shelf 1.82 m, 3 boards, sagging\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_tana_182_3_sag.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_firewood (kitchen)",
+   "class": "StaticObj_JP_F_Firewood_Stack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Firewood stack (maki)\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_firewood_stack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_firewood (kitchen)",
+   "class": "StaticObj_JP_F_Firewood_Low",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Firewood stack, half used, logs rolled\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_firewood_low.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_firewood (kitchen)",
+   "class": "StaticObj_JP_F_Firewood_Bundle",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Brushwood bundles (soda)\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_firewood_bundle.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_firewood (kitchen)",
+   "class": "StaticObj_JP_F_Firewood_Bundle_Loose",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Brushwood bundle burst, sticks scattered\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_firewood_bundle_loose.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_S",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar S\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_s.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_M",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar M\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_m.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_L",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar L\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_l.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_S_Pale",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar S (pale glaze)\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_s_pale.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_M_Pale",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar M (pale glaze)\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_m_pale.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_S_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar S, lid off\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_s_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_M_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar M, lid off\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_m_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_L_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar L, lid off\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_l_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_jar (kitchen)",
+   "class": "StaticObj_JP_F_Jar_M_Broken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Storage jar M, broken\";",
+    "model=\"\\JP\\furniture\\kitchen\\jp_f_jar_m_broken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_andon (heat_light)",
+   "class": "StaticObj_JP_F_Andon_Kaku",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Standing paper lamp (andon)\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_andon_kaku.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_andon (heat_light)",
+   "class": "StaticObj_JP_F_Andon_Kaku_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Andon, knocked over, paper torn\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_andon_kaku_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_andon (heat_light)",
+   "class": "StaticObj_JP_F_Andon_Ariake",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bedside lamp (ariake andon)\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_andon_ariake.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_andon (heat_light)",
+   "class": "StaticObj_JP_F_Andon_Ariake_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bedside lamp, knocked over\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_andon_ariake_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hibachi (heat_light)",
+   "class": "StaticObj_JP_F_Hibachi_Round",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Round ceramic brazier (hibachi)\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_hibachi_round.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hibachi (heat_light)",
+   "class": "StaticObj_JP_F_Hibachi_Round_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Round brazier, tipped, ash spilled\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_hibachi_round_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hibachi (heat_light)",
+   "class": "StaticObj_JP_F_Hibachi_Box",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden box brazier\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_hibachi_box.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_hibachi (heat_light)",
+   "class": "StaticObj_JP_F_Hibachi_Box_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Box brazier, tipped, ash spilled\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_hibachi_box_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tabakobon (heat_light)",
+   "class": "StaticObj_JP_F_Tabakobon",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tobacco tray (tabako-bon)\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_tabakobon.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tabakobon (heat_light)",
+   "class": "StaticObj_JP_F_Tabakobon_Spilled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tobacco tray on its side, ash spilled\";",
+    "model=\"\\JP\\furniture\\heat_light\\jp_f_tabakobon_spilled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_nagamochi (storage)",
+   "class": "StaticObj_JP_F_Nagamochi",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Long chest (nagamochi)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_nagamochi.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_nagamochi (storage)",
+   "class": "StaticObj_JP_F_Nagamochi_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Long chest, lid thrown back, cloth spilling\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_nagamochi_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tansu (storage)",
+   "class": "StaticObj_JP_F_Tansu",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tansu (clothing chest)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tansu.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tansu (storage)",
+   "class": "StaticObj_JP_F_Tansu_Ransacked",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tansu (ransacked)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tansu_ransacked.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tansu (storage)",
+   "class": "StaticObj_JP_F_Tansu_Single",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tansu, single box\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tansu_single.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tansu (storage)",
+   "class": "StaticObj_JP_F_Tansu_Single_Ransacked",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tansu, single box (ransacked)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tansu_single_ransacked.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kori (storage)",
+   "class": "StaticObj_JP_F_Kori",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wicker trunk (kori)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_kori.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kori (storage)",
+   "class": "StaticObj_JP_F_Kori_2",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wicker trunks, stack of two\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_kori_2.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kori (storage)",
+   "class": "StaticObj_JP_F_Kori_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wicker trunk, lid off, garment out\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_kori_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_box (storage)",
+   "class": "StaticObj_JP_F_Box_S",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden box, small\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_box_s.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_box (storage)",
+   "class": "StaticObj_JP_F_Box_M",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden box, medium\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_box_m.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_box (storage)",
+   "class": "StaticObj_JP_F_Box_L",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden box, large\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_box_l.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_box (storage)",
+   "class": "StaticObj_JP_F_Box_Stack3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden boxes, stack of three\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_box_stack3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_box (storage)",
+   "class": "StaticObj_JP_F_Box_S_Lacquer",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Lacquered box, small (T3)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_box_s_lacquer.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_box (storage)",
+   "class": "StaticObj_JP_F_Box_M_Lacquer",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Lacquered box, medium (T3)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_box_m_lacquer.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_box (storage)",
+   "class": "StaticObj_JP_F_Box_Open",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Wooden box, lid off, spilled\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_box_open.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_box (storage)",
+   "class": "StaticObj_JP_F_Box_Stack3_Toppled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Box stack, small box knocked off\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_box_stack3_toppled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tawara (storage)",
+   "class": "StaticObj_JP_F_Tawara",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw rice bale (tawara)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tawara.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tawara (storage)",
+   "class": "StaticObj_JP_F_Tawara_Burst",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice bale, burst, rice spilled\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tawara_burst.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tawara (storage)",
+   "class": "StaticObj_JP_F_Tawara_Stack6",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice bales, pyramid of six\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tawara_stack6.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tawara (storage)",
+   "class": "StaticObj_JP_F_Tawara_Stack6_Burst",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Rice bales, top one burst\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tawara_stack6_burst.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tawara (storage)",
+   "class": "StaticObj_JP_F_Tawara_Kamasu",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw bag (kamasu)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tawara_kamasu.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tawara (storage)",
+   "class": "StaticObj_JP_F_Tawara_Kamasu_Stack3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw bags, stack of three\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tawara_kamasu_stack3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_tawara (storage)",
+   "class": "StaticObj_JP_F_Tawara_Kamasu_Burst",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw bag, split and slumped\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_tawara_kamasu_burst.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_rack (storage)",
+   "class": "StaticObj_JP_F_Rack_1ken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Board shelving 1.82 m (kura shelves)\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_rack_1ken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_rack (storage)",
+   "class": "StaticObj_JP_F_Rack_1ken_Collapsed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Board shelving 1.82 m, board down, goods on the floor\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_rack_1ken_collapsed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_rack (storage)",
+   "class": "StaticObj_JP_F_Rack_Half",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Board shelving 0.91 m\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_rack_half.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_rack (storage)",
+   "class": "StaticObj_JP_F_Rack_Half_Collapsed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Board shelving 0.91 m, board down\";",
+    "model=\"\\JP\\furniture\\storage\\jp_f_rack_half_collapsed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_futon_stack (bedding)",
+   "class": "StaticObj_JP_F_Futon_Stack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Folded bedding stack (futon, yogi)\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_futon_stack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_futon_stack (bedding)",
+   "class": "StaticObj_JP_F_Futon_Stack_Slumped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Bedding stack slumped, quilt dragged off\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_futon_stack_slumped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_futon_laid (bedding)",
+   "class": "StaticObj_JP_F_Futon_Laid",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Laid-out bedding, quilt thrown back\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_futon_laid.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_futon_laid (bedding)",
+   "class": "StaticObj_JP_F_Futon_Laid_Dragged",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Laid-out bedding, quilt dragged aside, stained\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_futon_laid_dragged.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mushiro (bedding)",
+   "class": "StaticObj_JP_F_Mushiro",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw floor mat (mushiro)\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_mushiro.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mushiro (bedding)",
+   "class": "StaticObj_JP_F_Mushiro_Torn",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw mat, torn, corner curled\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_mushiro_torn.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mushiro (bedding)",
+   "class": "StaticObj_JP_F_Mushiro_Rolled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw mat, rolled\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_mushiro_rolled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mushiro (bedding)",
+   "class": "StaticObj_JP_F_Mushiro_Rolled_Loose",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw mat, half unrolled\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_mushiro_rolled_loose.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mushiro (bedding)",
+   "class": "StaticObj_JP_F_Mushiro_Pile",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw mats, small pile\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_mushiro_pile.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_mushiro (bedding)",
+   "class": "StaticObj_JP_F_Mushiro_Pile_Spread",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Straw mats, pile slid apart\";",
+    "model=\"\\JP\\furniture\\bedding\\jp_f_mushiro_pile_spread.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_zukue (shop)",
+   "class": "StaticObj_JP_F_Zukue_Choba",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Account desk (choba-zukue)\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_zukue_choba.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_zukue (shop)",
+   "class": "StaticObj_JP_F_Zukue_Choba_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Account desk on its side, ledger scattered\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_zukue_choba_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_zukue (shop)",
+   "class": "StaticObj_JP_F_Zukue_Plain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Low writing desk (fuzukue)\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_zukue_plain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_zukue (shop)",
+   "class": "StaticObj_JP_F_Zukue_Plain_Tipped",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Writing desk on its side\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_zukue_plain_tipped.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_goshi (shop)",
+   "class": "StaticObj_JP_F_Choba_Goshi_3",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Counting-desk lattice, three folds\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_choba_goshi_3.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_goshi (shop)",
+   "class": "StaticObj_JP_F_Choba_Goshi_3_Knocked",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Counting-desk lattice, one fold knocked flat\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_choba_goshi_3_knocked.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_goshi (shop)",
+   "class": "StaticObj_JP_F_Choba_Goshi_2",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Counting-desk lattice, two folds\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_choba_goshi_2.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_choba_goshi (shop)",
+   "class": "StaticObj_JP_F_Choba_Goshi_2_Knocked",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Counting-desk lattice (two folds), one knocked flat\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_choba_goshi_2_knocked.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_misedana (shop)",
+   "class": "StaticObj_JP_F_Misedana_1ken",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stepped goods stand 1.82 m\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_misedana_1ken.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_misedana (shop)",
+   "class": "StaticObj_JP_F_Misedana_1ken_Toppled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Goods stand 1.82 m, toppled forward\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_misedana_1ken_toppled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_misedana (shop)",
+   "class": "StaticObj_JP_F_Misedana_Half",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Stepped goods stand 0.91 m\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_misedana_half.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_misedana (shop)",
+   "class": "StaticObj_JP_F_Misedana_Half_Toppled",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Goods stand 0.91 m, toppled forward\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_misedana_half_toppled.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_goods_general (shop)",
+   "class": "StaticObj_JP_F_Goods_General_Cloth",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Goods: cloth bolts and sandals, stacked\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_goods_general_cloth.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_goods_general (shop)",
+   "class": "StaticObj_JP_F_Goods_General_Cloth_Swept",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Goods: cloth swept off, a bolt unrolled\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_goods_general_cloth_swept.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_goods_general (shop)",
+   "class": "StaticObj_JP_F_Goods_General_Paper",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Goods: paper bundles, packages, a box\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_goods_general_paper.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_goods_general (shop)",
+   "class": "StaticObj_JP_F_Goods_General_Paper_Swept",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Goods: paper and packages swept off\";",
+    "model=\"\\JP\\furniture\\shop\\jp_f_goods_general_paper_swept.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_debris (debris)",
+   "class": "StaticObj_JP_F_Debris_Leaves",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Litter: autumn leaves blown in\";",
+    "model=\"\\JP\\furniture\\debris\\jp_f_debris_leaves.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_debris (debris)",
+   "class": "StaticObj_JP_F_Debris_Straw",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Litter: straw and dust\";",
+    "model=\"\\JP\\furniture\\debris\\jp_f_debris_straw.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_debris (debris)",
+   "class": "StaticObj_JP_F_Debris_Paper",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Litter: torn paper and shoji squares\";",
+    "model=\"\\JP\\furniture\\debris\\jp_f_debris_paper.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_debris (debris)",
+   "class": "StaticObj_JP_F_Debris_Shards",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Litter: broken bowls\";",
+    "model=\"\\JP\\furniture\\debris\\jp_f_debris_shards.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kamidana (fittings)",
+   "class": "StaticObj_JP_F_Kamidana_Plain",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"God shelf (kamidana) with shrine box\";",
+    "model=\"\\JP\\furniture\\fittings\\jp_f_kamidana_plain.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_nagashi (fittings)",
+   "class": "StaticObj_JP_F_Nagashi_Wood",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Kitchen sink (nagashi), wooden trough on legs\";",
+    "model=\"\\JP\\furniture\\fittings\\jp_f_nagashi_wood.p3d\";"
+   ]
+  }
+ ],
+ "models": [
+  "jp_f_kama",
+  "jp_f_kama_nolid",
+  "jp_f_kama_lid",
+  "jp_f_kama_nabe",
+  "jp_f_kama_nabe_rusted",
+  "jp_f_jizai_kagi",
+  "jp_f_jizai_kagi_abandoned",
+  "jp_f_jizai_kagi_plain",
+  "jp_f_jizai_kagi_plain_abandoned",
+  "jp_f_mizugame",
+  "jp_f_mizugame_open",
+  "jp_f_mizugame_broken",
+  "jp_f_oke_bucket",
+  "jp_f_oke_tipped",
+  "jp_f_oke_tarai",
+  "jp_f_oke_tarai_dry",
+  "jp_f_oke_pickle",
+  "jp_f_oke_pickle_open",
+  "jp_f_tana_091_1",
+  "jp_f_tana_091_1_sag",
+  "jp_f_tana_091_3",
+  "jp_f_tana_091_3_sag",
+  "jp_f_tana_136_1",
+  "jp_f_tana_136_1_sag",
+  "jp_f_tana_136_3",
+  "jp_f_tana_136_3_sag",
+  "jp_f_tana_182_1",
+  "jp_f_tana_182_1_sag",
+  "jp_f_tana_182_3",
+  "jp_f_tana_182_3_sag",
+  "jp_f_firewood_stack",
+  "jp_f_firewood_low",
+  "jp_f_firewood_bundle",
+  "jp_f_firewood_bundle_loose",
+  "jp_f_jar_s",
+  "jp_f_jar_m",
+  "jp_f_jar_l",
+  "jp_f_jar_s_pale",
+  "jp_f_jar_m_pale",
+  "jp_f_jar_s_open",
+  "jp_f_jar_m_open",
+  "jp_f_jar_l_open",
+  "jp_f_jar_m_broken",
+  "jp_f_andon_kaku",
+  "jp_f_andon_kaku_tipped",
+  "jp_f_andon_ariake",
+  "jp_f_andon_ariake_tipped",
+  "jp_f_hibachi_round",
+  "jp_f_hibachi_round_tipped",
+  "jp_f_hibachi_box",
+  "jp_f_hibachi_box_tipped",
+  "jp_f_tabakobon",
+  "jp_f_tabakobon_spilled",
+  "jp_f_nagamochi",
+  "jp_f_nagamochi_open",
+  "jp_f_tansu",
+  "jp_f_tansu_ransacked",
+  "jp_f_tansu_single",
+  "jp_f_tansu_single_ransacked",
+  "jp_f_kori",
+  "jp_f_kori_2",
+  "jp_f_kori_open",
+  "jp_f_box_s",
+  "jp_f_box_m",
+  "jp_f_box_l",
+  "jp_f_box_stack3",
+  "jp_f_box_s_lacquer",
+  "jp_f_box_m_lacquer",
+  "jp_f_box_open",
+  "jp_f_box_stack3_toppled",
+  "jp_f_tawara",
+  "jp_f_tawara_burst",
+  "jp_f_tawara_stack6",
+  "jp_f_tawara_stack6_burst",
+  "jp_f_tawara_kamasu",
+  "jp_f_tawara_kamasu_stack3",
+  "jp_f_tawara_kamasu_burst",
+  "jp_f_rack_1ken",
+  "jp_f_rack_1ken_collapsed",
+  "jp_f_rack_half",
+  "jp_f_rack_half_collapsed",
+  "jp_f_futon_stack",
+  "jp_f_futon_stack_slumped",
+  "jp_f_futon_laid",
+  "jp_f_futon_laid_dragged",
+  "jp_f_mushiro",
+  "jp_f_mushiro_torn",
+  "jp_f_mushiro_rolled",
+  "jp_f_mushiro_rolled_loose",
+  "jp_f_mushiro_pile",
+  "jp_f_mushiro_pile_spread",
+  "jp_f_zukue_choba",
+  "jp_f_zukue_choba_tipped",
+  "jp_f_zukue_plain",
+  "jp_f_zukue_plain_tipped",
+  "jp_f_choba_goshi_3",
+  "jp_f_choba_goshi_3_knocked",
+  "jp_f_choba_goshi_2",
+  "jp_f_choba_goshi_2_knocked",
+  "jp_f_misedana_1ken",
+  "jp_f_misedana_1ken_toppled",
+  "jp_f_misedana_half",
+  "jp_f_misedana_half_toppled",
+  "jp_f_goods_general_cloth",
+  "jp_f_goods_general_cloth_swept",
+  "jp_f_goods_general_paper",
+  "jp_f_goods_general_paper_swept",
+  "jp_f_debris_leaves",
+  "jp_f_debris_straw",
+  "jp_f_debris_paper",
+  "jp_f_debris_shards",
+  "jp_f_kamidana_plain",
+  "jp_f_nagashi_wood"
+ ],
+ "scripts": {}
+}
