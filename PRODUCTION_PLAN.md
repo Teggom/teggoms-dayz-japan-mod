@@ -534,7 +534,7 @@
   verify_oprw 4216/4216. Not done: hot-spring bath hut, painted show-booth sign texture, navmesh. Pitfall: binarizing the props folder
   crashes on already-binarized models: use spikes/W3B/binsingle.py. **Walk: TEST_CHECKLIST.md = D3 (~28 min) + FX4 re-check + 3b
   (~15 min).** Weekly 76 %. Next (Stephen's call): 3c trade sites (brewery etc.), 3d government, 3e castle.
-- 2026-10-02: **FX5 DONE: Stephen's 3a / 3b walk fixes** (a5639a1, 7747dea, + checks / checklist commit). Root causes and fixes:
+- 2026-10-02: **FX5 DONE: Stephen's 3a / 3b walk fixes** (a5639a1, 7747dea, 9f5cffe). Root causes and fixes:
   (1) **gate floors flickered**: `dwelling.compound()` laid every gate passage as an earth slab whose top lay exactly AT
   grade (z-fight with the terrain; all 9 compounds incl. the 3 W3B yards); now `floors.sill_pad()`: packed earth, top
   +0.10 (0.06 would have been coplanar again at the timber / foundry yards, sunk ~6 cm on their slope), sloped 20 deg
