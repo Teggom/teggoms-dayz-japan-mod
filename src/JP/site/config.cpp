@@ -2023,4 +2023,11 @@ class CfgVehicles
 		displayName="A crest lantern trodden flat";
 		model="\JP\site\street_life\jp_s_lantern_fallen_crushed.p3d";
 	};
+	// jp_s_hinomi_yagura (gov_site)
+	class Land_JP_S_Hinomi_Yagura: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fire watchtower (town, tall) with the alarm bell";
+		model="\JP\site\gov_site\jp_s_hinomi_yagura.p3d";
+	};
 };

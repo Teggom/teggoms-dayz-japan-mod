@@ -1,0 +1,58 @@
+{
+ "building": "Land_JP_Compound_Jinya",
+ "p3d": "\\JP\\buildings\\gv_site\\jp_compound_jinya.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/govsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.1,
+   "rect_kit": [
+    4.75,
+    6.17,
+    27.87,
+    30.17
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kido_kata)",
+   "enclosed": false,
+   "rect_model": [
+    -10.72,
+    -9.3,
+    13.31,
+    15.61
+   ],
+   "fittings": []
+  },
+  {
+   "name": "oshirasu",
+   "tag": "yard",
+   "floor": "gravel",
+   "level_m": 0.1,
+   "rect_kit": [
+    20.37,
+    29.68,
+    9.45,
+    15.484
+   ],
+   "doors": [],
+   "note": "the white-gravel court (oshirasu) before the court room",
+   "enclosed": false,
+   "rect_model": [
+    4.9,
+    14.21,
+    -5.11,
+    0.924
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 13,
+ "loot_by_room": {
+  "gate0": 1,
+  "oshirasu": 12
+ }
+}

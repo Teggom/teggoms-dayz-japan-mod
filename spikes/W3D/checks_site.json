@@ -1,0 +1,271 @@
+{
+ "models": {
+  "jp_s_hinomi_yagura": {
+   "prop": "jp_s_hinomi_yagura",
+   "cat": "gov_site",
+   "state": "intact",
+   "variant": "tall",
+   "pass": true,
+   "faces": {
+    "Resolution 1": 653,
+    "Resolution 2": 324,
+    "Resolution 3": 60,
+    "Geometry": 90,
+    "Memory": 0,
+    "Roadway": 1,
+    "View Geometry": 90,
+    "Fire Geometry": 90
+   },
+   "checks": [
+    {
+     "id": "RT",
+     "name": "MLOD reads back",
+     "pass": true,
+     "detail": [
+      "Fire Geometry",
+      "Geometry",
+      "Memory",
+      "Resolution 1",
+      "Resolution 2",
+      "Resolution 3",
+      "Roadway",
+      "View Geometry"
+     ]
+    },
+    {
+     "id": "C2",
+     "name": "library materials only",
+     "pass": true,
+     "detail": {
+      "materials": [
+       "JP\\common\\materials\\metal\\jp_m_metal_iron_w2.rvmat",
+       "JP\\common\\materials\\stone\\jp_m_stone_cut_w2.rvmat",
+       "JP\\common\\materials\\straw\\jp_m_straw_rope_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_kuro_w2.rvmat",
+       "JP\\common\\materials\\wood\\jp_m_wood_weathered_w2.rvmat"
+      ],
+      "bad": []
+     }
+    },
+    {
+     "id": "C8",
+     "name": "era lint: no glass / steel / plastic material, no emissive rvmat, no metal on ordinary tubs",
+     "pass": true,
+     "detail": {
+      "banned": [],
+      "emissive": []
+     }
+    },
+    {
+     "id": "C5",
+     "name": "LOD set (R1+R2+R3+Geometry+ViewG+FireG+Memory) + budget detail R1<=1500 R2<=600 R3<=250, LODs step down",
+     "pass": true,
+     "detail": {
+      "faces": {
+       "Resolution 1": 653,
+       "Resolution 2": 324,
+       "Resolution 3": 60,
+       "Geometry": 90,
+       "Memory": 0,
+       "Roadway": 1,
+       "View Geometry": 90,
+       "Fire Geometry": 90
+      },
+      "extra": []
+     }
+    },
+    {
+     "id": "C4",
+     "name": "dimensions against the build list (tol per dim)",
+     "pass": true,
+     "detail": [
+      {
+       "name": "deck_head_room",
+       "expected": 2.2,
+       "measured": 2.2,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      },
+      {
+       "name": "deck_y",
+       "expected": 6.4,
+       "measured": 6.4,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "C6a",
+     "name": "anchor 'floor': base on the terrain (0-2 cm / bury), wall gap",
+     "pass": true,
+     "detail": {
+      "res1_min_y": -0.5103,
+      "geo_min_y": -0.5091,
+      "bury": 0.52,
+      "hung": false
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Geometry: closed convex components, mass, autocenter=0",
+     "pass": true,
+     "detail": {
+      "components": 15,
+      "problems": {},
+      "mass": 900.0
+     }
+    },
+    {
+     "id": "C6b",
+     "name": "no Geometry interpenetration > 1 cm",
+     "pass": true,
+     "detail": {
+      "worst_m": 0.0,
+      "pair": null
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "View Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 15
+     }
+    },
+    {
+     "id": "GEO",
+     "name": "Fire Geometry components closed + convex",
+     "pass": true,
+     "detail": {
+      "components": 15
+     }
+    },
+    {
+     "id": "LOOT",
+     "name": "loot points on a Res 1 up-face at their height, <= 1.40 m (0 surfaces)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "id": "ROAD",
+     "name": "Roadway faces horizontal, vanilla surface",
+     "pass": true,
+     "detail": {
+      "faces": 1
+     }
+    },
+    {
+     "id": "C19",
+     "name": "matte library rvmats have the black env map (iron exempt)",
+     "pass": true,
+     "detail": {
+      "jp_m_straw_rope_w2": true
+     }
+    },
+    {
+     "id": "C1",
+     "name": "palette: the _w1 of every material used within tolerance (_w0/_w2 listed)",
+     "pass": true,
+     "detail": [
+      {
+       "material": "jp_m_metal_iron_w2",
+       "mean_srgb": [
+        73.7,
+        69.7,
+        66.7
+       ],
+       "palette": "iron_black",
+       "dE76": 1.0,
+       "tolerance": 10,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_stone_cut_w2",
+       "mean_srgb": [
+        155.1,
+        131.6,
+        102.7
+       ],
+       "palette": "stone_granite",
+       "dE76": 3.2,
+       "tolerance": 9,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_straw_rope_w2",
+       "mean_srgb": [
+        87.2,
+        73.6,
+        53.0
+       ],
+       "palette": "straw_aged",
+       "dE76": 4.0,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_kuro_w2",
+       "mean_srgb": [
+        27.1,
+        31.0,
+        34.2
+       ],
+       "palette": "kuro_board",
+       "dE76": 4.0,
+       "tolerance": 6,
+       "pass": true,
+       "masked": true
+      },
+      {
+       "material": "jp_m_wood_weathered_w2",
+       "mean_srgb": [
+        97.0,
+        71.5,
+        62.9
+       ],
+       "palette": "timber_weathered",
+       "dE76": 7.3,
+       "tolerance": 14,
+       "pass": true,
+       "masked": true
+      }
+     ]
+    },
+    {
+     "id": "TXT",
+     "name": "text decals face out of their host and read left to right in game (0 faces)",
+     "pass": true,
+     "detail": []
+    }
+   ]
+  }
+ },
+ "global": {
+  "CFG": {
+   "pass": true,
+   "detail": [
+    "CfgConvert config.cpp: OK ",
+    "CfgConvert model.cfg: OK "
+   ]
+  },
+  "BIN": {
+   "pass": true,
+   "detail": {
+    "missing": [],
+    "warning_lines": [],
+    "exit": 0
+   }
+  }
+ },
+ "summary": {
+  "models": 1,
+  "pass": 1,
+  "classes_in_config": 321
+ }
+}

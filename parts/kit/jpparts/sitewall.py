@@ -452,6 +452,49 @@ def _lean(P, deg):
         sd.finalize()
 
 
+# ------------------------------------------------------------------------------------------------ palisade (W3D)
+SAKU_H = 2.40                    # W3D: the palisade's log tops (before the points)
+SAKU_PITCH = 0.22                # log centres
+SAKU_R = 0.08                    # log radius (~0.16 across: 6 cm gaps between logs)
+
+
+def _saku(L, ends, state, rng, P):
+    """W3D (2026-10-02, spikes/W3D/W3D_NOTES.md site 1): the wooden palisade (saku) of checkpoints and military posts
+    (KEEP_CIVIC walls: 'sharpened timber fence'; Hakone's palisade round the whole checkpoint): round logs set close in
+    the ground (footing -0.40), tops cut to a point, two rails (nuki) on the inside face (-z)."""
+    H = SAKU_H
+    m = "wood_weathered"
+    xa = 0.0 if ends[0] == "seam" else (_PW[0] if ends[0] == "post" else SAKU_R + 0.01)
+    xb = L if ends[1] == "seam" else L - (_PW[0] if ends[1] == "post" else SAKU_R + 0.01)
+    if ends[0].startswith("corner"):
+        xa = SAKU_R + 0.01
+    if ends[1].startswith("corner"):
+        xb = L + SAKU_R + 0.01          # the corner log belongs to the module that ends there
+    n = max(1, int(round((xb - xa) / SAKU_PITCH)))
+    for k in range(n):
+        x = xa + (k + 0.5) * (xb - xa) / n
+        if state == "broken" and rng.random() < 0.25:
+            continue
+        r = SAKU_R * rng.uniform(0.88, 1.06)
+        top = H + rng.uniform(-0.03, 0.03)
+        base = [(x + r * math.cos(2 * math.pi * (i + 0.25) / 6), r * math.sin(2 * math.pi * (i + 0.25) / 6))
+                for i in range(6)]
+        P.add(rings((base, [(FOOT, 1.0), (top, 1.0), (top + 0.20, 0.04)]), m, vis=(1,), tag="saku_log",
+                    grain="long"))
+    # far LODs: the run as one slab with a ridge where the points are (Resolution 2) / the slab alone (Resolution 3)
+    P.add(box(xa, xb, 0.0, H, -SAKU_R, SAKU_R, m, vis=(2, 3), tag="saku_lod", uv="fit"))
+    P.add(prism([(H, -SAKU_R), (H, SAKU_R), (H + 0.20, 0.0)], "x", xa, xb, m, vis=(2, 3), tag="saku_lod_top"))
+    for y in (0.55, 1.85):
+        P.add(box(xa if ends[0] != "seam" else 0.0, xb if ends[1] != "seam" else L, y, y + 0.10,
+                  -SAKU_R - 0.07, -SAKU_R + 0.005, m, vis=(1, 2), tag="saku_nuki"))
+    blocked = state != "broken"
+    P.add(box(xa, xb, -0.30, H, -SAKU_R, SAKU_R, m, vis=(), geo=True, view=blocked, fire=True if blocked else None,
+              tag="fence_geo"))
+    if state == "leaning":
+        _lean(P, rng.uniform(4.0, 8.0))
+    return P
+
+
 # ------------------------------------------------------------------------------------------------ bamboo fences
 def _yotsume(L, ends, state, rng, P):
     H = 1.05
@@ -910,6 +953,8 @@ def wall(kind, L=KEN, ends=("seam", "seam"), finish=None, cap=None, state=None, 
         _brush(L, ends, kind, state, rng, P)
     elif kind == "ikegaki":
         _hedge(L, ends, size, state, rng, P, run=run)
+    elif kind == "saku":
+        _saku(L, ends, state, rng, P)
     elif kind == "ishigaki":
         _ishigaki(L, ends, stone, H or 0.90, retaining, state, rng, P)
     elif kind == "bank":
@@ -996,6 +1041,43 @@ def gate_kabuki(span=1.5 * KEN, roofed=False, covering="itabuki", leaves="_board
     for x in (0.0, span):
         P.conn("post", (x, 0.0, 0.0), size=post, role="gate_post")
     P.dim("clear_open_m", ">=1.00 (D1)", span - post - 2 * 0.05)
+    return P
+
+
+def gate_koraimon(span=1.5 * KEN, covering="itabuki", leaves="_board", pid="jp_p_gate_koraimon", variant="",
+                  leaf_y0=None):
+    """W3D (2026-10-02, spikes/W3D/W3D_NOTES.md site 1): the kora-mon of the checkpoint (Hakone's Kyoguchi gate is
+    one; the form dates from the 1590s castle gates): K3's roofed kabuki-mon (two main posts, the kabuki beam, a small
+    gable roof along the gate line, two hinged board leaves swinging 90 deg in) + two rear posts (hikae-bashira) set
+    back behind the main posts, tied to them at 2.6 m, each pair under its own small gable roof at right angles: the
+    open leaves stand under the rear roofs. The rear posts stand just outboard of the main posts' lines so the open
+    leaves (against the main posts' back faces) clear them."""
+    from . import gates as G
+    P = gate_kabuki(span, roofed=True, covering=covering, leaves=leaves, pid=pid, variant=variant, leaf_y0=leaf_y0)
+    P.used_for = "kora-mon (checkpoint / official gate in a palisade or wall run)"
+    rng = rng_for(pid + variant + "_hikae")
+    leaf_w = (span - 0.21) / 2 + G.OVERLAP
+    zr = -(leaf_w + 0.40)                     # the rear posts' centre line (behind the open leaves' far edges)
+    top_r = 2.72
+    for (x, sx) in ((-0.11, -1), (span + 0.11, 1)):
+        P.add(box(x - 0.09, x + 0.09, FOOT, top_r, zr - 0.09, zr + 0.09, "wood_weathered", vis=(1, 2, 3), geo=True,
+                  view=True, fire=True, tag="hikae_post", grain="long"))
+        P.add(stone(rng, x, zr, 0.34, 0.34, 0.14, 0.06, "stone_cut", bury=0.10, n=7, flat_top=0.85, vis=(1, 2),
+                    tag="post_stone"))
+        # the tie (nuki) from the rear post into the main post's back face, over the leaves' tops
+        xm = 0.0 if sx < 0 else span
+        a, b = min(x, xm) - 0.05, max(x, xm) + 0.05
+        P.add(box(a, b, 2.52, 2.66, zr + 0.09, -0.105, "wood_weathered", vis=(1, 2, 3), geo=True, view=True,
+                  fire=True, tag="hikae_nuki", grain="long"))
+        # the small gable roof over the pair, ridge along z (the leaf's open line), from behind the main post to past
+        # the rear post
+        S_ = SR.Spec(0.16, 0.36, top_r + 0.05, covering, t=0.42, gov=0.20, body="solid", y_solid=top_r,
+                     walkable=False, rafter_sp=0.20, rafter_sec=(0.04, 0.05), ridge_w=0.16, bed_mat="wall_arakabe")
+        r = Part(pid + "_hikae_roof", "", "")
+        Lr = -zr + 0.30 - 0.32
+        SR.straight(r, S_, Lr, ("gable", "gable"))
+        P.merge(r.transformed(-90.0, ((x + xm) / 2, 0.0, -0.32)))     # its verge clear of a palisade / wall line
+    P.dim("rear_posts_z", round(zr, 3), zr)
     return P
 
 
@@ -1123,7 +1205,7 @@ def wicket(kind="itabei", L=KEN, pid="jp_p_gate_wicket", variant="", kuro=False)
 # z 0 at x 0 and x span (grid nodes), +z outside, leaves on the -z face swinging 90 deg into the compound; leaf_y0 =
 # the leaves' bottom over grade (compound gates lift them over FX5's sill pad). POST_W[kind] is the post width the
 # fence modules either side stop at (dwelling._wall_path passes it as wall(post_w=...)).
-POST_W = {"kabuki": 0.21, "kabuki_roofed": 0.21, "munemon": 0.21, "kido_kata": 0.15, "kido_ryo": 0.18,
+POST_W = {"kabuki": 0.21, "kabuki_roofed": 0.21, "koraimon": 0.21, "munemon": 0.21, "kido_kata": 0.15, "kido_ryo": 0.18,
           "shiorido": 0.12, "opening": 0.12, "opening_board": 0.15}
 KIDO_LATCH = 1.26           # kido_kata / shiorido: the latch post's centre from the hinge post's centre
 LIGHT_FENCES = ("yotsume", "kenninji", "shiba", "takeho")

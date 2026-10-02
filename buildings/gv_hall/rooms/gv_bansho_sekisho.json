@@ -1,0 +1,150 @@
+{
+ "building": "Land_JP_Bansho_Sekisho",
+ "p3d": "\\JP\\buildings\\gv_hall\\jp_bansho_sekisho.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/govsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "engawa",
+   "tag": "office",
+   "floor": "boards",
+   "level_m": 0.45,
+   "rect_kit": [
+    0.06,
+    6.3100000000000005,
+    -0.89,
+    -0.02
+   ],
+   "doors": [],
+   "note": "the veranda of the inspection room over the gravel court (samurai stood / sat here)",
+   "enclosed": false,
+   "rect_model": [
+    -4.49,
+    1.76,
+    2.295,
+    3.165
+   ],
+   "fittings": []
+  },
+  {
+   "name": "hall",
+   "tag": "office",
+   "floor": "tatami",
+   "level_m": 0.6,
+   "rect_kit": [
+    0.06,
+    6.3100000000000005,
+    -4.4799999999999995,
+    -0.93
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "the officials' tatami (the stepped seat over the court), open to the front",
+   "enclosed": false,
+   "rect_model": [
+    -4.49,
+    1.76,
+    -1.295,
+    2.255
+   ],
+   "fittings": [
+    {
+     "kind": "desks",
+     "room": "hall",
+     "note": "the officials' low desks at the back of the tatami, facing the gravel court",
+     "rect": [
+      -2.73,
+      0.0,
+      -0.965,
+      -0.265
+     ],
+     "y": 0.6
+    }
+   ]
+  },
+  {
+   "name": "office",
+   "tag": "office",
+   "floor": "boards",
+   "level_m": 0.6,
+   "rect_kit": [
+    0.06,
+    6.3100000000000005,
+    -6.3100000000000005,
+    -4.62
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "the back office: pass ledgers, the seal box, writing desks",
+   "enclosed": true,
+   "rect_model": [
+    -4.49,
+    1.76,
+    -3.125,
+    -1.435
+   ],
+   "fittings": [
+    {
+     "kind": "ledgers",
+     "room": "office",
+     "note": "the pass ledgers / registers along the back wall",
+     "rect": [
+      -4.44,
+      1.52,
+      -3.105,
+      -2.675
+     ],
+     "y": 0.6
+    }
+   ]
+  },
+  {
+   "name": "doma",
+   "tag": "kitchen",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    6.44,
+    9.04,
+    -6.3100000000000005,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the guardhouse kitchen doma (kamado, water jar)",
+   "enclosed": true,
+   "rect_model": [
+    1.89,
+    4.49,
+    -3.125,
+    3.125
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      2.22,
+      -0.2
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.1,
+      0.65
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  }
+ ],
+ "loot_points": 12,
+ "loot_by_room": {
+  "engawa": 3,
+  "hall": 3,
+  "office": 3,
+  "doma": 3
+ }
+}

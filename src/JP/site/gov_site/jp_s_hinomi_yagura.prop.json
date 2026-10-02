@@ -1,0 +1,92 @@
+{
+ "id": "jp_s_hinomi_yagura",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "abandoned_state": null,
+  "placement_rule": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "group": "gov_site",
+ "frame": "origin = base centre on the terrain, +y up, +z = front (road side), autocenter=0; anchor 'wall': the wall plane is z = 0, the object stands wall_gap in front (+z), y = 0 at the wall foot; mount = where the decorator may place it (see 'mount_note')",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\site\\gov_site\\jp_s_hinomi_yagura.p3d",
+   "class": "Land_JP_S_Hinomi_Yagura",
+   "variant": "tall",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fire watchtower (town, tall) with the alarm bell",
+   "anchor": "floor",
+   "wall_gap": null,
+   "budget": "detail",
+   "faces": {
+    "Resolution 1": 653,
+    "Resolution 2": 324,
+    "Resolution 3": 60,
+    "Geometry": 90,
+    "Memory": 0,
+    "Roadway": 1,
+    "View Geometry": 90,
+    "Fire Geometry": 90
+   },
+   "bbox": [
+    -1.54,
+    1.54,
+    -0.51,
+    9.2,
+    -1.54,
+    1.54
+   ],
+   "collision": [
+    "geo",
+    "view",
+    "fire"
+   ],
+   "footprint_xz": [
+    -1.413,
+    -1.413,
+    1.413,
+    1.413
+   ],
+   "roadway": true,
+   "mass_kg": 900.0,
+   "well": false,
+   "text_cells": [],
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "deck_head_room",
+     "expected": 2.2,
+     "measured": 2.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
+     "name": "deck_y",
+     "expected": 6.4,
+     "measured": 6.4,
+     "tol": 0.001,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "town fire watchtower (hi-no-mi yagura, Kyoho; black, lower than the 3-jo shogunal tower); CLIMBABLE like the FP1 ladder: climb the +z face, step off onto the railed deck at 6.40; roof 2.20 m over the deck (FX4); the hansho bell outside the back parapet"
+   ],
+   "master": "spikes/W3D/out_site/gov_site/jp_s_hinomi_yagura.p3d",
+   "mount": "yard",
+   "mount_note": "in a house yard (back or side yard, by a door or wall): base centre on the ground",
+   "tiers": [
+    2,
+    3
+   ]
+  }
+ ],
+ "made_by": "spikes/W3D/build_w3d_site.py (agent W3D, 2026-10-02) on spikes/B3b/build.py",
+ "life_layer": null,
+ "refs_local": []
+}

@@ -611,3 +611,8 @@ SETS.update(_w3c1.sets())
 import w3c2_sets as _w3c2  # noqa: E402
 
 SETS.update(_w3c2.sets())
+
+# W3D (2026-10-02): the government halls and the shells the wave-3d sites reuse: buildings/w3d_sets.py
+import w3d_sets as _w3d  # noqa: E402
+
+SETS.update(_w3d.sets())

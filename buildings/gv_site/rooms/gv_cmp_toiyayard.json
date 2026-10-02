@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Compound_ToiyaYard",
+ "p3d": "\\JP\\buildings\\gv_site\\jp_compound_toiyayard.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/govsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.1,
+   "rect_kit": [
+    7.479999999999998,
+    9.809999999999999,
+    -1.0500000000000003,
+    1.25
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kido_ryo)",
+   "enclosed": false,
+   "rect_model": [
+    -0.71,
+    1.62,
+    -7.42,
+    -5.12
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}

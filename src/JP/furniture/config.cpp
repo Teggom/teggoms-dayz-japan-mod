@@ -4175,4 +4175,43 @@ class CfgVehicles
 		displayName="Pine-needle fuel heap with brushwood bundles";
 		model="\JP\furniture\sitefit\jp_f_matsuba.p3d";
 	};
+	// jp_f_mitsudogu_tate (govfit)
+	class StaticObj_JP_F_Mitsudogu_Tate: HouseNoDestruct
+	{
+		scope=1;
+		displayName="The three capture tools on a free-standing roofed rack";
+		model="\JP\furniture\govfit\jp_f_mitsudogu_tate.p3d";
+	};
+	class StaticObj_JP_F_Mitsudogu_Tate_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Capture-tool rack, the sodegarami fallen";
+		model="\JP\furniture\govfit\jp_f_mitsudogu_tate_ab.p3d";
+	};
+	// jp_f_kanme_hakari (govfit)
+	class StaticObj_JP_F_Kanme_Hakari: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Big steelyard on its frame, a bale on the hook";
+		model="\JP\furniture\govfit\jp_f_kanme_hakari.p3d";
+	};
+	class StaticObj_JP_F_Kanme_Hakari_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Big steelyard down, the bale rolled off";
+		model="\JP\furniture\govfit\jp_f_kanme_hakari_ab.p3d";
+	};
+	// jp_f_matoi_nobori (govfit)
+	class StaticObj_JP_F_Matoi_Nobori: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fire-brigade standard (matoi-nobori) in its stand";
+		model="\JP\furniture\govfit\jp_f_matoi_nobori.p3d";
+	};
+	class StaticObj_JP_F_Matoi_Nobori_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fire-brigade standard knocked down";
+		model="\JP\furniture\govfit\jp_f_matoi_nobori_fallen.p3d";
+	};
 };

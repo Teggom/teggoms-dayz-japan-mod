@@ -1,0 +1,83 @@
+{
+ "building": "Land_JP_Toiyaba_Furnished",
+ "p3d": "\\JP\\buildings\\gv_furnished\\jp_toiyaba_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "choba",
+   "tag": "office",
+   "floor": "boards",
+   "level_m": 0.45,
+   "rect_kit": [
+    0.06,
+    6.3,
+    -5.4,
+    -0.05
+   ],
+   "doors": [],
+   "note": "the raised office (choba) open to the yard: clerks' desks, ledgers, the fare board",
+   "enclosed": false,
+   "rect_model": [
+    -4.49,
+    1.75,
+    -2.67,
+    2.68
+   ],
+   "fittings": [
+    {
+     "kind": "ledgers",
+     "room": "choba",
+     "note": "the relay ledgers (tsugitate-cho) and registers along the back wall",
+     "rect": [
+      -4.44,
+      1.42,
+      -2.65,
+      -2.17
+     ],
+     "y": 0.45
+    },
+    {
+     "kind": "desks",
+     "room": "choba",
+     "note": "the clerks' desks (choba-zukue) facing the yard",
+     "rect": [
+      -3.458,
+      0.728,
+      -0.182,
+      1.092
+     ],
+     "y": 0.45
+    }
+   ]
+  },
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    6.44,
+    9.04,
+    -5.4,
+    0.15
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the clerks' earth doma open to the yard, the back door to the stables",
+   "enclosed": false,
+   "rect_model": [
+    1.89,
+    4.49,
+    -2.67,
+    2.88
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 19,
+ "loot_by_room": {
+  "choba": 12,
+  "doma": 7
+ }
+}

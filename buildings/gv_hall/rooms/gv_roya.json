@@ -1,0 +1,99 @@
+{
+ "building": "Land_JP_Roya",
+ "p3d": "\\JP\\buildings\\gv_hall\\jp_roya.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/govsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "corridor",
+   "tag": "jail",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    7.220000000000001,
+    -1.74,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2",
+    "DoorsTwin3"
+   ],
+   "note": "the earth corridor between the outer and the inner lattice (the guards' walk)",
+   "enclosed": true,
+   "rect_model": [
+    -3.58,
+    3.58,
+    0.99,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "keys",
+     "room": "corridor",
+     "note": "the guards' lantern / clappers on the corridor end wall",
+     "rect": [
+      -3.56,
+      -3.48,
+      1.21,
+      2.33
+     ]
+    }
+   ]
+  },
+  {
+   "name": "cell_a",
+   "tag": "jail",
+   "floor": "boards",
+   "level_m": 0.3,
+   "rect_kit": [
+    0.06,
+    3.5700000000000003,
+    -5.4,
+    -1.8900000000000001
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "cell A: raised boards, straw mats, the toilet tub in the corner; empty, the door open",
+   "enclosed": true,
+   "rect_model": [
+    -3.58,
+    -0.07,
+    -2.67,
+    0.84
+   ],
+   "fittings": []
+  },
+  {
+   "name": "cell_b",
+   "tag": "jail",
+   "floor": "boards",
+   "level_m": 0.3,
+   "rect_kit": [
+    3.71,
+    7.220000000000001,
+    -5.4,
+    -1.8900000000000001
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "cell B: raised boards, straw mats; empty, the door open",
+   "enclosed": true,
+   "rect_model": [
+    0.07,
+    3.58,
+    -2.67,
+    0.84
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 7,
+ "loot_by_room": {
+  "corridor": 3,
+  "cell_a": 2,
+  "cell_b": 2
+ }
+}

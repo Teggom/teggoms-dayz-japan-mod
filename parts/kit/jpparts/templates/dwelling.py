@@ -1655,7 +1655,8 @@ def nagayamon(name=None, rank="samurai", wear="_w1"):
     roof (commoners use boards, T29)."""
     W, D = 7 * KEN, 2 * KEN
     sam = rank == "samurai"
-    fam = "sangawara" if sam else "itabuki"
+    off = rank == "official"           # W3D: the jinya's black gatehouse (KEEP_CIVIC 2): black boards, tiled
+    fam = "sangawara" if sam else "itabuki"     # official: boards (Takayama jinya, all roofs boards [TAK-WP])
     E = 3.30
     YT, YG = E - KETA_H, E - 0.21
     t = R.PITCH[fam]
@@ -1671,7 +1672,8 @@ def nagayamon(name=None, rank="samurai", wear="_w1"):
     for s_ in S.H.solids:
         if s_.tag == "post":
             s_.tag = "gate_post"
-    wk = dict(finish="nakanuri") if sam else dict(kind="board_vertical", mat="wood_weathered", grime=False)
+    wk = dict(finish="nakanuri") if sam else dict(kind="board_vertical", mat="wood_kuro" if off else "wood_weathered",
+                                                  grime=False)
     # front (street): left part (room + doma), the passage left open, right part (storage); barred windows
     S.wall_line(((0.0, (0.0, 0.0, 0.0)), XP0, "front_l"), [(0.0, XL, FL_), (XL, XP0, DOMA)], YT,
                 [(0.75 * KEN, 1.25 * KEN, FL_ + 0.90, FL_ + 1.65, "window")], nodes_extra=(0.75 * KEN, 1.25 * KEN), **wk)
@@ -1836,6 +1838,11 @@ _LIGHT = ("yotsume", "kenninji", "shiba", "takeho")
 def pick_gate(fence, opt=None, status="mid", role="front", carts=False):
     """(kind, span) of the gate for a gap in `fence` (sitewall kind; opt = its wall options, e.g. ikegaki size)."""
     opt = opt or {}
+    if fence == "saku":
+        # W3D (spikes/W3D/W3D_NOTES.md site 1): the checkpoint palisade: its front gates (the Edo-side and the
+        # Kyoto-side gate) are kora-mon 1.5 ken (horses, palanquins, pack trains; a 2-ken pair fails C10: the open
+        # leaves are out of reach from outside); any other gate in a palisade a two-leaf board gate
+        return ("koraimon", 1.5 * KEN) if (status == "high" and role == "front") else ("kido_ryo", KEN)
     light = fence in _LIGHT or (fence == "ikegaki" and opt.get("size", "low") == "low")
     if light:
         if status == "work" and carts:
@@ -1867,6 +1874,8 @@ def _gate_part(kind, span, fence="itabei", fence_opt=None):
         return W.gate_kabuki(span, roofed=kind.endswith("roofed"), leaf_y0=ly0)
     if kind == "munemon":
         return W.gate_munemon(span, leaf_y0=ly0)
+    if kind == "koraimon":
+        return W.gate_koraimon(span, leaf_y0=ly0)
     if kind == "kido_kata":
         return _twin_single(W.gate_kido_kata(span, fence=fence, kuro=fo.get("kuro", False), leaf_y0=ly0))
     if kind == "kido_ryo":
@@ -1942,7 +1951,7 @@ COMPOUNDS = {
 
 
 # FX5: half the thickness of each wall kind at its face (a run that butts against it stops at this face)
-_HALF_THICK = {"dobei": 0.15, "tsuiji": 0.45, "itabei": 0.08, "yotsume": 0.06, "kenninji": 0.05, "shiba": 0.07,
+_HALF_THICK = {"saku": 0.09, "dobei": 0.15, "tsuiji": 0.45, "itabei": 0.08, "yotsume": 0.06, "kenninji": 0.05, "shiba": 0.07,
                "takeho": 0.07}
 
 
@@ -2054,6 +2063,15 @@ def compound(name=None, plot="samurai_m", wear="_w1"):
             st_ = _stone(rr, sx, sz, 0.42, 0.36, 0.10 + ty, ty, "stone_field", bury=0.08, n=7, flat_top=0.8,
                          vis=(1, 2), tag="soseki")
             S.H.add(st_)
+    # W3D: open-ground pads inside the plot (the white-gravel court, oshirasu): a sill pad (FX5, top 0.10 over grade,
+    # sloped margins) with a pale stone top and a gravel Roadway; each its own (open) room for loot
+    for (nm, x0, x1, z0, z1, note) in spec.get("pads", ()):
+        S.B.interior = True
+        pad = FL.sill_pad(nm, x0, x1, z0, z1, mats={"top": "stone_river", "body_ext": "ground_earth_bare"},
+                          surf="gravel")
+        S.B.merge(pad)
+        S.B.interior = False
+        S.room(nm, "yard", "gravel", FL.SILL_TOP, pad.meta["top_rect"], [], note, enclosed=False)
     trim_lods(S.H)
     for s_ in S.H.solids:
         if s_.tag == "hedge_core":

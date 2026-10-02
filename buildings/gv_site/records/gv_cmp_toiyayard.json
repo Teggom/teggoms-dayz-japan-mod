@@ -1,0 +1,47 @@
+{
+ "key": "gv_cmp_toiyayard",
+ "class": "Land_JP_Compound_ToiyaYard",
+ "name": "jp_compound_toiyayard",
+ "model": "\\JP\\buildings\\gv_site\\jp_compound_toiyayard.p3d",
+ "model_dir": "gv_site",
+ "doors": [
+  "Gate (kido ryo)"
+ ],
+ "faces": {
+  "Resolution 1": 2886,
+  "Resolution 2": 924,
+  "Resolution 3": 400,
+  "Geometry": 254,
+  "Memory": 0,
+  "Roadway": 5,
+  "View Geometry": 254,
+  "Fire Geometry": 254
+ },
+ "loot_points": 1,
+ "config_class": "\tclass Land_JP_Compound_ToiyaYard: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Post-station yard: board fence + two-leaf gate\";\n\t\tmodel=\"\\JP\\buildings\\gv_site\\jp_compound_toiyayard.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t\tclass DoorsTwin1\n\t\t\t{\n\t\t\t\tdisplayName=\"Gate (kido ryo)\";\n\t\t\t\tcomponent=\"DoorsTwin1\";\n\t\t\t\tsoundPos=\"doorsTwin1_action\";\n\t\t\t\tanimPeriod=2;\n\t\t\t\tinitPhase=0;\n\t\t\t\tinitOpened=1;\n\t\t\t\tsoundOpen=\"doorWoodSlideOpen\";\n\t\t\t\tsoundClose=\"doorWoodSlideClose\";\n\t\t\t\tsoundLocked=\"doorWoodSlideRattle\";\n\t\t\t\tsoundOpenABit=\"doorWoodSlideOpenABit\";\n\t\t\t};\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t\tclass DoorsTwin1\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\thitpoints=1000;\n\t\t\t\t\t\ttransferToGlobalCoef=0;\n\t\t\t\t\t};\n\t\t\t\t\tcomponentNames[]=\n\t\t\t\t\t{\n\t\t\t\t\t\t\"doorstwin1\"\n\t\t\t\t\t};\n\t\t\t\t\tfatalInjuryCoef=-1;\n\t\t\t\t\tclass ArmorType\n\t\t\t\t\t{\n\t\t\t\t\t\tclass Projectile\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=3;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass Melee\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=5;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t\tclass FragGrenade\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclass Health\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=10;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Blood\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tclass Shock\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t\t\t};\n\t\t\t\t\t\t};\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_compound_toiyayard_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\t\t\t\"doors1\",\"\",\n\t\t\t\"doors2\",\"\"\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_compound_toiyayard: Default\n\t{\n\t\tskeletonName=\"jp_compound_toiyayard_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t\tclass Doors1\n\t\t\t{\n\t\t\t\ttype=\"rotation\";\n\t\t\t\tsource=\"DoorsTwin1\";\n\t\t\t\tselection=\"doors1\";\n\t\t\t\taxis=\"doors1_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\tangle0=0;\n\t\t\t\tangle1=1.570796;\n\t\t\t};\n\t\t\tclass Doors2\n\t\t\t{\n\t\t\t\ttype=\"rotation\";\n\t\t\t\tsource=\"DoorsTwin1\";\n\t\t\t\tselection=\"doors2\";\n\t\t\t\taxis=\"doors2_axis\";\n\t\t\t\tmemory=1;\n\t\t\t\tminValue=0;\n\t\t\t\tmaxValue=1;\n\t\t\t\tangle0=0;\n\t\t\t\tangle1=1.570796;\n\t\t\t};\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Compound_ToiyaYard\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-5.627143 0.100000 -0.455000\" range=\"0.342857\" height=\"0.857143\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "compound",
+  "plot": "toiyayard"
+ },
+ "bbox": [
+  -8.29,
+  8.29,
+  -0.4,
+  2.47,
+  -7.807,
+  6.47
+ ]
+}

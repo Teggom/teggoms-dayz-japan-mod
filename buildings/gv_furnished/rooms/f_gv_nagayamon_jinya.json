@@ -1,0 +1,109 @@
+{
+ "building": "Land_JP_NagayaMon_Jinya_Furnished",
+ "p3d": "\\JP\\buildings\\gv_furnished\\jp_nagayamon_jinya_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "room",
+   "tag": "sleeping",
+   "floor": "boards",
+   "level_m": 0.45,
+   "rect_kit": [
+    0.06,
+    3.115,
+    -3.58,
+    -0.06
+   ],
+   "doors": [],
+   "note": "the servants' room (chugen-beya), raised boards, open to its doma",
+   "enclosed": true,
+   "rect_model": [
+    -6.31,
+    -3.255,
+    -1.76,
+    1.76
+   ],
+   "fittings": []
+  },
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    3.255,
+    4.945,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "the servants' doma by the yard door",
+   "enclosed": true,
+   "rect_model": [
+    -3.115,
+    -1.425,
+    -1.76,
+    1.76
+   ],
+   "fittings": []
+  },
+  {
+   "name": "storage",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    7.795,
+    12.68,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "storage / a stable bay",
+   "enclosed": true,
+   "rect_model": [
+    1.425,
+    6.31,
+    -1.76,
+    1.76
+   ],
+   "fittings": []
+  },
+  {
+   "name": "gate",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    5.125,
+    7.615,
+    -3.79,
+    0.15
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "the gate passage (street +z, yard -z)",
+   "enclosed": false,
+   "rect_model": [
+    -1.245,
+    1.245,
+    -1.97,
+    1.97
+   ],
+   "fittings": [],
+   "sparse": "the gate passage"
+  }
+ ],
+ "loot_points": 24,
+ "loot_by_room": {
+  "room": 6,
+  "doma": 2,
+  "storage": 15,
+  "gate": 1
+ }
+}

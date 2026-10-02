@@ -1108,6 +1108,80 @@ for _f in W3C2_FURNISHED:                     # W3C2's own model folder
 BUILDINGS += W3C2_FURNISHED
 
 
+# ------------------------------------------------------------------------------------------------ W3D government
+# Phase C wave 3d (agent W3D, 2026-10-02): the government buildings (the highway checkpoint kit, the post-station
+# office, the intendant's jinya, the jail, the fire brigade station + the tall fire watchtower) from
+# parts/kit/jpparts/templates/govsite.py (buildings/govsitekit.py builds them; research + recorded choices
+# spikes/W3D/W3D_NOTES.md). The shells a site reuses are earlier shells furnished in buildings/w3d_sets.py. Placed in
+# ONE district west of 3c-2 by spikes/W3D/layout_w3d.py (test/placements/W3D.csv + test/ce/W3D_mapgrouppos.xml).
+from jpparts.templates import govsite as _gv  # noqa: E402
+
+_LOOT_GV_OFFICE = {"usage": ["Town", "Village"], "categories": ["tools", "containers"], "tags": ["floor"]}
+_LOOT_GV_YARD = {"usage": ["Village", "Town"], "categories": ["tools"], "tags": ["floor"]}
+
+
+def _gvd(key, dir_, cls, display, params, loot, mass):
+    e = {"key": key, "dir": dir_, "module": "govsite_shells", "class": cls, "name": "jp_" + key, "display": display,
+         "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
+         "placements": [], "verify": "shellcheck", "budget": _gv.budget_class(**params), "ship": True}
+    ob = _gv.over_budget_ok(**params)
+    if ob:
+        e["over_budget_ok"] = ob
+    return e
+
+
+W3D_SHELLS = [
+    # site 1 the highway checkpoint kit: the guardhouse with the inspection room, the palisade + kora-mon compound
+    _gvd("gv_bansho_sekisho", "gv_hall", "Land_JP_Bansho_Sekisho", "Checkpoint guardhouse with the inspection room "
+         "(obansho: stepped veranda + tatami over the gravel court, office, kitchen doma)",
+         {"kind": "bansho", "size": "sekisho"}, _LOOT_GV_OFFICE, 30000.0),
+    _gvd("gv_cmp_sekisho", "gv_site", "Land_JP_Compound_Sekisho", "Checkpoint: palisade, two kora-mon gates across "
+         "the road, the gravel court", {"kind": "compound", "plot": "sekisho"}, _LOOT_GV_YARD, 60000.0),
+    # site 2 the post-station office + its yard
+    _gvd("gv_toiyaba", "gv_hall", "Land_JP_Toiyaba", "Post-station office (toiya-ba: raised office open to the yard)",
+         {"kind": "toiyaba"}, _LOOT_GV_OFFICE, 30000.0),
+    _gvd("gv_cmp_toiyayard", "gv_site", "Land_JP_Compound_ToiyaYard", "Post-station yard: board fence + two-leaf "
+         "gate", {"kind": "compound", "plot": "toiyayard"}, _LOOT_GV_YARD, 15000.0),
+    # site 3 the intendant's jinya: the court room, the compound (the black nagaya-mon is a D3 dwelling entry below)
+    _gvd("gv_ginmisho", "gv_hall", "Land_JP_GinmiSho", "Court room (ginmi-sho) of the intendant's office: stepped "
+         "veranda + tatami over the white-gravel court", {"kind": "bansho", "size": "ginmi"}, _LOOT_GV_OFFICE, 30000.0),
+    _gvd("gv_cmp_jinya", "gv_site", "Land_JP_Compound_Jinya", "Intendant's office (jinya): black board fence, back "
+         "gate, the white-gravel court", {"kind": "compound", "plot": "jinya"}, _LOOT_GV_YARD, 30000.0),
+    # site 4 the jail
+    _gvd("gv_roya", "gv_hall", "Land_JP_Roya", "Jail cell block (roya: outer + inner timber lattice, two cells)",
+         {"kind": "roya"}, _LOOT_GV_OFFICE, 30000.0),
+    _gvd("gv_cmp_roya", "gv_site", "Land_JP_Compound_Roya", "Jail compound: black capped board fence, one gate",
+         {"kind": "compound", "plot": "roya"}, _LOOT_GV_YARD, 25000.0),
+    # site 5 the fire brigade station (the tall tower is a climbable site object: spikes/W3D/props_w3d_site.py)
+    _gvd("gv_cmp_hikeshi", "gv_site", "Land_JP_Compound_Hikeshi", "Fire brigade station: board fence + wide gate",
+         {"kind": "compound", "plot": "hikeshi"}, _LOOT_GV_YARD, 15000.0),
+    # the jinya's black gatehouse (D3's nagaya-mon template, rank 'official')
+    _dwl("gv_nagayamon_jinya", "dw_samurai", "Land_JP_NagayaMon_Jinya", "Gatehouse with rooms (nagaya-mon), the "
+         "intendant's office: black boards, tiled", {"kind": "nagayamon", "rank": "official"}, _LOOT_DW_TOWN, 40000.0),
+]
+BUILDINGS += W3D_SHELLS
+
+# W3D furnished variants (furnishkit + buildings/w3d_sets.py); the jail's guard office is the W2F jishin-ban as it is
+# (Land_JP_Guardhut_M_Itabuki_Jishinban), the jinya gatehouse's servants' room D3's nagaya-mon dressing
+W3D_FURNISHED = [
+    _furn("f_gv_bansho", "gv_bansho_sekisho", "w3d_bansho", "Furnished", "furnished (desks, ledgers, the kitchen)"),
+    _furn("f_gv_bunk_ashigaru", "rs_bunkhall_itabuki", "w3d_bunk_ashigaru", "Ashigaru",
+          "furnished: the checkpoint's foot-soldiers' guardhouse"),
+    _furn("f_gv_toiyaba", "gv_toiyaba", "w3d_toiyaba", "Furnished", "furnished (clerks' desks, relay ledgers, loads)"),
+    _furn("f_gv_ginmisho", "gv_ginmisho", "w3d_ginmisho", "Furnished", "furnished (the official's desk, records)"),
+    _furn("f_gv_jinya", "dw_samurai_s", "w3d_jinya", "Jinya", "furnished: the intendant's office (desks, ledgers, "
+          "measures)"),
+    _furn("f_gv_nagayamon_jinya", "gv_nagayamon_jinya", "d3_nagayamon", "Furnished", "furnished (servants' room)"),
+    _furn("f_gv_kura_nengu", "kura_plain", "w3d_kura_nengu", "Nengu", "furnished: the jinya's tax-rice store"),
+    _furn("f_gv_roya", "gv_roya", "w3d_roya", "Furnished", "furnished (mats, the tub, bowls; empty, doors open)"),
+    _furn("f_gv_hikeshi", "shed_open_board", "w3d_hikeshi", "Hikeshi", "furnished: the fire brigade's tool shed "
+          "(matoi-nobori, hooks, buckets)"),
+]
+for _f in W3D_FURNISHED:                     # W3D's own model folder
+    _f["dir"] = _f["model_dir"] = "gv_furnished"
+BUILDINGS += W3D_FURNISHED
+
+
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
 # Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_
