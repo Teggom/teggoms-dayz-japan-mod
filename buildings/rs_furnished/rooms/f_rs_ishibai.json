@@ -1,0 +1,34 @@
+{
+ "building": "Land_JP_Shed_Open_Thatch_Ishibai",
+ "p3d": "\\JP\\buildings\\rs_furnished\\jp_shed_open_thatch_ishibai.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -3.58,
+    -0.15
+   ],
+   "doors": [],
+   "note": "shed floor (open front)",
+   "enclosed": false,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -1.76,
+    1.67
+   ],
+   "fittings": [],
+   "sparse": "the open slaking shed: bales and tubs"
+  }
+ ],
+ "loot_points": 7,
+ "loot_by_room": {
+  "floor": 7
+ }
+}

@@ -4060,4 +4060,51 @@ class CfgVehicles
 		displayName="Kiln shelves and props stacked";
 		model="\JP\furniture\sitefit\jp_f_kiln_shelves.p3d";
 	};
+	// jp_f_kawara_rack (sitefit)
+	class StaticObj_JP_F_Kawara_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Green-tile drying rack";
+		model="\JP\furniture\sitefit\jp_f_kawara_rack.p3d";
+	};
+	class StaticObj_JP_F_Kawara_Rack_Collapsed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Green-tile drying rack, top shelf collapsed";
+		model="\JP\furniture\sitefit\jp_f_kawara_rack_collapsed.p3d";
+	};
+	// jp_f_kawara_stack (sitefit)
+	class StaticObj_JP_F_Kawara_Stack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fired roof tiles stacked on a pallet";
+		model="\JP\furniture\sitefit\jp_f_kawara_stack.p3d";
+	};
+	class StaticObj_JP_F_Kawara_Stack_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fired roof tiles, a row pushed over";
+		model="\JP\furniture\sitefit\jp_f_kawara_stack_scattered.p3d";
+	};
+	// jp_f_kawara_bench (sitefit)
+	class StaticObj_JP_F_Kawara_Bench: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tile moulding bench with a half-carved onigawara";
+		model="\JP\furniture\sitefit\jp_f_kawara_bench.p3d";
+	};
+	// jp_f_limestone_heap (sitefit)
+	class StaticObj_JP_F_Limestone_Heap: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Heap of broken limestone for the kiln";
+		model="\JP\furniture\sitefit\jp_f_limestone_heap.p3d";
+	};
+	// jp_f_spoil_heap (sitefit)
+	class StaticObj_JP_F_Spoil_Heap: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Mine spoil heap (earth and rock)";
+		model="\JP\furniture\sitefit\jp_f_spoil_heap.p3d";
+	};
 };

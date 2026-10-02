@@ -1,0 +1,178 @@
+{
+ "id": "jp_p_site_kiln_shaft_stone",
+ "part": "jp_p_site_kiln_shaft",
+ "variant": "_stone",
+ "group": "site",
+ "p3d": "JP\\parts\\site\\jp_p_site_kiln_shaft_stone.p3d",
+ "build_list": {
+  "entry": "jp_p_site_kiln_shaft",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2
+ ],
+ "used_for": "the lime kiln (TR26, Nariki / Ome type): a dry-stone walled kiln pit against its earth bank, the draw hole at the front foot, the burnt-out quicklime heap inside; cold (dead world)",
+ "datum": "centred, +z = the draw hole's face; y 0 = grade",
+ "recipe": "ruralsite_parts.kiln_pit(part, inner, wall, H)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -4.9,
+  4.9,
+  -0.3,
+  2.12,
+  -4.9,
+  2.854
+ ],
+ "dims": [
+  {
+   "name": "inner_m",
+   "expected": "3-9 (Nariki ~9, OME)",
+   "measured": 3.0,
+   "tol": 0.01,
+   "source": "W3C2_NOTES TR26",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "mouth",
+   "pos": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "note": "the draw hole"
+  }
+ ],
+ "materials": [
+  {
+   "key": "ground_ash",
+   "id": "jp_m_ground_ash",
+   "palette_id": "ash_grey",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_ash<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "ground_earth_bare",
+   "id": "jp_m_ground_earth_bare",
+   "palette_id": "earth_bare",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "lacquer_black",
+   "id": "jp_m_lacquer_black",
+   "palette_id": "sumi_black",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_black<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 838,
+  "Resolution 2": 607,
+  "Resolution 3": 154,
+  "Geometry": 42,
+  "View Geometry": 42,
+  "Fire Geometry": 42
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 838, Resolution 2 607, Resolution 3 154, Geometry 42, View Geometry 42, Fire Geometry 42"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, granite"
+  },
+  {
+   "check": "C4 inner_m",
+   "ok": true,
+   "detail": "expected 3-9 (Nariki ~9, OME), measured 3.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

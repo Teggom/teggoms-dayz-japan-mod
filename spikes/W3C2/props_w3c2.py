@@ -207,6 +207,141 @@ def kiln_shelves():
     return P
 
 
+# ================================================================================================ 3 tile works
+KAWARA = "roof_kawara"
+
+
+def tile(mat, x=0.0, y=0.0, z=0.0, rx=0.0, ry=0.0, rz=0.0):
+    """One sangawara pan tile (~0.28 x 0.30, its S-wave as two shallow planes), lying flat at (x, y, z)."""
+    a = W(-0.14, 0.02, 0.0, 0.016, -0.15, 0.15, mat, vis=(1,))
+    b = xf(W(0.0, 0.13, 0.0, 0.016, -0.15, 0.15, mat, vis=(1,)), rz=14.0, t=(0.02, 0.0, 0.0))
+    return [xf(s_, rx=rx, ry=ry, rz=rz, t=(x, y, z)) for s_ in (a, b)]
+
+
+def kawara_rack(collapsed=False):
+    """The green-tile drying rack (free-standing): four posts, three slatted shelves (0.30, 0.80, 1.30) 1.80 long, the
+    unfired tiles standing on edge in a row on each, leaning a little. collapsed: the top shelf down, tiles broken."""
+    P = LPart("kawara_rack", budget="furniture", mass=90.0, anchor="floor")
+    r_ = rng("kawararack" + str(collapsed))
+    out = []
+    for sx in (-0.90, 0.90):
+        for sz in (-0.20, 0.20):
+            out.append(W(sx - 0.035, sx + 0.035, 0.0, 1.50, sz - 0.035, sz + 0.035, WEATH, vis=(1,)))
+    for k, y in enumerate((0.30, 0.80, 1.30)):
+        for sx in (-0.90, 0.90):
+            out.append(W(sx - 0.04, sx + 0.04, y - 0.06, y - 0.025, -0.24, 0.24, WEATH, vis=(1,)))
+        if collapsed and k == 2:
+            out.append(xf(W(-0.95, 0.95, 0.0, 0.025, -0.22, 0.22, WEATH, vis=(1,)), rz=-17.0, pivot=(-0.90, 0.0, 0.0),
+                          t=(0.0, y - 0.025, 0.0)))
+            for j in range(6):
+                out += tile(CLAY, -0.60 + 0.25 * j, 0.0, 0.45 + 0.10 * (j % 2), ry=r_.uniform(-40, 40))
+            continue
+        for sz in (-0.12, 0.12):
+            out.append(W(-0.95, 0.95, y - 0.025, y, sz - 0.08, sz + 0.08, WEATH, vis=(1,)))
+        for j in range(7):
+            out += tile(CLAY, -0.75 + 0.25 * j, y + 0.15, 0.0, rx=0.0, rz=78.0)
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-0.95, 0.95, 0.0, 1.50, -0.24, 0.24, WEATH, vis=(2,)))
+    P.add(col(-0.95, 0.95, 0.0, 1.50, -0.24, 0.24, WEATH))
+    P.dim("l", 1.90, 1.90, tol=0.01)
+    P.notes.append("green-tile drying rack%s" % (", the top shelf collapsed, tiles broken" if collapsed else ""))
+    return P
+
+
+def kawara_stack(scattered=False):
+    """Fired tiles stacked on edge in two long rows on a plank pallet (1.40 x 0.70, 0.55 high) for the carts.
+    scattered: one row pushed over, tiles slid and broken on the ground."""
+    P = LPart("kawara_stack", budget="furniture", mass=400.0, anchor="floor")
+    r_ = rng("kawarastack" + str(scattered))
+    out = [W(-0.72, 0.72, 0.0, 0.06, -0.36, 0.36, WEATH, vis=(1,))]
+    for row, z in enumerate((-0.17, 0.17)):
+        if scattered and row == 1:
+            for j in range(8):
+                out += tile(KAWARA, -0.60 + 0.17 * j + r_.uniform(-0.05, 0.05), 0.0, 0.55 + r_.uniform(0, 0.35),
+                            ry=r_.uniform(-60, 60))
+            continue
+        for j in range(16):
+            out += tile(KAWARA, -0.64 + 0.085 * j, 0.06 + 0.15, z, rz=82.0)
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-0.72, 0.72, 0.0, 0.36, -0.36, 0.36, KAWARA, vis=(2,)))
+    P.add(col(-0.72, 0.72, 0.0, 0.36, -0.36, 0.36 if not scattered else 0.0, KAWARA))
+    P.dim("w", 1.44, 1.44, tol=0.01)
+    P.notes.append("fired tiles stacked on edge on a pallet%s" % (", one row pushed over" if scattered else ""))
+    return P
+
+
+def kawara_bench():
+    """The tile maker's moulding bench (1.60 x 0.70 at 0.70): the wooden mould (kata) with a clay slab in it, the
+    bow-wire cutter, a slab block waiting, the burnishing spatula; at the right end a half-carved ridge-end tile
+    (onigawara) on its board."""
+    P = LPart("kawara_bench", budget="furniture", mass=70.0, anchor="floor")
+    r_ = rng("kbench")
+    out = [W(-0.80, 0.80, 0.64, 0.70, -0.35, 0.35, WEATH, vis=(1,))]
+    for sx in (-0.70, 0.70):
+        for sz in (-0.28, 0.28):
+            out.append(W(sx - 0.04, sx + 0.04, 0.0, 0.64, sz - 0.04, sz + 0.04, WEATH, vis=(1,)))
+    # the mould: a shaped board frame with a clay slab
+    for (a, b, c, d) in ((-0.55, -0.20, -0.20, -0.17), (-0.55, -0.20, 0.17, 0.20), (-0.55, -0.52, -0.17, 0.17),
+                         (-0.23, -0.20, -0.17, 0.17)):
+        out.append(W(a, b, 0.70, 0.74, c, d, SOOTW, vis=(1,)))
+    out.append(W(-0.52, -0.23, 0.70, 0.725, -0.17, 0.17, CLAY, vis=(1,)))
+    # the slab block (a clay loaf) and the bow-wire cutter
+    out.append(W(-0.10, 0.25, 0.70, 0.86, -0.16, 0.16, CLAY, vis=(1,)))
+    out.append(pole((-0.05, 0.71, 0.24), (0.40, 0.71, 0.24), 0.008, BAMBOO, n=4, vis=(1,)))
+    out.append(cord((-0.03, 0.715, 0.24), (0.38, 0.715, 0.24), 0.001))
+    out.append(W(0.30, 0.42, 0.70, 0.71, -0.30, -0.22, WEATH, vis=(1,)))           # the spatula
+    # the onigawara: a thick shaped plaque, half carved, on its board
+    out.append(W(0.46, 0.78, 0.70, 0.72, -0.20, 0.20, WEATH, vis=(1,)))
+    oni = prism([(-0.13, 0.0), (0.13, 0.0), (0.13, 0.22), (0.07, 0.32), (0.0, 0.35), (-0.07, 0.32), (-0.13, 0.22)],
+                "z", -0.05, 0.05, CLAY, vis=(1,))
+    out.append(xf(oni, t=(0.62, 0.72, 0.0)))
+    out.append(xf(W(-0.05, 0.05, 0.0, 0.05, 0.05, 0.065, CLAY, vis=(1,)), t=(0.62, 0.86, 0.0)))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(W(-0.80, 0.80, 0.0, 0.72, -0.35, 0.35, WEATH, vis=(2,)))
+    P.add(col(-0.80, 0.80, 0.0, 0.70, -0.35, 0.35, WEATH))
+    P.dim("h", 0.70, 0.70, tol=0.01)
+    P.notes.append("tile moulding bench: mould, wire cutter, slab, a half-carved onigawara")
+    return P
+
+
+# ================================================================================================ 4-6 heaps (lime, quarry, mine)
+def _heap_solid(r_, rx, rz, h, mat, vis=(1,), geo=False, n=10):
+    base = [(rx * (1 + r_.uniform(-0.12, 0.12)) * math.cos(2 * math.pi * k / n),
+             rz * (1 + r_.uniform(-0.12, 0.12)) * math.sin(2 * math.pi * k / n)) for k in range(n)]
+    base = core.hull2d(base)
+    prof = [(0.0, 1.0), (h * 0.45, 0.70), (h * 0.80, 0.38), (h, 0.10)]
+    kw = dict(geo=True, view=True, fire=True) if geo else {}
+    return core.rings((base, prof), mat, vis=vis, **kw)
+
+
+def heap(kind="limestone"):
+    """A heap of broken stone on the ground: 'limestone' (pale limestone lumps waiting for the kiln, 2.2 x 1.6, 0.9
+    high) or 'spoil' (a mine's spoil: earth and grey rock, 3.4 x 2.4, 1.3 high). Lumps lie on its slopes."""
+    big = kind == "spoil"
+    P = LPart(kind + "_heap", budget="furniture", mass=5000.0 if big else 2000.0, anchor="floor")
+    r_ = rng("heap" + kind)
+    rx, rz, h = (1.70, 1.20, 1.30) if big else (1.10, 0.80, 0.90)
+    body = EARTH if big else LIME
+    out = [_heap_solid(r_, rx, rz, h, body)]
+    lm = FIELD if big else LIME
+    for k in range(14 if big else 12):
+        a = r_.uniform(0, 2 * math.pi)
+        f = r_.uniform(0.15, 0.95)
+        x, z = rx * f * math.cos(a), rz * f * math.sin(a)
+        y = h * (1.0 - f) * 0.92
+        out.append(lump(r_, x, max(0.0, y - 0.06), z, r_.uniform(0.18, 0.34), lm if k % 3 else FIELD, n=6))
+    wear_all(out, "_w2")
+    adds1(P, out)
+    P.add(_heap_solid(r_, rx, rz, h, body, vis=(2,), n=8))
+    P.add(_heap_solid(rng("heapcol" + kind), rx * 0.9, rz * 0.9, h * 0.9, body, vis=(), geo=True, n=8))
+    P.dim("h", h, h, tol=0.25)
+    P.notes.append("%s heap" % ("mine spoil" if big else "limestone"))
+    return P
+
+
 PROPS = [
     {"id": "jp_f_keri_rokuro", "cat": CAT, "mount": "floor", "models": [
         M("jp_f_keri_rokuro", "std", "intact", "Potter's kick wheel with a dry half-thrown jar", lambda: keri_rokuro()),
@@ -220,4 +355,18 @@ PROPS = [
         M("jp_f_wares_straw", "std", "intact", "Wares packed in straw for the road", wares_straw)]},
     {"id": "jp_f_kiln_shelves", "cat": CAT, "mount": "floor", "models": [
         M("jp_f_kiln_shelves", "std", "intact", "Kiln shelves and props stacked", kiln_shelves)]},
+    {"id": "jp_f_kawara_rack", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_kawara_rack", "std", "intact", "Green-tile drying rack", lambda: kawara_rack()),
+        M("jp_f_kawara_rack_collapsed", "std", "broken", "Green-tile drying rack, top shelf collapsed",
+          lambda: kawara_rack(True))]},
+    {"id": "jp_f_kawara_stack", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_kawara_stack", "std", "intact", "Fired roof tiles stacked on a pallet", lambda: kawara_stack()),
+        M("jp_f_kawara_stack_scattered", "std", "scattered", "Fired roof tiles, a row pushed over",
+          lambda: kawara_stack(True))]},
+    {"id": "jp_f_kawara_bench", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_kawara_bench", "std", "intact", "Tile moulding bench with a half-carved onigawara", kawara_bench)]},
+    {"id": "jp_f_limestone_heap", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_limestone_heap", "std", "intact", "Heap of broken limestone for the kiln", lambda: heap("limestone"))]},
+    {"id": "jp_f_spoil_heap", "cat": CAT, "mount": "floor", "models": [
+        M("jp_f_spoil_heap", "std", "intact", "Mine spoil heap (earth and rock)", lambda: heap("spoil"))]},
 ]

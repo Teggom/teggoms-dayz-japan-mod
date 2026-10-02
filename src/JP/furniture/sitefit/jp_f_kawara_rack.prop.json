@@ -1,0 +1,124 @@
+{
+ "id": "jp_f_kawara_rack",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sitefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sitefit\\jp_f_kawara_rack.p3d",
+   "class": "StaticObj_JP_F_Kawara_Rack",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Green-tile drying rack",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 348,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.95,
+    0.95,
+    0.0,
+    1.599,
+    -0.24,
+    0.24
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.95,
+    -0.24,
+    0.95,
+    0.24
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 90.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "l",
+     "expected": 1.9,
+     "measured": 1.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "green-tile drying rack"
+   ],
+   "master": "spikes/W3C2/out/sitefit/jp_f_kawara_rack.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\sitefit\\jp_f_kawara_rack_collapsed.p3d",
+   "class": "StaticObj_JP_F_Kawara_Rack_Collapsed",
+   "variant": "std",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Green-tile drying rack, top shelf collapsed",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 330,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.95,
+    0.95,
+    0.0,
+    1.5,
+    -0.24,
+    0.748
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.95,
+    -0.24,
+    0.95,
+    0.24
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 90.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "l",
+     "expected": 1.9,
+     "measured": 1.9,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "green-tile drying rack, the top shelf collapsed, tiles broken"
+   ],
+   "master": "spikes/W3C2/out/sitefit/jp_f_kawara_rack_collapsed.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C2/build_w3c2.py (agent W3C2, 2026-10-02) on spikes/B3a/build.py"
+}

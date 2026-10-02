@@ -450,6 +450,96 @@
      "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
     }
    ]
+  },
+  {
+   "id": "jp_p_site_kiln_updraught_daruma",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 429, Resolution 2 288, Resolution 3 249, Geometry 33, View Geometry 33, Fire Geometry 33"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "3 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "dirt, pottery"
+    },
+    {
+     "check": "C4 length_m",
+     "ok": true,
+     "detail": "expected 3.5-5.0 (GK), measured 4.2"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
+  },
+  {
+   "id": "jp_p_site_kiln_shaft_stone",
+   "checks": [
+    {
+     "check": "C5 LODs",
+     "ok": true,
+     "detail": "Resolution 1 838, Resolution 2 607, Resolution 3 154, Geometry 42, View Geometry 42, Fire Geometry 42"
+    },
+    {
+     "check": "C2 library only",
+     "ok": true,
+     "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+    },
+    {
+     "check": "C7 Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 View Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire Geometry closed+convex",
+     "ok": true,
+     "detail": "7 components, all closed and convex"
+    },
+    {
+     "check": "C7 Fire penetration mats",
+     "ok": true,
+     "detail": "dirt, granite"
+    },
+    {
+     "check": "C4 inner_m",
+     "ok": true,
+     "detail": "expected 3-9 (Nariki ~9, OME), measured 3.0"
+    },
+    {
+     "check": "C3 grid snap",
+     "ok": true,
+     "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+    }
+   ]
   }
  ]
 }

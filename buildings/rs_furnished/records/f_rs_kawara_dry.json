@@ -1,0 +1,63 @@
+{
+ "key": "f_rs_kawara_dry",
+ "class": "Land_JP_Shed_Open_Board_KawaraDry",
+ "name": "jp_shed_open_board_kawaradry",
+ "model": "\\JP\\buildings\\rs_furnished\\jp_shed_open_board_kawaradry.p3d",
+ "model_dir": "rs_furnished",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 2304,
+  "Resolution 2": 629,
+  "Resolution 3": 293,
+  "Geometry": 603,
+  "Memory": 0,
+  "Roadway": 4,
+  "View Geometry": 603,
+  "Fire Geometry": 603
+ },
+ "loot_points": 5,
+ "config_class": "\tclass Land_JP_Shed_Open_Board_KawaraDry: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Shed, open front (board roof), furnished: the tile drying shed\";\n\t\tmodel=\"\\JP\\buildings\\rs_furnished\\jp_shed_open_board_kawaradry.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_shed_open_board_kawaradry_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_shed_open_board_kawaradry: Default\n\t{\n\t\tskeletonName=\"jp_shed_open_board_kawaradry_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Shed_Open_Board_KawaraDry\">",
+  "\t\t\t\t<usage name=\"Farm\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.702500 0.050000 1.459286\" range=\"0.600714\" height=\"1.501786\" />",
+  "\t\t\t\t\t\t<point pos=\"0.612500 0.050000 1.459286\" range=\"0.409286\" height=\"1.023214\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.702500 0.050000 -1.459286\" range=\"0.608714\" height=\"1.521786\" />",
+  "\t\t\t\t\t\t<point pos=\"0.612500 0.050000 -1.783571\" range=\"0.733571\" height=\"1.833929\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.590000 0.062000 -1.740000\" range=\"0.120000\" height=\"0.300000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "proxies": {
+  "Resolution 1": 6,
+  "Geometry": 6,
+  "View Geometry": 6,
+  "Fire Geometry": 6
+ },
+ "proxy_addons": [
+  "JP_Furniture"
+ ],
+ "loot_containers": {
+  "lootFloor": 5,
+  "lootshelves": 0
+ },
+ "params": {
+  "base": "shed_open_board",
+  "dress": "w3c2_kawara_dry"
+ },
+ "bbox": [
+  -3.15,
+  3.15,
+  -0.272,
+  4.119,
+  -2.631,
+  2.631
+ ]
+}

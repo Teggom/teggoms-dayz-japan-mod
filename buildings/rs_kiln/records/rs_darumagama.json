@@ -1,0 +1,45 @@
+{
+ "key": "rs_darumagama",
+ "class": "Land_JP_Kawara_Gama",
+ "name": "jp_kawara_gama",
+ "model": "\\JP\\buildings\\rs_kiln\\jp_kawara_gama.p3d",
+ "model_dir": "rs_kiln",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 1918,
+  "Resolution 2": 665,
+  "Resolution 3": 374,
+  "Geometry": 372,
+  "Memory": 0,
+  "Roadway": 4,
+  "View Geometry": 372,
+  "Fire Geometry": 372
+ },
+ "loot_points": 2,
+ "config_class": "\tclass Land_JP_Kawara_Gama: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Tile kiln (daruma type) under its board roof\";\n\t\tmodel=\"\\JP\\buildings\\rs_kiln\\jp_kawara_gama.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_kawara_gama_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_kawara_gama: Default\n\t{\n\t\tskeletonName=\"jp_kawara_gama_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Kawara_Gama\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Industrial\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.686786 0.050000 2.595238\" range=\"0.347873\" height=\"0.869682\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.686786 0.050000 -2.595238\" range=\"0.347873\" height=\"0.869682\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "darumagama"
+ },
+ "bbox": [
+  -3.605,
+  3.605,
+  -0.3,
+  4.474,
+  -3.086,
+  3.086
+ ]
+}

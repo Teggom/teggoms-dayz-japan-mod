@@ -1,0 +1,44 @@
+{
+ "key": "rs_ishibaigama",
+ "class": "Land_JP_Ishibai_Gama",
+ "name": "jp_ishibai_gama",
+ "model": "\\JP\\buildings\\rs_kiln\\jp_ishibai_gama.p3d",
+ "model_dir": "rs_kiln",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 1597,
+  "Resolution 2": 828,
+  "Resolution 3": 279,
+  "Geometry": 253,
+  "Memory": 0,
+  "Roadway": 4,
+  "View Geometry": 253,
+  "Fire Geometry": 253
+ },
+ "loot_points": 1,
+ "config_class": "\tclass Land_JP_Ishibai_Gama: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Lime kiln (dry-stone pit on its bank) + draw floor\";\n\t\tmodel=\"\\JP\\buildings\\rs_kiln\\jp_ishibai_gama.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_ishibai_gama_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_ishibai_gama: Default\n\t{\n\t\tskeletonName=\"jp_ishibai_gama_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Ishibai_Gama\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Industrial\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"3.799286 0.050000 1.088571\" range=\"0.360714\" height=\"0.901786\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "ishibaigama"
+ },
+ "bbox": [
+  -4.9,
+  4.9,
+  -0.3,
+  3.31,
+  -4.41,
+  5.221
+ ]
+}

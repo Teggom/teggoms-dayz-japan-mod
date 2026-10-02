@@ -10,6 +10,8 @@ hut, the open sheds, W3B's earth-floor workshops and saw shed) are earlier shell
 Kinds (kit frame as rural.py: x 0..W along the front, z 0 = front line, +z = out, z -D = back, y 0 = grade)
   sumigama     the charcoal kiln (jp_p_site_kiln_dome) under its board roof on six posts (3 x 3 ken, open sides)
   noborigama   the climbing kiln (jp_p_site_kiln_climbing) on its bank + the stoking floor before the fire mouth
+  darumagama   the daruma tile kiln (jp_p_site_kiln_updraught) under its board roof on six posts (3.5 x 2.5 ken)
+  ishibaigama  the lime kiln pit on its bank (jp_p_site_kiln_shaft) + the draw floor under a small roof (2 x 1 ken)
   bunkhall     W 6 x D 3 ken, board walls: the entrance doma (2 ken, front + back doors, the hearth) and the long
                raised sleeping floor (0.40, one irori); roof itabuki | ishioki
 """
@@ -21,7 +23,7 @@ from .rural import Shell, _r, DOMA, A_, _kamado, _irori, big_leaf
 from .civic import fit, trim_lods, koshiyane, open_front, _ext
 from . import dwelling as DW
 
-KINDS = ("sumigama", "noborigama", "bunkhall", "compound")
+KINDS = ("sumigama", "noborigama", "darumagama", "ishibaigama", "bunkhall", "compound")
 
 
 def _open_roof(S, W, D, E, fam="itabuki", ov=None, ridge="bamboo"):
@@ -94,6 +96,63 @@ def noborigama(name=None, wear="_w2"):
     return H, info
 
 
+# ================================================================================================ TR19 daruma tile kiln
+def darumagama(name=None, wear="_w2"):
+    """The daruma tile kiln (jp_p_site_kiln_updraught _daruma) under its board roof on six posts (3.5 x 2.5 ken), its
+    long axis along the front, the loading door to the front, a stoking floor at each fire mouth."""
+    W, D, E = 3.5 * KEN, 2.5 * KEN, 3.25
+    S = Shell(name or "jp_kawara_gama", W, D, [1, 2], "daruma tile kiln under its roof (kawara-gama, TR19)", wear)
+    B = S.B
+    sls, info_r, K = _open_roof(S, W, D, E)
+    B.interior = True
+    B.merge(FL.doma("floor", -0.10, W + 0.10, -D - 0.10, 0.25, road=(A_, W - A_, -D + A_, -0.10), y=DOMA,
+                    mats=FL.MATS_DOMA_EARTH))
+    B.interior = False
+    cx, cz = W / 2, -D / 2
+    kp = B.P("kiln")
+    ki = RS.kiln_daruma(kp)
+    B.put(kp, (90.0, (cx, 0.0, cz)), what="jp_p_site_kiln_updraught _daruma (cold, the loading door walled up)")
+    hx, hz = ki["L"] / 2, ki["w"] / 2
+    S.obst.append(("floor", _r(cx - hx - 0.20, cx + hx + 0.20, cz - hz - 0.05, cz + hz + 0.65)))
+    for sg in (-1, 1):                                       # the fire mouths' jambs + ash at both ends
+        xm = cx + sg * (hx + 0.30)
+        S.obst.append(("floor", _r(xm - 0.35, xm + 0.35, cz - 0.70, cz + 0.70)))
+    S.room("floor", "workshop", "earth", DOMA, (A_, W - A_, -D + A_, -0.10), [],
+           "the kiln floor under the roof: the daruma kiln, a stoking floor at each fire mouth", enclosed=False)
+    trim_lods(S.H)
+    H, info = S.finish({"params": {"kind": "darumagama"}, "levels": {"doma": DOMA, "eave": E},
+                        "koyagumi": K["counts"], "kiln": ki}, exterior=_ext(W, D))
+    return H, info
+
+
+# ================================================================================================ TR26 lime kiln
+def ishibaigama(name=None, wear="_w2"):
+    """The lime kiln pit on its bank (jp_p_site_kiln_shaft _stone) + the draw floor before its draw hole under a small
+    board roof on four posts (2 x 1 ken): where the burnt lime was drawn and the fire tended."""
+    LF = KEN
+    W = 2 * KEN
+    S = Shell(name or "jp_ishibai_gama", W, LF + 8.0, [1, 2], "lime kiln (ishibai-gama, TR26), Nariki / Ome type", wear)
+    B = S.B
+    kp = B.P("kiln")
+    ki = RS.kiln_pit(kp)
+    B.put(kp, (0.0, (W / 2, 0.0, -LF - ki["front"])), what="jp_p_site_kiln_shaft _stone (burnt out, cold)")
+    sls, info_r, K_ = _open_roof(S, W, LF, 2.70)
+    B.interior = True
+    B.merge(FL.doma("draw", 0.0, W, -LF, 0.0, road=(0.15, W - 0.15, -LF + 0.02, -0.15), y=DOMA,
+                    mats=FL.MATS_DOMA_EARTH))
+    B.interior = False
+    S.obst.append(("draw", _r(W / 2 - 0.80, W / 2 + 0.80, -LF, -LF + 0.85)))
+    S.room("draw", "workshop", "earth", DOMA, (0.15, W - 0.15, -LF + 0.02, -0.15), [],
+           "the draw floor before the kiln's draw hole, under its small roof (the kiln pit is solid; the heap shows "
+           "over its rim)", enclosed=False)
+    trim_lods(S.H)
+    S.D = LF + 2 * ki["front"] + ki["bank"]
+    H, info = S.finish({"params": {"kind": "ishibaigama"}, "levels": {"doma": DOMA}, "kiln": ki,
+                        "koyagumi": K_["counts"]}, exterior=None)
+    info["D"] = S.D
+    return H, info
+
+
 # ================================================================================================ yards
 YARDS = {
     # the potter's yard: a light bamboo fence (yotsume) round the work shed and the drying racks; the gate (by the
@@ -102,6 +161,12 @@ YARDS = {
                         runs=[([(0.0, 0.0), (0.0, 6 * KEN), (7 * KEN, 6 * KEN), (7 * KEN, 0.0)], "yotsume", {},
                                ("end", "end"))],
                         gates=[(0, 3, 1.0 * KEN) + DW.pick_gate("yotsume", status="work", carts=True)]),
+    # the tile works yard: a board fence (itabei) round the moulding shed, the drying shed and the kiln; the gate (by
+    # the picker: a two-leaf board gate 1.5 ken for the tile carts) in the south line
+    "tileyard": dict(W=10 * KEN, D=7 * KEN, closed=True,
+                     runs=[([(0.0, 0.0), (0.0, 7 * KEN), (10 * KEN, 7 * KEN), (10 * KEN, 0.0)], "itabei",
+                            dict(kuro=False, cap="none"), ("end", "end"))],
+                     gates=[(0, 3, 2.0 * KEN) + DW.pick_gate("itabei", status="work", carts=True)]),
 }
 DW.COMPOUNDS.update(YARDS)
 

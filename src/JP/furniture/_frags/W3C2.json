@@ -77,6 +77,76 @@
     "displayName=\"Kiln shelves and props stacked\";",
     "model=\"\\JP\\furniture\\sitefit\\jp_f_kiln_shelves.p3d\";"
    ]
+  },
+  {
+   "group": "jp_f_kawara_rack (sitefit)",
+   "class": "StaticObj_JP_F_Kawara_Rack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Green-tile drying rack\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_kawara_rack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kawara_rack (sitefit)",
+   "class": "StaticObj_JP_F_Kawara_Rack_Collapsed",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Green-tile drying rack, top shelf collapsed\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_kawara_rack_collapsed.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kawara_stack (sitefit)",
+   "class": "StaticObj_JP_F_Kawara_Stack",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fired roof tiles stacked on a pallet\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_kawara_stack.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kawara_stack (sitefit)",
+   "class": "StaticObj_JP_F_Kawara_Stack_Scattered",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Fired roof tiles, a row pushed over\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_kawara_stack_scattered.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_kawara_bench (sitefit)",
+   "class": "StaticObj_JP_F_Kawara_Bench",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Tile moulding bench with a half-carved onigawara\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_kawara_bench.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_limestone_heap (sitefit)",
+   "class": "StaticObj_JP_F_Limestone_Heap",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Heap of broken limestone for the kiln\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_limestone_heap.p3d\";"
+   ]
+  },
+  {
+   "group": "jp_f_spoil_heap (sitefit)",
+   "class": "StaticObj_JP_F_Spoil_Heap",
+   "base": "HouseNoDestruct",
+   "body": [
+    "scope=1;",
+    "displayName=\"Mine spoil heap (earth and rock)\";",
+    "model=\"\\JP\\furniture\\sitefit\\jp_f_spoil_heap.p3d\";"
+   ]
   }
  ],
  "models": [
@@ -86,7 +156,14 @@
   "jp_f_ware_rack",
   "jp_f_ware_rack_fallen",
   "jp_f_wares_straw",
-  "jp_f_kiln_shelves"
+  "jp_f_kiln_shelves",
+  "jp_f_kawara_rack",
+  "jp_f_kawara_rack_collapsed",
+  "jp_f_kawara_stack",
+  "jp_f_kawara_stack_scattered",
+  "jp_f_kawara_bench",
+  "jp_f_limestone_heap",
+  "jp_f_spoil_heap"
  ],
  "scripts": {}
 }

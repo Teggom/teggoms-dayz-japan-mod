@@ -6882,6 +6882,34 @@
 						<point pos="-4.717143 0.100000 -3.185000" range="0.342857" height="0.857143" />
 				</container>
 		</group>
+		<group name="Land_JP_Kawara_Gama">
+				<usage name="Village" />
+				<usage name="Industrial" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<tag name="floor" />
+						<point pos="-1.686786 0.050000 2.595238" range="0.347873" height="0.869682" />
+						<point pos="-1.686786 0.050000 -2.595238" range="0.347873" height="0.869682" />
+				</container>
+		</group>
+		<group name="Land_JP_Compound_TileYard">
+				<usage name="Village" />
+				<usage name="Industrial" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<tag name="floor" />
+						<point pos="-5.627143 0.100000 -4.095000" range="0.342857" height="0.857143" />
+				</container>
+		</group>
+		<group name="Land_JP_Ishibai_Gama">
+				<usage name="Village" />
+				<usage name="Industrial" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<tag name="floor" />
+						<point pos="3.799286 0.050000 1.088571" range="0.360714" height="0.901786" />
+				</container>
+		</group>
 		<group name="Land_JP_Hut_West_Ishioki_Sumiyaki">
 				<usage name="Farm" />
 				<usage name="Village" />
@@ -6923,5 +6951,61 @@
 						<category name="containers" />
 						<tag name="shelves" />
 						<point pos="1.905000 0.730000 -1.330000" range="0.250000" height="0.625000" />
+				</container>
+		</group>
+		<group name="Land_JP_Workshop_Doma_Sangawara_Kawara">
+				<usage name="Town" />
+				<usage name="Village" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="floor" />
+						<point pos="-1.182857 0.050000 1.011786" range="0.877500" height="2.000000" />
+						<point pos="1.092857 0.050000 2.173214" range="0.358214" height="0.895536" />
+						<point pos="-0.930000 0.050000 -0.343214" range="0.396786" height="0.991964" />
+						<point pos="1.598571 0.050000 -0.343214" range="0.396786" height="0.991964" />
+						<point pos="-0.000000 0.400000 -1.825000" range="0.645000" height="1.612500" />
+				</container>
+				<container name="lootshelves">
+						<category name="tools" />
+						<category name="containers" />
+						<tag name="shelves" />
+						<point pos="-1.905000 0.730000 -1.570000" range="0.250000" height="0.625000" />
+				</container>
+		</group>
+		<group name="Land_JP_Shed_Open_Board_KawaraDry">
+				<usage name="Farm" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.702500 0.050000 1.459286" range="0.600714" height="1.501786" />
+						<point pos="0.612500 0.050000 1.459286" range="0.409286" height="1.023214" />
+						<point pos="-0.702500 0.050000 -1.459286" range="0.608714" height="1.521786" />
+						<point pos="0.612500 0.050000 -1.783571" range="0.733571" height="1.833929" />
+						<point pos="-0.590000 0.062000 -1.740000" range="0.120000" height="0.300000" />
+				</container>
+		</group>
+		<group name="Land_JP_Shed_Open_Thatch_Ishibai">
+				<usage name="Farm" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="food" />
+						<tag name="floor" />
+						<point pos="-0.138929 0.050000 1.135000" range="0.857500" height="2.000000" />
+						<point pos="0.800357 0.050000 0.162143" range="0.769643" height="1.924107" />
+						<point pos="-0.702500 0.050000 -1.135000" range="0.426899" height="1.067248" />
+						<point pos="0.988214 0.050000 -1.783571" range="0.534914" height="1.337284" />
+				</container>
+				<container name="lootshelves">
+						<category name="tools" />
+						<category name="containers" />
+						<category name="food" />
+						<tag name="shelves" />
+						<point pos="-1.205000 1.116000 -0.008000" range="0.250000" height="0.625000" />
+						<point pos="-1.455000 0.480000 -0.974000" range="0.250000" height="0.625000" />
+						<point pos="0.085458 0.440200 -1.180763" range="0.250000" height="0.625000" />
 				</container>
 		</group>

@@ -1,0 +1,124 @@
+{
+ "id": "jp_f_kawara_stack",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sitefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sitefit\\jp_f_kawara_stack.p3d",
+   "class": "StaticObj_JP_F_Kawara_Stack",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Fired roof tiles stacked on a pallet",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 390,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.72,
+    0.72,
+    0.0,
+    0.36,
+    -0.36,
+    0.36
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.72,
+    -0.36,
+    0.72,
+    0.36
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 400.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.44,
+     "measured": 1.44,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "fired tiles stacked on edge on a pallet"
+   ],
+   "master": "spikes/W3C2/out/sitefit/jp_f_kawara_stack.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\sitefit\\jp_f_kawara_stack_scattered.p3d",
+   "class": "StaticObj_JP_F_Kawara_Stack_Scattered",
+   "variant": "std",
+   "state": "scattered",
+   "abandoned": true,
+   "display": "Fired roof tiles, a row pushed over",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 294,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.787,
+    0.769,
+    0.0,
+    0.36,
+    -0.36,
+    1.058
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.72,
+    -0.36,
+    0.72,
+    0.0
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 400.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.44,
+     "measured": 1.44,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "fired tiles stacked on edge on a pallet, one row pushed over"
+   ],
+   "master": "spikes/W3C2/out/sitefit/jp_f_kawara_stack_scattered.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C2/build_w3c2.py (agent W3C2, 2026-10-02) on spikes/B3a/build.py"
+}

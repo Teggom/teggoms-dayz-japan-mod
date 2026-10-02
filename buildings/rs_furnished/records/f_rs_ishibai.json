@@ -1,0 +1,89 @@
+{
+ "key": "f_rs_ishibai",
+ "class": "Land_JP_Shed_Open_Thatch_Ishibai",
+ "name": "jp_shed_open_thatch_ishibai",
+ "model": "\\JP\\buildings\\rs_furnished\\jp_shed_open_thatch_ishibai.p3d",
+ "model_dir": "rs_furnished",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 2249,
+  "Resolution 2": 658,
+  "Resolution 3": 278,
+  "Geometry": 650,
+  "Memory": 0,
+  "Roadway": 1,
+  "View Geometry": 650,
+  "Fire Geometry": 650
+ },
+ "loot_points": 7,
+ "config_class": "\tclass Land_JP_Shed_Open_Thatch_Ishibai: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Shed, open front (thatch), furnished: the lime slaking + packing shed\";\n\t\tmodel=\"\\JP\\buildings\\rs_furnished\\jp_shed_open_thatch_ishibai.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_shed_open_thatch_ishibai_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_shed_open_thatch_ishibai: Default\n\t{\n\t\tskeletonName=\"jp_shed_open_thatch_ishibai_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Shed_Open_Thatch_Ishibai\">",
+  "\t\t\t\t<usage name=\"Farm\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.138929 0.050000 1.135000\" range=\"0.857500\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.800357 0.050000 0.162143\" range=\"0.769643\" height=\"1.924107\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.702500 0.050000 -1.135000\" range=\"0.426899\" height=\"1.067248\" />",
+  "\t\t\t\t\t\t<point pos=\"0.988214 0.050000 -1.783571\" range=\"0.534914\" height=\"1.337284\" />",
+  "\t\t\t\t</container>",
+  "\t\t\t\t<container name=\"lootshelves\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"shelves\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.205000 1.116000 -0.008000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.455000 0.480000 -0.974000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"0.085458 0.440200 -1.180763\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "proxies": {
+  "Resolution 1": 7,
+  "Geometry": 5,
+  "View Geometry": 5,
+  "Fire Geometry": 5
+ },
+ "proxy_addons": [
+  "JP_Furniture"
+ ],
+ "loot_containers": {
+  "lootFloor": 4,
+  "lootshelves": 3
+ },
+ "site": [
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_firewood_bundle_loose.p3d",
+   "x": -3.7,
+   "z": 0.4,
+   "yaw": 90.0,
+   "y": 0.0,
+   "why": "brushwood bundles for the burn"
+  },
+  {
+   "p3d": "\\JP\\furniture\\kitchen\\jp_f_firewood_bundle.p3d",
+   "x": -3.7,
+   "z": -0.9,
+   "yaw": 90.0,
+   "y": 0.0,
+   "why": "brushwood bundles"
+  }
+ ],
+ "params": {
+  "base": "shed_open_thatch",
+  "dress": "w3c2_ishibai"
+ },
+ "bbox": [
+  -3.385,
+  3.385,
+  -0.272,
+  6.18,
+  -2.72,
+  2.72
+ ]
+}

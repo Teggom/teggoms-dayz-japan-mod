@@ -236,6 +236,112 @@ def part_kiln_climbing(variant):
     return p
 
 
+# ------------------------------------------------------------------------------------------------ 41 kiln_updraught
+def kiln_daruma(p):
+    """The daruma tile kiln (updraught; the type is Sengoku-period, W3C2_NOTES TR19): an oblong clay body 2.6 wide x
+    4.2 long (along z) on a fired-sherd base course, rounded shoulders (a barrel vault, crown 2.10), a fire mouth at
+    each end (0.50 x 0.60, arched, cold), the loading door in the +x side walled up with its top courses pulled down
+    (loose bricks below it), three smoke holes with clay collars in the crown. Solid (not enterable)."""
+    rng = rng_for("kiln_daruma")
+    w, L, ys, rise = 2.60, 4.20, 1.00, 1.10
+    p.add(box(-w / 2, w / 2, -0.30, 0.35, -L / 2, L / 2, FIRED, vis=(1, 2, 3), **_g(tag="base_course")))
+    p.add(box(-w / 2 + 0.02, w / 2 - 0.02, 0.35, ys, -L / 2 + 0.02, L / 2 - 0.02, CLAY, vis=(1, 2, 3),
+              **_g(tag="kiln_wall")))
+    vault(p, -w / 2 + 0.02, w / 2 - 0.02, ys, rise, -L / 2 + 0.02, L / 2 - 0.02, CLAY, n=10, tag="kiln_vault")
+    for zz, yaw in ((L / 2, 0.0), (-L / 2, 180.0)):
+        m = Part("mouth", "", "")
+        mouth(m, 0.0, 0.0, 0.50, 0.60, 0.0, jamb=FIRED, header=FIRED, rng=rng, tag="fire_mouth", svis=(1, 2, 3))
+        m.add(prism(ellipse(0.0, 0.42, 0.50, 0.30, 10), "y", -0.02, 0.022, ASH, vis=(1,), tag="ash_spill"))
+        p.merge(m.transformed(yaw, (0.0, 0.0, zz)))
+    d = Part("door", "", "")
+    mouth(d, 0.0, 0.35, 0.80, 1.05, 0.0, depth=0.10, jamb=FIRED, header=FIRED, rng=rng, recess=DARK, tag="loading",
+          svis=(1, 2, 3))
+    d.add(box(-0.38, 0.38, 0.35, 1.05, 0.006, 0.04, FIRED, vis=(1,), tag="loading_wall"))
+    scatter_stones(d, rng, [(-0.30, 0.35, 0.14, 0.0), (0.10, 0.45, 0.12, 0.0), (0.35, 0.30, 0.13, 0.0)], mats=FIRED,
+                   tag="loose_brick")
+    p.merge(d.transformed(-90.0, (w / 2, 0.0, 0.0)))
+    yc = ys + rise
+    for zz in (-1.2, 0.0, 1.2):
+        p.add(box(-0.14, 0.14, yc - 0.06, yc + 0.10, zz - 0.14, zz + 0.14, CLAYF, vis=(1, 2, 3), tag="smoke_collar"))
+        p.add(box(-0.08, 0.08, yc + 0.10, yc + 0.102, zz - 0.08, zz + 0.08, DARK, vis=(1,), tag="smoke_hole"))
+    return {"w": w, "L": L, "h": yc + 0.10}
+
+
+def part_kiln_updraught(variant):
+    p = Part("jp_p_site_kiln_updraught", variant, "site", tiers=[1, 2],
+             used_for="the daruma tile kiln (TR19): an oblong clay updraught kiln with a fire mouth at each end and "
+                      "the loading door walled up; cold (dead world)",
+             recipe="ruralsite_parts.kiln_daruma(part)",
+             datum="centred, the long axis along z (fire mouths at both ends), the loading door on +x; y 0 = grade")
+    k = kiln_daruma(p)
+    p.dim("length_m", "3.5-5.0 (GK)", k["L"], source="W3C2_NOTES TR19")
+    p.dims[-1]["ok"] = True
+    p.conn("mouth", (0.0, 0.0, k["L"] / 2), note="a fire mouth")
+    return p
+
+
+# ------------------------------------------------------------------------------------------------ 40 kiln_shaft
+def kiln_pit(p, inner=3.0, wall=0.60, H=2.0):
+    """The lime kiln (W3C2_NOTES TR26, after the Nariki burn [OME]): a dry-stone walled kiln pit (inside `inner`
+    square, walls `wall` thick to H) built against its own earth bank (back and both sides, up to the rim: the charging
+    side), the draw / fire hole (0.60 x 0.80) at the front foot, inside the burnt-out heap of white quicklime lumps and
+    ash to 1.1 m (the last burn not drawn). The front face looks +z. Solid round the pit; not enterable."""
+    rng = rng_for("kiln_pit")
+    o = inner / 2 + wall
+    i = inner / 2
+    for (x0, x1, z0, z1, tg) in ((-o, o, -o, -i, "wall_back"), (-o, o, i, o, "wall_front"),
+                                 (-o, -i, -i, i, "wall_left"), (i, o, -i, i, "wall_right")):
+        p.add(box(x0, x1, -0.30, H, z0, z1, STONE, vis=(1, 2, 3), **_g(tag=tg)))
+    # coping stones along the rim + a few proud stones in the faces (the dry-stone look)
+    for k in range(10):
+        a = k / 10.0
+        for (x, z) in ((-o + 2 * o * a + 0.2, o - 0.30), (-o + 2 * o * a + 0.2, -o + 0.30)):
+            p.add(rough_block(rng, x - 0.20, x + 0.20, H - 0.02, H + 0.12, z - 0.26, z + 0.26, STONE, chamfer=0.05,
+                              top_jit=0.03, vis=(1, 2), tag="coping"))
+    for (x, y) in ((-1.4, 0.4), (-0.9, 1.3), (0.9, 0.7), (1.5, 1.5), (-1.6, 1.7), (1.3, 0.2)):
+        p.add(rough_block(rng, x - 0.22, x + 0.22, y - 0.15, y + 0.15, o - 0.04, o + 0.05, STONE, chamfer=0.05,
+                          top_jit=0.02, vis=(1,), tag="face_stone"))
+    mouth(p, 0.0, 0.0, 0.60, 0.80, o + 0.002, rng=rng, tag="draw_hole", svis=(1, 2, 3))
+    p.add(prism(ellipse(0.0, o + 0.45, 0.60, 0.32, 10), "y", -0.02, 0.022, ASH, vis=(1,), tag="ash_spill"))
+    # the burnt-out heap inside (white quicklime lumps over ash), seen over the rim
+    mound(p, 0.0, 0.0, i - 0.02, i - 0.02, [(0.0, 1.0), (0.55, 0.92), (0.90, 0.62), (1.10, 0.25)], LIME, n=12,
+          tag="lime_heap", geo=False, vis=(1, 2, 3))
+    scatter_stones(p, rng, [(-0.5, 0.3, 0.30, 0.85), (0.4, -0.4, 0.26, 0.80), (0.1, 0.6, 0.22, 0.75)], mats=LIME,
+                   tag="lime_lump")
+    # the bank: back and both sides up to the rim, falling outwards 1 : 1.4; three mitred wedges (convex hexahedra:
+    # the slopes meet on the corner diagonals), the side banks end in a cut face just behind the kiln's front
+    run = 1.4 * H
+    a, b, yb, yt = o - 0.02, o + run, -0.30, H - 0.05
+    zf = o - 0.05
+
+    def wedge(c, tg):
+        p.add(hexa(c, EARTH, vis=(1, 2, 3), geo=True, view=True, fire="dirt", tag=tg))
+    wedge([(-a, yb, -a), (a, yb, -a), (b, yb, -b), (-b, yb, -b), (-a, yt, -a), (a, yt, -a), (b, 0.0, -b), (-b, 0.0, -b)],
+          "bank_back")
+    for sg in (-1, 1):
+        c = [(sg * a, yb, zf), (sg * a, yb, -a), (sg * b, yb, -b), (sg * b, yb, zf),
+             (sg * a, yt, zf), (sg * a, yt, -a), (sg * b, 0.0, -b), (sg * b, 0.0, zf)]
+        if sg < 0:
+            c = c[:4][::-1] + c[4:][::-1]
+        wedge(c, "bank_side")
+    return {"outer": 2 * o, "inner": inner, "H": H, "front": o, "bank": run}
+
+
+def part_kiln_shaft(variant):
+    p = Part("jp_p_site_kiln_shaft", variant, "site", tiers=[1, 2],
+             used_for="the lime kiln (TR26, Nariki / Ome type): a dry-stone walled kiln pit against its earth bank, "
+                      "the draw hole at the front foot, the burnt-out quicklime heap inside; cold (dead world)",
+             recipe="ruralsite_parts.kiln_pit(part, inner, wall, H)",
+             datum="centred, +z = the draw hole's face; y 0 = grade")
+    k = kiln_pit(p)
+    p.dim("inner_m", "3-9 (Nariki ~9, OME)", k["inner"], source="W3C2_NOTES TR26")
+    p.dims[-1]["ok"] = True
+    p.conn("mouth", (0.0, 0.0, k["front"]), note="the draw hole")
+    return p
+
+
 def register(reg):
     reg("jp_p_site_kiln_dome", ["_charcoal"], part_kiln_dome)
     reg("jp_p_site_kiln_climbing", ["_4ch"], part_kiln_climbing)
+    reg("jp_p_site_kiln_updraught", ["_daruma"], part_kiln_updraught)
+    reg("jp_p_site_kiln_shaft", ["_stone"], part_kiln_shaft)
