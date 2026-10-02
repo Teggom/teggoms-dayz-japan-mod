@@ -499,3 +499,6 @@
   fixed 6 inside-out shapes incl. waniguchi, collars, lids, sedge hat), fire-watch roof 2.20 m above the deck, stone atlases
   (esearch/materials/make_stone_atlas.py: carved / carved_aged / cut) + uvwood stone mode. Pitfall: re-run make_stone_atlas.py
   after any stone material maker + repack jp_common. **Wave 3a launched: K3 (kits) + D3 (dwellings; waits for K3 to build compounds).**
+- 2026-10-01 (night): **Stephen approved: launch 3b automatically once D3 finishes** (sento, stable yard, stall kit, earth-floor +
+  raised-floor workshops, timber yard, foundry; shells + furnished + placement + walk), after a usage check: only if the
+  projected weekly stays safely under 90 % (estimate 3b ~4-6 %).
