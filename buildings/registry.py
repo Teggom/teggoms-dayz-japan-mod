@@ -861,6 +861,80 @@ for _f in D3_FURNISHED:                       # D3's own model folder (batch bin
 BUILDINGS += D3_FURNISHED
 
 
+# ------------------------------------------------------------------------------------------------ W3B workshops + services
+# Phase C wave 3b (agent W3B, 2026-10-02): the public bathhouse, the stable row + yard, the barber's and show booths,
+# the earth-floor and raised-floor workshops, the timber-yard sheds, the foundry and the yard fences, from
+# parts/kit/jpparts/templates/trade.py (buildings/tradekit.py builds them, buildings/shellcheck.py checks them; research
+# notes spikes/W3B/W3B_NOTES.md). Placed on the test island by spikes/W3B/layout_w3b.py (test/placements/W3B.csv +
+# test/ce/W3B_mapgrouppos.xml), not through 'placements' here.
+from jpparts.templates import trade as _tr  # noqa: E402
+
+_LOOT_TR_TOWN = {"usage": ["Town", "Village"], "categories": ["tools", "containers", "clothes", "food"], "tags": ["floor"]}
+_LOOT_TR_WORK = {"usage": ["Town", "Village"], "categories": ["tools", "containers"], "tags": ["floor"]}
+_LOOT_TR_YARD = {"usage": ["Village", "Town"], "categories": ["tools", "containers"], "tags": ["floor"]}
+
+
+def _trd(key, dir_, cls, display, params, loot, mass):
+    e = {"key": key, "dir": dir_, "module": "trade_shells", "class": cls, "name": "jp_" + key, "display": display,
+         "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
+         "placements": [], "verify": "shellcheck", "budget": _tr.budget_class(**params), "ship": True}
+    ob = _tr.over_budget_ok(**params)
+    if ob:
+        e["over_budget_ok"] = ob
+    return e
+
+
+W3B_SHELLS = [
+    # TR08 public bathhouse: entrance doma + bandai, changing room + washing floor, the zakuro-guchi, the bath room,
+    # the boiler lean-to; town (tiled) / board roof
+    _trd("tr_sento_sangawara", "tr_sento", "Land_JP_Sento_Sangawara", "Public bathhouse (sento, zakuro-guchi bath, "
+         "tiled)", {"kind": "sento", "roof": "sangawara"}, _LOOT_TR_TOWN, 60000.0),
+    _trd("tr_sento_itabuki", "tr_sento", "Land_JP_Sento_Itabuki", "Public bathhouse (sento, zakuro-guchi bath, "
+         "board roof)", {"kind": "sento", "roof": "itabuki"}, _LOOT_TR_TOWN, 55000.0),
+    # TR09 stable row (four stalls + the tack room)
+    _trd("tr_stablerow_itabuki", "tr_stable", "Land_JP_StableRow_Itabuki", "Stable row: four stalls open to the yard, "
+         "tack room (post town, board roof)", {"kind": "stablerow", "roof": "itabuki"}, _LOOT_TR_YARD, 30000.0),
+    _trd("tr_stablerow_thatch", "tr_stable", "Land_JP_StableRow_Thatch", "Stable row: four stalls, tack room "
+         "(packhorse carrier, thatch)", {"kind": "stablerow", "roof": "thatch"}, _LOOT_TR_YARD, 30000.0),
+    # TR02 the booths that are buildings
+    _trd("tr_booth_barber", "tr_booth", "Land_JP_Booth_Barber", "Barber's booth (de-doko)",
+         {"kind": "booth", "form": "barber"}, _LOOT_TR_TOWN, 5000.0),
+    _trd("tr_booth_misemono", "tr_booth", "Land_JP_Booth_Misemono", "Show booth (misemono-goya): mat walls, stage",
+         {"kind": "booth", "form": "misemono"}, _LOOT_TR_TOWN, 8000.0),
+    # TR13 earth-floor workshop / TR14 raised-floor bench workshop
+    _trd("tr_ws_doma_itabuki", "tr_workshop", "Land_JP_Workshop_Doma_Itabuki", "Earth-floor workshop (board roof)",
+         {"kind": "workshop", "form": "doma", "roof": "itabuki"}, _LOOT_TR_WORK, 20000.0),
+    _trd("tr_ws_doma_sangawara", "tr_workshop", "Land_JP_Workshop_Doma_Sangawara", "Earth-floor workshop (tiled)",
+         {"kind": "workshop", "form": "doma", "roof": "sangawara"}, _LOOT_TR_WORK, 24000.0),
+    _trd("tr_ws_bench_itabuki", "tr_workshop", "Land_JP_Workshop_Bench_Itabuki", "Raised-floor bench workshop with the "
+         "dust-free back room (board roof)", {"kind": "workshop", "form": "bench", "roof": "itabuki"}, _LOOT_TR_WORK,
+         25000.0),
+    _trd("tr_ws_bench_sangawara", "tr_workshop", "Land_JP_Workshop_Bench_Sangawara", "Raised-floor bench workshop "
+         "with the dust-free back room (tiled)", {"kind": "workshop", "form": "bench", "roof": "sangawara"},
+         _LOOT_TR_WORK, 30000.0),
+    # TR15 timber yard sheds
+    _trd("tr_timber_saw", "tr_timber", "Land_JP_Timber_SawShed", "Timber yard: the sawing shed (open)",
+         {"kind": "timbershed", "form": "saw"}, _LOOT_TR_YARD, 8000.0),
+    _trd("tr_timber_store", "tr_timber", "Land_JP_Timber_Store", "Timber yard: the timber store (upright timber)",
+         {"kind": "timbershed", "form": "store"}, _LOOT_TR_YARD, 9000.0),
+    _trd("tr_timber_shingle", "tr_timber", "Land_JP_Timber_ShingleShed", "Timber yard: the shingle splitter's shed",
+         {"kind": "timbershed", "form": "shingle"}, _LOOT_TR_YARD, 5000.0),
+    # TR12 foundry
+    _trd("tr_foundry_itabuki", "tr_foundry", "Land_JP_Foundry_Itabuki", "Foundry (imoji: cupola furnace, treadle "
+         "bellows, sand casting floor; board roof)", {"kind": "foundry", "roof": "itabuki"}, _LOOT_TR_WORK, 30000.0),
+    _trd("tr_foundry_sangawara", "tr_foundry", "Land_JP_Foundry_Sangawara", "Foundry (imoji, tiled)",
+         {"kind": "foundry", "roof": "sangawara"}, _LOOT_TR_WORK, 35000.0),
+    # the yard fences (K3's wall kit)
+    _trd("tr_cmp_stableyard", "tr_site", "Land_JP_Compound_StableYard", "Stable yard: board fence + wide gate",
+         {"kind": "compound", "plot": "stableyard"}, _LOOT_TR_YARD, 15000.0),
+    _trd("tr_cmp_timberyard", "tr_site", "Land_JP_Compound_TimberYard", "Timber yard: board fence + wide gate",
+         {"kind": "compound", "plot": "timberyard"}, _LOOT_TR_YARD, 25000.0),
+    _trd("tr_cmp_foundryyard", "tr_site", "Land_JP_Compound_FoundryYard", "Foundry yard: board fence + gate",
+         {"kind": "compound", "plot": "foundryyard"}, _LOOT_TR_YARD, 15000.0),
+]
+BUILDINGS += W3B_SHELLS
+
+
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
 # Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_

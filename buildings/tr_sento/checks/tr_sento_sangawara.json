@@ -1,0 +1,371 @@
+{
+ "building": "Land_JP_Sento_Sangawara",
+ "key": "tr_sento_sangawara",
+ "date": "2026-09-30",
+ "budget": "large",
+ "faces": "10686/2777/1059",
+ "door_clear_m": [
+  1.06,
+  1.06,
+  1.06
+ ],
+ "checks_n": 71,
+ "failures": 0,
+ "checks": [
+  {
+   "check": "C5 LOD set (vanilla house set)",
+   "ok": true,
+   "detail": "Resolution 1 10686, Resolution 2 2777, Resolution 3 1059, Geometry 2117, Memory 0, Roadway 12, View Geometry 2064, Fire Geometry 2082"
+  },
+  {
+   "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+   "ok": true,
+   "detail": "R1 10686, R2 2777, R3 1059"
+  },
+  {
+   "check": "Geometry properties + mass",
+   "ok": true,
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 60000 kg"
+  },
+  {
+   "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
+   "ok": true,
+   "detail": "Land_JP_Sento_Sangawara -> jp_sento_sangawara.p3d"
+  },
+  {
+   "check": "C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "273 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "264 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "267 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry penetration rvmats",
+   "ok": true,
+   "detail": "dirt, granite, pottery, wood"
+  },
+  {
+   "check": "C2 library materials only",
+   "ok": true,
+   "detail": "every path under JP\\common\\materials\\ (on disk) or vanilla penetration / roadway"
+  },
+  {
+   "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
+   "ok": true,
+   "detail": "glass paths 0; 2902 corrugated kawara field faces in LOD0; 0 individual dodai stones, 30 soseki under the posts"
+  },
+  {
+   "check": "C3 grid snap (post nodes on the 0.455 grid)",
+   "ok": true,
+   "detail": "36 posts"
+  },
+  {
+   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Entrance (bathhouse) (katabiki): bones doors1"
+  },
+  {
+   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Back door (doma) (katabiki): bones doors2"
+  },
+  {
+   "check": "C7 DoorsTwin2 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin3 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Washing floor -> bath room (the way in, D9) (katabiki): bones doors3"
+  },
+  {
+   "check": "C7 DoorsTwin3 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin4 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Window (changing room, front L) (window_slide): bones doors4"
+  },
+  {
+   "check": "C7 DoorsTwin4 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin5 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Window (changing room, front R) (window_slide): bones doors5"
+  },
+  {
+   "check": "C7 DoorsTwin5 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin6 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Steam window (bath room, high) (tsukiage): bones doors6"
+  },
+  {
+   "check": "C7 DoorsTwin6 window sweep",
+   "ok": true,
+   "detail": "tsukiage moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin7 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Window (changing room, back) (window_slide): bones doors7"
+  },
+  {
+   "check": "C7 DoorsTwin7 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin8 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Window (doma end) (window_slide): bones doors8"
+  },
+  {
+   "check": "C7 DoorsTwin8 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 Roadway sits on Geometry (+-3 cm)",
+   "ok": true,
+   "detail": "192/192 samples"
+  },
+  {
+   "check": "C7 walkable floors have Roadway at floor height",
+   "ok": true,
+   "detail": "766/766 samples over leanto, doma, datsuiba, bath"
+  },
+  {
+   "check": "C7 head room >= 2.10 over every floor",
+   "ok": true,
+   "detail": "lowest 2.44 m"
+  },
+  {
+   "check": "Loot points on Roadway floors, ranges clear of walls, every room",
+   "ok": true,
+   "detail": "13 points (leanto 2, doma 3, datsuiba 6, bath 2)"
+  },
+  {
+   "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
+   "ok": true,
+   "detail": "13 points, max diff 4.3e-07 m"
+  },
+  {
+   "check": "Placement inside the test yard, clear of the reserved spots",
+   "ok": true,
+   "detail": "not placed on the island (shipped in the PBO only)"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Entrance (bathhouse): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Entrance (bathhouse): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Back door (doma): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Back door (doma): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Washing floor -> bath room (the way in, D9): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.98 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Washing floor -> bath room (the way in, D9): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.59 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Window (changing room, front L): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin4 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Window (changing room, front L): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Window (changing room, front R): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin5 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Window (changing room, front R): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C10 DoorsTwin6 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Steam window (bath room, high): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.69 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.49 m"
+  },
+  {
+   "check": "C10 DoorsTwin6 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Steam window (bath room, high): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.64 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.83 m"
+  },
+  {
+   "check": "C10 DoorsTwin7 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Window (changing room, back): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin7 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Window (changing room, back): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C10 DoorsTwin8 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Window (doma end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.00 m"
+  },
+  {
+   "check": "C10 DoorsTwin8 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Window (doma end): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Entrance (bathhouse): 18114 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Back door (doma): 18114 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Washing floor -> bath room (the way in, D9): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin4 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Window (changing room, front L): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin5 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Window (changing room, front R): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin6 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Steam window (bath room, high): 16702 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin7 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Window (changing room, back): 17094 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin8 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Window (doma end): 17094 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C18 DoorsTwin1 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Entrance (bathhouse): doors1 u 5.32 closed -> 4.22 open, doorway 4.10..5.40"
+  },
+  {
+   "check": "C18 DoorsTwin2 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Back door (doma): doors2 u -2.87 closed -> -3.97 open, doorway -4.09..-2.79"
+  },
+  {
+   "check": "C18 DoorsTwin3 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Washing floor -> bath room (the way in, D9): doors3 u -0.14 closed -> -1.24 open, doorway -1.36..-0.06"
+  },
+  {
+   "check": "C11 envelope leak: rooms see outside only through doors / windows",
+   "ok": true,
+   "detail": "doma 10560 rays, 0 out through doors/windows, 0 LEAKS; datsuiba 11520 rays, 0 out through doors/windows, 0 LEAKS; bath 5760 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): leanto"
+  },
+  {
+   "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+   "ok": true,
+   "detail": "3 roof bodies clear"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed, fascia at every eave",
+   "ok": true,
+   "detail": "3871/3871 field points within reach of the bed; 3 eave tile sets, 3 fascia boards"
+  },
+  {
+   "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+   "ok": true,
+   "detail": "no exterior earth face looks into a room"
+  },
+  {
+   "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+   "ok": true,
+   "detail": "6787 columns over 2.5 m compared in each LOD"
+  },
+  {
+   "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+   "ok": true,
+   "detail": "21 library rvmats in the visual LODs, 5 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+  },
+  {
+   "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+   "ok": true,
+   "detail": "far-field faces R1/R2/R3 0/222/3; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+  },
+  {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 3016 touching (opposite-facing: backface-culled) and 523 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
+   "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
+   "ok": true,
+   "detail": "ODOL v55, 910030 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+  }
+ ]
+}

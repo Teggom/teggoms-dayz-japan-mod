@@ -1,0 +1,164 @@
+{
+ "id": "jp_f_bath_boiler",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_bath_boiler.p3d",
+   "class": "StaticObj_JP_F_Bath_Boiler",
+   "variant": "std",
+   "state": "cold",
+   "abandoned": true,
+   "display": "Bath boiler fire mouth, cold",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 91,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.49,
+    0.49,
+    0.0,
+    0.952,
+    0.0,
+    0.927
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.45,
+    0.0,
+    0.45,
+    0.58
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 500.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 0.75,
+     "rect": [
+      -0.35,
+      0.1,
+      0.35,
+      0.5
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.75,
+       0.3
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the bath boiler's fire mouth on the end wall outside (mount wall), cold"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_bath_boiler.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_bath_boiler_ab.p3d",
+   "class": "StaticObj_JP_F_Bath_Boiler_Ab",
+   "variant": "std",
+   "state": "ransacked",
+   "abandoned": true,
+   "display": "Bath boiler fire mouth, door off, ash raked out",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 91,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.49,
+    0.508,
+    0.0,
+    0.952,
+    0.0,
+    1.295
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.45,
+    0.0,
+    0.45,
+    0.58
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 500.0,
+   "loot_surfaces": [
+    {
+     "name": "top",
+     "kind": "shelf",
+     "y": 0.75,
+     "rect": [
+      -0.35,
+      0.1,
+      0.35,
+      0.5
+     ],
+     "range": 0.15,
+     "points": [
+      [
+       0.0,
+       0.75,
+       0.3
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the bath boiler's fire mouth on the end wall outside (mount wall), cold; the door torn off, ash raked out"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_bath_boiler_ab.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

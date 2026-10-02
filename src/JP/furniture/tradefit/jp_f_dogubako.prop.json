@@ -1,0 +1,164 @@
+{
+ "id": "jp_f_dogubako",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_dogubako.p3d",
+   "class": "StaticObj_JP_F_Dogubako",
+   "variant": "std",
+   "state": "open",
+   "abandoned": true,
+   "display": "Joiner's tool chest, open",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 105,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.45,
+    0.45,
+    0.0,
+    0.694,
+    -0.276,
+    0.19
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.45,
+    -0.19,
+    0.45,
+    0.19
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 20.0,
+   "loot_surfaces": [
+    {
+     "name": "box",
+     "kind": "shelf",
+     "y": 0.02,
+     "rect": [
+      -0.33,
+      -0.05,
+      0.33,
+      0.05
+     ],
+     "range": 0.1,
+     "points": [
+      [
+       -0.2,
+       0.02,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the joiner's tool chest, open"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_dogubako.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_dogubako_ransacked.p3d",
+   "class": "StaticObj_JP_F_Dogubako_Ransacked",
+   "variant": "std",
+   "state": "ransacked",
+   "abandoned": true,
+   "display": "Joiner's tool chest, tools strewn",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 105,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.45,
+    0.481,
+    0.0,
+    0.694,
+    -0.276,
+    1.124
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.45,
+    -0.19,
+    0.45,
+    0.19
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 20.0,
+   "loot_surfaces": [
+    {
+     "name": "box",
+     "kind": "shelf",
+     "y": 0.02,
+     "rect": [
+      -0.33,
+      -0.05,
+      0.33,
+      0.05
+     ],
+     "range": 0.1,
+     "points": [
+      [
+       -0.2,
+       0.02,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.9,
+     "measured": 0.9,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the joiner's tool chest, open; tools strewn"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_dogubako_ransacked.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

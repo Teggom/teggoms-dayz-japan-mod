@@ -3339,4 +3339,416 @@ class CfgVehicles
 		displayName="Bamboo ladles on their rack";
 		model="\JP\furniture\civicfit\jp_f_hishaku_rack.p3d";
 	};
+	// jp_f_yubune (tradefit)
+	class StaticObj_JP_F_Yubune: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bath tub (yubune), drained";
+		model="\JP\furniture\tradefit\jp_f_yubune.p3d";
+	};
+	class StaticObj_JP_F_Yubune_Staved: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bath tub, drained, a board split";
+		model="\JP\furniture\tradefit\jp_f_yubune_staved.p3d";
+	};
+	// jp_f_bath_boiler (tradefit)
+	class StaticObj_JP_F_Bath_Boiler: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bath boiler fire mouth, cold";
+		model="\JP\furniture\tradefit\jp_f_bath_boiler.p3d";
+	};
+	class StaticObj_JP_F_Bath_Boiler_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bath boiler fire mouth, door off, ash raked out";
+		model="\JP\furniture\tradefit\jp_f_bath_boiler_ab.p3d";
+	};
+	// jp_f_bath_stools (tradefit)
+	class StaticObj_JP_F_Bath_Stools: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bath stools and buckets";
+		model="\JP\furniture\tradefit\jp_f_bath_stools.p3d";
+	};
+	class StaticObj_JP_F_Bath_Stools_Tipped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bath stools and buckets, knocked over";
+		model="\JP\furniture\tradefit\jp_f_bath_stools_tipped.p3d";
+	};
+	// jp_f_bandai (tradefit)
+	class StaticObj_JP_F_Bandai: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bathhouse pay counter (bandai) with the cashbox";
+		model="\JP\furniture\tradefit\jp_f_bandai.p3d";
+	};
+	class StaticObj_JP_F_Bandai_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bathhouse pay counter, cashbox forced";
+		model="\JP\furniture\tradefit\jp_f_bandai_ab.p3d";
+	};
+	// jp_f_nagashi (tradefit)
+	class StaticObj_JP_F_Nagashi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Slatted washing floor (nagashi) over its drain";
+		model="\JP\furniture\tradefit\jp_f_nagashi.p3d";
+	};
+	class StaticObj_JP_F_Nagashi_Warped: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Washing floor, slats warped and missing";
+		model="\JP\furniture\tradefit\jp_f_nagashi_warped.p3d";
+	};
+	// jp_f_datsui_dana (tradefit)
+	class StaticObj_JP_F_Datsui_Dana: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clothes cubbies with baskets";
+		model="\JP\furniture\tradefit\jp_f_datsui_dana.p3d";
+	};
+	class StaticObj_JP_F_Datsui_Dana_Ransacked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Clothes cubbies, ransacked";
+		model="\JP\furniture\tradefit\jp_f_datsui_dana_ransacked.p3d";
+	};
+	// jp_f_tack_wall (tradefit)
+	class StaticObj_JP_F_Tack_Wall: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tack on pegs: straw horseshoes, halter, girth";
+		model="\JP\furniture\tradefit\jp_f_tack_wall.p3d";
+	};
+	class StaticObj_JP_F_Tack_Wall_Taken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tack on pegs, half taken";
+		model="\JP\furniture\tradefit\jp_f_tack_wall_taken.p3d";
+	};
+	// jp_f_ekisha_table (tradefit)
+	class StaticObj_JP_F_Ekisha_Table: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fortune-teller's table";
+		model="\JP\furniture\tradefit\jp_f_ekisha_table.p3d";
+	};
+	class StaticObj_JP_F_Ekisha_Table_Upset: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Fortune-teller's table, knocked over";
+		model="\JP\furniture\tradefit\jp_f_ekisha_table_upset.p3d";
+	};
+	// jp_f_barber_kit (tradefit)
+	class StaticObj_JP_F_Barber_Kit: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Barber's kit box with basin";
+		model="\JP\furniture\tradefit\jp_f_barber_kit.p3d";
+	};
+	class StaticObj_JP_F_Barber_Kit_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Barber's kit box, spilled";
+		model="\JP\furniture\tradefit\jp_f_barber_kit_spilled.p3d";
+	};
+	// jp_f_misemono_sign (tradefit)
+	class StaticObj_JP_F_Misemono_Sign: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Show booth signboard";
+		model="\JP\furniture\tradefit\jp_f_misemono_sign.p3d";
+	};
+	class StaticObj_JP_F_Misemono_Sign_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Show booth signboard, torn";
+		model="\JP\furniture\tradefit\jp_f_misemono_sign_torn.p3d";
+	};
+	// jp_f_show_cage (tradefit)
+	class StaticObj_JP_F_Show_Cage: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo animal cage, empty";
+		model="\JP\furniture\tradefit\jp_f_show_cage.p3d";
+	};
+	class StaticObj_JP_F_Show_Cage_Open: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo animal cage, bars broken out";
+		model="\JP\furniture\tradefit\jp_f_show_cage_open.p3d";
+	};
+	// jp_f_kezuridai (tradefit)
+	class StaticObj_JP_F_Kezuridai: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Planing beam with a plane";
+		model="\JP\furniture\tradefit\jp_f_kezuridai.p3d";
+	};
+	class StaticObj_JP_F_Kezuridai_Knocked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Planing beam, plane knocked off";
+		model="\JP\furniture\tradefit\jp_f_kezuridai_knocked.p3d";
+	};
+	// jp_f_sawhorses (tradefit)
+	class StaticObj_JP_F_Sawhorses: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sawhorses with a board";
+		model="\JP\furniture\tradefit\jp_f_sawhorses.p3d";
+	};
+	class StaticObj_JP_F_Sawhorses_Knocked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sawhorses, one knocked over";
+		model="\JP\furniture\tradefit\jp_f_sawhorses_knocked.p3d";
+	};
+	// jp_f_dogubako (tradefit)
+	class StaticObj_JP_F_Dogubako: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Joiner's tool chest, open";
+		model="\JP\furniture\tradefit\jp_f_dogubako.p3d";
+	};
+	class StaticObj_JP_F_Dogubako_Ransacked: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Joiner's tool chest, tools strewn";
+		model="\JP\furniture\tradefit\jp_f_dogubako_ransacked.p3d";
+	};
+	// jp_f_frames_lean (tradefit)
+	class StaticObj_JP_F_Frames_Lean: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shoji and door frames leaning on the wall";
+		model="\JP\furniture\tradefit\jp_f_frames_lean.p3d";
+	};
+	// jp_f_rokuro (tradefit)
+	class StaticObj_JP_F_Rokuro: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Woodturner's strap lathe";
+		model="\JP\furniture\tradefit\jp_f_rokuro.p3d";
+	};
+	class StaticObj_JP_F_Rokuro_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Woodturner's strap lathe, strap snapped";
+		model="\JP\furniture\tradefit\jp_f_rokuro_broken.p3d";
+	};
+	// jp_f_soroban_tray (tradefit)
+	class StaticObj_JP_F_Soroban_Tray: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Abacus maker's tray";
+		model="\JP\furniture\tradefit\jp_f_soroban_tray.p3d";
+	};
+	// jp_f_bamboo_stock (tradefit)
+	class StaticObj_JP_F_Bamboo_Stock: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo poles stood on the wall";
+		model="\JP\furniture\tradefit\jp_f_bamboo_stock.p3d";
+	};
+	class StaticObj_JP_F_Bamboo_Stock_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bamboo poles, fallen";
+		model="\JP\furniture\tradefit\jp_f_bamboo_stock_scattered.p3d";
+	};
+	// jp_f_basket_work (tradefit)
+	class StaticObj_JP_F_Basket_Work: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Basket maker's place";
+		model="\JP\furniture\tradefit\jp_f_basket_work.p3d";
+	};
+	class StaticObj_JP_F_Basket_Work_Abandoned: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Basket maker's place, kicked over";
+		model="\JP\furniture\tradefit\jp_f_basket_work_abandoned.p3d";
+	};
+	// jp_f_togidai (tradefit)
+	class StaticObj_JP_F_Togidai: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sword polisher's stand";
+		model="\JP\furniture\tradefit\jp_f_togidai.p3d";
+	};
+	class StaticObj_JP_F_Togidai_Upset: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sword polisher's stand, upset";
+		model="\JP\furniture\tradefit\jp_f_togidai_upset.p3d";
+	};
+	// jp_f_urushi_tray (tradefit)
+	class StaticObj_JP_F_Urushi_Tray: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lacquerer's work board";
+		model="\JP\furniture\tradefit\jp_f_urushi_tray.p3d";
+	};
+	class StaticObj_JP_F_Urushi_Tray_Spilled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lacquerer's work board, lacquer spilt";
+		model="\JP\furniture\tradefit\jp_f_urushi_tray_spilled.p3d";
+	};
+	// jp_f_kinko_bench (tradefit)
+	class StaticObj_JP_F_Kinko_Bench: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sword-fittings maker's bench";
+		model="\JP\furniture\tradefit\jp_f_kinko_bench.p3d";
+	};
+	class StaticObj_JP_F_Kinko_Bench_Taken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sword-fittings maker's bench, guards taken";
+		model="\JP\furniture\tradefit\jp_f_kinko_bench_taken.p3d";
+	};
+	// jp_f_saw_trestle (tradefit)
+	class StaticObj_JP_F_Saw_Trestle: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sawyer's trestle with the log and the big saw";
+		model="\JP\furniture\tradefit\jp_f_saw_trestle.p3d";
+	};
+	class StaticObj_JP_F_Saw_Trestle_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sawyer's trestle, the log rolled off";
+		model="\JP\furniture\tradefit\jp_f_saw_trestle_fallen.p3d";
+	};
+	// jp_f_log_stack (tradefit)
+	class StaticObj_JP_F_Log_Stack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Log stack on bearers";
+		model="\JP\furniture\tradefit\jp_f_log_stack.p3d";
+	};
+	class StaticObj_JP_F_Log_Stack_Collapsed: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Log stack, top rolled down";
+		model="\JP\furniture\tradefit\jp_f_log_stack_collapsed.p3d";
+	};
+	// jp_f_timber_upright (tradefit)
+	class StaticObj_JP_F_Timber_Upright: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Timber stood upright on its rack";
+		model="\JP\furniture\tradefit\jp_f_timber_upright.p3d";
+	};
+	class StaticObj_JP_F_Timber_Upright_Half: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Timber rack, half taken";
+		model="\JP\furniture\tradefit\jp_f_timber_upright_half.p3d";
+	};
+	// jp_f_plank_stack (tradefit)
+	class StaticObj_JP_F_Plank_Stack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Planks air-drying on bearers";
+		model="\JP\furniture\tradefit\jp_f_plank_stack.p3d";
+	};
+	class StaticObj_JP_F_Plank_Stack_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Plank stack, pulled down";
+		model="\JP\furniture\tradefit\jp_f_plank_stack_scattered.p3d";
+	};
+	// jp_f_shingle_split (tradefit)
+	class StaticObj_JP_F_Shingle_Split: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shingle splitting block, froe, bundles";
+		model="\JP\furniture\tradefit\jp_f_shingle_split.p3d";
+	};
+	class StaticObj_JP_F_Shingle_Split_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shingle splitting block, shingles strewn";
+		model="\JP\furniture\tradefit\jp_f_shingle_split_scattered.p3d";
+	};
+	// jp_f_koshikiro (tradefit)
+	class StaticObj_JP_F_Koshikiro: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cupola furnace (koshiki-ro), cold";
+		model="\JP\furniture\tradefit\jp_f_koshikiro.p3d";
+	};
+	class StaticObj_JP_F_Koshikiro_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cupola furnace, top ring broken";
+		model="\JP\furniture\tradefit\jp_f_koshikiro_fallen.p3d";
+	};
+	// jp_f_fumifuigo (tradefit)
+	class StaticObj_JP_F_Fumifuigo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Treadle bellows (fumi-fuigo)";
+		model="\JP\furniture\tradefit\jp_f_fumifuigo.p3d";
+	};
+	class StaticObj_JP_F_Fumifuigo_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Treadle bellows, board split off";
+		model="\JP\furniture\tradefit\jp_f_fumifuigo_broken.p3d";
+	};
+	// jp_f_imono_moulds (tradefit)
+	class StaticObj_JP_F_Imono_Moulds: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sand casting bed with clay moulds";
+		model="\JP\furniture\tradefit\jp_f_imono_moulds.p3d";
+	};
+	class StaticObj_JP_F_Imono_Moulds_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Casting bed, a mould knocked open";
+		model="\JP\furniture\tradefit\jp_f_imono_moulds_broken.p3d";
+	};
+	// jp_f_toribe_rack (tradefit)
+	class StaticObj_JP_F_Toribe_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Casting ladles on a wall rack";
+		model="\JP\furniture\tradefit\jp_f_toribe_rack.p3d";
+	};
+	// jp_f_cast_pots (tradefit)
+	class StaticObj_JP_F_Cast_Pots: HouseNoDestruct
+	{
+		scope=1;
+		displayName="New cast-iron pots and kettles on a rack";
+		model="\JP\furniture\tradefit\jp_f_cast_pots.p3d";
+	};
+	class StaticObj_JP_F_Cast_Pots_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cast-iron pots, knocked off the rack";
+		model="\JP\furniture\tradefit\jp_f_cast_pots_scattered.p3d";
+	};
+	// jp_f_scrap_heap (tradefit)
+	class StaticObj_JP_F_Scrap_Heap: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Scrap iron heap";
+		model="\JP\furniture\tradefit\jp_f_scrap_heap.p3d";
+	};
+	// jp_f_bell_mould (tradefit)
+	class StaticObj_JP_F_Bell_Mould: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bell casting mould in its pit";
+		model="\JP\furniture\tradefit\jp_f_bell_mould.p3d";
+	};
 };

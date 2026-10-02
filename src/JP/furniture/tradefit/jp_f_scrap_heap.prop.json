@@ -1,0 +1,73 @@
+{
+ "id": "jp_f_scrap_heap",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_scrap_heap.p3d",
+   "class": "StaticObj_JP_F_Scrap_Heap",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Scrap iron heap",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 98,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.75,
+    0.75,
+    0.0,
+    0.3,
+    -0.55,
+    0.55
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.55,
+    -0.38,
+    0.55,
+    0.38
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 200.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.1,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "scrap iron for the melt (visual heap; loot around it)"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_scrap_heap.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

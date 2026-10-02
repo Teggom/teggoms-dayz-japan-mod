@@ -1,0 +1,164 @@
+{
+ "id": "jp_f_basket_work",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_basket_work.p3d",
+   "class": "StaticObj_JP_F_Basket_Work",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Basket maker's place",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 383,
+    "Resolution 2": 6,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.9,
+    0.6,
+    0.0,
+    0.361,
+    -0.55,
+    0.45
+   ],
+   "collision": true,
+   "footprint_xz": [
+    0.078,
+    -0.522,
+    0.522,
+    -0.078
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 10.0,
+   "loot_surfaces": [
+    {
+     "name": "mat",
+     "kind": "floor",
+     "y": 0.012,
+     "rect": [
+      -0.45,
+      0.3,
+      0.45,
+      0.4
+     ],
+     "range": 0.12,
+     "points": [
+      [
+       0.25,
+       0.012,
+       0.35
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the basket maker's place: half-woven basket, nata, soaking tub, trays"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_basket_work.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_basket_work_abandoned.p3d",
+   "class": "StaticObj_JP_F_Basket_Work_Abandoned",
+   "variant": "std",
+   "state": "abandoned",
+   "abandoned": true,
+   "display": "Basket maker's place, kicked over",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 383,
+    "Resolution 2": 6,
+    "Geometry": 14,
+    "View Geometry": 14,
+    "Fire Geometry": 14
+   },
+   "bbox": [
+    -0.9,
+    0.6,
+    0.0,
+    0.532,
+    -0.55,
+    0.452
+   ],
+   "collision": true,
+   "footprint_xz": [
+    0.078,
+    -0.522,
+    0.522,
+    -0.078
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 10.0,
+   "loot_surfaces": [
+    {
+     "name": "mat",
+     "kind": "floor",
+     "y": 0.012,
+     "rect": [
+      -0.45,
+      0.3,
+      0.45,
+      0.4
+     ],
+     "range": 0.12,
+     "points": [
+      [
+       0.25,
+       0.012,
+       0.35
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the basket maker's place: half-woven basket, nata, soaking tub, trays; the basket kicked over"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_basket_work_abandoned.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

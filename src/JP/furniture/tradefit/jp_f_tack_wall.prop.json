@@ -1,0 +1,108 @@
+{
+ "id": "jp_f_tack_wall",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_tack_wall.p3d",
+   "class": "StaticObj_JP_F_Tack_Wall",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Tack on pegs: straw horseshoes, halter, girth",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 284,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.7,
+    0.7,
+    0.75,
+    1.55,
+    0.0,
+    0.098
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.4,
+     "measured": 1.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tack on pegs: straw horseshoes, rope halter, girth, a straw saddle pad (mount wall)"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_tack_wall.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_tack_wall_taken.p3d",
+   "class": "StaticObj_JP_F_Tack_Wall_Taken",
+   "variant": "std",
+   "state": "taken",
+   "abandoned": true,
+   "display": "Tack on pegs, half taken",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 202,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.7,
+    0.7,
+    0.75,
+    1.55,
+    0.0,
+    0.098
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.4,
+     "measured": 1.4,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "tack on pegs: straw horseshoes, rope halter, girth, a straw saddle pad (mount wall); half taken"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_tack_wall_taken.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

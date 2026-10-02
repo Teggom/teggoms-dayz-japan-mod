@@ -1,0 +1,149 @@
+{
+ "id": "jp_f_sawhorses",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_sawhorses.p3d",
+   "class": "StaticObj_JP_F_Sawhorses",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Sawhorses with a board",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 90,
+    "Resolution 2": 6,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -1.1,
+    1.1,
+    0.0,
+    0.58,
+    -0.4,
+    0.4
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -1.1,
+    -0.4,
+    1.1,
+    0.4
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 25.0,
+   "loot_surfaces": [
+    {
+     "name": "board",
+     "kind": "shelf",
+     "y": 0.58,
+     "rect": [
+      -0.95,
+      -0.08,
+      0.95,
+      0.08
+     ],
+     "range": 0.12,
+     "points": [
+      [
+       -0.475,
+       0.58,
+       0.0
+      ],
+      [
+       0.475,
+       0.58,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.5800000000000001,
+     "measured": 0.58,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "two sawhorses with a board"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_sawhorses.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_sawhorses_knocked.p3d",
+   "class": "StaticObj_JP_F_Sawhorses_Knocked",
+   "variant": "std",
+   "state": "knocked",
+   "abandoned": true,
+   "display": "Sawhorses, one knocked over",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 90,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -1.1,
+    1.208,
+    0.0,
+    0.643,
+    -0.55,
+    0.4
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.75,
+    -0.4,
+    -0.55,
+    0.4
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 25.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.5800000000000001,
+     "measured": 0.58,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "two sawhorses with a board (one knocked over, the board slid down)"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_sawhorses_knocked.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

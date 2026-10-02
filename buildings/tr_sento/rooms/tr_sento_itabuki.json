@@ -1,0 +1,186 @@
+{
+ "building": "Land_JP_Sento_Itabuki",
+ "p3d": "\\JP\\buildings\\tr_sento\\jp_sento_itabuki.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/trade.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "leanto",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    10.99,
+    12.59,
+    -5.31,
+    -0.15
+   ],
+   "doors": [],
+   "note": "open lean-to on the right gable (woodshed / work space)",
+   "enclosed": false,
+   "rect_model": [
+    5.53,
+    7.13,
+    -2.58,
+    2.58
+   ],
+   "fittings": [
+    {
+     "kind": "boiler",
+     "room": "leanto",
+     "note": "the boiler's fire mouth on the end wall outside (prop) + firewood stacks",
+     "centre": [
+      5.84,
+      -1.17
+     ],
+     "size": [
+      0.55,
+      0.9
+     ],
+     "yaw": 90.0
+    }
+   ]
+  },
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    2.66,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "entrance doma: the noren, the bandai at the step-up, the footwear shelf, the back door",
+   "enclosed": true,
+   "rect_model": [
+    -5.4,
+    -2.8,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "bandai",
+     "room": "doma",
+     "note": "the bandai: the attendant's pay counter at the step-up, the cashbox on it (prop)",
+     "centre": [
+      -3.15,
+      1.95
+     ],
+     "size": [
+      0.7,
+      0.95
+     ],
+     "yaw": 90.0
+    },
+    {
+     "kind": "geta_shelf",
+     "room": "doma",
+     "note": "the footwear shelf on the doma end wall",
+     "rect": [
+      -5.38,
+      -5.0,
+      -2.33,
+      0.455
+     ]
+    }
+   ]
+  },
+  {
+   "name": "datsuiba",
+   "tag": "bath",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    2.8,
+    8.129999999999999,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "changing room + washing floor (nagashi) on one board floor, open to the doma over the kamachi",
+   "enclosed": true,
+   "rect_model": [
+    -2.66,
+    2.67,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "clothes_shelves",
+     "room": "datsuiba",
+     "note": "clothes shelves / baskets on the changing room's back wall",
+     "rect": [
+      -2.43,
+      1.13,
+      -2.65,
+      -2.27
+     ]
+    },
+    {
+     "kind": "nagashi",
+     "room": "datsuiba",
+     "note": "the nagashi: the slatted washing floor over its drain on the bath side (walk-on prop)",
+     "rect": [
+      1.28,
+      2.62,
+      -2.57,
+      2.33
+     ]
+    }
+   ]
+  },
+  {
+   "name": "bath",
+   "tag": "bath",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    8.25,
+    10.86,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "the dim bath room behind the zakuro-guchi: the tub on the end wall, one high steam window",
+   "enclosed": true,
+   "rect_model": [
+    2.79,
+    5.4,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "tub",
+     "room": "bath",
+     "note": "the yubune (tub) against the end wall (prop); the boiler under it is fired from the lean-to outside",
+     "rect": [
+      3.85,
+      5.38,
+      -2.47,
+      0.13
+     ],
+     "y": 0.4
+    }
+   ]
+  }
+ ],
+ "loot_points": 13,
+ "loot_by_room": {
+  "leanto": 2,
+  "doma": 3,
+  "datsuiba": 6,
+  "bath": 2
+ }
+}

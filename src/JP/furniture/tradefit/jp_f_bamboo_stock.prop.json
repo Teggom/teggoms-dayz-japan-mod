@@ -1,0 +1,108 @@
+{
+ "id": "jp_f_bamboo_stock",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_bamboo_stock.p3d",
+   "class": "StaticObj_JP_F_Bamboo_Stock",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Bamboo poles stood on the wall",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 188,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.65,
+    1.6,
+    0.0,
+    2.978,
+    0.0,
+    0.6
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 2.8,
+     "measured": 2.8,
+     "tol": 0.3,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bamboo poles stood on the wall + split strips (mount wall; visual)"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_bamboo_stock.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_bamboo_stock_scattered.p3d",
+   "class": "StaticObj_JP_F_Bamboo_Stock_Scattered",
+   "variant": "std",
+   "state": "fallen",
+   "abandoned": true,
+   "display": "Bamboo poles, fallen",
+   "anchor": "wall",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 188,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -0.65,
+    1.6,
+    0.0,
+    2.93,
+    0.0,
+    3.055
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 2.8,
+     "measured": 2.8,
+     "tol": 0.3,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "bamboo poles stood on the wall + split strips (mount wall; visual); poles fallen"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_bamboo_stock_scattered.p3d",
+   "mount": "wall",
+   "mount_note": "on a wall: origin on the floor below, the wall face is z = 0 (anchor 'wall'); height is built in; a shop-front piece (kanban, sugidama, shape sign): the FACADE plane z = 0, +z = the street"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

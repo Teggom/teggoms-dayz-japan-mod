@@ -1,0 +1,166 @@
+{
+ "id": "jp_f_koshikiro",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_koshikiro.p3d",
+   "class": "StaticObj_JP_F_Koshikiro",
+   "variant": "std",
+   "state": "cold",
+   "abandoned": true,
+   "display": "Cupola furnace (koshiki-ro), cold",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 416,
+    "Resolution 2": 30,
+    "Resolution 3": 6,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.7,
+    0.55,
+    0.0,
+    1.5,
+    -0.53,
+    1.1
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.5,
+    -0.5,
+    0.5,
+    0.5
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 900.0,
+   "loot_surfaces": [
+    {
+     "name": "base",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      0.36,
+      -0.4,
+      0.46,
+      0.4
+     ],
+     "range": 0.05,
+     "points": [
+      [
+       0.44,
+       0.3,
+       0.44
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 1.5,
+     "measured": 1.5,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the koshiki-ro cupola furnace, cold: stacked clay rings, tuyere on -x, tap spout on +z"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_koshikiro.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_koshikiro_fallen.p3d",
+   "class": "StaticObj_JP_F_Koshikiro_Fallen",
+   "variant": "std",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Cupola furnace, top ring broken",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 368,
+    "Resolution 2": 30,
+    "Resolution 3": 6,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.7,
+    1.301,
+    0.0,
+    1.1,
+    -0.987,
+    1.1
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.5,
+    -0.5,
+    0.5,
+    0.5
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 900.0,
+   "loot_surfaces": [
+    {
+     "name": "base",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      0.36,
+      -0.4,
+      0.46,
+      0.4
+     ],
+     "range": 0.05,
+     "points": [
+      [
+       0.44,
+       0.3,
+       0.44
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the koshiki-ro cupola furnace, cold: stacked clay rings, tuyere on -x, tap spout on +z; the top ring knocked off and broken"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_koshikiro_fallen.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

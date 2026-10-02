@@ -1,0 +1,48 @@
+{
+ "key": "tr_timber_store",
+ "class": "Land_JP_Timber_Store",
+ "name": "jp_timber_store",
+ "model": "\\JP\\buildings\\tr_timber\\jp_timber_store.p3d",
+ "model_dir": "tr_timber",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 2655,
+  "Resolution 2": 611,
+  "Resolution 3": 251,
+  "Geometry": 737,
+  "Memory": 0,
+  "Roadway": 4,
+  "View Geometry": 737,
+  "Fire Geometry": 737
+ },
+ "loot_points": 3,
+ "config_class": "\tclass Land_JP_Timber_Store: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Timber yard: the timber store (upright timber)\";\n\t\tmodel=\"\\JP\\buildings\\tr_timber\\jp_timber_store.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_timber_store_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_timber_store: Default\n\t{\n\t\tskeletonName=\"jp_timber_store_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Timber_Store\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.045000 0.050000 2.120000\" range=\"1.060000\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.045000 0.050000 -0.000000\" range=\"1.060000\" height=\"2.000000\" />",
+  "\t\t\t\t\t\t<point pos=\"-0.045000 0.050000 -2.120000\" range=\"1.060000\" height=\"2.000000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "timbershed",
+  "form": "store"
+ },
+ "bbox": [
+  -4.06,
+  4.06,
+  -0.272,
+  4.614,
+  -2.176,
+  2.176
+ ]
+}

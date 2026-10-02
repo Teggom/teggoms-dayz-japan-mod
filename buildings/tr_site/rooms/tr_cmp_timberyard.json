@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Compound_TimberYard",
+ "p3d": "\\JP\\buildings\\tr_site\\jp_compound_timberyard.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/trade.py; 'fittings' = irori pit (rect, hook point), kamado spot, stall, tokonoma, hidana, tub ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.0,
+   "rect_kit": [
+    13.800000000000002,
+    16.230000000000004,
+    -1.1,
+    1.3
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kabuki)",
+   "enclosed": false,
+   "rect_model": [
+    0.15,
+    2.58,
+    -11.11,
+    -8.71
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}

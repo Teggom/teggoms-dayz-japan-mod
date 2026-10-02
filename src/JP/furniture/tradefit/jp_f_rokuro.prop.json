@@ -1,0 +1,164 @@
+{
+ "id": "jp_f_rokuro",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_rokuro.p3d",
+   "class": "StaticObj_JP_F_Rokuro",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Woodturner's strap lathe",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 353,
+    "Resolution 2": 6,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.55,
+    0.95,
+    0.0,
+    0.555,
+    -0.25,
+    0.67
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.55,
+    -0.25,
+    0.95,
+    0.25
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 50.0,
+   "loot_surfaces": [
+    {
+     "name": "seat",
+     "kind": "shelf",
+     "y": 0.18,
+     "rect": [
+      0.62,
+      -0.15,
+      0.88,
+      0.15
+     ],
+     "range": 0.1,
+     "points": [
+      [
+       0.75,
+       0.18,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the woodturner's strap lathe with a bowl blank, the turner's seat, turned bowls"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_rokuro.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_rokuro_broken.p3d",
+   "class": "StaticObj_JP_F_Rokuro_Broken",
+   "variant": "std",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Woodturner's strap lathe, strap snapped",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 348,
+    "Resolution 2": 6,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.55,
+    0.95,
+    0.0,
+    0.54,
+    -0.25,
+    0.801
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.55,
+    -0.25,
+    0.95,
+    0.25
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 50.0,
+   "loot_surfaces": [
+    {
+     "name": "seat",
+     "kind": "shelf",
+     "y": 0.18,
+     "rect": [
+      0.62,
+      -0.15,
+      0.88,
+      0.15
+     ],
+     "range": 0.1,
+     "points": [
+      [
+       0.75,
+       0.18,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "L",
+     "expected": 1.1,
+     "measured": 1.1,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the woodturner's strap lathe with a bowl blank, the turner's seat, turned bowls; strap snapped, blank off the chuck"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_rokuro_broken.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

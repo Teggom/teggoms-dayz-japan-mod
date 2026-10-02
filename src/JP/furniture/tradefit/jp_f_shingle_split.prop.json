@@ -1,0 +1,164 @@
+{
+ "id": "jp_f_shingle_split",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_shingle_split.p3d",
+   "class": "StaticObj_JP_F_Shingle_Split",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shingle splitting block, froe, bundles",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 172,
+    "Resolution 2": 6,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -1.002,
+    0.7,
+    0.0,
+    0.8,
+    -0.3,
+    0.801
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -1.0,
+    -0.25,
+    0.231,
+    0.231
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 80.0,
+   "loot_surfaces": [
+    {
+     "name": "block",
+     "kind": "shelf",
+     "y": 0.45,
+     "rect": [
+      0.08,
+      -0.15,
+      0.2,
+      0.1
+     ],
+     "range": 0.06,
+     "points": [
+      [
+       0.14,
+       0.45,
+       -0.1
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "block_h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the shingle splitting block with the froe in a bolt, mallet, shingles and bundles"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_shingle_split.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_shingle_split_scattered.p3d",
+   "class": "StaticObj_JP_F_Shingle_Split_Scattered",
+   "variant": "std",
+   "state": "scattered",
+   "abandoned": true,
+   "display": "Shingle splitting block, shingles strewn",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 184,
+    "Resolution 2": 6,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -1.002,
+    0.7,
+    0.0,
+    0.8,
+    -0.3,
+    0.801
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -1.0,
+    -0.25,
+    0.231,
+    0.231
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 80.0,
+   "loot_surfaces": [
+    {
+     "name": "block",
+     "kind": "shelf",
+     "y": 0.45,
+     "rect": [
+      0.08,
+      -0.15,
+      0.2,
+      0.1
+     ],
+     "range": 0.06,
+     "points": [
+      [
+       0.14,
+       0.45,
+       -0.1
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "block_h",
+     "expected": 0.45,
+     "measured": 0.45,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the shingle splitting block with the froe in a bolt, mallet, shingles and bundles; bundles taken, shingles strewn"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_shingle_split_scattered.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

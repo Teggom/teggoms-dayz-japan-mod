@@ -1,0 +1,234 @@
+{
+ "building": "Land_JP_Foundry_Sangawara",
+ "key": "tr_foundry_sangawara",
+ "date": "2026-09-30",
+ "budget": "standard",
+ "faces": "6080/1615/692",
+ "door_clear_m": [
+  1.06
+ ],
+ "checks_n": 44,
+ "failures": 0,
+ "checks": [
+  {
+   "check": "C5 LOD set (vanilla house set)",
+   "ok": true,
+   "detail": "Resolution 1 6080, Resolution 2 1615, Resolution 3 692, Geometry 1108, Memory 0, Roadway 5, View Geometry 1090, Fire Geometry 1096"
+  },
+  {
+   "check": "C5 face budget (standard: 6000 / 2300 / 800)",
+   "ok": true,
+   "detail": "R1 6080, R2 1615, R3 692 | OVER BUDGET +1.3 % (deliberate: a tiled 4 x 3 ken foundry with the 1.5-ken louvred smoke vent (kawara geometry))"
+  },
+  {
+   "check": "Geometry properties + mass",
+   "ok": true,
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 35000 kg"
+  },
+  {
+   "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
+   "ok": true,
+   "detail": "Land_JP_Foundry_Sangawara -> jp_foundry_sangawara.p3d"
+  },
+  {
+   "check": "C7 Geometry closed + convex",
+   "ok": true,
+   "detail": "139 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 View Geometry closed + convex",
+   "ok": true,
+   "detail": "136 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry closed + convex",
+   "ok": true,
+   "detail": "137 components, 0 bad, 0 faces outside components"
+  },
+  {
+   "check": "C7 Fire Geometry penetration rvmats",
+   "ok": true,
+   "detail": "dirt, granite, pottery, wood"
+  },
+  {
+   "check": "C2 library materials only",
+   "ok": true,
+   "detail": "every path under JP\\common\\materials\\ (on disk) or vanilla penetration / roadway"
+  },
+  {
+   "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
+   "ok": true,
+   "detail": "glass paths 0; 1708 corrugated kawara field faces in LOD0; 0 individual dodai stones, 17 soseki under the posts"
+  },
+  {
+   "check": "C3 grid snap (post nodes on the 0.455 grid)",
+   "ok": true,
+   "detail": "17 posts"
+  },
+  {
+   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Back door (charcoal + scrap yard) (katabiki): bones doors1"
+  },
+  {
+   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
+   "ok": true,
+   "detail": "leaves slide 1.10 m without touching other geometry; open clear 1.06 m, head 2.00 m"
+  },
+  {
+   "check": "C7 DoorsTwin2 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Window (front) (window_slide): bones doors2"
+  },
+  {
+   "check": "C7 DoorsTwin2 window sweep",
+   "ok": true,
+   "detail": "window_slide moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 DoorsTwin3 selections, memory, model.cfg, config",
+   "ok": true,
+   "detail": "Window (end, push-up) (tsukiage): bones doors3"
+  },
+  {
+   "check": "C7 DoorsTwin3 window sweep",
+   "ok": true,
+   "detail": "tsukiage moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C7 Roadway sits on Geometry (+-3 cm)",
+   "ok": true,
+   "detail": "80/80 samples"
+  },
+  {
+   "check": "C7 walkable floors have Roadway at floor height",
+   "ok": true,
+   "detail": "194/194 samples over doma"
+  },
+  {
+   "check": "C7 head room >= 2.10 over every floor",
+   "ok": true,
+   "detail": "lowest 3.30 m"
+  },
+  {
+   "check": "Loot points on Roadway floors, ranges clear of walls, every room",
+   "ok": true,
+   "detail": "8 points (doma 8)"
+  },
+  {
+   "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
+   "ok": true,
+   "detail": "8 points, max diff 4.3e-07 m"
+  },
+  {
+   "check": "Placement inside the test yard, clear of the reserved spots",
+   "ok": true,
+   "detail": "not placed on the island (shipped in the PBO only)"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Back door (charcoal + scrap yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.94 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.38 m"
+  },
+  {
+   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Back door (charcoal + scrap yard): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.70 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from its leaf side (open)",
+   "ok": true,
+   "detail": "Window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.89 m"
+  },
+  {
+   "check": "C10 DoorsTwin2 reachable from its leaf side (closed)",
+   "ok": true,
+   "detail": "Window (front): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.80 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (open)",
+   "ok": true,
+   "detail": "Window (end, push-up): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.22 m; far: leaf hit first from 10/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.47 m"
+  },
+  {
+   "check": "C10 DoorsTwin3 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "Window (end, push-up): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.74 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 0.92 m"
+  },
+  {
+   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Back door (charcoal + scrap yard): 17682 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Window (front): 16662 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C17 DoorsTwin3 closed: no see-through slit at a jamb or meeting stile",
+   "ok": true,
+   "detail": "Window (end, push-up): 16264 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+  },
+  {
+   "check": "C18 DoorsTwin1 pulls on the stub edge (in the doorway when open)",
+   "ok": true,
+   "detail": "Back door (charcoal + scrap yard): doors1 u 3.50 closed -> 2.40 open, doorway 2.28..3.58"
+  },
+  {
+   "check": "C11 envelope leak: rooms see outside only through doors / windows",
+   "ok": true,
+   "detail": "open-sided by design (not checked): doma"
+  },
+  {
+   "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+   "ok": true,
+   "detail": "2 roof bodies clear"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed, fascia at every eave",
+   "ok": true,
+   "detail": "2278/2278 field points within reach of the bed; 2 eave tile sets, 2 fascia boards"
+  },
+  {
+   "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+   "ok": true,
+   "detail": "no exterior earth face looks into a room"
+  },
+  {
+   "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+   "ok": true,
+   "detail": "4216 columns over 2.5 m compared in each LOD"
+  },
+  {
+   "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+   "ok": true,
+   "detail": "16 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+  },
+  {
+   "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+   "ok": true,
+   "detail": "far-field faces R1/R2/R3 0/124/2; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+  },
+  {
+   "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+   "ok": true,
+   "detail": "0 visible same-facing pairs; 1704 touching (opposite-facing: backface-culled) and 296 covered / drawn-identically pairs not judged"
+  },
+  {
+   "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+   "ok": true,
+   "detail": "every interior wall top closed"
+  },
+  {
+   "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+   "ok": true,
+   "detail": "every interior wall panel end closed"
+  },
+  {
+   "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
+   "ok": true,
+   "detail": "ODOL v55, 524866 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+  }
+ ]
+}

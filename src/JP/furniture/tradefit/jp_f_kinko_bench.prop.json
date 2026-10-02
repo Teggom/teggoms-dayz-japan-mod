@@ -1,0 +1,164 @@
+{
+ "id": "jp_f_kinko_bench",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_kinko_bench.p3d",
+   "class": "StaticObj_JP_F_Kinko_Bench",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Sword-fittings maker's bench",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 308,
+    "Resolution 2": 6,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.45,
+    0.95,
+    0.0,
+    0.42,
+    -0.23,
+    0.425
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.45,
+    -0.225,
+    0.916,
+    0.225
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 20.0,
+   "loot_surfaces": [
+    {
+     "name": "desk",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      -0.4,
+      -0.17,
+      -0.25,
+      0.0
+     ],
+     "range": 0.06,
+     "points": [
+      [
+       -0.33,
+       0.3,
+       -0.1
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the sword-fittings maker's bench: pitch bowl, punches, files, guards, the little brazier forge"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_kinko_bench.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_kinko_bench_taken.p3d",
+   "class": "StaticObj_JP_F_Kinko_Bench_Taken",
+   "variant": "std",
+   "state": "taken",
+   "abandoned": true,
+   "display": "Sword-fittings maker's bench, guards taken",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 236,
+    "Resolution 2": 6,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.45,
+    0.95,
+    0.0,
+    0.42,
+    -0.23,
+    0.425
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.45,
+    -0.225,
+    0.916,
+    0.225
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 20.0,
+   "loot_surfaces": [
+    {
+     "name": "desk",
+     "kind": "shelf",
+     "y": 0.3,
+     "rect": [
+      -0.4,
+      -0.17,
+      -0.25,
+      0.0
+     ],
+     "range": 0.06,
+     "points": [
+      [
+       -0.33,
+       0.3,
+       -0.1
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "h",
+     "expected": 0.3,
+     "measured": 0.3,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the sword-fittings maker's bench: pitch bowl, punches, files, guards, the little brazier forge; the finished guards taken"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_kinko_bench_taken.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}

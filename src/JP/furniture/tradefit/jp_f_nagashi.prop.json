@@ -1,0 +1,176 @@
+{
+ "id": "jp_f_nagashi",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "tradefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_nagashi.p3d",
+   "class": "StaticObj_JP_F_Nagashi",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Slatted washing floor (nagashi) over its drain",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 135,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.834,
+    0.65,
+    0.0,
+    0.07,
+    -1.2,
+    1.2
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.65,
+    -1.2,
+    0.65,
+    1.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 50.0,
+   "loot_surfaces": [
+    {
+     "name": "slats",
+     "kind": "floor",
+     "y": 0.06,
+     "rect": [
+      -0.5,
+      -1.0,
+      0.5,
+      1.0
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       0.06,
+       -0.2022
+      ],
+      [
+       0.0,
+       0.06,
+       0.5844
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.48,
+     "measured": 1.48,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the slatted washing floor (nagashi) over its drain gutter; walk-on"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_nagashi.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\tradefit\\jp_f_nagashi_warped.p3d",
+   "class": "StaticObj_JP_F_Nagashi_Warped",
+   "variant": "std",
+   "state": "warped",
+   "abandoned": true,
+   "display": "Washing floor, slats warped and missing",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 117,
+    "Resolution 2": 6,
+    "Geometry": 6,
+    "Roadway": 1,
+    "View Geometry": 6,
+    "Fire Geometry": 6
+   },
+   "bbox": [
+    -0.834,
+    0.65,
+    0.0,
+    0.07,
+    -1.2,
+    1.2
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.65,
+    -1.2,
+    0.65,
+    1.2
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": true,
+   "mass_kg": 50.0,
+   "loot_surfaces": [
+    {
+     "name": "slats",
+     "kind": "floor",
+     "y": 0.06,
+     "rect": [
+      -0.5,
+      -1.0,
+      0.5,
+      1.0
+     ],
+     "range": 0.2,
+     "points": [
+      [
+       0.0,
+       0.06,
+       -0.2022
+      ],
+      [
+       0.0,
+       0.06,
+       0.5844
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 1.48,
+     "measured": 1.48,
+     "tol": 0.005,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the slatted washing floor (nagashi) over its drain gutter; walk-on; slats warped, three missing"
+   ],
+   "master": "spikes/W3B/out/tradefit/jp_f_nagashi_warped.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3B/build_w3b.py (agent W3B, 2026-10-02) on spikes/B3a/build.py"
+}
