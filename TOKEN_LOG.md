@@ -72,7 +72,7 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-02 ~00:28 (local) | D3 | 28 dwelling shells + honjin / waki-honjin, 16 furnished, 8 compounds / corridors (incl. temple U hondo<->kuri roka), 29 placed, 28-min walk | **161k reported** (319 tool calls; the count looks low for the run) | 106 min | weekly **74%** after 3a |
 | 2026-10-02 00:31 (local) | W3B (baseline) | launched: wave 3b workshops + services (approved by Stephen before bed, usage-checked) | - | - | before: **74%** (projected ~78-80%) |
 | 2026-10-02 ~01:30 (local) | W3B | wave 3b: 18 shells (sento x2, stable row x2, barber + misemono booths, doma + bench workshops x2 each, timber sheds x3, foundry x2, 3 yard compounds), 34 props / 63 models, 14 furnished, 38 placements | **644k** (182 tool calls) | 55 min | weekly **76%** after |
-| 2026-10-02 ~11:35 (local) | FX5 | fixes from the 3a / 3b walk: gate sill pads (9 compounds), honjin wall / fence joints + hedge slits, continuous hedge + 2 new materials, U9 deferred, 5-min re-check | (see completion notice) | 45 min | weekly **77%** after (76% at start) |
+| 2026-10-02 ~11:35 (local) | FX5 | fixes from the 3a / 3b walk: gate sill pads (9 compounds), honjin wall / fence joints + hedge slits, continuous hedge + 2 new materials, U9 deferred, 5-min re-check | 392k | 45 min | weekly **77%** after (76% at start) |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
