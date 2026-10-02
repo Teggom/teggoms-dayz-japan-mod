@@ -695,3 +695,19 @@
   props on a pad object must take the pad's seat, not their own ground. **Walk: TEST_CHECKLIST.md = FX6 re-check
   (~8 min) + 3c-2 (~20 min) + 3d (~20 min).** Weekly 84 % -> 86 %. Next (Stephen's call, after the weekly reset
   2026-10-06): 3e castle kit or the fishing suite.
+- 2026-10-02 (evening): **Stephen walked FX6 + 3c-2 + 3d: "everything else appears ok at a glance, good enough for now".**
+  Open fixes = **FX7**, first job after the weekly reset (2026-10-06), before 3e / fishing:
+  (1) **Checkpoint (3d, x ~744-770 on lane LG):** "the spiky-fence building sits higher on the ground than the other
+  buildings; I can't walk in, I need to jump." Find which entry (guardhouse Land_JP_Bansho_Sekisho step, the gravel
+  court pad Land_JP_Oshirasu_Sekisho, the gate sill pads in Land_JP_Compound_Sekisho) has a rise a player can't walk;
+  re-seat or add steps; add a check: every entry walkable from the ground outside (max step ~0.30 m) on sloped seats.
+  (2) **The cargo scale `jp_f_kanme_hakari`** "doesn't look like a weighing scale": the bale lies on the ground under a
+  bare frame, so it reads as a gallows next to the jail. Rebuild so it reads as weighing: the bale hanging off the
+  ground on the steelyard hook, a visible graduated beam with its counterweight, hung from a tripod or a carrying pole
+  on trestles (check the period form in the sources).
+  (3) **The big beige rock / earth masses (3c-2):** the quarry face (Land_JP_Ishiba), the mine hillside (Land_JP_Mabu),
+  the lime-kiln bank (Land_JP_Ishibai_Gama) and the climbing-kiln bank (Land_JP_Noborigama) "look kind of like shit;
+  no idea what they are." Cause: no rock or soil material (sandy stand-in, W3C2 flagged it) + blobby forms sitting ON
+  the flat island. Fix: proper rock (cut and natural) and soil / grass-edged earth materials, more natural forms
+  that blend into the ground at the foot; record for the map that real hillsides come from terrain and these become
+  the face / portal / bank only.
