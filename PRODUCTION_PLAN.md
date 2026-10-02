@@ -456,3 +456,9 @@
   flip / grain along member / 1-2 m tiles) + macro weathering layer + irregular moss, prepared and proven on samples in
   spikes/FX3/ only, ONE sample sheet (no per-prop renders). **Phase 2 (integration + rebuild) waits for FX2**; the lead resumes
   the same agent then.
+- 2026-10-01: **FX2 DONE** (685k / 81 min; 5b6a02f .. 3e7f94b). Refs: 32 CC0 images / 20 objects (research/statues/REFS.md; Met v1 search
+  retired 2026-10-01 -> v1.1). Altar images 3.5-4.6k faces (new 'altar' class 5,500; material gilt_worn), stone Jizo ~1.9k with faces,
+  shakujo closed. Komainu (2 forms + mossy) FX-P1/P2/V1, kitsune FX-I1 + lantern pair FX-I2 (no CC0 stone-fox photo: **Stephen may
+  save 2-3**). Mask wall 2,128 + temple bell 1,946 (new 2,250 class). Torii rope 3/4 sag, shide tucked, lowest tip 2.31 m. U1 wrap
+  veranda 12,428 ('large_plus'); village hall kept returns (wrap failed 2 checks). 193 bldgs / 11,830 checks pass. **FX3 phase 2
+  resumed.**

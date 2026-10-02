@@ -60,6 +60,8 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~18:30 (local) | FX1 | wave-2 walk fixes 1-6 (door pulls, offering box, hung props, veranda returns, torii clearance, woodpile stakes) + handlecheck / hangcheck | **598k** (268 tool calls) | 55 min | |
 | 2026-10-01 ~18:45 (local) | FX2 (baseline) | launched: statues from CC0 museum refs, komainu + kitsune pairs, lantern pairs, detail props, torii rope sag, U1 wrap veranda | - | - | before: **~63%** |
 | 2026-10-01 ~19:20 (local) | FX3 phase 1 | inventory (11 UV helpers / 8 pipelines -> one hook), uvwood.py design, 11 wood atlases, macro weathering stage, irregular moss, ONE sample sheet | **298k** (102 tool calls) | 26 min | concurrent with FX2 |
+| 2026-10-01 ~20:05 (local) | FX2 | 32 CC0 museum refs (Met 7, Cleveland 13 objects), 4 altar images + Jizo family remade from photos, komainu x3 + kitsune pairs placed, detail props, torii rope 3/4 sag (lowest tip 2.31 m), U1 wrap veranda | **685k** (297 tool calls) | 81 min | |
+| 2026-10-01 ~20:06 (local) | FX3 phase 2 (resumed) | integrate uvwood + atlases + macro layer + moss into every pipeline, rebuild all | - | - | |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
