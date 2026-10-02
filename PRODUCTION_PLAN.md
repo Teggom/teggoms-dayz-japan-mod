@@ -508,3 +508,10 @@
   jpparts/striproof.py roofs both. API in parts/K3_NOTES.md §6 (run_wall, run_roka, connector_fit). **Pitfall: keep each object
   under ~15,000 faces: binarize fails 'Too many vertices' (two halls + a corridor in one p3d).** Missing materials (stand-ins):
   brushwood, black palm rope, ochre plaster, turf, copper valley lining. Hinged gate/wicket leaves untested in the engine.
+- 2026-10-02: **D3 DONE — WAVE 3a BUILT** (66e8772, 4ea993d, ffc121c, 0f8349e). 28 shells (Mountain x3, Coastal x2, KumiYashiki_3 x2,
+  Doshin x2, Samurai_S / M / L (L 9x5 ken: binarize vertex limit at 10), Merchant_Residence, Headman_East (+_Shiba), Headman_Kinai,
+  Chashitsu x2, Itagura x2, Stable_Horse / _Ox, Furoba, NagayaMon x2, Honjin_Omote / _Oku, Wakihonjin; all one storey + attic, sourced in
+  spikes/D3/D3_NOTES.md); 16 furnished (buildings/d3_sets.py); 8 compounds / corridors incl. **Roka_Temple_U (Stephen's corridor proof)**
+  and Roka_Honjin (shrine-P kairo skipped: terraced halls, no level run). Placed S1-S10, H1-H6, J1-J5, M1-M4, E1-E3, U9.
+  verify_all --full 245 buildings / 16,697 checks; bindcheck 245; verify_oprw 4178/4178. Known false flag: placecheck calls every kasuga
+  lantern 'hanging'. **Walk: TEST_CHECKLIST.md (~28 min) + FX4 re-check.** **W3B (wave 3b) launched** at 74 % weekly.
