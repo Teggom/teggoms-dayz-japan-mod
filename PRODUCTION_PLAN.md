@@ -482,3 +482,8 @@
   kilns, paper, salt, charcoal, logging, quarry, mine) -> 3d government (official compound, post-station office, checkpoint kit, jail,
   fire watchtower) -> 3e the castle kit (keep with swaps, turrets, tamon, box gate, palace wing, ruins). Pleasure quarters + kabuki
   theatre go with landmarks.
+- 2026-10-01: **Stephen: after CA1 -> FX4 -> then 3a.** 3a now also includes a **modular covered-corridor kit (watari-roka) + kairo
+  cloister** (historical: temple hondo<->kuri corridors around tsuboniwa courtyards, abbot's quarters, shrine kairo around the inner
+  precinct, samurai / honjin / daimyo wings linked around gardens): straight 1/2/3 ken, corner, T, cross, end, stepped-roof piece for
+  slopes; sides open-railed / half-walled / enclosed; raised board floor; roofs straight board / tile / curved sori. Proof on the island:
+  link one temple's hondo to its kuri (and a kairo segment at the town shrine if cheap).
