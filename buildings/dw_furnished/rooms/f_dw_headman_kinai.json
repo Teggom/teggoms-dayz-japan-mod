@@ -1,0 +1,281 @@
+{
+ "building": "Land_JP_Headman_Kinai_Furnished",
+ "p3d": "\\JP\\buildings\\dw_furnished\\jp_headman_kinai_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "genkan_porch",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    16.45,
+    18.05,
+    -7.13,
+    -0.15
+   ],
+   "doors": [
+    "DoorsTwin9"
+   ],
+   "note": "the formal entrance under a tiled lean-to: the shikidai board step up to the genkan room",
+   "enclosed": false,
+   "rect_model": [
+    8.26,
+    9.86,
+    -3.49,
+    3.49
+   ],
+   "fittings": [],
+   "sparse": "the formal entrance under the lean-to"
+  },
+  {
+   "name": "niwa",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.39,
+    -7.220000000000001,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the niwa: the kamado row (kudo), water jars",
+   "enclosed": true,
+   "rect_model": [
+    -8.13,
+    -2.8,
+    -3.58,
+    3.58
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "niwa",
+     "centre": [
+      -7.69,
+      2.002
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado",
+     "room": "niwa",
+     "centre": [
+      -7.69,
+      0.455
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "kamado",
+     "room": "niwa",
+     "centre": [
+      -7.69,
+      -1.092
+     ],
+     "yaw": 90.0,
+     "size": [
+      1.3,
+      0.7
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    }
+   ]
+  },
+  {
+   "name": "mise",
+   "tag": "living",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.53,
+    9.04,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin7"
+   ],
+   "note": "mise (the village-business room), open to the niwa",
+   "enclosed": true,
+   "rect_model": [
+    -2.66,
+    0.85,
+    0.06,
+    3.58
+   ],
+   "fittings": []
+  },
+  {
+   "name": "daidokoro",
+   "tag": "daidokoro",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    5.53,
+    9.04,
+    -7.220000000000001,
+    -3.7
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin7"
+   ],
+   "note": "daidokoro with the irori, open to the niwa",
+   "enclosed": true,
+   "rect_model": [
+    -2.66,
+    0.85,
+    -3.58,
+    -0.06
+   ],
+   "fittings": [
+    {
+     "kind": "irori",
+     "room": "daidokoro",
+     "rect": [
+      -1.592,
+      -0.227,
+      -2.275,
+      -1.365
+     ],
+     "floor_y": 0.5,
+     "pit": "irori",
+     "hook": [
+      -0.91,
+      3.82,
+      -1.82
+     ],
+     "note": "jp_p_fit_irori pit; jizai-kagi hangs from the tie beam on this frame line (hook y = beam underside)"
+    }
+   ]
+  },
+  {
+   "name": "tsugi",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    12.68,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin4",
+    "DoorsTwin6"
+   ],
+   "note": "tsugi-no-ma",
+   "enclosed": true,
+   "rect_model": [
+    0.97,
+    4.49,
+    0.06,
+    3.58
+   ],
+   "fittings": []
+  },
+  {
+   "name": "nando",
+   "tag": "sleeping",
+   "floor": "boards",
+   "level_m": 0.5,
+   "rect_kit": [
+    9.16,
+    12.68,
+    -7.220000000000001,
+    -3.7
+   ],
+   "doors": [
+    "DoorsTwin3",
+    "DoorsTwin5"
+   ],
+   "note": "nando",
+   "enclosed": true,
+   "rect_model": [
+    0.97,
+    4.49,
+    -3.58,
+    -0.06
+   ],
+   "fittings": []
+  },
+  {
+   "name": "genkan_ma",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    12.8,
+    16.32,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin9",
+    "DoorsTwin6",
+    "DoorsTwin8"
+   ],
+   "note": "the genkan room (shikidai-no-ma)",
+   "enclosed": true,
+   "rect_model": [
+    4.61,
+    8.13,
+    0.06,
+    3.58
+   ],
+   "fittings": []
+  },
+  {
+   "name": "zashiki",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.5,
+   "rect_kit": [
+    12.8,
+    16.32,
+    -7.220000000000001,
+    -3.7
+   ],
+   "doors": [
+    "DoorsTwin8",
+    "DoorsTwin5"
+   ],
+   "note": "the formal zashiki (no tokonoma: commoner, G1 A2)",
+   "enclosed": true,
+   "rect_model": [
+    4.61,
+    8.13,
+    -3.58,
+    -0.06
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 44,
+ "loot_by_room": {
+  "genkan_porch": 2,
+  "niwa": 12,
+  "mise": 6,
+  "daidokoro": 4,
+  "tsugi": 4,
+  "nando": 6,
+  "genkan_ma": 6,
+  "zashiki": 4
+ }
+}

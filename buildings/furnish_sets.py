@@ -590,3 +590,8 @@ SETS.update(_shop.sets())
 import w2f_sets as _w2f  # noqa: E402
 
 SETS.update(_w2f.sets())
+
+# D3 (2026-10-01): the wave-3a dressings (dwellings, outbuildings, nagaya-mon, honjin): buildings/d3_sets.py
+import d3_sets as _d3  # noqa: E402
+
+SETS.update(_d3.sets())

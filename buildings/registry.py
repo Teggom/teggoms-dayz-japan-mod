@@ -813,6 +813,29 @@ D3_SHELLS = [
 ]
 BUILDINGS += D3_SHELLS
 
+# D3 furnished variants (the C3 / W2F pattern: furnishkit + buildings/d3_sets.py), one per type
+D3_FURNISHED = [
+    _furn("f_dw_mountain", "dw_mountain_ishioki", "d3_mountain", "Furnished", "furnished (snow gear, hidana)"),
+    _furn("f_dw_coastal", "dw_coastal_ishioki", "d3_coastal", "Furnished", "furnished (nets, the net store)"),
+    _furn("f_dw_kumi", "dw_kumi_itabuki", "d3_kumi", "Furnished", "furnished (three units)"),
+    _furn("f_dw_doshin", "dw_doshin_itabuki", "d3_doshin", "Furnished", "furnished"),
+    _furn("f_dw_samurai_m", "dw_samurai_m", "d3_samurai", "Furnished", "furnished (armour chest, sword stand)"),
+    _furn("f_dw_merchant", "dw_merchant", "d3_merchant", "Furnished", "furnished (money chest, ledgers)"),
+    _furn("f_dw_honjin_omote", "dw_honjin_omote", "d3_honjin_omote", "Furnished", "furnished (the lord's suite)"),
+    _furn("f_dw_honjin_oku", "dw_honjin_oku", "d3_honjin_oku", "Furnished", "furnished (the big kitchen)"),
+    _furn("f_dw_wakihonjin", "dw_wakihonjin", "d3_wakihonjin", "Furnished", "furnished"),
+    _furn("f_dw_headman_east", "dw_headman_east", "d3_headman_east", "Furnished", "furnished (village registers)"),
+    _furn("f_dw_headman_kinai", "dw_headman_kinai", "d3_headman_kinai", "Furnished", "furnished (village business)"),
+    _furn("f_dw_chashitsu", "dw_chashitsu_thatch", "d3_chashitsu", "Furnished", "furnished (as left after tea)"),
+    _furn("f_dw_itagura", "dw_itagura_itabuki", "d3_itagura", "Furnished", "furnished (grain)"),
+    _furn("f_dw_stable", "dw_stable_horse", "d3_stable", "Furnished", "furnished (mangers, tack)"),
+    _furn("f_dw_furoba", "dw_furoba", "d3_furoba", "Furnished", "furnished"),
+    _furn("f_dw_nagayamon", "dw_nagayamon_samurai", "d3_nagayamon", "Furnished", "furnished (servants' room)"),
+]
+for _f in D3_FURNISHED:                       # D3's own model folder (batch binarize, no noise in C3 / W2F's)
+    _f["dir"] = _f["model_dir"] = "dw_furnished"
+BUILDINGS += D3_FURNISHED
+
 
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named

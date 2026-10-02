@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Itagura_Itabuki_Furnished",
+ "p3d": "\\JP\\buildings\\dw_furnished\\jp_itagura_itabuki_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "kura",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 0.6,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -2.67,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the board storehouse: grain bales, straw bags, tools, seed (rat guards on the posts)",
+   "enclosed": true,
+   "rect_model": [
+    -1.76,
+    1.76,
+    -1.305,
+    1.305
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 8,
+ "loot_by_room": {
+  "kura": 8
+ }
+}

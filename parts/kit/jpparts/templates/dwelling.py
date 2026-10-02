@@ -1109,8 +1109,9 @@ def kumi(name=None, units=3, roof="itabuki", wear="_w2"):
                           mats=FL.MATS_TATAMI_B1))
         B.interior = False
         S.kamachi((90.0, (u0 + KEN, 0.0, ZS)), -ZS, FL_, [0.75 * KEN], "u%d_doma" % u)
-        S.kamachi((0.0, (u0, 0.0, ZS)), KEN - 0.06, FL_, [0.5 * KEN], "u%d_doma" % u)
-        _kamado(S, "u%d_doma" % u, u0 + 0.40, -0.35, 90.0, size=(0.60, 0.60))
+        S.kamachi((0.0, (u0, 0.0, ZS)), KEN - 0.06, FL_, [], "u%d_doma" % u)
+        # the stove against the side wall, back from the door (D5: nothing in the doorway zone)
+        _kamado(S, "u%d_doma" % u, u0 + 0.40, ZS + 0.55, 90.0, size=(0.60, 0.60))
     S.place_windows()
     for u in range(units):
         u0 = u * UW
@@ -1731,7 +1732,7 @@ def nagayamon(name=None, rank="samurai", wear="_w1"):
             walls.namako(nm, a, b, 0.05, 0.95, 0.0375 + 0.002, diagonal=True)
             B.put(nm, fr, what="walls.namako (diagonal) on the street face")
     S.place_windows()
-    S.room("room", "sleeping", "boards", FL_, (A_, XL - 0.07, -D + A_, -A_), [S.dn["room"]],
+    S.room("room", "sleeping", "boards", FL_, (A_, XL - 0.07, -D + A_, -A_), [],
            "the servants' room (chugen-beya), raised boards, open to its doma")
     S.room("doma", "doma", "earth", DOMA, (XL + 0.07, XP0 - A_, -D + A_, -A_), [S.dn["room"]],
            "the servants' doma by the yard door")

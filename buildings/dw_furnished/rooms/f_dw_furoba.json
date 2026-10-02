@@ -1,0 +1,72 @@
+{
+ "building": "Land_JP_Furoba_Furnished",
+ "p3d": "\\JP\\buildings\\dw_furnished\\jp_furoba_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "furoba",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    2.67,
+    -1.76,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the bath hut: the tub spot, the door",
+   "enclosed": true,
+   "rect_model": [
+    -1.305,
+    1.305,
+    -0.85,
+    0.85
+   ],
+   "fittings": [
+    {
+     "kind": "tub",
+     "room": "furoba",
+     "note": "the bath tub (prop; firebox through the back wall outside): the furnisher keeps loot off it",
+     "rect": [
+      0.475,
+      1.285,
+      -0.83,
+      0.61
+     ],
+     "y": 0.05
+    }
+   ]
+  },
+  {
+   "name": "sunoko",
+   "tag": "storage",
+   "floor": "slats",
+   "level_m": 0.15000000000000002,
+   "rect_kit": [
+    0.18,
+    1.4,
+    -1.64,
+    -0.73
+   ],
+   "doors": [],
+   "note": "the slatted washing floor",
+   "enclosed": true,
+   "rect_model": [
+    -1.185,
+    0.035,
+    -0.73,
+    0.18
+   ],
+   "fittings": [],
+   "sparse": "the slatted washing floor"
+  }
+ ],
+ "loot_points": 3,
+ "loot_by_room": {
+  "furoba": 2,
+  "sunoko": 1
+ }
+}

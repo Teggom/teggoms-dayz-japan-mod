@@ -3,7 +3,7 @@
  "key": "dw_kumi_itabuki",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "9269/3131/1217",
+ "faces": "9164/3131/1217",
  "door_clear_m": [
   1.06,
   1.06,
@@ -18,12 +18,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 9269, Resolution 2 3131, Resolution 3 1217, Geometry 3108, Memory 0, Roadway 24, View Geometry 3006, Fire Geometry 3042"
+   "detail": "Resolution 1 9164, Resolution 2 3131, Resolution 3 1217, Geometry 3093, Memory 0, Roadway 21, View Geometry 3006, Fire Geometry 3042"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 9269, R2 3131, R3 1217"
+   "detail": "R1 9164, R2 3131, R3 1217"
   },
   {
    "check": "Geometry properties + mass",
@@ -38,7 +38,7 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "418 components, 0 bad, 0 faces outside components"
+   "detail": "415 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
@@ -193,12 +193,12 @@
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "384/384 samples"
+   "detail": "336/336 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "1734/1734 samples over u0_doma, u0_front, u0_back, u1_doma, u1_front, u1_back, u2_doma, u2_front, u2_back"
+   "detail": "1791/1791 samples over u0_doma, u0_front, u0_back, u1_doma, u1_front, u1_back, u2_doma, u2_front, u2_back"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -468,7 +468,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 939277 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 933081 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

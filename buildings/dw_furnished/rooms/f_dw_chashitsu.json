@@ -1,0 +1,100 @@
+{
+ "building": "Land_JP_Chashitsu_Thatch_Furnished",
+ "p3d": "\\JP\\buildings\\dw_furnished\\jp_chashitsu_thatch_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "chashitsu",
+   "tag": "zashiki",
+   "floor": "tatami",
+   "level_m": 0.4,
+   "rect_kit": [
+    0.06,
+    2.67,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin2"
+   ],
+   "note": "the tea room (4.5 mats, the ro, the tokonoma at the back, the low ceiling)",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    -0.06,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "ro",
+     "room": "chashitsu",
+     "rect": [
+      -0.665,
+      -0.245,
+      1.155,
+      1.575
+     ],
+     "floor_y": 0.4,
+     "note": "the sunken hearth (ro) for the tea kettle, in the board half-mat"
+    },
+    {
+     "kind": "tokonoma",
+     "room": "chashitsu",
+     "rect": [
+      -2.72,
+      -0.83,
+      -1.82,
+      -0.81
+     ],
+     "y": 0.52,
+     "note": "tokonoma (one scroll, one flower)"
+    }
+   ],
+   "sparse": "the tea room: bare by its rules, as left after the last gathering"
+  },
+  {
+   "name": "mizuya",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    2.79,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the mizuya (prep room): the way in",
+   "enclosed": true,
+   "rect_model": [
+    0.06,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "mizuya_shelf",
+     "room": "mizuya",
+     "note": "the mizuya's shelves + sink (sunoko drain): props",
+     "rect": [
+      2.27,
+      2.67,
+      -1.62,
+      1.52
+     ],
+     "y": 0.4
+    }
+   ]
+  }
+ ],
+ "loot_points": 8,
+ "loot_by_room": {
+  "chashitsu": 1,
+  "mizuya": 7
+ }
+}
