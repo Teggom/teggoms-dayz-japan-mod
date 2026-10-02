@@ -113,12 +113,17 @@ def slopes_for(W, D, form, eave_y, t, ov, gov):
     S = []
     gl, gr = gov if isinstance(gov, (tuple, list)) else (gov, gov)
     if form == "kirizuma":
-        S.append(Slope("front", [(-gl, ov), (W + gr, ov), (W + gr, -h), (-gl, -h)], (0.0, -1.0), (0.0, 0.0),
-                       (1.0, 0.0), (0.0, ov), eave_y, t, ov, True, verges=(-gl, W + gr)))
-        S.append(Slope("back", [(-gl, -D - ov), (-gl, -h), (W + gr, -h), (W + gr, -D - ov)], (0.0, 1.0), (0.0, -D),
-                       (-1.0, 0.0), (W, -D - ov), eave_y, t, ov, True, verges=(-W - gl + W, gr + W - W)))
-        S[1].verges = (S[1].u_of(W + gr, -D - ov), S[1].u_of(-gl, -D - ov))
+        # W3C1 (2026-10-02, jp_p_roof_union _gutter): ov may be (front, back) - a kirizuma roof whose back eave stops
+        # short against a taller wall (the kasane-gura join); a number = both eaves
+        of, ob = ov if isinstance(ov, (tuple, list)) else (ov, ov)
+        S.append(Slope("front", [(-gl, of), (W + gr, of), (W + gr, -h), (-gl, -h)], (0.0, -1.0), (0.0, 0.0),
+                       (1.0, 0.0), (0.0, of), eave_y, t, of, True, verges=(-gl, W + gr)))
+        S.append(Slope("back", [(-gl, -D - ob), (-gl, -h), (W + gr, -h), (W + gr, -D - ob)], (0.0, 1.0), (0.0, -D),
+                       (-1.0, 0.0), (W, -D - ob), eave_y, t, ob, True, verges=(-W - gl + W, gr + W - W)))
+        S[1].verges = (S[1].u_of(W + gr, -D - ob), S[1].u_of(-gl, -D - ob))
         return S
+    if isinstance(ov, (tuple, list)):
+        raise ValueError("per-eave overhangs (ov=(front, back)) are for kirizuma roofs only")
     if form == "yosemune":
         xg0, xg1 = h, W - h
     elif form == "irimoya":
@@ -671,10 +676,12 @@ def hafu(part, x, D, t, eave_y, ov, sg, fam, board=(0.03, 0.24), purlins=True):
     stack = STACK.get(fam, 0.1)
     kind = "thatch" if fam == "thatch" else ("tile" if fam in ("sangawara", "hongawara") else "board")
     hide = kind == "thatch"
+    of, ob = ov if isinstance(ov, (tuple, list)) else (ov, ov)
     for side in (-1, 1):
-        ze = ov if side > 0 else -D - ov
+        ov_s = of if side > 0 else ob
+        ze = of if side > 0 else -D - ob
         zr = -h
-        ye = eave_y + stack - t * ov
+        ye = eave_y + stack - t * ov_s
         yr = eave_y + stack + t * h
         a = (x, ye - 0.02, ze)
         b = (x, yr + 0.02, zr)

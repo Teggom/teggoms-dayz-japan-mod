@@ -1,0 +1,110 @@
+{
+ "id": "jp_f_shibori_front",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "brewfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_shibori_front.p3d",
+   "class": "StaticObj_JP_F_Shibori_Front",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Shop-front dyed cloths on a pole",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 97,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -1.2,
+    1.2,
+    -1.2,
+    0.0,
+    -0.03,
+    0.03
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "shop-front cloths on a bamboo pole"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_shibori_front.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "hang_len": 1.2
+  },
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_shibori_front_torn.p3d",
+   "class": "StaticObj_JP_F_Shibori_Front_Torn",
+   "variant": "std",
+   "state": "torn",
+   "abandoned": true,
+   "display": "Shop-front cloths, torn and half gone",
+   "anchor": "hang",
+   "budget": "small",
+   "faces": {
+    "Resolution 1": 73,
+    "Resolution 2": 6
+   },
+   "bbox": [
+    -1.2,
+    1.2,
+    -1.2,
+    0.0,
+    -0.03,
+    0.03
+   ],
+   "collision": false,
+   "footprint_xz": null,
+   "loot_floor_clearance_m": 0.0,
+   "roadway": false,
+   "mass_kg": null,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 2.4,
+     "measured": 2.4,
+     "tol": 0.05,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "shop-front cloths on a bamboo pole, torn and half gone"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_shibori_front_torn.p3d",
+   "mount": "beam",
+   "mount_note": "under a beam or the loft joists: origin = the beam underside (anchor 'hang'), the prop hangs down",
+   "hang_len": 1.2
+  }
+ ],
+ "made_by": "spikes/W3C1/build_w3c1.py (agent W3C1, 2026-10-02) on spikes/B3a/build.py"
+}

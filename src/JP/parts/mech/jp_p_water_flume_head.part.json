@@ -1,0 +1,163 @@
+{
+ "id": "jp_p_water_flume_head",
+ "part": "jp_p_water_flume",
+ "variant": "_head",
+ "group": "mech",
+ "p3d": "JP\\parts\\mech\\jp_p_water_flume_head.p3d",
+ "build_list": {
+  "entry": "jp_p_water_flume",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2
+ ],
+ "used_for": "the mill's flume (kakehi): an open board trough on trestles, with the sluice board shut at its head; dry (dead world)",
+ "datum": "the trough along +x from 0 to 1.5 ken, bed top at 3.95, centred on z 0; y 0 = grade",
+ "recipe": "mech.flume(part, L, y_bed, w, d, trestle_at, head)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  0.0,
+  2.73,
+  -0.006,
+  4.75,
+  -0.742,
+  0.742
+ ],
+ "dims": [
+  {
+   "name": "inside_w_m",
+   "expected": "0.30-0.50 (GK)",
+   "measured": 0.4,
+   "tol": 0.01,
+   "source": "W3C1_NOTES TR04",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "flume",
+   "pos": [
+    0.0,
+    3.95,
+    0.0
+   ],
+   "note": "run start"
+  },
+  {
+   "type": "flume",
+   "pos": [
+    2.73,
+    3.95,
+    0.0
+   ],
+   "note": "run end"
+  }
+ ],
+ "materials": [
+  {
+   "key": "ground_leaf_litter",
+   "id": "jp_m_ground_leaf_litter",
+   "palette_id": "leaf_litter_autumn",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_leaf_litter<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 110,
+  "Resolution 2": 92,
+  "Resolution 3": 92,
+  "Geometry": 74,
+  "View Geometry": 74,
+  "Fire Geometry": 74
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 110, Resolution 2 92, Resolution 3 92, Geometry 74, View Geometry 74, Fire Geometry 74"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "11 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "11 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "11 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 inside_w_m",
+   "ok": true,
+   "detail": "expected 0.30-0.50 (GK), measured 0.4"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

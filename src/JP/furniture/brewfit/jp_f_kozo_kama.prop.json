@@ -1,0 +1,124 @@
+{
+ "id": "jp_f_kozo_kama",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "brewfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_kozo_kama.p3d",
+   "class": "StaticObj_JP_F_Kozo_Kama",
+   "variant": "std",
+   "state": "cold",
+   "abandoned": true,
+   "display": "Bark steamer on its small hearth, cold",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 186,
+    "Resolution 2": 30,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.475,
+    0.475,
+    0.0,
+    1.5,
+    -0.475,
+    0.496
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.475,
+    -0.475,
+    0.475,
+    0.475
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 300.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.95,
+     "measured": 0.95,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the bark steamer (koshiki on a cauldron over a small hearth), cold"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_kozo_kama.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_kozo_kama_ab.p3d",
+   "class": "StaticObj_JP_F_Kozo_Kama_Ab",
+   "variant": "std",
+   "state": "ransacked",
+   "abandoned": true,
+   "display": "Bark steamer, the tub knocked off",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 216,
+    "Resolution 2": 12,
+    "Geometry": 12,
+    "View Geometry": 12,
+    "Fire Geometry": 12
+   },
+   "bbox": [
+    -0.475,
+    1.2,
+    0.0,
+    0.8,
+    -0.475,
+    1.513
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.475,
+    -0.475,
+    1.15,
+    1.0
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 300.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "w",
+     "expected": 0.95,
+     "measured": 0.95,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the bark steamer (koshiki on a cauldron over a small hearth), cold; the tub knocked off"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_kozo_kama_ab.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C1/build_w3c1.py (agent W3C1, 2026-10-02) on spikes/B3a/build.py"
+}

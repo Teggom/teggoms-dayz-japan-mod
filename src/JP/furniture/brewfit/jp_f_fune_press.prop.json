@@ -1,0 +1,169 @@
+{
+ "id": "jp_f_fune_press",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "brewfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_fune_press.p3d",
+   "class": "StaticObj_JP_F_Fune_Press",
+   "variant": "std",
+   "state": "slack",
+   "abandoned": true,
+   "display": "Sake lever press (fune + beam + stones), slack",
+   "anchor": "floor",
+   "budget": "detail",
+   "faces": {
+    "Resolution 1": 456,
+    "Resolution 2": 30,
+    "Geometry": 42,
+    "View Geometry": 42,
+    "Fire Geometry": 42
+   },
+   "bbox": [
+    -3.441,
+    3.25,
+    0.0,
+    2.6,
+    -0.8,
+    0.8
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -3.42,
+    -0.75,
+    3.16,
+    0.75
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 4000.0,
+   "loot_surfaces": [
+    {
+     "name": "lid",
+     "kind": "shelf",
+     "y": 0.89,
+     "rect": [
+      2.05,
+      -0.3,
+      2.55,
+      0.3
+     ],
+     "range": 0.12,
+     "points": [
+      [
+       2.3,
+       0.89,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "len",
+     "expected": 6.4,
+     "measured": 6.41,
+     "tol": 0.4,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the lever press (fune + tenbin beam + weight stones), slack"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_fune_press.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_fune_press_down.p3d",
+   "class": "StaticObj_JP_F_Fune_Press_Down",
+   "variant": "std",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Sake lever press, the beam down, stones rolled",
+   "anchor": "floor",
+   "budget": "detail",
+   "faces": {
+    "Resolution 1": 360,
+    "Resolution 2": 30,
+    "Geometry": 30,
+    "View Geometry": 30,
+    "Fire Geometry": 30
+   },
+   "bbox": [
+    -3.74,
+    3.476,
+    0.0,
+    2.6,
+    -0.8,
+    1.2
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -3.143,
+    -0.75,
+    3.16,
+    0.75
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 4000.0,
+   "loot_surfaces": [
+    {
+     "name": "bags",
+     "kind": "shelf",
+     "y": 0.22,
+     "rect": [
+      0.7,
+      -0.25,
+      1.7,
+      0.25
+     ],
+     "range": 0.12,
+     "points": [
+      [
+       0.82,
+       0.22,
+       0.0
+      ],
+      [
+       1.57,
+       0.22,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "dims": [
+    {
+     "name": "len",
+     "expected": 6.4,
+     "measured": 6.43,
+     "tol": 0.4,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "the lever press (fune + tenbin beam + weight stones): slings cut, the beam down, the stones rolled about"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_fune_press_down.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C1/build_w3c1.py (agent W3C1, 2026-10-02) on spikes/B3a/build.py"
+}

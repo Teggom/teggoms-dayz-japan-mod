@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Compound_Brewery",
+ "p3d": "\\JP\\buildings\\ts_site\\jp_compound_brewery.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/tradesite.py; 'fittings' = tubs, press, hearth, koji bed, pestles, vats, paper vat ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.1,
+   "rect_kit": [
+    11.12,
+    13.450000000000001,
+    -1.0500000000000003,
+    1.25
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kabuki)",
+   "enclosed": false,
+   "rect_model": [
+    0.2,
+    2.53,
+    -11.97,
+    -9.67
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}

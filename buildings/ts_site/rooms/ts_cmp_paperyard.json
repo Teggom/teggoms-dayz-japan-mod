@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Compound_PaperYard",
+ "p3d": "\\JP\\buildings\\ts_site\\jp_compound_paperyard.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/tradesite.py; 'fittings' = tubs, press, hearth, koji bed, pestles, vats, paper vat ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.1,
+   "rect_kit": [
+    2.02,
+    4.3500000000000005,
+    9.669999999999998,
+    11.97
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kabuki)",
+   "enclosed": false,
+   "rect_model": [
+    -6.17,
+    -3.84,
+    4.21,
+    6.51
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}

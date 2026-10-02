@@ -70,6 +70,9 @@ from . import sitewall
 sitewall.register(reg)
 from . import roka
 roka.register(reg)
+# ---- W3C1 (2026-10-02): the water wheel, the flume, the parallel-roof union (spikes/W3C1/W3C1_NOTES.md)
+from . import mech
+mech.register(reg)
 
 # render hints for the contact sheets (context parts: [name, yaw, [x, y, z]])
 RENDER_HINTS = {

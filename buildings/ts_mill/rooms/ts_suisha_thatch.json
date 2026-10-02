@@ -1,0 +1,61 @@
+{
+ "building": "Land_JP_Suisha_Thatch",
+ "p3d": "\\JP\\buildings\\ts_mill\\jp_suisha_thatch.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/tradesite.py; 'fittings' = tubs, press, hearth, koji bed, pestles, vats, paper vat ...",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -3.58,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the mill floor: three pestles on the wheel's cam shaft over their mortars, the hand quern",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -1.76,
+    1.76
+   ],
+   "fittings": [
+    {
+     "kind": "quern",
+     "room": "floor",
+     "note": "the stone hand mill (ishi-usu) on the floor by the door: grinding by hand (gears: late Edo, W3C1_NOTES)",
+     "centre": [
+      -1.78,
+      1.27
+     ],
+     "size": [
+      0.7,
+      0.7
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "sacks",
+     "room": "floor",
+     "note": "rice bales and grain sacks by the front wall",
+     "rect": [
+      1.43,
+      2.62,
+      1.07,
+      1.71
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 4,
+ "loot_by_room": {
+  "floor": 4
+ }
+}

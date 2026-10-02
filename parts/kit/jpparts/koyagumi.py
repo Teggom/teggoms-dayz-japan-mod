@@ -287,7 +287,7 @@ def koyagumi(part, W, D, info, eave_y=EAVE_Y, system=None, members="sawn", geya=
 
     def reach(sl, x):
         """How far in from its wall line slope sl (front / back) reaches on the frame line x (the ridge, or a hip)."""
-        return sl.depth_at(sl.u_of(x, 0.0)) - ov
+        return sl.depth_at(sl.u_of(x, 0.0)) - sl.ov
 
     def side_z(side, s):
         return -s if side == "front" else -D + s

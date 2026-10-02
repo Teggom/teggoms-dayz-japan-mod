@@ -1,0 +1,35 @@
+{
+ "building": "Land_JP_Compound_DyersYard",
+ "p3d": "\\JP\\buildings\\ts_site\\jp_compound_dyersyard.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/tradesite.py; 'fittings' = tubs, press, hearth, koji bed, pestles, vats, paper vat ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.1,
+   "rect_kit": [
+    5.660000000000001,
+    7.990000000000002,
+    -1.0500000000000003,
+    1.25
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the gate passage (kabuki)",
+   "enclosed": false,
+   "rect_model": [
+    -1.62,
+    0.71,
+    -6.51,
+    -4.21
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}

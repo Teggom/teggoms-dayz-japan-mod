@@ -3751,4 +3751,266 @@ class CfgVehicles
 		displayName="Bell casting mould in its pit";
 		model="\JP\furniture\tradefit\jp_f_bell_mould.p3d";
 	};
+	// jp_f_shikomi_oke (brewfit)
+	class StaticObj_JP_F_Shikomi_Oke: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Big fermentation tub (shikomi-oke), dry, lid half on";
+		model="\JP\furniture\brewfit\jp_f_shikomi_oke.p3d";
+	};
+	class StaticObj_JP_F_Shikomi_Oke_Ladder: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Big fermentation tub with a ladder leaning on it";
+		model="\JP\furniture\brewfit\jp_f_shikomi_oke_ladder.p3d";
+	};
+	class StaticObj_JP_F_Shikomi_Oke_Staved: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Big fermentation tub, staves fallen out";
+		model="\JP\furniture\brewfit\jp_f_shikomi_oke_staved.p3d";
+	};
+	// jp_f_hangiri (brewfit)
+	class StaticObj_JP_F_Hangiri: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shallow starter tubs (hangiri), stacked";
+		model="\JP\furniture\brewfit\jp_f_hangiri.p3d";
+	};
+	class StaticObj_JP_F_Hangiri_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shallow starter tubs, knocked about";
+		model="\JP\furniture\brewfit\jp_f_hangiri_scattered.p3d";
+	};
+	// jp_f_kai_poles (brewfit)
+	class StaticObj_JP_F_Kai_Poles: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Stirring poles (kai) leaning on the wall";
+		model="\JP\furniture\brewfit\jp_f_kai_poles.p3d";
+	};
+	// jp_f_kamaba (brewfit)
+	class StaticObj_JP_F_Kamaba: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Brewery steaming hearth (kamado, cauldron, koshiki), cold";
+		model="\JP\furniture\brewfit\jp_f_kamaba.p3d";
+	};
+	class StaticObj_JP_F_Kamaba_Toppled: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Brewery steaming hearth, the koshiki knocked off";
+		model="\JP\furniture\brewfit\jp_f_kamaba_toppled.p3d";
+	};
+	// jp_f_fune_press (brewfit)
+	class StaticObj_JP_F_Fune_Press: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sake lever press (fune + beam + stones), slack";
+		model="\JP\furniture\brewfit\jp_f_fune_press.p3d";
+	};
+	class StaticObj_JP_F_Fune_Press_Down: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sake lever press, the beam down, stones rolled";
+		model="\JP\furniture\brewfit\jp_f_fune_press_down.p3d";
+	};
+	// jp_f_koji_toko (brewfit)
+	class StaticObj_JP_F_Koji_Toko: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Koji bed (toko) with its cloth";
+		model="\JP\furniture\brewfit\jp_f_koji_toko.p3d";
+	};
+	class StaticObj_JP_F_Koji_Toko_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Koji bed, the cloth dragged off";
+		model="\JP\furniture\brewfit\jp_f_koji_toko_ab.p3d";
+	};
+	// jp_f_kojibuta_tana (brewfit)
+	class StaticObj_JP_F_Kojibuta_Tana: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shelves of koji trays";
+		model="\JP\furniture\brewfit\jp_f_kojibuta_tana.p3d";
+	};
+	class StaticObj_JP_F_Kojibuta_Tana_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shelves of koji trays, half pulled down";
+		model="\JP\furniture\brewfit\jp_f_kojibuta_tana_ab.p3d";
+	};
+	// jp_f_karausu (brewfit)
+	class StaticObj_JP_F_Karausu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Foot-treadle rice mortar (kara-usu)";
+		model="\JP\furniture\brewfit\jp_f_karausu.p3d";
+	};
+	class StaticObj_JP_F_Karausu_Broken: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Foot-treadle rice mortar, lever off its pivot";
+		model="\JP\furniture\brewfit\jp_f_karausu_broken.p3d";
+	};
+	// jp_f_sakabayashi (brewfit)
+	class StaticObj_JP_F_Sakabayashi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Brewery sugidama (big cedar ball, 0.75), brown, hung from the eave";
+		model="\JP\furniture\brewfit\jp_f_sakabayashi.p3d";
+	};
+	// jp_f_sakabayashi_fallen (brewfit)
+	class StaticObj_JP_F_Sakabayashi_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Brewery sugidama, fallen to the ground";
+		model="\JP\furniture\brewfit\jp_f_sakabayashi_fallen.p3d";
+	};
+	// jp_f_hatcho_oke (brewfit)
+	class StaticObj_JP_F_Hatcho_Oke: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Hatcho-style miso vat with its stone cone";
+		model="\JP\furniture\brewfit\jp_f_hatcho_oke.p3d";
+	};
+	class StaticObj_JP_F_Hatcho_Oke_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Miso vat, the stones tumbled";
+		model="\JP\furniture\brewfit\jp_f_hatcho_oke_ab.p3d";
+	};
+	// jp_f_hashigo (brewfit)
+	class StaticObj_JP_F_Hashigo: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Plain ladder leaning on the wall";
+		model="\JP\furniture\brewfit\jp_f_hashigo.p3d";
+	};
+	// jp_f_sukumo_bales (brewfit)
+	class StaticObj_JP_F_Sukumo_Bales: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sukumo indigo in straw bales";
+		model="\JP\furniture\brewfit\jp_f_sukumo_bales.p3d";
+	};
+	class StaticObj_JP_F_Sukumo_Bales_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Sukumo bales, one burst";
+		model="\JP\furniture\brewfit\jp_f_sukumo_bales_scattered.p3d";
+	};
+	// jp_f_akumizu (brewfit)
+	class StaticObj_JP_F_Akumizu: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lye drip tubs (akumizu) and the lime tub";
+		model="\JP\furniture\brewfit\jp_f_akumizu.p3d";
+	};
+	class StaticObj_JP_F_Akumizu_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Lye drip tubs, the ash tub knocked off";
+		model="\JP\furniture\brewfit\jp_f_akumizu_ab.p3d";
+	};
+	// jp_f_monohoshi (brewfit)
+	class StaticObj_JP_F_Monohoshi: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Tall cloth-drying frame with indigo lengths";
+		model="\JP\furniture\brewfit\jp_f_monohoshi.p3d";
+	};
+	class StaticObj_JP_F_Monohoshi_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Cloth-drying frame, cloths fallen and torn";
+		model="\JP\furniture\brewfit\jp_f_monohoshi_torn.p3d";
+	};
+	// jp_f_shibori_front (brewfit)
+	class StaticObj_JP_F_Shibori_Front: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shop-front dyed cloths on a pole";
+		model="\JP\furniture\brewfit\jp_f_shibori_front.p3d";
+	};
+	class StaticObj_JP_F_Shibori_Front_Torn: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Shop-front cloths, torn and half gone";
+		model="\JP\furniture\brewfit\jp_f_shibori_front_torn.p3d";
+	};
+	// jp_f_dye_rack (brewfit)
+	class StaticObj_JP_F_Dye_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Dyer's pole rack with a dripping length";
+		model="\JP\furniture\brewfit\jp_f_dye_rack.p3d";
+	};
+	// jp_f_sukibune (brewfit)
+	class StaticObj_JP_F_Sukibune: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Paper vat with the mould and spring pole";
+		model="\JP\furniture\brewfit\jp_f_sukibune.p3d";
+	};
+	class StaticObj_JP_F_Sukibune_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Paper vat, the mould fallen in, the pole snapped";
+		model="\JP\furniture\brewfit\jp_f_sukibune_ab.p3d";
+	};
+	// jp_f_kozo_beat (brewfit)
+	class StaticObj_JP_F_Kozo_Beat: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bark-beating board with mallets";
+		model="\JP\furniture\brewfit\jp_f_kozo_beat.p3d";
+	};
+	class StaticObj_JP_F_Kozo_Beat_Scattered: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bark-beating board, mallets strewn";
+		model="\JP\furniture\brewfit\jp_f_kozo_beat_scattered.p3d";
+	};
+	// jp_f_shime_press (brewfit)
+	class StaticObj_JP_F_Shime_Press: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Couching stack under its lever press";
+		model="\JP\furniture\brewfit\jp_f_shime_press.p3d";
+	};
+	class StaticObj_JP_F_Shime_Press_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Couching press, the lever down";
+		model="\JP\furniture\brewfit\jp_f_shime_press_ab.p3d";
+	};
+	// jp_f_hoshiita_rack (brewfit)
+	class StaticObj_JP_F_Hoshiita_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Paper drying boards leaned to the sun";
+		model="\JP\furniture\brewfit\jp_f_hoshiita_rack.p3d";
+	};
+	class StaticObj_JP_F_Hoshiita_Rack_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Paper drying boards, fallen flat";
+		model="\JP\furniture\brewfit\jp_f_hoshiita_rack_fallen.p3d";
+	};
+	// jp_f_kozo_kama (brewfit)
+	class StaticObj_JP_F_Kozo_Kama: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bark steamer on its small hearth, cold";
+		model="\JP\furniture\brewfit\jp_f_kozo_kama.p3d";
+	};
+	class StaticObj_JP_F_Kozo_Kama_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Bark steamer, the tub knocked off";
+		model="\JP\furniture\brewfit\jp_f_kozo_kama_ab.p3d";
+	};
 };

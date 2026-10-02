@@ -956,6 +956,62 @@ for _f in W3B_FURNISHED:                      # W3B's own model folder
 BUILDINGS += W3B_FURNISHED
 
 
+# ------------------------------------------------------------------------------------------------ W3C1 trade sites
+# Phase C wave 3c-1 (agent W3C1, 2026-10-02): the sake brewery complex (the kasane-gura: o-kura + mae-gura, the
+# rice-polishing shed), the water mill, the indigo dyer, the paper mill and their yards, from
+# parts/kit/jpparts/templates/tradesite.py (buildings/tradesitekit.py builds them, buildings/shellcheck.py checks them;
+# research + recorded choices spikes/W3C1/W3C1_NOTES.md). Placed in the trade quarter south-west of the yard by
+# spikes/W3C1/layout_w3c1.py (test/placements/W3C1.csv + test/ce/W3C1_mapgrouppos.xml), not through 'placements'.
+from jpparts.templates import tradesite as _ts  # noqa: E402
+
+_LOOT_TS_WORK = {"usage": ["Town", "Village"], "categories": ["tools", "containers", "food"], "tags": ["floor"]}
+_LOOT_TS_YARD = {"usage": ["Village", "Town"], "categories": ["tools", "containers"], "tags": ["floor"]}
+
+
+def _tsd(key, dir_, cls, display, params, loot, mass):
+    e = {"key": key, "dir": dir_, "module": "tradesite_shells", "class": cls, "name": "jp_" + key, "display": display,
+         "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
+         "placements": [], "verify": "shellcheck", "budget": _ts.budget_class(**params), "ship": True}
+    ob = _ts.over_budget_ok(**params)
+    if ob:
+        e["over_budget_ok"] = ob
+    return e
+
+
+W3C1_SHELLS = [
+    # TR03 the sake brewery: the kasane-gura (o-kura north, mae-gura south), the rice-polishing shed
+    _tsd("ts_okura", "ts_brewery", "Land_JP_SakaGura_Okura", "Sake brewery: the large kura (o-kura: fermentation "
+         "floor, press bay, the starter loft)", {"kind": "okura"}, _LOOT_TS_WORK, 120000.0),
+    _tsd("ts_maegura", "ts_brewery", "Land_JP_SakaGura_Maegura", "Sake brewery: the front kura (mae-gura: washing, "
+         "steaming hearth, koji room, brewers' rest room)", {"kind": "maegura"}, _LOOT_TS_WORK, 90000.0),
+    _tsd("ts_seimai", "ts_brewery", "Land_JP_SakaGura_Seimai", "Sake brewery: the rice-polishing shed (foot-treadle "
+         "mortars)", {"kind": "seimai"}, _LOOT_TS_YARD, 12000.0),
+    # TR04 the water mill (overshot wheel, flume, stamps)
+    _tsd("ts_suisha_itabuki", "ts_mill", "Land_JP_Suisha_Itabuki", "Water mill (overshot wheel, flume, stamps; board "
+         "roof)", {"kind": "suisha", "roof": "itabuki"}, _LOOT_TS_YARD, 20000.0),
+    _tsd("ts_suisha_thatch", "ts_mill", "Land_JP_Suisha_Thatch", "Water mill (overshot wheel, flume, stamps; thatch)",
+         {"kind": "suisha", "roof": "thatch"}, _LOOT_TS_YARD, 20000.0),
+    # TR17 the indigo dyer (sunk vats)
+    _tsd("ts_konya_sangawara", "ts_dyer", "Land_JP_Konya_Sangawara", "Indigo dyer (kon'ya: shop + vat room with four "
+         "sunk vats; tiled)", {"kind": "konya", "roof": "sangawara"}, _LOOT_TS_WORK, 30000.0),
+    _tsd("ts_konya_itabuki", "ts_dyer", "Land_JP_Konya_Itabuki", "Indigo dyer (kon'ya; board roof)",
+         {"kind": "konya", "roof": "itabuki"}, _LOOT_TS_WORK, 26000.0),
+    # TR21 the paper mill
+    _tsd("ts_kamisuki_itabuki", "ts_paper", "Land_JP_KamiSuki_Itabuki", "Paper mill (kami-suki-ba; board roof)",
+         {"kind": "kamisuki", "roof": "itabuki"}, _LOOT_TS_WORK, 22000.0),
+    _tsd("ts_kamisuki_thatch", "ts_paper", "Land_JP_KamiSuki_Thatch", "Paper mill (kami-suki-ba; thatch)",
+         {"kind": "kamisuki", "roof": "thatch"}, _LOOT_TS_WORK, 22000.0),
+    # the yards (K3's wall kit)
+    _tsd("ts_cmp_brewery", "ts_site", "Land_JP_Compound_Brewery", "Sake brewery yard: black board fence + wide gate",
+         {"kind": "compound", "plot": "brewery"}, _LOOT_TS_YARD, 25000.0),
+    _tsd("ts_cmp_dyersyard", "ts_site", "Land_JP_Compound_DyersYard", "Dyer's drying yard: board fence + gate",
+         {"kind": "compound", "plot": "dyersyard"}, _LOOT_TS_YARD, 15000.0),
+    _tsd("ts_cmp_paperyard", "ts_site", "Land_JP_Compound_PaperYard", "Paper mill drying yard: bamboo fence + gate",
+         {"kind": "compound", "plot": "paperyard"}, _LOOT_TS_YARD, 12000.0),
+]
+BUILDINGS += W3C1_SHELLS
+
+
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
 # Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_

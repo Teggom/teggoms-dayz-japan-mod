@@ -1,0 +1,124 @@
+{
+ "id": "jp_f_hatcho_oke",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "brewfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_hatcho_oke.p3d",
+   "class": "StaticObj_JP_F_Hatcho_Oke",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Hatcho-style miso vat with its stone cone",
+   "anchor": "floor",
+   "budget": "detail",
+   "faces": {
+    "Resolution 1": 960,
+    "Resolution 2": 46,
+    "Geometry": 46,
+    "View Geometry": 46,
+    "Fire Geometry": 46
+   },
+   "bbox": [
+    -0.796,
+    0.796,
+    0.0,
+    2.4,
+    -0.808,
+    0.808
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.761,
+    -0.8,
+    0.761,
+    0.8
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 3000.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 1.6,
+     "measured": 1.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "Hatcho-style miso vat with its stone cone"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_hatcho_oke.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_hatcho_oke_ab.p3d",
+   "class": "StaticObj_JP_F_Hatcho_Oke_Ab",
+   "variant": "std",
+   "state": "ransacked",
+   "abandoned": true,
+   "display": "Miso vat, the stones tumbled",
+   "anchor": "floor",
+   "budget": "detail",
+   "faces": {
+    "Resolution 1": 813,
+    "Resolution 2": 30,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -1.302,
+    1.276,
+    0.0,
+    1.81,
+    -1.174,
+    1.369
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.761,
+    -0.8,
+    0.761,
+    0.8
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 3000.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 1.6,
+     "measured": 1.6,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "Hatcho-style miso vat with its stone cone, stones tumbled"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_hatcho_oke_ab.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C1/build_w3c1.py (agent W3C1, 2026-10-02) on spikes/B3a/build.py"
+}

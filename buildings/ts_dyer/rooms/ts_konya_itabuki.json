@@ -1,0 +1,104 @@
+{
+ "building": "Land_JP_Konya_Itabuki",
+ "p3d": "\\JP\\buildings\\ts_dyer\\jp_konya_itabuki.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/tradesite.py; 'fittings' = tubs, press, hearth, koji bed, pestles, vats, paper vat ...",
+ "rooms": [
+  {
+   "name": "mise",
+   "tag": "shop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    7.220000000000001,
+    -1.8,
+    -0.15
+   ],
+   "doors": [],
+   "note": "the shop doma, open to the street: dyed cloth, Arimatsu shibori hung at the front",
+   "enclosed": false,
+   "rect_model": [
+    -3.58,
+    3.58,
+    0.93,
+    2.58
+   ],
+   "fittings": [
+    {
+     "kind": "shop",
+     "room": "mise",
+     "note": "the shop doma: bolts of dyed cloth on a shelf, the counting desk",
+     "rect": [
+      -3.38,
+      3.38,
+      1.06,
+      1.66
+     ]
+    }
+   ]
+  },
+  {
+   "name": "aiba",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.3,
+   "rect_kit": [
+    0.06,
+    7.220000000000001,
+    -5.4,
+    -1.94
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the vat room: four sunk indigo vats round the fire pit, sukumo bales, lye tubs; back door to the yard; open to the shop over the kerb",
+   "enclosed": false,
+   "rect_model": [
+    -3.58,
+    3.58,
+    -2.67,
+    0.79
+   ],
+   "fittings": [
+    {
+     "kind": "bales",
+     "room": "aiba",
+     "note": "sukumo (fermented indigo) in straw bales in the corner",
+     "rect": [
+      -3.53,
+      -2.38,
+      -2.62,
+      -1.77
+     ]
+    },
+    {
+     "kind": "lye",
+     "room": "aiba",
+     "note": "the lye drip tubs (akumizu) and the bran / lime tubs",
+     "rect": [
+      2.48,
+      3.53,
+      -0.59,
+      0.66
+     ]
+    },
+    {
+     "kind": "poles",
+     "room": "aiba",
+     "note": "stirring poles and dripping cloth on a rack by the west wall",
+     "rect": [
+      -3.56,
+      -3.18,
+      -0.59,
+      0.61
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 7,
+ "loot_by_room": {
+  "mise": 3,
+  "aiba": 4
+ }
+}

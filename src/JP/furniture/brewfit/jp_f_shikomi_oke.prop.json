@@ -1,0 +1,196 @@
+{
+ "id": "jp_f_shikomi_oke",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "brewfit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_shikomi_oke.p3d",
+   "class": "StaticObj_JP_F_Shikomi_Oke",
+   "variant": "std",
+   "state": "dry",
+   "abandoned": true,
+   "display": "Big fermentation tub (shikomi-oke), dry, lid half on",
+   "anchor": "floor",
+   "budget": "detail",
+   "faces": {
+    "Resolution 1": 506,
+    "Resolution 2": 40,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.907,
+    0.907,
+    0.0,
+    1.775,
+    -0.91,
+    0.91
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.865,
+    -0.91,
+    0.865,
+    0.91
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 600.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.775,
+     "measured": 1.775,
+     "tol": 0.2,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "big fermentation tub (shikomi-oke, 1.82 x 1.70), dry; plank lid half on"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_shikomi_oke.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_shikomi_oke_ladder.p3d",
+   "class": "StaticObj_JP_F_Shikomi_Oke_Ladder",
+   "variant": "std",
+   "state": "ladder",
+   "abandoned": true,
+   "display": "Big fermentation tub with a ladder leaning on it",
+   "anchor": "floor",
+   "budget": "detail",
+   "faces": {
+    "Resolution 1": 560,
+    "Resolution 2": 46,
+    "Geometry": 24,
+    "View Geometry": 24,
+    "Fire Geometry": 24
+   },
+   "bbox": [
+    -0.907,
+    0.907,
+    0.0,
+    1.873,
+    -0.91,
+    1.716
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.865,
+    -0.91,
+    0.865,
+    1.693
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 600.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.775,
+     "measured": 1.775,
+     "tol": 0.2,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "big fermentation tub (shikomi-oke, 1.82 x 1.70), dry; lid half on, a ladder leaning on it"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_shikomi_oke_ladder.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\brewfit\\jp_f_shikomi_oke_staved.p3d",
+   "class": "StaticObj_JP_F_Shikomi_Oke_Staved",
+   "variant": "std",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Big fermentation tub, staves fallen out",
+   "anchor": "floor",
+   "budget": "detail",
+   "faces": {
+    "Resolution 1": 306,
+    "Resolution 2": 32,
+    "Geometry": 18,
+    "View Geometry": 18,
+    "Fire Geometry": 18
+   },
+   "bbox": [
+    -0.907,
+    2.455,
+    0.0,
+    1.7,
+    -1.677,
+    0.907
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.865,
+    -0.91,
+    0.865,
+    0.91
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 600.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "d",
+     "expected": 1.82,
+     "measured": 1.82,
+     "tol": 0.005,
+     "source": "build_list"
+    },
+    {
+     "name": "h",
+     "expected": 1.7,
+     "measured": 1.7,
+     "tol": 0.2,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "big fermentation tub (shikomi-oke, 1.82 x 1.70), dry; hoops slipped, five staves fallen out"
+   ],
+   "master": "spikes/W3C1/out/brewfit/jp_f_shikomi_oke_staved.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C1/build_w3c1.py (agent W3C1, 2026-10-02) on spikes/B3a/build.py"
+}
