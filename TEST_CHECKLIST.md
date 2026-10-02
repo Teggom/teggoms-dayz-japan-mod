@@ -22,6 +22,41 @@ tea houses) -> the town temple -> back to the spawn.
 pass (open AND close it, from both sides); loot on floors and on furniture tops. Shrines, altars and offerings carry
 no loot on purpose (left undisturbed).
 
+## FX2 re-check (~12 min; statues, guardians, detail props, rope, U1 veranda). IDs: spikes/SH1/SHOWCASE_MAP.md (W2F + FX2 sections)
+
+Pictures beside their reference photos: `research/production/contact_sheets/fx2_statues.jpg`, `fx2_komainu.jpg`,
+`fx2_detail.jpg`, `fx2_rope.jpg`; map of the new pairs `fx2_map_guardians.jpg`. Do these first.
+1. **Altar images** (open the doors; stand at the altar): T1 village hondo (972, 1123.5) **Amida** seated, hands in the
+   lap with the two finger rings, curls + ushnisha, the wheel halo; U1 town hondo (1100, 1112) **Shaka** seated, right
+   hand raised palm out, the boat halo with flames; U5 Kannon hall (1083, 1104) standing **Kannon** with the crown and
+   the lotus bud in her left hand; T5 Jizo hall (962, 1109.5) standing **Jizo**, jewel in his left hand, the ringed
+   staff in his right. Pass: each reads as that figure with a face from 2-3 m; worn gilt (not bright gold) on the
+   first three; no gaps where the figure meets its lotus seat.
+2. **Staff head** (T5 Jizo, any stone Jizo): the staff top is a closed pointed loop with rings / beads, no see-through
+   hole at the tip.
+3. **Stone Jizo**: T8 (958.4, 1106.8) with its bib, the six Jizo row at the graveyard's east gate (GJ1-GJ6), the child
+   Jizo graves in the graveyard, the Jizo huts in the sub-shrine row (x 1038, z 1145-1189). Pass: a face (closed eyes,
+   nose, mouth), robe with the kesa band, jewel + staff; the bib and cap sit on the figure (no float, no clipping).
+4. **Komainu pairs** (new): FX-P1 just inside the first torii (1021.5 / 1026.5, 1102.1), FX-P2 inside the second torii
+   (1021.3 / 1026.7, 1138.9), FX-V1 mossy, outside the village torii (942.8 / 947.2, 1059.5). Pass: each pair faces
+   down the approach, the open-mouth one on the RIGHT as you face the shrine, the closed one (with a small horn on the
+   upright form) on the left; nothing floats; you can walk between them.
+5. **Inari foxes** (new) FX-I1 (1056.2 / 1059.8, 1223.9) below the vermilion torii, with the lantern pair FX-I2
+   (1056 / 1060, 1221.4): key in the left fox's mouth, jewel in the right one's. The ground slopes ~13 deg there:
+   the pedestals' uphill sides are set ~0.28 m into the slope. Pass / tell me if it looks wrong.
+6. **Detail props**: P5 kagura stage back wall (1011.5, 1188.5): four masks with faces (old man with a beard, red
+   horned demon, plump woman, the pursed-mouth hyottoko) + the bell tree (bells on top, ribbons below); the P1 / V1
+   bell ropes (twisted red-white, fringed tassel); the U1 gong (flat, a slit round the lower rim, twisted rope); the
+   T3 / U3 temple bells (nipples in panels, bands, the dragon lug); the ema rail + the framed votive picture on the P1
+   / V1 haiden; the offering boxes (slats, iron straps with nails, the bronze crest).
+7. **Rope torii** (V3 945, 1061; 1024, 1161; the x 1036 row; the hill stair): the rope now hangs a little lower with
+   more sag than after FX1 (3/4 of the original), the paper shide tucked into the rope. Pass: still above your head
+   (lowest tip >= 2.31 m) and no longer looks short.
+8. **U1 town hondo veranda** (1100, 1112): the veranda runs round the front AND both sides (one bay deep) and ends at
+   a board screen (wakishoji) on each side. Pass: walk round it; no railing gap, nothing floating.
+- Tell me: statue faces (good enough or another pass?), the komainu forms (keep both?), the fox pedestals on the
+  slope, the rope height.
+
 ## FX1 re-check (~10 min; the fixes from your wave-2 walk). IDs: spikes/SH1/SHOWCASE_MAP.md (W2F section)
 
 Before / after pictures: `research/production/contact_sheets/fx1_fixes.jpg`. Do these first, then the rest of the walk

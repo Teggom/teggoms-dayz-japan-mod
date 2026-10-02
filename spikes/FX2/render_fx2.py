@@ -133,6 +133,8 @@ def blender_main(jobs):
         sc.render.resolution_x, sc.render.resolution_y = j.get("res", [900, 900])
         for it in j["items"]:
             add(it[0], it[1], it[2], it[3], it[4] if len(it) > 4 else 0.0, j.get("lod", 1.0))
+        for h in j.get("humans", []):
+            g["human"](h[0], h[1], h[2] if len(h) > 2 else 0.0)
         bpy.ops.mesh.primitive_plane_add(size=200, location=(0, 0, -0.002))
         bpy.context.active_object.data.materials.append(gm)
         cpos = Vector(g["to_b"](j["cam"]))

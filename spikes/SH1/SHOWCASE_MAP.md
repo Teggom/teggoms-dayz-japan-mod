@@ -436,7 +436,7 @@ Regenerate: `python spikes/W2F/layout_w2f.py` then `python spikes/W2F/map_md.py`
 |---|---|---|---|---|---|---|
 | P1t | `StaticObj_JP_F_Terrace_L` | 1024.00 | 1191.10 | 180 | -0.73 | stone terrace under P1 (1.4 m at the front) |
 | P1 | `Land_JP_Shrine_Haiden_Town_Hiwada_Furnished` | 1024.00 | 1192.00 | 180 | 0.54 | town haiden (Hachimangu): drum, offerings, bell rope, name board |
-| P1.s1 | `jp_f_saisen_bako_l.p3d` | 1021.81 | 1187.23 | 180 | 0.96 | the offering box at the foot of the steps (FX1: beside the stair foot, 0.88 m clear of it) |
+| P1.s1 | `jp_f_saisen_bako_l.p3d` | 1021.81 | 1187.24 | 180 | 0.96 | the offering box at the foot of the steps (FX1: beside the stair foot, 0.88 m clear of it) |
 | P2t | `StaticObj_JP_F_Terrace_M` | 1024.00 | 1205.71 | 180 | -1.11 | stone terrace under P2 (1.8 m at the front) |
 | P2 | `Land_JP_Shrine_Honden_Nagare_Town_Furnished` | 1024.00 | 1207.00 | 180 | 0.48 | town honden (nagare sangen-sha, curved bark roof), sanctum sealed |
 | P3 | `Land_JP_Shrine_Temizuya_Town_Furnished` | 1014.00 | 1147.00 | 90 | -0.07 | temizuya: basin + ladles |
@@ -459,12 +459,12 @@ Regenerate: `python spikes/W2F/layout_w2f.py` then `python spikes/W2F/map_md.py`
 | ID | Class / p3d | x | z | yaw | y_off | What |
 |---|---|---|---|---|---|---|
 | T1 | `Land_JP_Temple_Hondo_Village_Jodo` | 972.00 | 1123.50 | 180 | -0.00 | village hondo (Jodo): Amida, sutra desk |
-| T1.s1 | `jp_f_saisen_bako_m.p3d` | 969.28 | 1117.80 | 180 | -0.00 | the donation box (FX1: was on the en, across both doors) (FX1: beside the stair foot, 1.56 m clear of it) |
+| T1.s1 | `jp_f_saisen_bako_m.p3d` | 969.28 | 1117.80 | 180 | 0.00 | the donation box (FX1: was on the en, across both doors) (FX1: beside the stair foot, 1.56 m clear of it) |
 | T2 | `Land_JP_Temple_Kuri_Village_Furnished` | 955.00 | 1122.00 | 180 | 0.00 | village kuri: kamado row, irori, guest room |
 | T3 | `Land_JP_Temple_Shoro_Village_Bell` | 984.00 | 1112.00 | 180 | 0.00 | village bell tower with its bell |
 | T4 | `Land_JP_Temple_Gate_Yakuimon_Furnished` | 972.00 | 1104.50 | 180 | 0.00 | village temple gate (yakui-mon) |
 | T5 | `Land_JP_Temple_Do_2_Board_Jizo` | 962.00 | 1109.50 | 90 | 0.00 | Jizo hall |
-| T5.s1 | `jp_f_saisen_bako_s.p3d` | 965.91 | 1107.79 | 90 | 0.00 | the donation box (FX1: on the ground beside the stair foot in both hall sizes; the 2-ken hall had it on the en, across the doors) (FX1: beside the stair foot, 0.65 m clear of it) |
+| T5.s1 | `jp_f_saisen_bako_s.p3d` | 965.90 | 1107.79 | 90 | 0.00 | the donation box (FX1: on the ground beside the stair foot in both hall sizes; the 2-ken hall had it on the en, across the doors) (FX1: beside the stair foot, 0.65 m clear of it) |
 | T6 | `StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss` | 969.00 | 1109.50 | 90 | 0.00 | temple lantern (west of the walk) |
 | T7 | `StaticObj_JP_S_Stone_Lantern_Kasuga_18_Moss` | 975.00 | 1109.50 | 270 | -0.00 | temple lantern (east of the walk) |
 | T8 | `StaticObj_JP_S_Stone_Jizo_Bib` | 958.40 | 1106.80 | 90 | -0.19 | a stone Jizo with its bib by the Jizo hall |
@@ -474,12 +474,12 @@ Regenerate: `python spikes/W2F/layout_w2f.py` then `python spikes/W2F/map_md.py`
 | ID | Class / p3d | x | z | yaw | y_off | What |
 |---|---|---|---|---|---|---|
 | U1 | `Land_JP_Temple_Hondo_Town_Zen` | 1100.00 | 1112.00 | 180 | 0.00 | town hondo (Zen): Shaka, big mokugyo, drum |
-| U1.s1 | `jp_f_saisen_bako_l.p3d` | 1097.81 | 1106.09 | 180 | 0.00 | the donation box at the foot of the steps (FX1: beside the stair foot, 0.88 m clear of it) |
+| U1.s1 | `jp_f_saisen_bako_l.p3d` | 1097.81 | 1106.10 | 180 | 0.00 | the donation box at the foot of the steps (FX1: beside the stair foot, 0.88 m clear of it) |
 | U2 | `Land_JP_Temple_Kuri_Town_Zen` | 1114.50 | 1111.00 | 180 | 0.00 | town kuri (Zen): fish board, cloud gong |
 | U3 | `Land_JP_Temple_Shoro_Town_Bell` | 1085.50 | 1118.50 | 90 | 0.00 | town bell tower (hakama), the bell upstairs |
 | U4 | `Land_JP_Temple_Gate_Shikyakumon_Furnished` | 1100.00 | 1097.50 | 180 | 0.00 | town temple gate (shikyaku-mon) |
 | U5 | `Land_JP_Temple_Do_3_Tile_Kannon` | 1083.00 | 1104.00 | 90 | 0.00 | Kannon hall |
-| U5.s1 | `jp_f_saisen_bako_s.p3d` | 1087.82 | 1102.29 | 90 | 0.00 | the donation box (FX1: on the ground beside the stair foot in both hall sizes; the 2-ken hall had it on the en, across the doors) (FX1: beside the stair foot, 0.65 m clear of it) |
+| U5.s1 | `jp_f_saisen_bako_s.p3d` | 1087.81 | 1102.29 | 90 | 0.00 | the donation box (FX1: on the ground beside the stair foot in both hall sizes; the 2-ken hall had it on the en, across the doors) (FX1: beside the stair foot, 0.65 m clear of it) |
 | U6 | `StaticObj_JP_S_Stone_Lantern_Kasuga_24` | 1097.00 | 1102.50 | 90 | -0.00 | temple lantern (west) |
 | U7 | `StaticObj_JP_S_Stone_Lantern_Kasuga_24` | 1103.00 | 1102.50 | 270 | 0.00 | temple lantern (east) |
 | U8 | `StaticObj_JP_S_Chozubachi_Small` | 1094.00 | 1103.00 | 90 | 0.00 | temple water basin |

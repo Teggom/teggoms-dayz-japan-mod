@@ -2,23 +2,23 @@
  "building": "Land_JP_Temple_Hondo_Town_Zen",
  "key": "f_temple_hondo_town",
  "date": "2026-09-30",
- "budget": "large",
- "faces": "11592/3484/1590",
+ "budget": "large_plus",
+ "faces": "12434/3694/1638",
  "door_clear_m": [
   1.92
  ],
- "checks_n": 66,
+ "checks_n": 74,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11592, Resolution 2 3484, Resolution 3 1590, Geometry 1503, Memory 0, Roadway 125, View Geometry 1437, Fire Geometry 1455"
+   "detail": "Resolution 1 12434, Resolution 2 3694, Resolution 3 1638, Geometry 1551, Memory 0, Roadway 127, View Geometry 1473, Fire Geometry 1491"
   },
   {
-   "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+   "check": "C5 face budget (large_plus: 15000 / 5750 / 2000)",
    "ok": true,
-   "detail": "R1 11592, R2 3484, R3 1590"
+   "detail": "R1 12434, R2 3694, R3 1638"
   },
   {
    "check": "Geometry properties + mass",
@@ -33,17 +33,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "228 components, 0 bad, 0 faces outside components"
+   "detail": "236 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "217 components, 0 bad, 0 faces outside components"
+   "detail": "223 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "220 components, 0 bad, 0 faces outside components"
+   "detail": "226 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -58,7 +58,7 @@
   {
    "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
    "ok": true,
-   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 14 soseki under the posts"
+   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 25 soseki under the posts"
   },
   {
    "check": "C3 grid snap (post nodes on the 0.455 grid)",
@@ -98,12 +98,12 @@
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "1808/1808 samples"
+   "detail": "1840/1840 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "360/360 samples over hall, en"
+   "detail": "834/834 samples over hall, en, en_left, en_right"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -113,12 +113,12 @@
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "12 points (hall 10, en 2)"
+   "detail": "16 points (hall 10, en 4, en_left 1, en_right 1)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "12 points, max diff 4.3e-07 m"
+   "detail": "16 points, max diff 4.3e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -173,7 +173,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "hall 9600 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): en"
+   "detail": "hall 9600 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): en, en_left, en_right"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -208,7 +208,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 3418 touching (opposite-facing: backface-culled) and 974 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 3725 touching (opposite-facing: backface-culled) and 993 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -248,7 +248,7 @@
   {
    "check": "D2 floor coverage <= 25 %: en",
    "ok": true,
-   "detail": "0.00 of 5.56 m2 = 0.0 % (collision footprints)"
+   "detail": "0.00 of 8.01 m2 = 0.0 % (collision footprints)"
   },
   {
    "check": "D3 raised loot surface not required (sparse: the veranda before the hall): en",
@@ -257,6 +257,46 @@
   },
   {
    "check": "D4 1.00 m clear band door-to-door and door-to-centre: en",
+   "ok": true,
+   "detail": "no doors into this sparse space (walkable round its props)"
+  },
+  {
+   "check": "D1 props per room 0-7: en_left (sparse: side veranda)",
+   "ok": true,
+   "detail": "0 props: "
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: en_left",
+   "ok": true,
+   "detail": "0.00 of 2.22 m2 = 0.0 % (collision footprints)"
+  },
+  {
+   "check": "D3 raised loot surface not required (sparse: side veranda): en_left",
+   "ok": true,
+   "detail": "0 raised points on -"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: en_left",
+   "ok": true,
+   "detail": "no doors into this sparse space (walkable round its props)"
+  },
+  {
+   "check": "D1 props per room 0-7: en_right (sparse: side veranda)",
+   "ok": true,
+   "detail": "0 props: "
+  },
+  {
+   "check": "D2 floor coverage <= 25 %: en_right",
+   "ok": true,
+   "detail": "0.00 of 2.22 m2 = 0.0 % (collision footprints)"
+  },
+  {
+   "check": "D3 raised loot surface not required (sparse: side veranda): en_right",
+   "ok": true,
+   "detail": "0 raised points on -"
+  },
+  {
+   "check": "D4 1.00 m clear band door-to-door and door-to-centre: en_right",
    "ok": true,
    "detail": "no doors into this sparse space (walkable round its props)"
   },
@@ -303,7 +343,7 @@
   {
    "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
    "ok": true,
-   "detail": "8 collision props checked against 224 building components"
+   "detail": "8 collision props checked against 232 building components"
   },
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
@@ -323,7 +363,7 @@
   {
    "check": "D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry",
    "ok": true,
-   "detail": "12 points (10 floor, 2 raised)"
+   "detail": "16 points (14 floor, 2 raised)"
   },
   {
    "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
@@ -338,7 +378,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 965536 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1019963 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

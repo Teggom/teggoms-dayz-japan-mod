@@ -94,7 +94,10 @@ BUILDINGS = [
 ]
 
 BUDGETS = {"small": (3000, 1150, 400), "standard": (6000, 2300, 800), "townhouse": (9000, 3450, 1200),
-           "large": (12000, 4600, 1600)}
+           "large": (12000, 4600, 1600),
+           # FX2 (2026-10-01): PLAYBOOK §12 'budgets are guidance: +30-50 % when an object needs it': the town hondo
+           # with its mawari-en (Stephen: yes) = large + 25 %
+           "large_plus": (15000, 5750, 2000)}
 
 # ------------------------------------------------------------------------------------------------ C1 families
 # Phase C wave 1 (agent C1, 2026-09-30): template shells, one registry entry each (buildings/shellkit.py builds them,

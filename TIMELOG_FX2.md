@@ -11,3 +11,7 @@
 2026-10-01 20:43:07 | GROUP START 4 (torii rope + tassels) | FX2 | g4 | 5h 31% wk 65%
 2026-10-01 20:45:19 | GROUP DONE 4 (rope sag 0.075/1.82, shide into the lay, 5-bundle tassels; placed lowest tip 2.31 m, 0 LOW) | FX2 | g4 | 5h 32% wk 65%
 2026-10-01 20:45:19 | GROUP START 5 (U1 mawari-en) | FX2 | g5 | 5h 32% wk 65%
+2026-10-01 20:50:28 | PBO PACKED (jp_site 320 classes, jp_furniture 522; jp_common earlier) | FX2 | pack | 5h 33% wk 65%
+2026-10-01 20:53:07 | GROUP DONE 5 (U1 mawari-en 12,428 / 3,688 / 1,638, class large_plus; village hondo kept returns) | FX2 | g5 | 5h 34% wk 65%
+2026-10-01 20:54:02 | ISLAND BUILT (world 4144 objects, mission, verify_oprw PASS 4135/4135) | FX2 | island | 5h 35% wk 65%
+2026-10-01 21:04:31 | CHECKS DONE (verify_all --full 193 / 11,830 / 0 fail; bindcheck 193; hangcheck 0; handlecheck 0/40; ropeclear 0 LOW; toriipost 0; props 239+81+49 pass) | FX2 | checks | 5h 37% wk 66%

@@ -903,7 +903,9 @@ def hondo(name=None, grade="village", form="degumi", wear="_w1"):
     B.merge(cp)
     B.interior = False
     en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False,
-                    returns=True)  # FX1: koran returns at the en ends
+                    returns=True)  # FX1: koran returns at the en ends. FX2 tried the mawari-en here too (9,512 faces) but
+    # the straight sangawara eave leaves the side-en screens poking through the far-LOD silhouette (C15) and the
+    # village dressing has no side-en rooms: kept the returns (a front-only en is common on a village hall)
     rp = Part("roof", "", "")
     sls, info = R.roof(rp, W, D, "irimoya", "sangawara", eave_y=EAVE_Y)
     far_r2_in_r3(rp, ("kawara_field_far",))      # C15: the 4-ken irimoya's R3 field misses the gable foot by 0.30
@@ -942,8 +944,8 @@ def _hondo_town(name, form, wear):
     """Town hondo: 3 x 3 bays of 2.275 on a boarded raised floor (+0.75), degumi (or mitesaki) bracket sets with
     kaerumata, board walls + a board ceiling, curved irimoya hongawara, the en on three sides with giboshi koran,
     wakishoji, kizahashi, a hongawara-style kohai fitted under the curved eave; sankarado in the middle bay, hinged
-    shitomido beside, a board side door. FX1: the en is front-only with koran returns (the three-side en the first
-    line names is over the face budget)."""
+    shitomido beside, a board side door. FX1 put koran returns on a front-only en (budget); FX2 restores the
+    mawari-en (three sides, the sides one bay deep to wakishoji) at Stephen's yes (budget class large_plus)."""
     n, bay = 3, TOWN_BAY
     W = D = n * bay
     drop, col_h = 0.75, 3.2
@@ -956,10 +958,11 @@ def _hondo_town(name, form, wear):
     n0 = len(S.portals)
     dn = town_walls(S, W, D, n, n, c, ytop, front=["shitomi", "tobira_sankara_in", "shitomi"])
     S.dn["front"] = dn[1]
-    en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front",), stair=W / 2, waki=False,
-                    returns=True)  # FX1: koran returns at the en ends (was cut off). A mawari-en (three sides, even
-    # one bay deep to a wakishoji: koran.en_wrap side_len) is the fuller form but takes R1 to 12,428 / R3 1,638, over
-    # the 'large' budget (12,000 / 1,600); the returns keep it at 11,586 / 1,590
+    # FX2 (2026-10-01, Stephen: 'U1 wrap-round veranda: YES, even though it goes to ~12,428 faces'): the period
+    # mawari-en: the en on three sides, the side runs one bay deep back to a wakishoji screen (koran.en_wrap side_len,
+    # FX1's variant a), instead of FX1's koran returns. Budget class 'large_plus' (registry: large + 25 %)
+    en = KR.en_wrap(S.H, W, D, drop=drop, style="plain", sides=("front", "left", "right"), stair=W / 2, waki=True,
+                    side_len=bay)
     rp = Part("roof", "", "")
     sls, info = SO.roof(rp, W, D, "irimoya", "hongawara", bear_y=K["bear_y"], g_out=K["g_out"],
                         ov=K["g_out"] + (1.30 if form == "mitesaki" else 1.35), spacing=0.30)
@@ -979,7 +982,7 @@ def _hondo_town(name, form, wear):
     lift_portals(S, drop, n0)
     S.room("hall", "worship", "boards", drop, (c / 2 + 0.03, W - c / 2 - 0.03, -D + c / 2 + 0.03, -c / 2 - 0.03),
            [S.dn["front"]], "gejin in front, naijin at the back: the dais spot")
-    en_rooms(S, W, D, drop, ("front",), z0=0.32, returns=True)
+    en_rooms(S, W, D, drop, ("front", "left", "right"), z0=0.32, side_len=bay)        # FX2: the mawari-en
     stair_obstacle(S, "en", en["stair"])
     fit(S, "altar", "hall", rect=(bay, 2 * bay, -D + c / 2 + 0.03, -D + c / 2 + 1.40), y=drop,
         note="naijin: Sumeru dais (shumidan) with the honzon in its zushi, canopy (tengai), keman, banners, the "
@@ -1381,6 +1384,8 @@ def budget_class(kind, **params):
     grade = params.get("grade", "village")
     if kind == "shoro":
         return "large" if grade == "town" else "standard"     # the town tower: R3 > 800 (no 'tower' class yet)
+    if kind == "hondo" and grade == "town":
+        return "large_plus"                                    # FX2: the mawari-en (Stephen: yes, ~12,4xx faces)
     if kind in ("hondo", "kuri"):
         return "large"
     if grade == "town" and kind in ("haiden", "do", "kagura", "honden"):

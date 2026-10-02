@@ -17,6 +17,8 @@ KEEP = [
     # W2F furniture (jp_furniture)
     r"jp_f_dais_", r"jp_f_kagura_masks\.", r"jp_f_waniguchi\.", r"jp_f_suzu_rope", r"jp_f_bonsho_",
     r"jp_f_ema_rail\.", r"jp_f_saisen_bako_", r"jp_f_shimenawa_hang\.",
+    # buildings (jp_buildings): the town hondo (U1) with its mawari-en, shell + furnished
+    r"^jp_temple_hondo_town\.p3d$", r"^jp_temple_hondo_town_zen\.p3d$",
 ]
 
 

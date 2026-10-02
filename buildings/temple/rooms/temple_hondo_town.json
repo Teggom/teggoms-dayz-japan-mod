@@ -61,8 +61,8 @@
    "floor": "boards",
    "level_m": 0.75,
    "rect_kit": [
-    0.2,
-    6.624999999999999,
+    -1.215,
+    8.04,
     0.32,
     1.185
    ],
@@ -70,8 +70,8 @@
    "note": "the en (veranda) round the hall: open, railed",
    "enclosed": false,
    "rect_model": [
-    -3.212,
-    3.212,
+    -4.627,
+    4.627,
     3.732,
     4.598
    ],
@@ -107,11 +107,57 @@
      "y": 3.2
     }
    ]
+  },
+  {
+   "name": "en_left",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    -1.215,
+    -0.12,
+    -2.025,
+    0.0
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    -4.627,
+    -3.532,
+    1.387,
+    3.412
+   ],
+   "fittings": []
+  },
+  {
+   "name": "en_right",
+   "tag": "veranda",
+   "floor": "boards",
+   "level_m": 0.75,
+   "rect_kit": [
+    6.944999999999999,
+    8.04,
+    -2.025,
+    0.0
+   ],
+   "doors": [],
+   "note": "the en (veranda) round the hall: open, railed",
+   "enclosed": false,
+   "rect_model": [
+    3.532,
+    4.627,
+    1.387,
+    3.412
+   ],
+   "fittings": []
   }
  ],
- "loot_points": 10,
+ "loot_points": 14,
  "loot_by_room": {
   "hall": 8,
-  "en": 2
+  "en": 4,
+  "en_left": 1,
+  "en_right": 1
  }
 }

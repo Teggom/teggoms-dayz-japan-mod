@@ -235,9 +235,9 @@
   {
    "p3d": "JP\\site\\roadside\\jp_s_shimenawa_len_1ken.p3d",
    "pos": [
-    1026.3994422197343,
-    27.16999994277954,
-    1053.2005374941975
+    1026.3997494220735,
+    27.21034656524658,
+    1053.199962311238
    ],
    "yaw": 180.0,
    "src": "placement:C.csv"
@@ -1701,6 +1701,106 @@
    ],
    "yaw": 328.0,
    "src": "placement:F.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_komainu_b_un.p3d",
+   "pos": [
+    1021.45,
+    25.0,
+    1102.1
+   ],
+   "yaw": 165.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_komainu_b_a.p3d",
+   "pos": [
+    1026.55,
+    25.0,
+    1102.1
+   ],
+   "yaw": 195.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_komainu_a_un.p3d",
+   "pos": [
+    1021.3,
+    25.217584259033202,
+    1138.9
+   ],
+   "yaw": 165.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_komainu_a_a.p3d",
+   "pos": [
+    1026.7,
+    25.217584259033202,
+    1138.9
+   ],
+   "yaw": 195.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_komainu_a_un_moss.p3d",
+   "pos": [
+    942.8,
+    25.0,
+    1059.5
+   ],
+   "yaw": 165.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_komainu_a_a_moss.p3d",
+   "pos": [
+    947.2,
+    25.0,
+    1059.5
+   ],
+   "yaw": 195.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_kitsune_key.p3d",
+   "pos": [
+    1056.2,
+    33.02977651977539,
+    1223.9
+   ],
+   "yaw": 165.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_kitsune_jewel.p3d",
+   "pos": [
+    1059.8,
+    33.00375918579102,
+    1223.9
+   ],
+   "yaw": 195.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d",
+   "pos": [
+    1056.0,
+    32.398485443115234,
+    1221.4
+   ],
+   "yaw": 90.0,
+   "src": "placement:FX2.csv"
+  },
+  {
+   "p3d": "JP\\site\\shrine\\jp_s_stone_lantern_kasuga_18_moss.p3d",
+   "pos": [
+    1060.0,
+    32.35516781616211,
+    1221.4
+   ],
+   "yaw": 270.0,
+   "src": "placement:FX2.csv"
   },
   {
    "p3d": "JP\\common\\swatch\\jp_swatch_wall.p3d",
@@ -5535,9 +5635,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_l.p3d",
    "pos": [
-    1021.811,
-    28.342625869750975,
-    1187.232
+    1021.809,
+    28.34294058227539,
+    1187.236
    ],
    "yaw": 180.0,
    "src": "placement:W2F.csv"
@@ -5605,9 +5705,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_m.p3d",
    "pos": [
-    943.188,
+    943.186,
     25.0,
-    1066.117
+    1066.121
    ],
    "yaw": 180.0,
    "src": "placement:W2F.csv"
@@ -5635,9 +5735,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_m.p3d",
    "pos": [
-    969.278,
-    24.999998092651367,
-    1117.797
+    969.276,
+    25.0,
+    1117.801
    ],
    "yaw": 180.0,
    "src": "placement:W2F.csv"
@@ -5685,9 +5785,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_s.p3d",
    "pos": [
-    965.908,
+    965.904,
     25.0,
-    1107.788
+    1107.786
    ],
    "yaw": 90.0,
    "src": "placement:W2F.csv"
@@ -5705,9 +5805,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_l.p3d",
    "pos": [
-    1097.811,
+    1097.809,
     25.0,
-    1106.094
+    1106.099
    ],
    "yaw": 180.0,
    "src": "placement:W2F.csv"
@@ -5755,9 +5855,9 @@
   {
    "p3d": "JP\\furniture\\sacred\\jp_f_saisen_bako_s.p3d",
    "pos": [
-    1087.818,
-    25.000001907348633,
-    1102.288
+    1087.814,
+    25.0,
+    1102.286
    ],
    "yaw": 90.0,
    "src": "placement:W2F.csv"

@@ -2,8 +2,8 @@
  "building": "Land_JP_Temple_Hondo_Town",
  "key": "temple_hondo_town",
  "date": "2026-09-30",
- "budget": "large",
- "faces": "11586/3478/1590",
+ "budget": "large_plus",
+ "faces": "12428/3688/1638",
  "door_clear_m": [
   1.92
  ],
@@ -13,12 +13,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 11586, Resolution 2 3478, Resolution 3 1590, Geometry 1503, Memory 0, Roadway 125, View Geometry 1437, Fire Geometry 1455"
+   "detail": "Resolution 1 12428, Resolution 2 3688, Resolution 3 1638, Geometry 1551, Memory 0, Roadway 127, View Geometry 1473, Fire Geometry 1491"
   },
   {
-   "check": "C5 face budget (large: 12000 / 4600 / 1600)",
+   "check": "C5 face budget (large_plus: 15000 / 5750 / 2000)",
    "ok": true,
-   "detail": "R1 11586, R2 3478, R3 1590"
+   "detail": "R1 12428, R2 3688, R3 1638"
   },
   {
    "check": "Geometry properties + mass",
@@ -33,17 +33,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "228 components, 0 bad, 0 faces outside components"
+   "detail": "236 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "217 components, 0 bad, 0 faces outside components"
+   "detail": "223 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "220 components, 0 bad, 0 faces outside components"
+   "detail": "226 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -58,7 +58,7 @@
   {
    "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
    "ok": true,
-   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 14 soseki under the posts"
+   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 25 soseki under the posts"
   },
   {
    "check": "C3 grid snap (post nodes on the 0.455 grid)",
@@ -98,12 +98,12 @@
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "1808/1808 samples"
+   "detail": "1840/1840 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "360/360 samples over hall, en"
+   "detail": "834/834 samples over hall, en, en_left, en_right"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -113,12 +113,12 @@
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "10 points (hall 8, en 2)"
+   "detail": "14 points (hall 8, en 4, en_left 1, en_right 1)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "10 points, max diff 4.3e-07 m"
+   "detail": "14 points, max diff 4.3e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -173,7 +173,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "hall 9600 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): en"
+   "detail": "hall 9600 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): en, en_left, en_right"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -208,7 +208,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 3420 touching (opposite-facing: backface-culled) and 976 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 3724 touching (opposite-facing: backface-culled) and 992 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -223,7 +223,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 961440 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1014850 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

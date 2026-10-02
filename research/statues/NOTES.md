@@ -66,7 +66,12 @@ Code: `spikes/FX2/figures.py` (the shapes), `statuekit.py` (mesher), `statues.py
   shaped point. NO stone Inari fox in either open-access collection: **references missing** (see the FX2 report):
   Stephen may want to save 2-3 photos of Edo-period stone Inari foxes (e.g. Fushimi Inari, Toyokawa Inari) for a check.
 
-## Face counts (Res 1 / 2 / 3, figure only)
-See `python spikes/FX2/statues.py`. Altar daises (image + lotus + halo + cabinet + altar pieces) are budget class
+## Face counts (Res 1 / 2 / 3)
+Figures (`python spikes/FX2/statues.py`): seated nyorai 2,800 / 998 / 338; Kannon 2,598 / 948 / 318; altar Jizo
+2,598 / 948 / 380; stone Jizo 2,398 / 858 / 290; child Jizo 1,100 / 420 / 148; komainu a 2,800 / 1,000 / 340, b 2,600 /
+950 / 320; kitsune 2,000 / 750 / 250; lotus seat 700 / 260 / 176; masks 400 / 150 / 50 each.
+Props: altar daises 3,490-4,622 (Amida the most: the wheel halo); stone Jizo 1,813-1,930; Jizo huts 1,877-2,029;
+komainu 2,638-2,847; kitsune 2,036; kagura mask wall 2,128; bonsho 1,946; waniguchi 1,249; suzu 828; ema rail 830;
+offering box 496. Altar daises (image + lotus + halo + cabinet + altar pieces) are budget class
 `altar` (5,500 = statue 4,500 + furniture 1,000); stone Jizo / komainu / kitsune props class `statue` (4,500 / 1,700 /
 700: 3,000 + 50 %, PLAYBOOK §12).
