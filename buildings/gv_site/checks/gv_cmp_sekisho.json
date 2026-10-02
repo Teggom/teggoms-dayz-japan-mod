@@ -3,7 +3,7 @@
  "key": "gv_cmp_sekisho",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "8890/2046/1180",
+ "faces": "8600/1990/1158",
  "door_clear_m": [
   2.5,
   2.5
@@ -14,12 +14,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 8890, Resolution 2 2046, Resolution 3 1180, Geometry 458, Memory 0, Roadway 15, View Geometry 458, Fire Geometry 458"
+   "detail": "Resolution 1 8600, Resolution 2 1990, Resolution 3 1158, Geometry 436, Memory 0, Roadway 10, View Geometry 436, Fire Geometry 436"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 8890, R2 2046, R3 1180"
+   "detail": "R1 8600, R2 1990, R3 1158"
   },
   {
    "check": "Geometry properties + mass",
@@ -34,17 +34,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "73 components, 0 bad, 0 faces outside components"
+   "detail": "70 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "73 components, 0 bad, 0 faces outside components"
+   "detail": "70 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "73 components, 0 bad, 0 faces outside components"
+   "detail": "70 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -89,12 +89,12 @@
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "240/240 samples"
+   "detail": "160/160 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "555/555 samples over gate0, gate1, oshirasu"
+   "detail": "330/330 samples over gate0, gate1"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -104,12 +104,12 @@
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "6 points (gate0 1, gate1 1, oshirasu 4)"
+   "detail": "2 points (gate0 1, gate1 1)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "6 points, max diff 1.4e-07 m"
+   "detail": "2 points, max diff 1.4e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -149,7 +149,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "open-sided by design (not checked): gate0, gate1, oshirasu"
+   "detail": "open-sided by design (not checked): gate0, gate1"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -169,12 +169,12 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "1241 columns over 2.5 m compared in each LOD"
+   "detail": "1240 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "10 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "8 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -184,7 +184,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 1078 touching (opposite-facing: backface-culled) and 224 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 1050 touching (opposite-facing: backface-culled) and 216 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -199,7 +199,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 749461 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 719531 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

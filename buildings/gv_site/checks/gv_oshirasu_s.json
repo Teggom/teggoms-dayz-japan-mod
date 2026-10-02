@@ -1,54 +1,52 @@
 {
- "building": "Land_JP_Compound_Hikeshi",
- "key": "gv_cmp_hikeshi",
+ "building": "Land_JP_Oshirasu_Sekisho",
+ "key": "gv_oshirasu_s",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "2766/888/382",
- "door_clear_m": [
-  2.54
- ],
- "checks_n": 33,
+ "faces": "169/34/6",
+ "door_clear_m": [],
+ "checks_n": 28,
  "failures": 0,
  "checks": [
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 2766, Resolution 2 888, Resolution 3 382, Geometry 242, Memory 0, Roadway 5, View Geometry 242, Fire Geometry 242"
+   "detail": "Resolution 1 169, Resolution 2 34, Resolution 3 6, Geometry 122, Memory 0, Roadway 5, View Geometry 122, Fire Geometry 122"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 2766, R2 888, R3 382"
+   "detail": "R1 169, R2 34, R3 6"
   },
   {
    "check": "Geometry properties + mass",
    "ok": true,
-   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 15000 kg"
+   "detail": "{'class': 'house', 'map': 'house', 'damage': 'no', 'autocenter': '0'}, mass 20000 kg"
   },
   {
    "check": "B1/B2 binds in game (class == Land_<p3d stem>, shipped p3d has class=house)",
    "ok": true,
-   "detail": "Land_JP_Compound_Hikeshi -> jp_compound_hikeshi.p3d"
+   "detail": "Land_JP_Oshirasu_Sekisho -> jp_oshirasu_sekisho.p3d"
   },
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "39 components, 0 bad, 0 faces outside components"
+   "detail": "9 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "39 components, 0 bad, 0 faces outside components"
+   "detail": "9 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "39 components, 0 bad, 0 faces outside components"
+   "detail": "9 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
    "ok": true,
-   "detail": "dirt, wood"
+   "detail": "dirt, granite, wood"
   },
   {
    "check": "C2 library materials only",
@@ -63,17 +61,7 @@
   {
    "check": "C3 grid snap (post nodes on the 0.455 grid)",
    "ok": true,
-   "detail": "6 posts"
-  },
-  {
-   "check": "C7 DoorsTwin1 selections, memory, model.cfg, config",
-   "ok": true,
-   "detail": "Gate (kido ryo) (hinged_gate): bones doors1+doors2"
-  },
-  {
-   "check": "C7 DoorsTwin1 sweep + clear (>= 1.00, D1) + head (D2)",
-   "ok": true,
-   "detail": "leaves turn 90/90 deg without touching other geometry; open clear 2.54 m, head 2.25 m"
+   "detail": "4 posts"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
@@ -83,7 +71,7 @@
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "165/165 samples over gate0"
+   "detail": "225/225 samples over oshirasu"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -93,12 +81,12 @@
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "1 points (gate0 1)"
+   "detail": "4 points (oshirasu 4)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "1 points, max diff 1.4e-07 m"
+   "detail": "4 points, max diff 0.0e+00 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -106,24 +94,9 @@
    "detail": "not placed on the island (shipped in the PBO only)"
   },
   {
-   "check": "C10 DoorsTwin1 reachable from both sides (open)",
-   "ok": true,
-   "detail": "Gate (kido ryo): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.96 m; far: leaf hit first from 6/15 standing positions (need 4), e.g. 0.7 m out, -0.3 m along, ray 2.33 m"
-  },
-  {
-   "check": "C10 DoorsTwin1 reachable from both sides (closed)",
-   "ok": true,
-   "detail": "Gate (kido ryo): leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.75 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.67 m"
-  },
-  {
-   "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
-   "ok": true,
-   "detail": "Gate (kido ryo): 55728 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
-  },
-  {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "open-sided by design (not checked): gate0"
+   "detail": "open-sided by design (not checked): oshirasu"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -148,7 +121,7 @@
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "5 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "4 library rvmats in the visual LODs, 0 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -158,7 +131,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 1213 touching (opposite-facing: backface-culled) and 168 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 9 touching (opposite-facing: backface-culled) and 0 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -173,7 +146,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 221360 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 38485 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

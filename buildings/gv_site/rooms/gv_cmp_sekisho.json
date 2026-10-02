@@ -11,8 +11,8 @@
    "rect_kit": [
     -1.0500000000000003,
     1.25,
-    10.209999999999999,
-    12.540000000000001
+    8.389999999999999,
+    10.72
    ],
    "doors": [
     "DoorsTwin1"
@@ -22,8 +22,8 @@
    "rect_model": [
     -12.88,
     -10.58,
-    -1.62,
-    0.71
+    -2.53,
+    -0.2
    ],
    "fittings": []
   },
@@ -35,8 +35,8 @@
    "rect_kit": [
     22.41,
     24.71,
-    10.209999999999999,
-    12.540000000000001
+    8.389999999999999,
+    10.72
    ],
    "doors": [
     "DoorsTwin2"
@@ -46,38 +46,15 @@
    "rect_model": [
     10.58,
     12.88,
-    -1.62,
-    0.71
-   ],
-   "fittings": []
-  },
-  {
-   "name": "oshirasu",
-   "tag": "yard",
-   "floor": "gravel",
-   "level_m": 0.1,
-   "rect_kit": [
-    2.17,
-    11.48,
-    13.909,
-    16.029999999999998
-   ],
-   "doors": [],
-   "note": "the gravel court before the inspection room (travellers knelt on straw mats here)",
-   "enclosed": false,
-   "rect_model": [
-    -9.66,
-    -0.35,
-    2.079,
-    4.2
+    -2.53,
+    -0.2
    ],
    "fittings": []
   }
  ],
- "loot_points": 6,
+ "loot_points": 2,
  "loot_by_room": {
   "gate0": 1,
-  "gate1": 1,
-  "oshirasu": 4
+  "gate1": 1
  }
 }

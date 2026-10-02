@@ -7285,12 +7285,20 @@
 				<container name="lootFloor">
 						<category name="tools" />
 						<tag name="floor" />
-						<point pos="-0.455000 0.100000 11.087143" range="0.342857" height="0.857143" />
-						<point pos="-0.455000 0.100000 -11.087143" range="0.342857" height="0.857143" />
-						<point pos="3.139500 0.100000 8.196250" range="0.860500" height="2.000000" />
-						<point pos="3.139500 0.100000 6.068750" range="0.860500" height="2.000000" />
-						<point pos="3.139500 0.100000 3.941250" range="0.860500" height="2.000000" />
-						<point pos="3.139500 0.100000 1.813750" range="0.860500" height="2.000000" />
+						<point pos="-1.365000 0.100000 11.087143" range="0.342857" height="0.857143" />
+						<point pos="-1.365000 0.100000 -11.087143" range="0.342857" height="0.857143" />
+				</container>
+		</group>
+		<group name="Land_JP_Oshirasu_Sekisho">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<tag name="floor" />
+						<point pos="0.000000 0.100000 3.187500" range="0.750000" height="1.875000" />
+						<point pos="0.000000 0.100000 1.062500" range="0.750000" height="1.875000" />
+						<point pos="0.000000 0.100000 -1.062500" range="0.750000" height="1.875000" />
+						<point pos="0.000000 0.100000 -3.187500" range="0.750000" height="1.875000" />
 				</container>
 		</group>
 		<group name="Land_JP_Toiyaba">
@@ -7317,7 +7325,7 @@
 				<container name="lootFloor">
 						<category name="tools" />
 						<tag name="floor" />
-						<point pos="-5.627143 0.100000 -0.455000" range="0.342857" height="0.857143" />
+						<point pos="-6.537143 0.100000 -0.455000" range="0.342857" height="0.857143" />
 				</container>
 		</group>
 		<group name="Land_JP_GinmiSho">
@@ -7347,19 +7355,27 @@
 				<container name="lootFloor">
 						<category name="tools" />
 						<tag name="floor" />
-						<point pos="13.817143 0.100000 10.010000" range="0.342857" height="0.857143" />
-						<point pos="-3.089952 0.100000 -6.971607" range="1.072333" height="2.000000" />
-						<point pos="-1.594524 0.100000 -7.275536" range="1.072333" height="2.000000" />
-						<point pos="-0.597571 0.100000 -6.363750" range="1.072333" height="2.000000" />
-						<point pos="-3.089952 0.100000 -8.491250" range="1.072333" height="2.000000" />
-						<point pos="-2.093000 0.100000 -9.403036" range="1.072333" height="2.000000" />
-						<point pos="-1.096048 0.100000 -8.491250" range="1.072333" height="2.000000" />
-						<point pos="-3.089952 0.100000 -10.618750" range="1.072333" height="2.000000" />
-						<point pos="-1.843762 0.100000 -11.226607" range="1.072333" height="2.000000" />
-						<point pos="-0.846810 0.100000 -10.314821" range="1.072333" height="2.000000" />
-						<point pos="-3.089952 0.100000 -12.138393" range="1.072333" height="2.000000" />
-						<point pos="-1.345286 0.100000 -12.442321" range="1.072333" height="2.000000" />
-						<point pos="-0.099095 0.100000 -13.050179" range="0.923095" height="2.000000" />
+						<point pos="-7.280000 0.100000 19.277143" range="0.342857" height="0.857143" />
+				</container>
+		</group>
+		<group name="Land_JP_Oshirasu_Jinya">
+				<usage name="Village" />
+				<usage name="Town" />
+				<container name="lootFloor">
+						<category name="tools" />
+						<tag name="floor" />
+						<point pos="-1.085714 0.100000 2.276786" range="1.150000" height="2.000000" />
+						<point pos="0.271429 0.100000 2.276786" range="1.150000" height="2.000000" />
+						<point pos="1.628571 0.100000 2.883929" range="1.150000" height="2.000000" />
+						<point pos="-1.085714 0.100000 0.758929" range="1.150000" height="2.000000" />
+						<point pos="0.271429 0.100000 0.758929" range="1.150000" height="2.000000" />
+						<point pos="1.628571 0.100000 1.062500" range="1.150000" height="2.000000" />
+						<point pos="-1.085714 0.100000 -1.062500" range="1.150000" height="2.000000" />
+						<point pos="0.271429 0.100000 -1.062500" range="1.150000" height="2.000000" />
+						<point pos="1.357143 0.100000 -1.973214" range="1.150000" height="2.000000" />
+						<point pos="-1.085714 0.100000 -2.580357" range="1.150000" height="2.000000" />
+						<point pos="0.271429 0.100000 -2.883929" range="1.150000" height="2.000000" />
+						<point pos="1.900000 0.100000 -3.187500" range="1.150000" height="2.000000" />
 				</container>
 		</group>
 		<group name="Land_JP_Roya">

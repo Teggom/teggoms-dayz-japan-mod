@@ -359,38 +359,44 @@ def roya(name=None, wear="_w2"):
 
 # ================================================================================================ compounds
 GOV = {
-    # the checkpoint: a palisade 13 x 13 ken, the road through the middle (z 5.75..7.25 ken), a kora-mon in the west
-    # line (Kyoto side) and the east line (Edo side) by the picker; the gravel court before the inspection room
-    "sekisho": dict(W=13 * KEN, D=13 * KEN, closed=True,
-                    runs=[([(0.0, 0.0), (0.0, 13 * KEN), (13 * KEN, 13 * KEN), (13 * KEN, 0.0)], "saku", {},
+    # the checkpoint: a palisade 13 x 12 ken, the road through it (z 4.5..6 ken), a kora-mon in the west line (Kyoto
+    # side) and the east line (Edo side) by the picker. The gravel court is its own object (oshirasu_s: on a slope a pad
+    # inside a big compound would be buried on the high side)
+    "sekisho": dict(W=13 * KEN, D=12 * KEN, closed=True,
+                    runs=[([(0.0, 0.0), (0.0, 12 * KEN), (13 * KEN, 12 * KEN), (13 * KEN, 0.0)], "saku", {},
                            ("end", "end"))],
-                    gates=[(0, 0, 5.5 * KEN) + DW.pick_gate("saku", status="high", role="front"),
-                           (0, 2, 6.0 * KEN) + DW.pick_gate("saku", status="high", role="front")],
-                    pads=[("oshirasu", 1.0 * KEN, 6.5 * KEN, 7.45 * KEN, 9.0 * KEN,
-                           "the gravel court before the inspection room (travellers knelt on straw mats here)")]),
+                    gates=[(0, 0, 4.5 * KEN) + DW.pick_gate("saku", status="high", role="front"),
+                           (0, 2, 6.0 * KEN) + DW.pick_gate("saku", status="high", role="front")]),
+    # the gravel courts (oshirasu): pads only (white gravel before the inspection room / the court room)
+    "oshirasu_s": dict(W=10.0, D=2.6, closed=False, runs=[], gates=[],
+                       pad_posts=[(-0.455, -0.455), (10.465, -0.455), (-0.455, 1.365), (10.465, 1.365)],
+                       pads=[("oshirasu", 0.0, 10.0, 0.0, 2.6, "the gravel court before the inspection room (travellers "
+                              "knelt on straw mats here)")]),
+    "oshirasu_j": dict(W=10.0, D=7.2, closed=False, runs=[], gates=[],
+                       pad_posts=[(-0.455, -0.455), (10.465, -0.455), (-0.455, 7.735), (10.465, 7.735)],
+                       pads=[("oshirasu", 0.0, 10.0, 0.0, 7.2, "the white-gravel court (oshirasu) before the court "
+                              "room")]),
     # the post-station yard: a board fence round the office (at the back) and the yard; the street gate by the picker
-    "toiyayard": dict(W=9 * KEN, D=7 * KEN, closed=True,
-                      runs=[([(0.0, 0.0), (0.0, 7 * KEN), (9 * KEN, 7 * KEN), (9 * KEN, 0.0)], "itabei",
-                             dict(kuro=False, cap="none"), ("end", "end"))],
+    "toiyayard": dict(W=9 * KEN, D=8 * KEN, closed=True,
+                      runs=[([(0.0, 0.0), (0.0, 8 * KEN), (9 * KEN, 8 * KEN), (9 * KEN, 0.0)], "itabei",
+                             dict(kuro=False, cap="none", skirt=0.60), ("end", "end"))],
                       gates=[(0, 3, 3.5 * KEN) + DW.pick_gate("itabei", status="work", carts=True)]),
     # the intendant's office: the black nagaya-mon (a separate object) in the gap of the south line, a black board fence
     # round the rest, the back gate by the picker; the white-gravel court before the court room
-    "jinya": dict(W=17 * KEN, D=16 * KEN, gate_obj=(5 * KEN, 12 * KEN),
-                  runs=[([(5 * KEN, 0.0), (0.0, 0.0), (0.0, 16 * KEN), (17 * KEN, 16 * KEN), (17 * KEN, 0.0),
-                          (12 * KEN, 0.0)], "itabei", dict(kuro=True, cap="none"), ("end", "end"))],
-                  gates=[(0, 2, 2.5 * KEN) + DW.pick_gate("itabei", dict(kuro=True), status="high", role="back")],
-                  pads=[("oshirasu", 11.0 * KEN, 16.5 * KEN, 5.0 * KEN, 8.7 * KEN,
-                         "the white-gravel court (oshirasu) before the court room")]),
+    "jinya": dict(W=22 * KEN, D=13 * KEN, gate_obj=(7.5 * KEN, 14.5 * KEN),
+                  runs=[([(7.5 * KEN, 0.0), (0.0, 0.0), (0.0, 13 * KEN), (22 * KEN, 13 * KEN), (22 * KEN, 0.0),
+                          (14.5 * KEN, 0.0)], "itabei", dict(kuro=True, cap="none", skirt=0.60), ("end", "end"))],
+                  gates=[(0, 1, 2.0 * KEN) + DW.pick_gate("itabei", dict(kuro=True), status="high", role="back")]),
     # the jail: a black board fence round the plot (a plastered dobei was 19k faces, a board cap +81 % R3: W3D_NOTES), ONE
     # gate (the picker: high status, front, board fence = a kabuki-mon 1.5 ken)
     "roya": dict(W=10 * KEN, D=9 * KEN, closed=True,
                  runs=[([(0.0, 0.0), (0.0, 9 * KEN), (10 * KEN, 9 * KEN), (10 * KEN, 0.0)], "itabei",
-                        dict(kuro=True, cap="none"), ("end", "end"))],
+                        dict(kuro=True, cap="none", skirt=0.60), ("end", "end"))],
                  gates=[(0, 3, 6.0 * KEN) + DW.pick_gate("itabei", dict(kuro=True), status="high", role="front")]),
     # the fire brigade station: a board fence round the tower and the tool shed; a wide gate for ladders and hooks
     "hikeshi": dict(W=8 * KEN, D=7 * KEN, closed=True,
                     runs=[([(0.0, 0.0), (0.0, 7 * KEN), (8 * KEN, 7 * KEN), (8 * KEN, 0.0)], "itabei",
-                           dict(kuro=False, cap="none"), ("end", "end"))],
+                           dict(kuro=False, cap="none", skirt=0.60), ("end", "end"))],
                     gates=[(0, 3, 3.0 * KEN) + DW.pick_gate("itabei", status="work", carts=True)]),
 }
 DW.COMPOUNDS.update(GOV)

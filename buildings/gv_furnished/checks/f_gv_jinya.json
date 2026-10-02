@@ -3,7 +3,7 @@
  "key": "f_gv_jinya",
  "date": "2026-09-30",
  "budget": "large",
- "faces": "13340/3343/1483",
+ "faces": "13364/3367/1507",
  "door_clear_m": [
   1.46,
   1.06,
@@ -22,12 +22,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 13340, Resolution 2 3343, Resolution 3 1483, Geometry 3180, Memory 0, Roadway 30, View Geometry 3093, Fire Geometry 3153"
+   "detail": "Resolution 1 13364, Resolution 2 3367, Resolution 3 1507, Geometry 3180, Memory 0, Roadway 30, View Geometry 3093, Fire Geometry 3153"
   },
   {
    "check": "C5 face budget (large: 12000 / 4600 / 1600)",
    "ok": true,
-   "detail": "R1 13340, R2 3343, R3 1483 | OVER BUDGET +11.2 % (deliberate: tiled status residence: kawara geometry over a 7-10 ken house + the genkan porch, the engawa, the tokonoma and the ceilings in one object)"
+   "detail": "R1 13364, R2 3367, R3 1507 | OVER BUDGET +11.4 % (deliberate: tiled status residence: kawara geometry over a 7-10 ken house + the genkan porch, the engawa, the tokonoma and the ceilings in one object)"
   },
   {
    "check": "Geometry properties + mass",
@@ -502,7 +502,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 3643 touching (opposite-facing: backface-culled) and 622 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 3655 touching (opposite-facing: backface-culled) and 624 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -952,7 +952,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1176624 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1180258 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

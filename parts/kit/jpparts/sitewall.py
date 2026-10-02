@@ -382,15 +382,17 @@ def _shoulder(pts, w, fmat):
 
 
 # ------------------------------------------------------------------------------------------------ board fence
-def _itabei(L, ends, kuro, cap, state, rng, P):
+def _itabei(L, ends, kuro, cap, state, rng, P, skirt=0.0):
+    """skirt (W3D): the boards, posts and collision run this much further into the ground, so a fence seated on its
+    gate (the high side of a slope) hides its float on the low side."""
     m = "wood_kuro" if kuro else "wood_weathered"
     H = 1.80
     from .found import soseki
     posts = _post_nodes(L, ends)
     lean = 0.0
     for x in posts:
-        P.add(box(x - 0.06, x + 0.06, FOOT, H + 0.04, -0.06, 0.06, m, vis=(1, 2, 3), geo=True, view=True, fire=True,
-                  tag="fence_post", grain="long"))
+        P.add(box(x - 0.06, x + 0.06, FOOT - skirt, H + 0.04, -0.06, 0.06, m, vis=(1, 2, 3), geo=True, view=True,
+                  fire=True, tag="fence_post", grain="long"))
     xa = 0.06 if ends[0] in ("seam", "end") else (_PW[0] if ends[0] == "post" else 0.06)
     xa = 0.0 if ends[0] == "seam" else xa
     xb = L if ends[1] == "seam" else L - (_PW[0] if ends[1] == "post" else 0.06)
@@ -405,20 +407,20 @@ def _itabei(L, ends, kuro, cap, state, rng, P):
     # boards on the outside face, battens (oshibuchi) over the joints every ~0.45
     z0, z1 = 0.06, 0.08
     bx0, bx1 = (xa if ends[0] != "seam" else 0.0), (xb if ends[1] != "seam" else L)
-    boards = board_run(bx0, bx1, 0.04, H, z0, z1, rng, 0.22, 0.30, m, vis=(1,), tag="fence_board")
+    boards = board_run(bx0, bx1, 0.04 - skirt, H, z0, z1, rng, 0.22, 0.30, m, vis=(1,), tag="fence_board")
     if state == "broken":
         boards = [b for b in boards if rng.random() > 0.3]
     P.extend(boards)
-    P.add(box(bx0, bx1, 0.04, H, z0, z1, m, vis=(2, 3), tag="fence_board_lod"))
+    P.add(box(bx0, bx1, 0.04 - skirt, H, z0, z1, m, vis=(2, 3), tag="fence_board_lod"))
     k = 0
     x = bx0 + 0.22
     while x < bx1 - 0.15:
         P.add(box(x - 0.025, x + 0.025, 0.06, H - 0.02, z1, z1 + 0.018, m, vis=(1,), tag="oshibuchi"))
         x += 0.45
     if state != "broken":
-        P.add(box(bx0, bx1, -0.30, H, -0.045, z1, m, vis=(), geo=True, view=True, fire=True, tag="fence_geo"))
+        P.add(box(bx0, bx1, -0.30 - skirt, H, -0.045, z1, m, vis=(), geo=True, view=True, fire=True, tag="fence_geo"))
     else:
-        P.add(box(bx0, bx1, -0.30, H, -0.045, z1, m, vis=(), geo=True, view=False, fire=None, tag="fence_geo"))
+        P.add(box(bx0, bx1, -0.30 - skirt, H, -0.045, z1, m, vis=(), geo=True, view=False, fire=None, tag="fence_geo"))
     if cap in (None, "none"):
         # kasagi: the cap board over boards and posts
         P.add(box(bx0 - (0.02 if ends[0] == "end" else 0.0), bx1 + (0.02 if ends[1] == "end" else 0.0), H + 0.04,
@@ -456,6 +458,7 @@ def _lean(P, deg):
 SAKU_H = 2.40                    # W3D: the palisade's log tops (before the points)
 SAKU_PITCH = 0.22                # log centres
 SAKU_R = 0.08                    # log radius (~0.16 across: 6 cm gaps between logs)
+SAKU_FOOT = -1.00                # W3D: the logs run 1 m into the ground (a palisade on a slope is seated mid-slope)
 
 
 def _saku(L, ends, state, rng, P):
@@ -479,7 +482,7 @@ def _saku(L, ends, state, rng, P):
         top = H + rng.uniform(-0.03, 0.03)
         base = [(x + r * math.cos(2 * math.pi * (i + 0.25) / 6), r * math.sin(2 * math.pi * (i + 0.25) / 6))
                 for i in range(6)]
-        P.add(rings((base, [(FOOT, 1.0), (top, 1.0), (top + 0.20, 0.04)]), m, vis=(1,), tag="saku_log",
+        P.add(rings((base, [(SAKU_FOOT, 1.0), (top, 1.0), (top + 0.20, 0.04)]), m, vis=(1,), tag="saku_log",
                     grain="long"))
     # far LODs: the run as one slab with a ridge where the points are (Resolution 2) / the slab alone (Resolution 3)
     P.add(box(xa, xb, 0.0, H, -SAKU_R, SAKU_R, m, vis=(2, 3), tag="saku_lod", uv="fit"))
@@ -488,8 +491,8 @@ def _saku(L, ends, state, rng, P):
         P.add(box(xa if ends[0] != "seam" else 0.0, xb if ends[1] != "seam" else L, y, y + 0.10,
                   -SAKU_R - 0.07, -SAKU_R + 0.005, m, vis=(1, 2), tag="saku_nuki"))
     blocked = state != "broken"
-    P.add(box(xa, xb, -0.30, H, -SAKU_R, SAKU_R, m, vis=(), geo=True, view=blocked, fire=True if blocked else None,
-              tag="fence_geo"))
+    P.add(box(xa, xb, SAKU_FOOT + 0.10, H, -SAKU_R, SAKU_R, m, vis=(), geo=True, view=blocked,
+              fire=True if blocked else None, tag="fence_geo"))
     if state == "leaning":
         _lean(P, rng.uniform(4.0, 8.0))
     return P
@@ -928,7 +931,7 @@ def _bank(L, ends, state, rng, P):
 
 # ------------------------------------------------------------------------------------------------ the module API
 def wall(kind, L=KEN, ends=("seam", "seam"), finish=None, cap=None, state=None, hikae=False, size="low", stone="nozura",
-         H=None, retaining=False, kuro=False, seed=0, pid=None, variant="", post_w=0.21, run=None):
+         H=None, retaining=False, kuro=False, seed=0, pid=None, variant="", post_w=0.21, run=None, skirt=0.0):
     """One wall module (see the module docstring). Returns a Part with connectors 'post' (hidden) at both end nodes.
     run=(s0, seed): the module's start along the whole wall path and the path's seed (FX5: the hedge's surface noise,
     fringe and UVs follow the run, so a run is continuous across modules); None for a single module."""
@@ -944,7 +947,7 @@ def wall(kind, L=KEN, ends=("seam", "seam"), finish=None, cap=None, state=None, 
         cap = cap or "tile"
         _earth_wall(kind, L, ends, finish, cap, state, hikae, rng, P)
     elif kind == "itabei":
-        _itabei(L, ends, kuro, cap, state, rng, P)
+        _itabei(L, ends, kuro, cap, state, rng, P, skirt=skirt)
     elif kind == "yotsume":
         _yotsume(L, ends, state, rng, P)
     elif kind == "kenninji":

@@ -142366,6 +142366,76 @@ class CfgVehicles
 			};
 		};
 	};
+	class Land_JP_Oshirasu_Sekisho: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Gravel court before the checkpoint's inspection room";
+		model="\JP\buildings\gv_site\jp_oshirasu_sekisho.p3d";
+		class Doors
+		{
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
+			};
+		};
+	};
 	class Land_JP_Toiyaba: HouseNoDestruct
 	{
 		scope=1;
@@ -143457,6 +143527,76 @@ class CfgVehicles
 						};
 					};
 				};
+			};
+		};
+	};
+	class Land_JP_Oshirasu_Jinya: HouseNoDestruct
+	{
+		scope=1;
+		displayName="White-gravel court (oshirasu) before the court room";
+		model="\JP\buildings\gv_site\jp_oshirasu_jinya.p3d";
+		class Doors
+		{
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=1000;
+				};
+			};
+			class GlobalArmor
+			{
+				class Projectile
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class Melee
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+				class FragGrenade
+				{
+					class Health
+					{
+						damage=0;
+					};
+					class Blood
+					{
+						damage=0;
+					};
+					class Shock
+					{
+						damage=0;
+					};
+				};
+			};
+			class DamageZones
+			{
 			};
 		};
 	};

@@ -13,11 +13,29 @@ import w3c2_sets as W2
 import w3c1_sets as W1
 
 
+def _plinth(c, depth=0.55, top=0.03, w=0.26):
+    """W3D: a cut-stone foundation band (kiso) round the wall lines, from `depth` under grade to `top`: the island's
+    district slopes 3-4 %, so a building is seated on its high side (no terrain through a floor, spikes/W3D/
+    floorcheck.py) and this band closes the gap under its walls on the low side (a building on a levelled stone
+    plinth: honest for a slope). Visual only (the walls and floors keep the collision). The footprint = the post
+    nodes' extent."""
+    from jpparts.core import box
+    pts = [s_ for s_ in c.M.solids if s_.tag in ("post", "gate_post") and 1 in s_.vis]
+    xs = [v for s_ in pts for v in (s_.bbox()[0], s_.bbox()[1])]
+    zs = [v for s_ in pts for v in (s_.bbox()[4], s_.bbox()[5])]
+    x0, x1, z0, z1 = min(xs), max(xs), min(zs), max(zs)
+    h = w / 2
+    for (a0, a1, b0, b1) in ((x0 - h, x1 + h, z0 - h, z0 + h), (x0 - h, x1 + h, z1 - h, z1 + h),
+                             (x0 - h, x0 + h, z0 + h, z1 - h), (x1 - h, x1 + h, z0 + h, z1 - h)):
+        c.M.add(box(a0, a1, -depth, top, b0, b1, "stone_cut", vis=(1, 2, 3), tag="kiso"))
+
+
 # ------------------------------------------------------------------------------------------------ 1 checkpoint
 def bansho(c):
     """The checkpoint guardhouse: on the officials' tatami the low desks facing the gravel court (the pass presented
     and compared with the ledger), a brazier, the cushions stacked; in the back office the pass ledgers, the seal box,
     a spilled writing box; in the kitchen doma the stove, the water jar, the capture tools on the wall."""
+    _plinth(c)
     FS._kamado_on_spot(c, "doma", 1)
     c.pot("doma", "jp_f_kama_nolid", 0, why="the guards' rice pot left in the stove")
     D = Room(c, "doma", centre=False)
@@ -50,6 +68,7 @@ def bunk_ashigaru(c):
     """The foot-soldiers' guardhouse (W3C2's bunk hall, board roof): the stove and the water jar in the doma, the
     six-shaku staffs and the capture tools on the wall; on the raised floor the bedding rolled along the wall round the
     irori, coats and rain capes on the pegs, a lantern with the checkpoint's crest dropped."""
+    _plinth(c)
     FS._kamado_on_spot(c, "doma", 1)
     c.pot("doma", "jp_f_kama", 0, why="the pot, lid on, in the stove")
     c.passage(("doma", "living"), -1.82, 0.35, "kamachi step doma <-> living")
@@ -72,6 +91,7 @@ def bunk_ashigaru(c):
 def toiyaba(c):
     """The post-station office: on the raised office the clerks' desks facing the yard (the relay ledgers, an abacus),
     the ledger boxes and the chest along the back wall, a brazier; the doma with the station's loads waiting."""
+    _plinth(c)
     C = Room(c, "choba", open_sides=("zmax",), centre=False)
     d1 = must(C, "jp_f_zukue_choba", "the clerks' desk facing the yard", sides=("zmax",))
     if d1 is not None:
@@ -118,6 +138,7 @@ def jinya(c):
     """The intendant's office (D3's small samurai mansion): the genkan room with the screen and the sword stand, the
     clerks' offices (desks, ledgers, abacus, the tax-rice measures) in the chanoma and the tsugi, the intendant's room
     (the zashiki, its tokonoma undisturbed), the kitchen as it was."""
+    _plinth(c)
     steps = [(c.R("doma")[1] + 0.05, 0.0)]
     c.passage(("doma", "daidokoro"), steps[0][0], steps[0][1], "kamachi step doma <-> daidokoro")
     D3._doma_kitchen(c, "doma", "xmax", steps, 3)
@@ -174,6 +195,7 @@ def roya(c):
     """The cell block: in the corridor the guards' things (the capture tools on the end wall, a lantern dropped, a
     bucket); in each cell straw mats on the boards, the lidded toilet tub in the corner, a few wooden bowls. Empty,
     the doors open; nothing else (neutral)."""
+    _plinth(c)
     K = Room(c, "corridor", centre=False)
     K.wall("jp_f_mitsudogu", sides=("xmin", "xmax"), why="the capture tools on the end wall")
     K.wall("jp_f_oke_bucket", sides=("xmax", "xmin"), why="a water bucket")
@@ -202,6 +224,12 @@ def hikeshi(c):
     F.free("jp_f_oke_tipped", 0.6, 0.6, 30, why="a bucket rolled", band=False)
 
 
+def nagayamon(c):
+    """The jinya's black nagaya-mon: D3's dressing of the servants' room and the store + the foundation band."""
+    _plinth(c)
+    D3.nagayamon(c)
+
+
 SETS_W3D = {
     "w3d_bansho": {"tier": 2, "fn": bansho},
     "w3d_bunk_ashigaru": {"tier": 1, "fn": bunk_ashigaru},
@@ -211,6 +239,7 @@ SETS_W3D = {
     "w3d_kura_nengu": {"tier": 2, "fn": kura_nengu},
     "w3d_roya": {"tier": 1, "fn": roya},
     "w3d_hikeshi": {"tier": 1, "fn": hikeshi},
+    "w3d_nagayamon": {"tier": 2, "fn": nagayamon},
 }
 
 

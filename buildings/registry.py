@@ -1137,6 +1137,8 @@ W3D_SHELLS = [
          {"kind": "bansho", "size": "sekisho"}, _LOOT_GV_OFFICE, 30000.0),
     _gvd("gv_cmp_sekisho", "gv_site", "Land_JP_Compound_Sekisho", "Checkpoint: palisade, two kora-mon gates across "
          "the road, the gravel court", {"kind": "compound", "plot": "sekisho"}, _LOOT_GV_YARD, 60000.0),
+    _gvd("gv_oshirasu_s", "gv_site", "Land_JP_Oshirasu_Sekisho", "Gravel court before the checkpoint's inspection "
+         "room", {"kind": "compound", "plot": "oshirasu_s"}, _LOOT_GV_YARD, 20000.0),
     # site 2 the post-station office + its yard
     _gvd("gv_toiyaba", "gv_hall", "Land_JP_Toiyaba", "Post-station office (toiya-ba: raised office open to the yard)",
          {"kind": "toiyaba"}, _LOOT_GV_OFFICE, 30000.0),
@@ -1147,6 +1149,8 @@ W3D_SHELLS = [
          "veranda + tatami over the white-gravel court", {"kind": "bansho", "size": "ginmi"}, _LOOT_GV_OFFICE, 30000.0),
     _gvd("gv_cmp_jinya", "gv_site", "Land_JP_Compound_Jinya", "Intendant's office (jinya): black board fence, back "
          "gate, the white-gravel court", {"kind": "compound", "plot": "jinya"}, _LOOT_GV_YARD, 30000.0),
+    _gvd("gv_oshirasu_j", "gv_site", "Land_JP_Oshirasu_Jinya", "White-gravel court (oshirasu) before the court room",
+         {"kind": "compound", "plot": "oshirasu_j"}, _LOOT_GV_YARD, 40000.0),
     # site 4 the jail
     _gvd("gv_roya", "gv_hall", "Land_JP_Roya", "Jail cell block (roya: outer + inner timber lattice, two cells)",
          {"kind": "roya"}, _LOOT_GV_OFFICE, 30000.0),
@@ -1171,7 +1175,7 @@ W3D_FURNISHED = [
     _furn("f_gv_ginmisho", "gv_ginmisho", "w3d_ginmisho", "Furnished", "furnished (the official's desk, records)"),
     _furn("f_gv_jinya", "dw_samurai_s", "w3d_jinya", "Jinya", "furnished: the intendant's office (desks, ledgers, "
           "measures)"),
-    _furn("f_gv_nagayamon_jinya", "gv_nagayamon_jinya", "d3_nagayamon", "Furnished", "furnished (servants' room)"),
+    _furn("f_gv_nagayamon_jinya", "gv_nagayamon_jinya", "w3d_nagayamon", "Furnished", "furnished (servants' room)"),
     _furn("f_gv_kura_nengu", "kura_plain", "w3d_kura_nengu", "Nengu", "furnished: the jinya's tax-rice store"),
     _furn("f_gv_roya", "gv_roya", "w3d_roya", "Furnished", "furnished (mats, the tub, bowls; empty, doors open)"),
     _furn("f_gv_hikeshi", "shed_open_board", "w3d_hikeshi", "Hikeshi", "furnished: the fire brigade's tool shed "

@@ -3,7 +3,7 @@
  "key": "f_gv_bansho",
  "date": "2026-09-30",
  "budget": "standard",
- "faces": "5912/1634/617",
+ "faces": "5936/1658/641",
  "door_clear_m": [
   1.06,
   1.06,
@@ -15,12 +15,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 5912, Resolution 2 1634, Resolution 3 617, Geometry 1837, Memory 0, Roadway 11, View Geometry 1790, Fire Geometry 1808"
+   "detail": "Resolution 1 5936, Resolution 2 1658, Resolution 3 641, Geometry 1837, Memory 0, Roadway 11, View Geometry 1790, Fire Geometry 1808"
   },
   {
    "check": "C5 face budget (standard: 6000 / 2300 / 800)",
    "ok": true,
-   "detail": "R1 5912, R2 1634, R3 617"
+   "detail": "R1 5936, R2 1658, R3 641"
   },
   {
    "check": "Geometry properties + mass",
@@ -320,7 +320,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 2288 touching (opposite-facing: backface-culled) and 501 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 2300 touching (opposite-facing: backface-culled) and 501 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -545,7 +545,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 605289 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 609078 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

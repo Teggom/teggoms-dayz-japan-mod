@@ -1,0 +1,33 @@
+{
+ "building": "Land_JP_Oshirasu_Sekisho",
+ "p3d": "\\JP\\buildings\\gv_site\\jp_oshirasu_sekisho.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/govsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "oshirasu",
+   "tag": "yard",
+   "floor": "gravel",
+   "level_m": 0.1,
+   "rect_kit": [
+    0.35,
+    9.65,
+    0.35,
+    2.25
+   ],
+   "doors": [],
+   "note": "the gravel court before the inspection room (travellers knelt on straw mats here)",
+   "enclosed": false,
+   "rect_model": [
+    -4.65,
+    4.65,
+    -0.95,
+    0.95
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 4,
+ "loot_by_room": {
+  "oshirasu": 4
+ }
+}

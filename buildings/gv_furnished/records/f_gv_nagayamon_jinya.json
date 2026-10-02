@@ -14,9 +14,9 @@
   "Servants' room window (end)"
  ],
  "faces": {
-  "Resolution 1": 5984,
-  "Resolution 2": 1550,
-  "Resolution 3": 779,
+  "Resolution 1": 6008,
+  "Resolution 2": 1574,
+  "Resolution 3": 803,
   "Geometry": 1787,
   "Memory": 0,
   "Roadway": 10,
@@ -86,12 +86,12 @@
  },
  "params": {
   "base": "gv_nagayamon_jinya",
-  "dress": "d3_nagayamon"
+  "dress": "w3d_nagayamon"
  },
  "bbox": [
   -6.79,
   6.79,
-  -0.272,
+  -0.55,
   4.319,
   -2.631,
   2.631

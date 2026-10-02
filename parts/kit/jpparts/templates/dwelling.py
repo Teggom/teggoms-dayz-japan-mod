@@ -2071,7 +2071,12 @@ def compound(name=None, plot="samurai_m", wear="_w1"):
                           surf="gravel")
         S.B.merge(pad)
         S.B.interior = False
+        t0, t1, t2, t3 = pad.meta["top_rect"]
+        from ..core import box as _box
+        S.H.add(_box(t0, t1, FL.SILL_TOP - 0.06, FL.SILL_TOP, t2, t3, "stone_river", vis=(3,), tag="pad_lod"))
         S.room(nm, "yard", "gravel", FL.SILL_TOP, pad.meta["top_rect"], [], note, enclosed=False)
+    for (px, pz) in spec.get("pad_posts", ()):       # W3D: the court's corner posts on their stones (low markers)
+        S.post(px, pz, 1.10)
     trim_lods(S.H)
     for s_ in S.H.solids:
         if s_.tag == "hedge_core":
