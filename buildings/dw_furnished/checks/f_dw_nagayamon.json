@@ -145,7 +145,7 @@
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "810/810 samples over room, doma, storage, gate"
+   "detail": "785/785 samples over room, doma, storage, gate"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -285,7 +285,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "room 11520 rays, 0 out through doors/windows, 0 LEAKS; doma 11520 rays, 0 out through doors/windows, 0 LEAKS; storage 11520 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): gate"
+   "detail": "room 11520 rays, 0 out through doors/windows, 0 LEAKS; doma 10560 rays, 0 out through doors/windows, 0 LEAKS; storage 11520 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): gate"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -355,7 +355,7 @@
   {
    "check": "D1 props per room 5-7: doma",
    "ok": true,
-   "detail": "5 props: jp_f_oke_bucket, jp_f_firewood_bundle, jp_f_jar_m, jp_f_debris_straw, jp_f_basket_kago, jp_f_mino_pegs, jp_f_box_l"
+   "detail": "5 props: jp_f_oke_bucket, jp_f_firewood_bundle, jp_f_jar_m, jp_f_basket_kago, jp_f_mino_pegs, jp_f_box_l"
   },
   {
    "check": "D2 floor coverage <= 25 %: doma",
@@ -370,7 +370,7 @@
   {
    "check": "D4 1.00 m clear band door-to-door and door-to-centre: doma",
    "ok": true,
-   "detail": "DoorsTwin2, kamachi step doma <-> room, centre joined by a 1.00 m band (318 free cells)"
+   "detail": "DoorsTwin2, kamachi step doma <-> room, centre joined by a 1.00 m band (273 free cells)"
   },
   {
    "check": "D1 props per room 5-7: storage",
@@ -520,12 +520,12 @@
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
    "ok": true,
-   "detail": "17 props pairwise"
+   "detail": "16 props pairwise"
   },
   {
    "check": "D10 C6 bases on the floor (0-2 cm), wall-hung props against a wall",
    "ok": true,
-   "detail": "17 props"
+   "detail": "16 props"
   },
   {
    "check": "D11 loot: floor points 0.4 m clear of footprints, raised points on prop surfaces <= 1.40 m, none inside geometry",
@@ -535,12 +535,12 @@
   {
    "check": "D12 proxies in the vanilla LODs (Q5: collision props Res 1 + Geometry + View + Fire, flat / hanging Res 1 only) at the planned poses",
    "ok": true,
-   "detail": "62 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
+   "detail": "61 proxy records in ['Fire Geometry', 'Geometry', 'Resolution 1', 'View Geometry']"
   },
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 796897 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 795539 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

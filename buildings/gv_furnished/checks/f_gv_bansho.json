@@ -3,7 +3,7 @@
  "key": "f_gv_bansho",
  "date": "2026-09-30",
  "budget": "standard",
- "faces": "5936/1658/641",
+ "faces": "5954/1676/659",
  "door_clear_m": [
   1.06,
   1.06,
@@ -15,12 +15,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 5936, Resolution 2 1658, Resolution 3 641, Geometry 1837, Memory 0, Roadway 11, View Geometry 1790, Fire Geometry 1808"
+   "detail": "Resolution 1 5954, Resolution 2 1676, Resolution 3 659, Geometry 1847, Memory 0, Roadway 13, View Geometry 1790, Fire Geometry 1808"
   },
   {
    "check": "C5 face budget (standard: 6000 / 2300 / 800)",
    "ok": true,
-   "detail": "R1 5936, R2 1658, R3 641"
+   "detail": "R1 5954, R2 1676, R3 659"
   },
   {
    "check": "Geometry properties + mass",
@@ -35,7 +35,7 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "242 components, 0 bad, 0 faces outside components"
+   "detail": "244 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
@@ -140,7 +140,7 @@
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
    "ok": true,
-   "detail": "176/176 samples"
+   "detail": "208/208 samples"
   },
   {
    "check": "C7 walkable floors have Roadway at floor height",
@@ -320,7 +320,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 2298 touching (opposite-facing: backface-culled) and 501 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 2301 touching (opposite-facing: backface-culled) and 501 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -515,7 +515,7 @@
   {
    "check": "D8 props clear of the building (no Geometry overlap > 1 cm; seated pots excepted)",
    "ok": true,
-   "detail": "13 collision props checked against 234 building components"
+   "detail": "13 collision props checked against 236 building components"
   },
   {
    "check": "D9 props clear of each other (no Geometry overlap > 1 cm)",
@@ -545,7 +545,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 609228 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 612434 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

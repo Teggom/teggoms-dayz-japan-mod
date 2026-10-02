@@ -1722,7 +1722,10 @@ def nagayamon(name=None, rank="samurai", wear="_w1"):
     B.merge(FL.doma("gate", XP0 - 0.10, XP1 + 0.10, -D - 0.30, 0.30, road=(XP0 + 0.12, XP1 - 0.12, -D - 0.15, 0.15),
                     y=DOMA, mats=FL.MATS_DOMA_EARTH))
     B.interior = False
-    S.kamachi((90.0, (XL, 0.0, -D)), D, FL_, [1.0 * KEN], "doma")
+    # FX7: the room lies at x < XL, the doma at x > XL: the frame turns -90 so the kutsunugi + its walk ramp face the
+    # doma (at +90 they lay under the room's floor: a bare 0.40 step, spikes/FX7/entrycheck.py); same spot (1 ken
+    # from the back wall)
+    S.kamachi((-90.0, (XL, 0.0, 0.0)), D, FL_, [D - 1.0 * KEN], "doma")
     S.obst.append(("gate", _r(XP0, XP1, -1.40, 0.10)))
     if sam:
         plaster_exterior(S, W, D)

@@ -145,7 +145,7 @@
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "810/810 samples over room, doma, storage, gate"
+   "detail": "785/785 samples over room, doma, storage, gate"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -285,7 +285,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "room 11520 rays, 0 out through doors/windows, 0 LEAKS; doma 11520 rays, 0 out through doors/windows, 0 LEAKS; storage 11520 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): gate"
+   "detail": "room 11520 rays, 0 out through doors/windows, 0 LEAKS; doma 10560 rays, 0 out through doors/windows, 0 LEAKS; storage 11520 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): gate"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -335,7 +335,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 588963 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 588668 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

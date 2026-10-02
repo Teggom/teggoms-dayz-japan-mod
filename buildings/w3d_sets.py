@@ -30,12 +30,42 @@ def _plinth(c, depth=0.55, top=0.046, w=0.26):
         c.M.add(box(a0, a1, -depth, top, b0, b1, "stone_cut", vis=(1, 2, 3), tag="kiso"))
 
 
+# FX7 (2026-10-02, Stephen's 3d walk: "I can't walk in, I need to jump"): the guardhouse is seated by its back doma
+# (floorcheck: the district rises ~6 % north here), so its gravel court (its own object, flat) lies 0.315 under the
+# guardhouse grade at the front (measured: court top 24.715, guardhouse seat 25.030). The kit's kutsunugi ramp ends at
+# grade + 0.05 = a 0.36-0.38 lip over the gravel at the inspection front, the same at the kitchen door (spikes/FX7/
+# entrycheck.py). Fix: cut-stone steps down onto the gravel + the hidden walk ramp (34 deg, found.step's rule)
+# carried on down 5 cm into the court.
+SK_COURT_Y = -0.315
+
+
+def _court_step(c, x0, x1, z_face, y_top, y_ground, treads, rng_seed):
+    """Hidden walk ramp from (y_top at z_face) down to 5 cm under y_ground (34 deg, Geometry + Roadway stone_ext) over
+    x0..x1, plus visible cut-stone treads [(z0, z1, top)] (bottoms 0.12 under the ground)."""
+    import math
+    import random
+    from jpparts.core import prism, box
+    yb = y_ground - 0.05
+    run = (y_top - yb) / math.tan(math.radians(34.0))
+    c.M.add(prism([(y_top, z_face), (yb, z_face), (yb, z_face + run)], "x", x0, x1, "stone_field", vis=(), geo=True,
+                  view=False, fire=None, tag="ramp"))
+    c.M.road([(x0, y_top, z_face), (x1, y_top, z_face), (x1, yb, z_face + run), (x0, yb, z_face + run)], "stone_ext")
+    rng = random.Random(rng_seed)
+    for (za, zb, top) in treads:
+        c.M.add(box(x0 + 0.04 + rng.uniform(0, 0.02), x1 - 0.04 - rng.uniform(0, 0.02), y_ground - 0.12, top, za, zb,
+                    "stone_cut", vis=(1, 2, 3), tag="step_slab"))     # plain blocks: the hall sits at its R1 budget
+
+
 # ------------------------------------------------------------------------------------------------ 1 checkpoint
 def bansho(c):
     """The checkpoint guardhouse: on the officials' tatami the low desks facing the gravel court (the pass presented
     and compared with the ledger), a brazier, the cushions stacked; in the back office the pass ledgers, the seal box,
     a spilled writing box; in the kitchen doma the stove, the water jar, the capture tools on the wall."""
     _plinth(c)
+    # FX7: the inspection front's kutsunugi (x -2.795..-1.755, its ramp foot at z 3.85, y 0.05) carried down onto
+    # the gravel; the kitchen door (x 1.82..3.64) gets a step over the foundation band (top 0.046 to z 3.315)
+    _court_step(c, -2.875, -1.675, 3.85, 0.05, SK_COURT_Y, [(3.70, 4.05, 0.02), (4.05, 4.45, -0.15)], 7301)
+    _court_step(c, 1.90, 3.56, 3.315, 0.05, SK_COURT_Y, [(3.315, 3.72, -0.13)], 7302)
     FS._kamado_on_spot(c, "doma", 1)
     c.pot("doma", "jp_f_kama_nolid", 0, why="the guards' rice pot left in the stove")
     D = Room(c, "doma", centre=False)
