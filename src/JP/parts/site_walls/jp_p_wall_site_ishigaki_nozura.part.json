@@ -1,0 +1,157 @@
+{
+ "id": "jp_p_wall_site_ishigaki_nozura",
+ "part": "jp_p_wall_site_ishigaki",
+ "variant": "_nozura",
+ "group": "site_walls",
+ "p3d": "JP\\parts\\site_walls\\jp_p_wall_site_ishigaki_nozura.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_site_ishigaki",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "site wall module: ishigaki",
+ "datum": "run along +x 0..L on the wall centreline z 0, +z the outside face, y 0 = grade; footing to -0.40",
+ "recipe": "sitewall.wall('ishigaki', L=1.820, ends=('seam', 'seam'), finish=None, cap=None, state=None)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.007,
+  1.859,
+  -0.4,
+  0.952,
+  -0.508,
+  0.501
+ ],
+ "dims": [
+  {
+   "name": "module_length_m",
+   "expected": 1.82,
+   "measured": 1.82,
+   "tol": 0.01,
+   "source": "K3_NOTES §2 (half-ken grid)"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "role": "wall_node",
+   "end": "seam"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "role": "wall_node",
+   "end": "seam"
+  }
+ ],
+ "materials": [
+  {
+   "key": "ground_earth_bare",
+   "id": "jp_m_ground_earth_bare",
+   "palette_id": "earth_bare",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 558,
+  "Resolution 2": 6,
+  "Resolution 3": 6,
+  "Geometry": 6,
+  "View Geometry": 6,
+  "Fire Geometry": 6
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [
+  "K3 wall kit (parts/K3_NOTES.md); samples at _w1 (abandoned at _w2); wear per instance"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 558, Resolution 2 6, Resolution 3 6, Geometry 6, View Geometry 6, Fire Geometry 6"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "1 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "stone"
+  },
+  {
+   "check": "C4 module_length_m",
+   "ok": true,
+   "detail": "expected 1.82, measured 1.82"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

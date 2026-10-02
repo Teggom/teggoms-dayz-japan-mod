@@ -65,6 +65,11 @@ from . import sori, kumimono, storey
 sori.register(reg)
 kumimono.register(reg)
 storey.register(reg)
+# ---- K3 (2026-10-01): the wall kit + the covered-corridor / kairo kit (parts/K3_NOTES.md)
+from . import sitewall
+sitewall.register(reg)
+from . import roka
+roka.register(reg)
 
 # render hints for the contact sheets (context parts: [name, yaw, [x, y, z]])
 RENDER_HINTS = {

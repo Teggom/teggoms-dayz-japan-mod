@@ -1,0 +1,252 @@
+{
+ "id": "jp_p_roka_straight_1ken_open_itabuki",
+ "part": "jp_p_roka_straight",
+ "variant": "_1ken_open_itabuki",
+ "group": "roka",
+ "p3d": "JP\\parts\\roka\\jp_p_roka_straight_1ken_open_itabuki.p3d",
+ "build_list": {
+  "entry": "jp_p_roka_straight",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "covered corridor (watari-roka) / kairo module",
+ "datum": "run along +x 0..L on the corridor centreline z 0, posts on z = +-D/2; y 0 = grade, floor 0.45",
+ "recipe": "roka.straight(L=1.820, sides=('open', 'open'), roof='itabuki', profile='straight', ends=('seam', 'seam'))",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.253,
+  1.849,
+  -0.272,
+  3.427,
+  -1.78,
+  1.78
+ ],
+ "dims": [
+  {
+   "name": "clear_between_posts_m",
+   "expected": ">=1.00 (D5)",
+   "measured": 1.7,
+   "tol": 0.01,
+   "source": "build_list"
+  },
+  {
+   "name": "head_under_tie_m",
+   "expected": ">=2.05",
+   "measured": 2.1,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    -0.91
+   ],
+   "hidden": false,
+   "role": "roka_node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.91
+   ],
+   "hidden": false,
+   "role": "roka_node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    -0.91
+   ],
+   "hidden": true,
+   "role": "roka_node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.91
+   ],
+   "hidden": true,
+   "role": "roka_node"
+  },
+  {
+   "type": "floor",
+   "pos": [
+    0.0,
+    0.45,
+    0.0
+   ],
+   "role": "floor_start"
+  },
+  {
+   "type": "floor",
+   "pos": [
+    1.82,
+    0.45,
+    0.0
+   ],
+   "role": "floor_end"
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kokera",
+   "id": "jp_m_roof_kokera",
+   "palette_id": "roof_board_silver",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 440,
+  "Resolution 2": 216,
+  "Resolution 3": 158,
+  "Geometry": 104,
+  "Roadway": 3,
+  "View Geometry": 86,
+  "Fire Geometry": 86
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [
+  "K3 corridor / kairo kit (parts/K3_NOTES.md); samples at _w1 (abandoned at _w2)"
+ ],
+ "extra": {
+  "roof_info": {
+   "L": 1.82,
+   "ends": [
+    "seam",
+    "seam"
+   ],
+   "ridge_y": 3.2340000000000004
+  },
+  "spec": {
+   "D": 1.82,
+   "floor": 0.45,
+   "y_bear": 2.8700000000000006,
+   "ridge_y": 3.2340000000000004,
+   "roof": "itabuki",
+   "profile": "straight"
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 440, Resolution 2 216, Resolution 3 158, Geometry 104, Roadway 3, View Geometry 86, Fire Geometry 86"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "12 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "granite, wood"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "48/48 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 clear_between_posts_m",
+   "ok": true,
+   "detail": "expected >=1.00 (D5), measured 1.7"
+  },
+  {
+   "check": "C4 head_under_tie_m",
+   "ok": true,
+   "detail": "expected >=2.05, measured 2.1"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "6 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,145 @@
+{
+ "id": "jp_p_wall_site_itabei_ab_leaning",
+ "part": "jp_p_wall_site_itabei",
+ "variant": "_ab_leaning",
+ "group": "site_walls",
+ "p3d": "JP\\parts\\site_walls\\jp_p_wall_site_itabei_ab_leaning.p3d",
+ "build_list": {
+  "entry": "jp_p_wall_site_itabei",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "site wall module: itabei",
+ "datum": "run along +x 0..L on the wall centreline z 0, +z the outside face, y 0 = grade; footing to -0.40",
+ "recipe": "sitewall.wall('itabei', L=1.820, ends=('seam', 'seam'), finish=None, cap=None, state='leaning')",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.06,
+  1.82,
+  -0.4,
+  1.885,
+  -0.06,
+  0.339
+ ],
+ "dims": [
+  {
+   "name": "module_length_m",
+   "expected": 1.82,
+   "measured": 1.82,
+   "tol": 0.01,
+   "source": "K3_NOTES §2 (half-ken grid)"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "role": "wall_node",
+   "end": "seam"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "role": "wall_node",
+   "end": "seam"
+  }
+ ],
+ "materials": [
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w2",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 96,
+  "Resolution 2": 36,
+  "Resolution 3": 18,
+  "Geometry": 12,
+  "View Geometry": 12,
+  "Fire Geometry": 12
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [
+  "K3 wall kit (parts/K3_NOTES.md); samples at _w1 (abandoned at _w2); wear per instance"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 96, Resolution 2 36, Resolution 3 18, Geometry 12, View Geometry 12, Fire Geometry 12"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 module_length_m",
+   "ok": true,
+   "detail": "expected 1.82, measured 1.82"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

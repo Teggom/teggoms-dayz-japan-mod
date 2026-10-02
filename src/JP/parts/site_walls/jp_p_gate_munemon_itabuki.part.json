@@ -1,0 +1,247 @@
+{
+ "id": "jp_p_gate_munemon_itabuki",
+ "part": "jp_p_gate_munemon",
+ "variant": "_itabuki",
+ "group": "site_walls",
+ "p3d": "JP\\parts\\site_walls\\jp_p_gate_munemon_itabuki.p3d",
+ "build_list": {
+  "entry": "jp_p_gate_munemon",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "mune-mon gate (temple, samurai, top headman)",
+ "datum": "posts centred at x 0 and x span on the wall line z 0 (+z outside), y 0 = grade",
+ "recipe": "sitewall.gate_munemon(span=2.730, covering='itabuki')",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.59,
+  3.32,
+  -0.4,
+  3.505,
+  -1.27,
+  1.27
+ ],
+ "dims": [
+  {
+   "name": "clear_open_m",
+   "expected": ">=1.00 (D1)",
+   "measured": 2.39,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "size": 0.24,
+   "role": "gate_post"
+  },
+  {
+   "type": "post",
+   "pos": [
+    2.73,
+    0.0,
+    0.0
+   ],
+   "size": 0.24,
+   "role": "gate_post"
+  }
+ ],
+ "materials": [
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kokera",
+   "id": "jp_m_roof_kokera",
+   "palette_id": "roof_board_silver",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kokera<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_cut",
+   "id": "jp_m_stone_cut",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_cut<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_street_dark",
+   "id": "jp_m_wood_street_dark",
+   "palette_id": "timber_street_dark",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_street_dark<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 444,
+  "Resolution 2": 258,
+  "Resolution 3": 170,
+  "Geometry": 62,
+  "Memory": 0,
+  "Roadway": 2,
+  "View Geometry": 62,
+  "Fire Geometry": 62
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [
+  {
+   "source": "DoorsTwin1",
+   "kind": "plank",
+   "display": "gate",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "rotation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.5708,
+     "unit": "rad"
+    },
+    {
+     "bone": "doors2",
+     "type": "rotation",
+     "axis_memory": "doors2_axis",
+     "amount": 1.5708,
+     "unit": "rad"
+    }
+   ],
+   "anim_period": 2.0,
+   "init_opened": 1.0,
+   "sound": "doorWoodSlide",
+   "clear_width_m": null,
+   "engine_tested": false,
+   "note": "kido leaves (rotation pair)"
+  }
+ ],
+ "notes": [
+  "K3 wall kit (parts/K3_NOTES.md); samples at _w1 (abandoned at _w2); wear per instance"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 444, Resolution 2 258, Resolution 3 170, Geometry 62, Memory 0, Roadway 2, View Geometry 62, Fire Geometry 62"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "9 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "rotation, 2 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep (window / hinged)",
+   "ok": true,
+   "detail": "moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.87 m; far: leaf hit first from 7/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.40 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.65 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.57 m"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "32/32 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 clear_open_m",
+   "ok": true,
+   "detail": "expected >=1.00 (D1), measured 2.39"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

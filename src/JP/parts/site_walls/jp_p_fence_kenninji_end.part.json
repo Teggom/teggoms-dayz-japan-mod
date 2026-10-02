@@ -1,0 +1,169 @@
+{
+ "id": "jp_p_fence_kenninji_end",
+ "part": "jp_p_fence_kenninji",
+ "variant": "_end",
+ "group": "site_walls",
+ "p3d": "JP\\parts\\site_walls\\jp_p_fence_kenninji_end.p3d",
+ "build_list": {
+  "entry": "jp_p_fence_kenninji",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "site wall module: kenninji",
+ "datum": "run along +x 0..L on the wall centreline z 0, +z the outside face, y 0 = grade; footing to -0.40",
+ "recipe": "sitewall.wall('kenninji', L=1.820, ends=('end', 'seam'), finish=None, cap=None, state=None)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.051,
+  1.83,
+  -0.4,
+  1.85,
+  -0.052,
+  0.052
+ ],
+ "dims": [
+  {
+   "name": "module_length_m",
+   "expected": 1.82,
+   "measured": 1.82,
+   "tol": 0.01,
+   "source": "K3_NOTES §2 (half-ken grid)"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "role": "wall_node",
+   "end": "end"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "role": "wall_node",
+   "end": "seam"
+  }
+ ],
+ "materials": [
+  {
+   "key": "bamboo_weathered",
+   "id": "jp_m_bamboo_weathered",
+   "palette_id": "bamboo_weathered",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "straw_rope",
+   "id": "jp_m_straw_rope",
+   "palette_id": "straw_aged",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 518,
+  "Resolution 2": 74,
+  "Resolution 3": 26,
+  "Geometry": 20,
+  "View Geometry": 20,
+  "Fire Geometry": 20
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [
+  "K3 wall kit (parts/K3_NOTES.md); samples at _w1 (abandoned at _w2); wear per instance"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 518, Resolution 2 74, Resolution 3 26, Geometry 20, View Geometry 20, Fire Geometry 20"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "2 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C4 module_length_m",
+   "ok": true,
+   "detail": "expected 1.82, measured 1.82"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

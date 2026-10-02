@@ -1,0 +1,222 @@
+{
+ "id": "jp_p_gate_wicket_kenninji",
+ "part": "jp_p_gate_wicket",
+ "variant": "_kenninji",
+ "group": "site_walls",
+ "p3d": "JP\\parts\\site_walls\\jp_p_gate_wicket_kenninji.p3d",
+ "build_list": {
+  "entry": "jp_p_gate_wicket",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2,
+  3
+ ],
+ "used_for": "wicket door module in a kenninji run",
+ "datum": "run along +x 0..L on the wall centreline z 0, +z outside; y 0 = grade",
+ "recipe": "sitewall.wicket('kenninji', L=1.820)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.051,
+  1.83,
+  -0.4,
+  2.35,
+  -0.12,
+  0.12
+ ],
+ "dims": [
+  {
+   "name": "clear_width_m",
+   "expected": ">=1.00 (D1)",
+   "measured": 1.04,
+   "tol": 0.01,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "post",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "role": "wall_node"
+  },
+  {
+   "type": "post",
+   "pos": [
+    1.82,
+    0.0,
+    0.0
+   ],
+   "hidden": true,
+   "role": "wall_node"
+  }
+ ],
+ "materials": [
+  {
+   "key": "bamboo_weathered",
+   "id": "jp_m_bamboo_weathered",
+   "palette_id": "bamboo_weathered",
+   "rvmat": "JP\\common\\materials\\bamboo\\jp_m_bamboo_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "metal_iron",
+   "id": "jp_m_metal_iron",
+   "palette_id": "iron_black",
+   "rvmat": "JP\\common\\materials\\metal\\jp_m_metal_iron<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "straw_rope",
+   "id": "jp_m_straw_rope",
+   "palette_id": "straw_aged",
+   "rvmat": "JP\\common\\materials\\straw\\jp_m_straw_rope<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 440,
+  "Resolution 2": 218,
+  "Resolution 3": 98,
+  "Geometry": 50,
+  "Memory": 0,
+  "View Geometry": 50,
+  "Fire Geometry": 50
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Memory",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [
+  {
+   "source": "Doors1",
+   "kind": "plank",
+   "display": "door",
+   "anims": [
+    {
+     "bone": "doors1",
+     "type": "rotation",
+     "axis_memory": "doors1_axis",
+     "amount": 1.5708,
+     "unit": "rad"
+    }
+   ],
+   "anim_period": 1.2,
+   "init_opened": 0.0,
+   "sound": "doorWoodSlide",
+   "clear_width_m": null,
+   "engine_tested": false,
+   "note": "wicket (wakido): one hinged leaf"
+  }
+ ],
+ "notes": [
+  "K3 wall kit (parts/K3_NOTES.md); samples at _w1 (abandoned at _w2); wear per instance"
+ ],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 440, Resolution 2 218, Resolution 3 98, Geometry 50, Memory 0, View Geometry 50, Fire Geometry 50"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "7 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "wood"
+  },
+  {
+   "check": "C7 door doors1 selections+memory",
+   "ok": true,
+   "detail": "rotation, 1 bone(s), axis/action/leaf points"
+  },
+  {
+   "check": "C7 door doors1 sweep (window / hinged)",
+   "ok": true,
+   "detail": "moves closed -> open without touching other geometry"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (open)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.44 m; far: leaf hit first from 7/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.97 m"
+  },
+  {
+   "check": "C10 door doors1 reachable from both sides (closed)",
+   "ok": true,
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.61 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.55 m"
+  },
+  {
+   "check": "C4 clear_width_m",
+   "ok": true,
+   "detail": "expected >=1.00 (D1), measured 1.04"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

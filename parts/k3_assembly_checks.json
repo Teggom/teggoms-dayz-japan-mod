@@ -1,0 +1,518 @@
+{
+ "k3_compound_corner": {
+  "faces": {
+   "Resolution 1": 7793,
+   "Resolution 2": 1823,
+   "Resolution 3": 1455,
+   "Geometry": 362,
+   "Memory": 0,
+   "View Geometry": 362,
+   "Fire Geometry": 362
+  },
+  "zfight_resolved": [
+   "zfight.resolve pass: 200 visible pairs, 68 solids moved",
+   "zfight.resolve pass: 14 visible pairs, 12 solids moved"
+  ],
+  "checks": [
+   {
+    "check": "C5 LODs (vanilla house set)",
+    "ok": true,
+    "detail": "Resolution 1 7793, Resolution 2 1823, Resolution 3 1455, Geometry 362, Memory 0, View Geometry 362, Fire Geometry 362"
+   },
+   {
+    "check": "C5 face budget (large: 12000 / 4600 / 1600; +50 % guidance)",
+    "ok": true,
+    "detail": "7793 / 1823 / 1455 (91 % of the class)"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "61 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "61 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "61 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "KW1 wall / fence line closed in Geometry (gates excepted)",
+    "ok": true,
+    "detail": "696/696 samples inside a Geometry component"
+   },
+   {
+    "check": "C10 DoorsTwin1 reachable from both sides (open)",
+    "ok": true,
+    "detail": ": leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.88 m; far: leaf hit first from 7/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 2.42 m"
+   },
+   {
+    "check": "C10 DoorsTwin1 reachable from both sides (closed)",
+    "ok": true,
+    "detail": ": leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.65 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.58 m"
+   },
+   {
+    "check": "C10 DoorsTwin2 reachable from both sides (open)",
+    "ok": true,
+    "detail": ": leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.42 m; far: leaf hit first from 7/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.95 m"
+   },
+   {
+    "check": "C10 DoorsTwin2 reachable from both sides (closed)",
+    "ok": true,
+    "detail": ": leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.60 m; far: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.54 m"
+   },
+   {
+    "check": "C17 DoorsTwin1 closed: no see-through slit at a jamb or meeting stile",
+    "ok": true,
+    "detail": ": 56100 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+   },
+   {
+    "check": "C17 DoorsTwin2 closed: no see-through slit at a jamb or meeting stile",
+    "ok": true,
+    "detail": ": 17202 rays through the closed doorway (steep ones at every jamb / meeting stile + straight through the leaves), 0 see through"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "38 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "1113/1113 field points within reach of the bed; 16 eave tile sets, 16 fascia boards"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "1220 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "11 library rvmats in the visual LODs, 4 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/196/196; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+    "ok": true,
+    "detail": "0 visible same-facing pairs; 1526 touching (opposite-facing: backface-culled) and 331 covered / drawn-identically pairs not judged"
+   },
+   {
+    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+    "ok": true,
+    "detail": "every interior wall top closed"
+   },
+   {
+    "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+    "ok": true,
+    "detail": "every interior wall panel end closed"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL: k3_compound_corner",
+    "ok": true,
+    "detail": "ODOL, 623703 bytes"
+   }
+  ]
+ },
+ "k3_slope_fences": {
+  "faces": {
+   "Resolution 1": 4622,
+   "Resolution 2": 1066,
+   "Resolution 3": 350,
+   "Geometry": 350,
+   "Memory": 0,
+   "View Geometry": 308,
+   "Fire Geometry": 266
+  },
+  "zfight_resolved": [
+   "zfight.resolve pass: 204 visible pairs, 28 solids moved"
+  ],
+  "checks": [
+   {
+    "check": "C5 LODs (vanilla house set)",
+    "ok": true,
+    "detail": "Resolution 1 4622, Resolution 2 1066, Resolution 3 350, Geometry 350, Memory 0, View Geometry 308, Fire Geometry 266"
+   },
+   {
+    "check": "C5 face budget (standard: 6000 / 2300 / 800; +50 % guidance)",
+    "ok": true,
+    "detail": "4622 / 1066 / 350 (77 % of the class)"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "37 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "30 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "23 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "KW1 wall / fence line closed in Geometry (gates excepted)",
+    "ok": true,
+    "detail": "498/498 samples inside a Geometry component"
+   },
+   {
+    "check": "KW2 terrain steps closed (Geometry from the lower grade up on both sides of each step)",
+    "ok": true,
+    "detail": "6 steps, no slot"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "0 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "no kawara on this building (board / thatch roofs): nothing to seat"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "0 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "4 library rvmats in the visual LODs, 0 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/0/0; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+    "ok": true,
+    "detail": "0 visible same-facing pairs; 1759 touching (opposite-facing: backface-culled) and 12 covered / drawn-identically pairs not judged"
+   },
+   {
+    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+    "ok": true,
+    "detail": "every interior wall top closed"
+   },
+   {
+    "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+    "ok": true,
+    "detail": "every interior wall panel end closed"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL: k3_slope_fences",
+    "ok": true,
+    "detail": "ODOL, 296452 bytes"
+   }
+  ]
+ },
+ "k3_corridor_court": {
+  "faces": {
+   "Resolution 1": 18273,
+   "Resolution 2": 5119,
+   "Resolution 3": 3767,
+   "Geometry": 2380,
+   "Memory": 0,
+   "Roadway": 61,
+   "View Geometry": 1876,
+   "Fire Geometry": 1876
+  },
+  "zfight_resolved": [
+   "zfight.resolve pass: 560 visible pairs, 187 solids moved",
+   "zfight.resolve pass: 105 visible pairs, 55 solids moved",
+   "zfight.resolve pass: 8 visible pairs, 3 solids moved",
+   "zfight.resolve pass: 6 visible pairs, 2 solids moved"
+  ],
+  "checks": [
+   {
+    "check": "C5 LODs (vanilla house set)",
+    "ok": true,
+    "detail": "Resolution 1 18273, Resolution 2 5119, Resolution 3 3767, Geometry 2380, Memory 0, Roadway 61, View Geometry 1876, Fire Geometry 1876"
+   },
+   {
+    "check": "C5 corridor faces per ken of run <= 1,500 (K3_NOTES \u00a75; stand-in halls excluded)",
+    "ok": true,
+    "detail": "corridor 11120 R1 faces over 13.0 ken = 855 per ken; whole proof 18273 / 5119 / 3767"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "294 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "210 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "210 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "C7 Roadway on Geometry (+-3 cm)",
+    "ok": true,
+    "detail": "759/759 samples on a Geometry top"
+   },
+   {
+    "check": "KW3 Roadway continuous along the walk (hall -> corridor -> hall)",
+    "ok": true,
+    "detail": "512 samples, 0 without Roadway, 0 height jumps > 6 cm"
+   },
+   {
+    "check": "KW4 walk slope <= 38 deg (stairs as ramps)",
+    "ok": true,
+    "detail": "steepest 26.8 deg"
+   },
+   {
+    "check": "KW5 head room >= 2.05 over the walk",
+    "ok": true,
+    "detail": "lowest 2.05 m over 128 samples"
+   },
+   {
+    "check": "KW6 clear width >= 1.00 at 1.0 m over the floor",
+    "ok": true,
+    "detail": "narrowest 1.40 m over 52 samples"
+   },
+   {
+    "check": "KW7 corridor ridge clears the host eave (connector_fit)",
+    "ok": true,
+    "detail": "ridge top 3.68 m, host soffit margin 0.06 m"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "38 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "9398/9398 field points within reach of the bed; 30 eave tile sets, 30 fascia boards"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "11219 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "8 library rvmats in the visual LODs, 3 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/568/380; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+    "ok": true,
+    "detail": "0 visible same-facing pairs; 3050 touching (opposite-facing: backface-culled) and 499 covered / drawn-identically pairs not judged"
+   },
+   {
+    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+    "ok": true,
+    "detail": "every interior wall top closed"
+   },
+   {
+    "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+    "ok": true,
+    "detail": "every interior wall panel end closed"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL: k3_corridor_court_roka",
+    "ok": true,
+    "detail": "ODOL, 956344 bytes"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL: k3_corridor_court_halls",
+    "ok": true,
+    "detail": "ODOL, 571301 bytes"
+   }
+  ]
+ },
+ "k3_kairo_segment": {
+  "faces": {
+   "Resolution 1": 7607,
+   "Resolution 2": 2224,
+   "Resolution 3": 1726,
+   "Geometry": 858,
+   "Memory": 0,
+   "Roadway": 49,
+   "View Geometry": 636,
+   "Fire Geometry": 636
+  },
+  "zfight_resolved": [
+   "zfight.resolve pass: 188 visible pairs, 82 solids moved",
+   "zfight.resolve pass: 76 visible pairs, 28 solids moved"
+  ],
+  "checks": [
+   {
+    "check": "C5 LODs (vanilla house set)",
+    "ok": true,
+    "detail": "Resolution 1 7607, Resolution 2 2224, Resolution 3 1726, Geometry 858, Memory 0, Roadway 49, View Geometry 636, Fire Geometry 636"
+   },
+   {
+    "check": "C5 face budget (large: 12000 / 4600 / 1600; +50 % guidance)",
+    "ok": true,
+    "detail": "7607 / 2224 / 1726 (108 % of the class)"
+   },
+   {
+    "check": "C7 Geometry closed + convex",
+    "ok": true,
+    "detail": "120 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 View Geometry closed + convex",
+    "ok": true,
+    "detail": "83 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C7 Fire Geometry closed + convex",
+    "ok": true,
+    "detail": "83 components, 0 bad, 0 faces outside"
+   },
+   {
+    "check": "C2 library materials only",
+    "ok": true,
+    "detail": "all library / vanilla"
+   },
+   {
+    "check": "C7 Roadway on Geometry (+-3 cm)",
+    "ok": true,
+    "detail": "632/632 samples on a Geometry top"
+   },
+   {
+    "check": "KW3 Roadway continuous along the walk (hall -> corridor -> hall)",
+    "ok": true,
+    "detail": "255 samples, 0 without Roadway, 0 height jumps > 6 cm"
+   },
+   {
+    "check": "KW4 walk slope <= 38 deg (stairs as ramps)",
+    "ok": true,
+    "detail": "steepest 0.0 deg"
+   },
+   {
+    "check": "KW5 head room >= 2.05 over the walk",
+    "ok": true,
+    "detail": "lowest 2.24 m over 64 samples"
+   },
+   {
+    "check": "KW6 clear width >= 1.00 at 1.0 m over the floor",
+    "ok": true,
+    "detail": "narrowest 1.72 m over 26 samples"
+   },
+   {
+    "check": "C11 envelope leak: rooms see outside only through doors / windows",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
+    "ok": true,
+    "detail": "40 roof bodies clear"
+   },
+   {
+    "check": "C13 kawara seated on the clay bed, fascia at every eave",
+    "ok": true,
+    "detail": "1078/1078 field points within reach of the bed; 16 eave tile sets, 8 fascia boards"
+   },
+   {
+    "check": "C14 interior faces use the interior clay, not the exterior-weathered earth",
+    "ok": true,
+    "detail": "no exterior earth face looks into a room"
+   },
+   {
+    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
+    "ok": true,
+    "detail": "3371 columns over 2.5 m compared in each LOD"
+   },
+   {
+    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
+    "ok": true,
+    "detail": "8 library rvmats in the visual LODs, 3 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   },
+   {
+    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
+    "ok": true,
+    "detail": "far-field faces R1/R2/R3 0/250/250; close field in R2/R3 0/0; specular far 0.22 < close 0.60"
+   },
+   {
+    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
+    "ok": true,
+    "detail": "0 visible same-facing pairs; 1941 touching (opposite-facing: backface-culled) and 412 covered / drawn-identically pairs not judged"
+   },
+   {
+    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
+    "ok": true,
+    "detail": "every interior wall top closed"
+   },
+   {
+    "check": "C22 interior wall ends meet a post or a wall (no vertical see-through slot)",
+    "ok": true,
+    "detail": "every interior wall panel end closed"
+   },
+   {
+    "check": "Binarize (cwd P:\\) -> ODOL: k3_kairo_segment",
+    "ok": true,
+    "detail": "ODOL, 642141 bytes"
+   }
+  ]
+ }
+}

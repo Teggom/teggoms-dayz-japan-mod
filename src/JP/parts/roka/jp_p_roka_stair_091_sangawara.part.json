@@ -1,0 +1,259 @@
+{
+ "id": "jp_p_roka_stair_091_sangawara",
+ "part": "jp_p_roka_stair",
+ "variant": "_091_sangawara",
+ "group": "roka",
+ "p3d": "JP\\parts\\roka\\jp_p_roka_stair_091_sangawara.p3d",
+ "build_list": {
+  "entry": "jp_p_roka_stair",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "covered stair corridor (level change)",
+ "datum": "run along +x 0..L, floor 0.45 at x 0 and 1.36 at x L (y 0 = grade at x 0)",
+ "recipe": "roka.stair(L=3.640, rise=0.910, sides=('open', 'open'), roof='sangawara')",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -0.525,
+  3.911,
+  -0.272,
+  4.719,
+  -1.853,
+  1.853
+ ],
+ "dims": [
+  {
+   "name": "stair_angle_deg",
+   "expected": "<=38 (D4)",
+   "measured": 26.8191,
+   "tol": 0.0,
+   "source": "build_list"
+  },
+  {
+   "name": "riser_m",
+   "expected": "<=0.16",
+   "measured": 0.1517,
+   "tol": 0.0,
+   "source": "build_list"
+  }
+ ],
+ "connectors": [
+  {
+   "type": "floor",
+   "pos": [
+    0.0,
+    0.45,
+    0.0
+   ],
+   "role": "floor_start"
+  },
+  {
+   "type": "floor",
+   "pos": [
+    3.64,
+    1.36,
+    0.0
+   ],
+   "role": "floor_end",
+   "rise": 0.91
+  }
+ ],
+ "materials": [
+  {
+   "key": "roof_kawara",
+   "id": "jp_m_roof_kawara",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_far",
+   "id": "jp_m_roof_kawara_far",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_far<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "roof_kawara_field",
+   "id": "jp_m_roof_kawara_field",
+   "palette_id": "kawara_ibushi",
+   "rvmat": "JP\\common\\materials\\roof\\jp_m_roof_kawara_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_shikkui",
+   "id": "jp_m_wall_shikkui",
+   "palette_id": "shikkui_white",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_shikkui<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_sooted",
+   "id": "jp_m_wood_sooted",
+   "palette_id": "timber_sooted",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_sooted<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wood_weathered",
+   "id": "jp_m_wood_weathered",
+   "palette_id": "timber_weathered",
+   "rvmat": "JP\\common\\materials\\wood\\jp_m_wood_weathered<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 1839,
+  "Resolution 2": 666,
+  "Resolution 3": 476,
+  "Geometry": 208,
+  "Roadway": 5,
+  "View Geometry": 154,
+  "Fire Geometry": 154
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "Roadway",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": true,
+ "doors": [],
+ "notes": [
+  "K3 corridor / kairo kit (parts/K3_NOTES.md); samples at _w1 (abandoned at _w2)"
+ ],
+ "extra": {
+  "stair": {
+   "run": 1.7999999999999998,
+   "risers": 6,
+   "riser": 0.15166666666666667,
+   "going": 0.3,
+   "x0": 0.9200000000000002,
+   "x1": 2.7199999999999998,
+   "angle": 26.81913279096923
+  }
+ },
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 1839, Resolution 2 666, Resolution 3 476, Geometry 208, Roadway 5, View Geometry 154, Fire Geometry 154"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "24 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "15 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "15 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "granite, pottery, wood"
+  },
+  {
+   "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
+   "ok": true,
+   "detail": "821/821 field points within reach of the bed; 2 eave tile sets, 2 fascia boards"
+  },
+  {
+   "check": "C7 Roadway on Geometry",
+   "ok": true,
+   "detail": "80/80 samples on a Geometry top (+-3 cm)"
+  },
+  {
+   "check": "C4 stair_angle_deg",
+   "ok": true,
+   "detail": "expected <=38 (D4), measured 26.8191"
+  },
+  {
+   "check": "C4 riser_m",
+   "ok": true,
+   "detail": "expected <=0.16, measured 0.1517"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "2 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}
