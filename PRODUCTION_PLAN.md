@@ -711,3 +711,23 @@
   the flat island. Fix: proper rock (cut and natural) and soil / grass-edged earth materials, more natural forms
   that blend into the ground at the foot; record for the map that real hillsides come from terrain and these become
   the face / portal / bank only.
+- 2026-10-02 (late): **FX7 DONE** (agent FX7; spikes/FX7/FX7_PROGRESS.md). (1) **Checkpoint:** the guardhouse
+  Land_JP_Bansho_Sekisho_Furnished was seated by its back kitchen on a ~6 % rise, so its gravel court lay 0.315 under
+  its grade: the kutsunugi ramp ended in a **0.38-0.41 m lip** (front) and 0.35 (kitchen door); gates (0.03) and the
+  foot-soldiers' hall (0.22) were fine. Fix: cut-stone treads + the hidden 34 deg walk ramp down onto the gravel at
+  both entries (w3d_sets._court_step); the jinya + D3 nagaya-mon had their kamachi step facing INTO the room (bare 0.40
+  step), template fixed. New **spikes/FX7/entrycheck.py** (2.5D walk map from the real terrain + every placed object's
+  Geometry, minimax largest rise from the terrain to every room / through every gate, STEP_MAX 0.30): island 146
+  objects, 3c-2 + 3d 0 failing; older waves listed, not fixed: D3 roka_honjin deck 0.50 (U9, deferred), W2F town
+  shrine haiden (0.75 floor unreached), honden (not entered by design?), shamusho doma (check artifact), kagura stage
+  0.32. (2) **Cargo scale** jp_f_kanme_hakari (+_ab) rebuilt on a timber tripod: bale hanging 0.43 off the ground in a
+  rope sling on the hook, 2 m graduated beam, counterweight on the long arm; _ab tripod standing, the rest on the
+  ground (choice recorded in W3D_NOTES). (3) **Rock / earth masses:** new materials jp_m_stone_quarry_face /
+  jp_m_stone_outcrop / jp_m_ground_earth_bank (make_fx7_materials.py; palette rock_andesite_cut + rock_outcrop_weathered
+  ASSUMED, verify with a licensed photo), soil slopes + feathered toes (ruralsite_parts.apron / hull_solid) on the
+  quarry, the adit knoll and both kiln banks; one iteration; still faceted at a distance. **Map rule (recorded in
+  W3C2_NOTES): hillsides come from the TERRAIN; these objects shrink to the cut face / the portal / the bank, the
+  island aprons are dropped.** World + mission rebuilt; verify_all 341/341 0 failures; verify_oprw 4316/4316, floorcheck 0, bindcheck 341/0, hangcheck
+  0, gatecheck 9/0, roomaccess (changed) 0, propfloat 0, propseat 0, placecheck 451 (baseline 450). Sheet
+  research/production/contact_sheets/fx7_fixes.jpg. **Walk: TEST_CHECKLIST.md = FX7 re-check (~6 min).** Weekly 86 %
+  -> 87 %. Next (Stephen's call, after the weekly reset 2026-10-06): 3e castle kit or the fishing suite.

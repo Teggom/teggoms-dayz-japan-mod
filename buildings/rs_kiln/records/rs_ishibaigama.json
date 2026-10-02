@@ -6,14 +6,14 @@
  "model_dir": "rs_kiln",
  "doors": [],
  "faces": {
-  "Resolution 1": 1597,
-  "Resolution 2": 828,
-  "Resolution 3": 279,
-  "Geometry": 253,
+  "Resolution 1": 1612,
+  "Resolution 2": 843,
+  "Resolution 3": 294,
+  "Geometry": 268,
   "Memory": 0,
   "Roadway": 4,
-  "View Geometry": 253,
-  "Fire Geometry": 253
+  "View Geometry": 268,
+  "Fire Geometry": 268
  },
  "loot_points": 1,
  "config_class": "\tclass Land_JP_Ishibai_Gama: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Lime kiln (dry-stone pit on its bank) + draw floor\";\n\t\tmodel=\"\\JP\\buildings\\rs_kiln\\jp_ishibai_gama.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
@@ -34,11 +34,11 @@
   "kind": "ishibaigama"
  },
  "bbox": [
-  -4.9,
-  4.9,
+  -6.29,
+  6.29,
   -0.3,
   3.31,
-  -4.41,
+  -5.8,
   5.221
  ]
 }

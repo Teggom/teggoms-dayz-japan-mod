@@ -6,7 +6,8 @@ Stop rule: weekly usage 88 % -> checkpoint, commit + push, resume note here.
 ## Status
 - [x] 1 checkpoint entry (guardhouse) + entrycheck island-wide
 - [x] 2 cargo scale jp_f_kanme_hakari (+ _ab)
-- [ ] 3 rock / earth masses (Ishiba, Mabu, Ishibai_Gama, Noborigama)
+- [x] 3 rock / earth masses (Ishiba, Mabu, Ishibai_Gama, Noborigama)
+- [x] world + mission rebuilt, checks, sheet, checklist, plan / token log
 
 ## 1. The checkpoint "I can't walk in, I need to jump"
 - **Measured (spikes/FX7/entrycheck.py):** the culprit is the guardhouse `Land_JP_Bansho_Sekisho_Furnished` (SK2,
@@ -45,3 +46,35 @@ Stop rule: weekly usage 88 % -> checkpoint, commit + push, resume note here.
 - Layout: TY3 re-seated (-0.039, the wider tripod footprint); SK6 (the straw mat on the gravel) moved 0.50 south
   (757.60, 866.60) off the new guardhouse steps (layout_w3d placecheck 0 problems). World + mission rebuilt at the end.
 - Renders: spikes/FX7/renders/before_kanme_hakari*.png (W3D), fx7_kanme_hakari*.png (after).
+
+## 3. The rock / earth masses (3c-2)
+- **Cause:** all four built from stone_cut / stone_field / ground_earth_bare = one warm beige (the palette's
+  stone_granite is the old weathered Himeji wall, 163,140,110), and blobby masses ending in a hard line on flat ground.
+- **Materials (research/materials/make_fx7_materials.py, B1 make_one, PLAYBOOK 15.3 matte):**
+  `jp_m_stone_quarry_face` (split andesite / granite: flecks, three bedding joints with rust bleeding down, two vertical
+  joints, the half wedge-hole channels along the top split line, pick / chisel marks; 2 m tile),
+  `jp_m_stone_outcrop` (weathered crag, lichen, moss; 3 m tile), `jp_m_ground_earth_bank` (brown soil, clods, pebbles,
+  dense dry autumn grass, leaf drifts; 2 m tile). Sources = CC0 Poly Haven scans already credited (rock_surface,
+  worn_rock_natural_01, clay_floor_001, dry_decay_leaves). New palette entries (ASSUMED, verify with a licensed photo):
+  `rock_andesite_cut` (138,136,128), `rock_outcrop_weathered` (116,113,103). C1: all 9 PASS/WARN, no FAIL
+  (src/JP/common/materials/checks_fx7.json). Stone atlas check OK (30 PAAs); jp_common repacked.
+- **Forms (parts/kit/jpparts/ruralsite_parts.py + templates/ruralsite.ishiba):** new `hull_solid` (convex hull of a
+  few points, coplanar faces merged) and `apron` (hipped soil slopes + a gentler toe round a mass, top edges hidden in
+  it, foot 0.20 under grade). Quarry: cut faces (+z) in quarry stone, the crown under a soil cap, the ends in weathered
+  rock, soil slopes up the back and both ends (kept within 1.8 m: lanes LS / LWS pass 2-3 m away). Mine: knoll slopes
+  in grassed soil, rock faces + crown rocks in outcrop, aprons round sides + back (the sheer 0.75 foot gone). Lime
+  kiln: the bank in grassed soil with a feathered toe, the pit walls in grey rock, the side banks' front ends rock-faced.
+  Climbing kiln: the bank in soil, its sheer sides now battered soil slopes (0.45 run per metre, no toe: the tile and
+  pottery yards stand within 2 m). layout_w3c2: 0 problems (NB1 x TL1 footprint rect allowed: Geometry 0.2 m clear,
+  measured).
+- **Judged honestly (sheet rows 3-6):** they now read as a quarry face, a grassed knoll with a portal and two kilns on
+  soil banks; one iteration done (soil darker and greener, pit walls grey, crown rocks). Still planar / faceted at a
+  distance (the slopes are big flat facets; the aprons' straight edges show on the flat island) - acceptable for the
+  test island because on the real map hillsides come from the terrain (W3C2_NOTES, "the slope question", FX7 note).
+
+## Island + checks (end)
+- World + mission rebuilt (W3D.csv: TY3 seat, SK6 moved); verify_oprw 4316/4316 PASS; floorcheck 17 / 0; bindcheck
+  341 / 0; placecheck island 451 (W3D baseline 450; the +1 is a slope sink, none on the changed objects' entries);
+  entrycheck island-wide 146 objects, 5 failing = the 5 older-wave listings above (3c-2 + 3d: 0); roomaccess on the
+  changed furnished buildings 3 / 0; propfloat 2 / 0; propseat 77 / 0; verify_all 341 / 341, 0 failures; hangcheck 0; gatecheck 9 / 0.
+- Sheet: research/production/contact_sheets/fx7_fixes.jpg (`python spikes/FX7/sheet_fx7.py`).

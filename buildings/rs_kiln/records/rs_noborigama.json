@@ -6,14 +6,14 @@
  "model_dir": "rs_kiln",
  "doors": [],
  "faces": {
-  "Resolution 1": 1676,
-  "Resolution 2": 823,
-  "Resolution 3": 528,
-  "Geometry": 350,
+  "Resolution 1": 1688,
+  "Resolution 2": 835,
+  "Resolution 3": 540,
+  "Geometry": 362,
   "Memory": 0,
   "Roadway": 4,
-  "View Geometry": 350,
-  "Fire Geometry": 350
+  "View Geometry": 362,
+  "Fire Geometry": 362
  },
  "loot_points": 1,
  "config_class": "\tclass Land_JP_Noborigama: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Climbing kiln (noborigama, 4 chambers on its bank)\";\n\t\tmodel=\"\\JP\\buildings\\rs_kiln\\jp_noborigama.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
@@ -34,8 +34,8 @@
   "kind": "noborigama"
  },
  "bbox": [
-  -2.24,
-  2.24,
+  -2.735,
+  2.735,
   -0.3,
   4.652,
   -11.33,

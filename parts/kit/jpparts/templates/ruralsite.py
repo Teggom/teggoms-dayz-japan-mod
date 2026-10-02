@@ -187,18 +187,27 @@ def ishiba(name=None, wear="_w2"):
     zl, zu, zb = -D + 3.40, -D + 1.90, -D           # the lower face, the upper face, the back
     yl, yu = 2.10, 4.40
     rock = B.P("rock")
-    M2 = {"top": "stone_field", "default": "stone_cut"}
+    # FX7: the cut faces (+z) in split quarry stone, the crown under its soil cap, the uncut ends in weathered rock
+    M_UP = {"top": "ground_earth_bank", "front": "stone_quarry_face", "default": "stone_outcrop"}
+    M_LO = {"top": "stone_outcrop", "front": "stone_quarry_face", "default": "stone_outcrop"}
     g = dict(vis=(1, 2, 3), geo=True, view=True, fire="granite")
-    rock.add(rough_block(rng, cx - 5.0, cx + 5.0, -0.30, yu, zb + 0.20, zu, M2, chamfer=0.25, top_jit=0.20,
+    rock.add(rough_block(rng, cx - 5.0, cx + 5.0, -0.30, yu, zb + 0.20, zu, M_UP, chamfer=0.25, top_jit=0.20,
                          tag="rock_upper", **g))
-    rock.add(rough_block(rng, cx - 5.0, cx + 4.0, -0.30, yl, zu - 0.02, zl, M2, chamfer=0.18, top_jit=0.10,
+    rock.add(rough_block(rng, cx - 5.0, cx + 4.0, -0.30, yl, zu - 0.02, zl, M_LO, chamfer=0.18, top_jit=0.10,
                          tag="rock_lower", **g))
     # weathered natural rock on the crown and the shoulders (the uncut hill)
     for (x, z, w, d, h, top) in ((cx - 2.5, zb + 1.2, 3.6, 2.4, 1.2, yu + 0.55), (cx + 1.8, zb + 1.0, 3.2, 2.2, 1.0,
                                                                                     yu + 0.40),
                                  (cx - 5.6, zb + 1.8, 2.2, 3.4, 3.0, 2.9), (cx + 5.3, zb + 1.6, 2.0, 3.0, 3.4, 3.3),
                                  (cx + 4.6, zl - 0.6, 1.6, 1.8, 1.6, 1.6)):
-        rock.add(_stone(rng, x, z, w, d, h, top, "stone_field", bury=0.30, n=9, flat_top=0.55, tag="rock_natural", **g))
+        rock.add(_stone(rng, x, z, w, d, h, top, "stone_outcrop", bury=0.30, n=9, flat_top=0.55, tag="rock_natural",
+                        **g))
+    # FX7: the hill the face is cut into: soil slopes up the back and both ends (hidden tops inside the rock), a
+    # feathered toe; the front (the cut face + the splitting floor) stays open
+    # (kept within 1.8 m of the rock: the island's lanes LS / LWS pass 2-3 m behind and west of it)
+    RS.apron(rock, cx - 5.0, cx + 5.0, zb + 0.20, zu, 1.3, ("back",), k=1.2, toe_h=0.20, toe_k=2.0, tag="hill")
+    RS.apron(rock, cx - 5.0, cx + 5.0, zb + 0.20, zu - 0.6, 1.2, ("left", "right"), k=1.2, toe_h=0.20, toe_k=2.0,
+             tag="hill")
     # the wedge-hole rows (ya-ana) along both faces, 0.25 apart, just under the bench edges
     for (zf, y, xa, xb) in ((zl, yl - 0.28, cx - 4.4, cx + 3.4), (zu, yu - 0.45, cx - 4.4, cx + 4.4)):
         x = xa
@@ -209,7 +218,7 @@ def ishiba(name=None, wear="_w2"):
     # the half-split block on the lower bench: two halves 3 cm apart, iron wedges (ya) standing in the split
     bz = (zu + zl) / 2
     for (a, b) in ((cx - 1.6, cx - 0.82), (cx - 0.79, cx + 0.0)):
-        rock.add(rough_block(rng, a, b, yl - 0.02, yl + 0.70, bz - 0.40, bz + 0.40, "stone_cut", chamfer=0.03,
+        rock.add(rough_block(rng, a, b, yl - 0.02, yl + 0.70, bz - 0.40, bz + 0.40, "stone_quarry_face", chamfer=0.03,
                              top_jit=0.01, tag="split_block", vis=(1, 2, 3), geo=True, view=True, fire="granite"))
     for k in range(4):
         z = bz - 0.30 + 0.20 * k
@@ -219,7 +228,7 @@ def ishiba(name=None, wear="_w2"):
     for k in range(9):
         x, z = cx - 4.5 + k * 1.05 + rng.uniform(-0.3, 0.3), zl + 0.45 + rng.uniform(0.0, 0.7)
         sz = rng.uniform(0.25, 0.55)
-        rock.add(_stone(rng, x, z, sz, sz * 0.8, sz * 0.6, sz * 0.55, "stone_cut", bury=0.05, n=7, flat_top=0.6,
+        rock.add(_stone(rng, x, z, sz, sz * 0.8, sz * 0.6, sz * 0.55, "stone_quarry_face", bury=0.05, n=7, flat_top=0.6,
                         vis=(1, 2), tag="rubble"))
     B.put(rock, (0.0, (0.0, 0.0, 0.0)), what="the cut rock face, two benches, ya-ana rows, the half-split block")
     # the splitting floor before the face + the masons' shelter (2 x 1 ken) at its east end

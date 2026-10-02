@@ -3,7 +3,7 @@
  "key": "rs_ishibaigama",
  "date": "2026-09-30",
  "budget": "standard",
- "faces": "1597/828/279",
+ "faces": "1612/843/294",
  "door_clear_m": [],
  "checks_n": 28,
  "failures": 0,
@@ -11,12 +11,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 1597, Resolution 2 828, Resolution 3 279, Geometry 253, Memory 0, Roadway 4, View Geometry 253, Fire Geometry 253"
+   "detail": "Resolution 1 1612, Resolution 2 843, Resolution 3 294, Geometry 268, Memory 0, Roadway 4, View Geometry 268, Fire Geometry 268"
   },
   {
    "check": "C5 face budget (standard: 6000 / 2300 / 800)",
    "ok": true,
-   "detail": "R1 1597, R2 828, R3 279"
+   "detail": "R1 1612, R2 843, R3 294"
   },
   {
    "check": "Geometry properties + mass",
@@ -31,17 +31,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "25 components, 0 bad, 0 faces outside components"
+   "detail": "28 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "25 components, 0 bad, 0 faces outside components"
+   "detail": "28 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "25 components, 0 bad, 0 faces outside components"
+   "detail": "28 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -116,12 +116,12 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "988 columns over 2.5 m compared in each LOD"
+   "detail": "925 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
    "ok": true,
-   "detail": "11 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
+   "detail": "12 library rvmats in the visual LODs, 1 glossy / glazed by design (sidecar finish, else kawara, namako, iron)"
   },
   {
    "check": "C16 far-LOD kawara: matte far material in Resolution 2 / 3",
@@ -131,7 +131,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 201 touching (opposite-facing: backface-culled) and 93 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 219 touching (opposite-facing: backface-culled) and 105 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -146,7 +146,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 203440 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 213732 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

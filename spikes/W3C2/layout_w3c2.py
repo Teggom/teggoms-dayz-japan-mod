@@ -140,7 +140,9 @@ EXTRA = [
     ("SL3", F % "jp_f_zaru_tori", 928.6, 853.2, 0.0, "a sieve stand by the bed: brine tubs, sea-water buckets"),
     ("SL4", F % "jp_f_zaru_tori_ab", 933.6, 853.2, 0.0, "a sieve stand, a basket tipped off"),
 ]
-ALLOW = set()
+# FX7: the climbing kiln's new battered side slope widens NB1's footprint rect over the tile yard's fence line; the
+# Geometry stays 0.2 m clear of the fence (measured, every component's world bbox), so the rect overlap is allowed
+ALLOW = {("NB1", "TL1")}
 LINE_KINDS = ("rs_cmp_",)
 
 

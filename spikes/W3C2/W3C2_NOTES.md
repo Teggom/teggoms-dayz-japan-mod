@@ -33,6 +33,15 @@ slope (only placement changes; the bank then sinks into the hill). The climbing 
 bank (the kiln builders' practice where a slope was too shallow, GK); the quarry face is a rock outcrop with the cut
 face; the adit goes into an earth-and-rock knoll; the slide ends at its landing (the run's lowest 12 m).
 
+**FX7 (2026-10-02, Stephen's walk: the quarry / mine / kiln banks "look kind of like shit; no idea what they are"):**
+the masses were all one warm beige (stone_cut / stone_field / ground_earth_bare, the sandy stand-in) and blobby forms
+ending in a hard line on the flat island. Now real materials (research/materials/make_fx7_materials.py:
+jp_m_stone_quarry_face, jp_m_stone_outcrop, jp_m_ground_earth_bank; two ASSUMED grey rock palette entries) and soil
+slopes / feathered toes at the foot (ruralsite_parts.apron / hull_solid). **Rule for the real map: hillsides come
+from the TERRAIN.** There these objects shrink to what is built or cut: the quarry to its cut face + benches set into
+a terrain slope, the adit to its portal + the first metres of knoll, the kiln banks to the bank under the kiln; the
+island's aprons and soil slopes are island-only and get dropped (or cut back) when the object is set into a hill.
+
 ---
 
 ## TR23 Charcoal kiln site (sumi-yaki ba) - SITE 1

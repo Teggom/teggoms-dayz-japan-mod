@@ -6,14 +6,14 @@
  "model_dir": "rs_site",
  "doors": [],
  "faces": {
-  "Resolution 1": 1697,
-  "Resolution 2": 727,
-  "Resolution 3": 388,
-  "Geometry": 474,
+  "Resolution 1": 1727,
+  "Resolution 2": 757,
+  "Resolution 3": 418,
+  "Geometry": 504,
   "Memory": 0,
   "Roadway": 4,
-  "View Geometry": 474,
-  "Fire Geometry": 474
+  "View Geometry": 504,
+  "Fire Geometry": 504
  },
  "loot_points": 5,
  "config_class": "\tclass Land_JP_Ishiba: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Quarry face (two cut benches, wedge-hole rows) + splitting floor\";\n\t\tmodel=\"\\JP\\buildings\\rs_site\\jp_ishiba.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
@@ -38,11 +38,11 @@
   "kind": "ishiba"
  },
  "bbox": [
-  -6.604,
-  6.228,
+  -6.8,
+  6.8,
   -0.4,
   4.95,
-  -4.1,
+  -5.695,
   4.906
  ]
 }

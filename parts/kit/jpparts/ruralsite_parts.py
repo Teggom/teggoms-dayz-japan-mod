@@ -19,7 +19,7 @@ slide's low end). Collision: one convex Geometry / View / Fire solid per mass; s
 """
 import math
 
-from .core import Part, box, prism, hexa, rings, stone, rng_for, KEN
+from .core import Part, box, prism, hexa, rings, stone, rng_for, KEN, Solid
 from .shapes import rough_block, tube
 
 EARTH = "ground_earth_bare"
@@ -33,6 +33,10 @@ CUT = "stone_cut"
 WOOD = "wood_weathered"
 SOOT = "wood_sooted"
 LIME = "wall_shikkui"
+# FX7 (2026-10-02, Stephen's 3c-2 walk: the banks / knoll / quarry read as beige blobs): real rock and soil
+BANK = "ground_earth_bank"           # an old soil bank, dry autumn grass + leaves (research/materials/make_fx7_materials)
+OUTCROP = "stone_outcrop"            # natural weathered rock, lichen
+QFACE = "stone_quarry_face"          # a split quarry face: bedding joints, wedge-hole channels, tool marks
 
 
 def _g(**kw):
@@ -101,6 +105,75 @@ def bank(p, x0, x1, z_low, z_high, y_low, y_high, base=-0.30, mats=EARTH, tag="b
     s.fire = "dirt"
     p.add(s)
     return s
+
+
+def hull_solid(pts, mats, eps=1e-6, **kw):
+    """FX7: the convex hull of a few points (<= ~12) as one Solid, coplanar faces merged (n-gons; Solid fans them)."""
+    import itertools
+    P = [tuple(float(c) for c in p) for p in pts]
+    n = len(P)
+
+    def sub(a, b):
+        return (a[0] - b[0], a[1] - b[1], a[2] - b[2])
+
+    def cross(a, b):
+        return (a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0])
+
+    def dot(a, b):
+        return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
+    faces, seen = [], set()
+    for i, j, k in itertools.combinations(range(n), 3):
+        nn = cross(sub(P[j], P[i]), sub(P[k], P[i]))
+        L = dot(nn, nn) ** 0.5
+        if L < 1e-9:
+            continue
+        nn = (nn[0] / L, nn[1] / L, nn[2] / L)
+        d = [dot(nn, sub(q, P[i])) for q in P]
+        if max(d) > 1e-5 and min(d) < -1e-5:
+            continue
+        on = frozenset(m for m in range(n) if abs(d[m]) <= 1e-5)
+        if on in seen:
+            continue
+        seen.add(on)
+        c = tuple(sum(P[m][a] for m in on) / len(on) for a in range(3))
+        u = sub(P[i], c)
+        ul = dot(u, u) ** 0.5 or 1.0
+        u = (u[0] / ul, u[1] / ul, u[2] / ul)
+        v = cross(nn, u)
+        import math as _m
+        faces.append(sorted(on, key=lambda m: _m.atan2(dot(sub(P[m], c), v), dot(sub(P[m], c), u))))
+    return Solid(P, faces, mats, **kw)
+
+
+def apron(p, x0, x1, z0, z1, h, sides, k=1.6, toe_h=0.35, toe_k=3.4, base=-0.20, inset=0.30, mats=BANK,
+          tag="apron"):
+    """FX7: an earth apron round the rectangle (x0..x1, z0..z1) of a mass sitting on flat ground: on each side in
+    `sides` ('back' -z, 'front' +z, 'left' -x, 'right' +x) a hipped slope from `h` (its top edge `inset` inside the
+    rectangle, hidden in the mass) down to `base` under grade at a run of k per metre of rise, and a gentler toe
+    (toe_h, toe_k) beyond it, so the mass's foot feathers into the terrain instead of meeting it with a hard edge.
+    Each piece one convex solid (Geometry / View / Fire 'dirt'); slopes <= ~32 deg (walkable)."""
+    out = []
+    for (hh, kk, nm) in ((h, k, ""), (toe_h, toe_k, "_toe")):
+        if hh <= base + 0.05:
+            continue
+        r = kk * (hh - base)
+        for sd in sides:
+            if sd in ("back", "front"):
+                zi = z0 + inset if sd == "back" else z1 - inset
+                ze = z0 if sd == "back" else z1
+                zo = ze - r if sd == "back" else ze + r
+                pts = [(x0, hh, zi), (x1, hh, zi), (x0, base, zi), (x1, base, zi),
+                       (x0 - r, base, zo), (x1 + r, base, zo)]
+            else:
+                xi = x0 + inset if sd == "left" else x1 - inset
+                xe = x0 if sd == "left" else x1
+                xo = xe - r if sd == "left" else xe + r
+                pts = [(xi, hh, z0), (xi, hh, z1), (xi, base, z0), (xi, base, z1),
+                       (xo, base, z0 - r), (xo, base, z1 + r)]
+            sol = hull_solid(pts, mats, vis=(1, 2, 3), geo=True, view=True, fire="dirt", tag=tag + "_" + sd + nm)
+            p.add(sol)
+            out.append(sol)
+    return out
 
 
 def scatter_stones(p, rng, pts, mats=STONE, vis=(1,), tag="loose_stone"):
@@ -174,10 +247,23 @@ def kiln_climbing(p, open_door=0):
     zend = ztop - K["lflue"]
     ybank = y0 + st * (n - 1) + 0.10
     # the bank: a wedge from the fire mouth to the top, 0.25 wider than the chambers each side
-    bank(p, -wc / 2 - 0.25, wc / 2 + 0.25, zc0 + 0.20, zend - 0.30, 0.05, ybank)
+    bank(p, -wc / 2 - 0.25, wc / 2 + 0.25, zc0 + 0.20, zend - 0.30, 0.05, ybank, mats={"top": BANK, "default": BANK})
+    # FX7: the bank's sides slope away in soil (were sheer earth walls): a hull per side whose top edge follows the
+    # bank's top (0.05 at the fire mouth -> ybank at the top), its foot 1.5 x the height out, plus a feathered toe
+    for sg in (-1, 1):
+        xe = sg * (wc / 2 + 0.25)
+        xi = xe - sg * 0.30
+        za, zb_ = zc0 + 0.20, zend - 0.30
+        # (a battered face, 0.45 run per metre, no toe: the tile and pottery yards stand within 2 m on the island;
+        # on the map the bank is the hillside itself)
+        for (yt0, yt1, kk, ex, tg) in ((0.05, ybank, 0.45, 0.0, "bank_slope"),):
+            r0, r1 = kk * (yt0 + 0.20), kk * (yt1 + 0.20)
+            pts = [(xi, yt0, za), (xi, yt1, zb_), (xi, -0.20, za), (xi, -0.20, zb_),
+                   (xe + sg * r0, -0.20, za + 0.6 * r0), (xe + sg * r1, -0.20, zb_)]
+            p.add(hull_solid(pts, BANK, vis=(1, 2, 3), geo=True, view=True, fire="dirt", tag=tg))
     # the bank's back falls away to grade (on the island's flat ground; on the map it runs into the hill)
     p.add(prism([(-0.30, zend - 0.30), (-0.30, zend - 0.30 - 2.2 * ybank), (0.0, zend - 0.30 - 2.2 * ybank),
-                 (ybank, zend - 0.30)], "x", -wc / 2 - 0.25, wc / 2 + 0.25, EARTH, vis=(1, 2, 3),
+                 (ybank, zend - 0.30)], "x", -wc / 2 - 0.25, wc / 2 + 0.25, BANK, vis=(1, 2, 3),
                 **_g(tag="bank_back")))
     # the firebox: a low box + vault, its arched fire mouth in the front face
     p.add(box(-wf / 2, wf / 2, -0.30, 0.45, zc0, zf, FIRED, vis=(1, 2, 3), **_g(tag="firebox")))
@@ -291,15 +377,15 @@ def kiln_pit(p, inner=3.0, wall=0.60, H=2.0):
     i = inner / 2
     for (x0, x1, z0, z1, tg) in ((-o, o, -o, -i, "wall_back"), (-o, o, i, o, "wall_front"),
                                  (-o, -i, -i, i, "wall_left"), (i, o, -i, i, "wall_right")):
-        p.add(box(x0, x1, -0.30, H, z0, z1, STONE, vis=(1, 2, 3), **_g(tag=tg)))
+        p.add(box(x0, x1, -0.30, H, z0, z1, OUTCROP, vis=(1, 2, 3), **_g(tag=tg)))       # FX7: grey field stone
     # coping stones along the rim + a few proud stones in the faces (the dry-stone look)
     for k in range(10):
         a = k / 10.0
         for (x, z) in ((-o + 2 * o * a + 0.2, o - 0.30), (-o + 2 * o * a + 0.2, -o + 0.30)):
-            p.add(rough_block(rng, x - 0.20, x + 0.20, H - 0.02, H + 0.12, z - 0.26, z + 0.26, STONE, chamfer=0.05,
+            p.add(rough_block(rng, x - 0.20, x + 0.20, H - 0.02, H + 0.12, z - 0.26, z + 0.26, OUTCROP, chamfer=0.05,
                               top_jit=0.03, vis=(1, 2), tag="coping"))
     for (x, y) in ((-1.4, 0.4), (-0.9, 1.3), (0.9, 0.7), (1.5, 1.5), (-1.6, 1.7), (1.3, 0.2)):
-        p.add(rough_block(rng, x - 0.22, x + 0.22, y - 0.15, y + 0.15, o - 0.04, o + 0.05, STONE, chamfer=0.05,
+        p.add(rough_block(rng, x - 0.22, x + 0.22, y - 0.15, y + 0.15, o - 0.04, o + 0.05, OUTCROP, chamfer=0.05,
                           top_jit=0.02, vis=(1,), tag="face_stone"))
     mouth(p, 0.0, 0.0, 0.60, 0.80, o + 0.002, rng=rng, tag="draw_hole", svis=(1, 2, 3))
     p.add(prism(ellipse(0.0, o + 0.45, 0.60, 0.32, 10), "y", 0.035, 0.062, ASH, vis=(1,), tag="ash_spill"))
@@ -315,7 +401,12 @@ def kiln_pit(p, inner=3.0, wall=0.60, H=2.0):
     zf = o - 0.05
 
     def wedge(c, tg):
-        p.add(hexa(c, EARTH, vis=(1, 2, 3), geo=True, view=True, fire="dirt", tag=tg))
+        p.add(hexa(c, {"top": BANK, "front": OUTCROP, "default": BANK}, vis=(1, 2, 3), geo=True, view=True,
+                   fire="dirt", tag=tg))
+    # FX7: the feathered toe round the bank's foot (0.40 high at 0.25 inside the bank's foot line, out 2.0 m to
+    # 0.20 under grade): the 35 deg bank no longer meets the flat ground in a hard line
+    apron(p, -b + 0.65, b - 0.65, -b + 0.65, zf, -0.20, ("back", "left", "right"), toe_h=0.40, toe_k=3.4, inset=0.0,
+          tag="bank_toe")
     wedge([(-a, yb, -a), (a, yb, -a), (b, yb, -b), (-b, yb, -b), (-a, yt, -a), (a, yt, -a), (b, 0.0, -b), (-b, 0.0, -b)],
           "bank_back")
     for sg in (-1, 1):
@@ -360,7 +451,7 @@ def adit(p, cx=0.0, zp=0.0, H=4.0, W=9.1, D=10.0, floor_y=0.05):
     x0, x1 = cx - W / 2, cx + W / 2
     zb = zp - D
     g = dict(vis=(1, 2, 3), geo=True, view=True, fire="granite")
-    MR = {"top": EARTH, "default": STONE}
+    MR = {"top": BANK, "default": OUTCROP}             # FX7: grassed soil on the slopes, weathered rock faces
     # the knoll: left + right masses, the roof over the drift, the back (the rockfall face)
     # the side masses fall away from the drift to the knoll's foot (a hill nose cut by the portal face); the back mass
     # falls to the rear; each a convex hexahedron with planar faces
@@ -380,8 +471,10 @@ def adit(p, cx=0.0, zp=0.0, H=4.0, W=9.1, D=10.0, floor_y=0.05):
     for (x, z, w, d, h, top) in ((cx, zp - 4.0, 3.4, 4.6, 1.0, H + 0.30), (cx - 2.2, zp - 5.5, 2.4, 3.4, 1.4, H - 0.6),
                                  (cx + 2.2, zp - 3.0, 2.2, 3.0, 1.4, H - 0.7), (cx - 3.5, zp - 1.0, 1.4, 1.6, 1.2, 1.5),
                                  (cx + 3.6, zp - 1.2, 1.4, 1.6, 1.3, 1.6)):
-        p.add(stone(rng, x, z, w, d, h, top, EARTH if top > 3.0 else STONE, bury=0.30, n=9, flat_top=0.5,
+        p.add(stone(rng, x, z, w, d, h, top, OUTCROP, bury=0.30, n=9, flat_top=0.5,
                     tag="knoll_crown", **g))
+    # FX7: the knoll's sheer 0.75 m foot (ye over grade + 0.30 buried) feathers out in soil on both sides and the back
+    apron(p, x0, x1, zb, zp, ye + 0.10, ("back", "left", "right"), k=2.4, toe_h=0.25, toe_k=4.0, tag="knoll_apron")
     # the timber sets: round posts on flat sill stones, a cap, lagging boards over the caps
     posts = []
     for k in range(A["sets"]):

@@ -1,0 +1,74 @@
+{
+ "id": "jp_m_ground_earth_bank",
+ "family": "ground",
+ "palette_id": "earth_bare",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "none; clods, pebbles, grass tufts (strokes fan up the texture)",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\dirt.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\dirt_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "a newer bank: more soil, fewer tufts",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_earth_bank_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bank_w0.rvmat",
+   "target_srgb": [
+    124.4,
+    104.2,
+    80.4
+   ],
+   "masked_frac": 0.536
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "grassed over, leaves",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_earth_bank_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bank_w1.rvmat",
+   "target_srgb": [
+    124.5,
+    107.4,
+    86.1
+   ],
+   "masked_frac": 0.64
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "long untended: dense dry grass, leaf drifts",
+   "co": "JP\\common\\materials\\ground\\jp_m_ground_earth_bank_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bank_w2.rvmat",
+   "target_srgb": [
+    124.4,
+    110.5,
+    91.8
+   ],
+   "masked_frac": 0.723
+  }
+ },
+ "used_by": [
+  "jp_ishiba",
+  "jp_mabu",
+  "jp_ishibai_gama",
+  "jp_noborigama"
+ ],
+ "used_on": "Soil banks and knolls (3c-2 sites)",
+ "sources": [
+  {
+   "procedural": "make_fx7_materials.py (on make_b1_materials.make_one)"
+  },
+  {
+   "polyhaven_cc0": [
+    "clay_floor_001",
+    "dry_decay_leaves"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_fx7_materials.py (agent FX7, 2026-10-02), through B1's make_one",
+ "requested_by": "FX7 (Stephen's 3c-2 walk: the quarry / mine / kiln banks read as beige blobs)",
+ "note": "An old soil bank grown over with dry autumn grass and fallen leaves (FX7): kiln banks, the adit's knoll, the quarry's cap, the feathered aprons at their feet."
+}

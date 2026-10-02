@@ -1,0 +1,71 @@
+{
+ "id": "jp_m_stone_outcrop",
+ "family": "stone",
+ "palette_id": "rock_outcrop_weathered",
+ "palette_by_wear": {},
+ "tile_size_m": 3.0,
+ "texture_px": 1024,
+ "px_per_m": 341.3,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain; turn and shift per piece",
+ "grain": "none; weathered crag skin with lichen",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\granite.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\stone_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "clean weathered rock, little lichen",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_outcrop_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_outcrop_w0.rvmat",
+   "target_srgb": [
+    123.6,
+    120.5,
+    110.4
+   ],
+   "masked_frac": 0.163
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "lichen + moss in the hollows",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_outcrop_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_outcrop_w1.rvmat",
+   "target_srgb": [
+    116.0,
+    113.0,
+    103.0
+   ],
+   "masked_frac": 0.338
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "heavily lichened, moss",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_outcrop_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_outcrop_w2.rvmat",
+   "target_srgb": [
+    108.5,
+    105.6,
+    95.7
+   ],
+   "masked_frac": 0.472
+  }
+ },
+ "used_by": [
+  "jp_ishiba",
+  "jp_mabu"
+ ],
+ "used_on": "Natural rock (crags, the quarry's crown, the adit's knoll)",
+ "sources": [
+  {
+   "procedural": "make_fx7_materials.py (on make_b1_materials.make_one)"
+  },
+  {
+   "polyhaven_cc0": [
+    "worn_rock_natural_01"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_fx7_materials.py (agent FX7, 2026-10-02), through B1's make_one",
+ "requested_by": "FX7 (Stephen's 3c-2 walk: the quarry / mine / kiln banks read as beige blobs)",
+ "note": "Natural weathered rock (FX7): the uncut crag round a quarry, the knoll's rocks, boulders."
+}

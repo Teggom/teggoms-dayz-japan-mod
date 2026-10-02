@@ -2621,6 +2621,50 @@
     }
    ],
    "hex": "#876E51"
+  },
+  {
+   "id": "rock_andesite_cut",
+   "name": "Quarry face, freshly split andesite / granite (grey)",
+   "material": "Izu andesite (komatsu-ishi) / Okazaki granite, split face a few years old",
+   "group": "stone",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "quarry faces, split blocks, fresh rubble (jp_m_stone_quarry_face)",
+   "note": "Added 2026-10-02 by FX7 (research/materials/make_fx7_materials.py), ASSUMED: no licensed photo sample. A split andesite / granite face is mid grey with a faint warm cast; the warm beige stone_granite (163,140,110) is sampled from the old weathered Himeji walls and read as sand on the quarry. Verify.",
+   "srgb": [
+    138,
+    136,
+    128
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 14,
+   "weathering": null,
+   "hex": "#8A8880"
+  },
+  {
+   "id": "rock_outcrop_weathered",
+   "name": "Natural rock outcrop, weathered (grey, lichen)",
+   "material": "andesite / granite crag weathered in place: grey-brown skin, lichen, moss in the joints",
+   "group": "stone",
+   "tiers": [
+    1,
+    2,
+    3
+   ],
+   "use": "uncut crags, a quarry's crown, boulders (jp_m_stone_outcrop)",
+   "note": "Added 2026-10-02 by FX7, ASSUMED (reasoned: darker and browner than the fresh split face, lichen and moss as overlays). Verify against a licensed photo.",
+   "srgb": [
+    116,
+    113,
+    103
+   ],
+   "method": "assumed",
+   "tolerance_dE76": 14,
+   "weathering": null,
+   "hex": "#747167"
   }
  ]
 }

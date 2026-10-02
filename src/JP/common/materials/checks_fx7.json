@@ -1,0 +1,329 @@
+{
+ "check": "C1 palette (tools/matcheck), FX7 materials",
+ "palette_entries_added": [],
+ "results": [
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_quarry_face_w0_co.png",
+   "palette_id": "rock_andesite_cut",
+   "wear": "",
+   "mean_srgb": [
+    148.4,
+    146.4,
+    138.3
+   ],
+   "target_srgb": [
+    138,
+    136,
+    128
+   ],
+   "dE": 4.0,
+   "dE_to_entry": 4.0,
+   "tol": 14.0,
+   "spread_p75": 6.1,
+   "observed_spread": null,
+   "masked_frac": 0.061,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_quarry_face_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     148.4,
+     146.4,
+     138.4
+    ],
+    "dE": 4.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_quarry_face_w1_co.png",
+   "palette_id": "rock_andesite_cut",
+   "wear": "",
+   "mean_srgb": [
+    138.0,
+    136.0,
+    128.0
+   ],
+   "target_srgb": [
+    138,
+    136,
+    128
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 14.0,
+   "spread_p75": 5.8,
+   "observed_spread": null,
+   "masked_frac": 0.061,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_quarry_face_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     138.0,
+     136.0,
+     128.1
+    ],
+    "dE": 0.06,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_quarry_face_w2_co.png",
+   "palette_id": "rock_andesite_cut",
+   "wear": "",
+   "mean_srgb": [
+    131.0,
+    128.2,
+    118.7
+   ],
+   "target_srgb": [
+    138,
+    136,
+    128
+   ],
+   "dE": 3.16,
+   "dE_to_entry": 3.16,
+   "tol": 14.0,
+   "spread_p75": 5.5,
+   "observed_spread": null,
+   "masked_frac": 0.061,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_quarry_face_w2_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     131.1,
+     128.2,
+     118.8
+    ],
+    "dE": 3.15,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_outcrop_w0_co.png",
+   "palette_id": "rock_outcrop_weathered",
+   "wear": "",
+   "mean_srgb": [
+    123.6,
+    120.5,
+    110.4
+   ],
+   "target_srgb": [
+    116,
+    113,
+    103
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 14.0,
+   "spread_p75": 5.1,
+   "observed_spread": null,
+   "masked_frac": 0.163,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_outcrop_w0_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     123.6,
+     120.5,
+     110.4
+    ],
+    "dE": 2.99,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_outcrop_w1_co.png",
+   "palette_id": "rock_outcrop_weathered",
+   "wear": "",
+   "mean_srgb": [
+    116.0,
+    113.0,
+    103.0
+   ],
+   "target_srgb": [
+    116,
+    113,
+    103
+   ],
+   "dE": 0.0,
+   "dE_to_entry": 0.0,
+   "tol": 14.0,
+   "spread_p75": 5.1,
+   "observed_spread": null,
+   "masked_frac": 0.338,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_outcrop_w1_mask.png",
+   "verdict": "PASS",
+   "warnings": [],
+   "shipped_paa": {
+    "mean_srgb": [
+     116.0,
+     113.0,
+     103.1
+    ],
+    "dE": 0.05,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_outcrop_w2_co.png",
+   "palette_id": "rock_outcrop_weathered",
+   "wear": "",
+   "mean_srgb": [
+    108.5,
+    105.6,
+    95.7
+   ],
+   "target_srgb": [
+    116,
+    113,
+    103
+   ],
+   "dE": 3.0,
+   "dE_to_entry": 3.0,
+   "tol": 14.0,
+   "spread_p75": 5.1,
+   "observed_spread": null,
+   "masked_frac": 0.472,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_stone_outcrop_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "mask excludes 47 %"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     108.5,
+     105.5,
+     95.7
+    ],
+    "dE": 3.0,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_earth_bank_w0_co.png",
+   "palette_id": "earth_bare",
+   "wear": "",
+   "mean_srgb": [
+    124.4,
+    104.2,
+    80.4
+   ],
+   "target_srgb": [
+    148,
+    130,
+    108
+   ],
+   "dE": 10.25,
+   "dE_to_entry": 10.25,
+   "tol": 14.0,
+   "spread_p75": 3.4,
+   "observed_spread": 20.7,
+   "masked_frac": 0.536,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_earth_bank_w0_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "mask excludes 54 %"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     123.7,
+     104.5,
+     80.0
+    ],
+    "dE": 10.26,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_earth_bank_w1_co.png",
+   "palette_id": "earth_bare",
+   "wear": "",
+   "mean_srgb": [
+    124.5,
+    107.4,
+    86.1
+   ],
+   "target_srgb": [
+    148,
+    130,
+    108
+   ],
+   "dE": 9.0,
+   "dE_to_entry": 9.0,
+   "tol": 14.0,
+   "spread_p75": 3.3,
+   "observed_spread": 20.7,
+   "masked_frac": 0.64,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_earth_bank_w1_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "mask excludes 64 %"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     123.8,
+     107.6,
+     85.3
+    ],
+    "dE": 9.04,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  },
+  {
+   "file": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_earth_bank_w2_co.png",
+   "palette_id": "earth_bare",
+   "wear": "",
+   "mean_srgb": [
+    124.4,
+    110.5,
+    91.8
+   ],
+   "target_srgb": [
+    148,
+    130,
+    108
+   ],
+   "dE": 8.31,
+   "dE_to_entry": 8.31,
+   "tol": 14.0,
+   "spread_p75": 3.3,
+   "observed_spread": 20.7,
+   "masked_frac": 0.723,
+   "mask": "D:\\DayZ-Server_AI-20260907-MultiMap\\japan_dev\\data\\materials\\textures\\jp_m_ground_earth_bank_w2_mask.png",
+   "verdict": "WARN",
+   "warnings": [
+    "mask excludes 72 %"
+   ],
+   "shipped_paa": {
+    "mean_srgb": [
+     123.8,
+     110.7,
+     90.7
+    ],
+    "dE": 8.3,
+    "verdict": "PASS",
+    "warnings": [],
+    "masked": true
+   }
+  }
+ ]
+}

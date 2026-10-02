@@ -1,0 +1,70 @@
+{
+ "id": "jp_m_stone_quarry_face",
+ "family": "stone",
+ "palette_id": "rock_andesite_cut",
+ "palette_by_wear": {},
+ "tile_size_m": 2.0,
+ "texture_px": 1024,
+ "px_per_m": 512.0,
+ "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain",
+ "grain": "horizontal bedding joints (u = along the face, v down)",
+ "penetration_rvmat": "dz\\data\\data\\penetration\\granite.rvmat",
+ "roadway_surface": "dz\\surfaces\\data\\roadway\\stone_ext.paa",
+ "finish": "matte",
+ "wear": {
+  "_w0": {
+   "name": "clean",
+   "look": "freshly split, pale tool marks",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_quarry_face_w0_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_quarry_face_w0.rvmat",
+   "target_srgb": [
+    148.4,
+    146.4,
+    138.3
+   ],
+   "masked_frac": 0.061
+  },
+  "_w1": {
+   "name": "normal",
+   "look": "a few years old, rust in the joints",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_quarry_face_w1_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_quarry_face_w1.rvmat",
+   "target_srgb": [
+    138.0,
+    136.0,
+    128.0
+   ],
+   "masked_frac": 0.061
+  },
+  "_w2": {
+   "name": "heavy",
+   "look": "abandoned: darker, rust streaks, damp streaks",
+   "co": "JP\\common\\materials\\stone\\jp_m_stone_quarry_face_w2_co.paa",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_quarry_face_w2.rvmat",
+   "target_srgb": [
+    131.0,
+    128.2,
+    118.7
+   ],
+   "masked_frac": 0.061
+  }
+ },
+ "used_by": [
+  "jp_ishiba"
+ ],
+ "used_on": "Quarry face (TR25): the cut benches, the split block, the rubble",
+ "sources": [
+  {
+   "procedural": "make_fx7_materials.py (on make_b1_materials.make_one)"
+  },
+  {
+   "polyhaven_cc0": [
+    "rock_surface"
+   ]
+  }
+ ],
+ "normal_convention": "DirectX (green = down), like the library; make_textures.GREEN_DX flips all",
+ "made_by": "research/materials/make_fx7_materials.py (agent FX7, 2026-10-02), through B1's make_one",
+ "requested_by": "FX7 (Stephen's 3c-2 walk: the quarry / mine / kiln banks read as beige blobs)",
+ "note": "Quarry split faces and fresh blocks (FX7): u along the face, v down; the ya-ana channel row sits 0.32 m under the tile top, so put the tile top at a bench edge."
+}
