@@ -116,6 +116,17 @@
   silver-grey weathered wood (the new vs grey posts differ little now), ink posthumous names (new sumi cells).
   Lead note: binarize rewrites every ODOL with byte noise; 169 unchanged site models were restored to HEAD (no geometry
   change) to keep the repo clean.
+- **Modular host variants for corridors (end of production)** (Stephen, 2026-10-02, after walking 3a): do NOT fix
+  corridor-to-host joins building by building now. Once the host designs are final (end of production, like the
+  duplicate thatched-roof variants), make the modular host variants: duplicate the final hall, open the railing / wall
+  where each corridor meets it, align the corridor to it, and add the stair where the floors differ. His reasoning:
+  host buildings with openings made now would mean e.g. 8 shrine / hall variants with different railing openings,
+  and every later design change would then have to be made 8 times. The case that raised it, the town temple
+  corridor **U9** (`Land_JP_Roka_Temple_U`, hondo U1 east veranda -> kuri U2), left exactly as built until then:
+  (1) the hall's veranda railing was never opened, so the corridor is fenced off at the veranda; (2) its far end stops
+  short of the kuri's genkan porch and is misaligned with it; (3) the level change is a 0.70 m step-off instead of a
+  stair (K3's stair broke the connector fit on a 2-ken run). The honjin corridor **J3** (`Land_JP_Roka_Honjin`,
+  omote <-> oku, both floors 0.50, connected both ends) worked: Stephen did not flag it. K3_NOTES.md §6 points here.
 
 ### Parked (not in this plan until Stephen raises them)
 - Terrain-tool size test; the real map build; more horizontal in-between roads

@@ -206,6 +206,10 @@ roka = R.run_roka(path, sides=("enclosed", "open"), roof="itabuki", profile="str
   D2) and has no post in it.
 - Veranda hosts: put the path end on the veranda's outer edge line (the connector floor meets the veranda deck at the
   same height; the veranda's own eave is the soffit to check).
+- **Joining a corridor to its host halls is deferred to the end of production** (Stephen, 2026-10-02): the hosts' railing /
+  wall openings, the alignment and the stairs at level changes are made once, on modular variants of the FINAL host
+  designs. See PRODUCTION_PLAN.md "Confirmed future work": "Modular host variants for corridors (end of production)"
+  (U9's three faults are listed there; the honjin J3 corridor worked).
 - Single modules: `R.straight(L, sides, roof, profile, ends, branches)`, `R.junction(arms, sides={side: kind})`,
   `R.stair(L, rise)`, `R.connector(L)`. Junction cells are centred on the crossing of the centrelines; a straight next
   to a junction needs `branches=[(end, side)]` so its overhang is cut on the valley, and `posts0=False` when it starts
