@@ -138,7 +138,7 @@
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "10 points, max diff 2.9e-07 m"
+   "detail": "10 points, max diff 4.3e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -278,22 +278,22 @@
   {
    "check": "D1 props per room 5-7: doma",
    "ok": true,
-   "detail": "5 props: jp_f_soroban_tray, jp_f_rack_half, jp_f_basket_kago, jp_f_tool_wall, jp_f_oke_bucket, jp_f_box_l"
+   "detail": "5 props: jp_f_rokuro_broken, jp_f_soroban_tray, jp_f_rack_half, jp_f_basket_kago, jp_f_tool_wall, jp_f_oke_bucket"
   },
   {
    "check": "D2 floor coverage <= 25 %: doma",
    "ok": true,
-   "detail": "1.23 of 15.23 m2 = 8.1 % (collision footprints)"
+   "detail": "1.74 of 15.23 m2 = 11.4 % (collision footprints)"
   },
   {
    "check": "D3 at least one raised loot surface: doma",
    "ok": true,
-   "detail": "4 raised points on jp_f_box_l, jp_f_rack_half"
+   "detail": "4 raised points on jp_f_rack_half, jp_f_rokuro_broken"
   },
   {
    "check": "D4 1.00 m clear band door-to-door and door-to-centre: doma",
    "ok": true,
-   "detail": "DoorsTwin1, kamachi step, centre joined by a 1.00 m band (2457 free cells)"
+   "detail": "DoorsTwin1, kamachi step, centre joined by a 1.00 m band (2309 free cells)"
   },
   {
    "check": "D1 props per room 5-7: room",
@@ -403,7 +403,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 399452 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 399597 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

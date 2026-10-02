@@ -616,3 +616,69 @@ Regenerate: `python spikes/D3/layout_d3.py` then `python spikes/D3/map_d3.py`. M
 | U9 | `Land_JP_Roka_Temple_U` | 1106.45 | 1109.45 | 0 | -0.00 | covered corridor: the hondo's east veranda -> the kuri's genkan porch (step down at the porch) |
 
 <!-- D3 END -->
+
+<!-- W3B BEGIN -->
+
+## W3B wave 3b: workshops, services, stalls, timber yard, foundry (agent W3B, 2026-10-02)
+
+Regenerate: `python spikes/W3B/layout_w3b.py` then `python spikes/W3B/map_w3b.py`. Map: research/production/contact_sheets/w3b_map.jpg. Buildings are furnished variants (`buildings/w3b_sets.py`); yard fences (`Land_JP_Compound_*Yard`) are K3-kit objects; `.sN` = a site object of that building; IDs without a class are free props. y_off is over the ground at the object.
+
+### The artisans' street, east of the spawn (panel A)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| A1 | `Land_JP_Workshop_Doma_Sangawara_Joinery` | 1036.50 | 1012.30 | 180 | -0.00 | joiner's workshop (earth floor, tiled): planing beam, sawhorses, tool chest, frames |
+| A2 | `Land_JP_Workshop_Doma_Itabuki_Turner` | 1043.40 | 1012.30 | 180 | 0.00 | woodturner + abacus maker (earth floor): the strap lathe, the abacus tray |
+| A3 | `Land_JP_Workshop_Doma_Itabuki_Basket` | 1050.30 | 1012.30 | 180 | 0.00 | bamboo + basket maker (earth floor): poles, the half-woven basket |
+| A4 | `Land_JP_Workshop_Bench_Sangawara_Polisher` | 1073.50 | 1012.75 | 180 | 0.00 | sword polisher (raised-floor bench workshop, tiled): stone holder by the lattice window; the dust-free back room |
+| A5 | `Land_JP_Workshop_Bench_Itabuki_Lacquer` | 1081.00 | 1012.75 | 180 | -0.00 | lacquerer (bench workshop): the work board, the drying cupboard in the back room |
+| A6 | `Land_JP_Workshop_Bench_Sangawara_Kinko` | 1088.50 | 1012.75 | 180 | -0.00 | sword-fittings maker (bench workshop, tiled): pitch bowl, the little forge |
+| A7 | `Land_JP_Booth_Barber_Furnished` | 1039.60 | 995.00 | 0 | 0.00 | barber's booth (de-doko): the kit box, the waiting bench |
+| A8 | `Land_JP_Booth_Misemono_Furnished` | 1071.20 | 994.50 | 0 | 0.00 | show booth (misemono-goya): mat walls, benches, the empty cage on the stage, the painted signboard |
+| A8.s1 | `jp_s_nobori_shop.p3d` | 1069.10 | 997.67 | 0 | 0.00 | a show banner |
+| A8.s2 | `jp_s_nobori_shop.p3d` | 1073.30 | 997.67 | 0 | 0.00 | a show banner |
+| A9 | `jp_s_stall_yatai.p3d` | 1046.00 | 995.60 | 0 | 0.00 | a roofed food stall (yatai: soba / dumplings) |
+| A10 | `jp_s_stall_reed.p3d` | 1050.80 | 995.60 | 0 | 0.00 | a reed-screen market stall |
+| A11 | `jp_s_stall_row3.p3d` | 1059.00 | 995.30 | 0 | -0.00 | the market row: three reed stalls |
+| A12 | `jp_f_ekisha_table_upset.p3d` | 1064.60 | 996.60 | 0 | 0.00 | the fortune-teller's table, knocked over (lantern, sticks, counting rods) |
+| A13 | `jp_f_ekisha_table.p3d` | 1054.80 | 1004.80 | 200 | -0.00 | a second fortune-teller's table, as left, by the sakura |
+| A14 | `jp_s_nobori_shop.p3d` | 1044.20 | 997.00 | 0 | 0.00 | a stall banner |
+
+### Bathhouse + stable yard by the post-town street (panel B)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| B1 | `Land_JP_Sento_Sangawara_Furnished` | 1048.50 | 1061.00 | 0 | -0.00 | public bathhouse (sento, furnished): entrance + bandai west, changing room, the zakuro-guchi, the bath room east, the boiler lean-to on the east gable |
+| B2 | `Land_JP_Compound_StableYard` | 1069.30 | 1056.40 | 180 | 0.00 | the stable yard's board fence, the wide gate north (street side) |
+| B3 | `Land_JP_StableRow_Itabuki_Furnished` | 1069.30 | 1054.01 | 0 | -0.00 | stable row (furnished): four stalls open to the yard (north), the tack room east |
+| B3.s1 | `jp_s_stable_yard_trough_stone.p3d` | 1066.80 | 1057.90 | 0 | 0.00 | the stone water trough before the stalls |
+| B3.s2 | `jp_s_stable_yard_tie_post.p3d` | 1069.30 | 1058.11 | 0 | 0.00 | tie posts in the yard |
+| B3.s3 | `jp_s_stable_yard_saddle_rack.p3d` | 1065.10 | 1057.70 | 0 | -0.00 | the pack-saddle rack |
+| B4 | `jp_s_straw_stack_nio_cone.p3d` | 1063.60 | 1061.00 | 0 | 0.00 | a straw stack in the stable yard |
+| B5 | `jp_s_handcart_load_bales.p3d` | 1074.30 | 1059.60 | 0 | -0.00 | a handcart with fodder bales |
+
+### Timber yard at the south edge (panel T/F)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| T1 | `Land_JP_Compound_TimberYard` | 1013.65 | 912.00 | 180 | -0.09 | the timber yard's board fence, the wide gate north |
+| T2 | `Land_JP_Timber_SawShed_Furnished` | 1007.00 | 905.60 | 0 | -0.03 | the sawing shed (open): the sawing trestle with the log and the big saw |
+| T3 | `Land_JP_Timber_Store_Furnished` | 1018.60 | 905.30 | 0 | -0.03 | the timber store: timber stood upright, planks |
+| T4 | `Land_JP_Timber_ShingleShed_Furnished` | 1003.10 | 916.50 | 90 | -0.01 | the shingle splitter's shed (open east) |
+| T5 | `jp_f_log_stack.p3d` | 1016.00 | 913.20 | 0 | -0.01 | logs stacked on bearers, the dealer's mark |
+| T6 | `jp_f_log_stack_collapsed.p3d` | 1023.00 | 912.60 | 0 | -0.00 | a log stack, the top rolled down |
+| T7 | `jp_f_plank_stack_scattered.p3d` | 1021.00 | 919.20 | 0 | -0.00 | planks, half pulled down |
+| T8 | `jp_f_log_stack.p3d` | 1006.50 | 920.00 | 0 | -0.00 | logs waiting for the saw |
+
+### Foundry yard at the south edge (panel T/F)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| F1 | `Land_JP_Compound_FoundryYard` | 1044.10 | 910.30 | 180 | -0.06 | the foundry yard's board fence, the gate north |
+| F2 | `Land_JP_Foundry_Itabuki_Furnished` | 1040.60 | 907.30 | 0 | -0.03 | foundry (furnished): the cupola furnace, treadle bellows, sand casting bed, new pots, scrap; open bays north to the yard |
+| F3 | `jp_f_bell_mould.p3d` | 1048.30 | 912.60 | 0 | -0.00 | the bell casting site: the clay mould in its pit (never poured) |
+| F4 | `jp_s_charcoal_bales_stack.p3d` | 1050.80 | 906.30 | 90 | -0.00 | charcoal bales for the melt |
+| F5 | `jp_f_scrap_heap.p3d` | 1046.60 | 906.20 | 0 | -0.01 | scrap iron in the yard |
+| F6 | `jp_f_cast_pots.p3d` | 1038.20 | 914.60 | 0 | -0.00 | new pots and kettles on a rack outside |
+
+<!-- W3B END -->

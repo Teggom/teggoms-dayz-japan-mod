@@ -1,4 +1,7 @@
-# Japan test island: wave 3a walk, houses, compounds, corridors, honjin (~28 min)
+# Japan test island: wave 3a walk, houses, compounds, corridors, honjin (~28 min) + wave 3b workshops + services (~15 min)
+
+One combined walk: sections 1-6 (wave 3a) and the FX4 re-check, then **section 3b at the end** (workshops, bathhouse,
+stable yard, stalls, timber yard, foundry).
 
 Wave 3a (D3) is built and placed: 28 new shells (mountain + coastal farmhouses, the foot-soldier row, doshin and
 samurai houses in three sizes, the great merchant, the honjin + waki-honjin, two headman houses, tea hut, board
@@ -131,3 +134,75 @@ Before / after picture: `research/production/contact_sheets/fx4_fixes.jpg` (draw
 4. **Stone weathering layer** (new, like FX3's wood): soft grime / pale lichen clouds at ~11 m scale. Pass: not
    blotchy or tiled; tell me if too strong.
 - Tell me: any bell or gong you can still see into; head room on the deck; stone repeats left anywhere.
+
+## 3b. Wave 3b: workshops, bathhouse, stable yard, stalls, timber yard, foundry (~15 min)
+
+Built and placed by W3B (2026-10-02): 18 new shells (bathhouse x2, stable row x2, barber's booth, show booth,
+earth-floor workshop x2, raised-floor bench workshop x2, three timber-yard sheds, foundry x2, three yard fences), 14 of
+them furnished, 34 new props (63 models). Nothing here has been seen in the engine yet. Pictures:
+`research/production/contact_sheets/w3b_family.jpg` (every shell), `w3b_rooms.jpg` (the furnished rooms + props),
+labelled map `w3b_map.jpg` (every ID below is in `spikes/SH1/SHOWCASE_MAP.md`, W3B section).
+
+**Route (~550 m):** spawn -> east along the new artisans' street (A) -> north to the bathhouse and the stable yard (B)
+by the post-town street -> back south past the spawn and across the weapon range to the timber yard (T) and the
+foundry yard (F) at the south edge -> back to the spawn.
+
+**A. The artisans' street (5 min; panel A).** From the spawn walk ~15 m east: the lane runs east-west at z ~1003.
+- South side, west to east: **A7 barber's booth** (1039.6, 995; open front): the kit box with its copper basin
+  (drawer pulled out), the customer's stool, the raised waiting bench at the back (step up by the stone). Then the
+  **food stall A9** (yatai), the **reed market stall A10**, the **market row A11**, the knocked-over
+  **fortune-teller's table A12** (lantern, divining sticks, counting rods; a second one, as left, A13 by the sakura).
+- **A8 show booth** (1071.2, 994.5; straw-mat walls): in through the **rolled mat curtain** in the middle of the front,
+  plank benches in the pit, step up onto the low stage (the empty animal cage, the drums). Outside over the entrance:
+  the painted-cloth signboard, torn, and two banners. **Does the signboard clip the eave?**
+- North side (fronts face south onto the lane), west to east: **A1 joiner** (1036.5, 1012.3; tiled): the planing
+  beam, sawhorses, the tool chest, frames on the wall; **A2 woodturner + abacus maker** (1043.4): the strap lathe (a
+  spindle between two posts, the pull strap snapped), the abacus tray; **A3 basket maker** (1050.3): bamboo poles on
+  the wall, the half-woven basket kicked over, the soaking tub. Each: the earth floor open to the lane, a raised room
+  at the end (kamachi step), a back door.
+- Past the sakura: **A4 sword polisher** (1073.5, 1012.8; tiled), **A5 lacquerer** (1081, 1012.8), **A6 fittings
+  maker** (1088.5, 1012.8; tiled): the front door into a doma (kamado, water jar), step up into the work room with the
+  big lattice windows (polisher's stone holder + water tub / lacquer board with brushes and pots / the pitch-bowl
+  bench with the little brazier forge), then the **door into the closed back room** (A5: the lacquer drying cupboard,
+  doors open).
+
+**B. Bathhouse + stable yard (4 min; panel B).** Walk north ~50 m, towards the post-town street.
+- **B1 public bathhouse (sento)** (1048.5, 1061; tiled, front faces north to the street): in under the noren (west
+  end of the front) -> the entrance doma with the **bandai** (pay counter, cashbox forced) at the step-up -> the
+  changing room (clothes cubbies ransacked, a go board) -> the washing floor (slatted **nagashi** over its drain, stools
+  and buckets). On the partition: the **zakuro-guchi**, a low gabled opening (0.95 m high) under a painted vermilion
+  panel. It is decoration (PLAYBOOK D9): you go in by the **board door beside it**. Inside the dim bath room: the
+  drained wooden tub against the end wall. Outside, round the **east gable**: the open lean-to (kama-ba) with the
+  boiler's fire mouth (door torn off, ash raked out) and the firewood.
+- **B2 / B3 stable yard** (gate on the north side ~1068.9, 1062.7): open / close the wide gate from both sides. In the
+  yard: the stone trough, tie posts, the pack-saddle rack, a straw stack, a handcart. **B3 stable row** facing the
+  yard: walk into each of the four stalls (bars down, as left; mangers on the back wall), then the **tack room door**
+  at the east end (straw horseshoes on the pegs).
+
+**T. Timber yard (3 min; panel T/F).** Walk south past the spawn and across the weapon range to z ~922.
+- **T1 board fence**, wide gate on the north (~1012.3, 922). Inside: **T2 sawing shed** (1007, 905.6, open): the tall
+  trestle with the log propped on it at an angle and the big rip saw in the kerf (no sawpit: the Japanese sawyers
+  worked a raised log). **T3 timber store** (1018.6, 905.3): timber stood upright on the back wall, planks. **T4
+  shingle shed** (1003.1, 916.5, open to the east): the splitting block with the froe in a bolt. Log stacks T5 / T6 /
+  T8, planks T7. Walk into the log stacks and the trestle: **solid, nothing you can walk through, no floating log?**
+
+**F. Foundry yard (3 min; panel T/F).** ~25 m east of the timber yard.
+- **F1 board fence**, gate on the north (~1043.6, 917.6). **F2 foundry** (1040.6, 907.3; open bays face the yard):
+  the **cupola furnace** (stacked clay rings, cold), the **treadle bellows** with its seesaw board and the wind trunk
+  to the furnace, the sand casting bed with clay moulds (one knocked open, a cast pot inside), new pots on a rack,
+  scrap, ladles on the wall, the louvred smoke vent on the ridge. In the yard: **F3 the bell casting site** (the clay
+  mould of a temple bell in its pit, banded and propped), charcoal (F4), scrap (F5), pots (F6).
+
+**Tell me (3b):**
+1. **Bathhouse:** does it read as a bathhouse? The zakuro-guchi: right look and height, or should it be walk-through
+   (crouch)? The tub size? (The men's upstairs rest room is NOT built: one storey, the G1-5 cap; say if you want it.)
+2. **Workshops:** can you tell the six trades apart by their props? The bench workshops' back room: worth it?
+3. **Booths and stalls:** barber, show booth, food / market stalls, fortune-teller: right feel? The show booth's mat
+   walls?
+4. **Stable yard:** stalls enterable, gate OK, yard props right?
+5. **Timber yard + foundry:** the sawing trestle (log at an angle), the furnace + bellows: believable? Anything you can
+   walk through?
+6. **Doors / gates / steps:** any door that sticks or opens into a prop; the kamachi steps up and down.
+7. **Loot:** on floors, the bandai, benches, chests, the tub step; nothing up high.
+8. **Placement:** the street, the bathhouse by the post-town street, the yards at the south edge: right, or move
+   anything?

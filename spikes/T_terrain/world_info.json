@@ -6481,6 +6481,386 @@
    ],
    "yaw": 90.0,
    "src": "placement:W2F.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_workshop_doma_sangawara_joinery.p3d",
+   "pos": [
+    1036.5,
+    25.0,
+    1012.3
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_workshop_doma_itabuki_turner.p3d",
+   "pos": [
+    1043.4,
+    25.0,
+    1012.3
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_workshop_doma_itabuki_basket.p3d",
+   "pos": [
+    1050.3,
+    25.0,
+    1012.3
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_workshop_bench_sangawara_polisher.p3d",
+   "pos": [
+    1073.5,
+    25.0,
+    1012.75
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_workshop_bench_itabuki_lacquer.p3d",
+   "pos": [
+    1081.0,
+    25.0,
+    1012.75
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_workshop_bench_sangawara_kinko.p3d",
+   "pos": [
+    1088.5,
+    25.0,
+    1012.75
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_booth_barber_furnished.p3d",
+   "pos": [
+    1039.6,
+    25.0,
+    995.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_booth_misemono_furnished.p3d",
+   "pos": [
+    1071.2,
+    25.0,
+    994.5
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_nobori_shop.p3d",
+   "pos": [
+    1069.1,
+    25.0,
+    997.675
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_nobori_shop.p3d",
+   "pos": [
+    1073.3,
+    25.0,
+    997.675
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_sento_sangawara_furnished.p3d",
+   "pos": [
+    1048.5,
+    25.0,
+    1061.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_site\\jp_compound_stableyard.p3d",
+   "pos": [
+    1069.3,
+    25.0,
+    1056.4
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_stablerow_itabuki_furnished.p3d",
+   "pos": [
+    1069.3,
+    25.000001907348633,
+    1054.005
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_stable_yard_trough_stone.p3d",
+   "pos": [
+    1066.8,
+    25.0,
+    1057.905
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_stable_yard_tie_post.p3d",
+   "pos": [
+    1069.3,
+    25.0,
+    1058.105
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_stable_yard_saddle_rack.p3d",
+   "pos": [
+    1065.1,
+    25.000001907348633,
+    1057.705
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_site\\jp_compound_timberyard.p3d",
+   "pos": [
+    1013.65,
+    24.945694122314453,
+    912.0
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_timber_sawshed_furnished.p3d",
+   "pos": [
+    1007.0,
+    25.04499203491211,
+    905.6
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_timber_store_furnished.p3d",
+   "pos": [
+    1018.6,
+    24.977787704467772,
+    905.3
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_timber_shingleshed_furnished.p3d",
+   "pos": [
+    1003.1,
+    25.018958984375,
+    916.5
+   ],
+   "yaw": 90.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_site\\jp_compound_foundryyard.p3d",
+   "pos": [
+    1044.1,
+    24.95022804260254,
+    910.3
+   ],
+   "yaw": 180.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\buildings\\tr_furnished\\jp_foundry_itabuki_furnished.p3d",
+   "pos": [
+    1040.6,
+    24.96132211303711,
+    907.3
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_stall_yatai.p3d",
+   "pos": [
+    1046.0,
+    25.0,
+    995.6
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_stall_reed.p3d",
+   "pos": [
+    1050.8,
+    25.0,
+    995.6
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_stall_row3.p3d",
+   "pos": [
+    1059.0,
+    25.0,
+    995.3
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_ekisha_table_upset.p3d",
+   "pos": [
+    1064.6,
+    25.0,
+    996.6
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_ekisha_table.p3d",
+   "pos": [
+    1054.8,
+    25.0,
+    1004.8
+   ],
+   "yaw": 200.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\street\\jp_s_nobori_shop.p3d",
+   "pos": [
+    1044.2,
+    25.0,
+    997.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_straw_stack_nio_cone.p3d",
+   "pos": [
+    1063.6,
+    26.450000047683716,
+    1061.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard\\jp_s_handcart_load_bales.p3d",
+   "pos": [
+    1074.3,
+    25.0,
+    1059.6
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_log_stack.p3d",
+   "pos": [
+    1016.0,
+    25.020634216308594,
+    913.2
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_log_stack_collapsed.p3d",
+   "pos": [
+    1023.0,
+    25.01292771911621,
+    912.6
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_plank_stack_scattered.p3d",
+   "pos": [
+    1021.0,
+    25.003125854492186,
+    919.2
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_log_stack.p3d",
+   "pos": [
+    1006.5,
+    25.006361267089844,
+    920.0
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_bell_mould.p3d",
+   "pos": [
+    1048.3,
+    25.00767106628418,
+    912.6
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\site\\yard_life\\jp_s_charcoal_bales_stack.p3d",
+   "pos": [
+    1050.8,
+    24.981828399658202,
+    906.3
+   ],
+   "yaw": 90.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_scrap_heap.p3d",
+   "pos": [
+    1046.6,
+    24.978575820922853,
+    906.2
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
+  },
+  {
+   "p3d": "JP\\furniture\\tradefit\\jp_f_cast_pots.p3d",
+   "pos": [
+    1038.2,
+    25.010005950927734,
+    914.6
+   ],
+   "yaw": 0.0,
+   "src": "placement:W3B.csv"
   }
  ]
 }

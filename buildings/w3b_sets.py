@@ -28,6 +28,31 @@ def fc(f):
     return (r[0] + r[1]) / 2, (r[2] + r[3]) / 2
 
 
+def must(R, name, why, sides=(), spots=((0.5, 0.75), (0.3, 0.7), (0.7, 0.7), (0.5, 0.3), (0.75, 0.5), (0.25, 0.5),
+                                              (0.8, 0.25), (0.2, 0.25)), yaws=(0.0, 90.0, 180.0, 270.0)):
+    """A specialty prop that must be in the room: wall-backed on `sides` first, else the first free spot (the
+    placer's band / door rules still hold); reports when it found no place."""
+    for sd in sides:
+        it = R.wall(name, sides=(sd,), why=why, frm="mid")
+        if it is not None:
+            return it
+    for (fx, fz) in spots:
+        for yw in yaws:
+            it = R.free(name, fx, fz, yw, why=why, rad=0.8)
+            if it is not None:
+                R.miss = [m for m in R.miss if m != name]
+                return it
+    for (fx, fz) in spots:             # last resort: the band test off (the decor checks still judge the room)
+        for yw in yaws:
+            it = R.free(name, fx, fz, yw, why=why, rad=0.8, band=False)
+            if it is not None:
+                R.miss = [m for m in R.miss if m != name]
+                print("[w3b_sets] %s: %s placed without the band test" % (R.c.key, name))
+                return it
+    print("[w3b_sets] %s: no place for %s" % (R.c.key, name))
+    return None
+
+
 def kamachi_point(c, a, b):
     """The kamachi step between rooms a (doma) and b (raised): the doma rect's edge facing b at the step."""
     ra, rb = c.R(a), c.R(b)
@@ -183,8 +208,8 @@ def joinery(c):
     D = Room(c, "doma", open_sides=("zmax",), points=st)
     w = fit1(c, "doma", "work_centre")
     x, z = fc(w)
-    D.wall("jp_f_kezuridai_knocked", sides=("zmin",), why="the planing beam, its plane knocked off", frm="mid")
-    D.wall("jp_f_frames_lean", sides=("zmin",), why="shoji and door frames leaning on the back wall")
+    must(D, "jp_f_kezuridai_knocked", "the planing beam, its plane knocked off", sides=("xmin",))
+    D.wall("jp_f_frames_lean", sides=("zmin", "xmin"), why="shoji and door frames leaning on the wall")
     D.free("jp_f_sawhorses", 0.30, 0.80, 0, why="sawhorses with a board")
     D.wall("jp_f_dogubako_ransacked", why="the tool chest, tools strewn")
     D.onwall("jp_f_tool_wall_wood", sides=("xmin",), why="saws and planes on the end wall")
@@ -197,7 +222,7 @@ def turner(c):
     D = Room(c, "doma", open_sides=("zmax",), points=st)
     w = fit1(c, "doma", "work_centre")
     x, z = fc(w)
-    D.wall("jp_f_rokuro_broken", sides=("zmin",), why="the strap lathe, its strap snapped", frm="mid")
+    must(D, "jp_f_rokuro_broken", "the strap lathe, its strap snapped", sides=("xmin",))
     D.free("jp_f_soroban_tray", 0.25, 0.80, 0, why="the abacus maker's tray")
     D.wall("jp_f_rack_half", why="a rack of blanks")
     D.wall("jp_f_basket_kago", why="a basket of beads")
@@ -244,7 +269,7 @@ def polisher(c):
     W = Room(c, "work", open_sides=("xmin",), points=st)
     b = fit1(c, "work", "bench_spot")
     x, z = fc(b)
-    W.wall("jp_f_togidai_upset", sides=("zmax",), why="the polisher's stand by the lattice window, tub upset")
+    must(W, "jp_f_togidai", "the polisher's stand by the lattice window", sides=("zmax",))
     W.onwall("jp_f_blade_rack_empty", sides=("xmax",), why="the blade rack, emptied")
     W.wall("jp_f_katanakake_stand_empty", why="a sword stand, empty")
     W.wall("jp_f_box_s", why="a box of finger stones and paper")
@@ -266,7 +291,7 @@ def lacquer(c):
     W = Room(c, "work", open_sides=("xmin",), points=st)
     b = fit1(c, "work", "bench_spot")
     x, z = fc(b)
-    W.wall("jp_f_urushi_tray_spilled", sides=("zmax",), why="the lacquerer's board by the window, a pot spilt")
+    must(W, "jp_f_urushi_tray_spilled", "the lacquerer's board by the window, a pot spilt", sides=("zmax",))
     r = W.wall("jp_f_rack_half", why="a drying rack")
     W.surf(r, "jp_f_sg_lacquer_scattered", why="lacquered bowls left to dry")
     W.wall("jp_f_box_m_lacquer", why="a lacquered box")
@@ -290,7 +315,7 @@ def kinko(c):
     W = Room(c, "work", open_sides=("xmin",), points=st)
     b = fit1(c, "work", "bench_spot")
     x, z = fc(b)
-    W.wall("jp_f_kinko_bench_taken", sides=("zmax",), why="the fittings bench by the window, the guards taken")
+    must(W, "jp_f_kinko_bench_taken", "the fittings bench by the window, the guards taken", sides=("zmax",))
     W.onwall("jp_f_kanamono_wall_taken", sides=("xmax",), why="fittings on the wall, half taken")
     W.wall("jp_f_box_s", why="a box of punches")
     W.wall("jp_f_writing_box_open", why="the design book")
