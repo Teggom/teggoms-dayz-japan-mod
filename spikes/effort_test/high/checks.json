@@ -331,8 +331,8 @@
      "material": "jp_m_wood_street_dark_w1",
      "mean_srgb": [
       86.8,
-      58.5,
-      44.4
+      58.6,
+      44.5
      ],
      "palette": "timber_interior",
      "target": [
@@ -348,8 +348,8 @@
      "material": "jp_m_wood_street_dark_w1",
      "mean_srgb": [
       86.8,
-      58.5,
-      44.4
+      58.6,
+      44.5
      ],
      "palette": "timber_street_dark",
      "target": [
@@ -357,7 +357,7 @@
       56,
       42
      ],
-     "dE76": 1.1,
+     "dE76": 1.2,
      "tolerance": 14,
      "pass": true
     },
@@ -365,8 +365,8 @@
      "material": "jp_m_wood_street_dark_w2",
      "mean_srgb": [
       91.2,
-      67.0,
-      54.4
+      67.1,
+      54.5
      ],
      "palette": "timber_interior",
      "target": [
@@ -374,7 +374,7 @@
       52,
       46
      ],
-     "dE76": 9.0,
+     "dE76": 9.1,
      "tolerance": 14,
      "pass": true
     },
@@ -412,8 +412,8 @@
    "pass": true,
    "detail": {
     "odol_bytes": {
-     "intact": 54972,
-     "ransacked": 69889
+     "intact": 56461,
+     "ransacked": 72723
     },
     "warning_lines": [],
     "boilerplate_lines": 8,

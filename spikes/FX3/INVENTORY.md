@@ -88,3 +88,14 @@ macro today); the make_* scripts and parts/kit/make_part_materials.py / make_fix
   route (world-continuous macro) needs a `#UVSet#` tagg in every MLOD writer: recorded in PHASE2_PLAN.md §5.
 - Three wood macros (outdoor, dark woods with half the bleach, interior with grime only) and two thatch macros
   (_w1 grime / bleach, _w2 moss carpets); _w0 thatch keeps the empty `color(0,0,0,0,MC)`.
+
+## Phase 2 addendum: what FX2 added (2026-10-01)
+
+- Statue kit (spikes/FX2/statuekit.py, figures.py, statues.py): SDF meshes with their own explicit UVs on stone /
+  `gilt_worn` / bronze: not wood, untouched by uvwood (no "atlas" in those sidecars).
+- spikes/FX2/detail_fx2.py (kagura mask wall, bell tree, waniguchi, suzu, bonsho, ema rail + gaku-ema, offering box):
+  FPart props on wood_interior / wood_weathered / wood_kuro / wood_new / wood_silver -> covered automatically
+  (Part.lods hook); no band_fit, no custom uv code there.
+- spikes/B3b/props_guardian.py (komainu, kitsune): stone + `skit.moss_top` / `moss_face` decals -> moss mode.
+- ropekit sag changes: straw rope material, untouched. U1 wrap-round veranda: jpparts parts -> plane groups.
+- New budget classes in buildings/registry.py: uvwood never adds faces (UVs only), so no budget moves.

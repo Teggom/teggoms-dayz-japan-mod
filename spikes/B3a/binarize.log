@@ -330,7 +330,7 @@ Convert model P:\JP\furniture\kitchen\jp_f_mizugame.p3d -> D:\DayZ-Server_AI-202
 </model>
 Convert model P:\JP\furniture\kitchen\jp_f_mizugame_broken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_mizugame_broken.p3d
 <model = "P:\JP\furniture\kitchen\jp_f_mizugame_broken.p3d">
-UV mapping too varied on jp\common\materials\ceramic\jp_m_ceramic_stoneware_dark_w2_co.paa, stage 0: texel size used 0.0019417, max 0.0069113, min 0.00186937
+UV mapping too varied on jp\common\materials\ceramic\jp_m_ceramic_stoneware_dark_w2_co.paa, stage 0: texel size used 0.00194176, max 0.0069101, min 0.00186904
 </model>
 Convert model P:\JP\furniture\kitchen\jp_f_mizugame_open.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\kitchen\jp_f_mizugame_open.p3d
 <model = "P:\JP\furniture\kitchen\jp_f_mizugame_open.p3d">
@@ -516,7 +516,7 @@ Convert model P:\JP\furniture\shop\jp_f_zukue_plain.p3d -> D:\DayZ-Server_AI-202
 </model>
 Convert model P:\JP\furniture\shop\jp_f_zukue_plain_tipped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\B3a\_build\binarized\shop\jp_f_zukue_plain_tipped.p3d
 <model = "P:\JP\furniture\shop\jp_f_zukue_plain_tipped.p3d">
-UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000949524, max 0.00195445, min 0.000873458
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000949279, max 0.0019534, min 0.000873557
 </model>
 
 FileServer MaxCacheSize = 23987 MB

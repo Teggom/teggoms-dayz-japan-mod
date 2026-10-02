@@ -302,7 +302,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 2079 touching (opposite-facing: backface-culled) and 313 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 2079 touching (opposite-facing: backface-culled) and 315 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -317,7 +317,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 575421 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 607529 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

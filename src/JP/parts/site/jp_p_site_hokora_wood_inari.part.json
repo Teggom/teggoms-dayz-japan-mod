@@ -114,7 +114,7 @@
  ],
  "lod_faces": {
   "Resolution 1": 262,
-  "Resolution 2": 220,
+  "Resolution 2": 164,
   "Resolution 3": 80,
   "Geometry": 46,
   "View Geometry": 46,
@@ -136,7 +136,7 @@
   {
    "check": "C5 LODs",
    "ok": true,
-   "detail": "Resolution 1 262, Resolution 2 220, Resolution 3 80, Geometry 46, View Geometry 46, Fire Geometry 46"
+   "detail": "Resolution 1 262, Resolution 2 164, Resolution 3 80, Geometry 46, View Geometry 46, Fire Geometry 46"
   },
   {
    "check": "C2 library only",

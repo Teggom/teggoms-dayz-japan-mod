@@ -234,7 +234,7 @@
   {
    "check": "C1 palette (whole-texture means)",
    "ok": true,
-   "detail": "jp_m_metal_iron_w1 mean (78,69,62) vs iron_black dE 3.5 (tol 10) | jp_m_wood_sooted_w0 mean (38,29,23) vs timber_sooted dE 1.0 (tol 12) | jp_m_wood_street_dark_w2 mean (91,67,54) vs timber_street_dark dE 5.2 (tol 14); vs the wanted timber_interior dE 9.0 (tol 14) | jp_m_wood_weathered_w1 mean (111,80,71) vs timber_weathered dE 2.6 (tol 14)"
+   "detail": "jp_m_metal_iron_w1 mean (78,69,62) vs iron_black dE 3.5 (tol 10) | jp_m_wood_sooted_w0 mean (38,30,24) vs timber_sooted dE 1.0 (tol 12) | jp_m_wood_street_dark_w2 mean (91,67,54) vs timber_street_dark dE 5.2 (tol 14); vs the wanted timber_interior dE 9.1 (tol 14) | jp_m_wood_weathered_w1 mean (111,80,71) vs timber_weathered dE 2.7 (tol 14)"
   },
   {
    "check": "CfgConvert config.cpp + model.cfg (to bin and back)",
@@ -244,7 +244,7 @@
   {
    "check": "binarize clean",
    "ok": true,
-   "detail": "both p3d -> ODOL (jp_f_tansu.p3d 47011 B, jp_f_tansu_ransacked.p3d 65052 B); 42 log lines, flagged 0, unexplained 0 (the rest is the same config noise as the machiya's log); spikes\\effort_test\\xhigh\\out\\binarize.log"
+   "detail": "both p3d -> ODOL (jp_f_tansu.p3d 47480 B, jp_f_tansu_ransacked.p3d 66016 B); 42 log lines, flagged 0, unexplained 0 (the rest is the same config noise as the machiya's log); spikes\\effort_test\\xhigh\\out\\binarize.log"
   },
   {
    "check": "A ODOL read-back",
@@ -259,7 +259,7 @@
   {
    "check": "PBO contents",
    "ok": true,
-   "detail": "@Japan\\addons\\jp_efftest_xhigh.pbo: prefix JP\\effort_test\\xhigh, entries ['config.cpp', 'jp_f_tansu.p3d', 'jp_f_tansu_ransacked.p3d'], p3d ODOL {'jp_f_tansu.p3d': True, 'jp_f_tansu_ransacked.p3d': True}, SHA-1 trailer OK, 113378 bytes"
+   "detail": "@Japan\\addons\\jp_efftest_xhigh.pbo: prefix JP\\effort_test\\xhigh, entries ['config.cpp', 'jp_f_tansu.p3d', 'jp_f_tansu_ransacked.p3d'], p3d ODOL {'jp_f_tansu.p3d': True, 'jp_f_tansu_ransacked.p3d': True}, SHA-1 trailer OK, 114811 bytes"
   },
   {
    "check": "config: one CfgPatches, two static classes, models exist, no map coupling",

@@ -22,6 +22,26 @@ tea houses) -> the town temple -> back to the spawn.
 pass (open AND close it, from both sides); loot on floors and on furniture tops. Shrines, altars and offerings carry
 no loot on purpose (left undisturbed).
 
+## FX3 re-check (~6 min; wood texture variety + moss). IDs: spikes/SH1/SHOWCASE_MAP.md
+
+Before / after picture: `spikes/FX3/fx3_insitu.jpg` (and `spikes/FX3/fx3_samples.jpg`). Every wood surface now
+picks its own patch / offset / flip of a 4 m wide atlas, plus a large soft weathering layer (grime, sun-bleach,
+streaks, ~15 m across) on top.
+1. **Torii poles** (any wooden torii: V3 945, 1061; the x 1036 row; the approach torii 1024, 1161): the two poles
+   and the beams no longer show the same knot / mark at the same height. Pass: no obvious twin pattern.
+2. **Board walls, posts, verandas** (the street houses, K2 tea house 1075.5, 1086.8, P1 haiden): no 2 m repeat
+   marching along a wall; no hard seam INSIDE one board (seams at board edges / posts are fine).
+3. **Watch the lighting on the grain (the one technical risk):** about half the wood faces now have their texture
+   mirrored. In low sun, walk along a board wall and a few posts: the grain bumps / board grooves should catch the
+   light the same way on every face. If some faces look embossed the wrong way (light from the wrong side), tell me:
+   it is one switch (uvwood ALLOW_FLIP) and a rebuild.
+4. **Weathering layer**: soft grime clouds, paler sun-bleached areas and faint streaks at a big scale on outdoor wood;
+   indoors only faint grime. Pass: reads as weathering, not as blotches or a tiled pattern; not too strong.
+5. **K2 tea house thatch** (1075.5, 1086.8): moss in irregular patches across the roof, no rows of identical moss
+   blobs. **Moss decals** on stone lanterns / komainu / torii feet: irregular clumps, no repeating dots.
+6. **Furniture** (tansu, nagamochi, shelves in any house): planks clean (no seam across one board), no grey patches.
+- Tell me: more or less variety / weathering? Any face with wrong-way lighting?
+
 ## FX2 re-check (~12 min; statues, guardians, detail props, rope, U1 veranda). IDs: spikes/SH1/SHOWCASE_MAP.md (W2F + FX2 sections)
 
 Pictures beside their reference photos: `research/production/contact_sheets/fx2_statues.jpg`, `fx2_komainu.jpg`,

@@ -156,24 +156,24 @@
       {
        "material": "jp_m_wood_kuro_w1",
        "mean_srgb": [
-        26.0,
-        29.9,
-        33.1
+        26.1,
+        30.0,
+        33.2
        ],
        "palette": "kuro_board",
-       "dE76": 3.5,
+       "dE76": 3.6,
        "tolerance": 6,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -379,21 +379,21 @@
       {
        "material": "jp_m_wood_kuro_w1",
        "mean_srgb": [
-        26.0,
-        29.9,
-        33.1
+        26.1,
+        30.0,
+        33.2
        ],
        "palette": "kuro_board",
-       "dE76": 3.5,
+       "dE76": 3.6,
        "tolerance": 6,
        "pass": true
       },
       {
        "material": "jp_m_wood_kuro_w2",
        "mean_srgb": [
-        27.5,
+        27.6,
         31.3,
-        34.2
+        34.3
        ],
        "palette": "kuro_board",
        "dE76": 4.2,
@@ -403,12 +403,12 @@
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -1102,12 +1102,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -1115,11 +1115,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -1241,11 +1241,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -1949,12 +1949,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -1962,11 +1962,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -2288,12 +2288,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -2301,11 +2301,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -2510,12 +2510,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -2720,12 +2720,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -2845,12 +2845,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -2858,23 +2858,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -3008,12 +3008,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -3021,35 +3021,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -3248,12 +3248,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -3261,11 +3261,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -3456,12 +3456,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -3469,11 +3469,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -3622,12 +3622,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -3635,23 +3635,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -3806,35 +3806,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -3989,12 +3989,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -4002,23 +4002,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -4173,35 +4173,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -4356,12 +4356,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -4369,23 +4369,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -4540,35 +4540,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -4723,12 +4723,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -4736,23 +4736,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -4907,35 +4907,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -5090,12 +5090,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -5103,23 +5103,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -5274,35 +5274,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -5457,12 +5457,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -5470,23 +5470,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -5641,35 +5641,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -5824,12 +5824,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -5837,23 +5837,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -6008,35 +6008,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -6191,12 +6191,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -6204,11 +6204,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -6332,12 +6332,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -6345,11 +6345,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -6498,12 +6498,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -6511,11 +6511,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -6791,12 +6791,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -6804,11 +6804,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -6943,11 +6943,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -7990,12 +7990,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -8003,23 +8003,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -8220,12 +8220,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -8233,23 +8233,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -8396,12 +8396,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -8409,11 +8409,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -8566,12 +8566,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -8579,11 +8579,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -8736,12 +8736,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -8749,11 +8749,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -8906,12 +8906,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -8919,11 +8919,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -9076,12 +9076,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -9089,11 +9089,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -9246,12 +9246,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -9259,11 +9259,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -9438,12 +9438,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -9612,12 +9612,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -9766,12 +9766,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -9779,23 +9779,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -9950,35 +9950,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -10133,12 +10133,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -10146,23 +10146,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -10317,35 +10317,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -10500,12 +10500,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -10513,23 +10513,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -10684,35 +10684,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -10867,12 +10867,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -10880,23 +10880,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -11051,35 +11051,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -11234,12 +11234,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -11247,23 +11247,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -11418,35 +11418,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -11601,12 +11601,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -11614,23 +11614,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -11785,35 +11785,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -11968,12 +11968,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -11981,23 +11981,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -12152,35 +12152,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -12362,12 +12362,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -12375,23 +12375,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -12581,12 +12581,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -12594,23 +12594,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -12795,12 +12795,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -13001,24 +13001,24 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -13204,12 +13204,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -13217,23 +13217,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -13410,12 +13410,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -13423,11 +13423,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -14044,12 +14044,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -14057,23 +14057,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -14249,12 +14249,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -14262,23 +14262,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -14467,12 +14467,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -14480,23 +14480,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -14660,12 +14660,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -14673,23 +14673,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -14926,12 +14926,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -14939,11 +14939,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -15168,12 +15168,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -15181,11 +15181,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -15345,12 +15345,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -15745,12 +15745,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -15758,23 +15758,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -16002,12 +16002,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -16015,23 +16015,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -16255,12 +16255,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -16268,11 +16268,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -16509,12 +16509,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -16522,11 +16522,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -16675,12 +16675,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -16688,23 +16688,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -16859,35 +16859,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -17042,12 +17042,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -17055,23 +17055,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -17226,35 +17226,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -17409,12 +17409,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -17422,23 +17422,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -17593,35 +17593,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -17776,12 +17776,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -17789,23 +17789,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -17960,35 +17960,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -18143,12 +18143,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -18156,23 +18156,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -18327,35 +18327,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -18510,12 +18510,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -18523,23 +18523,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -18694,35 +18694,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -18877,12 +18877,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -18890,23 +18890,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -19061,35 +19061,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -19226,12 +19226,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -19362,12 +19362,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -19498,12 +19498,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -19713,12 +19713,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -19726,11 +19726,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -19985,12 +19985,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -19998,11 +19998,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -20171,12 +20171,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -20184,11 +20184,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -20351,12 +20351,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -20364,11 +20364,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -20822,12 +20822,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -20835,11 +20835,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -20991,12 +20991,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -21004,11 +21004,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -21785,12 +21785,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -21798,11 +21798,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -22002,12 +22002,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -22015,11 +22015,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -22190,12 +22190,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -22372,12 +22372,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -22800,12 +22800,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -22955,12 +22955,12 @@
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -23115,12 +23115,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -23128,23 +23128,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -23299,35 +23299,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -23482,12 +23482,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -23495,23 +23495,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -23666,35 +23666,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -23849,12 +23849,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -23862,23 +23862,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -24033,35 +24033,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -24216,12 +24216,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -24229,23 +24229,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -24400,35 +24400,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -24583,12 +24583,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -24596,23 +24596,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -24767,35 +24767,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -24950,12 +24950,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -24963,23 +24963,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -25134,35 +25134,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -25306,12 +25306,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -25319,11 +25319,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -25460,11 +25460,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -26316,12 +26316,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -26329,11 +26329,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -26542,12 +26542,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -26555,11 +26555,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -27183,12 +27183,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -27196,11 +27196,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -27427,12 +27427,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -27440,11 +27440,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -27568,12 +27568,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -27581,11 +27581,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -27708,12 +27708,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -27721,11 +27721,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -27968,12 +27968,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -27981,11 +27981,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -28218,12 +28218,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -28231,11 +28231,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -28664,12 +28664,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -28677,11 +28677,11 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       }
@@ -28969,12 +28969,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -28982,23 +28982,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -29153,35 +29153,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -29336,12 +29336,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -29349,23 +29349,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -29520,35 +29520,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -29703,12 +29703,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -29716,23 +29716,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -29887,35 +29887,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -30070,12 +30070,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -30083,23 +30083,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -30254,35 +30254,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -30437,12 +30437,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -30450,23 +30450,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -30621,35 +30621,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -30804,12 +30804,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -30817,23 +30817,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -30988,35 +30988,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -31171,12 +31171,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -31184,23 +31184,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -31355,35 +31355,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -31538,12 +31538,12 @@
       {
        "material": "jp_m_wood_interior_w1",
        "mean_srgb": [
-        69.0,
-        52.0,
-        46.0
+        69.1,
+        52.1,
+        46.1
        ],
        "palette": "timber_interior",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 14,
        "pass": true
       },
@@ -31551,23 +31551,23 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       }
@@ -31722,35 +31722,35 @@
        "material": "jp_m_wood_interior_w2",
        "mean_srgb": [
         73.9,
-        62.5,
-        60.9
+        62.6,
+        61.0
        ],
        "palette": "timber_interior",
-       "dE76": 6.0,
+       "dE76": 6.1,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w1",
        "mean_srgb": [
-        111.2,
-        80.2,
-        71.3
+        111.3,
+        80.3,
+        71.4
        ],
        "palette": "timber_weathered",
-       "dE76": 2.6,
+       "dE76": 2.7,
        "tolerance": 14,
        "pass": true
       },
       {
        "material": "jp_m_wood_weathered_w2",
        "mean_srgb": [
-        95.0,
-        70.0,
-        61.5
+        95.2,
+        70.1,
+        61.7
        ],
        "palette": "timber_weathered",
-       "dE76": 8.0,
+       "dE76": 7.9,
        "tolerance": 14,
        "pass": true
       }
@@ -31780,10 +31780,6 @@
     "warning_lines": [],
     "exit": 0
    }
-  },
-  "PBO": {
-   "pass": true,
-   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_furniture.pbo"
   }
  },
  "summary": {

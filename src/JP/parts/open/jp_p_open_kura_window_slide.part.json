@@ -51,8 +51,8 @@
   },
   {
    "name": "shutter_thickness_m",
-   "expected": 0.12,
-   "measured": 0.12,
+   "expected": "0.08 (FB1: ~2.5-3 sun; was 0.12)",
+   "measured": 0.08,
    "tol": 0.01,
    "source": "build_list"
   }
@@ -232,7 +232,7 @@
   {
    "check": "C4 shutter_thickness_m",
    "ok": true,
-   "detail": "expected 0.12, measured 0.12"
+   "detail": "expected 0.08 (FB1: ~2.5-3 sun; was 0.12), measured 0.08"
   },
   {
    "check": "C3 grid snap",

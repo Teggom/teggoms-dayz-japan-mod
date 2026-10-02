@@ -6000,8 +6000,8 @@
     },
     {
      "name": "leaf_thickness_m",
-     "expected": "0.15-0.20",
-     "measured": 0.16,
+     "expected": "0.12-0.15 (FB1: small kura, ~4-5 sun)",
+     "measured": 0.135,
      "tol": 0.01,
      "source": "build_list"
     },
@@ -6239,8 +6239,8 @@
     },
     {
      "name": "leaf_thickness_m",
-     "expected": "0.15-0.20",
-     "measured": 0.16,
+     "expected": "0.12-0.15 (FB1: small kura, ~4-5 sun)",
+     "measured": 0.135,
      "tol": 0.01,
      "source": "build_list"
     },
@@ -8479,8 +8479,8 @@
     },
     {
      "name": "shutter_thickness_m",
-     "expected": 0.12,
-     "measured": 0.12,
+     "expected": "0.08 (FB1: ~2.5-3 sun; was 0.12)",
+     "measured": 0.08,
      "tol": 0.01,
      "source": "build_list"
     }
@@ -8654,8 +8654,8 @@
     },
     {
      "name": "shutter_thickness_m",
-     "expected": 0.12,
-     "measured": 0.12,
+     "expected": "0.08 (FB1: ~2.5-3 sun; was 0.12)",
+     "measured": 0.08,
      "tol": 0.01,
      "source": "build_list"
     }
@@ -28433,7 +28433,7 @@
    ],
    "lod_faces": {
     "Resolution 1": 262,
-    "Resolution 2": 220,
+    "Resolution 2": 164,
     "Resolution 3": 80,
     "Geometry": 46,
     "View Geometry": 46,
@@ -28545,7 +28545,7 @@
    ],
    "lod_faces": {
     "Resolution 1": 328,
-    "Resolution 2": 286,
+    "Resolution 2": 202,
     "Resolution 3": 118,
     "Geometry": 46,
     "View Geometry": 46,
@@ -28669,7 +28669,7 @@
    ],
    "lod_faces": {
     "Resolution 1": 262,
-    "Resolution 2": 220,
+    "Resolution 2": 164,
     "Resolution 3": 80,
     "Geometry": 46,
     "View Geometry": 46,
@@ -28793,7 +28793,7 @@
    ],
    "lod_faces": {
     "Resolution 1": 487,
-    "Resolution 2": 445,
+    "Resolution 2": 389,
     "Resolution 3": 134,
     "Geometry": 82,
     "View Geometry": 82,

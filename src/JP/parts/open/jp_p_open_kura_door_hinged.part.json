@@ -43,8 +43,8 @@
   },
   {
    "name": "leaf_thickness_m",
-   "expected": "0.15-0.20",
-   "measured": 0.16,
+   "expected": "0.12-0.15 (FB1: small kura, ~4-5 sun)",
+   "measured": 0.135,
    "tol": 0.01,
    "source": "build_list"
   },
@@ -368,7 +368,7 @@
   {
    "check": "C10 door doors2 reachable from both sides (closed)",
    "ok": true,
-   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.05 m"
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.14 m"
   },
   {
    "check": "C7 door doors3 selections+memory",
@@ -388,7 +388,7 @@
   {
    "check": "C10 door doors3 reachable from both sides (closed)",
    "ok": true,
-   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.12 m"
+   "detail": "leaf: leaf hit first from 15/15 standing positions (need 4), e.g. 0.7 m out, +0.0 m along, ray 1.23 m"
   },
   {
    "check": "C13 kawara seated on the clay bed (gap <= 1 cm), fascia at every eave",
@@ -408,7 +408,7 @@
   {
    "check": "C4 leaf_thickness_m",
    "ok": true,
-   "detail": "expected 0.15-0.20, measured 0.16"
+   "detail": "expected 0.12-0.15 (FB1: small kura, ~4-5 sun), measured 0.135"
   },
   {
    "check": "C4 jamb_steps",

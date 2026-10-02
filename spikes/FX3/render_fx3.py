@@ -17,6 +17,13 @@ DEV = os.path.abspath(os.path.join(HERE, "..", ".."))
 KIT = os.path.join(DEV, "parts", "kit")
 TEXPNG = os.path.join(DEV, "data", "materials", "textures")
 DRAFT = os.path.join(HERE, "drafts", "textures")
+INSITU = "--insitu" in sys.argv or os.environ.get("FX3_INSITU") == "1"
+if INSITU:                       # phase 2: the shipped masters with the library (atlas + macro) PNGs
+    DRAFT = TEXPNG
+SHIPPED = {"torii": "spikes/B3b/out/shrine/jp_s_torii_wood_shinmei.p3d", "bench": "spikes/B3b/out/street/jp_s_bench_1ken.p3d",
+           "woodpile": "spikes/B3b/out/yard/jp_s_firewood_stack_wall_1ken_h120.p3d",
+           "chest": "spikes/B3a/out/storage/jp_f_nagamochi.p3d", "tansu": "spikes/B3a/out/storage/jp_f_tansu.p3d",
+           "teahouse": "buildings/teahouse/out/jp_teahouse_shop_thatch.p3d"}
 BLENDER = r"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe"
 REN = os.path.join(HERE, "renders")
 JOBS = os.path.join(HERE, "_build", "render_jobs.json")
@@ -226,7 +233,7 @@ def blender_main():
         shoot(job["out"], lo, hi, tuple(job["view"]), 50, job["tight"])
 
 
-def sheet():
+def sheet(after="after", out="fx3_samples.jpg", title=None):
     from PIL import Image, ImageDraw, ImageFont
     W, H = 900, 675
     pad, lab = 8, 26
@@ -236,41 +243,46 @@ def sheet():
         font = ImageFont.truetype("arial.ttf", 20)
     except OSError:
         font = ImageFont.load_default()
-    d.text((pad, 8), "FX3 wood texture variety: BEFORE (left) / AFTER (right: atlas + uvwood + macro, draft)",
+    d.text((pad, 8), title or "FX3 wood texture variety: BEFORE (left) / AFTER (right: atlas + uvwood + macro, draft)",
            fill=(240, 240, 240), font=font)
     y = 40
     for shot, items, view, tight, frac, label in SHOTS:
         d.text((pad, y + 2), label, fill=(230, 230, 200), font=font)
-        for k, mode in enumerate(("before", "after")):
+        for k, mode in enumerate(("before", after)):
             p = os.path.join(REN, "%s_%s.png" % (mode, shot))
             if os.path.isfile(p):
                 im.paste(Image.open(p).convert("RGB"), (pad + k * (W + pad), y + lab))
         y += H + lab + pad
     im = im.resize((im.width // 2, im.height // 2), Image.LANCZOS)
-    im.save(os.path.join(HERE, "fx3_samples.jpg"), quality=86)
+    im.save(os.path.join(HERE, out), quality=86)
     print("sheet", im.size)
 
 
 def main():
     jobs = []
-    for mode in ("before", "after"):
+    for mode in (("insitu",) if INSITU else ("before", "after")):
         for shot, items, view, tight, frac, label in SHOTS:
             jobs.append({"out": "%s_%s" % (mode, shot), "view": view, "tight": tight, "frac": frac,
-                         "after": mode == "after",
-                         "items": [{"p3d": os.path.join(HERE, "out", mode, s + ".p3d"), "off": list(o)}
-                                   for s, o in items]})
+                         "after": mode != "before",
+                         "items": [{"p3d": os.path.join(DEV, SHIPPED[s]) if INSITU else
+                                    os.path.join(HERE, "out", mode, s + ".p3d"), "off": list(o)} for s, o in items]})
     os.makedirs(os.path.dirname(JOBS), exist_ok=True)
     with open(JOBS, "wb") as fh:
         fh.write(json.dumps(jobs, indent=1).encode("utf-8"))
+    env = dict(os.environ, FX3_INSITU="1" if INSITU else "0")
     r = subprocess.run([BLENDER, "--background", "--factory-startup", "--python", os.path.abspath(__file__)],
-                       capture_output=True, text=True, errors="replace")
+                       capture_output=True, text=True, errors="replace", env=env)
     with open(os.path.join(HERE, "_build", "render.log"), "wb") as fh:
         fh.write((r.stdout + "\n" + r.stderr).replace("\r\n", "\n").encode("utf-8"))
     done = [l for l in r.stdout.splitlines() if l.startswith("rendered")]
     print("blender exit", r.returncode, "; rendered:", len(done), "of", len(jobs))
     if r.returncode or len(done) < len(jobs):
         print(r.stderr[-1500:])
-    sheet()
+    if INSITU:
+        sheet("insitu", "fx3_insitu.jpg", "FX3 in situ: BEFORE (phase-1 render, old textures) / AFTER (the rebuilt shipped "
+              "masters, library atlases + macro)")
+    else:
+        sheet()
 
 
 if __name__ == "__main__":

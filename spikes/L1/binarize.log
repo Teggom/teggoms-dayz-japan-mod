@@ -114,6 +114,7 @@ Convert model P:\JP\furniture\living\jp_f_toys_hagoita.p3d -> D:\DayZ-Server_AI-
 </model>
 Convert model P:\JP\furniture\living\jp_f_toys_koma.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\living\jp_f_toys_koma.p3d
 <model = "P:\JP\furniture\living\jp_f_toys_koma.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192882, max 0.00390625, min 0.00180709
 </model>
 Convert model P:\JP\furniture\living\jp_f_toys_scattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\living\jp_f_toys_scattered.p3d
 <model = "P:\JP\furniture\living\jp_f_toys_scattered.p3d">
@@ -212,6 +213,7 @@ Convert model P:\JP\furniture\meal\jp_f_basket_zaru_stack.p3d -> D:\DayZ-Server_
 </model>
 Convert model P:\JP\furniture\meal\jp_f_basket_zaru_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\meal\jp_f_basket_zaru_wall.p3d
 <model = "P:\JP\furniture\meal\jp_f_basket_zaru_wall.p3d">
+TexMaterial loading race detected for jp\common\materials\wood\jp_m_wood_interior_w2.rvmat
 </model>
 Convert model P:\JP\furniture\meal\jp_f_charcoal_bale.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\meal\jp_f_charcoal_bale.p3d
 <model = "P:\JP\furniture\meal\jp_f_charcoal_bale.p3d">
@@ -415,9 +417,12 @@ Convert model P:\JP\furniture\religious\jp_f_kamidana_set_offerings_dry.p3d -> D
 </model>
 Convert model P:\JP\furniture\religious\jp_f_kamidana_set_shimenawa.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\religious\jp_f_kamidana_set_shimenawa.p3d
 <model = "P:\JP\furniture\religious\jp_f_kamidana_set_shimenawa.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00194299, max 0.00390625, min 0.00192722
 </model>
 Convert model P:\JP\furniture\religious\jp_f_kamidana_set_shimenawa_old.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\religious\jp_f_kamidana_set_shimenawa_old.p3d
 <model = "P:\JP\furniture\religious\jp_f_kamidana_set_shimenawa_old.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192873, max 0.00390625, min 0.00192722
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w2_co.paa, stage 0: texel size used 0.00194351, max 0.00390625, min 0.00193512
 </model>
 
 FileServer MaxCacheSize = 23987 MB
@@ -458,8 +463,8 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_butsu_set_simpl
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_butsu_set_simple_dusty.p3d: -0.00,0.03
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_offerings.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_offerings_dry.p3d: -0.02,0.00
-DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_shimenawa.p3d: -0.00,0.16
-DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_shimenawa_old.p3d: -0.00,0.16
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_shimenawa.p3d: 0.00,0.16
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\religious\jp_f_kamidana_set_shimenawa_old.p3d: 0.00,0.16
 
 C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Binarize\binarize.exe -always -addon=P:\JP\furniture -binpath=P:\bin P:\JP\furniture\tier D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier *.p3d
 
@@ -484,8 +489,8 @@ Convert model P:\JP\furniture\tier\jp_f_fallen_leaf_shoji_broken.p3d -> D:\DayZ-
 </model>
 Convert model P:\JP\furniture\tier\jp_f_katanakake_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_stand.p3d
 <model = "P:\JP\furniture\tier\jp_f_katanakake_stand.p3d">
-UV mapping too varied on jp\common\materials\wood\jp_m_wood_kuro_w1_co.paa, stage 0: texel size used 0.000976563, max 0.00195499, min 0.000234489
-UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_indigo_w1_co.paa, stage 0: texel size used 0.000725384, max 0.00390625, min 0.000494079
+UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_indigo_w1_co.paa, stage 0: texel size used 0.000764518, max 0.00390625, min 0.000173081
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_kuro_w1_co.paa, stage 0: texel size used 0.000690534, max 0.00195432, min 0.000234488
 </model>
 Convert model P:\JP\furniture\tier\jp_f_katanakake_stand_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_stand_empty.p3d
 <model = "P:\JP\furniture\tier\jp_f_katanakake_stand_empty.p3d">
@@ -493,8 +498,8 @@ Convert model P:\JP\furniture\tier\jp_f_katanakake_stand_empty.p3d -> D:\DayZ-Se
 Convert model P:\JP\furniture\tier\jp_f_katanakake_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_wall.p3d
 <model = "P:\JP\furniture\tier\jp_f_katanakake_wall.p3d">
 UV mapping too varied on jp\common\materials\paint\jp_m_lacquer_black_w1_co.paa, stage 0: texel size used 0.00195305, max 0.00390625, min 0.00119429
-UV mapping too varied on jp\common\materials\wood\jp_m_wood_kuro_w1_co.paa, stage 0: texel size used 0.000976563, max 0.00195546, min 0.000234415
-UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_indigo_w1_co.paa, stage 0: texel size used 0.000725565, max 0.00390625, min 0.000493968
+UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_indigo_w1_co.paa, stage 0: texel size used 0.000764628, max 0.00390625, min 0.000173097
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_kuro_w1_co.paa, stage 0: texel size used 0.000690534, max 0.00197449, min 0.000234111
 </model>
 Convert model P:\JP\furniture\tier\jp_f_katanakake_wall_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_katanakake_wall_empty.p3d
 <model = "P:\JP\furniture\tier\jp_f_katanakake_wall_empty.p3d">
@@ -534,12 +539,15 @@ Convert model P:\JP\furniture\tier\jp_f_yoroibitsu_plain.p3d -> D:\DayZ-Server_A
 </model>
 Convert model P:\JP\furniture\tier\jp_f_yumi_rack_stand.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yumi_rack_stand.p3d
 <model = "P:\JP\furniture\tier\jp_f_yumi_rack_stand.p3d">
+UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_plain_w1_co.paa, stage 0: texel size used 0.00194001, max 0.00390625, min 0.00190937
 </model>
 Convert model P:\JP\furniture\tier\jp_f_yumi_rack_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yumi_rack_wall.p3d
 <model = "P:\JP\furniture\tier\jp_f_yumi_rack_wall.p3d">
+UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_plain_w1_co.paa, stage 0: texel size used 0.00192125, max 0.00390625, min 0.0019211
 </model>
 Convert model P:\JP\furniture\tier\jp_f_yumi_rack_wall_empty.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\tier\jp_f_yumi_rack_wall_empty.p3d
 <model = "P:\JP\furniture\tier\jp_f_yumi_rack_wall_empty.p3d">
+UV mapping too varied on jp\common\materials\textile\jp_m_textile_cotton_plain_w2_co.paa, stage 0: texel size used 0.00192127, max 0.00390625, min 0.00192119
 </model>
 
 FileServer MaxCacheSize = 23987 MB
@@ -602,6 +610,7 @@ Distance 0.0 - min grid 3.125, Slowdown CPU factor 0.0 (max. 0.0), memory requir
 Warning: Terrain grid 0.5 will be too slow, should use 3.1
 Convert model P:\JP\furniture\wall\jp_f_bangasa_hung.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_bangasa_hung.p3d
 <model = "P:\JP\furniture\wall\jp_f_bangasa_hung.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192928, max 0.00390625, min 0.00192697
 </model>
 Convert model P:\JP\furniture\wall\jp_f_bangasa_leaning.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_bangasa_leaning.p3d
 <model = "P:\JP\furniture\wall\jp_f_bangasa_leaning.p3d">
@@ -611,33 +620,42 @@ Convert model P:\JP\furniture\wall\jp_f_bangasa_open_torn.p3d -> D:\DayZ-Server_
 </model>
 Convert model P:\JP\furniture\wall\jp_f_chochin_crest.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_chochin_crest.p3d
 <model = "P:\JP\furniture\wall\jp_f_chochin_crest.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192761, max 0.00390625, min 0.00192761
 </model>
 Convert model P:\JP\furniture\wall\jp_f_chochin_crest2.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_chochin_crest2.p3d
 <model = "P:\JP\furniture\wall\jp_f_chochin_crest2.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192821, max 0.00390625, min 0.00192821
 </model>
 Convert model P:\JP\furniture\wall\jp_f_chochin_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_chochin_fallen.p3d
 <model = "P:\JP\furniture\wall\jp_f_chochin_fallen.p3d">
 </model>
 Convert model P:\JP\furniture\wall\jp_f_chochin_shop.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_chochin_shop.p3d
 <model = "P:\JP\furniture\wall\jp_f_chochin_shop.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192761, max 0.00390625, min 0.00192761
 </model>
 Convert model P:\JP\furniture\wall\jp_f_chochin_shop2.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_chochin_shop2.p3d
 <model = "P:\JP\furniture\wall\jp_f_chochin_shop2.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192761, max 0.00390625, min 0.00192761
 </model>
 Convert model P:\JP\furniture\wall\jp_f_chochin_torn.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_chochin_torn.p3d
 <model = "P:\JP\furniture\wall\jp_f_chochin_torn.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192755, max 0.00390625, min 0.00192755
 </model>
 Convert model P:\JP\furniture\wall\jp_f_drying_chilli.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_drying_chilli.p3d
 <model = "P:\JP\furniture\wall\jp_f_drying_chilli.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192838, max 0.00390625, min 0.0019272
 </model>
 Convert model P:\JP\furniture\wall\jp_f_drying_daikon.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_drying_daikon.p3d
 <model = "P:\JP\furniture\wall\jp_f_drying_daikon.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192811, max 0.00390625, min 0.0019281
 </model>
 Convert model P:\JP\furniture\wall\jp_f_drying_daikon_shrivelled.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_drying_daikon_shrivelled.p3d
 <model = "P:\JP\furniture\wall\jp_f_drying_daikon_shrivelled.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192809, max 0.00390625, min 0.00192808
 </model>
 Convert model P:\JP\furniture\wall\jp_f_drying_fish.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_drying_fish.p3d
 <model = "P:\JP\furniture\wall\jp_f_drying_fish.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192896, max 0.00390625, min 0.00192644
 </model>
 Convert model P:\JP\furniture\wall\jp_f_fire_gear.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_fire_gear.p3d
 <model = "P:\JP\furniture\wall\jp_f_fire_gear.p3d">
@@ -650,21 +668,26 @@ Convert model P:\JP\furniture\wall\jp_f_fire_gear_fallen.p3d -> D:\DayZ-Server_A
 </model>
 Convert model P:\JP\furniture\wall\jp_f_hoshigaki_3.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_hoshigaki_3.p3d
 <model = "P:\JP\furniture\wall\jp_f_hoshigaki_3.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00193041, max 0.00390625, min 0.00192394
 </model>
 Convert model P:\JP\furniture\wall\jp_f_hoshigaki_5.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_hoshigaki_5.p3d
 <model = "P:\JP\furniture\wall\jp_f_hoshigaki_5.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00193162, max 0.00390625, min 0.00192399
 </model>
 Convert model P:\JP\furniture\wall\jp_f_hoshigaki_rotten.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_hoshigaki_rotten.p3d
 <model = "P:\JP\furniture\wall\jp_f_hoshigaki_rotten.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00193044, max 0.00390625, min 0.00192413
 </model>
 Convert model P:\JP\furniture\wall\jp_f_kaya_bundle.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_kaya_bundle.p3d
 <model = "P:\JP\furniture\wall\jp_f_kaya_bundle.p3d">
 </model>
 Convert model P:\JP\furniture\wall\jp_f_kaya_draped.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_kaya_draped.p3d
 <model = "P:\JP\furniture\wall\jp_f_kaya_draped.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.0019297, max 0.00390625, min 0.00192591
 </model>
 Convert model P:\JP\furniture\wall\jp_f_kaya_loose.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_kaya_loose.p3d
 <model = "P:\JP\furniture\wall\jp_f_kaya_loose.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00193175, max 0.00390625, min 0.00192392
 </model>
 Convert model P:\JP\furniture\wall\jp_f_koyomi.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_koyomi.p3d
 <model = "P:\JP\furniture\wall\jp_f_koyomi.p3d">
@@ -674,12 +697,15 @@ Convert model P:\JP\furniture\wall\jp_f_koyomi_curled.p3d -> D:\DayZ-Server_AI-2
 </model>
 Convert model P:\JP\furniture\wall\jp_f_mino_pegs.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_mino_pegs.p3d
 <model = "P:\JP\furniture\wall\jp_f_mino_pegs.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192739, max 0.00390625, min 0.00192736
 </model>
 Convert model P:\JP\furniture\wall\jp_f_mino_pegs_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_mino_pegs_fallen.p3d
 <model = "P:\JP\furniture\wall\jp_f_mino_pegs_fallen.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192944, max 0.00390625, min 0.00192602
 </model>
 Convert model P:\JP\furniture\wall\jp_f_mino_pegs_rain.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_mino_pegs_rain.p3d
 <model = "P:\JP\furniture\wall\jp_f_mino_pegs_rain.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192937, max 0.00390625, min 0.00192633
 </model>
 Convert model P:\JP\furniture\wall\jp_f_noren_inner_2.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_noren_inner_2.p3d
 <model = "P:\JP\furniture\wall\jp_f_noren_inner_2.p3d">
@@ -716,28 +742,31 @@ Convert model P:\JP\furniture\wall\jp_f_sandals_hung_beam.p3d -> D:\DayZ-Server_
 </model>
 Convert model P:\JP\furniture\wall\jp_f_sandals_hung_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_sandals_hung_fallen.p3d
 <model = "P:\JP\furniture\wall\jp_f_sandals_hung_fallen.p3d">
-UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000781224, max 0.00195419, min 0.000781224
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192838, max 0.00390625, min 0.0019263
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000781254, max 0.00195338, min 0.000781254
 </model>
 Convert model P:\JP\furniture\wall\jp_f_sandals_hung_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_sandals_hung_wall.p3d
 <model = "P:\JP\furniture\wall\jp_f_sandals_hung_wall.p3d">
-UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000781224, max 0.00195419, min 0.000781224
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000781068, max 0.00195626, min 0.000781068
 </model>
 Convert model P:\JP\furniture\wall\jp_f_tool_wall.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_tool_wall.p3d
 <model = "P:\JP\furniture\wall\jp_f_tool_wall.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192905, max 0.00390625, min 0.00192632
 </model>
 Convert model P:\JP\furniture\wall\jp_f_tool_wall_taken.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_tool_wall_taken.p3d
 <model = "P:\JP\furniture\wall\jp_f_tool_wall_taken.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00192751, max 0.00390625, min 0.0019275
 </model>
 Convert model P:\JP\furniture\wall\jp_f_tool_wall_wood.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_tool_wall_wood.p3d
 <model = "P:\JP\furniture\wall\jp_f_tool_wall_wood.p3d">
 </model>
 Convert model P:\JP\furniture\wall\jp_f_utensil_board.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_utensil_board.p3d
 <model = "P:\JP\furniture\wall\jp_f_utensil_board.p3d">
-UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000819408, max 0.00195122, min 0.000741191
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000819304, max 0.00195785, min 0.000741303
 </model>
 Convert model P:\JP\furniture\wall\jp_f_utensil_board_fallen.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_utensil_board_fallen.p3d
 <model = "P:\JP\furniture\wall\jp_f_utensil_board_fallen.p3d">
-UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000819408, max 0.00195122, min 0.000741191
+UV mapping too varied on jp\common\materials\wood\jp_m_wood_interior_w2_co.paa, stage 0: texel size used 0.000819394, max 0.00195759, min 0.000741182
 </model>
 Convert model P:\JP\furniture\wall\jp_f_utensil_board_small.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\wall\jp_f_utensil_board_small.p3d
 <model = "P:\JP\furniture\wall\jp_f_utensil_board_small.p3d">
@@ -805,11 +834,11 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_ofuda_single.p3d: 0.
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_ofuda_torn.p3d: 0.00,0.03
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_rope_pegs_2.p3d: 0.01,0.07
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_rope_pegs_3.p3d: 0.00,0.07
-DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_rope_pegs_fallen.p3d: 0.16,0.32
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_rope_pegs_fallen.p3d: 0.17,0.32
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_sandals_hung_beam.p3d: -0.00,0.04
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_sandals_hung_fallen.p3d: -0.12,0.33
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_sandals_hung_wall.p3d: -0.01,0.07
-DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_tool_wall.p3d: 0.00,0.06
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_tool_wall.p3d: 0.00,0.07
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_tool_wall_taken.p3d: -0.05,0.34
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_tool_wall_wood.p3d: 0.00,0.06
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\wall\jp_f_utensil_board.p3d: 0.00,0.06
@@ -833,6 +862,7 @@ Convert model P:\JP\furniture\work\jp_f_choba_set_scattered.p3d -> D:\DayZ-Serve
 </model>
 Convert model P:\JP\furniture\work\jp_f_choba_set_tenbin.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_choba_set_tenbin.p3d
 <model = "P:\JP\furniture\work\jp_f_choba_set_tenbin.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.00193192, max 0.00390625, min 0.00192567
 </model>
 Convert model P:\JP\furniture\work\jp_f_choba_set_zenibako.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_choba_set_zenibako.p3d
 <model = "P:\JP\furniture\work\jp_f_choba_set_zenibako.p3d">
@@ -884,6 +914,7 @@ Convert model P:\JP\furniture\work\jp_f_straw_work_beating.p3d -> D:\DayZ-Server
 </model>
 Convert model P:\JP\furniture\work\jp_f_straw_work_sandal.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_straw_work_sandal.p3d
 <model = "P:\JP\furniture\work\jp_f_straw_work_sandal.p3d">
+UV mapping too varied on jp\common\materials\straw\jp_m_straw_rope_w1_co.paa, stage 0: texel size used 0.0019279, max 0.00390625, min 0.00178266
 </model>
 Convert model P:\JP\furniture\work\jp_f_straw_work_scattered.p3d -> D:\DayZ-Server_AI-20260907-MultiMap\japan_dev\spikes\L1\_build\binarized\work\jp_f_straw_work_scattered.p3d
 <model = "P:\JP\furniture\work\jp_f_straw_work_scattered.p3d">
@@ -958,7 +989,7 @@ DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_mi_furui.p3d: 0.00,0
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_mi_spilled.p3d: -0.12,0.08
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_mi_wall.p3d: 0.00,0.14
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_straw_work_beating.p3d: 0.00,0.20
-DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_straw_work_sandal.p3d: 0.12,0.14
+DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_straw_work_sandal.p3d: 0.13,0.14
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_straw_work_scattered.p3d: 0.07,0.22
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_usu.p3d: 0.00,0.00
 DIAG-SERIALIZED BoundingCenter of p:\jp\furniture\work\jp_f_usu_fallen.p3d: 0.00,0.00
