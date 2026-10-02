@@ -1,0 +1,39 @@
+f_gv_bansho.json
+  skip engawa     no doors (open sides): skipped
+  PASS hall       DoorsTwin3: reaches 17.89 of 17.89 m2
+  PASS office     DoorsTwin3: reaches 5.41 of 5.41 m2
+  PASS doma       DoorsTwin1: reaches 10.41 of 10.41 m2; DoorsTwin2: reaches 10.41 of 10.41 m2
+f_gv_bunk_ashigaru.json
+  PASS doma       DoorsTwin1: reaches 13.56 of 13.56 m2; DoorsTwin2: reaches 13.56 of 13.56 m2
+  skip living     no doors (open sides): skipped
+f_gv_ginmisho.json
+  skip engawa     no doors (open sides): skipped
+  PASS hall       DoorsTwin1: reaches 21.61 of 21.61 m2
+  PASS office     DoorsTwin1: reaches 6.43 of 6.43 m2
+f_gv_hikeshi.json
+  skip floor      no doors (open sides): skipped
+f_gv_jinya.json
+  PASS genkan_porch DoorsTwin10: reaches 4.55 of 4.55 m2
+  PASS engawa     DoorsTwin3: reaches 7.25 of 7.25 m2; DoorsTwin4: reaches 7.25 of 7.25 m2
+  PASS doma       DoorsTwin1: reaches 11.82 of 11.82 m2; DoorsTwin2: reaches 11.82 of 11.82 m2
+  PASS daidokoro  DoorsTwin5: reaches 16.91 of 16.91 m2; DoorsTwin6: reaches 16.91 of 16.91 m2
+  PASS chanoma    DoorsTwin5: reaches 11.82 of 11.82 m2; DoorsTwin8: reaches 11.82 of 11.82 m2; DoorsTwin9: reaches 11.82 of 11.82 m2
+  PASS tsugi      DoorsTwin6: reaches 8.36 of 8.36 m2; DoorsTwin7: reaches 8.36 of 8.36 m2; DoorsTwin9: reaches 8.36 of 8.36 m2; DoorsTwin3: reaches 8.36 of 8.36 m2
+  PASS genkan_ma  DoorsTwin8: reaches 11.14 of 11.14 m2; DoorsTwin10: reaches 11.14 of 11.14 m2
+  PASS zashiki    DoorsTwin7: reaches 7.70 of 7.70 m2; DoorsTwin4: reaches 7.70 of 7.70 m2
+f_gv_kura_nengu.json
+  PASS kura       DoorsTwin1: reaches 5.05 of 5.31 m2
+  skip nikai      no doors (open sides): skipped
+f_gv_nagayamon_jinya.json
+  skip room       no doors (open sides): skipped
+  PASS doma       DoorsTwin2: reaches 3.28 of 3.28 m2
+  PASS storage    DoorsTwin1: reaches 8.16 of 8.16 m2
+  PASS gate       DoorsTwin3: reaches 8.29 of 8.29 m2
+f_gv_roya.json
+  PASS corridor   DoorsTwin1: reaches 8.15 of 8.15 m2; DoorsTwin2: reaches 8.15 of 8.15 m2; DoorsTwin3: reaches 8.15 of 8.15 m2
+  PASS cell_a     DoorsTwin2: reaches 9.07 of 9.07 m2
+  PASS cell_b     DoorsTwin3: reaches 9.10 of 9.10 m2
+f_gv_toiyaba.json
+  skip choba      no doors (open sides): skipped
+  PASS doma       DoorsTwin1: reaches 10.12 of 10.12 m2
+ROOMACCESS: 9 buildings, 0 rooms failing

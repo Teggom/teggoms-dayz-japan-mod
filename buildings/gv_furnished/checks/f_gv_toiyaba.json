@@ -253,7 +253,7 @@
   {
    "check": "D1 props per room 5-7: choba",
    "ok": true,
-   "detail": "6 props: jp_f_zukue_choba, jp_f_choba_set_desk, jp_f_zukue_plain, jp_f_sg_books_scattered, jp_f_soroban_tray, jp_f_box_stack3, jp_f_tansu_single_ransacked, jp_f_hibachi_box_tipped"
+   "detail": "6 props: jp_f_zukue_choba, jp_f_choba_set_desk, jp_f_zukue_plain, jp_f_sg_books, jp_f_soroban_tray, jp_f_box_stack3, jp_f_tansu_single_ransacked, jp_f_hibachi_box_tipped"
   },
   {
    "check": "D2 floor coverage <= 25 %: choba",
@@ -373,7 +373,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 569309 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 569256 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

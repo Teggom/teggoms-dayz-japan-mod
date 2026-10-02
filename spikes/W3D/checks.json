@@ -387,7 +387,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 252,
+    "Resolution 1": 222,
     "Resolution 2": 16,
     "Geometry": 24,
     "View Geometry": 24,
@@ -432,7 +432,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 252,
+       "Resolution 1": 222,
        "Resolution 2": 16,
        "Geometry": 24,
        "View Geometry": 24,
@@ -1198,14 +1198,6 @@
     "CfgConvert config.cpp: OK ",
     "CfgConvert model.cfg: OK "
    ]
-  },
-  "BIN": {
-   "pass": true,
-   "detail": {
-    "missing": [],
-    "warning_lines": [],
-    "exit": 0
-   }
   }
  },
  "summary": {

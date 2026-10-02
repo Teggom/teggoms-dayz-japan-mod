@@ -502,7 +502,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 3655 touching (opposite-facing: backface-culled) and 624 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 3657 touching (opposite-facing: backface-culled) and 630 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -577,7 +577,7 @@
   {
    "check": "D1 props per room 5-7: daidokoro",
    "ok": true,
-   "detail": "6 props: jp_f_jizai_kagi, jp_f_enza, jp_f_tana_182_3, jp_f_tableware_hakozen_stack, jp_f_rice_bin, jp_f_charcoal_scuttle, jp_f_tableware_scattered, jp_f_kama_nabe, jp_f_ofuda_akiba"
+   "detail": "6 props: jp_f_jizai_kagi, jp_f_enza, jp_f_tana_182_3, jp_f_tableware_bowls, jp_f_rice_bin, jp_f_charcoal_scuttle, jp_f_tableware_scattered, jp_f_kama_nabe, jp_f_ofuda_akiba"
   },
   {
    "check": "D2 floor coverage <= 25 %: daidokoro",
@@ -597,7 +597,7 @@
   {
    "check": "D1 props per room 5-7: chanoma",
    "ok": true,
-   "detail": "5 props: jp_f_zukue_choba, jp_f_choba_set_desk, jp_f_zukue_plain, jp_f_sg_books_scattered, jp_f_soroban_tray, jp_f_masu_spilled, jp_f_box_l"
+   "detail": "5 props: jp_f_zukue_choba, jp_f_choba_set_desk, jp_f_zukue_plain, jp_f_sg_books, jp_f_soroban_tray, jp_f_masu_spilled, jp_f_box_l"
   },
   {
    "check": "D2 floor coverage <= 25 %: chanoma",
@@ -952,7 +952,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 1180258 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 1179770 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

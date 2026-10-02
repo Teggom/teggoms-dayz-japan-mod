@@ -13,7 +13,7 @@ import w3c2_sets as W2
 import w3c1_sets as W1
 
 
-def _plinth(c, depth=0.55, top=0.03, w=0.26):
+def _plinth(c, depth=0.55, top=0.046, w=0.26):
     """W3D: a cut-stone foundation band (kiso) round the wall lines, from `depth` under grade to `top`: the island's
     district slopes 3-4 %, so a building is seated on its high side (no terrain through a floor, spikes/W3D/
     floorcheck.py) and this band closes the gap under its walls on the low side (a building on a levelled stone
@@ -47,10 +47,10 @@ def bansho(c):
     H = Room(c, "hall", open_sides=("zmax",), centre=False)
     d1 = must(H, "jp_f_zukue_choba", "the officials' low desk facing the gravel court", sides=("zmin",))
     if d1 is not None:
-        c.surf(d1, "jp_f_choba_set_desk", why="the desk set: brush, inkstone, the pass being compared")
+        c.surf(d1, "jp_f_choba_set_desk", dx=-0.035, dz=-0.04, why="the desk set: brush, inkstone, the pass being compared")
     d2 = H.wall("jp_f_zukue_plain", sides=("zmin",), why="a second desk (the clerk's)")
     if d2 is not None:
-        c.surf(d2, "jp_f_sg_books_scattered", why="pass ledgers left open")
+        c.surf(d2, "jp_f_sg_books", why="pass ledgers left open")
     H.free("jp_f_hibachi_box_tipped", 0.20, 0.55, 0, why="the brazier tipped over")
     H.wall("jp_f_enza_zabuton_stack3", sides=("xmin",), why="the officials' cushions stacked")
     H.free("jp_f_tabakobon_spilled", 0.75, 0.45, 20, why="a tobacco tray knocked over")
@@ -95,10 +95,10 @@ def toiyaba(c):
     C = Room(c, "choba", open_sides=("zmax",), centre=False)
     d1 = must(C, "jp_f_zukue_choba", "the clerks' desk facing the yard", sides=("zmax",))
     if d1 is not None:
-        c.surf(d1, "jp_f_choba_set_desk", why="the desk set (the relay ledger open)")
+        c.surf(d1, "jp_f_choba_set_desk", dx=-0.035, dz=-0.04, why="the desk set (the relay ledger open)")
     d2 = C.wall("jp_f_zukue_plain", sides=("zmin",), why="a second desk")
     if d2 is not None:
-        c.surf(d2, "jp_f_sg_books_scattered", why="the relay ledgers (tsugitate-cho) spilled")
+        c.surf(d2, "jp_f_sg_books", why="the relay ledgers (tsugitate-cho) spilled")
     C.free("jp_f_soroban_tray", 0.30, 0.55, 15, why="the abacus tray")
     C.wall("jp_f_box_stack3", sides=("zmin", "xmin"), why="the register boxes")
     C.wall("jp_f_tansu_single_ransacked", sides=("zmin", "xmin"), why="the ledger chest, drawers pulled")
@@ -117,7 +117,7 @@ def ginmisho(c):
     H = Room(c, "hall", open_sides=("zmax",), centre=False)
     d1 = must(H, "jp_f_zukue_plain", "the official's desk facing the gravel court", sides=("zmin",))
     if d1 is not None:
-        c.surf(d1, "jp_f_writing_box_open", why="the writing box, open")
+        c.surf(d1, "jp_f_sg_books", why="the case record, closed")
     d2 = H.wall("jp_f_zukue_choba", sides=("xmin", "xmax"), why="the clerk's desk at the side (the record kept)")
     if d2 is not None:
         c.surf(d2, "jp_f_sg_books", why="the record book")
@@ -129,9 +129,30 @@ def ginmisho(c):
     O.wall("jp_f_tansu_single_ransacked", why="a chest, drawers pulled")
     t = O.wall("jp_f_zukue_plain", why="a desk")
     if t is not None:
-        c.surf(t, "jp_f_sg_books_scattered", why="papers spilled")
+        c.surf(t, "jp_f_sg_books", why="papers spilled")
     O.wall("jp_f_box_m_lacquer", why="the seal box")
     O.free("jp_f_andon_kaku_tipped", 0.5, 0.5, 0, why="a lamp knocked over")
+
+
+def _daidokoro(c, room, steps):
+    """D3's daidokoro dressing with the pot hook hung from the REAL member over the irori (W3C2's _beam_over; D3's
+    samurai houses hang it 1.2-1.3 m under the beam: hangcheck baseline, fixed here only)."""
+    from d3_sets import Room as R_
+    D = R_(c, room, open_sides=("xmin",), points=steps)
+    if c.fit(room, "irori"):
+        f = c.fit(room, "irori")[0]
+        hx, hy, hz = f["hook"]
+        c.hang(room, "jp_f_jizai_kagi", hx, hz, W2._beam_over(c, hx, hz, hy, reach=1.6), over="hearth",
+               why="the pot hook over the irori")
+        D.free("jp_f_enza", 0.55, 0.62, 0, why="straw cushion by the hearth")
+    tn = D.wall("jp_f_tana_182_3", sides=("zmin", "zmax"), why="the dish shelf")
+    D.surf(tn, "jp_f_tableware_bowls", surface="board_1", why="bowls on the shelf")
+    D.wall("jp_f_rice_bin", sides=("zmax", "zmin", "xmax"), why="the rice bin")
+    D.wall("jp_f_charcoal_scuttle", why="the charcoal scuttle")
+    D.free("jp_f_tableware_scattered", 0.5, 0.25, 20, why="bowls scattered (disorder)", count=True)
+    D.free("jp_f_kama_nabe", 0.5, 0.78, 0, why="a pot left on the boards")
+    D.onwall("jp_f_ofuda_akiba", sides=("xmax", "zmax", "zmin"), why="the fire charm")
+    return D
 
 
 def jinya(c):
@@ -142,7 +163,7 @@ def jinya(c):
     steps = [(c.R("doma")[1] + 0.05, 0.0)]
     c.passage(("doma", "daidokoro"), steps[0][0], steps[0][1], "kamachi step doma <-> daidokoro")
     D3._doma_kitchen(c, "doma", "xmax", steps, 3)
-    D3._daidokoro(c, "daidokoro", steps, 3)
+    _daidokoro(c, "daidokoro", steps)
     G = Room(c, "genkan_ma")
     G.free("jp_f_byobu_tsuitate", 0.80, 0.70, 90, why="the entrance screen facing the genkan door")
     G.wall("jp_f_katanakake_stand_empty", why="the sword stand, empty")
@@ -152,10 +173,10 @@ def jinya(c):
     ch = Room(c, "chanoma")
     d = ch.wall("jp_f_zukue_choba", why="a clerk's desk")
     if d is not None:
-        ch.surf(d, "jp_f_choba_set_desk", why="the desk set (the tax allocation papers)")
+        ch.surf(d, "jp_f_choba_set_desk", dx=-0.035, dz=-0.04, why="the desk set (the tax allocation papers)")
     d2 = ch.wall("jp_f_zukue_plain", why="a second clerk's desk")
     if d2 is not None:
-        ch.surf(d2, "jp_f_sg_books_scattered", why="village detail books spilled")
+        ch.surf(d2, "jp_f_sg_books", why="village detail books spilled")
     ch.free("jp_f_soroban_tray", 0.55, 0.55, 10, why="the abacus tray")
     ch.wall("jp_f_box_stack3_toppled", why="register boxes toppled")
     ch.free("jp_f_masu_spilled", 0.35, 0.40, 0, why="the standard rice measures knocked over")
@@ -164,7 +185,7 @@ def jinya(c):
     ts.wall("jp_f_box_m_lacquer", why="the seal box")
     d3 = ts.wall("jp_f_zukue_plain", why="a desk")
     if d3 is not None:
-        ts.surf(d3, "jp_f_masu_set", why="the measures on the desk")
+        ts.surf(d3, "jp_f_masu_set", dx=-0.145, dz=-0.05, why="the measures on the desk")
     ts.free("jp_f_enza_zabuton_stack3", 0.5, 0.5, 0, why="cushions stacked")
     ts.free("jp_f_andon_kaku_tipped", 0.3, 0.7, 0, why="a lamp knocked over")
     if t is None:

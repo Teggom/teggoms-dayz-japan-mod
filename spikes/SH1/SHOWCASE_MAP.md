@@ -841,3 +841,69 @@ Regenerate: `python spikes/W3C2/layout_w3c2.py` then `python spikes/W3C2/map_w3c
 | SL4 | `jp_f_zaru_tori_ab.p3d` | 933.60 | 853.20 | 0 | -0.01 | a sieve stand, a basket tipped off |
 
 <!-- W3C2 END -->
+
+<!-- W3D BEGIN -->
+
+## W3D wave 3d: the government buildings (checkpoint, post-station office, jinya, jail, fire brigade) (agent W3D, 2026-10-02)
+
+**District (Stephen's one-district rule):** x 744-826, z 845-892, west of 3c-2's west lane (24.0-25.7 m: a ~1.3 % fall west along the lane, 3-4 % to the south). ONE lane LG (z 862-866) from 3c-2's west-lane corner (826, 864) west through the district and through the checkpoint's two kora-mon gates (Edo side x 771.7, Kyoto side x 748.0) to x 744. North of the lane the jinya; south of it, from the east, the post-station office, the fire brigade and the jail; the checkpoint at the west end. Every building is seated so no floor has terrain through it (spikes/W3D/floorcheck.py); the low side of a hall shows its cut-stone foundation band, the board fences their 0.60 skirt, the palisade's logs run 1 m down.
+
+Regenerate: `python spikes/W3D/layout_w3d.py` then `python spikes/W3D/map_w3d.py`. Map: research/production/contact_sheets/w3d_map.jpg. Halls are furnished variants (`buildings/w3d_sets.py`); the fences / palisade (`Land_JP_Compound_*`) and the gravel courts (`Land_JP_Oshirasu_*`) are kit objects (`templates/govsite.py`); `.sN` = a site object of that building; IDs without a class are free props.
+
+### The checkpoint (west end; the lane runs through its two kora-mon gates)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| SK1 | `Land_JP_Compound_Sekisho` | 759.83 | 865.37 | 0 | 0.10 | the checkpoint's palisade: the Edo-side kora-mon east on the lane, the Kyoto-side kora-mon west |
+| SK2 | `Land_JP_Bansho_Sekisho_Furnished` | 755.28 | 871.79 | 180 | 0.21 | the guardhouse (front south to the road): the inspection room's veranda + tatami over the gravel court, the back office, the kitchen doma (west) |
+| SK3 | `Land_JP_Oshirasu_Sekisho` | 754.80 | 867.30 | 0 | 0.01 | the gravel court before the inspection room (where travellers knelt) |
+| SK4 | `Land_JP_BunkHall_Itabuki_Ashigaru` | 761.00 | 858.40 | 0 | -0.00 | the foot-soldiers' guardhouse (door north to the road): bedding, the capture tools on the wall |
+| SK5 | `jp_f_mitsudogu_tate.p3d` | 755.00 | 867.00 | 180 | 0.13 | the three capture tools on their rack, on the gravel facing the road |
+| SK6 | `jp_f_mushiro.p3d` | 757.60 | 867.10 | 0 | 0.14 | a straw mat on the gravel (where the traveller knelt) |
+| SK7 | `jp_f_mushiro_torn.p3d` | 751.60 | 867.00 | 0 | 0.11 | a torn mat on the gravel |
+| SK8 | `jp_s_kosatsu_std.p3d` | 775.00 | 868.40 | 180 | -0.10 | the notice board outside the Edo-side gate |
+
+### The intendant's jinya (north of the lane): the black nagaya-mon, the office, the court room + its gravel court, the tax-rice kura
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| JY1 | `Land_JP_Compound_Jinya` | 804.02 | 879.33 | 0 | -0.43 | the jinya's black board fence; the back gate on the west line |
+| JY2 | `Land_JP_NagayaMon_Jinya_Furnished` | 804.02 | 869.32 | 180 | 0.04 | the black nagaya-mon on the lane (gate leaves, servants' room, store) |
+| JY3 | `Land_JP_Samurai_S_Jinya` | 793.64 | 883.64 | 180 | -0.03 | the intendant's office (genkan south): clerks' desks, ledgers, the abacus, the rice measures; the intendant's room with its tokonoma |
+| JY4 | `Land_JP_Oshirasu_Jinya` | 818.00 | 878.60 | 0 | -0.01 | the white-gravel court (oshirasu) before the court room |
+| JY5 | `Land_JP_GinmiSho_Furnished` | 818.15 | 885.70 | 180 | -0.04 | the court room (front south over the gravel court): veranda + tatami, the official's desk; the records office behind |
+| JY6 | `Land_JP_Kura_Plain_Nengu` | 818.40 | 871.20 | 0 | -0.04 | the tax-rice kura (door north to the court): bales on both floors |
+
+### The post-station office and its yard (south of the lane, east)
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| TY1 | `Land_JP_Compound_ToiyaYard` | 816.69 | 853.96 | 180 | 0.07 | the post-station yard's board fence, the two-leaf gate north on the lane |
+| TY2 | `Land_JP_Toiyaba_Furnished` | 816.69 | 851.00 | 0 | 0.08 | the post-station office (open north to the yard): the raised office with the clerks' desks and ledgers, the clerks' doma |
+| TY3 | `jp_f_kanme_hakari.p3d` | 811.60 | 857.80 | 0 | -0.03 | the big steelyard on its frame, a bale on the hook (the cargo weight check) |
+| TY4 | `jp_s_stable_yard_tie_post.p3d` | 819.40 | 860.00 | 0 | -0.00 | a tie post for the relay horses |
+| TY5 | `jp_s_stable_yard_tie_post.p3d` | 822.20 | 860.00 | 0 | -0.00 | a tie post |
+| TY6 | `jp_s_stable_yard_saddle_rack.p3d` | 822.80 | 856.60 | 270 | -0.01 | pack saddles on their rack |
+| TY7 | `jp_s_kago_down.p3d` | 812.40 | 860.20 | 90 | -0.02 | a palanquin set down, waiting |
+| TY8 | `jp_s_handcart_load_bales.p3d` | 819.80 | 856.80 | 90 | -0.03 | a handcart with bales for the relay |
+
+### The fire brigade (south of the lane): the tall watchtower, the tool shed
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| FB1 | `Land_JP_Compound_Hikeshi` | 799.78 | 854.87 | 180 | 0.17 | the fire brigade's board fence, the wide gate north on the lane |
+| FB2 | `Land_JP_Shed_Open_Board_Hikeshi` | 802.60 | 852.40 | 0 | 0.04 | the brigade's tool shed (open north): the matoi-nobori, hooks, buckets |
+| FB3 | `jp_s_hinomi_yagura.p3d` | 795.50 | 856.50 | 0 | -0.06 | the tall fire watchtower (climb the north face; the lookout deck at 6.40, the hansho bell) |
+| FB4 | `jp_s_fire_watch_rack.p3d` | 805.60 | 858.80 | 270 | -0.03 | buckets, a hook and a ladder on their rack |
+| FB5 | `jp_f_matoi_nobori_fallen.p3d` | 798.20 | 853.00 | 90 | -0.04 | a second standard knocked down in the yard |
+
+### The jail (south of the lane, west): the cell block, the guard office
+
+| ID | Class / p3d | x | z | yaw | y_off | What |
+|---|---|---|---|---|---|---|
+| RY1 | `Land_JP_Compound_Roya` | 782.10 | 853.19 | 180 | 0.23 | the jail's black board fence, its one gate north on the lane |
+| RY2 | `Land_JP_Roya_Furnished` | 780.50 | 849.40 | 0 | 0.07 | the cell block (door north): the outer lattice, the corridor, two cells behind the inner lattice, their doors open |
+| RY3 | `Land_JP_Guardhut_M_Itabuki_Jishinban` | 777.00 | 857.50 | 90 | 0.02 | the guard office (the jishin-ban as built; door east) |
+| RY3.s1 | `jp_s_lantern_sign_tsuji.p3d` | 779.37 | 858.97 | 90 | -0.01 | the ward lantern |
+
+<!-- W3D END -->

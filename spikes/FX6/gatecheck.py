@@ -21,7 +21,9 @@ GATES = [("kido_kata itabei", lambda: W.gate_kido_kata(KEN, "itabei", leaf_y0=0.
          ("kido_ryo 1.5 ken kuro", lambda: W.gate_kido_ryo(1.5 * KEN, kuro=True, leaf_y0=0.13)),
          ("shiorido yotsume", lambda: W.gate_shiorido(KEN, "yotsume", leaf_y0=0.13)),
          ("opening yotsume", lambda: W.gate_opening(KEN, "yotsume")),
-         ("opening itabei", lambda: W.gate_opening(KEN, "itabei"))]
+         ("opening itabei", lambda: W.gate_opening(KEN, "itabei")),
+         # W3D (2026-10-02): the checkpoint's kora-mon (the picker's saku / high / front row)
+         ("koraimon 1.5 ken", lambda: W.gate_koraimon(1.5 * KEN, leaf_y0=0.13))]
 
 
 def main():

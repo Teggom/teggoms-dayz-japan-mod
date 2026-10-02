@@ -190,3 +190,13 @@ the fire brigade (south) first, then the jinya (north) and the jail (south), the
   its posts). Everything else inside its class cap. Largest object: Land_JP_Compound_Sekisho 9.0k R1.
 - No white gravel (shirasu) material in the library: the oshirasu pads use stone_river with a gravel Roadway
   (a material job, flagged).
+- **Placement on the slope (3-4 %):** the gravel courts became their own objects (Land_JP_Oshirasu_Sekisho / _Jinya,
+  four low corner posts on stones: C3 / C8), a pad inside a big compound is buried on its high side. Plot sizes as
+  placed: checkpoint 13 x 12 ken (road through z 4.5-6 ken), jinya 22 x 13 ken (kura by the gate side facing the court),
+  post-station yard 9 x 8 ken. Every building is seated so no floor has terrain through it (floorcheck.py); the W3D
+  halls get a cut-stone foundation band to -0.55 (w3d_sets._plinth, top 0.046: off FX5's near-grade band), the board
+  fences a 0.60 skirt (sitewall itabei skirt=), the palisade logs run to -1.00. The jinya's pot hook hangs from the
+  real beam (D3's samurai houses hang it 1.2-1.3 m low: baseline, fixed here only); desk-top items centred on their
+  desks (propseat).
+- **Site 6 (execution grounds) not built** (usage; the slope needs a skirted bamboo fence; a plain memorial Jizo, the
+  Kozukappara great Jizo is 1741).

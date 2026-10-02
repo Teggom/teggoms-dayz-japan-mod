@@ -293,7 +293,7 @@
   {
    "check": "D1 props per room 5-7: hall",
    "ok": true,
-   "detail": "5 props: jp_f_zukue_plain, jp_f_writing_box_open, jp_f_zukue_choba, jp_f_sg_books, jp_f_enza_zabuton_stack3, jp_f_hibachi_round, jp_f_box_l"
+   "detail": "5 props: jp_f_zukue_plain, jp_f_sg_books, jp_f_zukue_choba, jp_f_sg_books, jp_f_enza_zabuton_stack3, jp_f_hibachi_round, jp_f_box_l"
   },
   {
    "check": "D2 floor coverage <= 25 %: hall",
@@ -313,7 +313,7 @@
   {
    "check": "D1 props per room 5-7: office",
    "ok": true,
-   "detail": "5 props: jp_f_box_stack3_toppled, jp_f_tansu_single_ransacked, jp_f_zukue_plain, jp_f_sg_books_scattered, jp_f_box_m_lacquer, jp_f_box_l"
+   "detail": "5 props: jp_f_box_stack3_toppled, jp_f_tansu_single_ransacked, jp_f_zukue_plain, jp_f_sg_books, jp_f_box_m_lacquer, jp_f_box_l"
   },
   {
    "check": "D2 floor coverage <= 25 %: office",
@@ -423,7 +423,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 509251 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 509027 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

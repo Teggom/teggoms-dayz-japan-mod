@@ -655,3 +655,43 @@
   gradesweep counts down-facing faces; a seat box on the work floor lets a bank sink into the rising ground; never put a
   flat ash / spill at grade under a 0.05 floor (hidden). **Walk: TEST_CHECKLIST.md = FX6 re-check (~8 min) + 3c-2
   (~20 min).** Weekly 82 % -> 84 %. Next (Stephen's call): 3d government, 3e castle, or the fishing suite.
+- 2026-10-02: **W3D DONE (sites 1-5; site 6 not done): wave 3d, the government buildings** (Stephen approved; agent
+  W3D, Opus, no sub-agents). Sourced setup first (spikes/W3D/W3D_NOTES.md: ja.wikipedia Hakone / Arai checkpoints,
+  Takayama jinya, matoi; a visit report of the 2007 Hakone reconstruction; kotobank fire watchtower; C_CIVIC §4;
+  post-1730 evidence flagged: Hakone rebuilt from an 1865 report, Arai's building 1855, Takayama's court room 1816).
+  Built site by site: (1) **checkpoint kit**: NEW wall-kit palisade `saku` + NEW status gate `koraimon` (pick_gate row
+  saku / high / front = kora-mon 1.5 ken; a 2-ken pair failed C10), Land_JP_Compound_Sekisho (13 x 12 ken, the lane
+  through both gates), Land_JP_Bansho_Sekisho (black boards; the inspection room = veranda 0.45 + officials' tatami 0.60
+  over the gravel court, back office, kitchen doma), Land_JP_Oshirasu_Sekisho (gravel court object), the foot-soldiers'
+  guardhouse = Land_JP_BunkHall_Itabuki_Ashigaru, free-standing capture-tool rack jp_f_mitsudogu_tate (no guns
+  displayed: gunless overhaul), the existing kosatsu; (2) **post-station office** Land_JP_Toiyaba (raised office open to
+  the yard, clerks' doma) + Land_JP_Compound_ToiyaYard + the big steelyard jp_f_kanme_hakari (cargo weight station =
+  this dressing), tie posts, saddles, palanquin; (3) **jinya** (one size): black board nagaya-mon
+  Land_JP_NagayaMon_Jinya (D3 template, rank 'official', board roof like Takayama), office = Land_JP_Samurai_S_Jinya,
+  court room Land_JP_GinmiSho + Land_JP_Oshirasu_Jinya, tax-rice kura Land_JP_Kura_Plain_Nengu,
+  Land_JP_Compound_Jinya; (4) **jail** Land_JP_Roya (outer + inner timber lattice, earth corridor, two enterable cells
+  with sliding lattice doors: game concession for the crawl door; empty, neutral) + Land_JP_Compound_Roya (black board
+  fence, one kabuki gate) + the W2F jishin-ban as the guard office; (5) **tall fire watchtower** Land_JP_S_Hinomi_Yagura
+  (town type, climbable like the FP1 ladder, deck 6.40, roof 2.20 over it, hansho bell) + Land_JP_Compound_Hikeshi + the
+  tool shed Land_JP_Shed_Open_Board_Hikeshi with the 1720s matoi-nobori (jp_f_matoi_nobori). Template
+  parts/kit/jpparts/templates/govsite.py, sets buildings/w3d_sets.py, props spikes/W3D/props_w3d.py (govfit) +
+  props_w3d_site.py (gov_site). **District:** x 744-826, z 845-892, west of 3c-2's west lane; ONE lane LG from 3c-2's
+  corner (826, 864) west through the checkpoint's two gates (SHOWCASE_MAP W3D, w3d_map.jpg). The ground slopes 3-4 %:
+  every building seated so no floor has terrain through it (new spikes/W3D/floorcheck.py), the W3D halls closed on
+  their low side by a cut-stone foundation band (w3d_sets._plinth), board fences with a 0.60 skirt (sitewall itabei
+  skirt=), palisade logs 1 m deep; the jinya fence sinks ~0.46 and the palisade ~0.58 on their high corners.
+  Commits: 4bd1d23, 7660c32 + the checks / sheets / docs commit. Checks: verify_all --full 341 buildings / 22,009
+  checks / 0 failures; bindcheck 341; verify_oprw 4316/4316; floorcheck 0; roomaccess 9 buildings / 0 failing; hangcheck
+  0 (the jinya's pot hook hung from the real beam: D3's samurai houses hang it 1.2-1.3 m low, baseline); handlecheck
+  40/0; gatecheck 9/0 (kora-mon added); propfloat govfit 6/0; propseat 119 props, 4 'floating' = pots seated in kamado
+  holes (FX6 baseline); gradesweep at the shells' baseline (the foundation band top at 0.046); placecheck island 450 =
+  baseline 442 + 8 (the two fences sinking on their high side by design, baseline tie posts / lantern sign, 3 props sunk
+  3-7 cm on the slope). Over budget (reason recorded): Land_JP_Toiyaba +18 % R1. **Not done:** site 6 execution grounds
+  (left for usage; plan: a yotsume-fenced lot west of the Kyoto-side gate, the yotsume needs the same skirt, a plain
+  memorial Jizo: Kozukappara's great Jizo is 1741), the other jinya sizes, the checkpoint's stables / women's inspection
+  room / lookout, the river-crossing office, a white gravel (shirasu) material (stone_river stands in), padded fire
+  coats. Pitfalls: on a slope a pad inside a big compound is buried on the high side (courts are their own objects);
+  pick a compound's seat by its gate sill pads, not its lowest corner; a 2-ken hinged gate fails C10 from outside;
+  props on a pad object must take the pad's seat, not their own ground. **Walk: TEST_CHECKLIST.md = FX6 re-check
+  (~8 min) + 3c-2 (~20 min) + 3d (~20 min).** Weekly 84 % -> 86 %. Next (Stephen's call, after the weekly reset
+  2026-10-06): 3e castle kit or the fishing suite.

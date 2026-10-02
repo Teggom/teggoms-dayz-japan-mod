@@ -90,11 +90,11 @@ F = r"JP\furniture\govfit\%s.p3d"
 # free objects: id, p3d (P:-relative), x, z, yaw, label[, dy = height over the ground, or the id of the gravel court
 # object it lies on]
 EXTRA = [
-    ("SK5", F % "jp_f_mitsudogu_tate", 757.70, 867.15, 180.0, "the three capture tools on their rack, on the gravel "
+    ("SK5", F % "jp_f_mitsudogu_tate", 755.00, 867.00, 180.0, "the three capture tools on their rack, on the gravel "
      "facing the road", "SK3"),
-    ("SK6", r"JP\furniture\bedding\jp_f_mushiro.p3d", 754.40, 866.80, 0.0, "a straw mat on the gravel (where the "
+    ("SK6", r"JP\furniture\bedding\jp_f_mushiro.p3d", 757.60, 867.10, 0.0, "a straw mat on the gravel (where the "
      "traveller knelt)", "SK3"),
-    ("SK7", r"JP\furniture\bedding\jp_f_mushiro_torn.p3d", 751.80, 867.00, 15.0, "a torn mat on the gravel", "SK3"),
+    ("SK7", r"JP\furniture\bedding\jp_f_mushiro_torn.p3d", 751.60, 867.00, 0.0, "a torn mat on the gravel", "SK3"),
     ("SK8", r"JP\site\roadside\jp_s_kosatsu_std.p3d", 775.00, 868.40, 180.0, "the notice board outside the Edo-side gate"),
     ("TY3", F % "jp_f_kanme_hakari", 811.60, 857.80, 0.0, "the big steelyard on its frame, a bale on the hook (the cargo "
      "weight check)"),

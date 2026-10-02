@@ -170,7 +170,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "corridor 11520 rays, 269 out through doors/windows, 0 LEAKS; cell_a 11520 rays, 33 out through doors/windows, 0 LEAKS; cell_b 11520 rays, 64 out through doors/windows, 0 LEAKS"
+   "detail": "corridor 11520 rays, 266 out through doors/windows, 0 LEAKS; cell_a 11520 rays, 33 out through doors/windows, 0 LEAKS; cell_b 11520 rays, 64 out through doors/windows, 0 LEAKS"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -205,7 +205,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 1952 touching (opposite-facing: backface-culled) and 390 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 1949 touching (opposite-facing: backface-culled) and 392 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -365,7 +365,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 488094 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 488053 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

@@ -106,8 +106,8 @@ def kanme_hakari(ab=False):
         yb = 1.55                                                         # the steelyard beam's height
         xf_ = -0.10                                                       # the fulcrum
         out.append(cord((xf_, 2.45, 0.0), (xf_, yb + 0.03, 0.0), 0.008))
-        out.append(W(-0.55, 1.35, yb - 0.025, yb + 0.025, -0.025, 0.025, WEATH, vis=(1,)))   # the beam (sao)
-        for k in range(12):                                                                   # brass graduations
+        out.append(W(-0.55, 0.80, yb - 0.025, yb + 0.025, -0.025, 0.025, WEATH, vis=(1,)))   # the beam (clear of the post)
+        for k in range(7):                                                                    # brass graduations
             xx = 0.05 + 0.11 * k
             out.append(W(xx - 0.004, xx + 0.004, yb + 0.025, yb + 0.029, -0.012, 0.012, IRON, vis=(1,)))
         xl = -0.48                                                        # the load hook + its ropes to the bale
@@ -115,7 +115,7 @@ def kanme_hakari(ab=False):
         out.append(xf(bale, t=(xl, 0.0, 0.0)))
         for sz in (-1, 1):
             out.append(cord((xl, 0.62, 0.0), (xl, 0.40, sz * 0.24), 0.008))
-        xw = 0.95                                                         # the counterweight
+        xw = 0.70                                                         # the counterweight
         out.append(cord((xw, yb - 0.025, 0.0), (xw, 1.12, 0.0), 0.004))
         out.append(lathe([(0.0, 0.0), (0.06, 0.02), (0.07, 0.10), (0.04, 0.16), (0.0, 0.17)], 8, IRON, vis=(1,)))
         out[-1] = xf(out[-1], t=(xw, 0.95, 0.0))

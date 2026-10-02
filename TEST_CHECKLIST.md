@@ -1,7 +1,7 @@
-# Japan test island: FX6 re-check of the 3c-1 trade quarter (~8 min)
+# Japan test island: FX6 re-check (~8 min) + 3c-2 rural sites (~20 min) + 3d government (~20 min): ~48 min
 
 Short re-check of what you flagged on the 3c-1 walk (2026-10-02). The old 3c-1 walk text and FX5's re-check (you passed
-it: gate sills, honjin joints, hedge) are in git history. **Wave 3c-2 adds its section below this one.**
+it: gate sills, honjin joints, hedge) are in git history. **Waves 3c-2 and 3d add their sections below this one.**
 
 What changed:
 - **Gates:** the big kabuki-mon is no longer on every fence. A gate now follows its fence and the owner's status: a
@@ -130,3 +130,70 @@ surfaces (nothing high up).
   portal, the timber slide, the salt bed? (They are built for a hillside; on this flat ground the banks sit on top.)
 - The adit: is 4 ken in to a rockfall enough, or do you want it deeper?
 - Colours that look wrong (the quarry rock reads sandy; there is no sand texture for the salt bed yet).
+
+# 3d: the government buildings (~20 min)
+
+New this wave: five government sites in ONE district west of the 3c-2 sites, along one lane that runs on west from
+3c-2's west-lane corner (826, 864) through the district and through the checkpoint's two gates (map:
+`research/production/contact_sheets/w3d_map.jpg`, IDs in `spikes/SH1/SHOWCASE_MAP.md` "W3D"). Dead world: the offices
+left in a hurry, the cells empty with their doors open (nothing grim in them). Pictures: `w3d_family.jpg` (every new
+building, fence, gravel court, the tall tower and the new props, bare), `w3d_rooms.jpg` (the furnished rooms),
+`w3d_map.jpg`.
+
+The ground here slopes 3-4 %. Every building is seated so no floor has earth poking through it; on the low side you
+will see a band of cut stone under the walls (a foundation, like a building on a levelled plinth), and the board
+fences and the palisade run deeper into the ground on their low side. On the high side a fence stands lower (the jinya's
+NW corner ~0.5 m, the checkpoint palisade's NE corner ~0.6 m).
+
+**Start:** as above (server bat, then client bat). Walk to 3c-2's west-lane corner (~826, 864), then west along the
+lane.
+
+## Route: west along the lane -> post-station office -> fire brigade -> jinya -> jail -> the checkpoint -> back
+
+At every door and gate: open it, close it, walk through both ways. Look for anything floating, anything you walk
+through, loot lying on floors and surfaces (nothing high up on a beam).
+
+1. **Post-station office (toiya-ba)** (south of the lane): the yard gate (816.2, 861.2), a two-leaf board gate. In the
+   yard the big beam scale on its frame with a rice bale on the hook (811.6, 857.8), tie posts, a pack-saddle rack, a
+   palanquin set down, a handcart. The office (816.7, 851.0) is open on its whole front: step up onto the raised board
+   office (the step stone ~815.3, 853.7): clerks' desks facing the yard, ledgers, an abacus, the ledger boxes and a
+   chest along the back. The earth floor on its east end, its back door (south) both ways.
+2. **Fire brigade** (south of the lane): the gate (799.3, 861.2), two-leaf. **Climb the tall watchtower** (795.5,
+   856.5) up its north face: the lookout deck is at 6.4 m; stand up on it and look about: the roof should be well over
+   your head (2.2 m), the black board parapet round three sides, the bell hanging outside the back parapet. Climb back
+   down. The tool shed (802.6, 852.4, open north): the fire-brigade standard (a pole with a carved head and a long
+   narrow banner: the 1720s form, before the tassel kind), hooks and buckets on the walls; a second standard lies
+   knocked down in the yard.
+3. **The jinya** (north of the lane): the **black gatehouse** (804.0, 867.5): open the gate leaves, walk through both
+   ways; its two side rooms (doors on the yard side). Inside: the **office** (793.6, 883.6, genkan at ~785.8, 881.4):
+   in by the genkan, the clerks' rooms with desks, ledgers, an abacus and the rice measures, the intendant's room with
+   its alcove, the kitchen. The **court room** (818.2, 885.7) with the **white-gravel court** in front of it (818.0,
+   878.6): stand on the gravel and look up at the stepped floors (veranda, then the officials' tatami); step up the
+   stone in the middle (~818.2, 882.5) and walk in; the records room behind its sliding doors. The **rice kura**
+   (818.4, 871.2, door north to the court): bales on both floors. The back gate in the west fence (784.0, 872.5): a
+   single-leaf board gate.
+4. **The jail** (south of the lane): its one gate (785.3, 861.4), a kabuki-mon in the black board fence. The **guard
+   office** (777.0, 857.5, door east). The **cell block** (780.5, 849.4): the door at its north-west corner (~777.8,
+   852.1) into the earth corridor between two heavy timber lattices; **both cells** (west A, east B): slide each lattice
+   door, step up into the cell, walk round, come out. Can you see through the lattices? (You should; you should not be
+   able to walk or shoot through.) Mats, a lidded tub, a few bowls; nothing else.
+5. **The checkpoint** (west end): the **Edo-side gate** (771.7, 864.0) across the lane: a kora-mon (two posts and a
+   beam under a small roof, two rear posts with their own little roofs over the open leaves); open and close it from
+   both sides; the notice board outside it (775.0, 868.4). Inside, north of the road, the **guardhouse** (755.3, 871.8)
+   behind its **gravel court** (754.8, 867.3): the capture-tool rack standing on the gravel (755.0, 867.0), straw mats
+   where travellers knelt; step up the stone (~757.6, 868.6) onto the veranda and the officials' tatami (desks facing
+   the gravel), the back office through the sliding doors, the kitchen door (~752.5, 868.6). South of the road the
+   **foot-soldiers' guardhouse** (761.0, 858.4, door north). Walk along the **palisade** (sharpened logs) all round:
+   no gap you can squeeze through. Out through the **Kyoto-side gate** (748.0, 864.0) and back.
+6. Back east along the lane to 3c-2's corner (826, 864).
+
+## Tell me
+- Any door, gate or lattice that won't open, won't close, or that you can't walk through (both ways).
+- Anything floating or tilted on nothing; anything you walk through that should be solid (the palisade, the lattices,
+  the tower).
+- The tower: could you climb up and down? Head room on the deck?
+- Can you get up onto the inspection floor and the court-room floor from the gravel?
+- Does each site read as what it is from 20 m: the checkpoint across the road, the jinya behind its black gate, the
+  jail, the tall tower?
+- The stone foundation bands on the low side of the halls: OK, or too visible?
+- The gravel courts: there is no white gravel texture yet (a river-stone texture stands in); OK for now?
