@@ -470,3 +470,7 @@
     non-atlas texture). If flipped faces' bumps light wrong in game: uvwood.ALLOW_FLIP = False + rebuild. jp_efftest_medium (test
     tansus) still has old UVs.
   - **Re-check: TEST_CHECKLIST.md has FX1, FX2 and FX3 sections.** Next: the config assembler, then wave 3 or the items track.
+- 2026-10-01: **Stephen's walk of FX1-FX3:** good overall. Three fixes queued as **FX4 (after CA1)**: (1) the big temple bell shows a
+  backwards texture: you can see into it (inside faces / open mouth); (2) the climbable fire-watch tower is too short at the top:
+  you clip into its roof (head room on the deck); (3) stone torii columns still show duplicated textures (FX3 covered wood only:
+  extend the atlas + per-piece patch approach to stone). Other minor things deferred by Stephen.
