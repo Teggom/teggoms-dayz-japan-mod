@@ -24226,12 +24226,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -25567,12 +25567,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -26004,24 +26004,24 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
       {
        "material": "jp_m_stone_cut_w2",
        "mean_srgb": [
-        152.2,
-        130.8,
-        100.8
+        152.1,
+        130.0,
+        100.7
        ],
        "palette": "stone_granite",
-       "dE76": 3.7,
+       "dE76": 3.9,
        "tolerance": 9,
        "pass": true
       },
@@ -31767,6 +31767,6 @@
  "summary": {
   "models": 185,
   "pass": 185,
-  "classes_in_config": 298
+  "classes_in_config": 522
  }
 }

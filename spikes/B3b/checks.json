@@ -198,12 +198,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -463,12 +463,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -1147,12 +1147,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -10249,12 +10249,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -12358,11 +12358,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -12372,10 +12372,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -12585,11 +12585,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -12599,10 +12599,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -12812,11 +12812,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -12826,10 +12826,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13054,11 +13054,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13068,10 +13068,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13283,11 +13283,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13297,10 +13297,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13553,11 +13553,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13567,10 +13567,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13822,12 +13822,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -13835,12 +13835,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -14049,11 +14049,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -14318,11 +14318,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -14332,10 +14332,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -14343,12 +14343,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -14588,11 +14588,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -14830,11 +14830,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -15071,11 +15071,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -15085,10 +15085,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -15279,11 +15279,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -15293,10 +15293,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -15486,10 +15486,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -15679,10 +15679,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -15880,10 +15880,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -16073,10 +16073,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -16282,10 +16282,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -16530,11 +16530,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -16542,12 +16542,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -16694,12 +16694,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -16845,12 +16845,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -16996,12 +16996,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -17210,12 +17210,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -17590,12 +17590,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -17906,24 +17906,24 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
       {
        "material": "jp_m_stone_cut_w2",
        "mean_srgb": [
-        154.9,
-        132.3,
-        102.5
+        155.1,
+        131.6,
+        102.7
        ],
        "palette": "stone_granite",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -22110,10 +22110,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -22352,10 +22352,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -22563,10 +22563,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -22794,10 +22794,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -23036,10 +23036,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -24851,12 +24851,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -25162,12 +25162,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -25710,12 +25710,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -32675,11 +32675,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -32889,11 +32889,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -33130,11 +33130,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -33369,12 +33369,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -33612,12 +33612,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -33838,11 +33838,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -34066,11 +34066,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -34291,11 +34291,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -34519,11 +34519,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -34744,12 +34744,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -34946,11 +34946,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -35150,11 +35150,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -35354,11 +35354,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -35550,11 +35550,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -35729,11 +35729,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -35938,11 +35938,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -36139,12 +36139,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -36344,12 +36344,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -36549,12 +36549,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -36746,12 +36746,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -36926,12 +36926,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -37144,12 +37144,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -37361,12 +37361,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -37608,10 +37608,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -37865,10 +37865,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -38079,10 +38079,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -38339,12 +38339,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -38579,12 +38579,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -38826,12 +38826,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -39073,12 +39073,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -39320,12 +39320,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -39567,12 +39567,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -40258,12 +40258,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -40481,12 +40481,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -40678,12 +40678,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -40854,12 +40854,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -41094,12 +41094,12 @@
       {
        "material": "jp_m_stone_cut_w2",
        "mean_srgb": [
-        154.9,
-        132.3,
-        102.5
+        155.1,
+        131.6,
+        102.7
        ],
        "palette": "stone_granite",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41552,10 +41552,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41753,10 +41753,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -41967,12 +41967,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42171,11 +42171,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42185,10 +42185,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42387,11 +42387,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42401,10 +42401,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42595,10 +42595,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -42606,12 +42606,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -42785,10 +42785,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -43001,10 +43001,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -43012,12 +43012,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -43229,10 +43229,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -43240,12 +43240,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -43513,10 +43513,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -43788,10 +43788,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -44061,10 +44061,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -44072,12 +44072,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -44270,10 +44270,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -44281,12 +44281,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -44494,10 +44494,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -44690,11 +44690,11 @@
        "material": "jp_m_stone_carved_aged_w1",
        "mean_srgb": [
         73.0,
-        70.0,
-        62.0
+        70.1,
+        62.2
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -44704,10 +44704,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45524,12 +45524,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45741,12 +45741,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45963,12 +45963,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -45976,12 +45976,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -46189,12 +46189,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -46202,12 +46202,12 @@
       {
        "material": "jp_m_stone_cut_w2",
        "mean_srgb": [
-        154.9,
-        132.3,
-        102.5
+        155.1,
+        131.6,
+        102.7
        ],
        "palette": "stone_granite",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -46427,12 +46427,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -46639,12 +46639,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -47175,12 +47175,12 @@
       {
        "material": "jp_m_stone_cut_w2",
        "mean_srgb": [
-        154.9,
-        132.3,
-        102.5
+        155.1,
+        131.6,
+        102.7
        ],
        "palette": "stone_granite",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -47385,10 +47385,10 @@
        "mean_srgb": [
         73.0,
         70.0,
-        62.0
+        62.4
        ],
        "palette": "stone_lantern",
-       "dE76": 0.0,
+       "dE76": 0.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -47396,12 +47396,12 @@
       {
        "material": "jp_m_stone_carved_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        65.8,
+        62.8,
+        55.4
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 3.2,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -50113,12 +50113,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -50310,12 +50310,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -50514,12 +50514,12 @@
       {
        "material": "jp_m_stone_carved_aged_w0",
        "mean_srgb": [
-        84.7,
-        81.6,
-        73.4
+        84.9,
+        81.9,
+        73.8
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 5.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -50718,12 +50718,12 @@
       {
        "material": "jp_m_stone_carved_aged_w0",
        "mean_srgb": [
-        84.7,
-        81.6,
-        73.4
+        84.9,
+        81.9,
+        73.8
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 5.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -50922,12 +50922,12 @@
       {
        "material": "jp_m_stone_carved_aged_w0",
        "mean_srgb": [
-        84.7,
-        81.6,
-        73.4
+        84.9,
+        81.9,
+        73.8
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 5.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -51126,12 +51126,12 @@
       {
        "material": "jp_m_stone_carved_aged_w0",
        "mean_srgb": [
-        84.7,
-        81.6,
-        73.4
+        84.9,
+        81.9,
+        73.8
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 5.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -51330,12 +51330,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -51534,12 +51534,12 @@
       {
        "material": "jp_m_stone_carved_aged_w2",
        "mean_srgb": [
-        66.1,
-        63.2,
-        55.3
+        66.6,
+        63.7,
+        55.2
        ],
        "palette": "stone_lantern",
-       "dE76": 3.0,
+       "dE76": 2.8,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -51738,12 +51738,12 @@
       {
        "material": "jp_m_stone_carved_aged_w0",
        "mean_srgb": [
-        84.7,
-        81.6,
-        73.4
+        84.9,
+        81.9,
+        73.8
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 5.1,
        "tolerance": 9,
        "pass": true,
        "masked": true
@@ -51942,12 +51942,12 @@
       {
        "material": "jp_m_stone_carved_aged_w0",
        "mean_srgb": [
-        84.7,
-        81.6,
-        73.4
+        84.9,
+        81.9,
+        73.8
        ],
        "palette": "stone_lantern",
-       "dE76": 5.0,
+       "dE76": 5.1,
        "tolerance": 9,
        "pass": true,
        "masked": true

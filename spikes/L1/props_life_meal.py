@@ -31,7 +31,7 @@ def bowl(cx, cz, y=0.0, r=0.06, h=0.055, mat=LACQ, n=6, wear=None, lid=False, fi
         out.append(flat_poly([(r * 0.8 * math.cos(-k * 2 * math.pi / 6), r * 0.8 * math.sin(-k * 2 * math.pi / 6))
                               for k in range(6)], h - 0.02, ASH, vis=(1,), wear="_w2"))
     if lid:
-        out.append(lathe([(0.0, h + 0.03), (r * 0.3, h + 0.03), (r * 0.35, h + 0.02), (r * 0.95, h), (0.0, h)], n, mat,
+        out.append(lathe([(0.0, h + 0.03), (r * 0.3, h + 0.03), (r * 0.35, h + 0.02), (r * 0.95, h), (0.0, h)][::-1], n, mat,  # FX4: outward
                          vis=(1,), wear=wear))
     return xfs(out, t=(cx, y, cz))
 
@@ -123,7 +123,7 @@ def meal_left(kind):
         P.adds(zen(0.0, 0.0))
         P.adds(bowl(-0.08, 0.07, 0.135, fill="rice", fill_wear="_w2"))
         P.adds(bowl(0.08, 0.07, 0.135, r=0.055, fill="soup"))
-        lid = lathe([(0.0, 0.03), (0.018, 0.03), (0.02, 0.02), (0.052, 0.0), (0.0, 0.0)], 6, LACQ, vis=(1,))
+        lid = lathe([(0.0, 0.03), (0.018, 0.03), (0.02, 0.02), (0.052, 0.0), (0.0, 0.0)][::-1], 6, LACQ, vis=(1,))  # FX4: outward
         if kind == "zen":
             P.add(xf(lid, rx=180.0, t=(0.20, 0.03, 0.14)))          # the soup lid put down upside down
         dish = lathe([(0.0, 0.0), (0.045, 0.0), (0.05, 0.012), (0.0, 0.008)], 6, PALE, vis=(1,))

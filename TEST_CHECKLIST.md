@@ -22,6 +22,24 @@ tea houses) -> the town temple -> back to the spawn.
 pass (open AND close it, from both sides); loot on floors and on furniture tops. Shrines, altars and offerings carry
 no loot on purpose (left undisturbed).
 
+## FX4 re-check (~6 min; bell, fire-watch roof, stone textures). IDs: spikes/SH1/SHOWCASE_MAP.md
+
+Before / after picture: `research/production/contact_sheets/fx4_fixes.jpg` (drawn with back faces culled, as the game).
+1. **Temple bells** (T3 village bell tower 984, 1112; U3 town bell tower 1085.5, 1118.5): walk round the bell and
+   crouch under it, look up into the mouth. Pass: a solid bronze bell from every side; from below you see a dark
+   bronze inside with a thick rim (lip), never the far wall through the near one. Same for the U1 gong (1100, 1112;
+   flat, solid from both faces and the edge) and the alarm bell on the guard house's fire ladder.
+2. **Fire-watch ladder** (street corner 1033, 1086.8): climb, step off onto the deck, stand up, look around and up.
+   Pass: the roof is well above your head (2.2 m over the deck, on four posts); nothing clips your head; the bell now
+   hangs OUTSIDE the back rail. Then climb back down (the ladder itself is unchanged).
+3. **Stone torii** (S01 1024, 1099.5; S14 1024, 1136.5; the small row at x 1036, z 1157-1185; S63 / S70 on the hill
+   stair) **+ stone lanterns, graves, Jizo / komainu plinths, house foundation stones**: walk round a post. Pass: the
+   faces of one post and the two posts no longer show the same lichen patch at the same height; no straight seam or
+   hard edge INSIDE one face (changes at the post's arrises are fine). Rain streaks on carved stone still run down.
+4. **Stone weathering layer** (new, like FX3's wood): soft grime / pale lichen clouds at ~11 m scale. Pass: not
+   blotchy or tiled; tell me if too strong.
+- Tell me: any bell or gong you can still see into; head room on the deck; stone repeats left anywhere.
+
 ## FX3 re-check (~6 min; wood texture variety + moss). IDs: spikes/SH1/SHOWCASE_MAP.md
 
 Before / after picture: `spikes/FX3/fx3_insitu.jpg` (and `spikes/FX3/fx3_samples.jpg`). Every wood surface now

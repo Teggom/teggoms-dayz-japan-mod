@@ -97,22 +97,22 @@
    "wall_gap": null,
    "budget": "medium",
    "faces": {
-    "Resolution 1": 358,
-    "Resolution 2": 176,
-    "Resolution 3": 12,
-    "Geometry": 72,
+    "Resolution 1": 394,
+    "Resolution 2": 212,
+    "Resolution 3": 18,
+    "Geometry": 84,
     "Memory": 0,
     "Roadway": 1,
-    "View Geometry": 60,
-    "Fire Geometry": 72
+    "View Geometry": 72,
+    "Fire Geometry": 84
    },
    "bbox": [
     -1.443,
     1.443,
     -0.513,
-    6.04,
+    7.14,
     -2.149,
-    0.12
+    0.15
    ],
    "collision": [
     "geo",
@@ -132,9 +132,16 @@
    "loot_surfaces": [],
    "dims": [
     {
+     "name": "deck_head_room",
+     "expected": 2.2,
+     "measured": 2.2,
+     "tol": 0.001,
+     "source": "build_list"
+    },
+    {
      "name": "height",
-     "expected": 6.3,
-     "measured": 6.34,
+     "expected": 7.64,
+     "measured": 7.64,
      "tol": 0.1,
      "source": "build_list"
     },
@@ -147,7 +154,7 @@
     }
    ],
    "notes": [
-    "fire-watch ladder with an alarm bell (Kyoho fire rules, PLAYBOOK 1 / T12); CLIMBABLE (FP1): climb the +z face, step off onto the railed lookout deck at 4.90 m; Land_ class (class=house)"
+    "fire-watch ladder with an alarm bell (Kyoho fire rules, PLAYBOOK 1 / T12); CLIMBABLE (FP1): climb the +z face, step off onto the railed lookout deck at 4.90 m; Land_ class (class=house); FX4: roof 2.20 m over the deck on four posts, the bell outside the back rail"
    ],
    "master": "spikes/L2/out/street_life/jp_s_fire_watch_ladder_tower.p3d",
    "mount": "street",

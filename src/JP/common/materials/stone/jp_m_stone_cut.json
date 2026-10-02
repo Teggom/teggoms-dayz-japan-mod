@@ -4,7 +4,10 @@
  "palette_id": "stone_granite",
  "palette_by_wear": {},
  "tile_size_m": 1.0,
- "texture_px": 512,
+ "texture_px": [
+  1024,
+  1024
+ ],
  "px_per_m": 512.0,
  "uv": "world-scale: u, v = metres / tile_size_m; v runs down the texture = along the grain / down-slope",
  "grain": "tool marks",
@@ -66,5 +69,26 @@
   }
  ],
  "normal_convention": "DirectX (green = down), like the machiya v1 maps; make_textures.GREEN_DX flips all",
- "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)"
+ "made_by": "research/materials/build_materials.py (materials agent, 2026-09-27)",
+ "atlas": {
+  "w_m": 2.0,
+  "h_m": 2.0,
+  "patches": 4,
+  "lock": null,
+  "roll_px": 0,
+  "kind": "stone",
+  "px": [
+   1024,
+   1024
+  ],
+  "turn": "small",
+  "note": "FX4: 2 x 2 tile atlas (the tile + 3 turned / mirrored / rolled variants cut in along irregular lines); tile_size_m stays the tile, parts/kit/jpparts/uvwood.py turns + offsets + maybe mirrors each stone face / solid into it"
+ },
+ "macro": {
+  "stage3": "JP\\common\\materials\\macro\\jp_m_macro_stone_w<n>_mc.paa",
+  "aside_up": [
+   0.177,
+   0.177
+  ]
+ }
 }

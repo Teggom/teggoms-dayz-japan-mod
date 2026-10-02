@@ -5447,8 +5447,8 @@
    "variant": "s",
    "pass": true,
    "faces": {
-    "Resolution 1": 1946,
-    "Resolution 2": 30,
+    "Resolution 1": 2106,
+    "Resolution 2": 46,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -5493,8 +5493,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1946,
-       "Resolution 2": 30,
+       "Resolution 1": 2106,
+       "Resolution 2": 46,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
@@ -5502,7 +5502,7 @@
       "extra": [],
       "budget": 1500,
       "over_budget": {
-       "over_pct": 29.7,
+       "over_pct": 40.4,
        "caps": [
         1500
        ],
@@ -5670,8 +5670,8 @@
    "variant": "l",
    "pass": true,
    "faces": {
-    "Resolution 1": 1946,
-    "Resolution 2": 30,
+    "Resolution 1": 2106,
+    "Resolution 2": 46,
     "Geometry": 20,
     "View Geometry": 20,
     "Fire Geometry": 20
@@ -5716,8 +5716,8 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 1946,
-       "Resolution 2": 30,
+       "Resolution 1": 2106,
+       "Resolution 2": 46,
        "Geometry": 20,
        "View Geometry": 20,
        "Fire Geometry": 20
@@ -5725,7 +5725,7 @@
       "extra": [],
       "budget": 1500,
       "over_budget": {
-       "over_pct": 29.7,
+       "over_pct": 40.4,
        "caps": [
         1500
        ],
@@ -8352,12 +8352,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       },
@@ -9029,7 +9029,7 @@
    "variant": "std",
    "pass": true,
    "faces": {
-    "Resolution 1": 141,
+    "Resolution 1": 181,
     "Resolution 2": 30
    },
    "checks": [
@@ -9067,7 +9067,7 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 141,
+       "Resolution 1": 181,
        "Resolution 2": 30
       },
       "extra": [],
@@ -9437,12 +9437,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -9622,12 +9622,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -9651,10 +9651,6 @@
     "warning_lines": [],
     "exit": 0
    }
-  },
-  "PBO": {
-   "pass": true,
-   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_furniture.pbo"
   }
  },
  "summary": {

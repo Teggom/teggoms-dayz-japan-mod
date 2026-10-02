@@ -69,7 +69,8 @@ def twisted(p0, p1, r, mats, turns=3.0, seg=14, wear=None, vis=(1,)):
 def fringe(p, length, r, mat, n=8, wear=None, seed=1, vis=(1,)):
     """A cloth / straw tassel: a bound collar and n strands fanning out and down."""
     rg = random.Random(seed)
-    out = [_w(lathe([(0.0, 0.0), (r * 1.15, 0.0), (r * 1.2, -0.03), (r * 1.1, -0.06), (0.0, -0.06)], 8, mat, vis=vis),
+    out = [_w(lathe([(0.0, 0.0), (r * 1.15, 0.0), (r * 1.2, -0.03), (r * 1.1, -0.06), (0.0, -0.06)][::-1], 8, mat,  # FX4: outward
+                    vis=vis),
               wear)]
     out[-1] = xf(out[-1], t=p)
     for k in range(n):
@@ -142,7 +143,9 @@ def waniguchi():
             (0.13, T - 0.004), (0.135, T + 0.002), (0.14, T - 0.004), (0.185, T - 0.010), (R - 0.008, T - 0.008),
             (R, T * 0.45), (R + 0.006, 0.0), (R, -T * 0.45), (R - 0.008, -T + 0.008), (0.14, -T + 0.004),
             (0.0, -T)]
-    g = lathe(prof, 28, BRONZE, vis=(1,))
+    # FX4 (2026-10-01): the profile ran face -> rim -> back, i.e. clockwise, so fkit.lathe turned every face inward
+    # (the gong was inside out: its far side showed through). Traversed the other way it is a closed outward solid.
+    g = lathe(prof[::-1], 28, BRONZE, vis=(1,))
     out.append(xf(g, rx=90.0, t=(0.0, gy, 0.0)))
     # the mouth: a dark slit band round the lower rim (from 4 to 8 o'clock)
     for k in range(9):
@@ -222,9 +225,15 @@ def bonsho_body(H, D, y0, mat=BRONZE):
     both sides, the two-headed dragon lug (ryuzu) with its jewel. Returns (solids, striking-seat y)."""
     R = D / 2
     out = []
-    prof = [(0.0, y0), (R * 0.55, y0), (R * 0.80, y0 - 0.02), (R * 0.92, y0 - 0.06), (R * 0.95, y0 - 0.12),
-            (R * 0.97, y0 - H * 0.6), (R * 0.99, y0 - H * 0.85), (R, y0 - H + 0.04), (R * 1.025, y0 - H + 0.01),
-            (R * 1.02, y0 - H), (R * 0.90, y0 - H), (R * 0.88, y0 - H + 0.06), (0.0, y0 - H + 0.06)]
+    # FX4 (2026-10-01, Stephen: 'a backwards texture: you can see into it'): the old profile ran DOWN the outside (fkit
+    # lathe wants the material on the left: up the outside), so every face pointed inward, and the mouth was a flat
+    # disc 6 cm up. Now a real hollow casting: the inside crown, down the inner wall (faces turned into the cavity),
+    # the thickened lip (komaki) with a flat underside, up the outside to the crown. One closed profile, axis to axis.
+    prof = [(0.0, y0 - 0.075), (R * 0.50, y0 - 0.085), (R * 0.74, y0 - 0.11), (R * 0.83, y0 - 0.17),
+            (R * 0.86, y0 - H * 0.6), (R * 0.87, y0 - H * 0.85), (R * 0.86, y0 - H + 0.05), (R * 0.88, y0 - H),
+            (R * 1.02, y0 - H), (R * 1.025, y0 - H + 0.01), (R, y0 - H + 0.04), (R * 0.99, y0 - H * 0.85),
+            (R * 0.97, y0 - H * 0.6), (R * 0.95, y0 - 0.12), (R * 0.92, y0 - 0.06), (R * 0.80, y0 - 0.02),
+            (R * 0.55, y0), (0.0, y0)]
     out.append(lathe(prof, 32, mat, vis=(1,)))
     for f in (0.38, 0.66):                                                     # horizontal belts
         yb = y0 - H * f

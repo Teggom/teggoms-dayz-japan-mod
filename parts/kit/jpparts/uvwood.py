@@ -23,11 +23,20 @@ What it does, on a finished Part (all solids finalized, in the MODEL frame, i.e.
   * Deterministic: seed = FNV-1a(salt = model name, group key from rounded geometry): rebuild-stable, order-free.
   * Grain along the member is upstream's job (core.face_uvs 'grain' / sidecar 'along member'); axes never swapped.
 
-Not touched: materials without an "atlas" in their sidecar (text decals, cells, stone, roofs, end grain, firewood),
-except the moss decal (MOSS below: flips + offsets per decal, no patches).
+Stone (FX4, 2026-10-01; Stephen: 'stone torii columns still show duplicated textures'): a sidecar atlas with
+"kind": "stone" (research/materials/make_stone_atlas.py: 2 x 2 tiles, the tile + 3 turned / mirrored / rolled variants,
+tiling in u AND v) gets the same plane / solid groups, but each group's map also TURNS:  (a, b) -> R(t) (a, b), then
+u' = fu * a' * (tile / W) + U0,  v' = b' * (tile_v / H) + V0  with U0, V0 anywhere in the atlas. "turn": "any" =
+t uniform 0-360 deg (isotropic lichen stone); "small" = t within +-8 deg or 180 +-8 deg (rain streaks / tool marks run
+along v and stay vertical on a vertical face). So the 8 faces of an octagonal post, the kasagi's faces, a lantern's
+pieces each show their own patch.
+
+Not touched: materials without an "atlas" in their sidecar (text decals, cells, field / river stone, roofs, end grain,
+firewood), except the moss decal (MOSS below: flips + offsets per decal, no patches).
 Called by core.Part.lods() (idempotent: solid._uvw) and by buildings/pipeline.py before zfight.resolve.
 """
 import bisect
+import math
 import os
 import random
 
@@ -70,9 +79,11 @@ def _png_ok(core, mat):
     p = core.png_path(mat, "_w1")
     if os.path.isfile(p):
         w, h = Image.open(p).size
-        if w != 2048:
-            raise RuntimeError("uvwood: %s is %dx%d, not the 2048x1024 atlas: run research/materials/"
-                               "make_wood_atlas.py after the maker (and pack jp_common)" % (p, w, h))
+        want = (core.mat_info(mat).get("atlas") or {}).get("px", [2048, 1024])
+        if [w, h] != list(want):
+            raise RuntimeError("uvwood: %s is %dx%d, not the %dx%d atlas: run research/materials/"
+                               "make_wood_atlas.py / make_stone_atlas.py after the maker (and pack jp_common)"
+                               % (p, w, h, want[0], want[1]))
     return True
 
 
@@ -96,6 +107,16 @@ def _map(salt, key, flip, band=False):
     fv = -1.0 if (flip and ALLOW_FLIP and r.random() < 0.5) else 1.0
     h = r.randrange(2)
     return U0, V0, fu, fv, h
+
+
+def _turn(salt, key, mode):
+    """FX4 stone: the group's turn (cos, sin), from its own seed (the wood maps above stay as they were)."""
+    r = random.Random(fnv("%s|%s|turn" % (salt, key)))
+    if mode == "any":
+        a = r.uniform(0.0, 2.0 * math.pi)
+    else:
+        a = math.radians(r.uniform(-8.0, 8.0)) + (math.pi if r.random() < 0.5 else 0.0)
+    return math.cos(a), math.sin(a)
 
 
 def remap_part(P, salt=None):
@@ -166,7 +187,11 @@ def remap_part(P, salt=None):
                 key = ("s|%s|%s" % (m, sig)) if sg else plane_key(m, n, _dot(n, s.verts[s.faces[fi][0]]))
                 U0, V0, fu, fv, h = _map(salt, key, True)
                 ku, kv = mi["tile"] / sp["w_m"], mi["tile_v"] / sp["h_m"]
-                new.append([(fu * a * ku + U0, fv * b * kv + V0) for a, b in uv])
+                if sp.get("kind") == "stone":
+                    c, sn = _turn(salt, key, sp.get("turn", "small"))
+                    new.append([(fu * (a * c - b * sn) * ku + U0, (a * sn + b * c) * kv + V0) for a, b in uv])
+                else:
+                    new.append([(fu * a * ku + U0, fv * b * kv + V0) for a, b in uv])
             groups.add(key)
             nf += 1
         s.fuv = new                     # rebind (transformed / merged copies share the old list object)

@@ -1,0 +1,189 @@
+{
+ "stone": {
+  "stone_carved_aged": {
+   "tile_px": 1024,
+   "atlas_px": 2048,
+   "plan": [
+    {
+     "q": 1,
+     "k": 3,
+     "flip": true,
+     "dx": 195,
+     "dy": 412
+    },
+    {
+     "q": 2,
+     "k": 0,
+     "flip": false,
+     "dx": 733,
+     "dy": 252
+    },
+    {
+     "q": 3,
+     "k": 2,
+     "flip": false,
+     "dx": 327,
+     "dy": 656
+    }
+   ],
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.141,
+     "quadrant_L": [
+      35.6,
+      34.7,
+      34.8,
+      34.4
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.146,
+     "quadrant_L": [
+      30.2,
+      29.8,
+      29.8,
+      29.5
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.046,
+     "quadrant_L": [
+      27.0,
+      26.8,
+      26.9,
+      26.6
+     ]
+    }
+   }
+  },
+  "stone_carved": {
+   "tile_px": 512,
+   "atlas_px": 1024,
+   "plan": [
+    {
+     "q": 1,
+     "k": 2,
+     "flip": false,
+     "dx": 192,
+     "dy": 341
+    },
+    {
+     "q": 2,
+     "k": 2,
+     "flip": true,
+     "dx": 505,
+     "dy": 310
+    },
+    {
+     "q": 3,
+     "k": 0,
+     "flip": true,
+     "dx": 214,
+     "dy": 377
+    }
+   ],
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.188,
+     "quadrant_L": [
+      34.7,
+      35.0,
+      34.8,
+      34.8
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.016,
+     "quadrant_L": [
+      29.6,
+      30.1,
+      29.9,
+      29.8
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.015,
+     "quadrant_L": [
+      26.5,
+      27.0,
+      26.8,
+      26.7
+     ]
+    }
+   }
+  },
+  "stone_cut": {
+   "tile_px": 512,
+   "atlas_px": 1024,
+   "plan": [
+    {
+     "q": 1,
+     "k": 2,
+     "flip": true,
+     "dx": 198,
+     "dy": 457
+    },
+    {
+     "q": 2,
+     "k": 0,
+     "flip": true,
+     "dx": 65,
+     "dy": 309
+    },
+    {
+     "q": 3,
+     "k": 2,
+     "flip": false,
+     "dx": 254,
+     "dy": 509
+    }
+   ],
+   "wears": {
+    "_w0": {
+     "atlas_vs_tile_dE": 0.143,
+     "quadrant_L": [
+      61.5,
+      61.6,
+      61.4,
+      61.8
+     ]
+    },
+    "_w1": {
+     "atlas_vs_tile_dE": 0.13,
+     "quadrant_L": [
+      58.5,
+      58.9,
+      58.3,
+      58.9
+     ]
+    },
+    "_w2": {
+     "atlas_vs_tile_dE": 0.634,
+     "quadrant_L": [
+      56.4,
+      56.6,
+      56.2,
+      56.7
+     ]
+    }
+   }
+  }
+ },
+ "macro_shift_dE": {
+  "stone_carved_aged": {
+   "_w0": 0.16,
+   "_w1": 0.1,
+   "_w2": 0.26
+  },
+  "stone_carved": {
+   "_w0": 0.14,
+   "_w1": 0.11,
+   "_w2": 0.36
+  },
+  "stone_cut": {
+   "_w0": 1.26,
+   "_w1": 1.89,
+   "_w2": 2.44
+  }
+ }
+}

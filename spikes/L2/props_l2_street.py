@@ -757,22 +757,34 @@ def fire_watch(kind):
             P.add(W(-0.46, 0.46, PY - 0.03, PY, z0 + 0.004, z0 + 0.164, WOOD, vis=(1, 2)))
         P.add(col(-0.46, 0.46, PY - 0.12, PY, -0.86, -0.03))
         P.road([(-0.46, PY, -0.86), (0.46, PY, -0.86), (0.46, PY, -0.03), (-0.46, PY, -0.03)], "boards_ext")
-        # railing round the back and the sides (0.9 m), posts at the back corners carry the roof
+        # railing round the back and the sides (0.9 m), four corner posts carry the roof.
+        # FX4 (2026-10-01, Stephen: 'too short at the top: you clip into its roof'): the roof was 1.10 m over the deck
+        # and the bell hung over the deck at head height. Now the roof underside (and its tie beams) is RT = deck +
+        # 2.20 m (a 1.8 m player + margin; PLAYBOOK D4 asks 2.05-2.10), carried by four corner posts, and the bell
+        # hangs from the roof's back overhang OUTSIDE the back rail (struck over the rail), clear of the deck.
+        RT = PY + 2.20                                          # roof underside / tie-beam underside
         for sx in (-1, 1):
-            P.add(W(sx * 0.44 - 0.03, sx * 0.44 + 0.03, PY, PY + 1.10, -0.86, -0.80, WOOD, vis=(1, 2)))
-            P.add(col(sx * 0.44 - 0.03, sx * 0.44 + 0.03, PY, PY + 1.10, -0.86, -0.80))
-            P.add(W(sx * 0.44 - 0.02, sx * 0.44 + 0.02, PY + 0.86, PY + 0.92, -0.86, -0.04, WOOD, vis=(1, 2)))
-            P.add(col(sx * 0.44 - 0.02, sx * 0.44 + 0.02, PY + 0.10, PY + 0.92, -0.80, -0.06))
-        P.add(W(-0.47, 0.47, PY + 0.86, PY + 0.92, -0.86, -0.80, WOOD, vis=(1, 2)))
+            for (za, zb) in ((-0.86, -0.80), (-0.07, -0.01)):   # back and front corner posts
+                P.add(W(sx * 0.44 - 0.03, sx * 0.44 + 0.03, PY, RT, za, zb, WOOD, vis=(1, 2)))
+                P.add(col(sx * 0.44 - 0.03, sx * 0.44 + 0.03, PY, RT, za, zb))
+            P.add(W(sx * 0.44 - 0.02, sx * 0.44 + 0.02, PY + 0.86, PY + 0.92, -0.80, -0.07, WOOD, vis=(1, 2)))
+            P.add(col(sx * 0.44 - 0.02, sx * 0.44 + 0.02, PY + 0.10, PY + 0.92, -0.80, -0.07))
+            P.add(W(sx * 0.44 - 0.025, sx * 0.44 + 0.025, RT - 0.08, RT, -0.80, -0.07, WOOD, vis=(1, 2)))   # side tie
+        P.add(W(-0.41, 0.41, PY + 0.86, PY + 0.92, -0.86, -0.80, WOOD, vis=(1, 2)))
         P.add(col(-0.41, 0.41, PY + 0.10, PY + 0.92, -0.86, -0.80))
-        P.add(W(-0.55, 0.55, PY + 1.10, PY + 1.14, -0.95, 0.12, WOOD, vis=(1, 2)))       # the little roof
+        for (za, zb) in ((-0.86, -0.80), (-0.07, -0.01)):                                   # back + front ties
+            P.add(W(-0.41, 0.41, RT - 0.08, RT, za, zb, WOOD, vis=(1, 2)))
+        P.add(W(-0.60, 0.60, RT, RT + 0.04, -1.25, 0.15, WOOD, vis=(1, 2)))                 # the little roof
+        bz, by = -1.06, PY + 0.98                                                            # bell outside the back rail
         bell = lathe([(0.0, 0.0), (0.13, 0.0), (0.11, 0.08), (0.09, 0.26), (0.05, 0.30), (0.0, 0.31)], 10, IRON,
                      vis=(1, 2))
-        P.add(xf(bell, t=(0.0, PY + 0.45, -0.55)))
-        P.add(cord((0.0, PY + 0.76, -0.55), (0.0, PY + 1.10, -0.55), 0.008))
-        P.add(pole((0.30, PY + 0.70, -0.82), (0.36, PY + 0.40, -0.80), 0.012, WOOD, n=4, vis=(1,)))   # the striker
+        P.add(xf(bell, t=(0.0, by, bz)))
+        P.add(cord((0.0, by + 0.31, bz), (0.0, RT, bz), 0.008))
+        P.add(pole((0.30, PY + 1.20, -0.88), (0.36, PY + 0.90, -0.88), 0.012, WOOD, n=4, vis=(1,)))   # the striker
         P.add(W(-0.25, 0.25, -0.5, 5.84, -0.05, 0.05, WOOD, vis=(3,)))
-        P.add(W(-0.46, 0.46, PY - 0.12, PY + 1.14, -0.86, -0.03, WOOD, vis=(3,)))
+        P.add(W(-0.46, 0.46, PY - 0.12, RT, -0.86, -0.01, WOOD, vis=(3,)))
+        P.add(W(-0.60, 0.60, RT, RT + 0.04, -1.25, 0.15, WOOD, vis=(3,)))
+        P.dim("deck_head_room", 2.20, RT - PY, tol=0.001)          # FX4: >= 2.10 clear over the deck (Stephen)
         # memory points (vanilla names and roles, see above)
         P.memory = {
             "ladder1": [(0.0, PY + 0.675, 0.03), (0.0, 0.54, 0.03)],
@@ -782,10 +794,11 @@ def fire_watch(kind):
             "ladder1_bottom_front": [(0.0, 0.0, 0.10)],
             "ladder1_top_front": [(0.0, PY, 0.0)],
         }
-        P.dim("height", 6.3, 5.84 + 0.5, tol=0.1)
+        P.dim("height", 7.64, RT + 0.04 + 0.5, tol=0.1)            # FX4: roof raised (was 6.3)
         P.dim("deck_y", 4.90, PY, tol=0.001)
         P.notes.append("fire-watch ladder with an alarm bell (Kyoho fire rules, PLAYBOOK 1 / T12); CLIMBABLE (FP1): "
-                       "climb the +z face, step off onto the railed lookout deck at 4.90 m; Land_ class (class=house)")
+                       "climb the +z face, step off onto the railed lookout deck at 4.90 m; Land_ class (class=house); "
+                       "FX4: roof 2.20 m over the deck on four posts, the bell outside the back rail")
     return P
 
 

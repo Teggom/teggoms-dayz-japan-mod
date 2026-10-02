@@ -355,6 +355,9 @@ def macro_for(mid, wear):
     if key == "roof_thatch" and wear in ("_w1", "_w2"):
         su, sv = MACRO["thatch"]
         return MACRO_TEX % ("thatch", wear[1:]), su, sv
+    if key.startswith("stone_"):                        # FX4 (2026-10-01): stone atlases + macro (make_stone_atlas.py)
+        import make_stone_atlas as SA
+        return SA.macro_for_stone(mid, wear)
     return None
 
 

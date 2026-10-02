@@ -299,7 +299,10 @@ def ridge_ladder():
         if sx < 0:
             s = xf(s, ry=180.0)
         out.append(xf(s, t=(0.0, yt + 0.05, 0.0)))
-    bell = lathe([(0.0, 0.0), (0.09, -0.02), (0.11, -0.20), (0.12, -0.23), (0.0, -0.22)], 10, BRONZE, vis=(1,))
+    # FX4 (2026-10-01): the alarm bell was traversed down the outside (inside out) with a flat closing disc: now a
+    # hollow casting (inside crown, inner wall facing the cavity, a lip with a flat underside, up the outside)
+    bell = lathe([(0.0, -0.045), (0.065, -0.055), (0.088, -0.12), (0.098, -0.205), (0.10, -0.23), (0.12, -0.23),
+                  (0.11, -0.20), (0.09, -0.02), (0.0, 0.0)], 10, BRONZE, vis=(1,))
     out.append(xf(bell, t=(0.0, yt - 0.02, 0.0)))
     out.append(pole((0.0, yt - 0.24, 0.0), (0.0, yt - 0.60, 0.0), 0.006, ROPE, n=3, vis=(1,)))
     wear_all(out, "_w1")

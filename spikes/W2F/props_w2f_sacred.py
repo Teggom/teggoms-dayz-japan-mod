@@ -537,7 +537,9 @@ def bonsho(H=0.95, D=0.56):
         out.append(box(x - 0.012, x + 0.012, -0.035, 0.0, -0.012, 0.012, IRON, vis=(1,)))       # the eye
     wear_all(out, "_w1")
     P.adds(out)
-    P.add(lathe([(0.0, y0), (R, y0 - 0.08), (R, y0 - H), (0.0, y0 - H)], 8, BRONZE, vis=(2,), smooth=False))
+    # FX4: the LOD 2 bell hollow and turned outward too (was traversed down the outside = inside out)
+    P.add(lathe([(0.0, y0 - 0.10), (R * 0.84, y0 - 0.16), (R * 0.88, y0 - H), (R, y0 - H), (R, y0 - 0.08), (0.0, y0)],
+                8, BRONZE, vis=(2,), smooth=False))
     P.add(box(lx1, lx0, ys - 0.07, ys + 0.07, -0.07, 0.07, WEATH, vis=(2,)))
     P.add(cyl_col(R, y0 - H, y0, n=8, mat=BRONZE))
     P.add(col(lx1, lx0, ys - 0.08, ys + 0.08, -0.08, 0.08, WEATH))

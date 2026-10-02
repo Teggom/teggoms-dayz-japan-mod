@@ -133,7 +133,7 @@ def sg_tobacco(state="intact"):
 
 def kasa(x, z, r=0.20, h=0.10, y0=0.0, wear=None, tilt=0.0):
     """A sedge travel hat (sugegasa), a shallow cone, lying crown up."""
-    s = lathe([(0.0, y0 + h), (r * 0.15, y0 + h * 0.9), (r, y0), (r - 0.01, y0), (0.0, y0 + h - 0.01)], 8, MUSHIRO,
+    s = lathe([(0.0, y0 + h), (r * 0.15, y0 + h * 0.9), (r, y0), (r - 0.01, y0), (0.0, y0 + h - 0.01)][::-1], 8, MUSHIRO,  # FX4
               vis=(1,), wear=wear)
     return xf(s, rz=tilt, t=(x, 0.0, z))
 

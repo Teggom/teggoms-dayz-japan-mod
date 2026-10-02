@@ -8287,12 +8287,12 @@
       {
        "material": "jp_m_stone_cut_w1",
        "mean_srgb": [
-        160.3,
-        137.4,
-        107.5
+        160.7,
+        137.8,
+        107.8
        ],
        "palette": "stone_granite",
-       "dE76": 1.0,
+       "dE76": 0.9,
        "tolerance": 9,
        "pass": true
       }
@@ -14017,14 +14017,14 @@
    "variant": "tower",
    "pass": true,
    "faces": {
-    "Resolution 1": 358,
-    "Resolution 2": 176,
-    "Resolution 3": 12,
-    "Geometry": 72,
+    "Resolution 1": 394,
+    "Resolution 2": 212,
+    "Resolution 3": 18,
+    "Geometry": 84,
     "Memory": 0,
     "Roadway": 1,
-    "View Geometry": 60,
-    "Fire Geometry": 72
+    "View Geometry": 72,
+    "Fire Geometry": 84
    },
    "checks": [
     {
@@ -14070,14 +14070,14 @@
      "pass": true,
      "detail": {
       "faces": {
-       "Resolution 1": 358,
-       "Resolution 2": 176,
-       "Resolution 3": 12,
-       "Geometry": 72,
+       "Resolution 1": 394,
+       "Resolution 2": 212,
+       "Resolution 3": 18,
+       "Geometry": 84,
        "Memory": 0,
        "Roadway": 1,
-       "View Geometry": 60,
-       "Fire Geometry": 72
+       "View Geometry": 72,
+       "Fire Geometry": 84
       },
       "extra": []
      }
@@ -14088,9 +14088,17 @@
      "pass": true,
      "detail": [
       {
+       "name": "deck_head_room",
+       "expected": 2.2,
+       "measured": 2.2,
+       "tol": 0.001,
+       "source": "build_list",
+       "ok": true
+      },
+      {
        "name": "height",
-       "expected": 6.3,
-       "measured": 6.34,
+       "expected": 7.64,
+       "measured": 7.64,
        "tol": 0.1,
        "source": "build_list",
        "ok": true
@@ -14121,7 +14129,7 @@
      "name": "Geometry: closed convex components, mass, autocenter=0",
      "pass": true,
      "detail": {
-      "components": 12,
+      "components": 14,
       "problems": {},
       "mass": 60.0
      }
@@ -14140,7 +14148,7 @@
      "name": "View Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 10
+      "components": 12
      }
     },
     {
@@ -14148,7 +14156,7 @@
      "name": "Fire Geometry components closed + convex",
      "pass": true,
      "detail": {
-      "components": 12
+      "components": 14
      }
     },
     {
@@ -16185,10 +16193,6 @@
     "warning_lines": [],
     "exit": 0
    }
-  },
-  "PBO": {
-   "pass": true,
-   "detail": "D:\\DayZ-Server_AI-20260907-MultiMap\\@Japan\\addons\\jp_site.pbo"
   }
  },
  "summary": {
