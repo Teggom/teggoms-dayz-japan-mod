@@ -127,6 +127,21 @@
   short of the kuri's genkan porch and is misaligned with it; (3) the level change is a 0.70 m step-off instead of a
   stair (K3's stair broke the connector fit on a 2-ken run). The honjin corridor **J3** (`Land_JP_Roka_Honjin`,
   omote <-> oku, both floors 0.50, connected both ends) worked: Stephen did not flag it. K3_NOTES.md §6 points here.
+- **Fishing industry suite (must-have)** (Stephen, 2026-10-02: "Japan was a massive fishing industry, so having
+  accurate boats in towns or docks or near the shore is a must"). Today the pieces are scattered and mostly unbuilt:
+  the coastal house (built in 3a, with net store + a beached boat), KEEP_DWELLINGS beach hut (ama-goya), boat shed
+  (funa-goya), net shed; KEEP_OUTDOOR "Shore and salt" (16: beached boats, net and fish racks) and "Canals and boats"
+  (8); KEEP_TRADES fishmonger, boatbuilder's yard (☆), river fish weir house (☆); G1 site type g (shore landing:
+  harbour, beach, lake shore); the Nihonbashi fish market (landmark). Make it ONE planned suite, researched first
+  (sourced, 1730 era test) and built as its own wave once there is a shore to place it on: **period-accurate boats**
+  (small coastal and river fishing boats, a ferry, a lighter / cargo boat, the big coastal freighter as a
+  landmark-scale piece; beached, moored and abandoned / wrecked states), **landings** (beach slipways, stone landing
+  steps, timber jetties / piers, mooring posts), **the fishing village** (net boss compound with net stores, net
+  drying and mending racks, fish-drying racks, processing sheds such as dried-fish / fish-fertiliser / bonito works if
+  they pass the era test, boat sheds, the fish market / wholesaler), **river and lake fishing** (weirs, traps,
+  cormorant-fishing kit if in era), and the props (nets, floats, baskets, rods, oars, the sculling oar, anchors,
+  lanterns). Placement needs a shore: the test island has none near the showcase, so either a shore district on the
+  test island or wait for the map. Not scheduled yet; Stephen picks when.
 
 ### Parked (not in this plan until Stephen raises them)
 - Terrain-tool size test; the real map build; more horizontal in-between roads
