@@ -1,0 +1,97 @@
+{
+ "key": "f_tr_booth_misemono",
+ "class": "Land_JP_Booth_Misemono_Furnished",
+ "name": "jp_booth_misemono_furnished",
+ "model": "\\JP\\buildings\\tr_furnished\\jp_booth_misemono_furnished.p3d",
+ "model_dir": "tr_furnished",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 3151,
+  "Resolution 2": 753,
+  "Resolution 3": 347,
+  "Geometry": 872,
+  "Memory": 0,
+  "Roadway": 6,
+  "View Geometry": 867,
+  "Fire Geometry": 867
+ },
+ "loot_points": 11,
+ "config_class": "\tclass Land_JP_Booth_Misemono_Furnished: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Show booth (misemono-goya): mat walls, stage, furnished (cage, benches, sign)\";\n\t\tmodel=\"\\JP\\buildings\\tr_furnished\\jp_booth_misemono_furnished.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_booth_misemono_furnished_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_booth_misemono_furnished: Default\n\t{\n\t\tskeletonName=\"jp_booth_misemono_furnished_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Booth_Misemono_Furnished\">",
+  "\t\t\t\t<usage name=\"Town\" />",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"0.400714 0.050000 0.162143\" range=\"0.441364\" height=\"1.103410\" />",
+  "\t\t\t\t\t\t<point pos=\"0.143571 0.050000 -1.135000\" range=\"0.428571\" height=\"1.071429\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.370000 0.600000 2.107857\" range=\"0.389857\" height=\"0.974643\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.370000 0.600000 -2.107857\" range=\"0.462143\" height=\"1.155357\" />",
+  "\t\t\t\t</container>",
+  "\t\t\t\t<container name=\"lootshelves\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<category name=\"containers\" />",
+  "\t\t\t\t\t\t<category name=\"clothes\" />",
+  "\t\t\t\t\t\t<category name=\"food\" />",
+  "\t\t\t\t\t\t<tag name=\"shelves\" />",
+  "\t\t\t\t\t\t<point pos=\"1.045000 0.480000 1.918000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.045000 0.480000 1.018000\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.045000 0.480000 -1.024800\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"1.045000 0.480000 -1.924800\" range=\"0.250000\" height=\"0.625000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.454500 1.550000 1.068000\" range=\"0.150000\" height=\"0.375000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.985000 1.000000 0.150000\" range=\"0.200000\" height=\"0.500000\" />",
+  "\t\t\t\t\t\t<point pos=\"-1.981000 0.900000 -0.503000\" range=\"0.200000\" height=\"0.500000\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "proxies": {
+  "Resolution 1": 12,
+  "Geometry": 8,
+  "View Geometry": 8,
+  "Fire Geometry": 8
+ },
+ "proxy_addons": [
+  "JP_Furniture",
+  "JP_Site"
+ ],
+ "loot_containers": {
+  "lootFloor": 4,
+  "lootshelves": 7
+ },
+ "site": [
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_nobori_shop.p3d",
+   "x": -2.1,
+   "z": 3.175,
+   "yaw": 0.0,
+   "y": 0.0,
+   "why": "a show banner"
+  },
+  {
+   "p3d": "\\JP\\site\\street\\jp_s_nobori_shop.p3d",
+   "x": 2.1,
+   "z": 3.175,
+   "yaw": 0.0,
+   "y": 0.0,
+   "why": "a show banner"
+  }
+ ],
+ "params": {
+  "base": "tr_booth_misemono",
+  "dress": "w3b_misemono"
+ },
+ "bbox": [
+  -3.15,
+  3.15,
+  -0.272,
+  4.324,
+  -3.086,
+  3.086
+ ]
+}

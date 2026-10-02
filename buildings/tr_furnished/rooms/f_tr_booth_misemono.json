@@ -1,0 +1,95 @@
+{
+ "building": "Land_JP_Booth_Misemono_Furnished",
+ "p3d": "\\JP\\buildings\\tr_furnished\\jp_booth_misemono_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "pit",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -2.66,
+    -0.06
+   ],
+   "doors": [],
+   "note": "the audience pit: plank benches on the earth, the rolled-mat entrance",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -0.385,
+    2.215
+   ],
+   "fittings": [
+    {
+     "kind": "benches",
+     "room": "pit",
+     "note": "plank benches for the audience (props)",
+     "rect": [
+      -2.38,
+      2.38,
+      0.395,
+      1.375
+     ]
+    },
+    {
+     "kind": "signboard",
+     "room": "pit",
+     "note": "the show's signboard over the entrance, outside (a front prop); banners either side",
+     "centre": [
+      0.0,
+      2.725
+     ],
+     "size": [
+      2.4,
+      0.2
+     ],
+     "yaw": 0.0,
+     "y": 2.25
+    }
+   ]
+  },
+  {
+   "name": "stage",
+   "tag": "storage",
+   "floor": "boards",
+   "level_m": 0.6,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -4.49,
+    -2.8
+   ],
+   "doors": [],
+   "note": "the low board stage",
+   "enclosed": true,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -2.215,
+    -0.525
+   ],
+   "fittings": [
+    {
+     "kind": "show",
+     "room": "stage",
+     "note": "the show's things left on the stage (a cage, a curtain rail, a drum)",
+     "rect": [
+      -2.47,
+      2.47,
+      -2.115,
+      -0.755
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 11,
+ "loot_by_room": {
+  "pit": 6,
+  "stage": 5
+ }
+}

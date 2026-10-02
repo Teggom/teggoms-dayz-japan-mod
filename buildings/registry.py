@@ -934,6 +934,27 @@ W3B_SHELLS = [
 ]
 BUILDINGS += W3B_SHELLS
 
+# W3B furnished variants (the C3 / W2F / D3 pattern: furnishkit + buildings/w3b_sets.py)
+W3B_FURNISHED = [
+    _furn("f_tr_sento", "tr_sento_sangawara", "w3b_sento", "Furnished", "furnished (bandai, cubbies, the drained tub)"),
+    _furn("f_tr_stablerow", "tr_stablerow_itabuki", "w3b_stablerow", "Furnished", "furnished (tack, fodder)"),
+    _furn("f_tr_booth_barber", "tr_booth_barber", "w3b_barber", "Furnished", "furnished (the barber's kit)"),
+    _furn("f_tr_booth_misemono", "tr_booth_misemono", "w3b_misemono", "Furnished", "furnished (cage, benches, sign)"),
+    _furn("f_tr_ws_joinery", "tr_ws_doma_sangawara", "w3b_joinery", "Joinery", "furnished: joiner"),
+    _furn("f_tr_ws_turner", "tr_ws_doma_itabuki", "w3b_turner", "Turner", "furnished: woodturner + abacus maker"),
+    _furn("f_tr_ws_basket", "tr_ws_doma_itabuki", "w3b_basket", "Basket", "furnished: bamboo + basket maker"),
+    _furn("f_tr_ws_polisher", "tr_ws_bench_sangawara", "w3b_polisher", "Polisher", "furnished: sword polisher"),
+    _furn("f_tr_ws_lacquer", "tr_ws_bench_itabuki", "w3b_lacquer", "Lacquer", "furnished: lacquerer"),
+    _furn("f_tr_ws_kinko", "tr_ws_bench_sangawara", "w3b_kinko", "Kinko", "furnished: sword-fittings maker"),
+    _furn("f_tr_timber_saw", "tr_timber_saw", "w3b_saw_shed", "Furnished", "furnished (the sawing trestle)"),
+    _furn("f_tr_timber_store", "tr_timber_store", "w3b_timber_store", "Furnished", "furnished (upright timber, planks)"),
+    _furn("f_tr_timber_shingle", "tr_timber_shingle", "w3b_shingle_shed", "Furnished", "furnished (splitting block)"),
+    _furn("f_tr_foundry", "tr_foundry_itabuki", "w3b_foundry", "Furnished", "furnished (cupola, bellows, moulds)"),
+]
+for _f in W3B_FURNISHED:                      # W3B's own model folder
+    _f["dir"] = _f["model_dir"] = "tr_furnished"
+BUILDINGS += W3B_FURNISHED
+
 
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named

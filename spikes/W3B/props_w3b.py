@@ -71,7 +71,7 @@ def yubune(staved=False):
     board (fumidai) along the bather's side, drained: a dark sludge line and leaves at the bottom. +z = the bather's
     side (the step), -z = the end wall (the boiler's flue box at the back)."""
     P = LPart("yubune", budget="furniture", mass=300.0, anchor="floor")
-    w, d, h, t = 1.50, 2.60, 0.78, 0.05
+    w, d, h, t = 1.25, 2.10, 0.78, 0.05
     x0, x1, z0, z1 = -w / 2, w / 2, -d / 2, d / 2
     out = [W(x0, x1, 0.0, 0.10, z0 + 0.10, z0 + 0.22, SOOTW, vis=(1,)), W(x0, x1, 0.0, 0.10, z1 - 0.22, z1 - 0.10,
                                                                          SOOTW, vis=(1,)),

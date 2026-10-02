@@ -1,0 +1,87 @@
+{
+ "building": "Land_JP_Foundry_Itabuki_Furnished",
+ "p3d": "\\JP\\buildings\\tr_furnished\\jp_foundry_itabuki_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    7.220000000000001,
+    -5.4,
+    -0.15
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the foundry floor: the furnace + bellows at the back, the sand casting floor, the goods corner",
+   "enclosed": false,
+   "rect_model": [
+    -3.58,
+    3.58,
+    -2.67,
+    2.58
+   ],
+   "fittings": [
+    {
+     "kind": "furnace",
+     "room": "doma",
+     "note": "the koshiki-ro (stacked clay-ring cupola) on its base, under the smoke vent (specialty prop)",
+     "centre": [
+      -1.365,
+      -1.88
+     ],
+     "size": [
+      1.2,
+      1.2
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "bellows",
+     "room": "doma",
+     "note": "the treadle bellows (fumi-fuigo) beside the furnace, its pipe to the tuyere (specialty prop)",
+     "centre": [
+      0.185,
+      -1.83
+     ],
+     "size": [
+      1.1,
+      1.7
+     ],
+     "yaw": 90.0
+    },
+    {
+     "kind": "casting_floor",
+     "room": "doma",
+     "note": "the sand casting floor: moulds bedded in sand, a ladle (props)",
+     "rect": [
+      -3.24,
+      1.092,
+      -0.73,
+      2.18
+     ]
+    },
+    {
+     "kind": "goods",
+     "room": "doma",
+     "note": "new pots and kettles cooling, scrap iron, charcoal (props)",
+     "rect": [
+      1.82,
+      3.53,
+      -2.62,
+      0.91
+     ]
+    }
+   ],
+   "sparse": "the foundry floor: furnace, bellows and the casting bed fill it"
+  }
+ ],
+ "loot_points": 14,
+ "loot_by_room": {
+  "doma": 14
+ }
+}

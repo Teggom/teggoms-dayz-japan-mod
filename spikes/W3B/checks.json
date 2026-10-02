@@ -71,8 +71,8 @@
      "detail": [
       {
        "name": "w",
-       "expected": 1.5,
-       "measured": 1.5,
+       "expected": 1.25,
+       "measured": 1.25,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
@@ -141,7 +141,7 @@
        "point": [
         0.0,
         0.32,
-        1.48
+        1.23
        ],
        "hit_y": 0.32,
        "ok": true
@@ -319,8 +319,8 @@
      "detail": [
       {
        "name": "w",
-       "expected": 1.5,
-       "measured": 1.5,
+       "expected": 1.25,
+       "measured": 1.25,
        "tol": 0.005,
        "source": "build_list",
        "ok": true
@@ -389,7 +389,7 @@
        "point": [
         0.0,
         0.32,
-        1.48
+        1.23
        ],
        "hit_y": 0.32,
        "ok": true
@@ -13031,11 +13031,14 @@
    ]
   },
   "BIN": {
-   "pass": true,
+   "pass": false,
    "detail": {
-    "missing": [],
+    "missing": [
+     "jp_f_yubune",
+     "jp_f_yubune_staved"
+    ],
     "warning_lines": [],
-    "exit": 0
+    "exit": 3221225477
    }
   }
  },

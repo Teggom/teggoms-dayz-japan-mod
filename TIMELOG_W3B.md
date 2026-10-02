@@ -6,3 +6,5 @@
 2026-10-02 01:01:58 | GROUP DONE | shells | 18 shells, 813 checks pass | 5h 42% wk 76%
 2026-10-02 01:01:58 | GROUP START | props | tradefit | 5h 42% wk 76%
 2026-10-02 01:01:58 | GROUP DONE | props | 34 props / 63 models pass | 5h 42% wk 76%
+2026-10-02 01:09:05 | GROUP START | furnishing | 14 dressings | 5h 44% wk 77%
+2026-10-02 01:09:05 | GROUP DONE | furnishing | 14 furnished, all pass | 5h 44% wk 77%

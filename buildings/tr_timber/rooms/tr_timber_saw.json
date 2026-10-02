@@ -10,7 +10,7 @@
    "level_m": 0.05,
    "rect_kit": [
     0.06,
-    5.4,
+    7.220000000000001,
     -3.58,
     -0.15
    ],
@@ -18,8 +18,8 @@
    "note": "the sawing shed: the sawing trestle with its log stands under it",
    "enclosed": false,
    "rect_model": [
-    -2.67,
-    2.67,
+    -3.58,
+    3.58,
     -1.76,
     1.67
    ],
@@ -29,8 +29,8 @@
      "room": "floor",
      "note": "the sawing trestle + the log raised at an angle (prop, ~4.5 m long)",
      "rect": [
-      -2.28,
-      2.28,
+      -3.19,
+      3.19,
       -1.02,
       0.92
      ]
@@ -38,8 +38,8 @@
    ]
   }
  ],
- "loot_points": 4,
+ "loot_points": 6,
  "loot_by_room": {
-  "floor": 4
+  "floor": 6
  }
 }

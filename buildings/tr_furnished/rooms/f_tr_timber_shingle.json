@@ -1,0 +1,60 @@
+{
+ "building": "Land_JP_Timber_ShingleShed_Furnished",
+ "p3d": "\\JP\\buildings\\tr_furnished\\jp_timber_shingleshed_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -2.67,
+    -0.15
+   ],
+   "doors": [],
+   "note": "the shingle splitter's shed: the splitting block, bundles of shingles",
+   "enclosed": false,
+   "rect_model": [
+    -1.76,
+    1.76,
+    -1.305,
+    1.215
+   ],
+   "fittings": [
+    {
+     "kind": "split_block",
+     "room": "floor",
+     "note": "the splitting block with the froe (prop)",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      0.6,
+      0.6
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "bundles",
+     "room": "floor",
+     "note": "bundles of shingles along the back wall",
+     "rect": [
+      -1.71,
+      1.71,
+      -1.285,
+      -0.855
+     ]
+    }
+   ],
+   "sparse": "the shingle splitter's open shed"
+  }
+ ],
+ "loot_points": 3,
+ "loot_by_room": {
+  "floor": 3
+ }
+}

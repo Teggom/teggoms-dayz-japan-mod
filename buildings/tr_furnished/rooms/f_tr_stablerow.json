@@ -1,0 +1,93 @@
+{
+ "building": "Land_JP_StableRow_Itabuki_Furnished",
+ "p3d": "\\JP\\buildings\\tr_furnished\\jp_stablerow_itabuki_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "stalls",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    7.220000000000001,
+    -4.49,
+    -0.15
+   ],
+   "doors": [],
+   "note": "the stable: four stalls on the back wall, the aisle open to the yard",
+   "enclosed": false,
+   "rect_model": [
+    -4.945,
+    2.215,
+    -2.215,
+    2.125
+   ],
+   "fittings": [
+    {
+     "kind": "stall",
+     "room": "stalls",
+     "rect": [
+      -5.005,
+      2.275,
+      -2.215,
+      0.455
+     ],
+     "note": "four stalls (jp_p_frame_stall frame, bars down = as left), mangers on the back wall"
+    },
+    {
+     "kind": "aisle",
+     "room": "stalls",
+     "note": "the aisle in front of the stalls (open to the yard): the fodder cutter, buckets, a dropped saddle",
+     "rect": [
+      -4.605,
+      1.875,
+      0.755,
+      1.925
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tack",
+   "tag": "storage",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    7.34,
+    9.95,
+    -4.49,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1"
+   ],
+   "note": "the tack room: saddles, harness, straw horseshoes, the groom's things",
+   "enclosed": true,
+   "rect_model": [
+    2.335,
+    4.945,
+    -2.215,
+    2.215
+   ],
+   "fittings": [
+    {
+     "kind": "tack_wall",
+     "room": "tack",
+     "note": "tack on the back wall: pack saddles, bridles, straw horseshoes (props)",
+     "rect": [
+      2.385,
+      4.895,
+      -2.195,
+      -1.915
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 11,
+ "loot_by_room": {
+  "stalls": 3,
+  "tack": 8
+ }
+}

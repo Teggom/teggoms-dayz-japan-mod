@@ -3,7 +3,7 @@
  "key": "tr_timber_saw",
  "date": "2026-09-30",
  "budget": "standard",
- "faces": "1920/477/191",
+ "faces": "2355/551/203",
  "door_clear_m": [],
  "checks_n": 28,
  "failures": 0,
@@ -11,12 +11,12 @@
   {
    "check": "C5 LOD set (vanilla house set)",
    "ok": true,
-   "detail": "Resolution 1 1920, Resolution 2 477, Resolution 3 191, Geometry 555, Memory 0, Roadway 4, View Geometry 555, Fire Geometry 555"
+   "detail": "Resolution 1 2355, Resolution 2 551, Resolution 3 203, Geometry 665, Memory 0, Roadway 4, View Geometry 665, Fire Geometry 665"
   },
   {
    "check": "C5 face budget (standard: 6000 / 2300 / 800)",
    "ok": true,
-   "detail": "R1 1920, R2 477, R3 191"
+   "detail": "R1 2355, R2 551, R3 203"
   },
   {
    "check": "Geometry properties + mass",
@@ -31,17 +31,17 @@
   {
    "check": "C7 Geometry closed + convex",
    "ok": true,
-   "detail": "56 components, 0 bad, 0 faces outside components"
+   "detail": "65 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 View Geometry closed + convex",
    "ok": true,
-   "detail": "56 components, 0 bad, 0 faces outside components"
+   "detail": "65 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry closed + convex",
    "ok": true,
-   "detail": "56 components, 0 bad, 0 faces outside components"
+   "detail": "65 components, 0 bad, 0 faces outside components"
   },
   {
    "check": "C7 Fire Geometry penetration rvmats",
@@ -56,12 +56,12 @@
   {
    "check": "C8 era lint (no glass, kawara geometry, separate plinth stones)",
    "ok": true,
-   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 10 soseki under the posts"
+   "detail": "glass paths 0; no kawara (board roof); 0 individual dodai stones, 12 soseki under the posts"
   },
   {
    "check": "C3 grid snap (post nodes on the 0.455 grid)",
    "ok": true,
-   "detail": "10 posts"
+   "detail": "12 posts"
   },
   {
    "check": "C7 Roadway sits on Geometry (+-3 cm)",
@@ -76,17 +76,17 @@
   {
    "check": "C7 head room >= 2.10 over every floor",
    "ok": true,
-   "detail": "lowest 3.60 m"
+   "detail": "lowest 3.10 m"
   },
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "4 points (floor 4)"
+   "detail": "6 points (floor 6)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "4 points, max diff 4.3e-07 m"
+   "detail": "6 points, max diff 4.3e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -116,7 +116,7 @@
   {
    "check": "C15 stable silhouette: Resolution 2 / 3 top heights within 0.10 m of Resolution 1",
    "ok": true,
-   "detail": "2332 columns over 2.5 m compared in each LOD"
+   "detail": "2992 columns over 2.5 m compared in each LOD"
   },
   {
    "check": "C19 matte finish: no environment reflection on matte materials (clay, plaster, wood, straw, paper, stone)",
@@ -131,7 +131,7 @@
   {
    "check": "C20 no z-fighting: no visibly different faces share a plane (same-facing, <= 1 mm, overlapping), R1-R3",
    "ok": true,
-   "detail": "0 visible same-facing pairs; 400 touching (opposite-facing: backface-culled) and 116 covered / drawn-identically pairs not judged"
+   "detail": "0 visible same-facing pairs; 470 touching (opposite-facing: backface-culled) and 136 covered / drawn-identically pairs not judged"
   },
   {
    "check": "C21 interior partitions end at a beam or a ceiling (no wall top open below the roof)",
@@ -146,7 +146,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 195141 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 229044 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

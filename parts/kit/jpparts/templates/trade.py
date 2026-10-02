@@ -22,7 +22,7 @@ Kinds and parameters (kit frame as rural.py: x 0..W along the front, z 0 = front
              form 'bench' W 3.5 x D 3 ken: an entrance doma 1.5 ken (full depth, front + back doors), the raised work
                           room (2 x 1.5 ken, a wide lattice window on the street) and behind it the closed back room
                           (the dust-free coating room: one high window, a door from the work room).  roof as above
-  timbershed form 'saw' W 3 x D 2 ken open shed (back wall only): the sawing trestle stands under it
+  timbershed form 'saw' W 4 x D 2 ken open shed (back wall only): the sawing trestle stands under it
              form 'store' W 4 x D 1.5 ken, open front: timber stood upright against the back wall
              form 'shingle' W 2 x D 1.5 ken, open front: the shingle splitter's shed
   foundry    W 4 x D 3 ken, eave 3.80: two open front bays, earth walls over a board skirt, sooted roof frame, a 1.5-ken
@@ -167,7 +167,7 @@ def sento(name=None, roof="sangawara", wear="_w2"):
     S.kamachi((90.0, (XD, 0.0, -D)), D, FLR, [1.0 * KEN], "doma", soot=False)
     # the kama-ba: an open lean-to on the right gable (the boiler is fired from outside, through the end wall)
     _gable_leanto(S, "right", fam, E, t)
-    fit(S, "tub", "bath", rect=(W - A_ - 1.55, W - A_ - 0.02, -D + A_ + 0.20, -D + A_ + 0.20 + 2.60), y=FLR,
+    fit(S, "tub", "bath", rect=(W - A_ - 1.30, W - A_ - 0.02, -D + A_ + 0.20, -D + A_ + 0.20 + 2.10), y=FLR,
         note="the yubune (tub) against the end wall (prop); the boiler under it is fired from the lean-to outside")
     fit(S, "boiler", "leanto", centre=(W + 0.38, -D + A_ + 1.50), size=(0.55, 0.90), yaw=90.0,
         note="the boiler's fire mouth on the end wall outside (prop) + firewood stacks")
@@ -177,7 +177,7 @@ def sento(name=None, roof="sangawara", wear="_w2"):
         note="the footwear shelf on the doma end wall")
     fit(S, "clothes_shelves", "datsuiba", rect=(XD + 0.30, XZ - 1.60, -D + A_ + 0.02, -D + A_ + 0.40), obstacle=False,
         note="clothes shelves / baskets on the changing room's back wall")
-    fit(S, "nagashi", "datsuiba", rect=(XZ - 1.45, XZ - A_ - 0.05, -D + A_ + 0.10, -0.40), obstacle=False,
+    fit(S, "nagashi", "datsuiba", rect=(XZ - 1.45, XZ - A_ - 0.05, -D + A_ + 0.10, -1.5 * KEN - 0.20), obstacle=False,
         note="the nagashi: the slatted washing floor over its drain on the bath side (walk-on prop)")
     S.place_windows()
     S.room("doma", "doma", "earth", DOMA, (A_, XD - 0.07, -D + A_, -A_), [S.dn["front"], S.dn["back"]],
@@ -498,7 +498,7 @@ def _ws_bench(name, roof, wear):
 # ------------------------------------------------------------------------------------------------ TR15 timber sheds
 TIMBER = {
     # form: (W, D, eave, walled sides, what)
-    "saw": (3 * KEN, 2 * KEN, 3.60, ("back",), "the sawing shed: the sawing trestle with its log stands under it"),
+    "saw": (4 * KEN, 2 * KEN, 3.60, ("back",), "the sawing shed: the sawing trestle with its log stands under it"),
     "store": (4 * KEN, 1.5 * KEN, 3.80, ("back", "left", "right"), "the timber store: timber stood upright on the "
               "back wall (tate-kake), planks stacked"),
     "shingle": (2 * KEN, 1.5 * KEN, 3.00, ("back", "left", "right"), "the shingle splitter's shed: the splitting "

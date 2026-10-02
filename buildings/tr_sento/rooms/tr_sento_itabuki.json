@@ -133,7 +133,7 @@
       1.28,
       2.62,
       -2.57,
-      2.33
+      -0.2
      ]
     }
    ]
@@ -166,21 +166,21 @@
      "room": "bath",
      "note": "the yubune (tub) against the end wall (prop); the boiler under it is fired from the lean-to outside",
      "rect": [
-      3.85,
+      4.1,
       5.38,
       -2.47,
-      0.13
+      -0.37
      ],
      "y": 0.4
     }
    ]
   }
  ],
- "loot_points": 13,
+ "loot_points": 14,
  "loot_by_room": {
   "leanto": 2,
   "doma": 3,
   "datsuiba": 6,
-  "bath": 2
+  "bath": 3
  }
 }

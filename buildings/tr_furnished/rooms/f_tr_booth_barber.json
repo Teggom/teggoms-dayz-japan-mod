@@ -1,0 +1,98 @@
+{
+ "building": "Land_JP_Booth_Barber_Furnished",
+ "p3d": "\\JP\\buildings\\tr_furnished\\jp_booth_barber_furnished.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -1.75,
+    -0.15
+   ],
+   "doors": [],
+   "note": "the barber's floor: the customer's stool, the kit box; open to the street",
+   "enclosed": false,
+   "rect_model": [
+    -1.76,
+    1.76,
+    0.07,
+    1.67
+   ],
+   "fittings": [
+    {
+     "kind": "barber_kit",
+     "room": "doma",
+     "note": "the barber's kit box (bin-darai: basin on top, drawers of razors, combs, pomade, paper cord)",
+     "centre": [
+      1.37,
+      0.45
+     ],
+     "size": [
+      0.45,
+      0.6
+     ],
+     "yaw": 0.0
+    },
+    {
+     "kind": "stool",
+     "room": "doma",
+     "note": "the customer's low stool, facing the street",
+     "centre": [
+      0.0,
+      0.85
+     ],
+     "size": [
+      0.4,
+      0.4
+     ],
+     "yaw": 0.0
+    }
+   ]
+  },
+  {
+   "name": "bench",
+   "tag": "living",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    0.06,
+    3.58,
+    -3.58,
+    -1.8900000000000001
+   ],
+   "doors": [],
+   "note": "the raised bench where customers wait (board games, tobacco)",
+   "enclosed": false,
+   "rect_model": [
+    -1.76,
+    1.76,
+    -1.76,
+    -0.07
+   ],
+   "fittings": [
+    {
+     "kind": "bench_goods",
+     "room": "bench",
+     "note": "the waiting bench: a go / shogi board, the tobacco tray, a cushion",
+     "rect": [
+      -1.66,
+      1.66,
+      -1.71,
+      -0.15
+     ]
+    }
+   ],
+   "sparse": "the narrow waiting bench"
+  }
+ ],
+ "loot_points": 3,
+ "loot_by_room": {
+  "doma": 2,
+  "bench": 1
+ }
+}

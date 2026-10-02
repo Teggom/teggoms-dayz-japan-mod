@@ -1,0 +1,136 @@
+{
+ "building": "Land_JP_Workshop_Bench_Sangawara_Polisher",
+ "p3d": "\\JP\\buildings\\tr_furnished\\jp_workshop_bench_sangawara_polisher.p3d",
+ "frame": "model: the base shell's frame (origin = footprint / lot centre at grade, +z = front); furnished by C3",
+ "rooms": [
+  {
+   "name": "doma",
+   "tag": "doma",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    2.66,
+    -5.4,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin1",
+    "DoorsTwin2"
+   ],
+   "note": "the entrance doma: the kamado (hot water), the water jar, front + back doors",
+   "enclosed": true,
+   "rect_model": [
+    -3.125,
+    -0.525,
+    -2.67,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "kamado",
+     "room": "doma",
+     "centre": [
+      -2.765,
+      -2.23
+     ],
+     "yaw": 0.0,
+     "size": [
+      0.6,
+      0.6
+     ],
+     "note": "jp_p_fit_kamado _2 spot (mouths face along yaw: 0 = +z); back to the wall"
+    },
+    {
+     "kind": "water",
+     "room": "doma",
+     "note": "water jar + tubs in the doma (polishing water, rinsing)",
+     "rect": [
+      -2.935,
+      -0.755,
+      0.3,
+      2.03
+     ]
+    }
+   ]
+  },
+  {
+   "name": "work",
+   "tag": "workshop",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    2.8,
+    6.3100000000000005,
+    -2.66,
+    -0.06
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "the bench work room: sitting work by the lattice window; open to the doma over the kamachi",
+   "enclosed": true,
+   "rect_model": [
+    -0.385,
+    3.125,
+    0.07,
+    2.67
+   ],
+   "fittings": [
+    {
+     "kind": "bench_spot",
+     "room": "work",
+     "note": "the craftsman's place by the lattice window (polishing stand / lacquer tray / fittings bench)",
+     "rect": [
+      0.095,
+      2.485,
+      0.45,
+      2.18
+     ]
+    }
+   ]
+  },
+  {
+   "name": "back",
+   "tag": "workshop",
+   "floor": "boards",
+   "level_m": 0.4,
+   "rect_kit": [
+    2.79,
+    6.3100000000000005,
+    -5.4,
+    -2.8
+   ],
+   "doors": [
+    "DoorsTwin3"
+   ],
+   "note": "the closed back room (the dust-free coating room / store): the drying cupboard, one high window",
+   "enclosed": true,
+   "rect_model": [
+    -0.395,
+    3.125,
+    -2.67,
+    -0.07
+   ],
+   "fittings": [
+    {
+     "kind": "cabinet",
+     "room": "back",
+     "note": "the drying cupboard (urushi-buro) / the store chest in the back room",
+     "rect": [
+      2.375,
+      3.105,
+      -2.65,
+      -2.07
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 17,
+ "loot_by_room": {
+  "doma": 5,
+  "work": 3,
+  "back": 9
+ }
+}

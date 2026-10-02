@@ -155,7 +155,7 @@
   {
    "check": "C7 walkable floors have Roadway at floor height",
    "ok": true,
-   "detail": "766/766 samples over leanto, doma, datsuiba, bath"
+   "detail": "783/783 samples over leanto, doma, datsuiba, bath"
   },
   {
    "check": "C7 head room >= 2.10 over every floor",
@@ -165,12 +165,12 @@
   {
    "check": "Loot points on Roadway floors, ranges clear of walls, every room",
    "ok": true,
-   "detail": "13 points (leanto 2, doma 3, datsuiba 6, bath 2)"
+   "detail": "14 points (leanto 2, doma 3, datsuiba 6, bath 3)"
   },
   {
    "check": "CE loot frame -> world == model -> world (WORLD_BUILDINGS \u00a70)",
    "ok": true,
-   "detail": "13 points, max diff 4.3e-07 m"
+   "detail": "14 points, max diff 4.3e-07 m"
   },
   {
    "check": "Placement inside the test yard, clear of the reserved spots",
@@ -315,7 +315,7 @@
   {
    "check": "C11 envelope leak: rooms see outside only through doors / windows",
    "ok": true,
-   "detail": "doma 10560 rays, 0 out through doors/windows, 0 LEAKS; datsuiba 11520 rays, 0 out through doors/windows, 0 LEAKS; bath 5760 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): leanto"
+   "detail": "doma 10560 rays, 0 out through doors/windows, 0 LEAKS; datsuiba 11520 rays, 0 out through doors/windows, 0 LEAKS; bath 9600 rays, 0 out through doors/windows, 0 LEAKS; open-sided by design (not checked): leanto"
   },
   {
    "check": "C12 roof / wall intersection (no part pokes into a roof body > 3 cm)",
@@ -365,7 +365,7 @@
   {
    "check": "Binarize -> ODOL (LODs, bones, axes, twin selections, skeleton)",
    "ok": true,
-   "detail": "ODOL v55, 712492 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
+   "detail": "ODOL v55, 711958 bytes; LODs 8; bones+axes True; twin selections+actions True; skeleton True"
   }
  ]
 }

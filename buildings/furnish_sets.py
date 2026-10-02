@@ -595,3 +595,9 @@ SETS.update(_w2f.sets())
 import d3_sets as _d3  # noqa: E402
 
 SETS.update(_d3.sets())
+
+# W3B (2026-10-02): the wave-3b dressings (bathhouse, stable row, booths, workshops, timber sheds, foundry):
+# buildings/w3b_sets.py
+import w3b_sets as _w3b  # noqa: E402
+
+SETS.update(_w3b.sets())
