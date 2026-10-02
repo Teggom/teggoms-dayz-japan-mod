@@ -64,6 +64,8 @@ running. All agents are Opus 5.5 at effort high (`opus-high`) unless noted.
 | 2026-10-01 ~20:06 (local) | FX3 phase 2 (resumed) | integrate uvwood + atlases + macro layer + moss into every pipeline, rebuild all | - | - | |
 | 2026-10-01 ~21:35 (local) | FX3 phase 2 | wood atlases (11 x 3) + uvwood.py in Part.lods() + Stage3 macro weathering in every wood/thatch rvmat + moss; rebuilt parts 234 / buildings 193 / all props, 5 PBOs | **410k** (86 tool calls) | 26 min | FX3 total 708k |
 | 2026-10-01 ~21:40 (local) | CA1 (baseline) | launched: one config assembler per PBO (builder fragments merged), budget-class tidy-up | - | - | before: **67%** |
+| 2026-10-01 ~22:05 (local) | CA1 | config assembler: per-builder fragments + tools/assemble_config.py for jp_furniture (522) + jp_site (320), 0 class diffs over 13 PBOs, single-builder rebuild proof, budget classes folded back (9 deliberate overages reported) | **334k** (196 tool calls) | 28 min | |
+| 2026-10-01 ~22:06 (local) | FX4 (baseline) | launched: bell interior, fire-tower head room, stone atlas + per-piece mapping | - | - | before: **68%** |
 
 ## B3b time log, summarised (TIMELOG_B3b.md, with GROUP START lines)
 
