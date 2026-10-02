@@ -1,0 +1,33 @@
+{
+ "building": "Land_JP_Noborigama",
+ "p3d": "\\JP\\buildings\\rs_kiln\\jp_noborigama.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/ruralsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "stoke",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.15,
+    3.49,
+    -1.8,
+    -0.15
+   ],
+   "doors": [],
+   "note": "the stoking floor before the fire mouth under the stokers' shelter (the kiln itself is solid: its doors are look-ins)",
+   "enclosed": false,
+   "rect_model": [
+    -1.67,
+    1.67,
+    5.01,
+    6.66
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "stoke": 1
+ }
+}

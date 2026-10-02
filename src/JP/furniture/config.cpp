@@ -4013,4 +4013,51 @@ class CfgVehicles
 		displayName="Bark steamer, the tub knocked off";
 		model="\JP\furniture\brewfit\jp_f_kozo_kama_ab.p3d";
 	};
+	// jp_f_keri_rokuro (sitefit)
+	class StaticObj_JP_F_Keri_Rokuro: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Potter's kick wheel with a dry half-thrown jar";
+		model="\JP\furniture\sitefit\jp_f_keri_rokuro.p3d";
+	};
+	class StaticObj_JP_F_Keri_Rokuro_Ab: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Potter's kick wheel, the head knocked off";
+		model="\JP\furniture\sitefit\jp_f_keri_rokuro_ab.p3d";
+	};
+	// jp_f_neri_ban (sitefit)
+	class StaticObj_JP_F_Neri_Ban: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wedging board with clay and the clay heap";
+		model="\JP\furniture\sitefit\jp_f_neri_ban.p3d";
+	};
+	// jp_f_ware_rack (sitefit)
+	class StaticObj_JP_F_Ware_Rack: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ware-drying rack with unfired bowls";
+		model="\JP\furniture\sitefit\jp_f_ware_rack.p3d";
+	};
+	class StaticObj_JP_F_Ware_Rack_Fallen: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Ware-drying rack, the top plank fallen";
+		model="\JP\furniture\sitefit\jp_f_ware_rack_fallen.p3d";
+	};
+	// jp_f_wares_straw (sitefit)
+	class StaticObj_JP_F_Wares_Straw: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Wares packed in straw for the road";
+		model="\JP\furniture\sitefit\jp_f_wares_straw.p3d";
+	};
+	// jp_f_kiln_shelves (sitefit)
+	class StaticObj_JP_F_Kiln_Shelves: HouseNoDestruct
+	{
+		scope=1;
+		displayName="Kiln shelves and props stacked";
+		model="\JP\furniture\sitefit\jp_f_kiln_shelves.p3d";
+	};
 };

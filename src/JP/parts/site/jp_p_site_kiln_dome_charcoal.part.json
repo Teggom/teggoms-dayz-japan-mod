@@ -1,0 +1,178 @@
+{
+ "id": "jp_p_site_kiln_dome_charcoal",
+ "part": "jp_p_site_kiln_dome",
+ "variant": "_charcoal",
+ "group": "site",
+ "p3d": "JP\\parts\\site\\jp_p_site_kiln_dome_charcoal.p3d",
+ "build_list": {
+  "entry": "jp_p_site_kiln_dome",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  1,
+  2
+ ],
+ "used_for": "the earth-dome charcoal kiln (kuro-zumi-gama, TR23): a solid earth mass with the stone-faced fire mouth and the clay flue; cold and opened (dead world)",
+ "datum": "centre of the dome at grade, +z = the fire mouth; the mound sunk 0.30 into the ground",
+ "recipe": "ruralsite_parts.kiln_dome(part, cx, cz)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -1.85,
+  1.85,
+  -0.3,
+  2.252,
+  -1.91,
+  2.434
+ ],
+ "dims": [
+  {
+   "name": "dome_w_m",
+   "expected": "3.0-4.5 (GK)",
+   "measured": 3.7,
+   "tol": 0.01,
+   "source": "W3C2_NOTES TR23",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "mouth",
+   "pos": [
+    0.0,
+    0.0,
+    1.71
+   ],
+   "note": "the fire mouth (work pit side)"
+  }
+ ],
+ "materials": [
+  {
+   "key": "ground_ash",
+   "id": "jp_m_ground_ash",
+   "palette_id": "ash_grey",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_ash<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "ground_earth_bare",
+   "id": "jp_m_ground_earth_bare",
+   "palette_id": "earth_bare",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "lacquer_black",
+   "id": "jp_m_lacquer_black",
+   "palette_id": "sumi_black",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_black<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "stone_field",
+   "id": "jp_m_stone_field",
+   "palette_id": "stone_granite",
+   "rvmat": "JP\\common\\materials\\stone\\jp_m_stone_field<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 397,
+  "Resolution 2": 231,
+  "Resolution 3": 152,
+  "Geometry": 152,
+  "View Geometry": 152,
+  "Fire Geometry": 152
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 397, Resolution 2 231, Resolution 3 152, Geometry 152, View Geometry 152, Fire Geometry 152"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "3 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, granite"
+  },
+  {
+   "check": "C4 dome_w_m",
+   "ok": true,
+   "detail": "expected 3.0-4.5 (GK), measured 3.7"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

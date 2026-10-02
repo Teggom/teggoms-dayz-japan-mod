@@ -1,0 +1,45 @@
+{
+ "key": "rs_cmp_potteryyard",
+ "class": "Land_JP_Compound_PotteryYard",
+ "name": "jp_compound_potteryyard",
+ "model": "\\JP\\buildings\\rs_site\\jp_compound_potteryyard.p3d",
+ "model_dir": "rs_site",
+ "doors": [],
+ "faces": {
+  "Resolution 1": 2662,
+  "Resolution 2": 1488,
+  "Resolution 3": 210,
+  "Geometry": 304,
+  "Memory": 0,
+  "Roadway": 5,
+  "View Geometry": 220,
+  "Fire Geometry": 220
+ },
+ "loot_points": 1,
+ "config_class": "\tclass Land_JP_Compound_PotteryYard: HouseNoDestruct\n\t{\n\t\tscope=1;\n\t\tdisplayName=\"Potter's yard: bamboo fence + cart opening\";\n\t\tmodel=\"\\JP\\buildings\\rs_site\\jp_compound_potteryyard.p3d\";\n\t\tclass Doors\n\t\t{\n\t\t};\n\t\tclass DamageSystem\n\t\t{\n\t\t\tclass GlobalHealth\n\t\t\t{\n\t\t\t\tclass Health\n\t\t\t\t{\n\t\t\t\t\thitpoints=1000;\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass GlobalArmor\n\t\t\t{\n\t\t\t\tclass Projectile\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass Melee\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t\tclass FragGrenade\n\t\t\t\t{\n\t\t\t\t\tclass Health\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Blood\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t\tclass Shock\n\t\t\t\t\t{\n\t\t\t\t\t\tdamage=0;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tclass DamageZones\n\t\t\t{\n\t\t\t};\n\t\t};\n\t};\n",
+ "skeleton": "\tclass jp_compound_potteryyard_skeleton: Default\n\t{\n\t\tskeletonInherit=\"Default\";\n\t\tskeletonBones[]=\n\t\t{\n\n\t\t};\n\t};\n",
+ "cfgmodel": "\tclass jp_compound_potteryyard: Default\n\t{\n\t\tskeletonName=\"jp_compound_potteryyard_skeleton\";\n\t\tclass Animations\n\t\t{\n\t\t};\n\t};\n",
+ "loot_group": [
+  "\t\t<group name=\"Land_JP_Compound_PotteryYard\">",
+  "\t\t\t\t<usage name=\"Village\" />",
+  "\t\t\t\t<usage name=\"Industrial\" />",
+  "\t\t\t\t<container name=\"lootFloor\">",
+  "\t\t\t\t\t\t<category name=\"tools\" />",
+  "\t\t\t\t\t\t<tag name=\"floor\" />",
+  "\t\t\t\t\t\t<point pos=\"-4.717143 0.100000 -3.185000\" range=\"0.342857\" height=\"0.857143\" />",
+  "\t\t\t\t</container>",
+  "\t\t</group>"
+ ],
+ "params": {
+  "kind": "compound",
+  "plot": "potteryyard"
+ },
+ "bbox": [
+  -6.481,
+  6.481,
+  -0.4,
+  1.36,
+  -6.89,
+  5.571
+ ]
+}

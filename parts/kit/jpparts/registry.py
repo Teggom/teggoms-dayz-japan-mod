@@ -73,6 +73,9 @@ roka.register(reg)
 # ---- W3C1 (2026-10-02): the water wheel, the flume, the parallel-roof union (spikes/W3C1/W3C1_NOTES.md)
 from . import mech
 mech.register(reg)
+# ---- W3C2 (2026-10-02): the kiln family, the mine adit, the timber slide (spikes/W3C2/W3C2_NOTES.md)
+from . import ruralsite_parts
+ruralsite_parts.register(reg)
 
 # render hints for the contact sheets (context parts: [name, yaw, [x, y, z]])
 RENDER_HINTS = {

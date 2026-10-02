@@ -1,0 +1,68 @@
+"""W3C2 (2026-10-02): the dressings of the wave-3c-2 furnished variants (the earlier huts, sheds and workshops each site
+reuses + the two new halls) for buildings/furnishkit.py. SETS_W3C2 are merged into buildings/furnish_sets.SETS (like
+w3c1_sets). Binding rules as w3c1_sets.py (G1 A2, BUILD_LIST, LIFE_LAYER): 5-7 counted props a room, <= 25 % floor
+cover, the 1.00 m bands, >= 1 raised loot surface a room, moderate "as left" disorder; rooms the machinery fills are
+sparse(). Props: spikes/W3C2/props_w3c2.py (sitefit) + the earlier libraries. Autumn, dead world: every kiln cold, the
+camps left, the work where it lay. Research + recorded choices: spikes/W3C2/W3C2_NOTES.md.
+"""
+import d3_sets as D3
+from d3_sets import Room, sparse
+from w3b_sets import fit1, fc, must, step_link
+import furnish_sets as FS
+
+
+# ------------------------------------------------------------------------------------------------ 1 charcoal burner's hut
+def sumiyaki(c):
+    """The charcoal burner's hut (C2's west hut, thatch, board floor): the one-mouth stove, the water jar, axe and saw
+    on the pegs, charcoal in bales by the door; the straw bed round the irori. Outside: billets and bales."""
+    FS._kamado_on_spot(c, "doma", 1)
+    c.pot("doma", "jp_f_kama_nolid", 0, why="the pot left in the stove")
+    c.onwall("doma", "xmin", 0.40, "jp_f_tool_wall_wood", why="axe, hatchet and saw on pegs")
+    Dm = Room(c, "doma", centre=False)
+    Dm.wall("jp_f_jar_l", why="the water jar")
+    Dm.wall("jp_f_charcoal_bale", why="a bale of charcoal, ready to carry down")
+    Dm.wall("jp_f_charcoal_scuttle", why="a charcoal scuttle")
+    Dm.wall("jp_f_oke_bucket", why="a bucket")
+    c.passage(("doma", "living"), -0.91, 0.0, "kamachi step doma <-> living")
+    f = FS._hut_living(c, "xmax", 0.0, bed="jp_f_straw_bed_pile")
+    c.free("living", "jp_f_kama_nabe_rusted", 0.20, 0.90, 0, why="a pot by the hearth")
+    c.free("living", "jp_f_mushiro_torn", 0.30, 1.30, 0, why="a torn straw mat")
+    c.free("living", "jp_f_basket_back", -0.30, -1.30, 0, why="a back basket for the bales")
+    c.free("living", "jp_f_tabakobon_spilled", 1.10, -1.20, 0, why="a tobacco tray")
+    c.free("living", "jp_f_box_s", 2.30, 1.30, 0, why="a small box")
+    hx, hy, hz = f["hook"]
+    c.hang("living", "jp_f_drying_daikon_shrivelled", hx, 1.30, hy, over="corner", why="daikon drying, shrivelled")
+    c.site("jp_f_charcoal_bales3", 0.90, 2.75, 0, why="charcoal in straw bales by the door, ready to carry down")
+    c.site("jp_f_charcoal_burst", 2.40, 2.60, 20, why="a burst charcoal bale")
+    c.site("jp_f_firewood_stack", -3.55, 0.0, 90, why="split wood stacked against the gable")
+
+
+# ------------------------------------------------------------------------------------------------ 2 potter's workshop
+def toki(c):
+    """The potter's work shed (W3B's earth-floor workshop, board roof): the kick wheel by the open front's light, the
+    wedging board with the clay heap, the ware-drying racks along the back wall, glaze tubs and jars; in the raised
+    room the finished wares packed in straw and the master's desk."""
+    st = step_link(c, "doma", "room")
+    sparse(c, "doma", "the potter's floor: wheel, wedging board and racks fill it")
+    D = Room(c, "doma", open_sides=("zmax",), points=st, centre=False)
+    must(D, "jp_f_ware_rack", "the ware-drying rack: rows of unfired bowls", sides=("zmin",))
+    must(D, "jp_f_neri_ban", "the wedging board with clay, the clay heap beside it", sides=("zmin",))
+    must(D, "jp_f_keri_rokuro", "the kick wheel with a half-thrown jar gone dry")
+    D.wall("jp_f_oke_tarai_dry", sides=("zmin", "zmax"), why="a glaze tub, dried out")
+    D.wall("jp_f_jar_m_open", sides=("zmin", "zmax"), why="a glaze jar")
+    R = Room(c, "room", open_sides=("xmin",), points=st)
+    R.wall("jp_f_wares_straw", why="finished wares packed in straw for the road")
+    R.wall("jp_f_zukue_plain", why="the master's desk")
+    R.wall("jp_f_box_m", why="a box of brushes and tools")
+    R.free("jp_f_enza", 0.5, 0.5, 0, why="a straw cushion")
+    R.wall("jp_f_andon_kaku_tipped", why="a lamp, knocked over")
+
+
+SETS_W3C2 = {
+    "w3c2_sumiyaki": {"tier": 1, "fn": sumiyaki},
+    "w3c2_toki": {"tier": 1, "fn": toki},
+}
+
+
+def sets():
+    return {k: dict(v, fn=D3._wrap(v["fn"])) for k, v in SETS_W3C2.items()}

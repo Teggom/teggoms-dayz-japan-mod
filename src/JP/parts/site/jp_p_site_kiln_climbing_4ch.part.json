@@ -1,0 +1,190 @@
+{
+ "id": "jp_p_site_kiln_climbing_4ch",
+ "part": "jp_p_site_kiln_climbing",
+ "variant": "_4ch",
+ "group": "site",
+ "p3d": "JP\\parts\\site\\jp_p_site_kiln_climbing_4ch.p3d",
+ "build_list": {
+  "entry": "jp_p_site_kiln_climbing",
+  "variant": null,
+  "differs_by": null,
+  "priority": null,
+  "importance": null,
+  "refs": []
+ },
+ "tiers": [
+  2,
+  3
+ ],
+ "used_for": "the climbing kiln (renbo-shiki noborigama, TR18, Seto / Mino): firebox + 4 chambers stepping up its own earth bank, the flue stack; cold, one loading door open (dead world)",
+ "datum": "x centred, +z = the fire mouth (z 0 = its face), the kiln climbs towards -z; y 0 = grade",
+ "recipe": "ruralsite_parts.kiln_climbing(part, open_door)",
+ "deviation": null,
+ "frame": "origin = left post centreline at finished floor/sill level; +x along the wall, +y up, +z exterior; autocenter=0 (PLAYBOOK §10.2)",
+ "bbox_m": [
+  -2.027,
+  2.079,
+  -0.3,
+  4.652,
+  -16.32,
+  0.783
+ ],
+ "dims": [
+  {
+   "name": "chambers",
+   "expected": "3-10 (GK)",
+   "measured": 4.0,
+   "tol": 0.01,
+   "source": "W3C2_NOTES TR18",
+   "ok": true
+  }
+ ],
+ "connectors": [
+  {
+   "type": "mouth",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "the fire mouth"
+  }
+ ],
+ "materials": [
+  {
+   "key": "ceramic_earthenware",
+   "id": "jp_m_ceramic_earthenware",
+   "palette_id": "earthenware_unglazed",
+   "rvmat": "JP\\common\\materials\\ceramic\\jp_m_ceramic_earthenware<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "ground_ash",
+   "id": "jp_m_ground_ash",
+   "palette_id": "ash_grey",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_ash<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "ground_earth_bare",
+   "id": "jp_m_ground_earth_bare",
+   "palette_id": "earth_bare",
+   "rvmat": "JP\\common\\materials\\ground\\jp_m_ground_earth_bare<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "lacquer_black",
+   "id": "jp_m_lacquer_black",
+   "palette_id": "sumi_black",
+   "rvmat": "JP\\common\\materials\\paint\\jp_m_lacquer_black<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_arakabe",
+   "id": "jp_m_wall_arakabe",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_arakabe<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  },
+  {
+   "key": "wall_nakanuri",
+   "id": "jp_m_wall_nakanuri",
+   "palette_id": "earth_wall_aged",
+   "rvmat": "JP\\common\\materials\\wall\\jp_m_wall_nakanuri<wear>.rvmat",
+   "default_wear": "_w1",
+   "wear_selectable": [
+    "_w0",
+    "_w1",
+    "_w2"
+   ]
+  }
+ ],
+ "lod_faces": {
+  "Resolution 1": 917,
+  "Resolution 2": 602,
+  "Resolution 3": 403,
+  "Geometry": 139,
+  "View Geometry": 139,
+  "Fire Geometry": 139
+ },
+ "contributes": [
+  "Resolution 1",
+  "Resolution 2",
+  "Resolution 3",
+  "Geometry",
+  "View Geometry",
+  "Fire Geometry"
+ ],
+ "walkable": false,
+ "doors": [],
+ "notes": [],
+ "extra": {},
+ "checks": [
+  {
+   "check": "C5 LODs",
+   "ok": true,
+   "detail": "Resolution 1 917, Resolution 2 602, Resolution 3 403, Geometry 139, View Geometry 139, Fire Geometry 139"
+  },
+  {
+   "check": "C2 library only",
+   "ok": true,
+   "detail": "all paths under JP\\common\\materials\\ (on disk) or vanilla penetration/roadway"
+  },
+  {
+   "check": "C7 Geometry closed+convex",
+   "ok": true,
+   "detail": "14 components, all closed and convex"
+  },
+  {
+   "check": "C7 View Geometry closed+convex",
+   "ok": true,
+   "detail": "14 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire Geometry closed+convex",
+   "ok": true,
+   "detail": "14 components, all closed and convex"
+  },
+  {
+   "check": "C7 Fire penetration mats",
+   "ok": true,
+   "detail": "dirt, pottery"
+  },
+  {
+   "check": "C4 chambers",
+   "ok": true,
+   "detail": "expected 3-10 (GK), measured 4.0"
+  },
+  {
+   "check": "C3 grid snap",
+   "ok": true,
+   "detail": "1 connectors, all post/sill nodes on the 0.455 grid"
+  }
+ ],
+ "made_by": "parts/kit/build_parts.py (parts agent B-PARTS, 2026-09-27)"
+}

@@ -1,0 +1,124 @@
+{
+ "id": "jp_f_keri_rokuro",
+ "build_list": {
+  "name": null,
+  "importance": null,
+  "tiers": null,
+  "room_tags": null,
+  "loot_surface": null,
+  "abandoned_state": null,
+  "blocks_path": null,
+  "lod_budget": null,
+  "dimensions": null,
+  "refs": null
+ },
+ "category": "sitefit",
+ "frame": "origin = base centre on the supporting floor, +y up, +z = front, autocenter=0 (anchor 'wall': floor below the shelf, wall plane z=0; 'hang': hook-beam underside); mount = where the decorator may place it (see 'mount_note')",
+ "proxy_lods": "Resolution 1, Geometry, View Geometry, Fire Geometry (flat or hanging props: Resolution 1 only), BUILD_LIST Q5 rule 1",
+ "notes": [],
+ "models": [
+  {
+   "p3d": "\\JP\\furniture\\sitefit\\jp_f_keri_rokuro.p3d",
+   "class": "StaticObj_JP_F_Keri_Rokuro",
+   "variant": "std",
+   "state": "intact",
+   "abandoned": false,
+   "display": "Potter's kick wheel with a dry half-thrown jar",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 235,
+    "Resolution 2": 36,
+    "Geometry": 26,
+    "View Geometry": 26,
+    "Fire Geometry": 26
+   },
+   "bbox": [
+    -0.4,
+    0.4,
+    0.0,
+    0.82,
+    -0.82,
+    0.4
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.4,
+    -0.82,
+    0.4,
+    0.37
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 90.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "wheel_d",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "kick wheel (keri-rokuro), a half-thrown jar gone dry on the head"
+   ],
+   "master": "spikes/W3C2/out/sitefit/jp_f_keri_rokuro.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  },
+  {
+   "p3d": "\\JP\\furniture\\sitefit\\jp_f_keri_rokuro_ab.p3d",
+   "class": "StaticObj_JP_F_Keri_Rokuro_Ab",
+   "variant": "std",
+   "state": "broken",
+   "abandoned": true,
+   "display": "Potter's kick wheel, the head knocked off",
+   "anchor": "floor",
+   "budget": "furniture",
+   "faces": {
+    "Resolution 1": 227,
+    "Resolution 2": 30,
+    "Geometry": 20,
+    "View Geometry": 20,
+    "Fire Geometry": 20
+   },
+   "bbox": [
+    -0.4,
+    0.653,
+    0.0,
+    0.55,
+    -0.82,
+    0.496
+   ],
+   "collision": true,
+   "footprint_xz": [
+    -0.4,
+    -0.82,
+    0.4,
+    0.37
+   ],
+   "loot_floor_clearance_m": 0.4,
+   "roadway": false,
+   "mass_kg": 90.0,
+   "loot_surfaces": [],
+   "dims": [
+    {
+     "name": "wheel_d",
+     "expected": 0.8,
+     "measured": 0.8,
+     "tol": 0.01,
+     "source": "build_list"
+    }
+   ],
+   "notes": [
+    "kick wheel (keri-rokuro), the wheelhead knocked off, the jar broken"
+   ],
+   "master": "spikes/W3C2/out/sitefit/jp_f_keri_rokuro_ab.p3d",
+   "mount": "floor",
+   "mount_note": "on the floor: base centre on the floor"
+  }
+ ],
+ "made_by": "spikes/W3C2/build_w3c2.py (agent W3C2, 2026-10-02) on spikes/B3a/build.py"
+}

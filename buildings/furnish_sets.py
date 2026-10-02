@@ -606,3 +606,8 @@ SETS.update(_w3b.sets())
 import w3c1_sets as _w3c1  # noqa: E402
 
 SETS.update(_w3c1.sets())
+# W3C2 (2026-10-02): the wave-3c-2 dressings (charcoal hut, potter, tile works, lime / quarry / sorting sheds, bunk
+# halls, salt-boiling hut): buildings/w3c2_sets.py
+import w3c2_sets as _w3c2  # noqa: E402
+
+SETS.update(_w3c2.sets())

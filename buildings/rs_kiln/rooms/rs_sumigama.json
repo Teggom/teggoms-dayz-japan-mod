@@ -1,0 +1,45 @@
+{
+ "building": "Land_JP_SumiGama",
+ "p3d": "\\JP\\buildings\\rs_kiln\\jp_sumigama.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/ruralsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "floor",
+   "tag": "workshop",
+   "floor": "earth",
+   "level_m": 0.05,
+   "rect_kit": [
+    0.06,
+    5.4,
+    -5.4,
+    -0.1
+   ],
+   "doors": [],
+   "note": "the kiln floor under the roof: the earth-dome kiln, its fire mouth to the front, the flue at the back",
+   "enclosed": false,
+   "rect_model": [
+    -2.67,
+    2.67,
+    -2.67,
+    2.63
+   ],
+   "fittings": [
+    {
+     "kind": "rake",
+     "room": "floor",
+     "note": "the kiln rake and long hoe leaning on a back post",
+     "rect": [
+      -2.62,
+      -2.07,
+      -2.62,
+      -1.87
+     ]
+    }
+   ]
+  }
+ ],
+ "loot_points": 2,
+ "loot_by_room": {
+  "floor": 2
+ }
+}

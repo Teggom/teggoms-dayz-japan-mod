@@ -1028,6 +1028,50 @@ for _f in W3C1_FURNISHED:                     # W3C1's own model folder
 BUILDINGS += W3C1_FURNISHED
 
 
+# ------------------------------------------------------------------------------------------------ W3C2 rural sites
+# Phase C wave 3c-2 (agent W3C2, 2026-10-02): the rural / industrial trade sites (charcoal, pottery, tile works, lime,
+# quarry + stonemason, mine, logging camp, salt works) from parts/kit/jpparts/templates/ruralsite.py (buildings/
+# ruralsitekit.py builds them; research + recorded choices spikes/W3C2/W3C2_NOTES.md). The huts and sheds a site reuses
+# are earlier shells furnished in buildings/w3c2_sets.py. Placed in ONE district west + south of 3c-1 by
+# spikes/W3C2/layout_w3c2.py (test/placements/W3C2.csv + test/ce/W3C2_mapgrouppos.xml), not through 'placements'.
+from jpparts.templates import ruralsite as _rs  # noqa: E402
+
+_LOOT_RS_SITE = {"usage": ["Village", "Industrial"], "categories": ["tools"], "tags": ["floor"]}
+_LOOT_RS_HUT = {"usage": ["Village"], "categories": ["tools", "containers", "food"], "tags": ["floor"]}
+
+
+def _rsd(key, dir_, cls, display, params, loot, mass):
+    e = {"key": key, "dir": dir_, "module": "ruralsite_shells", "class": cls, "name": "jp_" + key, "display": display,
+         "params": dict(params), "model_dir": dir_, "mass": mass, "sound": "doorWoodSlide", "loot": loot,
+         "placements": [], "verify": "shellcheck", "budget": _rs.budget_class(**params), "ship": True}
+    ob = _rs.over_budget_ok(**params)
+    if ob:
+        e["over_budget_ok"] = ob
+    return e
+
+
+W3C2_SHELLS = [
+    # TR23 the charcoal kiln under its roof (the burner's hut = C2's west hut, furnished)
+    _rsd("rs_sumigama", "rs_kiln", "Land_JP_SumiGama", "Charcoal kiln (earth dome) under its board roof",
+         {"kind": "sumigama"}, _LOOT_RS_SITE, 40000.0),
+    # TR18 the climbing kiln (the work shed = W3B's earth-floor workshop, furnished as the potter)
+    _rsd("rs_noborigama", "rs_kiln", "Land_JP_Noborigama", "Climbing kiln (noborigama, 4 chambers on its bank)",
+         {"kind": "noborigama"}, _LOOT_RS_SITE, 200000.0),
+    _rsd("rs_cmp_potteryyard", "rs_site", "Land_JP_Compound_PotteryYard", "Potter's yard: bamboo fence + cart opening",
+         {"kind": "compound", "plot": "potteryyard"}, _LOOT_RS_SITE, 10000.0),
+]
+BUILDINGS += W3C2_SHELLS
+
+# W3C2 furnished variants (furnishkit + buildings/w3c2_sets.py): earlier huts / sheds / workshops dressed per site
+W3C2_FURNISHED = [
+    _furn("f_rs_sumiyaki", "hut_west_ishioki", "w3c2_sumiyaki", "Sumiyaki", "furnished: the charcoal burner's hut"),
+    _furn("f_rs_toki", "tr_ws_doma_itabuki", "w3c2_toki", "Toki", "furnished: the potter's work shed"),
+]
+for _f in W3C2_FURNISHED:                     # W3C2's own model folder
+    _f["dir"] = _f["model_dir"] = "rs_furnished"
+BUILDINGS += W3C2_FURNISHED
+
+
 # ------------------------------------------------------------------------------------------------ FB1 binding names
 # FB1 (2026-10-01): a terrain-placed p3d binds to its config + script class ONLY through the class named
 # Land_<p3d file name> (case-insensitive). C1-S1 named the family p3ds after their registry keys (jp_townhouse_

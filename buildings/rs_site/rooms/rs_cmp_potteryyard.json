@@ -1,0 +1,33 @@
+{
+ "building": "Land_JP_Compound_PotteryYard",
+ "p3d": "\\JP\\buildings\\rs_site\\jp_compound_potteryyard.p3d",
+ "frame": "model: origin = footprint centre at grade, +z = front; built by parts/kit/jpparts/templates/ruralsite.py; 'fittings' = kiln spots, the pan, the irori, fixed props ...",
+ "rooms": [
+  {
+   "name": "gate0",
+   "tag": "yard",
+   "floor": "earth",
+   "level_m": 0.1,
+   "rect_kit": [
+    8.389999999999999,
+    10.72,
+    -1.0500000000000003,
+    1.25
+   ],
+   "doors": [],
+   "note": "the gate passage (opening)",
+   "enclosed": false,
+   "rect_model": [
+    2.02,
+    4.35,
+    -6.51,
+    -4.21
+   ],
+   "fittings": []
+  }
+ ],
+ "loot_points": 1,
+ "loot_by_room": {
+  "gate0": 1
+ }
+}
